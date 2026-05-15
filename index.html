@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tirol Tourismus – Geschützter Bereich</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #0f0f1a 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+    .bg-pattern {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 25% 40%, rgba(200,16,46,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 75% 60%, rgba(74,124,89,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 50% 80%, rgba(200,16,46,0.04) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .silhouette {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+      overflow: hidden; pointer-events: none;
+    }
+    .silhouette svg { width:100%; height:100%; fill: rgba(255,255,255,0.03); }
+    .card {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 3rem 3.5rem;
+      max-width: 440px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    }
+    .logo {
+      width: 64px; height: 64px;
+      background: var(--r, #c8102e);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      box-shadow: 0 8px 30px rgba(200,16,46,0.3);
+    }
+    .card h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .card h1 span { color: #c8102e; }
+    .card .sub {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+    }
+    .lock-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      opacity: 0.4;
+    }
+    .pw-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .pw-group input {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      text-align: center;
+      letter-spacing: 4px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .pw-group input::placeholder {
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.2);
+    }
+    .pw-group input:focus {
+      border-color: #c8102e;
+      box-shadow: 0 0 0 3px rgba(200,16,46,0.15);
+      background: rgba(255,255,255,0.08);
+    }
+    .pw-group button {
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: #c8102e;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(200,16,46,0.25);
+    }
+    .pw-group button:hover {
+      background: #9e0c23;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(200,16,46,0.35);
+    }
+    .pw-group button:active { transform: translateY(0); }
+    .error {
+      color: #f43f5e;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      min-height: 1.4em;
+    }
+    .error.show { opacity: 1; }
+    .footer-note {
+      margin-top: 2rem;
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 1px;
+    }
+    .particle {
+      position: absolute;
+      width: 3px; height: 3px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      animation: float 15s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      20% { opacity: 1; }
+      80% { opacity: 0.5; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+    @media (max-width: 480px) {
+      .card { padding: 2rem 1.5rem; }
+      .card h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-pattern"></div>
+<div class="silhouette">
+  <svg viewBox="0 0 1440 200" preserveAspectRatio="none">
+    <path d="M0,160 L200,130 L400,170 L600,100 L800,150 L1000,80 L1200,130 L1440,90 L1440,200 L0,200 Z" />
+  </svg>
+</div>
+
+<div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+  <div class="particle" style="left:10%;animation-delay:0s;"></div>
+  <div class="particle" style="left:25%;animation-delay:3s;width:4px;height:4px;"></div>
+  <div class="particle" style="left:40%;animation-delay:6s;"></div>
+  <div class="particle" style="left:55%;animation-delay:2s;"></div>
+  <div class="particle" style="left:70%;animation-delay:8s;width:2px;height:2px;"></div>
+  <div class="particle" style="left:85%;animation-delay:4s;width:4px;height:4px;"></div>
+</div>
+
+<div class="card">
+  <div class="logo">T</div>
+  <div class="lock-icon">🔐</div>
+  <h1>tirol<span>tourismus</span></h1>
+  <p class="sub">Geschützter Bereich · Passwort erforderlich</p>
+
+  <div class="pw-group">
+    <input type="password" id="pwInput" placeholder="Passwort" maxlength="10"
+           autofocus onkeydown="if(event.key==='Enter')checkPw()" />
+    <button onclick="checkPw()">Eintreten →</button>
+    <div class="error" id="errorMsg">✗ Falsches Passwort</div>
+  </div>
+
+  <div class="footer-note">Alpine Experience · Curated by AI</div>
+</div>
+
+<script>
+function checkPw() {
+  const pw = document.getElementById('pwInput').value;
+  if (pw === '2205') {
+    sessionStorage.setItem('tirol_auth', '2205');
+    location.href = 'app/';
+  } else {
+    document.getElementById('errorMsg').classList.add('show');
+    document.getElementById('pwInput').value = '';
+    document.getElementById('pwInput').focus();
+    setTimeout(() => document.getElementById('errorMsg').classList.remove('show'), 2500);
+  }
+}
+</script>
+
+</body>
+</html>

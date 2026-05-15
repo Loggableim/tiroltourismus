@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tirol Tourismus – Das offizielle Reiseportal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════════════════════════
+       RESET & ROOT
+       ═══════════════════════════════════════════════════ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+      /* Tirol Brand Palette */
+      --tirol-red: #c8102e;
+      --tirol-red-dark: #9e0c23;
+      --tirol-red-light: #f5d6db;
+      --tirol-white: #ffffff;
+      --tirol-cream: #faf8f5;
+      --tirol-silver: #f0f0ee;
+      --tirol-green: #4a7c59;
+      --tirol-green-light: #e8f0ea;
+      --tirol-green-dark: #2d5a3e;
+      --tirol-blue: #3b7ea1;
+      --tirol-blue-light: #e3f0f5;
+      --tirol-stone: #8a8a8a;
+      --tirol-charcoal: #1a1a1a;
+      --tirol-text: #2c2c2c;
+      --tirol-text-light: #6b6b6b;
+      --tirol-gold: #c9a84c;
+      --tirol-warm: #e8ddd0;
+
+      --transition: 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.08);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+      --shadow-red: 0 8px 30px rgba(200,16,46,0.2);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--tirol-white);
+      color: var(--tirol-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       UTILITY
+       ═══════════════════════════════════════════════════ */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    .section-pad { padding: 6rem 0; }
+    .section-pad-sm { padding: 3rem 0; }
+
+    .label-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--tirol-red);
+      margin-bottom: 1rem;
+    }
+    .label-tag::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--tirol-red);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--tirol-charcoal);
+      margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--tirol-text-light);
+      max-width: 580px;
+      line-height: 1.7;
+    }
+    .section-sub.wide { max-width: 720px; }
+    .section-title .highlight {
+      color: var(--tirol-red);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .btn-red {
+      background: var(--tirol-red);
+      color: white;
+      box-shadow: var(--shadow-red);
+    }
+    .btn-red:hover {
+      background: var(--tirol-red-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(200,16,46,0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--tirol-text);
+      border: 2px solid var(--tirol-silver);
+    }
+    .btn-outline:hover {
+      border-color: var(--tirol-red);
+      color: var(--tirol-red);
+      transform: translateY(-2px);
+    }
+    .btn-white {
+      background: white;
+      color: var(--tirol-red);
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-ghost:hover {
+      border-color: white;
+      transform: translateY(-2px);
+    }
+
+    .btn-sm { padding: 10px 20px; font-size: 0.85rem; }
+
+    /* ═══════════════════════════════════════════════════
+       EDELWEISS PATTERN (CSS only)
+       ═══════════════════════════════════════════════════ */
+    .edelweiss-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; height: 40px;
+      position: relative;
+    }
+    .edelweiss-icon::before,
+    .edelweiss-icon::after {
+      content: '✿';
+      font-size: 28px;
+      position: absolute;
+    }
+    .edelweiss-icon::before { transform: rotate(0deg); }
+    .edelweiss-icon::after { transform: rotate(45deg); opacity: 0.6; }
+
+    /* ═══════════════════════════════════════════════════
+       TOP BAR
+       ═══════════════════════════════════════════════════ */
+    .top-bar {
+      background: var(--tirol-charcoal);
+      color: rgba(255,255,255,0.7);
+      font-size: 0.78rem;
+      padding: 0.5rem 0;
+    }
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .top-bar a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .top-bar a:hover { color: white; }
+    .top-bar-left { display: flex; gap: 1.5rem; align-items: center; }
+    .top-bar-right { display: flex; gap: 1rem; align-items: center; }
+    .top-bar .lang-switch {
+      display: flex; gap: 0.5rem; align-items: center;
+    }
+    .top-bar .lang-switch a {
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 600;
+    }
+    .top-bar .lang-switch a.active {
+      color: white;
+      background: var(--tirol-red);
+    }
+    .top-divider { color: rgba(255,255,255,0.25); }
+
+    /* ═══════════════════════════════════════════════════
+       MAIN NAV
+       ═══════════════════════════════════════════════════ */
+    .main-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: white;
+      border-bottom: 1px solid var(--tirol-silver);
+      transition: all var(--transition);
+    }
+    .main-nav.scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .main-nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo {
+      width: 44px;
+      height: 44px;
+      background: var(--tirol-red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: white;
+      font-family: var(--font-serif);
+      position: relative;
+      overflow: hidden;
+    }
+    .nav-logo::after {
+      content: '';
+      position: absolute;
+      width: 18px; height: 18px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      top: 5px;
+    }
+    .nav-brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .nav-brand-text .top {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--tirol-text-light);
+    }
+    .nav-brand-text .main {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--tirol-charcoal);
+    }
+    .nav-brand-text .main span { color: var(--tirol-red); }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      list-style: none;
+    }
+    .nav-menu > li {
+      position: relative;
+    }
+    .nav-menu > li > a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0.6rem 1rem;
+      text-decoration: none;
+      color: var(--tirol-text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: var(--radius-sm);
+      transition: all var(--transition);
+    }
+    .nav-menu > li > a:hover,
+    .nav-menu > li > a.active {
+      color: var(--tirol-red);
+      background: var(--tirol-red-light);
+    }
+    .nav-menu .arrow { font-size: 0.65rem; transition: transform var(--transition); }
+    .nav-menu li:hover .arrow { transform: rotate(180deg); }
+
+    /* Mega Dropdown */
+    .mega-drop {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      background: white;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      padding: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      min-width: 600px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      border: 1px solid var(--tirol-silver);
+    }
+    .nav-menu li:hover .mega-drop {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(0);
+    }
+    .mega-drop .col h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--tirol-text-light);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--tirol-silver);
+    }
+    .mega-drop .col a {
+      display: block;
+      padding: 0.4rem 0;
+      color: var(--tirol-text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color var(--transition);
+    }
+    .mega-drop .col a:hover { color: var(--tirol-red); }
+    .mega-drop .col .featured-link {
+      font-weight: 600;
+      color: var(--tirol-red) !important;
+    }
+    .mega-drop .col .featured-link:hover { text-decoration: underline; }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .nav-search {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--tirol-silver);
+      background: transparent;
+      cursor: pointer;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+    .nav-search:hover {
+      border-color: var(--tirol-red);
+      color: var(--tirol-red);
+    }
+    .nav-fav {
+      position: relative;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--tirol-silver);
+      background: transparent;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+    .nav-fav:hover {
+      border-color: var(--tirol-red);
+      color: var(--tirol-red);
+    }
+    .nav-fav .badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      width: 18px; height: 18px;
+      background: var(--tirol-red);
+      color: white;
+      border-radius: 50%;
+      font-size: 0.65rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Menu Toggle (hidden on desktop) */
+    .menu-toggle {
+      display: none;
+      width: 40px; height: 40px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: center;
+      align-items: center;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--tirol-charcoal);
+      border-radius: 2px;
+      transition: all var(--transition);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      opacity: 0.06;
+      background-image:
+        radial-gradient(circle at 20% 50%, white 1px, transparent 1px),
+        radial-gradient(circle at 80% 30%, white 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(180deg, transparent, white);
+      z-index: 2;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(200,16,46,0.15) 0%,
+        transparent 40%,
+        rgba(0,0,0,0.3) 100%
+      );
+      z-index: 1;
+    }
+
+    /* Alpine silhouette */
+    .hero-silhouette {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 250px;
+      z-index: 1;
+      overflow: hidden;
+    }
+    .hero-silhouette svg {
+      width: 100%;
+      height: 100%;
+      fill: white;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 0 2rem;
+      margin-top: -60px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s both;
+    }
+    .hero-eyebrow .line {
+      width: 40px;
+      height: 2px;
+      background: var(--tirol-red);
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: white;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.1s both;
+    }
+    .hero h1 .accent { color: var(--tirol-red); }
+    .hero h1 .thin { font-weight: 400; font-style: italic; }
+    .hero p {
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: rgba(255,255,255,0.75);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s 0.2s both;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      animation: fadeUp 0.8s 0.3s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SEARCH BAR (floating over hero)
+       ═══════════════════════════════════════════════════ */
+    .search-bar {
+      position: relative;
+      z-index: 4;
+      margin-top: -50px;
+      padding: 0 2rem;
+    }
+    .search-bar-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .search-group {
+      flex: 1;
+      min-width: 160px;
+    }
+    .search-group label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--tirol-text-light);
+      margin-bottom: 4px;
+    }
+    .search-group select,
+    .search-group input {
+      width: 100%;
+      padding: 0.6rem 0;
+      border: none;
+      border-bottom: 2px solid var(--tirol-silver);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      color: var(--tirol-text);
+      background: transparent;
+      outline: none;
+      transition: border-color var(--transition);
+      cursor: pointer;
+    }
+    .search-group select:focus,
+    .search-group input:focus {
+      border-color: var(--tirol-red);
+    }
+    .search-submit {
+      padding: 0.8rem 2rem;
+      border-radius: var(--radius-sm);
+      background: var(--tirol-red);
+      color: white;
+      border: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .search-submit:hover {
+      background: var(--tirol-red-dark);
+      transform: translateY(-1px);
+    }
+    .search-divider { width: 1px; height: 40px; background: var(--tirol-silver); }
+
+    /* ═══════════════════════════════════════════════════
+       INTRO / WELCOME
+       ═══════════════════════════════════════════════════ */
+    .intro-section {
+      background: var(--tirol-cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-section::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,16,46,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .intro-visual {
+      position: relative;
+    }
+    .intro-visual .main-box {
+      background: linear-gradient(135deg, var(--tirol-red) 0%, #8b1a2b 100%);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      color: white;
+      position: relative;
+    }
+    .intro-visual .main-box .big-number {
+      font-family: var(--font-serif);
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .intro-visual .main-box p {
+      opacity: 0.85;
+      font-size: 0.95rem;
+    }
+    .intro-visual .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .intro-visual .stat-item {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      backdrop-filter: blur(4px);
+    }
+    .intro-visual .stat-item .num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      font-family: var(--font-serif);
+    }
+    .intro-visual .stat-item .lbl {
+      font-size: 0.7rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ─── WERTE / VALUES ─── */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .value-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-radius: var(--radius-md);
+      background: white;
+      border: 1px solid var(--tirol-silver);
+      transition: all var(--transition);
+    }
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .value-card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .value-card h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .value-card p {
+      font-size: 0.8rem;
+      color: var(--tirol-text-light);
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       REGIONS / DESTINATIONS
+       ═══════════════════════════════════════════════════ */
+    .bg-cream { background: var(--tirol-cream); }
+
+    .regions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .region-card {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 4/5;
+      background: var(--tirol-charcoal);
+      transition: all var(--transition);
+    }
+    .region-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .region-card .bg {
+      position: absolute;
+      inset: 0;
+      transition: transform 0.6s ease;
+    }
+    /* Solid gradients as image placeholders */
+    .region-card:nth-child(1) .bg { background: linear-gradient(135deg, #1a3d2e, #2d6b4e); }
+    .region-card:nth-child(2) .bg { background: linear-gradient(135deg, #1a2e4a, #2d4a7a); }
+    .region-card:nth-child(3) .bg { background: linear-gradient(135deg, #3d1a2e, #6b2d4a); }
+    .region-card:nth-child(4) .bg { background: linear-gradient(135deg, #3d2d1a, #6b4a2d); }
+    .region-card:nth-child(5) .bg { background: linear-gradient(135deg, #1a1a3d, #2d2d6b); }
+    .region-card:nth-child(6) .bg { background: linear-gradient(135deg, #2d3d1a, #4a6b2d); }
+    .region-card:hover .bg { transform: scale(1.08); }
+
+    .region-card .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg,
+        rgba(0,0,0,0.8) 0%,
+        rgba(0,0,0,0.2) 40%,
+        transparent 65%
+      );
+      z-index: 1;
+    }
+    .region-card .content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      z-index: 2;
+      color: white;
+    }
+    .region-card .tag {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+    }
+    .region-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .region-card .meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       ACCOMMODATIONS
+       ═══════════════════════════════════════════════════ */
+    .acc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .acc-tabs {
+      display: flex;
+      gap: 0.25rem;
+      background: var(--tirol-silver);
+      border-radius: 100px;
+      padding: 3px;
+    }
+    .acc-tab {
+      padding: 8px 18px;
+      border: none;
+      background: transparent;
+      border-radius: 100px;
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--tirol-text-light);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .acc-tab:hover { color: var(--tirol-text); }
+    .acc-tab.active {
+      background: white;
+      color: var(--tirol-red);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      font-weight: 600;
+    }
+
+    .acc-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .acc-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--tirol-silver);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .acc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .acc-card .img {
+      height: 180px;
+      position: relative;
+      overflow: hidden;
+    }
+    .acc-card:nth-child(1) .img { background: linear-gradient(135deg, #4a7c59, #2d5a3e); }
+    .acc-card:nth-child(2) .img { background: linear-gradient(135deg, #3b7ea1, #2d5a7a); }
+    .acc-card:nth-child(3) .img { background: linear-gradient(135deg, #8b6b4a, #6b4a2d); }
+    .acc-card:nth-child(4) .img { background: linear-gradient(135deg, #5a4a6b, #3d2d5a); }
+    .acc-card:nth-child(5) .img { background: linear-gradient(135deg, #6b4a3d, #8b5a3d); }
+    .acc-card:nth-child(6) .img { background: linear-gradient(135deg, #3d6b5a, #2d5a4a); }
+    .acc-card:nth-child(7) .img { background: linear-gradient(135deg, #4a5a7a, #3d4a6b); }
+    .acc-card:nth-child(8) .img { background: linear-gradient(135deg, #7a5a3d, #5a4a2d); }
+
+    .acc-card .img .badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: var(--tirol-red);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .acc-card .img .fav-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.9);
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+    }
+    .acc-card .img .fav-btn:hover {
+      background: white;
+      transform: scale(1.1);
+    }
+    .acc-card .body {
+      padding: 1rem 1.25rem 1.25rem;
+    }
+    .acc-card .body .type {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--tirol-text-light);
+      margin-bottom: 0.3rem;
+    }
+    .acc-card .body h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .acc-card .body .location {
+      font-size: 0.85rem;
+      color: var(--tirol-text-light);
+      margin-bottom: 0.6rem;
+    }
+    .acc-card .body .stars {
+      color: var(--tirol-gold);
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+    }
+    .acc-card .body .rating-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 0.6rem;
+    }
+    .acc-card .body .score {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px; height: 30px;
+      border-radius: 6px;
+      background: var(--tirol-green);
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .acc-card .body .reviews {
+      font-size: 0.8rem;
+      color: var(--tirol-text-light);
+    }
+    .acc-card .body .price {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      color: var(--tirol-text-light);
+    }
+    .acc-card .body .price strong {
+      font-size: 1.15rem;
+      color: var(--tirol-text);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       ACTIVITIES / ERLEBNISSE
+       ═══════════════════════════════════════════════════ */
+    .act-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .act-card {
+      padding: 2rem;
+      border-radius: var(--radius-md);
+      background: white;
+      border: 1px solid var(--tirol-silver);
+      transition: all var(--transition);
+      position: relative;
+    }
+    .act-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--tirol-red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .act-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .act-card:hover::before { transform: scaleX(1); }
+    .act-card .icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    .act-card h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .act-card p {
+      font-size: 0.88rem;
+      color: var(--tirol-text-light);
+      line-height: 1.6;
+    }
+    .act-card .act-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.2rem;
+    }
+    .act-card .price {
+      font-weight: 700;
+      color: var(--tirol-red);
+      font-size: 1.1rem;
+    }
+    .act-card .cta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--tirol-text);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: all var(--transition);
+    }
+    .act-card .cta:hover { color: var(--tirol-red); border-bottom-color: var(--tirol-red); }
+
+    /* ═══════════════════════════════════════════════════
+       EVENTS SECTION
+       ═══════════════════════════════════════════════════ */
+    .section-dark {
+      background: var(--tirol-charcoal);
+      color: white;
+    }
+    .section-dark .section-title { color: white; }
+    .section-dark .section-sub { color: rgba(255,255,255,0.6); }
+    .section-dark .label-tag { color: var(--tirol-red); }
+    .section-dark .label-tag::before { background: var(--tirol-red); }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+    .event-card {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .event-card:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+    .event-card .date-box {
+      min-width: 70px;
+      text-align: center;
+      padding: 0.8rem;
+      background: var(--tirol-red);
+      border-radius: var(--radius-sm);
+      height: fit-content;
+    }
+    .event-card .date-box .day {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1;
+      font-family: var(--font-serif);
+    }
+    .event-card .date-box .month {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .event-card .info { flex: 1; }
+    .event-card .info h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    .event-card .info .loc {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0.5rem;
+    }
+    .event-card .info p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+    .event-card .info .cat {
+      display: inline-block;
+      margin-top: 0.6rem;
+      padding: 2px 10px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.1);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       BLOG / MAGAZIN
+       ═══════════════════════════════════════════════════ */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .blog-card {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--tirol-silver);
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .blog-card .img {
+      height: 200px;
+      position: relative;
+    }
+    .blog-card:nth-child(1) .img { background: linear-gradient(135deg, #2d5a3e, #4a7c59); }
+    .blog-card:nth-child(2) .img { background: linear-gradient(135deg, #3b7ea1, #5a9ab8); }
+    .blog-card:nth-child(3) .img { background: linear-gradient(135deg, #8b6b4a, #a88b6b); }
+
+    .blog-card .img .cat {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: var(--tirol-red);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .blog-card .body {
+      padding: 1.25rem;
+    }
+    .blog-card .body .date {
+      font-size: 0.75rem;
+      color: var(--tirol-text-light);
+      margin-bottom: 0.5rem;
+    }
+    .blog-card .body h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+    .blog-card .body p {
+      font-size: 0.85rem;
+      color: var(--tirol-text-light);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       NEWSLETTER / APP CTA
+       ═══════════════════════════════════════════════════ */
+    .cta-ribbon {
+      background: var(--tirol-red);
+      padding: 4rem 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-ribbon::before {
+      content: '✦';
+      position: absolute;
+      font-size: 20rem;
+      opacity: 0.04;
+      top: -50%;
+      right: -5%;
+      font-family: var(--font-serif);
+    }
+    .cta-ribbon .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-ribbon h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+    }
+    .cta-ribbon p {
+      opacity: 0.85;
+      max-width: 400px;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+    .cta-ribbon .right {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .cta-ribbon .email-input {
+      display: flex;
+      gap: 0;
+      background: white;
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    .cta-ribbon .email-input input {
+      padding: 14px 20px;
+      border: none;
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      min-width: 240px;
+      outline: none;
+      background: transparent;
+    }
+    .cta-ribbon .email-input button {
+      padding: 14px 28px;
+      border: none;
+      background: var(--tirol-charcoal);
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    .cta-ribbon .email-input button:hover { background: #333; }
+
+    /* ═══════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════ */
+    footer {
+      background: var(--tirol-charcoal);
+      color: rgba(255,255,255,0.7);
+      padding: 4rem 0 0;
+    }
+    footer .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+    footer .col h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: white;
+      margin-bottom: 1.2rem;
+    }
+    footer .col p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    footer .col a {
+      display: block;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0;
+      transition: color var(--transition);
+    }
+    footer .col a:hover { color: white; }
+    footer .social {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    footer .social a {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: all var(--transition);
+    }
+    footer .social a:hover {
+      border-color: var(--tirol-red);
+      background: var(--tirol-red);
+      color: white;
+    }
+    footer .bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 3rem;
+      padding: 1.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    footer .bottom .links { display: flex; gap: 1.5rem; }
+    footer .bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer .bottom a:hover { color: white; }
+
+    /* ═══════════════════════════════════════════════════
+       SUBPAGE SIMULATION (page indicators + sections)
+       ═══════════════════════════════════════════════════ */
+    .page-indicator {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.75rem;
+      color: var(--tirol-text-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .page-indicator strong {
+      color: var(--tirol-red);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       REVEAL ON SCROLL
+       ═══════════════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .regions-grid { grid-template-columns: repeat(2, 1fr); }
+      .acc-grid { grid-template-columns: repeat(2, 1fr); }
+      .act-grid { grid-template-columns: repeat(2, 1fr); }
+      .events-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      footer .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .top-bar .container { flex-direction: column; text-align: center; }
+      .nav-menu { display: none; }
+      .menu-toggle { display: flex; }
+      .mega-drop { display: none; }
+      .hero { min-height: 70vh; }
+      .hero h1 { font-size: clamp(2rem, 10vw, 3rem); }
+      .search-bar { margin-top: -30px; }
+      .search-bar-inner { flex-direction: column; padding: 1.5rem; }
+      .search-divider { display: none; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .regions-grid { grid-template-columns: 1fr; }
+      .acc-grid { grid-template-columns: 1fr; }
+      .act-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .cta-ribbon .container { flex-direction: column; text-align: center; }
+      .cta-ribbon .email-input input { min-width: 180px; }
+      footer .grid { grid-template-columns: 1fr; gap: 2rem; }
+      footer .bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+      .intro-visual .stat-row { grid-template-columns: 1fr; }
+      .acc-tabs { flex-wrap: wrap; border-radius: var(--radius-md); }
+    }
+    @media (max-width: 480px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .section-pad { padding: 3rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════
+     TOP BAR
+     ═══════════════════════════════════════════════════ -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span>🏔️ Offizielles Tirol-Reiseportal</span>
+        <span class="top-divider">|</span>
+        <a href="#">Favoriten <span class="top-divider">(0)</span></a>
+        <span class="top-divider">|</span>
+        <a href="#">Merkliste</a>
+      </div>
+      <div class="top-bar-right">
+        <div class="lang-switch">
+          <a href="#" class="active">DE</a>
+          <a href="#">EN</a>
+          <a href="#">IT</a>
+          <a href="#">FR</a>
+        </div>
+        <span class="top-divider">|</span>
+        <a href="#">Kontakt</a>
+        <span class="top-divider">|</span>
+        <a href="#">Für Betriebe</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+     MAIN NAV
+     ═══════════════════════════════════════════════════ -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <a href="#" class="nav-brand">
+        <div class="nav-logo">T</div>
+        <div class="nav-brand-text">
+          <span class="top">tirol</span>
+          <span class="main">tourismus<span>.com</span></span>
+        </div>
+      </a>
+
+      <ul class="nav-menu">
+        <li>
+          <a href="#">Regionen <span class="arrow">▾</span></a>
+          <div class="mega-drop">
+            <div class="col">
+              <h4>Nordtirol</h4>
+              <a href="#">Innsbruck & Umgebung</a>
+              <a href="#">Ötztal</a>
+              <a href="#">Zillertal</a>
+              <a href="#">Stubaital</a>
+              <a href="#">Pitztal</a>
+              <a href="#">Kaunertal</a>
+              <a href="#" class="featured-link">Alle Regionen →</a>
+            </div>
+            <div class="col">
+              <h4>Osttirol</h4>
+              <a href="#">Lienz</a>
+              <a href="#">Hohe Tauern</a>
+              <a href="#">Defereggental</a>
+              <a href="#">Virgental</a>
+              <h4 style="margin-top:1.2rem;">Außerfern</h4>
+              <a href="#">Reutte</a>
+              <a href="#">Zugspitz Arena</a>
+            </div>
+            <div class="col">
+              <h4>Nach Saison</h4>
+              <a href="#">Frühling in Tirol</a>
+              <a href="#">Sommer in Tirol</a>
+              <a href="#">Herbst in Tirol</a>
+              <a href="#">Winter in Tirol</a>
+              <h4 style="margin-top:1.2rem;">Themen</h4>
+              <a href="#">Familienurlaub</a>
+              <a href="#">Barrierefrei reisen</a>
+              <a href="#">Nachhaltig reisen</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Unterkünfte <span class="arrow">▾</span></a>
+          <div class="mega-drop" style="min-width:400px;grid-template-columns:1fr 1fr;">
+            <div class="col">
+              <h4>Kategorien</h4>
+              <a href="#">Hotels & Pensionen</a>
+              <a href="#">Ferienwohnungen</a>
+              <a href="#">Bauernhöfe</a>
+              <a href="#">Hütten & Almen</a>
+              <a href="#">Camping & Glamping</a>
+              <a href="#" class="featured-link">Alle Unterkünfte →</a>
+            </div>
+            <div class="col">
+              <h4>Besonders</h4>
+              <a href="#">Wellness & Spa</a>
+              <a href="#">Familienhotels</a>
+              <a href="#">Design & Luxus</a>
+              <a href="#">Nachhaltige Unterkünfte</a>
+              <a href="#">Last Minute</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Aktivitäten</a>
+        </li>
+        <li>
+          <a href="#">Events <span class="arrow">▾</span></a>
+          <div class="mega-drop" style="min-width:350px;grid-template-columns:1fr 1fr;">
+            <div class="col">
+              <h4>Top-Kategorien</h4>
+              <a href="#">Konzerte & Festivals</a>
+              <a href="#">Märkte & Feste</a>
+              <a href="#">Sport-Events</a>
+              <a href="#">Ausstellungen</a>
+              <a href="#" class="featured-link">Alle Events →</a>
+            </div>
+            <div class="col">
+              <h4>Jetzt in Tirol</h4>
+              <a href="#">Almabtriebe Herbst 2026</a>
+              <a href="#">Bergmessen im Sommer</a>
+              <a href="#">Weihnachtsmärkte</a>
+              <a href="#">Skispringen am Bergisel</a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Magazin</a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-fav" title="Merkliste">
+          ♥ <span class="badge">3</span>
+        </button>
+        <button class="nav-search" title="Suche">🔍</button>
+        <button class="menu-toggle" onclick="this.classList.toggle('active'); document.querySelector('.nav-menu').classList.toggle('show')" aria-label="Menü">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-silhouette">
+      <svg viewBox="0 0 1440 250" preserveAspectRatio="none">
+        <path d="M0,200 L200,180 L350,220 L500,140 L650,190 L800,100 L950,170 L1100,130 L1250,160 L1440,120 L1440,250 L0,250 Z" fill="white" opacity="0.08"/>
+        <path d="M0,220 L180,200 L320,230 L480,160 L620,210 L780,130 L920,190 L1080,150 L1220,180 L1440,150 L1440,250 L0,250 Z" fill="white" opacity="0.05"/>
+        <path d="M0,250 L1440,200 L1440,250 L0,250 Z" fill="white"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="line"></span>
+        Alpen-Urlaub in Österreich
+      </div>
+      <h1>
+        Tirol.<br>
+        <span class="accent">Berge bewegen.</span><br>
+        <span class="thin">Seit jeher.</span>
+      </h1>
+      <p>
+        Ob einsame Gipfel, glasklare Seen oder urige Almhütten – 
+        in Tirol findest du dein ganz persönliches Alpenglühen. 
+        Lass dich von unserer KI inspirieren.
+      </p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-white">Regionen entdecken →</a>
+        <a href="#" class="btn btn-ghost">🎿 Skipässe vergleichen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     SEARCH BAR (floating)
+     ═══════════════════════════════════════════════════ -->
+  <div class="search-bar">
+    <div class="search-bar-inner">
+      <div class="search-group">
+        <label>📍 Ort / Region</label>
+        <select>
+          <option>Ganze Region Tirol</option>
+          <option>Innsbruck</option>
+          <option>Ötztal</option>
+          <option>Zillertal</option>
+          <option>Stubaital</option>
+          <option>Pitztal</option>
+          <option>Kaunertal</option>
+          <option>Lienz / Osttirol</option>
+          <option>Achensee</option>
+          <option>Zugspitz Arena</option>
+        </select>
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-group" style="min-width:120px;">
+        <label>📅 Anreise</label>
+        <input type="date" value="2026-06-01" />
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-group" style="min-width:120px;">
+        <label>📅 Abreise</label>
+        <input type="date" value="2026-06-08" />
+      </div>
+      <div class="search-divider"></div>
+      <div class="search-group" style="min-width:100px;">
+        <label>👥 Personen</label>
+        <select>
+          <option>2 Erwachsene</option>
+          <option>1 Person</option>
+          <option>3 Personen</option>
+          <option>4 Personen</option>
+          <option>Familie</option>
+        </select>
+      </div>
+      <button class="search-submit">🔍 Suchen</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+     INTRO / VALUES
+     ═══════════════════════════════════════════════════ -->
+  <section class="intro-section section-pad">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-text reveal">
+          <div class="label-tag">Willkommen in Tirol</div>
+          <h2 class="section-title">
+            Wo die Berge<br>
+            <span class="highlight">Geschichte schreiben.</span>
+          </h2>
+          <p class="section-sub wide">
+            Tirol ist mehr als nur eine Urlaubsregion – es ist ein Lebensgefühl. 
+            Zwischen schroffen Dreitausendern und sanften Almwiesen, 
+            zwischen jahrhundertealter Tradition und moderner Alpenkultur 
+            findest du hier deinen ganz persönlichen Rhythmus.
+          </p>
+          <p class="section-sub wide" style="margin-top:1rem;">
+            Unser KI-gestütztes Portal kuratiert für dich die schönsten 
+            Orte, aktuellsten Events und die besten Unterkünfte – 
+            personalisiert und immer frisch.
+          </p>
+          <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="#" class="btn btn-red">Mehr über Tirol →</a>
+            <a href="#" class="btn btn-outline">📖 Reiseführer bestellen</a>
+          </div>
+        </div>
+        <div class="intro-visual reveal reveal-delay-2">
+          <div class="main-box">
+            <div class="big-number">✺</div>
+            <p style="font-size:0.9rem;opacity:0.8;">Die Tiroler Gastfreundschaft vereint jahrhundertealte Tradition mit modernem Alpen-Chic.</p>
+            <div class="stat-row">
+              <div class="stat-item">
+                <div class="num">3.200</div>
+                <div class="lbl">Wanderwege</div>
+              </div>
+              <div class="stat-item">
+                <div class="num">4.500</div>
+                <div class="lbl">Unterkünfte</div>
+              </div>
+              <div class="stat-item">
+                <div class="num">300+</div>
+                <div class="lbl">Skilifte</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card reveal reveal-delay-1">
+          <div class="icon">🏔️</div>
+          <h4>Alpine Natur pur</h4>
+          <p>3.200 km Wanderwege, 5 Naturparks, unberührte Bergseen und urige Almen.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-2">
+          <div class="icon">🍽️</div>
+          <h4>Genuss aus den Bergen</h4>
+          <p>Tiroler Käse, Speck, Almkräuter und erlesene Weine – regional und saisonal.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <div class="icon">🎿</div>
+          <h4>Skigebiete Top-Klasse</h4>
+          <p>Ischgl, Sölden, Kitzbühel, St. Anton – 45.000 Pistenkilometer erwarten dich.</p>
+        </div>
+        <div class="value-card reveal reveal-delay-3">
+          <div class="icon">❤️</div>
+          <h4>Gastfreundschaft</h4>
+          <p>Tiroler Herzlichkeit, 4.500 Familienbetriebe, Nachhaltigkeit im Fokus.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     REGIONS
+     ═══════════════════════════════════════════════════ -->
+  <section class="section-pad bg-cream" id="regionen">
+    <div class="container">
+      <div class="label-tag">Destinationen</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
+        <h2 class="section-title" style="margin-bottom:0;">
+          Entdecke <span class="highlight">Tirols</span> Regionen
+        </h2>
+        <a href="#" class="btn btn-outline btn-sm">Alle Regionen →</a>
+      </div>
+      <p class="section-sub" style="margin-bottom:0.5rem;">
+        Von der Landeshauptstadt Innsbruck bis zu den entlegenen Tälern Osttirols – 
+        jede Region hat ihren eigenen Charakter.
+      </p>
+
+      <div class="regions-grid">
+        <div class="region-card reveal">
+          <div class="bg"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <span class="tag">🏔️ Bergwelt</span>
+            <h3>Ötztal</h3>
+            <div class="meta">
+              <span>Gletscher, 300+ Sonnentage</span>
+              <span>★ 4.9</span>
+            </div>
+          </div>
+        </div>
+        <div class="region-card reveal reveal-delay-1">
+          <div class="bg"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <span class="tag">🌲 Natur pur</span>
+            <h3>Zillertal</h3>
+            <div class="meta">
+              <span>Schlegeis, Bike-Arena</span>
+              <span>★ 4.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="region-card reveal reveal-delay-2">
+          <div class="bg"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <span class="tag">🎿 Ski & Après</span>
+            <h3>Ischgl</h3>
+            <div class="meta">
+              <span>Top-Skigebiet, Silvretta</span>
+              <span>★ 4.7</span>
+            </div>
+          </div>
+        </div>
+        <div class="region-card reveal reveal-delay-1">
+          <div class="bg"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <span class="tag">🏛️ Kultur</span>
+            <h3>Innsbruck</h3>
+            <div class="meta">
+              <span>Goldenes Dachl, Bergisel</span>
+              <span>★ 4.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="region-card reveal reveal-delay-2">
+          <div class="bg"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <span class="tag">💧 Seen & Spa</span>
+            <h3>Achensee</h3>
+            <div class="meta">
+              <span>Tirols größter See</span>
+              <span>★ 4.9</span>
+            </div>
+          </div>
+        </div>
+        <div class="region-card reveal reveal-delay-3">
+          <div class="bg"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <span class="tag">🍷 Kulinarik</span>
+            <h3>Südtiroler Grenze</h3>
+            <div class="meta">
+              <span>Weingüter, Kastanien</span>
+              <span>★ 4.6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     ACCOMMODATIONS
+     ═══════════════════════════════════════════════════ -->
+  <section class="section-pad" id="unterkuenfte">
+    <div class="container">
+      <div class="label-tag">Übernachten</div>
+      <div class="acc-header">
+        <div>
+          <h2 class="section-title" style="margin-bottom:0.5rem;">
+            Finde deine <span class="highlight">Unterkunft</span>
+          </h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            Über 4.500 geprüfte Unterkünfte – vom Almhütte bis zum Design-Hotel.
+          </p>
+        </div>
+        <div class="acc-tabs">
+          <button class="acc-tab active" onclick="switchAccTab(this)">🔥 Empfohlen</button>
+          <button class="acc-tab" onclick="switchAccTab(this)">⭐ Beste Bewertung</button>
+          <button class="acc-tab" onclick="switchAccTab(this)">💰 Bestpreis</button>
+        </div>
+      </div>
+
+      <div class="acc-grid" id="accGrid">
+        <div class="acc-card reveal">
+          <div class="img">
+            <span class="badge">KI-Empfehlung</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">★★★ Superior</div>
+            <h4>Alpine Wellness Resort</h4>
+            <div class="location">📍 Ötztal, 1.200 m</div>
+            <div class="stars">★★★★☆</div>
+            <div class="rating-row">
+              <span class="score">9.2</span>
+              <span class="reviews">Hervorragend · 287 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 89</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal reveal-delay-1">
+          <div class="img">
+            <span class="badge">Familienfreundlich</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">★★★★ Hotel</div>
+            <h4>Bergglück Familienhotel</h4>
+            <div class="location">📍 Zillertal, 980 m</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating-row">
+              <span class="score">9.5</span>
+              <span class="reviews">Hervorragend · 412 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 129</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal reveal-delay-2">
+          <div class="img">
+            <span class="badge">TOP-Bewertet</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">★★★★★ Superior</div>
+            <h4>Edelweiss Spa Lodge</h4>
+            <div class="location">📍 Kitzbühel, 1.100 m</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating-row">
+              <span class="score">9.8</span>
+              <span class="reviews">Außergewöhnlich · 673 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 249</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal reveal-delay-3">
+          <div class="img">
+            <span class="badge">Urlaub am Bauernhof</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">Ferienwohnung</div>
+            <h4>Haus Almblick</h4>
+            <div class="location">📍 Stubaital, 850 m</div>
+            <div class="stars">★★★☆☆</div>
+            <div class="rating-row">
+              <span class="score">9.0</span>
+              <span class="reviews">Sehr gut · 94 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 59</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal">
+          <div class="img">
+            <span class="badge">Nachhaltig</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">Glamping Resort</div>
+            <h4>Alpine Glamping Domes</h4>
+            <div class="location">📍 Pitztal, 1.450 m</div>
+            <div class="stars">★★★★☆</div>
+            <div class="rating-row">
+              <span class="score">9.3</span>
+              <span class="reviews">Hervorragend · 156 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 149</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal reveal-delay-1">
+          <div class="img">
+            <span class="badge">Design & Luxus</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">★★★★★ Design Hotel</div>
+            <h4>Das Tiroler Bergjuwel</h4>
+            <div class="location">📍 Innsbruck, Stadtzentrum</div>
+            <div class="stars">★★★★★</div>
+            <div class="rating-row">
+              <span class="score">9.7</span>
+              <span class="reviews">Außergewöhnlich · 891 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 189</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal reveal-delay-2">
+          <div class="img">
+            <span class="badge">Hütte & Alm</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">Almhütte</div>
+            <h4>Bergkristall Alm</h4>
+            <div class="location">📍 Kaunertal, 2.000 m</div>
+            <div class="stars">★★★☆☆</div>
+            <div class="rating-row">
+              <span class="score">9.1</span>
+              <span class="reviews">Sehr gut · 78 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 39</strong> / Nacht</div>
+          </div>
+        </div>
+        <div class="acc-card reveal reveal-delay-3">
+          <div class="img">
+            <span class="badge">Last Minute</span>
+            <button class="fav-btn">♡</button>
+          </div>
+          <div class="body">
+            <div class="type">★★★ Gasthof</div>
+            <h4>Gasthof Post</h4>
+            <div class="location">📍 Lienz, Osttirol</div>
+            <div class="stars">★★★★☆</div>
+            <div class="rating-row">
+              <span class="score">8.9</span>
+              <span class="reviews">Sehr gut · 203 Bewertungen</span>
+            </div>
+            <div class="price">ab <strong>€ 69</strong> / Nacht</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:2.5rem;">
+        <a href="#" class="btn btn-red">Alle 4.500+ Unterkünfte anzeigen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     ACTIVITIES / ERLEBNISSE
+     ═══════════════════════════════════════════════════ -->
+  <section class="section-pad bg-cream" id="aktivitaeten">
+    <div class="container">
+      <div class="label-tag">Aktivitäten & Erlebnisse</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+        <div>
+          <h2 class="section-title" style="margin-bottom:0.5rem;">
+            Erlebe Tirol <span class="highlight">aktiv.</span>
+          </h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            Ob Klettersteig, Weinprobe oder Yoga-Retreat – buche direkt online.
+          </p>
+        </div>
+        <a href="#" class="btn btn-outline btn-sm">Alle Aktivitäten →</a>
+      </div>
+
+      <div class="act-grid">
+        <div class="act-card reveal">
+          <div class="icon">🥾</div>
+          <h4>Geführte Hochtour am Stubaier Gletscher</h4>
+          <p>Erfahrene Bergführer, Kleingruppen (max 6), Leihausrüstung inklusive – für Einsteiger & Profis.</p>
+          <div class="act-footer">
+            <span class="price">ab €89</span>
+            <a href="#" class="cta">Buchen →</a>
+          </div>
+        </div>
+        <div class="act-card reveal reveal-delay-1">
+          <div class="icon">🚵</div>
+          <h4>E-Mountainbike Panorama Tour</h4>
+          <p>45 km durchs Ötztal & Pitztal – 5 Stunden mit Mittagessen auf einer urigen Alm, E-Bike inklusive.</p>
+          <div class="act-footer">
+            <span class="price">ab €59</span>
+            <a href="#" class="cta">Buchen →</a>
+          </div>
+        </div>
+        <div class="act-card reveal reveal-delay-2">
+          <div class="icon">🪂</div>
+          <h4>Tandemflug über Innsbruck</h4>
+          <p>Start am Hafelekar, 360°-Panorama über die Nordkette und das Inntal. Atemberaubend!</p>
+          <div class="act-footer">
+            <span class="price">ab €149</span>
+            <a href="#" class="cta">Buchen →</a>
+          </div>
+        </div>
+        <div class="act-card reveal">
+          <div class="icon">🧘</div>
+          <h4>3-Tage Yoga & Wellness Retreat</h4>
+          <p>Meditation, Berg-Yoga, Sauna und regionale Küche – inklusive Übernachtung im 4-Sterne Hotel.</p>
+          <div class="act-footer">
+            <span class="price">ab €399</span>
+            <a href="#" class="cta">Buchen →</a>
+          </div>
+        </div>
+        <div class="act-card reveal reveal-delay-1">
+          <div class="icon">🍷</div>
+          <h4>Weinprobe an der Südtiroler Weinstraße</h4>
+          <p>5 Weingüter besuchen, Kellerführung, Käsebegleitung. Transfer inklusive. (Saison Apr–Okt)</p>
+          <div class="act-footer">
+            <span class="price">ab €45</span>
+            <a href="#" class="cta">Buchen →</a>
+          </div>
+        </div>
+        <div class="act-card reveal reveal-delay-2">
+          <div class="icon">🎿</div>
+          <h4>Skikurs für Einsteiger & Kinder</h4>
+          <p>4 Stunden/Tag, max 8 Personen pro Gruppe. Liftpass und Leihski inklusive. Alle Skigebiete.</p>
+          <div class="act-footer">
+            <span class="price">ab €129</span>
+            <a href="#" class="cta">Buchen →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     EVENTS (dark section)
+     ═══════════════════════════════════════════════════ -->
+  <section class="section-dark section-pad" id="events">
+    <div class="container">
+      <div class="label-tag">Events & Veranstaltungen</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+        <div>
+          <h2 class="section-title" style="margin-bottom:0.5rem;">
+            Was ist los <span class="highlight">in Tirol?</span>
+          </h2>
+          <p class="section-sub">
+            Von traditionellen Almfesten bis zu internationalen Sport-Events – 
+            hier ist immer etwas los.
+          </p>
+        </div>
+        <a href="#" class="btn btn-white btn-sm">Alle Events →</a>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-card reveal">
+          <div class="date-box">
+            <div class="day">14</div>
+            <div class="month">JUN</div>
+          </div>
+          <div class="info">
+            <h4>Almabtrieb im Zillertal</h4>
+            <div class="loc">📍 Zell am Ziller</div>
+            <p>Traditioneller Almabtrieb mit über 500 Kühen, geschmückt mit Blumenkränzen – buntes Volksfest mit Musik und regionaler Kulinarik.</p>
+            <span class="cat">🎪 Tradition</span>
+          </div>
+        </div>
+        <div class="event-card reveal reveal-delay-1">
+          <div class="date-box">
+            <div class="day">22</div>
+            <div class="month">JUL</div>
+          </div>
+          <div class="info">
+            <h4>Bergisel-Skispringen Sommer Grand Prix</h4>
+            <div class="loc">📍 Innsbruck, Bergisel</div>
+            <p>Internationales Skispringen auf der legendären Bergisel-Schanze. Weltelite auf Matten.</p>
+            <span class="cat">🏆 Sport</span>
+          </div>
+        </div>
+        <div class="event-card reveal reveal-delay-2">
+          <div class="date-box">
+            <div class="day">08</div>
+            <div class="month">AUG</div>
+          </div>
+          <div class="info">
+            <h4>Ötztal Cycle Marathon</h4>
+            <div class="loc">📍 Ötztal, Sölden</div>
+            <p>Einer der härtesten Radmarathons der Alpen. 238 km und 5.500 Höhenmeter durch das gesamte Ötztal.</p>
+            <span class="cat">🚵 Sport</span>
+          </div>
+        </div>
+        <div class="event-card reveal">
+          <div class="date-box">
+            <div class="day">15</div>
+            <div class="month">SEP</div>
+          </div>
+          <div class="info">
+            <h4>Tiroler Weintage & Genussmarkt</h4>
+            <div class="loc">📍 Innsbruck Altstadt</div>
+            <p>Über 60 Winzer und Kulinarik-Aussteller präsentieren die besten Weine und Produkte aus Tirol und Südtirol.</p>
+            <span class="cat">🍷 Genuss</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     BLOG / MAGAZIN
+     ═══════════════════════════════════════════════════ -->
+  <section class="section-pad" id="magazin">
+    <div class="container">
+      <div class="label-tag">Magazin</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+        <div>
+          <h2 class="section-title" style="margin-bottom:0.5rem;">
+            Neues aus <span class="highlight">Tirol</span>
+          </h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            Geschichten, Tipps und Inspiration – kuratiert von unserer KI und den Tiroler Redaktionen.
+          </p>
+        </div>
+        <a href="#" class="btn btn-outline btn-sm">Alle Beiträge →</a>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card reveal">
+          <div class="img">
+            <span class="cat">Wandern</span>
+          </div>
+          <div class="body">
+            <div class="date">12. Mai 2026</div>
+            <h4>Die 10 schönsten Wanderungen im Ötztal für 2026</h4>
+            <p>Von leichten Almrunden bis zu anspruchsvollen Gletschertouren – unsere KI hat die 10 Highlights zusammengestellt.</p>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="img">
+            <span class="cat">Kulinarik</span>
+          </div>
+          <div class="body">
+            <div class="date">5. Mai 2026</div>
+            <h4>Tiroler Speck & Käse: Eine kulinarische Entdeckungsreise</h4>
+            <p>Besuch bei 5 Senner und Bauern, die ihr Handwerk seit Generationen perfektionieren.</p>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="img">
+            <span class="cat">Nachhaltig</span>
+          </div>
+          <div class="body">
+            <div class="date">28. April 2026</div>
+            <h4>Mit dem Zug nach Tirol: So reist du umweltfreundlich in die Berge</h4>
+            <p>Nightjet, Railjet und die neue Alpentransit-Bahn – nachhaltig anreisen leicht gemacht.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+     NEWSLETTER / APP CTA
+     ═══════════════════════════════════════════════════ -->
+  <div class="cta-ribbon">
+    <div class="container">
+      <div>
+        <h2>✦ KI-Newsletter</h2>
+        <p>Wöchentlich die besten Touren, Events und Last-Minute-Angebote – automatisch für dich zusammengestellt.</p>
+      </div>
+      <div class="right">
+        <div class="email-input">
+          <input type="email" placeholder="Deine E-Mail-Adresse" />
+          <button type="button">Anmelden →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="grid">
+        <div class="col">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+            <div class="nav-logo" style="width:48px;height:48px;">T</div>
+            <div>
+              <div style="font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:white;">tiroltourismus.com</div>
+              <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);">Offizielles Reiseportal</div>
+            </div>
+          </div>
+          <p>Das KI-gestützte Portal für deinen Urlaub in Tirol. Von der Alm bis zum Gipfel – wir finden dein perfektes Erlebnis.</p>
+          <div class="social">
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Facebook">👍</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+            <a href="#" aria-label="Pinterest">📌</a>
+            <a href="#" aria-label="TikTok">🎵</a>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Regionen</h4>
+          <a href="#">Innsbruck</a>
+          <a href="#">Ötztal</a>
+          <a href="#">Zillertal</a>
+          <a href="#">Stubaital</a>
+          <a href="#">Pitztal</a>
+          <a href="#">Osttirol</a>
+          <a href="#">Alle Regionen</a>
+        </div>
+        <div class="col">
+          <h4>Aktivitäten</h4>
+          <a href="#">Wandern</a>
+          <a href="#">Skifahren</a>
+          <a href="#">Radfahren</a>
+          <a href="#">Klettern</a>
+          <a href="#">Wellness</a>
+          <a href="#">Kulinarik</a>
+          <a href="#">Kultur</a>
+        </div>
+        <div class="col">
+          <h4>Service</h4>
+          <a href="#">Unterkunft suchen</a>
+          <a href="#">Pistenbericht</a>
+          <a href="#">Wetter</a>
+          <a href="#">Anreise</a>
+          <a href="#">FAQ</a>
+          <a href="#">Newsletter</a>
+          <a href="#">App</a>
+        </div>
+        <div class="col">
+          <h4>Rechtlich</h4>
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
+          <a href="#">Cookie-Einstellungen</a>
+          <a href="#">Mediadaten</a>
+          <a href="#">Partner werden</a>
+        </div>
+      </div>
+      <div class="bottom">
+        <span>© 2026 tiroltourismus.com – Alpine Experience, kuratiert mit ♥ und KI</span>
+        <div class="links">
+          <a href="#">Zum Seitenanfang ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ═══════════════════════════════════════════════════
+       NAV SCROLL
+       ═══════════════════════════════════════════════════ */
+    window.addEventListener('scroll', () => {
+      document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ═══════════════════════════════════════════════════
+       SCROLL REVEAL (IntersectionObserver)
+       ═══════════════════════════════════════════════════ */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px' });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+
+    /* ═══════════════════════════════════════════════════
+       ACC TAB SWITCH (demo)
+       ═══════════════════════════════════════════════════ */
+    function switchAccTab(el) {
+      document.querySelectorAll('.acc-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    /* ═══════════════════════════════════════════════════
+       FAV TOGGLE
+       ═══════════════════════════════════════════════════ */
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.textContent = btn.textContent === '♡' ? '♥' : '♡';
+        btn.style.color = btn.textContent === '♥' ? 'var(--tirol-red)' : '';
+        // Update badge
+        const badge = document.querySelector('.nav-fav .badge');
+        const count = document.querySelectorAll('.fav-btn:contains(♥)').length;
+        // simple fallback
+        const hearts = [...document.querySelectorAll('.fav-btn')].filter(b => b.textContent === '♥');
+        badge.textContent = hearts.length;
+      });
+    });
+
+    /* ═══════════════════════════════════════════════════
+       FAV BADGE FIX
+       ═══════════════════════════════════════════════════ */
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.textContent = btn.textContent.trim() === '♡' ? '♥' : '♡';
+        btn.style.color = btn.textContent === '♥' ? 'var(--tirol-red)' : '';
+        setTimeout(() => {
+          const hearts = [...document.querySelectorAll('.fav-btn')].filter(b => b.textContent.trim() === '♥');
+          document.querySelector('.nav-fav .badge').textContent = hearts.length;
+        }, 10);
+      });
+    });
+
+    /* ═══════════════════════════════════════════════════
+       MENU TOGGLE (mobile)
+       ═══════════════════════════════════════════════════ */
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+      const menu = document.querySelector('.nav-menu');
+      menu.classList.toggle('show');
+      if (menu.classList.contains('show')) {
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column';
+        menu.style.position = 'absolute';
+        menu.style.top = '100%';
+        menu.style.left = '0';
+        menu.style.right = '0';
+        menu.style.background = 'white';
+        menu.style.padding = '1rem';
+        menu.style.boxShadow = '0 20px 40px rgba(0,0,0,0.1)';
+        menu.style.borderRadius = '0 0 12px 12px';
+        menu.style.zIndex = '200';
+      } else {
+        menu.style.display = '';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -28,6 +28,16 @@ npm run preview
 
 Der Deploy erfolgt automatisch über **GitHub Actions** bei jedem Push auf `master`.
 
+## Backup
+
+Wöchentliches Backup aller JSON-Daten in `src/data/` über **GitHub Actions** (`backup.yml`):
+- **Zeitplan**: Jeden Montag 03:00 UTC
+- **Zielbranch**: `backups` (wird automatisch angelegt)
+- **Format**: `backups/tirol-content-<timestamp>.zip`
+- **Aufbewahrung**: Die letzten 24 Snapshots, ältere werden automatisch gelöscht
+- **Manuell starten**: GitHub → Actions → "Weekly JSON Data Backup" → "Run workflow"
+- **Lokales Backup**: `bash scripts/backup-now.sh` (erzeugt zip im `backups/`-Ordner)
+
 ### Workflow: `.github/workflows/deploy.yml`
 
 1. **Checkout** — Repository auschecken

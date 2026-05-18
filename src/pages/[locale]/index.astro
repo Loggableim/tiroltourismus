@@ -6,6 +6,7 @@ import AccommodationCard from '../../components/AccommodationCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import GastroCard from '../../components/GastroCard.astro';
 import SightCard from '../../components/SightCard.astro';
+import NewsletterForm from '../../components/NewsletterForm.tsx';
 import { readCollection, isPublished, readSingleton } from '../../lib/content.js';
 
 export async function getStaticPaths() {
@@ -328,20 +329,7 @@ function formatDate(d) {
     </section>
 
     <!-- ═══ NEWSLETTER ═══ -->
-    <section class="newsletter" id="newsletter" aria-label="Newsletter">
-      <div class="container">
-        <div>
-          <h2>{t.newsletter.title}</h2>
-          <p>{t.newsletter.desc}</p>
-          <form class="nl-form" onsubmit="return handleNewsletter(event)">
-            <input type="email" placeholder={t.newsletter.placeholder} required>
-            <button type="submit">{t.newsletter.button}</button>
-          </form>
-          <div class="nl-disclaimer">{t.newsletter.disclaimer}</div>
-          <div class="nl-success" id="nlSuccess">{t.newsletter.success}</div>
-        </div>
-      </div>
-    </section>
+    <NewsletterForm client:load />
 
     <!-- ═══ PARTNER ═══ -->
     <section class="partner section" aria-label={locale === 'en' ? 'Partners' : 'Partner'}>
@@ -417,47 +405,6 @@ function formatDate(d) {
 })();
 </script>
 
-<!-- ═══ NEWSLETTER HANDLER ═══ -->
-<script is:inline>
-const NEWSLETTER_API_URL = 'https://webhook.tiroltourismus.com/api/newsletter';
-const NL_WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
-
-async function handleNewsletter(e) {
-  e.preventDefault();
-  const form = e.target;
-  const email = form.querySelector('input[type="email"]').value;
-  const nlSuccess = document.getElementById('nlSuccess');
-  if (!email) return false;
-
-  try {
-    if (NEWSLETTER_API_URL) {
-      await fetch(NEWSLETTER_API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-    } else if (NL_WEB3FORMS_KEY !== 'YOUR_ACCESS_KEY_HERE') {
-      await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: NL_WEB3FORMS_KEY,
-          email: email,
-          subject: '📬 Newsletter-Anmeldung – tiroltourismus.com',
-          message: `Neue Newsletter-Anmeldung\n\nE-Mail: ${email}`,
-          botcheck: '',
-        }),
-      });
-    }
-  } catch (_) { /* silent fallback */ }
-
-  // Show success either way
-  form.style.display = 'none';
-  if (nlSuccess) nlSuccess.style.display = 'block';
-  return false;
-}
-</script>
-
 <style is:global>
   /* ═══ HERO ═══ */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 24px 60px}
@@ -468,9 +415,9 @@ async function handleNewsletter(e) {
   .hero-content{position:relative;z-index:2;max-width:800px}
   .hero-weather{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);margin-bottom:20px;font-size:13px;color:rgba(255,255,255,.85);min-height:36px}
   .hero-badge{display:inline-flex;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);margin-bottom:24px;gap:6px}
-  .hero h1{font-family:var(--font-display);font-size:clamp(64px,12vw,140px);line-height:.85;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
-  .hero h1 .line{display:block}
-  .hero h1 .line:last-child{color:transparent;-webkit-text-stroke:2px var(--text)}
+  .hero h1{font-family:'Prata',serif;font-size:clamp(64px,12vw,140px);line-height:.85;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+  .hero h1 .line:first-child{letter-spacing:6px}
+  .hero h1 .line:last-child{background:linear-gradient(135deg,var(--pink),var(--gold),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:heroGradient 4s var(--ease) infinite}
   .hero p{font-size:16px;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 32px;line-height:1.7}
   .hero p .pink{color:var(--pink)}
   .hero p .gold{color:var(--gold)}
@@ -521,6 +468,7 @@ async function handleNewsletter(e) {
   .daily-fav-btn .fav-heart-icon{width:12px;height:12px}
   .daily-star{position:absolute;top:8px;right:8px;font-size:18px;animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  @keyframes heroGradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
   .daily-body{padding:16px;flex:1;display:flex;flex-direction:column}
   .daily-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:2px}
   .daily-name{font-family:var(--font-display);font-size:18px;line-height:1.15;letter-spacing:.3px;color:var(--text);margin-bottom:6px}
@@ -552,19 +500,6 @@ async function handleNewsletter(e) {
   .section-footer{text-align:center;margin-top:32px}
   .section-footer .btn-outline{background:transparent;border:2px solid var(--glass-border);color:var(--text);padding:12px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
   .section-footer .btn-outline:hover{background:var(--text);color:var(--bg);border-color:var(--text);transform:translateY(-3px)}
-
-  /* ═══ NEWSLETTER ═══ */
-  .newsletter{background:linear-gradient(135deg,var(--pink),var(--pink-dark));padding:80px 0;text-align:center;color:#fff}
-  .newsletter h2{font-family:var(--font-display);font-size:clamp(36px,5vw,56px);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-  .newsletter p{font-size:14px;opacity:.9;max-width:520px;margin:0 auto 24px}
-  .nl-form{display:flex;gap:8px;max-width:440px;margin:0 auto}
-  .nl-form input{flex:1;padding:14px 20px;border-radius:100px;border:none;font-size:14px;background:rgba(255,255,255,.15);color:#fff;backdrop-filter:blur(10px)}
-  .nl-form input::placeholder{color:rgba(255,255,255,.5)}
-  .nl-form button{padding:14px 28px;border-radius:100px;border:none;background:#fff;color:var(--pink-dark);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:all .3s}
-  .nl-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
-  .nl-disclaimer{font-size:11px;opacity:.6;margin-top:12px}
-  .nl-success{display:none;margin-top:16px;padding:14px 24px;background:rgba(255,255,255,.15);border-radius:100px;font-size:14px;font-weight:600}
-  @media(max-width:500px){.nl-form{flex-direction:column}}
 
   /* ═══ PARTNER ═══ */
   .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:80px 0}

@@ -31,4 +31,14 @@ const { titel, slug, teaser, datum, kategorie, emoji = '📰' } = Astro.props;
   .article-body p{font-size:13px;color:var(--text2);line-height:1.6;flex:1;margin-bottom:12px}
   .article-link{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink);margin-top:auto;display:inline-flex;align-items:center;gap:4px;transition:all .3s}
   .article-link:hover{gap:8px}
+  @media(max-width:600px){
+    .article-img{height:140px}
+    .article-body h3{font-size:20px}
+    .article-body{padding:16px 18px}
+  }
+  @media(max-width:480px){
+    .article-img{height:120px}
+    .article-body h3{font-size:18px}
+    .article-body{padding:14px}
+  }
 </style>

@@ -54,4 +54,16 @@ const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier =
   .uk-na{font-size:12px;color:var(--text3)}
   .uk-cta{display:block;width:100%;padding:12px;margin-top:14px;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
   .uk-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
+  @media(max-width:600px){
+    .uk-img{height:120px}
+    .uk-name{font-size:20px}
+    .uk-body{padding:14px 18px 18px}
+    .uk-cta{padding:11px}
+  }
+  @media(max-width:480px){
+    .uk-img{height:100px}
+    .uk-name{font-size:18px}
+    .uk-body{padding:12px}
+    .uk-cta{padding:10px}
+  }
 </style>

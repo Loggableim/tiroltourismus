@@ -21,7 +21,7 @@ const { label, title, content } = Astro.props;
         </h2>
       </div>
     )}
-    <div class="sec-desc-body">{content}</div>
+    <div class="sec-desc-body" set:html={content}></div>
   </div>
 </section>
 
@@ -74,5 +74,41 @@ const { label, title, content } = Astro.props;
     border-radius: var(--radius);
     max-width: 100%;
     margin: 24px 0;
+  }
+
+  /* Zwei-Spalten-Layout für Feature-Grids */
+  .sec-desc-body .feature-grid,
+  .sec-desc-body .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .sec-desc-body .feature-grid > *,
+  .sec-desc-body .features > * {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .sec-desc-body {
+      font-size: 14px;
+    }
+    .sec-desc-body h2 {
+      font-size: 24px;
+    }
+    .sec-desc-body .feature-grid,
+    .sec-desc-body .features {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-desc-body {
+      font-size: 13px;
+    }
+    .sec-desc-body blockquote {
+      padding: 12px 16px;
+    }
   }
 </style>

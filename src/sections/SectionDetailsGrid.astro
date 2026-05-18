@@ -100,7 +100,28 @@ const { items } = Astro.props;
 
   @media (max-width: 768px) {
     .sec-details-grid {
+      gap: 12px;
+    }
+    .sec-detail-item {
+      padding: 14px 16px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .sec-details-grid {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-detail-item {
+      padding: 12px 14px;
+    }
+    .sec-detail-value {
+      font-size: 13px;
+    }
+    .sec-detail-price {
+      font-size: 16px;
     }
   }
 </style>

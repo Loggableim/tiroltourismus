@@ -31,4 +31,26 @@ const { tags, centered = true } = Astro.props;
   .sec-tags-centered {
     justify-content: center;
   }
+
+  @media (max-width: 768px) {
+    .sec-tags-row {
+      gap: 6px;
+    }
+    .sec-tags {
+      padding: 0 0 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-tags-row {
+      gap: 4px;
+    }
+    .sec-tags {
+      padding: 0 0 24px;
+    }
+    .sec-tags-row .tag {
+      font-size: 11px;
+      padding: 3px 10px;
+    }
+  }
 </style>

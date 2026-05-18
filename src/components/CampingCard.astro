@@ -48,4 +48,14 @@ const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier =
   .cp-tag-more{color:var(--text3)!important}
   .cp-cta{display:block;width:100%;padding:12px;margin-top:auto;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
   .cp-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
+  @media(max-width:600px){
+    .cp-img{height:120px}
+    .cp-name{font-size:20px}
+    .cp-body{padding:14px 18px 18px}
+  }
+  @media(max-width:480px){
+    .cp-img{height:100px}
+    .cp-name{font-size:18px}
+    .cp-body{padding:12px}
+  }
 </style>

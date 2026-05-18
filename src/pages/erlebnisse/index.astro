@@ -145,6 +145,23 @@ const kategorieLabel = {
     color: var(--text);
   }
 
+  @media (max-width: 700px) {
+    .kategorie-tabs {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      scrollbar-width: none;
+    }
+    .kategorie-tabs::-webkit-scrollbar { display: none; }
+    .kategorie-btn {
+      padding: 8px 14px;
+      font-size: 11px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
   .erlebnisse-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

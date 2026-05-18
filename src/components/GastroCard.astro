@@ -40,4 +40,14 @@ const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '
   .gastro-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--glass-border)}
   .gastro-preis{font-size:14px;font-weight:700;color:var(--orange)}
   .gastro-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink)}
+  @media(max-width:600px){
+    .gastro-card-img{height:85px}
+    .gastro-body h3{font-size:20px}
+    .gastro-body{padding:14px 18px 18px}
+  }
+  @media(max-width:480px){
+    .gastro-card-img{height:70px}
+    .gastro-body h3{font-size:18px}
+    .gastro-body{padding:12px}
+  }
 </style>

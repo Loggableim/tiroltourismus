@@ -71,4 +71,28 @@ const { value, label, currency = '€', extras, accentColor } = Astro.props;
     gap: 8px;
     margin-top: 16px;
   }
+
+  @media (max-width: 768px) {
+    .sec-price {
+      padding: 44px 0;
+    }
+    .sec-price-value {
+      font-size: clamp(32px, 6vw, 52px);
+    }
+    .sec-price-label {
+      font-size: 17px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-price {
+      padding: 36px 0;
+    }
+    .sec-price-value {
+      font-size: clamp(28px, 6vw, 40px);
+    }
+    .sec-price-label {
+      font-size: 15px;
+    }
+  }
 </style>

@@ -342,11 +342,19 @@
   }
 
   /* ── Responsive ── */
-  @media (max-width: 480px) {
-    .splash-content { padding: 24px 16px; }
-    .splash-logo { width: 260px; }
-    .splash-input-wrap { max-width: 100%; }
-    .splash-input { font-size: 16px; letter-spacing: 6px; padding: 12px 14px; }
-    .splash-btn { padding: 12px 18px; font-size: 11px; }
-  }
+  @media (max-width: 480px) {
+    .splash-content { padding: 24px 16px; }
+    .splash-logo { width: 260px; }
+    .splash-input-wrap { max-width: 100%; }
+    .splash-input { font-size: 16px; letter-spacing: 6px; padding: 12px 14px; }
+    .splash-btn { padding: 12px 18px; font-size: 11px; }
+  }
+
+  @media (max-width: 380px) {
+    .splash-logo { width: 200px; }
+    .splash-title { font-size: clamp(36px, 9vw, 48px); }
+    .splash-content { padding: 16px 12px; }
+    .splash-input { font-size: 14px; letter-spacing: 4px; padding: 10px 12px; }
+    .splash-btn { padding: 10px 14px; font-size: 10px; }
+  }
 </style>

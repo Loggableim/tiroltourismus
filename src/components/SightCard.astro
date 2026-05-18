@@ -42,4 +42,14 @@ const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport
   .sight-preis{font-size:13px;font-weight:700;color:var(--purple)}
   .sight-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink);transition:all .3s}
   .sight-link:hover{gap:6px}
+  @media(max-width:600px){
+    .sight-card-img{height:110px}
+    .sight-body h3{font-size:22px}
+    .sight-body{padding:14px 18px 18px}
+  }
+  @media(max-width:480px){
+    .sight-card-img{height:90px}
+    .sight-body h3{font-size:19px}
+    .sight-body{padding:12px}
+  }
 </style>

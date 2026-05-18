@@ -95,4 +95,37 @@ const {
     margin: 0 auto;
     line-height: 1.6;
   }
+
+  @media (max-width: 768px) {
+    .sec-art-hero {
+      padding: 36px 0 32px;
+    }
+    .sec-art-emoji {
+      font-size: 40px;
+    }
+    .sec-art-hero h1 {
+      font-size: clamp(26px, 4.5vw, 42px);
+    }
+    .sec-art-teaser {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-art-hero {
+      padding: 28px 0 24px;
+    }
+    .sec-art-emoji {
+      font-size: 32px;
+    }
+    .sec-art-hero h1 {
+      font-size: clamp(22px, 5vw, 28px);
+    }
+    .sec-art-teaser {
+      font-size: 14px;
+    }
+    .sec-art-meta {
+      gap: 6px;
+    }
+  }
 </style>

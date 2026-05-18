@@ -217,4 +217,23 @@ const sorted = unterkuenfte.sort((a, b) => {
     color: var(--text);
     background: var(--bg1);
   }
+
+  @media (max-width: 700px) {
+    .tab-switcher {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      max-width: none;
+      border-radius: 100px;
+      scrollbar-width: none;
+    }
+    .tab-switcher::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      padding: 8px 14px;
+      font-size: 11px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
 </style>

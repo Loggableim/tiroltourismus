@@ -182,21 +182,50 @@ const htmlContent = marked.parse(content) as string;
     }
     .sec-art-content h2 {
       font-size: 24px;
+      margin-top: 32px;
     }
     .sec-art-content h3 {
       font-size: 19px;
+      margin-top: 24px;
+    }
+    .sec-art-footer {
+      padding: 28px 0;
     }
     .sec-art-footer-inner {
       flex-direction: column;
       align-items: flex-start;
+    }
+    .sec-art-content pre {
+      padding: 14px;
+      font-size: 13px;
+    }
+    .sec-art-content table {
+      font-size: 14px;
     }
   }
   @media (max-width: 480px) {
     .sec-art-content {
       font-size: 14px;
     }
+    .sec-art-content h2 {
+      font-size: 20px;
+    }
+    .sec-art-content h3 {
+      font-size: 17px;
+    }
     .sec-art-hero h1 {
       font-size: 26px;
+    }
+    .sec-art-footer {
+      padding: 24px 0;
+    }
+    .sec-art-content pre {
+      font-size: 12px;
+      padding: 12px;
+    }
+    .sec-art-content th,
+    .sec-art-content td {
+      padding: 8px 10px;
     }
   }
 </style>

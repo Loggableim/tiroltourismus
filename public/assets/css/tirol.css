@@ -70,9 +70,8 @@ img{max-width:100%;height:auto;display:block}
 .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-@media(max-width:968px){.grid-4{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:550px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+@media(max-width:600px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
 
 /* ═══ Tags / Badges ═══ */
 .tag{display:inline-block;padding:3px 12px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:var(--surface);border:1px solid var(--glass-border)}
@@ -227,8 +226,8 @@ img{max-width:100%;height:auto;display:block}
 .seelen-card:nth-child(4):hover{border-color:var(--orange);box-shadow:0 20px 60px rgba(255,107,53,.15),0 0 40px var(--gold-soft)}
 .seelen-card:nth-child(5):hover{border-color:var(--purple);box-shadow:0 20px 60px rgba(139,92,246,.15),0 0 40px var(--gold-soft)}
 .seelen-card:nth-child(6):hover{border-color:var(--gold);box-shadow:0 20px 60px var(--gold-glow),0 0 40px var(--gold-soft)}
-@media(max-width:900px){.seelen-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.seelen-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.seelen-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.seelen-grid{grid-template-columns:1fr}}
 
 /* ═══ WARUM TIROL ─── */
 .why-tirol{padding:100px 0;background:var(--bg2);position:relative;overflow:hidden}
@@ -249,7 +248,8 @@ img{max-width:100%;height:auto;display:block}
 .why-card .why-stat{font-family:var(--font-display);font-size:48px;line-height:1;letter-spacing:2px;margin-top:16px;display:block}
 .why-card .why-stat.pink{color:var(--pink);-webkit-text-fill-color:var(--pink)}
 .why-card .why-stat.gold{color:var(--gold);-webkit-text-fill-color:var(--gold)}
-@media(max-width:900px){.why-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.why-grid{grid-template-columns:1fr}}
 
 /* ═══ REGIONS ─── */
 .regions{background:var(--bg);padding:100px 0}
@@ -265,8 +265,8 @@ img{max-width:100%;height:auto;display:block}
 .region-bg{position:absolute;inset:0;z-index:0;transition:transform .6s}
 .region-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.3) 100%)}
 .region-dots{position:absolute;inset:0;z-index:1;background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 1px);background-size:16px 16px;pointer-events:none}
-@media(max-width:900px){.regions-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:500px){.regions-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.regions-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.regions-grid{grid-template-columns:1fr}}
 
 /* ═══ ACCOMMODATIONS ─── */
 .accommodations{background:var(--bg2);padding:100px 0}
@@ -298,8 +298,8 @@ img{max-width:100%;height:auto;display:block}
 .accomm-tab{padding:8px 22px;border-radius:50px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;border:1px solid var(--glass-border);background:var(--surface);color:var(--text2);transition:all .3s;cursor:pointer}
 .accomm-tab.active{background:linear-gradient(135deg,var(--pink),#b3006e);border-color:transparent;color:#fff;box-shadow:0 4px 20px var(--pink-glow)}
 .accomm-tab:hover:not(.active){border-color:var(--text3)}
-@media(max-width:900px){.accomm-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:550px){.accomm-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.accomm-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.accomm-grid{grid-template-columns:1fr}}
 
 /* ═══ ACTIVITIES ─── */
 .activities{background:var(--bg);padding:100px 0}

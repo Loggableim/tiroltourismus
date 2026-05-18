@@ -220,5 +220,45 @@ const { title, subtitle, emoji, gradient, size = 'sm', bgImage, meta } = Astro.p
     .sec-hero-meta {
       gap: 12px;
     }
+    .sec-hero-emoji {
+      font-size: 44px;
+    }
+    .sec-hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+    }
+    .sec-hero-md h1 {
+      font-size: clamp(36px, 7vw, 60px);
+    }
+    .sec-hero-sub {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-hero-sm {
+      padding: 32px 0 24px;
+    }
+    .sec-hero-sm.sec-hero-has-img {
+      padding: 48px 0 36px;
+    }
+    .sec-hero-md {
+      padding: 48px 0 36px;
+    }
+    .sec-hero-emoji {
+      font-size: 36px;
+    }
+    .sec-hero h1 {
+      font-size: clamp(24px, 5vw, 32px);
+      letter-spacing: 1px;
+    }
+    .sec-hero-md h1 {
+      font-size: clamp(28px, 7vw, 40px);
+    }
+    .sec-hero-sub {
+      font-size: 13px;
+    }
+    .sec-hero-price-val {
+      font-size: 22px;
+    }
   }
 </style>

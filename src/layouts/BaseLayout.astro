@@ -100,7 +100,6 @@ const settings = readSingleton('einstellungen');
   </style>
 </head>
 <body>
-<SplashScreen />
 <div id="scrollProgress"></div>
 <button class="btt" id="backToTop" aria-label="Nach oben">↑</button>
   <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten">
@@ -230,6 +229,6 @@ const settings = readSingleton('einstellungen');
       </div>
     </div>
   </footer>
-  <script is:inline src="/assets/js/tirol.js"></script>
+  <script is:inline defer src="/assets/js/tirol.js"></script>
 </body>
 </html>

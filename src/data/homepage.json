@@ -3,9 +3,9 @@
     "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
     "badge": "✦ AlpenPop <span class=\"pink\">Tag</span> · <span class=\"gold\">Gold</span> · ALPENPEAK <span class=\"pink\">Nacht</span>",
     "title": ["TIROL", "ANDERS"],
-    "subtitle": "Zwei Seelen, ein Land. <strong class=\"pink\">AlpenPop</strong> bei Tag – hell, bunt, frech.<br><strong class=\"gold\">ALPENPEAK</strong> bei Nacht – dunkel, dramatisch, gold. Willkommen im neuen Tirol.",
-    "ctaPrimary": { "text": "✦ 6 Seelen entdecken", "href": "#seelen", "class": "btn-primary" },
-    "ctaSecondary": { "text": "Regionen erkunden", "href": "#regionen", "class": "btn-secondary" }
+    "subtitle": "Zwei Seelen, ein Land.<br><strong class=\"pink\">AlpenPop</strong> bei Tag – hell, bunt, frech.<br><strong class=\"gold\">ALPENPEAK</strong> bei Nacht – dunkel, dramatisch, gold.<br>Willkommen im neuen Tirol.",
+    "ctaPrimary": { "text": "✦ Jetzt entdecken", "href": "#willkommen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "Unterkünfte finden", "href": "#unterkuenfte", "class": "btn-secondary" }
   },
   "stats": [
     { "icon": "🏔️", "count": 835, "label": "Gipfel über 3.000m" },

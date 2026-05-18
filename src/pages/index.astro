@@ -5,6 +5,7 @@ import RegionCard from '../components/RegionCard.astro';
 import AccommodationCard from '../components/AccommodationCard.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import GastroCard from '../components/GastroCard.astro';
+import SightCard from '../components/SightCard.astro';
 import { readCollection, isPublished } from '../lib/content.js';
 import page from '../data/homepage.json';
 
@@ -25,6 +26,11 @@ const top3Unterkuenfte = sortedUnterkuenfte.slice(0, 3);
 
 // ── Pick 3 random gastro ──
 const shuffledGastro = [...alleGastro].sort(() => Math.random() - 0.5).slice(0, 3);
+
+// ── Top sights: up to 4 (featured first, then shuffled) ──
+const featuredSights = alleSights.filter(s => s.entry.featured);
+const otherSights = alleSights.filter(s => !s.entry.featured);
+const sortedSights = [...featuredSights, ...otherSights.sort(() => Math.random() - 0.5)].slice(0, 4);
 
 // ── Magazine sorted by date (newest first) ──
 const sortedMagazin = [...alleMagazin].sort((a, b) => {
@@ -100,10 +106,38 @@ function formatDate(d) {
       </div>
     </section>
 
+    <!-- ═══ WILLKOMMEN IN TIROL ═══ -->
+    <section class="willkommen section" id="willkommen">
+      <div class="container">
+        <div class="willkommen-grid">
+          <div class="willkommen-text">
+            <div class="section-label" style="text-align:left">#willkommen</div>
+            <h2 class="willkommen-title">Tirol <span>ANDERS</span> erleben</h2>
+            <p class="willkommen-p">Was wäre, wenn ein ganzes Bundesland nach dem Sonnenstand seine Farben wechselt? Pink am Tag, Gold in der Nacht, dazwischen tausend Schattierungen von Alpenpop und Bergromantik. Tirol hat sich neu erfunden – mit einer Dual-Mode-Identity, die es so noch nie gab.</p>
+            <p class="willkommen-p">Ob Du durch neonbeleuchtete Wälder wanderst, in einer Design-Lodge mit Goldakzenten frühstückst oder auf 3.000 Metern den Sonnenuntergang mit elektronischer Musik feierst – Tirol ist bunt, dunkel und anders. Und genau das macht es unvergesslich.</p>
+            <div class="willkommen-features">
+              <div class="willkommen-feature"><span class="wf-icon">🏔️</span><span>835 Dreitausender</span></div>
+              <div class="willkommen-feature"><span class="wf-icon">🎨</span><span>Dual-Mode Identity</span></div>
+              <div class="willkommen-feature"><span class="wf-icon">🌙</span><span>ALPENPEAK bei Nacht</span></div>
+              <div class="willkommen-feature"><span class="wf-icon">🍽️</span><span>Pop-Kulinarik</span></div>
+            </div>
+          </div>
+          <div class="willkommen-highlight">
+            <div class="willkommen-highlight-box">
+              <span class="wh-icon">💡</span>
+              <h3>Wusstest Du?</h3>
+              <p>Tirol hat die erste <strong>Dual-Mode-Destination-Identity</strong> der Welt entwickelt. Das bedeutet: Farbwechsel nach Tageszeit, zwei Logos, eine unverwechselbare Experience – entwickelt von der Design-Schmiede <strong>ALPENPEAK<sup>®</sup></strong>.</p>
+              <a href="/magazin/" class="btn btn-glass btn-sm">Mehr erfahren →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ═══ HEUTE ENTDECKEN ═══ -->
     <section class="daily section" id="heute" aria-label="Heute entdecken">
       <div class="container">
-        <SectionHeader label="#heute" title="Heute entdecken" sub="Zufallsfunde aus allen Kategorien – jeden Tag neu." />
+        <SectionHeader label="#heute" title="Heute entdecken" sub="Zufallsfunde aus allen Kategorien – jeden Tag neu. Klick Dich durch Tirols bunteste Seiten." />
         <div class="daily-grid" id="dailyPicks">
           {dailyPicks.map((item, i) => {
             const name = item.name || item.titel || 'Unbekannt';
@@ -125,29 +159,61 @@ function formatDate(d) {
             );
           })}
         </div>
+        <div class="section-footer">
+          <a href="/orte/" class="btn-outline">Alle Orte &amp; Sehenswürdigkeiten entdecken →</a>
+        </div>
       </div>
     </section>
 
     <!-- ═══ REGIONEN ═══ -->
     <section class="section" id="regionen" aria-label="Regionen">
       <div class="container">
-        <SectionHeader label="#regionen" title="Unsere Region" sub="Ein Land, eine Region – unendliche Geschichten." />
+        <SectionHeader label="#regionen" title="Unsere Regionen" sub="Ein Land, unendlich viele Gesichter. Jede Region Tirols hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals." />
+        <p class="regionen-lead">Egal ob Du actionreiche Tage im Zillertal, kulinarische Genussmomente im Stubaital oder luxuriöse Auszeiten in Kitzbühel suchst – hier findest Du Deine perfekte Tirol-Bühne. Jede Region in unserem Portal wurde kuratiert, bewertet und mit eigenen Farben, Emojis und persönlichen Beschreibungen versehen.</p>
         <div class="section-grid">
           {regionen.map(r => (
             <RegionCard titel={r.entry.titel} slug={r.slug} beschreibung={r.entry.kurzbeschreibung} emoji={r.entry.emoji} bewertung={r.entry.bewertung} farbe={r.entry.farbe} featured={r.entry.featured} />
           ))}
         </div>
+        <div class="section-footer">
+          <a href="/regionen/" class="btn-outline">Alle Regionen entdecken →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SEHENSWÜRDIGKEITEN ═══ -->
+    <section class="section" id="sehenswuerdigkeiten" aria-label="Sehenswürdigkeiten">
+      <div class="container">
+        <SectionHeader label="#sehenswuerdigkeiten" title="Sehenswürdigkeiten" sub="Von goldenen Kirchen bis zu neonbeleuchteten Aussichtspunkten. Tirols Highlights warten auf Dich." />
+        {sortedSights.length > 0 ? (
+          <>
+            <div class="sight-grid">
+              {sortedSights.map(s => (
+                <SightCard name={s.entry.name} slug={s.slug} kurzbeschreibung={s.entry.kurzbeschreibung} kategorie={s.entry.kategorie} emoji={s.entry.emoji} farbe={s.entry.farbe} ort={s.entry.ort} preis={s.entry.preis} />
+              ))}
+            </div>
+            <div class="section-footer">
+              <a href="/sehenswuerdigkeiten/" class="btn-outline">Alle {alleSights.length} Sehenswürdigkeiten anzeigen →</a>
+            </div>
+          </>
+        ) : (
+          <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Sehenswürdigkeiten in der Datenbank erfasst. Neue Einträge folgen in Kürze.</p>
+        )}
       </div>
     </section>
 
     <!-- ═══ UNTERKÜNFTE ═══ -->
     <section class="section" id="unterkuenfte" aria-label="Unterkünfte">
       <div class="container">
-        <SectionHeader label="#unterkuenfte" title="Top Unterkünfte" sub="Handverlesen & nach Qualität gestaffelt." />
+        <SectionHeader label="#unterkuenfte" title="Top Unterkünfte" sub="Handverlesen & nach Qualität gestaffelt. Von der Gold-Lodge bis zum gemütlichen Basic-Studio – finde Dein Tirol-Zuhause." />
+        <p class="section-lead">Unsere Redaktion testet und bewertet jede Unterkunft persönlich. Gold-gekennzeichnete Häuser bieten das volle AlpenPop-Erlebnis mit Design, Stil und besonderen Extras. Silber steht für exzellentes Preis-Leistungs-Verhältnis, Basic für charmant und erschwinglich.</p>
         <div class="section-grid" id="unterkunftGrid">
-          {top3Unterkuenfte.map(u => (
+          {top3Unterkuenfte.length > 0 ? top3Unterkuenfte.map(u => (
             <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} />
-          ))}
+          )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Unterkünfte erfasst.</p>}
+        </div>
+        <div class="section-footer">
+          <a href="/unterkuenfte/" class="btn-outline">Alle {unterkuenfte.length} Unterkünfte anzeigen →</a>
         </div>
       </div>
     </section>
@@ -155,24 +221,38 @@ function formatDate(d) {
     <!-- ═══ GASTRO ═══ -->
     <section class="section" id="gastro" aria-label="Gastronomie">
       <div class="container">
-        <SectionHeader label="#gastro" title="Essen & Trinken" sub="Von der Almhütte bis zur Spitzenküche." />
-        <div class="section-grid" id="gastroGrid">
-          {shuffledGastro.map(g => (
-            <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} preis={g.entry.preis} emoji={g.entry.emoji} farbe={g.entry.farbe} ort={g.entry.ort} />
-          ))}
-        </div>
+        <SectionHeader label="#gastro" title="Essen & Trinken" sub="Von der urigen Almhütte bis zur pop-up Spitzenküche. Tirols Gastro-Szene ist bunter als Du denkst." />
+        {alleGastro.length > 0 ? (
+          <>
+            <div class="section-grid" id="gastroGrid">
+              {shuffledGastro.map(g => (
+                <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} preis={g.entry.preis} emoji={g.entry.emoji} farbe={g.entry.farbe} ort={g.entry.ort} />
+              ))}
+            </div>
+            <div class="section-footer">
+              <a href="/gastro/" class="btn-outline">Alle {alleGastro.length} Gastro-Adressen entdecken →</a>
+            </div>
+          </>
+        ) : <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Gastro-Einträge in der Datenbank erfasst.</p>}
       </div>
     </section>
 
     <!-- ═══ MAGAZIN ═══ -->
     <section class="section" id="magazin" aria-label="Magazin">
       <div class="container">
-        <SectionHeader label="#magazin" title="Stories aus den Bergen" sub="Neueste Geschichten, Tipps & Inspirationen." />
-        <div class="section-grid" id="magazinGrid">
-          {top3Magazin.map(a => (
-            <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} />
-          ))}
-        </div>
+        <SectionHeader label="#magazin" title="Stories aus den Bergen" sub="Neueste Geschichten, Tipps & Inspirationen aus der buntesten Destination der Alpen." />
+        {top3Magazin.length > 0 ? (
+          <>
+            <div class="section-grid" id="magazinGrid">
+              {top3Magazin.map(a => (
+                <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} />
+              ))}
+            </div>
+            <div class="section-footer">
+              <a href="/magazin/" class="btn-outline">Alle Magazin-Beiträge lesen →</a>
+            </div>
+          </>
+        ) : <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Magazinbeiträge veröffentlicht.</p>}
       </div>
     </section>
 
@@ -181,7 +261,7 @@ function formatDate(d) {
       <div class="container">
         <div>
           <h2>#tiroltourismus</h2>
-          <p>Pink &amp; Gold am Morgen, ALPENPEAK am Abend – verpasse keine Neuigkeit aus Tirols buntestem Portal.</p>
+          <p>Pink &amp; Gold am Morgen, ALPENPEAK am Abend – verpasse keine Neuigkeit aus Tirols buntestem Portal. Exklusive Deals, neue Events und Geschichten direkt in Dein Postfach.</p>
           <form class="nl-form" onsubmit="return handleNewsletter(event)">
             <input type="email" placeholder="Deine E-Mail-Adresse" required>
             <button type="submit">Anmelden</button>
@@ -198,7 +278,7 @@ function formatDate(d) {
         <div class="partner-grid">
           <div class="partner-text reveal r1">
             <h2>Partner <span>werden</span></h2>
-            <p>Zeige Deine Unterkunft, Dein Event oder Dein Produkt im poppigsten, goldensten Tourismuskatalog der Alpen. Wir bringen Farbe in Deine Vermarktung.</p>
+            <p>Zeige Deine Unterkunft, Dein Event oder Dein Produkt im poppigsten, goldensten Tourismuskatalog der Alpen. Wir bringen Farbe in Deine Vermarktung – mit modernster Digitaltechnik, KI-gestützten Empfehlungen und einer Community von über 50.000 begeisterten Tirol-Fans.</p>
             <div class="partner-benefits">
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sichtbarkeit bei 50k+ Visitors</div>
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kostenlose Einträge</div>
@@ -322,6 +402,10 @@ function handleNewsletter(e) {
   .section{padding:80px 0}
   .section:nth-child(even){background:var(--bg2)}
 
+  /* ═══ SECTION LEAD TEXT ═══ */
+  .section-lead,.regionen-lead{text-align:center;font-size:14px;color:var(--text2);line-height:1.8;max-width:680px;margin:-24px auto 40px}
+  .section-lead{margin:-24px auto 32px}
+
   /* ═══ HEUTE ENTDECKEN DAILY GRID ═══ */
   .daily-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   @media(max-width:968px){.daily-grid{grid-template-columns:repeat(2,1fr)}}
@@ -339,10 +423,37 @@ function handleNewsletter(e) {
   .daily-name{font-family:var(--font-display);font-size:18px;line-height:1.15;letter-spacing:.3px;color:var(--text);margin-bottom:6px}
   .daily-cta{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink);margin-top:auto}
 
+  /* ═══ WILLKOMMEN ═══ */
+  .willkommen-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:start}
+  .willkommen-text .section-label{text-align:left!important}
+  .willkommen-title{font-family:var(--font-display);font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+  .willkommen-title span{background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .willkommen-p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+  .willkommen-features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+  .willkommen-feature{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--text);padding:10px 16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--glass-border);transition:all .3s}
+  .willkommen-feature:hover{border-color:var(--pink);transform:translateY(-2px)}
+  .wf-icon{font-size:20px}
+  .willkommen-highlight-box{background:linear-gradient(135deg,rgba(255,20,147,.06),rgba(212,168,0,.06));border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px;text-align:center}
+  .wh-icon{font-size:42px;display:block;margin-bottom:8px}
+  .willkommen-highlight-box h3{font-family:var(--font-display);font-size:24px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:var(--text)}
+  .willkommen-highlight-box p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px}
+  .btn-sm{padding:10px 24px;font-size:11px}
+  @media(max-width:800px){.willkommen-grid{grid-template-columns:1fr}.willkommen-features{grid-template-columns:1fr}}
+
+  /* ═══ SIGHT GRID ═══ */
+  .sight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:968px){.sight-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.sight-grid{grid-template-columns:1fr}}
+
+  /* ═══ SECTION CTA FOOTER ═══ */
+  .section-footer{text-align:center;margin-top:32px}
+  .section-footer .btn-outline{background:transparent;border:2px solid var(--glass-border);color:var(--text);padding:12px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+  .section-footer .btn-outline:hover{background:var(--text);color:var(--bg);border-color:var(--text);transform:translateY(-3px)}
+
   /* ═══ NEWSLETTER ═══ */
   .newsletter{background:linear-gradient(135deg,var(--pink),var(--pink-dark));padding:80px 0;text-align:center;color:#fff}
   .newsletter h2{font-family:var(--font-display);font-size:clamp(36px,5vw,56px);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-  .newsletter p{font-size:14px;opacity:.9;max-width:440px;margin:0 auto 24px}
+  .newsletter p{font-size:14px;opacity:.9;max-width:520px;margin:0 auto 24px}
   .nl-form{display:flex;gap:8px;max-width:440px;margin:0 auto}
   .nl-form input{flex:1;padding:14px 20px;border-radius:100px;border:none;font-size:14px;background:rgba(255,255,255,.15);color:#fff;backdrop-filter:blur(10px)}
   .nl-form input::placeholder{color:rgba(255,255,255,.5)}

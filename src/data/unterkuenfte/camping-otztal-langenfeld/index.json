@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Ötztal Längenfeld bietet einen idyllisch gelegenen Campingplatz in Längenfeld, Tirol. <strong>Nur wenige Minuten</strong> von der Ötztaler Hauptstraße entfernt, profitieren Gäste von einer ruhigen Lage mit Ausblick auf die Ötztaler Alpen. <strong>Die Atmosphäre</strong> ist entspannt und naturbelassen, ideal für Familien und Naturfreunde, die einen unverfälschten Urlaub in den Bergen suchen.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "oetztal",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

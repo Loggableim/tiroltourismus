@@ -11,12 +11,9 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [
-    "ferienwohnung",
-    "privat"
-  ],
+  "beschreibung": "<p>Die <strong>Ferienwohnung Holzer Astrid</strong> liegt in Tirol und bietet eine gemütliche Unterkunft für Erholungssuchende. Die Ferienwohnung verfügt über eine voll ausgestattete Küche und ein eigenes Bad. Gäste können die Ruhe der Natur genießen und von hier aus Ausflüge in die umliegende Bergwelt unternehmen.</p>",
+  "ausstattung": ["wifi", "küche"],
+  "tags": ["ferienwohnung", "privat", "familie"],
   "tier": "basic",
   "koordinaten": {
     "lat": "47.1628042",

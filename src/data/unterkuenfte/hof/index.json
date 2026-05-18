@@ -11,8 +11,11 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p>Der <strong>Hof</strong> ist ein traditioneller Gasthof in Tirol, der seinen Gästen eine gemütliche Atmosphäre und regionale Gastlichkeit bietet. Die Unterkunft eignet sich für alle, die das ländliche Tirol in entspannter Umgebung erleben möchten.</p>",
+  "ausstattung": [
+    "restaurant",
+    "parkplatz"
+  ],
   "tags": [
     "gasthof",
     "kulinarik",

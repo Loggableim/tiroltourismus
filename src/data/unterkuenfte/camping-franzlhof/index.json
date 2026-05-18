@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Franzlhof in Söll, Tirol, bietet eine idyllische Naturumgebung mit Blick auf das Ötztal. <strong>Lage:</strong> Der Campingplatz ist ideal gelegen, um die umliegenden Berge und Wanderwege zu erkunden. <strong>Atmosphäre:</strong> Eine ruhige und entspannte Atmosphäre lädt zu ausgedehnten Spaziergängen und zum Entspannen. <strong>Gästenerwartungen:</strong> Gäste können zwischen verschiedenen Stellplätzen wählen und profitieren von modernen Sanitäreinrichtungen und verschiedenen Freizeitmöglichkeiten wie einem Schwimmbad.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "kufstein",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

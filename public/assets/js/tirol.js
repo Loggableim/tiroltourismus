@@ -204,9 +204,9 @@
       '--surface-hover': colors.surfaceHover,
       '--yellow': colors.yellow,
       '--blue': colors.blue,
-      '--warhol-pink': colors.pink,
-      '--warhol-pink-dark': colors.pinkDark,
-      '--warhol-pink-glow': colors.pinkGlow,
+      '--tirol-pink': colors.pink,
+      '--tirol-pink-dark': colors.pinkDark,
+      '--tirol-pink-glow': colors.pinkGlow,
       '--pop-yellow': colors.yellow,
       '--ikea-blue': colors.blue
     };
@@ -263,7 +263,7 @@
     var oldTheme = localStorage.getItem('tirol_theme');
     var newTheme = localStorage.getItem('tirol_auto_theme');
     if (oldTheme && !newTheme) {
-      // 'alpenpeak' → 'night', 'alpenpop' → 'auto'
+      // 'night' → 'night', 'auto' → 'auto'
       localStorage.setItem('tirol_auto_theme', oldTheme === 'alpenpeak' ? 'night' : 'auto');
       localStorage.removeItem('tirol_theme');
     }

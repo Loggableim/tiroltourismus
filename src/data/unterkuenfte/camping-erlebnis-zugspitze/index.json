@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Erlebnis Zugspitze in Garmisch-Partenkirchen bietet eine idyllische Naturumgebung mit Aussicht auf die Zugspitze. Der Campingplatz liegt in der Nähe des Eibsee und bietet einen ruhigen Rückzugsort mit verschiedenen Wohnmöglichkeiten. <strong>Gäste</strong> können zwischen Ferienhäusern und Campingplätzen wählen und genießen die frische Bergluft sowie Ausflugsmöglichkeiten in die umliegende Bergwelt.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

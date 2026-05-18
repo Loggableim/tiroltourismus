@@ -11,10 +11,19 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Insel Buchau am Staffelsee bietet einen idyllischen Rückzugsort inmitten der Natur Tirols. Gelegen direkt am Ufer des Staffelsees, bietet der Campingplatz eine entspannte Atmosphäre und direkten Zugang zum klaren Wasser. <strong>Die malerische Umgebung</strong> und die ruhige Lage machen diesen Platz zu einem idealen Erholungsort für Natur- und Wassurliebhaber.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor",
+    "see",
+    "wasser"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

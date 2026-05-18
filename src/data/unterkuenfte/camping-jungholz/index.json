@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Jungholz bietet einen idyllischen Rückzugsort in Jungholz, Tirol. <strong>Die Campingplatz-Lage</strong> ist ideal für Natur- und Wanderliebhaber, da sie in der Nähe von Wanderwegen und dem Skigebiet befindet. Die <strong>atmosphärische Ruhe</strong> und die Aussicht auf die umliegende Bergkulisse sorgen für eine entspannte und erholsame Urlaubsatmosphäre. Gäste können zwischen verschiedenen Stellplätzen und gemütlichen Ferienhäusern wählen und genießen die Nähe zur Natur sowie verschiedene Freizeitmöglichkeiten direkt am Campingplatz.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "ausserfern",
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

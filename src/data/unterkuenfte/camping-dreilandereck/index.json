@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Der <strong>Camping Dreiländereck</strong> liegt idyllisch im Herzen von Ried im Oberinntal, Tirol, nahe der Grenze zu Deutschland und Südtirol. Umgeben von unberührter Natur und den majestätischen Bergen bietet dieser Campingplatz eine entspannte Atmosphäre, ideal für Natur- und Familienurlauber. <strong>Gäste</strong> können zwischen verschiedenen Stellplätzen wählen und profitieren von modernen Einrichtungen wie dem Schwimmbecken und dem Kinderplanschbecken.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "landeck",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

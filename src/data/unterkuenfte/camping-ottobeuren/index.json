@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Ottobeuren bietet eine idyllische Gelegenheit, um in der Natur zu entspannen. <strong>Gelegen im Herzen Tirols</strong>, bietet dieser Campingplatz eine ruhige und abgeschiedene Lage nahe dem Ort Ottobeuren. Die <strong>stimmungsvolle Atmosphäre</strong> ist geprägt von den umliegenden Bergen und dem nahegelegenen Fluss, der für angenehme Spaziergänge sorgt. Gäste können hier zwischen verschiedenen Stellplätzen wählen und genießen die Ruhe und Schönheit der Umgebung.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

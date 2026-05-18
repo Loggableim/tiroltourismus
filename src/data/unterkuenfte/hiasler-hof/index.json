@@ -11,12 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> begrüßt seine Gäste mit tiroler Gastfreundschaft und einer ruhigen, naturnahen Umgebung. Die gemütlichen Zimmer und der traditionelle Gastraum schaffen eine einladende Atmosphäre. In der Umgebung laden zahlreiche Wanderwege und Ausflugsziele zu Erkundungstouren ein.</p>",
+  "ausstattung": [
+    "Restaurant",
+    "Parkplatz",
+    "Tiroler Küche"
+  ],
   "tags": [
     "gasthof",
     "kulinarik",
-    "tradition"
+    "tradition",
+    "familie"
   ],
   "tier": "basic",
   "koordinaten": {

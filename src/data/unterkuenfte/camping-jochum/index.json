@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Jochum bietet einen ruhigen Rückzugsort inmitten der Tiroler Alpen. <strong>Lage:</strong> Der Campingplatz liegt etwa 1.500 Meter über dem Meeresspiegel und ist umgeben von den majestätischen Bergen. <strong>Atmosphäre:</strong> Hier herrscht eine entspannte und familiäre Stimmung, ideal für Naturfreunde und Familien. <strong>Erwartungen:</strong> Gäste können zwischen verschiedenen Stellplätzen wählen und profitieren von gut ausgestatteten Sanitäreinrichtungen und einem kleinen Supermarkt am Campingplatz.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

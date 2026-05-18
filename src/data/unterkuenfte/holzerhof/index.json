@@ -11,13 +11,9 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [
-    "gasthof",
-    "kulinarik",
-    "tradition"
-  ],
+  "beschreibung": "<p>Der <strong>Holzerhof</strong> ist ein traditioneller Gasthof in Tirol und bietet seinen Gästen eine herzliche Gastfreundschaft. Das Haus verfügt über gemütliche Zimmer und einen Gastgarten, der zum Verweilen einlädt. Die Küche verwöhnt mit regionalen Spezialitäten und tiroler Schmankerln.</p>",
+  "ausstattung": ["wifi", "restaurant"],
+  "tags": ["gasthof", "kulinarik", "tradition"],
   "tier": "basic",
   "koordinaten": {
     "lat": "47.1664722",

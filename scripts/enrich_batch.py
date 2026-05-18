@@ -12,15 +12,21 @@ schreibt sie zurück. Rate-Limit: 1 Request pro Sekunde.
 import json, os, sys, time, glob, re, argparse, ssl, urllib.request
 
 # Load .env if OPENCODE_GO_API_KEY is not yet set
-env_file = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
-                        "home", ".env")
-if not os.environ.get("OPENCODE_GO_API_KEY") and os.path.exists(env_file):
-    with open(env_file) as f:
-        for line in f:
-            line = line.strip()
-            if "=" in line and not line.startswith("#"):
-                k, v = line.split("=", 1)
-                os.environ[k] = v
+for env_file_candidate in [
+    "E:/HermesPortable/home/.env",
+    os.path.expanduser(r"~\.hermes\.env"),
+    os.path.join(os.environ.get("HERMES_HOME", ""), ".env"),
+    os.path.join(os.path.dirname(os.environ.get("HERMES_HOME", "")), ".env"),
+]:
+    if env_file_candidate and os.path.exists(env_file_candidate):
+        with open(env_file_candidate) as f:
+            for line in f:
+                line = line.strip()
+                if "=" in line and not line.startswith("#"):
+                    k, v = line.split("=", 1)
+                    os.environ[k] = v
+        if os.environ.get("OPENCODE_GO_API_KEY"):
+            break
 
 # Use requests if available (handles SSL/cert validation better on Windows)
 try:
@@ -96,6 +102,62 @@ def generate_description(name, ort, typ, region):
         "temperature": 0.4,
     }
 
+    if HAS_REQUESTS:
+        return _generate_via_requests(body)
+    else:
+        return _generate_via_urllib(body)
+
+
+def _generate_via_requests(body):
+    import requests as req_lib
+    try:
+        resp = req_lib.post(
+            API_URL,
+            json=body,
+            headers={
+                "Authorization": f"Bearer {API_KEY}",
+                "User-Agent": "curl/8.0.0",
+            },
+            timeout=120,
+        )
+        if resp.status_code != 200:
+            raise ValueError(f"HTTP {resp.status_code}: {resp.text[:200]}")
+        result = resp.json()
+        text = result["choices"][0]["message"]["content"].strip()
+        if not text:
+            raise ValueError("Empty content from API")
+        if not text.startswith("<"):
+            text = f"<p>{text}</p>"
+        return text
+    except Exception as e:
+        print(f"    ⚠️ API-Fehler: {e}")
+        try:
+            time.sleep(3)
+            resp = req_lib.post(
+                API_URL,
+                json=body,
+                headers={
+                    "Authorization": f"Bearer {API_KEY}",
+                    "User-Agent": "curl/8.0.0",
+                },
+                timeout=120,
+            )
+            if resp.status_code != 200:
+                raise ValueError(f"HTTP {resp.status_code}")
+            result = resp.json()
+            text = result["choices"][0]["message"]["content"].strip()
+            if not text:
+                raise ValueError("Empty content on retry")
+            if not text.startswith("<"):
+                text = f"<p>{text}</p>"
+            return text
+        except Exception as e2:
+            print(f"    ⚠️ Retry auch fehlgeschlagen: {e2}")
+            return ""
+
+
+def _generate_via_urllib(body):
+    """Fallback via urllib if requests is not installed."""
     req = urllib.request.Request(
         API_URL,
         data=json.dumps(body).encode(),
@@ -112,13 +174,11 @@ def generate_description(name, ort, typ, region):
         text = result["choices"][0]["message"]["content"].strip()
         if not text:
             raise ValueError("Empty content from API")
-        # Clean up - ensure it's wrapped in <p>
         if not text.startswith("<"):
             text = f"<p>{text}</p>"
         return text
     except Exception as e:
         print(f"    ⚠️ API-Fehler: {e}")
-        # Retry once after a short wait
         try:
             time.sleep(3)
             resp = urllib.request.urlopen(req, timeout=120)

@@ -11,12 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> ist ein traditioneller Gasthof mit Tiroler Gastlichkeit und gemütlichen Zimmern. Die ruhige Lage in der Natur lädt zum Entspannen ein, während die umliegende Bergwelt vielfältige Wandermöglichkeiten bietet. Die hauseigene Küche verwöhnt Gäste mit regionalen Spezialitäten.</p>",
+  "ausstattung": [
+    "Restaurant",
+    "Parkplatz",
+    "Tiroler Küche"
+  ],
   "tags": [
     "gasthof",
     "kulinarik",
-    "tradition"
+    "tradition",
+    "familie"
   ],
   "tier": "basic",
   "koordinaten": {

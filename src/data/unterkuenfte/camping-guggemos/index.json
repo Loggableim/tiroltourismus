@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Guggemos in Füssen, Tirol, bietet eine idyllische Naturumgebung mit Aussicht auf die Alpen. Der Campingplatz liegt am südlichen Ortsrand von Füssen, nur wenige Minuten von der Altstadt entfernt, und bietet einen ruhigen Rückzugsort. <strong>Die Atmosphäre</strong> ist entspannt und familienfreundlich, mit ausgedehnten Wiesen und einem kleinen Teich, der zum Verweilen einlädt.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

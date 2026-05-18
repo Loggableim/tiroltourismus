@@ -12,7 +12,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-// Dark tile style that matches the AlpenPeak dark theme
+// Dark tile style that matches the dark theme
 const TILES = {
   light: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
   dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
@@ -23,7 +23,7 @@ const TIROL_CENTER = { lat: 47.15, lng: 11.4 };
 
 function getTheme() {
   if (typeof document === 'undefined') return 'light';
-  return document.documentElement.getAttribute('data-theme') === 'alpenpeak' ? 'dark' : 'light';
+  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
 }
 
 export default function LeafletMap({

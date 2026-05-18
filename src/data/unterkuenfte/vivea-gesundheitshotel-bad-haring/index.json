@@ -12,7 +12,9 @@
   "email": null,
   "webseite": "http://www.kurzentrum.at/",
   "beschreibung": "",
-  "ausstattung": [],
+  "ausstattung": [
+    "pool"
+  ],
   "tags": [
     "hotel",
     "komfort",
@@ -24,7 +26,5 @@
     "lat": "47.5146703",
     "lng": "12.1091403"
   },
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null
+  "status": "published"
 }

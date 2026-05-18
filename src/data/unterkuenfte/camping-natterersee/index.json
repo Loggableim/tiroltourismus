@@ -11,10 +11,20 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Natterersee bietet einen idyllischen Rückzugsort inmitten der Tiroler Natur. <strong>Gelegen am Ufer des Natterersees</strong>, bietet dieser Campingplatz nicht nur eine entspannte Atmosphäre, sondern auch direkten Zugang zum klaren, kristallinen Wasser. Die <strong>schöne, ruhige Lage</strong> in Natters, Tirol, garantiert einen unvergesslichen Urlaub, weit entfernt vom Lärm der Großstädte, aber dennoch nur wenige Minuten von der Ortschaft entfernt.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "innsbruck",
+    "outdoor",
+    "see",
+    "wasser"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

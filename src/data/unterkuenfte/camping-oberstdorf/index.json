@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Oberstdorf bietet eine idyllische, erhöhte Lage mit einer Aussicht auf die umliegenden Berge und Wälder. <strong>Nur wenige Minuten</strong> vom Ortszentrum entfernt, bietet dieser Campingplatz eine entspannte Atmosphäre und einen direkten Zugang zu Wanderwegen und dem Skigebiet. Gäste können zwischen verschiedenen Stellplätzen wählen und genießen die Ruhe der Natur sowie die Nähe zu den Hauptattraktionen von Oberstdorf.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

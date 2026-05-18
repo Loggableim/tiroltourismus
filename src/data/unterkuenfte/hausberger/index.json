@@ -11,14 +11,19 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt in ruhiger Lage in Söll und bietet Gästen eine herzliche, familiäre Atmosphäre. Die Zimmer sind einfach und geschmackvoll eingerichtet. Als Ausgangspunkt für Aktivitäten in der Skiwelt Wilder Kaiser – Brixental ist der Gasthof besonders bei Wanderern und Skifahrern beliebt.</p>",
+  "ausstattung": [
+    "Restaurant",
+    "Parkplatz",
+    "Tiroler Küche"
+  ],
   "tags": [
     "berg",
     "gasthof",
     "kufstein",
     "kulinarik",
-    "tradition"
+    "tradition",
+    "familie"
   ],
   "tier": "basic",
   "koordinaten": {

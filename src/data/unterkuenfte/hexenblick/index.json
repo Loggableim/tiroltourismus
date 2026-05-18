@@ -11,12 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p>Das <strong>Hotel Hexenblick</strong> in Söll empfängt seine Gäste mit komfortablen Zimmern und einem freundlichen Service. Die Unterkunft bietet einen schönen Ausblick auf die umliegende Bergwelt der Skiwelt Wilder Kaiser. Gäste schätzen die ruhige Lage und die Nähe zu den Wander- und Skigebieten der Region.</p>",
+  "ausstattung": [
+    "Restaurant",
+    "Parkplatz",
+    "Aussicht"
+  ],
   "tags": [
     "hotel",
     "komfort",
-    "kufstein"
+    "kufstein",
+    "ausblick",
+    "berg"
   ],
   "tier": "basic",
   "koordinaten": {

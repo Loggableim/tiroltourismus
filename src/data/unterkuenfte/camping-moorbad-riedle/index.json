@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Moorbad Riedle bietet einen idyllischen Rückzugsort inmitten der Tiroler Landschaft. <strong>Gelegen im Stubaital</strong>, nahe dem Ötztal, profitieren Gäste von einer ruhigen und erholsamen Umgebung. Der Campingplatz ist ideal für Natur- und Abenteuerliebhaber, die Entspannung und Aktivitäten in der unberührten Natur genießen möchten.</p>",
+  "ausstattung": [
+    "pool",
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

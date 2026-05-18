@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping beim Fischer in Münsing, Tirol, bietet einen idyllischen Rückzugsort in der Nähe von Hallstatt. <strong>Gelegen am Ufer des Hallstätter Sees</strong>, bietet dieser Campingplatz eine ruhige und entspannte Atmosphäre. Die Umgebung ist ideal für Wanderungen und Ausflüge in die umliegende Natur Tirols. <strong>Die Campingsaison</strong> erstreckt sich von April bis Oktober, sodass Gäste die Schönheit des Jahreszeitenwechsels genießen können.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Edelweiss in Neustift im Stubaital, Tirol, bietet eine idyllische Naturumgebung für Wanderungen und Erholung. Der Campingplatz liegt in der Nähe des Stubai Gaistries, ideal für Sommer- und Wintertouren. Gäste erwarten saubere und gepflegte Stellplätze, moderne Sanitäreinrichtungen und eine entspannte Atmosphäre.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor",
+    "stubaital"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

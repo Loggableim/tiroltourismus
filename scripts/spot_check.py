@@ -1,32 +1,28 @@
 #!/usr/bin/env python3
-"""Verify quality of a few entries"""
-import json, os
+import json
 
-entries = [
-    "alpenflora",
-    "anton",
-    "alpenhof",
-    "alpenhotel-ernberg",
-    "alpenrose",
-    "altstadthotel-weisses-kreuz",
-    "andreas-hofer",
+# Check entries from each batch
+slugs_to_check = [
+    ("batch 021", "bauernhof-ferienwohnung-grasweberhof"),
+    ("batch 021", "bauernhof-ferienwohnung-hecherhof"),
+    ("batch 025", "bauernhof-lechnerbauer"),
+    ("batch 026", "bauernhof-stockl"),
+    ("batch 028", "berggasthof-moosbauer"),
+    ("batch 030", "best-western-plus-hotel-alpenrose"),
 ]
 
-base = "src/data/unterkuenfte"
-for slug in entries:
-    fp = f"{base}/{slug}/index.json"
-    if not os.path.exists(fp):
-        print(f"{slug}: FILE MISSING")
-        continue
-    d = json.load(open(fp, encoding="utf-8"))
-    name = d.get("name", "?")
-    beschreibung = d.get("beschreibung", "")
-    print(f"\n=== {name} ({slug}) ===")
-    if beschreibung and len(beschreibung) > 10:
-        print(f"  Beschreibung ({len(beschreibung)} chars):")
-        print(f"  {beschreibung[:300]}")
-        print(f"  ...")
-    else:
-        print(f"  ❌ KEINE Beschreibung")
-    print(f"  Tags: {d.get('tags', [])}")
-    print(f"  Tier: {d.get('tier', '?')}")
+for batch, slug in slugs_to_check:
+    try:
+        e = json.load(open(f"src/data/unterkuenfte/{slug}/index.json"))
+        d = e.get("beschreibung", "")
+        print(f"[{batch}] {slug}: desc len={len(d)}")
+        if len(d) > 10:
+            print(f"  Content: {d[:150]}...")
+        else:
+            print(f"  NO DESCRIPTION (or too short)")
+        print(f"  Tags: {e.get('tags', [])}")
+        print(f"  Ausstattung: {e.get('ausstattung', [])}")
+        print()
+    except Exception as ex:
+        print(f"[{batch}] {slug}: ERROR: {ex}")
+        print()

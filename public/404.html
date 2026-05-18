@@ -19,23 +19,23 @@
       --surface:rgba(0,0,0,.03);--surface-hover:rgba(0,0,0,.06);
       --text:#1A1A1A;--text2:rgba(0,0,0,.60);--text3:rgba(0,0,0,.38);
       --tirol-red:#C8102E;--ikea-blue:#0051BA;
-      --warhol-pink:#FF1493;--warhol-pink-dark:#C0006E;--warhol-pink-glow:rgba(255,20,147,.12);
+      --tirol-pink:#FF1493; --tirol-pink-dark:#C0006E; --tirol-pink-glow:rgba(255,20,147,.12);
       --pop-yellow:#FFD700;--pop-green:#00C853;--pop-orange:#FF6B35;--pop-purple:#8B5CF6;
       --glass:rgba(255,255,255,.7);--glass-border:rgba(0,0,0,.06);--glass-shadow:0 12px 48px rgba(0,0,0,.06);
       --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
       --font-body:'Montserrat',-apple-system,sans-serif;
       --ease:cubic-bezier(.16,1,.3,1);
       --radius:12px;--radius-sm:8px;--radius-lg:20px;
-      --pink:var(--warhol-pink);--pink-dark:var(--warhol-pink-dark);--pink-glow:var(--warhol-pink-glow);
+      --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);--pink-glow:var(--tirol-pink-glow);
       --blue:var(--ikea-blue);--yellow:var(--pop-yellow);
       --gold:#D4A800;--gold-light:#FFD700;--gold-glow:rgba(212,168,0,.18);--gold-soft:rgba(212,168,0,.08);
     }
-    [data-theme="alpenpeak"]{
+    [data-theme="dark"]{
       --bg:#0A0A12;--bg2:#10101E;
       --surface:rgba(255,255,255,.04);--surface-hover:rgba(255,255,255,.08);
       --text:#F0EDEE;--text2:rgba(255,255,255,.65);--text3:rgba(255,255,255,.30);
       --glass:rgba(255,255,255,.06);--glass-border:rgba(255,255,255,.08);--glass-shadow:0 12px 48px rgba(0,0,0,.5);
-      --warhol-pink-glow:rgba(255,20,147,.18);--gold-glow:rgba(255,215,0,.15);--gold-soft:rgba(255,215,0,.06);
+      --tirol-pink-glow:rgba(255,20,147,.18);--gold-glow:rgba(255,215,0,.15);--gold-soft:rgba(255,215,0,.06);
     }
     html{scroll-behavior:smooth}
     body{
@@ -62,8 +62,8 @@
     .theme-toggle:hover{transform:scale(1.1)}
     .theme-toggle .icon-sun{display:block}
     .theme-toggle .icon-moon{display:none}
-    [data-theme="alpenpeak"] .theme-toggle .icon-sun{display:none}
-    [data-theme="alpenpeak"] .theme-toggle .icon-moon{display:block}
+    [data-theme="dark"] .theme-toggle .icon-sun{display:none}
+    [data-theme="dark"] .theme-toggle .icon-moon{display:block}
 
     /* ─── 404 Hero ─── */
     .error-hero{
@@ -91,7 +91,7 @@
     }
     @keyframes glow{
       0%,100%{filter:drop-shadow(0 0 24px var(--pink-glow))}
-      50%{filter:drop-shadow(0 0 40px var(--warhol-pink-glow))}
+      50%{filter:drop-shadow(0 0 40px var(--tirol-pink-glow))}
     }
     .error-emoji{
       font-size:72px;line-height:1;margin-top:-16px;
@@ -121,7 +121,7 @@
       font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
       transition:all .3s var(--ease);
     }
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--warhol-pink-glow)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--tirol-pink-glow)}
     .btn-ghost{
       display:inline-flex;align-items:center;gap:8px;
       padding:14px 36px;border-radius:50px;
@@ -239,13 +239,13 @@
   <!-- Footer -->
   <footer class="error-footer">
     <div class="container">
-      Tirol ANDERS – AlpenPop bei Tag, ALPENPEAK bei Nacht.<br>
+      tiroltourismus.com<br>
       &copy; 2026 Tirol Tourismus
     </div>
   </footer>
 
   <script>
-    // ─── Theme System (AlpenPop × ALPENPEAK) ───
+    // ─── Theme System (Hell/Dunkel-Modus) ───
     (function(){
       var root = document.documentElement;
       var toggle = document.getElementById('themeToggle');
@@ -254,19 +254,19 @@
       function getTheme() {
         if (stored) return stored;
         var h = new Date().getHours();
-        return (h >= 6 && h < 20) ? 'alpenpop' : 'alpenpeak';
+        return (h >= 6 && h < 20) ? 'light' : 'dark';
       }
 
       function applyTheme(t) {
-        if (t === 'alpenpeak') {
-          root.setAttribute('data-theme', 'alpenpeak');
+        if (t === 'dark') {
+          root.setAttribute('data-theme', 'dark');
         } else {
           root.removeAttribute('data-theme');
         }
       }
 
       function toggleTheme() {
-        var current = root.getAttribute('data-theme') === 'alpenpeak' ? 'alpenpop' : 'alpenpeak';
+        var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         localStorage.setItem('tirol_theme', current);
         applyTheme(current);
       }

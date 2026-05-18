@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Der Camping Naturweiher Moorbad liegt idyllisch im Südtiroler Landesinneren, umgeben von den majestätischen Bergen und dem unberührten Naturpark. <strong>Nur wenige Minuten</strong> vom malerischen Dorf Lago di Garda entfernt, bietet dieser Campingplatz eine entspannte Atmosphäre und einen direkten Zugang zu den unzähligen Wanderwegen und Ausflugsmöglichkeiten der Umgebung. <strong>Die Natur</strong> ist hier präsent und unberührt, ideal für Natur- und Abenteuerliebhaber, die eine entspannte Urlaubszeit in der Schönheit Tirols verbringen möchten.</p>",
+  "ausstattung": [
+    "pool",
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

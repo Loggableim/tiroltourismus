@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Maurerhäusl in Hochfilzen, Tirol, bietet eine idyllische Naturumgebung mit Aussicht auf die Alpen. Der Campingplatz liegt direkt am Fluss und bietet Wanderwegen und Radwege in unmittelbarer Nähe. <strong>Die Atmosphäre ist entspannt und ruhig</strong>, ideal für Familien oder Alleinreisende, die nach einem erholsamen Urlaub suchen. Gäste können zwischen verschiedenen Stellplätzen wählen und genießen den direkten Zugang zum Fluss für Schwimmen oder Angeln.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "kitzbuehel",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

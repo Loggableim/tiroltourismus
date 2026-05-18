@@ -11,10 +11,17 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Mühlleiten in Schönau am Königssee, Tirol, bietet einen idyllisch gelegenen Campingplatz mit Aussicht auf das Königsseeufer. Die Stätte ist von einer ruhigen, grünen Umgebung umgeben, ideal für Natur- und Wandervereine. Gäste können zwischen verschiedenen Stellplätzen wählen, die meisten mit Aussicht auf das Wasser. Die Infrastruktur umfasst moderne Sanitäreinrichtungen, einen Spielplatz für Kinder und einen Bootsanleger für Wasserausflüge.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

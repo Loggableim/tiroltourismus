@@ -11,10 +11,19 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Der <strong>Camping Hopfensee</strong> in Füssen, Tirol, bietet einen idyllisch gelegenen Campingplatz direkt am Hopfensee. Die Natur umgibt die Zelte und Wohnwagen mit ihren üppigen Wäldern und dem klaren Wasser des Sees. <strong>Erholung und Abenteuer</strong> in einer einzigartigen Landschaft erwarten die Gäste. Entspannung am See, Wanderungen durch den Naturpark oder Aktivitäten für die ganze Familie – die vielfältigen Möglichkeiten sorgen für eine unvergessliche Urlaubszeit.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor",
+    "see",
+    "wasser"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

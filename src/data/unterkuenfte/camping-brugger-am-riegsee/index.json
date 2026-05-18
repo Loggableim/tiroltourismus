@@ -11,10 +11,19 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Brugger am Riegsee in Murnau am Staffelsee, Tirol, bietet einen idyllisch gelegenen Campingplatz mit einer ruhigen Atmosphäre. <strong>Die Lage</strong> ist ideal für Wanderungen und Ausflüge in die umliegende Natur. Gäste können von der sauberen Umgebung und den gut ausgestatteten Campingfacilitäten profitieren.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor",
+    "see",
+    "wasser"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

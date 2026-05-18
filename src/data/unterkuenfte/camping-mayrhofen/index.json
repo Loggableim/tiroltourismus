@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Mayrhofen bietet eine idyllische Unterkunft in der Nähe von Mayrhofen, Tirol. Der Campingplatz liegt in der Nähe von Wäldern und bietet eine ruhige Atmosphäre. <strong>Gäste</strong> können von der Nähe zu Wanderwegen und dem Skigebiet profitieren und genießen die Aussicht auf die umliegende Bergkulisse.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor",
+    "zillertal"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

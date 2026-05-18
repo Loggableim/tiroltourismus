@@ -1,20 +1,20 @@
 /* ═══════════════════════════════════════════════════════
    tiroltourismus.com – Shared Design System v1.1
-   AlpenPop (Tag) × ALPENPEAK (Nacht)
+   Hell/Dunkel-Modus
    Pink + Gold Duo · Gipfellinie Hero · 6 Seelen Tirols
    ═══════════════════════════════════════════════════════ */
 
 /* ─── Base Reset ─── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
-/* ─── Design Tokens (AlpenPop Tag) ─── */
+/* ─── Design Tokens (Hell-Modus) ─── */
 :root{
   --bg:#F5F3F0; --bg2:#EDE8E2;
   --surface:rgba(0,0,0,.03); --surface-hover:rgba(0,0,0,.06);
   --text:#1A1A1A; --text2:rgba(0,0,0,.60); --text3:rgba(0,0,0,.38);
   --tirol-red:#C8102E; --tirol-red-dark:#9E0C23; --tirol-red-light:rgba(200,16,46,.08);
   --ikea-blue:#0051BA; --ikea-blue-dark:#003A8A; --ikea-blue-light:rgba(0,81,186,.08);
-  --warhol-pink:#FF1493; --warhol-pink-dark:#C0006E; --warhol-pink-glow:rgba(255,20,147,.12);
+  --tirol-pink:#FF1493; --tirol-pink-dark:#C0006E; --tirol-pink-glow:rgba(255,20,147,.12);
   --pop-yellow:#FFD700; --pop-yellow-glow:rgba(255,215,0,.1);
   --pop-green:#00C853; --pop-orange:#FF6B35; --pop-purple:#8B5CF6;
   --glass:rgba(255,255,255,.7); --glass-border:rgba(0,0,0,.06); --glass-shadow:0 12px 48px rgba(0,0,0,.06);
@@ -22,20 +22,20 @@
   --font-body:'Montserrat',-apple-system,sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);
   --radius:12px; --radius-sm:8px; --radius-lg:20px;
-  --pink:var(--warhol-pink); --pink-dark:var(--warhol-pink-dark); --pink-glow:var(--warhol-pink-glow);
+  --pink:var(--tirol-pink); --pink-dark:var(--tirol-pink-dark); --pink-glow:var(--tirol-pink-glow);
   --blue:var(--ikea-blue); --blue-dark:var(--ikea-blue-dark); --blue-glow:var(--ikea-blue-light);
   --yellow:var(--pop-yellow); --yellow-glow:var(--pop-yellow-glow);
   --green:var(--pop-green); --orange:var(--pop-orange); --purple:var(--pop-purple);
   --gold:#D4A800; --gold-light:#FFD700; --gold-glow:rgba(212,168,0,.18); --gold-soft:rgba(212,168,0,.08);
 }
 
-/* ─── Design Tokens (ALPENPEAK Nacht) ─── */
-[data-theme="alpenpeak"]{
+/* ─── Design Tokens (Dunkel-Modus) ─── */
+[data-theme="dark"]{
   --bg:#0A0A12; --bg2:#10101E;
   --surface:rgba(255,255,255,.04); --surface-hover:rgba(255,255,255,.08);
   --text:#F0EDEE; --text2:rgba(255,255,255,.65); --text3:rgba(255,255,255,.30);
   --tirol-red-light:rgba(200,16,46,.15); --ikea-blue:#0066FF; --ikea-blue-light:rgba(0,102,255,.1);
-  --warhol-pink-glow:rgba(255,20,147,.18); --pop-yellow-glow:rgba(255,215,0,.12);
+  --tirol-pink-glow:rgba(255,20,147,.18); --pop-yellow-glow:rgba(255,215,0,.12);
   --glass:rgba(255,255,255,.06); --glass-border:rgba(255,255,255,.08); --glass-shadow:0 12px 48px rgba(0,0,0,.5);
   --gold-glow:rgba(255,215,0,.15); --gold-soft:rgba(255,215,0,.06);
 }
@@ -111,18 +111,18 @@ img{max-width:100%;height:auto;display:block}
 
 /* ═══ TOP BAR ─── */
 .topbar{background:rgba(0,0,0,.3);backdrop-filter:blur(12px);padding:8px 0;font-size:12px;color:rgba(255,255,255,.7);position:fixed;top:0;left:0;right:0;z-index:1002;transition:all .6s}
-[data-theme="alpenpeak"] .topbar{background:rgba(10,10,18,.6);backdrop-filter:blur(20px);color:var(--text2);border-bottom:1px solid var(--glass-border)}
+[data-theme="dark"] .topbar{background:rgba(10,10,18,.6);backdrop-filter:blur(20px);color:var(--text2);border-bottom:1px solid var(--glass-border)}
 .topbar a{color:rgba(255,255,255,.7);transition:all .3s}
 .topbar a:hover{color:#fff}
-[data-theme="alpenpeak"] .topbar a{color:var(--text2)}
-[data-theme="alpenpeak"] .topbar a:hover{color:var(--text)}
+[data-theme="dark"] .topbar a{color:var(--text2)}
+[data-theme="dark"] .topbar a:hover{color:var(--text)}
 .topbar .container{display:flex;justify-content:space-between;align-items:center;width:100%}
 .topbar-l,.topbar-r{display:flex;align-items:center;gap:16px}
 .topbar-lang{display:flex;gap:6px}
 .topbar-lang a{padding:2px 6px;font-size:10px;color:rgba(255,255,255,.6)}
 .topbar-lang a.active{color:#fff;font-weight:700}
-[data-theme="alpenpeak"] .topbar-lang a{color:var(--text3)}
-[data-theme="alpenpeak"] .topbar-lang a.active{color:var(--text);font-weight:700}
+[data-theme="dark"] .topbar-lang a{color:var(--text3)}
+[data-theme="dark"] .topbar-lang a.active{color:var(--text);font-weight:700}
 .fav-link{display:flex;align-items:center;gap:4px;position:relative}
 @media(max-width:480px){.fav-link{padding:6px 4px}}
 .fav-badge{position:absolute;top:-7px;right:-10px;background:var(--yellow);color:var(--bg);font-size:8px;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;transition:transform .35s var(--ease)}
@@ -130,10 +130,10 @@ img{max-width:100%;height:auto;display:block}
 @keyframes bump{0%{transform:scale(1)}50%{transform:scale(1.5)}100%{transform:scale(1)}}
 
 /* ═══ NAV – Glassmorphism ─── */
-.main-nav{height:64px;position:fixed;top:66px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
-[data-theme="alpenpeak"] .main-nav{background:rgba(10,10,18,.5);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--glass-border);box-shadow:none}
+.main-nav{height:64px;position:fixed;top:38px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
+[data-theme="dark"] .main-nav{background:rgba(10,10,18,.5);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid var(--glass-border);box-shadow:none}
 .main-nav.scrolled{top:6px!important;box-shadow:0 4px 30px rgba(0,0,0,.1)}
-[data-theme="alpenpeak"] .main-nav.scrolled{top:6px!important;background:rgba(10,10,18,.8);box-shadow:0 8px 40px rgba(0,0,0,.3)}
+[data-theme="dark"] .main-nav.scrolled{top:38px!important;background:rgba(10,10,18,.8);box-shadow:0 8px 40px rgba(0,0,0,.3)}
 .main-nav .container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:none;padding:0}
 .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:26px;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
 .nav-logo img{width:28px;height:28px;border-radius:6px}
@@ -159,7 +159,7 @@ img{max-width:100%;height:auto;display:block}
 
 /* Mobile Menu */
 .mobile-menu{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,10,18,.97);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;opacity:0;pointer-events:none;transition:all .5s var(--ease)}
-[data-theme="alpenpeak"] .mobile-menu{background:rgba(5,5,10,.98)}
+[data-theme="dark"] .mobile-menu{background:rgba(5,5,10,.98)}
 .mobile-menu.open{opacity:1;pointer-events:all}
 .mobile-menu a{font-family:var(--font-display);font-size:52px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);transition:all .3s}
 .mobile-menu a:hover{color:var(--pink)}
@@ -237,7 +237,7 @@ img{max-width:100%;height:auto;display:block}
 .why-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--pink),var(--gold));transform:scaleX(0);transition:transform .5s var(--ease);transform-origin:left}
 .why-card:hover::before{transform:scaleX(1)}
 .why-card:hover{transform:translateY(-8px);border-color:transparent;box-shadow:0 20px 60px rgba(0,0,0,.1),0 0 40px var(--gold-soft)}
-[data-theme="alpenpeak"] .why-card:hover{box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 40px var(--gold-soft)}
+[data-theme="dark"] .why-card:hover{box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 40px var(--gold-soft)}
 .why-icon-wrap{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:36px;transition:all .5s var(--ease);position:relative}
 .why-icon-wrap::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid transparent;transition:all .5s var(--ease)}
 .why-card:hover .why-icon-wrap::after{border-color:var(--gold-light);transform:rotate(90deg)}

@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Inntal in Wiesing, Tirol, bietet einen idyllisch gelegenen Campingplatz mit einer ruhigen Atmosphäre. <strong>Die Natur</strong> umgibt den Campingplatz, und die Nähe zum Inntal bietet Möglichkeiten für Wanderungen und Ausflüge. <strong>Gäste</strong> können zwischen verschiedenen Stellplätzen wählen und profitieren von modernen Sanitär- und Freizeitfacilitäten.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "familie",
+    "outdoor",
+    "zillertal"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

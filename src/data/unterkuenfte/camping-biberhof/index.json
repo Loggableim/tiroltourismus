@@ -11,10 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Campingplatz Biberhof in Biberwier, Tirol, bietet eine idyllische Naturumgebung mit Aussicht auf das Ötztal. <strong>Die Campingplatz-Lage</strong> ist ideal für Wanderungen und Ausflüge in die umliegende Bergwelt. <strong>Atmosphäre</strong>: entspannte und ruhige Atmosphäre mit ausreichend Platz für Zelte und Wohnwagen.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "ausserfern",
+    "camping",
+    "familie",
+    "outdoor"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

@@ -11,10 +11,19 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Bergkristall in Prägraten, Tirol, bietet einen idyllisch gelegenen Campingplatz mit einer ruhigen Atmosphäre. Das Camp ist umgeben von den Tiroler Bergen und bietet einen direkten Zugang zum Alpenverein-Wanderweg. <strong>Die sauberen Sanitäreinrichtungen und die gut ausgestattete Stellplatzvariety machen den Aufenthalt besonders angenehm.</strong> Ideal für Natur- und Wanderliebhaber, die eine entspannte Urlaubszeit inmitten der Schönheit Tirols genießen möchten.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "berg",
+    "camping",
+    "familie",
+    "outdoor",
+    "wandern"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

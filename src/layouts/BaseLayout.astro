@@ -1,5 +1,5 @@
 ---
-// BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (AlpenPop × ALPENPEAK)
+// BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
 // Locale-aware: supports 'de' (default) and 'en' with /en/ URL prefix
 import { readSingleton } from '../lib/content.js';
 import NewsletterForm from '../components/NewsletterForm.tsx';
@@ -30,7 +30,7 @@ const {
 const langCode = locale === 'en' ? 'en' : 'de';
 const fullLocale = locale === 'en' ? 'en_US' : 'de_AT';
 const localePrefix = locale === 'en' ? '/en' : '';
-const siteDesc = description || (locale === 'en' ? 'Tyrol DIFFERENT – The official tourism portal for Tyrol' : 'Tirol ANDERS – Das offizielle Tourismusportal für Tirol');
+const siteDesc = description || (locale === 'en' ? 'The official tourism portal for Tyrol – Mountains, lakes, hiking trails, ski resorts, and accommodations.' : 'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.');
 const settings = readSingleton('einstellungen', locale);
 
 // Language switcher helper: builds locale-switched URL
@@ -65,7 +65,7 @@ const nav = locale === 'en' ? {
   erlebnisse: 'Experiences',
   events: 'Events',
   suche: 'Search',
-  footer_p: 'AlpenPop by day, ALPENPEAK by night. The official tourism portal for Tyrol.',
+  footer_p: 'The official tourism portal for Tyrol – discover mountains, lakes, and alpine culture.',
   footer_regionen: 'Regions',
   footer_alle_regionen: 'All Regions',
   footer_erlebnisse: 'Experiences',
@@ -93,7 +93,7 @@ const nav = locale === 'en' ? {
   erlebnisse: 'Erlebnisse',
   events: 'Events',
   suche: 'Suche',
-  footer_p: 'AlpenPop bei Tag, ALPENPEAK bei Nacht. Das offizielle Tourismusportal für Tirol.',
+  footer_p: 'Das offizielle Tourismusportal für Tirol – entdecke Berge, Seen und alpine Kultur.',
   footer_regionen: 'Regionen',
   footer_alle_regionen: 'Alle Regionen',
   footer_erlebnisse: 'Erlebnisse',
@@ -194,14 +194,14 @@ if (extraLD) ldBlocks.push(extraLD);
       --surface:rgba(0,0,0,.03);--surface-hover:rgba(0,0,0,.06);
       --text:#1A1A1A;--text2:rgba(0,0,0,.60);--text3:rgba(0,0,0,.38);
       --tirol-red:#C8102E;--ikea-blue:#0051BA;
-      --warhol-pink:#FF1493;--warhol-pink-dark:#C0006E;--warhol-pink-glow:rgba(255,20,147,.12);
+      --tirol-pink:#FF1493;--tirol-pink-dark:#C0006E;--tirol-pink-glow:rgba(255,20,147,.12);
       --pop-yellow:#FFD700;--pop-green:#00C853;--pop-orange:#FF6B35;--pop-purple:#8B5CF6;
       --glass:rgba(255,255,255,.7);--glass-border:rgba(0,0,0,.06);--glass-shadow:0 12px 48px rgba(0,0,0,.06);
       --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
       --font-body:'Montserrat',-apple-system,sans-serif;
       --ease:cubic-bezier(.16,1,.3,1);
       --radius:12px;--radius-sm:8px;--radius-lg:20px;
-      --pink:var(--warhol-pink);--pink-dark:var(--warhol-pink-dark);--pink-glow:var(--warhol-pink-glow);
+      --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);--pink-glow:var(--tirol-pink-glow);
       --blue:var(--ikea-blue);--yellow:var(--pop-yellow);
       --gold:#D4A800;--gold-light:#FFD700;--gold-glow:rgba(212,168,0,.18);--gold-soft:rgba(212,168,0,.08);
     }
@@ -210,7 +210,7 @@ if (extraLD) ldBlocks.push(extraLD);
       --surface:rgba(255,255,255,.04);--surface-hover:rgba(255,255,255,.08);
       --text:#F0EDEE;--text2:rgba(255,255,255,.65);--text3:rgba(255,255,255,.30);
       --glass:rgba(255,255,255,.06);--glass-border:rgba(255,255,255,.08);--glass-shadow:0 12px 48px rgba(0,0,0,.5);
-      --warhol-pink-glow:rgba(255,20,147,.18);--gold-glow:rgba(255,215,0,.15);--gold-soft:rgba(255,215,0,.06);
+      --tirol-pink-glow:rgba(255,20,147,.18);--gold-glow:rgba(255,215,0,.15);--gold-soft:rgba(255,215,0,.06);
     }
     html{scroll-behavior:smooth}
     body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s,color .6s;font-display:swap}
@@ -224,7 +224,7 @@ if (extraLD) ldBlocks.push(extraLD);
     .topbar-lang a.active{color:#fff;font-weight:700}
     .fav-link{display:inline-flex;align-items:center;gap:4px;position:relative}
     .fav-badge{position:absolute;top:-6px;right:-10px;min-width:16px;height:16px;border-radius:50%;background:var(--pink);color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
-    .main-nav{height:64px;position:fixed;top:10px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
+    .main-nav{height:64px;position:fixed;top:38px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
     [data-theme="alpenpeak"] .main-nav{background:rgba(10,10,18,.5);backdrop-filter:blur(24px);border:1px solid var(--glass-border);box-shadow:none}
     .main-nav .container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:none;padding:0}
     .nav-logo{display:flex;align-items:center;font-family:var(--font-display);font-size:26px;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
@@ -401,7 +401,7 @@ if (extraLD) ldBlocks.push(extraLD);
       </div>
 
       <div class="footer-bottom">
-        <span>© 2026 tiroltourismus.com · AlpenPop × ALPENPEAK</span>
+        <span>© 2026 tiroltourismus.com</span>
         <div><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href="#" class="footer-btt" id="backToTop">{nav.footer_oben}</a></div>
       </div>
     </div>

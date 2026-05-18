@@ -11,10 +11,20 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "",
-  "ausstattung": [],
-  "tags": [],
-  "tier": null,
+  "beschreibung": "<p>Camping Heiterwanger See Fischer am See bietet eine idyllische Unterkunft in Heiterwang, Tirol, Österreich. <strong>Lage:</strong> Der Campingplatz liegt direkt am Heiterwanger See, umgeben von den Bergpanoramen Tirols. <strong>Atmosphäre:</strong> Eine ruhige und entspannte Atmosphäre bietet sich für diejenigen, die Natur und Erholung suchen. <strong>Erwartungen:</strong> Gäste können zwischen verschiedenen Stellplätzen wählen und genießen den Zugang zu den Seeufern, sowie Möglichkeiten zum Wassersport und Wanderungen in der Umgebung.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "ausserfern",
+    "camping",
+    "familie",
+    "outdoor",
+    "see",
+    "wasser"
+  ],
+  "tier": "basic",
   "koordinaten": {
     "lat": "",
     "lng": ""

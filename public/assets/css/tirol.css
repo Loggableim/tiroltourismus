@@ -83,7 +83,7 @@ img{max-width:100%;height:auto;display:block}
 .tag-green{border-color:rgba(0,200,83,.15);color:var(--green)}
 
 /* ═══ Breadcrumbs ═══ */
-.breadcrumbs{display:flex;align-items:center;gap:8px;padding:12px 0;font-size:12px;color:var(--text3)}
+.breadcrumbs{display:flex;align-items:center;gap:8px;padding:12px 0;font-size:12px;color:var(--text3);flex-wrap:wrap}
 .breadcrumbs a{color:var(--text2);transition:color .2s}
 .breadcrumbs a:hover{color:var(--pink)}
 .breadcrumbs .sep{color:var(--text3);font-size:10px}
@@ -444,14 +444,7 @@ img{max-width:100%;height:auto;display:block}
   .reveal{opacity:1;transform:none}
 }
 
-/* ─── SCROLL PROGRESS ─── */
-#scrollProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--yellow));z-index:10000;width:0;transition:width .1s}
-
-/* ─── BACK TO TOP ─── */
-.btt{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--pink);color:#fff;font-size:22px;z-index:9999;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--pink-glow);opacity:0;transform:translateY(20px);transition:all .4s var(--ease);border:none}
-.btt.visible{opacity:1;transform:translateY(0)}
-.btt:hover{background:var(--pink-dark);transform:translateY(-4px);box-shadow:0 8px 30px var(--pink-glow)}
-
+/* (removed — consolidated into ═══ SCROLL PROGRESS section above) */
 /* ─── SEARCH MODAL ─── */
 .search-modal{position:fixed;inset:0;z-index:9999;opacity:0;pointer-events:none;transition:opacity .4s var(--ease)}
 .search-modal.open{opacity:1;pointer-events:all}
@@ -465,11 +458,7 @@ img{max-width:100%;height:auto;display:block}
 .search-input:focus{border-color:var(--pink);outline:none}
 .search-hints{font-size:12px;color:var(--text3);margin-top:16px}
 
-/* ─── FAVORITES ─── */
-.fav-link{display:inline-flex;align-items:center;gap:4px;position:relative}
-.fav-badge{position:absolute;top:-8px;right:-12px;min-width:18px;height:18px;border-radius:50%;background:var(--pink);color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 5px}
-.fav-btn.active{color:var(--pink)}
-
+/* (removed — consolidated into TOP BAR section above) */
 /* ═══ THEME TOGGLE BUTTON ─── */
 .theme-toggle {
   position: fixed;

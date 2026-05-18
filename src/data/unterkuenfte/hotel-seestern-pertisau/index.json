@@ -1,0 +1,35 @@
+{
+  "name": "Hotel Seestern Pertisau",
+  "slug": "hotel-seestern-pertisau",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Pertisau",
+  "plz": "6213",
+  "region": "achensee",
+  "adresse": "Seepromenade 10",
+  "telefon": "+43 5243 56789",
+  "email": "info@hotelseestern.at",
+  "webseite": "https://www.hotel-seestern-pertisau.at",
+  "beschreibung": "<p>Erstklassiges 4-Sterne-Hotel direkt am Ufer des Achensees. Jedes Zimmer bietet Seeblick und Zugang zum privaten Badesteg. Wellnessbereich mit Infinity-Pool und Bergpanorama. Gourmet-Halbpension mit regionalen Produkten.</p>",
+  "preis_ab": 149,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "pool",
+    "halbpension",
+    "parkplatz"
+  ],
+  "tags": [
+    "wellness",
+    "natur",
+    "paare",
+    "luxus"
+  ],
+  "tier": "gold",
+  "koordinaten": {
+    "lat": "47.4333",
+    "lng": "11.7"
+  },
+  "status": "published"
+}

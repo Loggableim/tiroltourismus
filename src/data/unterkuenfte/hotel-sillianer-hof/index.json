@@ -1,0 +1,33 @@
+{
+  "name": "Hotel Sillianer Hof",
+  "slug": "hotel-sillianer-hof",
+  "typ": "hotel",
+  "sterne": 3,
+  "ort": "Sillian",
+  "plz": "9920",
+  "region": "osttirol",
+  "adresse": "Hochpustertaler Straße 15",
+  "telefon": "+43 4842 2233",
+  "email": "hotel@sillianerhof.at",
+  "webseite": "https://www.sillianerhof.at",
+  "beschreibung": "<p>Gemütliches 3-Sterne-Hotel im sonnigen Hochpustertal. Ausgangspunkt für Ausflüge ins nahegelegene Innichen und den Naturpark Fanes-Sennes-Prags. Haustierfreundlich und familiengeführt.</p>",
+  "preis_ab": 72,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "parkplatz",
+    "halbpension"
+  ],
+  "tags": [
+    "wandern",
+    "natur",
+    "familie",
+    "budget"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "46.7481",
+    "lng": "12.4211"
+  },
+  "status": "published"
+}

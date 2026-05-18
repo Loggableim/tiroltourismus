@@ -1,0 +1,33 @@
+{
+  "name": "Apartments Wenns",
+  "slug": "apartments-wenns",
+  "typ": "ferienwohnung",
+  "sterne": 3,
+  "ort": "Wenns",
+  "plz": "6473",
+  "region": "imst",
+  "adresse": "Wenns 42",
+  "telefon": "+43 5414 5223",
+  "email": "apartments@wenns.at",
+  "webseite": "https://www.apartments-wenns.at",
+  "beschreibung": "<p>Helle, modern eingerichtete Apartments im Pitztaler Ort Wenns. Ideal für Familien und Gruppen. Die Hochzeiger-Bergbahn ist nur wenige Minuten entfernt. Großer Skiraum und Fahrradkeller vorhanden.</p>",
+  "preis_ab": 62,
+  "ausstattung": [
+    "wifi",
+    "parkplatz",
+    "kueche",
+    "sauna"
+  ],
+  "tags": [
+    "natur",
+    "familie",
+    "ferienwohnung",
+    "ski"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.1667",
+    "lng": "10.7333"
+  },
+  "status": "published"
+}

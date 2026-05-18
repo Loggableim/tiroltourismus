@@ -1,0 +1,32 @@
+{
+  "name": "Ehrwalder Alm Bauernhof",
+  "slug": "bauernhof-ehrwalder-alm",
+  "typ": "bauernhof",
+  "sterne": 3,
+  "ort": "Ehrwald",
+  "plz": "6632",
+  "region": "ausserfern",
+  "adresse": "Almweg 5",
+  "telefon": "+43 5673 3344",
+  "email": "info@ehrwalderalm.at",
+  "webseite": "https://www.ehrwalderalm.at",
+  "beschreibung": "<p>Traditioneller Bergbauernhof am Fuße der Zugspitze mit herrlichem Alpenpanorama. Sommer wie Winter ein Paradies für Naturliebhaber. Selbstgemachter Käse und Bauernbrot aus dem eigenen Holzofen.</p>",
+  "preis_ab": 42,
+  "ausstattung": [
+    "fruehstueck",
+    "parkplatz",
+    "haustiere"
+  ],
+  "tags": [
+    "natur",
+    "familie",
+    "budget",
+    "bauernhof"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.3986",
+    "lng": "10.9172"
+  },
+  "status": "published"
+}

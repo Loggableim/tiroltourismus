@@ -1,0 +1,33 @@
+{
+  "name": "Ferienhaus Zams",
+  "slug": "ferienhaus-zams",
+  "typ": "ferienwohnung",
+  "sterne": 3,
+  "ort": "Zams",
+  "plz": "6511",
+  "region": "landeck",
+  "adresse": "Hauptstraße 19",
+  "telefon": "+43 5442 75421",
+  "email": "ferien@zams.at",
+  "webseite": "https://www.ferienhaus-zams.at",
+  "beschreibung": "<p>Freundliches Ferienhaus in der Gemeinde Zams, direkt angrenzend an Landeck. Gepflegte Wohnungen mit Garten und Grillmöglichkeit. Ideal als preiswerte Basis für Aktivurlaub im Tiroler Oberland.</p>",
+  "preis_ab": 56,
+  "ausstattung": [
+    "parkplatz",
+    "kueche",
+    "garten",
+    "haustiere"
+  ],
+  "tags": [
+    "natur",
+    "familie",
+    "budget",
+    "ferienwohnung"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.15",
+    "lng": "10.5833"
+  },
+  "status": "published"
+}

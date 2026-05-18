@@ -1,0 +1,33 @@
+{
+  "name": "Hotel am Reutte",
+  "slug": "hotel-reutte",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Reutte",
+  "plz": "6600",
+  "region": "ausserfern",
+  "adresse": "Untermarkt 17",
+  "telefon": "+43 5672 72345",
+  "email": "info@hotelamreutte.at",
+  "webseite": "https://www.hotelamreutte.at",
+  "beschreibung": "<p>Stilvolles 4-Sterne-Hotel im Zentrum von Reutte, dem Herzen des Außerferns. Von hier erreichen Sie das malerische Schloss Neuschwanstein, den Plansee und die Ammergauer Alpen. Tiroler Küche und herzlicher Service.</p>",
+  "preis_ab": 89,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "parkplatz"
+  ],
+  "tags": [
+    "kultur",
+    "natur",
+    "wandern",
+    "familie"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.4894",
+    "lng": "10.7186"
+  },
+  "status": "published"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Bauernhof Glocknerblick",
+  "slug": "bauernhof-glocknerblick",
+  "typ": "bauernhof",
+  "sterne": 3,
+  "ort": "Kals am Großglockner",
+  "plz": "9981",
+  "region": "osttirol",
+  "adresse": "Glocknerweg 8",
+  "telefon": "+43 4876 8554",
+  "email": "info@bauernhof-glocknerblick.at",
+  "webseite": "https://www.bauernhof-glocknerblick.at",
+  "beschreibung": "<p>Idyllischer Bauernhof am Fuße des Großglockners mit eigener Tierhaltung und hausgemachten Produkten. Frische Milch, Butter und Eier direkt vom Hof. Der perfekte Ort für einen authentischen Osttiroler Familienurlaub.</p>",
+  "preis_ab": 45,
+  "ausstattung": [
+    "fruehstueck",
+    "parkplatz",
+    "haustiere"
+  ],
+  "tags": [
+    "familie",
+    "natur",
+    "budget",
+    "bauernhof"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.0033",
+    "lng": "12.6447"
+  },
+  "status": "published"
+}

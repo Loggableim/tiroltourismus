@@ -1,0 +1,33 @@
+{
+  "name": "Hotel Lienzer Bergbahnen",
+  "slug": "hotel-lienzer-bergbahnen",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Lienz",
+  "plz": "9900",
+  "region": "osttirol",
+  "adresse": "Zettersfeldstraße 25",
+  "telefon": "+43 4852 65432",
+  "email": "info@lienzerbergbahnen.at",
+  "webseite": "https://www.lienzerbergbahnen.at",
+  "beschreibung": "<p>Komfortables 4-Sterne-Hotel direkt an der Talstation der Zettersfeldbahn in Lienz. Genießen Sie den Panoramablick auf die Lienzer Dolomiten und die umliegende Bergwelt. Ideal für Wanderer, Skifahrer und Genießer der Osttiroler Gastfreundschaft.</p>",
+  "preis_ab": 99,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "parkplatz"
+  ],
+  "tags": [
+    "wandern",
+    "ski",
+    "familie",
+    "natur"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "46.8283",
+    "lng": "12.7689"
+  },
+  "status": "published"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Hotel Landecker Hof",
+  "slug": "hotel-landecker-hof",
+  "typ": "hotel",
+  "sterne": 3,
+  "ort": "Landeck",
+  "plz": "6500",
+  "region": "landeck",
+  "adresse": "Malserstraße 33",
+  "telefon": "+43 5442 62230",
+  "email": "info@landecker-hof.at",
+  "webseite": "https://www.landecker-hof.at",
+  "beschreibung": "<p>Zentral gelegenes Hotel in der Bezirkshauptstadt Landeck. Bequemer Ausgangspunkt für Ausflüge ins nahegelegene Skigebiet Sann- und Venet sowie ins winterliche Ischgl oder das sonnige Oberland. Tiroler Gastfreundschaft seit drei Generationen.</p>",
+  "preis_ab": 78,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "parkplatz"
+  ],
+  "tags": [
+    "kultur",
+    "wandern",
+    "familie",
+    "ski"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.1333",
+    "lng": "10.5667"
+  },
+  "status": "published"
+}

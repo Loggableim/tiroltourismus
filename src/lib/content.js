@@ -4,6 +4,22 @@ import path from 'path';
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 
 /**
+ * Bezirk → zugehörige Region-Slugs
+ * Wird für die Bezirks-Navigation und Filterung verwendet.
+ */
+export const BEZIRK_REGIONS = {
+  innsbruck: ['innsbruck'],
+  'innsbruck-land': ['innsbruck-land'],
+  imst: ['imst', 'oetztal'],
+  landeck: ['landeck', 'arlberg'],
+  reutte: ['ausserfern'],
+  kufstein: ['kufstein'],
+  kitzbuehel: ['kitzbuehel'],
+  schwaz: ['schwaz', 'achensee', 'zillertal', 'kaunertal'],
+  lienz: ['osttirol', 'lienz'],
+};
+
+/**
  * Get the data directory for a given locale.
  * 'de' (or omitted) → src/data/
  * 'en'              → src/data/en/

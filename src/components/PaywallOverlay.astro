@@ -1,7 +1,14 @@
 ---
 // PaywallOverlay.astro — Glassmorphism-Overlay für Basic-Tier-Unterkünfte
 // Zeigt auf der Detailseite für nicht-angemeldete User einen Upgrade-Call-to-Action.
-// Nutzt localStorage zur Tier-Simulation (Demo-Modus).
+// Nutzt LemonSqueezy-Integration: Buttons verlinken zur /preise/ Seite mit Checkout.
+//
+// Tier-Management:
+// - localStorage (client-seitig) für statisches Hosting
+// - LemonSqueezy Webhook (webhook/server.js) für serverseitige Sync
+// - Siehe src/scripts/lemon-tier-store.js und src/scripts/lemon-squeezy.js
+//
+// NOTE: Die Demo-Buttons wurden durch echte Checkout-Links ersetzt.
 
 export interface Props {
   name: string;
@@ -36,35 +43,28 @@ export interface Props {
         </div>
       </div>
 
-      <button class="paywall-btn" id="paywallLoginBtn">
-        Jetzt kostenlos registrieren
-      </button>
-      <button class="paywall-link" id="paywallToggleBtn">
-        Demo: Als Silver anzeigen
-      </button>
-      <button class="paywall-link paywall-link-gold" id="paywallGoldBtn">
-        Demo: Als Gold anzeigen
-      </button>
+      <div class="paywall-actions">
+        <a href="/preise/" class="paywall-btn paywall-btn-primary" id="paywallUpgradeBtn">
+          Ab 19€/Monat freischalten
+        </a>
+        <div class="paywall-sub-links">
+          <a href="/preise/" class="paywall-link paywall-link-silver">🥈 Silver (19€/Monat)</a>
+          <a href="/preise/" class="paywall-link paywall-link-gold">⭐ Gold (49€/Monat)</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Client-seitige Logik: localStorage-basierte Tier-Simulation -->
+  <!-- Client-seitige Logik: liest echten Tier-Status aus localStorage (gesetzt nach LemonSqueezy-Checkout) -->
   <script is:inline>
     (function() {
       var KEY = 'tirol_user_tier';
       var container = document.querySelector('[data-paywall]');
       var overlay = document.getElementById('paywallOverlay');
-      var loginBtn = document.getElementById('paywallLoginBtn');
-      var toggleBtn = document.getElementById('paywallToggleBtn');
-      var goldBtn = document.getElementById('paywallGoldBtn');
 
       function getUserTier() {
-        return localStorage.getItem(KEY) || 'basic';
-      }
-
-      function setUserTier(tier) {
-        localStorage.setItem(KEY, tier);
-        applyTier(tier);
+        try { return localStorage.getItem(KEY) || 'basic'; }
+        catch(e) { return 'basic'; }
       }
 
       function applyTier(tier) {
@@ -82,57 +82,18 @@ export interface Props {
           container.classList.add('tier-gold');
           if (overlay) overlay.style.display = 'none';
         }
-        // Aktualisiere Button-Texte
-        updateButtonTexts(tier);
       }
 
-      function updateButtonTexts(tier) {
-        if (!toggleBtn) return;
-        if (tier === 'basic') {
-          toggleBtn.textContent = 'Demo: Als Silver anzeigen';
-          if (goldBtn) goldBtn.style.display = '';
-        } else if (tier === 'silver') {
-          toggleBtn.textContent = 'Demo: Als Basic anzeigen';
-          if (goldBtn) goldBtn.style.display = 'none';
-        } else if (tier === 'gold') {
-          toggleBtn.textContent = 'Demo: Als Basic anzeigen';
-          if (goldBtn) goldBtn.style.display = 'none';
-        }
-      }
-
-      // Init
+      // Init: apply actual tier from localStorage (set by LemonSqueezy checkout)
       var currentTier = getUserTier();
-      // Nur auf Basic-Detailseiten relevant — per CSS-Klasse gesteuert
       applyTier(currentTier);
 
-      // Event: "Jetzt registrieren" → als Silver anmelden (Demo)
-      if (loginBtn) {
-        loginBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          setUserTier('silver');
-        });
-      }
-
-      // Event: Toggle-Demo
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          var cur = getUserTier();
-          if (cur === 'basic') {
-            setUserTier('silver');
-          } else {
-            setUserTier('basic');
-          }
-        });
-      }
-
-      // Event: Gold-Demo
-      if (goldBtn) {
-        goldBtn.addEventListener('click', function(e) {
-          e.preventDefault();
-          setUserTier('gold');
-        });
-      }
+      // Listen for tier changes (from other tabs or future updates)
+      window.addEventListener('storage', function(e) {
+        if (e.key === KEY) {
+          applyTier(e.newValue || 'basic');
+        }
+      });
     })();
   </script>
 </div>
@@ -258,7 +219,13 @@ export interface Props {
     margin-top: -20px;
   }
 
-  /* CTA Buttons */
+  /* CTA Area */
+  .paywall-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .paywall-btn {
     display: inline-block;
     padding: 14px 32px;
@@ -267,36 +234,49 @@ export interface Props {
     font-weight: 700;
     font-family: var(--font-body);
     letter-spacing: 0.3px;
+    transition: all 0.3s var(--ease);
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: center;
+  }
+  .paywall-btn-primary {
     background: var(--pink);
     color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s var(--ease);
-    margin-bottom: 12px;
-    width: 100%;
-    max-width: 280px;
   }
-  .paywall-btn:hover {
+  .paywall-btn-primary:hover {
     background: var(--pink-dark);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px var(--pink-glow);
   }
 
+  .paywall-sub-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
   .paywall-link {
-    display: block;
     font-size: 11px;
     color: var(--text3);
     background: none;
     border: none;
     cursor: pointer;
     text-decoration: underline;
-    padding: 6px;
+    padding: 4px;
     font-family: var(--font-body);
     transition: color 0.3s;
-    width: 100%;
   }
   .paywall-link:hover {
     color: var(--text);
+  }
+
+  .paywall-link-silver {
+    color: var(--pop-green);
+  }
+  .paywall-link-silver:hover {
+    color: var(--green);
   }
 
   .paywall-link-gold {

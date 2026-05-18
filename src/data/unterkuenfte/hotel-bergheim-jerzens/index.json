@@ -1,0 +1,35 @@
+{
+  "name": "Hotel Bergheim Jerzens",
+  "slug": "hotel-bergheim-jerzens",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Jerzens",
+  "plz": "6474",
+  "region": "imst",
+  "adresse": "Jerzens 15",
+  "telefon": "+43 5414 87321",
+  "email": "info@bergheim-jerzens.at",
+  "webseite": "https://www.bergheim-jerzens.at",
+  "beschreibung": "<p>Wohlfühlhotel der Extraklasse im Skigebiet Hochzeiger. Direkter Zugang zu den Pisten, großzügiger Spa-Bereich mit Innen- und Außenpool und kulinarische Highlights auf 1.300 Metern. Tiroler Gastlichkeit in Perfektion.</p>",
+  "preis_ab": 119,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "pool",
+    "halbpension",
+    "parkplatz"
+  ],
+  "tags": [
+    "luxus",
+    "ski",
+    "wellness",
+    "paare"
+  ],
+  "tier": "gold",
+  "koordinaten": {
+    "lat": "47.15",
+    "lng": "10.7333"
+  },
+  "status": "published"
+}

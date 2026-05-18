@@ -52,6 +52,7 @@ const twitterCard = 'summary_large_image';
 // Nav labels
 const nav = locale === 'en' ? {
   magazin: 'Magazine',
+  preise: 'Pricing',
   fuerBetriebe: 'For Businesses',
   merkliste: '♥ Wishlist',
   kontakt: 'Contact',
@@ -79,6 +80,7 @@ const nav = locale === 'en' ? {
   footer_oben: '↑ Back to top',
 } : {
   magazin: 'Magazin',
+  preise: 'Preise',
   fuerBetriebe: 'Für Betriebe',
   merkliste: '♥ Merkliste',
   kontakt: 'Kontakt',
@@ -319,6 +321,7 @@ if (extraLD) ldBlocks.push(extraLD);
         <a href={`${localePrefix}/erlebnisse/`} class={Astro.url.pathname.includes('erlebnisse') ? 'active' : ''}>{nav.erlebnisse}</a>
         <a href={`${localePrefix}/events/`} class={Astro.url.pathname.includes('events') ? 'active' : ''}>{nav.events}</a>
         <a href={`${localePrefix}/magazin/`} class={Astro.url.pathname.includes('magazin') ? 'active' : ''}>{nav.magazin}</a>
+        <a href={`${localePrefix}/preise/`} class={Astro.url.pathname.includes('preise') ? 'active' : ''} style="color:var(--gold-light);font-weight:600">{nav.preise}</a>
       </div>
       <div class="nav-r">
         <button class="nav-search" onclick="window.location.href='{localePrefix}/suche/'" aria-label={nav.suche}>🔍</button>
@@ -339,6 +342,7 @@ if (extraLD) ldBlocks.push(extraLD);
     <a href={`${localePrefix}/erlebnisse/`}>{nav.erlebnisse}</a>
     <a href={`${localePrefix}/events/`}>{nav.events}</a>
     <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
+    <a href={`${localePrefix}/preise/`} style="color:var(--gold-light)">{nav.preise}</a>
     <a href={`${localePrefix}/suche/`}>🔍 {nav.suche}</a>
     <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
     <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
@@ -383,7 +387,7 @@ if (extraLD) ldBlocks.push(extraLD);
         </div>
         <div class="footer-col"><h4>{nav.footer_regionen}</h4><a href={`${localePrefix}/regionen/`}>{nav.footer_alle_regionen}</a><a href={`${localePrefix}/regionen/oetztal/`}>Ötztal</a></div>
         <div class="footer-col"><h4>{nav.footer_erlebnisse}</h4><a href={`${localePrefix}/erlebnisse/`}>{nav.footer_alle_erlebnisse}</a></div>
-        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/fuer-betriebe/`}>{nav.footer_fuer_betriebe}</a><a href={`${localePrefix}/kontakt/`}>{nav.footer_kontakt}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
+        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/preise/`} style="color:var(--gold-light);font-weight:600">{nav.preise}</a><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/fuer-betriebe/`}>{nav.footer_fuer_betriebe}</a><a href={`${localePrefix}/kontakt/`}>{nav.footer_kontakt}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
       </div>
 
       <!-- NEWSLETTER SIGNUP -->

@@ -1,0 +1,33 @@
+{
+  "name": "Hotel Imster Hof",
+  "slug": "hotel-imster-hof",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Imst",
+  "plz": "6460",
+  "region": "imst",
+  "adresse": "Pfarrgasse 11",
+  "telefon": "+43 5412 76543",
+  "email": "info@hotel-imster-hof.at",
+  "webseite": "https://www.hotel-imster-hof.at",
+  "beschreibung": "<p>Urbanes 4-Sterne-Hotel im Zentrum von Imst mit innovativer Architektur und Tiroler Gastfreundschaft. Stadtnah aber dennoch ruhig gelegen mit Blick auf die umliegenden Berge. Perfekt für einen aktiven Urlaub in den Tiroler Alpen.</p>",
+  "preis_ab": 92,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "parkplatz"
+  ],
+  "tags": [
+    "kultur",
+    "wandern",
+    "bike",
+    "familie"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.2428",
+    "lng": "10.7407"
+  },
+  "status": "published"
+}

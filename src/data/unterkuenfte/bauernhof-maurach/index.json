@@ -1,0 +1,32 @@
+{
+  "name": "Bauernhof Maurach",
+  "slug": "bauernhof-maurach",
+  "typ": "bauernhof",
+  "sterne": 3,
+  "ort": "Maurach",
+  "plz": "6212",
+  "region": "achensee",
+  "adresse": "Bergweg 12",
+  "telefon": "+43 5243 4433",
+  "email": "hof@bauernhof-maurach.at",
+  "webseite": "https://www.bauernhof-maurach.at",
+  "beschreibung": "<p>Familienfreundlicher Bauernhof zwischen Maurach und dem Achensee gelegen. Kühe, Schafe, Hühner und Ponys warten auf die kleinen Gäste. Frische Produkte direkt vom Hof. Ein Stück heile Tiroler Welt.</p>",
+  "preis_ab": 48,
+  "ausstattung": [
+    "fruehstueck",
+    "parkplatz",
+    "haustiere"
+  ],
+  "tags": [
+    "familie",
+    "natur",
+    "budget",
+    "bauernhof"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.4333",
+    "lng": "11.75"
+  },
+  "status": "published"
+}

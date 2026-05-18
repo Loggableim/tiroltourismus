@@ -1,0 +1,33 @@
+{
+  "name": "Ferienhaus Wiesing am See",
+  "slug": "ferienhaus-wiesing",
+  "typ": "ferienwohnung",
+  "sterne": 3,
+  "ort": "Wiesing",
+  "plz": "6211",
+  "region": "achensee",
+  "adresse": "Wiesing 18",
+  "telefon": "+43 5243 23456",
+  "email": "ferienhaus@wiesing.at",
+  "webseite": "https://www.ferienhaus-wiesing.at",
+  "beschreibung": "<p>Ruhiges Ferienhaus in idyllischer Lage am Fuße des Achensees. Der nahegelegene Radweg entlang des Ufers führt direkt zum See und zur Achenseebahn. Familienfreundlich mit großem Garten und Grillplatz.</p>",
+  "preis_ab": 58,
+  "ausstattung": [
+    "parkplatz",
+    "kueche",
+    "haustiere",
+    "garten"
+  ],
+  "tags": [
+    "natur",
+    "familie",
+    "budget",
+    "ferienwohnung"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.4",
+    "lng": "11.7833"
+  },
+  "status": "published"
+}

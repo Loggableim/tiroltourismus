@@ -1,27 +1,29 @@
 {
-  "name": "Bergkristall Resort",
-  "status": "published",
-  "tier": "gold",
+  "name": "Hotel Bergkristall",
+  "slug": "hotel-bergkristall",
   "typ": "hotel",
-  "sterne": 5,
-  "adresse": "Dorfstraße 15",
-  "plz": "6450",
-  "ort": "Sölden",
-  "telefon": "+43 5254 12345",
-  "email": "info@bergkristall.at",
-  "webseite": "https://bergkristall.at",
-  "beschreibung": "Luxuriöses 5-Sterne-Resort im Herzen des Ötztals mit direktem Zugang zu Skipisten und Therme.",
-  "preis_ab": 169,
-  "ausstattung": [
-    "wifi",
-    "fruehstueck",
-    "sauna",
-    "pool"
-  ],
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": null,
+  "ausstattung": [],
   "tags": [
-    "luxus",
-    "wellness",
-    "ski",
-    "paare"
-  ]
+    "berg",
+    "hotel",
+    "komfort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.4276706",
+    "lng": "12.0224947"
+  },
+  "status": "published",
+  "beschreibung": "<p>Das <strong>Hotel Bergkristall</strong> liegt in einem Tiroler Bergdorf mit direktem Zugang zu Wander- und Skipisten. Die Einrichtung verbindet alpine Tradition mit modernem Komfort. Gäste erwarten eine <strong>alpine Küche</strong>, gemütliche Aufenthaltsbereiche und ein breites Angebot an <strong>Outdoor-Aktivitäten</strong> in der Umgebung.</p>",
+  "bilder": [],
+  "hero_bild": null
 }

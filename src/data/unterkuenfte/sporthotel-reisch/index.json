@@ -1,0 +1,30 @@
+{
+  "name": "Sporthotel Reisch",
+  "slug": "sporthotel-reisch",
+  "typ": "hotel",
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": null,
+  "beschreibung": "",
+  "ausstattung": [
+    "restaurant"
+  ],
+  "tags": [
+    "hotel",
+    "komfort",
+    "kulinarik",
+    "sport"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.44592",
+    "lng": "12.3897821"
+  },
+  "status": "published"
+}

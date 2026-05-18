@@ -1,0 +1,29 @@
+{
+  "name": "Hotel Schloß Fernsteinsee",
+  "slug": "hotel-schlo-fernsteinsee",
+  "typ": "hotel",
+  "sterne": 4,
+  "preis_ab": null,
+  "ort": "Nassereith",
+  "region": "imst",
+  "plz": "6465",
+  "adresse": "Fernstein 475",
+  "telefon": null,
+  "email": "hotel@fernsteinsee.at",
+  "webseite": "https://www.fernsteinsee.at/",
+  "beschreibung": "",
+  "ausstattung": [
+    "wifi"
+  ],
+  "tags": [
+    "hotel",
+    "imst",
+    "komfort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.3456635",
+    "lng": "10.8185885"
+  },
+  "status": "published"
+}

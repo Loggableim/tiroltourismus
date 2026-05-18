@@ -3,24 +3,27 @@
   "slug": "hotel-aqua-dome",
   "typ": "hotel",
   "sterne": 4,
+  "preis_ab": null,
   "ort": "Längenfeld",
+  "region": "oetztal",
   "plz": "6444",
   "adresse": "Oberlängenfeld 140",
-  "beschreibung": "Direkt am Aqua Dome – Tirols bekanntestem Thermalbad. Inklusive Thermen-Eintritt und Halbpension.",
-  "preis_ab": 189,
-  "ausstattung": [
-    "wifi",
-    "fruehstueck",
-    "sauna",
-    "pool",
-    "halbpension"
-  ],
+  "telefon": "+43 5253 6400",
+  "email": "office@aqua-dome.at",
+  "webseite": "https://www.aqua-dome.at/",
+  "ausstattung": [],
   "tags": [
-    "wellness",
-    "therme",
-    "familie",
-    "paare"
+    "hotel",
+    "komfort",
+    "oetztal"
   ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.068637",
+    "lng": "10.9648104"
+  },
   "status": "published",
-  "tier": "basic"
+  "beschreibung": "<p>Das Hotel Aqua Dome liegt in Längenfeld im Ötztal, Tirol. Die Architektur verbindet moderne Formen mit der alpinen Umgebung. Gäste erwartet ein Thermalbad mit den markanten Kuppeln, Saunen und Ruhebereichen.</p>",
+  "bilder": [],
+  "hero_bild": null
 }

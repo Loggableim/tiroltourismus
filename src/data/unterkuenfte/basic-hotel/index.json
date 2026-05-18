@@ -1,0 +1,31 @@
+{
+  "name": "Basic Hotel",
+  "slug": "basic-hotel",
+  "typ": "hotel",
+  "sterne": 3,
+  "preis_ab": null,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6021",
+  "adresse": "Innrain 16",
+  "telefon": "+43 512 586385",
+  "email": null,
+  "webseite": "https://www.basic-hotel.at",
+  "beschreibung": "<p>Das <strong>Basic Hotel</strong> befindet sich im Zentrum von <strong>Innsbruck</strong>, nahe der historischen Altstadt und der berühmten <strong>Innenstadt</strong>. Das Haus bietet eine schlichte, moderne Einrichtung mit funktionalen Zimmern. <strong>Gäste</strong> können kompakte Unterkünfte mit den wesentlichen Annehmlichkeiten erwarten. Die Lage ermöglicht einen unkomplizierten Zugang zu <strong>Sehenswürdigkeiten</strong> und dem öffentlichen Nahverkehr.</p>",
+  "ausstattung": [
+    "wifi"
+  ],
+  "tags": [
+    "hotel",
+    "innsbruck",
+    "komfort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.2667136",
+    "lng": "11.3898423"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
+}

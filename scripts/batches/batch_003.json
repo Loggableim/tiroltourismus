@@ -1,0 +1,68 @@
+[
+  {
+    "batch": 3,
+    "batch_idx": 0,
+    "slug": "alpen-camping-aigner",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\alpen-camping-aigner\\index.json",
+    "name": "Alpen Camping Aigner",
+    "ort": "Wald im Pinzgau",
+    "typ": "camping",
+    "region": "",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 3,
+    "batch_idx": 1,
+    "slug": "alpen-campingplatz",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\alpen-campingplatz\\index.json",
+    "name": "Alpen-Campingplatz",
+    "ort": "Lenggries",
+    "typ": "camping",
+    "region": "",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 3,
+    "batch_idx": 2,
+    "slug": "alpen-caravan-park-achensee",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\alpen-caravan-park-achensee\\index.json",
+    "name": "Alpen Caravan Park Achensee",
+    "ort": "Achenkirch",
+    "typ": "camping",
+    "region": "achensee",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 3,
+    "batch_idx": 3,
+    "slug": "alpen-caravanpark-tennsee",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\alpen-caravanpark-tennsee\\index.json",
+    "name": "Alpen-Caravanpark Tennsee",
+    "ort": "Mittenwald",
+    "typ": "camping",
+    "region": "",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 3,
+    "batch_idx": 4,
+    "slug": "alpen-chalets",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\alpen-chalets\\index.json",
+    "name": "Alpen-Chalets",
+    "ort": "",
+    "typ": "ferienhaus",
+    "region": "",
+    "hat_beschreibung": true
+  },
+  {
+    "batch": 3,
+    "batch_idx": 5,
+    "slug": "alpenblick",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\alpenblick\\index.json",
+    "name": "Alpenblick",
+    "ort": "Schattwald",
+    "typ": "gasthof",
+    "region": "ausserfern",
+    "hat_beschreibung": true
+  }
+]

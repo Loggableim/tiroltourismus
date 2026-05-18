@@ -42,6 +42,7 @@ function formatPreis(preis) {
       category: katStr,
       location: entry.ort,
       bgStyle: entry.farbe ? `linear-gradient(135deg,${entry.farbe}15,${entry.farbe}25)` : undefined,
+      bgImage: entry.hero_bild,
     },
     (entry.dauer || entry.preis || entry.preis === 0) ? {
       type: 'sight-facts',
@@ -70,11 +71,11 @@ function formatPreis(preis) {
     {
       type: 'cta',
       label: 'Lust bekommen?',
-      title: 'Jetzt buchen',
+      title: 'Mehr erfahren',
       subtitle: 'Sichere dir dein unvergessliches Erlebnis in Tirol.',
       buttons: [
         entry.link && entry.link !== '#'
-          ? { label: `🔗 Jetzt buchen`, href: entry.link, variant: 'pink', analytics: 'Buchung' }
+          ? { label: `🔗 Mehr erfahren`, href: entry.link, variant: 'pink', analytics: 'Info' }
           : { label: `📞 Angebot anfragen`, href: '#', variant: 'pink', analytics: 'Buchung' },
         { label: '← Alle Erlebnisse', href: '/erlebnisse/', variant: 'glass' },
       ].filter(Boolean),

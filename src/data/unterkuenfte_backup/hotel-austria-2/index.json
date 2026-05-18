@@ -1,0 +1,29 @@
+{
+  "name": "Hotel Austria",
+  "slug": "hotel-austria-2",
+  "typ": "hotel",
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": null,
+  "beschreibung": "",
+  "ausstattung": [
+    "restaurant"
+  ],
+  "tags": [
+    "hotel",
+    "komfort",
+    "kulinarik"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.4488474",
+    "lng": "12.0921979"
+  },
+  "status": "published"
+}

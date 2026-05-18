@@ -1,0 +1,29 @@
+{
+  "name": "Sonnenhof",
+  "slug": "sonnenhof",
+  "typ": "hotel",
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": "https://www.gasthaus-sonnenhof.at/",
+  "beschreibung": "",
+  "ausstattung": [
+    "restaurant"
+  ],
+  "tags": [
+    "hotel",
+    "komfort",
+    "kulinarik"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "46.9649658",
+    "lng": "10.5103779"
+  },
+  "status": "published"
+}

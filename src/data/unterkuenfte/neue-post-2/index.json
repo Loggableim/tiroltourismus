@@ -1,0 +1,31 @@
+{
+  "name": "Neue Post",
+  "slug": "neue-post-2",
+  "typ": "hotel",
+  "sterne": 4,
+  "preis_ab": null,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6020",
+  "adresse": "Maximilianstraße 15",
+  "telefon": "+43 512 594760",
+  "email": null,
+  "webseite": "http://www.hotel-neue-post.at",
+  "beschreibung": "<p><strong>Neue Post</strong> liegt in Innsbruck. Der Hotel mit persönlichem Service. Gäste erwarten vielseitige Freizeitmöglichkeiten in der Umgebung.</p>",
+  "ausstattung": [
+    "wifi"
+  ],
+  "tags": [
+    "hotel",
+    "innsbruck",
+    "komfort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.262305",
+    "lng": "11.3921619"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
+}

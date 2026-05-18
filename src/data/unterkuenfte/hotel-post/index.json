@@ -1,0 +1,28 @@
+{
+  "name": "Hotel Post",
+  "slug": "hotel-post",
+  "typ": "hotel",
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": null,
+  "beschreibung": "<p>Das <strong>Hotel Post</strong> liegt zentral in einem Tiroler Dorf und verbindet traditionelle Architektur mit modernem Komfort. Die Einrichtung ist schlicht und funktional, mit Holzmöbeln und alpinen Elementen. Gäste erwarten ein Restaurant mit regionaler Küche, eine kleine Wellnessfläche und persönlicher Service. Das Hotel eignet sich für Reisende, die einen unkomplizierten Aufenthalt in unmittelbarer Nähe zu Skipisten und Wanderwegen suchen.</p>",
+  "ausstattung": [],
+  "tags": [
+    "hotel",
+    "komfort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.2919625",
+    "lng": "11.8755764"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
+}

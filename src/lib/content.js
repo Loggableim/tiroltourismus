@@ -75,7 +75,7 @@ export function isPublished(entry) {
  * returns [{ collection, slug, entry }, ...]
  */
 export function findByTag(tag, locale = 'de') {
-  const collections = ['regionen', 'unterkuenfte', 'gastro', 'orte', 'sehenswuerdigkeiten', 'magazin', 'erlebnisse', 'events'];
+  const collections = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'magazin', 'erlebnisse', 'events'];
   const results = [];
   for (const coll of collections) {
     const entries = readCollection(coll, locale);
@@ -96,7 +96,7 @@ export function findRelated(collection, slug, locale = 'de', limit = 4) {
   const entry = readEntry(collection, slug, locale);
   if (!entry || !entry.tags || !Array.isArray(entry.tags) || entry.tags.length === 0) return [];
 
-  const collections = ['regionen', 'unterkuenfte', 'gastro', 'orte', 'sehenswuerdigkeiten', 'magazin', 'erlebnisse', 'events'];
+  const collections = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'magazin', 'erlebnisse', 'events'];
   const scored = [];
 
   for (const coll of collections) {

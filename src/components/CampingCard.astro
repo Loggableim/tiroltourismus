@@ -1,0 +1,51 @@
+---
+export interface Props {
+  name: string;
+  slug: string;
+  ort?: string;
+  region?: string;
+  preis_ab?: number;
+  ausstattung?: string[];
+  tier?: string;
+  'data-tier'?: string;
+}
+const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'data-tier': dataTier } = Astro.props;
+const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen', 'wasseranschluss'].includes(a));
+const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier === 'silver' ? { cls: 'badge-silver', text: 'Silber' } : { cls: '', text: '' };
+---
+<a href={`/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'}>
+  <div class="cp-img">
+    {badge.cls && <span class={badge.cls}>{badge.text}</span>}
+    <span class="cp-placeholder">🏕️</span>
+  </div>
+  <div class="cp-body">
+    <div class="cp-type">Campingplatz</div>
+    <div class="cp-name">{name}</div>
+    <div class="cp-ort">{ort || 'Tirol'}</div>
+    {ausstattung.length > 0 && (
+      <div class="cp-ausstattung">
+        {ausstattung.slice(0, 4).map(a => <span class="cp-tag">{a}</span>)}
+        {ausstattung.length > 4 && <span class="cp-tag cp-tag-more">+{ausstattung.length - 4}</span>}
+      </div>
+    )}
+    <span class="cp-cta">Details →</span>
+  </div>
+</a>
+
+<style is:global>
+  .cp-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column}
+  .cp-card:hover{transform:translateY(-5px);border-color:var(--green, #00C853);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .cp-img{position:relative;height:140px;display:flex;align-items:center;justify-content:center;background:var(--surface)}
+  .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a}
+  .badge-silver{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--green),#059669);color:#fff}
+  .cp-placeholder{font-size:48px;color:var(--text3)}
+  .cp-body{padding:16px 20px 20px;flex:1;display:flex;flex-direction:column}
+  .cp-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:4px}
+  .cp-name{font-family:var(--font-display);font-size:22px;line-height:1.1;letter-spacing:.5px;margin-bottom:2px;color:var(--text)}
+  .cp-ort{font-size:12px;color:var(--text2);margin-bottom:8px}
+  .cp-ausstattung{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
+  .cp-tag{padding:2px 8px;border-radius:100px;font-size:9px;font-weight:600;background:var(--surface);border:1px solid var(--glass-border);color:var(--text2)}
+  .cp-tag-more{color:var(--text3)!important}
+  .cp-cta{display:block;width:100%;padding:12px;margin-top:auto;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
+  .cp-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
+</style>

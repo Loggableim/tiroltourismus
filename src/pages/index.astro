@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import RegionCard from '../components/RegionCard.astro';
 import AccommodationCard from '../components/AccommodationCard.astro';
+import CampingCard from '../components/CampingCard.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import GastroCard from '../components/GastroCard.astro';
 import SightCard from '../components/SightCard.astro';
@@ -16,6 +17,11 @@ const alleGastro = readCollection('gastro').filter(g => isPublished(g.entry));
 const alleOrte = readCollection('orte').filter(o => isPublished(o.entry));
 const alleSights = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
 const alleMagazin = readCollection('magazin').filter(a => isPublished(a.entry));
+const camping = readCollection('camping').filter(c => isPublished(c.entry));
+const top3Camping = [...camping].sort((a, b) => {
+  const order = { gold: 0, silver: 1, basic: 2 };
+  return (order[a.entry.tier||'basic']||2) - (order[b.entry.tier||'basic']||2);
+}).slice(0, 3);
 
 // ── Sort accommodations: gold first, then silver, then basic ──
 const sortedUnterkuenfte = [...unterkuenfte].sort((a, b) => {
@@ -214,6 +220,21 @@ function formatDate(d) {
         </div>
         <div class="section-footer">
           <a href="/unterkuenfte/" class="btn-outline">Alle {unterkuenfte.length} Unterkünfte anzeigen →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CAMPING ═══ -->
+    <section class="section" id="camping" aria-label="Campingplätze">
+      <div class="container">
+        <SectionHeader label="#camping" title="Campingplätze" sub="🏕️ Von Alpencamping bis Zeltplatz – übernachten inmitten der Tiroler Bergwelt." />
+        <div class="section-grid" id="campingGrid">
+          {top3Camping.length > 0 ? top3Camping.map(c => (
+            <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
+          )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Campingplätze erfasst.</p>}
+        </div>
+        <div class="section-footer">
+          <a href="/camping/" class="btn-outline">Alle {camping.length} Campingplätze anzeigen →</a>
         </div>
       </div>
     </section>

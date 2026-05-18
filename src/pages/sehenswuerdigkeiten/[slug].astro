@@ -28,6 +28,7 @@ const catStr = entry.kategorie ? `${catEmoji[entry.kategorie] || ''} ${catLabel[
       category: catStr,
       location: entry.ort,
       bgStyle: entry.farbe ? `linear-gradient(135deg,${entry.farbe}15,${entry.farbe}25)` : undefined,
+      bgImage: entry.hero_bild,
     },
     (entry.hoehe || entry.dauer || entry.preis) ? {
       type: 'sight-facts',

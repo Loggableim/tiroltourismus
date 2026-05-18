@@ -1,0 +1,34 @@
+{
+  "name": "Grauer Bär",
+  "slug": "grauer-bar",
+  "typ": "hotel",
+  "sterne": 4,
+  "preis_ab": null,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6020",
+  "adresse": "Universitätsstraße 5-7",
+  "telefon": "+43 512 5924",
+  "email": null,
+  "webseite": "https://www.grauer-baer.at/",
+  "beschreibung": "<p>Der Grauer Bär ist ein traditionsreiches Hotel im Zentrum von Innsbruck, nur wenige Gehminuten von der Altstadt und dem Goldenen Dachl entfernt. Das Haus verbindet historischen Charme mit moderner Gastfreundschaft und bietet komfortable Zimmer sowie ein hauseigenes Restaurant mit regionaler Küche. Es ist der ideale Ausgangspunkt, um die Tiroler Landeshauptstadt und ihre Umgebung zu erkunden.</p>",
+  "ausstattung": [
+    "bar",
+    "pool",
+    "wifi"
+  ],
+  "tags": [
+    "hotel",
+    "innsbruck",
+    "komfort",
+    "wellness"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.2690086",
+    "lng": "11.3975964"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
+}

@@ -24,7 +24,7 @@ const badge = {
   basic: { text:'Basic', cls:'tag-basic' },
 }[tier] || null;
 
-const emoji = entry.emoji || '🏨';
+const emoji = entry.typ === 'camping' ? '🏕️' : (entry.emoji || '🏨');
 
 // Free-Mium Tier-Logik:
 // Basic: Hero + Kontaktdaten sichtbar, Rest hinter Paywall
@@ -39,6 +39,7 @@ const publicSections = [
     subtitle: entry.ort ? `${entry.ort}${entry.plz ? `, ${entry.plz}` : ''}` : undefined,
     emoji: emoji,
     size: 'sm',
+    bgImage: entry.hero_bild,
     meta: {
       stars: entry.sterne,
       badge: badge ? { text: badge.text, cls: badge.cls } : undefined,

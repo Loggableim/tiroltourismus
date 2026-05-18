@@ -47,6 +47,7 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
         emoji={s.emoji}
         gradient={s.gradient}
         size={s.size || 'sm'}
+        bgImage={s.bgImage}
         meta={s.meta}
       />
     ))}
@@ -56,7 +57,8 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
     ))}
 
     {sections.filter(s => s.type === 'custom-hero').map(s => (
-      <header class="sec-custom-hero" style={s.bgStyle ? `background:${s.bgStyle}` : ''}>
+      <header class={`sec-custom-hero${s.bgImage ? ' sec-custom-hero-has-img' : ''}`} style={s.bgImage ? `background-image:url(${s.bgImage})` : (s.bgStyle ? `background:${s.bgStyle}` : '')}>
+        {s.bgImage && <div class="sec-custom-hero-overlay"></div>}
         <div class="container" style="position:relative;z-index:2">
           {s.emoji && <div class="sec-custom-hero-emoji">{s.emoji}</div>}
           {s.category && <div class="sec-custom-hero-cat">{s.category}</div>}
@@ -172,6 +174,15 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
   .sec-custom-hero h1{font-family:var(--font-display);font-size:clamp(42px,6vw,80px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;color:var(--text)}
   .sec-custom-hero-loc{font-size:14px;color:var(--text2);margin-bottom:8px}
   .sec-custom-hero-sub{font-size:15px;color:var(--text2);max-width:560px;margin:0 auto;line-height:1.6}
+
+  /* Custom Hero with background image */
+  .sec-custom-hero-has-img{background-size:cover;background-position:center center;position:relative;}
+  .sec-custom-hero-has-img .sec-custom-hero-emoji,
+  .sec-custom-hero-has-img h1,
+  .sec-custom-hero-has-img .sec-custom-hero-sub,
+  .sec-custom-hero-has-img .sec-custom-hero-loc,
+  .sec-custom-hero-has-img .sec-custom-hero-cat{color:#fff !important}
+  .sec-custom-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4)0%,rgba(0,0,0,.6)100%);z-index:0;pointer-events:none}
 
   /* Custom Facts (sight detail pages) */
   .sec-custom-facts{display:flex;justify-content:center;gap:48px;padding:28px 0;flex-wrap:wrap}

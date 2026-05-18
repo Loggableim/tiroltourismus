@@ -1,0 +1,29 @@
+{
+  "name": "Platzl",
+  "slug": "platzl",
+  "typ": "hotel",
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": null,
+  "beschreibung": "",
+  "ausstattung": [
+    "restaurant"
+  ],
+  "tags": [
+    "hotel",
+    "komfort",
+    "kulinarik"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.4108555",
+    "lng": "12.0351362"
+  },
+  "status": "published"
+}

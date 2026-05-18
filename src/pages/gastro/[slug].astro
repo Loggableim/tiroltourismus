@@ -26,6 +26,7 @@ const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kateg
       subtitle: subtitle,
       emoji: emoji,
       gradient: entry.farbe,
+      bgImage: entry.hero_bild,
     },
     (entry.kurzbeschreibung || entry.beschreibung) ? {
       type: 'description',

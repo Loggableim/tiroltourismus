@@ -1,0 +1,29 @@
+{
+  "name": "Lammwirt",
+  "slug": "lammwirt",
+  "typ": "hotel",
+  "sterne": 3,
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": null,
+  "beschreibung": "",
+  "ausstattung": [
+    "restaurant"
+  ],
+  "tags": [
+    "hotel",
+    "komfort",
+    "kulinarik"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.14955",
+    "lng": "10.746811"
+  },
+  "status": "published"
+}

@@ -3,24 +3,28 @@
   "slug": "hotel-innsbruck",
   "typ": "hotel",
   "sterne": 4,
+  "preis_ab": null,
   "ort": "Innsbruck",
+  "region": "innsbruck",
   "plz": "6020",
   "adresse": "Innrain 3",
-  "beschreibung": "Zentral gelegenes 4-Sterne-Hotel in der Innsbrucker Altstadt mit Blick auf die Nordkette. Ideal für Städtereisen und Ausflüge in die Berge.",
-  "preis_ab": 89,
+  "telefon": "+43 512 598680",
+  "email": null,
+  "webseite": "https://www.hotelinnsbruck.com/",
   "ausstattung": [
-    "wifi",
-    "fruehstueck",
-    "parkplatz"
+    "wifi"
   ],
   "tags": [
-    "stadt",
-    "kultur",
-    "paare"
+    "hotel",
+    "innsbruck",
+    "komfort"
   ],
-  "tier": "silver",
+  "tier": "basic",
   "koordinaten": {
-    "lat": "47.3288627",
-    "lng": "11.1841854"
-  }
+    "lat": "47.2678656",
+    "lng": "11.3914224"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
 }

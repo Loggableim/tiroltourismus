@@ -1,0 +1,29 @@
+{
+  "name": "Hotel Landhof",
+  "slug": "hotel-landhof",
+  "typ": "hotel",
+  "sterne": 4,
+  "preis_ab": null,
+  "ort": "Ellmau",
+  "region": "kufstein",
+  "plz": "6352",
+  "adresse": "Weißachgraben 22",
+  "telefon": "+43 5358 3003",
+  "email": "info@landhof.com",
+  "webseite": "http://www.landhof.com/",
+  "beschreibung": "",
+  "ausstattung": [
+    "wifi"
+  ],
+  "tags": [
+    "hotel",
+    "komfort",
+    "kufstein"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.5005342",
+    "lng": "12.2983556"
+  },
+  "status": "published"
+}

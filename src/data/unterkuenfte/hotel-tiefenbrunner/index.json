@@ -3,28 +3,26 @@
   "slug": "hotel-tiefenbrunner",
   "typ": "hotel",
   "sterne": 4,
-  "ort": "Kitzbühel",
-  "region": "kitzbuehel",
-  "plz": "6370",
-  "adresse": "Hornweg 18",
-  "beschreibung": "Gemütliches 4-Sterne-Hotel in sonniger Hanglage mit traumhaftem Blick auf die Kitzbüheler Alpen. Ideal für Skifahrer und Wanderer mit kostenlosem Skibus.",
-  "preis_ab": 129,
-  "ausstattung": [
-    "wifi",
-    "fruehstueck",
-    "sauna",
-    "parkplatz"
-  ],
+  "preis_ab": null,
+  "ort": "",
+  "region": "",
+  "plz": "",
+  "adresse": "",
+  "telefon": null,
+  "email": null,
+  "webseite": "https://www.hotel-tiefenbrunner.at/",
+  "beschreibung": "",
+  "ausstattung": [],
   "tags": [
-    "ski",
-    "wandern",
-    "familie",
-    "natur",
-    "sport"
+    "hotel",
+    "komfort"
   ],
   "tier": "basic",
   "koordinaten": {
-    "lat": "47.4479153",
-    "lng": "12.3974816"
-  }
+    "lat": "47.4474196",
+    "lng": "12.3905611"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
 }

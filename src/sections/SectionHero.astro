@@ -8,6 +8,7 @@ export interface Props {
   emoji?: string;
   gradient?: string; // Hex-Farbe für Akzent
   size?: 'sm' | 'md'; // Standard 'sm'
+  bgImage?: string; // URL zum Hero-Hintergrundbild (z.B. /images/unterkuenfte/hotel-xyz/hero.webp)
   meta?: {
     stars?: number;
     badge?: { text: string; cls: string };
@@ -15,11 +16,12 @@ export interface Props {
   };
 }
 
-const { title, subtitle, emoji, gradient, size = 'sm', meta } = Astro.props;
+const { title, subtitle, emoji, gradient, size = 'sm', bgImage, meta } = Astro.props;
 ---
 
-<section class={`sec-hero sec-hero-${size}`}>
-  {gradient && (
+<section class={`sec-hero sec-hero-${size}${bgImage ? ' sec-hero-has-img' : ''}`} style={bgImage ? `background-image:url(${bgImage})` : ''}>
+  {bgImage && <div class="sec-hero-img-overlay"></div>}
+  {gradient && !bgImage && (
     <div class="sec-hero-bg" style={`background:${gradient}15`}>
       <div class="sec-hero-blob" style={`background:${gradient}`}></div>
     </div>
@@ -69,12 +71,45 @@ const { title, subtitle, emoji, gradient, size = 'sm', meta } = Astro.props;
     border-bottom: 1px solid var(--glass-border);
   }
 
+  /* Size: sm with background image */
+  .sec-hero-sm.sec-hero-has-img {
+    padding: 80px 0 60px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
   /* Size: md */
   .sec-hero-md {
     padding: 80px 0 60px;
     min-height: 40vh;
     display: flex;
     align-items: center;
+  }
+
+  /* Size: md with background image */
+  .sec-hero-md.sec-hero-has-img {
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+  }
+
+  /* Background image overlay */
+  .sec-hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Text readability over background images */
+  .sec-hero-has-img .sec-hero-emoji,
+  .sec-hero-has-img h1,
+  .sec-hero-has-img .sec-hero-sub,
+  .sec-hero-has-img .sec-hero-meta {
+    color: #fff !important;
   }
 
   /* Hintergrund-Elemente */

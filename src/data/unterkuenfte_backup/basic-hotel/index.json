@@ -1,0 +1,29 @@
+{
+  "name": "Basic Hotel",
+  "slug": "basic-hotel",
+  "typ": "hotel",
+  "sterne": 3,
+  "preis_ab": null,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6021",
+  "adresse": "Innrain 16",
+  "telefon": "+43 512 586385",
+  "email": null,
+  "webseite": "https://www.basic-hotel.at",
+  "beschreibung": "",
+  "ausstattung": [
+    "wifi"
+  ],
+  "tags": [
+    "hotel",
+    "innsbruck",
+    "komfort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.2667136",
+    "lng": "11.3898423"
+  },
+  "status": "published"
+}

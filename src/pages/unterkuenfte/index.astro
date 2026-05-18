@@ -26,8 +26,8 @@ const sorted = unterkuenfte.sort((a, b) => {
       <div class="container">
         <h1 class="reveal">Finde Dein Zuhause in Tirol</h1>
         <p class="reveal r2">
-          Von luxuriösen Wellness-Hotels über urige Berghütten bis zu
-          familiengeführten Bauernhöfen – hier wirst Du fündig.
+          Von luxuriösen Wellness-Hotels über urige Berghütten zu familiengeführten
+          Bauernhöfen und 236 Campingplätzen – hier wirst Du fündig.
         </p>
       </div>
     </section>
@@ -36,15 +36,28 @@ const sorted = unterkuenfte.sort((a, b) => {
       <section class="section">
         <div class="container">
           <SectionHeader
-            label="Buchen & Träumen"
+            label="Übernachten & Träumen"
             title="Unterkünfte in Tirol"
             sub="Von ★★★★★ Luxusresorts bis zu gemütlichen Bauernhöfen – finde den Ort, der zu Dir passt."
           />
 
-          <div class="tab-switcher reveal r1">
-            <button class="tab-btn active" data-tier="alle">Alle</button>
-            <button class="tab-btn" data-tier="gold">⭐ Gold</button>
-            <button class="tab-btn" data-tier="silver">Silber</button>
+          <div class="filter-row reveal r1">
+            <!-- Type filter row -->
+            <div class="tab-switcher tab-switcher-typ" data-filter="typ">
+              <button class="tab-btn active" data-typ="alle">Alle Typen</button>
+              <button class="tab-btn" data-typ="hotel">🏨 Hotel</button>
+              <button class="tab-btn" data-typ="ferienwohnung">🏠 Ferienwohnung</button>
+              <button class="tab-btn" data-typ="camping">⛺ Camping</button>
+              <button class="tab-btn" data-typ="bauernhof">🐄 Bauernhof</button>
+              <button class="tab-btn" data-typ="jugendherberge">🎒 Jugendherberge</button>
+            </div>
+            <!-- Tier filter row -->
+            <div class="tab-switcher tab-switcher-tier" data-filter="tier" style="margin-top:8px">
+              <button class="tab-btn active" data-tier="alle">Alle Stufen</button>
+              <button class="tab-btn" data-tier="gold">⭐ Gold</button>
+              <button class="tab-btn" data-tier="silver">Silber</button>
+              <button class="tab-btn" data-tier="basic">Basic</button>
+            </div>
           </div>
 
           <div class="uk-grid">
@@ -80,6 +93,47 @@ const sorted = unterkuenfte.sort((a, b) => {
     )}
   </main>
 </BaseLayout>
+
+<script is:inline>
+(function() {
+  var typButtons = document.querySelectorAll('.tab-switcher-typ .tab-btn');
+  var tierButtons = document.querySelectorAll('.tab-switcher-tier .tab-btn');
+  var cards = document.querySelectorAll('.uk-card');
+
+  function applyFilters() {
+    var activeTyp = 'alle';
+    var activeTier = 'alle';
+    document.querySelectorAll('.tab-switcher-typ .tab-btn.active').forEach(function(b) {
+      if (b.getAttribute('data-typ')) activeTyp = b.getAttribute('data-typ');
+    });
+    document.querySelectorAll('.tab-switcher-tier .tab-btn.active').forEach(function(b) {
+      if (b.getAttribute('data-tier')) activeTier = b.getAttribute('data-tier');
+    });
+    cards.forEach(function(card) {
+      var cardTyp = card.getAttribute('data-typ') || 'unknown';
+      var cardTier = card.getAttribute('data-tier') || 'basic';
+      var showTyp = activeTyp === 'alle' || cardTyp === activeTyp;
+      var showTier = activeTier === 'alle' || cardTier === activeTier;
+      card.style.display = (showTyp && showTier) ? '' : 'none';
+    });
+  }
+
+  function setupTabGroup(buttons) {
+    buttons.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var parent = this.parentNode;
+        parent.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        applyFilters();
+      });
+    });
+  }
+
+  setupTabGroup(typButtons);
+  setupTabGroup(tierButtons);
+})();
+</script>
 
 <style is:global>
   .page-header {
@@ -120,7 +174,6 @@ const sorted = unterkuenfte.sort((a, b) => {
     display: flex;
     justify-content: center;
     gap: 6px;
-    margin-bottom: 32px;
     background: var(--surface);
     padding: 4px;
     border-radius: 100px;
@@ -128,6 +181,20 @@ const sorted = unterkuenfte.sort((a, b) => {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid var(--glass-border);
+  }
+  .filter-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 32px;
+  }
+  .tab-switcher-typ {
+    max-width: 680px;
+    flex-wrap: wrap;
+  }
+  .tab-switcher-tier {
+    max-width: 420px;
   }
   .tab-btn {
     padding: 10px 24px;

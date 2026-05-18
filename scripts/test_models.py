@@ -1,51 +1,57 @@
-#!/usr/bin/env python
-"""Test various model names and endpoints for opencode-go."""
-import json, os, sys, urllib.request, urllib.error
+"""Test API call speed with different models."""
+import json, os, urllib.request, time, re
 
-sys.path.insert(0, "E:/HermesPortable/cids-hermes-agent")
-os.environ["HERMES_HOME"] = "E:/HermesPortable/home"
+API_KEY = os.environ.get("OPENCODE_GO_API_KEY", "")
+if not API_KEY:
+    for f in ["E:/HermesPortable/home/.env", os.path.expanduser("~/.hermes/.env")]:
+        if os.path.exists(f):
+            with open(f) as fh:
+                for line in fh:
+                    if line.startswith("OPENCODE_GO_API_KEY="):
+                        API_KEY = line.split("=", 1)[1].strip()
+                        break
+            if API_KEY:
+                break
 
-# Get API key
-auth_path = "E:/HermesPortable/home/auth.json"
-with open(auth_path) as f:
-    data = json.load(f)
-api_key = data["credential_pool"]["opencode-go"][0]["access_token"]
+print(f"API_KEY: {API_KEY[:8]}...{API_KEY[-4:]}")
 
-base_urls = [
-    "https://opencode.ai/zen/go/v1",
-    "https://opencode.ai/zen/v1",
-]
+models = ["deepseek-v4-flash", "minimax-m2.7", "deepseek-chat"]
 
-models = [
-    "deepseek-v4-flash",
-    "deepseek-chat",
-    "deepseek-v4",
-    "gpt-4o-mini",
-]
+for model in models:
+    body = {
+        "model": model,
+        "messages": [
+            {"role": "system", "content": "Du schreibst kurze, sachliche Beschreibungen für ein Tirol-Tourismusportal. Deutsch, 5-8 Sätze, als HTML-Paragraph."},
+            {"role": "user", "content": f"Schreibe eine Beschreibung von 5-8 Sätzen über die Sehenswürdigkeit 'Alpinarium' in Imst, Tirol."}
+        ],
+        "max_tokens": 2048,
+        "temperature": 0.3,
+    }
 
-for base_url in base_urls:
-    for model in models:
-        url = f"{base_url}/chat/completions"
-        body = {
-            "model": model,
-            "messages": [{"role": "user", "content": "Say hi."}],
-            "max_tokens": 5,
-        }
-        req = urllib.request.Request(
-            url, data=json.dumps(body).encode(),
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {api_key}",
-            },
-            method="POST"
-        )
-        try:
-            resp = urllib.request.urlopen(req, timeout=10)
-            result = json.loads(resp.read())
-            print(f"✅ {base_url}/{model}: {result['choices'][0]['message']['content']}")
-        except urllib.error.HTTPError as e:
-            code = e.code
-            msg = e.read().decode()[:150]
-            print(f"❌ {base_url}/{model}: HTTP {code} {msg}")
-        except Exception as e:
-            print(f"⚠️ {base_url}/{model}: {e}")
+    req = urllib.request.Request(
+        "https://opencode.ai/zen/go/v1/chat/completions",
+        data=json.dumps(body).encode(),
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {API_KEY}",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        },
+        method="POST",
+    )
+
+    try:
+        t0 = time.time()
+        resp = urllib.request.urlopen(req, timeout=120)
+        result = json.loads(resp.read())
+        text = result["choices"][0]["message"]["content"].strip()
+        elapsed = time.time() - t0
+        
+        # Count sentences
+        clean = re.sub(r"<[^>]+>", "", text)
+        clean = clean.replace("\n", " ").strip()
+        sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", clean) if s.strip()]
+        
+        print(f"\n{model}: {elapsed:.1f}s, {len(sents)} Sätze")
+        print(f"  {text[:120]}...")
+    except Exception as e:
+        print(f"\n{model}: ERROR - {e}")

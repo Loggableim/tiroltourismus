@@ -23,7 +23,12 @@ const orte = readCollection('orte').filter(o => isPublished(o.entry));
       subtitle="Entdecke die schönsten Orte in Tirol."
       emoji="🏘️"
       size="md"
-    />
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#orte-grid" class="btn btn-pink">Orte entdecken →</a>
+        <span class="hero-urgency">📍 {orte.length} Ortschaften</span>
+      </div>
+    </Hero>
 
     {orte.length > 0 ? (
       <section class="section">
@@ -34,7 +39,7 @@ const orte = readCollection('orte').filter(o => isPublished(o.entry));
             sub="Von charmanten Dörfern bis zu pulsierenden Städten – jeder Ort in Tirol hat seinen eigenen Charakter."
           />
 
-          <div class="orte-grid">
+          <div class="orte-grid" id="orte-grid">
             {orte.map((o) => (
               <OrtCard
                 name={o.entry.name}

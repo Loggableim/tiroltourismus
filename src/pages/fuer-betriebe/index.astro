@@ -19,7 +19,12 @@ import SectionHeader from '../../components/SectionHeader.astro';
       subtitle="Werden Sie Teil des größten Tirol-Portals. Basis kostenlos – Prominenz gegen Gebühr."
       emoji="🏢"
       size="md"
-    />
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#pricing" class="btn btn-pink">Jetzt eintragen →</a>
+        <span class="hero-urgency">🚀 Kostenlos starten</span>
+      </div>
+    </Hero>
 
     <!-- How it works -->
     <section class="section">
@@ -55,7 +60,7 @@ import SectionHeader from '../../components/SectionHeader.astro';
           sub="Basic ist und bleibt kostenlos. Für mehr Sichtbarkeit upgraden Sie flexibel."
         />
 
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px" id="pricing">
           <!-- Basic -->
           <div class="card" style="padding:32px 24px;text-align:center;border:2px solid var(--glass-border)">
             <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Basic</h3>
@@ -150,6 +155,87 @@ import SectionHeader from '../../components/SectionHeader.astro';
       </div>
     </section>
 
+    <!-- ═══════════════════════════════════════════════════════
+         FAQ — Häufige Fragen & Einwände
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section faq-section">
+      <div class="container" style="max-width:720px">
+        <SectionHeader
+          label="Häufige Fragen"
+          title="Was Betriebe fragen"
+          sub="Ehrliche Antworten auf die häufigsten Bedenken – kein Kleingedrucktes."
+        />
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>🤔</span>
+              Ist der Basiseintrag wirklich kostenlos?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Ja, für immer.</strong> Der Basiseintrag ist und bleibt kostenlos – ohne Haken, ohne versteckte Kosten, ohne Kartenzahlung. Sie brauchen nur Ihren Betrieb anzumelden, und schon sind Sie im größten Tirol-Portal sichtbar. Premium-Upgrades sind optional und werden erst gebucht, wenn Sie mehr Sichtbarkeit wünschen.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>📊</span>
+              Lohnt sich das wirklich? Haben Sie überhaupt Besucher?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolut. Unser Portal wächst täglich – mit <strong>Regionen, Unterkünften, Events und Magazin-Content</strong>, der bei Google gefunden wird. Jeder Eintrag profitiert von unserer <strong>KI-gestützten Suchmaschinenoptimierung</strong> und wird auf tiroltourismus.com sowie über Social-Media-Kanäle ausgespielt. Ein Eintrag kostet Sie nichts – das Risiko ist null, der potenzielle Gewinn enorm.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>🌐</span>
+              Ich bin schon auf Google & Booking.com – wozu noch ein Portal?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Gute Frage. Die Antwort: <strong>Sichtbarkeit in der Nische.</strong> Google listet alles – wir listen nur Tirol. Wer auf tiroltourismus.com sucht, hat bereits eine <strong>konkrete Reiseabsicht für Tirol</strong>. Das ist keine Streuwerbung, sondern direktes, qualifiziertes Publikum. Außerdem: Auf den großen Plattformen zahlen Sie pro Buchung satte Provisionen – bei uns nicht. Und mit Premium sind Sie <strong>vor allen Gratis-Einträgen platziert</strong>, ohne ständig Gebote abgeben zu müssen.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>🔄</span>
+              Kann ich Premium jederzeit kündigen?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Ja, monatlich kündbar.</strong> Keine Mindestlaufzeit, keine versteckten Kündigungsfristen. Sie können Silver oder Gold jederzeit zum Monatsende beenden und fallen automatisch zurück in den kostenlosen Basiseintrag. Wir wollen, dass Sie nur dann zahlen, wenn Sie den Mehrwert auch tatsächlich spüren.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>⏰</span>
+              Ich habe keine Zeit für noch eine Plattform. Wer pflegt meinen Eintrag?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Verständlich – und genau dafür sind unsere <strong>KI-Agenten</strong> da. Sie übernehmen die Pflege Ihres Eintrags automatisch: Öffnungszeiten, Events, Bewertungen – alles wird in Echtzeit aktualisiert. Als Premium-Betrieb erhalten Sie sogar einen <strong>persönlichen KI-Assistenten</strong>, der Optimierungsvorschläge liefert. Sie müssen sich um nichts kümmern, außer einmal anzumelden. Menschen entscheiden, <strong>KI liefert</strong>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+              <span>🏔️</span>
+              Wer steckt hinter tiroltourismus.com?
+              <span class="faq-arrow">▼</span>
+            </button>
+            <div class="faq-answer">
+              <p>Ein kleines, leidenschaftliches Team mit Sitz in <strong>Innsbruck, Tirol</strong>. Wir haben dieses Portal gestartet, weil wir fanden, dass Tirol ein Portal verdient, das so bunt, ehrlich und anders ist wie das Land selbst. Unsere Mission: das <strong>vollständigste Tirol-Verzeichnis</strong> aufzubauen – kuratiert von Menschen, betrieben von KI, für alle zugänglich. Transparenz und Fairness sind unsere Grundwerte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="section">
       <div class="container" style="text-align:center;padding:48px 0">
@@ -175,9 +261,92 @@ import SectionHeader from '../../components/SectionHeader.astro';
   .card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;transition:all .4s var(--ease)}
   .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
 
+  /* ═══ FAQ ACCORDION ═══ */
+  .faq-section {
+    background: var(--bg);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .faq-item {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .faq-item:hover {
+    border-color: var(--pink);
+    box-shadow: 0 4px 16px rgba(255, 20, 147, 0.06);
+  }
+  .faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    text-align: left;
+    letter-spacing: 0.3px;
+    transition: background 0.3s;
+    line-height: 1.4;
+  }
+  .faq-question span:first-child {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .faq-arrow {
+    margin-left: auto;
+    flex-shrink: 0;
+    font-size: 10px;
+    color: var(--text3);
+    transition: transform 0.3s var(--ease);
+  }
+  .faq-question.open .faq-arrow {
+    transform: rotate(180deg);
+  }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease), padding 0.4s var(--ease);
+    padding: 0 24px;
+  }
+  .faq-answer.open {
+    max-height: 300px;
+    padding: 0 24px 20px;
+  }
+  .faq-answer p {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.8;
+    margin: 0;
+  }
+  .faq-answer strong {
+    color: var(--text);
+  }
+  .faq-item:first-child .faq-question span:first-child {
+    font-size: 20px;
+  }
+
   @media(max-width:768px){
     .section{padding:48px 0}
     [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
     [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+    .faq-question {
+      padding: 14px 18px;
+      font-size: 13px;
+    }
+    .faq-answer.open {
+      padding: 0 18px 16px;
+    }
   }
 </style>

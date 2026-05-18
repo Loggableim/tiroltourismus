@@ -32,7 +32,7 @@ const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier =
 
 <style is:global>
   .uk-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column}
-  .uk-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+  .uk-card:hover{transform:translateY(-5px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
   .uk-img{position:relative;height:140px;display:flex;align-items:center;justify-content:center;background:var(--surface)}
   .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a}
   .badge-silver{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--green),#059669);color:#fff}

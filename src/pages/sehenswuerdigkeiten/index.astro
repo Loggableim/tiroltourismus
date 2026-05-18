@@ -13,7 +13,12 @@ const kategorien = [...new Set(sights.map(s => s.entry.kategorie).filter(Boolean
 <BaseLayout title="Sehenswürdigkeiten in Tirol" description="Entdecke die schönsten Sehenswürdigkeiten in Tirol – von Gletschern über Burgen bis zu atemberaubenden Aussichtspunkten.">
   <main>
     <Breadcrumbs items={[{ label: 'Sehenswürdigkeiten' }]} />
-    <Hero title="Sehenswürdigkeiten" subtitle="Entdecke die schönsten Orte und Highlights in Tirol." emoji="🏛️" size="md" />
+    <Hero title="Sehenswürdigkeiten" subtitle="Entdecke die schönsten Orte und Highlights in Tirol." emoji="🏛️" size="md">
+      <div slot="actions" class="hero-actions">
+        <a href="#sight-grid" class="btn btn-pink">Highlights entdecken →</a>
+        <span class="hero-urgency">✨ {sights.length} Sehenswürdigkeiten</span>
+      </div>
+    </Hero>
 
     {sights.length > 0 ? (
       <section class="section">
@@ -27,7 +32,7 @@ const kategorien = [...new Set(sights.map(s => s.entry.kategorie).filter(Boolean
             </div>
           )}
 
-          <div class="sight-grid">
+          <div class="sight-grid" id="sight-grid">
             {sights.map((s, i) => (
               <SightCard
                 name={s.entry.name}

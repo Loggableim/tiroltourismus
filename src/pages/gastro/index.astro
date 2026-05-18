@@ -23,7 +23,12 @@ const gastro = readCollection('gastro').filter(g => isPublished(g.entry));
       subtitle="Entdecke die kulinarische Vielfalt Tirols."
       emoji="🍽️"
       size="md"
-    />
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#gastro-grid" class="btn btn-pink">Gastro entdecken →</a>
+        <span class="hero-urgency">⭐ {gastro.length} Genussorte</span>
+      </div>
+    </Hero>
 
     {gastro.length > 0 ? (
       <section class="section">
@@ -34,7 +39,7 @@ const gastro = readCollection('gastro').filter(g => isPublished(g.entry));
             sub="Von urigen Hütten über traditionelle Gasthäuser bis zu moderner Haubenküche – Tirol verwöhnt deinen Gaumen."
           />
 
-          <div class="gastro-grid">
+          <div class="gastro-grid" id="gastro-grid">
             {gastro.map((g) => (
               <GastroCard
                 name={g.entry.name}

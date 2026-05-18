@@ -41,12 +41,12 @@
     "title": "Unsere Regionen",
     "desc": "Jede Region hat ihren eigenen Vibe – von poppig bis dramatisch, von gold bis pink.",
     "items": [
-      { "img": "/assets/images/region_innsbruck_20260517_101459.png", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "Stadt & Berg – urbaner Alpenglühn-Mix", "stars": 5, "slug": "innsbruck" },
-      { "img": "/assets/images/region_oetztal_20260517_101502.png", "tag": "NATUR", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Gletscher, Gipfel & wilde Täler", "stars": 4, "slug": "oetztal" },
-      { "img": "/assets/images/region_zillertal_20260517_101508.png", "tag": "AKTIV", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Wandern, Biken, Skifahren pur", "stars": 5, "slug": "zillertal" },
-      { "img": "/assets/images/region_stubaital_20260517_101513.png", "tag": "KULINARIK", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Genuss & Bergromantik", "stars": 4, "slug": "stubaital" },
-      { "img": "/assets/images/region_kitzbuehel_20260517_101526.png", "tag": "LUXUS", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Alpine Eleganz & Glamour", "stars": 5, "slug": "kitzbuehel" },
-      { "img": "/assets/images/region_kaunertal_20260517_101520.png", "tag": "GIPFEL", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Ursprünglich & unberührt", "stars": 4, "slug": "kaunertal" }
+      { "img": "/assets/images/region_innsbruck_20260517_101459.webp", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "Stadt & Berg – urbaner Alpenglühn-Mix", "stars": 5, "slug": "innsbruck" },
+      { "img": "/assets/images/region_oetztal_20260517_101502.webp", "tag": "NATUR", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Gletscher, Gipfel & wilde Täler", "stars": 4, "slug": "oetztal" },
+      { "img": "/assets/images/region_zillertal_20260517_101508.webp", "tag": "AKTIV", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Wandern, Biken, Skifahren pur", "stars": 5, "slug": "zillertal" },
+      { "img": "/assets/images/region_stubaital_20260517_101513.webp", "tag": "KULINARIK", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Genuss & Bergromantik", "stars": 4, "slug": "stubaital" },
+      { "img": "/assets/images/region_kitzbuehel_20260517_101526.webp", "tag": "LUXUS", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Alpine Eleganz & Glamour", "stars": 5, "slug": "kitzbuehel" },
+      { "img": "/assets/images/region_kaunertal_20260517_101520.webp", "tag": "GIPFEL", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Ursprünglich & unberührt", "stars": 4, "slug": "kaunertal" }
     ]
   },
   "unterkuenfte": {
@@ -55,9 +55,9 @@
     "desc": "Von der Design-Lodge bis zur urigen Hütte – kontrastreich wie die Berge selbst.",
     "tabs": ["Empfohlen", "Beste Bewertung", "Bestpreis"],
     "items": [
-      { "img": "/assets/images/hotel_1_20260517_101547.png", "badge": "KI-Empfehlung", "badgeClass": "pop", "type": "Design Hotel", "name": "Pop Mountain Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
-      { "img": "/assets/images/hotel_2_20260517_101544.png", "badge": "Top bewertet", "badgeClass": "top", "type": "Alpine Lodge", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
-      { "img": "/assets/images/hotel_3_20260517_101551.png", "badge": "Sparangebot", "badgeClass": "deal", "type": "Ferienwohnung", "name": "Alpen Pop Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
+      { "img": "/assets/images/hotel_1_20260517_101547.webp", "badge": "KI-Empfehlung", "badgeClass": "pop", "type": "Design Hotel", "name": "Pop Mountain Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
+      { "img": "/assets/images/hotel_2_20260517_101544.webp", "badge": "Top bewertet", "badgeClass": "top", "type": "Alpine Lodge", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
+      { "img": "/assets/images/hotel_3_20260517_101551.webp", "badge": "Sparangebot", "badgeClass": "deal", "type": "Ferienwohnung", "name": "Alpen Pop Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
     ]
   },
   "activities": [
@@ -75,8 +75,8 @@
     { "day": 12, "month": "SEP", "dateBoxClass": "green", "cat": "🍽️ Kulinarik", "title": "Pop-Up Gourmet Gipfel", "desc": "Spitzenköche treffen auf Streetfood – mit goldenen Akzenten und Aromen auf 2.500m.", "loc": "Kitzbühel", "price": "€89" }
   ],
   "magazin": [
-    { "img": "/assets/images/magazin_1_20260517_101554.png", "cat": "Wandern", "catClass": "wander", "date": "12. Mai 2026", "title": "Die buntesten Wanderrouten Tirols", "desc": "Sieben Routen, die beweisen, dass die Natur selbst die beste Künstlerin ist – von Alpenblumen bis zu goldenen Gletscherseen." },
-    { "img": "/assets/images/magazin_2_20260517_101600.png", "cat": "Natur", "catClass": "natur", "date": "28. April 2026", "title": "Nachhaltigkeit trifft Popkultur", "desc": "Wie Tiroler Hotels mit knalligen Ideen, goldenen Akzenten und grünem Gewissen neue Maßstäbe setzen." },
-    { "img": "/assets/images/magazin_3_20260517_101603.png", "cat": "Kulinarik", "catClass": "kulin", "date": "03. April 2026", "title": "Alpine Pop-Küche – Rezepte mit Farbe", "desc": "Von pinken Knödeln bis zum goldenen Schnitzel: Junge Köche interpretieren Tiroler Klassiker neu." }
+    { "img": "/assets/images/magazin_1_20260517_101554.webp", "cat": "Wandern", "catClass": "wander", "date": "12. Mai 2026", "title": "Die buntesten Wanderrouten Tirols", "desc": "Sieben Routen, die beweisen, dass die Natur selbst die beste Künstlerin ist – von Alpenblumen bis zu goldenen Gletscherseen." },
+    { "img": "/assets/images/magazin_2_20260517_101600.webp", "cat": "Natur", "catClass": "natur", "date": "28. April 2026", "title": "Nachhaltigkeit trifft Popkultur", "desc": "Wie Tiroler Hotels mit knalligen Ideen, goldenen Akzenten und grünem Gewissen neue Maßstäbe setzen." },
+    { "img": "/assets/images/magazin_3_20260517_101603.webp", "cat": "Kulinarik", "catClass": "kulin", "date": "03. April 2026", "title": "Alpine Pop-Küche – Rezepte mit Farbe", "desc": "Von pinken Knödeln bis zum goldenen Schnitzel: Junge Köche interpretieren Tiroler Klassiker neu." }
   ]
 }

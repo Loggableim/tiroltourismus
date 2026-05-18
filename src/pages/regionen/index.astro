@@ -23,7 +23,12 @@ const regionen = readCollection('regionen').filter(r => isPublished(r.entry)).so
       subtitle="Sechs Gesichter, ein Land."
       emoji="🏔️"
       size="md"
-    />
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#region-grid" class="btn btn-pink">Regionen entdecken →</a>
+        <span class="hero-urgency">🏔️ {regionen.length} Regionen</span>
+      </div>
+    </Hero>
 
     {regionen.length > 0 ? (
       <>
@@ -35,7 +40,7 @@ const regionen = readCollection('regionen').filter(r => isPublished(r.entry)).so
               sub="Ob hochalpine Gipfel, glitzernde Gletscher oder urbane Bergluft – Tirols Regionen sind so vielfältig wie das Leben selbst."
             />
 
-            <div class="region-grid">
+            <div class="region-grid" id="region-grid">
               {regionen.map((r) => (
                 <RegionCard
                   titel={r.entry.titel}

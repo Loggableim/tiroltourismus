@@ -44,7 +44,12 @@ const kategorieLabel = {
       subtitle="Wandern, Ski, Bike, Wellness, Kulinarik, Kultur & Abenteuer – Tirol hat für jeden das passende Erlebnis."
       emoji="🏔️"
       size="md"
-    />
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#erlebnis-grid" class="btn btn-pink">Erlebnisse entdecken →</a>
+        <span class="hero-urgency">🔥 {erlebnisse.length} Abenteuer</span>
+      </div>
+    </Hero>
 
     {erlebnisse.length > 0 ? (
       <section class="section">

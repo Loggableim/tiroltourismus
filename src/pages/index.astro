@@ -276,7 +276,7 @@ const page = homepageData;
             </div>
             <a href="/fuer-betriebe/" class="btn btn-pink">Jetzt Partner werden</a>
           </div>
-          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.png') center/cover">PINK · GOLD</div>
+          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.webp') center/cover">PINK · GOLD</div>
         </div>
       </div>
     </section>
@@ -284,9 +284,6 @@ const page = homepageData;
 </BaseLayout>
 
 <style is:global>
-  /* ═══ SCROLL PROGRESS ═══ */
-  #scrollProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--gold));z-index:9999;width:0;transition:width 50ms linear}
-
   /* ═══ HERO ═══ */
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 24px 60px}
   .hero-bg{position:absolute;inset:0;z-index:0}
@@ -487,8 +484,6 @@ const page = homepageData;
   .partner-visual{height:300px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:36px;letter-spacing:4px;color:#fff;text-transform:uppercase;text-shadow:0 4px 20px rgba(0,0,0,.3)}
   @media(max-width:768px){.partner-grid{grid-template-columns:1fr}.partner-visual{height:200px}.partner-benefits{grid-template-columns:1fr}}
 
-  /* ═══ BACK TO TOP ═══ */
-  .btt{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--pink);color:#fff;font-size:20px;border:none;cursor:pointer;z-index:999;opacity:0;transform:translateY(20px);transition:all .3s var(--ease);box-shadow:0 4px 20px var(--pink-glow)}
-  .btt.visible{opacity:1;transform:translateY(0)}
-  .btt:hover{transform:translateY(-4px);box-shadow:0 8px 30px var(--pink-glow)}
+  /* ═══ LAZY LOADING — content-visibility for all below-fold sections ═══ */
+  .seelen, .why-tirol, .regions, .quote-block, .accommodations, .activities, .events, .magazine, .partner { content-visibility: auto; contain-intrinsic-size: auto 600px }
 </style>

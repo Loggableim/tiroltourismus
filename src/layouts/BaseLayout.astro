@@ -13,6 +13,7 @@ export interface Props {
   locale?: string;
   publishedTime?: string;
   jsonld?: Record<string, unknown>;
+  noindex?: boolean;
 }
 
 const {
@@ -24,6 +25,7 @@ const {
   locale = 'de',
   publishedTime,
   jsonld,
+  noindex,
 } = Astro.props;
 
 // Locale helpers
@@ -155,6 +157,7 @@ if (extraLD) ldBlocks.push(extraLD);
   <title>{title} – tiroltourismus.com</title>
   <meta name="description" content={siteDesc}>
   <meta name="theme-color" content="#FF1493">
+  {noindex && <meta name="robots" content="noindex, nofollow" />}
   <link rel="alternate" href={currentPath.replace(/^\/en(\/|$)/, '/') || '/'} hreflang="de" />
   <link rel="alternate" href={`/en${currentPath.startsWith('/en') ? currentPath.replace('/en', '') : currentPath === '/' ? '' : currentPath}`} hreflang="en" />
   <!-- Fonts: display=swap + preconnect for optimal loading -->
@@ -274,8 +277,6 @@ if (extraLD) ldBlocks.push(extraLD);
         <div class="topbar-lang">
           <a href={switchLangPath('de')} class={locale === 'de' ? 'active' : ''}>DE</a>
           <a href={switchLangPath('en')} class={locale === 'en' ? 'active' : ''}>EN</a>
-          <a href={switchLangPath('de')}>IT</a>
-          <a href={switchLangPath('de')}>FR</a>
         </div>
         <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
       </div>
@@ -324,7 +325,7 @@ if (extraLD) ldBlocks.push(extraLD);
         <a href={`${localePrefix}/preise/`} class={Astro.url.pathname.includes('preise') ? 'active' : ''} style="color:var(--gold-light);font-weight:600">{nav.preise}</a>
       </div>
       <div class="nav-r">
-        <button class="nav-search" onclick="window.location.href='{localePrefix}/suche/'" aria-label={nav.suche}>🔍</button>
+        <button class="nav-search" onclick={`window.location.href='${localePrefix}/suche/'`} aria-label={nav.suche}>🔍</button>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>

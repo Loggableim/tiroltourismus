@@ -1,9 +1,8 @@
 /**
  * AdminPendingDashboard.tsx — Admin-Dashboard zur Freigabe von Betriebs-Einträgen
  *
- * Liest pending entries aus localStorage (von BetriebRegistrationForm gespeichert).
- * Approve: verschiebt in 'tirol_approved_betriebe', zeigt JSON zum Export.
- * Reject: entfernt aus pending und speichert in 'tirol_rejected_betriebe'.
+ * Liest pending entries von der VPS-API (webhook.tiroltourismus.com).
+ * Approve/Reject per API-Aufruf. Enthält einfachen Passwort-Schutz.
  *
  * Use: client:load in /admin/pending/index.astro
  */
@@ -12,6 +11,7 @@ import { useState, useEffect, useCallback } from 'react';
 
 /* ── Types ── */
 export interface BetriebEntry {
+  slug?: string;
   name: string;
   typ: string;
   ort: string;
@@ -19,228 +19,210 @@ export interface BetriebEntry {
   email: string;
   telefon: string;
   bildUrl: string;
-  submittedAt?: string;
+  status?: string;
+  erstelltAm?: string;
+  freigegebenAm?: string;
+  serverSlug?: string;
 }
 
-interface ApprovedEntry extends BetriebEntry {
-  approvedAt: string;
-}
+/* ── API ── */
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:3456'
+  : 'https://webhook.tiroltourismus.com';
 
-const PENDING_KEY = 'tirol_pending_betriebe';
-const APPROVED_KEY = 'tirol_approved_betriebe';
-const REJECTED_KEY = 'tirol_rejected_betriebe';
-
-/* ── Helpers ── */
-function makeSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[ä]/g, 'ae')
-    .replace(/[ö]/g, 'oe')
-    .replace(/[ü]/g, 'ue')
-    .replace(/[ß]/g, 'ss')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 60);
-}
-
-function loadJSON<T>(key: string): T[] {
-  try {
-    const raw = localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveJSON<T>(key: string, data: T[]) {
-  localStorage.setItem(key, JSON.stringify(data));
-}
-
-/** Generiere vollständiges Eintrags-JSON für den Export */
-function buildExportEntry(data: BetriebEntry, slug: string, status: 'published' | 'rejected') {
-  return {
-    slug,
-    name: data.name,
-    typ: data.typ,
-    ort: data.ort,
-    kurzbeschreibung: data.beschreibung,
-    kontakt: {
-      email: data.email,
-      telefon: data.telefon || null,
-    },
-    bildUrl: data.bildUrl || null,
-    status,
-    erstelltAm: data.submittedAt || new Date().toISOString(),
-    veroentlichtAm: status === 'published' ? new Date().toISOString() : null,
-  };
-}
-
-/** Einen Datei-Download triggern */
-function downloadJSON(filename: string, json: unknown) {
-  const blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
-}
+/* ── Simple Admin-Passwort (niedrige Sicherheitsstufe für GitHub Pages) ── */
+const ADMIN_PASSWORD = 'tirol2026';
 
 /* ── Component ── */
 export default function AdminPendingDashboard() {
-  const [pending, setPending] = useState<BetriebEntry[]>([]);
-  const [approved, setApproved] = useState<ApprovedEntry[]>([]);
-  const [filter, setFilter] = useState<'all' | 'pending' | 'approved' | 'rejected'>('pending');
-  const [notification, setNotification] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
+  const [authed, setAuthed] = useState(false);
+  const [pwInput, setPwInput] = useState('');
+  const [pwError, setPwError] = useState('');
 
-  const loadData = useCallback(() => {
-    setPending(loadJSON<BetriebEntry>(PENDING_KEY));
-    setApproved(loadJSON<ApprovedEntry>(APPROVED_KEY));
+  const [pending, setPending] = useState<BetriebEntry[]>([]);
+  const [approved, setApproved] = useState<BetriebEntry[]>([]);
+  const [filter, setFilter] = useState<'all' | 'pending' | 'approved'>('pending');
+  const [notification, setNotification] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  /* ── Passwort-Login ── */
+  function handleLogin() {
+    if (pwInput === ADMIN_PASSWORD) {
+      setAuthed(true);
+      setPwError('');
+    } else {
+      setPwError('Falsches Passwort.');
+    }
+  }
+
+  function handlePwKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'Enter') handleLogin();
+  }
+
+  /* ── Daten von API laden ── */
+  const loadData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const resp = await fetch(`${API_BASE}/api/betriebe/pending`);
+      if (resp.ok) {
+        const entries: BetriebEntry[] = await resp.json();
+        setPending(entries.filter(e => e.status === 'pending'));
+        setApproved(entries.filter(e => e.status === 'approved'));
+      }
+    } catch (e) {
+      console.warn('Fehler beim Laden der pending entries:', e);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
-    loadData();
-  }, [loadData]);
+    if (authed) loadData();
+  }, [authed, loadData]);
 
-  /* ── Show notification ── */
+  /* ── Notification ── */
   function notify(type: 'success' | 'error', msg: string) {
     setNotification({ type, msg });
     setTimeout(() => setNotification(null), 4000);
   }
 
-  /* ── Approve an entry ── */
-  function handleApprove(index: number) {
-    const entry = pending[index];
-    if (!entry) return;
-
-    const approvedEntry: ApprovedEntry = {
-      ...entry,
-      submittedAt: entry.submittedAt || new Date().toISOString(),
-      approvedAt: new Date().toISOString(),
-    };
-
-    // Move from pending to approved
-    const newPending = [...pending];
-    newPending.splice(index, 1);
-    const newApproved = [...approved, approvedEntry];
-
-    saveJSON(PENDING_KEY, newPending);
-    saveJSON(APPROVED_KEY, newApproved);
-
-    setPending(newPending);
-    setApproved(newApproved);
-
-    notify('success', `"${entry.name}" wurde freigegeben!`);
+  /* ── Approve ── */
+  async function handleApprove(slug: string) {
+    try {
+      const resp = await fetch(`${API_BASE}/api/betriebe/pending/${slug}/approve`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      });
+      if (resp.ok) {
+        const entry = pending.find(e => e.slug === slug);
+        notify('success', `"${entry?.name || slug}" wurde freigegeben!`);
+        await loadData();
+      } else {
+        const err = await resp.json();
+        notify('error', err.error || 'Fehler beim Freigeben');
+      }
+    } catch (e) {
+      notify('error', 'Server nicht erreichbar');
+    }
   }
 
-  /* ── Reject an entry ── */
-  function handleReject(index: number) {
-    const entry = pending[index];
-    if (!entry) return;
-
-    // Append to rejected archive
-    const rejectedLog = loadJSON<{ entry: BetriebEntry; rejectedAt: string }>(REJECTED_KEY);
-    rejectedLog.push({ entry, rejectedAt: new Date().toISOString() });
-    saveJSON(REJECTED_KEY, rejectedLog);
-
-    // Remove from pending
-    const newPending = [...pending];
-    newPending.splice(index, 1);
-    saveJSON(PENDING_KEY, newPending);
-    setPending(newPending);
-
-    notify('success', `"${entry.name}" wurde abgelehnt.`);
+  /* ── Reject ── */
+  async function handleReject(slug: string) {
+    const grund = window.prompt('Grund für Ablehnung (optional):');
+    try {
+      const resp = await fetch(`${API_BASE}/api/betriebe/pending/${slug}/reject`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ grund: grund || '' }),
+      });
+      if (resp.ok) {
+        const entry = pending.find(e => e.slug === slug);
+        notify('success', `"${entry?.name || slug}" wurde abgelehnt.`);
+        await loadData();
+      } else {
+        const err = await resp.json();
+        notify('error', err.error || 'Fehler beim Ablehnen');
+      }
+    } catch (e) {
+      notify('error', 'Server nicht erreichbar');
+    }
   }
 
-  /* ── Download all approved entries as a single JSON collection ── */
-  function handleDownloadAll() {
-    const entries = approved.map((e) =>
-      buildExportEntry(e, makeSlug(e.name), 'published')
+  /* ── Refresh ── */
+  function handleRefresh() {
+    loadData();
+    notify('success', 'Daten aktualisiert.');
+  }
+
+  /* ── PASSWORT-GATE ── */
+  if (!authed) {
+    return (
+      <div className="admin-gate">
+        <div className="admin-gate-card">
+          <div className="admin-gate-icon">🔐</div>
+          <h2>Admin-Bereich</h2>
+          <p>Bitte Passwort eingeben, um fortzufahren.</p>
+          <input
+            type="password"
+            className="admin-gate-input"
+            placeholder="Passwort"
+            value={pwInput}
+            onChange={e => setPwInput(e.target.value)}
+            onKeyDown={handlePwKeyDown}
+            autoFocus
+          />
+          <button className="admin-gate-btn" onClick={handleLogin}>
+            Freischalten
+          </button>
+          {pwError && <p className="admin-gate-error">{pwError}</p>}
+        </div>
+      </div>
     );
-    downloadJSON('approved-betriebe.json', entries);
   }
 
-  /* ── Download a single pending entry as JSON ── */
-  function handleDownloadPending(entry: BetriebEntry) {
-    const slug = makeSlug(entry.name);
-    const json = buildExportEntry(entry, slug, 'pending');
-    downloadJSON(`${slug}/index.json`, json);
+  /* ── LOADING ── */
+  if (loading) {
+    return (
+      <div className="admin-loading">
+        <div className="admin-loading-spinner" />
+        <p className="admin-loading-text">Lade ausstehende Einträge…</p>
+      </div>
+    );
   }
 
-  /* ── Clear localStorage and reset everything ── */
-  function handleClearAll() {
-    if (!window.confirm('Alle Daten unwiderruflich löschen?')) return;
-    localStorage.removeItem(PENDING_KEY);
-    localStorage.removeItem(APPROVED_KEY);
-    localStorage.removeItem(REJECTED_KEY);
-    setPending([]);
-    setApproved([]);
-    notify('success', 'Alle Daten wurden gelöscht.');
-  }
-
+  /* ── DASHBOARD ── */
   return (
     <div className="admin-dashboard">
-      {/* ── Notification bar ── */}
+      {/* Notification */}
       {notification && (
         <div className={`admin-notification admin-notification-${notification.type}`} role="alert">
           {notification.msg}
         </div>
       )}
 
-      {/* ── Stats ── */}
+      {/* Stats */}
       <div className="admin-stats">
         <div className="admin-stat">
           <span className="admin-stat-num">{pending.length}</span>
           <span className="admin-stat-label">Ausstehend</span>
         </div>
         <div className="admin-stat">
-          <span className="admin-stat-num" style={{color: 'var(--green, #00C853)'}}>{approved.length}</span>
+          <span className="admin-stat-num" style={{color: 'var(--green)'}}>{approved.length}</span>
           <span className="admin-stat-label">Freigegeben</span>
         </div>
         <div className="admin-stat">
-          <span className="admin-stat-num">{loadJSON(REJECTED_KEY).length}</span>
-          <span className="admin-stat-label">Abgelehnt</span>
+          <span className="admin-stat-num">—</span>
+          <span className="admin-stat-label">Abgelehnt (per API)</span>
         </div>
       </div>
 
-      {/* ── Actions bar ── */}
+      {/* Actions */}
       <div className="admin-actions-bar">
         <div className="admin-tabs">
-          <button
-            className={`admin-tab${filter === 'pending' ? ' active' : ''}`}
-            onClick={() => setFilter('pending')}
-          >
+          <button className={`admin-tab${filter === 'pending' ? ' active' : ''}`} onClick={() => setFilter('pending')}>
             ⏳ Ausstehend ({pending.length})
           </button>
-          <button
-            className={`admin-tab${filter === 'approved' ? ' active' : ''}`}
-            onClick={() => setFilter('approved')}
-          >
+          <button className={`admin-tab${filter === 'approved' ? ' active' : ''}`} onClick={() => setFilter('approved')}>
             ✅ Freigegeben ({approved.length})
           </button>
-          <button
-            className={`admin-tab${filter === 'all' ? ' active' : ''}`}
-            onClick={() => setFilter('all')}
-          >
+          <button className={`admin-tab${filter === 'all' ? ' active' : ''}`} onClick={() => setFilter('all')}>
             📋 Alle anzeigen
           </button>
         </div>
         <div className="admin-actions-r">
-          <button className="admin-btn admin-btn-download" onClick={handleDownloadAll} disabled={approved.length === 0}>
-            ⬇ Alle Exportieren
-          </button>
-          <button className="admin-btn admin-btn-danger" onClick={handleClearAll}>
-            🗑 Zurücksetzen
+          <button className="admin-btn admin-btn-ghost" onClick={handleRefresh}>
+            🔄 Aktualisieren
           </button>
         </div>
       </div>
 
-      {/* ── PENDING LIST ── */}
+      {/* PENDING LIST */}
       {(filter === 'pending' || filter === 'all') && pending.length > 0 && (
         <section className="admin-section">
           <h2 className="admin-section-title">⏳ Ausstehende Einträge ({pending.length})</h2>
           {pending.map((entry, i) => (
-            <div key={i} className="admin-entry">
+            <div key={entry.slug || i} className="admin-entry">
               <div className="admin-entry-header">
                 <span className="admin-entry-emoji">🏪</span>
                 <div className="admin-entry-meta">
@@ -249,9 +231,9 @@ export default function AdminPendingDashboard() {
                   <span className="admin-entry-divider">·</span>
                   <span className="admin-entry-ort">📍 {entry.ort}</span>
                 </div>
-                {entry.submittedAt && (
+                {entry.erstelltAm && (
                   <span className="admin-entry-date">
-                    {new Date(entry.submittedAt).toLocaleDateString('de-AT', {
+                    {new Date(entry.erstelltAm).toLocaleDateString('de-AT', {
                       day: '2-digit', month: '2-digit', year: 'numeric',
                       hour: '2-digit', minute: '2-digit'
                     })}
@@ -265,43 +247,14 @@ export default function AdminPendingDashboard() {
                   <span>✉️ {entry.email}</span>
                   {entry.telefon && <span>📞 {entry.telefon}</span>}
                 </div>
-                {entry.bildUrl && (
-                  <div className="admin-entry-img">
-                    <span>🖼️ </span>
-                    <a href={entry.bildUrl} target="_blank" rel="noopener noreferrer" className="admin-link">
-                      {entry.bildUrl}
-                    </a>
-                  </div>
-                )}
               </div>
 
-              {/* JSON Preview */}
-              <details className="admin-entry-json-details">
-                <summary className="admin-entry-json-summary">📄 JSON anzeigen</summary>
-                <pre className="admin-entry-json">{JSON.stringify(
-                  buildExportEntry(entry, makeSlug(entry.name), 'pending'),
-                  null, 2
-                )}</pre>
-              </details>
-
               <div className="admin-entry-actions">
-                <button
-                  className="admin-btn admin-btn-approve"
-                  onClick={() => handleApprove(i)}
-                >
+                <button className="admin-btn admin-btn-approve" onClick={() => handleApprove(entry.slug || '')}>
                   ✅ Freigeben
                 </button>
-                <button
-                  className="admin-btn admin-btn-reject"
-                  onClick={() => handleReject(i)}
-                >
+                <button className="admin-btn admin-btn-reject" onClick={() => handleReject(entry.slug || '')}>
                   ❌ Ablehnen
-                </button>
-                <button
-                  className="admin-btn admin-btn-ghost"
-                  onClick={() => handleDownloadPending(entry)}
-                >
-                  ⬇ JSON
                 </button>
               </div>
             </div>
@@ -309,12 +262,12 @@ export default function AdminPendingDashboard() {
         </section>
       )}
 
-      {/* ── APPROVED LIST ── */}
+      {/* APPROVED LIST */}
       {(filter === 'approved' || filter === 'all') && approved.length > 0 && (
         <section className="admin-section">
           <h2 className="admin-section-title">✅ Freigegebene Einträge ({approved.length})</h2>
           {approved.map((entry, i) => (
-            <div key={i} className="admin-entry admin-entry-approved">
+            <div key={entry.slug || i} className="admin-entry admin-entry-approved">
               <div className="admin-entry-header">
                 <span className="admin-entry-emoji">✅</span>
                 <div className="admin-entry-meta">
@@ -323,33 +276,31 @@ export default function AdminPendingDashboard() {
                   <span className="admin-entry-divider">·</span>
                   <span className="admin-entry-ort">📍 {entry.ort}</span>
                 </div>
-                <span className="admin-entry-date">
-                  Freigegeben: {new Date(entry.approvedAt).toLocaleDateString('de-AT', {
-                    day: '2-digit', month: '2-digit', year: 'numeric',
-                    hour: '2-digit', minute: '2-digit'
-                  })}
-                </span>
+                {entry.freigegebenAm && (
+                  <span className="admin-entry-date">
+                    Freigegeben: {new Date(entry.freigegebenAm).toLocaleDateString('de-AT', {
+                      day: '2-digit', month: '2-digit', year: 'numeric',
+                      hour: '2-digit', minute: '2-digit'
+                    })}
+                  </span>
+                )}
               </div>
-
-              <details className="admin-entry-json-details">
-                <summary className="admin-entry-json-summary">📄 JSON zum Einfügen in <code>src/data/pending/{makeSlug(entry.name)}/index.json</code></summary>
-                <pre className="admin-entry-json">{JSON.stringify(
-                  buildExportEntry(entry, makeSlug(entry.name), 'published'),
-                  null, 2
-                )}</pre>
-              </details>
+              <p className="admin-entry-desc">{entry.beschreibung}</p>
+              <div className="admin-entry-contact">
+                <span>✉️ {entry.email}</span>
+              </div>
             </div>
           ))}
         </section>
       )}
 
-      {/* ── Empty state ── */}
-      {pending.length === 0 && (filter === 'pending' || filter === 'all') && (
+      {/* EMPTY STATE */}
+      {pending.length === 0 && approved.length === 0 && (
         <div className="admin-empty">
           <div className="admin-empty-icon">📭</div>
-          <h3 className="admin-empty-title">Keine ausstehenden Einträge</h3>
+          <h3 className="admin-empty-title">Keine Einträge</h3>
           <p className="admin-empty-text">
-            Es wurden noch keine Betriebs-Einträge über das Registrierungsformular eingereicht.
+            Es wurden noch keine Betriebs-Einträge eingereicht.
           </p>
           <a href="/fuer-betriebe/registrierung/" className="btn btn-pink">
             Registrierungsformular öffnen →

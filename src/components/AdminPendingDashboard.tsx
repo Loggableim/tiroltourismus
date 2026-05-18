@@ -67,7 +67,7 @@ export default function AdminPendingDashboard() {
       if (resp.ok) {
         const entries: BetriebEntry[] = await resp.json();
         setPending(entries.filter(e => e.status === 'pending'));
-        setApproved(entries.filter(e => e.status === 'approved'));
+        setApproved(entries.filter(e => e.status === 'published' || e.status === 'approved'));
       }
     } catch (e) {
       console.warn('Fehler beim Laden der pending entries:', e);
@@ -86,21 +86,20 @@ export default function AdminPendingDashboard() {
     setTimeout(() => setNotification(null), 4000);
   }
 
-  /* ── Approve ── */
-  async function handleApprove(slug: string) {
+  /* ── Publish (freigeben + in Kategorie veröffentlichen) ── */
+  async function handlePublish(slug: string) {
     try {
-      const resp = await fetch(`${API_BASE}/api/betriebe/pending/${slug}/approve`, {
+      const resp = await fetch(`${API_BASE}/api/betriebe/pending/${slug}/publish`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({}),
       });
+      const data = await resp.json();
       if (resp.ok) {
-        const entry = pending.find(e => e.slug === slug);
-        notify('success', `"${entry?.name || slug}" wurde freigegeben!`);
+        notify('success', `"${data.name}" wurde veröffentlicht → /${data.category}/${data.slug}/`);
         await loadData();
       } else {
-        const err = await resp.json();
-        notify('error', err.error || 'Fehler beim Freigeben');
+        notify('error', data.error || 'Fehler beim Veröffentlichen');
       }
     } catch (e) {
       notify('error', 'Server nicht erreichbar');
@@ -250,8 +249,8 @@ export default function AdminPendingDashboard() {
               </div>
 
               <div className="admin-entry-actions">
-                <button className="admin-btn admin-btn-approve" onClick={() => handleApprove(entry.slug || '')}>
-                  ✅ Freigeben
+                <button className="admin-btn admin-btn-approve" onClick={() => handlePublish(entry.slug || '')}>
+                  📰 Veröffentlichen
                 </button>
                 <button className="admin-btn admin-btn-reject" onClick={() => handleReject(entry.slug || '')}>
                   ❌ Ablehnen

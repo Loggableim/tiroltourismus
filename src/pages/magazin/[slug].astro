@@ -1,0 +1,39 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const articles = readCollection('magazin').filter(a => isPublished(a.entry));
+  return articles.map(a => ({ params: { slug: a.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('magazin', slug);
+if (!entry) return Astro.redirect('/magazin/');
+
+const catEmoji = { allgemein:'📰', tipps:'💡', reiseberichte:'✈️', interview:'🎙️', hintergrund:'🔍' };
+const emoji = catEmoji[entry.kategorie] || '📰';
+---
+
+<DetailPage
+  title={entry.titel}
+  description={entry.teaser}
+  sections={[
+    {
+      type: 'article-hero',
+      emoji: emoji,
+      category: entry.kategorie,
+      date: entry.datum,
+      author: entry.autor,
+      title: entry.titel,
+      teaser: entry.teaser,
+    },
+    entry.inhalt ? {
+      type: 'article-content',
+      content: entry.inhalt,
+      tags: entry.tags || [],
+      backHref: '/magazin/',
+      backText: 'Zurück zum Magazin',
+    } : null,
+  ].filter(Boolean)}
+/>

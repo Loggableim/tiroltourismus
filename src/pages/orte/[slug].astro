@@ -1,0 +1,39 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('orte').filter(o => isPublished(o.entry));
+  return all.map(o => ({ params: { slug: o.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('orte', slug);
+if (!entry) return Astro.redirect('/orte/');
+
+const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+---
+
+<DetailPage
+  title={name}
+  description={kurzbeschreibung}
+  breadcrumbs={[{ label: 'Orte', href: '/orte/' }, { label: name }]}
+  sections={[
+    {
+      type: 'hero',
+      title: name,
+      subtitle: kurzbeschreibung,
+      emoji: emoji,
+      gradient: farbe,
+    },
+    {
+      type: 'facts-bar',
+      accentColor: farbe,
+      items: [
+        hoehe ? { value: hoehe, label: 'Höhe' } : null,
+        einwohner ? { value: einwohner, label: 'Einwohner' } : null,
+      ].filter(Boolean),
+    },
+    tags && tags.length > 0 ? { type: 'tags', tags } : null,
+  ].filter(Boolean)}
+/>

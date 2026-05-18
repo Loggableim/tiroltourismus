@@ -1,0 +1,59 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('gastro').filter(g => isPublished(g.entry));
+  return all.map(g => ({ params: { slug: g.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('gastro', slug);
+if (!entry) return Astro.redirect('/gastro/');
+
+const emoji = entry.emoji || '🍽️';
+const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
+---
+
+<DetailPage
+  title={entry.name}
+  description={entry.kurzbeschreibung || `${entry.name} – ${entry.ort || 'Tirol'}. ${entry.kategorie || 'Kulinarik'}`}
+  breadcrumbs={[{ label: 'Gastro', href: '/gastro/' }, { label: entry.name }]}
+  sections={[
+    {
+      type: 'hero',
+      title: entry.name,
+      subtitle: subtitle,
+      emoji: emoji,
+      gradient: entry.farbe,
+    },
+    (entry.kurzbeschreibung || entry.beschreibung) ? {
+      type: 'description',
+      label: entry.name,
+      title: 'Über dieses Lokal',
+      content: [entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'),
+    } : null,
+    {
+      type: 'details-grid',
+      items: [
+        { label: 'Ort', value: entry.ort || undefined },
+        { label: 'Kategorie', value: entry.kategorie || undefined },
+        { label: 'Telefon', value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
+        { label: 'Adresse', value: entry.adresse || undefined },
+        { label: 'Preis', value: entry.preis || undefined, type: 'price' },
+        entry.webseite ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
+        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+      ].filter(Boolean),
+    },
+    {
+      type: 'cta',
+      label: 'Lust bekommen?',
+      title: 'Jetzt reservieren',
+      subtitle: 'Kontaktieren Sie das Lokal direkt für Tischreservierungen.',
+      buttons: [
+        entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+        entry.webseite ? { label: '🌐 Webseite', href: entry.webseite, variant: 'glass' } : null,
+      ].filter(Boolean),
+    },
+  ].filter(Boolean)}
+/>

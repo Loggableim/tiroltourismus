@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import { readCollection, isPublished } from '../../lib/content.js';
+
+const erlebnisse = readCollection('erlebnisse').filter(e => isPublished(e.entry));
+
+const kategorieMeta = {
+  wandern: { emoji: '🥾', color: 'var(--green)' },
+  ski: { emoji: '⛷️', color: 'var(--blue)' },
+  bike: { emoji: '🚵', color: 'var(--orange)' },
+  wellness: { emoji: '♨️', color: 'var(--pink)' },
+  familie: { emoji: '👨‍👩‍👧‍👦', color: 'var(--yellow)' },
+  kulinarik: { emoji: '🍷', color: 'var(--purple)' },
+  kultur: { emoji: '🎭', color: 'var(--orange)' },
+  abenteuer: { emoji: '🧗', color: 'var(--tirol-red)' },
+};
+
+const kategorieLabel = {
+  wandern: 'Wandern',
+  ski: 'Ski & Snowboard',
+  bike: 'Bike & Mountainbike',
+  wellness: 'Wellness & Erholung',
+  familie: 'Familie & Kinder',
+  kulinarik: 'Kulinarik',
+  kultur: 'Kultur',
+  abenteuer: 'Abenteuer',
+};
+---
+
+<BaseLayout
+  title="Erlebnisse in Tirol"
+  description="Erlebnisse in Tirol: Wandern, Ski, Bike, Wellness, Familie, Kulinarik, Kultur & Abenteuer."
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Erlebnisse' }]} />
+    </div>
+
+    <Hero
+      title="Erlebnisse"
+      subtitle="Wandern, Ski, Bike, Wellness, Kulinarik, Kultur & Abenteuer – Tirol hat für jeden das passende Erlebnis."
+      emoji="🏔️"
+      size="md"
+    />
+
+    {erlebnisse.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader
+            label="Entdecken"
+            title="Dein nächstes Abenteuer"
+            sub="Ob hoch über den Wolken oder tief in den Tälern – Tirols Erlebnisse warten auf dich."
+          />
+
+          <div class="kategorie-tabs">
+            <button class="kategorie-btn active" data-cat="all">Alle</button>
+            {Object.keys(kategorieLabel).map((k) => (
+              <button class="kategorie-btn" data-cat={k}>{kategorieLabel[k]}</button>
+            ))}
+          </div>
+
+          <div class="erlebnisse-grid" id="erlebnis-grid">
+            {erlebnisse.map((e) => {
+              const entry = e.entry;
+              const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--pink)' };
+              return (
+                <div class="erlebnis-card" data-kategorie={entry.kategorie}>
+                  <span class="erlebnis-icon">{meta.emoji}</span>
+                  <h3 class="erlebnis-title">{entry.titel}</h3>
+                  <p class="erlebnis-desc">{entry.kurzbeschreibung}</p>
+                  {entry.dauer && <div class="erlebnis-meta">⏱ {entry.dauer}</div>}
+                  {entry.schwierigkeit && <div class="erlebnis-meta">📊 {entry.schwierigkeit}</div>}
+                  {entry.preis && <div class="erlebnis-price">{entry.preis}</div>}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🥾</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            Bald verfügbar
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            Erlebnisse werden aktuell eingepflegt. Schau bald wieder vorbei!
+          </p>
+        </div>
+      </section>
+    )}
+
+    <section class="quote-section">
+      <div class="container">
+        <blockquote>
+          „Die Berge sind nicht nur aus Stein und Schnee – sie sind aus Geschichten gemacht. Jeder Gipfel hat eine, die darauf wartet, erzählt zu werden."
+        </blockquote>
+        <cite>Tiroler Redeweisheit</cite>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .kategorie-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  .kategorie-btn {
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid var(--glass-border);
+    background: transparent;
+    color: var(--text2);
+  }
+
+  .kategorie-btn.active {
+    background: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+    box-shadow: 0 4px 20px var(--pink-glow);
+  }
+
+  .kategorie-btn:hover:not(.active) {
+    border-color: var(--text2);
+    color: var(--text);
+  }
+
+  .erlebnisse-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+
+  @media (max-width: 968px) {
+    .erlebnisse-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .erlebnisse-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .erlebnis-card {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px 24px;
+    text-align: center;
+    transition: all 0.4s var(--ease);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .erlebnis-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--pink);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  }
+
+  .erlebnis-icon {
+    font-size: 52px;
+    margin-bottom: 12px;
+    display: block;
+    line-height: 1;
+  }
+
+  .erlebnis-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .erlebnis-desc {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+
+  .erlebnis-meta {
+    font-size: 12px;
+    color: var(--text3);
+    margin-bottom: 6px;
+  }
+
+  .erlebnis-price {
+    font-size: 14px;
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  .quote-section {
+    background: var(--bg2);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 64px 0;
+    text-align: center;
+  }
+
+  .quote-section blockquote {
+    font-size: clamp(18px, 2.5vw, 28px);
+    font-weight: 600;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .quote-section cite {
+    display: block;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text2);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .quote-section cite::before {
+    content: '— ';
+  }
+</style>

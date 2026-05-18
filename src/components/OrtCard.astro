@@ -1,0 +1,31 @@
+---
+export interface Props {
+  name: string;
+  slug: string;
+  beschreibung?: string;
+  emoji?: string;
+  farbe?: string;
+}
+const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--pink)' } = Astro.props;
+---
+<a href={`/orte/${slug}/`} class="ort-card">
+  <div class="ort-card-img" style={`background:${farbe}20`}>
+    <span class="ort-emoji">{emoji}</span>
+  </div>
+  <div class="ort-card-body">
+    <h3>{name}</h3>
+    {beschreibung && <p>{beschreibung}</p>}
+    <span class="ort-link">Entdecken →</span>
+  </div>
+</a>
+
+<style is:global>
+  .ort-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column}
+  .ort-card:hover{transform:translateY(-4px);border-color:var(--pink)}
+  .ort-card-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:48px}
+  .ort-emoji{font-size:48px}
+  .ort-card-body{padding:20px;flex:1;display:flex;flex-direction:column}
+  .ort-card-body h3{font-family:var(--font-display);font-size:24px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;color:var(--text)}
+  .ort-card-body p{font-size:13px;color:var(--text2);line-height:1.6;flex:1;margin-bottom:12px}
+  .ort-link{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink)}
+</style>

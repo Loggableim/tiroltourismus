@@ -1,0 +1,495 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import homepageData from '../data/homepage.json';
+const page = homepageData;
+---
+<BaseLayout title="tiroltourismus.com – Tirol ANDERS" description="AlpenPop bei Tag, ALPENPEAK bei Nacht. Das offizielle Tourismusportal für Tirol – bunt, gold, dunkel, anders.">
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <img src={page.hero.bgImage} alt="">
+      </div>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-badge" set:html={page.hero.badge}></div>
+        <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
+        <p set:html={page.hero.subtitle}></p>
+        <div class="hero-actions">
+          <a href={page.hero.ctaPrimary.href} class={page.hero.ctaPrimary.class}>{page.hero.ctaPrimary.text}</a>
+          <a href={page.hero.ctaSecondary.href} class={page.hero.ctaSecondary.class}>{page.hero.ctaSecondary.text}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ STATS ═══ -->
+    <section class="stats" aria-label="Statistiken">
+      <div class="container">
+        <div class="stats-grid">
+          {page.stats.map((s, i) => (
+            <div class={`stat-card reveal r${i+1}`}>
+              <span class="stat-icon">{s.icon}</span>
+              <div class="stat-num" data-count={s.count}>0</div>
+              <div class="stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ 6 SEELEN ═══ -->
+    <section class="seelen section" id="seelen" aria-label="6 Seelen Tirols">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">{page.seelen.label}</div>
+          <h2 class="section-title">{page.seelen.title.split(' ').map((w, i) => i === 1 ? <span>{w}</span> : w)}</h2>
+          <p class="section-desc">{page.seelen.desc}</p>
+        </div>
+        <div class="seelen-grid">
+          {page.seelen.items.map((item, i) => (
+            <div class={`seelen-card reveal r${i+1}`}>
+              <img src={item.img} alt={item.label} loading="lazy">
+              <span class="seelen-label">{item.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WARUM TIROL ═══ -->
+    <section class="why-tirol section" id="warum" aria-label="Warum Tirol">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">{page.whyTirol.label}</div>
+          <h2 class="section-title">{page.whyTirol.title}</h2>
+          <p class="section-desc">{page.whyTirol.desc}</p>
+        </div>
+        <div class="why-grid">
+          {page.whyTirol.items.map((item, i) => (
+            <div class={`why-card reveal r${i+1}`}>
+              <div class={`why-icon-wrap ${item.iconClass}`}>{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+              <span class={`why-stat ${item.statClass}`}>{item.stat}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ REGIONEN ═══ -->
+    <section class="regions section" id="regionen" aria-label="Regionen">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">{page.regionen.label}</div>
+          <h2 class="section-title"><span>{page.regionen.title.split(' ')[0]}</span> {page.regionen.title.split(' ').slice(1).join(' ')}</h2>
+          <p class="section-desc">{page.regionen.desc}</p>
+        </div>
+        <div class="regions-grid">
+          {page.regionen.items.map((r, i) => (
+            <a href={`/regionen/${r.slug}/`} class={`region-card reveal r${i+1}`}>
+              <div class="region-bg r{i+1}" style={`background:url('${r.img}') center/cover`}></div>
+              <div class="region-overlay"></div>
+              <div class="region-dots"></div>
+              <div class="region-card-content">
+                <span class="region-tag" style={`background:${r.tagColor};color:#fff`}>{r.tag}</span>
+                <h3>{r.name}</h3>
+                <div class="region-meta">
+                  <span>{r.meta}</span>
+                  <span class="region-stars">{'★'.repeat(r.stars)}{'☆'.repeat(5-r.stars)}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ QUOTE ═══ -->
+    <section class="quote" aria-label="Zitat">
+      <div class="container">
+        <div class="quote-block reveal">
+          <div class="quote-icon">"</div>
+          <p class="quote-text">Die Berge sind meine Leinwand – <em>Pink &amp; Gold</em> sind meine Farben.</p>
+          <p class="quote-author">— <span>tiroltourismus</span> · AlpenPop × ALPENPEAK</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ UNTERKÜNFTE ═══ -->
+    <section class="accommodations section" id="unterkuenfte" aria-label="Unterkünfte">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">{page.unterkuenfte.label}</div>
+          <h2 class="section-title"><span>{page.unterkuenfte.title.split(' ').slice(0,1)}</span> Dein <em>{page.unterkuenfte.title.split(' ').slice(1).join(' ')}</em></h2>
+          <p class="section-desc">{page.unterkuenfte.desc}</p>
+        </div>
+        <div class="accomm-tabs reveal">
+          {page.unterkuenfte.tabs.map((tab, i) => <button class={`accomm-tab${i===0?' active':''}`}>{tab}</button>)}
+        </div>
+        <div class="accomm-grid">
+          {page.unterkuenfte.items.map((item, i) => (
+            <div class={`accomm-card reveal r${i+1}`}>
+              <div class="card-vis">
+                <div class="fill" style={`background:url('${item.img}') center/cover`}></div>
+                <span class={`accomm-badge ${item.badgeClass}`}>{item.badge}</span>
+                <button class="accomm-fav" aria-label="Merken">♡</button>
+              </div>
+              <div class="accomm-body">
+                <div class="accomm-type">{item.type}</div>
+                <h3>{item.name}</h3>
+                <div class="accomm-loc">📍 {item.loc}</div>
+                <div class="accomm-rating">
+                  <span style="color:var(--yellow)">{'★'.repeat(item.stars)}{'☆'.repeat(5-item.stars)}</span>
+                  <span class="score">{item.score}</span>
+                </div>
+                <div class="accomm-footer">
+                  <div class="accomm-price">
+                    <span class="from">Ab</span>
+                    <span class="val">€{item.price} <small>/ Nacht</small></span>
+                  </div>
+                  <a href={`/unterkuenfte/${item.slug}/`} class="btn btn-pink btn-sm">Buchen</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ AKTIVITÄTEN ═══ -->
+    <section class="activities section" id="erlebnisse" aria-label="Erlebnisse">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Erlebnisse</div>
+          <h2 class="section-title">Aktiv <span>durch</span> <em>Tirol</em></h2>
+          <p class="section-desc">Von poppigen Paragliding-Trips bis zu goldenen Sonnenuntergangstouren.</p>
+        </div>
+        <div class="activities-grid">
+          {page.activities.map((a, i) => (
+            <div class={`activity-card reveal r${i+1}`}>
+              <div class="activity-bar"></div>
+              <div class="activity-icon-wrap">
+                <div class={`activity-icon ${a.barColor}`}>{a.icon}</div>
+              </div>
+              <div class="activity-info">
+                <h3>{a.title}</h3>
+                <p>{a.desc}</p>
+                <div class="activity-footer">
+                  <span class="activity-price">€{a.price} <small>/ Person</small></span>
+                  <a href={a.link} class="activity-link">Buchen →</a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ EVENTS ═══ -->
+    <section class="events section" id="events" aria-label="Events">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Events</div>
+          <h2 class="section-title">Was <span>geht</span> <em>ab</em>?</h2>
+          <p class="section-desc">Die spektakulärsten Events in Tirol – von Gold-Partys bis zu pinken Bergfesten.</p>
+        </div>
+        <div class="events-grid">
+          {page.events.map((e, i) => (
+            <div class={`event-card reveal r${i+1}`}>
+              <div class={`event-date-box ${e.dateBoxClass}`}>
+                <span class="day">{e.day}</span>
+                <span class="month">{e.month}</span>
+              </div>
+              <div class="event-info">
+                <span class="event-cat">{e.cat}</span>
+                <h3>{e.title}</h3>
+                <p>{e.desc}</p>
+                <div class="event-loc">📍 {e.loc} · {e.price}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ MAGAZIN ═══ -->
+    <section class="magazine section" id="magazin" aria-label="Magazin">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Magazin</div>
+          <h2 class="section-title"><span>Stories</span> aus den <em>Bergen</em></h2>
+          <p class="section-desc">Geschichten, die unter die Haut gehen – von Poppig bis Gold.</p>
+        </div>
+        <div class="mag-grid">
+          {page.magazin.map((a, i) => (
+            <div class={`article-card reveal r${i+1}`}>
+              <div class="article-img">
+                <div class="fill" style={`background:url('${a.img}') center/cover`}></div>
+                <span class={`article-cat ${a.catClass}`}>{a.cat}</span>
+              </div>
+              <div class="article-body">
+                <div class="article-date">{a.date}</div>
+                <h3>{a.title}</h3>
+                <p>{a.desc}</p>
+                <a href="#" class="article-more">Weiterlesen →</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ NEWSLETTER ═══ -->
+    <section class="newsletter" id="newsletter" aria-label="Newsletter">
+      <div class="container">
+        <div class="reveal">
+          <h2>#tiroltourismus</h2>
+          <p>Pink &amp; Gold am Morgen, ALPENPEAK am Abend – verpasse keine Neuigkeit aus Tirols buntestem Portal.</p>
+          <form class="nl-form" onsubmit="return handleNewsletter(event)">
+            <input type="email" placeholder="Deine E-Mail-Adresse" required>
+            <button type="submit">Anmelden</button>
+          </form>
+          <div class="nl-disclaimer">Mit Klick auf "Anmelden" akzeptierst Du unsere Datenschutzbestimmungen.</div>
+          <div class="nl-success" id="nlSuccess">🎉 Danke! Willkommen im Tirol-Newsletter.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PARTNER ═══ -->
+    <section class="partner section" aria-label="Partner">
+      <div class="container">
+        <div class="partner-grid">
+          <div class="partner-text reveal r1">
+            <h2>Partner <span>werden</span></h2>
+            <p>Zeige Deine Unterkunft, Dein Event oder Dein Produkt im poppigsten, goldensten Tourismuskatalog der Alpen. Wir bringen Farbe in Deine Vermarktung.</p>
+            <div class="partner-benefits">
+              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sichtbarkeit bei 50k+ Visitors</div>
+              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kostenlose Einträge</div>
+              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Social-Media-Boost</div>
+              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Exklusive Events</div>
+            </div>
+            <a href="/fuer-betriebe/" class="btn btn-pink">Jetzt Partner werden</a>
+          </div>
+          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.png') center/cover">PINK · GOLD</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  /* ═══ SCROLL PROGRESS ═══ */
+  #scrollProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--gold));z-index:9999;width:0;transition:width 50ms linear}
+
+  /* ═══ HERO ═══ */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 24px 60px}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+  .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(255,20,147,.25) 0%, rgba(212,168,0,.12) 40%, var(--bg) 75%);z-index:1}
+  .hero-content{position:relative;z-index:2;max-width:800px}
+  .hero-badge{display:inline-flex;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);margin-bottom:24px;gap:6px}
+  .hero h1{font-family:var(--font-display);font-size:clamp(64px,12vw,140px);line-height:.85;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
+  .hero h1 .line{display:block}
+  .hero h1 .line:last-child{color:transparent;-webkit-text-stroke:2px var(--text)}
+  .hero p{font-size:16px;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 32px;line-height:1.7}
+  .hero p .pink{color:var(--pink)}
+  .hero p .gold{color:var(--gold)}
+  .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn-primary,.btn-secondary{padding:14px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;transition:all .3s var(--ease)}
+  .btn-primary{background:var(--pink);color:#fff}
+  .btn-primary:hover{background:var(--pink-dark);transform:translateY(-3px);box-shadow:0 8px 30px var(--pink-glow)}
+  .btn-secondary{background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);color:var(--text)}
+  .btn-secondary:hover{background:var(--surface-hover);transform:translateY(-3px)}
+
+  /* ═══ STATS ═══ */
+  .stats{padding:60px 0;background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+  .stat-card{padding:24px}
+  .stat-icon{font-size:36px;display:block;margin-bottom:8px}
+  .stat-num{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);line-height:1;color:var(--pink);letter-spacing:2px;margin-bottom:4px}
+  .stat-label{font-size:13px;color:var(--text2);font-weight:500}
+  @media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+
+  /* ═══ SEELEN ═══ */
+  .seelen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .seelen-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;padding:24px;text-align:center;transition:all .4s var(--ease)}
+  .seelen-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .seelen-card img{width:100%;height:auto;border-radius:var(--radius-sm);margin-bottom:12px}
+  .seelen-label{font-family:var(--font-display);font-size:18px;letter-spacing:1px;text-transform:uppercase;color:var(--text)}
+  @media(max-width:768px){.seelen-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.seelen-grid{grid-template-columns:1fr}}
+
+  /* ═══ WHY TIROL ═══ */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .why-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:36px 28px;text-align:center;transition:all .4s var(--ease)}
+  .why-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .why-icon-wrap{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 16px}
+  .why-icon-wrap.i1{background:rgba(255,20,147,.12);color:var(--pink)}
+  .why-icon-wrap.i2{background:rgba(255,215,0,.12);color:var(--gold)}
+  .why-icon-wrap.i3{background:rgba(0,200,83,.12);color:var(--green)}
+  .why-card h3{font-family:var(--font-display);font-size:24px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:var(--text)}
+  .why-card p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px}
+  .why-stat{font-family:var(--font-display);font-size:36px;line-height:1;letter-spacing:2px}
+  .why-stat.pink{color:var(--pink)}
+  .why-stat.gold{color:var(--gold)}
+  @media(max-width:768px){.why-grid{grid-template-columns:1fr}}
+
+  /* ═══ REGIONEN ═══ */
+  .regions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .region-card{position:relative;height:280px;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;display:block}
+  .region-bg{position:absolute;inset:0;background-size:cover!important;background-position:center!important;transition:transform .6s var(--ease)}
+  .region-card:hover .region-bg{transform:scale(1.08)}
+  .region-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85) 100%);z-index:1}
+  .region-dots{position:absolute;inset:0;z-index:2;opacity:0;transition:opacity .4s;pointer-events:none;background-image:radial-gradient(circle,rgba(255,255,255,.12) 1px,transparent 1px);background-size:16px 16px}
+  .region-card:hover .region-dots{opacity:1}
+  .region-card-content{position:absolute;bottom:0;left:0;right:0;padding:24px;z-index:3}
+  .region-tag{display:inline-block;padding:3px 12px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+  .region-card-content h3{font-family:var(--font-display);font-size:32px;line-height:1;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:6px}
+  .region-meta{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .region-meta span:first-child{font-size:12px;color:rgba(255,255,255,.7)}
+  .region-stars{color:var(--yellow);font-size:14px;white-space:nowrap}
+  @media(max-width:968px){.regions-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.regions-grid{grid-template-columns:1fr}.region-card{height:220px}}
+  @media(max-width:600px){.regions-grid{grid-template-columns:1fr}.region-card{height:220px}}
+
+  /* ═══ QUOTE ═══ */
+  .quote{background:var(--bg2);padding:80px 0;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+  .quote-block{text-align:center;max-width:640px;margin:0 auto;position:relative}
+  .quote-icon{font-size:72px;color:var(--pink);opacity:.2;font-family:Georgia,serif;line-height:1;margin-bottom:-20px}
+  .quote-text{font-size:clamp(18px,2.5vw,28px);font-weight:600;line-height:1.5;color:var(--text);font-style:italic}
+  .quote-text em{color:var(--gold)}
+  .quote-author{font-size:13px;color:var(--text2);margin-top:16px;font-style:normal}
+  .quote-author span{color:var(--pink)}
+
+  /* ═══ ACCOMMODATIONS ═══ */
+  .accomm-tabs{display:flex;justify-content:center;gap:6px;margin-bottom:36px}
+  .accomm-tab{padding:10px 28px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;transition:all .3s;cursor:pointer;border:2px solid var(--glass-border);background:transparent;color:var(--text2)}
+  .accomm-tab.active{background:var(--pink);color:#fff;border-color:var(--pink);box-shadow:0 4px 20px var(--pink-glow)}
+  .accomm-tab:hover:not(.active){border-color:var(--text2);color:var(--text)}
+  .accomm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .accomm-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease)}
+  .accomm-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+  .card-vis{position:relative;height:200px;overflow:hidden}
+  .card-vis .fill{width:100%;height:100%;background-size:cover!important;background-position:center!important}
+  .accomm-badge{position:absolute;top:12px;left:12px;padding:4px 14px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;z-index:2}
+  .accomm-badge.pop{background:linear-gradient(135deg,var(--purple),#6D28D9);color:#fff}
+  .accomm-badge.top{background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a}
+  .accomm-badge.deal{background:linear-gradient(135deg,var(--green),#059669);color:#fff}
+  .accomm-fav{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border:none;display:flex;align-items:center;justify-content:center;font-size:18px;cursor:pointer;color:var(--text2);z-index:2;transition:all .3s}
+  .accomm-fav:hover{transform:scale(1.15)}
+  .accomm-fav.active{color:var(--tirol-red)}
+  .accomm-body{padding:20px}
+  .accomm-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:4px}
+  .accomm-body h3{font-family:var(--font-display);font-size:22px;line-height:1.1;letter-spacing:.5px;margin-bottom:4px;color:var(--text)}
+  .accomm-loc{font-size:12px;color:var(--text2);margin-bottom:8px}
+  .accomm-rating{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+  .accomm-rating .score{font-size:14px;font-weight:800;color:var(--green);background:rgba(0,200,83,.1);padding:2px 10px;border-radius:100px}
+  .accomm-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--glass-border)}
+  .accomm-price .from{font-size:11px;color:var(--text3);display:block}
+  .accomm-price .val{font-size:20px;font-weight:800;color:var(--text)}
+  .accomm-price small{font-size:11px;font-weight:400;color:var(--text2)}
+  @media(max-width:768px){.accomm-grid{grid-template-columns:1fr}}
+
+  /* ═══ ACTIVITIES ═══ */
+  .activities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .activity-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column;position:relative}
+  .activity-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .activity-bar{height:4px;width:100%;background:var(--pink)}
+  .activity-card:nth-child(2) .activity-bar{background:var(--blue)}
+  .activity-card:nth-child(3) .activity-bar{background:var(--orange)}
+  .activity-card:nth-child(4) .activity-bar{background:var(--purple)}
+  .activity-card:nth-child(5) .activity-bar{background:var(--green)}
+  .activity-card:nth-child(6) .activity-bar{background:var(--gold)}
+  .activity-icon-wrap{padding:24px 24px 0;text-align:center}
+  .activity-icon{width:52px;height:52px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px}
+  .activity-icon.c1{background:rgba(255,20,147,.12)}
+  .activity-icon.c2{background:rgba(0,81,186,.12)}
+  .activity-icon.c3{background:rgba(255,107,53,.12)}
+  .activity-icon.c4{background:rgba(139,92,246,.12)}
+  .activity-icon.c5{background:rgba(0,200,83,.12)}
+  .activity-icon.c6{background:rgba(255,215,0,.12)}
+  .activity-info{padding:0 24px 20px;flex:1;display:flex;flex-direction:column}
+  .activity-info h3{font-family:var(--font-display);font-size:20px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;color:var(--text);line-height:1.2}
+  .activity-info p{font-size:12px;color:var(--text2);line-height:1.6;flex:1;margin-bottom:12px}
+  .activity-footer{display:flex;justify-content:space-between;align-items:center}
+  .activity-price{font-size:14px;font-weight:800;color:var(--text)}
+  .activity-price small{font-size:11px;font-weight:400;color:var(--text2)}
+  .activity-link{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink)}
+  .activity-link:hover{color:var(--pink-dark)}
+  @media(max-width:968px){.activities-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.activities-grid{grid-template-columns:1fr}}
+
+  /* ═══ EVENTS ═══ */
+  .events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .event-card{display:flex;background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease)}
+  .event-card:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+  .event-date-box{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:90px;padding:16px;color:#fff;text-align:center;flex-shrink:0}
+  .event-date-box.pink{background:var(--pink)}
+  .event-date-box.gold{background:var(--gold);color:var(--bg)}
+  .event-date-box.green{background:var(--green)}
+  .event-date-box .day{font-family:var(--font-display);font-size:32px;line-height:1;letter-spacing:1px}
+  .event-date-box .month{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+  .event-info{padding:16px 20px;flex:1}
+  .event-cat{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--pink);margin-bottom:4px;display:block}
+  .event-info h3{font-family:var(--font-display);font-size:20px;letter-spacing:.5px;line-height:1.2;margin-bottom:4px;color:var(--text)}
+  .event-info p{font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:6px}
+  .event-loc{font-size:11px;color:var(--text3)}
+  @media(max-width:768px){.events-grid{grid-template-columns:1fr}}
+
+  /* ═══ MAGAZIN ═══ */
+  .mag-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .article-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column}
+  .article-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .article-img{position:relative;height:180px;overflow:hidden}
+  .article-img .fill{width:100%;height:100%;background-size:cover!important;background-position:center!important}
+  .article-cat{position:absolute;top:12px;left:12px;padding:3px 12px;border-radius:100px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+  .article-cat.wander{background:var(--green);color:#fff}
+  .article-cat.natur{background:var(--blue);color:#fff}
+  .article-cat.kulin{background:var(--orange);color:#fff}
+  .article-body{padding:20px;flex:1;display:flex;flex-direction:column}
+  .article-date{font-size:11px;color:var(--text3);margin-bottom:6px}
+  .article-body h3{font-family:var(--font-display);font-size:20px;line-height:1.15;letter-spacing:.5px;margin-bottom:8px;color:var(--text)}
+  .article-body p{font-size:13px;color:var(--text2);line-height:1.6;flex:1;margin-bottom:12px}
+  .article-more{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink);margin-top:auto}
+  .article-more:hover{color:var(--pink-dark)}
+  @media(max-width:768px){.mag-grid{grid-template-columns:1fr}}
+
+  /* ═══ NEWSLETTER ═══ */
+  .newsletter{background:linear-gradient(135deg,var(--pink),var(--pink-dark));padding:80px 0;text-align:center;color:#fff}
+  .newsletter h2{font-family:var(--font-display);font-size:clamp(36px,5vw,56px);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .newsletter p{font-size:14px;opacity:.9;max-width:440px;margin:0 auto 24px}
+  .nl-form{display:flex;gap:8px;max-width:440px;margin:0 auto}
+  .nl-form input{flex:1;padding:14px 20px;border-radius:100px;border:none;font-size:14px;background:rgba(255,255,255,.15);color:#fff;backdrop-filter:blur(10px)}
+  .nl-form input::placeholder{color:rgba(255,255,255,.5)}
+  .nl-form button{padding:14px 28px;border-radius:100px;border:none;background:#fff;color:var(--pink-dark);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;cursor:pointer;transition:all .3s}
+  .nl-form button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+  .nl-disclaimer{font-size:11px;opacity:.6;margin-top:12px}
+  .nl-success{display:none;margin-top:16px;padding:14px 24px;background:rgba(255,255,255,.15);border-radius:100px;font-size:14px;font-weight:600}
+  @media(max-width:500px){.nl-form{flex-direction:column}}
+
+  /* ═══ PARTNER ═══ */
+  .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .partner-text h2{font-family:var(--font-display);font-size:42px;line-height:1;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--text)}
+  .partner-text h2 span{color:var(--pink)}
+  .partner-text p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px}
+  .partner-benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+  .partner-ben{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)}
+  .partner-ben svg{width:18px;height:18px;color:var(--pink);flex-shrink:0}
+  .partner-visual{height:300px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:36px;letter-spacing:4px;color:#fff;text-transform:uppercase;text-shadow:0 4px 20px rgba(0,0,0,.3)}
+  @media(max-width:768px){.partner-grid{grid-template-columns:1fr}.partner-visual{height:200px}.partner-benefits{grid-template-columns:1fr}}
+
+  /* ═══ BACK TO TOP ═══ */
+  .btt{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--pink);color:#fff;font-size:20px;border:none;cursor:pointer;z-index:999;opacity:0;transform:translateY(20px);transition:all .3s var(--ease);box-shadow:0 4px 20px var(--pink-glow)}
+  .btt.visible{opacity:1;transform:translateY(0)}
+  .btt:hover{transform:translateY(-4px);box-shadow:0 8px 30px var(--pink-glow)}
+
+  /* ═══ SECTION GENERICS ═══ */
+  .section{padding:80px 0}
+  .section-header{text-align:center;margin-bottom:48px}
+  .section-label{font-family:var(--font-display);font-size:20px;letter-spacing:4px;color:var(--pink);margin-bottom:8px;text-transform:uppercase}
+  .section-title{font-family:var(--font-display);font-size:clamp(32px,5vw,56px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .section-title span{color:var(--pink)}
+  .section-title em{color:var(--gold);font-style:normal}
+  .section-desc{font-size:14px;color:var(--text2);max-width:520px;margin:0 auto;line-height:1.6}
+</style>

@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png",
+    "badge": "✦ AlpenPop <span class=\"pink\">Tag</span> · <span class=\"gold\">Gold</span> · ALPENPEAK <span class=\"pink\">Nacht</span>",
+    "title": ["TIROL", "ANDERS"],
+    "subtitle": "Zwei Seelen, ein Land. <strong class=\"pink\">AlpenPop</strong> bei Tag – hell, bunt, frech.<br><strong class=\"gold\">ALPENPEAK</strong> bei Nacht – dunkel, dramatisch, gold. Willkommen im neuen Tirol.",
+    "ctaPrimary": { "text": "✦ 6 Seelen entdecken", "href": "#seelen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "Regionen erkunden", "href": "#regionen", "class": "btn-secondary" }
+  },
+  "stats": [
+    { "icon": "🏔️", "count": 835, "label": "Gipfel über 3.000m" },
+    { "icon": "🏡", "count": 12000, "label": "Unterkünfte" },
+    { "icon": "🥾", "count": 24500, "label": "Wanderkilometer" },
+    { "icon": "🎿", "count": 580, "label": "Liftanlagen" }
+  ],
+  "seelen": {
+    "label": "#6seelen",
+    "title": "6 Seelen Tirols",
+    "desc": "Sechs Logos, sechs Persönlichkeiten. Jede eine eigene Facette des neuen Tirol-Gefühls – von der Gipfellinie bis zur Linienkunst.",
+    "items": [
+      { "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png", "label": "Gipfellinie" },
+      { "img": "/brand/hero-logos/konzept2_dualmodus_20260517_083239.png", "label": "Dualmodus" },
+      { "img": "/brand/hero-logos/konzept3_alpiner_kristall_20260517_083254.png", "label": "Alpiner Kristall" },
+      { "img": "/brand/hero-logos/konzept4_typografisch_20260517_084716.png", "label": "Typografisch" },
+      { "img": "/brand/hero-logos/konzept5_aurora_20260517_084732.png", "label": "Aurora" },
+      { "img": "/brand/hero-logos/konzept6_linienkunst_20260517_084749.png", "label": "Linienkunst" }
+    ]
+  },
+  "whyTirol": {
+    "label": "#warumtirol",
+    "title": "Warum Tirol?",
+    "desc": "Drei Gründe, warum dieses Land anders ist. Bunter. Goldener. Echter.",
+    "items": [
+      { "icon": "🏔️", "iconClass": "i1", "title": "Gipfel & Täler", "desc": "835 Dreitausender warten darauf, von Dir entdeckt zu werden. Jeder Gipfel eine neue Perspektive – von Pop-Art-bunt bis dramatisch-dunkel.", "stat": "835", "statClass": "pink" },
+      { "icon": "🎨", "iconClass": "i2", "title": "Design als Erlebnis", "desc": "Tirol ist die erste Destination mit Dual-Mode-Identity. AlpenPop am Tag, ALPENPEAK in der Nacht – zwei Erlebnisse, ein Klick.", "stat": "2", "statClass": "gold" },
+      { "icon": "🌱", "iconClass": "i3", "title": "Nachhaltig & Echt", "desc": "Nachhaltigkeit trifft auf Popkultur. Grüne Initiativen, regionale Küche und echter Respekt vor der Natur – in knalligen Farben verpackt.", "stat": "100%", "statClass": "pink" }
+    ]
+  },
+  "regionen": {
+    "label": "Entdecke",
+    "title": "Unsere Regionen",
+    "desc": "Jede Region hat ihren eigenen Vibe – von poppig bis dramatisch, von gold bis pink.",
+    "items": [
+      { "img": "/assets/images/region_innsbruck_20260517_101459.png", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "Stadt & Berg – urbaner Alpenglühn-Mix", "stars": 5, "slug": "innsbruck" },
+      { "img": "/assets/images/region_oetztal_20260517_101502.png", "tag": "NATUR", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Gletscher, Gipfel & wilde Täler", "stars": 4, "slug": "oetztal" },
+      { "img": "/assets/images/region_zillertal_20260517_101508.png", "tag": "AKTIV", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Wandern, Biken, Skifahren pur", "stars": 5, "slug": "zillertal" },
+      { "img": "/assets/images/region_stubaital_20260517_101513.png", "tag": "KULINARIK", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Genuss & Bergromantik", "stars": 4, "slug": "stubaital" },
+      { "img": "/assets/images/region_kitzbuehel_20260517_101526.png", "tag": "LUXUS", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Alpine Eleganz & Glamour", "stars": 5, "slug": "kitzbuehel" },
+      { "img": "/assets/images/region_kaunertal_20260517_101520.png", "tag": "GIPFEL", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Ursprünglich & unberührt", "stars": 4, "slug": "kaunertal" }
+    ]
+  },
+  "unterkuenfte": {
+    "label": "Übernachten",
+    "title": "Finde Dein Zuhause",
+    "desc": "Von der Design-Lodge bis zur urigen Hütte – kontrastreich wie die Berge selbst.",
+    "tabs": ["Empfohlen", "Beste Bewertung", "Bestpreis"],
+    "items": [
+      { "img": "/assets/images/hotel_1_20260517_101547.png", "badge": "KI-Empfehlung", "badgeClass": "pop", "type": "Design Hotel", "name": "Pop Mountain Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
+      { "img": "/assets/images/hotel_2_20260517_101544.png", "badge": "Top bewertet", "badgeClass": "top", "type": "Alpine Lodge", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
+      { "img": "/assets/images/hotel_3_20260517_101551.png", "badge": "Sparangebot", "badgeClass": "deal", "type": "Ferienwohnung", "name": "Alpen Pop Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
+    ]
+  },
+  "activities": [
+    { "barColor": "c1", "icon": "🪂", "title": "Paragliding über Innsbruck", "desc": "Schwebe über die Stadt – mit neonfarbenen Gleitschirmen für den ultimativen Pop-Effekt.", "price": 129, "link": "#" },
+    { "barColor": "c2", "icon": "🚵", "title": "E-Mountainbike Sunset Tour", "desc": "Abendliche Bike-Tour mit UV-beleuchteten Rahmen – durch dunkle Wälder und über leuchtende Gipfel.", "price": 89, "link": "#" },
+    { "barColor": "c3", "icon": "🎨", "title": "Pop-Art Bergmalerei", "desc": "Workshop mit lokalen Künstlern – male Dein eigenes Alpenpop-Meisterwerk auf Leinwand mit Goldakzenten.", "price": 55, "link": "#" },
+    { "barColor": "c4", "icon": "🌙", "title": "Nachtwanderung mit Neon", "desc": "Geführte Wanderung mit Neon-Leuchtstäben und Blacklight-Effekten. Der Wald wird zur Kunstinstallation.", "price": 45, "link": "#" },
+    { "barColor": "c5", "icon": "🧘", "title": "Alpine Sound Meditation", "desc": "Yoga & Sound-Healing auf 2.500m – begleitet von elektronischer Musik und goldenem Bergpanorama.", "price": 69, "link": "#" },
+    { "barColor": "c6", "icon": "🍷", "title": "Pop-Up Weinberg Dinner", "desc": "Exklusives Dinner im Weinberg mit regionaler Küche und goldenen Lichtinstallationen unter Sternen.", "price": 149, "link": "#" }
+  ],
+  "events": [
+    { "day": 21, "month": "JUN", "dateBoxClass": "pink", "cat": "🎵 Musik", "title": "ALPENPEAK Open Air", "desc": "Das größte Pop-Festival der Alpen mit internationalen Acts und Lichtshow auf 2.000m.", "loc": "Innsbruck", "price": "ab €49" },
+    { "day": 5, "month": "JUL", "dateBoxClass": "gold", "cat": "🎨 Kunst", "title": "Gold Art Trail", "desc": "Kunstinstallationen und goldene Leuchtskulpturen entlang eines beleuchteten Bergpfads – abends geöffnet.", "loc": "Ötztal", "price": "€22" },
+    { "day": 19, "month": "AUG", "dateBoxClass": "gold", "cat": "🥾 Sport", "title": "Pop-Up Bergfest", "desc": "Fun-Run mit Neonfarben, DJs und After-Party auf der Alm – mit goldenen Medaillen!", "loc": "Zillertal", "price": "€35" },
+    { "day": 12, "month": "SEP", "dateBoxClass": "green", "cat": "🍽️ Kulinarik", "title": "Pop-Up Gourmet Gipfel", "desc": "Spitzenköche treffen auf Streetfood – mit goldenen Akzenten und Aromen auf 2.500m.", "loc": "Kitzbühel", "price": "€89" }
+  ],
+  "magazin": [
+    { "img": "/assets/images/magazin_1_20260517_101554.png", "cat": "Wandern", "catClass": "wander", "date": "12. Mai 2026", "title": "Die buntesten Wanderrouten Tirols", "desc": "Sieben Routen, die beweisen, dass die Natur selbst die beste Künstlerin ist – von Alpenblumen bis zu goldenen Gletscherseen." },
+    { "img": "/assets/images/magazin_2_20260517_101600.png", "cat": "Natur", "catClass": "natur", "date": "28. April 2026", "title": "Nachhaltigkeit trifft Popkultur", "desc": "Wie Tiroler Hotels mit knalligen Ideen, goldenen Akzenten und grünem Gewissen neue Maßstäbe setzen." },
+    { "img": "/assets/images/magazin_3_20260517_101603.png", "cat": "Kulinarik", "catClass": "kulin", "date": "03. April 2026", "title": "Alpine Pop-Küche – Rezepte mit Farbe", "desc": "Von pinken Knödeln bis zum goldenen Schnitzel: Junge Köche interpretieren Tiroler Klassiker neu." }
+  ]
+}

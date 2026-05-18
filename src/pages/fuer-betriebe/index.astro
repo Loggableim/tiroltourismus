@@ -1,0 +1,183 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+---
+
+<BaseLayout
+  title="Für Betriebe"
+  description="tiroltourismus.com für Betriebe: Jetzt eintragen und sichtbar werden. Basis kostenlos, Premium gegen Gebühr. Werden Sie Teil des größten Tirol-Portals."
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Für Betriebe' }]} />
+    </div>
+
+    <Hero
+      title="Für Betriebe"
+      subtitle="Werden Sie Teil des größten Tirol-Portals. Basis kostenlos – Prominenz gegen Gebühr."
+      emoji="🏢"
+      size="md"
+    />
+
+    <!-- How it works -->
+    <section class="section">
+      <div class="container" style="max-width:800px">
+        <SectionHeader
+          label="So einfach geht's"
+          title="So funktioniert's"
+          sub="In drei Schritten zu mehr Sichtbarkeit und Buchungen."
+        />
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px">
+          <div class="card" style="padding:32px 24px;text-align:center">
+            <div style="font-size:36px;margin-bottom:12px">📝</div>
+            <h3 style="font-family:var(--font-display);font-size:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Eintragen</h3>
+            <p style="font-size:13px;color:var(--text2)">Kostenloser Basiseintrag mit allen wichtigen Infos zu Ihrem Betrieb. Adresse, Kontakt, Beschreibung – in wenigen Minuten erledigt.</p>
+          </div>
+          <div class="card" style="padding:32px 24px;text-align:center">
+            <div style="font-size:36px;margin-bottom:12px">📈</div>
+            <h3 style="font-family:var(--font-display);font-size:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Sichtbar werden</h3>
+            <p style="font-size:13px;color:var(--text2)">Mit Silver oder Gold erscheinen Sie prominent – vor Gratis-Einträgen, mit eigenem Badge und auf der Startseite.</p>
+          </div>
+          <div class="card" style="padding:32px 24px;text-align:center">
+            <div style="font-size:36px;margin-bottom:12px">📊</div>
+            <h3 style="font-family:var(--font-display);font-size:20px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Profitieren</h3>
+            <p style="font-size:13px;color:var(--text2)">Mehr Buchungen, mehr Sichtbarkeit, mehr Gäste aus aller Welt. Starten Sie noch heute!</p>
+          </div>
+        </div>
+
+        <!-- Pricing -->
+        <SectionHeader
+          label="Für jedes Budget"
+          title="Unsere Packages"
+          sub="Basic ist und bleibt kostenlos. Für mehr Sichtbarkeit upgraden Sie flexibel."
+        />
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:48px">
+          <!-- Basic -->
+          <div class="card" style="padding:32px 24px;text-align:center;border:2px solid var(--glass-border)">
+            <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Basic</h3>
+            <div style="font-size:36px;font-weight:800;color:var(--green);margin-bottom:16px">Kostenlos</div>
+            <ul style="list-style:none;padding:0;margin-bottom:24px;font-size:13px;color:var(--text2);line-height:2.2">
+              <li>✅ Basiseintrag</li>
+              <li>✅ Adresse & Kontakt</li>
+              <li>✅ Beschreibung</li>
+              <li>✅ Öffnungszeiten</li>
+              <li>❌ Featured-Badge</li>
+              <li>❌ Höhere Platzierung</li>
+              <li>❌ Bilder-Galerie</li>
+            </ul>
+            <span style="font-size:12px;color:var(--text3)">Jederzeit aufwertbar</span>
+          </div>
+
+          <!-- Silver -->
+          <div class="card" style="padding:32px 24px;text-align:center;border:2px solid var(--pink);position:relative">
+            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;padding:4px 20px;border-radius:100px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px">Beliebt</div>
+            <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Silver</h3>
+            <div style="font-size:36px;font-weight:800;color:var(--pink);margin-bottom:16px">Ab 19€<span style="font-size:14px;font-weight:400;color:var(--text2)">/Monat</span></div>
+            <ul style="list-style:none;padding:0;margin-bottom:24px;font-size:13px;color:var(--text2);line-height:2.2">
+              <li>✅ Alles aus Basic</li>
+              <li>✅ Silver-Badge</li>
+              <li>✅ Bilder-Galerie (bis 10)</li>
+              <li>✅ Vor Basic gelistet</li>
+              <li>✅ Social-Media-Links</li>
+              <li>❌ Top-Platzierung</li>
+              <li>❌ Featured auf Startseite</li>
+            </ul>
+            <button class="btn btn-pink" style="width:100%">Jetzt buchen</button>
+          </div>
+
+          <!-- Gold -->
+          <div class="card" style="padding:32px 24px;text-align:center;border:2px solid var(--yellow)">
+            <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Gold</h3>
+            <div style="font-size:36px;font-weight:800;color:var(--yellow);margin-bottom:16px">Ab 49€<span style="font-size:14px;font-weight:400;color:var(--text2)">/Monat</span></div>
+            <ul style="list-style:none;padding:0;margin-bottom:24px;font-size:13px;color:var(--text2);line-height:2.2">
+              <li>✅ Alles aus Silver</li>
+              <li>✅ ⭐ Gold-Badge</li>
+              <li>✅ Top-Platzierung</li>
+              <li>✅ Featured auf Startseite</li>
+              <li>✅ Bilder-Galerie (unbegrenzt)</li>
+              <li>✅ Eigener Agent für Updates</li>
+              <li>✅ Exklusiver Partner-Status</li>
+            </ul>
+            <button class="btn btn-pink" style="width:100%">Jetzt buchen</button>
+          </div>
+        </div>
+
+        <!-- Hinweis -->
+        <div style="text-align:center">
+          <p style="font-size:14px;color:var(--text2);margin-bottom:16px">ℹ️ Preise in Vorbereitung. Zahlungsabwicklung über Dodo Payments.</p>
+          <a href="/kontakt/" class="btn btn-outline">Kontakt aufnehmen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business model explanation -->
+    <section class="section" style="background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)">
+      <div class="container" style="max-width:800px">
+        <SectionHeader
+          label="Unser Modell"
+          title="Free-Mium für Tirol"
+          sub="Kostenlos für alle – Premium für mehr. So bleibt das Portal offen und finanziert sich fair."
+        />
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:48px">
+          <div style="background:var(--bg1);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px">
+            <div style="font-size:28px;margin-bottom:12px">🆓</div>
+            <h3 style="font-family:var(--font-display);font-size:18px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:var(--green)">Free – für alle</h3>
+            <p style="font-size:13px;color:var(--text2);line-height:1.8">
+              Jeder Betrieb in Tirol kann sich <strong>kostenlos</strong> eintragen. Der Basiseintrag enthält alle wichtigen Informationen: Adresse, Kontakt, Beschreibung und Öffnungszeiten. So stellen wir sicher, dass unser Portal das <strong>vollständigste Tirol-Verzeichnis</strong> bleibt – für Gäste und Einheimische gleichermaßen.
+            </p>
+          </div>
+          <div style="background:var(--bg1);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px">
+            <div style="font-size:28px;margin-bottom:12px">⭐</div>
+            <h3 style="font-family:var(--font-display);font-size:18px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:var(--pink)">Premium – für mehr</h3>
+            <p style="font-size:13px;color:var(--text2);line-height:1.8">
+              Betriebe, die <strong>mehr Sichtbarkeit</strong> wünschen, können auf Silver oder Gold upgraden. Gegen eine faire monatliche Gebühr erhalten Sie einen <strong>hervorgehobenen Eintrag</strong>, Badges, bessere Platzierungen und exklusive Features. So finanzieren wir den Betrieb des Portals und halten es gleichzeitig für alle offen.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:var(--bg1);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px;text-align:center">
+          <div style="font-size:32px;margin-bottom:12px">🤖</div>
+          <h3 style="font-family:var(--font-display);font-size:18px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">KI-gestützte Kuratierung</h3>
+          <p style="font-size:13px;color:var(--text2);line-height:1.8;max-width:600px;margin:0 auto">
+            Unsere KI-Agenten sammeln und aktualisieren Inhalte in Echtzeit – von Öffnungszeiten über Events bis zu Bewertungen. Premium-Betriebe profitieren von einem <strong>persönlichen KI-Agenten</strong>, der ihren Eintrag stets aktuell hält und Optimierungsvorschläge liefert. Menschen entscheiden, KI liefert.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container" style="text-align:center;padding:48px 0">
+        <div style="font-size:48px;margin-bottom:16px">🚀</div>
+        <h2 style="font-family:var(--font-display);font-size:clamp(28px,4vw,48px);line-height:1;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px">
+          Bereit, durchzustarten?
+        </h2>
+        <p style="font-size:14px;color:var(--text2);max-width:480px;margin:0 auto 24px;line-height:1.6">
+          Registrieren Sie Ihren Betrieb kostenlos oder upgrade direkt auf Silver oder Gold. Wir helfen Ihnen bei jedem Schritt.
+        </p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+          <a href="/kontakt/" class="btn btn-pink">Jetzt eintragen</a>
+          <a href="/kontakt/" class="btn btn-outline">Beratung anfragen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .section{padding:64px 0}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  .card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden;transition:all .4s var(--ease)}
+  .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+
+  @media(max-width:768px){
+    .section{padding:48px 0}
+    [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
+    [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+  }
+</style>

@@ -1,0 +1,76 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('unterkuenfte').filter(u => isPublished(u.entry));
+  return all.map(u => ({ params: { slug: u.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('unterkuenfte', slug);
+if (!entry) return Astro.redirect('/unterkuenfte/');
+
+const typLabel = { hotel:'Hotel', ferienwohnung:'Ferienwohnung', bauernhof:'Bauernhof', jugendherberge:'Jugendherberge', camping:'Camping' };
+const tierBadge = {
+  gold: { text:'⭐ Gold', cls:'tag-gold' },
+  silver: { text:'Silber', cls:'tag-blue' },
+  basic: null,
+};
+const badge = tierBadge[entry.tier] || null;
+const emoji = entry.emoji || '🏨';
+---
+
+<DetailPage
+  title={entry.name}
+  description={`${entry.name} – ${entry.ort || 'Tirol'}. ${(entry.typ && typLabel[entry.typ]) || 'Unterkunft'}`}
+  breadcrumbs={[{ label: 'Unterkünfte', href: '/unterkuenfte/' }, { label: entry.name }]}
+  sections={[
+    {
+      type: 'hero',
+      title: entry.name,
+      subtitle: entry.ort ? `${entry.ort}${entry.plz ? `, ${entry.plz}` : ''}` : undefined,
+      emoji: emoji,
+      size: 'sm',
+      meta: {
+        stars: entry.sterne,
+        badge: badge ? { text: badge.text, cls: badge.cls } : undefined,
+        price: entry.preis_ab ? { value: `ab ${entry.preis_ab} €`, label: '/ Nacht' } : undefined,
+      },
+    },
+    entry.beschreibung ? {
+      type: 'description',
+      label: 'Über diese Unterkunft',
+      title: 'Beschreibung',
+      content: entry.beschreibung,
+    } : null,
+    {
+      type: 'details-grid',
+      items: [
+        { label: 'Typ', value: typLabel[entry.typ] || entry.typ },
+        { label: 'Adresse', value: entry.adresse ? `${entry.adresse}${entry.ort ? `, ${entry.ort}` : ''}` : entry.ort || undefined },
+        { label: 'Telefon', value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
+        { label: 'E-Mail', value: entry.email || undefined, type: 'link', href: entry.email ? `mailto:${entry.email}` : undefined },
+        { label: 'Webseite', value: entry.webseite || undefined, type: 'link', href: entry.webseite },
+        { label: 'Ausstattung', tags: entry.ausstattung || [], type: 'tags' },
+        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+      ],
+    },
+    entry.preis_ab ? {
+      type: 'price',
+      value: entry.preis_ab,
+      label: '/ Nacht',
+      extras: entry.preis_extras || [],
+    } : null,
+    {
+      type: 'cta',
+      label: 'Interesse?',
+      title: 'Jetzt anfragen',
+      subtitle: 'Kontaktieren Sie die Unterkunft direkt für Buchungen und Anfragen.',
+      buttons: [
+        entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+        entry.email ? { label: '✉️ E-Mail senden', href: `mailto:${entry.email}`, variant: 'glass' } : null,
+      ].filter(Boolean),
+    },
+  ].filter(Boolean)}
+/>

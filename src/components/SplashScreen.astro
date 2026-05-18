@@ -1,0 +1,352 @@
+---
+// SplashScreen.astro — Coming Soon Login Gate
+// Password: 2205
+// Stores unlocked state in sessionStorage
+---
+<aside id="splashGate" class="splash-overlay">
+  <!-- Background layers -->
+  <div class="splash-bg primary-bg"></div>
+  <div class="splash-bg secondary-bg"></div>
+  <div class="splash-gradient-overlay"></div>
+
+  <!-- Content -->
+  <div class="splash-content">
+    <!-- Brand -->
+    <div class="splash-brand">
+      <svg viewBox="4 4 404 46" width="360" height="46" class="splash-logo">
+        <defs>
+          <linearGradient id="st1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+          <linearGradient id="st2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+          <linearGradient id="st3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+          <linearGradient id="st4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+          <linearGradient id="st5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+        </defs>
+        <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#st1)">T</text>
+        <polygon points="10,36 10,10 34,36" fill="url(#st1)" opacity="0.08"/>
+        <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#st2)">I</text>
+        <polygon points="42,36 42,14 56,36" fill="url(#st2)" opacity="0.08"/>
+        <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#st3)">R</text>
+        <polygon points="68,36 68,8 92,36" fill="url(#st3)" opacity="0.08"/>
+        <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#st4)">O</text>
+        <polygon points="100,36 100,10 126,36" fill="url(#st4)" opacity="0.08"/>
+        <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#st5)">L</text>
+        <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
+        <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
+      </svg>
+    </div>
+
+    <!-- Coming Soon -->
+    <div class="splash-coming">
+      <span class="splash-badge">COMING SOON</span>
+      <h1 class="splash-title">Tirol <em>ANDERS</em></h1>
+      <p class="splash-sub">Bunt. Dunkel. AlpenPop bei Tag, ALPENPEAK bei Nacht.</p>
+    </div>
+
+    <!-- Divider -->
+    <div class="splash-divider">✦ ✦ ✦</div>
+
+    <!-- Login Gate -->
+    <div class="splash-gate">
+      <p class="splash-gate-label">Früher Eintritt — Passwort eingeben</p>
+      <form id="splashForm" class="splash-form" onsubmit="return false;">
+        <div class="splash-input-wrap">
+          <input type="password" id="splashPassword" class="splash-input" placeholder="• • • •" maxlength="6" inputmode="numeric" autocomplete="off" />
+          <button type="button" id="splashSubmit" class="splash-btn">Eintreten →</button>
+        </div>
+        <p id="splashError" class="splash-error">✗ Falsches Passwort</p>
+      </form>
+    </div>
+
+    <!-- Footer hint -->
+    <p class="splash-footer">Noch nicht live — exklusiver Vorabzugang</p>
+  </div>
+</aside>
+
+<script>
+  (function(){
+    const splash = document.getElementById('splashGate');
+    const input = document.getElementById('splashPassword');
+    const submit = document.getElementById('splashSubmit');
+    const error = document.getElementById('splashError');
+    const form = document.getElementById('splashForm');
+
+    // Check if already unlocked
+    if (sessionStorage.getItem('tirol_unlocked') === 'true') {
+      splash.style.display = 'none';
+    }
+
+    function tryUnlock() {
+      const pw = input.value.trim();
+      if (pw === '2205') {
+        sessionStorage.setItem('tirol_unlocked', 'true');
+        splash.classList.add('splash-exit');
+        setTimeout(() => { splash.style.display = 'none'; }, 800);
+        error.classList.remove('visible');
+      } else {
+        error.classList.add('visible');
+        input.value = '';
+        input.focus();
+        // Shake animation
+        form.classList.add('shake');
+        setTimeout(() => form.classList.remove('shake'), 500);
+      }
+    }
+
+    submit.addEventListener('click', tryUnlock);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') tryUnlock();
+    });
+    input.addEventListener('input', function() {
+      error.classList.remove('visible');
+    });
+  })();
+</script>
+
+<style is:global>
+  /* ══════════════════════════════════════════
+     SPLASH SCREEN — Fullscreen Login Gate
+     ══════════════════════════════════════════ */
+  .splash-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .splash-overlay.splash-exit {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  /* ── Background images ── */
+  .splash-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 3s ease;
+  }
+  .splash-bg.primary-bg {
+    background-image: url('/assets/images/splash_neon_20260518_053145.png');
+    opacity: 1;
+  }
+  .splash-bg.secondary-bg {
+    background-image: url('/assets/images/splash_bg_20260518_053131.png');
+    opacity: 0;
+    animation: splashBgCrossfade 12s infinite alternate;
+  }
+
+  @keyframes splashBgCrossfade {
+    0%   { opacity: 0; }
+    45%  { opacity: 0; }
+    50%  { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  /* ── Gradient overlay ── */
+  .splash-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(5,5,15,0.65) 0%, rgba(5,5,15,0.8) 40%, rgba(10,10,20,0.95) 100%),
+      radial-gradient(ellipse at 50% 30%, rgba(255,20,147,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 50% 70%, rgba(212,168,0,0.05) 0%, transparent 50%);
+    z-index: 1;
+  }
+
+  /* ── Content ── */
+  .splash-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 520px;
+    width: 90%;
+    padding: 40px 24px;
+    animation: splashFadeIn 1.2s ease forwards;
+  }
+
+  @keyframes splashFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Brand ── */
+  .splash-brand {
+    margin-bottom: 32px;
+  }
+  .splash-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(255,20,147,0.15));
+  }
+
+  /* ── Coming Soon ── */
+  .splash-coming {
+    margin-bottom: 28px;
+  }
+  .splash-badge {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, #FF1493, #D4A800);
+    color: #fff;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 24px rgba(255,20,147,0.25);
+  }
+  .splash-title {
+    font-family: 'Bebas Neue', 'Impact', 'Arial Narrow', sans-serif;
+    font-size: clamp(48px, 10vw, 88px);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0 0 12px;
+    background: linear-gradient(135deg, #FF1493 20%, #D4A800 50%, #FF1493 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .splash-title em {
+    font-style: italic;
+    font-weight: 900;
+  }
+  .splash-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  /* ── Divider ── */
+  .splash-divider {
+    font-size: 10px;
+    letter-spacing: 12px;
+    color: rgba(255,255,255,0.12);
+    margin-bottom: 28px;
+  }
+
+  /* ── Gate ── */
+  .splash-gate-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .splash-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .splash-form.shake {
+    animation: splashShake 0.5s ease;
+  }
+  @keyframes splashShake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+    20%, 40%, 60%, 80% { transform: translateX(6px); }
+  }
+
+  .splash-input-wrap {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    max-width: 300px;
+  }
+  .splash-input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', monospace;
+    backdrop-filter: blur(12px);
+  }
+  .splash-input:focus {
+    border-color: #FF1493;
+    box-shadow: 0 0 30px rgba(255,20,147,0.12), inset 0 0 20px rgba(255,20,147,0.04);
+    background: rgba(255,255,255,0.06);
+  }
+  .splash-input::placeholder {
+    color: rgba(255,255,255,0.12);
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
+
+  .splash-btn {
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #FF1493, #D4A800);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0 4px 24px rgba(255,20,147,0.25);
+  }
+  .splash-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(255,20,147,0.35);
+  }
+  .splash-btn:active {
+    transform: translateY(0);
+  }
+
+  /* ── Error ── */
+  .splash-error {
+    font-size: 11px;
+    color: #FF1493;
+    font-weight: 600;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+  }
+  .splash-error.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Footer ── */
+  .splash-footer {
+    margin-top: 32px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.15);
+    letter-spacing: 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 480px) {
+    .splash-content { padding: 24px 16px; }
+    .splash-logo { width: 260px; }
+    .splash-input-wrap { max-width: 100%; }
+    .splash-input { font-size: 16px; letter-spacing: 6px; padding: 12px 14px; }
+    .splash-btn { padding: 12px 18px; font-size: 11px; }
+  }
+</style>

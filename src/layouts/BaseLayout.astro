@@ -1,0 +1,171 @@
+---
+// BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (AlpenPop × ALPENPEAK)
+import { readSingleton } from '../lib/content.js';
+import SplashScreen from '../components/SplashScreen.astro';
+
+export interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage } = Astro.props;
+const siteDesc = description || 'Tirol ANDERS – Das offizielle Tourismusportal für Tirol';
+const settings = readSingleton('einstellungen');
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title} – tiroltourismus.com</title>
+  <meta name="description" content={siteDesc}>
+  <meta name="theme-color" content="#FF1493">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta property="og:title" content={`${title} – tiroltourismus.com`}>
+  <meta property="og:description" content={siteDesc}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={Astro.url}>
+  {ogImage && <meta property="og:image" content={ogImage}>}
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/assets/css/tirol.css">
+
+  <style>
+    :root { --active-nav: initial; }
+    #scrollProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--pink),var(--yellow));z-index:10000;width:0;transition:width .1s}
+  .fav-link{display:inline-flex;align-items:center;gap:4px;position:relative}
+  .fav-badge{position:absolute;top:-6px;right:-10px;min-width:16px;height:16px;border-radius:50%;background:var(--pink);color:#fff;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
+  .btt{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--pink);color:#fff;font-size:22px;z-index:9999;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--pink-glow);opacity:0;transform:translateY(20px);transition:all .4s var(--ease);border:none}
+  .btt.visible{opacity:1;transform:translateY(0)}
+    .btt{position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--pink);color:#fff;font-size:22px;z-index:9999;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px var(--pink-glow);opacity:0;transform:translateY(20px);transition:all .4s var(--ease);border:none}
+    .btt.visible{opacity:1;transform:translateY(0)}
+    .btt:hover{background:var(--pink-dark);transform:translateY(-4px)}
+  </style>
+</head>
+<body>
+<SplashScreen />
+<div id="scrollProgress"></div>
+<button class="btt" id="backToTop" aria-label="Nach oben">↑</button>
+  <button class="theme-toggle" id="themeToggle" aria-label="Modus umschalten">☀️</button>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-l">
+        <div class="topbar-lang">
+          <a href="#" class="active">DE</a><a href="#">EN</a><a href="#">IT</a><a href="#">FR</a>
+        </div>
+        <a href="/magazin/">Magazin</a>
+      </div>
+      <div class="topbar-r">
+        <a href="/fuer-betriebe/">Für Betriebe</a>
+        <a href="#" class="fav-link" id="topFavLink">♥ Merkliste <span class="fav-badge" id="favBadge" style="display:none">0</span></a>
+      <a href="/kontakt/">Kontakt</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="main-nav" id="mainNav">
+    <div class="container">
+      <a href="/" class="nav-logo">
+        <svg viewBox="4 4 404 46" width="360" height="46"><defs>
+          <linearGradient id="nt1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+          <linearGradient id="nt2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+          <linearGradient id="nt3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+          <linearGradient id="nt4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+          <linearGradient id="nt5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+        </defs>
+        <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt1)">T</text>
+        <polygon points="10,36 10,10 34,36" fill="url(#nt1)" opacity="0.08"/>
+        <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt2)">I</text>
+        <polygon points="42,36 42,14 56,36" fill="url(#nt2)" opacity="0.08"/>
+        <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt3)">R</text>
+        <polygon points="68,36 68,8 92,36" fill="url(#nt3)" opacity="0.08"/>
+        <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt4)">O</text>
+        <polygon points="100,36 100,10 126,36" fill="url(#nt4)" opacity="0.08"/>
+        <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt5)">L</text>
+        <circle cx="172" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
+        <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
+      </svg></a>
+      <div class="nav-links">
+        <a href="/regionen/" class={Astro.url.pathname.startsWith('/regionen') ? 'active' : ''}>Regionen</a>
+        <a href="/unterkuenfte/" class={Astro.url.pathname.startsWith('/unterkuenfte') ? 'active' : ''}>Unterkünfte</a>
+        <a href="/orte/" class={Astro.url.pathname.startsWith('/orte') ? 'active' : ''}>Orte</a>
+        <a href="/sehenswuerdigkeiten/" class={Astro.url.pathname.startsWith('/sehenswuerdigkeiten') ? 'active' : ''}>Sehenswertes</a>
+        <a href="/gastro/" class={Astro.url.pathname.startsWith('/gastro') ? 'active' : ''}>Gastro</a>
+        <a href="/erlebnisse/" class={Astro.url.pathname.startsWith('/erlebnisse') ? 'active' : ''}>Erlebnisse</a>
+        <a href="/events/" class={Astro.url.pathname.startsWith('/events') ? 'active' : ''}>Events</a>
+        <a href="/magazin/" class={Astro.url.pathname.startsWith('/magazin') ? 'active' : ''}>Magazin</a>
+      </div>
+      <div class="nav-r">
+        <button class="nav-search" onclick="window.location.href='/'" aria-label="Suche">🔍</button>
+        <a href="/unterkuenfte/" class="nav-cta">Buchen</a>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">&times;</button>
+    <a href="/regionen/">Regionen</a>
+    <a href="/unterkuenfte/">Unterkünfte</a>
+    <a href="/orte/">Orte</a>
+    <a href="/sehenswuerdigkeiten/">Sehenswertes</a>
+    <a href="/gastro/">Gastro</a>
+    <a href="/erlebnisse/">Erlebnisse</a>
+    <a href="/events/">Events</a>
+    <a href="/magazin/">Magazin</a>
+    <a href="/kontakt/">Kontakt</a>
+  </div>
+
+  <slot />
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="/" class="nav-logo">
+            <svg viewBox="4 4 404 46" width="340" height="46"><defs>
+              <linearGradient id="ft1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+              <linearGradient id="ft2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+              <linearGradient id="ft3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+              <linearGradient id="ft4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+              <linearGradient id="ft5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+            </defs>
+            <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft1)">T</text>
+            <polygon points="10,36 10,10 34,36" fill="url(#ft1)" opacity="0.08"/>
+            <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft2)">I</text>
+            <polygon points="42,36 42,14 56,36" fill="url(#ft2)" opacity="0.08"/>
+            <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft3)">R</text>
+            <polygon points="68,36 68,8 92,36" fill="url(#ft3)" opacity="0.08"/>
+            <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft4)">O</text>
+            <polygon points="100,36 100,10 126,36" fill="url(#ft4)" opacity="0.08"/>
+            <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft5)">L</text>
+            <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
+            <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink)">tourismus</text>
+          </svg></a>
+          <p>AlpenPop bei Tag, ALPENPEAK bei Nacht. Das offizielle Tourismusportal für Tirol.</p>
+          <div class="footer-social">
+            <a href={settings?.social?.instagram || '#'} aria-label="Instagram">📷</a>
+            <a href={settings?.social?.tiktok || '#'} aria-label="TikTok">🎵</a>
+            <a href={settings?.social?.facebook || '#'} aria-label="Facebook">👍</a>
+            <a href={settings?.social?.youtube || '#'} aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Regionen</h4><a href="/regionen/">Alle Regionen</a><a href="/regionen/oetztal/">Ötztal</a></div>
+        <div class="footer-col"><h4>Erlebnisse</h4><a href="/erlebnisse/">Alle Erlebnisse</a></div>
+        <div class="footer-col"><h4>Service</h4><a href="/ueber-uns/">Über uns</a><a href="/fuer-betriebe/">Für Betriebe</a><a href="/kontakt/">Kontakt</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/agb/">AGB</a></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 tiroltourismus.com · AlpenPop × ALPENPEAK</span>
+        <div><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="#" class="footer-btt" id="backToTop">↑ Zum Seitenanfang</a></div>
+      </div>
+    </div>
+  </footer>
+  <script is:inline src="/assets/js/tirol.js"></script>
+</body>
+</html>

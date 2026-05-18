@@ -1,0 +1,402 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<BaseLayout
+  title="Kontakt"
+  description="Kontaktiere das Team von tiroltourismus.com. Du hast Fragen, Anregungen oder willst deinen Betrieb eintragen? Wir sind für dich da."
+>
+  <main>
+    <!-- ============================================================
+         BREADCRUMBS
+         ============================================================ -->
+    <Breadcrumbs items={[{ label: 'Kontakt' }]} />
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="kontakt-hero">
+      <div class="kontakt-hero-bg"></div>
+      <div class="container">
+        <div class="kontakt-hero-inner">
+          <div class="kontakt-hero-emoji">📬</div>
+          <h1 class="kontakt-hero-title">Kontakt</h1>
+          <p class="kontakt-hero-sub">
+            Du hast Fragen, Anregungen oder willst deinen Betrieb eintragen?<br />
+            Wir sind für dich da.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT GRID — 2-Column: Info + Form
+         ============================================================ -->
+    <section class="kontakt-section">
+      <div class="container">
+        <div class="kontakt-grid">
+          <!-- LEFT: Contact Info -->
+          <div class="kontakt-info">
+            <h2 class="kontakt-info-heading">So erreichst du uns</h2>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon">📍</div>
+              <div>
+                <strong>tiroltourismus.com</strong><br />
+                <span class="kontakt-detail"
+                  >Dominik Rainer<br />A-6020 Innsbruck, Tirol</span
+                >
+              </div>
+            </div>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon">📧</div>
+              <div>
+                <a
+                  href="mailto:hallo@tiroltourismus.com"
+                  class="kontakt-email"
+                  >hallo@tiroltourismus.com</a
+                >
+              </div>
+            </div>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon">🕐</div>
+              <div>
+                <strong>Bürozeiten</strong><br />
+                <span class="kontakt-detail"
+                  >Mo–Fr: 09:00 – 17:00 Uhr<br />Wochenende &amp; Feiertage:
+                  geschlossen</span
+                >
+              </div>
+            </div>
+
+            <div class="kontakt-item">
+              <div class="kontakt-icon">📱</div>
+              <div>
+                <strong>Social Media</strong><br />
+                <span class="kontakt-detail"
+                  ><a href="https://instagram.com" class="kontakt-social"
+                    >Instagram</a
+                  >
+                  · <a href="https://tiktok.com" class="kontakt-social">TikTok</a>
+                  · <a href="https://facebook.com" class="kontakt-social">Facebook</a>
+                  · <a href="https://youtube.com" class="kontakt-social">YouTube</a></span
+                >
+              </div>
+            </div>
+
+            <div class="kontakt-note">
+              <span class="kontakt-note-icon">💡</span>
+              <p>
+                Für Betriebe: Trag deinen Betrieb kostenlos ein oder buche
+                Premium-Features für mehr Sichtbarkeit.
+              </p>
+              <a href="/fuer-betriebe/" class="btn btn-pink kontakt-note-btn"
+                >Zu den Betrieben →</a
+              >
+            </div>
+          </div>
+
+          <!-- RIGHT: Contact Form -->
+          <div class="kontakt-form-card">
+            <h3 class="kontakt-form-title">Nachricht senden</h3>
+            <p class="kontakt-form-subtitle">
+              Schreib uns eine Nachricht – wir melden uns innerhalb von 24 h
+              zurück.
+            </p>
+            <form
+              class="kontakt-form"
+              onsubmit="alert('Vielen Dank für deine Nachricht! Wir melden uns bald bei dir.');return false"
+            >
+              <label class="kontakt-field">
+                <span class="kontakt-label">Name *</span>
+                <input
+                  type="text"
+                  placeholder="Dein Name"
+                  required
+                  class="kontakt-input"
+                />
+              </label>
+              <label class="kontakt-field">
+                <span class="kontakt-label">E-Mail *</span>
+                <input
+                  type="email"
+                  placeholder="deine@email.at"
+                  required
+                  class="kontakt-input"
+                />
+              </label>
+              <label class="kontakt-field">
+                <span class="kontakt-label">Betreff</span>
+                <input
+                  type="text"
+                  placeholder="Worum geht es?"
+                  class="kontakt-input"
+                />
+              </label>
+              <label class="kontakt-field">
+                <span class="kontakt-label">Nachricht *</span>
+                <textarea
+                  rows="5"
+                  placeholder="Deine Nachricht an uns …"
+                  required
+                  class="kontakt-input kontakt-textarea"
+                ></textarea>
+              </label>
+              <button type="submit" class="btn btn-pink kontakt-submit">
+                Senden ✈️
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  /* ==============================================================
+     HERO
+     ============================================================== */
+  .kontakt-hero {
+    position: relative;
+    padding: 80px 0 64px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .kontakt-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--pink-glow), transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .kontakt-hero .container {
+    position: relative;
+    z-index: 2;
+  }
+  .kontakt-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .kontakt-hero-emoji {
+    font-size: 64px;
+    line-height: 1;
+    filter: drop-shadow(0 4px 12px rgba(255, 20, 147, 0.25));
+    animation: float 3s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .kontakt-hero-title {
+    font-family: var(--font-display);
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0;
+  }
+  .kontakt-hero-sub {
+    font-size: 16px;
+    color: var(--text2);
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0;
+  }
+
+  /* ==============================================================
+     CONTACT SECTION — 2-Column Grid
+     ============================================================== */
+  .kontakt-section {
+    padding: 64px 0 88px;
+  }
+  .kontakt-section .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* ==============================================================
+     LEFT — Contact Info
+     ============================================================== */
+  .kontakt-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .kontakt-info-heading {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0;
+  }
+  .kontakt-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .kontakt-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 36px;
+    text-align: center;
+  }
+  .kontakt-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .kontakt-detail {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+  .kontakt-email {
+    color: var(--pink);
+    font-weight: 600;
+    font-size: 15px;
+    transition: opacity 0.2s;
+  }
+  .kontakt-email:hover {
+    opacity: 0.8;
+  }
+  .kontakt-social {
+    color: var(--text2);
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  .kontakt-social:hover {
+    color: var(--pink);
+  }
+
+  /* Note Card */
+  .kontakt-note {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .kontakt-note-icon {
+    font-size: 24px;
+  }
+  .kontakt-note p {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .kontakt-note-btn {
+    align-self: flex-start;
+  }
+
+  /* ==============================================================
+     RIGHT — Contact Form Card
+     ============================================================== */
+  .kontakt-form-card {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px 32px;
+  }
+  .kontakt-form-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 6px;
+  }
+  .kontakt-form-subtitle {
+    font-size: 13px;
+    color: var(--text3);
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+  .kontakt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .kontakt-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .kontakt-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text2);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .kontakt-input {
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+  }
+  .kontakt-input:focus {
+    border-color: var(--pink);
+    outline: none;
+  }
+  .kontakt-input::placeholder {
+    color: var(--text3);
+  }
+  .kontakt-textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.6;
+  }
+  .kontakt-submit {
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  /* ==============================================================
+     RESPONSIVE
+     ============================================================== */
+  @media (max-width: 768px) {
+    .kontakt-hero {
+      padding: 48px 0 40px;
+    }
+    .kontakt-hero-title {
+      font-size: 36px;
+    }
+    .kontakt-hero-emoji {
+      font-size: 48px;
+    }
+    .kontakt-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .kontakt-form-card {
+      padding: 24px 20px;
+    }
+    .kontakt-section {
+      padding: 40px 0 64px;
+    }
+  }
+</style>

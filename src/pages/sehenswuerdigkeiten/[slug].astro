@@ -1,0 +1,61 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
+  return all.map(s => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('sehenswuerdigkeiten', slug);
+if (!entry) return Astro.redirect('/sehenswuerdigkeiten/');
+
+const catLabel = { natur:'Natur', kultur:'Kultur', aussicht:'Aussicht', sport:'Sport', museum:'Museum', kirche:'Kirche', burg:'Burg', wanderung:'Wanderung' };
+const catEmoji = { natur:'🌿', kultur:'🎭', aussicht:'🏔️', sport:'⚡', museum:'🏛️', kirche:'⛪', burg:'🏰', wanderung:'🥾' };
+const catStr = entry.kategorie ? `${catEmoji[entry.kategorie] || ''} ${catLabel[entry.kategorie] || entry.kategorie}` : undefined;
+---
+
+<DetailPage
+  title={entry.name}
+  description={entry.kurzbeschreibung}
+  sections={[
+    {
+      type: 'custom-hero',
+      title: entry.name,
+      subtitle: entry.kurzbeschreibung,
+      emoji: entry.emoji || '🏛️',
+      category: catStr,
+      location: entry.ort,
+      bgStyle: entry.farbe ? `linear-gradient(135deg,${entry.farbe}15,${entry.farbe}25)` : undefined,
+    },
+    (entry.hoehe || entry.dauer || entry.preis) ? {
+      type: 'sight-facts',
+      items: [
+        entry.hoehe ? { value: entry.hoehe, label: 'Höhe' } : null,
+        entry.dauer ? { value: entry.dauer, label: 'Dauer' } : null,
+        entry.preis ? { value: entry.preis, label: 'Eintritt' } : null,
+      ].filter(Boolean),
+    } : null,
+    entry.beschreibung ? {
+      type: 'description',
+      label: 'Details',
+      title: 'Mehr erfahren',
+      content: entry.beschreibung,
+    } : null,
+    entry.tags && entry.tags.length > 0 ? { type: 'tags', tags: entry.tags } : null,
+    {
+      type: 'sight-info-grid',
+      items: [
+        entry.oeffnungszeiten ? { icon: '🕐', label: 'Öffnungszeiten', value: entry.oeffnungszeiten } : null,
+        entry.preis ? { icon: '💰', label: 'Eintritt', value: entry.preis } : null,
+        entry.webseite ? { icon: '🌐', label: 'Webseite', value: entry.webseite.replace(/^https?:\/\//,'') + ' ↗', href: entry.webseite } : null,
+      ].filter(Boolean),
+    },
+    {
+      type: 'back-link',
+      href: '/sehenswuerdigkeiten/',
+      text: 'Alle Sehenswürdigkeiten',
+    },
+  ].filter(Boolean)}
+/>

@@ -1,0 +1,96 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('regionen').filter(r => isPublished(r.entry));
+  return all.map(r => ({ params: { slug: r.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('regionen', slug);
+if (!entry) return Astro.redirect('/regionen/');
+
+const { titel, emoji, farbe, kurzbeschreibung, bewertung, beschreibung, hoehe, flaeche, einwohner, tags } = entry;
+
+const unterkuenfte = readCollection('unterkuenfte').filter(u => isPublished(u.entry) && u.entry.region === slug);
+const orte = readCollection('orte').filter(o => isPublished(o.entry) && o.entry.region === slug);
+const gastro = readCollection('gastro').filter(g => isPublished(g.entry) && g.entry.region === slug);
+---
+
+<DetailPage
+  title={titel}
+  description={kurzbeschreibung}
+  breadcrumbs={[{ label: 'Regionen', href: '/regionen/' }, { label: titel }]}
+  sections={[
+    {
+      type: 'hero',
+      title: titel,
+      subtitle: kurzbeschreibung,
+      emoji: emoji,
+      gradient: farbe,
+      size: 'sm',
+    },
+    {
+      type: 'facts-bar',
+      accentColor: farbe,
+      items: [
+        bewertung ? { value: bewertung, suffix: '/5', label: 'Bewertung' } : null,
+        hoehe ? { value: hoehe, label: 'Höhe' } : null,
+        flaeche ? { value: flaeche, label: 'Fläche' } : null,
+        einwohner ? { value: einwohner, label: 'Einwohner' } : null,
+      ].filter(Boolean),
+    },
+    beschreibung ? {
+      type: 'description',
+      label: `${titel} entdecken`,
+      title: 'Highlights',
+      content: beschreibung,
+    } : null,
+    tags && tags.length > 0 ? { type: 'tags', tags: tags } : null,
+    {
+      type: 'related-grid',
+      label: 'Übernachten',
+      title: `Unterkünfte im ${titel}`,
+      description: unterkuenfte.length > 0 ? `${unterkuenfte.length} Unterkunft${unterkuenfte.length !== 1 ? 'en' : ''} gefunden` : undefined,
+      entries: unterkuenfte.slice(0, 6),
+      slugPrefix: '/unterkuenfte/',
+      nameField: 'name',
+      subtitleField: 'ort',
+      priceField: 'preis_ab',
+      emptyText: 'Noch keine Unterkünfte in dieser Region gelistet.',
+      ctaHref: `/unterkuenfte/?region=${slug}`,
+      ctaText: 'Alle Unterkünfte anzeigen',
+      accentBg: true,
+    },
+    {
+      type: 'related-grid',
+      label: 'Orte',
+      title: `Orte im ${titel}`,
+      description: orte.length > 0 ? `${orte.length} Ort${orte.length !== 1 ? 'e' : ''} gefunden` : undefined,
+      entries: orte.slice(0, 6),
+      slugPrefix: '/orte/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: 'emoji',
+      emptyText: 'Noch keine Orte in dieser Region gelistet.',
+      ctaHref: `/orte/?region=${slug}`,
+      ctaText: 'Alle Orte anzeigen',
+    },
+    {
+      type: 'related-grid',
+      label: 'Gastronomie',
+      title: `Gastro im ${titel}`,
+      description: gastro.length > 0 ? `${gastro.length} Lokal${gastro.length !== 1 ? 'e' : ''} gefunden` : undefined,
+      entries: gastro.slice(0, 6),
+      slugPrefix: '/gastro/',
+      nameField: 'name',
+      subtitleField: 'ort',
+      emojiField: 'emoji',
+      emptyText: 'Noch keine Gastro in dieser Region gelistet.',
+      ctaHref: `/gastro/?region=${slug}`,
+      ctaText: 'Alle Gastro anzeigen',
+      accentBg: true,
+    },
+  ].filter(Boolean)}
+/>

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import homepageData from '../data/homepage.json';
+const placeholderColors = ['#FF1493,#C0006E','#FF6B35,#E65100','#8B5CF6,#6D28D9','#0066FF,#003A8A','#00E5FF,#0097A7','#FFD700,#D4A800',];
+const placeholderIcons = ['🏔️','☯️','💎','T','🌌','✏️'];
 const page = homepageData;
 ---
 <BaseLayout title="tiroltourismus.com – Tirol ANDERS" description="AlpenPop bei Tag, ALPENPEAK bei Nacht. Das offizielle Tourismusportal für Tirol – bunt, gold, dunkel, anders.">
@@ -8,10 +10,11 @@ const page = homepageData;
     <!-- ═══ HERO ═══ -->
     <section class="hero" aria-label="Hero">
       <div class="hero-bg">
-        <img src={page.hero.bgImage} alt="">
+        <img src={page.hero.bgImage} alt="" loading="eager">
       </div>
       <div class="hero-glow"></div>
       <div class="hero-content">
+        <div id="weatherWidget" class="hero-weather"></div>
         <div class="hero-badge" set:html={page.hero.badge}></div>
         <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
         <p set:html={page.hero.subtitle}></p>
@@ -48,7 +51,9 @@ const page = homepageData;
         <div class="seelen-grid">
           {page.seelen.items.map((item, i) => (
             <div class={`seelen-card reveal r${i+1}`}>
-              <img src={item.img} alt={item.label} loading="lazy">
+              <div class="seelen-placeholder" style={`background:linear-gradient(135deg,${placeholderColors[i]})`}>
+                <span class="seelen-placeholder-icon">{placeholderIcons[i]}</span>
+              </div>
               <span class="seelen-label">{item.label}</span>
             </div>
           ))}
@@ -286,8 +291,10 @@ const page = homepageData;
   .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 24px 60px}
   .hero-bg{position:absolute;inset:0;z-index:0}
   .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0A0A12 0%,transparent 40%),linear-gradient(180deg,rgba(255,20,147,0.3) 0%,transparent 40%);pointer-events:none}
   .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(255,20,147,.25) 0%, rgba(212,168,0,.12) 40%, var(--bg) 75%);z-index:1}
   .hero-content{position:relative;z-index:2;max-width:800px}
+  .hero-weather{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);margin-bottom:20px;font-size:13px;color:rgba(255,255,255,.85);min-height:36px}
   .hero-badge{display:inline-flex;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);margin-bottom:24px;gap:6px}
   .hero h1{font-family:var(--font-display);font-size:clamp(64px,12vw,140px);line-height:.85;letter-spacing:4px;text-transform:uppercase;margin-bottom:16px}
   .hero h1 .line{display:block}
@@ -315,7 +322,8 @@ const page = homepageData;
   .seelen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .seelen-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;padding:24px;text-align:center;transition:all .4s var(--ease)}
   .seelen-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
-  .seelen-card img{width:100%;height:auto;border-radius:var(--radius-sm);margin-bottom:12px}
+  .seelen-placeholder{width:100%;aspect-ratio:1;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+  .seelen-placeholder-icon{font-size:48px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.2))}
   .seelen-label{font-family:var(--font-display);font-size:18px;letter-spacing:1px;text-transform:uppercase;color:var(--text)}
   @media(max-width:768px){.seelen-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:500px){.seelen-grid{grid-template-columns:1fr}}
@@ -483,13 +491,4 @@ const page = homepageData;
   .btt{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--pink);color:#fff;font-size:20px;border:none;cursor:pointer;z-index:999;opacity:0;transform:translateY(20px);transition:all .3s var(--ease);box-shadow:0 4px 20px var(--pink-glow)}
   .btt.visible{opacity:1;transform:translateY(0)}
   .btt:hover{transform:translateY(-4px);box-shadow:0 8px 30px var(--pink-glow)}
-
-  /* ═══ SECTION GENERICS ═══ */
-  .section{padding:80px 0}
-  .section-header{text-align:center;margin-bottom:48px}
-  .section-label{font-family:var(--font-display);font-size:20px;letter-spacing:4px;color:var(--pink);margin-bottom:8px;text-transform:uppercase}
-  .section-title{font-family:var(--font-display);font-size:clamp(32px,5vw,56px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
-  .section-title span{color:var(--pink)}
-  .section-title em{color:var(--gold);font-style:normal}
-  .section-desc{font-size:14px;color:var(--text2);max-width:520px;margin:0 auto;line-height:1.6}
 </style>

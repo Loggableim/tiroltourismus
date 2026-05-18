@@ -12,7 +12,15 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": { "lat": 47.27, "lng": 11.39 }
+  "bilder": [
+    {
+      "url": "/images/magazin/kulturhighlights-in-innsbruck-goldenes-dachl--co.webp",
+      "alt": "Kulturhighlights in Innsbruck – Goldenes Dachl & Co"
+    }
+  ],
+  "hero_bild": "/images/magazin/kulturhighlights-in-innsbruck-goldenes-dachl--co.webp",
+  "koordinaten": {
+    "lat": 47.27,
+    "lng": 11.39
+  }
 }

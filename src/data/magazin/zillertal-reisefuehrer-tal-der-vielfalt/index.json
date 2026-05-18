@@ -18,8 +18,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/zillertal-reisefuehrer-tal-der-vielfalt.webp",
+      "alt": "Zillertal Reiseführer – Tal der Vielfalt: Erlebnisse für die ganze Familie"
+    }
+  ],
+  "hero_bild": "/images/magazin/zillertal-reisefuehrer-tal-der-vielfalt.webp",
   "koordinaten": {
     "lat": 47.28,
     "lng": 11.88

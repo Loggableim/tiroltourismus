@@ -17,8 +17,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/tiroler-kueche-von-a-z-die-kulinarische-reise-durchs-land.webp",
+      "alt": "Tiroler Küche von A–Z – Die kulinarische Reise durchs Land"
+    }
+  ],
+  "hero_bild": "/images/magazin/tiroler-kueche-von-a-z-die-kulinarische-reise-durchs-land.webp",
   "koordinaten": {
     "lat": 47.27,
     "lng": 11.39

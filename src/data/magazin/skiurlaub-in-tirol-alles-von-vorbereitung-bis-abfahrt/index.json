@@ -16,8 +16,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/skiurlaub-in-tirol-alles-von-vorbereitung-bis-abfahrt.webp",
+      "alt": "Skiurlaub in Tirol – Alles von Vorbereitung bis Abfahrt"
+    }
+  ],
+  "hero_bild": "/images/magazin/skiurlaub-in-tirol-alles-von-vorbereitung-bis-abfahrt.webp",
   "koordinaten": {
     "lat": 47.27,
     "lng": 11.39

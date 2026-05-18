@@ -13,7 +13,15 @@
   ],
   "status": "published",
   "datum": "2026-05-17",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": { "lat": 46.97, "lng": 11.00 }
+  "bilder": [
+    {
+      "url": "/images/magazin/wanderwege-oetztal.webp",
+      "alt": "Die 10 schönsten Wanderwege im Ötztal"
+    }
+  ],
+  "hero_bild": "/images/magazin/wanderwege-oetztal.webp",
+  "koordinaten": {
+    "lat": 46.97,
+    "lng": 11.0
+  }
 }

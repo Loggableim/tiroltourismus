@@ -14,8 +14,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/kulinarik-oetztal.webp",
+      "alt": "Kulinarik im Ötztal – Vom Bauerhof auf den Teller"
+    }
+  ],
+  "hero_bild": "/images/magazin/kulinarik-oetztal.webp",
   "koordinaten": {
     "lat": 46.97,
     "lng": 11.0

@@ -16,8 +16,13 @@
   ],
   "status": "published",
   "datum": "2026-05-17",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/oetztal-reisefuehrer-aktivurlaub-im-sueden-tirols.webp",
+      "alt": "Ötztal Reiseführer – Aktivurlaub im Süden Tirols"
+    }
+  ],
+  "hero_bild": "/images/magazin/oetztal-reisefuehrer-aktivurlaub-im-sueden-tirols.webp",
   "koordinaten": {
     "lat": 46.97,
     "lng": 11.0

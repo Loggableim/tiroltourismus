@@ -16,7 +16,15 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": { "lat": 47.27, "lng": 11.39 }
+  "bilder": [
+    {
+      "url": "/images/magazin/tiroler-kueche-traditionelle-gerichte--spezialitaeten.webp",
+      "alt": "Tiroler Küche – Traditionelle Gerichte & Spezialitäten"
+    }
+  ],
+  "hero_bild": "/images/magazin/tiroler-kueche-traditionelle-gerichte--spezialitaeten.webp",
+  "koordinaten": {
+    "lat": 47.27,
+    "lng": 11.39
+  }
 }

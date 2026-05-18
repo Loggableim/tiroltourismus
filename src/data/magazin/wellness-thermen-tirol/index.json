@@ -13,8 +13,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/wellness-thermen-tirol.webp",
+      "alt": "Wellness in Tirol – Die besten Thermen und Spa-Resorts"
+    }
+  ],
+  "hero_bild": "/images/magazin/wellness-thermen-tirol.webp",
   "koordinaten": {
     "lat": 47.07,
     "lng": 10.97

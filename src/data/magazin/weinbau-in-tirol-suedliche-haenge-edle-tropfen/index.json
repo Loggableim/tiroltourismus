@@ -12,7 +12,15 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": { "lat": 47.05, "lng": 11.30 }
+  "bilder": [
+    {
+      "url": "/images/magazin/weinbau-in-tirol-suedliche-haenge-edle-tropfen.webp",
+      "alt": "Weinbau in Tirol – südliche Hänge, edle Tropfen"
+    }
+  ],
+  "hero_bild": "/images/magazin/weinbau-in-tirol-suedliche-haenge-edle-tropfen.webp",
+  "koordinaten": {
+    "lat": 47.05,
+    "lng": 11.3
+  }
 }

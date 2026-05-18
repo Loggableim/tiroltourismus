@@ -14,8 +14,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/wandern-mit-kindern-in-tirol-familienfreundliche-touren.webp",
+      "alt": "Wandern mit Kindern in Tirol – familienfreundliche Touren"
+    }
+  ],
+  "hero_bild": "/images/magazin/wandern-mit-kindern-in-tirol-familienfreundliche-touren.webp",
   "koordinaten": {
     "lat": 47.27,
     "lng": 11.39

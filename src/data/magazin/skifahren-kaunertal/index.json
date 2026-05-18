@@ -14,8 +14,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/skifahren-kaunertal.webp",
+      "alt": "Skifahren im Kaunertal – Das geheime Powder-Paradies"
+    }
+  ],
+  "hero_bild": "/images/magazin/skifahren-kaunertal.webp",
   "koordinaten": {
     "lat": 46.97,
     "lng": 10.76

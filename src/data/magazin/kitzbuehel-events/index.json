@@ -14,8 +14,13 @@
   ],
   "status": "published",
   "datum": "2026-05-18",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/magazin/kitzbuehel-events.webp",
+      "alt": "Kitzbühel Events 2026 – Von der Hahnenkamm-Abfahrt bis zum Jazz Festival"
+    }
+  ],
+  "hero_bild": "/images/magazin/kitzbuehel-events.webp",
   "koordinaten": {
     "lat": 47.45,
     "lng": 12.39

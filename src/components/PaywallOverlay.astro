@@ -1,0 +1,327 @@
+---
+// PaywallOverlay.astro — Glassmorphism-Overlay für Basic-Tier-Unterkünfte
+// Zeigt auf der Detailseite für nicht-angemeldete User einen Upgrade-Call-to-Action.
+// Nutzt localStorage zur Tier-Simulation (Demo-Modus).
+
+export interface Props {
+  name: string;
+  slug: string;
+}
+---
+
+<div class="paywall-wrap" data-paywall data-slug={Astro.props.slug}>
+  <!-- Overlay für gesperrte Inhalte -->
+  <div class="paywall-overlay" id="paywallOverlay">
+    <div class="paywall-card">
+      <div class="paywall-lock">🔒</div>
+      <h2 class="paywall-headline">Mehr Details freischalten</h2>
+      <p class="paywall-sub">
+        Melde Dich an, um alle Informationen zu <strong>{Astro.props.name}</strong> zu sehen – inklusive Beschreibung, Bilder, Bewertungen und Kontaktdaten.
+      </p>
+
+      <div class="paywall-tiers">
+        <div class="paywall-tier">
+          <div class="paywall-tier-badge basic">Basic</div>
+          <div class="paywall-tier-desc">Kurzinfo &amp; Kontakt</div>
+        </div>
+        <div class="paywall-tier-arrow">→</div>
+        <div class="paywall-tier">
+          <div class="paywall-tier-badge silver">Silber</div>
+          <div class="paywall-tier-desc">Beschreibung, Bilder &amp; Bewertung</div>
+        </div>
+        <div class="paywall-tier-arrow">→</div>
+        <div class="paywall-tier">
+          <div class="paywall-tier-badge gold">⭐ Gold</div>
+          <div class="paywall-tier-desc">Alles + Hervorhebung</div>
+        </div>
+      </div>
+
+      <button class="paywall-btn" id="paywallLoginBtn">
+        Jetzt kostenlos registrieren
+      </button>
+      <button class="paywall-link" id="paywallToggleBtn">
+        Demo: Als Silver anzeigen
+      </button>
+      <button class="paywall-link paywall-link-gold" id="paywallGoldBtn">
+        Demo: Als Gold anzeigen
+      </button>
+    </div>
+  </div>
+
+  <!-- Client-seitige Logik: localStorage-basierte Tier-Simulation -->
+  <script is:inline>
+    (function() {
+      var KEY = 'tirol_user_tier';
+      var container = document.querySelector('[data-paywall]');
+      var overlay = document.getElementById('paywallOverlay');
+      var loginBtn = document.getElementById('paywallLoginBtn');
+      var toggleBtn = document.getElementById('paywallToggleBtn');
+      var goldBtn = document.getElementById('paywallGoldBtn');
+
+      function getUserTier() {
+        return localStorage.getItem(KEY) || 'basic';
+      }
+
+      function setUserTier(tier) {
+        localStorage.setItem(KEY, tier);
+        applyTier(tier);
+      }
+
+      function applyTier(tier) {
+        if (!container) return;
+        if (tier === 'basic') {
+          container.classList.remove('tier-silver', 'tier-gold');
+          container.classList.add('tier-basic');
+          if (overlay) overlay.style.display = 'flex';
+        } else if (tier === 'silver') {
+          container.classList.remove('tier-basic', 'tier-gold');
+          container.classList.add('tier-silver');
+          if (overlay) overlay.style.display = 'none';
+        } else if (tier === 'gold') {
+          container.classList.remove('tier-basic', 'tier-silver');
+          container.classList.add('tier-gold');
+          if (overlay) overlay.style.display = 'none';
+        }
+        // Aktualisiere Button-Texte
+        updateButtonTexts(tier);
+      }
+
+      function updateButtonTexts(tier) {
+        if (!toggleBtn) return;
+        if (tier === 'basic') {
+          toggleBtn.textContent = 'Demo: Als Silver anzeigen';
+          if (goldBtn) goldBtn.style.display = '';
+        } else if (tier === 'silver') {
+          toggleBtn.textContent = 'Demo: Als Basic anzeigen';
+          if (goldBtn) goldBtn.style.display = 'none';
+        } else if (tier === 'gold') {
+          toggleBtn.textContent = 'Demo: Als Basic anzeigen';
+          if (goldBtn) goldBtn.style.display = 'none';
+        }
+      }
+
+      // Init
+      var currentTier = getUserTier();
+      // Nur auf Basic-Detailseiten relevant — per CSS-Klasse gesteuert
+      applyTier(currentTier);
+
+      // Event: "Jetzt registrieren" → als Silver anmelden (Demo)
+      if (loginBtn) {
+        loginBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          setUserTier('silver');
+        });
+      }
+
+      // Event: Toggle-Demo
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          var cur = getUserTier();
+          if (cur === 'basic') {
+            setUserTier('silver');
+          } else {
+            setUserTier('basic');
+          }
+        });
+      }
+
+      // Event: Gold-Demo
+      if (goldBtn) {
+        goldBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          setUserTier('gold');
+        });
+      }
+    })();
+  </script>
+</div>
+
+<style is:global>
+  /* ─── Paywall Overlay ─── */
+  .paywall-wrap {
+    position: relative;
+  }
+  .paywall-wrap.tier-silver .paywall-overlay,
+  .paywall-wrap.tier-gold .paywall-overlay {
+    display: none !important;
+  }
+
+  .paywall-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius-lg);
+    padding: 40px 20px;
+    min-height: 320px;
+    transition: opacity 0.5s var(--ease);
+  }
+
+  .paywall-card {
+    background: var(--glass);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 40px 32px;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--glass-shadow);
+  }
+
+  .paywall-lock {
+    font-size: 48px;
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+
+  .paywall-headline {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 36px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .paywall-sub {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .paywall-sub strong {
+    color: var(--text);
+  }
+
+  /* Tier-Vergleichs-Reihe */
+  .paywall-tiers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .paywall-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .paywall-tier-badge {
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+  .paywall-tier-badge.basic {
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    color: var(--text3);
+  }
+  .paywall-tier-badge.silver {
+    background: linear-gradient(135deg, var(--green), #059669);
+    color: #fff;
+  }
+  .paywall-tier-badge.gold {
+    background: linear-gradient(135deg, var(--yellow), #F59E0B);
+    color: #1a1a1a;
+  }
+
+  .paywall-tier-desc {
+    font-size: 10px;
+    color: var(--text2);
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .paywall-tier-arrow {
+    font-size: 18px;
+    color: var(--text3);
+    margin-top: -20px;
+  }
+
+  /* CTA Buttons */
+  .paywall-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-body);
+    letter-spacing: 0.3px;
+    background: var(--pink);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 280px;
+  }
+  .paywall-btn:hover {
+    background: var(--pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--pink-glow);
+  }
+
+  .paywall-link {
+    display: block;
+    font-size: 11px;
+    color: var(--text3);
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 6px;
+    font-family: var(--font-body);
+    transition: color 0.3s;
+    width: 100%;
+  }
+  .paywall-link:hover {
+    color: var(--text);
+  }
+
+  .paywall-link-gold {
+    color: var(--gold-light);
+  }
+  .paywall-link-gold:hover {
+    color: var(--gold);
+  }
+
+  /* Paywall auf Basic-Karten im Listing */
+  [data-tier="basic"] .paywall-overlay {
+    display: flex;
+  }
+
+  @media (max-width: 480px) {
+    .paywall-card {
+      padding: 28px 20px;
+    }
+    .paywall-tiers {
+      flex-direction: column;
+      gap: 4px;
+    }
+    .paywall-tier-arrow {
+      transform: rotate(90deg);
+      margin-top: 0;
+    }
+  }
+</style>

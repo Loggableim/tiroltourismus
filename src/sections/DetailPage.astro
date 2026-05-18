@@ -26,12 +26,13 @@ export interface Props {
   sections: SectionConfig[];
   // Magazin-spezifisch (weil article != main layout)
   isArticle?: boolean;
+  locale?: string;
 }
 
-const { title, description, breadcrumbs, sections, isArticle } = Astro.props;
+const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} locale={locale}>
   <main>
     {breadcrumbs && breadcrumbs.length > 0 && (
       <div class="container">

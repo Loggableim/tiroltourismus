@@ -142,6 +142,10 @@ export const SINGLETONS = {
     label: 'Site-Einstellungen',
     fields: ['site_name', 'site_description', 'kontakt_email', 'kontakt_telefon', 'social'],
   },
+  bezirke: {
+    label: 'Bezirke Tirols (Singleton)',
+    fields: ['innsbruck', 'innsbruck-land', 'imst', 'landeck', 'reutte', 'kufstein', 'kitzbuehel', 'schwaz', 'lienz'],
+  },
   homepage: {
     label: 'Homepage (vollständig, alt)',
     fields: ['hero', 'stats', 'seelen', 'whyTirol', 'regionen', 'unterkuenfte', 'activities', 'events', 'magazin'],

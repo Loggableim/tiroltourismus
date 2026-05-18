@@ -1,0 +1,328 @@
+---
+// 404 — Seite nicht gefunden
+// Self-contained error page with Tirol dark-theme styling
+---
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Seite nicht gefunden – tiroltourismus.com</title>
+  <meta name="description" content="Die gesuchte Seite existiert leider nicht. Zurück zur Startseite von Tirol Tourismus." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0A0A12" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/tirol.css" />
+  <style>
+    /* ─── Error Page Overrides ─── */
+    .error-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 24px;
+      text-align: center;
+      background: var(--bg);
+      color: var(--text);
+      transition: background .6s, color .6s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Mountain silhouette background */
+    .error-page::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background:
+        linear-gradient(135deg, var(--pink-glow) 0%, transparent 60%),
+        linear-gradient(225deg, var(--gold-glow) 0%, transparent 60%);
+      opacity: 0.5;
+      pointer-events: none;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath d='M0,200 L0,120 L120,80 L200,110 L280,60 L360,90 L440,40 L520,70 L600,50 L680,80 L760,30 L840,65 L920,20 L1000,55 L1080,35 L1160,70 L1240,10 L1320,45 L1440,0 L1440,200 Z'/%3E%3C/svg%3E");
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath d='M0,200 L0,120 L120,80 L200,110 L280,60 L360,90 L440,40 L520,70 L600,50 L680,80 L760,30 L840,65 L920,20 L1000,55 L1080,35 L1160,70 L1240,10 L1320,45 L1440,0 L1440,200 Z'/%3E%3C/svg%3E");
+      -webkit-mask-size: cover;
+      mask-size: cover;
+    }
+
+    /* Floating decorative elements */
+    .error-deco {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+    }
+    .error-deco-1 {
+      width: 400px;
+      height: 400px;
+      background: var(--pink-glow);
+      top: -100px;
+      right: -100px;
+    }
+    .error-deco-2 {
+      width: 300px;
+      height: 300px;
+      background: var(--gold-glow);
+      bottom: -50px;
+      left: -80px;
+    }
+
+    .error-content {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+    }
+
+    .error-logo {
+      margin-bottom: 48px;
+      display: flex;
+      justify-content: center;
+    }
+    .error-logo svg {
+      width: 280px;
+      height: auto;
+    }
+
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(120px, 20vw, 200px);
+      line-height: 1;
+      letter-spacing: 4px;
+      background: linear-gradient(135deg, var(--pink) 0%, var(--gold-light) 50%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      animation: errorPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes errorPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .error-desc {
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all .3s var(--ease);
+      cursor: pointer;
+      border: none;
+    }
+
+    .error-btn-primary {
+      background: var(--pink);
+      color: #fff;
+      box-shadow: 0 4px 20px var(--pink-glow);
+    }
+    .error-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px var(--pink-glow);
+    }
+
+    .error-btn-secondary {
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      color: var(--text);
+    }
+    .error-btn-secondary:hover {
+      background: var(--surface-hover);
+      transform: translateY(-2px);
+    }
+
+    .error-footer {
+      position: absolute;
+      bottom: 24px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text3);
+      z-index: 1;
+    }
+
+    /* Dark mode toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 10;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all .4s var(--ease);
+      color: var(--text);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    }
+
+    @media (max-width: 600px) {
+      .error-page { padding: 24px 16px; }
+      .error-logo svg { width: 200px; }
+      .error-btn { padding: 12px 24px; font-size: 12px; }
+      .error-page::before { height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-page" id="errorPage">
+    <!-- Floating decorations -->
+    <div class="error-deco error-deco-1"></div>
+    <div class="error-deco error-deco-2"></div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten">
+      <svg class="theme-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg class="theme-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+
+    <div class="error-content">
+      <!-- TIROL Logo -->
+      <div class="error-logo">
+        <svg viewBox="8 4 420 50" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="el1" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+            <linearGradient id="el2" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+            <linearGradient id="el3" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+            <linearGradient id="el4" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+            <linearGradient id="el5" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+          </defs>
+          <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el1)">T</text>
+          <polygon points="10,36 10,10 34,36" fill="url(#el1)" opacity="0.08"/>
+          <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el2)">I</text>
+          <polygon points="42,36 42,14 56,36" fill="url(#el2)" opacity="0.08"/>
+          <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el3)">R</text>
+          <polygon points="68,36 68,8 92,36" fill="url(#el3)" opacity="0.08"/>
+          <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el4)">O</text>
+          <polygon points="100,36 100,10 126,36" fill="url(#el4)" opacity="0.08"/>
+          <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el5)">L</text>
+          <polygon points="134,36 134,8 158,36" fill="url(#el5)" opacity="0.08"/>
+          <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
+          <text x="186" y="38" font-family="'Montserrat','Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink, #FF1493)">tourismus</text>
+          <text x="388" y="38" font-family="'Montserrat','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="500" fill="var(--text3, rgba(255,255,255,0.15))">.com</text>
+        </svg>
+      </div>
+
+      <!-- Error Code -->
+      <div class="error-code">404</div>
+
+      <!-- Title -->
+      <h1 class="error-title">Seite nicht gefunden</h1>
+
+      <!-- Description -->
+      <p class="error-desc">
+        Die von Ihnen aufgerufene Seite existiert leider nicht oder wurde verschoben.<br />
+        Vielleicht hilft die Suche oder ein Blick auf die Startseite weiter.
+      </p>
+
+      <!-- Actions -->
+      <div class="error-actions">
+        <a href="/" class="error-btn error-btn-primary">
+          ← Zurück zur Startseite
+        </a>
+        <a href="/suche/" class="error-btn error-btn-secondary">
+          🔍 Suche
+        </a>
+      </div>
+    </div>
+
+    <div class="error-footer">
+      &copy; 2026 tiroltourismus.com &middot; AlpenPop &times; ALPENPEAK
+    </div>
+  </div>
+
+  <!-- Theme toggle logic (matching tirol.js but self-contained) -->
+  <script is:inline>
+    (function() {
+      const html = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const sun = toggle?.querySelector('.theme-sun');
+      const moon = toggle?.querySelector('.theme-moon');
+
+      function setTheme(mode) {
+        if (mode === 'alpenpeak') {
+          html.setAttribute('data-theme', 'alpenpeak');
+          if (sun) sun.style.display = 'none';
+          if (moon) moon.style.display = 'block';
+          try { localStorage.setItem('tirol_theme', 'alpenpeak'); } catch {}
+        } else {
+          html.removeAttribute('data-theme');
+          if (sun) sun.style.display = 'block';
+          if (moon) moon.style.display = 'none';
+          try { localStorage.setItem('tirol_theme', 'day'); } catch {}
+        }
+      }
+
+      // Restore saved theme
+      try {
+        const saved = localStorage.getItem('tirol_theme');
+        if (saved === 'alpenpeak') setTheme('alpenpeak');
+      } catch {}
+
+      // Auto-night mode (20:00–5:59)
+      if (!localStorage.getItem('tirol_theme')) {
+        const h = new Date().getHours();
+        if (h >= 20 || h < 6) setTheme('alpenpeak');
+      }
+
+      if (toggle) {
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isDark = html.getAttribute('data-theme') === 'alpenpeak';
+          setTheme(isDark ? 'day' : 'alpenpeak');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

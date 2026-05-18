@@ -1,0 +1,32 @@
+{
+  "name": "Hotel Alpenfeuer",
+  "slug": "hotel-alpenfeuer",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Kaunertal",
+  "region": "kaunertal",
+  "plz": "6524",
+  "adresse": "Feichten 100",
+  "beschreibung": "Familiengeführtes Wohlfühlhotel im Zentrum von Feichten mit großzügigem Wellnessbereich, Hallenbad und feiner Tiroler Küche. Ausgangspunkt für Touren ins Kaunertal.",
+  "preis_ab": 99,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "pool",
+    "parkplatz",
+    "halbpension"
+  ],
+  "tags": [
+    "familie",
+    "wellness",
+    "wandern",
+    "ski",
+    "natur"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "46.9882134",
+    "lng": "10.7281902"
+  }
+}

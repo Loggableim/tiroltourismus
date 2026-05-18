@@ -1,0 +1,82 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ The Official Tourism Portal for Tyrol",
+    "title": ["TIROL", "DIFFERENT"],
+    "subtitle": "Experience Tyrol in all its diversity – from majestic peaks through idyllic valleys to rustic alpine huts.",
+    "ctaPrimary": { "text": "✦ Discover Regions", "href": "#regionen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "Find Accommodation", "href": "#unterkuenfte", "class": "btn-secondary" }
+  },
+  "stats": [
+    { "icon": "🏔️", "count": 835, "label": "Peaks over 3,000m" },
+    { "icon": "🏡", "count": 12000, "label": "Accommodations" },
+    { "icon": "🥾", "count": 24500, "label": "Hiking Kilometers" },
+    { "icon": "🎿", "count": 580, "label": "Cable Cars & Lifts" }
+  ],
+  "seelen": {
+    "label": "#regionentyrol",
+    "title": "Regions of Tyrol",
+    "desc": "Six regions, six personalities – each with its very own character and charm.",
+    "items": [
+      { "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png", "label": "Summit Line" },
+      { "img": "/brand/hero-logos/konzept2_dualmodus_20260517_083239.png", "label": "Dual Mode" },
+      { "img": "/brand/hero-logos/konzept3_alpiner_kristall_20260517_083254.png", "label": "Alpine Crystal" },
+      { "img": "/brand/hero-logos/konzept4_typografisch_20260517_084716.png", "label": "Typographic" },
+      { "img": "/brand/hero-logos/konzept5_aurora_20260517_084732.png", "label": "Aurora" },
+      { "img": "/brand/hero-logos/konzept6_linienkunst_20260517_084749.png", "label": "Line Art" }
+    ]
+  },
+  "whyTirol": {
+    "label": "#whytyrol",
+    "title": "Why Tyrol?",
+    "desc": "Three good reasons why Tyrol ranks among the most beautiful holiday regions in the Alps.",
+    "items": [
+      { "icon": "🏔️", "iconClass": "i1", "title": "Peaks & Valleys", "desc": "835 three-thousanders await your discovery. Every summit offers a new perspective – from sunny alpine meadows to rugged rock faces.", "stat": "835", "statClass": "pink" },
+      { "icon": "🎨", "iconClass": "i2", "title": "Design as Experience", "desc": "Tyrol combines traditional hospitality with modern flair – two worlds of experience, one unforgettable holiday.", "stat": "2", "statClass": "gold" },
+      { "icon": "🌱", "iconClass": "i3", "title": "Sustainable & Authentic", "desc": "Sustainability and conservation are at the heart of everything. Green initiatives, regional cuisine, and genuine respect for nature shape the Tyrolean holiday experience.", "stat": "100%", "statClass": "pink" }
+    ]
+  },
+  "regionen": {
+    "label": "Discover",
+    "title": "Our Regions",
+    "desc": "From the state capital to the most remote mountain villages – every region has its own character and countless opportunities for unforgettable experiences.",
+    "items": [
+      { "img": "/assets/images/region_innsbruck_20260517_101459.webp", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "City & Mountain – Urban Alpine Glow Mix", "stars": 5, "slug": "innsbruck" },
+      { "img": "/assets/images/region_oetztal_20260517_101502.webp", "tag": "NATURE", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Glaciers, Peaks & Wild Valleys", "stars": 4, "slug": "oetztal" },
+      { "img": "/assets/images/region_zillertal_20260517_101508.webp", "tag": "ACTIVE", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Hiking, Biking, Skiing at its Purest", "stars": 5, "slug": "zillertal" },
+      { "img": "/assets/images/region_stubaital_20260517_101513.webp", "tag": "CULINARY", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Indulgence & Mountain Romance", "stars": 4, "slug": "stubaital" },
+      { "img": "/assets/images/region_kitzbuehel_20260517_101526.webp", "tag": "LUXURY", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Alpine Elegance & Glamour", "stars": 5, "slug": "kitzbuehel" },
+      { "img": "/assets/images/region_kaunertal_20260517_101520.webp", "tag": "SUMMIT", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Untouched & Unspoiled", "stars": 4, "slug": "kaunertal" }
+    ]
+  },
+  "unterkuenfte": {
+    "label": "Stay",
+    "title": "Find Your Home",
+    "desc": "From luxury wellness hotels to family-run farm stays and cozy holiday apartments – find your perfect accommodation in Tyrol.",
+    "tabs": ["Recommended", "Top Rated", "Best Price"],
+    "items": [
+      { "img": "/assets/images/hotel_1_20260517_101547.webp", "badge": "AI Pick", "badgeClass": "pop", "type": "Design Hotel", "name": "Alpine Panorama Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
+      { "img": "/assets/images/hotel_2_20260517_101544.webp", "badge": "Top Rated", "badgeClass": "top", "type": "Alpine Lodge", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
+      { "img": "/assets/images/hotel_3_20260517_101551.webp", "badge": "Deal", "badgeClass": "deal", "type": "Apartment", "name": "Alpen Panorama Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
+    ]
+  },
+  "activities": [
+    { "barColor": "c1", "icon": "🪂", "title": "Paragliding over Innsbruck", "desc": "Soar above the state capital and enjoy a breathtaking view of the surrounding mountain scenery.", "price": 129, "link": "#" },
+    { "barColor": "c2", "icon": "🚵", "title": "E-Mountainbike Sunset Tour", "desc": "Explore the Tyrolean mountain world on a guided e-bike tour and experience sunset over the peaks.", "price": 89, "link": "#" },
+    { "barColor": "c3", "icon": "🎨", "title": "Alpine Herb Hiking Tour", "desc": "Discover the local plant world on a guided herb hike with tasting of regional products.", "price": 55, "link": "#" },
+    { "barColor": "c4", "icon": "🌙", "title": "Guided Stargazing Hike", "desc": "On a night hike with certified guides, learn about the starry sky above the Alps.", "price": 45, "link": "#" },
+    { "barColor": "c5", "icon": "🧘", "title": "Alpine Yoga & Meditation", "desc": "Find your inner peace with a yoga session overlooking the Tyrolean mountains.", "price": 69, "link": "#" },
+    { "barColor": "c6", "icon": "🍷", "title": "Tyrolean Gourmet Evening", "desc": "Treat yourself to an exclusive dinner with regional specialties and fine wines.", "price": 149, "link": "#" }
+  ],
+  "events": [
+    { "day": 21, "month": "JUN", "dateBoxClass": "pink", "cat": "🎵 Music", "title": "Tyrolean Alpine Summer Festival", "desc": "The biggest music festival in the Alps with international acts and spectacular mountain scenery at 2,000m.", "loc": "Innsbruck", "price": "from €49" },
+    { "day": 5, "month": "JUL", "dateBoxClass": "gold", "cat": "🎨 Art", "title": "Gold Art Trail", "desc": "Art installations and golden light sculptures along an illuminated mountain path – open in the evenings.", "loc": "Ötztal", "price": "€22" },
+    { "day": 19, "month": "AUG", "dateBoxClass": "gold", "cat": "🥾 Sports", "title": "Summit Mountain Festival", "desc": "Mountain run with DJs and atmospheric after-party on the alp – for athletes and connoisseurs!", "loc": "Zillertal", "price": "€35" },
+    { "day": 12, "month": "SEP", "dateBoxClass": "green", "cat": "🍽️ Culinary", "title": "Gourmet Summit Experience", "desc": "Top chefs present their creations at 2,500m – a culinary experience of the highest order.", "loc": "Kitzbühel", "price": "€89" }
+  ],
+  "magazin": [
+    { "img": "/assets/images/magazin_1_20260517_101554.webp", "cat": "Hiking", "catClass": "wander", "date": "May 12, 2026", "title": "The Most Colorful Hiking Routes in Tyrol", "desc": "Seven routes that prove nature is the best artist – from alpine flowers to golden glacial lakes." },
+    { "img": "/assets/images/magazin_2_20260517_101600.webp", "cat": "Nature", "catClass": "natur", "date": "April 28, 2026", "title": "Sustainability Meets Pop Culture", "desc": "How Tyrolean hotels set new standards with bold ideas, golden accents, and green conscience." },
+    { "img": "/assets/images/magazin_3_20260517_101603.webp", "cat": "Culinary", "catClass": "kulin", "date": "April 3, 2026", "title": "Alpine Cuisine Reimagined", "desc": "From pink dumplings to golden schnitzel: Young chefs reinterpret Tyrolean classics." }
+  ]
+}

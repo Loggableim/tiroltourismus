@@ -1,0 +1,28 @@
+{
+  "name": "Gasthof Goldener Adler",
+  "slug": "gasthof-goldener-adler",
+  "typ": "gasthof",
+  "sterne": 3,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6020",
+  "adresse": "Herzog-Friedrich-Straße 15",
+  "beschreibung": "Historischer Gasthof im Herzen der Innsbrucker Altstadt, direkt am Goldenen Dachl. Tiroler Gastfreundschaft seit 1390 mit regionaler Küche und gemütlichen Zimmern.",
+  "preis_ab": 65,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "restaurant"
+  ],
+  "tags": [
+    "historisch",
+    "kultur",
+    "stadt",
+    "kulinarik"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.2686638",
+    "lng": "11.3943020"
+  }
+}

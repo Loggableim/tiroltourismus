@@ -1,0 +1,32 @@
+{
+  "name": "Hotel Rosenhof",
+  "slug": "hotel-rosenhof",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Gerlos",
+  "region": "zillertal",
+  "plz": "6281",
+  "adresse": "Gerlos 163",
+  "beschreibung": "Wohlfühlhotel mit großem Spa-Bereich direkt am Gerloser Stausee. Perfekt für Skiurlaub am Isskogel und Wanderungen im Sommer. Tiroler Küche vom Feinsten.",
+  "preis_ab": 149,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "pool",
+    "parkplatz",
+    "halbpension"
+  ],
+  "tags": [
+    "wellness",
+    "ski",
+    "wandern",
+    "paare",
+    "familie"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.2222358",
+    "lng": "11.9998731"
+  }
+}

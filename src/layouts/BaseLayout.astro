@@ -1,39 +1,189 @@
 ---
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (AlpenPop × ALPENPEAK)
+// Locale-aware: supports 'de' (default) and 'en' with /en/ URL prefix
 import { readSingleton } from '../lib/content.js';
+import NewsletterForm from '../components/NewsletterForm.tsx';
 
 export interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  canonicalURL?: string;
+  type?: 'website' | 'article';
+  locale?: string;
+  publishedTime?: string;
+  jsonld?: Record<string, unknown>;
 }
 
-const { title, description, ogImage } = Astro.props;
-const siteDesc = description || 'Tirol ANDERS – Das offizielle Tourismusportal für Tirol';
-const settings = readSingleton('einstellungen');
+const {
+  title,
+  description,
+  ogImage,
+  canonicalURL,
+  type = 'website',
+  locale = 'de',
+  publishedTime,
+  jsonld,
+} = Astro.props;
+
+// Locale helpers
+const langCode = locale === 'en' ? 'en' : 'de';
+const fullLocale = locale === 'en' ? 'en_US' : 'de_AT';
+const localePrefix = locale === 'en' ? '/en' : '';
+const siteDesc = description || (locale === 'en' ? 'Tyrol DIFFERENT – The official tourism portal for Tyrol' : 'Tirol ANDERS – Das offizielle Tourismusportal für Tirol');
+const settings = readSingleton('einstellungen', locale);
+
+// Language switcher helper: builds locale-switched URL
+const currentPath = Astro.url.pathname;
+function switchLangPath(targetLang) {
+  if (targetLang === 'de') {
+    return currentPath.replace(/^\/en(\/|$)/, '/') || '/';
+  } else {
+    return currentPath.startsWith('/en') ? currentPath : `/en${currentPath === '/' ? '' : currentPath}`;
+  }
+}
+
+const siteName = 'Tirol Tourismus';
+const siteURL = 'https://www.tirol-tourismus.at';
+const pageURL = canonicalURL ?? Astro.url.href;
+const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : undefined;
+const twitterCard = 'summary_large_image';
+
+// Nav labels
+const nav = locale === 'en' ? {
+  magazin: 'Magazine',
+  fuerBetriebe: 'For Businesses',
+  merkliste: '♥ Wishlist',
+  kontakt: 'Contact',
+  regionen: 'Regions',
+  unterkuenfte: 'Accommodations',
+  orte: 'Places',
+  sehenswertes: 'Sights',
+  gastro: 'Food & Drink',
+  erlebnisse: 'Experiences',
+  events: 'Events',
+  suche: 'Search',
+  buchen: 'Book',
+  footer_p: 'AlpenPop by day, ALPENPEAK by night. The official tourism portal for Tyrol.',
+  footer_regionen: 'Regions',
+  footer_alle_regionen: 'All Regions',
+  footer_erlebnisse: 'Experiences',
+  footer_alle_erlebnisse: 'All Experiences',
+  footer_service: 'Service',
+  footer_ueber_uns: 'About Us',
+  footer_fuer_betriebe: 'For Businesses',
+  footer_kontakt: 'Contact',
+  footer_impressum: 'Imprint',
+  footer_datenschutz: 'Privacy',
+  footer_agb: 'Terms',
+  footer_oben: '↑ Back to top',
+} : {
+  magazin: 'Magazin',
+  fuerBetriebe: 'Für Betriebe',
+  merkliste: '♥ Merkliste',
+  kontakt: 'Kontakt',
+  regionen: 'Regionen',
+  unterkuenfte: 'Unterkünfte',
+  orte: 'Orte',
+  sehenswertes: 'Sehenswertes',
+  gastro: 'Gastro',
+  erlebnisse: 'Erlebnisse',
+  events: 'Events',
+  suche: 'Suche',
+  buchen: 'Buchen',
+  footer_p: 'AlpenPop bei Tag, ALPENPEAK bei Nacht. Das offizielle Tourismusportal für Tirol.',
+  footer_regionen: 'Regionen',
+  footer_alle_regionen: 'Alle Regionen',
+  footer_erlebnisse: 'Erlebnisse',
+  footer_alle_erlebnisse: 'Alle Erlebnisse',
+  footer_service: 'Service',
+  footer_ueber_uns: 'Über uns',
+  footer_fuer_betriebe: 'Für Betriebe',
+  footer_kontakt: 'Kontakt',
+  footer_impressum: 'Impressum',
+  footer_datenschutz: 'Datenschutz',
+  footer_agb: 'AGB',
+  footer_oben: '↑ Zum Seitenanfang',
+};
+
+// JSON-LD: WebSite with SearchAction
+const websiteLD = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: siteURL,
+  description: locale === 'en' ? 'Official tourism information for Tyrol, Austria. Mountains, lakes, hiking trails, ski resorts, and accommodations.' : 'Offizielle Tourismus-Information für Tirol, Österreich. Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.',
+  inLanguage: langCode,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteURL}/suche?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+// JSON-LD: Organization with Tirol address
+const organizationLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: siteURL,
+  logo: `${siteURL}/favicon.svg`,
+  description: locale === 'en' ? 'Official tourism information for Tyrol, Austria.' : 'Offizielle Tourismus-Information für Tirol, Österreich.',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'AT',
+    addressRegion: 'Tirol',
+  },
+};
+
+// Allow pages to supply additional LD fragments (e.g. TouristDestination, Event)
+const extraLD = jsonld ? { ...websiteLD, ...jsonld } : null;
+const ldBlocks = [websiteLD, organizationLD];
+if (extraLD) ldBlocks.push(extraLD);
 ---
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang={langCode}>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title} – tiroltourismus.com</title>
   <meta name="description" content={siteDesc}>
   <meta name="theme-color" content="#FF1493">
+  <link rel="alternate" href={currentPath.replace(/^\/en(\/|$)/, '/') || '/'} hreflang="de" />
+  <link rel="alternate" href={`/en${currentPath.startsWith('/en') ? currentPath.replace('/en', '') : currentPath === '/' ? '' : currentPath}`} hreflang="en" />
+  <!-- Fonts: display=swap + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"></noscript>
-  <meta property="og:title" content={`${title} – tiroltourismus.com`}>
-  <meta property="og:description" content={siteDesc}>
-  <meta property="og:type" content="website">
-  <meta property="og:url" content={Astro.url}>
-  {ogImage && <meta property="og:image" content={ogImage}>}
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="preload" as="image" href="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp" fetchpriority="high">
-  <link rel="stylesheet" href="/assets/css/tirol.css" media="print" onload="this.media='all';this.onload=null">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href={pageURL} />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content={`${title} – ${siteName}`} />
+  <meta property="og:description" content={siteDesc} />
+  <meta property="og:type" content={type} />
+  <meta property="og:url" content={pageURL} />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content={fullLocale} />
+  {ogImage && <meta property="og:image" content={ogImageAbs} />}
+  {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content={twitterCard} />
+  <meta name="twitter:title" content={`${title} – ${siteName}`} />
+  <meta name="twitter:description" content={siteDesc} />
+  {ogImage && <meta name="twitter:image" content={ogImageAbs} />}
+  <!-- LCP: hero image with explicit dimensions -->
+  <link rel="preload" as="image" href="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp" fetchpriority="high" imagesrcset="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp" imagesizes="100vw">
+  <link rel="stylesheet" href="/assets/css/tirol.css" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
+  <noscript><link rel="stylesheet" href="/assets/css/tirol.css"></noscript>
   <style is:inline>
     /* ─── Critical: Design Tokens, Reset, Nav, Hero ─── */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -98,6 +248,11 @@ const settings = readSingleton('einstellungen');
     .breadcrumbs{display:flex;align-items:center;gap:8px;padding:12px 0;font-size:12px;color:var(--text3)}
     .theme-toggle{position:fixed;top:76px;right:28px;z-index:1001;width:40px;height:40px;border-radius:50%;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .4s var(--ease);color:var(--text);box-shadow:0 4px 16px rgba(0,0,0,.08)}
   </style>
+
+  <!-- JSON-LD Structured Data -->
+  {ldBlocks.map((ld) => (
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  ))}
 </head>
 <body>
 <div id="scrollProgress"></div>
@@ -116,14 +271,17 @@ const settings = readSingleton('einstellungen');
     <div class="container">
       <div class="topbar-l">
         <div class="topbar-lang">
-          <a href="#" class="active">DE</a><a href="#">EN</a><a href="#">IT</a><a href="#">FR</a>
+          <a href={switchLangPath('de')} class={locale === 'de' ? 'active' : ''}>DE</a>
+          <a href={switchLangPath('en')} class={locale === 'en' ? 'active' : ''}>EN</a>
+          <a href={switchLangPath('de')}>IT</a>
+          <a href={switchLangPath('de')}>FR</a>
         </div>
-        <a href="/magazin/">Magazin</a>
+        <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
       </div>
       <div class="topbar-r">
-        <a href="/fuer-betriebe/">Für Betriebe</a>
-        <a href="#" class="fav-link" id="topFavLink">♥ Merkliste <span class="fav-badge" id="favBadge" style="display:none">0</span></a>
-      <a href="/kontakt/">Kontakt</a>
+        <a href={`${localePrefix}/fuer-betriebe/`}>{nav.fuerBetriebe}</a>
+        <a href={`${localePrefix}/merkliste/`} class="fav-link" id="topFavLink">{nav.merkliste} <span class="fav-badge" id="favBadge" style="display:none">0</span></a>
+        <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
       </div>
     </div>
   </div>
@@ -131,7 +289,7 @@ const settings = readSingleton('einstellungen');
   <!-- NAV -->
   <nav class="main-nav" id="mainNav">
     <div class="container">
-<a href="/" class="nav-logo">
+<a href={localePrefix || '/'} class="nav-logo">
         <svg viewBox="4 4 404 46" width="280" height="36"><defs>
           <linearGradient id="nt1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
           <linearGradient id="nt2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
@@ -152,18 +310,19 @@ const settings = readSingleton('einstellungen');
         <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
       </svg></a>
       <div class="nav-links">
-        <a href="/regionen/" class={Astro.url.pathname.startsWith('/regionen') ? 'active' : ''}>Regionen</a>
-        <a href="/unterkuenfte/" class={Astro.url.pathname.startsWith('/unterkuenfte') ? 'active' : ''}>Unterkünfte</a>
-        <a href="/orte/" class={Astro.url.pathname.startsWith('/orte') ? 'active' : ''}>Orte</a>
-        <a href="/sehenswuerdigkeiten/" class={Astro.url.pathname.startsWith('/sehenswuerdigkeiten') ? 'active' : ''}>Sehenswertes</a>
-        <a href="/gastro/" class={Astro.url.pathname.startsWith('/gastro') ? 'active' : ''}>Gastro</a>
-        <a href="/erlebnisse/" class={Astro.url.pathname.startsWith('/erlebnisse') ? 'active' : ''}>Erlebnisse</a>
-        <a href="/events/" class={Astro.url.pathname.startsWith('/events') ? 'active' : ''}>Events</a>
-        <a href="/magazin/" class={Astro.url.pathname.startsWith('/magazin') ? 'active' : ''}>Magazin</a>
+        <a href={`${localePrefix}/regionen/`} class={Astro.url.pathname.includes('regionen') ? 'active' : ''}>{nav.regionen}</a>
+        <a href={`${localePrefix}/unterkuenfte/`} class={Astro.url.pathname.includes('unterkuenfte') ? 'active' : ''}>{nav.unterkuenfte}</a>
+        <a href={`${localePrefix}/orte/`} class={Astro.url.pathname.includes('orte') ? 'active' : ''}>{nav.orte}</a>
+        <a href="/bezirke/" class={Astro.url.pathname.startsWith('/bezirke') ? 'active' : ''}>Bezirke</a>
+        <a href={`${localePrefix}/sehenswuerdigkeiten/`} class={Astro.url.pathname.includes('sehenswuerdigkeiten') ? 'active' : ''}>{nav.sehenswertes}</a>
+        <a href={`${localePrefix}/gastro/`} class={Astro.url.pathname.includes('gastro') ? 'active' : ''}>{nav.gastro}</a>
+        <a href={`${localePrefix}/erlebnisse/`} class={Astro.url.pathname.includes('erlebnisse') ? 'active' : ''}>{nav.erlebnisse}</a>
+        <a href={`${localePrefix}/events/`} class={Astro.url.pathname.includes('events') ? 'active' : ''}>{nav.events}</a>
+        <a href={`${localePrefix}/magazin/`} class={Astro.url.pathname.includes('magazin') ? 'active' : ''}>{nav.magazin}</a>
       </div>
       <div class="nav-r">
-        <button class="nav-search" onclick="window.location.href='/'" aria-label="Suche">🔍</button>
-        <a href="/unterkuenfte/" class="nav-cta">Buchen</a>
+        <button class="nav-search" onclick="window.location.href='{localePrefix}/suche/'" aria-label={nav.suche}>🔍</button>
+        <a href={`${localePrefix}/unterkuenfte/`} class="nav-cta">{nav.buchen}</a>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
@@ -171,15 +330,18 @@ const settings = readSingleton('einstellungen');
 
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">&times;</button>
-    <a href="/regionen/">Regionen</a>
-    <a href="/unterkuenfte/">Unterkünfte</a>
-    <a href="/orte/">Orte</a>
-    <a href="/sehenswuerdigkeiten/">Sehenswertes</a>
-    <a href="/gastro/">Gastro</a>
-    <a href="/erlebnisse/">Erlebnisse</a>
-    <a href="/events/">Events</a>
-    <a href="/magazin/">Magazin</a>
-    <a href="/kontakt/">Kontakt</a>
+    <a href={`${localePrefix}/regionen/`}>{nav.regionen}</a>
+    <a href={`${localePrefix}/unterkuenfte/`}>{nav.unterkuenfte}</a>
+    <a href={`${localePrefix}/orte/`}>{nav.orte}</a>
+    <a href="/bezirke/">Bezirke</a>
+    <a href={`${localePrefix}/sehenswuerdigkeiten/`}>{nav.sehenswertes}</a>
+    <a href={`${localePrefix}/gastro/`}>{nav.gastro}</a>
+    <a href={`${localePrefix}/erlebnisse/`}>{nav.erlebnisse}</a>
+    <a href={`${localePrefix}/events/`}>{nav.events}</a>
+    <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
+    <a href={`${localePrefix}/suche/`}>🔍 {nav.suche}</a>
+    <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
+    <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
   </div>
 
   <slot />
@@ -191,7 +353,7 @@ const settings = readSingleton('einstellungen');
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
-          <a href="/" class="nav-logo">
+          <a href={localePrefix || '/'} class="nav-logo">
             <svg viewBox="4 4 404 46" width="340" height="46"><defs>
               <linearGradient id="ft1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
               <linearGradient id="ft2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
@@ -211,7 +373,7 @@ const settings = readSingleton('einstellungen');
             <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
             <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink)">tourismus</text>
           </svg></a>
-          <p>AlpenPop bei Tag, ALPENPEAK bei Nacht. Das offizielle Tourismusportal für Tirol.</p>
+          <p>{nav.footer_p}</p>
           <div class="footer-social">
             <a href={settings?.social?.instagram || '#'} aria-label="Instagram">📷</a>
             <a href={settings?.social?.tiktok || '#'} aria-label="TikTok">🎵</a>
@@ -219,13 +381,24 @@ const settings = readSingleton('einstellungen');
             <a href={settings?.social?.youtube || '#'} aria-label="YouTube">▶️</a>
           </div>
         </div>
-        <div class="footer-col"><h4>Regionen</h4><a href="/regionen/">Alle Regionen</a><a href="/regionen/oetztal/">Ötztal</a></div>
-        <div class="footer-col"><h4>Erlebnisse</h4><a href="/erlebnisse/">Alle Erlebnisse</a></div>
-        <div class="footer-col"><h4>Service</h4><a href="/ueber-uns/">Über uns</a><a href="/fuer-betriebe/">Für Betriebe</a><a href="/kontakt/">Kontakt</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/agb/">AGB</a></div>
+        <div class="footer-col"><h4>{nav.footer_regionen}</h4><a href={`${localePrefix}/regionen/`}>{nav.footer_alle_regionen}</a><a href={`${localePrefix}/regionen/oetztal/`}>Ötztal</a></div>
+        <div class="footer-col"><h4>{nav.footer_erlebnisse}</h4><a href={`${localePrefix}/erlebnisse/`}>{nav.footer_alle_erlebnisse}</a></div>
+        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/fuer-betriebe/`}>{nav.footer_fuer_betriebe}</a><a href={`${localePrefix}/kontakt/`}>{nav.footer_kontakt}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
       </div>
+
+      <!-- NEWSLETTER SIGNUP -->
+      <div class="footer-newsletter">
+        <h3 class="footer-newsletter-title">📬 Newsletter</h3>
+        <p class="footer-newsletter-desc">
+          Einmal im Monat die schönsten Seiten Tirols – Berggeschichten,
+          Events und exklusive Angebote. Kein Spam, jederzeit kündbar.
+        </p>
+        <NewsletterForm client:load compact />
+      </div>
+
       <div class="footer-bottom">
         <span>© 2026 tiroltourismus.com · AlpenPop × ALPENPEAK</span>
-        <div><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="#" class="footer-btt" id="backToTop">↑ Zum Seitenanfang</a></div>
+        <div><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href="#" class="footer-btt" id="backToTop">{nav.footer_oben}</a></div>
       </div>
     </div>
   </footer>

@@ -1,0 +1,296 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import NewsletterForm from '../../components/NewsletterForm.tsx';
+---
+
+<BaseLayout
+  title="Newsletter"
+  description="Melde dich zum Tirol-Newsletter an und erhalte monatlich die besten Tipps, Events und Angebote aus den Bergen – direkt in dein Postfach."
+>
+  <main>
+    <!-- ============================================================
+         BREADCRUMBS
+         ============================================================ -->
+    <Breadcrumbs items={[{ label: 'Newsletter' }]} />
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="nl-hero">
+      <div class="nl-hero-bg"></div>
+      <div class="container">
+        <div class="nl-hero-inner">
+          <div class="nl-hero-emoji">📬</div>
+          <h1 class="nl-hero-title">Newsletter</h1>
+          <p class="nl-hero-sub">
+            AlpenPop für dein Postfach. Berggeschichten, Events,
+            versteckte Flecken und die schönsten Touren – jeden Monat frisch
+            aus Tirol.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BENEFITS + FORM
+         ============================================================ -->
+    <section class="nl-section">
+      <div class="container">
+        <div class="nl-grid">
+          <!-- LEFT: Benefits -->
+          <div class="nl-benefits">
+            <h2 class="nl-benefits-heading">Was dich erwartet</h2>
+
+            <div class="nl-benefit-item">
+              <div class="nl-benefit-icon">🏔️</div>
+              <div>
+                <strong>Monatliche Berggeschichten</strong>
+                <p>
+                  Entdecke neue Wanderwege, versteckte Almen und
+                  Insider-Tipps aus allen Regionen Tirols.
+                </p>
+              </div>
+            </div>
+
+            <div class="nl-benefit-item">
+              <div class="nl-benefit-icon">🎉</div>
+              <div>
+                <strong>Events & Highlights</strong>
+                <p>
+                  Kein Konzert, kein Fest, kein Markt entgeht dir mehr.
+                  Wir halten dich auf dem Laufenden.
+                </p>
+              </div>
+            </div>
+
+            <div class="nl-benefit-item">
+              <div class="nl-benefit-icon">💰</div>
+              <div>
+                <strong>Exklusive Angebote</strong>
+                <p>
+                  Frühbucher-Rabatte für Unterkünfte und
+                  Specials von unseren Partner-Betrieben.
+                </p>
+              </div>
+            </div>
+
+            <div class="nl-benefit-item">
+              <div class="nl-benefit-icon">🔔</div>
+              <div>
+                <strong>Jederzeit kündbar</strong>
+                <p>
+                  Kein Stress, kein Risiko. Ein Klick im Footer oder
+                  der Link in jeder Mail genügt.
+                </p>
+              </div>
+            </div>
+
+            <div class="nl-note">
+              <span class="nl-note-icon">🔒</span>
+              <p>
+                Deine Daten sind bei uns sicher. Wir verwenden
+                <strong>Double Opt-in</strong> und geben deine
+                E-Mail-Adresse niemals an Dritte weiter.
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT: Newsletter Form -->
+          <div class="nl-form-card">
+            <h3 class="nl-form-title">Jetzt anmelden</h3>
+            <p class="nl-form-subtitle">
+              Kein Spam, kein Bloat – nur die schönsten Seiten Tirols,
+              einmal im Monat.
+            </p>
+            <NewsletterForm client:load />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  /* ==============================================================
+     HERO
+     ============================================================== */
+  .nl-hero {
+    position: relative;
+    padding: 80px 0 64px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .nl-hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--pink-glow), transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  .nl-hero .container {
+    position: relative;
+    z-index: 2;
+  }
+  .nl-hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .nl-hero-emoji {
+    font-size: 72px;
+    line-height: 1;
+    filter: drop-shadow(0 4px 16px rgba(255, 20, 147, 0.25));
+    animation: nl-float 3s ease-in-out infinite;
+  }
+  @keyframes nl-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .nl-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 8vw, 96px);
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0;
+  }
+  .nl-hero-sub {
+    font-size: 16px;
+    color: var(--text2);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0;
+  }
+
+  /* ==============================================================
+     SECTION — 2-Column Grid
+     ============================================================== */
+  .nl-section {
+    padding: 64px 0 100px;
+  }
+  .nl-section .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .nl-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  /* ==============================================================
+     LEFT — Benefits
+     ============================================================== */
+  .nl-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .nl-benefits-heading {
+    font-family: var(--font-display);
+    font-size: 28px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0;
+  }
+  .nl-benefit-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .nl-benefit-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 40px;
+    text-align: center;
+  }
+  .nl-benefit-item strong {
+    display: block;
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .nl-benefit-item p {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Note card */
+  .nl-note {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+  .nl-note-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .nl-note p {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* ==============================================================
+     RIGHT — Form Card
+     ============================================================== */
+  .nl-form-card {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 36px 32px 32px;
+  }
+  .nl-form-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 6px;
+  }
+  .nl-form-subtitle {
+    font-size: 13px;
+    color: var(--text3);
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+
+  /* ==============================================================
+     RESPONSIVE
+     ============================================================== */
+  @media (max-width: 768px) {
+    .nl-hero {
+      padding: 48px 0 40px;
+    }
+    .nl-hero-title {
+      font-size: 36px;
+    }
+    .nl-hero-emoji {
+      font-size: 52px;
+    }
+    .nl-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .nl-form-card {
+      padding: 24px 20px;
+    }
+    .nl-section {
+      padding: 40px 0 64px;
+    }
+  }
+</style>

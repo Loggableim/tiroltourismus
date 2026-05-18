@@ -1,0 +1,32 @@
+{
+  "name": "Hotel Kaiserhof Kitzbühel",
+  "slug": "hotel-kaiserhof-kitzbuehel",
+  "typ": "hotel",
+  "sterne": 4,
+  "ort": "Kitzbühel",
+  "region": "kitzbuehel",
+  "plz": "6370",
+  "adresse": "Bichlstraße 1",
+  "beschreibung": "Klassisch-elegantes 4-Sterne-Hotel in bester Zentrumslage Kitzbühels. Großzügiger Wellnessbereich mit Pool, feine Tiroler Gastronomie und herzlicher Service.",
+  "preis_ab": 169,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "sauna",
+    "pool",
+    "parkplatz",
+    "halbpension"
+  ],
+  "tags": [
+    "ski",
+    "wellness",
+    "kulinarik",
+    "paare",
+    "stadt"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.4452081",
+    "lng": "12.3921473"
+  }
+}

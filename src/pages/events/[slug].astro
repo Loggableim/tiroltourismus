@@ -1,0 +1,95 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findRelated } from '../../lib/content.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('events').filter(e => isPublished(e.entry));
+  return all.map(e => ({ params: { slug: e.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('events', slug);
+if (!entry) return Astro.redirect('/events/');
+
+const emoji = entry.emoji || '🎪';
+const subtitle = [
+  entry.ort,
+  entry.region && entry.region !== entry.ort ? entry.region : null,
+].filter(Boolean).join(' · ');
+
+// Date formatting
+const monate = ['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+function formatDate(d) {
+  if (!d) return null;
+  const [y, m, day] = d.split('-');
+  return { day: parseInt(day), month: monate[parseInt(m)-1], year: y };
+}
+const dateInfo = entry.datum ? formatDate(entry.datum) : (entry.datum_von ? formatDate(entry.datum_von) : null);
+const dateStr = dateInfo ? `${dateInfo.day}. ${dateInfo.month} ${dateInfo.year}` : undefined;
+
+// Related events
+const related = findRelated('events', slug, 'de', 3);
+const relatedSection = related.length > 0 ? {
+  type: 'related-grid',
+  collection: 'events',
+  title: 'Weitere Events',
+  items: related.map(r => ({
+    slug: r.slug,
+    name: r.entry.name || r.entry.titel,
+    emoji: r.entry.emoji || '🎪',
+    ort: r.entry.ort,
+    datum: r.entry.datum || r.entry.datum_von,
+    preis: r.entry.preis,
+  })),
+} : null;
+---
+
+<DetailPage
+  title={entry.name || entry.titel}
+  description={`${entry.name || entry.titel} – ${entry.ort || 'Tirol'}. ${entry.kurzbeschreibung || entry.beschreibung || ''}`}
+  breadcrumbs={[{ label: 'Events', href: '/events/' }, { label: entry.name || entry.titel }]}
+  sections={[
+    {
+      type: 'hero',
+      title: entry.name || entry.titel,
+      subtitle: subtitle || undefined,
+      emoji: emoji,
+      gradient: entry.farbe,
+      size: 'sm',
+      meta: {
+        badge: entry.kategorie ? { text: entry.kategorie, cls: 'tag-pink' } : undefined,
+        price: entry.preis ? { value: entry.preis, label: dateStr ? dateStr : undefined } : undefined,
+      },
+    },
+    (entry.beschreibung || entry.kurzbeschreibung) ? {
+      type: 'description',
+      label: entry.name || entry.titel,
+      title: 'Über dieses Event',
+      content: [entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'),
+    } : null,
+    {
+      type: 'details-grid',
+      items: [
+        { label: 'Datum', value: dateStr || undefined },
+        { label: 'Uhrzeit', value: entry.uhrzeit || undefined },
+        { label: 'Ort', value: entry.ort || undefined },
+        { label: 'Region', value: entry.region || undefined },
+        entry.preis ? { label: 'Preis', value: entry.preis, type: 'price' } : null,
+        entry.link && entry.link !== '#' ? { label: 'Webseite', value: entry.link, type: 'link', href: entry.link } : null,
+        entry.webseite && entry.webseite !== '#' ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
+        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+      ].filter(Boolean),
+    },
+    {
+      type: 'cta',
+      label: 'Interesse?',
+      title: 'Mehr erfahren',
+      subtitle: 'Besuchen Sie die offizielle Event-Seite für weitere Informationen und Tickets.',
+      buttons: [
+        (entry.link && entry.link !== '#') ? { label: '🌐 Event-Webseite', href: entry.link, variant: 'pink' } : null,
+        (entry.webseite && entry.webseite !== '#') ? { label: '🌐 Event-Webseite', href: entry.webseite, variant: 'pink' } : null,
+      ].filter(Boolean),
+    },
+    relatedSection,
+  ].filter(Boolean)}
+/>

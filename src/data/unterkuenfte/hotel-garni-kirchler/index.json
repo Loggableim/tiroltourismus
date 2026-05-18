@@ -1,0 +1,29 @@
+{
+  "name": "Hotel-Garni Kirchler",
+  "slug": "hotel-garni-kirchler",
+  "typ": "hotel",
+  "sterne": 3,
+  "ort": "Mayrhofen",
+  "region": "zillertal",
+  "plz": "6290",
+  "adresse": "Schwendberg 348",
+  "beschreibung": "Familiengeführtes Hotel-Garni mit Panoramablick auf die Zillertaler Alpen. Ruhige Lage, herzliche Gastfreundschaft und hausgemachtes Frühstücksbuffet.",
+  "preis_ab": 74,
+  "ausstattung": [
+    "wifi",
+    "fruehstueck",
+    "parkplatz",
+    "sauna"
+  ],
+  "tags": [
+    "familie",
+    "wandern",
+    "ski",
+    "natur"
+  ],
+  "tier": "silver",
+  "koordinaten": {
+    "lat": "47.1603214",
+    "lng": "11.8652047"
+  }
+}

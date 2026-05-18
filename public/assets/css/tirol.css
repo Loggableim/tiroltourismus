@@ -124,6 +124,7 @@ img{max-width:100%;height:auto;display:block}
 [data-theme="alpenpeak"] .topbar-lang a{color:var(--text3)}
 [data-theme="alpenpeak"] .topbar-lang a.active{color:var(--text);font-weight:700}
 .fav-link{display:flex;align-items:center;gap:4px;position:relative}
+@media(max-width:480px){.fav-link{padding:6px 4px}}
 .fav-badge{position:absolute;top:-7px;right:-10px;background:var(--yellow);color:var(--bg);font-size:8px;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;transition:transform .35s var(--ease)}
 .fav-badge.bump{animation:bump .4s var(--ease)}
 @keyframes bump{0%{transform:scale(1)}50%{transform:scale(1.5)}100%{transform:scale(1)}}
@@ -585,4 +586,40 @@ html.theme-transitioning *::after {
   left: 0;
   right: 0;
   z-index: 1002;
+}
+
+/* ═══ MOBILE COMPREHENSIVE FIXES ─── */
+@media(max-width:768px){
+  .main-nav{padding:0 4px}
+  .page-header{padding:50px 0 30px}
+  .page-header h1{font-size:clamp(32px,7vw,48px)}
+  .back-link{margin-bottom:12px}
+  .breadcrumbs{font-size:11px}
+}
+@media(max-width:480px){
+  .page-header h1{font-size:clamp(26px,7vw,38px)}
+  .page-header p{font-size:13px}
+  .section-title{font-size:clamp(26px,7vw,38px)!important}
+  .hero-lg h1{font-size:clamp(36px,12vw,52px)}
+  .hero-md h1{font-size:clamp(32px,9vw,42px)}
+  .hero-sm h1{font-size:clamp(28px,8vw,38px)}
+  .hero-badge{font-size:11px;padding:6px 16px}
+  .hero p{font-size:15px}
+  .section-header{margin-bottom:24px}
+  .section-label{font-size:16px}
+  .section-desc,.section-sub{font-size:13px}
+  .stats-grid{gap:16px}
+  .stat-card{padding:24px 16px}
+  .seelen-grid{gap:12px}
+  .regions-grid{gap:10px}
+  .accomm-grid{gap:12px}
+  .mag-grid{gap:14px}
+  .events-grid{gap:12px}
+  .uk-grid{gap:14px}
+  .sec-rel-grid{gap:14px}
+  .partner-grid{gap:24px}
+  .partner-benefits{grid-template-columns:1fr}
+  .newsletter h2{font-size:clamp(32px,10vw,48px)}
+  .footer{padding:32px 0 0}
+  .topbar-lang a{padding:6px 6px;font-size:9px}
 }

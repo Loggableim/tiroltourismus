@@ -298,7 +298,7 @@ function formatDate(d) {
 <script id="tirolData" type="application/json">{JSON.stringify(allForRandom)}</script>
 
 <!-- ═══ CLIENT-SIDE RANDOMIZATION ═══ -->
-<script>
+<script is:inline>
 (function() {
   'use strict';
   const dataEl = document.getElementById('tirolData');
@@ -348,7 +348,7 @@ function formatDate(d) {
 </script>
 
 <!-- ═══ NEWSLETTER HANDLER ═══ -->
-<script>
+<script is:inline>
 function handleNewsletter(e) {
   e.preventDefault();
   const el = document.getElementById('nlSuccess');

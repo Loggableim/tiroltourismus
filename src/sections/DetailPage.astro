@@ -12,6 +12,7 @@ import SectionRelatedGrid from './SectionRelatedGrid.astro';
 import SectionArticleHero from './SectionArticleHero.astro';
 import SectionArticleContent from './SectionArticleContent.astro';
 import SectionMap from './SectionMap.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -173,6 +174,19 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
       />
     ))}
 
+    {sections.filter(s => s.type === 'custom-content').map(s => (
+      <section class="sec-custom-content">
+        <div class="container" style="max-width: 800px">
+          <SectionHeader label={s.label} title={s.title} />
+          <div class="custom-content-links">
+            {s.items.map(item => (
+              <a href={item.href} class="custom-content-link">{item.text}</a>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
     {sections.filter(s => s.type === 'back-link').map(s => (
       <div class="section" style="text-align:center;padding:40px 0">
         <a href={s.href} class="btn btn-outline">← {s.text || 'Zurück'}</a>
@@ -214,6 +228,13 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
   .sec-custom-info-value{font-size:14px;color:var(--text)}
   .sec-custom-info-value a{color:var(--pink);font-weight:600}
   @media(max-width:768px){.sec-custom-info-grid{grid-template-columns:1fr}}
+
+  /* Custom Content (e.g. FAQ links block) */
+  .sec-custom-content{padding:64px 0;border-top:1px solid var(--glass-border);text-align:center}
+  .custom-content-links{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:32px}
+  .custom-content-link{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:all .3s var(--ease);max-width:500px;width:100%}
+  .custom-content-link::before{content:'❓';font-size:16px;flex-shrink:0}
+  .custom-content-link:hover{border-color:var(--pink);background:var(--glass);color:var(--pink);transform:translateY(-2px);box-shadow:0 4px 20px var(--pink-glow)}
 
   @media(max-width:600px){
     .sec-custom-hero{padding:40px 0 32px}

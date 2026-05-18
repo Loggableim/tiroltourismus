@@ -23,6 +23,56 @@ const catEmoji = { allgemein:'📰', tipps:'💡', reiseberichte:'✈️', inter
 const emoji = catEmoji[entry.kategorie] || '📰';
 const formattedDate = formatDate(entry.datum);
 
+// ─── FAQ-Links basierend auf Kategorie ───
+const kategorieToFaqAnchor = {
+  wandern: 'wandern',
+  bergsport: 'wandern',
+  ski: 'ski',
+  winter: 'ski',
+  kulinarik: 'gastro',
+  familie: 'unterkunft',
+  kultur: 'allgemein',
+  events: 'allgemein',
+  wellness: 'allgemein',
+  reiseberichte: 'anreise',
+  hintergrund: 'allgemein',
+  tipps: 'allgemein',
+};
+
+const faqLinksByCategory = {
+  wandern: [
+    { text: 'Die schönsten Wanderwege in Tirol', href: '/faq/#wandern' },
+    { text: 'Ausrüstung und Vorbereitung für Wanderungen', href: '/faq/#wandern' },
+    { text: 'Geführte Wandertouren und Naturerlebnisse', href: '/faq/#wandern' },
+  ],
+  ski: [
+    { text: 'Die besten Skigebiete Tirols', href: '/faq/#ski' },
+    { text: 'Skipass-Preise und Spartipps', href: '/faq/#ski' },
+    { text: 'Langlaufloipen und Winteraktivitäten', href: '/faq/#ski' },
+  ],
+  gastro: [
+    { text: 'Typische Tiroler Gerichte und Spezialitäten', href: '/faq/#gastro' },
+    { text: 'Traditionelle Wirtshäuser und Gastfreundschaft', href: '/faq/#gastro' },
+  ],
+  unterkunft: [
+    { text: 'Unterkunftsarten in Tirol', href: '/faq/#unterkunft' },
+    { text: 'Günstige Unterkünfte und Campingmöglichkeiten', href: '/faq/#unterkunft' },
+  ],
+  anreise: [
+    { text: 'Anreise mit Auto, Bahn oder Flugzeug', href: '/faq/#anreise' },
+    { text: 'Öffi-Tickets und Gästekarte', href: '/faq/#anreise' },
+    { text: 'Maut und Vignettenpflicht', href: '/faq/#anreise' },
+  ],
+  allgemein: [
+    { text: 'Wetter und beste Reisezeit in Tirol', href: '/faq/#allgemein' },
+    { text: 'Kulturelle Events und Feste', href: '/faq/#allgemein' },
+    { text: 'Sehenswerte Regionen in Tirol', href: '/faq/#allgemein' },
+  ],
+};
+
+const faqAnchor = entry.kategorie ? kategorieToFaqAnchor[entry.kategorie] || 'allgemein' : null;
+const faqLinks = faqAnchor ? (faqLinksByCategory[faqAnchor] || []) : [];
+
 // Verwandte Artikel via ersten Tag finden
 const relatedByTag = entry.tags && entry.tags.length > 0
   ? findByTag(entry.tags[0])
@@ -62,6 +112,12 @@ const relatedByTag = entry.tags && entry.tags.length > 0
       zoom: 10,
       label: 'Karte',
       title: 'Standort',
+    } : null,
+    entry.kategorie && faqLinks.length > 0 ? {
+      type: 'custom-content',
+      label: 'Häufige Fragen',
+      title: 'Mehr zum Thema',
+      items: faqLinks,
     } : null,
     relatedByTag.length > 0 ? {
       type: 'related-grid',

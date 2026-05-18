@@ -570,6 +570,10 @@ html.theme-transitioning *::after {
   left: 0;
   right: 0;
   z-index: 1002;
+  transition: transform .4s var(--ease);
+}
+.topbar.hidden {
+  transform: translateY(-100%);
 }
 
 /* ═══ MOBILE COMPREHENSIVE FIXES ─── */

@@ -360,12 +360,14 @@
     }
   })();
 
-  /* ─── 11. STICKY NAV ─── */
+  /* ─── 11. STICKY NAV + TOPBAR HIDE ─── */
   (function initStickyNav() {
     var mainNav = document.getElementById('mainNav');
+    var topBar = document.querySelector('.topbar');
     if (mainNav) {
       window.addEventListener('scroll', function() {
         mainNav.classList.toggle('scrolled', window.scrollY > 0);
+        if (topBar) topBar.classList.toggle('hidden', window.scrollY > 36);
       });
     }
   })();

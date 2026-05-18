@@ -1,0 +1,59 @@
+name: Weekly JSON Data Backup
+
+on:
+  schedule:
+    # Every Monday at 03:00 UTC — start of the week
+    - cron: '0 3 * * 1'
+  # Also allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (full history for backups branch)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate backup archive
+        run: |
+          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
+          BACKUP_DIR="backups"
+          mkdir -p "$BACKUP_DIR"
+          cd src/data
+          zip -r "../../$BACKUP_DIR/tirol-content-${TIMESTAMP}.zip" . \
+            -x ".*" -x "*/.*"
+          cd ../..
+          echo "Created: $BACKUP_DIR/tirol-content-${TIMESTAMP}.zip"
+          ls -lh "$BACKUP_DIR/"
+
+      - name: Commit and push to backups branch
+        run: |
+          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M-%S')
+          git config user.name "tirol-backup-bot"
+          git config user.email "bot@tiroltourismus.example"
+
+          # Create or switch to backups branch
+          if git show-ref --verify --quiet refs/heads/backups; then
+            git checkout backups
+          else
+            git checkout -b backups
+          fi
+
+          # Add new backup file
+          git add backups/
+          git commit -m "backup: src/data snapshot ${TIMESTAMP}"
+
+          # Prune old backups: keep newest 24, delete rest
+          BACKUP_COUNT=$(ls -1 backups/tirol-content-*.zip 2>/dev/null | wc -l)
+          if [ "$BACKUP_COUNT" -gt 24 ]; then
+            # Delete oldest ones, keeping newest 24
+            ls -1t backups/tirol-content-*.zip | tail -n +25 | xargs -r git rm
+            git commit -m "backup: prune to newest 24 snapshots (${BACKUP_COUNT} → 24)" --allow-empty
+          fi
+
+          git push origin backups

@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
 import PaywallOverlay from '../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -88,7 +88,7 @@ if (entry.beschreibung) {
     type: 'description',
     label: 'Über diese Unterkunft',
     title: 'Beschreibung',
-    content: entry.beschreibung,
+    content: autoLinkContent(entry.beschreibung, entry),
   });
 }
 
@@ -151,6 +151,29 @@ if (isBasic) {
   ];
 }
 if (mapSection) allSections.push(mapSection);
+
+// Verwandte Unterkünfte via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'unterkuenfte' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || (r.entry.typ === 'camping' ? '🏕️' : '🏨') }
+      }))
+  : [];
+if (relatedByTag.length > 0) {
+  allSections.push({
+    type: 'related-grid',
+    label: 'Weitere Unterkünfte',
+    entries: relatedByTag,
+    slugPrefix: '/unterkuenfte/',
+    nameField: 'name',
+    subtitleField: 'ort',
+    emojiField: '_emoji',
+    defaultEmoji: '🏨',
+  });
+}
 ---
 
 <DetailPage

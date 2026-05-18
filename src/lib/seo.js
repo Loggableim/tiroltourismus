@@ -43,27 +43,36 @@ function truncateText(text, maxLen = 150) {
 }
 
 /**
- * Extrahiert den ersten aussagekräftigen Textabschnitt aus beschreibung HTML.
- * Entfernt Einleitungssätze mit "Der/Die/Das/… liegt/befindet" da die
- * Keyword-vorne-Strategie den Namen bereits nennt.
+ * Extrahiert den ersten aussagekräftigen Satz aus Beschreibungs-HTML.
+ * Überspringt einleitende Floskeln ("Der/Die/Das … liegt/befindet"),
+ * da der Name bereits als Keyword vorangestellt wird.
+ * Liefert maximal ~90 Zeichen, damit build() nicht mitten im Satz kürzen muss.
  */
 function extractDescription(htmlText) {
   const text = stripHtml(htmlText);
   if (!text) return '';
 
-  // Versuche Satz 2+ zu nehmen, wenn Satz 1 nur eine schwache Einleitung ist
+  // Sätze aufteilen und schwache Einleitungen überspringen (max 3)
   const sentences = text.match(/[^.!?]+[.!?]+/g);
-  if (sentences && sentences.length >= 2) {
-    const first = sentences[0].trim().toLowerCase();
-    const weakStart = /^(der|die|das|den|dem|des|ein|eine|einen|einer|eines)\s.*(liegt|befindet|ist|bietet|hat|verfügt|wird)/;
-    if (weakStart.test(first)) {
-      // Ab dem zweiten Satz nehmen
-      const rest = sentences.slice(1).join(' ').trim();
-      if (rest.length > 60) return rest;
+  if (!sentences || sentences.length === 0) return text.slice(0, 90);
+
+  const weakStart = /^(der|die|das|den|dem|des|ein|eine|einen|einer|eines)\s.*(liegt|befindet|ist|bietet|hat|verfügt|wird)/i;
+  let startIdx = 0;
+  for (let i = 0; i < Math.min(3, sentences.length); i++) {
+    if (weakStart.test(sentences[i].trim())) {
+      startIdx = i + 1;
+    } else {
+      break;
     }
   }
 
-  return text;
+  if (startIdx >= sentences.length) {
+    return sentences[0].trim().slice(0, 90);
+  }
+
+  // Nimm nur den ersten guten Satz (max 90 Zeichen)
+  const first = sentences[startIdx].trim();
+  return first.length > 90 ? first.slice(0, 87).trim() + ' …' : first;
 }
 
 /**
@@ -116,7 +125,8 @@ export function generateMetaDescription(entry, collection, locale = 'de', opts =
     if (body) {
       // "keyword: body. CTA" oder "keyword – body. CTA"
       separator = body.length > 80 ? ': ' : ' – ';
-      result += separator + body;
+      // Hangingen an body, der ggf. schon mit Punkt endet
+      result += separator + body.replace(/[.!?]+$/, '').trim();
     }
     // CTA anhängen (wenn Platz)
     const ctaJoined = '. ' + cta;

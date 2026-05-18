@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby } from '../../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, autoLinkContent } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -118,7 +118,7 @@ const gastroCount = gastro.length;
       type: 'description',
       label: t.entdecken,
       title: t.highlights,
-      content: beschreibung,
+      content: autoLinkContent(beschreibung, entry, locale),
     } : null,
     tags && tags.length > 0 ? { type: 'tags', tags: tags } : null,
     regionMapSection,

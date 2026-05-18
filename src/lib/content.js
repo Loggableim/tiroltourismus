@@ -191,3 +191,90 @@ export function findNearby(entry, collection, locale = 'de', limit = 8) {
   results.sort((a, b) => b.score - a.score || (a.dist_km || 999) - (b.dist_km || 999));
   return results.slice(0, limit);
 }
+
+/**
+ * Automatische interne Verlinkung von Content (beschreibung/inhalt)
+ * Ersetzt Erwähnungen bekannter Entitäten (Regionen, Orte, Sehenswürdigkeiten)
+ * durch Links zu deren Detailseiten.
+ * 
+ * @param {string} html - HTML-Content (z.B. entry.beschreibung)
+ * @param {object} currentEntry - Der aktuelle Entry (um Selbstverlinkung zu vermeiden)
+ * @param {string} locale - Sprachkürzel
+ * @returns {string} HTML mit internen Links
+ */
+let _entityMap = null;
+function _buildEntityMap(locale = 'de') {
+  if (_entityMap) return _entityMap;
+  const map = [];
+  const collections = [
+    { name: 'regionen', prefix: '/regionen/', nameField: 'titel', weight: 5 },
+    { name: 'orte', prefix: '/orte/', nameField: 'name', weight: 4 },
+    { name: 'sehenswuerdigkeiten', prefix: '/sehenswuerdigkeiten/', nameField: 'name', weight: 3 },
+    { name: 'magazin', prefix: '/magazin/', nameField: 'titel', weight: 2 },
+    { name: 'erlebnisse', prefix: '/erlebnisse/', nameField: 'name', weight: 2 },
+    { name: 'events', prefix: '/events/', nameField: 'name || titel', weight: 2 },
+    { name: 'gastro', prefix: '/gastro/', nameField: 'name', weight: 2 },
+  ];
+  for (const coll of collections) {
+    const entries = readCollection(coll.name, locale);
+    for (const e of entries) {
+      const name = e.entry.name || e.entry.titel || '';
+      if (name && name.length > 2) {
+        map.push({
+          name,
+          slug: e.slug,
+          href: coll.prefix + e.slug + '/',
+          weight: coll.weight,
+          collection: coll.name,
+        });
+      }
+    }
+  }
+  // Sort by length descending to match longer names first
+  map.sort((a, b) => b.name.length - a.name.length);
+  _entityMap = map;
+  return map;
+}
+
+/** Cache für entityMap invalidieren */
+export function invalidateEntityCache() {
+  _entityMap = null;
+}
+
+/**
+ * HTML-Content mit automatischen internen Links anreichern.
+ * Überspringt bereits bestehende Links und HTML-Tags.
+ * Linkt maximal `maxLinks` Entitäten (Standard: 2).
+ */
+export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLinks = 2) {
+  if (!html || typeof html !== 'string') return html || '';
+  
+  const entityMap = _buildEntityMap(locale);
+  const currentSlug = currentEntry?.slug;
+  const currentName = (currentEntry?.name || currentEntry?.titel || '').toLowerCase();
+  
+  let linked = 0;
+  let result = html;
+  
+  for (const entity of entityMap) {
+    if (linked >= maxLinks) break;
+    
+    // Skip self-linking
+    if (currentSlug && entity.slug === currentSlug) continue;
+    if (currentName && entity.name.toLowerCase() === currentName) continue;
+    
+    // Create regex that matches the entity name as a whole word, not inside HTML tags or existing links
+    const escaped = entity.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(?<!<[^>]*)(?<!href="[^"]*)(?<![\\w\\d])(${escaped})(?![\\w\\d])`, 'gi');
+    
+    if (regex.test(result)) {
+      result = result.replace(regex, (match) => {
+        if (linked >= maxLinks) return match;
+        linked++;
+        return `<a href="${entity.href}" class="auto-link">${match}</a>`;
+      });
+    }
+  }
+  
+  return result;
+}

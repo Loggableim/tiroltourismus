@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -68,7 +68,7 @@ const relatedByTag = entry.tags && entry.tags.length > 0
       type: 'description',
       label: entry.name,
       title: 'Über dieses Lokal',
-      content: [entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'),
+      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
     } : null,
     {
       type: 'details-grid',

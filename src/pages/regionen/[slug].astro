@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findByTag, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -17,6 +17,17 @@ const { titel, emoji, farbe, kurzbeschreibung, bewertung, beschreibung, hoehe, f
 const unterkuenfte = readCollection('unterkuenfte').filter(u => isPublished(u.entry) && u.entry.region === slug);
 const orte = readCollection('orte').filter(o => isPublished(o.entry) && o.entry.region === slug);
 const gastro = readCollection('gastro').filter(g => isPublished(g.entry) && g.entry.region === slug);
+
+// Verwandte Regionen via ersten Tag
+const relatedByTag = tags && tags.length > 0
+  ? findByTag(tags[0])
+      .filter(r => r.collection === 'regionen' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🏔️' }
+      }))
+  : [];
 ---
 
 <DetailPage
@@ -47,7 +58,7 @@ const gastro = readCollection('gastro').filter(g => isPublished(g.entry) && g.en
       type: 'description',
       label: `${titel} entdecken`,
       title: 'Highlights',
-      content: beschreibung,
+      content: autoLinkContent(beschreibung, entry),
     } : null,
     tags && tags.length > 0 ? { type: 'tags', tags: tags } : null,
     {
@@ -94,5 +105,15 @@ const gastro = readCollection('gastro').filter(g => isPublished(g.entry) && g.en
       ctaText: 'Alle Gastro anzeigen',
       accentBg: true,
     },
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Regionen',
+      entries: relatedByTag,
+      slugPrefix: '/regionen/',
+      nameField: 'titel',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏔️',
+    } : null,
   ].filter(Boolean)}
 />

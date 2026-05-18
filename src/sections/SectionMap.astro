@@ -1,51 +1,86 @@
 ---
-// SectionMap.astro — Kartenabschnitt für Detailseiten (Orte, Unterkünfte, etc.)
-// Rendert eine Leaflet-Karte mit einem einzelnen Marker oder mehreren Markern.
-
+// SectionMap.astro — OSM-Karte via Leaflet
+// Props werden an LeafletMap React-Komponente weitergereicht
 import LeafletMap from '../components/LeafletMap.jsx';
 
 export interface Props {
-  label?: string;
-  title?: string;
-  sub?: string;
-  markers: { lat: string | number; lng: string | number; label?: string; href?: string; emoji?: string; color?: string }[];
-  center?: { lat: string | number; lng: string | number };
+  markers?: { lat: string|number; lng: string|number; label?: string; href?: string; emoji?: string; color?: string; category?: string }[];
+  center?: { lat: number; lng: number };
   zoom?: number;
   height?: string;
   scrollWheelZoom?: boolean;
+  label?: string;
+  title?: string;
+  polygons?: { coords: number[][]; label?: string; color?: string; fillOpacity?: number }[];
+  filterable?: boolean;
 }
 
-const { label, title, sub, markers = [], center, zoom, height, scrollWheelZoom } = Astro.props;
-const hasMultiple = markers.length > 1;
+const { markers, center, zoom, height, scrollWheelZoom, label, title, polygons, filterable } = Astro.props;
+const hasMarkers = markers && markers.length > 0;
 ---
 
-<section class="section section-map">
+<section class="sec-map">
   <div class="container">
     {(label || title) && (
-      <div class="section-header">
-        {label && <div class="section-label">{label}</div>}
-        {title && <h2 class="section-title">{title}</h2>}
-        {sub && <p class="section-desc">{sub}</p>}
+      <div class="sec-map-header">
+        {label && <span class="sec-map-label">{label}</span>}
+        {title && <h2 class="sec-map-title">{title}</h2>}
       </div>
     )}
-
-    <LeafletMap
-      client:only="react"
-      markers={markers}
-      center={center}
-      zoom={zoom || (hasMultiple ? 8 : 13)}
-      height={height || (hasMultiple ? '480px' : '400px')}
-      scrollWheelZoom={scrollWheelZoom ?? !hasMultiple}
-    />
+    {hasMarkers && (
+      <LeafletMap
+        client:load
+        markers={markers}
+        center={center}
+        zoom={zoom}
+        height={height || '380px'}
+        scrollWheelZoom={scrollWheelZoom !== false}
+        polygons={polygons}
+        filterable={filterable}
+      />
+    )}
+    {!hasMarkers && (
+      <div class="sec-map-empty">
+        <p>Keine Kartenposition verfügbar.</p>
+      </div>
+    )}
   </div>
 </section>
 
 <style is:global>
-  .section-map {
-    padding: 60px 0;
+  .sec-map {
+    padding: 40px 0;
     background: var(--bg2);
     border-top: 1px solid var(--glass-border);
     border-bottom: 1px solid var(--glass-border);
   }
-  @media(max-width:600px){.section-map{padding:40px 0}.section-map [class*='leaflet-container']{height:300px!important}}
+  .sec-map-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .sec-map-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--purple, #a855f7);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .sec-map-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .sec-map-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text3);
+    font-size: 14px;
+  }
+  @media (max-width: 600px) {
+    .sec-map { padding: 24px 0; }
+  }
 </style>

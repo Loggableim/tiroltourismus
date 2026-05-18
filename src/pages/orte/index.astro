@@ -3,10 +3,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import SectionMap from '../../sections/SectionMap.astro';
 import OrtCard from '../../components/OrtCard.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const orte = readCollection('orte').filter(o => isPublished(o.entry));
+
+const orteMitKarte = orte.filter(o => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
+const orteMarkers = orteMitKarte.map((o) => ({
+  lat: o.entry.koordinaten.lat,
+  lng: o.entry.koordinaten.lng,
+  label: o.entry.name,
+  href: '/orte/' + o.slug + '/',
+  emoji: o.entry.emoji || '🏘️',
+}));
 ---
 
 <BaseLayout
@@ -29,6 +39,15 @@ const orte = readCollection('orte').filter(o => isPublished(o.entry));
         <span class="hero-urgency">📍 {orte.length} Ortschaften</span>
       </div>
     </Hero>
+
+    <SectionMap
+      markers={orteMarkers}
+      label={`${orteMarkers.length} Orte`}
+      title="Auf einen Blick"
+      height="380px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
 
     {orte.length > 0 ? (
       <section class="section">

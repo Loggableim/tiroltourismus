@@ -610,3 +610,26 @@ html.theme-transitioning *::after {
   .footer{padding:32px 0 0}
   .topbar-lang a{padding:6px 6px;font-size:9px}
 }
+
+/* ── Contact Form (cf-*) ── */
+.cf-form{display:flex;flex-direction:column;gap:16px}
+.cf-hidden{position:absolute;left:-9999px;opacity:0;height:0;width:0}
+.cf-state{display:flex;align-items:flex-start;gap:12px;padding:20px 24px;border-radius:var(--radius);font-size:14px;line-height:1.6}
+.cf-success{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#4ade80}
+.cf-error{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#f87171}
+.cf-state-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.cf-state strong{display:block;margin-bottom:2px}
+.cf-state p{margin:0;font-size:13px;opacity:.85}
+.cf-fields-hidden{display:none}
+.cf-fields{display:flex;flex-direction:column;gap:16px}
+.cf-field{display:flex;flex-direction:column;gap:4px}
+.cf-label{font-size:12px;font-weight:600;color:var(--text2);letter-spacing:.5px;text-transform:uppercase}
+.cf-input{padding:12px 16px;border-radius:var(--radius-sm);background:var(--bg);border:1px solid var(--glass-border);color:var(--text);font-size:14px;font-family:inherit;transition:border-color .2s}
+.cf-input:focus{border-color:var(--pink);outline:none}
+.cf-input::placeholder{color:var(--text3)}
+.cf-input-error{border-color:#ef4444}
+.cf-err{font-size:12px;color:#ef4444;margin-top:2px}
+.cf-textarea{resize:vertical;min-height:110px;line-height:1.6}
+.cf-submit{align-self:flex-start;margin-top:4px}
+.cf-spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:cf-spin .6s linear infinite;vertical-align:middle;margin-right:6px}
+@keyframes cf-spin{to{transform:rotate(360deg)}}

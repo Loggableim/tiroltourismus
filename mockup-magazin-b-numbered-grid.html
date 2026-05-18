@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup B – Numbered Magazine Grid – Tirol Magazin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#F5F3F0;--bg2:#EDE8E2;
+    --surface:rgba(0,0,0,.03);--surface-hover:rgba(0,0,0,.06);
+    --text:#1A1A1A;--text2:rgba(0,0,0,.55);--text3:rgba(0,0,0,.35);
+    --tirol-pink:#FF1493;--tirol-pink-dark:#C0006E;
+    --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);
+    --gold:#D4A800;--gold-light:#FFD700;
+    --glass:rgba(255,255,255,.7);--glass-border:rgba(0,0,0,.06);
+    --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+    --font-body:'Montserrat',-apple-system,sans-serif;
+    --font-elegant:'Prata',Georgia,serif;
+    --radius:12px;--radius-lg:20px;--ease:cubic-bezier(.16,1,.3,1);
+  }
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ─── NAV ─── */
+  .topbar{background:rgba(0,0,0,.85);backdrop-filter:blur(12px);padding:8px 0;font-size:12px;color:rgba(255,255,255,.6);position:fixed;top:0;left:0;right:0;z-index:1002;}
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;}
+  .topbar a{color:rgba(255,255,255,.6);text-decoration:none;padding:2px 8px;transition:color .3s;}
+  .topbar a:hover{color:#fff;}
+  .main-nav{position:fixed;top:46px;left:50%;transform:translateX(-50%);z-index:1000;border-radius:16px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 16px;max-width:1160px;width:calc(100% - 40px);display:flex;align-items:center;justify-content:space-between;height:56px;}
+  .nav-logo{font-family:var(--font-display);font-size:22px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:4px;}
+  .nav-logo .dot{width:8px;height:8px;border-radius:50%;background:var(--pink);display:inline-block;}
+  .nav-links{display:flex;gap:2px;}
+  .nav-links a{padding:6px 10px;font-size:11px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:100px;transition:all .3s;}
+  .nav-links a:hover{background:var(--surface);}
+  .nav-links a.active{background:var(--pink);color:#fff;}
+
+  /* ─── HERO ─── */
+  .hero{
+    margin-top:102px;padding:48px 0 32px;text-align:center;
+    background:#fff;border-bottom:1px solid var(--glass-border);
+  }
+  .hero .num-label{
+    font-family:var(--font-display);font-size:14px;letter-spacing:3px;
+    color:var(--pink);text-transform:uppercase;margin-bottom:2px;
+  }
+  .hero h1{
+    font-family:var(--font-elegant);font-size:clamp(32px,5vw,52px);
+    font-weight:400;line-height:1.1;margin-bottom:4px;
+  }
+  .hero p{font-size:14px;color:var(--text2);max-width:400px;margin:0 auto;}
+
+  /* ─── FILTER CHIPS ─── */
+  .filter-bar{padding:20px 0 24px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+  .filter-chip{padding:6px 16px;border-radius:100px;font-size:10px;font-weight:600;background:var(--bg2);border:1px solid var(--glass-border);cursor:pointer;transition:all .3s;text-transform:uppercase;letter-spacing:.3px;}
+  .filter-chip:hover,.filter-chip.active{background:var(--text);color:#fff;border-color:var(--text);}
+
+  /* ─── SPOTLIGHT ─── */
+  .spotlight{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:var(--radius-lg);overflow:hidden;background:var(--bg2);border:1px solid var(--glass-border);margin-bottom:40px;transition:all .4s var(--ease);cursor:pointer;position:relative;}
+  .spotlight:hover{transform:translateY(-3px);box-shadow:0 20px 56px rgba(0,0,0,.07);border-color:var(--pink);}
+  .spotlight .sp-label{position:absolute;top:16px;left:16px;z-index:2;display:flex;gap:8px;}
+  .spotlight .sp-label span{padding:3px 10px;border-radius:100px;font-size:9px;font-weight:700;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.3);backdrop-filter:blur(4px);}
+  .spotlight .sp-visual{min-height:320px;display:flex;align-items:center;justify-content:center;font-size:80px;background:linear-gradient(135deg,var(--surface),var(--surface-hover));position:relative;overflow:hidden;}
+  .spotlight .sp-num{position:absolute;bottom:-10px;right:-10px;font-family:var(--font-display);font-size:160px;line-height:1;color:rgba(0,0,0,.04);pointer-events:none;letter-spacing:-5px;}
+  .spotlight .sp-body{padding:36px;display:flex;flex-direction:column;justify-content:center;}
+  .spotlight .sp-body h2{font-family:var(--font-elegant);font-size:clamp(24px,3.5vw,36px);font-weight:400;line-height:1.1;margin-bottom:12px;}
+  .spotlight .sp-body p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px;}
+  .spotlight .sp-meta{display:flex;gap:12px;font-size:11px;color:var(--text3);margin-bottom:10px;}
+  .spotlight .sp-cta{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink);display:inline-flex;align-items:center;gap:4px;transition:all .3s;width:fit-content;}
+  .spotlight:hover .sp-cta{gap:10px;}
+  @media(max-width:768px){.spotlight{grid-template-columns:1fr;}.spotlight .sp-visual{min-height:200px;}}
+
+  /* ─── NUMBERED GRID ─── */
+  .grid-header{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:20px;padding-bottom:12px;
+    border-bottom:1px solid var(--glass-border);
+  }
+  .grid-header h3{font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;}
+  .grid-header span{font-size:12px;color:var(--text3);}
+
+  .numbered-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+  }
+  @media(max-width:968px){.numbered-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.numbered-grid{grid-template-columns:1fr;}}
+
+  .num-card{
+    border-radius:var(--radius-lg);overflow:hidden;
+    background:var(--bg2);border:1px solid var(--glass-border);
+    transition:all .4s var(--ease);cursor:pointer;display:flex;flex-direction:column;
+    text-decoration:none;color:inherit;position:relative;
+  }
+  .num-card:hover{transform:translateY(-5px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08);}
+  .num-card .nc-num{
+    position:absolute;top:0;right:0;
+    font-family:var(--font-display);font-size:64px;line-height:.8;
+    color:rgba(0,0,0,.04);pointer-events:none;letter-spacing:-3px;z-index:1;
+  }
+  .num-card .nc-visual{
+    height:140px;display:flex;align-items:center;justify-content:center;font-size:48px;
+    background:linear-gradient(135deg,var(--surface),var(--surface-hover));
+    position:relative;overflow:hidden;
+  }
+  .num-card .nc-visual .nc-bg{position:absolute;font-size:100px;opacity:.06;}
+  .num-card .nc-body{padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;}
+  .num-card .nc-tag{display:inline-block;padding:2px 10px;border-radius:100px;font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;width:fit-content;}
+  .nc-tag-tipps{background:rgba(0,200,83,.12);color:#00C853;}
+  .nc-tag-reiseberichte{background:rgba(139,92,246,.12);color:#8B5CF6;}
+  .nc-tag-hintergrund{background:rgba(255,107,53,.12);color:#FF6B35;}
+  .nc-tag-allgemein{background:rgba(255,20,147,.12);color:#FF1493;}
+  .num-card .nc-date{font-size:10px;color:var(--text3);margin-bottom:2px;}
+  .num-card .nc-title{font-family:var(--font-elegant);font-size:17px;font-weight:400;line-height:1.2;margin-bottom:4px;flex:1;}
+  .num-card .nc-teaser{font-size:12px;color:var(--text2);line-height:1.5;margin-bottom:10px;}
+  .num-card .nc-link{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink);display:inline-flex;align-items:center;gap:4px;transition:all .3s;margin-top:auto;}
+  .num-card:hover .nc-link{gap:10px;}
+
+  /* ─── LOAD MORE ─── */
+  .load-more{text-align:center;padding:36px 0;}
+  .load-more button{padding:12px 36px;border-radius:100px;background:transparent;border:1px solid var(--glass-border);color:var(--text2);font-size:12px;font-weight:600;cursor:pointer;transition:all .3s;font-family:var(--font-body);}
+  .load-more button:hover{background:var(--text);color:#fff;border-color:var(--text);}
+
+  /* ─── FOOTER ─── */
+  .footer{padding:48px 0 32px;border-top:1px solid var(--glass-border);margin-top:10px;}
+  .footer-bottom{text-align:center;font-size:12px;color:var(--text3);padding-top:24px;border-top:1px solid var(--glass-border);}
+  .footer-links{display:flex;justify-content:center;gap:20px;margin-bottom:16px;}
+  .footer-links a{font-size:11px;color:var(--text2);text-decoration:none;}
+  .footer-links a:hover{color:var(--pink);}
+
+  /* ─── ANIMATION ─── */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  .num-card,.spotlight{animation:fadeUp .6s var(--ease) both;}
+  .num-card:nth-child(1){animation-delay:.05s}
+  .num-card:nth-child(2){animation-delay:.1s}
+  .num-card:nth-child(3){animation-delay:.15s}
+  .num-card:nth-child(4){animation-delay:.2s}
+  .num-card:nth-child(5){animation-delay:.25s}
+  .num-card:nth-child(6){animation-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<div class="topbar"><div class="container"><span>🇦🇹 Tirol Tourismus</span><div><a href="#">Magazin</a><a href="#">Preise</a><a href="#">Kontakt</a></div></div></div>
+<nav class="main-nav">
+  <a href="#" class="nav-logo"><span>TIROL</span><span class="dot"></span><span style="font-weight:300;font-family:var(--font-body);font-size:14px;letter-spacing:.5px;">magazin</span></a>
+  <div class="nav-links">
+    <a href="#">Regionen</a><a href="#">Unterkünfte</a><a href="#">Camping</a><a href="#">Gastro</a><a href="#">Erlebnisse</a><a href="#" class="active">Magazin</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="num-label">📰 Ausgabe #01 · Mai 2026</div>
+    <h1>Das Tirol Magazin</h1>
+    <p>Geschichten, Tipps und Reportagen aus den Bergen.</p>
+  </div>
+</section>
+
+<!-- Filter -->
+<div class="container"><div class="filter-bar"><span class="filter-chip active">Alle · 13</span><span class="filter-chip">💡 Tipps</span><span class="filter-chip">✈️ Reiseberichte</span><span class="filter-chip">🔍 Hintergrund</span><span class="filter-chip">📰 Allgemein</span><span class="filter-chip">🎙️ Interview</span></div></div>
+
+<!-- Content -->
+<div class="container" style="padding-bottom:10px;">
+
+  <!-- Spotlight: Featured (1 big) -->
+  <div class="spotlight">
+    <div class="sp-label"><span>⭐ Top-Story</span><span>💡 Tipps</span></div>
+    <div class="sp-visual">
+      <span>💡</span>
+      <span class="sp-num">01</span>
+    </div>
+    <div class="sp-body">
+      <div class="sp-meta"><span>📅 18. Mai 2026</span><span>📖 5 Min</span><span>❤️ 24</span></div>
+      <h2>Familienurlaub in Tirol – Die besten Tipps für Kids</h2>
+      <p>Bergbahnen, Murmelbahnen und Bauernhöfe: Tirol ist eines der kinderfreundlichsten Urlaubsziele der Alpen. Unser Guide zeigt die besten Adressen für einen unvergesslichen Familienurlaub.</p>
+      <span class="sp-cta">Weiterlesen →</span>
+    </div>
+  </div>
+
+  <!-- Grid Header -->
+  <div class="grid-header">
+    <h3>Alle Beiträge</h3>
+    <span>Sortiert nach Datum · <a href="#" style="color:var(--pink);text-decoration:none;">Neuste zuerst</a></span>
+  </div>
+
+  <!-- Numbered Grid -->
+  <div class="numbered-grid">
+
+    <a href="#" class="num-card">
+      <span class="nc-num">02</span>
+      <div class="nc-visual" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9);color:#fff;">✈️<span class="nc-bg">✈️</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="nc-date">18. Mai 2026 · ❤️ 18</div>
+        <h3 class="nc-title">Innsbruck City Guide</h3>
+        <p class="nc-teaser">Innsbruck vereint Altstadt mit Moderne – die Berge immer nah.</p>
+        <span class="nc-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">03</span>
+      <div class="nc-visual" style="background:linear-gradient(135deg,#FF6B35,#E64900);color:#fff;">🍽️<span class="nc-bg">🍽️</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-hintergrund">🔍 Hintergrund</span>
+        <div class="nc-date">18. Mai 2026 · ❤️ 15</div>
+        <h3 class="nc-title">Tiroler Kulinarik</h3>
+        <p class="nc-teaser">Von der Alm bis zur Spitzenküche – mehr als Kaiserschmarrn.</p>
+        <span class="nc-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">04</span>
+      <div class="nc-visual" style="font-size:44px;">🎿<span class="nc-bg">🎿</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-allgemein">📰 Allgemein</span>
+        <div class="nc-date">17. Mai 2026</div>
+        <h3 class="nc-title">Kitzbühel Events 2026</h3>
+        <p class="nc-teaser">Was ist los in der Gamsstadt? Der große Event-Kalender.</p>
+        <span class="nc-link">→</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">05</span>
+      <div class="nc-visual" style="background:linear-gradient(135deg,#0051BA,#003A8A);color:#fff;">🎭<span class="nc-bg">🎭</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-hintergrund">🔍 Hintergrund</span>
+        <div class="nc-date">15. Mai 2026</div>
+        <h3 class="nc-title">Kultur in Innsbruck</h3>
+        <p class="nc-teaser">Museen, Theater und Architektur in der Alpenmetropole.</p>
+        <span class="nc-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">06</span>
+      <div class="nc-visual" style="background:linear-gradient(135deg,#00C853,#009624);color:#fff;">♨️<span class="nc-bg">♨️</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-tipps">💡 Tipps</span>
+        <div class="nc-date">13. Mai 2026 · ❤️ 12</div>
+        <h3 class="nc-title">Wellness & Thermen Tirol</h3>
+        <p class="nc-teaser">Entspannung pur in den schönsten Thermen der Alpen.</p>
+        <span class="nc-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">07</span>
+      <div class="nc-visual" style="background:linear-gradient(135deg,#1a1a3e,#2a2a5e);color:#fff;">❄️<span class="nc-bg">❄️</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="nc-date">11. Mai 2026</div>
+        <h3 class="nc-title">Winterurlaub Tirol</h3>
+        <p class="nc-teaser">Die schönsten Winterziele abseits der Pisten.</p>
+        <span class="nc-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">08</span>
+      <div class="nc-visual" style="font-size:44px;">🥾<span class="nc-bg">🥾</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="nc-date">12. Mai 2026</div>
+        <h3 class="nc-title">Stubaital Familien</h3>
+        <p class="nc-teaser">Abenteuer für Groß und Klein im Stubaital.</p>
+        <span class="nc-link">→</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">09</span>
+      <div class="nc-visual" style="font-size:44px;">🏔️<span class="nc-bg">🏔️</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-tipps">💡 Tipps</span>
+        <div class="nc-date">10. Mai 2026</div>
+        <h3 class="nc-title">Skifahren Kaunertal</h3>
+        <p class="nc-teaser">Gletscherski bis in den Mai.</p>
+        <span class="nc-link">→</span>
+      </div>
+    </a>
+
+    <a href="#" class="num-card">
+      <span class="nc-num">10</span>
+      <div class="nc-visual" style="background:linear-gradient(135deg,#2d5a27,#4a8a3f);color:#fff;">🌲<span class="nc-bg">🌲</span></div>
+      <div class="nc-body">
+        <span class="nc-tag nc-tag-hintergrund">🔍 Hintergrund</span>
+        <div class="nc-date">9. Mai 2026</div>
+        <h3 class="nc-title">Wanderparadies Zillertal</h3>
+        <p class="nc-teaser">Die schönsten Touren und Einkehrmöglichkeiten.</p>
+        <span class="nc-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="load-more"><button>+ 3 weitere Artikel laden</button></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">Impressum</a><a href="#">Datenschutz</a><a href="#">AGB</a><a href="#">Kontakt</a>
+    </div>
+    <div class="footer-bottom">© 2026 tiroltourismus.com – Variante B: Numbered Magazine Grid</div>
+  </div>
+</footer>
+</body>
+</html>

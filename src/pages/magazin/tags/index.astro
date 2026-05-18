@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+
+// Magazine articles (DE only, matching the pattern of other magazin pages)
+const articles = readCollection('magazin').filter(a => isPublished(a.entry));
+
+// Collect all unique tags with article count
+const tagMap = new Map();
+for (const { entry } of articles) {
+  if (entry.tags && Array.isArray(entry.tags)) {
+    for (const tag of entry.tags) {
+      tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
+    }
+  }
+}
+
+// Sort alphabetically
+const tags = Array.from(tagMap.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+---
+
+<BaseLayout
+  title="Themen – Tirol Magazin"
+  description="Entdecke unsere Beiträge nach Thema"
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[
+        { label: 'Magazin', href: '/magazin/' },
+        { label: 'Themen' },
+      ]} />
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <SectionHeader
+          label="#magazin"
+          title="Alle Themen"
+          sub="Entdecke unsere Beiträge nach Thema"
+        />
+
+        {tags.length > 0 ? (
+          <div class="tag-cloud">
+            {tags.map(([tag, count]) => (
+              <a href={`/magazin/tag/${tag}/`} class="tag-item">
+                <span class="tag-name">{tag}</span>
+                <span class="tag-count">{count}</span>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div class="tag-empty">
+            <p>Noch keine Themen verfügbar.</p>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 0 80px;
+  }
+
+  .tag-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 100px;
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s var(--ease);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .tag-item:hover {
+    background: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+    box-shadow: 0 4px 20px var(--pink-glow);
+    transform: translateY(-2px);
+  }
+
+  .tag-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: var(--pink-glow);
+    color: var(--pink);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 0 8px;
+    transition: inherit;
+  }
+
+  .tag-item:hover .tag-count {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+  }
+
+  .tag-empty {
+    text-align: center;
+    padding: 60px 0;
+    color: var(--text2);
+    font-size: 15px;
+  }
+</style>

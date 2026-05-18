@@ -11,6 +11,7 @@ import SectionCTA from './SectionCTA.astro';
 import SectionRelatedGrid from './SectionRelatedGrid.astro';
 import SectionArticleHero from './SectionArticleHero.astro';
 import SectionArticleContent from './SectionArticleContent.astro';
+import SectionMap from './SectionMap.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -155,6 +156,20 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
         ctaHref={s.ctaHref}
         ctaText={s.ctaText}
         accentBg={s.accentBg}
+      />
+    ))}
+
+    {sections.filter(s => s.type === 'map').map(s => (
+      <SectionMap
+        markers={s.markers}
+        center={s.center}
+        zoom={s.zoom}
+        height={s.height}
+        scrollWheelZoom={s.scrollWheelZoom}
+        label={s.label}
+        title={s.title}
+        polygons={s.polygons}
+        filterable={s.filterable}
       />
     ))}
 

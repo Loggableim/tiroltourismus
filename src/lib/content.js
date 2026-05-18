@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
+const _collectionCache = new Map();
 
 /**
  * Bezirk → zugehörige Region-Slugs
@@ -34,6 +35,8 @@ function getDataDir(locale = 'de') {
  * returns [{ slug, entry }, ...]
  */
 export function readCollection(name, locale = 'de') {
+  const key = `${locale}:${name}`;
+  if (_collectionCache.has(key)) return _collectionCache.get(key);
   const dir = path.join(getDataDir(locale), name);
   if (!fs.existsSync(dir)) return [];
   const entries = [];
@@ -48,7 +51,14 @@ export function readCollection(name, locale = 'de') {
       } catch (e) { console.error(`Fehler in ${jsonPath}:`, e.message); }
     }
   }
+  _collectionCache.set(key, entries);
   return entries;
+}
+
+/** Cache für eine oder alle Collections invalidieren */
+export function invalidateCollectionCache(cacheKey) {
+  if (cacheKey) _collectionCache.delete(cacheKey);
+  else _collectionCache.clear();
 }
 
 /** Einzelnen Eintrag lesen */
@@ -114,4 +124,70 @@ export function findRelated(collection, slug, locale = 'de', limit = 4) {
   }
 
   return scored.sort((a, b) => b.score - a.score).slice(0, limit);
+}
+
+/**
+ * Nahegelegene Einträge zu einem Entry finden (region-basiert + distanz-basiert)
+ * 1. Gleiche Region → score 100
+ * 2. Gleicher Ort → score 50
+ * 3. Distanz < 10km → score nach Entfernung
+ * 
+ * Berücksichtigt NUR Collections mit Standort (kein 'magazin')
+ * Gibt maximal `limit` Ergebnisse
+ */
+export function findNearby(entry, collection, locale = 'de', limit = 8) {
+  if (!entry) return [];
+  
+  const locationCollections = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'erlebnisse', 'events'];
+  const results = [];
+
+  function haversineDist(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const dLat = (parseFloat(lat2) - parseFloat(lat1)) * Math.PI / 180;
+    const dLng = (parseFloat(lng2) - parseFloat(lng1)) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 + Math.cos(parseFloat(lat1)*Math.PI/180) * Math.cos(parseFloat(lat2)*Math.PI/180) * Math.sin(dLng/2)**2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
+
+  for (const coll of locationCollections) {
+    const entries = readCollection(coll, locale);
+    for (const e of entries) {
+      if (coll === collection && e.slug === entry.slug) continue; // skip self
+      const e2 = e.entry;
+      
+      let score = 0;
+      let distKm = null;
+
+      // Same region → strong match
+      if (entry.region && e2.region && entry.region === e2.region) {
+        score = 100;
+      }
+
+      // Same ort → strong match
+      if (entry.ort && e2.ort && entry.ort.toLowerCase() === e2.ort.toLowerCase()) {
+        score = Math.max(score, 80);
+      }
+
+      // Distance-based if both have coordinates
+      if (entry.koordinaten && e2.koordinaten) {
+        distKm = haversineDist(
+          entry.koordinaten.lat, entry.koordinaten.lng,
+          e2.koordinaten.lat, e2.koordinaten.lng
+        );
+        if (distKm < 1) score = Math.max(score, 90);
+        else if (distKm < 5) score = Math.max(score, 70);
+        else if (distKm < 10) score = Math.max(score, 50);
+        else if (distKm < 20) score = Math.max(score, 30);
+        // else score stays from region/ort match
+      }
+
+      if (score > 0) {
+        results.push({ collection: coll, slug: e.slug, entry: e2, score, dist_km: distKm });
+      }
+    }
+  }
+
+  // Sort by score desc, then dist_km asc
+  results.sort((a, b) => b.score - a.score || (a.dist_km || 999) - (b.dist_km || 999));
+  return results.slice(0, limit);
 }

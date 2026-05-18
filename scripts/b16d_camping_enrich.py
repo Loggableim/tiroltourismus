@@ -17,7 +17,7 @@ sys.stderr.reconfigure(line_buffering=True)
 PROJECT_DIR = r"F:/tiroltourismus"
 CAMPING_DIR = os.path.join(PROJECT_DIR, "src/data/camping")
 API_URL = "https://opencode.ai/zen/go/v1/chat/completions"
-MODEL = "deepseek-v4-flash"
+MODEL = "mimo-v2-pro"
 RATE_LIMIT_SEC = 1.1
 JOURNAL_FILE = os.path.join(os.path.dirname(__file__), "b16d_journal.json")
 

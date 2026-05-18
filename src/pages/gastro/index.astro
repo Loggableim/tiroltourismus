@@ -4,9 +4,11 @@ import Hero from '../../components/Hero.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import GastroCard from '../../components/GastroCard.astro';
+import SectionMap from '../../sections/SectionMap.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const gastro = readCollection('gastro').filter(g => isPublished(g.entry));
+const gastroMitCoords = gastro.filter(g => g.entry.koordinaten?.lat && g.entry.koordinaten?.lng);
 ---
 
 <BaseLayout
@@ -29,6 +31,24 @@ const gastro = readCollection('gastro').filter(g => isPublished(g.entry));
         <span class="hero-urgency">⭐ {gastro.length} Genussorte</span>
       </div>
     </Hero>
+
+    {gastroMitCoords.length > 0 && (
+      <SectionMap
+        markers={gastroMitCoords.map(g => ({
+          lat: g.entry.koordinaten.lat,
+          lng: g.entry.koordinaten.lng,
+          label: g.entry.name,
+          emoji: g.entry.emoji || '🍽️',
+          href: '/gastro/' + g.slug + '/',
+          category: 'gastro',
+        }))}
+        label={gastroMitCoords.length + ' Genussorte'}
+        title="Auf einen Blick"
+        height="380px"
+        scrollWheelZoom={true}
+        filterable={true}
+      />
+    )}
 
     {gastro.length > 0 ? (
       <section class="section">

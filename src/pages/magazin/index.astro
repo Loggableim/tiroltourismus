@@ -1,123 +1,86 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const articles = readCollection('magazin');
 const published = articles
   .filter(a => isPublished(a.entry))
   .sort((a, b) => (b.entry.datum || '').localeCompare(a.entry.datum || ''));
-const featured = published[0] || null;
+
 const catEmoji = { allgemein: '📰', tipps: '💡', reiseberichte: '✈️', interview: '🎙️', hintergrund: '🔍' };
+const catLabel = { allgemein: 'Allgemein', tipps: 'Tipps', reiseberichte: 'Reiseberichte', interview: 'Interview', hintergrund: 'Hintergrund' };
 
-// Metro Tile Size Mapping (6-col grid)
-// s6=3×2 (hero) · s4=2×2 (large square) · s2=2×1 (wide) · s1=1×1 (small square)
-const tileSizes = ['s6','s2','s1','s2','s4','s1','s1','s2','s4','s1','s2','s1','s1'];
-const getTileSize = (i) => tileSizes[i] || 's1';
-
-// Metro category → color class mapping
-const catColor = {
-  tipps: 'c-green',
-  reiseberichte: 'c-purple',
-  hintergrund: 'c-orange',
-  interview: 'c-blue',
-  allgemein: 'c-pink',
-};
-const getCatColor = (k) => catColor[k] || 'c-grey';
+function formatDate(d) {
+  if (!d) return '';
+  try { return new Date(d + 'T00:00:00').toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
 ---
 
 <BaseLayout title="Tirol Magazin" description="Das Tirol Magazin: Inspiration für Deinen nächsten Urlaub in den Alpen.">
-  <main class="metro-page">
-    <!-- HERO -->
-    <section class="metro-hero">
-      <div class="container">
-        <h1>📰 Magazin</h1>
-        <p>Geschichten, Tipps und Reportagen aus Tirol.</p>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Magazin' }]} />
+    </div>
+
+    <Hero
+      title="Magazin"
+      subtitle="Geschichten, Tipps und Reportagen aus Tirol."
+      emoji="📰"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#magazin-grid" class="btn btn-pink">Artikel entdecken →</a>
+        <span class="hero-urgency">📖 {published.length} Artikel</span>
       </div>
-    </section>
+    </Hero>
 
     {published.length > 0 ? (
-      <>
-        <!-- FILTER BAR -->
+      <section class="section" id="magazin-grid">
         <div class="container">
-          <div class="metro-filter">
-            <span class="filter-chip active">ALLE</span>
-            <span class="filter-chip">TIPP</span>
-            <span class="filter-chip">REISE</span>
-            <span class="filter-chip">HINTERGRUND</span>
-            <span class="filter-chip">ALLGEMEIN</span>
+          <SectionHeader
+            label="#magazin"
+            title="Stories aus den Bergen"
+            sub="Neueste Geschichten, Tipps & Inspirationen rund um Deinen nächsten Tirol-Urlaub."
+          />
+
+          <!-- Filter Chips -->
+          <div class="magazin-filter">
+            <button class="filter-chip active" data-cat="all">ALLE</button>
+            <button class="filter-chip" data-cat="tipps">TIPP</button>
+            <button class="filter-chip" data-cat="reiseberichte">REISE</button>
+            <button class="filter-chip" data-cat="hintergrund">HINTERGRUND</button>
+            <button class="filter-chip" data-cat="allgemein">ALLGEMEIN</button>
+          </div>
+
+          <div class="magazin-grid">
+            {published.map((a) => (
+              <div class="magazin-item" data-kategorie={a.entry.kategorie}>
+                <ArticleCard
+                  titel={a.entry.titel}
+                  slug={a.slug}
+                  teaser={a.entry.teaser}
+                  datum={formatDate(a.entry.datum)}
+                  kategorie={(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}
+                  emoji={catEmoji[a.entry.kategorie] || '📰'}
+                />
+              </div>
+            ))}
           </div>
         </div>
-
-        <!-- METRO GRID -->
-        <div class="container">
-          <div class="metro-grid">
-            {published.map((a, i) => {
-              const size = getTileSize(i);
-              const emoji = catEmoji[a.entry.kategorie] || '📰';
-              const colorClass = i === 0 ? 'c-dark' : (getCatColor(a.entry.kategorie));
-              const formattedDate = a.entry.datum ? new Date(a.entry.datum + 'T00:00:00').toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }) : '';
-
-              if (size === 's6') {
-                // HERO TILE (3×2) — full content
-                return (
-                  <a href={`/magazin/${a.slug}/`} class={`tile tile-${size} ${colorClass}`}>
-                    <span class="t-bg-icon">{emoji}</span>
-                    <span class="t-num">01</span>
-                    <span class="t-emoji">{emoji}</span>
-                    <span class="t-label">TOP-STORY · {(a.entry.kategorie || '').toUpperCase()}</span>
-                    <span class="t-title">{a.entry.titel}</span>
-                    {a.entry.teaser && <span class="t-teaser">{a.entry.teaser}</span>}
-                    <span class="t-meta">📅 {formattedDate}</span>
-                  </a>
-                );
-              }
-
-              if (size === 's4') {
-                // LARGE SQUARE (2×2)
-                return (
-                  <a href={`/magazin/${a.slug}/`} class={`tile tile-${size} ${colorClass}`}>
-                    <span class="t-bg-icon">{emoji}</span>
-                    <span class="t-num">{String(i + 1).padStart(2, '0')}</span>
-                    <span class="t-emoji">{emoji}</span>
-                    <span class="t-label">{(a.entry.kategorie || '').toUpperCase()}</span>
-                    <span class="t-title">{a.entry.titel}</span>
-                    {a.entry.teaser && <span class="t-teaser">{a.entry.teaser}</span>}
-                    <span class="t-meta">📅 {formattedDate}</span>
-                  </a>
-                );
-              }
-
-              if (size === 's2') {
-                // WIDE TILE (2×1)
-                return (
-                  <a href={`/magazin/${a.slug}/`} class={`tile tile-${size} ${colorClass}`}>
-                    <span class="t-num">{String(i + 1).padStart(2, '0')}</span>
-                    <span class="t-emoji">{emoji}</span>
-                    <span class="t-label">{(a.entry.kategorie || '').toUpperCase()}</span>
-                    <span class="t-title">{a.entry.titel}</span>
-                    {a.entry.teaser && <span class="t-teaser">{a.entry.teaser}</span>}
-                    <span class="t-meta">📅 {formattedDate}</span>
-                  </a>
-                );
-              }
-
-              // SMALL SQUARE (1×1) — iconic
-              return (
-                <a href={`/magazin/${a.slug}/`} class={`tile tile-${size} ${colorClass}`}>
-                  <span class="t-emoji">{emoji}</span>
-                  <span class="t-title">{a.entry.titel}</span>
-                </a>
-              );
-            })}
-          </div>
-        </div>
-      </>
+      </section>
     ) : (
       <section class="section">
         <div class="container" style="text-align:center;padding:80px 0">
           <div style="font-size:64px;margin-bottom:16px">📰</div>
-          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px">Bald verfügbar</h2>
-          <p style="color:var(--text2);max-width:400px;margin:0 auto">
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            Bald verfügbar
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
             Magazin-Artikel werden aktuell eingepflegt.
           </p>
         </div>
@@ -127,223 +90,98 @@ const getCatColor = (k) => catColor[k] || 'c-grey';
 </BaseLayout>
 
 <style is:global>
-  /* ─── METRO PAGE WRAPPER ─── */
-  .metro-page {
-    font-family: 'Montserrat', -apple-system, sans-serif;
-    color: #fff;
-    background: #0D0D1A;
-    min-height: 100vh;
-  }
-  .metro-page .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-
-  /* ─── HERO ─── */
-  .metro-hero {
-    padding: 32px 0 16px;
-    background: #14142A;
-    border-bottom: 2px solid #FF1493;
-  }
-  .metro-hero h1 {
-    font-size: clamp(36px, 6vw, 72px);
-    font-weight: 200;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin: 0;
-    line-height: 1.1;
-  }
-  .metro-hero p {
-    font-size: 13px;
-    font-weight: 300;
-    opacity: .6;
-    max-width: 400px;
-    margin: 4px 0 0;
-  }
-
-  /* ─── FILTER ─── */
-  .metro-filter {
-    padding: 12px 0 16px;
+  .magazin-filter {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
   }
+
   .filter-chip {
-    padding: 5px 14px;
-    font-size: 10px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    cursor: pointer;
-    transition: all .2s;
-    border: none;
-    border-left: 3px solid transparent;
-    background: rgba(255,255,255,.05);
-    color: rgba(255,255,255,.4);
-    font-family: 'Montserrat', sans-serif;
-  }
-  .filter-chip:hover,
-  .filter-chip.active {
-    background: rgba(255,255,255,.1);
-    color: #fff;
-    border-left-color: #FF1493;
-  }
-
-  /* ─── METRO TILE GRID ─── */
-  .metro-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 6px;
-    padding: 4px 0 48px;
-  }
-
-  /* Tile base — scharfkantig, Metro-Style */
-  .tile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 16px;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    transition: transform .15s var(--ease, cubic-bezier(.16,1,.3,1));
-    min-height: 100%;
-    cursor: pointer;
-  }
-  .tile:hover { transform: scale(1.02); opacity: .92; }
-  .tile:active { transform: scale(.98); }
-
-  /* Grid spans */
-  .tile-s1 { grid-column: span 1; grid-row: span 1; }
-  .tile-s2 { grid-column: span 2; grid-row: span 1; }
-  .tile-s4 { grid-column: span 2; grid-row: span 2; }
-  .tile-s6 { grid-column: span 3; grid-row: span 2; }
-
-  /* Metro category palette */
-  .c-red    { background: #C8102E; }
-  .c-pink   { background: #FF1493; }
-  .c-purple { background: #8B5CF6; }
-  .c-blue   { background: #0051BA; }
-  .c-teal   { background: #00897B; }
-  .c-green  { background: #2E7D32; }
-  .c-orange { background: #E65100; }
-  .c-grey   { background: #455A64; }
-  .c-dark   { background: #263238; }
-
-  /* ─── TILE INNERS ─── */
-  .tile .t-num {
-    position: absolute;
-    top: 6px; right: 10px;
-    font-size: 36px;
-    font-weight: 800;
-    opacity: .08;
-    letter-spacing: -2px;
-    line-height: 1;
-  }
-  .tile .t-label {
-    font-size: 8px;
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 12px;
     font-weight: 700;
+    letter-spacing: 0.3px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    opacity: .5;
-    margin-bottom: 4px;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid var(--glass-border);
+    background: transparent;
+    color: var(--text2);
+    font-family: var(--font-body);
   }
-  .tile .t-title {
-    font-size: clamp(12px, 1.6vw, 18px);
-    font-weight: 600;
-    line-height: 1.15;
-    margin-bottom: 4px;
-    color: #fff;
-  }
-  .tile-s4 .t-title {
-    font-size: clamp(18px, 2.5vw, 28px);
-    font-weight: 500;
-  }
-  .tile-s6 .t-title {
-    font-size: clamp(22px, 3vw, 38px);
-    font-weight: 400;
-  }
-  .tile .t-teaser {
-    font-size: 10px;
-    font-weight: 300;
-    opacity: .65;
-    line-height: 1.4;
-    color: #fff;
-  }
-  .tile-s4 .t-teaser { font-size: 12px; }
-  .tile-s6 .t-teaser { font-size: 13px; }
-  .tile .t-meta {
-    font-size: 8px;
-    font-weight: 400;
-    opacity: .35;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    margin-top: 6px;
-    color: #fff;
-  }
-  .tile .t-emoji {
-    font-size: clamp(24px, 4vw, 56px);
-    margin-bottom: 6px;
-    line-height: 1;
-  }
-  .tile-s4 .t-emoji { font-size: 56px; }
-  .tile-s6 .t-emoji { font-size: 64px; }
 
-  /* Small square = iconic only */
-  .tile-s1 {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 110px;
+  .filter-chip.active {
+    background: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+    box-shadow: 0 4px 20px var(--pink-glow);
   }
-  .tile-s1 .t-emoji {
-    font-size: 36px;
-    margin-bottom: 4px;
-  }
-  .tile-s1 .t-title {
-    font-size: 9px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.2;
-  }
-  .tile-s1 .t-label,
-  .tile-s1 .t-teaser,
-  .tile-s1 .t-meta,
-  .tile-s1 .t-num { display: none; }
 
-  /* BG decoration icon */
-  .tile .t-bg-icon {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    font-size: 120px;
-    opacity: .06;
-    pointer-events: none;
+  .filter-chip:hover:not(.active) {
+    border-color: var(--text2);
+    color: var(--text);
   }
-  .tile-s4 .t-bg-icon { font-size: 160px; }
-  .tile-s6 .t-bg-icon { font-size: 200px; }
 
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 900px) {
-    .metro-grid { grid-template-columns: repeat(4, 1fr); }
-    .tile-s6 { grid-column: span 4; }
-  }
-  @media (max-width: 600px) {
-    .metro-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 4px;
+  @media (max-width: 700px) {
+    .magazin-filter {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      scrollbar-width: none;
     }
-    .tile-s2,
-    .tile-s4,
-    .tile-s6 { grid-column: span 2; }
-    .tile-s4,
-    .tile-s6 { grid-row: span 2; }
-    .tile { padding: 12px; }
-    .tile .t-emoji { font-size: 28px !important; }
-    .tile .t-title { font-size: 11px !important; }
-    .tile .t-teaser { display: none; }
-    .tile-s1 .t-title { font-size: 8px !important; }
+    .magazin-filter::-webkit-scrollbar { display: none; }
+    .filter-chip {
+      padding: 8px 14px;
+      font-size: 11px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
+  .magazin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+
+  @media (max-width: 968px) {
+    .magazin-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .magazin-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
+
+<script is:inline>
+(function() {
+  const chips = document.querySelectorAll('.filter-chip');
+  const items = document.querySelectorAll('.magazin-item');
+  if (!chips.length || !items.length) return;
+
+  function filterGrid(category) {
+    chips.forEach(c => c.classList.remove('active'));
+    chips.forEach(c => {
+      if (c.dataset.cat === category) c.classList.add('active');
+    });
+    items.forEach(item => {
+      item.style.display = (category === 'all' || item.dataset.kategorie === category) ? '' : 'none';
+    });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', function() {
+      filterGrid(this.dataset.cat);
+    });
+  });
+})();
+</script>

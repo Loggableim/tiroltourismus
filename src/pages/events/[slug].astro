@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findRelated } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findRelated } from '../../lib/content.js';
 
 export async function getStaticPaths() {
   const all = readCollection('events').filter(e => isPublished(e.entry));
@@ -16,6 +16,31 @@ const subtitle = [
   entry.ort,
   entry.region && entry.region !== entry.ort ? entry.region : null,
 ].filter(Boolean).join(' · ');
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'events', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat, lng: entry.koordinaten.lng,
+    label: entry.name || entry.titel, emoji: emoji,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map', label: 'Standort', title: 'Auf der Karte',
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
 
 // Date formatting
 const monate = ['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
@@ -92,5 +117,6 @@ const relatedSection = related.length > 0 ? {
       ].filter(Boolean),
     },
     relatedSection,
+    mapSection,
   ].filter(Boolean)}
 />

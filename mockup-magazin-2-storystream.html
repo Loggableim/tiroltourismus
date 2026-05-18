@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup 2 – Story-Stream – Tirol Magazin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0A0A12;--bg2:#10101E;
+    --surface:rgba(255,255,255,.04);--surface-hover:rgba(255,255,255,.08);
+    --text:#F0EDEE;--text2:rgba(255,255,255,.65);--text3:rgba(255,255,255,.30);
+    --glass:rgba(255,255,255,.06);--glass-border:rgba(255,255,255,.08);
+    --tirol-pink:#FF1493;--tirol-pink-dark:#C0006E;
+    --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);
+    --gold:#D4A800;--gold-light:#FFD700;
+    --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+    --font-body:'Montserrat',-apple-system,sans-serif;
+    --font-elegant:'Prata',Georgia,serif;
+    --radius:12px;--radius-lg:24px;--ease:cubic-bezier(.16,1,.3,1);
+  }
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ─────────── NAV (alpenpeak) ─────────── */
+  .topbar{background:rgba(10,10,18,.6);backdrop-filter:blur(20px);padding:10px 0;font-size:12px;color:var(--text3);position:fixed;top:0;left:0;right:0;z-index:100;border-bottom:1px solid var(--glass-border);}
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;}
+  .topbar a{color:var(--text3);text-decoration:none;padding:2px 8px;}
+  .main-nav{position:fixed;top:40px;left:20px;right:20px;z-index:99;background:rgba(10,10,18,.5);backdrop-filter:blur(24px);border:1px solid var(--glass-border);border-radius:100px;padding:0 24px;max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+  .nav-logo{font-family:var(--font-display);font-size:24px;letter-spacing:2px;text-transform:uppercase;color:var(--text);text-decoration:none;}
+  .nav-links{display:flex;gap:4px;}
+  .nav-links a{padding:6px 12px;font-size:12px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:100px;transition:all .3s;}
+  .nav-links a:hover{background:var(--surface-hover);}
+  .nav-links a.active{background:var(--pink);color:#fff;}
+
+  /* ─────────── HERO ─────────── */
+  .stream-hero{
+    margin-top:96px;padding:100px 0 60px;text-align:center;
+    position:relative;overflow:hidden;
+  }
+  .stream-hero::before{
+    content:'';position:absolute;top:-50%;left:50%;transform:translateX(-50%);
+    width:600px;height:600px;border-radius:50%;
+    background:var(--pink-glow, rgba(255,20,147,.15));filter:blur(100px);pointer-events:none;
+  }
+  .stream-hero h1{
+    font-family:var(--font-display);font-size:clamp(48px,7vw,96px);line-height:1;
+    letter-spacing:2px;text-transform:uppercase;position:relative;z-index:1;
+  }
+  .stream-hero p{
+    font-size:16px;color:var(--text2);max-width:500px;margin:8px auto 0;position:relative;z-index:1;
+  }
+
+  /* ─────────── STORY TIMELINE ─────────── */
+  .story-section{padding:20px 0 80px;position:relative;}
+
+  /* Timeline line */
+  .story-section::before{
+    content:'';position:absolute;top:40px;bottom:80px;left:50%;transform:translateX(-50%);
+    width:2px;background:linear-gradient(to bottom, transparent, var(--pink), var(--gold), transparent);
+    opacity:.3;
+  }
+
+  /* ─────────── FEATURED STORY ─────────── */
+  .featured-story{
+    margin-bottom:80px;position:relative;z-index:2;
+  }
+  .featured-story-inner{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border-radius:var(--radius-lg);overflow:hidden;
+    background:var(--bg2);border:1px solid var(--glass-border);
+    transition:all .4s var(--ease);
+  }
+  .featured-story-inner:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 24px 64px rgba(0,0,0,.5);}
+  .featured-visual{
+    min-height:380px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg, #1a1a2e, #16213e);font-size:100px;position:relative;
+    overflow:hidden;
+  }
+  .featured-visual::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 60%,rgba(10,10,18,.8));
+  }
+  .featured-visual span{position:relative;z-index:1;animation:float 6s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .featured-body{padding:40px;display:flex;flex-direction:column;justify-content:center;position:relative;}
+  .featured-badge{
+    position:absolute;top:-12px;right:-12px;
+    width:56px;height:56px;border-radius:50%;
+    background:linear-gradient(135deg,var(--pink),var(--gold));color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;font-weight:700;box-shadow:0 4px 20px rgba(255,20,147,.3);
+  }
+  .featured-body h2{
+    font-family:var(--font-elegant);font-size:clamp(28px,4vw,42px);font-weight:400;
+    line-height:1.15;margin-bottom:16px;color:var(--text);
+  }
+  .featured-meta{display:flex;gap:16px;font-size:12px;color:var(--text3);margin-bottom:12px;}
+  .featured-meta .cat-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:4px;}
+  .featured-body p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px;}
+  .featured-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:10px 28px;border-radius:100px;
+    background:linear-gradient(135deg,var(--pink),var(--tirol-pink-dark));
+    color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-decoration:none;
+    transition:all .3s var(--ease);width:fit-content;
+  }
+  .featured-cta:hover{transform:translateY(-2px);gap:14px;box-shadow:0 8px 32px rgba(255,20,147,.3);}
+  @media(max-width:768px){.featured-story-inner{grid-template-columns:1fr;}.featured-visual{min-height:220px;}}
+
+  /* ─────────── TIMELINE STORY CARD ─────────── */
+  .story-card{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+    margin-bottom:60px;position:relative;
+  }
+  .story-card::before{
+    content:'✦';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    font-size:16px;color:var(--pink);z-index:3;
+    text-shadow:0 0 12px rgba(255,20,147,.5);
+  }
+  .story-card:nth-child(even){direction:rtl;}
+  .story-card:nth-child(even) .story-content{direction:ltr;}
+
+  .story-visual{
+    height:280px;border-radius:var(--radius-lg);overflow:hidden;
+    display:flex;align-items:center;justify-content:center;font-size:72px;
+    position:relative;transition:all .4s var(--ease);
+  }
+  .story-visual:hover{transform:scale(1.02);}
+  .story-visual .story-date-badge{
+    position:absolute;top:16px;left:16px;
+    padding:4px 12px;border-radius:100px;font-size:9px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.5px;
+    background:rgba(0,0,0,.5);backdrop-filter:blur(8px);color:#fff;
+  }
+  .story-content{padding:20px 0;}
+  .story-tag{
+    display:inline-block;padding:4px 14px;border-radius:100px;font-size:9px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;border:1px solid;
+  }
+  .story-tag-tipps{border-color:rgba(0,200,83,.3);color:#00C853;}
+  .story-tag-reiseberichte{border-color:rgba(139,92,246,.3);color:#8B5CF6;}
+  .story-tag-hintergrund{border-color:rgba(255,107,53,.3);color:#FF6B35;}
+  .story-tag-allgemein{border-color:rgba(255,20,147,.3);color:#FF1493;}
+  .story-content h3{
+    font-family:var(--font-elegant);font-size:28px;font-weight:400;
+    line-height:1.15;margin-bottom:10px;color:var(--text);
+  }
+  .story-content p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px;}
+  .story-link{
+    font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;
+    color:var(--pink);text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:all .3s;
+  }
+  .story-link:hover{gap:12px;}
+
+  @media(max-width:768px){
+    .story-card,.story-card:nth-child(even){grid-template-columns:1fr;direction:ltr;}
+    .story-card::before{display:none;}
+    .story-section::before{display:none;}
+    .story-visual{height:200px;}
+  }
+
+  /* ─────────── LOAD MORE ─────────── */
+  .load-more{
+    text-align:center;padding:40px 0;
+  }
+  .load-more button{
+    padding:14px 40px;border-radius:100px;
+    background:transparent;border:1px solid var(--glass-border);
+    color:var(--text2);font-size:13px;font-weight:600;cursor:pointer;
+    transition:all .3s var(--ease);font-family:var(--font-body);
+  }
+  .load-more button:hover{
+    background:var(--pink);color:#fff;border-color:var(--pink);
+    box-shadow:0 8px 32px rgba(255,20,147,.2);
+  }
+
+  /* ─────────── NEWSLETTER TEASER ─────────── */
+  .newsletter-teaser{
+    margin:40px auto;max-width:600px;text-align:center;
+    padding:48px 32px;border-radius:var(--radius-lg);
+    background:var(--bg2);border:1px solid var(--glass-border);
+    position:relative;overflow:hidden;
+  }
+  .newsletter-teaser::before{
+    content:'';position:absolute;top:-40%;right:-20%;
+    width:300px;height:300px;border-radius:50%;
+    background:var(--pink-glow, rgba(255,20,147,.1));filter:blur(60px);
+  }
+  .newsletter-teaser h3{font-family:var(--font-display);font-size:48px;letter-spacing:1px;margin-bottom:8px;position:relative;z-index:1;}
+  .newsletter-teaser p{font-size:14px;color:var(--text2);margin-bottom:20px;position:relative;z-index:1;}
+  .newsletter-input{display:flex;gap:8px;max-width:400px;margin:0 auto;position:relative;z-index:1;}
+  .newsletter-input input{
+    flex:1;padding:12px 16px;border-radius:100px;border:1px solid var(--glass-border);
+    background:rgba(255,255,255,.06);color:var(--text);font-size:13px;
+    outline:none;transition:border-color .3s;font-family:var(--font-body);
+  }
+  .newsletter-input input:focus{border-color:var(--pink);}
+  .newsletter-input button{
+    padding:12px 24px;border-radius:100px;
+    background:linear-gradient(135deg,var(--pink),var(--tirol-pink-dark));
+    color:#fff;border:none;font-size:12px;font-weight:700;text-transform:uppercase;
+    cursor:pointer;transition:all .3s var(--ease);font-family:var(--font-body);
+  }
+  .newsletter-input button:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,20,147,.3);}
+
+  /* ─────────── FOOTER ─────────── */
+  .footer{padding:60px 0 40px;border-top:1px solid var(--glass-border);}
+  .footer-bottom{text-align:center;font-size:13px;color:var(--text3);padding-top:32px;border-top:1px solid var(--glass-border);}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<div class="topbar"><div class="container"><span>🇦🇹 Tirol Tourismus</span><div><a href="#">Magazin</a><a href="#">Preise</a><a href="#">Kontakt</a></div></div></div>
+<nav class="main-nav">
+  <a href="#" class="nav-logo">TIROL <span style="color:var(--pink)">tourismus</span></a>
+  <div class="nav-links">
+    <a href="#">Regionen</a><a href="#">Unterkünfte</a><a href="#">Camping</a><a href="#">Orte</a><a href="#">Gastro</a><a href="#">Erlebnisse</a><a href="#" class="active">Magazin</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="stream-hero">
+  <div class="container">
+    <span style="font-size:64px;display:block;margin-bottom:8px;position:relative;z-index:1;">📰</span>
+    <h1>Magazin</h1>
+    <p>Geschichten, Tipps und Insider-Wissen – erzählt als Story-Stream.</p>
+  </div>
+</section>
+
+<!-- Featured Story -->
+<section class="story-section container">
+  <div class="featured-story">
+    <div class="featured-story-inner">
+      <div class="featured-visual">
+        <span>💡</span>
+      </div>
+      <div class="featured-body">
+        <div class="featured-badge">TOP</div>
+        <div class="featured-meta">
+          <span><span class="cat-dot" style="background:#00C853;"></span> Tipps</span>
+          <span>📅 18. Mai 2026</span>
+          <span>📖 5 Min</span>
+        </div>
+        <h2>Familienurlaub in Tirol – Die besten Tipps für Kids</h2>
+        <p>Bergbahnen, Murmelbahnen und Bauernhöfe: Tirol ist eines der kinderfreundlichsten Urlaubsziele der Alpen.</p>
+        <a href="#" class="featured-cta">Zum Artikel →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline Stories -->
+  <div class="story-card">
+    <div class="story-visual" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9);">
+      <span class="story-date-badge">⭐ Neu</span>
+      ✈️
+    </div>
+    <div class="story-content">
+      <span class="story-tag story-tag-reiseberichte">✈️ Reiseberichte</span>
+      <h3>Innsbruck City Guide – Zwischen Berg und Moderne</h3>
+      <p>Innsbruck vereint mittelalterliche Altstadt mit moderner Architektur – und die Berge sind immer zum Greifen nah.</p>
+      <a href="#" class="story-link">Story entdecken →</a>
+    </div>
+  </div>
+
+  <div class="story-card">
+    <div class="story-visual" style="background:linear-gradient(135deg,#FF6B35,#E64900);">
+      <span class="story-date-badge">🔍 Hintergrund</span>
+      🍽️
+    </div>
+    <div class="story-content">
+      <span class="story-tag story-tag-hintergrund">🔍 Hintergrund</span>
+      <h3>Tiroler Kulinarik – Mehr als nur Kaiserschmarrn</h3>
+      <p>Von der Alm bis zur Spitzenküche: Tirols kulinarische Vielfalt überrascht mit Tradition und Innovation.</p>
+      <a href="#" class="story-link">Story entdecken →</a>
+    </div>
+  </div>
+
+  <div class="story-card">
+    <div class="story-visual" style="background:linear-gradient(135deg,#0051BA,#003A8A);">
+      <span class="story-date-badge">🎭 Kultur</span>
+      🎭
+    </div>
+    <div class="story-content">
+      <span class="story-tag story-tag-hintergrund">🔍 Hintergrund</span>
+      <h3>Kultur in Innsbruck – Von Habsburg bis Zaha Hadid</h3>
+      <p>Museen, Theater und Architektur in der Alpenmetropole – ein kultureller Streifzug.</p>
+      <a href="#" class="story-link">Story entdecken →</a>
+    </div>
+  </div>
+
+  <div class="story-card">
+    <div class="story-visual" style="background:linear-gradient(135deg,#00C853,#009624);">
+      <span class="story-date-badge">♨️ Wellness</span>
+      ♨️
+    </div>
+    <div class="story-content">
+      <span class="story-tag story-tag-tipps">💡 Tipps</span>
+      <h3>Wellness & Thermen in Tirol</h3>
+      <p>Entspannung pur in den schönsten Thermen der Alpen. Ein Überblick für Erholungssuchende.</p>
+      <a href="#" class="story-link">Story entdecken →</a>
+    </div>
+  </div>
+
+  <div class="load-more">
+    <button>📖 Alle 13 Artikel laden</button>
+  </div>
+
+  <!-- Newsletter -->
+  <div class="newsletter-teaser">
+    <h3>📬 Bleib dran</h3>
+    <p>Einmal im Monat die schönsten Seiten Tirols – Geschichten, Events & exklusive Angebote.</p>
+    <div class="newsletter-input">
+      <input type="email" placeholder="Deine E-Mail-Adresse">
+      <button>Abonnieren</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 tiroltourismus.com – Mockup 2: Story-Stream (Alpenpeak Dark)</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

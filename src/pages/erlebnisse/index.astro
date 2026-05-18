@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import SectionMap from '../../sections/SectionMap.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const erlebnisse = readCollection('erlebnisse').filter(e => isPublished(e.entry));
@@ -28,6 +29,18 @@ const kategorieLabel = {
   kultur: 'Kultur',
   abenteuer: 'Abenteuer',
 };
+
+const erlebnisseMitKarte = erlebnisse.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng);
+const erlebnisseMarkers = erlebnisseMitKarte.map((e) => {
+  const meta = kategorieMeta[e.entry.kategorie] || {};
+  return {
+    lat: e.entry.koordinaten.lat,
+    lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel,
+    href: '/erlebnisse/' + e.slug + '/',
+    emoji: e.entry.emoji || meta.emoji || '🏔️',
+  };
+});
 ---
 
 <BaseLayout
@@ -50,6 +63,15 @@ const kategorieLabel = {
         <span class="hero-urgency">🔥 {erlebnisse.length} Abenteuer</span>
       </div>
     </Hero>
+
+    <SectionMap
+      markers={erlebnisseMarkers}
+      label={`${erlebnisseMarkers.length} Erlebnisse`}
+      title="Auf einen Blick"
+      height="380px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
 
     {erlebnisse.length > 0 ? (
       <section class="section">

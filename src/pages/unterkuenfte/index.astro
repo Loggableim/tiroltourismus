@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import SectionMap from '../../sections/SectionMap.astro';
 import AccommodationCard from '../../components/AccommodationCard.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const unterkuenfte = readCollection('unterkuenfte').filter(u => isPublished(u.entry));
+const unterkunftMitCoords = unterkuenfte.filter(u => u.entry.koordinaten?.lat && u.entry.koordinaten?.lng);
 const sorted = unterkuenfte.sort((a, b) => {
   const order = { gold: 0, silver: 1, basic: 2 };
   return (order[a.entry.tier || 'basic'] || 2) - (order[b.entry.tier || 'basic'] || 2);
@@ -31,6 +33,24 @@ const sorted = unterkuenfte.sort((a, b) => {
         </p>
       </div>
     </section>
+
+    {unterkunftMitCoords.length > 0 && (
+      <SectionMap
+        markers={unterkunftMitCoords.map(u => ({
+          lat: u.entry.koordinaten.lat,
+          lng: u.entry.koordinaten.lng,
+          label: u.entry.name,
+          emoji: u.entry.typ === 'camping' ? '🏕️' : (u.entry.emoji || '🏨'),
+          href: '/unterkuenfte/' + u.slug + '/',
+          category: 'unterkuenfte',
+        }))}
+        label={unterkunftMitCoords.length + ' Unterkünfte'}
+        title="Auf einen Blick"
+        height="380px"
+        scrollWheelZoom={true}
+        filterable={true}
+      />
+    )}
 
     {sorted.length > 0 ? (
       <section class="section">

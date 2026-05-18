@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ContactForm from '../../components/ContactForm.tsx';
 ---
 
 <BaseLayout
@@ -54,9 +55,9 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
               <div class="kontakt-icon">📧</div>
               <div>
                 <a
-                  href="mailto:hallo@tiroltourismus.com"
+                  href="mailto:office@tiroltourismus.com"
                   class="kontakt-email"
-                  >hallo@tiroltourismus.com</a
+                  >office@tiroltourismus.com</a
                 >
               </div>
             </div>
@@ -106,49 +107,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
               Schreib uns eine Nachricht – wir melden uns innerhalb von 24 h
               zurück.
             </p>
-            <form
-              class="kontakt-form"
-              onsubmit="alert('Vielen Dank für deine Nachricht! Wir melden uns bald bei dir.');return false"
-            >
-              <label class="kontakt-field">
-                <span class="kontakt-label">Name *</span>
-                <input
-                  type="text"
-                  placeholder="Dein Name"
-                  required
-                  class="kontakt-input"
-                />
-              </label>
-              <label class="kontakt-field">
-                <span class="kontakt-label">E-Mail *</span>
-                <input
-                  type="email"
-                  placeholder="deine@email.at"
-                  required
-                  class="kontakt-input"
-                />
-              </label>
-              <label class="kontakt-field">
-                <span class="kontakt-label">Betreff</span>
-                <input
-                  type="text"
-                  placeholder="Worum geht es?"
-                  class="kontakt-input"
-                />
-              </label>
-              <label class="kontakt-field">
-                <span class="kontakt-label">Nachricht *</span>
-                <textarea
-                  rows="5"
-                  placeholder="Deine Nachricht an uns …"
-                  required
-                  class="kontakt-input kontakt-textarea"
-                ></textarea>
-              </label>
-              <button type="submit" class="btn btn-pink kontakt-submit">
-                Senden ✈️
-              </button>
-            </form>
+            <ContactForm client:load />
           </div>
         </div>
       </div>
@@ -330,49 +289,6 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     color: var(--text3);
     margin: 0 0 20px;
     line-height: 1.5;
-  }
-  .kontakt-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .kontakt-field {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .kontakt-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text2);
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
-  .kontakt-input {
-    padding: 12px 16px;
-    border-radius: var(--radius-sm);
-    background: var(--bg);
-    border: 1px solid var(--glass-border);
-    color: var(--text);
-    font-size: 14px;
-    font-family: inherit;
-    transition: border-color 0.2s;
-  }
-  .kontakt-input:focus {
-    border-color: var(--pink);
-    outline: none;
-  }
-  .kontakt-input::placeholder {
-    color: var(--text3);
-  }
-  .kontakt-textarea {
-    resize: vertical;
-    min-height: 110px;
-    line-height: 1.6;
-  }
-  .kontakt-submit {
-    align-self: flex-start;
-    margin-top: 4px;
   }
 
   /* ==============================================================

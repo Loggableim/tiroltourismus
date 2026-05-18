@@ -22,6 +22,7 @@ interface FormData {
   email: string;
   telefon: string;
   bildUrl: string;
+  serverSlug?: string;
 }
 
 interface FormErrors {
@@ -44,6 +45,12 @@ const BETRIEB_TYPEN = [
 ];
 
 const STORAGE_KEY = 'tirol_pending_betriebe';
+/* Server-API-Endpoint: in dev lokal, in prod über den Webhook-Server */
+function getApiUrl() {
+  return typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:3456/api/betrieb-register'
+    : 'https://webhook.tiroltourismus.com/api/betrieb-register';
+}
 
 /* ── Helpers ── */
 /** Einen lesbaren Slug aus dem Namen generieren */
@@ -129,7 +136,7 @@ export default function BetriebRegistrationForm() {
   }
 
   /* ── Submit ── */
-  function handleSubmit(ev: FormEvent) {
+  async function handleSubmit(ev: FormEvent) {
     ev.preventDefault();
     if (!validate()) return;
 
@@ -147,8 +154,31 @@ export default function BetriebRegistrationForm() {
         bildUrl: form.bildUrl.trim(),
       };
 
+      // 1. Immer in localStorage speichern (Offline-Fallback + Admin-Dashboard)
       savePending(entry);
-      setSavedEntry(entry);
+
+      // 2. Optional an Server senden (falls verfügbar)
+      let serverSlug: string | undefined;
+      try {
+        const resp = await fetch(getApiUrl(), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(entry),
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          serverSlug = data.slug;
+          console.log(`✅ Betrieb auf Server registriert: ${serverSlug}`);
+        } else {
+          const errData = await resp.json();
+          console.warn('⚠️ Server-Registrierung fehlgeschlagen:', errData.error || resp.status);
+        }
+      } catch (netErr) {
+        // Server nicht erreichbar → nur localStorage (kein Fehler für User)
+        console.warn('⚠️ Server nicht erreichbar, nur lokal gespeichert');
+      }
+
+      setSavedEntry({ ...entry, serverSlug });
       setState('success');
       setForm({
         name: '',
@@ -209,6 +239,11 @@ export default function BetriebRegistrationForm() {
             übermittelt und wird von unserem Team geprüft. Du erhältst in Kürze
             eine Bestätigung per E-Mail.
           </p>
+          {savedEntry.serverSlug && (
+            <p className="br-success-text" style={{ fontSize: '12px', color: 'var(--green)' }}>
+              ✅ Auch auf dem Server gespeichert (Slug: {savedEntry.serverSlug})
+            </p>
+          )}
 
           <div className="br-success-json">
             <strong>📄 JSON-Vorschau (wird an Admin gesendet):</strong>

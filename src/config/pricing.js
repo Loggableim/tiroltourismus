@@ -17,11 +17,11 @@
  */
 
 export const LEMONSQUEEZY = {
-  // ── REPLACE WITH YOUR REAL IDs ──
-  storeId: 0,             // Your LemonSqueezy Store ID
+  // ── LemonSqueezy Store & Variant IDs ──
+  storeId: 379815,          // Tirol Tourismus Store
   variants: {
-    silver: 0,            // Your Silver variant ID (19€/month)
-    gold: 0,              // Your Gold variant ID (49€/month)
+    silver: 1671559,        // Silver — 19€/month
+    gold: 1671576,          // Gold — 49€/month
   },
   // Lemon.js script URL
   scriptUrl: 'https://lmsqueezy.com/lemon.js',

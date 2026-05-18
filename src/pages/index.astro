@@ -8,6 +8,7 @@ import ArticleCard from '../components/ArticleCard.astro';
 import GastroCard from '../components/GastroCard.astro';
 import SightCard from '../components/SightCard.astro';
 import NewsletterForm from '../components/NewsletterForm.tsx';
+import SectionMap from '../sections/SectionMap.astro';
 import { readCollection, isPublished } from '../lib/content.js';
 import page from '../data/homepage.json';
 
@@ -23,6 +24,46 @@ const top3Camping = [...camping].sort((a, b) => {
   const order = { gold: 0, silver: 1, basic: 2 };
   return (order[a.entry.tier||'basic']||2) - (order[b.entry.tier||'basic']||2);
 }).slice(0, 3);
+
+// ── Tirol-Übersichts-Karte: Marker aus allen Collections ──
+const mapMarkers = [
+  ...unterkuenfte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Unterkunft',
+    href: `/unterkuenfte/${e.slug}/`,
+    emoji: e.entry.emoji || '🏨', category: 'unterkuenfte',
+  })),
+  ...alleGastro.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Gastro',
+    href: `/gastro/${e.slug}/`,
+    emoji: e.entry.emoji || '🍽️', category: 'gastro',
+  })),
+  ...alleOrte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Ort',
+    href: `/orte/${e.slug}/`,
+    emoji: e.entry.emoji || '🏘️', category: 'orte',
+  })),
+  ...alleSights.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Sehenswürdigkeit',
+    href: `/sehenswuerdigkeiten/${e.slug}/`,
+    emoji: e.entry.emoji || '🏛️', category: 'sehenswuerdigkeiten',
+  })),
+  ...camping.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Camping',
+    href: `/camping/${e.slug}/`,
+    emoji: e.entry.emoji || '🏕️', category: 'camping',
+  })),
+  ...alleMagazin.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.titel || e.entry.name || 'Magazin',
+    href: `/magazin/${e.slug}/`,
+    emoji: e.entry.emoji || '📰', category: 'magazin',
+  })),
+].slice(0, 250);
 
 // ── Sort accommodations: gold first, then silver, then basic ──
 const sortedUnterkuenfte = [...unterkuenfte].sort((a, b) => {
@@ -97,6 +138,16 @@ function formatDate(d) {
         </div>
       </div>
     </section>
+
+    <!-- ═══ TIROL-KARTE ═══ -->
+    <SectionMap
+      markers={mapMarkers}
+      label={`${mapMarkers.length} Orte entdecken`}
+      title="Tirol entdecken"
+      height="450px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
 
     <!-- ═══ STATS ═══ -->
     <section class="stats" aria-label="Statistiken">

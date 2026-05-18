@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mockup 1 – Dynamisches Kacheldesign – Tirol Magazin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#F5F3F0;--bg2:#EDE8E2;
+    --surface:rgba(0,0,0,.03);--surface-hover:rgba(0,0,0,.06);
+    --text:#1A1A1A;--text2:rgba(0,0,0,.60);--text3:rgba(0,0,0,.38);
+    --tirol-pink:#FF1493;--tirol-pink-dark:#C0006E;
+    --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);
+    --gold:#D4A800;--gold-light:#FFD700;
+    --glass:rgba(255,255,255,.7);--glass-border:rgba(0,0,0,.06);
+    --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+    --font-body:'Montserrat',-apple-system,sans-serif;
+    --radius:12px;--radius-lg:20px;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ───────────── HEADER ───────────── */
+  .topbar{
+    background:#1A1A1A;padding:10px 0;font-size:12px;color:rgba(255,255,255,.6);
+    position:fixed;top:0;left:0;right:0;z-index:100;
+  }
+  .topbar .container{display:flex;justify-content:space-between;align-items:center;}
+  .topbar a{color:rgba(255,255,255,.6);text-decoration:none;padding:2px 8px;}
+  .main-nav{
+    position:fixed;top:40px;left:20px;right:20px;z-index:99;
+    background:#fff;border-radius:100px;box-shadow:0 2px 20px rgba(0,0,0,.06);
+    border:1px solid rgba(0,0,0,.04);padding:0 24px;max-width:1160px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;height:56px;
+  }
+  .nav-logo{font-family:var(--font-display);font-size:24px;letter-spacing:2px;text-transform:uppercase;color:var(--text);text-decoration:none;}
+  .nav-links{display:flex;gap:4px;}
+  .nav-links a{padding:6px 12px;font-size:12px;font-weight:500;color:var(--text2);text-decoration:none;border-radius:100px;transition:all .3s;}
+  .nav-links a.active{background:var(--pink);color:#fff;}
+
+  /* ───────────── HERO ───────────── */
+  .masonry-hero{
+    margin-top:96px;padding:80px 0 60px;text-align:center;
+    background:linear-gradient(135deg, #EDE8E2 0%, #F5F3F0 50%, #fff 100%);
+    border-bottom:1px solid var(--glass-border);position:relative;overflow:hidden;
+  }
+  .masonry-hero::before{
+    content:'';position:absolute;top:-30%;left:-5%;width:500px;height:500px;
+    border-radius:50%;background:rgba(255,20,147,.08);filter:blur(80px);pointer-events:none;
+  }
+  .masonry-hero h1{
+    font-family:var(--font-display);font-size:clamp(48px,7vw,96px);line-height:1;
+    letter-spacing:2px;text-transform:uppercase;position:relative;z-index:1;
+  }
+  .masonry-hero p{
+    font-size:16px;color:var(--text2);max-width:500px;margin:8px auto 0;
+    position:relative;z-index:1;
+  }
+
+  /* ───────────── FILTER CHIPS ───────────── */
+  .filter-bar{
+    padding:24px 0 8px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  }
+  .filter-chip{
+    padding:6px 18px;border-radius:100px;font-size:11px;font-weight:600;
+    background:var(--bg2);border:1px solid var(--glass-border);cursor:pointer;
+    transition:all .3s var(--ease);text-transform:uppercase;letter-spacing:.3px;
+  }
+  .filter-chip:hover,.filter-chip.active{background:var(--pink);color:#fff;border-color:var(--pink);}
+  .filter-chip-count{
+    display:inline-block;margin-left:4px;font-size:9px;opacity:.6;
+  }
+
+  /* ───────────── MASONRY TILES ───────────── */
+  .masonry-section{padding:40px 0 80px;}
+  .masonry{
+    column-count:3;column-gap:20px;
+  }
+  @media(max-width:968px){.masonry{column-count:2;}}
+  @media(max-width:600px){.masonry{column-count:1;}}
+
+  .tile{
+    break-inside:avoid;margin-bottom:20px;
+    border-radius:var(--radius-lg);overflow:hidden;
+    background:var(--bg2);border:1px solid var(--glass-border);
+    transition:all .4s var(--ease);cursor:pointer;display:block;text-decoration:none;color:inherit;
+    position:relative;
+  }
+  .tile:hover{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08);}
+  
+  .tile-visual{
+    display:flex;align-items:center;justify-content:center;font-size:56px;
+    background:linear-gradient(135deg, var(--surface), var(--surface-hover));
+    position:relative;overflow:hidden;
+  }
+  .tile-visual .tile-bg-icon{
+    position:absolute;font-size:120px;opacity:.06;pointer-events:none;
+  }
+  
+  /* Tile size variants */
+  .tile-sm .tile-visual{height:120px;}
+  .tile-md .tile-visual{height:180px;}
+  .tile-lg .tile-visual{height:260px;}
+  .tile-xl .tile-visual{height:320px;}
+  
+  /* Featured tile spans full width */
+  .tile-featured{column-span:all;display:grid;grid-template-columns:1fr 1fr;margin-bottom:20px;}
+  .tile-featured .tile-visual{height:280px;}
+  .tile-featured .tile-body{padding:32px;}
+  @media(max-width:768px){.tile-featured{grid-template-columns:1fr;}}
+
+  .tile-body{padding:16px 20px 20px;display:flex;flex-direction:column;}
+  .tile-tag{
+    display:inline-block;padding:3px 12px;border-radius:100px;font-size:9px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;width:fit-content;
+  }
+  .tile-tag-tipps{background:rgba(0,200,83,.12);color:#00C853;}
+  .tile-tag-reiseberichte{background:rgba(139,92,246,.12);color:#8B5CF6;}
+  .tile-tag-hintergrund{background:rgba(255,107,53,.12);color:#FF6B35;}
+  .tile-tag-interview{background:rgba(0,81,186,.12);color:#0051BA;}
+  .tile-tag-allgemein{background:rgba(255,20,147,.12);color:#FF1493;}
+  
+  .tile-date{font-size:10px;color:var(--text3);margin-bottom:4px;}
+  .tile-title{font-family:var(--font-display);font-size:24px;line-height:1.1;letter-spacing:.3px;margin-bottom:6px;}
+  .tile-sm .tile-title{font-size:20px;}
+  .tile-lg .tile-title{font-size:30px;}
+  .tile-xl .tile-title{font-size:36px;}
+  .tile-teaser{font-size:13px;color:var(--text2);line-height:1.6;}
+  .tile-link{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink);margin-top:12px;display:inline-flex;align-items:center;gap:4px;transition:all .3s;}
+  .tile:hover .tile-link{gap:8px;}
+
+  /* Category color accents on hover */
+  .tile[data-cat="tipps"]:hover{border-color:#00C853;}
+  .tile[data-cat="reiseberichte"]:hover{border-color:#8B5CF6;}
+  .tile[data-cat="hintergrund"]:hover{border-color:#FF6B35;}
+  .tile[data-cat="interview"]:hover{border-color:#0051BA;}
+
+  /* ───────────── COUNTER BADGE ───────────── */
+  .tile-stat{
+    display:flex;gap:12px;margin-top:8px;font-size:11px;color:var(--text3);
+  }
+  .tile-stat span{display:flex;align-items:center;gap:4px;}
+
+  /* ───────────── FOOTER ───────────── */
+  .footer{padding:60px 0 40px;background:var(--bg2);border-top:1px solid var(--glass-border);margin-top:40px;}
+  .footer-bottom{text-align:center;font-size:13px;color:var(--text3);padding-top:32px;border-top:1px solid var(--glass-border);}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<div class="topbar"><div class="container"><span>🇦🇹 Tirol Tourismus</span><div><a href="#">Magazin</a><a href="#">Preise</a><a href="#">Kontakt</a></div></div></div>
+<nav class="main-nav">
+  <a href="#" class="nav-logo">TIROL <span style="color:var(--pink)">tourismus</span></a>
+  <div class="nav-links">
+    <a href="#">Regionen</a><a href="#">Unterkünfte</a><a href="#">Camping</a><a href="#">Orte</a><a href="#">Gastro</a><a href="#">Erlebnisse</a><a href="#" class="active">Magazin</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="masonry-hero">
+  <div class="container">
+    <span style="font-size:64px;display:block;margin-bottom:8px;position:relative;z-index:1;">📰</span>
+    <h1>Magazin</h1>
+    <p>Geschichten, Tipps und Insider-Wissen – diesmal im dynamischen Kacheldesign.</p>
+  </div>
+</section>
+
+<!-- Filter-Bar -->
+<section class="container">
+  <div class="filter-bar">
+    <span class="filter-chip active">Alle <span class="filter-chip-count">13</span></span>
+    <span class="filter-chip">💡 Tipps <span class="filter-chip-count">3</span></span>
+    <span class="filter-chip">✈️ Reiseberichte <span class="filter-chip-count">4</span></span>
+    <span class="filter-chip">🎙️ Interview <span class="filter-chip-count">2</span></span>
+    <span class="filter-chip">🔍 Hintergrund <span class="filter-chip-count">4</span></span>
+    <span class="filter-chip">📰 Allgemein <span class="filter-chip-count">1</span></span>
+  </div>
+</section>
+
+<!-- Masonry Tiles -->
+<section class="masonry-section container">
+
+  <!-- Featured Tile – XL, full-width -->
+  <a href="#" class="tile tile-featured" data-cat="tipps">
+    <div class="tile-visual" style="background:linear-gradient(135deg,#FF1493,#C0006E);font-size:100px;color:#fff;">
+      <span class="tile-bg-icon">💡</span>
+      💡
+      <span style="position:absolute;bottom:16px;left:20px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.6);">⭐ Featured Story</span>
+    </div>
+    <div class="tile-body">
+      <span class="tile-tag tile-tag-tipps">💡 Tipps</span>
+      <div class="tile-date">18. Mai 2026</div>
+      <h2 class="tile-title" style="font-size:clamp(28px,4vw,44px);">Familienurlaub in Tirol – Die besten Tipps für Kids</h2>
+      <p class="tile-teaser">Bergbahnen, Murmelbahnen und Bauernhöfe: Tirol ist eines der kinderfreundlichsten Urlaubsziele der Alpen.</p>
+      <div class="tile-stat">
+        <span>📖 5 Min Lesezeit</span>
+        <span>❤️ 24</span>
+      </div>
+      <span class="tile-link">Zum Artikel →</span>
+    </div>
+  </a>
+
+  <div class="masonry">
+    <!-- XL Tile – Innsbruck City Guide -->
+    <a href="#" class="tile tile-xl" data-cat="reiseberichte">
+      <div class="tile-visual" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9);font-size:80px;color:#fff;">
+        ✈️
+      </div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="tile-date">18. Mai 2026</div>
+        <h2 class="tile-title" style="font-size:32px;">Innsbruck City Guide</h2>
+        <p class="tile-teaser">Innsbruck vereint mittelalterliche Altstadt mit moderner Architektur – und die Berge sind immer zum Greifen nah.</p>
+        <div class="tile-stat"><span>📖 4 Min</span><span>❤️ 18</span></div>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <!-- SM Tile – Kitzbühel -->
+    <a href="#" class="tile tile-sm" data-cat="allgemein">
+      <div class="tile-visual" style="font-size:48px;">🎿</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-allgemein">📰 Allgemein</span>
+        <div class="tile-date">17. Mai 2026</div>
+        <h3 class="tile-title" style="font-size:20px;">Kitzbühel Events 2026</h3>
+        <p class="tile-teaser">Was ist los in der Gamsstadt?</p>
+        <span class="tile-link">→</span>
+      </div>
+    </a>
+
+    <!-- MD Tile – Tiroler Kulinarik -->
+    <a href="#" class="tile tile-md" data-cat="hintergrund">
+      <div class="tile-visual" style="background:linear-gradient(135deg,#FF6B35,#E64900);font-size:64px;color:#fff;">🍽️</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-hintergrund">🔍 Hintergrund</span>
+        <div class="tile-date">18. Mai 2026</div>
+        <h3 class="tile-title">Tiroler Kulinarik</h3>
+        <p class="tile-teaser">Von der Alm bis zur Spitzenküche: Tirols kulinarische Vielfalt überrascht mit Tradition und Innovation.</p>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <!-- MD Tile – Kulinarik Ötztal -->
+    <a href="#" class="tile tile-md" data-cat="tipps">
+      <div class="tile-visual" style="font-size:56px;">🧀</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-tipps">💡 Tipps</span>
+        <div class="tile-date">16. Mai 2026</div>
+        <h3 class="tile-title">Kulinarik Ötztal</h3>
+        <p class="tile-teaser">Die besten Hütten und Wirtshäuser im Ötztal.</p>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <!-- LG Tile – Kultur Innsbruck -->
+    <a href="#" class="tile tile-lg" data-cat="hintergrund">
+      <div class="tile-visual" style="background:linear-gradient(135deg,#0051BA,#003A8A);font-size:72px;color:#fff;">🎭</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-hintergrund">🔍 Hintergrund</span>
+        <div class="tile-date">15. Mai 2026</div>
+        <h2 class="tile-title" style="font-size:30px;">Kultur in Innsbruck</h2>
+        <p class="tile-teaser">Museen, Theater und Architektur in der Alpenmetropole.</p>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <!-- SM Tile – Skifahren Arlberg -->
+    <a href="#" class="tile tile-sm" data-cat="reiseberichte">
+      <div class="tile-visual" style="font-size:48px;">⛷️</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="tile-date">14. Mai 2026</div>
+        <h3 class="tile-title" style="font-size:20px;">Skifahren Arlberg</h3>
+        <p class="tile-teaser">Powder, Pisten und Panorama.</p>
+        <span class="tile-link">→</span>
+      </div>
+    </a>
+
+    <!-- LG Tile – Wellness Thermen -->
+    <a href="#" class="tile tile-lg" data-cat="tipps">
+      <div class="tile-visual" style="background:linear-gradient(135deg,#00C853,#009624);font-size:72px;color:#fff;">♨️</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-tipps">💡 Tipps</span>
+        <div class="tile-date">13. Mai 2026</div>
+        <h2 class="tile-title" style="font-size:30px;">Wellness & Thermen in Tirol</h2>
+        <p class="tile-teaser">Entspannung pur in den schönsten Thermen der Alpen. Ein Überblick für Erholungssuchende.</p>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <!-- SM Tile – Stubaital -->
+    <a href="#" class="tile tile-sm" data-cat="reiseberichte">
+      <div class="tile-visual" style="font-size:48px;">🥾</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="tile-date">12. Mai 2026</div>
+        <h3 class="tile-title" style="font-size:20px;">Stubaital Familien</h3>
+        <p class="tile-teaser">Abenteuer für Groß und Klein.</p>
+        <span class="tile-link">→</span>
+      </div>
+    </a>
+
+    <!-- MD Tile – Winterurlaub Tirol -->
+    <a href="#" class="tile tile-md" data-cat="reiseberichte">
+      <div class="tile-visual" style="background:linear-gradient(135deg,#1a1a3e,#2a2a5e);font-size:64px;color:#fff;">❄️</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-reiseberichte">✈️ Reiseberichte</span>
+        <div class="tile-date">11. Mai 2026</div>
+        <h3 class="tile-title">Winterurlaub Tirol</h3>
+        <p class="tile-teaser">Die schönsten Winterziele und Aktivitäten abseits der Pisten.</p>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+
+    <!-- SM Tile – Kaunertal -->
+    <a href="#" class="tile tile-sm" data-cat="tipps">
+      <div class="tile-visual" style="font-size:48px;">🏔️</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-tipps">💡 Tipps</span>
+        <div class="tile-date">10. Mai 2026</div>
+        <h3 class="tile-title" style="font-size:20px;">Skifahren Kaunertal</h3>
+        <p class="tile-teaser">Gletscherski bis in den Mai.</p>
+        <span class="tile-link">→</span>
+      </div>
+    </a>
+
+    <!-- MD Tile – Wanderparadies Zillertal -->
+    <a href="#" class="tile tile-md" data-cat="hintergrund">
+      <div class="tile-visual" style="background:linear-gradient(135deg,#2d5a27,#4a8a3f);font-size:64px;color:#fff;">🌲</div>
+      <div class="tile-body">
+        <span class="tile-tag tile-tag-hintergrund">🔍 Hintergrund</span>
+        <div class="tile-date">9. Mai 2026</div>
+        <h3 class="tile-title">Wanderparadies Zillertal</h3>
+        <p class="tile-teaser">Die schönsten Touren und Einkehrmöglichkeiten.</p>
+        <span class="tile-link">Weiterlesen →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 tiroltourismus.com – Mockup 1: Dynamisches Kacheldesign</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Filter functionality
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

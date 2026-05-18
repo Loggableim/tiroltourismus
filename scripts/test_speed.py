@@ -1,27 +1,21 @@
-#!/usr/bin/env python3
-"""Speed test for local GPU model."""
-import json, urllib.request, time
+"""Quick responsiveness test."""
+import requests, time
 
-API_URL = "http://localhost:8080/v1/chat/completions"
-TYP_LABELS = {"hotel":"Hotel","gasthof":"Gasthof","ferienwohnung":"Ferienwohnung","ferienhaus":"Ferienhaus","jugendherberge":"Jugendherberge","camping":"Campingplatz","bauernhof":"Bauernhof"}
+ov = "https://overpass-api.de/api/interpreter"
+hdrs = {"User-Agent": "OverpassTurbo/1.0", "Accept": "application/json"}
+q = '[out:json][timeout:30];(node(46.4,10.1,47.6,12.9)[amenity=restaurant];node(46.4,10.1,47.6,12.9)[amenity=cafe];node(46.4,10.1,47.6,12.9)[amenity=pub];node(46.4,10.1,47.6,12.9)[amenity=bar];node(46.4,10.1,47.6,12.9)[amenity=bistro];node(46.4,10.1,47.6,12.9)[amenity=fast_food];);out center body;'
 
-def gen(ort, typ, name):
-    body = {
-        "model": "Dolphin3.0-Llama3.1-8B-Q4_K_M",
-        "messages": [
-            {"role": "system", "content": "Du schreibst kurze, sachliche Beschreibungen für ein Tirol-Tourismusportal. Deutsch, maximal 120 Wörter, als HTML-Paragraph."},
-            {"role": "user", "content": f"Schreibe 2-3 Sätze HTML über {name} in {ort}, Tirol. Art: {TYP_LABELS.get(typ,typ)}. Sachlich, maximal 120 Wörter. Format: <p>Text mit <strong>Hervorhebungen</strong>.</p>"}
-        ],
-        "max_tokens": 200, "temperature": 0.4,
-    }
-    t0 = time.time()
-    req = urllib.request.Request(API_URL, data=json.dumps(body).encode(), headers={"Content-Type":"application/json"}, method="POST")
-    resp = urllib.request.urlopen(req, timeout=120)
-    result = json.loads(resp.read())
-    text = result["choices"][0]["message"]["content"].strip()
-    if not text.startswith("<"): text = f"<p>{text}</p>"
-    return text, time.time() - t0
-
-for name, ort, typ in [("Bilgeri Irma","Nesselwängle","ferienwohnung"),("Bio Landhaus Seethaler","Thiersee","hotel"),("Blattlbauer","Going am Wilden Kaiser","gasthof")]:
-    text, t = gen(ort, typ, name)
-    print(f"  {name} ({t:.1f}s): {text[:120]}...")
+print(f"Query: {len(q)} chars", flush=True)
+t0 = time.time()
+r = requests.post(ov, data={"data": q}, headers=hdrs, timeout=120)
+elapsed = time.time() - t0
+print(f"Status: {r.status_code} in {elapsed:.1f}s", flush=True)
+if r.status_code == 200:
+    data = r.json()
+    print(f"Elements: {len(data.get('elements',[]))}", flush=True)
+    # Show some random names
+    for e in data.get("elements", [])[:5]:
+        name = e.get("tags", {}).get("name", "?")
+        print(f"  Sample: {name}", flush=True)
+else:
+    print(f"Body: {r.text[:200]}", flush=True)

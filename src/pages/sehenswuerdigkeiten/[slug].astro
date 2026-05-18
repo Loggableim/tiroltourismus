@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby } from '../../lib/content.js';
 
 export async function getStaticPaths() {
   const all = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
@@ -14,6 +14,40 @@ if (!entry) return Astro.redirect('/sehenswuerdigkeiten/');
 const catLabel = { natur:'Natur', kultur:'Kultur', aussicht:'Aussicht', sport:'Sport', museum:'Museum', kirche:'Kirche', burg:'Burg', wanderung:'Wanderung' };
 const catEmoji = { natur:'🌿', kultur:'🎭', aussicht:'🏔️', sport:'⚡', museum:'🏛️', kirche:'⛪', burg:'🏰', wanderung:'🥾' };
 const catStr = entry.kategorie ? `${catEmoji[entry.kategorie] || ''} ${catLabel[entry.kategorie] || entry.kategorie}` : undefined;
+
+// Karten-Marker falls Koordinaten vorhanden
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const catStyle = { emoji: '🏛️', color: '#6B7280' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'sehenswuerdigkeiten', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat,
+    lng: entry.koordinaten.lng,
+    label: entry.name,
+    emoji: entry.emoji || catStyle.emoji,
+    href: entry.webseite || undefined,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: `/${n.collection}/${n.slug}/`,
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map',
+  label: 'Standort',
+  title: 'Auf der Karte',
+  markers: mapMarkers,
+  scrollWheelZoom: true,
+  filterable: true,
+} : null;
 ---
 
 <DetailPage
@@ -53,6 +87,7 @@ const catStr = entry.kategorie ? `${catEmoji[entry.kategorie] || ''} ${catLabel[
         entry.webseite ? { icon: '🌐', label: 'Webseite', value: entry.webseite.replace(/^https?:\/\//,'') + ' ↗', href: entry.webseite } : null,
       ].filter(Boolean),
     },
+    mapSection,
     {
       type: 'back-link',
       href: '/sehenswuerdigkeiten/',

@@ -7,6 +7,7 @@ import ArticleCard from '../../components/ArticleCard.astro';
 import GastroCard from '../../components/GastroCard.astro';
 import SightCard from '../../components/SightCard.astro';
 import NewsletterForm from '../../components/NewsletterForm.tsx';
+import SectionMap from '../../sections/SectionMap.astro';
 import { readCollection, isPublished, readSingleton } from '../../lib/content.js';
 
 export async function getStaticPaths() {
@@ -89,6 +90,47 @@ const alleGastro = readCollection('gastro', locale).filter(g => isPublished(g.en
 const alleOrte = readCollection('orte', locale).filter(o => isPublished(o.entry));
 const alleSights = readCollection('sehenswuerdigkeiten', locale).filter(s => isPublished(s.entry));
 const alleMagazin = readCollection('magazin', locale).filter(a => isPublished(a.entry));
+const camping = readCollection('camping', locale).filter(c => isPublished(c.entry));
+
+// ── Tirol-Übersichts-Karte: Marker aus allen Collections ──
+const mapMarkers = [
+  ...unterkuenfte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Unterkunft',
+    href: `${locale === 'en' ? '/en' : ''}/unterkuenfte/${e.slug}/`,
+    emoji: e.entry.emoji || '🏨', category: 'unterkuenfte',
+  })),
+  ...alleGastro.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Gastro',
+    href: `${locale === 'en' ? '/en' : ''}/gastro/${e.slug}/`,
+    emoji: e.entry.emoji || '🍽️', category: 'gastro',
+  })),
+  ...alleOrte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Ort',
+    href: `${locale === 'en' ? '/en' : ''}/orte/${e.slug}/`,
+    emoji: e.entry.emoji || '🏘️', category: 'orte',
+  })),
+  ...alleSights.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Sehenswürdigkeit',
+    href: `${locale === 'en' ? '/en' : ''}/sehenswuerdigkeiten/${e.slug}/`,
+    emoji: e.entry.emoji || '🏛️', category: 'sehenswuerdigkeiten',
+  })),
+  ...camping.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Camping',
+    href: `${locale === 'en' ? '/en' : ''}/camping/${e.slug}/`,
+    emoji: e.entry.emoji || '🏕️', category: 'camping',
+  })),
+  ...alleMagazin.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.titel || e.entry.name || 'Magazin',
+    href: `${locale === 'en' ? '/en' : ''}/magazin/${e.slug}/`,
+    emoji: e.entry.emoji || '📰', category: 'magazin',
+  })),
+].slice(0, 250);
 
 // ── Sort accommodations: gold first, then silver, then basic ──
 const sortedUnterkuenfte = [...unterkuenfte].sort((a, b) => {
@@ -162,6 +204,16 @@ function formatDate(d) {
         </div>
       </div>
     </section>
+
+    <!-- ═══ TIROL-KARTE ═══ -->
+    <SectionMap
+      markers={mapMarkers}
+      label={`${mapMarkers.length} Orte entdecken`}
+      title="Tirol entdecken"
+      height="450px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
 
     <!-- ═══ STATS ═══ -->
     <section class="stats" aria-label={locale === 'en' ? 'Statistics' : 'Statistiken'}>

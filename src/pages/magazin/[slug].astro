@@ -1,6 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findByTag } from '../../lib/content.js';
+import ArticleCard from '../../components/ArticleCard.astro';
 
 export async function getStaticPaths() {
   const articles = readCollection('magazin').filter(a => isPublished(a.entry));
@@ -11,8 +12,26 @@ const { slug } = Astro.params;
 const entry = readEntry('magazin', slug);
 if (!entry) return Astro.redirect('/magazin/');
 
+function formatDate(d) {
+  if (!d) return '';
+  try { return new Date(d + 'T00:00:00').toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
+
 const catEmoji = { allgemein:'📰', tipps:'💡', reiseberichte:'✈️', interview:'🎙️', hintergrund:'🔍' };
 const emoji = catEmoji[entry.kategorie] || '📰';
+const formattedDate = formatDate(entry.datum);
+
+// Verwandte Artikel via ersten Tag finden
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'magazin' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: catEmoji[r.entry.kategorie] || '📰' }
+      }))
+  : [];
 ---
 
 <DetailPage
@@ -23,7 +42,7 @@ const emoji = catEmoji[entry.kategorie] || '📰';
       type: 'article-hero',
       emoji: emoji,
       category: entry.kategorie,
-      date: entry.datum,
+      date: formattedDate,
       author: entry.autor,
       title: entry.titel,
       teaser: entry.teaser,
@@ -34,6 +53,24 @@ const emoji = catEmoji[entry.kategorie] || '📰';
       tags: entry.tags || [],
       backHref: '/magazin/',
       backText: 'Zurück zum Magazin',
+    } : null,
+    entry.koordinaten ? {
+      type: 'map',
+      markers: [{ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.titel }],
+      center: { lat: entry.koordinaten.lat, lng: entry.koordinaten.lng },
+      zoom: 10,
+      label: 'Karte',
+      title: 'Standort',
+    } : null,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Ähnliche Beiträge',
+      entries: relatedByTag,
+      slugPrefix: '/magazin/',
+      nameField: 'titel',
+      subtitleField: 'teaser',
+      emojiField: '_emoji',
+      defaultEmoji: '📰',
     } : null,
   ].filter(Boolean)}
 />

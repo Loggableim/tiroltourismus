@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby } from '../../lib/content.js';
 
 export async function getStaticPaths() {
   const all = readCollection('erlebnisse').filter(e => isPublished(e.entry));
@@ -27,6 +27,37 @@ function formatPreis(preis) {
   if (!preis && preis !== 0) return undefined;
   return `${Number(preis).toFixed(0)} €`;
 }
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'erlebnisse', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat,
+    lng: entry.koordinaten.lng,
+    label: entry.name,
+    emoji: emoji,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map',
+  label: 'Standort',
+  title: 'Auf der Karte',
+  markers: mapMarkers,
+  scrollWheelZoom: true,
+  filterable: true,
+} : null;
 ---
 
 <DetailPage
@@ -68,6 +99,7 @@ function formatPreis(preis) {
         entry.link && entry.link !== '#' ? { icon: '🌐', label: 'Informationen', value: 'Mehr erfahren ↗', href: entry.link } : null,
       ].filter(Boolean),
     },
+    mapSection,
     {
       type: 'cta',
       label: 'Lust bekommen?',

@@ -22,7 +22,7 @@ const htmlContent = marked.parse(content) as string;
         {tags && tags.length > 0 && (
           <div class="sec-art-tags">
             {tags.map((t) => (
-              <span class="tag">{t}</span>
+              <a href={'/magazin/tag/' + t + '/'} class="tag">{t}</a>
             ))}
           </div>
         )}

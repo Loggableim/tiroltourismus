@@ -10,7 +10,7 @@ import json, os, sys, time, re, ssl, urllib.request
 PROJECT_DIR = r"F:/tiroltourismus"
 CAMPING_DIR = os.path.join(PROJECT_DIR, "src/data/camping")
 API_URL = "https://opencode.ai/zen/go/v1/chat/completions"
-MODEL = "deepseek-v4-flash"
+MODEL = "mimo-v2-pro"
 RATE_LIMIT_SEC = 1.1
 
 API_KEY = ""

@@ -1,10 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import SectionMap from '../../sections/SectionMap.astro';
 import CampingCard from '../../components/CampingCard.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const camping = readCollection('camping').filter(c => isPublished(c.entry));
+const campingMitCoords = camping.filter(c => c.entry.koordinaten?.lat && c.entry.koordinaten?.lng);
 // Group by region for display
 const byRegion = {};
 for (const c of camping) {
@@ -56,6 +58,24 @@ const sortedRegions = Object.keys(byRegion).sort((a, b) => {
         </p>
       </div>
     </section>
+
+    {campingMitCoords.length > 0 && (
+      <SectionMap
+        markers={campingMitCoords.map(c => ({
+          lat: c.entry.koordinaten.lat,
+          lng: c.entry.koordinaten.lng,
+          label: c.entry.name,
+          emoji: '🏕️',
+          href: '/camping/' + c.slug + '/',
+          category: 'camping',
+        }))}
+        label={campingMitCoords.length + ' Campingplätze'}
+        title="Auf einen Blick"
+        height="380px"
+        scrollWheelZoom={true}
+        filterable={true}
+      />
+    )}
 
     {camping.length > 0 ? (
       <section class="section">

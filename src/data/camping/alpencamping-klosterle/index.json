@@ -11,8 +11,11 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.alpencamping-kloesterle.at/",
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p>Alpencamping Klösterle liegt im hinteren Verwalltal nahe der Arlberger Bergstraße. Der Campingplatz befindet sich in ruhiger Tallage direkt an einem Bachlauf. Gäste erwartet eine naturnahe Anlage mit <strong>gut gepflegten Stellplätzen</strong> für Zelte und Wohnwagen. Ein kleiner Spielplatz und die Nähe zu <strong>Wanderwegen</strong> machen den Platz besonders für Familien mit Kindern interessant.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
   "tags": [
     "camping",
     "natur",

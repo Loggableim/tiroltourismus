@@ -11,8 +11,11 @@
   "telefon": "+43 5224 68146; +43 699 19999109",
   "email": "info@alpencampingmark.com",
   "webseite": "https://www.alpencampingmark.com/",
-  "beschreibung": "",
-  "ausstattung": [],
+  "beschreibung": "<p><strong>Alpencamping Mark</strong> liegt am Rand von Weer im Bezirk Schwaz, eingebettet zwischen Wiesen und umgeben von den Bergen des Zillertals. Der Campingplatz bietet eine ruhige <strong>Alpenatmosphäre</strong> mit direktem Zugang zu Wanderwegen und ist Ausgangspunkt für Erkundungen der Region. Gäste können <strong>stellplätze für Wohnmobile und Zelte</strong> nutzen, Sanitäranlagen sowie einen kleinen Spielplatz erwarten. Die Anlage richtet sich an Naturliebhaber, die einen einfachen, naturnahen Aufenthalt in Tirol suchen.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
   "tags": [
     "camping",
     "natur",

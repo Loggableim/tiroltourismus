@@ -1,23 +1,34 @@
 /**
  * NewsletterForm.tsx — React newsletter signup component
  *
- * Uses: Web3Forms API (same backend as ContactForm).
- * Fields: Vorname, Email + DSGVO consent.
- * States: idle → loading → success / error
+ * Architecture:
+ *   [Form] → POST /api/newsletter → [webhook server (Express)] → MailerLite API
  *
- * Double Opt-in: Web3Forms supports "Autoresponder" on paid plans.
- * Configure in the Web3Forms dashboard → Email Settings → Autoresponder
- * to send a confirmation email after subscription.
+ * The webhook server proxies subscriptions to MailerLite. The API key lives
+ * server-side in webhook/.env (MAILERLITE_API_KEY), never on the client.
  *
- * Before use: replace the access_key below with your Web3Forms key.
- * Sign up at https://web3forms.com/ to get one (free tier: 250/mo).
+ * Fallback: Web3Forms (if webhook server URL is not configured).
+ *
+ * Setup:
+ * 1. Deploy the webhook server (webhook/server.js)
+ * 2. Set NEWSLETTER_API_URL below to your deployed server URL
+ * 3. Verify in MailerLite dashboard: Group "Newsletter" → active subscribers
  */
 
 import { useState, type FormEvent } from 'react';
 
-/* 🔑 Replace with your actual Web3Forms access_key */
-const ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
+/* ══ Newsletter API (backed by webhook server → MailerLite) ══
+ * The webhook server proxies to MailerLite API (no key exposed on client).
+ * Change NEWSLETTER_API_URL to your deployed webhook server URL.
+ * Example: 'https://webhook.tiroltourismus.com/api/newsletter'
+ */
+const NEWSLETTER_API_URL = 'https://webhook.tiroltourismus.com/api/newsletter';
 
+/* ══ Web3Forms Fallback (existing) ══
+ * Used when webhook server is not yet deployed.
+ * Sign up at https://web3forms.com/ (free tier: 250/mo).
+ */
+const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE';
 const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
 
 type FormState = 'idle' | 'loading' | 'success' | 'error';
@@ -50,6 +61,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
   const [errors, setErrors] = useState<FormErrors>({});
   const [state, setState] = useState<FormState>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [submittedEmail, setSubmittedEmail] = useState('');
 
   /* ── Validation ── */
   function validate(): boolean {
@@ -75,48 +87,82 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
     return Object.keys(e).length === 0;
   }
 
-  /* ── Submit ── */
-  async function handleSubmit(ev: FormEvent) {
-    ev.preventDefault();
-    if (!validate()) return;
-    if (ACCESS_KEY === 'YOUR_ACCESS_KEY_HERE') {
+  /* ── Submit to Newsletter API (webhook server → MailerLite) ── */
+  async function submitToApi(data: NewsletterFormData): Promise<boolean> {
+    if (!NEWSLETTER_API_URL) return false;
+
+    try {
+      const res = await fetch(NEWSLETTER_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: data.email.trim(),
+          name: data.name.trim(),
+        }),
+      });
+      return res.ok;
+    } catch {
+      return false;
+    }
+  }
+
+  /* ── Submit to Web3Forms (fallback) ── */
+  async function submitToWeb3Forms(data: NewsletterFormData): Promise<boolean> {
+    if (WEB3FORMS_ACCESS_KEY === 'YOUR_ACCESS_KEY_HERE') {
       setErrorMsg(
-        'Das Newsletter-Formular ist noch nicht konfiguriert. Bitte setze einen Web3Forms Access Key ein.'
+        'Das Newsletter-Formular ist noch nicht konfiguriert. Bitte setze einen MailerLite-Form-Link oder Web3Forms Access Key ein.'
       );
       setState('error');
-      return;
+      return false;
     }
-
-    setState('loading');
-    setErrorMsg('');
 
     try {
       const res = await fetch(WEB3FORMS_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: ACCESS_KEY,
-          name: form.name.trim(),
-          email: form.email.trim(),
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: data.name.trim(),
+          email: data.email.trim(),
           subject: '📬 Newsletter-Anmeldung – tiroltourismus.com',
-          message: `Neue Newsletter-Anmeldung\n\nName: ${form.name.trim()}\nE-Mail: ${form.email.trim()}\nDSGVO zugestimmt: Ja\n\n(Der Empfänger muss in Web3Forms unter "Email Settings" → "Autoresponder" eine Bestätigungsmail konfigurieren.)`,
+          message: `Neue Newsletter-Anmeldung\n\nName: ${data.name.trim()}\nE-Mail: ${data.email.trim()}\nDSGVO zugestimmt: Ja`,
           botcheck: '',
         }),
       });
 
-      if (res.ok) {
-        setState('success');
-        setForm({ name: '', email: '', consent: false });
-        setErrors({});
-      } else {
-        const data = await res.json().catch(() => null);
-        setErrorMsg(
-          data?.message || 'Fehler bei der Anmeldung. Bitte versuche es später erneut.'
-        );
-        setState('error');
-      }
+      return res.ok;
     } catch {
-      setErrorMsg('Netzwerkfehler. Bitte prüfe deine Internetverbindung.');
+      return false;
+    }
+  }
+
+  /* ── Submit ── */
+  async function handleSubmit(ev: FormEvent) {
+    ev.preventDefault();
+    if (!validate()) return;
+
+    setState('loading');
+    setErrorMsg('');
+    setSubmittedEmail(form.email.trim());
+
+    // Try Newsletter API (webhook server → MailerLite), fall back to Web3Forms
+    const apiOk = await submitToApi(form);
+    if (apiOk) {
+      setState('success');
+      setForm({ name: '', email: '', consent: false });
+      setErrors({});
+      return;
+    }
+
+    // Fallback
+    const web3Ok = await submitToWeb3Forms(form);
+    if (web3Ok) {
+      setState('success');
+      setForm({ name: '', email: '', consent: false });
+      setErrors({});
+    } else if (state !== 'error') {
+      // Only set error if not already set by submitToWeb3Forms
+      setErrorMsg('Fehler bei der Anmeldung. Bitte versuche es später erneut.');
       setState('error');
     }
   }
@@ -155,7 +201,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
             <strong>Fast geschafft!</strong>
             <p>
               Vielen Dank für deine Anmeldung! Wir haben dir eine Bestätigungs-E-Mail
-              an <strong>{form.email}</strong> gesendet. Bitte klicke den Link darin,
+              an <strong>{submittedEmail}</strong> gesendet. Bitte klicke den Link darin,
               um dein Abonnement zu aktivieren (Double Opt-in).
             </p>
           </div>

@@ -21,6 +21,7 @@
  */
 
 import express from 'express';
+import cors from 'cors';
 import crypto from 'crypto';
 import fs from 'fs';
 import path from 'path';
@@ -37,6 +38,12 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 const app = express();
+
+// ── CORS — allow tiroltourismus.com ──
+app.use(cors({
+  origin: ['https://tiroltourismus.com', 'https://www.tiroltourismus.com', 'http://localhost:4321', 'http://localhost:3000'],
+  methods: ['GET', 'POST'],
+}));
 
 // ── LemonSqueezy Webhook Signature Verification ──
 
@@ -188,7 +195,51 @@ app.post('/webhook/lemon-squeezy', express.json(), (req, res) => {
   }
 });
 
-// ── Helper endpoints ──
+// ── MailerLite Newsletter API ──
+
+const MAILERLITE_API_KEY = process.env.MAILERLITE_API_KEY || '';
+const MAILERLITE_GROUP_ID = process.env.MAILERLITE_GROUP_ID || '187803135383700493';
+
+app.post('/api/newsletter', express.json(), async (req, res) => {
+  const { email, name } = req.body;
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: 'Valid email is required' });
+  }
+
+  if (!MAILERLITE_API_KEY) {
+    return res.status(500).json({ error: 'MailerLite not configured' });
+  }
+
+  try {
+    const mlRes = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${MAILERLITE_API_KEY}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        fields: { name: name || '' },
+        groups: [MAILERLITE_GROUP_ID],
+      }),
+    });
+
+    const data = await mlRes.json();
+
+    if (mlRes.ok) {
+      console.log(`📬 Newsletter: ${email} subscribed`);
+      res.json({ subscribed: true, id: data.data?.id });
+    } else {
+      console.error(`📬 MailerLite error:`, data);
+      res.status(mlRes.status).json({ error: data.message || 'Subscription failed' });
+    }
+  } catch (e) {
+    console.error('📬 Newsletter error:', e.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 // GET /api/subscriptions — list all subscriptions (for debugging)
 app.get('/api/subscriptions', (req, res) => {
@@ -220,8 +271,10 @@ app.get('/health', (req, res) => {
 app.listen(PORT, () => {
   console.log(`🍋 Tirol LemonSqueezy Webhook Server running on port ${PORT}`);
   console.log(`   Webhook URL: http://localhost:${PORT}/webhook/lemon-squeezy`);
+  console.log(`   Newsletter API: http://localhost:${PORT}/api/newsletter`);
   console.log(`   Data directory: ${DATA_DIR}`);
   console.log(`   Webhook secret configured: ${WEBHOOK_SECRET ? '✅ Yes' : '❌ No (insecure — set LEMONSQUEEZY_WEBHOOK_SECRET env var)'}`);
+  console.log(`   MailerLite configured: ${MAILERLITE_API_KEY ? '✅ Yes' : '❌ No (set MAILERLITE_API_KEY env var)'}`);
   console.log('');
   console.log('   REMEMBER: Update VARIANT_TIER_MAP in server.js with your');
   console.log('   LemonSqueezy product variant IDs before going live!');

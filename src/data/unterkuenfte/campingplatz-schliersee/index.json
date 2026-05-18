@@ -1,0 +1,30 @@
+{
+  "name": "Campingplatz Schliersee",
+  "slug": "campingplatz-schliersee",
+  "typ": "camping",
+  "sterne": null,
+  "preis_ab": null,
+  "ort": "Schliersee",
+  "region": "",
+  "plz": "83727",
+  "adresse": "",
+  "telefon": "+49 8026 9298998",
+  "email": "info@camping-schliersee.de",
+  "webseite": "https://www.camping-schliersee.de",
+  "beschreibung": "<p>Der <strong>Campingplatz Schliersee</strong> liegt direkt am Ufer des gleichnamigen Sees, umgeben von den <strong>Bergen des Tiroler Unterlandes</strong>. Die Anlage bietet sowohl Stellplätze für Wohnmobile und Zelte als auch gemütliche <strong>Hütten zur Miete</strong> für alle, die ohne eigenes Zubehör anreisen möchten. Im Sommer lädt der See zum Schwimmen und Bootfahren ein, während die Umgebung im Herbst und Winter <strong>Wanderwege und Loipen</strong> für Outdoor-Aktivitäten bereithält. Ein kleiner Lebensmittelverkauf und Sanitärgebäude mit warmem Wasser sind vorhanden.</p>",
+  "ausstattung": [
+    "sanitäranlagen",
+    "stromanschluss"
+  ],
+  "tags": [
+    "camping",
+    "natur",
+    "outdoor"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.7278159",
+    "lng": "11.8519648"
+  },
+  "status": "published"
+}

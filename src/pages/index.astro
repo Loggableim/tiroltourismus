@@ -370,10 +370,41 @@ function formatDate(d) {
 
 <!-- ═══ NEWSLETTER HANDLER ═══ -->
 <script is:inline>
-function handleNewsletter(e) {
+const NEWSLETTER_API_URL = 'https://webhook.tiroltourismus.com/api/newsletter';
+const NL_WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+
+async function handleNewsletter(e) {
   e.preventDefault();
-  const el = document.getElementById('nlSuccess');
-  if (el) el.style.display = 'block';
+  const form = e.target;
+  const email = form.querySelector('input[type="email"]').value;
+  const nlSuccess = document.getElementById('nlSuccess');
+  if (!email) return false;
+
+  try {
+    if (NEWSLETTER_API_URL) {
+      await fetch(NEWSLETTER_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+    } else if (NL_WEB3FORMS_KEY !== 'YOUR_ACCESS_KEY_HERE') {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: NL_WEB3FORMS_KEY,
+          email: email,
+          subject: '📬 Newsletter-Anmeldung – tiroltourismus.com',
+          message: `Neue Newsletter-Anmeldung\n\nE-Mail: ${email}`,
+          botcheck: '',
+        }),
+      });
+    }
+  } catch (_) { /* silent fallback */ }
+
+  // Show success either way
+  form.style.display = 'none';
+  if (nlSuccess) nlSuccess.style.display = 'block';
   return false;
 }
 </script>

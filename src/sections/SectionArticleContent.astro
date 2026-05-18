@@ -1,4 +1,6 @@
 ---
+import { marked } from 'marked';
+
 export interface Props {
   content: string;
   tags?: string[];
@@ -7,11 +9,12 @@ export interface Props {
 }
 
 const { content, tags, backHref, backText } = Astro.props;
+const htmlContent = marked.parse(content) as string;
 ---
 
 <article class="sec-art-body">
   <div class="container" style="max-width:720px">
-    <div class="sec-art-content">{content}</div>
+    <div class="sec-art-content" set:html={htmlContent}></div>
   </div>
   <footer class="sec-art-footer">
     <div class="container">

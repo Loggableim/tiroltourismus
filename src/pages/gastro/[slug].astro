@@ -1,6 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
   const all = readCollection('gastro').filter(g => isPublished(g.entry));
@@ -37,11 +38,22 @@ const mapSection = mapMarkers.length > 0 ? {
   markers: mapMarkers, scrollWheelZoom: true,
   filterable: true,
 } : null;
+
+// Verwandte Gastro via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'gastro' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🍽️' }
+      }))
+  : [];
 ---
 
 <DetailPage
   title={entry.name}
-  description={entry.kurzbeschreibung || `${entry.name} – ${entry.ort || 'Tirol'}. ${entry.kategorie || 'Kulinarik'}`}
+  description={generateMetaDescription(entry, 'gastro')}
   breadcrumbs={[{ label: 'Gastro', href: '/gastro/' }, { label: entry.name }]}
   sections={[
     {
@@ -71,6 +83,16 @@ const mapSection = mapMarkers.length > 0 ? {
       ].filter(Boolean),
     },
     mapSection,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Lokale',
+      entries: relatedByTag,
+      slugPrefix: '/gastro/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🍽️',
+    } : null,
     {
       type: 'cta',
       label: 'Lust bekommen?',

@@ -1,6 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
   const all = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
@@ -48,11 +49,22 @@ const mapSection = mapMarkers.length > 0 ? {
   scrollWheelZoom: true,
   filterable: true,
 } : null;
+
+// Verwandte Sehenswürdigkeiten via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'sehenswuerdigkeiten' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || catStyle.emoji }
+      }))
+  : [];
 ---
 
 <DetailPage
   title={entry.name}
-  description={entry.kurzbeschreibung}
+  description={generateMetaDescription(entry, 'sehenswuerdigkeiten')}
   sections={[
     {
       type: 'custom-hero',
@@ -88,6 +100,16 @@ const mapSection = mapMarkers.length > 0 ? {
       ].filter(Boolean),
     },
     mapSection,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Sehenswürdigkeiten',
+      entries: relatedByTag,
+      slugPrefix: '/sehenswuerdigkeiten/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏛️',
+    } : null,
     {
       type: 'back-link',
       href: '/sehenswuerdigkeiten/',

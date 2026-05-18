@@ -1,6 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
   const all = readCollection('erlebnisse').filter(e => isPublished(e.entry));
@@ -58,11 +59,22 @@ const mapSection = mapMarkers.length > 0 ? {
   scrollWheelZoom: true,
   filterable: true,
 } : null;
+
+// Verwandte Erlebnisse via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'erlebnisse' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || kategorieEmoji[r.entry.kategorie] || '🏔️' }
+      }))
+  : [];
 ---
 
 <DetailPage
   title={entry.name}
-  description={entry.beschreibung || `${entry.name} – ${entry.ort || 'Tirol'}. ${kategorieLabel[entry.kategorie] || ''}`}
+  description={generateMetaDescription(entry, 'erlebnisse')}
   breadcrumbs={[{ label: 'Erlebnisse', href: '/erlebnisse/' }, { label: entry.name }]}
   sections={[
     {
@@ -100,6 +112,16 @@ const mapSection = mapMarkers.length > 0 ? {
       ].filter(Boolean),
     },
     mapSection,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Erlebnisse',
+      entries: relatedByTag,
+      slugPrefix: '/erlebnisse/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏔️',
+    } : null,
     {
       type: 'cta',
       label: 'Lust bekommen?',

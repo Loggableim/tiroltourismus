@@ -1,6 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findNearby } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
 
 export async function getStaticPaths() {
   const locales = ['de', 'en'];
@@ -91,7 +92,7 @@ const gastroCount = gastro.length;
 
 <DetailPage
   title={titel}
-  description={kurzbeschreibung}
+  description={generateMetaDescription(entry, 'regionen', locale)}
   locale={locale}
   breadcrumbs={[{ label: t.breadcrumb, href: `${localePrefix}/regionen/` }, { label: titel }]}
   sections={[

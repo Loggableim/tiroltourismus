@@ -2,6 +2,7 @@
 import DetailPage from '../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findByTag } from '../../lib/content.js';
 import ArticleCard from '../../components/ArticleCard.astro';
+import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
   const articles = readCollection('magazin').filter(a => isPublished(a.entry));
@@ -36,7 +37,7 @@ const relatedByTag = entry.tags && entry.tags.length > 0
 
 <DetailPage
   title={entry.titel}
-  description={entry.teaser}
+  description={generateMetaDescription(entry, 'magazin')}
   sections={[
     {
       type: 'article-hero',

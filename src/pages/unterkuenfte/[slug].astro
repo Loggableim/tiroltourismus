@@ -1,7 +1,8 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
 import PaywallOverlay from '../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
   const all = readCollection('unterkuenfte').filter(u => isPublished(u.entry));
@@ -154,7 +155,7 @@ if (mapSection) allSections.push(mapSection);
 
 <DetailPage
   title={entry.name}
-  description={`${entry.name} – ${entry.ort || 'Tirol'}. ${(entry.typ && typLabel[entry.typ]) || 'Unterkunft'}`}
+  description={generateMetaDescription(entry, 'unterkuenfte', 'de', { typLabel: typLabel[entry.typ] || entry.typ || '' })}
   breadcrumbs={[{ label: 'Unterkünfte', href: '/unterkuenfte/' }, { label: entry.name }]}
   sections={allSections}
 />

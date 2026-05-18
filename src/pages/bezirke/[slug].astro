@@ -3,6 +3,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { readSingleton, readCollection, isPublished } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
 import OrtCard from '../../components/OrtCard.astro';
 
 // Regionen → Bezirk Mapping
@@ -38,7 +39,7 @@ const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slu
 ---
 <BaseLayout
   title={bezirk.name}
-  description={bezirk.beschreibung}
+  description={generateMetaDescription({ name: bezirk.name, beschreibung: bezirk.beschreibung }, 'bezirke')}
 >
   <main>
     <div class="container">

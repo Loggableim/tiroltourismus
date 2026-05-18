@@ -26,9 +26,11 @@ export interface BetriebEntry {
 }
 
 /* ── API ── */
-const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-  ? 'http://localhost:3456'
-  : 'https://webhook.tiroltourismus.com';
+function getApiBase() {
+  return typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:3456'
+    : 'https://webhook.tiroltourismus.com';
+}
 
 /* ── Simple Admin-Passwort (niedrige Sicherheitsstufe für GitHub Pages) ── */
 const ADMIN_PASSWORD = 'tirol2026';
@@ -63,7 +65,7 @@ export default function AdminPendingDashboard() {
   const loadData = useCallback(async () => {
     setLoading(true);
     try {
-      const resp = await fetch(`${API_BASE}/api/betriebe/pending`);
+      const resp = await fetch(`${getApiBase()}/api/betriebe/pending`);
       if (resp.ok) {
         const entries: BetriebEntry[] = await resp.json();
         setPending(entries.filter(e => e.status === 'pending'));
@@ -89,7 +91,7 @@ export default function AdminPendingDashboard() {
   /* ── Publish (freigeben + in Kategorie veröffentlichen) ── */
   async function handlePublish(slug: string) {
     try {
-      const resp = await fetch(`${API_BASE}/api/betriebe/pending/${slug}/publish`, {
+      const resp = await fetch(`${getApiBase()}/api/betriebe/pending/${slug}/publish`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({}),
@@ -110,7 +112,7 @@ export default function AdminPendingDashboard() {
   async function handleReject(slug: string) {
     const grund = window.prompt('Grund für Ablehnung (optional):');
     try {
-      const resp = await fetch(`${API_BASE}/api/betriebe/pending/${slug}/reject`, {
+      const resp = await fetch(`${getApiBase()}/api/betriebe/pending/${slug}/reject`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ grund: grund || '' }),

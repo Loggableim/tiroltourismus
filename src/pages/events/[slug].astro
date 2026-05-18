@@ -76,7 +76,7 @@ const relatedSection = related.length > 0 ? {
         { label: 'Ort', value: entry.ort || undefined },
         { label: 'Region', value: entry.region || undefined },
         entry.preis ? { label: 'Preis', value: entry.preis, type: 'price' } : null,
-        entry.link && entry.link !== '#' ? { label: 'Webseite', value: entry.link, type: 'link', href: entry.link } : null,
+        entry.link && entry.link !== '#' ? { label: 'Event-Seite', value: entry.link, type: 'link', href: entry.link } : null,
         entry.webseite && entry.webseite !== '#' ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
         { label: 'Tags', tags: entry.tags || [], type: 'tags' },
       ].filter(Boolean),

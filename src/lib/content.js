@@ -11,11 +11,11 @@ export const BEZIRK_REGIONS = {
   innsbruck: ['innsbruck'],
   'innsbruck-land': ['innsbruck-land'],
   imst: ['imst', 'oetztal'],
-  landeck: ['landeck', 'arlberg'],
+  landeck: ['landeck', 'arlberg', 'kaunertal'],
   reutte: ['ausserfern'],
   kufstein: ['kufstein'],
   kitzbuehel: ['kitzbuehel'],
-  schwaz: ['schwaz', 'achensee', 'zillertal', 'kaunertal'],
+  schwaz: ['schwaz', 'achensee', 'zillertal'],
   lienz: ['osttirol', 'lienz'],
 };
 

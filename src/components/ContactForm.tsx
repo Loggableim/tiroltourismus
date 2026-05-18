@@ -93,8 +93,9 @@ export default function ContactForm() {
       setState('success');
       setForm({ name: '', email: '', subject: '', message: '' });
       setErrors({});
-      if (typeof window !== 'undefined' && (window as any).trackEvent) {
-        (window as any).trackEvent('Kontakt', { subject: form.subject.trim() || '(kein Betreff)' });
+      if (typeof window !== 'undefined') {
+        const track = (window as any).trackEvent || (window as any).gtag || (() => {});
+        track('Kontakt', { subject: form.subject.trim() || '(kein Betreff)' });
       }
     } catch {
       setErrorMsg(

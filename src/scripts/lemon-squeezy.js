@@ -138,8 +138,6 @@ function checkReturningCheckout() {
 
   if (!checkoutId) return;
 
-  console.log('[Tirol] Returning from checkout:', checkoutId);
-
   // We came back from a checkout — Lemon.js can verify the purchase
   // For now, determine tier from the variant ID in the URL or session
   // In production, the webhook handles this server-side
@@ -167,7 +165,6 @@ function checkReturningCheckout() {
               variantId,
               verifiedAt: Date.now(),
             });
-            console.log(`[Tirol] Tier set to ${tier} after checkout!`);
             // Reload to apply tier
             window.location.reload();
           }

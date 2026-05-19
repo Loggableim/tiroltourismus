@@ -106,14 +106,29 @@ export default function LeafletMap({
       // Store tiles ref for theme switching
       map._tileLayer = tiles;
 
-      // Draw polygons
-      drawPolygons(L, map);
+      try {
+        // Draw polygons
+        drawPolygons(L, map);
+      } catch (e) {
+        console.error('[LeafletMap] drawPolygons error:', e);
+      }
 
-      // Draw markers
-      drawMarkers(L, map);
+      try {
+        // Draw markers
+        drawMarkers(L, map);
+      } catch (e) {
+        console.error('[LeafletMap] drawMarkers error:', e);
+      }
 
-      // Fit bounds
-      fitBounds(map);
+      try {
+        // Fit bounds
+        fitBounds(map);
+      } catch (e) {
+        console.error('[LeafletMap] fitBounds error:', e);
+      }
+    }).catch((e) => {
+      console.error('[LeafletMap] Failed to load leaflet:', e);
+      setLoading(false);
     });
 
     return () => {
@@ -130,8 +145,10 @@ export default function LeafletMap({
     import('leaflet').then((L) => {
       const map = mapInstance.current;
       clearMarkers(map);
-      drawMarkers(L, map);
-      fitBounds(map);
+      try { drawMarkers(L, map); } catch (e) { console.error('[LeafletMap] re-draw markers error:', e); }
+      try { fitBounds(map); } catch (e) { console.error('[LeafletMap] re-fit bounds error:', e); }
+    }).catch((e) => {
+      console.error('[LeafletMap] Failed to re-load leaflet:', e);
     });
   }, [markers, polygons]);
 
@@ -328,8 +345,10 @@ export default function LeafletMap({
     if (!mapInstance.current) return;
     import('leaflet').then(L => {
       clearMarkers(mapInstance.current);
-      drawMarkers(L, mapInstance.current);
-      fitBounds(mapInstance.current);
+      try { drawMarkers(L, mapInstance.current); } catch (e) { console.error('[LeafletMap] filter draw error:', e); }
+      try { fitBounds(mapInstance.current); } catch (e) { console.error('[LeafletMap] filter fitBounds error:', e); }
+    }).catch((e) => {
+      console.error('[LeafletMap] Failed to re-load leaflet for filter:', e);
     });
   }, [activeFilters]);
 

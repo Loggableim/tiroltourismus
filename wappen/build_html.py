@@ -8,27 +8,68 @@ with open('wappen_page_data.json', 'r', encoding='utf-8') as f:
 
 # Add style variants for Innsbruck Stadtwappen
 # This data structure is reproducible for any other coat of arms
+# Groups: each style-key has model-subkeys (SVG, FLUX, Qwen) 
 STYLE_VARIANTS = {
     "Innsbruck Stadt": {
         "original": {
-            "name": "Original (Wikipedia)",
+            "name": "🏁 Original",
             "img": "img/bezirke/innsbruck_stadt.png",
-            "desc": "Original-Wappen aus Wikipedia, CC BY-SA 4.0"
+            "desc": "Original-Wappen aus Wikipedia, CC BY-SA 4.0",
+            "group": "original"
         },
-        "klassisch": {
-            "name": "Klassisch-Heraldisch",
+        "svg_klassisch": {
+            "name": "🏛️ SVG · Klassisch",
             "img": "img/generiert/wappen_innsbruck_klassisch.svg",
-            "desc": "Traditionelle heraldische Darstellung mit Steintexturen und schwarzem Rand"
+            "desc": "Handgezeichnete SVG — traditionelle Heraldik mit Steintexturen",
+            "group": "svg"
         },
-        "modern": {
-            "name": "Modern-Minimalistisch",
+        "svg_modern": {
+            "name": "✨ SVG · Modern",
             "img": "img/generiert/wappen_innsbruck_modern.svg",
-            "desc": "Flaches, geometrisches Design mit Farbverläufen und runden Fenstern"
+            "desc": "Handgezeichnete SVG — flaches, geometrisches Design",
+            "group": "svg"
         },
-        "holzschnitt": {
-            "name": "Mittelalter-Holzschnitt",
+        "svg_woodcut": {
+            "name": "🪵 SVG · Holzschnitt",
             "img": "img/generiert/wappen_innsbruck_holzschnitt.svg",
-            "desc": "Rustikaler Holzstich-Stil mit Pergamenthintergrund und Schraffuren"
+            "desc": "Handgezeichnete SVG — Mittelalter-Holzschnitt-Stil",
+            "group": "svg"
+        },
+        "flux_klassisch": {
+            "name": "🔥 FLUX · Klassisch",
+            "img": "img/generiert/wappen_innsbruck_flux_klassisch.png",
+            "desc": "FLUX.2-pro img2img — klassisch-heraldische Neuinterpretation",
+            "group": "flux"
+        },
+        "flux_modern": {
+            "name": "🔥 FLUX · Modern",
+            "img": "img/generiert/wappen_innsbruck_flux_modern.png",
+            "desc": "FLUX.2-pro img2img — minimalistisch-geometrisch",
+            "group": "flux"
+        },
+        "flux_woodcut": {
+            "name": "🔥 FLUX · Holzschnitt",
+            "img": "img/generiert/wappen_innsbruck_flux_woodcut.png",
+            "desc": "FLUX.2-pro img2img — mittelalterlicher Holzstich",
+            "group": "flux"
+        },
+        "qwen_klassisch": {
+            "name": "🐉 Qwen · Klassisch",
+            "img": "img/generiert/wappen_innsbruck_qwen_klassisch.png",
+            "desc": "Qwen-Image-Edit img2img — heraldische Interpretation",
+            "group": "qwen"
+        },
+        "qwen_modern": {
+            "name": "🐉 Qwen · Modern",
+            "img": "img/generiert/wappen_innsbruck_qwen_modern.png",
+            "desc": "Qwen-Image-Edit img2img — modern-minimalistisch",
+            "group": "qwen"
+        },
+        "qwen_woodcut": {
+            "name": "🐉 Qwen · Holzschnitt",
+            "img": "img/generiert/wappen_innsbruck_qwen_woodcut.png",
+            "desc": "Qwen-Image-Edit img2img — Holzstich-Stil",
+            "group": "qwen"
         }
     }
 }
@@ -288,18 +329,44 @@ function showOrte(idx) {{
 
 function renderStyleSwitcher(bezirk) {{
   const container = document.getElementById('styleSwitcher');
-  // Clear all buttons but keep the desc div
   const descDiv = document.getElementById('styleDesc');
   container.innerHTML = '';
   container.appendChild(descDiv);
 
+  // Group order: original, svg, flux, qwen
+  const groupOrder = ['original', 'svg', 'flux', 'qwen'];
+  const groupLabels = {{
+    original: '',
+    svg: '━━ SVG (handgezeichnet) ━━',
+    flux: '━━ FLUX.2-pro ━━',
+    qwen: '━━ Qwen-Image-Edit ━━'
+  }};
+
+  // Group entries by their group field
+  const groups = {{}};
   Object.entries(bezirk.styles).forEach(([key, style]) => {{
-    const btn = document.createElement('button');
-    btn.className = 'style-btn';
-    btn.textContent = style.name;
-    btn.onclick = () => switchStyle(key);
-    btn.dataset.key = key;
-    container.insertBefore(btn, descDiv);
+    const g = style.group || 'other';
+    if (!groups[g]) groups[g] = [];
+    groups[g].push({{key, style}});
+  }});
+
+  groupOrder.forEach(g => {{
+    if (!groups[g]) return;
+    // Group label (skip for 'original')
+    if (groupLabels[g]) {{
+      const label = document.createElement('div');
+      label.style.cssText = 'width:100%;text-align:center;font-size:0.75rem;color:#999;padding:0.4rem 0 0.2rem;letter-spacing:1px;';
+      label.textContent = groupLabels[g];
+      container.insertBefore(label, descDiv);
+    }}
+    groups[g].forEach(({{key, style}}) => {{
+      const btn = document.createElement('button');
+      btn.className = 'style-btn' + (g === 'original' ? '' : '');
+      btn.textContent = style.name;
+      btn.onclick = () => switchStyle(key);
+      btn.dataset.key = key;
+      container.insertBefore(btn, descDiv);
+    }});
   }});
 }}
 

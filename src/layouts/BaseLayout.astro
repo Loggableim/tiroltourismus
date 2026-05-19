@@ -51,6 +51,8 @@ const nav = locale === 'en' ? {
   preise: 'Pricing',
   fuerBetriebe: 'For Businesses',
   merkliste: '♥ Wishlist',
+  anmelden: 'Login',
+  konto: 'My Account',
   kontakt: 'Contact',
   regionen: 'Regions',
   camping: 'Camping',
@@ -79,6 +81,8 @@ const nav = locale === 'en' ? {
   preise: 'Preise',
   fuerBetriebe: 'Für Betriebe',
   merkliste: '♥ Merkliste',
+  anmelden: 'Anmelden',
+  konto: 'Mein Konto',
   kontakt: 'Kontakt',
   regionen: 'Regionen',
   camping: 'Campingplätze',
@@ -239,12 +243,14 @@ if (extraLD) ldBlocks.push(extraLD);
     .main-nav .container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:none;padding:0}
     .nav-logo{display:flex;align-items:center;font-family:var(--font-display);font-size:26px;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
     .nav-links{display:flex;gap:0;align-items:center}
+    .nav-login{display:flex;align-items:center;gap:4px;padding:6px 14px;font-size:12px;font-weight:600;border-radius:100px;background:var(--pink);color:#fff!important;transition:all .3s;white-space:nowrap;letter-spacing:.3px;text-decoration:none}
+    .nav-login:hover{opacity:.85;transform:translateY(-1px)}
     .nav-links a{padding:6px 8px;font-size:12px;font-weight:500;letter-spacing:.2px;color:var(--text2);transition:all .3s;border-radius:100px;white-space:nowrap}
     .nav-r{display:flex;align-items:center;gap:6px}
     .nav-search{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text2);cursor:pointer}
     .hamburger{display:none;flex-direction:column;gap:4px;padding:8px;cursor:pointer}
     .hamburger span{width:20px;height:2px;background:var(--text);border-radius:2px}
-    @media(max-width:1100px){.main-nav{left:12px;right:12px;border-radius:16px;padding:0 4px 0 16px}.nav-links{display:none}.hamburger{display:flex}}
+    @media(max-width:1100px){.main-nav{left:12px;right:12px;border-radius:16px;padding:0 4px 0 16px}.nav-links,.nav-login{display:none}.hamburger{display:flex}}
     @media(min-width:1101px){.main-nav{left:50%;transform:translateX(-50%);width:calc(100% - 40px)}}
     .mobile-menu{position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(10,10,18,.97);backdrop-filter:blur(40px);z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:24px;opacity:0;pointer-events:none;transition:all .5s var(--ease)}
     .mobile-menu.open{opacity:1;pointer-events:all}
@@ -364,6 +370,7 @@ if (extraLD) ldBlocks.push(extraLD);
         <a href={`${localePrefix}/preise/`} class={Astro.url.pathname.includes('preise') ? 'active' : ''} style="color:var(--gold-light);font-weight:600">{nav.preise}</a>
       </div>
       <div class="nav-r">
+        <a href={`${localePrefix}/login/`} class="nav-login">{nav.anmelden}</a>
         <button class="nav-search" onclick={`window.location.href='${localePrefix}/suche/'`} aria-label={nav.suche}>🔍</button>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
@@ -384,6 +391,7 @@ if (extraLD) ldBlocks.push(extraLD);
     <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
     <a href={`${localePrefix}/preise/`} style="color:var(--gold-light)">{nav.preise}</a>
     <a href={`${localePrefix}/suche/`}>🔍 {nav.suche}</a>
+    <a href={`${localePrefix}/login/`} style="color:var(--pink);font-weight:600">{nav.anmelden}</a>
     <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
     <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
   </div>

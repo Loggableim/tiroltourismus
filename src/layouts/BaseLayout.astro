@@ -243,8 +243,8 @@ if (extraLD) ldBlocks.push(extraLD);
     .main-nav .container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:none;padding:0}
     .nav-logo{display:flex;align-items:center;font-family:var(--font-display);font-size:26px;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
     .nav-links{display:flex;gap:0;align-items:center}
-    .nav-login{display:flex;align-items:center;gap:4px;padding:6px 14px;font-size:12px;font-weight:600;border-radius:100px;background:var(--pink);color:#fff!important;transition:all .3s;white-space:nowrap;letter-spacing:.3px;text-decoration:none}
-    .nav-login:hover{opacity:.85;transform:translateY(-1px)}
+    .nav-login,.nav-dash{display:flex;align-items:center;gap:4px;padding:6px 14px;font-size:12px;font-weight:600;border-radius:100px;background:var(--pink);color:#fff!important;transition:all .3s;white-space:nowrap;letter-spacing:.3px;text-decoration:none}
+    .nav-login:hover,.nav-dash:hover{opacity:.85;transform:translateY(-1px)}
     .nav-links a{padding:6px 8px;font-size:12px;font-weight:500;letter-spacing:.2px;color:var(--text2);transition:all .3s;border-radius:100px;white-space:nowrap}
     .nav-r{display:flex;align-items:center;gap:6px}
     .nav-search{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text2);cursor:pointer}
@@ -370,7 +370,8 @@ if (extraLD) ldBlocks.push(extraLD);
         <a href={`${localePrefix}/preise/`} class={Astro.url.pathname.includes('preise') ? 'active' : ''} style="color:var(--gold-light);font-weight:600">{nav.preise}</a>
       </div>
       <div class="nav-r">
-        <a href={`${localePrefix}/login/`} class="nav-login">{nav.anmelden}</a>
+        <a href={`${localePrefix}/login/`} class="nav-login" id="navLoginBtn">{nav.anmelden}</a>
+        <a href={`${localePrefix}/dashboard/`} class="nav-dash" id="navDashBtn" style="display:none">{nav.konto}</a>
         <button class="nav-search" onclick={`window.location.href='${localePrefix}/suche/'`} aria-label={nav.suche}>🔍</button>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
@@ -391,7 +392,8 @@ if (extraLD) ldBlocks.push(extraLD);
     <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
     <a href={`${localePrefix}/preise/`} style="color:var(--gold-light)">{nav.preise}</a>
     <a href={`${localePrefix}/suche/`}>🔍 {nav.suche}</a>
-    <a href={`${localePrefix}/login/`} style="color:var(--pink);font-weight:600">{nav.anmelden}</a>
+    <a href={`${localePrefix}/login/`} class="mob-login" id="mobLoginBtn" style="color:var(--pink);font-weight:600">{nav.anmelden}</a>
+    <a href={`${localePrefix}/dashboard/`} class="mob-dash" id="mobDashBtn" style="display:none;color:var(--pink);font-weight:600">{nav.konto}</a>
     <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
     <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
   </div>
@@ -486,6 +488,20 @@ if (extraLD) ldBlocks.push(extraLD);
       var fl=document.getElementById('floatingLang');
       if(fl&&!fl.contains(e.target))fl.classList.remove('open');
     });
+    // Session-Check: Anmelden vs. Mein Konto
+    (function(){
+      var hasSession = document.cookie.indexOf('session=') >= 0;
+      var loginBtn = document.getElementById('navLoginBtn');
+      var dashBtn = document.getElementById('navDashBtn');
+      var mobLogin = document.getElementById('mobLoginBtn');
+      var mobDash = document.getElementById('mobDashBtn');
+      if (hasSession) {
+        if (loginBtn) loginBtn.style.display = 'none';
+        if (dashBtn) dashBtn.style.display = 'flex';
+        if (mobLogin) mobLogin.style.display = 'none';
+        if (mobDash) mobDash.style.display = 'block';
+      }
+    })();
   })();
   </script>
   <script is:inline defer src="/assets/js/tirol.js"></script>

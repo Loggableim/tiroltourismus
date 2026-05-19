@@ -12,63 +12,45 @@ with open('wappen_page_data.json', 'r', encoding='utf-8') as f:
 STYLE_VARIANTS = {
     "Innsbruck Stadt": {
         "original": {
-            "name": "🏁 Original",
+            "name": "Original",
             "img": "img/bezirke/innsbruck_stadt.png",
             "desc": "Original-Wappen aus Wikipedia, CC BY-SA 4.0",
             "group": "original"
         },
-        "svg_klassisch": {
-            "name": "🏛️ SVG · Klassisch",
-            "img": "img/generiert/wappen_innsbruck_klassisch.svg",
-            "desc": "Handgezeichnete SVG — traditionelle Heraldik mit Steintexturen",
-            "group": "svg"
-        },
-        "svg_modern": {
-            "name": "✨ SVG · Modern",
-            "img": "img/generiert/wappen_innsbruck_modern.svg",
-            "desc": "Handgezeichnete SVG — flaches, geometrisches Design",
-            "group": "svg"
-        },
-        "svg_woodcut": {
-            "name": "🪵 SVG · Holzschnitt",
-            "img": "img/generiert/wappen_innsbruck_holzschnitt.svg",
-            "desc": "Handgezeichnete SVG — Mittelalter-Holzschnitt-Stil",
-            "group": "svg"
-        },
-        "flux_klassisch": {
-            "name": "🔥 FLUX · Klassisch",
-            "img": "img/generiert/wappen_innsbruck_flux_klassisch.png",
-            "desc": "FLUX.2-pro img2img — klassisch-heraldische Neuinterpretation",
+        "flux_classic": {
+            "name": "FLUX · Klassisch",
+            "img": "img/generiert/wappen_innsbruck_classic_flux.png",
+            "desc": "FLUX.2-pro — traditionell-heraldisch",
             "group": "flux"
         },
         "flux_modern": {
-            "name": "🔥 FLUX · Modern",
-            "img": "img/generiert/wappen_innsbruck_flux_modern.png",
-            "desc": "FLUX.2-pro img2img — minimalistisch-geometrisch",
+            "name": "FLUX · Modern",
+            "img": "img/generiert/wappen_innsbruck_modern_flux.png",
+            "desc": "FLUX.2-pro — minimalistisch-geometrisch",
             "group": "flux"
         },
-        "flux_woodcut": {
-            "name": "🔥 FLUX · Holzschnitt",
-            "img": "img/generiert/wappen_innsbruck_flux_woodcut.png",
-            "desc": "FLUX.2-pro img2img — mittelalterlicher Holzstich",
+        "flux_tirol": {
+            "name": "FLUX · Tirol-Tourismus",
+            "img": "img/generiert/wappen_innsbruck_tiroltourismus_flux.png",
+            "desc": "FLUX.2-pro — warme Gold-Rot-Töne, alpines Branding",
             "group": "flux"
         },
-        "qwen_klassisch": {
-            "name": "🐉 Qwen · Klassisch",
-            "img": "img/generiert/wappen_innsbruck_qwen_klassisch.png",
-            "desc": "Qwen-Image-Edit img2img — heraldische Interpretation",
+        "qwen_classic": {
+            "name": "Qwen · Klassisch",
+            "img": "img/generiert/wappen_innsbruck_classic_qwen.png",
+            "desc": "Qwen-Image-Edit — traditionell-heraldisch",
             "group": "qwen"
         },
         "qwen_modern": {
-            "name": "🐉 Qwen · Modern",
-            "img": "img/generiert/wappen_innsbruck_qwen_modern.png",
-            "desc": "Qwen-Image-Edit img2img — modern-minimalistisch",
+            "name": "Qwen · Modern",
+            "img": "img/generiert/wappen_innsbruck_modern_qwen.png",
+            "desc": "Qwen-Image-Edit — minimalistisch-geometrisch",
             "group": "qwen"
         },
-        "qwen_woodcut": {
-            "name": "🐉 Qwen · Holzschnitt",
-            "img": "img/generiert/wappen_innsbruck_qwen_woodcut.png",
-            "desc": "Qwen-Image-Edit img2img — Holzstich-Stil",
+        "qwen_tirol": {
+            "name": "Qwen · Tirol-Tourismus",
+            "img": "img/generiert/wappen_innsbruck_tiroltourismus_qwen.png",
+            "desc": "Qwen-Image-Edit — warme Gold-Rot-Töne, alpines Branding",
             "group": "qwen"
         }
     }
@@ -236,6 +218,11 @@ html = f'''<!DOCTYPE html>
   <h1>🏁 Wappen <span>Tirol</span></h1>
   <p>Alle Bezirks- und Gemeindewappen des Landes Tirol</p>
   <div class="count-badge">{len(data['bezirke'])} Bezirke · {total} Gemeinden</div>
+  <p style="margin-top: 0.6rem">
+    <a href="generiert.html" style="color:var(--gold);text-underline-offset:3px">
+      🎨 18 KI-generierte Wappen-Varianten ansehen →
+    </a>
+  </p>
 </header>
 
 <div class="container">
@@ -334,10 +321,9 @@ function renderStyleSwitcher(bezirk) {{
   container.appendChild(descDiv);
 
   // Group order: original, svg, flux, qwen
-  const groupOrder = ['original', 'svg', 'flux', 'qwen'];
+  const groupOrder = ['original', 'flux', 'qwen'];
   const groupLabels = {{
     original: '',
-    svg: '━━ SVG (handgezeichnet) ━━',
     flux: '━━ FLUX.2-pro ━━',
     qwen: '━━ Qwen-Image-Edit ━━'
   }};

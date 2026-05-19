@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KI-generierte Wappen – Galerie</title>
+<style>
+  :root {
+    --rot: #C8102E; --gold: #D4A017; --dunkel: #1a1a2e;
+    --hell: #f5f0e8; --grau: #e8e0d0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--hell); color: var(--dunkel);
+  }
+  header {
+    background: linear-gradient(135deg, var(--dunkel), #2d2d44);
+    color: #fff; padding: 2rem 1rem; text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  header h1 { font-size: 2rem; }
+  header h1 span { color: var(--gold); }
+  header p { margin-top: 0.5rem; opacity: 0.85; }
+  header .nav-link {
+    display: inline-block; margin-top: 0.8rem;
+    color: var(--gold); text-decoration: none;
+    border: 1px solid var(--gold); padding: 0.3rem 1rem;
+    border-radius: 6px; font-size: 0.85rem;
+    transition: all 0.2s;
+  }
+  header .nav-link:hover { background: var(--gold); color: var(--dunkel); }
+  .container { max-width: 1400px; margin: 0 auto; padding: 2rem 1rem; }
+
+  /* Ort-Sektion */
+  .ort-section { margin-bottom: 3rem; }
+  .ort-section h2 {
+    font-size: 1.5rem; margin-bottom: 1rem;
+    padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold);
+    display: flex; align-items: center; gap: 0.8rem;
+  }
+  .ort-section h2 img {
+    height: 50px; width: auto; border-radius: 6px;
+  }
+
+  /* Style-Grid pro Ort */
+  .style-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .style-card {
+    background: #fff; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+  }
+  .style-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+  .style-card .style-name {
+    padding: 0.6rem; text-align: center;
+    font-weight: 700; font-size: 0.9rem;
+    background: var(--dunkel); color: #fff;
+  }
+  .style-card .style-name .badge {
+    display: inline-block; font-size: 0.7rem;
+    padding: 0.1rem 0.5rem; border-radius: 10px;
+    margin-left: 0.3rem;
+  }
+  .badge-flux { background: #ff6b35; }
+  .badge-qwen { background: #6c5ce7; }
+
+  .model-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .model-card {
+    padding: 0.6rem;
+    text-align: center;
+    border-top: 1px solid var(--grau);
+  }
+  .model-card:first-child { border-right: 1px solid var(--grau); }
+  .model-card .model-label {
+    font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 1px; color: #888; margin-bottom: 0.4rem;
+  }
+  .model-card img {
+    width: 100%; max-width: 200px; height: auto;
+    display: block; margin: 0 auto; border-radius: 6px;
+    cursor: pointer; transition: transform 0.2s;
+  }
+  .model-card img:hover { transform: scale(1.05); }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; z-index: 999;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center; align-items: center;
+    cursor: pointer;
+  }
+  .lightbox.show { display: flex; }
+  .lightbox img {
+    max-width: 90%; max-height: 90%;
+    border-radius: 8px; box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  }
+  .lightbox .lb-label {
+    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    color: #fff; background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1.5rem; border-radius: 8px;
+    font-size: 0.9rem; text-align: center;
+  }
+
+  footer {
+    text-align: center; padding: 2rem; color: #888;
+    font-size: 0.85rem; border-top: 1px solid var(--grau);
+  }
+
+  @media (max-width: 900px) {
+    .style-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .style-grid { grid-template-columns: 1fr; }
+    .model-row { grid-template-columns: 1fr; }
+    .model-card:first-child { border-right: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎨 KI-generierte <span>Wappen</span></h1>
+  <p>3 Stile × 3 Gemeinden × 2 KI-Modelle = 18 Varianten</p>
+  <a class="nav-link" href="index.html">← Zurück zur Wappen-Übersicht</a>
+</header>
+
+<div class="container" id="gallery"></div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lbImg" src="" alt="">
+  <div class="lb-label" id="lbLabel"></div>
+</div>
+
+<footer>
+  Generiert mit FLUX.2-pro & Qwen-Image-Edit (SiliconFlow API) · Stile: Klassisch, Modern, Tirol-Tourismus
+</footer>
+
+<script>
+const GALLERY = [
+  {
+    "ort": "Innsbruck Stadt",
+    "img": "img/bezirke/innsbruck_stadt.png",
+    "styles": ["Klassisch", "Modern", "Tirol-Tourismus"],
+    "models": ["flux", "qwen"],
+    "files": {
+      "Klassisch": { "flux": "img/generiert/wappen_innsbruck_classic_flux.png", "qwen": "img/generiert/wappen_innsbruck_classic_qwen.png" },
+      "Modern":    { "flux": "img/generiert/wappen_innsbruck_modern_flux.png",    "qwen": "img/generiert/wappen_innsbruck_modern_qwen.png" },
+      "Tirol-Tourismus": { "flux": "img/generiert/wappen_innsbruck_tiroltourismus_flux.png", "qwen": "img/generiert/wappen_innsbruck_tiroltourismus_qwen.png" }
+    }
+  },
+  {
+    "ort": "Götzens",
+    "img": "img/orte/innsbruck-land/götzens.png",
+    "styles": ["Klassisch", "Modern", "Tirol-Tourismus"],
+    "models": ["flux", "qwen"],
+    "files": {
+      "Klassisch": { "flux": "img/generiert/wappen_gotzens_classic_flux.png", "qwen": "img/generiert/wappen_gotzens_classic_qwen.png" },
+      "Modern":    { "flux": "img/generiert/wappen_gotzens_modern_flux.png",    "qwen": "img/generiert/wappen_gotzens_modern_qwen.png" },
+      "Tirol-Tourismus": { "flux": "img/generiert/wappen_gotzens_tiroltourismus_flux.png", "qwen": "img/generiert/wappen_gotzens_tiroltourismus_qwen.png" }
+    }
+  },
+  {
+    "ort": "Wattens",
+    "img": "img/orte/innsbruck-land/wattens.png",
+    "styles": ["Klassisch", "Modern", "Tirol-Tourismus"],
+    "models": ["flux", "qwen"],
+    "files": {
+      "Klassisch": { "flux": "img/generiert/wappen_wattens_classic_flux.png", "qwen": "img/generiert/wappen_wattens_classic_qwen.png" },
+      "Modern":    { "flux": "img/generiert/wappen_wattens_modern_flux.png",    "qwen": "img/generiert/wappen_wattens_modern_qwen.png" },
+      "Tirol-Tourismus": { "flux": "img/generiert/wappen_wattens_tiroltourismus_flux.png", "qwen": "img/generiert/wappen_wattens_tiroltourismus_qwen.png" }
+    }
+  }
+];
+
+const MODEL_NAMES = { flux: "FLUX.2-pro", qwen: "Qwen-Image-Edit" };
+const MODEL_CLASS = { flux: "badge-flux", qwen: "badge-qwen" };
+
+function renderGallery() {
+  const container = document.getElementById('gallery');
+  container.innerHTML = '';
+
+  GALLERY.forEach(entry => {
+    const section = document.createElement('div');
+    section.className = 'ort-section';
+
+    // Header
+    const h2 = document.createElement('h2');
+    h2.innerHTML = `<img src="${entry.img}" alt=""> ${entry.ort}`;
+    section.appendChild(h2);
+
+    // Style grid
+    const grid = document.createElement('div');
+    grid.className = 'style-grid';
+
+    entry.styles.forEach(style => {
+      const card = document.createElement('div');
+      card.className = 'style-card';
+
+      // Style name
+      const nameDiv = document.createElement('div');
+      nameDiv.className = 'style-name';
+      nameDiv.textContent = style;
+      card.appendChild(nameDiv);
+
+      // Model row
+      const row = document.createElement('div');
+      row.className = 'model-row';
+
+      entry.models.forEach(model => {
+        const mc = document.createElement('div');
+        mc.className = 'model-card';
+
+        const label = document.createElement('div');
+        label.className = 'model-label';
+        label.innerHTML = `<span class="badge ${MODEL_CLASS[model]}">${model.toUpperCase()}</span>`;
+        mc.appendChild(label);
+
+        const img = document.createElement('img');
+        img.src = entry.files[style][model];
+        img.alt = `${entry.ort} – ${style} – ${model}`;
+        img.loading = 'lazy';
+        img.onclick = () => openLightbox(img.src, `${entry.ort} – ${style} (${MODEL_NAMES[model]})`);
+        mc.appendChild(img);
+
+        row.appendChild(mc);
+      });
+
+      card.appendChild(row);
+      grid.appendChild(card);
+    });
+
+    section.appendChild(grid);
+    container.appendChild(section);
+  });
+}
+
+function openLightbox(src, label) {
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lbLabel').textContent = label;
+  document.getElementById('lightbox').classList.add('show');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+renderGallery();
+</script>
+</body>
+</html>

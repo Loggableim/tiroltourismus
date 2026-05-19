@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wappen Tirol – Original vs Qwen Modern</title>
+<style>
+  :root {
+    --rot: #C8102E; --weiss: #FFFFFF; --gold: #D4A017;
+    --dunkel: #1a1a2e; --hell: #f5f0e8; --grau: #e8e0d0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--hell); color: var(--dunkel);
+  }
+  header {
+    background: linear-gradient(135deg, var(--dunkel), #2d2d44);
+    color: var(--weiss); padding: 2rem 1rem; text-align: center;
+    border-bottom: 4px solid var(--gold);
+  }
+  header h1 { font-size: 2rem; }
+  header h1 span { color: var(--gold); }
+  header p { opacity: 0.85; margin-top: 0.3rem; }
+  header .nav-link {
+    display: inline-block; margin-top: 0.8rem;
+    color: var(--gold); text-decoration: none;
+    border: 1px solid var(--gold); padding: 0.3rem 1rem;
+    border-radius: 6px; font-size: 0.85rem;
+  }
+  header .nav-link:hover { background: var(--gold); color: var(--dunkel); }
+  header .count-badge {
+    display: inline-block; margin-top: 0.5rem;
+    padding: 0.3rem 1rem; background: var(--rot);
+    border-radius: 20px; font-size: 0.9rem;
+  }
+  .container { max-width: 1600px; margin: 0 auto; padding: 2rem 1rem; }
+
+  /* Bezirk-Sektion */
+  .bezirk-section { margin-bottom: 3rem; }
+  .bezirk-section h2 {
+    font-size: 1.5rem; padding: 0.8rem 1.2rem;
+    background: var(--dunkel); color: var(--weiss);
+    border-radius: 10px; margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.8rem;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .bezirk-section h2 .b-img {
+    height: 40px; width: auto; border-radius: 4px;
+  }
+  .bezirk-section h2 .b-count {
+    font-size: 0.85rem; font-weight: 400;
+    opacity: 0.7; margin-left: auto;
+  }
+
+  /* Raster: Original | Qwen */
+  .vergleich-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .vergleich-card {
+    background: var(--weiss); border-radius: 12px;
+    overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s;
+  }
+  .vergleich-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+
+  .vergleich-card .ort-name {
+    padding: 0.6rem; text-align: center;
+    font-weight: 700; font-size: 0.85rem;
+    background: var(--dunkel); color: var(--weiss);
+  }
+  .vergleich-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+  .vergleich-item {
+    padding: 0.5rem; text-align: center;
+  }
+  .vergleich-item:first-child {
+    border-right: 1px solid var(--grau);
+  }
+  .vergleich-item .label {
+    font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.5px; color: #999; margin-bottom: 0.3rem;
+  }
+  .vergleich-item .label.orig { color: var(--rot); }
+  .vergleich-item .label.qwen { color: #6c5ce7; }
+  .vergleich-item img {
+    width: 100%; max-width: 110px; height: auto;
+    display: block; margin: 0 auto; border-radius: 4px;
+    cursor: pointer; transition: transform 0.15s;
+  }
+  .vergleich-item img:hover { transform: scale(1.15); }
+
+  /* Status-Badge */
+  .status-badge {
+    display: inline-block; padding: 0.15rem 0.5rem;
+    border-radius: 10px; font-size: 0.65rem; font-weight: 600;
+  }
+  .status-ready { background: #d1fae5; color: #065f46; }
+  .status-pending { background: #fef3c7; color: #92400e; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; z-index: 999;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.92);
+    justify-content: center; align-items: center;
+    cursor: pointer;
+  }
+  .lightbox.show { display: flex; }
+  .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+  .lightbox .lb-label {
+    position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    color: #fff; background: rgba(0,0,0,0.6);
+    padding: 0.5rem 1.5rem; border-radius: 8px;
+    font-size: 0.9rem; text-align: center;
+  }
+
+  /* Suche */
+  .search-bar {
+    max-width: 500px; margin: 0 auto 2rem;
+    display: flex; gap: 0.5rem;
+  }
+  .search-bar input {
+    flex: 1; padding: 0.6rem 1rem; border: 2px solid var(--grau);
+    border-radius: 8px; font-size: 1rem;
+    outline: none; transition: border-color 0.2s;
+  }
+  .search-bar input:focus { border-color: var(--gold); }
+  .search-bar select {
+    padding: 0.6rem; border: 2px solid var(--grau);
+    border-radius: 8px; font-size: 0.9rem;
+    outline: none; cursor: pointer;
+  }
+
+  footer {
+    text-align: center; padding: 2rem; color: #888;
+    font-size: 0.85rem; border-top: 1px solid var(--grau);
+  }
+
+  @media (max-width: 768px) {
+    .vergleich-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+    .vergleich-item img { max-width: 80px; }
+  }
+  @media (max-width: 480px) {
+    .vergleich-grid { grid-template-columns: repeat(2, 1fr); }
+    .vergleich-item img { max-width: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏁 Wappen <span>Tirol</span></h1>
+  <p>Original (Wikipedia) vs <strong>Qwen Modern</strong> — Alle 276 Gemeinden</p>
+  <div class="count-badge" id="headerCount">Lade Daten…</div>
+  <p style="margin-top:0.6rem">
+    <a class="nav-link" href="index.html">← Wappen-Übersicht</a>
+    <a class="nav-link" href="generiert.html" style="margin-left:0.5rem">🎨 KI-Galerie</a>
+  </p>
+</header>
+
+<div class="container">
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 Gemeinde suchen…" oninput="filterGemeinden()">
+    <select id="filterBezirk" onchange="filterGemeinden()">
+      <option value="">Alle Bezirke</option>
+    </select>
+  </div>
+  <div id="gallery"></div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lbImg" src="" alt="">
+  <div class="lb-label" id="lbLabel"></div>
+</div>
+
+<footer>
+  Original-Wappen: Wikipedia (CC BY-SA 4.0) · Qwen Modern: Generiert mit Qwen-Image-Edit (SiliconFlow API)
+</footer>
+
+<script>
+const DATA = null;
+let manifest = [];
+let allData = [];
+
+async function loadData() {
+  try {
+    const resp = await fetch('img/qwen_modern/manifest.json');
+    manifest = await resp.json();
+    
+    // Group by bezirk
+    const groups = {};
+    manifest.forEach(item => {
+      if (!groups[item.bezirk]) groups[item.bezirk] = [];
+      groups[item.bezirk].push(item);
+    });
+    
+    allData = Object.entries(groups);
+    
+    const total = manifest.length;
+    const ready = manifest.filter(m => m.qwen).length;
+    document.getElementById('headerCount').textContent = 
+      total + ' Gemeinden · ' + ready + ' Qwen Modern fertig';
+    
+    // Fill filter
+    const sel = document.getElementById('filterBezirk');
+    allData.forEach(([name]) => {
+      const opt = document.createElement('option');
+      opt.value = name;
+      opt.textContent = name;
+      sel.appendChild(opt);
+    });
+    
+    renderAll();
+  } catch(e) {
+    document.getElementById('headerCount').textContent = 'Lade… (Batch läuft noch?)';
+    console.error(e);
+    setTimeout(loadData, 5000);
+  }
+}
+
+function renderAll() {
+  const container = document.getElementById('gallery');
+  container.innerHTML = '';
+  
+  const filterText = document.getElementById('searchInput').value.toLowerCase();
+  const filterBezirk = document.getElementById('filterBezirk').value;
+  
+  let shown = 0;
+  allData.forEach(([bezirkName, items]) => {
+    if (filterBezirk && bezirkName !== filterBezirk) return;
+    
+    const filtered = items.filter(item => 
+      item.ort.toLowerCase().includes(filterText)
+    );
+    if (filtered.length === 0) return;
+    
+    shown += filtered.length;
+    
+    const section = document.createElement('div');
+    section.className = 'bezirk-section';
+    
+    const h2 = document.createElement('h2');
+    h2.innerHTML = `<span>${bezirkName}</span><span class="b-count">${filtered.length} Gemeinden</span>`;
+    section.appendChild(h2);
+    
+    const grid = document.createElement('div');
+    grid.className = 'vergleich-grid';
+    
+    filtered.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'vergleich-card';
+      
+      const hasQwen = item.qwen && item.qwen !== null;
+      
+      card.innerHTML = `
+        <div class="ort-name">${item.ort}</div>
+        <div class="vergleich-row">
+          <div class="vergleich-item">
+            <div class="label orig">Original</div>
+            <img src="${item.original}" alt="${item.ort}" loading="lazy"
+                 onclick="openLightbox('${item.original}', '${item.ort} – Original')">
+          </div>
+          <div class="vergleich-item">
+            <div class="label qwen">Qwen Modern ${hasQwen ? '<span class="status-badge status-ready">✓</span>' : '<span class="status-badge status-pending">⟳</span>'}</div>
+            ${hasQwen 
+              ? `<img src="${item.qwen}" alt="${item.ort} Qwen" loading="lazy"
+                     onclick="openLightbox('${item.qwen}', '${item.ort} – Qwen Modern')">`
+              : `<div style="height:100px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:0.8rem">⏳</div>`}
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+    
+    section.appendChild(grid);
+    container.appendChild(section);
+  });
+}
+
+function filterGemeinden() { renderAll(); }
+
+function openLightbox(src, label) {
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lbLabel').textContent = label;
+  document.getElementById('lightbox').classList.add('show');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+loadData();
+</script>
+</body>
+</html>

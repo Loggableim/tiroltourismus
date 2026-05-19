@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wappen Tirol – Original vs Qwen Modern</title>
+<title>Wappen Tirol – Original vs Modern (Vorschau)</title>
 <style>
   :root {
     --rot: #C8102E; --weiss: #FFFFFF; --gold: #D4A017;
@@ -22,21 +22,19 @@
   header h1 { font-size: 2rem; }
   header h1 span { color: var(--gold); }
   header p { opacity: 0.85; margin-top: 0.3rem; }
-  header .nav-link {
-    display: inline-block; margin-top: 0.8rem;
-    color: var(--gold); text-decoration: none;
+  header .badges { margin-top: 0.6rem; display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+  header .badge { padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.85rem; }
+  .badge-ready { background: #10b981; color: #fff; }
+  .badge-pending { background: #f59e0b; color: #fff; }
+  .badge-info { background: var(--dunkel); color: var(--weiss); border: 1px solid var(--gold); }
+  .nav-links { margin-top: 0.8rem; }
+  .nav-links a {
+    color: var(--gold); text-decoration: none; margin: 0 0.5rem;
     border: 1px solid var(--gold); padding: 0.3rem 1rem;
-    border-radius: 6px; font-size: 0.85rem;
+    border-radius: 6px; font-size: 0.85rem; transition: all 0.2s;
   }
-  header .nav-link:hover { background: var(--gold); color: var(--dunkel); }
-  header .count-badge {
-    display: inline-block; margin-top: 0.5rem;
-    padding: 0.3rem 1rem; background: var(--rot);
-    border-radius: 20px; font-size: 0.9rem;
-  }
+  .nav-links a:hover { background: var(--gold); color: var(--dunkel); }
   .container { max-width: 1600px; margin: 0 auto; padding: 2rem 1rem; }
-
-  /* Bezirk-Sektion */
   .bezirk-section { margin-bottom: 3rem; }
   .bezirk-section h2 {
     font-size: 1.5rem; padding: 0.8rem 1.2rem;
@@ -45,132 +43,129 @@
     display: flex; align-items: center; gap: 0.8rem;
     position: sticky; top: 0; z-index: 10;
   }
-  .bezirk-section h2 .b-img {
-    height: 40px; width: auto; border-radius: 4px;
-  }
-  .bezirk-section h2 .b-count {
-    font-size: 0.85rem; font-weight: 400;
-    opacity: 0.7; margin-left: auto;
-  }
-
-  /* Raster: Original | Qwen */
+  .bezirk-section h2 .b-count { font-size: 0.85rem; font-weight: 400; opacity: 0.7; margin-left: auto; }
+  .bezirk-section h2 .b-progress { font-size: 0.8rem; font-weight: 400; opacity: 0.8; margin-left: 0.5rem; padding: 0.15rem 0.6rem; border-radius: 10px; }
   .vergleich-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 1rem;
   }
   .vergleich-card {
-    background: var(--weiss); border-radius: 12px;
-    overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    transition: transform 0.2s;
+    background: var(--weiss); border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s;
+    border: 2px solid transparent;
   }
   .vergleich-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-
+  .vergleich-card.fertig { border-color: #10b981; }
+  .vergleich-card.aussteht { border-color: var(--grau); opacity: 0.85; }
   .vergleich-card .ort-name {
-    padding: 0.6rem; text-align: center;
-    font-weight: 700; font-size: 0.85rem;
+    padding: 0.6rem; text-align: center; font-weight: 700; font-size: 0.85rem;
     background: var(--dunkel); color: var(--weiss);
+    display: flex; align-items: center; justify-content: center; gap: 0.5rem;
   }
   .vergleich-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
   }
-  .vergleich-item {
-    padding: 0.5rem; text-align: center;
-  }
-  .vergleich-item:first-child {
-    border-right: 1px solid var(--grau);
-  }
-  .vergleich-item .label {
-    font-size: 0.65rem; font-weight: 600; text-transform: uppercase;
-    letter-spacing: 0.5px; color: #999; margin-bottom: 0.3rem;
-  }
+  .vergleich-item { padding: 0.5rem; text-align: center; }
+  .vergleich-item:first-child { border-right: 1px solid var(--grau); }
+  .vergleich-item .label { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.3rem; }
   .vergleich-item .label.orig { color: var(--rot); }
   .vergleich-item .label.qwen { color: #6c5ce7; }
-  .vergleich-item img {
-    width: 100%; max-width: 110px; height: auto;
-    display: block; margin: 0 auto; border-radius: 4px;
-    cursor: pointer; transition: transform 0.15s;
-  }
+  .vergleich-item img { width: 100%; max-width: 110px; height: auto; display: block; margin: 0 auto; border-radius: 4px; cursor: pointer; transition: transform 0.15s; }
   .vergleich-item img:hover { transform: scale(1.15); }
-
-  /* Status-Badge */
-  .status-badge {
-    display: inline-block; padding: 0.15rem 0.5rem;
-    border-radius: 10px; font-size: 0.65rem; font-weight: 600;
+  .search-bar {
+    max-width: 600px; margin: 0 auto 2rem;
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
   }
-  .status-ready { background: #d1fae5; color: #065f46; }
-  .status-pending { background: #fef3c7; color: #92400e; }
-
-  /* Lightbox */
+  .search-bar input {
+    flex: 1; padding: 0.6rem 1rem; border: 2px solid var(--grau);
+    border-radius: 8px; font-size: 1rem; outline: none;
+  }
+  .search-bar input:focus { border-color: var(--gold); }
+  .search-bar select {
+    padding: 0.6rem; border: 2px solid var(--grau);
+    border-radius: 8px; font-size: 0.9rem; outline: none; cursor: pointer;
+  }
+  .search-bar .filter-btn {
+    padding: 0.6rem 1rem; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: 600; font-size: 0.85rem; transition: all 0.2s;
+  }
+  .filter-btn.all { background: var(--grau); color: var(--dunkel); }
+  .filter-btn.fertig { background: #10b981; color: #fff; }
+  .filter-btn.aus { background: #f59e0b; color: #fff; }
+  .filter-btn.active { transform: scale(0.95); box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); }
   .lightbox {
-    display: none; position: fixed; z-index: 999;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.92);
-    justify-content: center; align-items: center;
-    cursor: pointer;
+    display: none; position: fixed; z-index: 999; top: 0; left: 0;
+    width: 100%; height: 100%; background: rgba(0,0,0,0.92);
+    justify-content: center; align-items: center; cursor: pointer;
   }
   .lightbox.show { display: flex; }
   .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
   .lightbox .lb-label {
     position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%);
-    color: #fff; background: rgba(0,0,0,0.6);
-    padding: 0.5rem 1.5rem; border-radius: 8px;
-    font-size: 0.9rem; text-align: center;
+    color: #fff; background: rgba(0,0,0,0.6); padding: 0.5rem 1.5rem; border-radius: 8px; font-size: 0.9rem;
   }
-
-  /* Suche */
-  .search-bar {
-    max-width: 500px; margin: 0 auto 2rem;
-    display: flex; gap: 0.5rem;
+  .info-banner {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 2px solid #f59e0b; border-radius: 12px;
+    padding: 1.5rem 2rem; margin-bottom: 2rem;
+    display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
   }
-  .search-bar input {
-    flex: 1; padding: 0.6rem 1rem; border: 2px solid var(--grau);
-    border-radius: 8px; font-size: 1rem;
-    outline: none; transition: border-color 0.2s;
+  .info-banner h3 { font-size: 1.1rem; color: #92400e; }
+  .info-banner p { color: #78350f; font-size: 0.9rem; }
+  .info-banner .btn {
+    margin-left: auto; padding: 0.6rem 1.5rem;
+    background: #f59e0b; color: #fff; border: none; border-radius: 8px;
+    font-weight: 700; cursor: pointer; font-size: 0.9rem;
+    text-decoration: none; white-space: nowrap;
   }
-  .search-bar input:focus { border-color: var(--gold); }
-  .search-bar select {
-    padding: 0.6rem; border: 2px solid var(--grau);
-    border-radius: 8px; font-size: 0.9rem;
-    outline: none; cursor: pointer;
-  }
-
-  footer {
-    text-align: center; padding: 2rem; color: #888;
-    font-size: 0.85rem; border-top: 1px solid var(--grau);
-  }
-
-  @media (max-width: 768px) {
-    .vergleich-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
-    .vergleich-item img { max-width: 80px; }
-  }
-  @media (max-width: 480px) {
-    .vergleich-grid { grid-template-columns: repeat(2, 1fr); }
-    .vergleich-item img { max-width: 60px; }
-  }
+  .info-banner .btn:hover { background: #d97706; }
+  footer { text-align: center; padding: 2rem; color: #888; font-size: 0.85rem; border-top: 1px solid var(--grau); }
+  @media (max-width: 768px) { .vergleich-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); } .vergleich-item img { max-width: 80px; } }
+  @media (max-width: 480px) { .vergleich-grid { grid-template-columns: repeat(2, 1fr); } .vergleich-item img { max-width: 60px; } }
 </style>
 </head>
 <body>
 
 <header>
   <h1>🏁 Wappen <span>Tirol</span></h1>
-  <p>Original (Wikipedia) vs <strong>Qwen Modern</strong> — Alle 276 Gemeinden</p>
-  <div class="count-badge" id="headerCount">Lade Daten…</div>
-  <p style="margin-top:0.6rem">
-    <a class="nav-link" href="index.html">← Wappen-Übersicht</a>
-    <a class="nav-link" href="generiert.html" style="margin-left:0.5rem">🎨 KI-Galerie</a>
-  </p>
+  <p>Original (Wikipedia) vs <strong>Modern — FLUX.2-pro / Qwen-Image-Edit</strong></p>
+  <div class="badges">
+    <span class="badge badge-ready">3 fertig</span>
+    <span class="badge badge-pending">273 Platzhalter</span>
+    <span class="badge badge-info">276 Gemeinden</span>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">← Wappen-Übersicht</a>
+    <a href="generiert.html">🎨 KI-Galerie</a>
+  </div>
 </header>
 
 <div class="container">
+
+  <div class="info-banner" id="infoBanner">
+    <div>
+      <h3>⚡ 3 von 276 Wappen generiert</h3>
+      <p>Es fehlen noch 273. SiliconFlow-Konto aufladen für den Rest.</p>
+    </div>
+    <span class="btn" onclick="alert('SiliconFlow-Konto aufladen (ca. $5-10 für alle 276).\n\nDann `python batch_flux_modern.py` ausführen —~15 Minuten.')">
+      🔋 Aufladen & Generieren
+    </span>
+  </div>
+
   <div class="search-bar">
     <input type="text" id="searchInput" placeholder="🔍 Gemeinde suchen…" oninput="filterGemeinden()">
     <select id="filterBezirk" onchange="filterGemeinden()">
       <option value="">Alle Bezirke</option>
+      <option value="Imst">Imst</option><option value="Innsbruck Stadt">Innsbruck Stadt</option><option value="Innsbruck-Land">Innsbruck-Land</option><option value="Kitzbühel">Kitzbühel</option><option value="Kufstein">Kufstein</option><option value="Landeck">Landeck</option><option value="Lienz (Osttirol)">Lienz (Osttirol)</option><option value="Reutte (Außerfern)">Reutte (Außerfern)</option><option value="Schwaz">Schwaz</option>
     </select>
+    <button class="filter-btn all active" onclick="setFilter('all', this)" id="fAll">Alle</button>
+    <button class="filter-btn fertig" onclick="setFilter('fertig', this)" id="fFertig">Fertig ✓</button>
+    <button class="filter-btn aus" onclick="setFilter('aus', this)" id="fAus">Platzhalter ⏳</button>
   </div>
+
   <div id="gallery"></div>
 </div>
 
@@ -180,122 +175,125 @@
 </div>
 
 <footer>
-  Original-Wappen: Wikipedia (CC BY-SA 4.0) · Qwen Modern: Generiert mit Qwen-Image-Edit (SiliconFlow API)
+  Original-Wappen: Wikipedia (CC BY-SA 4.0) · Ki-Versionen: FLUX.2-pro & Qwen-Image-Edit (SiliconFlow)
 </footer>
 
 <script>
-const DATA = null;
-let manifest = [];
-let allData = [];
+// Daten inline (kein CORS-Problem!)
+const ALL_DATA = [{"bezirk": "Imst", "ort": "Arzl im Pitztal", "original": "img/orte/imst/arzl_im_pitztal.png", "modern": null}, {"bezirk": "Imst", "ort": "Haiming", "original": "img/orte/imst/haiming.png", "modern": null}, {"bezirk": "Imst", "ort": "Imst", "original": "img/orte/imst/imst.png", "modern": null}, {"bezirk": "Imst", "ort": "Imsterberg", "original": "img/orte/imst/imsterberg.png", "modern": null}, {"bezirk": "Imst", "ort": "Jerzens", "original": "img/orte/imst/jerzens.png", "modern": null}, {"bezirk": "Imst", "ort": "Karres", "original": "img/orte/imst/karres.png", "modern": null}, {"bezirk": "Imst", "ort": "Karrösten", "original": "img/orte/imst/karrösten.png", "modern": null}, {"bezirk": "Imst", "ort": "Längenfeld", "original": "img/orte/imst/längenfeld.png", "modern": null}, {"bezirk": "Imst", "ort": "Mieming", "original": "img/orte/imst/mieming.png", "modern": null}, {"bezirk": "Imst", "ort": "Mils bei Imst", "original": "img/orte/imst/mils_bei_imst.png", "modern": null}, {"bezirk": "Imst", "ort": "Mötz", "original": "img/orte/imst/mötz.png", "modern": null}, {"bezirk": "Imst", "ort": "Nassereith", "original": "img/orte/imst/nassereith.png", "modern": null}, {"bezirk": "Imst", "ort": "Obsteig", "original": "img/orte/imst/obsteig.png", "modern": null}, {"bezirk": "Imst", "ort": "Oetz", "original": "img/orte/imst/oetz.png", "modern": null}, {"bezirk": "Imst", "ort": "Rietz", "original": "img/orte/imst/rietz.png", "modern": null}, {"bezirk": "Imst", "ort": "Roppen", "original": "img/orte/imst/roppen.png", "modern": null}, {"bezirk": "Imst", "ort": "St. Leonhard im Pitztal", "original": "img/orte/imst/st._leonhard_im_pitztal.png", "modern": null}, {"bezirk": "Imst", "ort": "Sautens", "original": "img/orte/imst/sautens.png", "modern": null}, {"bezirk": "Imst", "ort": "Silz", "original": "img/orte/imst/silz.png", "modern": null}, {"bezirk": "Imst", "ort": "Sölden", "original": "img/orte/imst/sölden.png", "modern": null}, {"bezirk": "Imst", "ort": "Stams", "original": "img/orte/imst/stams.png", "modern": null}, {"bezirk": "Imst", "ort": "Tarrenz", "original": "img/orte/imst/tarrenz.png", "modern": null}, {"bezirk": "Imst", "ort": "Umhausen", "original": "img/orte/imst/umhausen.png", "modern": null}, {"bezirk": "Imst", "ort": "Wenns", "original": "img/orte/imst/wenns.png", "modern": null}, {"bezirk": "Innsbruck Stadt", "ort": "Innsbruck", "original": "img/orte/statutarstadt_innsbruck/stadtwappen.png", "modern": "img/generiert/wappen_innsbruck_modern_qwen.png"}, {"bezirk": "Innsbruck-Land", "ort": "Absam", "original": "img/orte/innsbruck-land/absam.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Aldrans", "original": "img/orte/innsbruck-land/aldrans.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Ampass", "original": "img/orte/innsbruck-land/ampass.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Axams", "original": "img/orte/innsbruck-land/axams.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Baumkirchen", "original": "img/orte/innsbruck-land/baumkirchen.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Birgitz", "original": "img/orte/innsbruck-land/birgitz.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Ellbögen", "original": "img/orte/innsbruck-land/ellbögen.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Flaurling", "original": "img/orte/innsbruck-land/flaurling.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Fritzens", "original": "img/orte/innsbruck-land/fritzens.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Fulpmes", "original": "img/orte/innsbruck-land/fulpmes.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Gnadenwald", "original": "img/orte/innsbruck-land/gnadenwald.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Götzens", "original": "img/orte/innsbruck-land/götzens.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Gries am Brenner", "original": "img/orte/innsbruck-land/gries_am_brenner.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Gries im Sellrain", "original": "img/orte/innsbruck-land/gries_im_sellrain.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Grinzens", "original": "img/orte/innsbruck-land/grinzens.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Gschnitz", "original": "img/orte/innsbruck-land/gschnitz.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Hall in Tirol", "original": "img/orte/innsbruck-land/hall_in_tirol.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Hatting", "original": "img/orte/innsbruck-land/hatting.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Inzing", "original": "img/orte/innsbruck-land/inzing.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Kematen in Tirol", "original": "img/orte/innsbruck-land/kematen_in_tirol.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Kolsass", "original": "img/orte/innsbruck-land/kolsass.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Kolsassberg", "original": "img/orte/innsbruck-land/kolsassberg.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Lans", "original": "img/orte/innsbruck-land/lans.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Leutasch", "original": "img/orte/innsbruck-land/leutasch.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Matrei am Brenner", "original": "img/orte/innsbruck-land/matrei_am_brenner.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Mieders", "original": "img/orte/innsbruck-land/mieders.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Mils", "original": "img/orte/innsbruck-land/mils.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Mutters", "original": "img/orte/innsbruck-land/mutters.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Natters", "original": "img/orte/innsbruck-land/natters.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Navis", "original": "img/orte/innsbruck-land/navis.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Neustift im Stubaital", "original": "img/orte/innsbruck-land/neustift_im_stubaital.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Oberhofen im Inntal", "original": "img/orte/innsbruck-land/oberhofen_im_inntal.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Obernberg am Brenner", "original": "img/orte/innsbruck-land/obernberg_am_brenner.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Oberperfuss", "original": "img/orte/innsbruck-land/oberperfuss.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Patsch", "original": "img/orte/innsbruck-land/patsch.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Pettnau", "original": "img/orte/innsbruck-land/pettnau.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Pfaffenhofen", "original": "img/orte/innsbruck-land/pfaffenhofen.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Polling in Tirol", "original": "img/orte/innsbruck-land/polling_in_tirol.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Ranggen", "original": "img/orte/innsbruck-land/ranggen.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Reith bei Seefeld", "original": "img/orte/innsbruck-land/reith_bei_seefeld.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Rinn", "original": "img/orte/innsbruck-land/rinn.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Rum", "original": "img/orte/innsbruck-land/rum.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "St. Sigmund im Sellrain", "original": "img/orte/innsbruck-land/st._sigmund_im_sellrain.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Scharnitz", "original": "img/orte/innsbruck-land/scharnitz.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Schmirn", "original": "img/orte/innsbruck-land/schmirn.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Schönberg im Stubaital", "original": "img/orte/innsbruck-land/schönberg_im_stubaital.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Seefeld in Tirol", "original": "img/orte/innsbruck-land/seefeld_in_tirol.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Sellrain", "original": "img/orte/innsbruck-land/sellrain.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Sistrans", "original": "img/orte/innsbruck-land/sistrans.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Steinach am Brenner", "original": "img/orte/innsbruck-land/steinach_am_brenner.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Telfes im Stubai", "original": "img/orte/innsbruck-land/telfes_im_stubai.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Telfs", "original": "img/orte/innsbruck-land/telfs.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Thaur", "original": "img/orte/innsbruck-land/thaur.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Trins", "original": "img/orte/innsbruck-land/trins.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Tulfes", "original": "img/orte/innsbruck-land/tulfes.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Unterperfuss", "original": "img/orte/innsbruck-land/unterperfuss.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Vals", "original": "img/orte/innsbruck-land/vals.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Völs", "original": "img/orte/innsbruck-land/völs.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Volders", "original": "img/orte/innsbruck-land/volders.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Wattenberg", "original": "img/orte/innsbruck-land/wattenberg.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Wattens", "original": "img/orte/innsbruck-land/wattens.png", "modern": "img/generiert/wappen_wattens_modern_flux.png"}, {"bezirk": "Innsbruck-Land", "ort": "Wildermieming", "original": "img/orte/innsbruck-land/wildermieming.png", "modern": null}, {"bezirk": "Innsbruck-Land", "ort": "Zirl", "original": "img/orte/innsbruck-land/zirl.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Aurach bei Kitzbühel", "original": "img/orte/kitzbühel/aurach_bei_kitzbühel.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Brixen im Thale", "original": "img/orte/kitzbühel/brixen_im_thale.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Fieberbrunn", "original": "img/orte/kitzbühel/fieberbrunn.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Going am Wilden Kaiser", "original": "img/orte/kitzbühel/going_am_wilden_kaiser.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Hochfilzen", "original": "img/orte/kitzbühel/hochfilzen.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Hopfgarten im Brixental", "original": "img/orte/kitzbühel/hopfgarten_im_brixental.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Itter", "original": "img/orte/kitzbühel/itter.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Jochberg", "original": "img/orte/kitzbühel/jochberg.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Kirchberg in Tirol", "original": "img/orte/kitzbühel/kirchberg_in_tirol.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Kirchdorf in Tirol", "original": "img/orte/kitzbühel/kirchdorf_in_tirol.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Kitzbühel", "original": "img/orte/kitzbühel/kitzbühel.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Kössen", "original": "img/orte/kitzbühel/kössen.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Oberndorf in Tirol", "original": "img/orte/kitzbühel/oberndorf_in_tirol.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Reith bei Kitzbühel", "original": "img/orte/kitzbühel/reith_bei_kitzbhel.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Schwendt", "original": "img/orte/kitzbühel/schwendt.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "St. Jakob in Haus", "original": "img/orte/kitzbühel/st._jakob_in_haus.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "St. Johann in Tirol", "original": "img/orte/kitzbühel/st._johann_in_tirol.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "St. Ulrich am Pillersee", "original": "img/orte/kitzbühel/st._ulrich_am_pillersee.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Waidring", "original": "img/orte/kitzbühel/waidring.png", "modern": null}, {"bezirk": "Kitzbühel", "ort": "Westendorf", "original": "img/orte/kitzbühel/westendorf.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Alpbach", "original": "img/orte/kufstein/alpbach.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Angath", "original": "img/orte/kufstein/angath.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Angerberg", "original": "img/orte/kufstein/angerberg.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Bad Häring", "original": "img/orte/kufstein/bad_häring.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Brandenberg", "original": "img/orte/kufstein/brandenberg.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Breitenbach am Inn", "original": "img/orte/kufstein/breitenbach_am_inn.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Brixlegg", "original": "img/orte/kufstein/brixlegg.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Ebbs", "original": "img/orte/kufstein/ebbs.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Ellmau", "original": "img/orte/kufstein/ellmau.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Erl", "original": "img/orte/kufstein/erl.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Kirchbichl", "original": "img/orte/kufstein/kirchbichl.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Kramsach", "original": "img/orte/kufstein/kramsach.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Kufstein", "original": "img/orte/kufstein/kufstein.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Kundl", "original": "img/orte/kufstein/kundl.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Langkampfen", "original": "img/orte/kufstein/langkampfen.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Mariastein", "original": "img/orte/kufstein/mariastein.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Münster", "original": "img/orte/kufstein/münster.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Niederndorf", "original": "img/orte/kufstein/niederndorf.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Niederndorferberg", "original": "img/orte/kufstein/niederndorferberg.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Radfeld", "original": "img/orte/kufstein/radfeld.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Rattenberg", "original": "img/orte/kufstein/rattenberg.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Reith im Alpbachtal", "original": "img/orte/kufstein/reith_im_alpbachtal.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Rettenschöss", "original": "img/orte/kufstein/rettenschöss.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Scheffau am Wilden Kaiser", "original": "img/orte/kufstein/scheffau_am_wilden_kaiser.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Schwoich", "original": "img/orte/kufstein/schwoich.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Söll", "original": "img/orte/kufstein/söll.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Thiersee", "original": "img/orte/kufstein/thiersee.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Walchsee", "original": "img/orte/kufstein/walchsee.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Wildschönau", "original": "img/orte/kufstein/wildschönau.png", "modern": null}, {"bezirk": "Kufstein", "ort": "Wörgl", "original": "img/orte/kufstein/wörgl.png", "modern": null}, {"bezirk": "Landeck", "ort": "Faggen", "original": "img/orte/landeck/faggen.png", "modern": null}, {"bezirk": "Landeck", "ort": "Fendels", "original": "img/orte/landeck/fendels.png", "modern": null}, {"bezirk": "Landeck", "ort": "Fiss", "original": "img/orte/landeck/fiss.png", "modern": null}, {"bezirk": "Landeck", "ort": "Fließ", "original": "img/orte/landeck/fließ.png", "modern": null}, {"bezirk": "Landeck", "ort": "Flirsch", "original": "img/orte/landeck/flirsch.png", "modern": null}, {"bezirk": "Landeck", "ort": "Galtür", "original": "img/orte/landeck/galtür.png", "modern": null}, {"bezirk": "Landeck", "ort": "Grins", "original": "img/orte/landeck/grins.png", "modern": null}, {"bezirk": "Landeck", "ort": "Ischgl", "original": "img/orte/landeck/ischgl.png", "modern": null}, {"bezirk": "Landeck", "ort": "Kappl", "original": "img/orte/landeck/kappl.png", "modern": null}, {"bezirk": "Landeck", "ort": "Kaunerberg", "original": "img/orte/landeck/kaunerberg.png", "modern": null}, {"bezirk": "Landeck", "ort": "Kaunertal", "original": "img/orte/landeck/kaunertal.png", "modern": null}, {"bezirk": "Landeck", "ort": "Kauns", "original": "img/orte/landeck/kauns.png", "modern": null}, {"bezirk": "Landeck", "ort": "Ladis", "original": "img/orte/landeck/ladis.png", "modern": null}, {"bezirk": "Landeck", "ort": "Landeck", "original": "img/orte/landeck/landeck.png", "modern": null}, {"bezirk": "Landeck", "ort": "Nauders", "original": "img/orte/landeck/nauders.png", "modern": null}, {"bezirk": "Landeck", "ort": "Pettneu am Arlberg", "original": "img/orte/landeck/pettneu_am_arlberg.png", "modern": null}, {"bezirk": "Landeck", "ort": "Pfunds", "original": "img/orte/landeck/pfunds.png", "modern": null}, {"bezirk": "Landeck", "ort": "Pians", "original": "img/orte/landeck/pians.png", "modern": null}, {"bezirk": "Landeck", "ort": "Prutz", "original": "img/orte/landeck/prutz.png", "modern": null}, {"bezirk": "Landeck", "ort": "Ried im Oberinntal", "original": "img/orte/landeck/ried_im_oberinntal.png", "modern": null}, {"bezirk": "Landeck", "ort": "St. Anton am Arlberg", "original": "img/orte/landeck/st._anton_am_arlberg.png", "modern": null}, {"bezirk": "Landeck", "ort": "Schönwies", "original": "img/orte/landeck/schönwies.png", "modern": null}, {"bezirk": "Landeck", "ort": "See", "original": "img/orte/landeck/see.png", "modern": null}, {"bezirk": "Landeck", "ort": "Serfaus", "original": "img/orte/landeck/serfaus.png", "modern": null}, {"bezirk": "Landeck", "ort": "Spiss", "original": "img/orte/landeck/spiss.png", "modern": null}, {"bezirk": "Landeck", "ort": "Stanz bei Landeck", "original": "img/orte/landeck/stanz_bei_landeck.png", "modern": null}, {"bezirk": "Landeck", "ort": "Strengen", "original": "img/orte/landeck/strengen.png", "modern": null}, {"bezirk": "Landeck", "ort": "Tobadill", "original": "img/orte/landeck/tobadill.png", "modern": null}, {"bezirk": "Landeck", "ort": "Tösens", "original": "img/orte/landeck/tösens.png", "modern": null}, {"bezirk": "Landeck", "ort": "Zams", "original": "img/orte/landeck/zams.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Ainet", "original": "img/orte/lienz/ainet.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Amlach", "original": "img/orte/lienz/amlach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Anras", "original": "img/orte/lienz/anras.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Assling", "original": "img/orte/lienz/assling.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Außervillgraten", "original": "img/orte/lienz/außervillgraten.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Dölsach", "original": "img/orte/lienz/dölsach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Gaimberg", "original": "img/orte/lienz/gaimberg.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Heinfels", "original": "img/orte/lienz/heinfels.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Hopfgarten in Defereggen", "original": "img/orte/lienz/hopfgarten_in_defereggen.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Innervillgraten", "original": "img/orte/lienz/innervillgraten.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Iselsberg-Stronach", "original": "img/orte/lienz/iselsberg-stronach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Kals am Großglockner", "original": "img/orte/lienz/kals_am_großglockner.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Kartitsch", "original": "img/orte/lienz/kartitsch.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Lavant", "original": "img/orte/lienz/lavant.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Leisach", "original": "img/orte/lienz/leisach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Lienz", "original": "img/orte/lienz/lienz.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Matrei in Osttirol", "original": "img/orte/lienz/matrei_in_osttirol.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Nikolsdorf", "original": "img/orte/lienz/nikolsdorf.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Nußdorf-Debant", "original": "img/orte/lienz/nußdorf-debant.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Oberlienz", "original": "img/orte/lienz/oberlienz.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Obertilliach", "original": "img/orte/lienz/obertilliach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Prägraten am Großvenediger", "original": "img/orte/lienz/prägraten_am_großvenediger.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "St. Jakob in Defereggen", "original": "img/orte/lienz/st._jakob_in_defereggen.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "St. Johann im Walde", "original": "img/orte/lienz/st._johann_im_walde.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "St. Veit in Defereggen", "original": "img/orte/lienz/st._veit_in_defereggen.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Schlaiten", "original": "img/orte/lienz/schlaiten.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Sillian", "original": "img/orte/lienz/sillian.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Strassen", "original": "img/orte/lienz/strassen.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Thurn", "original": "img/orte/lienz/thurn.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Tristach", "original": "img/orte/lienz/tristach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Untertilliach", "original": "img/orte/lienz/untertilliach.png", "modern": null}, {"bezirk": "Lienz (Osttirol)", "ort": "Virgen", "original": "img/orte/lienz/virgen.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Bach", "original": "img/orte/reutte/bach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Berwang", "original": "img/orte/reutte/berwang.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Biberwier", "original": "img/orte/reutte/biberwier.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Bichlbach", "original": "img/orte/reutte/bichlbach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Breitenwang", "original": "img/orte/reutte/breitenwang.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Ehenbichl", "original": "img/orte/reutte/ehenbichl.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Ehrwald", "original": "img/orte/reutte/ehrwald.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Elbigenalp", "original": "img/orte/reutte/elbigenalp.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Elmen", "original": "img/orte/reutte/elmen.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Forchach", "original": "img/orte/reutte/forchach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Grän", "original": "img/orte/reutte/grän.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Gramais", "original": "img/orte/reutte/gramais.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Häselgehr", "original": "img/orte/reutte/häselgehr.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Heiterwang", "original": "img/orte/reutte/heiterwang.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Hinterhornbach", "original": "img/orte/reutte/hinterhornbach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Höfen", "original": "img/orte/reutte/höfen.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Holzgau", "original": "img/orte/reutte/holzgau.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Jungholz", "original": "img/orte/reutte/jungholz.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Kaisers", "original": "img/orte/reutte/kaisers.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Lechaschau", "original": "img/orte/reutte/lechaschau.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Lermoos", "original": "img/orte/reutte/lermoos.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Musau", "original": "img/orte/reutte/musau.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Namlos", "original": "img/orte/reutte/namlos.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Nesselwängle", "original": "img/orte/reutte/nesselwängle.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Pfafflar", "original": "img/orte/reutte/pfafflar.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Pflach", "original": "img/orte/reutte/pflach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Pinswang", "original": "img/orte/reutte/pinswang.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Reutte", "original": "img/orte/reutte/reutte.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Schattwald", "original": "img/orte/reutte/schattwald.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Stanzach", "original": "img/orte/reutte/stanzach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Steeg", "original": "img/orte/reutte/steeg.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Tannheim", "original": "img/orte/reutte/tannheim.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Vils", "original": "img/orte/reutte/vils.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Vorderhornbach", "original": "img/orte/reutte/vorderhornbach.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Wängle", "original": "img/orte/reutte/wängle.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Weißenbach am Lech", "original": "img/orte/reutte/weißenbach_am_lech.png", "modern": null}, {"bezirk": "Reutte (Außerfern)", "ort": "Zöblen", "original": "img/orte/reutte/zöblen.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Achenkirch", "original": "img/orte/schwaz/achenkirch.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Aschau im Zillertal", "original": "img/orte/schwaz/aschau_im_zillertal.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Brandberg", "original": "img/orte/schwaz/brandberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Bruck am Ziller", "original": "img/orte/schwaz/bruck_am_ziller.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Buch in Tirol", "original": "img/orte/schwaz/buch_in_tirol.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Eben am Achensee", "original": "img/orte/schwaz/eben_am_achensee.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Finkenberg", "original": "img/orte/schwaz/finkenberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Fügen", "original": "img/orte/schwaz/fügen.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Fügenberg", "original": "img/orte/schwaz/fügenberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Gallzein", "original": "img/orte/schwaz/gallzein.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Gerlos", "original": "img/orte/schwaz/gerlos.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Gerlosberg", "original": "img/orte/schwaz/gerlosberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Hainzenberg", "original": "img/orte/schwaz/hainzenberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Hart im Zillertal", "original": "img/orte/schwaz/hart_im_zillertal.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Hippach", "original": "img/orte/schwaz/hippach.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Jenbach", "original": "img/orte/schwaz/jenbach.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Kaltenbach", "original": "img/orte/schwaz/kaltenbach.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Mayrhofen", "original": "img/orte/schwaz/mayrhofen.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Pill", "original": "img/orte/schwaz/pill.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Ramsau im Zillertal", "original": "img/orte/schwaz/ramsau_im_zillertal.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Ried im Zillertal", "original": "img/orte/schwaz/ried_im_zillertal.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Rohrberg", "original": "img/orte/schwaz/rohrberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Schlitters", "original": "img/orte/schwaz/schlitters.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Schwaz", "original": "img/orte/schwaz/schwaz.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Schwendau", "original": "img/orte/schwaz/schwendau.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Stans", "original": "img/orte/schwaz/stans.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Steinberg am Rofan", "original": "img/orte/schwaz/steinberg_am_rofan.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Strass im Zillertal", "original": "img/orte/schwaz/strass_im_zillertal.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Stumm", "original": "img/orte/schwaz/stumm.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Stummerberg", "original": "img/orte/schwaz/stummerberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Terfens", "original": "img/orte/schwaz/terfens.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Tux", "original": "img/orte/schwaz/tux.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Uderns", "original": "img/orte/schwaz/uderns.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Vomp", "original": "img/orte/schwaz/vomp.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Weer", "original": "img/orte/schwaz/weer.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Weerberg", "original": "img/orte/schwaz/weerberg.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Wiesing", "original": "img/orte/schwaz/wiesing.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Zell am Ziller", "original": "img/orte/schwaz/zell_am_ziller.png", "modern": null}, {"bezirk": "Schwaz", "ort": "Zellberg", "original": "img/orte/schwaz/zellberg.png", "modern": null}];
+const BEZIRKE = ["Imst", "Innsbruck Stadt", "Innsbruck-Land", "Kitzbühel", "Kufstein", "Landeck", "Lienz (Osttirol)", "Reutte (Außerfern)", "Schwaz"];
+let currentFilter = 'all';
 
-async function loadData() {
-  try {
-    const resp = await fetch('img/qwen_modern/manifest.json');
-    manifest = await resp.json();
-    
-    // Group by bezirk
-    const groups = {};
-    manifest.forEach(item => {
-      if (!groups[item.bezirk]) groups[item.bezirk] = [];
-      groups[item.bezirk].push(item);
-    });
-    
-    allData = Object.entries(groups);
-    
-    const total = manifest.length;
-    const ready = manifest.filter(m => m.qwen).length;
-    document.getElementById('headerCount').textContent = 
-      total + ' Gemeinden · ' + ready + ' Qwen Modern fertig';
-    
-    // Fill filter
-    const sel = document.getElementById('filterBezirk');
-    allData.forEach(([name]) => {
-      const opt = document.createElement('option');
-      opt.value = name;
-      opt.textContent = name;
-      sel.appendChild(opt);
-    });
-    
-    renderAll();
-  } catch(e) {
-    document.getElementById('headerCount').textContent = 'Lade… (Batch läuft noch?)';
-    console.error(e);
-    setTimeout(loadData, 5000);
-  }
+function updateBadges() {
+  const ready = ALL_DATA.filter(d => d.modern).length;
+  const total = ALL_DATA.length;
+  document.getElementById('countReady').textContent = ready + ' fertig';
+  document.getElementById('countPending').textContent = (total - ready) + ' Platzhalter';
+  const h3 = document.querySelector('#infoBanner h3');
+  if (h3) h3.textContent = ready === total ? '🎉 Alle fertig!' : `⚡ ${ready} von ${total} Wappen generiert`;
+}
+
+function setFilter(filter, btn) {
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderAll();
 }
 
 function renderAll() {
   const container = document.getElementById('gallery');
   container.innerHTML = '';
-  
-  const filterText = document.getElementById('searchInput').value.toLowerCase();
+  const searchText = document.getElementById('searchInput').value.toLowerCase();
   const filterBezirk = document.getElementById('filterBezirk').value;
-  
-  let shown = 0;
-  allData.forEach(([bezirkName, items]) => {
+
+  const groups = {};
+  ALL_DATA.forEach(d => {
+    if (!groups[d.bezirk]) groups[d.bezirk] = [];
+    groups[d.bezirk].push(d);
+  });
+
+  Object.entries(groups).forEach(([bezirkName, items]) => {
     if (filterBezirk && bezirkName !== filterBezirk) return;
-    
-    const filtered = items.filter(item => 
-      item.ort.toLowerCase().includes(filterText)
-    );
+
+    let filtered = items.filter(d => d.ort.toLowerCase().includes(searchText));
+    if (currentFilter === 'fertig') filtered = filtered.filter(d => d.modern);
+    else if (currentFilter === 'aus') filtered = filtered.filter(d => !d.modern);
     if (filtered.length === 0) return;
-    
-    shown += filtered.length;
-    
+
+    const readyCount = filtered.filter(d => d.modern).length;
+
     const section = document.createElement('div');
     section.className = 'bezirk-section';
-    
-    const h2 = document.createElement('h2');
-    h2.innerHTML = `<span>${bezirkName}</span><span class="b-count">${filtered.length} Gemeinden</span>`;
-    section.appendChild(h2);
-    
+    section.innerHTML = `<h2>
+      <span>${bezirkName}</span>
+      <span class="b-progress" style="background:${readyCount === filtered.length ? '#10b981' : '#f59e0b'};color:#fff;">${readyCount}/${filtered.length}</span>
+      <span class="b-count">${filtered.length} Gemeinden</span>
+    </h2>`;
+
     const grid = document.createElement('div');
     grid.className = 'vergleich-grid';
-    
+
     filtered.forEach(item => {
       const card = document.createElement('div');
-      card.className = 'vergleich-card';
-      
-      const hasQwen = item.qwen && item.qwen !== null;
-      
-      card.innerHTML = `
-        <div class="ort-name">${item.ort}</div>
-        <div class="vergleich-row">
-          <div class="vergleich-item">
-            <div class="label orig">Original</div>
-            <img src="${item.original}" alt="${item.ort}" loading="lazy"
-                 onclick="openLightbox('${item.original}', '${item.ort} – Original')">
-          </div>
-          <div class="vergleich-item">
-            <div class="label qwen">Qwen Modern ${hasQwen ? '<span class="status-badge status-ready">✓</span>' : '<span class="status-badge status-pending">⟳</span>'}</div>
-            ${hasQwen 
-              ? `<img src="${item.qwen}" alt="${item.ort} Qwen" loading="lazy"
-                     onclick="openLightbox('${item.qwen}', '${item.ort} – Qwen Modern')">`
-              : `<div style="height:100px;display:flex;align-items:center;justify-content:center;color:#ccc;font-size:0.8rem">⏳</div>`}
-          </div>
-        </div>
-      `;
+      card.className = 'vergleich-card ' + (item.modern ? 'fertig' : 'aussteht');
+
+      if (item.modern) {
+        card.innerHTML = `
+          <div class="ort-name"><span class="check">✓</span> ${item.ort}</div>
+          <div class="vergleich-row">
+            <div class="vergleich-item">
+              <div class="label orig">Original</div>
+              <img src="${item.original}" alt="${item.ort}" loading="lazy"
+                   onclick="openLightbox(this.src, '${item.ort} – Original')">
+            </div>
+            <div class="vergleich-item">
+              <div class="label qwen">Modern</div>
+              <img src="${item.modern}" alt="${item.ort} Modern" loading="lazy"
+                   onclick="openLightbox(this.src, '${item.ort} – Modern')">
+            </div>
+          </div>`;
+      } else {
+        card.innerHTML = `
+          <div class="ort-name"><span style="opacity:0.3">⏳</span> ${item.ort}</div>
+          <div class="vergleich-row">
+            <div class="vergleich-item">
+              <div class="label orig">Original</div>
+              <img src="${item.original}" alt="${item.ort}" loading="lazy"
+                   onclick="openLightbox(this.src, '${item.ort} – Original')">
+            </div>
+            <div class="vergleich-item">
+              <div class="label qwen" style="color:#bbb">Modern</div>
+              <div class="placeholder">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 230" width="200" height="230">
+                  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5f0e8"/><stop offset="100%" stop-color="#e8e0d0"/></linearGradient></defs>
+                  <rect width="200" height="230" fill="url(#bg)" rx="12" ry="12"/>
+                  <path d="M100 25 Q175 35 185 120 Q195 190 160 220 Q130 225 100 225 Q70 225 40 220 Q5 190 15 120 Q25 35 100 25Z" fill="#e0d8c8" stroke="#c8c0b0" stroke-width="2"/>
+                  <text x="100" y="115" text-anchor="middle" fill="#bbb" font-size="13">⚡</text>
+                  <text x="100" y="150" text-anchor="middle" fill="#bbb" font-size="11" font-weight="600">Platzhalter</text>
+                  <text x="100" y="165" text-anchor="middle" fill="#ccc" font-size="9">bald hier</text>
+                </svg>
+              </div>
+            </div>
+          </div>`;
+      }
       grid.appendChild(card);
     });
-    
     section.appendChild(grid);
     container.appendChild(section);
   });
 }
 
 function filterGemeinden() { renderAll(); }
-
 function openLightbox(src, label) {
   document.getElementById('lbImg').src = src;
   document.getElementById('lbLabel').textContent = label;
   document.getElementById('lightbox').classList.add('show');
 }
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('show');
-}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('show'); }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 
-loadData();
+updateBadges();
+renderAll();
 </script>
 </body>
 </html>

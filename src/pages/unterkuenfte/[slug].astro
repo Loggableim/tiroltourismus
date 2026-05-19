@@ -1,5 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
+import PremiumBadge from '../../components/PremiumBadge.astro';
 import PaywallOverlay from '../../components/PaywallOverlay.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
@@ -19,11 +20,8 @@ const isBasic = tier === 'basic';
 const isSilver = tier === 'silver';
 const isGold = tier === 'gold';
 
-const badge = {
-  gold: { text:'⭐ Gold', cls:'tag-gold' },
-  silver: { text:'Silber', cls:'tag-blue' },
-  basic: { text:'Basic', cls:'tag-basic' },
-}[tier] || null;
+const badge = null;
+const tierBadge = tier;
 
 const emoji = entry.typ === 'camping' ? '🏕️' : (entry.emoji || '🏨');
 
@@ -65,7 +63,7 @@ const publicSections = [
     bgImage: entry.hero_bild,
     meta: {
       stars: entry.sterne,
-      badge: badge ? { text: badge.text, cls: badge.cls } : undefined,
+      badge: { text: tier, cls: 'tier-' + tier },
       price: entry.preis_ab ? { value: `ab ${entry.preis_ab} €`, label: '/ Nacht' } : undefined,
     },
   },

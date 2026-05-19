@@ -12,11 +12,11 @@ export interface Props {
 }
 const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'data-tier': dataTier } = Astro.props;
 const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen', 'wasseranschluss'].includes(a));
-const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier === 'silver' ? { cls: 'badge-silver', text: 'Silber' } : { cls: '', text: '' };
+// Badge handled by PremiumBadge component
 ---
 <a href={`/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
   <div class="cp-img" style="position:relative">
-    {badge.cls && <span class={badge.cls}>{badge.text}</span>}
+    <PremiumBadge tier={tier} />
     <span class="cp-placeholder">🏕️</span>
     <FavHeart collection="camping" slug={slug} />
   </div>

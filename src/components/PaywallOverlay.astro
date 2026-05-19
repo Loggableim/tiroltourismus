@@ -55,43 +55,52 @@ export interface Props {
     </div>
   </div>
 
-  <!-- Client-seitige Logik: liest echten Tier-Status aus localStorage (gesetzt nach LemonSqueezy-Checkout) -->
+  <!-- Client-seitige Logik: liest Tier aus Session-Cookie (D1 Auth) + localStorage Fallback -->
   <script is:inline>
     (function() {
-      var KEY = 'tirol_user_tier';
+      var COOKIE_KEY = 'session';
+      var LOCAL_KEY = 'tirol_user_tier';
       var container = document.querySelector('[data-paywall]');
       var overlay = document.getElementById('paywallOverlay');
 
+      function getCookie(name) {
+        var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+      }
+
       function getUserTier() {
-        try { return localStorage.getItem(KEY) || 'basic'; }
-        catch(e) { return 'basic'; }
+        // 1. Session Cookie vorhanden? Dann lokal gespeicherten Tier lesen
+        var session = getCookie(COOKIE_KEY);
+        if (session) {
+          try { return localStorage.getItem(LOCAL_KEY) || 'basic'; }
+          catch(e) { return 'basic'; }
+        }
+        return 'basic';
       }
 
       function applyTier(tier) {
         if (!container) return;
-        if (tier === 'basic') {
-          container.classList.remove('tier-silver', 'tier-gold');
-          container.classList.add('tier-basic');
-          if (overlay) overlay.style.display = 'flex';
-        } else if (tier === 'silver') {
-          container.classList.remove('tier-basic', 'tier-gold');
-          container.classList.add('tier-silver');
-          if (overlay) overlay.style.display = 'none';
-        } else if (tier === 'gold') {
-          container.classList.remove('tier-basic', 'tier-silver');
-          container.classList.add('tier-gold');
-          if (overlay) overlay.style.display = 'none';
+        container.classList.remove('tier-basic', 'tier-silver', 'tier-gold');
+        container.classList.add('tier-' + tier);
+        if (overlay) {
+          overlay.style.display = (tier === 'basic') ? 'flex' : 'none';
         }
       }
 
-      // Init: apply actual tier from localStorage (set by LemonSqueezy checkout)
-      var currentTier = getUserTier();
-      applyTier(currentTier);
+      // Init from session
+      applyTier(getUserTier());
 
-      // Listen for tier changes (from other tabs or future updates)
+      // Listen for storage changes (from checkout or other tabs)
       window.addEventListener('storage', function(e) {
-        if (e.key === KEY) {
+        if (e.key === LOCAL_KEY) {
           applyTier(e.newValue || 'basic');
+        }
+      });
+
+      // Also re-check when page visibility changes (return from LemonSqueezy)
+      document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState === 'visible') {
+          applyTier(getUserTier());
         }
       });
     })();

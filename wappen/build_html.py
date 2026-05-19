@@ -219,9 +219,12 @@ html = f'''<!DOCTYPE html>
   <p>Alle Bezirks- und Gemeindewappen des Landes Tirol</p>
   <div class="count-badge">{len(data['bezirke'])} Bezirke · {total} Gemeinden</div>
   <p style="margin-top: 0.6rem">
-    <a href="generiert.html" style="color:var(--gold);text-underline-offset:3px">
-      🎨 18 KI-generierte Wappen-Varianten ansehen →
-    </a>
+      <a href="generiert.html" style="color:var(--gold);text-underline-offset:3px">
+        🎨 18 KI-generierte Wappen-Varianten ansehen →
+      </a>
+      <a href="vergleich.html" style="color:var(--gold);text-underline-offset:3px;margin-left:1rem">
+        📊 Alle 276 im Vergleich (Original vs Modern) →
+      </a>
   </p>
 </header>
 

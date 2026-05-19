@@ -14,11 +14,11 @@ const { name, slug, typ, ort, sterne = 3, preis_ab, tier = 'basic', 'data-tier':
 const isCamping = typ === 'camping';
 const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'Bauernhof', jugendherberge: 'Jugendherberge', camping: 'Camping' };
 const placeholderIcon = isCamping ? '🏕️' : '🏨';
-const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier === 'silver' ? { cls: 'badge-silver', text: 'Silber' } : { cls: '', text: '' };
+// Badge handled by PremiumBadge component
 ---
 <a href={`/unterkuenfte/${slug}/`} class="uk-card" data-tier={dataTier || tier || 'basic'} data-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
   <div class="uk-img" style="position:relative">
-    {badge.cls && <span class={badge.cls}>{badge.text}</span>}
+    <PremiumBadge tier={tier} />
     {isCamping && <span class="uk-camping-badge">⛺</span>}
     <span class="uk-placeholder">{placeholderIcon}</span>
     <FavHeart collection="unterkuenfte" slug={slug} />

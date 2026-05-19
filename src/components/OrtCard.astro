@@ -1,4 +1,5 @@
 ---
+import FavHeart from './FavHeart.astro';
 export interface Props {
   name: string;
   slug: string;
@@ -8,9 +9,10 @@ export interface Props {
 }
 const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--pink)' } = Astro.props;
 ---
-<a href={`/orte/${slug}/`} class="ort-card">
-  <div class="ort-card-img" style={`background:${farbe}20`}>
+<a href={`/orte/${slug}/`} class="ort-card" data-collection="orte" data-slug={slug}>
+  <div class="ort-card-img" style={`position:relative;background:${farbe}20`}>
     <span class="ort-emoji">{emoji}</span>
+    <FavHeart collection="orte" slug={slug} />
   </div>
   <div class="ort-card-body">
     <h3>{name}</h3>

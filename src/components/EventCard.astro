@@ -1,4 +1,5 @@
 ---
+import FavHeart from './FavHeart.astro';
 // EventCard.astro — Karte für Event-Liste (events/index.astro)
 export interface Props {
   titel: string;
@@ -24,8 +25,9 @@ if (datum_von) {
 }
 ---
 
-<a href={`/events/${slug}/`} class="event-card-link">
-  <div class="event-card">
+<a href={`/events/${slug}/`} class="event-card-link" data-collection="events" data-slug={slug}>
+  <div class="event-card" style="position:relative">
+    <FavHeart collection="events" slug={slug} />
     {datum_von && (
       <div class="event-date-box">
         <span class="day">{dateStr.split('.')[0]}</span>

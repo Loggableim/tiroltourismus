@@ -1,4 +1,5 @@
 ---
+import FavHeart from './FavHeart.astro';
 export interface Props {
   titel: string;
   slug: string;
@@ -11,10 +12,11 @@ export interface Props {
 const { titel, slug, beschreibung, emoji = '🏔️', bewertung = 0, farbe = 'var(--pink)', featured } = Astro.props;
 const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
 ---
-<a href={`/regionen/${slug}/`} class="region-card">
-  <div class="region-card-img" style={`background:linear-gradient(135deg,${farbe}15,${farbe}25)`}>
+<a href={`/regionen/${slug}/`} class="region-card" data-collection="regionen" data-slug={slug}>
+  <div class="region-card-img" style={`position:relative;background:linear-gradient(135deg,${farbe}15,${farbe}25)`}>
     <div class="region-blob" style={`background:${farbe}`}></div>
     <span class="region-emoji">{emoji}</span>
+    <FavHeart collection="regionen" slug={slug} />
   </div>
   <div class="region-card-body">
     <h3>{titel}</h3>

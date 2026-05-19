@@ -1,4 +1,5 @@
 ---
+import FavHeart from './FavHeart.astro';
 export interface Props {
   titel: string;
   slug: string;
@@ -9,8 +10,8 @@ export interface Props {
 }
 const { titel, slug, teaser, datum, kategorie, emoji = '📰' } = Astro.props;
 ---
-<a href={`/magazin/${slug}/`} class="article-card">
-  <div class="article-img">{emoji}</div>
+<a href={`/magazin/${slug}/`} class="article-card" data-collection="magazin" data-slug={slug}>
+  <div class="article-img" style="position:relative">{emoji}<FavHeart collection="magazin" slug={slug} /></div>
   <div class="article-body">
     {kategorie && <span class="article-tag">{kategorie}</span>}
     {datum && <div class="article-date">{datum}</div>}

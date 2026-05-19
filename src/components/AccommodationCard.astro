@@ -1,4 +1,5 @@
 ---
+import FavHeart from './FavHeart.astro';
 export interface Props {
   name: string;
   slug: string;
@@ -15,11 +16,12 @@ const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'B
 const placeholderIcon = isCamping ? '🏕️' : '🏨';
 const badge = tier === 'gold' ? { cls: 'badge-gold', text: '⭐ Gold' } : tier === 'silver' ? { cls: 'badge-silver', text: 'Silber' } : { cls: '', text: '' };
 ---
-<a href={`/unterkuenfte/${slug}/`} class="uk-card" data-tier={dataTier || tier || 'basic'} data-typ={typ || 'unknown'}>
-  <div class="uk-img">
+<a href={`/unterkuenfte/${slug}/`} class="uk-card" data-tier={dataTier || tier || 'basic'} data-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
+  <div class="uk-img" style="position:relative">
     {badge.cls && <span class={badge.cls}>{badge.text}</span>}
     {isCamping && <span class="uk-camping-badge">⛺</span>}
     <span class="uk-placeholder">{placeholderIcon}</span>
+    <FavHeart collection="unterkuenfte" slug={slug} />
   </div>
   <div class="uk-body">
     <div class="uk-type">{typLabel[typ] || typ || 'Unterkunft'}</div>

@@ -1,4 +1,5 @@
 ---
+import FavHeart from './FavHeart.astro';
 export interface Props {
   name: string;
   slug: string;
@@ -12,9 +13,10 @@ export interface Props {
 const { name, slug, kurzbeschreibung, kategorie, emoji = '🏛️', farbe = '#8B5CF6', ort, preis } = Astro.props;
 const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport: 'Sport', museum: 'Museum', kirche: 'Kirche', burg: 'Burg', wanderung: 'Wanderung' };
 ---
-<a href={`/sehenswuerdigkeiten/${slug}/`} class="sight-card">
-  <div class="sight-card-img" style={`background:${farbe}18`}>
+<a href={`/sehenswuerdigkeiten/${slug}/`} class="sight-card" data-collection="sehenswuerdigkeiten" data-slug={slug}>
+  <div class="sight-card-img" style={`position:relative;background:${farbe}18`}>
     <span class="sight-emoji">{emoji}</span>
+    <FavHeart collection="sehenswuerdigkeiten" slug={slug} />
   </div>
   <div class="sight-body">
     <div class="sight-kategorie">{catLabel[kategorie] || kategorie || 'Sehenswürdigkeit'}</div>

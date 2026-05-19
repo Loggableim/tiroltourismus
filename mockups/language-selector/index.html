@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language Selector Mockups – tiroltourismus.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --bg:#0A0A12;--bg2:#10101E;
+    --text:#F0EDEE;--text2:rgba(255,255,255,.65);--text3:rgba(255,255,255,.30);
+    --glass:rgba(255,255,255,.06);--glass-border:rgba(255,255,255,.08);
+    --pink:#FF1493;--gold:#D4A800;
+    --green:#00C853;
+    --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+    --font-body:'Montserrat',-apple-system,sans-serif;
+    --radius:12px;
+  }
+  body{font-family:var(--font-body);background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px}
+  .container{max-width:900px;width:100%}
+  h1{font-family:var(--font-display);font-size:64px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px;text-align:center}
+  h1 span{background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .sub{text-align:center;color:var(--text2);font-size:14px;margin-bottom:40px;line-height:1.6}
+  .table-wrap{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;padding:16px 20px;font-family:var(--font-display);font-size:18px;letter-spacing:1px;text-transform:uppercase;background:rgba(255,255,255,.02);border-bottom:1px solid var(--glass-border);color:var(--text3)}
+  td{padding:14px 20px;border-bottom:1px solid var(--glass-border);vertical-align:top;line-height:1.5}
+  tr:last-child td{border-bottom:none}
+  .num{width:40px;text-align:center;font-weight:700;color:var(--pink);font-size:18px}
+  .preview-link{color:var(--pink);text-decoration:none;font-weight:600;font-size:14px}
+  .preview-link:hover{text-decoration:underline}
+  .tag{display:inline-block;padding:3px 10px;border-radius:100px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+  .tag-topbar{background:rgba(255,20,147,.15);color:#FF1493}
+  .tag-nav{background:rgba(212,168,0,.15);color:#D4A800}
+  .tag-floating{background:rgba(255,20,147,.15);color:#FF1493}
+  .tag-hero{background:rgba(212,168,0,.15);color:#D4A800}
+  .tag-footer{background:rgba(0,200,83,.15);color:#00C853}
+  .badge-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:500;background:var(--glass);border:1px solid var(--glass-border);color:var(--text3)}
+  .badge.good{color:var(--green);border-color:rgba(0,200,83,.3)}
+  .badge.warn{color:var(--gold);border-color:rgba(212,168,0,.3)}
+  .badge.mid{color:var(--text2);border-color:var(--glass-border)}
+  .footer-note{text-align:center;margin-top:32px;font-size:12px;color:var(--text3)}
+  .footer-note a{color:var(--pink);text-decoration:none}
+  p a{color:var(--pink);text-decoration:none}
+  p a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌐 Language <span>Selector</span></h1>
+    <p class="sub">5 Mockups für die Positionierung des Sprachumschalters auf tiroltourismus.com<br>Aktuell nur DE/EN — geplant: FR, IT, NL, weitere</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Position &amp; Variante</th>
+            <th>Beschreibung</th>
+            <th>Preview</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">1</td>
+            <td><span class="tag tag-topbar">Topbar</span> Dropdown</td>
+            <td>Erweitert den bestehenden DE/EN-Link in der Topbar zu einem Dropdown mit Flaggen, Sprachname + Kürzel. Leicht erreichbar, platzsparend, konsistent mit aktueller UI.</td>
+            <td><a href="01-topbar-dropdown.html" class="preview-link" target="_blank">→ Öffnen</a></td>
+          </tr>
+          <tr>
+            <td class="num">2</td>
+            <td><span class="tag tag-nav">Haupt-Nav</span> Dropdown</td>
+            <td>Globe-Icon in der rechten Navigationsleiste (neben der Suche). Dropdown klappt nach rechts auf. Topbar bleibt schlank. Sichtbar auf jeder Seite.</td>
+            <td><a href="02-nav-integriert.html" class="preview-link" target="_blank">→ Öffnen</a></td>
+          </tr>
+          <tr>
+            <td class="num">3</td>
+            <td><span class="tag tag-floating">Floating</span> Globe</td>
+            <td>Schwebender Sprach-Button (fixed) am rechten Bildschirmrand, vertikal zentriert. Klappt ein Panel mit allen Sprachen auf. Unabhängig vom Seiten-Scrollen immer sichtbar.</td>
+            <td><a href="03-floating-globe.html" class="preview-link" target="_blank">→ Öffnen</a></td>
+          </tr>
+          <tr>
+            <td class="num">4</td>
+            <td><span class="tag tag-hero">Hero</span> Sprachstrip</td>
+            <td>Horizontale Sprach-Reihe unter den CTA-Buttons im Hero-Bereich der Frontpage. Flags + Kürzel als sichtbare Buttons (kein Dropdown). Prominent, aber nur auf der Startseite sichtbar.</td>
+            <td><a href="04-hero-integriert.html" class="preview-link" target="_blank">→ Öffnen</a></td>
+          </tr>
+          <tr>
+            <td class="num">5</td>
+            <td><span class="tag tag-footer">Footer</span> Flaggen-Reihe</td>
+            <td>Sprachauswahl in der Footer-Brand-Spalte – alle Sprachen als sichtbare Flags + Name nebeneinander. Immer am Ende jeder Seite sichtbar. Gute Ergänzung zu einem kompakten Selector oben.</td>
+            <td><a href="05-footer-dropdown.html" class="preview-link" target="_blank">→ Öffnen</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer-note">
+      📁 Alle Dateien liegen unter <code>F:\tiroltourismus\mockups\language-selector\</code><br>
+      jeweils als standalone HTML — im Browser öffnen und testen.
+    </div>
+  </div>
+</body>
+</html>

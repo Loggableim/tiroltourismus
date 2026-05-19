@@ -1,0 +1,41 @@
+// Tirol Tourismus — Admin: Ausstehende Events
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AdminEventDashboard from '../../../components/AdminEventDashboard.tsx';
+---
+
+<BaseLayout
+  title="Admin – Event-Einträge – Tirol Tourismus"
+  description="Admin-Dashboard zur Freigabe von Event-Einträgen. Nur für Admin zugänglich."
+  noindex={true}
+>
+  <main>
+    <section class="admin-hero">
+      <div class="container">
+        <div class="admin-hero-inner">
+          <div class="admin-hero-emoji">🎪</div>
+          <h1 class="admin-hero-title">Events verwalten</h1>
+          <p class="admin-hero-sub">
+            Ausstehende Event-Einträge prüfen, freigeben oder ablehnen.
+          </p>
+          <nav class="admin-nav">
+            <a href="/admin/pending/" class="admin-nav-link">🏪 Betriebe</a>
+            <a href="/admin/events/" class="admin-nav-link active">🎪 Events</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section admin-section">
+      <div class="container">
+        <AdminEventDashboard client:load />
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .admin-nav{display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+  .admin-nav-link{padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;background:var(--surface);border:1px solid var(--glass-border);color:var(--text2);transition:all .2s}
+  .admin-nav-link.active{background:var(--pink);color:#fff;border-color:var(--pink)}
+  .admin-nav-link:hover:not(.active){border-color:var(--pink);color:var(--text)}
+</style>

@@ -1,0 +1,70 @@
+---
+// EventCard.astro — Karte für Event-Liste (events/index.astro)
+export interface Props {
+  titel: string;
+  slug: string;
+  kategorie?: string;
+  kurzbeschreibung?: string;
+  ort?: string;
+  datum_von?: string;
+  uhrzeit?: string;
+  preis?: string;
+  emoji?: string;
+}
+
+const { titel, slug, kategorie, kurzbeschreibung, ort, datum_von, uhrzeit, preis, emoji } = Astro.props;
+
+const monate = ['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+let dateStr = '';
+if (datum_von) {
+  try {
+    const [y, m, d] = datum_von.split('-');
+    dateStr = `${parseInt(d)}. ${monate[parseInt(m)-1]} ${y}`;
+  } catch {}
+}
+---
+
+<a href={`/events/${slug}/`} class="event-card-link">
+  <div class="event-card">
+    {datum_von && (
+      <div class="event-date-box">
+        <span class="day">{dateStr.split('.')[0]}</span>
+        <span class="month">{monate[parseInt(datum_von.split('-')[1])-1] || ''}</span>
+      </div>
+    )}
+    <div class="event-info">
+      {kategorie && <span class="event-cat">{emoji || '🎪'} {kategorie}</span>}
+      <h3>{titel}</h3>
+      {kurzbeschreibung && <p class="event-desc">{kurzbeschreibung}</p>}
+      {ort && <div class="event-location">📍 {ort}</div>}
+      <div class="event-meta">
+        {uhrzeit && <span class="event-time">🕐 {uhrzeit}</span>}
+        {preis && preis !== '#' && <span class="event-price">{preis}</span>}
+        <span class="event-link">Details →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style is:global>
+  .event-card-link{display:block;text-decoration:none;color:inherit}
+  .event-card-link:hover .event-card{transform:translateY(-4px);border-color:var(--pink);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+  .event-card{display:flex;background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);min-height:120px}
+  .event-date-box{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:100px;padding:16px;background:var(--pink);color:#fff;text-align:center;flex-shrink:0}
+  .event-date-box .day{font-family:var(--font-display);font-size:34px;line-height:1;letter-spacing:1px}
+  .event-date-box .month{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;opacity:.85}
+  .event-info{padding:16px 20px;flex:1;display:flex;flex-direction:column;gap:4px}
+  .event-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink)}
+  .event-info h3{font-family:var(--font-display);font-size:20px;letter-spacing:.5px;line-height:1.2;margin:0;color:var(--text)}
+  .event-desc{font-size:13px;color:var(--text2);line-height:1.5;margin:0}
+  .event-location{font-size:12px;color:var(--text3);margin:0}
+  .event-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+  .event-time,.event-price{font-size:11px;color:var(--text3)}
+  .event-price{font-weight:700;color:var(--pink)}
+  .event-link{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--pink);margin-left:auto}
+  @media(max-width:600px){
+    .event-card{flex-direction:column}
+    .event-date-box{flex-direction:row;gap:8px;min-width:auto;padding:10px 16px}
+    .event-date-box .day{font-size:24px}
+  }
+</style>

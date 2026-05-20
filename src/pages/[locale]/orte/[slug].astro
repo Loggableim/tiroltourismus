@@ -1,0 +1,47 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const locale of LANGUAGES_READY) {
+    const all = readCollection('orte', locale).filter(o => isPublished(o.entry));
+    for (const o of all) paths.push({ params: { locale, slug: o.slug } });
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('orte', slug, locale);
+if (!entry) return Astro.redirect('/orte/');
+
+const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: name, emoji: emoji || '🏘️' });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({ lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng, label: n.entry.name || n.entry.titel, emoji: CATEGORY_EMOJI[n.collection] || '📍', href: '/' + n.collection + '/' + n.slug + '/', category: n.collection });
+});
+const title = name || slug;
+const metaDesc = generateMetaDescription(entry, 'de');
+---
+
+<DetailPage title={title} description={metaDesc} locale={locale}
+  breadcrumbs="{[{ label: 'Orte', href: '/orte/' }, { label: title }]}"
+  sections={[
+    { type: 'hero', title, subtitle: entry.region, emoji: emoji || '🏘️', image: entry.hero_bild || (entry.bilder?.[0]?.url), color: farbe },
+    { type: 'facts', items: [
+      hoehe && { icon: '📏', label: 'Höhe', value: hoehe },
+      einwohner && { icon: '👥', label: 'Einwohner', value: einwohner },
+    ].filter(Boolean) },
+    { type: 'description', content: kurzbeschreibung },
+    entry.koordinaten && { type: 'map', markers: mapMarkers },
+    nearbyEntries.length > 0 && { type: 'related', items: nearbyEntries.slice(0,4) },
+  ].filter(Boolean)}
+/>

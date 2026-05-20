@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import EventCard from '../../../components/EventCard.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const events = readCollection('events', locale).filter(e => isPublished(e.entry));
+const sorted = [...events].sort((a,b) => (a.entry.datum_von||'').localeCompare(b.entry.datum_von||''));
+const mitCoords = events.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng);
+---
+
+<BaseLayout title="Events in Tirol" description="Events, Konzerte, Feste und kulinarische Highlights in Tirol." locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'Events' }]}" /></div>
+    <section class="page-header"><h1>Events in Tirol</h1><p>Veranstaltungen, Feste und kulinarische Events.</p></section>
+    <div class="event-list">{sorted.map(e => (<EventCard {...e.entry} slug={e.slug} />))}</div>
+  </main>
+</BaseLayout>

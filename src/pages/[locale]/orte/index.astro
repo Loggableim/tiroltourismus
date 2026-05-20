@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import OrtCard from '../../../components/OrtCard.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const orte = readCollection('orte', locale).filter(o => isPublished(o.entry));
+const mitKarte = orte.filter(o => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
+---
+
+<BaseLayout title="Orte in Tirol" description="Entdecke die schönsten Orte und Dörfer in Tirol." locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'Orte' }]}" /></div>
+    <Hero title="Orte" subtitle="Die schönsten Dörfer und Städte Tirols." emoji="🏘️" size="md" />
+    <div class="card-grid">
+      {orte.map(o => (<OrtCard {...o.entry} slug={o.slug} />))}
+    </div>
+    {mitKarte.length > 0 && (<SectionMap markers="{mitKarte.map(o => ({lat:o.entry.koordinaten.lat,lng:o.entry.koordinaten.lng,label:o.entry.name,emoji:o.entry.emoji||'🏘️',href:'/'+(locale!=='de'?locale+'/':'')+'orte/'+o.slug+'/'}))}" />)}
+  </main>
+</BaseLayout>

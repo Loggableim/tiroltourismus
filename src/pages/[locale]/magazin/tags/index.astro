@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../../components/SectionHeader.astro';
+import { readCollection, isPublished } from '../../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const articles = readCollection('magazin', locale).filter(a => isPublished(a.entry));
+const tagMap = new Map();
+for (const { entry } of articles) {
+  if (entry.tags) for (const tag of entry.tags) tagMap.set(tag, (tagMap.get(tag)||0)+1);
+}
+const sortedTags = [...tagMap.entries()].sort((a,b) => b[1]-a[1]);
+---
+
+<BaseLayout title="Alle Tags – Magazin" description="Alle Schlagworte des Tirol Magazins" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'Magazin', href: '/magazin/' }, { label: 'Tags' }]}" /></div>
+    <SectionHeader title="Tags" sub="${sortedTags.length} Schlagworte" />
+    <div class="tag-cloud">{sortedTags.map(([tag, count]) => (<a href="{'/'+(locale!=='de'?locale+'/':'')+'magazin/tag/'+tag}/" class="tag-pill">{tag} ({count})</a>))}</div>
+  </main>
+</BaseLayout>

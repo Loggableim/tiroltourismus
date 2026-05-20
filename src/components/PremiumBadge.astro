@@ -14,7 +14,7 @@ const config = {
 
 const sizeCls = size === 'md' ? 'pb-md' : 'pb-sm';
 ---
-<span class="premium-badge {config.cls} {sizeCls}">
+<span class={`premium-badge ${config.cls} ${sizeCls}`}>
   <span class="pb-icon">{config.icon}</span>
   <span class="pb-label">{config.label}</span>
 </span>

@@ -1,5 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
@@ -14,6 +15,9 @@ if (!entry) return Astro.redirect('/gastro/');
 
 const emoji = entry.emoji || '🍽️';
 const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
+
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
 
 const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'gastro', 'de', 8) : [];
@@ -64,26 +68,32 @@ const relatedByTag = entry.tags && entry.tags.length > 0
       gradient: entry.farbe,
       bgImage: entry.hero_bild,
     },
-    (entry.kurzbeschreibung || entry.beschreibung) ? {
-      type: 'description',
-      label: entry.name,
-      title: 'Über dieses Lokal',
-      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
-    } : null,
     {
       type: 'details-grid',
+      label: 'Kontakt & Standort',
       items: [
         { label: 'Ort', value: entry.ort || undefined },
         { label: 'Kategorie', value: entry.kategorie || undefined },
         { label: 'Telefon', value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
         { label: 'Adresse', value: entry.adresse || undefined },
-        { label: 'Preis', value: entry.preis || undefined, type: 'price' },
-        entry.webseite ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
         { label: 'Tags', tags: entry.tags || [], type: 'tags' },
       ].filter(Boolean),
     },
-    mapSection,
-    relatedByTag.length > 0 ? {
+    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? {
+      type: 'description',
+      label: entry.name,
+      title: 'Über dieses Lokal',
+      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
+    } : null,
+    !isBasic ? {
+      type: 'details-grid',
+      items: [
+        { label: 'Preis', value: entry.preis || undefined, type: 'price' },
+        entry.webseite ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
+      ].filter(Boolean),
+    } : null,
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: 'Weitere Lokale',
       entries: relatedByTag,
@@ -93,7 +103,7 @@ const relatedByTag = entry.tags && entry.tags.length > 0
       emojiField: '_emoji',
       defaultEmoji: '🍽️',
     } : null,
-    {
+    !isBasic ? {
       type: 'cta',
       label: 'Lust bekommen?',
       title: 'Jetzt reservieren',
@@ -105,3 +115,12 @@ const relatedByTag = entry.tags && entry.tags.length > 0
     },
   ].filter(Boolean)}
 />
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+    </div>
+  </section>
+)}

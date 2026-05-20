@@ -1,5 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
@@ -13,6 +14,8 @@ const entry = readEntry('orte', slug);
 if (!entry) return Astro.redirect('/orte/');
 
 const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
 
 const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', 'de', 8) : [];
@@ -70,8 +73,8 @@ const relatedByTag = tags && tags.length > 0
       ].filter(Boolean),
     },
     tags && tags.length > 0 ? { type: 'tags', tags } : null,
-    mapSection,
-    relatedByTag.length > 0 ? {
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: 'Weitere Orte',
       entries: relatedByTag,
@@ -83,3 +86,12 @@ const relatedByTag = tags && tags.length > 0
     } : null,
   ].filter(Boolean)}
 />
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={name} slug={slug} />
+    </div>
+  </section>
+)}

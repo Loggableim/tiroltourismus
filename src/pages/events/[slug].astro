@@ -1,5 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
 import { readEntry, readCollection, isPublished, findNearby, findRelated, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
@@ -13,6 +14,8 @@ const entry = readEntry('events', slug);
 if (!entry) return Astro.redirect('/events/');
 
 const emoji = entry.emoji || '🎪';
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
 const subtitle = [
   entry.ort,
   entry.region && entry.region !== entry.ort ? entry.region : null,
@@ -88,26 +91,31 @@ const relatedSection = related.length > 0 ? {
         price: entry.preis ? { value: entry.preis, label: dateStr ? dateStr : undefined } : undefined,
       },
     },
-    (entry.beschreibung || entry.kurzbeschreibung) ? {
+    {
+      type: 'details-grid',
+      label: 'Informationen',
+      items: [
+        { label: 'Datum', value: dateStr || undefined },
+        { label: 'Uhrzeit', value: entry.uhrzeit || undefined },
+        { label: 'Ort', value: entry.ort || undefined },
+        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+      ].filter(Boolean),
+    },
+    !isBasic ? {
+      type: 'details-grid',
+      items: [
+        { label: 'Preis', value: entry.preis || undefined },
+        { label: 'Webseite', value: entry.webseite || undefined, type: 'link', href: entry.webseite },
+      ].filter(Boolean),
+    } : null,
+    !isBasic && (entry.beschreibung || entry.kurzbeschreibung) ? {
       type: 'description',
       label: entry.name || entry.titel,
       title: 'Über dieses Event',
       content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
     } : null,
-    {
-      type: 'details-grid',
-      items: [
-        { label: 'Datum', value: dateStr || undefined },
-        { label: 'Uhrzeit', value: entry.uhrzeit || undefined },
-        { label: 'Ort', value: entry.ort || undefined },
-        { label: 'Region', value: entry.region || undefined },
-        entry.preis ? { label: 'Preis', value: entry.preis, type: 'price' } : null,
-        entry.link && entry.link !== '#' ? { label: 'Event-Seite', value: entry.link, type: 'link', href: entry.link } : null,
-        entry.webseite && entry.webseite !== '#' ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
-        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
-      ].filter(Boolean),
-    },
-    {
+    !isBasic ? mapSection : null,
+    !isBasic ? {
       type: 'cta',
       label: 'Interesse?',
       title: 'Mehr erfahren',
@@ -121,3 +129,12 @@ const relatedSection = related.length > 0 ? {
     mapSection,
   ].filter(Boolean)}
 />
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name || entry.titel} slug={slug} />
+    </div>
+  </section>
+)}

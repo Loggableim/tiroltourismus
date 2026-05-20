@@ -32,7 +32,8 @@ const CATEGORY_STYLES = {
 
 function getTheme() {
   if (typeof document === 'undefined') return 'light';
-  return document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  const dt = document.documentElement.getAttribute('data-theme');
+  return (dt === 'alpenpeak' || dt === 'dark') ? 'dark' : 'light';
 }
 
 export default function LeafletMap({
@@ -95,7 +96,11 @@ export default function LeafletMap({
       });
 
       mapInstance.current = map;
+      // Leaflet needs container visible - invalidate after init
+      setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 100);
       setLoading(false);
+      // Re-invalidate when fully rendered
+      setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 500);
 
       // Tile layer
       const tiles = L.tileLayer(activeTheme === 'dark' ? TILES.dark : TILES.light, {
@@ -379,15 +384,12 @@ export default function LeafletMap({
         </div>
       )}
 
-      {/* Loading skeleton */}
+      {/* Loading skeleton overlay */}
       {loading && (
         <div style={{
-          width: '100%', height: respH,
+          position: 'absolute', top: 0, left: 0, width: '100%', height: respH, zIndex: 10,
           borderRadius: 'var(--radius, 12px)',
-          background: 'linear-gradient(90deg, var(--bg2, #f0f0f0) 25%, var(--surface, #e0e0e0) 50%, var(--bg2, #f0f0f0) 75%)',
-          backgroundSize: '200% 100%',
-          animation: 'mapSkeleton 1.5s ease-in-out infinite',
-          border: '1px solid var(--glass-border, rgba(0,0,0,.06))',
+          background: 'var(--bg2, #f0f0f0)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           color: 'var(--text3, #aaa)', fontSize: '14px',
         }}>
@@ -402,7 +404,7 @@ export default function LeafletMap({
           overflow: 'hidden',
           border: '1px solid var(--glass-border, rgba(0,0,0,.06))',
           boxShadow: '0 4px 24px rgba(0,0,0,.08)',
-          display: loading ? 'none' : 'block',
+          display: 'block',  // always visible - Leaflet needs it
           transition: 'height .3s ease',
         }}
       />

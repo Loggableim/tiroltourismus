@@ -5,34 +5,16 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import RegionCard from '../../../components/RegionCard.astro';
 import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
 
 export async function getStaticPaths() {
-  return [
-    { params: { locale: 'de' } },
-    { params: { locale: 'en' } },
-  ];
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
 }
 
 const { locale } = Astro.params;
 const regionen = readCollection('regionen', locale).filter(r => isPublished(r.entry)).sort((a,b) => (b.entry.bewertung||0)-(a.entry.bewertung||0));
 
-const t = locale === 'en' ? {
-  title: 'Regions',
-  desc: 'Six faces, one land. Every region in Tyrol has its own sound — from glacier whispers to city beats. Find yours.',
-  hero_sub: 'Six faces, one land.',
-  section_label: 'Discover Tyrol',
-  section_title: 'Where do you want to go?',
-  section_sub: 'Whether high-alpine peaks, glittering glaciers, or urban mountain air — Tyrol\'s regions are as diverse as life itself.',
-  actions: 'Discover Regions →',
-  count_prefix: '🏔️',
-  count_suffix: 'Regions',
-  fact_regions: 'Regions',
-  fact_experiences: 'Experiences',
-  fact_unterkuenfte: 'Accommodations',
-  soon_title: 'Coming Soon',
-  soon_text: 'Regions are currently being added. Check back soon!',
-  breadcrumb: 'Regions',
-} : {
+const t = locale === 'de' ? {
   title: 'Regionen',
   desc: 'Sechs Gesichter, ein Land. Jede Region in Tirol hat ihren eigenen Sound – von Gletscherflüstern bis Stadtbeat. Finde deine.',
   hero_sub: 'Sechs Gesichter, ein Land.',
@@ -48,6 +30,22 @@ const t = locale === 'en' ? {
   soon_title: 'Bald verfügbar',
   soon_text: 'Regionen werden aktuell eingepflegt. Schau bald wieder vorbei!',
   breadcrumb: 'Regionen',
+} : {
+  title: 'Regions',
+  desc: 'Six faces, one land. Every region in Tyrol has its own sound — from glacier whispers to city beats. Find yours.',
+  hero_sub: 'Six faces, one land.',
+  section_label: 'Discover Tyrol',
+  section_title: 'Where do you want to go?',
+  section_sub: 'Whether high-alpine peaks, glittering glaciers, or urban mountain air — Tyrol\'s regions are as diverse as life itself.',
+  actions: 'Discover Regions →',
+  count_prefix: '🏔️',
+  count_suffix: 'Regions',
+  fact_regions: 'Regions',
+  fact_experiences: 'Experiences',
+  fact_unterkuenfte: 'Accommodations',
+  soon_title: 'Coming Soon',
+  soon_text: 'Regions are currently being added. Check back soon!',
+  breadcrumb: 'Regions',
 };
 ---
 

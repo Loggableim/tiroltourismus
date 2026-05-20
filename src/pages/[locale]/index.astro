@@ -9,35 +9,33 @@ import SightCard from '../../components/SightCard.astro';
 import NewsletterForm from '../../components/NewsletterForm.tsx';
 import SectionMap from '../../sections/SectionMap.astro';
 import { readCollection, isPublished, readSingleton } from '../../lib/content.js';
+import { LANGUAGES_READY } from '../../lib/languages.js';
 
 export async function getStaticPaths() {
-  return [
-    { params: { locale: 'de' } },
-    { params: { locale: 'en' } },
-  ];
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
 }
 
 const { locale } = Astro.params;
 const page = readSingleton('homepage', locale);
 
-// ── Locale-aware hardcoded strings ──
-const t = locale === 'en' ? {
-  willkommen: { label: '#welcome', title: 'Welcome to', titleAccent: 'Tyrol', p1: 'Tyrol is far more than just a region – it is a feeling of freedom, adventure, and deep connection with nature. Gentle alpine meadows and rugged rock peaks alternate like the seasons, ancient tradition meets modern hospitality, and in every valley a new surprise awaits.', p2: 'Whether you stroll through the historic alleys of Innsbruck, enjoy panoramic views from the summit of a three-thousander, or sample Tyrolean delicacies in a rustic hut – this corner of the earth has a soul you can feel. Let our diversity surprise you.', features: [
-    { icon: '🏔️', text: '835 Three-thousanders' },
-    { icon: '🥾', text: '24,500 km of Hiking Trails' },
-    { icon: '🚡', text: '580 Cable Cars & Lifts' },
-    { icon: '🍽️', text: 'Tyrolean Cuisine' },
-  ], highlight: { icon: '💡', title: 'Did You Know?', text: 'In Tyrol there are over <strong>60 different snack stations and alpine huts</strong> that are only accessible on foot or by cable car. Each one serves homemade Kaiserschmarrn, Kaspressknödel, and other Tyrolean specialties – with guaranteed stunning mountain scenery.', cta: 'Discover more →' } },
-  heute: { label: '#today', title: 'Discover Today', sub: 'Random finds from all categories – new every day. Click your way through Tyrol\'s most colorful pages.' },
-  regionen: { label: '#regionen', title: 'Our Regions', sub: 'One land, countless faces. Each Tyrolean region has its own character – from the urban Alpine city of Innsbruck to the pristine glacier worlds of the Kaunertal.', lead: 'Whether action-packed days in the Zillertal, culinary delights in the Stubaital, or luxurious escapes in Kitzbühel – find your perfect region here. Every destination on our portal has been curated, rated, and described personally.' },
-  sehenswuerdigkeiten: { label: '#sights', title: 'Sights & Attractions', sub: 'From historic churches to spectacular mountain peaks and cultural highlights – Tyrol\'s most beautiful excursion destinations.' },
-  unterkuenfte: { label: '#accommodation', title: 'Top Accommodations', sub: 'Hand-picked hotels, apartments, and farm stays – for every taste and budget.', lead: 'Our editorial team personally tests and rates every accommodation. Gold-tier properties offer that special something with style and first-class service. Silver stands for excellent value for money, Basic for charming and affordable.' },
-  gastro: { label: '#gastro', title: 'Food & Drink', sub: 'From rustic alpine huts to fine dining – Tyrol\'s gastronomy is as diverse as its landscape.' },
-  magazin: { label: '#magazine', title: 'Stories from the Mountains', sub: 'Latest stories, tips & inspiration for your next Tyrol holiday.' },
-  newsletter: { title: '#tiroltourismus', desc: 'Don\'t miss any news from Tyrol. Exclusive tips, new offers, and stories delivered to your inbox – unsubscribe anytime.', placeholder: 'Your e-mail address', button: 'Subscribe', disclaimer: 'By clicking "Subscribe" you accept our privacy policy.', success: '🎉 Thank you! Welcome to the Tyrol newsletter.' },
-  partner: { title: 'Become a', titleAccent: 'Partner', desc: 'Showcase your accommodation, event, or offer on the most modern tourism portal in the Alps. With AI-powered recommendations, smart search, and a growing community of over 50,000 enthusiastic Tyrol fans.', benefits: ['Visibility with 50k+ Visitors', 'Free Listings', 'Social Media Boost', 'Exclusive Events'], cta: 'Become a Partner Now' },
-  dailyPickTypes: { unterkunft: 'Accommodation', gastro: 'Gastro', ort: 'Place', sight: 'Sight', magazin: 'Magazine' },
-  dailyPickLinks: { unterkunft: '/en/unterkuenfte/', gastro: '/en/gastro/', ort: '/en/orte/', sight: '/en/sehenswuerdigkeiten/', magazin: '/en/magazin/' },
+// ── Locale-aware hardcoded strings (DE=en eigener Text, rest=EN als Fallback)
+const t = locale === 'de' ? {
+  willkommen: { label: '#willkommen', title: 'Willkommen in', titleAccent: 'Tirol', p1: 'Tirol ist weit mehr als nur eine Region – es ist ein Gefühl von Freiheit, Abenteuer und tiefer Verbundenheit mit der Natur. Sanfte Almwiesen und schroffe Felsgipfel wechseln sich ab wie die Jahreszeiten, uralte Tradition trifft auf moderne Gastfreundschaft, und in jedem Tal wartet eine neue Überraschung.', p2: 'Ob du durch die historischen Gassen Innsbrucks schlenderst, vom Gipfel eines Dreitausenders die Aussicht genießt oder in einer urigen Hütte Tiroler Schmankerl probierst – dieser Flecken Erde hat eine Seele, die man spüren kann. Lass dich von unserer Vielfalt überraschen.', features: [
+    { icon: '🏔️', text: '835 Dreitausender' },
+    { icon: '🥾', text: '24.500 km Wanderwege' },
+    { icon: '🚡', text: '580 Seilbahnen & Lifte' },
+    { icon: '🍽️', text: 'Tiroler Küche' },
+  ], highlight: { icon: '💡', title: 'Schon gewusst?', text: 'In Tirol gibt es über <strong>60 verschiedene Jausenstationen und Almhütten</strong>, die nur zu Fuß oder mit der Seilbahn erreichbar sind. Jede serviert hausgemachten Kaiserschmarrn, Kaspressknödel und andere Tiroler Spezialitäten – mit garantierter Traumaussicht.', cta: 'Mehr entdecken →' } },
+  heute: { label: '#heute', title: 'Heute entdecken', sub: 'Zufallsfunde aus allen Kategorien – jeden Tag neu. Klick dich durch Tirols bunteste Seiten.' },
+  regionen: { label: '#regionen', title: 'Unsere Regionen', sub: 'Ein Land, unzählige Gesichter. Jede Tiroler Region hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals.', lead: 'Ob actionreiche Tage im Zillertal, kulinarische Genüsse im Stubaital oder luxuriöse Auszeiten in Kitzbühel – finde hier deine perfekte Region. Jedes Ziel auf unserem Portal wurde kuratiert, bewertet und persönlich beschrieben.' },
+  sehenswuerdigkeiten: { label: '#sehenswertes', title: 'Sehenswürdigkeiten', sub: 'Von historischen Kirchen über spektakuläre Berggipfel bis zu kulturellen Highlights – Tirols schönste Ausflugsziele.' },
+  unterkuenfte: { label: '#unterkunft', title: 'Top-Unterkünfte', sub: 'Handverlesene Hotels, Apartments und Urlaub am Bauernhof – für jeden Geschmack und Geldbeutel.', lead: 'Unsere Redaktion testet und bewertet jede Unterkunft persönlich. Gold-Ressorts bieten das Besondere mit Stil und erstklassigem Service. Silber steht für ausgezeichnetes Preis-Leistungs-Verhältnis, Basic für charmant und günstig.' },
+  gastro: { label: '#gastro', title: 'Gastro & Genuss', sub: 'Von der urigen Almhütte bis zur Sterneküche – Tirols Gastronomie ist so vielfältig wie seine Landschaft.' },
+  magazin: { label: '#magazin', title: 'Geschichten aus den Bergen', sub: 'Aktuelle Stories, Tipps & Inspiration für deinen nächsten Tirol-Urlaub.' },
+  newsletter: { title: '#tiroltourismus', desc: 'Keine Neuigkeiten aus Tirol mehr verpassen. Exklusive Tipps, neue Angebote und Geschichten direkt in dein Postfach – jederzeit kündbar.', placeholder: 'Deine E-Mail-Adresse', button: 'Abonnieren', disclaimer: 'Mit Klick auf „Abonnieren\" akzeptierst du unsere Datenschutzerklärung.', success: '🎉 Danke! Willkommen beim Tirol-Newsletter.' },
+  partner: { title: 'Werde', titleAccent: 'Partner', desc: 'Präsentiere deine Unterkunft, Veranstaltung oder dein Angebot auf dem modernsten Tourismusportal der Alpen. Mit KI-gestützten Empfehlungen, smarter Suche und einer wachsenden Community von über 50.000 begeisterten Tirol-Fans.', benefits: ['Sichtbarkeit bei 50k+ Besuchern', 'Kostenlose Einträge', 'Social-Media-Boost', 'Exklusive Events'], cta: 'Jetzt Partner werden' },
+  dailyPickTypes: { unterkunft: 'Unterkunft', gastro: 'Gastro', ort: 'Ort', sight: 'Sehenswürdigkeit', magazin: 'Magazin' },
+  dailyPickLinks: { unterkunft: '/unterkuenfte/', gastro: '/gastro/', ort: '/orte/', sight: '/sehenswuerdigkeiten/', magazin: '/magazin/' },
   discover_all: 'Discover all places & sights →',
   all_regions: 'Discover all regions →',
   all_sights: 'Show all sights →',

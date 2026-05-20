@@ -7,8 +7,9 @@ export const LANGUAGES = [
   { code: 'de', flag: '🇩🇪', name: 'Deutsch', nameNative: 'Deutsch', default: true, ready: true },
   { code: 'en', flag: '🇬🇧', name: 'English', nameNative: 'English', ready: true },
   { code: 'fr', flag: '🇫🇷', name: 'Français', nameNative: 'Français', ready: true },
-  { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: false },
-  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: false },
+  { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
+  { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: true },
+  { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
 ];
 
 export const LANGUAGES_READY = ['de', 'en', 'fr']; // Sprachen mit übersetzten Daten

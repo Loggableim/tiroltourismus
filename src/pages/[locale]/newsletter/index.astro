@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import NewsletterForm from '../../components/NewsletterForm.tsx';
+import { LANGUAGES_READY } from '../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<BaseLayout title="Newsletter" description="Melde dich zum Tirol-Newsletter an" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'Newsletter' }]}" /></div>
+    <section class="page-header"><h1>Newsletter</h1></section>
+    <NewsletterForm client:load />
+  </main>
+</BaseLayout>

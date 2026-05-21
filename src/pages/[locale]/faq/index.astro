@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import { readSingleton } from '../../lib/content.js';
+import { LANGUAGES_READY } from '../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const faqItems = readSingleton('faq', locale) || [];
+
+const categoryOrder = ['allgemein', 'anreise', 'unterkunft', 'wandern', 'ski', 'familie', 'gastro', 'regionen', 'wetter', 'events'];
+const categoryLabels = {
+  allgemein: 'Allgemein', anreise: 'Anreise', unterkunft: 'Unterkunft',
+  wandern: 'Wandern', ski: 'Ski & Winter', familie: 'Familie & Kinder',
+  gastro: 'Kulinarik', regionen: 'Regionen', wetter: 'Wetter & Reisezeit', events: 'Events & Veranstaltungen',
+};
+const categoryEmoji = {
+  allgemein: '📌', anreise: '🚗', unterkunft: '🏨', wandern: '🥾',
+  ski: '⛷️', familie: '👨‍👩‍👧‍👦', gastro: '🍽️', regionen: '🗺️', wetter: '🌤️', events: '🎉',
+};
+
+const grouped = new Map();
+for (const cat of categoryOrder) {
+  const items = faqItems.filter(i => i.kategorie === cat);
+  if (items.length > 0) grouped.set(cat, items);
+}
+---
+
+<BaseLayout title="FAQ – Tirol Tourismus" description="Häufige Fragen zu Tirol – Antworten auf die wichtigsten Fragen" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'FAQ' }]}" /></div>
+    <SectionHeader title="FAQ" sub="Häufige Fragen zu Tirol" />
+    <div class="faq-grid">{[...grouped.entries()].map(([cat, items]) => (
+      <div class="faq-category"><h2 class="faq-cat-title">{categoryEmoji[cat]} {categoryLabels[cat]}</h2>
+        {items.map(item => (<details class="faq-item"><summary>{item.frage || item.q}</summary><p>{item.antwort || item.a}</p></details>))}
+      </div>
+    ))}</div>
+  </main>
+</BaseLayout>

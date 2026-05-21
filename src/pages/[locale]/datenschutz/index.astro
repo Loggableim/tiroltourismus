@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import { LANGUAGES_READY } from '../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<BaseLayout title="Datenschutz" description="Datenschutzerklärung von tiroltourismus.com" locale={locale}>
+  <main>
+    <div class="container">
+      <Breadcrumbs items="{[{ label: 'Datenschutz' }]}" />
+    </div>
+    <section class="legal-page section">
+      <div class="container" style="max-width:720px">
+        <SectionHeader title="Datenschutz" />
+        <div class="legal-text">
+
+          <h2>1. Datenschutz auf einen Blick</h2>
+
+          <h3>Allgemeine Hinweise</h3>
+          <p>
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
+            personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene
+            Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+            Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer
+            unter dieser Datenschutzerklärung aufgeführten Regelungen.
+          </p>
+
+          <h3>Datenerfassung auf dieser Website</h3>
+          <p>
+            Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.
+            Dessen Kontaktdaten können Sie dem <a href="/impressum/">Impressum</a> entnehmen.
+            Die Erhebung dieser Daten erfolgt entweder dadurch, dass Sie uns diese Daten
+            mitteilen (z.&thinsp;B. über das Kontaktformular), oder durch automatische
+            Systeme, die technische Daten (z.&thinsp;B. IP-Adresse) erfassen. Die
+            Rechtsgrundlage für die Verarbeitung ist Art.&thinsp;6&thinsp;Abs.&thinsp;1
+            lit.&thinsp;b und f DSGVO.
+          </p>
+
+          <h3>SSL- bzw. TLS-Verschlüsselung</h3>
+          <p>
+            Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung
+            vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte
+            Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von
+            „http://“ auf „https://“ wechselt und an dem Schloss-Symbol in Ihrer
+            Browserzeile. Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können
+            die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
+          </p>
+
+          <h2>2. Hosting</h2>
+
+          <h3>GitHub Pages</h3>
+          <p>
+            Diese Website wird auf <strong>GitHub Pages</strong> gehostet. Anbieter ist die
+            GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub
+            verarbeitet als Auftragsverarbeiter personenbezogene Daten – insbesondere
+            IP-Adressen –, die bei der Nutzung der Website anfallen. Weitere Informationen
+            entnehmen Sie der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.
+          </p>
+          <p>
+            Die Verwendung von GitHub Pages erfolgt auf Grundlage unseres berechtigten
+            Interesses an einer sicheren und effizienten Bereitstellung dieses Online-Angebots
+            (Art.&thinsp;6&thinsp;Abs.&thinsp;1 lit.&thinsp;f DSGVO).
+          </p>
+
+          <h3>Drittlandübermittlung</h3>
+          <p>
+            GitHub verarbeitet Daten in den USA. Wir haben mit GitHub
+            Auftragsverarbeitungsverträge (AVV) abgeschlossen, die den Anforderungen der
+            DSGVO entsprechen. Für die Datenübermittlung in die USA stützt sich GitHub auf
+            die EU-Standardvertragsklauseln.
+          </p>
+
+          <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+          <h3>Verantwortlicher</h3>
+          <p>
+            Verantwortlicher für die Datenverarbeitung auf dieser Website ist:<br />
+            <strong>Dominik Rainer</strong><br />
+            A-6020 Innsbruck, Tirol, Österreich<br />
+            E-Mail: office@tiroltourismus.com
+          </p>
+          <p>
+            Der Verantwortlicher ist die natürliche oder juristische Person, die allein
+            oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von
+            personenbezogenen Daten entscheidet.
+          </p>
+
+          <h3>Speicherdauer</h3>
+          <p>
+            Personenbezogene Daten werden nur so lange gespeichert, wie es für die
+            jeweiligen Verarbeitungszwecke erforderlich ist. Darüber hinaus erfolgt eine
+            Speicherung nur, wenn dies gesetzlich vorgeschrieben ist (etwa handels- oder
+            steuerrechtliche Aufbewahrungsfristen). Nach Wegfall des jeweiligen Zwecks
+            werden die Daten gelöscht.
+          </p>
+
+          <h3>Widerspruch gegen Werbe-Mails</h3>
+          <p>
+            Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten
+            zur Übersendung von nicht ausdrücklich angeforderter Werbung und
+            Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten
+            behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten
+            Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
+          </p>
+
+          <h2>4. Ihre Rechte</h2>
+
+          <h3>Betroffenenrechte</h3>
+          <p>
+            Ihnen stehen gegenüber dem Verantwortlichen folgende Rechte hinsichtlich der
+            Sie betreffenden personenbezogenen Daten zu:
+          </p>
+          <ul>
+            <li>Recht auf <strong>Auskunft</strong> (Art.&thinsp;15 DSGRO)</li>
+            <li>Recht auf <strong>Berichtigung</strong> (Art.&thinsp;16 DSGVO)</li>
+            <li>Recht auf <strong>Löschung</strong> („Recht auf Vergessenwerden“,
+            Art.&thinsp;17 DSGVO)</li>
+            <li>Recht auf <strong>Einschränkung der Verarbeitung</strong>
+            (Art.&thinsp;18 DSGVO)</li>
+            <li>Recht auf <strong>Datenübertragbarkeit</strong> (Art.&thinsp;20 DSGVO)</li>
+            <li>Recht auf <strong>Widerspruch</strong> gegen die Verarbeitung
+            (Art.&thinsp;21 DSGVO)</li>
+          </ul>
+
+          <h3>Beschwerderecht bei der Aufsichtsbehörde</h3>
+          <p>
+            Sie haben zudem das Recht, sich bei der zuständigen Aufsichtsbehörde für
+            Datenschutz zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung
+            Ihrer personenbezogenen Daten gegen die DSGVO verstößt. Die zuständige
+            Aufsichtsbehörde ist die
+            <a href="https://www.dsb.gv.at/" target="_blank" rel="noopener">Österreichische Datenschutzbehörde</a>.
+          </p>
+
+          <h3>Widerspruchsrecht im Einzelfall sowie gegen Direktwerbung</h3>
+          <p>
+            Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation
+            ergeben, jederzeit gegen die Verarbeitung Sie betreffender personenbezogener
+            Daten, die aufgrund von Art.&thinsp;6&thinsp;Abs.&thinsp;1 lit.&thinsp;e
+            oder f DSGVO erfolgt, Widerspruch einzulegen. Werden personenbezogene Daten
+            verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit
+            Widerspruch gegen die Verarbeitung Sie betreffender personenbezogener Daten
+            zum Zwecke derartiger Werbung einzulegen.
+          </p>
+
+          <h2>5. Änderungen dieser Datenschutzerklärung</h2>
+          <p>
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um sie stets den
+            aktuellen rechtlichen Anforderungen anzupassen oder um Änderungen unserer
+            Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch
+            gilt dann die neue Datenschutzerklärung.
+          </p>
+          <p><strong>Stand: Mai 2026</strong></p>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

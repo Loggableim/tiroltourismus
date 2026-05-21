@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MerklistePage from '../../components/MerklistePage.tsx';
+import { LANGUAGES_READY } from '../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<BaseLayout title="Merkliste" description="Deine gespeicherten Favoriten" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'Merkliste' }]}" /></div>
+    <MerklistePage client:load />
+  </main>
+</BaseLayout>

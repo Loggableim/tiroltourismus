@@ -112,7 +112,7 @@ const relatedByTag = entry.tags && entry.tags.length > 0
         entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
         entry.webseite ? { label: '🌐 Webseite', href: entry.webseite, variant: 'glass' } : null,
       ].filter(Boolean),
-    },
+    } : null,
   ].filter(Boolean)}
 />
 

@@ -124,7 +124,7 @@ const relatedSection = related.length > 0 ? {
         (entry.link && entry.link !== '#') ? { label: '🌐 Event-Webseite', href: entry.link, variant: 'pink' } : null,
         (entry.webseite && entry.webseite !== '#') ? { label: '🌐 Event-Webseite', href: entry.webseite, variant: 'pink' } : null,
       ].filter(Boolean),
-    },
+    } : null,
     relatedSection,
     mapSection,
   ].filter(Boolean)}

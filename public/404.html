@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de" data-theme>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seite nicht gefunden – tiroltourismus.com</title>
+  <meta name="description" content="Die angeforderte Seite existiert leider nicht. Zurück zur Startseite von Tirol Tourismus.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#FF1493">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─── Reset & Design Tokens ─── */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#F5F3F0;--bg2:#EDE8E2;
+      --surface:rgba(0,0,0,.03);--surface-hover:rgba(0,0,0,.06);
+      --text:#1A1A1A;--text2:rgba(0,0,0,.60);--text3:rgba(0,0,0,.38);
+      --tirol-red:#C8102E;--ikea-blue:#0051BA;
+      --tirol-pink:#FF1493; --tirol-pink-dark:#C0006E; --tirol-pink-glow:rgba(255,20,147,.12);
+      --pop-yellow:#FFD700;--pop-green:#00C853;--pop-orange:#FF6B35;--pop-purple:#8B5CF6;
+      --glass:rgba(255,255,255,.7);--glass-border:rgba(0,0,0,.06);--glass-shadow:0 12px 48px rgba(0,0,0,.06);
+      --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+      --font-body:'Montserrat',-apple-system,sans-serif;
+      --ease:cubic-bezier(.16,1,.3,1);
+      --radius:12px;--radius-sm:8px;--radius-lg:20px;
+      --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);--pink-glow:var(--tirol-pink-glow);
+      --blue:var(--ikea-blue);--yellow:var(--pop-yellow);
+      --gold:#D4A800;--gold-light:#FFD700;--gold-glow:rgba(212,168,0,.18);--gold-soft:rgba(212,168,0,.08);
+    }
+    [data-theme="dark"]{
+      --bg:#0A0A12;--bg2:#10101E;
+      --surface:rgba(255,255,255,.04);--surface-hover:rgba(255,255,255,.08);
+      --text:#F0EDEE;--text2:rgba(255,255,255,.65);--text3:rgba(255,255,255,.30);
+      --glass:rgba(255,255,255,.06);--glass-border:rgba(255,255,255,.08);--glass-shadow:0 12px 48px rgba(0,0,0,.5);
+      --tirol-pink-glow:rgba(255,20,147,.18);--gold-glow:rgba(255,215,0,.15);--gold-soft:rgba(255,215,0,.06);
+    }
+    html{scroll-behavior:smooth}
+    body{
+      font-family:var(--font-body);color:var(--text);background:var(--bg);
+      line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+      transition:background .6s,color .6s;font-display:swap;
+      min-height:100vh;display:flex;flex-direction:column;
+    }
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--pink);color:var(--bg)}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px;width:100%}
+
+    /* ─── Theme Toggle ─── */
+    .theme-toggle{
+      position:fixed;top:24px;right:28px;z-index:1001;
+      width:40px;height:40px;border-radius:50%;
+      background:var(--glass);backdrop-filter:blur(20px);
+      border:1px solid var(--glass-border);
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer;transition:all .4s var(--ease);color:var(--text);
+      box-shadow:0 4px 16px rgba(0,0,0,.08);
+      font-size:18px;
+    }
+    .theme-toggle:hover{transform:scale(1.1)}
+    .theme-toggle .icon-sun{display:block}
+    .theme-toggle .icon-moon{display:none}
+    [data-theme="dark"] .theme-toggle .icon-sun{display:none}
+    [data-theme="dark"] .theme-toggle .icon-moon{display:block}
+
+    /* ─── 404 Hero ─── */
+    .error-hero{
+      flex:1;display:flex;align-items:center;justify-content:center;
+      position:relative;overflow:hidden;padding:120px 24px;
+    }
+    .error-bg{
+      position:absolute;inset:0;
+      background:radial-gradient(ellipse at 50% 0%,var(--pink-glow),transparent 70%);
+      opacity:.3;pointer-events:none;
+    }
+    .error-content{
+      position:relative;z-index:2;text-align:center;
+      display:flex;flex-direction:column;align-items:center;gap:24px;
+      max-width:600px;
+    }
+    .error-code{
+      font-family:var(--font-display);
+      font-size:clamp(120px,20vw,220px);
+      line-height:1;letter-spacing:4px;
+      background:linear-gradient(135deg,var(--pink),var(--pop-yellow),var(--blue));
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:glow 4s ease-in-out infinite;
+    }
+    @keyframes glow{
+      0%,100%{filter:drop-shadow(0 0 24px var(--pink-glow))}
+      50%{filter:drop-shadow(0 0 40px var(--tirol-pink-glow))}
+    }
+    .error-emoji{
+      font-size:72px;line-height:1;margin-top:-16px;
+      filter:drop-shadow(0 4px 16px rgba(255,20,147,.2));
+      animation:float 4s var(--ease) infinite;
+    }
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-12px)}
+    }
+    .error-title{
+      font-family:var(--font-display);
+      font-size:clamp(32px,4vw,52px);
+      line-height:1.1;letter-spacing:2px;text-transform:uppercase;
+    }
+    .error-title span{color:var(--pink)}
+    .error-desc{
+      font-size:16px;color:var(--text2);line-height:1.7;max-width:440px;
+    }
+    .error-actions{
+      display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:8px;
+    }
+    .btn-primary{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:14px 36px;border-radius:50px;
+      background:var(--pink);color:#fff;
+      font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;
+      transition:all .3s var(--ease);
+    }
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px var(--tirol-pink-glow)}
+    .btn-ghost{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:14px 36px;border-radius:50px;
+      background:var(--glass);color:var(--text);
+      border:1px solid var(--glass-border);
+      font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;
+      transition:all .3s var(--ease);
+    }
+    .btn-ghost:hover{background:var(--surface-hover);transform:translateY(-2px)}
+
+    /* ─── Quick Links ─── */
+    .error-links{
+      display:flex;gap:24px;flex-wrap:wrap;justify-content:center;
+      margin-top:12px;padding-top:24px;
+      border-top:1px solid var(--glass-border);width:100%;max-width:400px;
+    }
+    .error-links a{
+      font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;
+      color:var(--text2);transition:color .3s;
+    }
+    .error-links a:hover{color:var(--pink)}
+
+    /* ─── Logo ─── */
+    .error-logo{
+      margin-bottom:8px;display:flex;justify-content:center;
+    }
+    .error-logo svg{height:36px;width:auto}
+
+    /* ─── Footer ─── */
+    .error-footer{
+      text-align:center;padding:24px;
+      font-size:12px;color:var(--text3);
+      border-top:1px solid var(--glass-border);
+    }
+
+    /* ─── Responsive ─── */
+    @media(max-width:768px){
+      .error-hero{padding:100px 20px}
+      .error-emoji{font-size:56px}
+      .error-actions{flex-direction:column;align-items:center}
+      .btn-primary,.btn-ghost{width:100%;justify-content:center}
+    }
+
+    /* ─── Reduced Motion ─── */
+    @media(prefers-reduced-motion:reduce){
+      .error-emoji{animation:none}
+      .error-code{animation:none}
+    }
+  </style>
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten">
+    <span class="icon-sun">☀️</span>
+    <span class="icon-moon">🌙</span>
+  </button>
+
+  <!-- 404 Hero -->
+  <main class="error-hero">
+    <div class="error-bg"></div>
+    <div class="error-content">
+      <!-- Logo -->
+      <a href="/" class="error-logo" aria-label="Zur Startseite">
+        <svg viewBox="4 4 404 46" width="340" height="36">
+          <defs>
+            <linearGradient id="l1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+            <linearGradient id="l2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+            <linearGradient id="l3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+            <linearGradient id="l4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+            <linearGradient id="l5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+          </defs>
+          <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#l1)">T</text>
+          <polygon points="10,36 10,10 34,36" fill="url(#l1)" opacity="0.08"/>
+          <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#l2)">I</text>
+          <polygon points="42,36 42,14 56,36" fill="url(#l2)" opacity="0.08"/>
+          <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#l3)">R</text>
+          <polygon points="68,36 68,8 92,36" fill="url(#l3)" opacity="0.08"/>
+          <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#l4)">O</text>
+          <polygon points="100,36 100,10 126,36" fill="url(#l4)" opacity="0.08"/>
+          <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#l5)">L</text>
+          <circle cx="172" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
+          <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
+        </svg>
+      </a>
+
+      <!-- 404 Code -->
+      <div class="error-code">404</div>
+
+      <!-- Emoji: verirrtes Bergschaf / verlorener Wanderer -->
+      <div class="error-emoji">🐑</div>
+
+      <!-- Message -->
+      <h1 class="error-title">Gipfel<span>sturm</span> verfehlt</h1>
+      <p class="error-desc">
+        Diese Seite existiert leider nicht – vielleicht hat sie der Föhn mitgenommen.<br>
+        Aber keine Sorge: Unsere Gipfel warten noch auf dich.
+      </p>
+
+      <!-- Actions -->
+      <div class="error-actions">
+        <a href="/" class="btn-primary">← Zurück zum Gipfel</a>
+        <a href="/suche/" class="btn-ghost">🔍 Seite suchen</a>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="error-links">
+        <a href="/regionen/">Regionen</a>
+        <a href="/unterkuenfte/">Unterkünfte</a>
+        <a href="/erlebnisse/">Erlebnisse</a>
+        <a href="/orte/">Orte</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="error-footer">
+    <div class="container">
+      tiroltourismus.com<br>
+      &copy; 2026 Tirol Tourismus
+    </div>
+  </footer>
+
+  <script>
+    // ─── Theme System (Hell/Dunkel-Modus) ───
+    (function(){
+      var root = document.documentElement;
+      var toggle = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('tirol_theme');
+
+      function getTheme() {
+        if (stored) return stored;
+        var h = new Date().getHours();
+        return (h >= 6 && h < 20) ? 'light' : 'dark';
+      }
+
+      function applyTheme(t) {
+        if (t === 'dark') {
+          root.setAttribute('data-theme', 'dark');
+        } else {
+          root.removeAttribute('data-theme');
+        }
+      }
+
+      function toggleTheme() {
+        var current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('tirol_theme', current);
+        applyTheme(current);
+      }
+
+      applyTheme(getTheme());
+      if (toggle) toggle.addEventListener('click', toggleTheme);
+    })();
+  </script>
+</body>
+</html>

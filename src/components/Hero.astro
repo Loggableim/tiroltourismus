@@ -1,0 +1,33 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  emoji?: string;
+  size?: 'lg' | 'md' | 'sm';
+  gradient?: string;
+}
+const { title, subtitle, emoji, size = 'lg', gradient } = Astro.props;
+---
+<section class={`hero hero-${size}`}>
+  {gradient && <div class="hero-shape" style={`background:${gradient}`}></div>}
+  <div class="container">
+    {emoji && <div class="hero-emoji">{emoji}</div>}
+    <h1>{title}</h1>
+    {subtitle && <p class="hero-sub">{subtitle}</p>}
+    <slot name="actions" />
+  </div>
+</section>
+
+<style is:global>
+  .hero{position:relative;text-align:center;overflow:hidden}
+  .hero-lg{padding:140px 0 80px;min-height:80vh;display:flex;align-items:center}
+  .hero-md{padding:80px 0 60px;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
+  .hero-sm{padding:60px 0 40px;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
+  .hero h1{font-family:var(--font-display);line-height:1;letter-spacing:2px;text-transform:uppercase;position:relative;z-index:1;margin-bottom:12px}
+  .hero-lg h1{font-size:clamp(56px,10vw,120px)}
+  .hero-md h1{font-size:clamp(48px,7vw,96px)}
+  .hero-sm h1{font-size:clamp(42px,6vw,80px)}
+  .hero-sub{font-size:16px;color:var(--text2);max-width:520px;margin:0 auto;line-height:1.6;position:relative;z-index:1}
+  .hero-emoji{font-size:64px;display:block;margin-bottom:8px;position:relative;z-index:1}
+  .hero-shape{position:absolute;width:600px;height:600px;border-radius:50%;top:-200px;right:-200px;pointer-events:none;opacity:.15;filter:blur(80px)}
+</style>

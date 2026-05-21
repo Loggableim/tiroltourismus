@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { readCollection, isPublished } from '../../lib/content.js';
+
+const articles = readCollection('magazin');
+const published = articles
+  .filter(a => isPublished(a.entry))
+  .sort((a, b) => (b.entry.datum || '').localeCompare(a.entry.datum || ''));
+
+const catEmoji = { allgemein: '📰', tipps: '💡', reiseberichte: '✈️', interview: '🎙️', hintergrund: '🔍' };
+const catLabel = { allgemein: 'Allgemein', tipps: 'Tipps', reiseberichte: 'Reiseberichte', interview: 'Interview', hintergrund: 'Hintergrund' };
+
+function formatDate(d) {
+  if (!d) return '';
+  try { return new Date(d + 'T00:00:00').toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
+---
+
+<BaseLayout title="Tirol Magazin" description="Das Tirol Magazin: Inspiration für Deinen nächsten Urlaub in den Alpen.">
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Magazin' }]} />
+    </div>
+
+    <Hero
+      title="Magazin"
+      subtitle="Geschichten, Tipps und Reportagen aus Tirol."
+      emoji="📰"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#magazin-grid" class="btn btn-pink">Artikel entdecken →</a>
+        <span class="hero-urgency">📖 {published.length} Artikel</span>
+      </div>
+    </Hero>
+
+    {published.length > 0 ? (
+      <section class="section" id="magazin-grid">
+        <div class="container">
+          <SectionHeader
+            label="#magazin"
+            title="Stories aus den Bergen"
+            sub="Neueste Geschichten, Tipps & Inspirationen rund um Deinen nächsten Tirol-Urlaub."
+          />
+
+          <!-- Filter Chips -->
+          <div class="magazin-filter">
+            <button class="filter-chip active" data-cat="all">ALLE</button>
+            <button class="filter-chip" data-cat="tipps">TIPP</button>
+            <button class="filter-chip" data-cat="reiseberichte">REISE</button>
+            <button class="filter-chip" data-cat="hintergrund">HINTERGRUND</button>
+            <button class="filter-chip" data-cat="allgemein">ALLGEMEIN</button>
+          </div>
+
+          <div class="magazin-grid">
+            {published.map((a) => (
+              <div class="magazin-item" data-kategorie={a.entry.kategorie}>
+                <ArticleCard
+                  titel={a.entry.titel}
+                  slug={a.slug}
+                  teaser={a.entry.teaser}
+                  datum={formatDate(a.entry.datum)}
+                  kategorie={(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}
+                  emoji={catEmoji[a.entry.kategorie] || '📰'}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:80px 0">
+          <div style="font-size:64px;margin-bottom:16px">📰</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            Bald verfügbar
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            Magazin-Artikel werden aktuell eingepflegt.
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .magazin-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+
+  .filter-chip {
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 2px solid var(--glass-border);
+    background: transparent;
+    color: var(--text2);
+    font-family: var(--font-body);
+  }
+
+  .filter-chip.active {
+    background: var(--pink);
+    color: #fff;
+    border-color: var(--pink);
+    box-shadow: 0 4px 20px var(--pink-glow);
+  }
+
+  .filter-chip:hover:not(.active) {
+    border-color: var(--text2);
+    color: var(--text);
+  }
+
+  @media (max-width: 700px) {
+    .magazin-filter {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      scrollbar-width: none;
+    }
+    .magazin-filter::-webkit-scrollbar { display: none; }
+    .filter-chip {
+      padding: 8px 14px;
+      font-size: 11px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+  }
+
+  .magazin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+
+  @media (max-width: 968px) {
+    .magazin-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .magazin-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script is:inline>
+(function() {
+  const chips = document.querySelectorAll('.filter-chip');
+  const items = document.querySelectorAll('.magazin-item');
+  if (!chips.length || !items.length) return;
+
+  function filterGrid(category) {
+    chips.forEach(c => c.classList.remove('active'));
+    chips.forEach(c => {
+      if (c.dataset.cat === category) c.classList.add('active');
+    });
+    items.forEach(item => {
+      item.style.display = (category === 'all' || item.dataset.kategorie === category) ? '' : 'none';
+    });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', function() {
+      filterGrid(this.dataset.cat);
+    });
+  });
+})();
+</script>

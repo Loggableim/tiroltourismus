@@ -1,0 +1,119 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
+  return all.map(s => ({ params: { slug: s.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('sehenswuerdigkeiten', slug);
+if (!entry) return Astro.redirect('/sehenswuerdigkeiten/');
+
+const catLabel = { natur:'Natur', kultur:'Kultur', aussicht:'Aussicht', sport:'Sport', museum:'Museum', kirche:'Kirche', burg:'Burg', wanderung:'Wanderung' };
+const catEmoji = { natur:'🌿', kultur:'🎭', aussicht:'🏔️', sport:'⚡', museum:'🏛️', kirche:'⛪', burg:'🏰', wanderung:'🥾' };
+const catStr = entry.kategorie ? `${catEmoji[entry.kategorie] || ''} ${catLabel[entry.kategorie] || entry.kategorie}` : undefined;
+
+// Karten-Marker falls Koordinaten vorhanden
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const catStyle = { emoji: '🏛️', color: '#6B7280' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'sehenswuerdigkeiten', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat,
+    lng: entry.koordinaten.lng,
+    label: entry.name,
+    emoji: entry.emoji || catStyle.emoji,
+    href: entry.webseite || undefined,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: `/${n.collection}/${n.slug}/`,
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map',
+  label: 'Standort',
+  title: 'Auf der Karte',
+  markers: mapMarkers,
+  scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Verwandte Sehenswürdigkeiten via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'sehenswuerdigkeiten' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || catStyle.emoji }
+      }))
+  : [];
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'sehenswuerdigkeiten')}
+  sections={[
+    {
+      type: 'custom-hero',
+      title: entry.name,
+      subtitle: entry.kurzbeschreibung,
+      emoji: entry.emoji || '🏛️',
+      category: catStr,
+      location: entry.ort,
+      bgStyle: entry.farbe ? `linear-gradient(135deg,${entry.farbe}15,${entry.farbe}25)` : undefined,
+      bgImage: entry.hero_bild,
+    },
+    (entry.hoehe || entry.dauer || entry.preis) ? {
+      type: 'sight-facts',
+      items: [
+        entry.hoehe ? { value: entry.hoehe, label: 'Höhe' } : null,
+        entry.dauer ? { value: entry.dauer, label: 'Dauer' } : null,
+        entry.preis ? { value: entry.preis, label: 'Eintritt' } : null,
+      ].filter(Boolean),
+    } : null,
+    entry.beschreibung ? {
+      type: 'description',
+      label: 'Details',
+      title: 'Mehr erfahren',
+      content: autoLinkContent(entry.beschreibung, entry),
+    } : null,
+    entry.tags && entry.tags.length > 0 ? { type: 'tags', tags: entry.tags } : null,
+    {
+      type: 'sight-info-grid',
+      items: [
+        entry.oeffnungszeiten ? { icon: '🕐', label: 'Öffnungszeiten', value: entry.oeffnungszeiten } : null,
+        entry.preis ? { icon: '💰', label: 'Eintritt', value: entry.preis } : null,
+        entry.webseite ? { icon: '🌐', label: 'Webseite', value: entry.webseite.replace(/^https?:\/\//,'') + ' ↗', href: entry.webseite } : null,
+      ].filter(Boolean),
+    },
+    mapSection,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Sehenswürdigkeiten',
+      entries: relatedByTag,
+      slugPrefix: '/sehenswuerdigkeiten/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏛️',
+    } : null,
+    {
+      type: 'back-link',
+      href: '/sehenswuerdigkeiten/',
+      text: 'Alle Sehenswürdigkeiten',
+    },
+  ].filter(Boolean)}
+/>

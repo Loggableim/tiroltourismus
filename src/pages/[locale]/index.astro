@@ -1,0 +1,614 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import RegionCard from '../../components/RegionCard.astro';
+import AccommodationCard from '../../components/AccommodationCard.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import GastroCard from '../../components/GastroCard.astro';
+import SightCard from '../../components/SightCard.astro';
+import NewsletterForm from '../../components/NewsletterForm.tsx';
+import SectionMap from '../../sections/SectionMap.astro';
+import { readCollection, isPublished, readSingleton } from '../../lib/content.js';
+import { LANGUAGES_READY } from '../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const page = readSingleton('homepage', locale);
+
+// ── Locale-aware hardcoded strings (DE=en eigener Text, rest=EN als Fallback)
+const t = locale === 'de' ? {
+  willkommen: { label: '#willkommen', title: 'Willkommen in', titleAccent: 'Tirol', p1: 'Tirol ist weit mehr als nur eine Region – es ist ein Gefühl von Freiheit, Abenteuer und tiefer Verbundenheit mit der Natur. Sanfte Almwiesen und schroffe Felsgipfel wechseln sich ab wie die Jahreszeiten, uralte Tradition trifft auf moderne Gastfreundschaft, und in jedem Tal wartet eine neue Überraschung.', p2: 'Ob du durch die historischen Gassen Innsbrucks schlenderst, vom Gipfel eines Dreitausenders die Aussicht genießt oder in einer urigen Hütte Tiroler Schmankerl probierst – dieser Flecken Erde hat eine Seele, die man spüren kann. Lass dich von unserer Vielfalt überraschen.', features: [
+    { icon: '🏔️', text: '835 Dreitausender' },
+    { icon: '🥾', text: '24.500 km Wanderwege' },
+    { icon: '🚡', text: '580 Seilbahnen & Lifte' },
+    { icon: '🍽️', text: 'Tiroler Küche' },
+  ], highlight: { icon: '💡', title: 'Schon gewusst?', text: 'In Tirol gibt es über <strong>60 verschiedene Jausenstationen und Almhütten</strong>, die nur zu Fuß oder mit der Seilbahn erreichbar sind. Jede serviert hausgemachten Kaiserschmarrn, Kaspressknödel und andere Tiroler Spezialitäten – mit garantierter Traumaussicht.', cta: 'Mehr entdecken →' } },
+  heute: { label: '#heute', title: 'Heute entdecken', sub: 'Zufallsfunde aus allen Kategorien – jeden Tag neu. Klick dich durch Tirols bunteste Seiten.' },
+  regionen: { label: '#regionen', title: 'Unsere Regionen', sub: 'Ein Land, unzählige Gesichter. Jede Tiroler Region hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals.', lead: 'Ob actionreiche Tage im Zillertal, kulinarische Genüsse im Stubaital oder luxuriöse Auszeiten in Kitzbühel – finde hier deine perfekte Region. Jedes Ziel auf unserem Portal wurde kuratiert, bewertet und persönlich beschrieben.' },
+  sehenswuerdigkeiten: { label: '#sehenswertes', title: 'Sehenswürdigkeiten', sub: 'Von historischen Kirchen über spektakuläre Berggipfel bis zu kulturellen Highlights – Tirols schönste Ausflugsziele.' },
+  unterkuenfte: { label: '#unterkunft', title: 'Top-Unterkünfte', sub: 'Handverlesene Hotels, Apartments und Urlaub am Bauernhof – für jeden Geschmack und Geldbeutel.', lead: 'Unsere Redaktion testet und bewertet jede Unterkunft persönlich. Gold-Ressorts bieten das Besondere mit Stil und erstklassigem Service. Silber steht für ausgezeichnetes Preis-Leistungs-Verhältnis, Basic für charmant und günstig.' },
+  gastro: { label: '#gastro', title: 'Gastro & Genuss', sub: 'Von der urigen Almhütte bis zur Sterneküche – Tirols Gastronomie ist so vielfältig wie seine Landschaft.' },
+  magazin: { label: '#magazin', title: 'Geschichten aus den Bergen', sub: 'Aktuelle Stories, Tipps & Inspiration für deinen nächsten Tirol-Urlaub.' },
+  newsletter: { title: '#tiroltourismus', desc: 'Keine Neuigkeiten aus Tirol mehr verpassen. Exklusive Tipps, neue Angebote und Geschichten direkt in dein Postfach – jederzeit kündbar.', placeholder: 'Deine E-Mail-Adresse', button: 'Abonnieren', disclaimer: 'Mit Klick auf „Abonnieren\" akzeptierst du unsere Datenschutzerklärung.', success: '🎉 Danke! Willkommen beim Tirol-Newsletter.' },
+  partner: { title: 'Werde', titleAccent: 'Partner', desc: 'Präsentiere deine Unterkunft, Veranstaltung oder dein Angebot auf dem modernsten Tourismusportal der Alpen. Mit KI-gestützten Empfehlungen, smarter Suche und einer wachsenden Community von über 50.000 begeisterten Tirol-Fans.', benefits: ['Sichtbarkeit bei 50k+ Besuchern', 'Kostenlose Einträge', 'Social-Media-Boost', 'Exklusive Events'], cta: 'Jetzt Partner werden' },
+  dailyPickTypes: { unterkunft: 'Unterkunft', gastro: 'Gastro', ort: 'Ort', sight: 'Sehenswürdigkeit', magazin: 'Magazin' },
+  dailyPickLinks: { unterkunft: '/unterkuenfte/', gastro: '/gastro/', ort: '/orte/', sight: '/sehenswuerdigkeiten/', magazin: '/magazin/' },
+  discover_all: 'Discover all places & sights →',
+  all_regions: 'Discover all regions →',
+  all_sights: 'Show all sights →',
+  all_unterkuenfte: 'Show all accommodations →',
+  all_gastro: 'Discover all restaurants →',
+  all_magazin: 'Read all magazine articles →',
+  no_sights: 'Currently no sights have been added to the database. New entries coming soon.',
+  no_unterkuenfte: 'Currently no accommodations have been added.',
+  no_gastro: 'Currently no restaurant entries have been added to the database.',
+  no_magazin: 'Currently no magazine articles have been published.',
+  willkommen_featured: '✨ Find of the Day →',
+  willkommen_discover: 'Discover →',
+  unknown: 'Unknown',
+} : {
+  willkommen: { label: '#willkommen', title: 'Willkommen in', titleAccent: 'Tirol', p1: 'Tirol ist weit mehr als nur eine Region – es ist ein Gefühl von Freiheit, Abenteuer und tiefer Verbundenheit mit der Natur. Sanfte Almwiesen und schroffe Felsgipfel wechseln sich ab wie die Jahreszeiten, uralte Tradition trifft auf moderne Gastfreundschaft, und in jedem Tal wartet eine neue Überraschung.', p2: 'Ob Sie durch die historischen Gassen Innsbrucks schlendern, auf dem Gipfel eines Dreitausenders den Panoramablick genießen oder in einer urigen Hütte Tiroler Schmankerl kosten – dieser Flecken Erde hat eine Seele, die man spüren kann. Lassen Sie sich von unserer Vielfalt überraschen.', features: [
+    { icon: '🏔️', text: '835 Dreitausender' },
+    { icon: '🥾', text: '24.500 Wanderkilometer' },
+    { icon: '🚡', text: '580 Liftanlagen' },
+    { icon: '🍽️', text: 'Tiroler Genussküche' },
+  ], highlight: { icon: '💡', title: 'Wussten Sie?', text: 'In Tirol gibt es über <strong>60 verschiedene Jausenstationen und Almhütten</strong>, die nur zu Fuß oder mit der Seilbahn erreichbar sind. Jede davon serviert hausgemachten Kaiserschmarrn, Kaspressknödel und andere Tiroler Spezialitäten – mit einmaliger Bergkulisse garantiert.', cta: 'Mehr entdecken →' } },
+  heute: { label: '#heute', title: 'Heute entdecken', sub: 'Zufallsfunde aus allen Kategorien – jeden Tag neu. Klick Dich durch Tirols bunteste Seiten.' },
+  regionen: { label: '#regionen', title: 'Unsere Regionen', sub: 'Ein Land, unendlich viele Gesichter. Jede Region Tirols hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals.', lead: 'Egal ob actionreiche Tage im Zillertal, kulinarische Genussmomente im Stubaital oder luxuriöse Auszeiten in Kitzbühel – hier finden Sie Ihre perfekte Region. Jede Destination in unserem Portal wurde kuratiert, bewertet und mit persönlichen Beschreibungen versehen.' },
+  sehenswuerdigkeiten: { label: '#sehenswuerdigkeiten', title: 'Sehenswürdigkeiten', sub: 'Von historischen Kirchen über spektakuläre Berggipfel bis zu kulturellen Highlights – Tirols schönste Ausflugsziele.' },
+  unterkuenfte: { label: '#unterkuenfte', title: 'Top Unterkünfte', sub: 'Handverlesene Hotels, Ferienwohnungen und Bauernhöfe – für jeden Geschmack und jedes Budget.', lead: 'Unsere Redaktion testet und bewertet jede Unterkunft persönlich. Gold-gekennzeichnete Häuser bieten das besondere Extra mit Stil und erstklassigem Service. Silber steht für exzellentes Preis-Leistungs-Verhältnis, Basic für charmant und erschwinglich.' },
+  gastro: { label: '#gastro', title: 'Essen & Trinken', sub: 'Von der urigen Almhütte bis zur gehobenen Küche – Tirols Gastronomie ist so vielfältig wie seine Landschaft.' },
+  magazin: { label: '#magazin', title: 'Stories aus den Bergen', sub: 'Neueste Geschichten, Tipps & Inspirationen rund um Ihren nächsten Tirol-Urlaub.' },
+  newsletter: { title: '#tiroltourismus', desc: 'Verpassen Sie keine Neuigkeit aus Tirol. Exklusive Tipps, neue Angebote und Geschichten direkt in Ihr Postfach – jederzeit kündbar.', placeholder: 'Deine E-Mail-Adresse', button: 'Anmelden', disclaimer: 'Mit Klick auf "Anmelden" akzeptierst Du unsere Datenschutzbestimmungen.', success: '🎉 Danke! Willkommen im Tirol-Newsletter.' },
+  partner: { title: 'Partner', titleAccent: 'werden', desc: 'Zeige Deine Unterkunft, Dein Event oder Dein Angebot auf dem modernsten Tourismusportal der Alpen. Mit KI-gestützten Empfehlungen, intelligenter Suche und einer wachsenden Community von über 50.000 begeisterten Tirol-Fans.', benefits: ['Sichtbarkeit bei 50k+ Visitors', 'Kostenlose Einträge', 'Social-Media-Boost', 'Exklusive Events'], cta: 'Jetzt Partner werden' },
+  dailyPickTypes: { unterkunft: 'Unterkunft', gastro: 'Gastro', ort: 'Ort', sight: 'Sehenswürdigkeit', magazin: 'Magazin' },
+  dailyPickLinks: { unterkunft: '/unterkuenfte/', gastro: '/gastro/', ort: '/orte/', sight: '/sehenswuerdigkeiten/', magazin: '/magazin/' },
+  discover_all: 'Alle Orte & Sehenswürdigkeiten entdecken →',
+  all_regions: 'Alle Regionen entdecken →',
+  all_sights: 'Alle Sehenswürdigkeiten anzeigen →',
+  all_unterkuenfte: 'Alle Unterkünfte anzeigen →',
+  all_gastro: 'Alle Gastro-Adressen entdecken →',
+  all_magazin: 'Alle Magazin-Beiträge lesen →',
+  no_sights: 'Aktuell sind keine Sehenswürdigkeiten in der Datenbank erfasst. Neue Einträge folgen in Kürze.',
+  no_unterkuenfte: 'Aktuell sind keine Unterkünfte erfasst.',
+  no_gastro: 'Aktuell sind keine Gastro-Einträge in der Datenbank erfasst.',
+  no_magazin: 'Aktuell sind keine Magazinbeiträge veröffentlicht.',
+  willkommen_featured: 'Zufallsfund des Tages →',
+  willkommen_discover: 'Entdecken →',
+  unknown: 'Unbekannt',
+};
+
+// ── Read ALL real collection data ──
+const regionen = readCollection('regionen', locale).filter(r => isPublished(r.entry));
+const unterkuenfte = readCollection('unterkuenfte', locale).filter(u => isPublished(u.entry));
+const alleGastro = readCollection('gastro', locale).filter(g => isPublished(g.entry));
+const alleOrte = readCollection('orte', locale).filter(o => isPublished(o.entry));
+const alleSights = readCollection('sehenswuerdigkeiten', locale).filter(s => isPublished(s.entry));
+const alleMagazin = readCollection('magazin', locale).filter(a => isPublished(a.entry));
+const camping = readCollection('camping', locale).filter(c => isPublished(c.entry));
+
+// ── Tirol-Übersichts-Karte: Marker aus allen Collections ──
+const mapMarkers = [
+  ...unterkuenfte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Unterkunft',
+    href: `${locale === 'en' ? '/en' : ''}/unterkuenfte/${e.slug}/`,
+    emoji: e.entry.emoji || '🏨', category: 'unterkuenfte',
+  })),
+  ...alleGastro.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Gastro',
+    href: `${locale === 'en' ? '/en' : ''}/gastro/${e.slug}/`,
+    emoji: e.entry.emoji || '🍽️', category: 'gastro',
+  })),
+  ...alleOrte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Ort',
+    href: `${locale === 'en' ? '/en' : ''}/orte/${e.slug}/`,
+    emoji: e.entry.emoji || '🏘️', category: 'orte',
+  })),
+  ...alleSights.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Sehenswürdigkeit',
+    href: `${locale === 'en' ? '/en' : ''}/sehenswuerdigkeiten/${e.slug}/`,
+    emoji: e.entry.emoji || '🏛️', category: 'sehenswuerdigkeiten',
+  })),
+  ...camping.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel || 'Camping',
+    href: `${locale === 'en' ? '/en' : ''}/camping/${e.slug}/`,
+    emoji: e.entry.emoji || '🏕️', category: 'camping',
+  })),
+  ...alleMagazin.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.titel || e.entry.name || 'Magazin',
+    href: `${locale === 'en' ? '/en' : ''}/magazin/${e.slug}/`,
+    emoji: e.entry.emoji || '📰', category: 'magazin',
+  })),
+].slice(0, 250);
+
+// ── Sort accommodations: gold first, then silver, then basic ──
+const sortedUnterkuenfte = [...unterkuenfte].sort((a, b) => {
+  const order = { gold: 0, silver: 1, basic: 2 };
+  return (order[a.entry.tier||'basic']||2) - (order[b.entry.tier||'basic']||2);
+});
+const top3Unterkuenfte = sortedUnterkuenfte.slice(0, 3);
+
+// ── Pick 3 random gastro ──
+const shuffledGastro = [...alleGastro].sort(() => Math.random() - 0.5).slice(0, 3);
+
+// ── Top sights: up to 4 (featured first, then shuffled) ──
+const featuredSights = alleSights.filter(s => s.entry.featured);
+const otherSights = alleSights.filter(s => !s.entry.featured);
+const sortedSights = [...featuredSights, ...otherSights.sort(() => Math.random() - 0.5)].slice(0, 4);
+
+// ── Magazine sorted by date (newest first) ──
+const sortedMagazin = [...alleMagazin].sort((a, b) => {
+  if (!a.entry.datum) return 1; if (!b.entry.datum) return -1;
+  return new Date(b.entry.datum) - new Date(a.entry.datum);
+});
+const top3Magazin = sortedMagazin.slice(0, 3);
+
+// ── Build embedded JSON for client-side randomization ──
+const allForRandom = {
+  unterkuenfte: sortedUnterkuenfte.slice(0, 6).map(u => ({ ...u.entry, slug: u.slug, _type: 'unterkunft' })),
+  gastro: alleGastro.slice(0, 6).map(g => ({ ...g.entry, slug: g.slug, _type: 'gastro' })),
+  orte: alleOrte.map(o => ({ ...o.entry, slug: o.slug, _type: 'ort' })),
+  sights: alleSights.slice(0, 6).map(s => ({ ...s.entry, slug: s.slug, _type: 'sight' })),
+  magazin: sortedMagazin.slice(0, 6).map(a => ({ ...a.entry, slug: a.slug, _type: 'magazin' })),
+};
+const allItemsFlat = Object.values(allForRandom).flat();
+
+// ── Seeded shuffle for daily SSR picks ──
+const today = new Date().toDateString();
+let seed = today.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+function seededShuffle(arr) {
+  const a = [...arr];
+  let s = seed;
+  for (let i = a.length - 1; i > 0; i--) {
+    s = (s * 16807) % 2147483647;
+    const j = s % (i + 1);
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+const dailyPicks = seededShuffle(allItemsFlat).slice(0, 4);
+
+// ── Helper: format datum for display ──
+function formatDate(d) {
+  if (!d) return '';
+  const lang = locale === 'en' ? 'en-US' : 'de-DE';
+  try { return new Date(d).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
+---
+<BaseLayout title={locale === 'en' ? 'tiroltourismus.com – The Official Tourism Portal' : 'tiroltourismus.com – Das offizielle Tourismusportal'} description={locale === 'en' ? 'The official tourism portal for Tyrol. Mountains, valleys, enjoyment – discover the diversity of the Alps.' : 'Das offizielle Tourismusportal für Tirol. Berge, Täler, Genuss – entdecken Sie die Vielfalt der Alpen.'} locale={locale}>
+  <main>
+    <!-- ═══ HERO ═══ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg"><img src={page.hero.bgImage} alt="" width="1024" height="1024" loading="eager" fetchpriority="high"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div id="weatherWidget" class="hero-weather"></div>
+        <div class="hero-badge" set:html={page.hero.badge}></div>
+        <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
+        <p set:html={page.hero.subtitle}></p>
+        <div class="hero-actions">
+          <a href={locale === 'en' ? '/en/#regionen' : page.hero.ctaPrimary.href} class={page.hero.ctaPrimary.class}>{page.hero.ctaPrimary.text}</a>
+          <a href={locale === 'en' ? '/en/#unterkuenfte' : page.hero.ctaSecondary.href} class={page.hero.ctaSecondary.class}>{page.hero.ctaSecondary.text}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TIROL-KARTE ═══ -->
+    <SectionMap
+      markers={mapMarkers}
+      label={`${mapMarkers.length} Orte entdecken`}
+      title="Tirol entdecken"
+      height="450px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
+
+    <!-- ═══ STATS ═══ -->
+    <section class="stats" aria-label={locale === 'en' ? 'Statistics' : 'Statistiken'}>
+      <div class="container">
+        <div class="stats-grid">
+          {page.stats.map((s, i) => (
+            <div class={`stat-card reveal r${i+1}`}>
+              <span class="stat-icon">{s.icon}</span>
+              <div class="stat-num" data-count={s.count}>0</div>
+              <div class="stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WILLKOMMEN / WELCOME ═══ -->
+    <section class="willkommen section" id="willkommen">
+      <div class="container">
+        <div class="willkommen-grid">
+          <div class="willkommen-text">
+            <div class="section-label" style="text-align:left">{t.willkommen.label}</div>
+            <h2 class="willkommen-title">{t.willkommen.title} <span>{t.willkommen.titleAccent}</span></h2>
+            <p class="willkommen-p">{t.willkommen.p1}</p>
+            <p class="willkommen-p">{t.willkommen.p2}</p>
+            <div class="willkommen-features">
+              {t.willkommen.features.map(f => (
+                <div class="willkommen-feature"><span class="wf-icon">{f.icon}</span><span>{f.text}</span></div>
+              ))}
+            </div>
+          </div>
+          <div class="willkommen-highlight">
+            <div class="willkommen-highlight-box">
+              <span class="wh-icon">{t.willkommen.highlight.icon}</span>
+              <h3>{t.willkommen.highlight.title}</h3>
+              <p set:html={t.willkommen.highlight.text}></p>
+              <a href={locale === 'en' ? '/en/magazin/' : '/magazin/'} class="btn btn-glass btn-sm">{t.willkommen.highlight.cta}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HEUTE ENTDECKEN / DISCOVER TODAY ═══ -->
+    <section class="daily section" id="heute" aria-label={t.heute.title}>
+      <div class="container">
+        <SectionHeader label={t.heute.label} title={t.heute.title} sub={t.heute.sub} />
+        <div class="daily-grid" id="dailyPicks">
+          {dailyPicks.map((item, i) => {
+            const name = item.name || item.titel || t.unknown;
+            const emoji = item.emoji || (item._type === 'unterkunft' ? '🏨' : item._type === 'gastro' ? '🍽️' : item._type === 'ort' ? '🏘️' : item._type === 'sight' ? '🏛️' : '📰');
+            const typeLabel = t.dailyPickTypes[item._type] || 'Entdeckung';
+            const linkBase = t.dailyPickLinks[item._type] || '/';
+            return (
+              <a href={`${linkBase}${item.slug}/`} class={`daily-card${i === 0 ? ' daily-featured' : ''}`}>
+                <div class="daily-emoji-wrap">
+                  <span class="daily-emoji">{emoji}</span>
+                  {i === 0 && <span class="daily-star">✨</span>}
+                  <button data-fav-btn data-fav-collection={item._type === 'unterkunft' ? 'unterkuenfte' : item._type === 'gastro' ? 'gastro' : item._type === 'ort' ? 'orte' : item._type === 'sight' ? 'sehenswuerdigkeiten' : item._type === 'magazin' ? 'magazin' : item._type} data-fav-slug={item.slug} data-fav-name={name} data-fav-emoji={emoji} data-fav-ort="" data-fav-color="" class="fav-btn daily-fav-btn" aria-label="Zur Merkliste hinzufügen"><svg viewBox="0 0 24 24" width="14" height="14" class="fav-heart-icon"><path class="fav-heart-path" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                </div>
+                <div class="daily-body">
+                  <span class="daily-type">{typeLabel}</span>
+                  <span class="daily-name">{name}</span>
+                  <span class="daily-cta">{i === 0 ? t.willkommen_featured : t.willkommen_discover}</span>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+        <div class="section-footer">
+          <a href={locale === 'en' ? '/en/orte/' : '/orte/'} class="btn-outline">{t.discover_all}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ REGIONEN ═══ -->
+    <section class="section" id="regionen" aria-label="Regionen">
+      <div class="container">
+        <SectionHeader label={t.regionen.label} title={t.regionen.title} sub={t.regionen.sub} />
+        <p class="regionen-lead">{t.regionen.lead}</p>
+        <div class="section-grid">
+          {regionen.map(r => (
+            <RegionCard titel={r.entry.titel} slug={r.slug} beschreibung={r.entry.kurzbeschreibung} emoji={r.entry.emoji} bewertung={r.entry.bewertung} farbe={r.entry.farbe} featured={r.entry.featured} />
+          ))}
+        </div>
+        <div class="section-footer">
+          <a href={locale === 'en' ? '/en/regionen/' : '/regionen/'} class="btn-outline">{t.all_regions}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ SEHENSWÜRDIGKEITEN ═══ -->
+    <section class="section" id="sehenswuerdigkeiten" aria-label={locale === 'en' ? 'Sights' : 'Sehenswürdigkeiten'}>
+      <div class="container">
+        <SectionHeader label={t.sehenswuerdigkeiten.label} title={t.sehenswuerdigkeiten.title} sub={t.sehenswuerdigkeiten.sub} />
+        {sortedSights.length > 0 ? (
+          <>
+            <div class="sight-grid">
+              {sortedSights.map(s => (
+                <SightCard name={s.entry.name} slug={s.slug} kurzbeschreibung={s.entry.kurzbeschreibung} kategorie={s.entry.kategorie} emoji={s.entry.emoji} farbe={s.entry.farbe} ort={s.entry.ort} preis={s.entry.preis} />
+              ))}
+            </div>
+            <div class="section-footer">
+              <a href={locale === 'en' ? '/en/sehenswuerdigkeiten/' : '/sehenswuerdigkeiten/'} class="btn-outline">{t.all_sights}</a>
+            </div>
+          </>
+        ) : (
+          <p style="text-align:center;color:var(--text2);padding:40px 0">{t.no_sights}</p>
+        )}
+      </div>
+    </section>
+
+    <!-- ═══ UNTERKÜNFTE ═══ -->
+    <section class="section" id="unterkuenfte" aria-label={locale === 'en' ? 'Accommodations' : 'Unterkünfte'}>
+      <div class="container">
+        <SectionHeader label={t.unterkuenfte.label} title={t.unterkuenfte.title} sub={t.unterkuenfte.sub} />
+        <p class="section-lead">{t.unterkuenfte.lead}</p>
+        <div class="section-grid" id="unterkunftGrid">
+          {top3Unterkuenfte.length > 0 ? top3Unterkuenfte.map(u => (
+            <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} />
+          )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">{t.no_unterkuenfte}</p>}
+        </div>
+        <div class="section-footer">
+          <a href={locale === 'en' ? '/en/unterkuenfte/' : '/unterkuenfte/'} class="btn-outline">{t.all_unterkuenfte}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GASTRO ═══ -->
+    <section class="section" id="gastro" aria-label={locale === 'en' ? 'Gastronomy' : 'Gastronomie'}>
+      <div class="container">
+        <SectionHeader label={t.gastro.label} title={t.gastro.title} sub={t.gastro.sub} />
+        {alleGastro.length > 0 ? (
+          <>
+            <div class="section-grid" id="gastroGrid">
+              {shuffledGastro.map(g => (
+                <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} preis={g.entry.preis} emoji={g.entry.emoji} farbe={g.entry.farbe} ort={g.entry.ort} />
+              ))}
+            </div>
+            <div class="section-footer">
+              <a href={locale === 'en' ? '/en/gastro/' : '/gastro/'} class="btn-outline">{t.all_gastro}</a>
+            </div>
+          </>
+        ) : <p style="text-align:center;color:var(--text2);padding:40px 0">{t.no_gastro}</p>}
+      </div>
+    </section>
+
+    <!-- ═══ MAGAZIN ═══ -->
+    <section class="section" id="magazin" aria-label={locale === 'en' ? 'Magazine' : 'Magazin'}>
+      <div class="container">
+        <SectionHeader label={t.magazin.label} title={t.magazin.title} sub={t.magazin.sub} />
+        {top3Magazin.length > 0 ? (
+          <>
+            <div class="section-grid" id="magazinGrid">
+              {top3Magazin.map(a => (
+                <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} />
+              ))}
+            </div>
+            <div class="section-footer">
+              <a href={locale === 'en' ? '/en/magazin/' : '/magazin/'} class="btn-outline">{t.all_magazin}</a>
+            </div>
+          </>
+        ) : <p style="text-align:center;color:var(--text2);padding:40px 0">{t.no_magazin}</p>}
+      </div>
+    </section>
+
+    <!-- ═══ NEWSLETTER ═══ -->
+    <NewsletterForm client:load />
+
+    <!-- ═══ PARTNER ═══ -->
+    <section class="partner section" aria-label={locale === 'en' ? 'Partners' : 'Partner'}>
+      <div class="container">
+        <div class="partner-grid">
+          <div class="partner-text reveal r1">
+            <h2>{t.partner.title} <span>{t.partner.titleAccent}</span></h2>
+            <p>{t.partner.desc}</p>
+            <div class="partner-benefits">
+              {t.partner.benefits.map(b => (
+                <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> {b}</div>
+              ))}
+            </div>
+            <a href={locale === 'en' ? '/en/fuer-betriebe/' : '/fuer-betriebe/'} class="btn btn-pink">{t.partner.cta}</a>
+          </div>
+          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.webp') center/cover">PINK · GOLD</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<!-- ═══ EMBEDDED DATA FOR CLIENT-SIDE JS ═══ -->
+<script id="tirolData" type="application/json">{JSON.stringify(allForRandom)}</script>
+
+<!-- ═══ CLIENT-SIDE RANDOMIZATION ═══ -->
+<script is:inline>
+(function() {
+  'use strict';
+  const dataEl = document.getElementById('tirolData');
+  if (!dataEl) return;
+  const DATA = JSON.parse(dataEl.textContent);
+
+  function shuffle(a) {
+    const arr = [...a];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  const allItems = [...DATA.unterkuenfte, ...DATA.gastro, ...DATA.orte, ...DATA.sights, ...DATA.magazin];
+  const typeLinks = { unterkunft: '/unterkuenfte/', gastro: '/gastro/', ort: '/orte/', sight: '/sehenswuerdigkeiten/', magazin: '/magazin/' };
+  const typeLabels = { unterkunft: 'Unterkunft', gastro: 'Gastro', ort: 'Ort', sight: 'Sehenswürdigkeit', magazin: 'Magazin' };
+
+  function buildCard(item, featured) {
+    const name = item.name || item.titel || 'Unbekannt';
+    const emoji = item.emoji || (item._type === 'unterkunft' ? '🏨' : item._type === 'gastro' ? '🍽️' : item._type === 'ort' ? '🏘️' : item._type === 'sight' ? '🏛️' : '📰');
+    const base = typeLinks[item._type] || '/';
+    return `<a href="${base}${item.slug}/" class="daily-card${featured ? ' daily-featured' : ''}">
+      <div class="daily-emoji-wrap">
+        <span class="daily-emoji">${emoji}</span>
+        ${featured ? '<span class="daily-star">✨</span>' : ''}
+        <button data-fav-btn data-fav-collection="${item._type === 'unterkunft' ? 'unterkuenfte' : item._type === 'gastro' ? 'gastro' : item._type === 'ort' ? 'orte' : item._type === 'sight' ? 'sehenswuerdigkeiten' : item._type === 'magazin' ? 'magazin' : item._type}" data-fav-slug="${item.slug}" data-fav-name="${name}" data-fav-emoji="${emoji}" data-fav-ort="" data-fav-color="" class="fav-btn daily-fav-btn" aria-label="Zur Merkliste hinzufügen"><svg viewBox="0 0 24 24" width="14" height="14" class="fav-heart-icon"><path class="fav-heart-path" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+      <div class="daily-body">
+        <span class="daily-type">${typeLabels[item._type] || 'Entdeckung'}</span>
+        <span class="daily-name">${name}</span>
+        <span class="daily-cta">${featured ? 'Zufallsfund des Tages →' : 'Entdecken →'}</span>
+      </div>
+    </a>`;
+  }
+
+  function refreshDailyPicks() {
+    const container = document.getElementById('dailyPicks');
+    if (!container) return;
+    const picks = shuffle(allItems).slice(0, 4);
+    container.innerHTML = picks.map((item, i) => buildCard(item, i === 0)).join('');
+  }
+
+  refreshDailyPicks();
+})();
+</script>
+
+<!-- ═══ STATS COUNTER ANIMATION ═══ -->
+<script is:inline>
+(function() {
+  'use strict';
+  function animateCount(el, target, duration) {
+    const start = performance.now();
+    const isLarge = target > 999;
+    function step(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      if (isLarge && target >= 1000) {
+        el.textContent = current.toLocaleString('de-DE');
+      } else {
+        el.textContent = current;
+      }
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function startCounters() {
+    const els = document.querySelectorAll('.stat-num[data-count]');
+    els.forEach(el => {
+      const target = parseInt(el.dataset.count, 10);
+      if (isNaN(target) || target <= 0) {
+        el.textContent = target || '0';
+        return;
+      }
+      const delay = parseInt(el.closest('.stat-card')?.className?.match(/r(\d)/)?.[1] || '1') * 120;
+      setTimeout(() => animateCount(el, target, 1200), delay);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startCounters);
+  } else {
+    startCounters();
+  }
+})();
+</script>
+
+<style is:global>
+  /* ═══ HERO ═══ */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:120px 24px 60px}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.45}
+  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0A0A12 0%,transparent 40%),linear-gradient(180deg,rgba(255,20,147,0.3) 0%,transparent 40%);pointer-events:none}
+  .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(255,20,147,.25) 0%, rgba(212,168,0,.12) 40%, var(--bg) 75%);z-index:1}
+  .hero-content{position:relative;z-index:2;max-width:800px}
+  .hero-weather{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);margin-bottom:20px;font-size:13px;color:rgba(255,255,255,.85);min-height:36px}
+  .hero-badge{display:inline-flex;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);margin-bottom:24px;gap:6px}
+  .hero h1{font-family:'Prata',serif;font-size:clamp(64px,12vw,140px);line-height:.85;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
+  .hero h1 .line:first-child{letter-spacing:6px}
+  .hero h1 .line:last-child{background:linear-gradient(135deg,var(--pink),var(--gold),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:heroGradient 4s var(--ease) infinite}
+  .hero p{font-size:16px;color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 32px;line-height:1.7}
+  .hero p .pink{color:var(--pink)}
+  .hero p .gold{color:var(--gold)}
+  .hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn-primary{padding:14px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;transition:all .3s var(--ease);background:var(--pink);color:#fff}
+  .btn-primary:hover{background:var(--pink-dark);transform:translateY(-3px);box-shadow:0 8px 30px var(--pink-glow)}
+  .btn-secondary{padding:14px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;transition:all .3s var(--ease);background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);color:var(--text)}
+  .btn-secondary:hover{background:var(--surface-hover);transform:translateY(-3px)}
+
+  /* ═══ STATS ═══ */
+  .stats{padding:60px 0;background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+  .stat-card{padding:24px}
+  .stat-icon{font-size:36px;display:block;margin-bottom:8px}
+  .stat-num{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);line-height:1;color:var(--pink);letter-spacing:2px;margin-bottom:4px}
+  .stat-label{font-size:13px;color:var(--text2);font-weight:500}
+  @media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+
+  /* ═══ SECTION HEADER ACCENT ═══ */
+  .section-header{position:relative}
+  .section-header::after{content:'';display:block;width:80px;height:3px;margin:16px auto 0;border-radius:2px;background:linear-gradient(90deg,var(--pink),var(--gold))}
+  .daily .section-header::after{background:linear-gradient(90deg,var(--pink),var(--gold),var(--pink))}
+
+  /* ═══ SECTION GRID (shared for regionen, unterkuenfte, gastro, magazin) ═══ */
+  .section-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:968px){.section-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.section-grid{grid-template-columns:1fr}}
+
+  /* ═══ SECTION SPACING ═══ */
+  .section{padding:80px 0}
+  .section:nth-child(even){background:var(--bg2)}
+
+  /* ═══ SECTION LEAD TEXT ═══ */
+  .section-lead,.regionen-lead{text-align:center;font-size:14px;color:var(--text2);line-height:1.8;max-width:680px;margin:-24px auto 40px}
+  .section-lead{margin:-24px auto 32px}
+
+  /* ═══ HEUTE ENTDECKEN DAILY GRID ═══ */
+  .daily-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:968px){.daily-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.daily-grid{grid-template-columns:1fr}}
+
+  .daily-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column;text-decoration:none}
+  .daily-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+  .daily-featured{border-color:var(--gold);background:linear-gradient(135deg,var(--bg2),rgba(255,215,0,.04))}
+  .daily-featured:hover{border-color:var(--gold);box-shadow:0 12px 40px rgba(255,215,0,.12)}
+  .daily-emoji-wrap{position:relative;height:80px;display:flex;align-items:center;justify-content:center;background:var(--surface);font-size:36px}
+  .daily-fav-btn{position:absolute;top:4px;right:4px;width:26px;height:26px;z-index:5}
+  .daily-fav-btn .fav-heart-icon{width:12px;height:12px}
+  .daily-star{position:absolute;top:8px;right:8px;font-size:18px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  @keyframes heroGradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+  .daily-body{padding:16px;flex:1;display:flex;flex-direction:column}
+  .daily-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:2px}
+  .daily-name{font-family:var(--font-display);font-size:18px;line-height:1.15;letter-spacing:.3px;color:var(--text);margin-bottom:6px}
+  .daily-cta{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink);margin-top:auto}
+
+  /* ═══ WILLKOMMEN ═══ */
+  .willkommen-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:start}
+  .willkommen-text .section-label{text-align:left!important}
+  .willkommen-title{font-family:var(--font-display);font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+  .willkommen-title span{background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .willkommen-p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
+  .willkommen-features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+  .willkommen-feature{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--text);padding:10px 16px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--glass-border);transition:all .3s}
+  .willkommen-feature:hover{border-color:var(--pink);transform:translateY(-2px)}
+  .wf-icon{font-size:20px}
+  .willkommen-highlight-box{background:linear-gradient(135deg,rgba(255,20,147,.06),rgba(212,168,0,.06));border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px;text-align:center}
+  .wh-icon{font-size:42px;display:block;margin-bottom:8px}
+  .willkommen-highlight-box h3{font-family:var(--font-display);font-size:24px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:var(--text)}
+  .willkommen-highlight-box p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px}
+  .btn-sm{padding:10px 24px;font-size:11px}
+  @media(max-width:800px){.willkommen-grid{grid-template-columns:1fr}.willkommen-features{grid-template-columns:1fr}}
+
+  /* ═══ SIGHT GRID ═══ */
+  .sight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:968px){.sight-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.sight-grid{grid-template-columns:1fr}}
+
+  /* ═══ SECTION CTA FOOTER ═══ */
+  .section-footer{text-align:center;margin-top:32px}
+  .section-footer .btn-outline{background:transparent;border:2px solid var(--glass-border);color:var(--text);padding:12px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+  .section-footer .btn-outline:hover{background:var(--text);color:var(--bg);border-color:var(--text);transform:translateY(-3px)}
+
+  /* ═══ PARTNER ═══ */
+  .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:80px 0}
+  .partner-text h2{font-family:var(--font-display);font-size:42px;line-height:1;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--text)}
+  .partner-text h2 span{color:var(--pink)}
+  .partner-text p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px}
+  .partner-benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+  .partner-ben{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)}
+  .partner-ben svg{width:18px;height:18px;color:var(--pink);flex-shrink:0}
+  .partner-visual{height:300px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:36px;letter-spacing:4px;color:#fff;text-transform:uppercase;text-shadow:0 4px 20px rgba(0,0,0,.3)}
+  @media(max-width:768px){.partner-grid{grid-template-columns:1fr}.partner-visual{height:200px}.partner-benefits{grid-template-columns:1fr}}
+
+  /* ═══ RANDOM-SLOT for JS-powered swaps ═══ */
+  .random-slot{min-height:100px;display:flex;align-items:center;justify-content:center;border:2px dashed var(--glass-border);border-radius:var(--radius-lg);padding:20px;transition:all .4s}
+  .random-slot.populated{border-style:solid;border-color:var(--pink);background:var(--bg2)}
+
+  /* ═══ LAZY LOADING ═══ */
+  .section,.partner,.newsletter{content-visibility:auto;contain-intrinsic-size:auto 600px}
+</style>

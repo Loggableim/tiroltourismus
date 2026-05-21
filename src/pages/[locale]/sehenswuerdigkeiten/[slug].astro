@@ -1,0 +1,50 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const locale of LANGUAGES_READY) {
+    const all = readCollection('sehenswuerdigkeiten', locale).filter(s => isPublished(s.entry));
+    for (const s of all) paths.push({ params: { locale, slug: s.slug } });
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('sehenswuerdigkeiten', slug, locale);
+if (!entry) return Astro.redirect('/sehenswuerdigkeiten/');
+
+const catLabel = { natur:'Natur', kultur:'Kultur', aussicht:'Aussicht', sport:'Sport', museum:'Museum', kirche:'Kirche', burg:'Burg', wanderung:'Wanderung' };
+const catEmoji = { natur:'🌿', kultur:'🎭', aussicht:'🏔️', sport:'⚡', museum:'🏛️', kirche:'⛪', burg:'🏰', wanderung:'🥾' };
+const catStr = entry.kategorie ? `${catEmoji[entry.kategorie] || ''} ${catLabel[entry.kategorie] || entry.kategorie}` : undefined;
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'sehenswuerdigkeiten', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name || entry.titel, emoji: '🏛️' });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({ lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng, label: n.entry.name || n.entry.titel, emoji: CATEGORY_EMOJI[n.collection] || '📍', href: '/' + n.collection + '/' + n.slug + '/' });
+});
+const title = entry.name || entry.titel || slug;
+const metaDesc = generateMetaDescription(entry, 'de');
+---
+
+<DetailPage title={title} description={metaDesc} locale={locale}
+  breadcrumbs="{[{ label: 'Sehenswürdigkeiten', href: '/sehenswuerdigkeiten/' }, { label: title }]}"
+  sections={[
+    { type: 'hero', title, subtitle: catStr, emoji: catEmoji[entry.kategorie] || '🏛️', image: entry.hero_bild || (entry.bilder?.[0]?.url) },
+    { type: 'facts', items: [
+      entry.ort && { icon: '📍', label: 'Ort', value: entry.ort },
+      entry.kategorie && { icon: '🏷️', label: 'Kategorie', value: catLabel[entry.kategorie] || entry.kategorie },
+      entry.hoehe && { icon: '📏', label: 'Höhe', value: entry.hoehe },
+    ].filter(Boolean) },
+    { type: 'description', content: entry.kurzbeschreibung },
+    entry.koordinaten && { type: 'map', markers: mapMarkers },
+    nearbyEntries.length > 0 && { type: 'related', items: nearbyEntries.slice(0,4) },
+  ].filter(Boolean)}
+/>

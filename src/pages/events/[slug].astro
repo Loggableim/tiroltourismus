@@ -1,0 +1,140 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findRelated, autoLinkContent } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('events').filter(e => isPublished(e.entry));
+  return all.map(e => ({ params: { slug: e.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('events', slug);
+if (!entry) return Astro.redirect('/events/');
+
+const emoji = entry.emoji || '🎪';
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+const subtitle = [
+  entry.ort,
+  entry.region && entry.region !== entry.ort ? entry.region : null,
+].filter(Boolean).join(' · ');
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'events', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat, lng: entry.koordinaten.lng,
+    label: entry.name || entry.titel, emoji: emoji,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map', label: 'Standort', title: 'Auf der Karte',
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Date formatting
+const monate = ['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+function formatDate(d) {
+  if (!d) return null;
+  const [y, m, day] = d.split('-');
+  return { day: parseInt(day), month: monate[parseInt(m)-1], year: y };
+}
+const dateInfo = entry.datum ? formatDate(entry.datum) : (entry.datum_von ? formatDate(entry.datum_von) : null);
+const dateStr = dateInfo ? `${dateInfo.day}. ${dateInfo.month} ${dateInfo.year}` : undefined;
+
+// Related events
+const related = findRelated('events', slug, 'de', 3);
+const relatedSection = related.length > 0 ? {
+  type: 'related-grid',
+  collection: 'events',
+  title: 'Weitere Events',
+  items: related.map(r => ({
+    slug: r.slug,
+    name: r.entry.name || r.entry.titel,
+    emoji: r.entry.emoji || '🎪',
+    ort: r.entry.ort,
+    datum: r.entry.datum || r.entry.datum_von,
+    preis: r.entry.preis,
+  })),
+} : null;
+---
+
+<DetailPage
+  title={entry.name || entry.titel}
+  description={generateMetaDescription(entry, 'events')}
+  breadcrumbs={[{ label: 'Events', href: '/events/' }, { label: entry.name || entry.titel }]}
+  sections={[
+    {
+      type: 'hero',
+      title: entry.name || entry.titel,
+      subtitle: subtitle || undefined,
+      emoji: emoji,
+      gradient: entry.farbe,
+      size: 'sm',
+      bgImage: entry.hero_bild,
+      meta: {
+        badge: entry.kategorie ? { text: entry.kategorie, cls: 'tag-pink' } : undefined,
+        price: entry.preis ? { value: entry.preis, label: dateStr ? dateStr : undefined } : undefined,
+      },
+    },
+    {
+      type: 'details-grid',
+      label: 'Informationen',
+      items: [
+        { label: 'Datum', value: dateStr || undefined },
+        { label: 'Uhrzeit', value: entry.uhrzeit || undefined },
+        { label: 'Ort', value: entry.ort || undefined },
+        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+      ].filter(Boolean),
+    },
+    !isBasic ? {
+      type: 'details-grid',
+      items: [
+        { label: 'Preis', value: entry.preis || undefined },
+        { label: 'Webseite', value: entry.webseite || undefined, type: 'link', href: entry.webseite },
+      ].filter(Boolean),
+    } : null,
+    !isBasic && (entry.beschreibung || entry.kurzbeschreibung) ? {
+      type: 'description',
+      label: entry.name || entry.titel,
+      title: 'Über dieses Event',
+      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
+    } : null,
+    !isBasic ? mapSection : null,
+    !isBasic ? {
+      type: 'cta',
+      label: 'Interesse?',
+      title: 'Mehr erfahren',
+      subtitle: 'Besuchen Sie die offizielle Event-Seite für weitere Informationen und Tickets.',
+      buttons: [
+        (entry.link && entry.link !== '#') ? { label: '🌐 Event-Webseite', href: entry.link, variant: 'pink' } : null,
+        (entry.webseite && entry.webseite !== '#') ? { label: '🌐 Event-Webseite', href: entry.webseite, variant: 'pink' } : null,
+      ].filter(Boolean),
+    } : null,
+    relatedSection,
+    mapSection,
+  ].filter(Boolean)}
+/>
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name || entry.titel} slug={slug} />
+    </div>
+  </section>
+)}

@@ -1,0 +1,86 @@
+---
+// SectionMap.astro — OSM-Karte via Leaflet
+// Props werden an LeafletMap React-Komponente weitergereicht
+import LeafletMap from '../components/LeafletMap.jsx';
+
+export interface Props {
+  markers?: { lat: string|number; lng: string|number; label?: string; href?: string; emoji?: string; color?: string; category?: string }[];
+  center?: { lat: number; lng: number };
+  zoom?: number;
+  height?: string;
+  scrollWheelZoom?: boolean;
+  label?: string;
+  title?: string;
+  polygons?: { coords: number[][]; label?: string; color?: string; fillOpacity?: number }[];
+  filterable?: boolean;
+}
+
+const { markers, center, zoom, height, scrollWheelZoom, label, title, polygons, filterable } = Astro.props;
+const hasMarkers = markers && markers.length > 0;
+---
+
+<section class="sec-map">
+  <div class="container">
+    {(label || title) && (
+      <div class="sec-map-header">
+        {label && <span class="sec-map-label">{label}</span>}
+        {title && <h2 class="sec-map-title">{title}</h2>}
+      </div>
+    )}
+    {hasMarkers && (
+      <LeafletMap
+        client:load
+        markers={markers}
+        center={center}
+        zoom={zoom}
+        height={height || '380px'}
+        scrollWheelZoom={scrollWheelZoom !== false}
+        polygons={polygons}
+        filterable={filterable}
+      />
+    )}
+    {!hasMarkers && (
+      <div class="sec-map-empty">
+        <p>Keine Kartenposition verfügbar.</p>
+      </div>
+    )}
+  </div>
+</section>
+
+<style is:global>
+  .sec-map {
+    padding: 40px 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .sec-map-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .sec-map-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--purple, #a855f7);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .sec-map-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  .sec-map-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text3);
+    font-size: 14px;
+  }
+  @media (max-width: 600px) {
+    .sec-map { padding: 24px 0; }
+  }
+</style>

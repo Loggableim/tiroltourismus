@@ -1,0 +1,271 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import PremiumBadge from '../../components/PremiumBadge.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('camping').filter(c => isPublished(c.entry));
+  return all.map(c => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('camping', slug);
+if (!entry) return Astro.redirect('/camping/');
+
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+const isSilver = tier === 'silver';
+const isGold = tier === 'gold';
+
+// Ausstattung Labels: translate machine keys to human-readable
+const ausstattungLabels = {
+  stromanschluss: 'Stromanschluss',
+  wasseranschluss: 'Wasseranschluss',
+  sanitäranlagen: 'Sanitäranlagen',
+  entsorgung: 'Entsorgung',
+  pool: 'Pool',
+  frühstück: 'Frühstück',
+  wifi: 'WLAN',
+  restaurant: 'Restaurant',
+  kinderspielplatz: 'Kinderspielplatz',
+  haustiere: 'Haustiere erlaubt',
+};
+
+const formattedAusstattung = (entry.ausstattung || []).map(a => ({
+  label: ausstattungLabels[a] || a,
+  icon: a === 'stromanschluss' ? '⚡' : a === 'wasseranschluss' ? '💧' : a === 'sanitäranlagen' ? '🚿' : a === 'entsorgung' ? '♻️' : '✅',
+}));
+
+const badge = null; // PremiumBadge handles display
+const tierBadge = tier;
+
+const emoji = '🏕️';
+
+// Public sections (visible to all)
+const publicSections = [
+  {
+    type: 'hero',
+    title: entry.name,
+    subtitle: entry.ort ? `${entry.ort}${entry.plz ? `, ${entry.plz}` : ''}` : undefined,
+    emoji: emoji,
+    size: 'sm',
+    meta: {
+      badge: { text: tier, cls: 'tier-' + tier },
+    },
+  },
+];
+
+// Basic contact info
+const basicContactItems = [
+  { label: 'Ort', value: entry.ort || undefined },
+  { label: 'Region', value: entry.region || undefined },
+  { label: 'Telefon', value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
+  { label: 'E-Mail', value: entry.email || undefined, type: 'link', href: entry.email ? `mailto:${entry.email}` : undefined },
+].filter(i => i.value);
+
+// Premium sections
+const premiumSections = [];
+
+// Description
+if (entry.beschreibung) {
+  premiumSections.push({
+    type: 'description',
+    label: 'Über diesen Campingplatz',
+    title: 'Beschreibung',
+    content: autoLinkContent(entry.beschreibung, entry),
+  });
+}
+
+// Ausstattung / Features
+if (formattedAusstattung.length > 0) {
+  premiumSections.push({
+    type: 'details-grid',
+    label: 'Ausstattung',
+    items: [
+      {
+        label: 'Ausstattung & Features',
+        tags: formattedAusstattung.map(a => a.label),
+        type: 'tags',
+      },
+    ],
+  });
+}
+
+// Full details (Silver/Gold get complete data)
+if (!isBasic) {
+  // Stellplatz-Typ (future field)
+  const stellplatzItems = [];
+  if (entry.stellplatz_typ) {
+    stellplatzItems.push({ label: 'Stellplatz-Typ', value: entry.stellplatz_typ });
+  }
+  if (entry.saison) {
+    stellplatzItems.push({ label: 'Saison', value: entry.saison });
+  }
+
+  if (stellplatzItems.length > 0) {
+    premiumSections.push({
+      type: 'details-grid',
+      items: stellplatzItems,
+    });
+  }
+
+  // Contact & details
+  premiumSections.push({
+    type: 'details-grid',
+    items: [
+      { label: 'Ort', value: entry.ort || undefined },
+      { label: 'Region', value: entry.region || undefined },
+      { label: 'Adresse', value: entry.adresse ? `${entry.adresse}${entry.ort ? `, ${entry.ort}` : ''}` : entry.ort || undefined },
+      { label: 'PLZ', value: entry.plz || undefined },
+      { label: 'Telefon', value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
+      { label: 'E-Mail', value: entry.email || undefined, type: 'link', href: entry.email ? `mailto:${entry.email}` : undefined },
+      { label: 'Webseite', value: entry.webseite || undefined, type: 'link', href: entry.webseite },
+      { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+    ].filter(Boolean),
+  });
+
+  // CTA
+  premiumSections.push({
+    type: 'cta',
+    label: 'Interesse?',
+    title: 'Jetzt anfragen',
+    subtitle: 'Kontaktieren Sie den Campingplatz direkt für Buchungen und Anfragen.',
+    buttons: [
+      entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+      entry.email ? { label: '✉️ E-Mail senden', href: `mailto:${entry.email}`, variant: 'glass' } : null,
+    ].filter(Boolean),
+  });
+}
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'camping', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name, emoji: '🏕️' });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map', label: 'Standort', title: 'Auf der Karte',
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Assemble sections
+let allSections;
+if (isBasic) {
+  allSections = [
+    ...publicSections,
+    {
+      type: 'details-grid',
+      items: basicContactItems,
+    },
+  ];
+} else {
+  allSections = [
+    ...publicSections,
+    ...premiumSections,
+  ];
+}
+if (mapSection) allSections.push(mapSection);
+
+// Verwandte Campingplätze via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'camping' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: '🏕️' }
+      }))
+  : [];
+if (relatedByTag.length > 0) {
+  allSections.push({
+    type: 'related-grid',
+    label: 'Weitere Campingplätze',
+    entries: relatedByTag,
+    slugPrefix: '/camping/',
+    nameField: 'name',
+    subtitleField: 'ort',
+    emojiField: '_emoji',
+    defaultEmoji: '🏕️',
+  });
+}
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'camping')}
+  breadcrumbs={[{ label: 'Campingplätze', href: '/camping/' }, { label: entry.name }]}
+  sections={allSections}
+/>
+
+<!-- Basic: Premium content behind paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+      <div class="paywall-hidden-content">
+        {entry.beschreibung && (
+          <div class="paywall-teaser">
+            <div class="paywall-teaser-label">Beschreibung</div>
+            <p class="paywall-teaser-preview">
+              {entry.beschreibung.replace(/<[^>]*>/g, '').substring(0, 120)}...
+            </p>
+          </div>
+        )}
+        <div class="paywall-teaser">
+          <div class="paywall-teaser-label">Ausstattung</div>
+          <div class="paywall-teaser-tags">
+            {(entry.ausstattung || []).slice(0, 3).map(t => <span class="tag">{ausstattungLabels[t] || t}</span>)}
+            {(entry.ausstattung || []).length > 3 && <span class="tag tag-more">+{entry.ausstattung.length - 3}</span>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- GOLD: Highlighting -->
+{isGold && (
+  <style is:global>
+    .sec-hero { background: var(--gold-soft) !important; border-bottom-color: rgba(212,168,0,.15) !important; }
+    .sec-hero-badge.tag-gold { background: linear-gradient(135deg, var(--yellow), #F59E0B); color: #1a1a1a; font-weight: 800; padding: 6px 18px; }
+  </style>
+)}
+
+<!-- BASIC: Gedämpfter Stil -->
+{isBasic && (
+  <style is:global>
+    .sec-hero-badge.tag-basic { background: var(--surface); border: 1px solid var(--glass-border); color: var(--text3); }
+    .sec-hero { opacity: 0.85; }
+  </style>
+)}
+
+<style is:global>
+  .paywall-hidden-content {
+    opacity: 0.3;
+    filter: blur(4px);
+    pointer-events: none;
+    user-select: none;
+    padding: 40px 0;
+  }
+  .paywall-teaser { margin-bottom: 32px; }
+  .paywall-teaser-label { font-family: var(--font-display); font-size: 22px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; color: var(--text); }
+  .paywall-teaser-preview { font-size: 14px; color: var(--text2); line-height: 1.6; }
+  .paywall-teaser-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .paywall-teaser-tags .tag { padding: 4px 10px; border-radius: 100px; font-size: 10px; font-weight: 600; background: var(--surface); border: 1px solid var(--glass-border); color: var(--text2); }
+  .tag-more { color: var(--text3) !important; }
+  .paywall-restricted { padding-top: 0 !important; }
+  @media (max-width: 768px) { .paywall-hidden-content { padding: 24px 0; } }
+</style>

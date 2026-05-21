@@ -1,0 +1,31 @@
+{
+  "name": "Central",
+  "slug": "central",
+  "typ": "hotel",
+  "sterne": 4,
+  "preis_ab": null,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6020",
+  "adresse": "Gilmstraße 5",
+  "telefon": "+43 512 5920",
+  "email": "office@central.co.at",
+  "webseite": "https://www.central.co.at/",
+  "beschreibung": "<p>Das <strong>Hotel Central</strong> in Innsbruck befindet sich im <strong>Stadtzentrum</strong> in unmittelbarer Nähe zum Hauptbahnhof. Die Umgebung bietet eine Mischung aus urbaner Infrastruktur. Kulturelle Anlaufstellen wie die Altstadt sind fußläufig erreichbar. Die Ausstattung umfasst <strong>Zimmer</strong> und Räume, die auf den praktischen Bedarf ausgelegt sind, ohne besonderen Luxus. Die Atmosphäre des Hauses ist betont sachlich und auf Effizienz bedacht. Das Hotel ist besonders für Geschäftsreisende und Städtetouristen geeignet, die Wert auf eine zentrale und verkehrsgünstige Lage legen.</p>",
+  "ausstattung": [
+    "wifi"
+  ],
+  "tags": [
+    "hôtel",
+    "Innsbruck",
+    "confort"
+  ],
+  "tier": "basic",
+  "koordinaten": {
+    "lat": "47.2658814",
+    "lng": "11.3965333"
+  },
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null
+}

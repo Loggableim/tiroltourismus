@@ -1,0 +1,150 @@
+---
+// bezirke/[slug].astro — Detailseite für einen Bezirk
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { readSingleton, readCollection, isPublished } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+import OrtCard from '../../components/OrtCard.astro';
+
+// Regionen → Bezirk Mapping
+const BEZIRK_REGIONS = {
+  'innsbruck': ['innsbruck'],
+  'innsbruck-land': ['innsbruck-land'],
+  'imst': ['imst', 'oetztal'],
+  'landeck': ['landeck', 'arlberg', 'kaunertal'],
+  'reutte': ['ausserfern'],
+  'kufstein': ['kufstein'],
+  'kitzbuehel': ['kitzbuehel'],
+  'schwaz': ['schwaz', 'achensee', 'zillertal'],
+  'lienz': ['osttirol', 'lienz'],
+};
+
+export async function getStaticPaths() {
+  const b = readSingleton('bezirke') || {};
+  return Object.values(b).filter(Boolean).map(entry => ({
+    params: { slug: entry.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const bezirke = readSingleton('bezirke');
+const bezirk = bezirke?.[slug] || null;
+if (!bezirk) return Astro.redirect('/bezirke/');
+
+const relevantRegions = BEZIRK_REGIONS[slug] || [];
+const allOrte = readCollection('orte').filter(o => isPublished(o.entry));
+const orteImBezirk = allOrte.filter(o => relevantRegions.includes(o.entry.region));
+const alleRegionen = readCollection('regionen');
+const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slug));
+---
+<BaseLayout
+  title={bezirk.name}
+  description={generateMetaDescription({ name: bezirk.name, beschreibung: bezirk.beschreibung }, 'bezirke')}
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Bezirke', href: '/bezirke/' }, { label: bezirk.name }]} />
+    </div>
+
+    <section class="bezirk-hero">
+      <div class="container" style="text-align:center;padding:60px 0 40px">
+        <div style="font-size:64px;margin-bottom:8px">🗺️</div>
+        <h1 class="bezirk-page-title">{bezirk.name}</h1>
+        <p class="bezirk-page-desc">{bezirk.beschreibung}</p>
+        {orteImBezirk.length > 0 && (
+          <p style="color:var(--text3);font-size:13px;margin-top:12px">{orteImBezirk.length} Gemeinden</p>
+        )}
+      </div>
+    </section>
+
+    {regionenImBezirk.length > 0 && (
+      <section class="section" style="padding:0 0 40px">
+        <div class="container">
+          <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin-bottom:16px">
+            Regionen in {bezirk.name}
+          </h2>
+          <div class="bezirk-regionen">
+            {regionenImBezirk.map(r => (
+              <a href={`/regionen/${r.slug}/`} class="bezirk-region-tag">
+                {r.entry.emoji} {r.entry.titel}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="section" style="padding:0 0 80px">
+      <div class="container">
+        <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin-bottom:16px">
+          Orte & Gemeinden
+        </h2>
+        {orteImBezirk.length > 0 ? (
+          <div class="bezirk-orte-grid">
+            {orteImBezirk.map(o => (
+              <OrtCard
+                name={o.entry.name}
+                slug={o.slug}
+                beschreibung={o.entry.kurzbeschreibung}
+                emoji={o.entry.emoji}
+                farbe={o.entry.farbe}
+              />
+            ))}
+          </div>
+        ) : (
+          <div style="text-align:center;padding:40px;color:var(--text2);border:1px dashed var(--glass-border);border-radius:var(--radius)">
+            <p>Noch keine Orte für diesen Bezirk erfasst.</p>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .bezirk-page-title {
+    font-family: var(--font-display);
+    font-size: clamp(42px,6vw,72px);
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .bezirk-page-desc {
+    color: var(--text2);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  .bezirk-regionen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .bezirk-region-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .bezirk-region-tag:hover {
+    border-color: var(--pink);
+    color: var(--pink);
+  }
+  .bezirk-orte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  @media(max-width:968px){.bezirk-orte-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.bezirk-orte-grid{grid-template-columns:1fr}}
+</style>

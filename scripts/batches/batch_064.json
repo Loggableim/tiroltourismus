@@ -1,0 +1,68 @@
+[
+  {
+    "batch": 64,
+    "batch_idx": 0,
+    "slug": "ferienhaus-thaler",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\ferienhaus-thaler\\index.json",
+    "name": "Ferienhaus Thaler",
+    "ort": "Nesselwängle",
+    "typ": "ferienhaus",
+    "region": "ausserfern",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 64,
+    "batch_idx": 1,
+    "slug": "ferienhaus-wasserfallhutte",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\ferienhaus-wasserfallhutte\\index.json",
+    "name": "Ferienhaus Wasserfallhütte",
+    "ort": "Kufstein",
+    "typ": "ferienhaus",
+    "region": "kufstein",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 64,
+    "batch_idx": 2,
+    "slug": "ferienheim-wildmoos",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\ferienheim-wildmoos\\index.json",
+    "name": "Ferienheim Wildmoos",
+    "ort": "",
+    "typ": "ferienhaus",
+    "region": "",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 64,
+    "batch_idx": 3,
+    "slug": "ferienhof-hinterleiten",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\ferienhof-hinterleiten\\index.json",
+    "name": "Ferienhof Hinterleiten",
+    "ort": "",
+    "typ": "gasthof",
+    "region": "",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 64,
+    "batch_idx": 4,
+    "slug": "ferienhotel-elvira-pension",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\ferienhotel-elvira-pension\\index.json",
+    "name": "Ferienhotel Elvira Pension",
+    "ort": "Thiersee",
+    "typ": "gasthof",
+    "region": "kufstein",
+    "hat_beschreibung": false
+  },
+  {
+    "batch": 64,
+    "batch_idx": 5,
+    "slug": "ferienhotel-fuchs",
+    "filepath": "F:\\tiroltourismus\\src\\data\\unterkuenfte\\ferienhotel-fuchs\\index.json",
+    "name": "Ferienhotel Fuchs",
+    "ort": "Söll",
+    "typ": "hotel",
+    "region": "kufstein",
+    "hat_beschreibung": false
+  }
+]

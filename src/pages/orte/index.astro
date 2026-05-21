@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import SectionMap from '../../sections/SectionMap.astro';
+import OrtCard from '../../components/OrtCard.astro';
+import { readCollection, isPublished } from '../../lib/content.js';
+
+const orte = readCollection('orte').filter(o => isPublished(o.entry));
+
+const orteMitKarte = orte.filter(o => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
+const orteMarkers = orteMitKarte.map((o) => ({
+  lat: o.entry.koordinaten.lat,
+  lng: o.entry.koordinaten.lng,
+  label: o.entry.name,
+  href: '/orte/' + o.slug + '/',
+  emoji: o.entry.emoji || '🏘️',
+}));
+---
+
+<BaseLayout
+  title="Orte in Tirol"
+  description="Entdecke die schönsten Orte in Tirol – von charmanten Dörfern bis zu pulsierenden Städten."
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Orte' }]} />
+    </div>
+
+    <Hero
+      title="Orte"
+      subtitle="Entdecke die schönsten Orte in Tirol."
+      emoji="🏘️"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#orte-grid" class="btn btn-pink">Orte entdecken →</a>
+        <span class="hero-urgency">📍 {orte.length} Ortschaften</span>
+      </div>
+    </Hero>
+
+    <SectionMap
+      markers={orteMarkers}
+      label={`${orteMarkers.length} Orte`}
+      title="Auf einen Blick"
+      height="380px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
+
+    {orte.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader
+            label="Tirol entdecken"
+            title="Orte in Tirol"
+            sub="Von charmanten Dörfern bis zu pulsierenden Städten – jeder Ort in Tirol hat seinen eigenen Charakter."
+          />
+
+          <div class="orte-grid" id="orte-grid">
+            {orte.map((o) => (
+              <OrtCard
+                name={o.entry.name}
+                slug={o.slug}
+                beschreibung={o.entry.kurzbeschreibung}
+                emoji={o.entry.emoji}
+                farbe={o.entry.farbe}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏘️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            Bald verfügbar
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            Orte werden aktuell eingepflegt. Schau bald wieder vorbei!
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .orte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+  @media (max-width: 968px) {
+    .orte-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .orte-grid { grid-template-columns: 1fr; }
+  }
+</style>

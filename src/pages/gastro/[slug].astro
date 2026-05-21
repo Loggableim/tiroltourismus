@@ -1,0 +1,126 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('gastro').filter(g => isPublished(g.entry));
+  return all.map(g => ({ params: { slug: g.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('gastro', slug);
+if (!entry) return Astro.redirect('/gastro/');
+
+const emoji = entry.emoji || '🍽️';
+const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
+
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'gastro', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name, emoji: emoji });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map',
+  label: 'Standort',
+  title: 'Auf der Karte',
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Verwandte Gastro via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'gastro' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🍽️' }
+      }))
+  : [];
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'gastro')}
+  breadcrumbs={[{ label: 'Gastro', href: '/gastro/' }, { label: entry.name }]}
+  sections={[
+    {
+      type: 'hero',
+      title: entry.name,
+      subtitle: subtitle,
+      emoji: emoji,
+      gradient: entry.farbe,
+      bgImage: entry.hero_bild,
+    },
+    {
+      type: 'details-grid',
+      label: 'Kontakt & Standort',
+      items: [
+        { label: 'Ort', value: entry.ort || undefined },
+        { label: 'Kategorie', value: entry.kategorie || undefined },
+        { label: 'Telefon', value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
+        { label: 'Adresse', value: entry.adresse || undefined },
+        { label: 'Tags', tags: entry.tags || [], type: 'tags' },
+      ].filter(Boolean),
+    },
+    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? {
+      type: 'description',
+      label: entry.name,
+      title: 'Über dieses Lokal',
+      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
+    } : null,
+    !isBasic ? {
+      type: 'details-grid',
+      items: [
+        { label: 'Preis', value: entry.preis || undefined, type: 'price' },
+        entry.webseite ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
+      ].filter(Boolean),
+    } : null,
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Lokale',
+      entries: relatedByTag,
+      slugPrefix: '/gastro/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🍽️',
+    } : null,
+    !isBasic ? {
+      type: 'cta',
+      label: 'Lust bekommen?',
+      title: 'Jetzt reservieren',
+      subtitle: 'Kontaktieren Sie das Lokal direkt für Tischreservierungen.',
+      buttons: [
+        entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+        entry.webseite ? { label: '🌐 Webseite', href: entry.webseite, variant: 'glass' } : null,
+      ].filter(Boolean),
+    } : null,
+  ].filter(Boolean)}
+/>
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+    </div>
+  </section>
+)}

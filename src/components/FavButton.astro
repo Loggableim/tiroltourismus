@@ -1,0 +1,124 @@
+---
+// FavButton.astro — Heart button for favorites (LocalStorage)
+// Uses event delegation from tirol.js via data attributes.
+// No React needed — pure CSS + data attributes.
+
+export interface Props {
+  collection: string;
+  slug: string;
+  name: string;
+  emoji?: string;
+  ort?: string;
+  color?: string;
+  size?: 'sm' | 'md';
+  position?: 'tl' | 'tr' | 'bl' | 'br';
+}
+
+const {
+  collection,
+  slug,
+  name,
+  emoji = '',
+  ort = '',
+  color = '',
+  size = 'md',
+  position = 'tr',
+} = Astro.props;
+const positionClass = `fav-btn-${position}`;
+const sizeClass = `fav-btn-${size}`;
+---
+
+<button
+  class={`fav-btn ${positionClass} ${sizeClass}`}
+  data-fav-btn
+  data-fav-collection={collection}
+  data-fav-slug={slug}
+  data-fav-name={name}
+  data-fav-emoji={emoji}
+  data-fav-ort={ort}
+  data-fav-color={color}
+  aria-label="Zur Merkliste hinzufügen"
+  title="Merken"
+>
+  <svg viewBox="0 0 24 24" width="20" height="20" class="fav-heart-icon">
+    <path
+      class="fav-heart-path"
+      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</button>
+
+<style is:global>
+  /* ── Fav Button Base ── */
+  .fav-btn {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.12);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(.16,1,.3,1);
+    color: rgba(0,0,0,.35);
+    padding: 0;
+  }
+  .fav-btn:hover {
+    transform: scale(1.12);
+    color: var(--pink);
+    box-shadow: 0 4px 16px rgba(255,20,147,.25);
+  }
+  .fav-btn:active {
+    transform: scale(0.92);
+  }
+  .fav-btn.active {
+    color: var(--pink);
+    background: rgba(255,20,147,.12);
+    box-shadow: 0 4px 16px rgba(255,20,147,.2);
+  }
+  .fav-btn.active:hover {
+    color: var(--pink-dark);
+    background: rgba(255,20,147,.18);
+  }
+  .fav-heart-icon {
+    transition: transform 0.2s;
+    display: block;
+  }
+  .fav-btn.active .fav-heart-path {
+    fill: var(--pink);
+  }
+  .fav-btn.active:hover .fav-heart-path {
+    fill: var(--pink-dark);
+  }
+
+  /* ── Positions ── */
+  .fav-btn-tl { top: 8px; left: 8px; }
+  .fav-btn-tr { top: 8px; right: 8px; }
+  .fav-btn-bl { bottom: 8px; left: 8px; }
+  .fav-btn-br { bottom: 8px; right: 8px; }
+
+  /* ── Sizes ── */
+  .fav-btn-sm { width: 34px; height: 34px; }
+  .fav-btn-sm .fav-heart-icon { width: 16px; height: 16px; }
+  .fav-btn-md { width: 40px; height: 40px; }
+  .fav-btn-md .fav-heart-icon { width: 20px; height: 20px; }
+  @media(hover:none){.fav-btn-sm{width:38px;height:38px}.fav-btn-md{width:44px;height:44px}}
+
+  /* ── For inline use (not absolute positioned) ── */
+  .fav-btn.inline {
+    position: relative;
+    top: auto;
+    right: auto;
+    flex-shrink: 0;
+  }
+</style>

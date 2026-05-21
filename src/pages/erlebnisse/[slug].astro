@@ -1,0 +1,138 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('erlebnisse').filter(e => isPublished(e.entry));
+  return all.map(e => ({ params: { slug: e.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('erlebnisse', slug);
+if (!entry) return Astro.redirect('/erlebnisse/');
+
+const kategorieLabel = {
+  wandern: 'Wandern', ski: 'Ski & Snowboard', bike: 'Bike & Mountainbike',
+  wellness: 'Wellness & Erholung', familie: 'Familie & Kinder',
+  kulinarik: 'Kulinarik', kultur: 'Kultur', abenteuer: 'Abenteuer',
+};
+const kategorieEmoji = {
+  wandern: '🥾', ski: '⛷️', bike: '🚵', wellness: '♨️',
+  familie: '👨‍👩‍👧‍👦', kulinarik: '🍷', kultur: '🎭', abenteuer: '🧗',
+};
+const emoji = entry.emoji || kategorieEmoji[entry.kategorie] || '🏔️';
+const katStr = entry.kategorie ? `${kategorieEmoji[entry.kategorie] || ''} ${kategorieLabel[entry.kategorie] || entry.kategorie}` : undefined;
+
+function formatPreis(preis) {
+  if (!preis && preis !== 0) return undefined;
+  return `${Number(preis).toFixed(0)} €`;
+}
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'erlebnisse', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat,
+    lng: entry.koordinaten.lng,
+    label: entry.name,
+    emoji: emoji,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map',
+  label: 'Standort',
+  title: 'Auf der Karte',
+  markers: mapMarkers,
+  scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Verwandte Erlebnisse via ersten Tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'erlebnisse' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || kategorieEmoji[r.entry.kategorie] || '🏔️' }
+      }))
+  : [];
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'erlebnisse')}
+  breadcrumbs={[{ label: 'Erlebnisse', href: '/erlebnisse/' }, { label: entry.name }]}
+  sections={[
+    {
+      type: 'custom-hero',
+      title: entry.name,
+      subtitle: entry.beschreibung,
+      emoji: emoji,
+      category: katStr,
+      location: entry.ort,
+      bgStyle: entry.farbe ? `linear-gradient(135deg,${entry.farbe}15,${entry.farbe}25)` : undefined,
+      bgImage: entry.hero_bild,
+    },
+    (entry.dauer || entry.preis || entry.preis === 0) ? {
+      type: 'sight-facts',
+      items: [
+        entry.dauer ? { value: entry.dauer, label: 'Dauer' } : null,
+        (entry.preis || entry.preis === 0) ? { value: formatPreis(entry.preis), label: 'Preis' } : null,
+      ].filter(Boolean),
+    } : null,
+    {
+      type: 'description',
+      label: 'Details',
+      title: 'Mehr zu diesem Erlebnis',
+      content: autoLinkContent(entry.beschreibung, entry),
+    },
+    entry.tags && entry.tags.length > 0 ? { type: 'tags', tags: entry.tags } : null,
+    {
+      type: 'sight-info-grid',
+      items: [
+        entry.ort ? { icon: '📍', label: 'Ort', value: entry.ort } : null,
+        entry.region ? { icon: '🏔️', label: 'Region', value: entry.region } : null,
+        entry.dauer ? { icon: '⏱', label: 'Dauer', value: entry.dauer } : null,
+        (entry.preis || entry.preis === 0) ? { icon: '💰', label: 'Preis', value: formatPreis(entry.preis) } : null,
+        entry.link && entry.link !== '#' ? { icon: '🌐', label: 'Informationen', value: 'Mehr erfahren ↗', href: entry.link } : null,
+      ].filter(Boolean),
+    },
+    mapSection,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Erlebnisse',
+      entries: relatedByTag,
+      slugPrefix: '/erlebnisse/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏔️',
+    } : null,
+    {
+      type: 'cta',
+      label: 'Lust bekommen?',
+      title: 'Mehr erfahren',
+      subtitle: 'Sichere dir dein unvergessliches Erlebnis in Tirol.',
+      buttons: [
+        entry.link && entry.link !== '#'
+          ? { label: `🔗 Mehr erfahren`, href: entry.link, variant: 'pink', analytics: 'Info' }
+          : { label: `📞 Angebot anfragen`, href: '#', variant: 'pink', analytics: 'Buchung' },
+        { label: '← Alle Erlebnisse', href: '/erlebnisse/', variant: 'glass' },
+      ].filter(Boolean),
+    },
+  ].filter(Boolean)}
+/>

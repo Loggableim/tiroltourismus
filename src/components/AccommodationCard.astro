@@ -1,0 +1,72 @@
+---
+import FavHeart from './FavHeart.astro';
+import PremiumBadge from './PremiumBadge.astro';
+export interface Props {
+  name: string;
+  slug: string;
+  typ?: string;
+  ort?: string;
+  sterne?: number;
+  preis_ab?: number;
+  tier?: string;
+  'data-tier'?: string;
+}
+const { name, slug, typ, ort, sterne = 3, preis_ab, tier = 'basic', 'data-tier': dataTier } = Astro.props;
+const isCamping = typ === 'camping';
+const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'Bauernhof', jugendherberge: 'Jugendherberge', camping: 'Camping' };
+const placeholderIcon = isCamping ? '🏕️' : '🏨';
+// Badge handled by PremiumBadge component
+---
+<a href={`/unterkuenfte/${slug}/`} class="uk-card" data-tier={dataTier || tier || 'basic'} data-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
+  <div class="uk-img" style="position:relative">
+    <PremiumBadge tier={tier} />
+    {isCamping && <span class="uk-camping-badge">⛺</span>}
+    <span class="uk-placeholder">{placeholderIcon}</span>
+    <FavHeart collection="unterkuenfte" slug={slug} />
+  </div>
+  <div class="uk-body">
+    <div class="uk-type">{typLabel[typ] || typ || 'Unterkunft'}</div>
+    <div class="uk-name">{name}</div>
+    <div class="uk-ort">{ort || 'Tirol'}</div>
+    {!isCamping && <div class="uk-stars">{'★'.repeat(sterne)}</div>}
+    {isCamping && <div class="uk-camping-info">Zelt • Wohnmobil • Wohnwagen</div>}
+    <div class="uk-meta">
+      {preis_ab ? <span class="uk-price">ab {preis_ab}€<small>/Nacht</small></span> : <span class="uk-na">{isCamping ? 'Stellplatz' : 'Preis auf Anfrage'}</span>}
+    </div>
+    <span class="uk-cta">Details →</span>
+  </div>
+</a>
+
+<style is:global>
+  .uk-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column}
+  .uk-card:hover{transform:translateY(-5px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .uk-img{position:relative;height:140px;display:flex;align-items:center;justify-content:center;background:var(--surface)}
+  .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a}
+  .badge-silver{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--green),#059669);color:#fff}
+  .uk-placeholder{font-size:48px;color:var(--text3)}
+  .uk-camping-badge{position:absolute;top:12px;left:62px;padding:4px 8px;border-radius:100px;font-size:10px;font-weight:700;background:rgba(0,200,83,.15);color:var(--pop-green)}
+  .uk-camping-info{font-size:11px;color:var(--pop-green);font-weight:600;letter-spacing:.3px;margin-bottom:8px}
+  .uk-body{padding:16px 20px 20px;flex:1;display:flex;flex-direction:column}
+  .uk-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:4px}
+  .uk-name{font-family:var(--font-display);font-size:22px;line-height:1.1;letter-spacing:.5px;margin-bottom:2px;color:var(--text)}
+  .uk-ort{font-size:12px;color:var(--text2);margin-bottom:8px}
+  .uk-stars{color:var(--yellow);font-size:13px;letter-spacing:2px;margin-bottom:8px}
+  .uk-meta{display:flex;align-items:center;justify-content:center;margin-top:auto;padding-top:12px;border-top:1px solid var(--glass-border)}
+  .uk-price{font-size:18px;font-weight:800;color:var(--text)}
+  .uk-price small{font-size:11px;font-weight:400;color:var(--text2)}
+  .uk-na{font-size:12px;color:var(--text3)}
+  .uk-cta{display:block;width:100%;padding:12px;margin-top:14px;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
+  .uk-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
+  @media(max-width:600px){
+    .uk-img{height:120px}
+    .uk-name{font-size:20px}
+    .uk-body{padding:14px 18px 18px}
+    .uk-cta{padding:11px}
+  }
+  @media(max-width:480px){
+    .uk-img{height:100px}
+    .uk-name{font-size:18px}
+    .uk-body{padding:12px}
+    .uk-cta{padding:10px}
+  }
+</style>

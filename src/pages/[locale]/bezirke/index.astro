@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { readSingleton } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const bezirke = readSingleton('bezirke');
+const items = bezirke ? Object.values(bezirke) : [];
+---
+
+<BaseLayout title="Bezirke Tirols" description="Alle neun Bezirke Tirols im Überblick." locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'Bezirke' }]}" /></div>
+    <section class="bezirke-hero"><h1>Bezirke Tirols</h1><p>Die neun Bezirke im Überblick.</p></section>
+    <div class="bezirke-grid">
+      {items.map(b => (
+        <a href="{'/'+(locale!=='de'?locale+'/':'')+'bezirke/'+b.slug+'/'}" class="bezirk-card">
+          <h3>{b.name}</h3>
+          <p>{b.kurzbeschreibung?.slice(0,100)}</p>
+        </a>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

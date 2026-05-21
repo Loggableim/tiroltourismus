@@ -1,0 +1,20 @@
+---
+export interface Props {
+  label?: string;
+  title: string;
+  sub?: string;
+}
+const { label, title, sub } = Astro.props;
+---
+<div class="section-header">
+  {label && <div class="section-label">{label}</div>}
+  <h2 class="section-title">{title}</h2>
+  {sub && <p class="section-sub">{sub}</p>}
+</div>
+
+<style is:global>
+  .section-header{text-align:center;margin-bottom:48px}
+  .section-label{font-family:var(--font-display);font-size:20px;letter-spacing:2px;color:var(--pink);margin-bottom:4px}
+  .section-title{font-family:var(--font-display);font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+  .section-sub{font-size:14px;color:var(--text2);max-width:520px;margin:0 auto;line-height:1.6}
+</style>

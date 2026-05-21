@@ -1,0 +1,15 @@
+---
+export interface Props {
+  items: Array<{ label: string; href?: string }>;
+}
+const { items } = Astro.props;
+const all = [{ label: 'Startseite', href: '/' }, ...items];
+---
+<div class="breadcrumbs container">
+  {all.map((item, i) => (
+    <>
+      {i > 0 && <span class="sep">›</span>}
+      {item.href ? <a href={item.href}>{item.label}</a> : <span>{item.label}</span>}
+    </>
+  ))}
+</div>

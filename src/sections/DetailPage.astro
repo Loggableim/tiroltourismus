@@ -1,0 +1,247 @@
+---
+// DetailPage.astro — Lego-Orchestrator für alle Detailseiten
+// Nimmt ein sections-Array mit Konfiguration und rendert die passenden Blöcke
+import SectionHero from './SectionHero.astro';
+import SectionFactsBar from './SectionFactsBar.astro';
+import SectionDescription from './SectionDescription.astro';
+import SectionDetailsGrid from './SectionDetailsGrid.astro';
+import SectionTags from './SectionTags.astro';
+import SectionPrice from './SectionPrice.astro';
+import SectionCTA from './SectionCTA.astro';
+import SectionRelatedGrid from './SectionRelatedGrid.astro';
+import SectionArticleHero from './SectionArticleHero.astro';
+import SectionArticleContent from './SectionArticleContent.astro';
+import SectionMap from './SectionMap.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+export interface SectionConfig {
+  type: string;
+  [key: string]: any;
+}
+
+export interface Props {
+  title: string;
+  description?: string;
+  breadcrumbs?: { label: string; href?: string }[];
+  sections: SectionConfig[];
+  // Magazin-spezifisch (weil article != main layout)
+  isArticle?: boolean;
+  locale?: string;
+}
+
+const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} locale={locale}>
+  <main>
+    {breadcrumbs && breadcrumbs.length > 0 && (
+      <div class="container">
+        <Breadcrumbs items={breadcrumbs} />
+      </div>
+    )}
+
+    {sections.filter(s => s.type === 'hero').map(s => (
+      <SectionHero
+        title={s.title}
+        subtitle={s.subtitle}
+        emoji={s.emoji}
+        gradient={s.gradient}
+        size={s.size || 'sm'}
+        bgImage={s.bgImage}
+        meta={s.meta}
+      />
+    ))}
+
+    {sections.filter(s => s.type === 'facts-bar').map(s => (
+      <SectionFactsBar items={s.items} accentColor={s.accentColor} />
+    ))}
+
+    {sections.filter(s => s.type === 'custom-hero').map(s => (
+      <header class={`sec-custom-hero${s.bgImage ? ' sec-custom-hero-has-img' : ''}`} style={s.bgImage ? `background-image:url(${s.bgImage})` : (s.bgStyle ? `background:${s.bgStyle}` : '')}>
+        {s.bgImage && <div class="sec-custom-hero-overlay"></div>}
+        <div class="container" style="position:relative;z-index:2">
+          {s.emoji && <div class="sec-custom-hero-emoji">{s.emoji}</div>}
+          {s.category && <div class="sec-custom-hero-cat">{s.category}</div>}
+          <h1>{s.title}</h1>
+          {s.location && <p class="sec-custom-hero-loc">📍 {s.location}</p>}
+          {s.subtitle && <p class="sec-custom-hero-sub">{s.subtitle}</p>}
+        </div>
+      </header>
+    ))}
+
+    {sections.filter(s => s.type === 'sight-facts').map(s => (
+      <section>
+        <div class="container">
+          <div class="sec-custom-facts">
+            {s.items.map(f => (
+              <div class="sec-custom-fact">
+                <span class="sec-custom-fact-num">{f.value}</span>
+                <span class="sec-custom-fact-label">{f.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    {sections.filter(s => s.type === 'sight-info-grid').map(s => (
+      <section class="sec-custom-info-section">
+        <div class="container" style="max-width:720px">
+          <div class="sec-custom-info-grid">
+            {s.items.filter(i => i.value).map(i => (
+              <div class="sec-custom-info-item">
+                <div class="sec-custom-info-label">{i.icon} {i.label}</div>
+                <div class="sec-custom-info-value">
+                  {i.href
+                    ? <a href={i.href} target="_blank" rel="noopener">{i.value}</a>
+                    : i.value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    {sections.filter(s => s.type === 'article-hero').map(s => (
+      <SectionArticleHero
+        emoji={s.emoji}
+        category={s.category}
+        categoryColor={s.categoryColor}
+        date={s.date}
+        author={s.author}
+        title={s.title}
+        teaser={s.teaser}
+      />
+    ))}
+
+    {sections.filter(s => s.type === 'description').map(s => (
+      <SectionDescription label={s.label} title={s.title} content={s.content} />
+    ))}
+
+    {sections.filter(s => s.type === 'details-grid').map(s => (
+      <SectionDetailsGrid items={s.items} />
+    ))}
+
+    {sections.filter(s => s.type === 'tags').map(s => (
+      <SectionTags tags={s.tags} centered={s.centered !== false} />
+    ))}
+
+    {sections.filter(s => s.type === 'price').map(s => (
+      <SectionPrice value={s.value} label={s.label} currency={s.currency} extras={s.extras} accentColor={s.accentColor} />
+    ))}
+
+    {sections.filter(s => s.type === 'cta').map(s => (
+      <SectionCTA buttons={s.buttons} label={s.label} title={s.title} subtitle={s.subtitle} />
+    ))}
+
+    {sections.filter(s => s.type === 'article-content').map(s => (
+      <SectionArticleContent content={s.content} tags={s.tags} backHref={s.backHref} backText={s.backText} />
+    ))}
+
+    {sections.filter(s => s.type === 'related-grid').map(s => (
+      <SectionRelatedGrid
+        label={s.label}
+        title={s.title}
+        description={s.description}
+        entries={s.entries}
+        slugPrefix={s.slugPrefix}
+        nameField={s.nameField}
+        subtitleField={s.subtitleField}
+        priceField={s.priceField}
+        emojiField={s.emojiField}
+        defaultEmoji={s.defaultEmoji}
+        emptyText={s.emptyText}
+        ctaHref={s.ctaHref}
+        ctaText={s.ctaText}
+        accentBg={s.accentBg}
+      />
+    ))}
+
+    {sections.filter(s => s.type === 'map').map(s => (
+      <SectionMap
+        markers={s.markers}
+        center={s.center}
+        zoom={s.zoom}
+        height={s.height}
+        scrollWheelZoom={s.scrollWheelZoom}
+        label={s.label}
+        title={s.title}
+        polygons={s.polygons}
+        filterable={s.filterable}
+      />
+    ))}
+
+    {sections.filter(s => s.type === 'custom-content').map(s => (
+      <section class="sec-custom-content">
+        <div class="container" style="max-width: 800px">
+          <SectionHeader label={s.label} title={s.title} />
+          <div class="custom-content-links">
+            {s.items.map(item => (
+              <a href={item.href} class="custom-content-link">{item.text}</a>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    {sections.filter(s => s.type === 'back-link').map(s => (
+      <div class="section" style="text-align:center;padding:40px 0">
+        <a href={s.href} class="btn btn-outline">← {s.text || 'Zurück'}</a>
+      </div>
+    ))}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  /* Custom Hero (sight detail pages — custom layout) */
+  .sec-custom-hero{position:relative;padding:80px 0 60px;text-align:center;overflow:hidden;border-bottom:1px solid var(--glass-border)}
+  .sec-custom-hero-emoji{font-size:72px;display:block;margin-bottom:8px;line-height:1}
+  .sec-custom-hero-cat{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--purple);margin-bottom:6px}
+  .sec-custom-hero h1{font-family:var(--font-display);font-size:clamp(42px,6vw,80px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;color:var(--text)}
+  .sec-custom-hero-loc{font-size:14px;color:var(--text2);margin-bottom:8px}
+  .sec-custom-hero-sub{font-size:15px;color:var(--text2);max-width:560px;margin:0 auto;line-height:1.6}
+
+  /* Custom Hero with background image */
+  .sec-custom-hero-has-img{background-size:cover;background-position:center center;position:relative;}
+  .sec-custom-hero-has-img .sec-custom-hero-emoji,
+  .sec-custom-hero-has-img h1,
+  .sec-custom-hero-has-img .sec-custom-hero-sub,
+  .sec-custom-hero-has-img .sec-custom-hero-loc,
+  .sec-custom-hero-has-img .sec-custom-hero-cat{color:#fff !important}
+  .sec-custom-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.4)0%,rgba(0,0,0,.6)100%);z-index:0;pointer-events:none}
+
+  /* Custom Facts (sight detail pages) */
+  .sec-custom-facts{display:flex;justify-content:center;gap:48px;padding:28px 0;flex-wrap:wrap}
+  .sec-custom-fact{text-align:center}
+  .sec-custom-fact-num{font-family:var(--font-display);font-size:28px;line-height:1;color:var(--pink);letter-spacing:1px;display:block}
+  .sec-custom-fact-label{font-size:12px;color:var(--text2);margin-top:4px;display:block}
+  .sec-custom-fact-label{display:block;font-size:12px;color:var(--text2);margin-top:4px}
+
+  /* Custom Info Grid (sight detail pages) */
+  .sec-custom-info-section{background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);padding:40px 0}
+  .sec-custom-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .sec-custom-info-item{background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:16px 20px}
+  .sec-custom-info-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:4px}
+  .sec-custom-info-value{font-size:14px;color:var(--text)}
+  .sec-custom-info-value a{color:var(--pink);font-weight:600}
+  @media(max-width:768px){.sec-custom-info-grid{grid-template-columns:1fr}}
+
+  /* Custom Content (e.g. FAQ links block) */
+  .sec-custom-content{padding:64px 0;border-top:1px solid var(--glass-border);text-align:center}
+  .custom-content-links{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:32px}
+  .custom-content-link{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:all .3s var(--ease);max-width:500px;width:100%}
+  .custom-content-link::before{content:'❓';font-size:16px;flex-shrink:0}
+  .custom-content-link:hover{border-color:var(--pink);background:var(--glass);color:var(--pink);transform:translateY(-2px);box-shadow:0 4px 20px var(--pink-glow)}
+
+  @media(max-width:600px){
+    .sec-custom-hero{padding:40px 0 32px}
+    .sec-custom-hero-emoji{font-size:48px}
+    .sec-custom-facts{gap:24px;padding:20px 0}
+    .sec-custom-info-item{padding:12px 16px}
+    .sec-custom-hero h1{font-size:clamp(28px,8vw,42px)}
+    .sec-custom-hero-sub{font-size:13px}
+  }
+</style>

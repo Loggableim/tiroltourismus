@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const faqItems = [
+  { q:'Wie komme ich am besten nach Tirol?', a:'Tirol ist hervorragend an das internationale Verkehrsnetz angebunden. Mit dem Auto über die Inntalautobahn A12 oder Brennerautobahn A13. Mit der Bahn via Innsbruck, Kufstein oder Landeck – der Railjet verbindet stündlich mit Wien, München und Zürich. Nächste Flughäfen: Innsbruck (INN), München (MUC) und Salzburg (SZG).' },
+  { q:'Gibt es ein günstiges Öffi-Ticket für Touristen?', a:'Ja, mit der Tiroler Oberland Card oder dem Klimaticket Tirol. Viele Gemeinden stellen eine Gästekarte aus – kostenlose Nutzung von Regionalbussen und Ermäßigungen auf Bergbahnen.' },
+  { q:'Wann ist die beste Reisezeit für Tirol?', a:'Sommer (Juni–September) für Wandern und Seen, Winter (Dezember–März) für Ski und Snowboard. Frühling und Herbst sind ruhiger, ideal für Wellness und Kultur.' },
+  { q:'Welche Regionen in Tirol sind am schönsten?', a:'Das Zillertal für Familien, Ötztal für Skifahrer, Stubaital für Wanderer, Kitzbühel für Luxus, Osttirol für Ruhe und Innsbruck für Kultur.' },
+  { q:'Kann man in den Tiroler Bergen gut wandern?', a:'Ja, Tirol hat über 24.500 km Wanderwege. Von leichten Almwanderungen bis zu anspruchsvollen Gipfeltouren – für jedes Level. Viele Hütten laden zur Einkehr ein.' },
+];
+---
+
+<BaseLayout title="Häufige Fragen – Tirol" description="Antworten auf die häufigsten Fragen zu Tirol" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: 'FAQ' }]}" /></div>
+    <SectionHeader title="FAQ" sub="Häufige Fragen zu Tirol" />
+    <div class="faq-list">{faqItems.map(item => (
+      <details class="faq-item"><summary>{item.q}</summary><p>{item.a}</p></details>
+    ))}</div>
+  </main>
+</BaseLayout>

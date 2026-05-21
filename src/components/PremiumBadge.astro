@@ -1,0 +1,42 @@
+---
+// PremiumBadge.astro — Zeigt den Tier-Status auf Cards und Detailseiten
+export interface Props {
+  tier?: string;
+  size?: 'sm' | 'md';
+}
+const { tier = 'basic', size = 'sm' } = Astro.props;
+
+const config = {
+  basic: { icon: '🌲', label: 'Basic', cls: 'pb-basic' },
+  silver: { icon: '🥈', label: 'Silver', cls: 'pb-silver' },
+  gold: { icon: '⭐', label: 'Gold', cls: 'pb-gold' },
+}[tier] || { icon: '🌲', label: 'Basic', cls: 'pb-basic' };
+
+const sizeCls = size === 'md' ? 'pb-md' : 'pb-sm';
+---
+<span class={`premium-badge ${config.cls} ${sizeCls}`}>
+  <span class="pb-icon">{config.icon}</span>
+  <span class="pb-label">{config.label}</span>
+</span>
+
+<style is:global>
+  .premium-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    border-radius: 100px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    white-space: nowrap;
+  }
+  .premium-badge.pb-sm { padding: 2px 8px; font-size: 9px; }
+  .premium-badge.pb-md { padding: 4px 12px; font-size: 11px; }
+  
+  .premium-badge.pb-basic { background: var(--surface); color: var(--text3); }
+  .premium-badge.pb-silver { background: linear-gradient(135deg, #E8E8E8, #C0C0C0); color: #333; }
+  .premium-badge.pb-gold { background: linear-gradient(135deg, #FFD700, #FFA500); color: #4A3000; }
+  
+  .premium-badge .pb-icon { font-size: inherit; line-height: 1; }
+  .premium-badge.pb-sm .pb-icon { font-size: 10px; }
+  .premium-badge.pb-md .pb-icon { font-size: 13px; }
+</style>

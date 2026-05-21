@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import { readCollection, isPublished, findByTag } from '../../../lib/content.js';
+
+export async function getStaticPaths() {
+  const articles = readCollection('magazin');
+  const published = articles.filter(a => isPublished(a.entry));
+  const tags = new Set();
+  for (const a of published) {
+    if (a.entry.tags && Array.isArray(a.entry.tags)) {
+      a.entry.tags.forEach(t => tags.add(t));
+    }
+  }
+  return [...tags].map(tag => ({ params: { tag } }));
+}
+
+const { tag } = Astro.params;
+const allResults = findByTag(tag);
+const magazinEntries = allResults.filter(r => r.collection === 'magazin');
+
+function formatDate(d) {
+  if (!d) return '';
+  try { return new Date(d + 'T00:00:00').toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
+
+const catEmoji = { allgemein: '📰', tipps: '💡', reiseberichte: '✈️', interview: '🎙️', hintergrund: '🔍' };
+const catLabel = { allgemein: 'Allgemein', tipps: 'Tipps', reiseberichte: 'Reiseberichte', interview: 'Interview', hintergrund: 'Hintergrund' };
+---
+
+<BaseLayout title={`Beiträge zu „${tag}“ — Tirol Magazin`} description={`Alle Magazin-Beiträge zum Thema „${tag}“.`}>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Magazin', href: '/magazin/' }, { label: tag }]} />
+    </div>
+
+    <Hero
+      title={`Beiträge zu „${tag}“`}
+      emoji="🏷️"
+      size="md"
+    />
+
+    <section class="section">
+      <div class="container">
+        <div class="magazin-nav">
+          <a href="/magazin/" class="btn btn-outline">← Alle Artikel</a>
+          <a href="/magazin/tags/" class="btn btn-outline">Alle Tags</a>
+        </div>
+
+        {magazinEntries.length > 0 ? (
+          <>
+            <SectionHeader
+              label={`#${tag}`}
+              title={`${magazinEntries.length} Artikel`}
+              sub={`Alle Magazin-Beiträge zum Thema „${tag}“.`}
+            />
+
+            <div class="magazin-grid">
+              {magazinEntries.map((r) => (
+                <ArticleCard
+                  titel={r.entry.titel}
+                  slug={r.slug}
+                  teaser={r.entry.teaser}
+                  datum={formatDate(r.entry.datum)}
+                  kategorie={(catLabel[r.entry.kategorie] || r.entry.kategorie || '').toUpperCase()}
+                  emoji={catEmoji[r.entry.kategorie] || '📰'}
+                />
+              ))}
+            </div>
+          </>
+        ) : (
+          <div class="empty-state">
+            <div class="empty-emoji">🏷️</div>
+            <h2>Keine Beiträge</h2>
+            <p>Für den Tag „{tag}“ gibt es noch keine veröffentlichten Beiträge.</p>
+            <a href="/magazin/" class="btn btn-pink">Zum Magazin</a>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .magazin-nav {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .magazin-nav .btn {
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline {
+    border: 2px solid var(--glass-border);
+    color: var(--text2);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    border-color: var(--text);
+    color: var(--text);
+  }
+  .magazin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+  @media (max-width: 968px) {
+    .magazin-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .magazin-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .empty-state {
+    text-align: center;
+    padding: 80px 0;
+  }
+  .empty-emoji {
+    font-size: 64px;
+    margin-bottom: 16px;
+  }
+  .empty-state h2 {
+    font-family: var(--font-display);
+    font-size: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .empty-state p {
+    color: var(--text2);
+    max-width: 400px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+  }
+  .btn-pink {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 100px;
+    background: var(--pink);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .btn-pink:hover {
+    box-shadow: 0 4px 20px var(--pink-glow);
+    transform: translateY(-1px);
+  }
+</style>

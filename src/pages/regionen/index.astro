@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import RegionCard from '../../components/RegionCard.astro';
+import { readCollection, isPublished } from '../../lib/content.js';
+
+const regionen = readCollection('regionen').filter(r => isPublished(r.entry)).sort((a,b) => (b.entry.bewertung||0)-(a.entry.bewertung||0));
+---
+
+<BaseLayout
+  title="Regionen"
+  description="Sechs Gesichter, ein Land. Jede Region in Tirol hat ihren eigenen Sound – von Gletscherflüstern bis Stadtbeat. Finde deine."
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Regionen' }]} />
+    </div>
+
+    <Hero
+      title="Regionen"
+      subtitle="Sechs Gesichter, ein Land."
+      emoji="🏔️"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#region-grid" class="btn btn-pink">Regionen entdecken →</a>
+        <span class="hero-urgency">🏔️ {regionen.length} Regionen</span>
+      </div>
+    </Hero>
+
+    {regionen.length > 0 ? (
+      <>
+        <section class="section">
+          <div class="container">
+            <SectionHeader
+              label="Tirol entdecken"
+              title="Wo willst du hin?"
+              sub="Ob hochalpine Gipfel, glitzernde Gletscher oder urbane Bergluft – Tirols Regionen sind so vielfältig wie das Leben selbst."
+            />
+
+            <div class="region-grid" id="region-grid">
+              {regionen.map((r) => (
+                <RegionCard
+                  titel={r.entry.titel}
+                  slug={r.slug}
+                  beschreibung={r.entry.kurzbeschreibung}
+                  emoji={r.entry.emoji}
+                  bewertung={r.entry.bewertung}
+                  farbe={r.entry.farbe}
+                  featured={r.entry.featured}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section class="facts-section">
+          <div class="container">
+            <div class="facts-grid">
+              <div class="fact-item">
+                <div class="fact-number">{regionen.length}</div>
+                <div class="fact-label">Regionen</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-number">∞</div>
+                <div class="fact-label">Erlebnisse</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-number">100+</div>
+                <div class="fact-label">Unterkünfte</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏔️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            Bald verfügbar
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            Regionen werden aktuell eingepflegt. Schau bald wieder vorbei!
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+  @media (max-width: 968px) {
+    .region-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .region-grid { grid-template-columns: 1fr; }
+  }
+
+  .facts-section {
+    background: var(--bg2);
+    padding: 60px 0;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+  .fact-number {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1;
+    color: var(--pink);
+    letter-spacing: 2px;
+  }
+  .fact-label {
+    font-size: 14px;
+    color: var(--text2);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  @media (max-width: 600px) {
+    .facts-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+</style>

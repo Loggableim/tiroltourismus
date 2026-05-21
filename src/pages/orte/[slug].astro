@@ -1,0 +1,97 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import PaywallOverlay from '../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const all = readCollection('orte').filter(o => isPublished(o.entry));
+  return all.map(o => ({ params: { slug: o.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('orte', slug);
+if (!entry) return Astro.redirect('/orte/');
+
+const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', 'de', 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: name, emoji: emoji || '🏘️' });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: '/' + n.collection + '/' + n.slug + '/',
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map', label: 'Standort', title: 'Auf der Karte',
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Verwandte Orte via ersten Tag
+const relatedByTag = tags && tags.length > 0
+  ? findByTag(tags[0])
+      .filter(r => r.collection === 'orte' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🏘️' }
+      }))
+  : [];
+---
+
+<DetailPage
+  title={name}
+  description={generateMetaDescription(entry, 'orte')}
+  breadcrumbs={[{ label: 'Orte', href: '/orte/' }, { label: name }]}
+  sections={[
+    {
+      type: 'hero',
+      title: name,
+      subtitle: kurzbeschreibung,
+      emoji: emoji,
+      gradient: farbe,
+      bgImage: entry.hero_bild,
+    },
+    {
+      type: 'facts-bar',
+      accentColor: farbe,
+      items: [
+        hoehe ? { value: hoehe, label: 'Höhe' } : null,
+        einwohner ? { value: einwohner, label: 'Einwohner' } : null,
+      ].filter(Boolean),
+    },
+    tags && tags.length > 0 ? { type: 'tags', tags } : null,
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Weitere Orte',
+      entries: relatedByTag,
+      slugPrefix: '/orte/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏘️',
+    } : null,
+  ].filter(Boolean)}
+/>
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={name} slug={slug} />
+    </div>
+  </section>
+)}

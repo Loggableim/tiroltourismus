@@ -1,0 +1,133 @@
+---
+import DetailPage from '../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findByTag } from '../../lib/content.js';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { generateMetaDescription } from '../../lib/seo.js';
+
+export async function getStaticPaths() {
+  const articles = readCollection('magazin').filter(a => isPublished(a.entry));
+  return articles.map(a => ({ params: { slug: a.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = readEntry('magazin', slug);
+if (!entry) return Astro.redirect('/magazin/');
+
+function formatDate(d) {
+  if (!d) return '';
+  try { return new Date(d + 'T00:00:00').toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
+
+const catEmoji = { allgemein:'📰', tipps:'💡', reiseberichte:'✈️', interview:'🎙️', hintergrund:'🔍' };
+const emoji = catEmoji[entry.kategorie] || '📰';
+const formattedDate = formatDate(entry.datum);
+
+// ─── FAQ-Links basierend auf Kategorie ───
+const kategorieToFaqAnchor = {
+  wandern: 'wandern',
+  bergsport: 'wandern',
+  ski: 'ski',
+  winter: 'ski',
+  kulinarik: 'gastro',
+  familie: 'unterkunft',
+  kultur: 'allgemein',
+  events: 'allgemein',
+  wellness: 'allgemein',
+  reiseberichte: 'anreise',
+  hintergrund: 'allgemein',
+  tipps: 'allgemein',
+};
+
+const faqLinksByCategory = {
+  wandern: [
+    { text: 'Die schönsten Wanderwege in Tirol', href: '/faq/#wandern' },
+    { text: 'Ausrüstung und Vorbereitung für Wanderungen', href: '/faq/#wandern' },
+    { text: 'Geführte Wandertouren und Naturerlebnisse', href: '/faq/#wandern' },
+  ],
+  ski: [
+    { text: 'Die besten Skigebiete Tirols', href: '/faq/#ski' },
+    { text: 'Skipass-Preise und Spartipps', href: '/faq/#ski' },
+    { text: 'Langlaufloipen und Winteraktivitäten', href: '/faq/#ski' },
+  ],
+  gastro: [
+    { text: 'Typische Tiroler Gerichte und Spezialitäten', href: '/faq/#gastro' },
+    { text: 'Traditionelle Wirtshäuser und Gastfreundschaft', href: '/faq/#gastro' },
+  ],
+  unterkunft: [
+    { text: 'Unterkunftsarten in Tirol', href: '/faq/#unterkunft' },
+    { text: 'Günstige Unterkünfte und Campingmöglichkeiten', href: '/faq/#unterkunft' },
+  ],
+  anreise: [
+    { text: 'Anreise mit Auto, Bahn oder Flugzeug', href: '/faq/#anreise' },
+    { text: 'Öffi-Tickets und Gästekarte', href: '/faq/#anreise' },
+    { text: 'Maut und Vignettenpflicht', href: '/faq/#anreise' },
+  ],
+  allgemein: [
+    { text: 'Wetter und beste Reisezeit in Tirol', href: '/faq/#allgemein' },
+    { text: 'Kulturelle Events und Feste', href: '/faq/#allgemein' },
+    { text: 'Sehenswerte Regionen in Tirol', href: '/faq/#allgemein' },
+  ],
+};
+
+const faqAnchor = entry.kategorie ? kategorieToFaqAnchor[entry.kategorie] || 'allgemein' : null;
+const faqLinks = faqAnchor ? (faqLinksByCategory[faqAnchor] || []) : [];
+
+// Verwandte Artikel via ersten Tag finden
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0])
+      .filter(r => r.collection === 'magazin' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: catEmoji[r.entry.kategorie] || '📰' }
+      }))
+  : [];
+---
+
+<DetailPage
+  title={entry.titel}
+  description={generateMetaDescription(entry, 'magazin')}
+  sections={[
+    {
+      type: 'article-hero',
+      emoji: emoji,
+      category: entry.kategorie,
+      date: formattedDate,
+      author: entry.autor,
+      title: entry.titel,
+      teaser: entry.teaser,
+    },
+    entry.inhalt ? {
+      type: 'article-content',
+      content: entry.inhalt,
+      tags: entry.tags || [],
+      backHref: '/magazin/',
+      backText: 'Zurück zum Magazin',
+    } : null,
+    entry.koordinaten ? {
+      type: 'map',
+      markers: [{ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.titel }],
+      center: { lat: entry.koordinaten.lat, lng: entry.koordinaten.lng },
+      zoom: 10,
+      label: 'Karte',
+      title: 'Standort',
+    } : null,
+    entry.kategorie && faqLinks.length > 0 ? {
+      type: 'custom-content',
+      label: 'Häufige Fragen',
+      title: 'Mehr zum Thema',
+      items: faqLinks,
+    } : null,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: 'Ähnliche Beiträge',
+      entries: relatedByTag,
+      slugPrefix: '/magazin/',
+      nameField: 'titel',
+      subtitleField: 'teaser',
+      emojiField: '_emoji',
+      defaultEmoji: '📰',
+    } : null,
+  ].filter(Boolean)}
+/>

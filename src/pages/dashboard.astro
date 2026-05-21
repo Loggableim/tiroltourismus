@@ -1,0 +1,327 @@
+---
+// Dashboard — User-Profil, Favoriten, Abo-Status
+// Lädt Daten via GET /api/user/dashboard (Cloudflare Function)
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { readSingleton } from '../lib/content.js';
+
+const settings = readSingleton('einstellungen');
+---
+<BaseLayout title="Mein Konto — Tirol Tourismus" description="Dein persönliches Dashboard mit Merkliste und Abo-Status.">
+  <main class="dash-page">
+    <!-- Loading State -->
+    <div id="dashLoading" class="dash-loading">
+      <div class="dash-spinner"></div>
+      <p>Dashboard wird geladen...</p>
+    </div>
+
+    <!-- Error State (not logged in) -->
+    <div id="dashGuest" class="dash-guest" style="display:none">
+      <div class="dash-guest-card">
+        <div class="dash-guest-icon">🔐</div>
+        <h1>Willkommen!</h1>
+        <p>Melde dich an, um deine Merkliste und Premium-Inhalte zu nutzen.</p>
+        <a href="/login/" class="btn btn-pink">Jetzt anmelden</a>
+      </div>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div id="dashContent" class="dash-content" style="display:none">
+      <!-- Header -->
+      <div class="dash-header">
+        <div class="dash-avatar">
+          <span id="dashAvatarText">👤</span>
+        </div>
+        <div>
+          <h1 id="dashUserName">Mein Konto</h1>
+          <p id="dashUserEmail" class="dash-email"></p>
+        </div>
+        <div class="dash-tier-badge" id="dashTierBadge">
+          <span id="dashTierIcon">⭐</span>
+          <span id="dashTierText">Basic</span>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="dash-stats">
+        <div class="dash-stat-card">
+          <span class="dash-stat-icon">❤️</span>
+          <span class="dash-stat-number" id="dashFavCount">0</span>
+          <span class="dash-stat-label">Merkliste</span>
+        </div>
+        <div class="dash-stat-card">
+          <span class="dash-stat-icon">⭐</span>
+          <span class="dash-stat-number" id="dashTierLevel">Basic</span>
+          <span class="dash-stat-label">Mitgliedschaft</span>
+        </div>
+        <div class="dash-stat-card">
+          <span class="dash-stat-icon">📋</span>
+          <span class="dash-stat-number" id="dashSubStatus">—</span>
+          <span class="dash-stat-label">Abo-Status</span>
+        </div>
+      </div>
+
+      <!-- Favorites Section -->
+      <section class="dash-section">
+        <h2>❤️ Meine Merkliste</h2>
+        <div id="dashFavList" class="dash-fav-list">
+          <p class="dash-empty">Keine Einträge in der Merkliste.</p>
+        </div>
+      </section>
+
+      <!-- Subscription Section -->
+      <section class="dash-section" id="dashSubSection">
+        <h2>⭐ Mitgliedschaft</h2>
+        <div id="dashSubInfo" class="dash-sub-info">
+          <p class="dash-empty">Du hast aktuell keine Premium-Mitgliedschaft.</p>
+          <a href="/preise/" class="btn btn-gold" style="margin-top:12px;display:inline-block">Premium entdecken →</a>
+        </div>
+      </section>
+    </div>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .dash-page {
+    min-height: calc(100vh - 200px);
+    padding: 130px 20px 60px;
+    background: var(--bg);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .dash-loading { text-align: center; padding: 80px 0; color: var(--text2); }
+  .dash-spinner {
+    width: 40px; height: 40px;
+    border: 3px solid var(--glass-border);
+    border-top-color: var(--pink);
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    margin: 0 auto 16px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .dash-guest { text-align: center; padding: 60px 0; }
+  .dash-guest-card {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 60px 40px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .dash-guest-icon { font-size: 64px; margin-bottom: 16px; }
+  .dash-guest-card h1 { font-family: var(--font-display); font-size: 28px; text-transform: uppercase; margin: 0 0 12px; color: var(--text); }
+  .dash-guest-card p { color: var(--text2); font-size: 14px; line-height: 1.6; margin: 0 0 24px; }
+
+  .dash-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+  }
+  .dash-avatar {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--pink), var(--gold));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .dash-header h1 { font-family: var(--font-display); font-size: 22px; text-transform: uppercase; margin: 0; color: var(--text); }
+  .dash-email { color: var(--text2); font-size: 14px; margin: 4px 0 0; }
+  .dash-tier-badge {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: .3px;
+    background: rgba(255,20,147,.1);
+    color: var(--pink);
+  }
+
+  .dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .dash-stat-card {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+  .dash-stat-icon { font-size: 24px; display: block; margin-bottom: 8px; }
+  .dash-stat-number { font-size: 24px; font-weight: 700; color: var(--text); display: block; }
+  .dash-stat-label { font-size: 12px; color: var(--text2); margin-top: 4px; display: block; }
+
+  .dash-section {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+  }
+  .dash-section h2 { font-size: 18px; font-weight: 600; color: var(--text); margin: 0 0 16px; letter-spacing: .3px; }
+  .dash-empty { color: var(--text3); font-size: 14px; text-align: center; padding: 20px 0; margin: 0; }
+
+  .dash-fav-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .dash-fav-item:last-child { border-bottom: none; }
+  .dash-fav-icon { font-size: 20px; width: 32px; text-align: center; }
+  .dash-fav-info { flex: 1; }
+  .dash-fav-name { font-size: 14px; font-weight: 500; color: var(--text); }
+  .dash-fav-meta { font-size: 11px; color: var(--text3); margin-top: 2px; }
+  .dash-fav-remove {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: var(--surface);
+    color: var(--text3);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all .2s;
+  }
+  .dash-fav-remove:hover { background: rgba(220,38,38,.15); color: #DC2626; }
+
+  @media(max-width:640px) {
+    .dash-stats { grid-template-columns: 1fr; }
+    .dash-header { flex-direction: column; text-align: center; }
+    .dash-tier-badge { margin-left: 0; }
+  }
+</style>
+
+<script is:inline>
+(function(){
+  var LOADING = document.getElementById('dashLoading');
+  var GUEST = document.getElementById('dashGuest');
+  var CONTENT = document.getElementById('dashContent');
+
+  // Prüfe Session-Cookie
+  var cookies = document.cookie.split(';');
+  var session = null;
+  for (var i = 0; i < cookies.length; i++) {
+    var c = cookies[i].trim();
+    if (c.indexOf('session=') === 0) {
+      session = c.substring(8);
+      break;
+    }
+  }
+
+  if (!session) {
+    // Nicht eingeloggt
+    LOADING.style.display = 'none';
+    GUEST.style.display = 'block';
+    return;
+  }
+
+  // Dashboard-Daten laden
+  fetch('/api/user/dashboard')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      LOADING.style.display = 'none';
+
+      if (data.error) {
+        GUEST.style.display = 'block';
+        GUEST.querySelector('p').textContent = data.error;
+        return;
+      }
+
+      CONTENT.style.display = 'block';
+
+      // User-Infos
+      var user = data.user || {};
+      document.getElementById('dashUserEmail').textContent = user.email || '';
+      document.getElementById('dashUserName').textContent = user.name || 'Mein Konto';
+
+      // Avatar-Initiale
+      var initial = (user.email || '?')[0].toUpperCase();
+      document.getElementById('dashAvatarText').textContent = initial;
+
+      // Tier
+      var tier = user.tier || 'basic';
+      var tierNames = { basic: 'Basic', silver: 'Silver', gold: 'Gold' };
+      var tierIcons = { basic: '⭐', silver: '🥈', gold: '🥇' };
+      document.getElementById('dashTierText').textContent = tierNames[tier] || 'Basic';
+      document.getElementById('dashTierIcon').textContent = tierIcons[tier] || '⭐';
+      document.getElementById('dashTierLevel').textContent = tierNames[tier] || 'Basic';
+
+      if (tier === 'silver' || tier === 'gold') {
+        document.getElementById('dashTierBadge').style.background = 'rgba(255,215,0,.15)';
+        document.getElementById('dashTierBadge').style.color = 'var(--gold-light)';
+      }
+
+      // Subscription
+      var subStatus = user.subscription_status || 'inactive';
+      var statusLabels = { active: '✅ Aktiv', inactive: '—', cancelled: '⏸️ Gekündigt', expired: '❌ Abgelaufen' };
+      document.getElementById('dashSubStatus').textContent = statusLabels[subStatus] || '—';
+
+      if (tier === 'basic' || subStatus !== 'active') {
+        var subInfo = document.getElementById('dashSubInfo');
+        subInfo.innerHTML = '<p class="dash-empty">Du hast aktuell keine Premium-Mitgliedschaft.</p><a href="/preise/" class="btn btn-gold" style="margin-top:12px;display:inline-block">Premium entdecken →</a>';
+      } else {
+        var subInfo = document.getElementById('dashSubInfo');
+        subInfo.innerHTML = '<p style="color:var(--gold-light);font-weight:600;font-size:15px">✅ Dein Premium-Zugriff ist aktiv. Vielen Dank für deine Unterstützung!</p>';
+      }
+
+      // Favorites
+      var favs = data.favorites || [];
+      var favList = document.getElementById('dashFavList');
+      var favCount = document.getElementById('dashFavCount');
+      favCount.textContent = favs.length;
+
+      if (favs.length === 0) {
+        favList.innerHTML = '<p class="dash-empty">Keine Einträge in der Merkliste.</p>';
+      } else {
+        var html = '';
+        for (var i = 0; i < favs.length; i++) {
+          var f = favs[i];
+          var iconMap = { unterkuenfte: '🏨', gastro: '🍽️', orte: '📍', sehenswuerdigkeiten: '🏛️', erlebnisse: '🎯', events: '🎪', magazin: '📰', regionen: '🏔️', camping: '🏕️' };
+          var icon = iconMap[f.collection] || '📌';
+          html += '<div class="dash-fav-item">';
+          html += '<span class="dash-fav-icon">' + icon + '</span>';
+          html += '<div class="dash-fav-info">';
+          html += '<div class="dash-fav-name">' + (f.slug || '—') + '</div>';
+          html += '<div class="dash-fav-meta">' + f.collection + '</div>';
+          html += '</div>';
+          html += '<button class="dash-fav-remove" data-collection="' + f.collection + '" data-slug="' + f.slug + '" onclick="removeFav(this)">&times;</button>';
+          html += '</div>';
+        }
+        favList.innerHTML = html;
+      }
+    })
+    .catch(function(err) {
+      LOADING.style.display = 'none';
+      GUEST.style.display = 'block';
+      GUEST.querySelector('p').textContent = 'Verbindungsfehler. Bitte versuche es später nochmal.';
+    });
+})();
+
+function removeFav(btn) {
+  var collection = btn.getAttribute('data-collection');
+  var slug = btn.getAttribute('data-slug');
+
+  fetch('/api/user/favorites', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ collection: collection, slug: slug })
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (data.favorited === false) {
+      btn.closest('.dash-fav-item').remove();
+      var countEl = document.getElementById('dashFavCount');
+      countEl.textContent = parseInt(countEl.textContent) - 1;
+    }
+  });
+}
+</script>

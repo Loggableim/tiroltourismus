@@ -1,0 +1,56 @@
+---
+export interface Props {
+  tags: string[];
+  centered?: boolean;
+}
+
+const { tags, centered = true } = Astro.props;
+---
+
+{tags && tags.length > 0 && (
+  <section class="sec-tags">
+    <div class="container">
+      <div class="sec-tags-row" class:list={{ 'sec-tags-centered': centered }}>
+        {tags.map(t => <span class="tag">{t}</span>)}
+      </div>
+    </div>
+  </section>
+)}
+
+<style is:global>
+  .sec-tags {
+    padding: 0 0 40px;
+  }
+
+  .sec-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sec-tags-centered {
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .sec-tags-row {
+      gap: 6px;
+    }
+    .sec-tags {
+      padding: 0 0 32px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .sec-tags-row {
+      gap: 4px;
+    }
+    .sec-tags {
+      padding: 0 0 24px;
+    }
+    .sec-tags-row .tag {
+      font-size: 11px;
+      padding: 3px 10px;
+    }
+  }
+</style>

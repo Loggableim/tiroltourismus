@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import { LANGUAGES_READY } from '../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+---
+
+<BaseLayout title="AGB" description="Allgemeine Geschäftsbedingungen von tiroltourismus.com" locale={locale}>
+  <main>
+    <div class="container">
+      <Breadcrumbs items="{[{ label: 'AGB' }]}" />
+    </div>
+    <section class="legal-page section">
+      <div class="container" style="max-width:720px">
+        <SectionHeader title="AGB" />
+        <div class="legal-text">
+
+          <h2>1. Geltungsbereich</h2>
+          <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung des Portals tiroltourismus.com sowie für alle damit verbundenen Dienstleistungen. Betreiber ist Dominik Rainer, A-6020 Innsbruck.</p>
+
+          <h2>2. Leistungsbeschreibung</h2>
+          <p>tiroltourismus.com ist ein Tourismusportal, das Informationen über Regionen, Unterkünfte, Orte, Gastronomie, Erlebnisse, Events und weitere touristische Angebote in Tirol bereitstellt. Die Eintragung von Betrieben erfolgt auf Basis eines Free-Mium-Modells: Basiseinträge sind kostenlos, Premium-Features (höhere Sichtbarkeit, Badges, Top-Platzierung) sind kostenpflichtig.</p>
+
+          <h2>3. Nutzungsbedingungen</h2>
+          <p>Die Nutzung des Portals ist für Endnutzer kostenlos. Für die Richtigkeit der eingetragenen Daten sind die jeweiligen Betriebe selbst verantwortlich. Der Betreiber übernimmt keine Haftung für die Richtigkeit und Vollständigkeit der Inhalte Dritter.</p>
+
+          <h2>4. Registrierung und Zugang</h2>
+          <p>Für die Nutzung bestimmter Funktionen (z. B. Premium-Einträge) kann eine Registrierung erforderlich sein. Der Nutzer ist verpflichtet, seine Zugangsdaten geheim zu halten und den Betreiber über unbefugte Nutzung zu informieren.</p>
+
+          <h2>5. Zahlungsbedingungen</h2>
+          <p>Premium-Dienstleistungen werden elektronisch abgewickelt. Die Zahlung erfolgt monatlich im Voraus. Eine Kündigung ist jederzeit zum Monatsende möglich. Bereits gezahlte Beträge werden bei vorzeitiger Kündigung nicht rückerstattet.</p>
+
+          <h2>6. Haftung</h2>
+          <p>Der Betreiber haftet nicht für Schäden, die durch die Nutzung des Portals entstehen, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen. Die Haftung für die Verfügbarkeit des Portals ist auf höhere Gewalt und notwendige Wartungsarbeiten beschränkt.</p>
+
+          <h2>7. Urheberrecht</h2>
+          <p>Alle Inhalte des Portals unterliegen dem Urheberrecht. Die Vervielfältigung, Bearbeitung oder Verbreitung bedarf der Zustimmung des Betreibers.</p>
+
+          <h2>8. Schlussbestimmungen</h2>
+          <p>Es gilt österreichisches Recht. Gerichtsstand ist Innsbruck. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+          <p class="legal-stand">Stand: Mai 2026</p>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

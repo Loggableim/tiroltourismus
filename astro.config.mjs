@@ -8,35 +8,27 @@ const LOCALE_PATTERN = /^\/(en|fr|it|es|zh)(\/|$)/;
 
 export default defineConfig({
   integrations: [react(), sitemap({
-    i18n: {
-      defaultLocale: 'de',
-      locales: Object.fromEntries(LANGUAGES.map(l => [l, LOCALE_MAP[l]])),
-    },
+    filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
     serialize: (entry) => {
       const path = entry.url;
-      const match = path.match(LOCALE_PATTERN);
+      const sitePrefix = 'https://tiroltourismus.com';
+      const relativePath = path.startsWith(sitePrefix) ? path.slice(sitePrefix.length) : path;
+      const match = relativePath.match(LOCALE_PATTERN);
       const currentLang = match ? match[1] : 'de';
+
+      const buildUrl = (lang, relPath) => {
+        const p = relPath.replace(LOCALE_PATTERN, '/').replace(/\/+/g, '/');
+        if (lang === 'de') return `${sitePrefix}${p}`;
+        const prefix = p === '/' ? `/${lang}` : `/${lang}${p}`;
+        return `${sitePrefix}${prefix}`;
+      };
 
       return {
         url: entry.url,
-        // Lastmod für heutige Pages
-        ...(path !== '/' && !path.match(LOCALE_PATTERN) && { lastmod: new Date().toISOString() }),
-        links: LANGUAGES.map(l => {
-          let url;
-          if (l === 'de') {
-            // DE: prefix entfernen
-            url = match ? path.replace(LOCALE_PATTERN, '/') : path;
-          } else if (currentLang === 'de') {
-            // Von DE zu anderer Sprache: prefix hinzufügen
-            url = `/${l}${path === '/' ? '' : path}`;
-          } else {
-            // Von Sprache X zu Sprache Y: prefix ersetzen
-            url = path.replace(LOCALE_PATTERN, `/${l}$2`);
-          }
-          // Doppelte Slashes vermeiden
-          url = url.replace(/\/\/+/g, '/');
-          return { lang: LOCALE_MAP[l], url };
-        }),
+        links: LANGUAGES.map(l => ({
+          lang: LOCALE_MAP[l],
+          url: buildUrl(l, relativePath),
+        })),
       };
     },
   })],

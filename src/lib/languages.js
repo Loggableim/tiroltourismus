@@ -12,7 +12,7 @@ export const LANGUAGES = [
   { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
 ];
 
-export const LANGUAGES_READY = ['de', 'en']; // Sprachen mit übersetzten Daten (FR deaktiviert wg. Build-Limit)
+export const LANGUAGES_READY = ['de', 'en', 'fr']; // Sprachen mit übersetzten Daten
 export const DEFAULT_LOCALE = 'de';
 
 /**

@@ -178,7 +178,6 @@ export function findNearby(entry, collection, locale = 'de', limit = 8) {
         else if (distKm < 5) score = Math.max(score, 70);
         else if (distKm < 10) score = Math.max(score, 50);
         else if (distKm < 20) score = Math.max(score, 30);
-        // else score stays from region/ort match
       }
 
       if (score > 0) {
@@ -193,27 +192,27 @@ export function findNearby(entry, collection, locale = 'de', limit = 8) {
 }
 
 /**
- * Automatische interne Verlinkung von Content (beschreibung/inhalt)
- * Ersetzt Erwähnungen bekannter Entitäten (Regionen, Orte, Sehenswürdigkeiten)
- * durch Links zu deren Detailseiten.
- * 
- * @param {string} html - HTML-Content (z.B. entry.beschreibung)
- * @param {object} currentEntry - Der aktuelle Entry (um Selbstverlinkung zu vermeiden)
- * @param {string} locale - Sprachkürzel
- * @returns {string} HTML mit internen Links
+ * Cache für entityMap (per locale)
  */
-let _entityMap = null;
+const _entityCache = new Map();
+
+export function invalidateEntityCache(locale) {
+  if (locale) _entityCache.delete(locale);
+  else _entityCache.clear();
+}
+
 function _buildEntityMap(locale = 'de') {
-  if (_entityMap) return _entityMap;
+  if (_entityCache.has(locale)) return _entityCache.get(locale);
+  const pref = locale === 'de' ? '' : `/${locale}`;
   const map = [];
   const collections = [
-    { name: 'regionen', prefix: '/regionen/', nameField: 'titel', weight: 5 },
-    { name: 'orte', prefix: '/orte/', nameField: 'name', weight: 4 },
-    { name: 'sehenswuerdigkeiten', prefix: '/sehenswuerdigkeiten/', nameField: 'name', weight: 3 },
-    { name: 'magazin', prefix: '/magazin/', nameField: 'titel', weight: 2 },
-    { name: 'erlebnisse', prefix: '/erlebnisse/', nameField: 'name', weight: 2 },
-    { name: 'events', prefix: '/events/', nameField: 'name || titel', weight: 2 },
-    { name: 'gastro', prefix: '/gastro/', nameField: 'name', weight: 2 },
+    { name: 'regionen', prefix: `${pref}/regionen/`, nameField: 'titel', weight: 5 },
+    { name: 'orte', prefix: `${pref}/orte/`, nameField: 'name', weight: 4 },
+    { name: 'sehenswuerdigkeiten', prefix: `${pref}/sehenswuerdigkeiten/`, nameField: 'name', weight: 3 },
+    { name: 'magazin', prefix: `${pref}/magazin/`, nameField: 'titel', weight: 2 },
+    { name: 'erlebnisse', prefix: `${pref}/erlebnisse/`, nameField: 'name', weight: 2 },
+    { name: 'events', prefix: `${pref}/events/`, nameField: 'name || titel', weight: 2 },
+    { name: 'gastro', prefix: `${pref}/gastro/`, nameField: 'name', weight: 2 },
   ];
   for (const coll of collections) {
     const entries = readCollection(coll.name, locale);
@@ -230,15 +229,9 @@ function _buildEntityMap(locale = 'de') {
       }
     }
   }
-  // Sort by length descending to match longer names first
   map.sort((a, b) => b.name.length - a.name.length);
-  _entityMap = map;
+  _entityCache.set(locale, map);
   return map;
-}
-
-/** Cache für entityMap invalidieren */
-export function invalidateEntityCache() {
-  _entityMap = null;
 }
 
 /**
@@ -263,7 +256,6 @@ export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLin
     if (currentSlug && entity.slug === currentSlug) continue;
     if (currentName && entity.name.toLowerCase() === currentName) continue;
     
-    // Create regex that matches the entity name as a whole word, not inside HTML tags or existing links
     const escaped = entity.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(?<!<[^>]*)(?<!href="[^"]*)(?<![\\w\\d])(${escaped})(?![\\w\\d])`, 'gi');
     

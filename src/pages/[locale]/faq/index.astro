@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { readSingleton } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const faqItems = readSingleton('faq', locale) || [];
+const t = { de:'Häufige Fragen', en:'FAQ', fr:'FAQ', it:'FAQ', es:'Preguntas Frecuentes', zh:'常见问题' };
+const categoryLabels = { de:{ allgemein:'Allgemein', anreise:'Anreise', unterkunft:'Unterkunft', wandern:'Wandern', ski:'Ski & Winter', familie:'Familie', gastro:'Kulinarik', regionen:'Regionen', wetter:'Wetter', events:'Events' }, en:{ allgemein:'General', anreise:'Arrival', unterkunft:'Accommodation', wandern:'Hiking', ski:'Ski & Winter', familie:'Family', gastro:'Food', regionen:'Regions', wetter:'Weather', events:'Events' } };
+const catOrder = ['allgemein','anreise','unterkunft','wandern','ski','familie','gastro','regionen','wetter','events'];
+const grouped = new Map();
+for (const c of catOrder) {
+  const items = faqItems.filter(i => i.kategorie === c);
+  if (items.length > 0) grouped.set(c, items);
+}
+---
+
+<BaseLayout title="{t[locale] || t.de} – Tirol" description="Antworten auf die häufigsten Fragen zu Tirol" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" /></div>
+    <SectionHeader title="{t[locale] || t.de}" sub="Häufige Fragen zu Tirol" />
+    {[...grouped.entries()].map(([cat, items]) => (
+      <div class="faq-group">
+        <h2>{categoryLabels['de']?.[cat] || cat}</h2>
+        {items.map(item => (<details class="faq-item"><summary>{item.frage || item.q}</summary><p>{item.antwort || item.a}</p></details>))}
+      </div>
+    ))}
+  </main>
+</BaseLayout>

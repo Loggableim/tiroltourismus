@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { readSingleton } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = { de:'Datenschutz', en:'Privacy Policy', fr:'Protection des Données', it:'Protezione dei Dati', es:'Política de Privacidad', zh:'隐私政策' };
+---
+
+<BaseLayout title="{t[locale] || t.de}" description="Datenschutzerklärung von tiroltourismus.com" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" /></div>
+    <section class="legal-page section">
+      <div class="container" style="max-width:720px">
+        <SectionHeader title="{t[locale] || t.de}" />
+        <div class="legal-text">
+          <h2>1. Verantwortlicher</h2>
+          <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist Dominik Rainer, A-6020 Innsbruck.</p>
+          <h2>2. Erhebung und Speicherung personenbezogener Daten</h2>
+          <p>Beim Besuch der Website werden automatisch Informationen an den Server gesendet: IP-Adresse, Datum/Uhrzeit, Browsertyp, Betriebssystem, aufgerufene Seiten. Eine Speicherung dieser Daten erfolgt nicht.</p>
+          <h2>3. Cookies</h2>
+          <p>Diese Website verwendet ausschließlich technisch notwendige Cookies (Session-Cookies). Es werden keine Tracking-Cookies, Analyse-Cookies oder Marketing-Cookies gesetzt.</p>
+          <h2>4. Rechte der betroffenen Person</h2>
+          <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer Daten. Kontakt: office@tiroltourismus.com</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

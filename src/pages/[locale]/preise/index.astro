@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { TIERS, LEMONSQUEEZY } from '../../../config/pricing.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = { de:'Preise & Mitgliedschaft', en:'Pricing', fr:'Tarifs', it:'Prezzi', es:'Precios', zh:'价格' };
+const tiers = [TIERS.basic, TIERS.silver, TIERS.gold];
+---
+
+<BaseLayout title={t[locale] || t.de} description="Preise für Betriebe – tiroltourismus.com" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items={[{ label: t[locale] || t.de }]} /></div>
+    <SectionHeader title={t[locale] || t.de} sub="Wähle das passende Paket für deinen Betrieb" />
+    <div class="pricing-grid">
+      {tiers.map(tier => (
+        <div class="pricing-card" data-tier={tier.id}>
+          <h3>{tier.name}</h3>
+          <div class="price">€{tier.price}<span>/Monat</span></div>
+          <ul>{tier.features.map(f => (<li>{f}</li>))}</ul>
+        </div>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

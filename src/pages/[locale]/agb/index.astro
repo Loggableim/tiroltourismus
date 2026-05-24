@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { readSingleton } from '../../../lib/content.js';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const settings = readSingleton('einstellungen', locale);
+const nav = { de:'AGB', en:'Terms & Conditions', fr:'Conditions Générales', it:'Termini e Condizioni', es:'Términos y Condiciones', zh:'条款和条件' };
+---
+
+<BaseLayout title="{nav[locale] || nav.de}" description="Allgemeine Geschäftsbedingungen von tiroltourismus.com" locale={locale}>
+  <main>
+    <Breadcrumbs items="{[{ label: nav[locale] || nav.de }]}" />
+    <section class="legal-page section">
+      <div class="container" style="max-width:720px">
+        <SectionHeader title="{nav[locale] || nav.de}" />
+        <div class="legal-text">
+          <h2>1. Geltungsbereich</h2>
+          <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung des Portals tiroltourismus.com sowie für alle damit verbundenen Dienstleistungen. Betreiber ist Dominik Rainer, A-6020 Innsbruck.</p>
+          <h2>2. Leistungsbeschreibung</h2>
+          <p>tiroltourismus.com ist ein Tourismusportal, das Informationen über Regionen, Unterkünfte, Orte, Gastronomie, Erlebnisse, Events und weitere touristische Angebote in Tirol bereitstellt.</p>
+          <h2>3. Nutzungsbedingungen</h2>
+          <p>Die Nutzung des Portals ist für Endnutzer kostenlos. Für die Richtigkeit der eingetragenen Daten sind die jeweiligen Betriebe selbst verantwortlich.</p>
+          <h2>4. Haftung</h2>
+          <p>Der Betreiber haftet nicht für Schäden, die durch die Nutzung des Portals entstehen, soweit diese nicht auf Vorsatz oder grober Fahrlässigkeit beruhen.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

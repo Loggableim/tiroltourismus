@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import NewsletterForm from '../../../components/NewsletterForm.tsx';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = { de:'Newsletter', en:'Newsletter', fr:'Newsletter', it:'Newsletter', es:'Boletín', zh:'新闻通讯' };
+---
+
+<BaseLayout title="{t[locale] || t.de}" description="Abonniere den Tirol Tourismus Newsletter." locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" /></div>
+    <section class="newsletter-page">
+      <h1>{t[locale] || t.de}</h1>
+      <p>Einmal im Monat die schönsten Seiten Tirols – Berggeschichten, Events und exklusive Angebote.</p>
+      <NewsletterForm client:load />
+    </section>
+  </main>
+</BaseLayout>

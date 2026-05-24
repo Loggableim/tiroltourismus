@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = { de:'Impressum', en:'Imprint', fr:'Mentions Légales', it:'Impressum', es:'Aviso Legal', zh:'法律声明' };
+---
+
+<BaseLayout title="{t[locale] || t.de}" description="Impressum von tiroltourismus.com" locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" /></div>
+    <section class="legal-page section">
+      <div class="container" style="max-width:720px">
+        <SectionHeader title="{t[locale] || t.de}" />
+        <div class="legal-text">
+          <p><strong>Medieninhaber & Betreiber:</strong><br>Dominik Rainer<br>A-6020 Innsbruck<br>Österreich</p>
+          <p><strong>Kontakt:</strong><br>E-Mail: office@tiroltourismus.com</p>
+          <p><strong>Unternehmensgegenstand:</strong><br>Tourismusportal und -vermarktung</p>
+          <p><strong>Mitgliedschaften:</strong><br>WKO Tirol, Tourismusverband Tirol</p>
+          <p><strong>Haftungsausschluss:</strong><br>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

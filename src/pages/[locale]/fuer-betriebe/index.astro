@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import { LANGUAGES_READY } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.map(locale => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = { de:'Für Betriebe', en:'For Businesses', fr:'Pour les Pros', it:'Per Aziende', es:'Para Empresas', zh:'企业服务' };
+---
+
+<BaseLayout title="{t[locale] || t.de}" description="Präsentiere deinen Betrieb auf tiroltourismus.com." locale={locale}>
+  <main>
+    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" /></div>
+    <Hero title="{t[locale] || t.de}" subtitle="Präsentiere deinen Betrieb auf dem modernsten Tourismusportal der Alpen." emoji="🏪" size="md" />
+    <section class="section">
+      <div class="container">
+        <p>Mit tiroltourismus.com erreichst du tausende potenzielle Gäste. Kostenlose Basiseinträge, Premium-Features für mehr Sichtbarkeit.</p>
+        <a href="/preise/" class="btn btn-pink">Jetzt Partner werden →</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

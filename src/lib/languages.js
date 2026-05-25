@@ -12,7 +12,7 @@ export const LANGUAGES = [
   { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
 ];
 
-export const LANGUAGES_READY = ['de', 'en']; // NUR DE+EN aktiv — alle anderen sprengen Build-Limit
+export const LANGUAGES_READY = LANGUAGES.filter((l) => l.ready).map((l) => l.code); // alle aktuell freigegebenen Sprachen routen
 export const DEFAULT_LOCALE = 'de';
 
 /**

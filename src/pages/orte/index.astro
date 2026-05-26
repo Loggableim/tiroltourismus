@@ -7,13 +7,30 @@ import SectionMap from '../../sections/SectionMap.astro';
 import OrtCard from '../../components/OrtCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 
-const featuredWappen = [
-  { name: 'Innsbruck', src: '/wappen/ultra-minimal/statutarstadt_innsbruck/innsbruck.png' },
-  { name: 'Imst', src: '/wappen/ultra-minimal/imst/imst.png' },
-  { name: 'Kitzbühel', src: '/wappen/ultra-minimal/kitzbühel/kitzbuehel.png' },
-  { name: 'Lienz', src: '/wappen/ultra-minimal/lienz/lienz.png' },
-];
+const ULTRA_MINIMAL = JSON.parse(
+  readFileSync(resolve(process.cwd(), 'wappen/sd15_ultra_minimal.json'), 'utf-8')
+) as Array<{ ort: string; img_rel: string; bezirk: string }>;
+
+const normalize = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+const wappenForOrt = (ortName: string) => {
+  const entry = ULTRA_MINIMAL.find((item) => normalize(item.ort) === normalize(ortName));
+  return entry ? `/wappen/ultra-minimal/${entry.img_rel.replace(/^img\/sd15_ultra_minimal\//, '')}` : null;
+};
+
+const featuredNames = ['Innsbruck', 'Imst', 'Kitzbühel', 'Lienz'];
+const featuredWappen = featuredNames
+  .map((name) => ({ name, src: wappenForOrt(name) }))
+  .filter((item) => item.src);
 
 const orte = readCollection('orte').filter((o) => isPublished(o.entry));
 const regionen = readCollection('regionen')
@@ -30,6 +47,7 @@ const orteMarkers = orteMitKarte.map((o) => ({
   lng: o.entry.koordinaten.lng,
   label: o.entry.name,
   href: '/orte/' + o.slug + '/',
+  wappenSrc: wappenForOrt(o.entry.name),
   emoji: o.entry.emoji || '🏘️',
 }));
 ---
@@ -45,14 +63,14 @@ const orteMarkers = orteMitKarte.map((o) => ({
 
     <Hero
       title="Orte"
-      subtitle="Entdecke die schönsten Orte in Tirol – jetzt mit den Wappen im Karten-Design statt Emojis."
-      imageSrc={featuredWappen[0].src}
+      subtitle="Entdecke die schönsten Orte in Tirol – die Karten und Marker zeigen jetzt echte Wappen statt Icons."
+      imageSrc={featuredWappen[0]?.src}
       size="md"
     >
-
+      <Fragment slot="actions">
         <a href="#orte-grid" class="btn btn-pink">Orte entdecken →</a>
         <span class="hero-urgency">📍 {orte.length} Ortschaften</span>
-      </div>
+      </Fragment>
     </Hero>
 
     <SectionMap
@@ -87,7 +105,6 @@ const orteMarkers = orteMitKarte.map((o) => ({
                 name={o.entry.name}
                 slug={o.slug}
                 beschreibung={o.entry.kurzbeschreibung}
-                emoji={o.entry.emoji}
                 farbe={o.entry.farbe}
                 region={o.entry.region}
               />
@@ -98,7 +115,9 @@ const orteMarkers = orteMitKarte.map((o) => ({
     ) : (
       <section class="section">
         <div class="container" style="text-align:center;padding:60px 0">
-          <div style="font-size:64px;margin-bottom:16px">🏘️</div>
+          <div style="width:120px;height:150px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center">
+            <img src={featuredWappen[0]?.src} alt="Wappen" style="width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 10px 18px rgba(0,0,0,.15))" />
+          </div>
           <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
             Bald verfügbar
           </h2>

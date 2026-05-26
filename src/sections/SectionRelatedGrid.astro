@@ -9,6 +9,7 @@ export interface Props {
   subtitleField?: string;
   priceField?: string;
   emojiField?: string;
+  imageField?: string;
   defaultEmoji?: string;
   emptyText?: string;
   ctaHref?: string;
@@ -26,6 +27,7 @@ const {
   subtitleField,
   priceField,
   emojiField,
+  imageField,
   defaultEmoji,
   emptyText,
   ctaHref,
@@ -51,26 +53,29 @@ const {
       <>
         <div class="sec-rel-grid">
           {entries.map((e) => {
+            const imageSrc = imageField
+              ? (e.entry ? e.entry[imageField] : e[imageField])
+              : '';
             const emoji = emojiField
-              ? e.entry
-                ? e.entry[emojiField]
-                : e[emojiField]
+              ? (e.entry ? e.entry[emojiField] : e[emojiField])
               : defaultEmoji;
             const name = e.entry ? e.entry[nameField] : e[nameField];
             const subtitle = subtitleField
-              ? e.entry
-                ? e.entry[subtitleField]
-                : e[subtitleField]
+              ? (e.entry ? e.entry[subtitleField] : e[subtitleField])
               : '';
             const price = priceField
-              ? e.entry
-                ? e.entry[priceField]
-                : e[priceField]
+              ? (e.entry ? e.entry[priceField] : e[priceField])
               : '';
             const slug = e.slug || e[slugPrefix];
             return (
               <a href={`${slugPrefix}${slug}/`} class="sec-rel-card">
-                <div class="sec-rel-card-emoji">{emoji || '📌'}</div>
+                <div class="sec-rel-card-media">
+                  {imageSrc ? (
+                    <img src={imageSrc} alt={`${name} Wappen`} loading="lazy" decoding="async" />
+                  ) : (
+                    <div class="sec-rel-card-emoji">{emoji || '📌'}</div>
+                  )}
+                </div>
                 <div class="sec-rel-card-body">
                   <h3>{name}</h3>
                   {subtitle && <p>{subtitle}</p>}
@@ -95,12 +100,8 @@ const {
 </section>
 
 <style is:global>
-  .sec-rel {
-    padding-bottom: 60px;
-  }
-  .sec-rel-alt {
-    background: var(--bg2);
-  }
+  .sec-rel { padding-bottom: 60px; }
+  .sec-rel-alt { background: var(--bg2); }
   .sec-rel-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -123,10 +124,25 @@ const {
     border-color: var(--pink);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
   }
+  .sec-rel-card-media {
+    min-height: 220px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    aspect-ratio: 3 / 4;
+  }
+  .sec-rel-card-media img {
+    width: 88%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 22px rgba(0,0,0,.14));
+  }
   .sec-rel-card-emoji {
-    font-size: 36px;
-    padding: 20px 20px 0;
-    text-align: center;
+    font-size: 44px;
+    line-height: 1;
   }
   .sec-rel-card-body {
     padding: 16px 20px 20px;
@@ -162,17 +178,11 @@ const {
     color: var(--text3);
     padding: 20px 0 10px;
   }
-  .sec-rel-cta {
-    text-align: center;
-  }
+  .sec-rel-cta { text-align: center; }
   @media (max-width: 968px) {
-    .sec-rel-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    .sec-rel-grid { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 600px) {
-    .sec-rel-grid {
-      grid-template-columns: 1fr;
-    }
+    .sec-rel-grid { grid-template-columns: 1fr; }
   }
 </style>

@@ -262,9 +262,12 @@ export default function LeafletMap({
           const catStyle = m.category ? CATEGORY_STYLES[m.category] : null;
           const iconColor = m.color || catStyle?.color || 'var(--pink, #FF1493)';
           const markerEmoji = m.emoji || catStyle?.emoji || '📍';
+          const markerImage = m.wappenSrc || m.imageSrc || null;
           const icon = L.divIcon({
-            html: `<div style="font-size:20px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:${iconColor};border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.3);border:2px solid #fff;cursor:pointer">${markerEmoji}</div>`,
-            className: '', iconSize: [34, 34], iconAnchor: [17, 17],
+            html: markerImage
+              ? `<div style="width:40px;height:48px;display:flex;align-items:center;justify-content:center;transform:translateY(-2px)"><img src="${markerImage}" alt="" style="width:40px;height:48px;object-fit:contain;filter:drop-shadow(0 8px 16px rgba(0,0,0,.24))" /></div>`
+              : `<div style="font-size:20px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:${iconColor};border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.3);border:2px solid #fff;cursor:pointer">${markerEmoji}</div>`,
+            className: '', iconSize: markerImage ? [40, 48] : [34, 34], iconAnchor: markerImage ? [20, 42] : [17, 17],
           });
           const marker = L.marker([centerLat, centerLng], { icon }).addTo(map);
           if (m.label) {
@@ -298,9 +301,12 @@ export default function LeafletMap({
         const catStyle = m.category ? CATEGORY_STYLES[m.category] : null;
         const iconColor = m.color || catStyle?.color || 'var(--pink, #FF1493)';
         const markerEmoji = m.emoji || catStyle?.emoji || '📍';
+        const markerImage = m.wappenSrc || m.imageSrc || null;
         const icon = L.divIcon({
-          html: `<div style="font-size:22px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:${iconColor};border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.3);border:2px solid #fff;transition:transform .2s ease;cursor:pointer">${markerEmoji}</div>`,
-          className: '', iconSize: [36, 36], iconAnchor: [18, 18],
+          html: markerImage
+            ? `<div style="width:42px;height:50px;display:flex;align-items:center;justify-content:center;transform:translateY(-2px)"><img src="${markerImage}" alt="" style="width:42px;height:50px;object-fit:contain;filter:drop-shadow(0 8px 16px rgba(0,0,0,.24))" /></div>`
+            : `<div style="font-size:22px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:${iconColor};border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,.3);border:2px solid #fff;transition:transform .2s ease;cursor:pointer">${markerEmoji}</div>`,
+          className: '', iconSize: markerImage ? [42, 50] : [36, 36], iconAnchor: markerImage ? [21, 44] : [18, 18],
         });
         const marker = L.marker(latlng, { icon }).addTo(map);
         if (m.label) {

@@ -36,14 +36,16 @@ const wappenSrc = wappenForOrt(name);
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', 'de', 8) : [];
 const mapMarkers = [];
 if (entry.koordinaten) {
-  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: name, emoji: emoji || '🏘️' });
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: name, wappenSrc, emoji: emoji || '🏘️' });
 }
 nearbyEntries.forEach(n => {
   if (!n.entry.koordinaten) return;
+  const nearbyWappen = wappenForOrt(n.entry.name || n.entry.titel || '');
   mapMarkers.push({
     lat: n.entry.koordinaten.lat,
     lng: n.entry.koordinaten.lng,
     label: n.entry.name || n.entry.titel,
+    wappenSrc: nearbyWappen,
     emoji: n.entry.emoji || '🏘️',
     href: '/' + n.collection + '/' + n.slug + '/',
     category: n.collection,
@@ -62,7 +64,7 @@ const relatedByTag = tags && tags.length > 0
       .slice(0, 3)
       .map(r => ({
         ...r,
-        entry: { ...r.entry, _emoji: r.entry.emoji || '🏘️' }
+        entry: { ...r.entry, _wappenSrc: wappenForOrt(r.entry.name || r.entry.titel || ''), _emoji: r.entry.emoji || '🏘️' }
       }))
   : [];
 ---
@@ -98,7 +100,7 @@ const relatedByTag = tags && tags.length > 0
       slugPrefix: '/orte/',
       nameField: 'name',
       subtitleField: 'kurzbeschreibung',
-      emojiField: '_emoji',
+      imageField: '_wappenSrc',
       defaultEmoji: '🏘️',
     } : null,
   ].filter(Boolean)}

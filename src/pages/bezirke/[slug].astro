@@ -5,23 +5,30 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { readSingleton, readCollection, isPublished } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 import OrtCard from '../../components/OrtCard.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 
 // Regionen → Bezirk Mapping
-const BEZIRK_REGIONS = {
-  'innsbruck': ['innsbruck'],
+const BEZIRK_REGIONS: Record<string, string[]> = {
+  innsbruck: ['innsbruck'],
   'innsbruck-land': ['innsbruck-land'],
-  'imst': ['imst', 'oetztal'],
-  'landeck': ['landeck', 'arlberg', 'kaunertal'],
-  'reutte': ['ausserfern'],
-  'kufstein': ['kufstein'],
-  'kitzbuehel': ['kitzbuehel'],
-  'schwaz': ['schwaz', 'achensee', 'zillertal'],
-  'lienz': ['osttirol', 'lienz'],
+  imst: ['imst', 'oetztal'],
+  landeck: ['landeck', 'arlberg', 'kaunertal'],
+  reutte: ['ausserfern'],
+  kufstein: ['kufstein'],
+  kitzbuehel: ['kitzbuehel'],
+  schwaz: ['schwaz', 'achensee', 'zillertal'],
+  lienz: ['osttirol', 'lienz'],
 };
+
+const WAPPEN_DATA = JSON.parse(readFileSync(resolve(process.cwd(), 'wappen/wappen_page_data.json'), 'utf-8'));
+const WAPPEN_BEZIRKE = Object.fromEntries(
+  WAPPEN_DATA.bezirke.map((b: any) => [b.key, { ...b, publicImg: `/wappen/${b.img.replace(/^img\//, '')}` }])
+);
 
 export async function getStaticPaths() {
   const b = readSingleton('bezirke') || {};
-  return Object.values(b).filter(Boolean).map(entry => ({
+  return Object.values(b).filter(Boolean).map((entry: any) => ({
     params: { slug: entry.slug },
   }));
 }
@@ -31,11 +38,12 @@ const bezirke = readSingleton('bezirke');
 const bezirk = bezirke?.[slug] || null;
 if (!bezirk) return Astro.redirect('/bezirke/');
 
+const bezirkWappen = WAPPEN_BEZIRKE[slug] || null;
 const relevantRegions = BEZIRK_REGIONS[slug] || [];
-const allOrte = readCollection('orte').filter(o => isPublished(o.entry));
-const orteImBezirk = allOrte.filter(o => relevantRegions.includes(o.entry.region));
+const allOrte = readCollection('orte').filter((o) => isPublished(o.entry));
+const orteImBezirk = allOrte.filter((o) => relevantRegions.includes(o.entry.region));
 const alleRegionen = readCollection('regionen');
-const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slug));
+const regionenImBezirk = alleRegionen.filter((r) => relevantRegions.includes(r.slug));
 ---
 <BaseLayout
   title={bezirk.name}
@@ -47,12 +55,22 @@ const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slu
     </div>
 
     <section class="bezirk-hero">
-      <div class="container" style="text-align:center;padding:60px 0 40px">
-        <div style="font-size:64px;margin-bottom:8px">🗺️</div>
-        <h1 class="bezirk-page-title">{bezirk.name}</h1>
-        <p class="bezirk-page-desc">{bezirk.beschreibung}</p>
-        {orteImBezirk.length > 0 && (
-          <p style="color:var(--text3);font-size:13px;margin-top:12px">{orteImBezirk.length} Gemeinden</p>
+      <div class="container bezirk-hero-grid">
+        <div class="bezirk-hero-copy">
+          <div style="font-size:64px;margin-bottom:8px">🗺️</div>
+          <h1 class="bezirk-page-title">{bezirk.name}</h1>
+          <p class="bezirk-page-desc">{bezirk.beschreibung}</p>
+          {orteImBezirk.length > 0 && (
+            <p style="color:var(--text3);font-size:13px;margin-top:12px">{orteImBezirk.length} Gemeinden</p>
+          )}
+          {bezirkWappen && (
+            <a href="/wappen/" class="bezirk-wappen-link">Wappen-Atlas öffnen →</a>
+          )}
+        </div>
+        {bezirkWappen && (
+          <div class="bezirk-hero-wappen">
+            <img src={bezirkWappen.publicImg} alt={`${bezirk.name} Wappen`} loading="lazy" decoding="async" width="240" height="240">
+          </div>
         )}
       </div>
     </section>
@@ -64,7 +82,7 @@ const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slu
             Regionen in {bezirk.name}
           </h2>
           <div class="bezirk-regionen">
-            {regionenImBezirk.map(r => (
+            {regionenImBezirk.map((r) => (
               <a href={`/regionen/${r.slug}/`} class="bezirk-region-tag">
                 {r.entry.emoji} {r.entry.titel}
               </a>
@@ -81,7 +99,7 @@ const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slu
         </h2>
         {orteImBezirk.length > 0 ? (
           <div class="bezirk-orte-grid">
-            {orteImBezirk.map(o => (
+            {orteImBezirk.map((o) => (
               <OrtCard
                 name={o.entry.name}
                 slug={o.slug}
@@ -117,6 +135,49 @@ const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slu
     line-height: 1.6;
     font-size: 15px;
   }
+  .bezirk-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) 280px;
+    gap: 24px;
+    align-items: center;
+    padding: 56px 0 40px;
+    text-align: left;
+  }
+  .bezirk-hero-copy {
+    text-align: left;
+  }
+  .bezirk-hero-copy .bezirk-page-desc,
+  .bezirk-hero-copy h1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .bezirk-hero-wappen {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 18px;
+    box-shadow: var(--glass-shadow);
+  }
+  .bezirk-hero-wappen img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 18px;
+    padding: 12px;
+  }
+  .bezirk-wappen-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--pink);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+  }
   .bezirk-regionen {
     display: flex;
     flex-wrap: wrap;
@@ -145,6 +206,11 @@ const regionenImBezirk = alleRegionen.filter(r => relevantRegions.includes(r.slu
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  @media(max-width:968px){.bezirk-orte-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.bezirk-orte-grid{grid-template-columns:1fr}}
+  @media(max-width:968px){
+    .bezirk-orte-grid{grid-template-columns:repeat(2,1fr)}
+    .bezirk-hero-grid{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    .bezirk-orte-grid{grid-template-columns:1fr}
+  }
 </style>

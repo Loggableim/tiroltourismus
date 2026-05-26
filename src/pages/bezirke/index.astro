@@ -3,9 +3,16 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { readSingleton } from '../../lib/content.js';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 
 const bezirke = readSingleton('bezirke');
 const items = bezirke ? Object.values(bezirke) : [];
+const wappenData = JSON.parse(readFileSync(resolve(process.cwd(), 'wappen/wappen_page_data.json'), 'utf-8'));
+const wappenBezirke = wappenData.bezirke.map((b) => ({
+  ...b,
+  publicImg: `/wappen/${b.img.replace(/^img\//, '')}`,
+}));
 ---
 <BaseLayout
   title="Bezirke Tirols"
@@ -21,6 +28,23 @@ const items = bezirke ? Object.values(bezirke) : [];
         <div style="font-size:64px;margin-bottom:8px">🗺️</div>
         <h1 class="bezirke-title">Bezirke Tirols</h1>
         <p class="bezirke-sub">Neun Bezirke – neun Persönlichkeiten. Von der Landeshauptstadt bis zu den entlegensten Tälern.</p>
+      </div>
+    </section>
+
+    <section class="wappen-feature-wrap">
+      <div class="container">
+        <a href="/wappen/" class="wappen-feature-card">
+          <div class="wappen-feature-copy">
+            <div class="wappen-feature-kicker">Neu im Atlas</div>
+            <h2>Tiroler Wappen-Übersicht</h2>
+            <p>Alle Bezirks- und Ortswappen in einer modernen, ultraminimalen Darstellung – direkt aus der Bezirke-Übersicht erreichbar.</p>
+          </div>
+          <div class="wappen-feature-preview">
+            {wappenBezirke.slice(0, 4).map((b) => (
+              <img src={b.publicImg} alt={b.name} loading="lazy" decoding="async">
+            ))}
+          </div>
+        </a>
       </div>
     </section>
 
@@ -60,6 +84,62 @@ const items = bezirke ? Object.values(bezirke) : [];
     margin: 0 auto;
     line-height: 1.6;
     font-size: 15px;
+  }
+  .wappen-feature-wrap {
+    padding: 0 0 18px;
+  }
+  .wappen-feature-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+    gap: 16px;
+    align-items: center;
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, rgba(255,20,147,.08), rgba(255,215,0,.06));
+    border: 1px solid rgba(255,20,147,.18);
+    text-decoration: none;
+    color: var(--text);
+    box-shadow: 0 14px 36px rgba(0,0,0,.05);
+    transition: all .25s var(--ease);
+  }
+  .wappen-feature-card:hover {
+    border-color: var(--pink);
+    transform: translateY(-1px);
+  }
+  .wappen-feature-kicker {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .wappen-feature-copy h2 {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 3vw, 44px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .wappen-feature-copy p {
+    color: var(--text2);
+    line-height: 1.7;
+    max-width: 62ch;
+  }
+  .wappen-feature-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .wappen-feature-preview img {
+    width: 100%;
+    aspect-ratio: 1 / 1.1;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    padding: 8px;
   }
   .bezirke-grid {
     display: grid;
@@ -114,6 +194,13 @@ const items = bezirke ? Object.values(bezirke) : [];
     color: var(--pink);
     font-size: 18px;
   }
-  @media(max-width:968px){.bezirke-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.bezirke-grid{grid-template-columns:1fr}}
+  @media(max-width:968px){
+    .wappen-feature-card{grid-template-columns:1fr}
+    .wappen-feature-preview{grid-template-columns:repeat(4,1fr)}
+    .bezirke-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:600px){
+    .bezirke-grid{grid-template-columns:1fr}
+    .wappen-feature-preview{grid-template-columns:repeat(2,1fr)}
+  }
 </style>

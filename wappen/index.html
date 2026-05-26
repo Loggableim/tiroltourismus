@@ -38,7 +38,30 @@
     border-radius: 20px;
     font-size: 0.9rem;
   }
-  .back-btn {
+  .hero-links {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+    margin-top: 1rem;
+  }
+  .hero-links a, .hero-links button {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    padding: 0.7rem 1rem; border-radius: 999px; border: 2px solid rgba(212,160,23,0.45);
+    background: rgba(255,255,255,0.08); color: var(--weiss); text-decoration: none;
+    font-weight: 700; transition: all .2s ease;
+  }
+  .hero-links a:hover, .hero-links button:hover { transform: translateY(-1px); border-color: var(--gold); background: rgba(212,160,23,0.16); }
+  .hero-links .primary { background: var(--rot); border-color: var(--rot); }
+  .hero-links .primary:hover { background: #a90d26; }
+  .ai-promo {
+    margin: 1.5rem auto 0; max-width: 980px; padding: 1rem 1.25rem;
+    border-radius: 16px; background: linear-gradient(135deg, rgba(200,16,46,0.12), rgba(212,160,23,0.10));
+    border: 1px solid rgba(212,160,23,0.35); color: var(--weiss); text-align: left;
+  }
+  .ai-promo strong { display:block; font-size: 1rem; margin-bottom: .2rem; }
+  .ai-promo span { display:block; color: rgba(255,255,255,0.84); font-size: .95rem; line-height: 1.4; }
+  .ai-promo .promo-actions { display:flex; flex-wrap: wrap; gap:.6rem; margin-top:.9rem; }
+  .ai-promo .promo-actions a { color: var(--weiss); text-decoration:none; padding:.55rem .85rem; border-radius:999px; border:1px solid rgba(255,255,255,.24); background: rgba(255,255,255,.08); font-weight:700; }
+  .ai-promo .promo-actions a:hover { background: rgba(255,255,255,.16); }
+
     display: none; position: fixed; top: 1rem; left: 1rem; z-index: 100;
     padding: 0.6rem 1.2rem; background: var(--dunkel); color: var(--weiss);
     border: 2px solid var(--gold); border-radius: 8px; cursor: pointer;
@@ -124,6 +147,18 @@
     padding: 0.6rem; font-size: 0.85rem; font-weight: 600; background: var(--weiss);
     min-height: 2.5rem; display: flex; align-items: center; justify-content: center; line-height: 1.2;
   }
+  .ort-card .variants {
+    display: grid; grid-template-rows: 1fr 1fr;
+  }
+  .ort-card .variant {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background: var(--grau); padding: 0.45rem 0.4rem; min-height: 98px; border-top: 1px solid rgba(0,0,0,0.06);
+  }
+  .ort-card .variant .tag {
+    font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.06em; color: #777; margin-bottom: 0.25rem;
+  }
+  .ort-card .variant img { max-height: 72px; max-width: 100%; object-fit: contain; }
+
   footer { text-align: center; padding: 2rem; color: #888; font-size: 0.85rem; border-top: 1px solid var(--grau); margin-top: 2rem; }
   footer a { color: var(--rot); text-decoration: none; }
   @media (max-width: 768px) {
@@ -150,7 +185,10 @@
   <p>Alle Bezirks- und Gemeindewappen des Landes Tirol</p>
   <div class="count-badge">9 Bezirke · 276 Gemeinden</div>
   <p style="margin-top: 0.6rem">
-      <a href="generiert.html" style="color:var(--gold);text-underline-offset:3px">
+      <a href="sd15_ultra_minimal.html" style="color:var(--gold);text-underline-offset:3px">
+        ✨ Alle 276 Wappen im Ultra-Minimal-Stil ansehen →
+      </a>
+      <a href="generiert.html" style="color:var(--gold);text-underline-offset:3px;margin-left:1rem">
         🎨 18 KI-generierte Wappen-Varianten ansehen →
       </a>
       <a href="vergleich.html" style="color:var(--gold);text-underline-offset:3px;margin-left:1rem">
@@ -193,6 +231,20 @@ const DATA = {"bezirke": [{"name": "Imst", "key": "imst", "orte": [{"name": "Arz
 
 let currentStyleIdx = null;
 
+function slugify(name) {
+  return name
+    .toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\./g, '')
+    .replace(/\s+/g, '_')
+    .replace(/-/g, '_');
+}
+
 function renderBezirke() {
   const grid = document.getElementById('bezirkGrid');
   grid.innerHTML = '';
@@ -234,10 +286,19 @@ function showOrte(idx) {
   bezirk.orte.forEach(ort => {
     const card = document.createElement('div');
     card.className = 'ort-card';
+    const genSrc = `img/sd15_ultra_minimal/${bezirk.key}/${slugify(ort.name)}.png`;
     card.innerHTML = `
-      <div class="img-wrap">
-        <img src="${ort.img}" alt="${ort.name}" loading="lazy"
-             onerror="this.parentElement.innerHTML='<div style=\'font-size:2rem\'>🏁</div>'">
+      <div class="variants">
+        <div class="variant">
+          <div class="tag">Original</div>
+          <img src="${ort.img}" alt="${ort.name} Original" loading="lazy"
+               onerror="this.parentElement.innerHTML='<div style=\'font-size:1.6rem\'>🏁</div>'">
+        </div>
+        <div class="variant">
+          <div class="tag">Ultra Minimal</div>
+          <img src="${genSrc}" alt="${ort.name} Ultra Minimal" loading="lazy"
+               onerror="this.parentElement.innerHTML='<div style=\'font-size:1.6rem\'>✳</div>'">
+        </div>
       </div>
       <div class="name">${ort.name}</div>`;
     grid.appendChild(card);

@@ -1,0 +1,94 @@
+[
+  {
+    "title": "Innsbruck",
+    "src_rel": "img/sd15_inputs/innsbruck/stadtwappen.png",
+    "variants": [
+      {
+        "key": "modern_badge",
+        "label": "Modern Badge",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/01_modern_badge.png"
+      },
+      {
+        "key": "stained_glass",
+        "label": "Stained Glass",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/02_stained_glass.png"
+      },
+      {
+        "key": "kintsugi",
+        "label": "Kintsugi",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/03_kintsugi.png"
+      },
+      {
+        "key": "topographic",
+        "label": "Topographic",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/04_topographic.png"
+      },
+      {
+        "key": "riso_poster",
+        "label": "Riso Poster",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/05_riso_poster.png"
+      },
+      {
+        "key": "brutalist_shield",
+        "label": "Brutalist Shield",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/06_brutalist_shield.png"
+      },
+      {
+        "key": "celestial_seal",
+        "label": "Celestial Seal",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/07_celestial_seal.png"
+      },
+      {
+        "key": "paper_collage",
+        "label": "Paper Collage",
+        "img_rel": "img/sd15_prompt_variants/innsbruck/08_paper_collage.png"
+      }
+    ]
+  },
+  {
+    "title": "Kitzbühel",
+    "src_rel": "img/sd15_inputs/kitzbuehel/kitzbühel.png",
+    "variants": [
+      {
+        "key": "modern_badge",
+        "label": "Modern Badge",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/01_modern_badge.png"
+      },
+      {
+        "key": "stained_glass",
+        "label": "Stained Glass",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/02_stained_glass.png"
+      },
+      {
+        "key": "kintsugi",
+        "label": "Kintsugi",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/03_kintsugi.png"
+      },
+      {
+        "key": "topographic",
+        "label": "Topographic",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/04_topographic.png"
+      },
+      {
+        "key": "riso_poster",
+        "label": "Riso Poster",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/05_riso_poster.png"
+      },
+      {
+        "key": "brutalist_shield",
+        "label": "Brutalist Shield",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/06_brutalist_shield.png"
+      },
+      {
+        "key": "celestial_seal",
+        "label": "Celestial Seal",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/07_celestial_seal.png"
+      },
+      {
+        "key": "paper_collage",
+        "label": "Paper Collage",
+        "img_rel": "img/sd15_prompt_variants/kitzbuehel/08_paper_collage.png"
+      }
+    ]
+  }
+]

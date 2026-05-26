@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Translation Worker v2 – Übersetzt deutsche JSON-Content-Dateien in Zielsprache.
+Translation Worker v3 – Übersetzt deutsche JSON-Content-Dateien in Zielsprache.
 Nutzung: python translate_worker.py <category> <target_lang> [--limit N] [--dry-run]
 
 Keys: 4 Ollama API Keys (round-robin)
-Model: ministral-3:14b
+Model routing: short texts -> gpt-oss:20b, long texts -> gpt-oss:120b
 Parallel: max 3 Worker-Threads
 
 Output: src/data/<target_lang>/<category>/<slug>/index.json
@@ -25,7 +25,9 @@ OLLAMA_KEYS = [
 ]
 
 BASE_URL = "https://ollama.com/v1"
-MODEL = "ministral-3:14b"
+SHORT_MODEL = os.getenv("OLLAMA_MODEL_SHORT", "gpt-oss:20b")
+LONG_MODEL = os.getenv("OLLAMA_MODEL_LONG", "gpt-oss:120b")
+LONG_TEXT_THRESHOLD = int(os.getenv("OLLAMA_LONG_TEXT_THRESHOLD", "1200"))
 MAX_PARALLEL = 3
 
 # System-Prompts pro Sprache
@@ -67,10 +69,16 @@ def next_key():
         _key_index += 1
         return k
 
-def api_call(system_prompt, user_text, timeout=120):
+def pick_model(user_text, force_long=False):
+    if force_long or len(user_text or "") >= LONG_TEXT_THRESHOLD:
+        return LONG_MODEL
+    return SHORT_MODEL
+
+
+def api_call(system_prompt, user_text, timeout=120, model=None):
     key = next_key()
     payload = json.dumps({
-        "model": MODEL,
+        "model": model or SHORT_MODEL,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_text[:12000]}
@@ -78,7 +86,7 @@ def api_call(system_prompt, user_text, timeout=120):
         "max_tokens": 4096,
         "temperature": 0.15,
     }).encode()
-    
+
     req = urllib.request.Request(
         f"{BASE_URL}/chat/completions", data=payload,
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
@@ -100,17 +108,18 @@ def api_call(system_prompt, user_text, timeout=120):
                 time.sleep(3 * (attempt + 1))
                 continue
             raise Exception(str(e)[:200])
-
 def translate_text(text, target_lang):
     if not text or not isinstance(text, str) or len(text.strip()) < 3:
         return text
-    return api_call(LANG_PROMPTS[target_lang], text)
+    model = pick_model(text)
+    return api_call(LANG_PROMPTS[target_lang], text, model=model)
+
 
 def translate_tags(tags, target_lang):
     if not tags:
         return tags
     try:
-        result = api_call(TAG_PROMPTS[target_lang], json.dumps(tags))
+        result = api_call(TAG_PROMPTS[target_lang], json.dumps(tags), model=SHORT_MODEL)
         m = re.search(r'\[.*?\]', result, re.DOTALL)
         if m:
             parsed = json.loads(m.group())
@@ -170,11 +179,11 @@ def main():
     total = len(remaining)
     if args.limit > 0: remaining = remaining[:args.limit]
     
-    print(f"\n{'='*60}")
-    print(f"🌍 DE → {args.target_lang.upper()} | {args.category}")
-    print(f"🤖 {MODEL} | 🔑 {len(OLLAMA_KEYS)} Keys | ⚡ {MAX_PARALLEL} Workers")
     print(f"{'='*60}")
-    print(f"📊 {total} remaining ({args.limit or 'unlimited'})")
+    print(f"🌍 DE → {args.target_lang.upper()} | {args.category}")
+    print(f"🤖 short={SHORT_MODEL} | long={LONG_MODEL} | 🔑 {len(OLLAMA_KEYS)} Keys | ⚡ {MAX_PARALLEL} Workers")
+    print(f"{'='*60}")
+
     if not remaining: print("✨ Nothing to do."); return
     if args.dry_run:
         for s,_ in remaining[:5]: print(f"  • {s}/")

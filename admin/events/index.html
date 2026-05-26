@@ -1,7 +1,6 @@
 <!DOCTYPE html>// Tirol Tourismus — Admin: Ausstehende Events
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import AdminEventDashboard from '../../../components/AdminEventDashboard.tsx';
-import SegmentedNav from '../../../components/SegmentedNav.astro'
+import AdminEventDashboard from '../../../components/AdminEventDashboard.tsx'
 <BaseLayout
   title="Admin – Event-Einträge – Tirol Tourismus"
   description="Admin-Dashboard zur Freigabe von Event-Einträgen. Nur für Admin zugänglich."
@@ -16,14 +15,10 @@ import SegmentedNav from '../../../components/SegmentedNav.astro'
           <p class="admin-hero-sub">
             Ausstehende Event-Einträge prüfen, freigeben oder ablehnen.
           </p>
-          <SegmentedNav
-            ariaLabel="Admin-Navigation"
-            compact={true}
-            items={[
-              { href: '/admin/pending/', icon: '🏪', label: 'Betriebe' },
-              { href: '/admin/events/', icon: '🎪', label: 'Events', active: true },
-            ]}
-          />
+          <nav class="admin-nav">
+            <a href="/admin/pending/" class="admin-nav-link">🏪 Betriebe</a>
+            <a href="/admin/events/" class="admin-nav-link active">🎪 Events</a>
+          </nav>
         </div>
       </div>
     </section>
@@ -35,3 +30,10 @@ import SegmentedNav from '../../../components/SegmentedNav.astro'
     </section>
   </main>
 </BaseLayout>
+
+<style is:global>
+  .admin-nav{display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+  .admin-nav-link{padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;text-decoration:none;background:var(--surface);border:1px solid var(--glass-border);color:var(--text2);transition:all .2s}
+  .admin-nav-link.active{background:var(--pink);color:#fff;border-color:var(--pink)}
+  .admin-nav-link:hover:not(.active){border-color:var(--pink);color:var(--text)}
+</style>

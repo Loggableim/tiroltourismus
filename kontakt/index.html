@@ -25,9 +25,9 @@
       --tirol-pink-glow:rgba(255,20,147,.18);--gold-glow:rgba(255,215,0,.15);--gold-soft:rgba(255,215,0,.06);
     }
     html{scroll-behavior:smooth}
-    body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s,color .6s}
+    body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s,color .6s;font-display:swap}
     a{color:inherit;text-decoration:none}::selection{background:var(--pink);color:var(--bg)}img{max-width:100%;height:auto;display:block}
-
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
     .topbar{background:rgba(0,0,0,.3);backdrop-filter:blur(12px);padding:8px 0;font-size:12px;color:rgba(255,255,255,.7);position:fixed;top:0;left:0;right:0;z-index:1002;transition:transform .4s var(--ease)}
     [data-theme="alpenpeak"] .topbar{background:rgba(10,10,18,.6);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
     .topbar .container{display:flex;justify-content:space-between;align-items:center;width:100%}
@@ -124,7 +124,7 @@ Schreib uns eine Nachricht – wir melden uns innerhalb von 24 h
 </button> <div class="floating-lang-panel"> <a href="/kontakt/" class="active"> <span class="fl-flag">🇩🇪</span> <span class="fl-name">Deutsch</span> <span class="fl-check">✓</span> </a><a href="/en/kontakt/"> <span class="fl-flag">🇬🇧</span> <span class="fl-name">English</span>  </a><a href="/fr/kontakt/"> <span class="fl-flag">🇫🇷</span> <span class="fl-name">Français</span>  </a><a href="/it/kontakt/"> <span class="fl-flag">🇮🇹</span> <span class="fl-name">Italiano</span>  </a><a href="/es/kontakt/"> <span class="fl-flag">🇪🇸</span> <span class="fl-name">Español</span>  </a><a href="/zh/kontakt/"> <span class="fl-flag">🇨🇳</span> <span class="fl-name">中文</span>  </a> </div> </div> <!-- Weather Widget (populated by JS) --> <div id="weatherWidget" class="weather-widget"></div> <footer class="footer"> <div class="container"> <div class="footer-grid"> <div class="footer-col footer-brand"> <a href="/" class="nav-logo"> <svg viewBox="4 4 404 46" width="340" height="46"><defs> <linearGradient id="ft1"><stop offset="0%" stop-color="#A00D24"></stop><stop offset="100%" stop-color="#C8102E"></stop></linearGradient> <linearGradient id="ft2"><stop offset="0%" stop-color="#C0006E"></stop><stop offset="100%" stop-color="#FF1493"></stop></linearGradient> <linearGradient id="ft3"><stop offset="0%" stop-color="#D4A800"></stop><stop offset="100%" stop-color="#FFD700"></stop></linearGradient> <linearGradient id="ft4"><stop offset="0%" stop-color="#C0006E"></stop><stop offset="100%" stop-color="#FF1493"></stop></linearGradient> <linearGradient id="ft5"><stop offset="0%" stop-color="#003A8A"></stop><stop offset="100%" stop-color="#0066FF"></stop></linearGradient> </defs> <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft1)">T</text> <polygon points="10,36 10,10 34,36" fill="url(#ft1)" opacity="0.08"></polygon> <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft2)">I</text> <polygon points="42,36 42,14 56,36" fill="url(#ft2)" opacity="0.08"></polygon> <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft3)">R</text> <polygon points="68,36 68,8 92,36" fill="url(#ft3)" opacity="0.08"></polygon> <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft4)">O</text> <polygon points="100,36 100,10 126,36" fill="url(#ft4)" opacity="0.08"></polygon> <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft5)">L</text> <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"></circle> <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink)">tourismus</text> </svg></a> <p>Das offizielle Tourismusportal für Tirol – entdecke Berge, Seen und alpine Kultur.</p> <div class="footer-social"> <a href="https://instagram.com/tiroltourismus" aria-label="Instagram">📷</a> <a href="https://tiktok.com/@tiroltourismus" aria-label="TikTok">🎵</a> <a href="https://facebook.com/tiroltourismus" aria-label="Facebook">👍</a> <a href="https://youtube.com/@tiroltourismus" aria-label="YouTube">▶️</a> </div> <!-- ═══ FOOTER LANGUAGE FLAGS ═══ --> <div class="footer-lang"> <a href="/kontakt/" class="active"> 🇩🇪 Deutsch </a><a href="/en/kontakt/"> 🇬🇧 English </a><a href="/fr/kontakt/"> 🇫🇷 Français </a><a href="/it/kontakt/"> 🇮🇹 Italiano </a><a href="/es/kontakt/"> 🇪🇸 Español </a><a href="/zh/kontakt/"> 🇨🇳 中文 </a> </div> </div> <div class="footer-col"><h4>Regionen</h4><a href="/regionen/">Alle Regionen</a><a href="/regionen/oetztal/">Ötztal</a></div> <div class="footer-col"><h4>Erlebnisse</h4><a href="/erlebnisse/">Alle Erlebnisse</a></div> <div class="footer-col"><h4>Service</h4><a href="/preise/" style="color:var(--gold-light);font-weight:600">Preise</a><a href="/ueber-uns/">Über uns</a><a href="/fuer-betriebe/">Für Betriebe</a><a href="/kontakt/">Kontakt</a><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a><a href="/agb/">AGB</a></div> </div> <!-- NEWSLETTER SIGNUP --> <div class="footer-newsletter"> <h3 class="footer-newsletter-title">📬 Newsletter</h3> <p class="footer-newsletter-desc">
 Einmal im Monat die schönsten Seiten Tirols – Berggeschichten,
           Events und exklusive Angebote. Kein Spam, jederzeit kündbar.
-</p> <astro-island uid="r2k8A" prefix="r3" component-url="/assets/NewsletterForm.BELlnHam.js" component-export="default" renderer-url="/assets/client.CbHKJimV.js" props="{&quot;compact&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;NewsletterForm&quot;,&quot;value&quot;:true}" await-children><style>
+</p> <astro-island uid="17MAPk" prefix="r3" component-url="/assets/NewsletterForm.DPPyLkcp.js" component-export="default" renderer-url="/assets/client.CbHKJimV.js" props="{&quot;compact&quot;:[0,true]}" ssr client="load" opts="{&quot;name&quot;:&quot;NewsletterForm&quot;,&quot;value&quot;:true}" await-children><style>
         .nl-root {
           --nl-bg: linear-gradient(135deg, rgba(255,20,147,.06), rgba(212,168,0,.06));
           --nl-border: 1px solid rgba(255,255,255,.08);
@@ -133,32 +133,32 @@ Einmal im Monat die schönsten Seiten Tirols – Berggeschichten,
         }
         .nl-root.nl-compact {
           text-align: left;
-          padding: 0;
         }
-        .nl-root.nl-compact .nl-form-wrap {
-          gap: 10px;
-        }
-        .nl-root.nl-compact .nl-row {
+        .nl-form-wrap {
           display: flex;
-          gap: 10px;
-          align-items: stretch;
+          flex-direction: column;
+          gap: var(--nl-gap);
         }
-        .nl-root.nl-compact .nl-input {
+        .nl-row {
+          display: flex;
+          gap: 8px;
+        }
+        .nl-input {
           flex: 1;
-          padding: 11px 14px;
-          border-radius: 999px;
-          border: 1px solid rgba(255,255,255,.12);
-          background: rgba(255,255,255,.06);
+          padding: 12px 18px;
+          border-radius: 100px;
+          border: var(--nl-border);
+          background: rgba(255,255,255,.08);
           color: var(--text, #F0EDEE);
-          font-size: 12px;
+          font-size: 13px;
           font-family: var(--font-body, 'Montserrat', sans-serif);
           backdrop-filter: blur(10px);
           transition: all .3s;
           min-width: 0;
         }
-        .nl-root.nl-compact .nl-input::placeholder { color: rgba(255,255,255,.32); }
-        .nl-root.nl-compact .nl-input:focus { border-color: var(--pink, #FF1493); background: rgba(255,255,255,.1); box-shadow: 0 0 0 3px rgba(255,20,147,.12); }
-        .nl-root.nl-compact .nl-input.error { border-color: #ff4444; }
+        .nl-input::placeholder { color: rgba(255,255,255,.35); }
+        .nl-input:focus { border-color: var(--pink, #FF1493); background: rgba(255,255,255,.12); box-shadow: 0 0 0 3px rgba(255,20,147,.15); }
+        .nl-input.error { border-color: #ff4444; }
 
         .nl-submit {
           padding: 12px 24px;
@@ -178,11 +178,6 @@ Einmal im Monat die schönsten Seiten Tirols – Berggeschichten,
           align-items: center;
           gap: 6px;
           justify-content: center;
-        }
-        .nl-root.nl-compact .nl-submit {
-          padding: 11px 16px;
-          font-size: 11px;
-          letter-spacing: .35px;
         }
         .nl-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,20,147,.35); }
         .nl-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }

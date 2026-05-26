@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" width="120" height="150">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E30613" stop-opacity=".22"/>
+      <stop offset="100%" stop-color="#E30613" stop-opacity=".06"/>
+    </linearGradient>
+    <clipPath id="shield">
+      <path d="M60,0 L120,0 L120,85 Q120,130 60,145 Q0,130 0,85 L0,0 Z"/>
+    </clipPath>
+  </defs>
+  <path d="M60,0 L120,0 L120,85 Q120,130 60,145 Q0,130 0,85 L0,0 Z" fill="rgba(0,0,0,.18)" transform="translate(2,3)"/>
+  <path d="M60,0 L120,0 L120,85 Q120,130 60,145 Q0,130 0,85 L0,0 Z" fill="url(#bg)" stroke="#E30613" stroke-width="1.5" stroke-opacity=".45"/>
+  <path d="M60,0 L120,0 L120,85 Q120,130 60,145 Q0,130 0,85 L0,0 Z" fill="none" stroke="rgba(255,255,255,.06)" stroke-width=".5" transform="scale(.92) translate(5,6)"/>
+  <line x1="20" y1="102" x2="100" y2="102" stroke="#E30613" stroke-width=".8" stroke-opacity=".2"/>
+  <text x="60" y="78" text-anchor="middle" dominant-baseline="central" font-size="36" fill="#E30613" opacity=".9">🏞️</text>
+  <text x="60" y="130" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" font-weight="600" letter-spacing="1" fill="#E30613" opacity=".55">Zillertal</text>
+</svg>

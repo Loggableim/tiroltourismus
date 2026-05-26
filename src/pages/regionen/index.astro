@@ -61,6 +61,7 @@ const regionen = readCollection('regionen')
                   slug={r.slug}
                   beschreibung={r.entry.kurzbeschreibung}
                   emoji={r.entry.emoji}
+                  wappenSrc={`/wappen/regionen/${r.slug}.svg`}
                   bewertung={r.entry.bewertung}
                   farbe={r.entry.farbe}
                   featured={r.entry.featured}

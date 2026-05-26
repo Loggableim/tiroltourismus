@@ -1,0 +1,896 @@
+{
+  "result": [
+    {
+      "id": "3ee34916-0f70-41e1-ad16-48eeebe2527d",
+      "short_id": "3ee34916",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "production",
+      "url": "https://3ee34916.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T21:22:31.153933Z",
+      "modified_on": "2026-05-26T21:22:34.861152Z",
+      "latest_stage": {
+        "name": "deploy",
+        "started_on": null,
+        "ended_on": "2026-05-26T21:22:34.861152Z",
+        "status": "success"
+      },
+      "deployment_trigger": {
+        "type": "ad_hoc",
+        "metadata": {
+          "branch": "master",
+          "commit_hash": "2208fd3ba4196d9829f4c329d59d9b21cae437d8",
+          "commit_message": "[i18n] ES+ZH translations complete, 6 languages live",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T21:22:31.153933Z",
+          "ended_on": null,
+          "status": "active"
+        },
+        {
+          "name": "initialize",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        },
+        {
+          "name": "build",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": "2026-05-26T21:22:34.861152Z",
+          "status": "success"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": "bundled",
+      "aliases": [
+        "https://tiroltourismus.com"
+      ],
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": true
+    },
+    {
+      "id": "78871bb6-001f-48ce-87d8-827e261d57ed",
+      "short_id": "78871bb6",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "production",
+      "url": "https://78871bb6.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T21:19:08.974161Z",
+      "modified_on": "2026-05-26T21:19:38.681045Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T21:19:38.681045Z",
+        "ended_on": null,
+        "status": "active"
+      },
+      "deployment_trigger": {
+        "type": "ad_hoc",
+        "metadata": {
+          "branch": "master",
+          "commit_hash": "2208fd3ba4196d9829f4c329d59d9b21cae437d8",
+          "commit_message": "[i18n] ES+ZH translations complete, 6 languages live",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T21:19:09.13151Z",
+          "ended_on": "2026-05-26T21:19:09.136317Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T21:19:09.136317Z",
+          "ended_on": "2026-05-26T21:19:12.017727Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T21:19:12.017727Z",
+          "ended_on": "2026-05-26T21:19:38.681045Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T21:19:38.681045Z",
+          "ended_on": null,
+          "status": "active"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "5da57efc-47a8-41d1-a246-5fd9148965d3",
+      "short_id": "5da57efc",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "preview",
+      "url": "https://5da57efc.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T20:34:58.12582Z",
+      "modified_on": "2026-05-26T20:35:30.840627Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T20:35:16.833772Z",
+        "ended_on": "2026-05-26T20:35:30.840627Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "gh-pages",
+          "commit_hash": "1039eb89225782ed680821eb7fb9b1b682e193db",
+          "commit_message": "deploy: 2208fd3ba4196d9829f4c329d59d9b21cae437d8",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T20:34:58.277662Z",
+          "ended_on": "2026-05-26T20:34:58.281488Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T20:34:58.281488Z",
+          "ended_on": "2026-05-26T20:35:01.935827Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T20:35:01.935827Z",
+          "ended_on": "2026-05-26T20:35:16.833772Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T20:35:16.833772Z",
+          "ended_on": "2026-05-26T20:35:30.840627Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "f25f0d6e-c599-4f99-96bf-a6654351017c",
+      "short_id": "f25f0d6e",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "preview",
+      "url": "https://f25f0d6e.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T20:05:06.997655Z",
+      "modified_on": "2026-05-26T20:25:09.793765Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T20:25:04.075227Z",
+        "ended_on": "2026-05-26T20:25:09.793765Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "gh-pages",
+          "commit_hash": "8f70f864c385ac5236998ef13f18a6cf69f2cb71",
+          "commit_message": "deploy: 507b923c78f2010d9b7b0ae614c978a3e4553f68",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T20:05:07.417453Z",
+          "ended_on": "2026-05-26T20:24:54.33138Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T20:24:54.33138Z",
+          "ended_on": "2026-05-26T20:24:56.081183Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T20:24:56.081183Z",
+          "ended_on": "2026-05-26T20:25:04.075227Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T20:25:04.075227Z",
+          "ended_on": "2026-05-26T20:25:09.793765Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "ea6dc426-2e3d-4d14-946c-288489d9afd9",
+      "short_id": "ea6dc426",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "production",
+      "url": "https://ea6dc426.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T19:45:48.668298Z",
+      "modified_on": "2026-05-26T20:24:54.086955Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T19:49:28.465437Z",
+        "ended_on": "2026-05-26T20:24:54.086955Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "master",
+          "commit_hash": "2208fd3ba4196d9829f4c329d59d9b21cae437d8",
+          "commit_message": "[i18n] ES+ZH translations complete, 6 languages live",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T19:45:49.563737Z",
+          "ended_on": "2026-05-26T19:48:54.087818Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T19:48:54.087818Z",
+          "ended_on": "2026-05-26T19:48:58.627906Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T19:48:58.627906Z",
+          "ended_on": "2026-05-26T19:49:28.465437Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T19:49:28.465437Z",
+          "ended_on": "2026-05-26T20:24:54.086955Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "c6ecc3fd-3fda-428c-a861-3e07f2b08031",
+      "short_id": "c6ecc3fd",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "production",
+      "url": "https://c6ecc3fd.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T19:11:54.478487Z",
+      "modified_on": "2026-05-26T19:48:53.877114Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T19:12:26.470798Z",
+        "ended_on": "2026-05-26T19:48:53.877114Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "master",
+          "commit_hash": "507b923c78f2010d9b7b0ae614c978a3e4553f68",
+          "commit_message": "[i18n] ES+ZH translations complete, 6 languages live",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T19:11:54.794283Z",
+          "ended_on": "2026-05-26T19:11:54.799Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T19:11:54.799Z",
+          "ended_on": "2026-05-26T19:11:58.832805Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T19:11:58.832805Z",
+          "ended_on": "2026-05-26T19:12:26.470798Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T19:12:26.470798Z",
+          "ended_on": "2026-05-26T19:48:53.877114Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "46a00c40-5bc7-4955-9bff-7f3f00e64e19",
+      "short_id": "46a00c40",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "preview",
+      "url": "https://46a00c40.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T17:15:40.487243Z",
+      "modified_on": "2026-05-26T17:15:57.858997Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T17:15:52.567802Z",
+        "ended_on": "2026-05-26T17:15:57.858997Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "gh-pages",
+          "commit_hash": "3be9b56d01bf69ef1eaf4510c4718165395e2a09",
+          "commit_message": "deploy: 08edc2b7d00dee741f045098ce6e5d511e03f31b",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T17:15:40.75988Z",
+          "ended_on": "2026-05-26T17:15:40.765217Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T17:15:40.765217Z",
+          "ended_on": "2026-05-26T17:15:42.817011Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T17:15:42.817011Z",
+          "ended_on": "2026-05-26T17:15:52.567802Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T17:15:52.567802Z",
+          "ended_on": "2026-05-26T17:15:57.858997Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "3da4d7ee-a1ee-4424-b31c-305fd6c6ec57",
+      "short_id": "3da4d7ee",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "preview",
+      "url": "https://3da4d7ee.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T16:32:27.650294Z",
+      "modified_on": "2026-05-26T17:11:12.661623Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T17:11:05.792791Z",
+        "ended_on": "2026-05-26T17:11:12.661623Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "gh-pages",
+          "commit_hash": "79e1b513135bcb8f395e58e39c71f0e0c7464afe",
+          "commit_message": "deploy: 50b192682fe7ea87acf0eb13453c6c89577073c9",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T16:32:27.787569Z",
+          "ended_on": "2026-05-26T17:10:55.56087Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T17:10:55.56087Z",
+          "ended_on": "2026-05-26T17:10:57.88891Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T17:10:57.88891Z",
+          "ended_on": "2026-05-26T17:11:05.792791Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T17:11:05.792791Z",
+          "ended_on": "2026-05-26T17:11:12.661623Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "a0d7d230-5e54-4078-bab7-6341de39fe80",
+      "short_id": "a0d7d230",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "production",
+      "url": "https://a0d7d230.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T16:31:29.620474Z",
+      "modified_on": "2026-05-26T17:10:55.389869Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T16:35:22.271387Z",
+        "ended_on": "2026-05-26T17:10:55.389869Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "master",
+          "commit_hash": "08edc2b7d00dee741f045098ce6e5d511e03f31b",
+          "commit_message": "[i18n] ES+ZH translations complete, 6 languages live",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T16:31:29.759052Z",
+          "ended_on": "2026-05-26T16:34:54.200933Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T16:34:54.200933Z",
+          "ended_on": "2026-05-26T16:34:57.922456Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T16:34:57.922456Z",
+          "ended_on": "2026-05-26T16:35:22.271387Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T16:35:22.271387Z",
+          "ended_on": "2026-05-26T17:10:55.389869Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    },
+    {
+      "id": "2f13e07e-b08d-4962-bb62-758be6decf15",
+      "short_id": "2f13e07e",
+      "project_id": "edfa6812-7def-489f-8299-b9e82535015a",
+      "project_name": "tiroltourismus",
+      "environment": "production",
+      "url": "https://2f13e07e.tiroltourismus.pages.dev",
+      "created_on": "2026-05-26T15:58:46.095363Z",
+      "modified_on": "2026-05-26T16:34:54.008738Z",
+      "latest_stage": {
+        "name": "build",
+        "started_on": "2026-05-26T15:59:19.262525Z",
+        "ended_on": "2026-05-26T16:34:54.008738Z",
+        "status": "failure"
+      },
+      "deployment_trigger": {
+        "type": "github:push",
+        "metadata": {
+          "branch": "master",
+          "commit_hash": "50b192682fe7ea87acf0eb13453c6c89577073c9",
+          "commit_message": "[i18n] ES+ZH translations complete, 6 languages live",
+          "commit_dirty": false
+        }
+      },
+      "stages": [
+        {
+          "name": "queued",
+          "started_on": "2026-05-26T15:58:46.247925Z",
+          "ended_on": "2026-05-26T15:58:46.250777Z",
+          "status": "success"
+        },
+        {
+          "name": "initialize",
+          "started_on": "2026-05-26T15:58:46.250777Z",
+          "ended_on": "2026-05-26T15:58:48.153739Z",
+          "status": "success"
+        },
+        {
+          "name": "clone_repo",
+          "started_on": "2026-05-26T15:58:48.153739Z",
+          "ended_on": "2026-05-26T15:59:19.262525Z",
+          "status": "success"
+        },
+        {
+          "name": "build",
+          "started_on": "2026-05-26T15:59:19.262525Z",
+          "ended_on": "2026-05-26T16:34:54.008738Z",
+          "status": "failure"
+        },
+        {
+          "name": "deploy",
+          "started_on": null,
+          "ended_on": null,
+          "status": "idle"
+        }
+      ],
+      "build_config": {
+        "build_command": "npm run build",
+        "destination_dir": "dist",
+        "build_caching": true,
+        "root_dir": "",
+        "web_analytics_tag": null,
+        "web_analytics_token": null
+      },
+      "source": {
+        "type": "github",
+        "config": {
+          "owner": "Loggableim",
+          "repo_name": "tiroltourismus",
+          "production_branch": "master",
+          "pr_comments_enabled": false
+        }
+      },
+      "env_vars": {},
+      "d1_databases": {
+        "DB": {
+          "id": "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+        }
+      },
+      "compatibility_date": "2026-05-19",
+      "compatibility_flags": [],
+      "build_image_major_version": 4,
+      "usage_model": null,
+      "aliases": null,
+      "is_skipped": false,
+      "production_branch": "master",
+      "uses_functions": null
+    }
+  ],
+  "success": true,
+  "errors": [],
+  "messages": [],
+  "result_info": {
+    "page": 1,
+    "per_page": 10,
+    "count": 10,
+    "total_count": 58,
+    "total_pages": 6
+  }
+}

@@ -30,12 +30,12 @@ const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
 </a>
 
 <style is:global>
-  .region-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(0,0,0,.08);backdrop-filter:blur(12px)}
-  .region-card:hover{transform:translateY(-8px);border-color:rgba(255,20,147,.42);box-shadow:0 22px 56px rgba(0,0,0,.14)}
-  .region-card-img{height:190px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(255,20,147,.08),rgba(212,168,0,.08))}
+  .region-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px)}
+  .region-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+  .region-card-img{height:190px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.015))}
   .region-card-img::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.08),transparent 60%);pointer-events:none}
-  .region-card-img .region-emoji{position:relative;z-index:1;font-size:56px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.18))}
-  .region-card-img .region-blob{position:absolute;width:220px;height:220px;border-radius:50%;opacity:.16;filter:blur(46px);top:50%;left:50%;transform:translate(-50%,-50%)}
+  .region-card-img .region-emoji{position:relative;z-index:1;font-size:56px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.16))}
+  .region-card-img .region-blob{position:absolute;width:220px;height:220px;border-radius:50%;opacity:.1;filter:blur(52px);top:50%;left:50%;transform:translate(-50%,-50%)}
   .region-card-body{padding:26px 24px 24px;flex:1;display:flex;flex-direction:column}
   .region-card-body h3{font-family:var(--font-display);font-size:26px;letter-spacing:.7px;text-transform:uppercase;margin-bottom:8px;line-height:1.05;color:var(--text)}
   .region-card-body p{font-size:14px;color:var(--text2);line-height:1.72;margin-bottom:14px;flex:1}
@@ -44,7 +44,7 @@ const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
   .region-stars .star.empty{color:var(--text3)}
   .region-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--pink);transition:all .3s}
   .region-link:hover{gap:10px}
-  .featured-badge{display:inline-block;padding:3px 12px;border-radius:100px;font-size:10px;font-weight:700;background:rgba(255,215,0,.9);color:#1a1a1a;margin-bottom:10px;width:fit-content;box-shadow:0 6px 16px rgba(255,215,0,.18)}
+  .featured-badge{display:inline-block;padding:3px 12px;border-radius:100px;font-size:10px;font-weight:700;background:rgba(255,215,0,.9);color:#1a1a1a;margin-bottom:10px;width:fit-content;box-shadow:0 4px 12px rgba(255,215,0,.14)}
   @media(max-width:600px){
     .region-card-img{height:160px}
     .region-card-body h3{font-size:24px}

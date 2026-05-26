@@ -8,6 +8,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
+import AdminTabs from './AdminTabs';
 
 /* ── Types ── */
 export interface BetriebEntry {
@@ -200,17 +201,15 @@ export default function AdminPendingDashboard() {
 
       {/* Actions */}
       <div className="admin-actions-bar">
-        <div className="admin-tabs">
-          <button className={`admin-tab${filter === 'pending' ? ' active' : ''}`} onClick={() => setFilter('pending')}>
-            ⏳ Ausstehend ({pending.length})
-          </button>
-          <button className={`admin-tab${filter === 'approved' ? ' active' : ''}`} onClick={() => setFilter('approved')}>
-            ✅ Freigegeben ({approved.length})
-          </button>
-          <button className={`admin-tab${filter === 'all' ? ' active' : ''}`} onClick={() => setFilter('all')}>
-            📋 Alle anzeigen
-          </button>
-        </div>
+        <AdminTabs
+          active={filter}
+          onChange={setFilter}
+          items={[
+            { value: 'pending', label: `📋 Ausstehend (${pending.length})` },
+            { value: 'approved', label: `✅ Freigegeben (${approved.length})` },
+            { value: 'all', label: `📦 Alle (${pending.length + approved.length})` },
+          ]}
+        />
         <div className="admin-actions-r">
           <button className="admin-btn admin-btn-ghost" onClick={handleRefresh}>
             🔄 Aktualisieren

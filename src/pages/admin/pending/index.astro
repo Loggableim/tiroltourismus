@@ -2,6 +2,7 @@
 // Tirol Tourismus — Admin: Ausstehende Betriebs-Einträge
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import AdminPendingDashboard from '../../../components/AdminPendingDashboard.tsx';
+import SegmentedNav from '../../../components/SegmentedNav.astro';
 ---
 
 <BaseLayout
@@ -18,10 +19,14 @@ import AdminPendingDashboard from '../../../components/AdminPendingDashboard.tsx
           <p class="admin-hero-sub">
             Ausstehende Betriebs-Einträge prüfen, freigeben oder ablehnen.
           </p>
-          <nav class="admin-nav">
-            <a href="/admin/pending/" class="admin-nav-link active">🏪 Betriebe</a>
-            <a href="/admin/events/" class="admin-nav-link">🎪 Events</a>
-          </nav>
+          <SegmentedNav
+            ariaLabel="Admin-Navigation"
+            compact={true}
+            items={[
+              { href: '/admin/pending/', icon: '🏪', label: 'Betriebe', active: true },
+              { href: '/admin/events/', icon: '🎪', label: 'Events' },
+            ]}
+          />
         </div>
       </div>
     </section>
@@ -152,19 +157,6 @@ import AdminPendingDashboard from '../../../components/AdminPendingDashboard.tsx
     gap: 12px;
     margin-bottom: 24px;
   }
-  .admin-tabs { display: flex; gap: 8px; }
-  .admin-tab {
-    padding: 8px 16px;
-    border-radius: 100px;
-    border: 1px solid var(--glass-border);
-    background: var(--surface);
-    color: var(--text2);
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all .3s;
-  }
-  .admin-tab.active { background: var(--pink); color: #fff; border-color: var(--pink); }
   .admin-actions-r { display: flex; gap: 8px; }
 
   .admin-btn {
@@ -176,6 +168,7 @@ import AdminPendingDashboard from '../../../components/AdminPendingDashboard.tsx
     cursor: pointer;
     transition: all .3s var(--ease);
   }
+
   .admin-btn-approve { background: var(--green); color: #fff; }
   .admin-btn-approve:hover { box-shadow: 0 4px 16px rgba(0,200,83,.3); }
   .admin-btn-reject { background: #E53935; color: #fff; }

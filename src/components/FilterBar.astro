@@ -1,0 +1,40 @@
+---
+export interface FilterOption {
+  value: string;
+  label: string;
+}
+
+export interface Props {
+  keyName: string;
+  options: FilterOption[];
+  allLabel?: string;
+  allValue?: string;
+  ariaLabel?: string;
+  compact?: boolean;
+  class?: string;
+}
+
+const {
+  keyName,
+  options,
+  allLabel = 'Alle',
+  allValue = 'all',
+  ariaLabel,
+  compact = false,
+  class: className,
+} = Astro.props;
+---
+<div
+  class:list={['filter-bar', compact && 'filter-bar--compact', className]}
+  data-filter-bar
+  data-filter-key={keyName}
+  data-filter-all={allValue}
+  aria-label={ariaLabel || `${keyName} filtern`}
+>
+  <button type="button" class="filter-pill active" data-filter-value={allValue}>{allLabel}</button>
+  {options.map((option) => (
+    <button type="button" class="filter-pill" data-filter-value={option.value}>
+      {option.label}
+    </button>
+  ))}
+</div>

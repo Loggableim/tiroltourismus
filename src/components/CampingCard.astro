@@ -36,29 +36,29 @@ const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen
 </a>
 
 <style is:global>
-  .cp-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:all .4s var(--ease);display:flex;flex-direction:column}
-  .cp-card:hover{transform:translateY(-5px);border-color:var(--green, #00C853);box-shadow:0 16px 48px rgba(0,0,0,.08)}
-  .cp-img{position:relative;height:140px;display:flex;align-items:center;justify-content:center;background:var(--surface)}
-  .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a}
-  .badge-silver{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--green),#059669);color:#fff}
-  .cp-placeholder{font-size:48px;color:var(--text3)}
-  .cp-body{padding:16px 20px 20px;flex:1;display:flex;flex-direction:column}
+  .cp-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(0,0,0,.08);backdrop-filter:blur(12px)}
+  .cp-card:hover{transform:translateY(-8px);border-color:rgba(0,200,83,.42);box-shadow:0 22px 56px rgba(0,0,0,.14)}
+  .cp-img{position:relative;height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,200,83,.08),rgba(255,255,255,.02))}
+  .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a;box-shadow:0 6px 16px rgba(255,215,0,.18)}
+  .badge-silver{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--green),#059669);color:#fff;box-shadow:0 6px 16px rgba(0,200,83,.16)}
+  .cp-placeholder{font-size:48px;color:var(--text3);filter:drop-shadow(0 8px 20px rgba(0,0,0,.18))}
+  .cp-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
   .cp-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:4px}
-  .cp-name{font-family:var(--font-display);font-size:22px;line-height:1.1;letter-spacing:.5px;margin-bottom:2px;color:var(--text)}
+  .cp-name{font-family:var(--font-display);font-size:22px;line-height:1.08;letter-spacing:.35px;margin-bottom:2px;color:var(--text)}
   .cp-ort{font-size:12px;color:var(--text2);margin-bottom:8px}
   .cp-ausstattung{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
-  .cp-tag{padding:2px 8px;border-radius:100px;font-size:9px;font-weight:600;background:var(--surface);border:1px solid var(--glass-border);color:var(--text2)}
+  .cp-tag{padding:2px 8px;border-radius:100px;font-size:9px;font-weight:600;background:var(--surface);border:1px solid rgba(255,255,255,.09);color:var(--text2)}
   .cp-tag-more{color:var(--text3)!important}
   .cp-cta{display:block;width:100%;padding:12px;margin-top:auto;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
   .cp-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
   @media(max-width:600px){
-    .cp-img{height:120px}
-    .cp-name{font-size:20px}
-    .cp-body{padding:14px 18px 18px}
+    .cp-img{height:130px}
+    .cp-name{font-size:19px}
+    .cp-body{padding:16px 18px 18px}
   }
   @media(max-width:480px){
-    .cp-img{height:100px}
-    .cp-name{font-size:18px}
+    .cp-img{height:110px}
+    .cp-name{font-size:17px}
     .cp-body{padding:12px}
   }
 </style>

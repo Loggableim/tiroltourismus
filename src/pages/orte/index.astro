@@ -5,11 +5,19 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import SectionMap from '../../sections/SectionMap.astro';
 import OrtCard from '../../components/OrtCard.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
-const orte = readCollection('orte').filter(o => isPublished(o.entry));
+const orte = readCollection('orte').filter((o) => isPublished(o.entry));
+const regionen = readCollection('regionen')
+  .filter((r) => isPublished(r.entry))
+  .sort((a, b) => (b.entry.bewertung || 0) - (a.entry.bewertung || 0) || (a.entry.titel || '').localeCompare(b.entry.titel || '', 'de'));
+const regionFilterOptions = regionen
+  .map((r) => ({ slug: r.slug, label: r.entry.titel }))
+  .sort((a, b) => a.label.localeCompare(b.label, 'de'));
+const regionLabel = Object.fromEntries(regionen.map((r) => [r.slug, r.entry.titel]));
 
-const orteMitKarte = orte.filter(o => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
+const orteMitKarte = orte.filter((o) => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
 const orteMarkers = orteMitKarte.map((o) => ({
   lat: o.entry.koordinaten.lat,
   lng: o.entry.koordinaten.lng,
@@ -58,6 +66,14 @@ const orteMarkers = orteMitKarte.map((o) => ({
             sub="Von charmanten Dörfern bis zu pulsierenden Städten – jeder Ort in Tirol hat seinen eigenen Charakter."
           />
 
+          {regionen.length > 1 && (
+            <FilterBar
+              keyName="cat"
+              ariaLabel="Orte nach Region filtern"
+              options={regionFilterOptions.map((r) => ({ value: r.slug, label: r.label }))}
+            />
+          )}
+
           <div class="orte-grid" id="orte-grid">
             {orte.map((o) => (
               <OrtCard
@@ -66,6 +82,7 @@ const orteMarkers = orteMitKarte.map((o) => ({
                 beschreibung={o.entry.kurzbeschreibung}
                 emoji={o.entry.emoji}
                 farbe={o.entry.farbe}
+                region={o.entry.region}
               />
             ))}
           </div>

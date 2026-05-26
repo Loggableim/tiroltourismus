@@ -109,32 +109,32 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
         }
         .nl-root.nl-compact {
           text-align: left;
+          padding: 0;
         }
-        .nl-form-wrap {
+        .nl-root.nl-compact .nl-form-wrap {
+          gap: 10px;
+        }
+        .nl-root.nl-compact .nl-row {
           display: flex;
-          flex-direction: column;
-          gap: var(--nl-gap);
+          gap: 10px;
+          align-items: stretch;
         }
-        .nl-row {
-          display: flex;
-          gap: 8px;
-        }
-        .nl-input {
+        .nl-root.nl-compact .nl-input {
           flex: 1;
-          padding: 12px 18px;
-          border-radius: 100px;
-          border: var(--nl-border);
-          background: rgba(255,255,255,.08);
+          padding: 11px 14px;
+          border-radius: 999px;
+          border: 1px solid rgba(255,255,255,.12);
+          background: rgba(255,255,255,.06);
           color: var(--text, #F0EDEE);
-          font-size: 13px;
+          font-size: 12px;
           font-family: var(--font-body, 'Montserrat', sans-serif);
           backdrop-filter: blur(10px);
           transition: all .3s;
           min-width: 0;
         }
-        .nl-input::placeholder { color: rgba(255,255,255,.35); }
-        .nl-input:focus { border-color: var(--pink, #FF1493); background: rgba(255,255,255,.12); box-shadow: 0 0 0 3px rgba(255,20,147,.15); }
-        .nl-input.error { border-color: #ff4444; }
+        .nl-root.nl-compact .nl-input::placeholder { color: rgba(255,255,255,.32); }
+        .nl-root.nl-compact .nl-input:focus { border-color: var(--pink, #FF1493); background: rgba(255,255,255,.1); box-shadow: 0 0 0 3px rgba(255,20,147,.12); }
+        .nl-root.nl-compact .nl-input.error { border-color: #ff4444; }
 
         .nl-submit {
           padding: 12px 24px;
@@ -154,6 +154,11 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
           align-items: center;
           gap: 6px;
           justify-content: center;
+        }
+        .nl-root.nl-compact .nl-submit {
+          padding: 11px 16px;
+          font-size: 11px;
+          letter-spacing: .35px;
         }
         .nl-submit:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,20,147,.35); }
         .nl-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; box-shadow: none; }

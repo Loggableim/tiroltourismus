@@ -1,0 +1,1051 @@
+[23:07:30] fail Imsterberg attempt=1
+[23:07:30] hard restart comfyui
+[23:07:30] [42/271] Innsbruck-Land / Inzing
+[23:07:30] prompt Inzing: 06a480e4-6912-42cc-ac70-4112bbe327ec
+[23:07:31] comfyui ready
+[23:07:31] prompt Roppen: 056b88f5-8484-474a-a76d-6d7435595fc4
+[23:07:32] error state Inzing
+[23:07:32] fail Inzing attempt=1
+[23:07:32] hard restart comfyui
+[23:07:32] comfyui ready
+[23:07:33] prompt Imsterberg: 8f0a5666-dfd1-47ef-a179-af9fd5ea4276
+[23:07:34] prompt Inzing: ce3a3a6a-69d1-4a41-af2a-58f6dcd7d396
+[23:07:34] error state Roppen
+[23:07:34] fail Roppen attempt=3
+[23:07:34] hard restart comfyui
+[23:07:34] error state Imsterberg
+[23:07:35] comfyui ready
+[23:07:37] error state Inzing
+[23:07:37] fail Inzing attempt=2
+[23:07:37] gave up Roppen
+[23:07:37] fail Imsterberg attempt=2
+[23:07:38] [17/271] Imst / St. Leonhard im Pitztal
+[23:07:38] prompt St. Leonhard im Pitztal: ce07d2ff-c4bf-4592-8ec2-b4b438c47c7c
+[23:07:39] prompt Inzing: 8fe33da9-ba1a-4054-9999-fe4f3a4c3b30
+[23:07:39] error state St. Leonhard im Pitztal
+[23:07:39] fail St. Leonhard im Pitztal attempt=1
+[23:07:41] error state Inzing
+[23:07:41] fail Inzing attempt=3
+[23:07:41] hard restart comfyui
+[23:07:41] comfyui ready
+[23:07:42] prompt St. Leonhard im Pitztal: 46fb566c-a4d2-4767-894b-d94f9e2e3aa3
+[23:07:43] prompt Imsterberg: 134f55ee-cc7c-4763-9939-2b45f59ea1f2
+[23:07:43] gave up Inzing
+[23:07:43] error state St. Leonhard im Pitztal
+[23:07:43] fail St. Leonhard im Pitztal attempt=2
+[23:07:43] hard restart comfyui
+[23:07:43] [43/271] Innsbruck-Land / Kematen in Tirol
+[23:07:44] prompt Kematen in Tirol: ee5a8b77-022c-4f41-abce-4d93bc213866
+[23:07:44] error state Imsterberg
+[23:07:44] comfyui ready
+[23:07:46] prompt St. Leonhard im Pitztal: a38ca819-4827-49e2-beb0-a9771da84bac
+[23:07:47] error state Kematen in Tirol
+[23:07:47] fail Kematen in Tirol attempt=1
+[23:07:48] error state St. Leonhard im Pitztal
+[23:07:48] fail St. Leonhard im Pitztal attempt=3
+[23:07:49] prompt Kematen in Tirol: 176cf771-c600-41f1-92eb-93b3b5367be4
+[23:07:50] gave up St. Leonhard im Pitztal
+[23:07:50] error state Kematen in Tirol
+[23:07:50] fail Kematen in Tirol attempt=2
+[23:07:50] hard restart comfyui
+[23:07:50] [18/271] Imst / Sautens
+[23:07:50] prompt Sautens: f80d18aa-3921-42b0-8067-a4de315eb2cc
+[23:07:50] comfyui ready
+[23:07:52] error state Sautens
+[23:07:52] fail Sautens attempt=1
+[23:07:52] hard restart comfyui
+[23:07:52] fail Imsterberg attempt=3
+[23:07:52] hard restart comfyui
+[23:07:53] prompt Kematen in Tirol: ea8eaa90-a0e8-4f5a-8d0e-1bd35c814c9f
+[23:07:53] comfyui ready
+[23:07:53] comfyui ready
+[23:07:54] error state Kematen in Tirol
+[23:07:54] fail Kematen in Tirol attempt=3
+[23:07:55] prompt Sautens: 3a25ba84-f5f3-4a98-946c-d6859b2ec408
+[23:07:55] gave up Imsterberg
+[23:07:56] [5/271] Imst / Jerzens
+[23:07:56] missing=271
+[23:07:56] [1/271] Imst / Arzl im Pitztal
+[23:07:56] gave up Kematen in Tirol
+[23:07:57] [44/271] Innsbruck-Land / Kolsass
+[23:07:57] prompt Kolsass: 022de4db-b50d-4d43-87b6-af8ee7569fe3
+[23:07:57] error state Sautens
+[23:07:57] fail Sautens attempt=2
+[23:07:59] prompt Sautens: 22703b2f-96a7-4623-9b1e-683e08419e67
+[23:08:00] error state Kolsass
+[23:08:00] fail Kolsass attempt=1
+[23:08:00] hard restart comfyui
+[23:08:00] comfyui ready
+[23:08:01] prompt Jerzens: 5f123b4e-ece3-4f37-9a16-731865853873
+[23:08:02] error state Sautens
+[23:08:02] fail Sautens attempt=3
+[23:08:02] hard restart comfyui
+[23:08:02] prompt Kolsass: a61872ae-5f4e-4d0b-8da9-62a327b37b53
+[23:08:02] error state Jerzens
+[23:08:03] comfyui ready
+[23:08:04] error state Kolsass
+[23:08:04] fail Kolsass attempt=2
+[23:08:05] gave up Sautens
+[23:08:05] prompt Arzl im Pitztal: 622cfcde-d7b0-4867-a1b0-a13449ad7f12
+[23:08:05] [19/271] Imst / Silz
+[23:08:05] prompt Silz: ac01f61e-61cc-4561-b169-73f83b432516
+[23:08:06] prompt Kolsass: 65baf71a-bda2-413c-b69d-cbd96f487cc2
+[23:08:07] error state Arzl im Pitztal
+[23:08:08] error state Silz
+[23:08:08] fail Silz attempt=1
+[23:08:10] error state Kolsass
+[23:08:10] fail Kolsass attempt=3
+[23:08:10] hard restart comfyui
+[23:08:10] prompt Silz: 91d6f5a5-5805-4ed3-a065-0a32afdd7ac7
+[23:08:10] comfyui ready
+[23:08:12] fail Jerzens attempt=1
+[23:08:12] fail Arzl im Pitztal attempt=1
+[23:08:12] error state Silz
+[23:08:12] fail Silz attempt=2
+[23:08:12] hard restart comfyui
+[23:08:12] gave up Kolsass
+[23:08:13] [45/271] Innsbruck-Land / Kolsassberg
+[23:08:13] prompt Kolsassberg: 78b14ca2-4737-4f37-94a2-6ad7456fa6c8
+[23:08:13] comfyui ready
+[23:08:15] error state Kolsassberg
+[23:08:15] fail Kolsassberg attempt=1
+[23:08:15] prompt Silz: 7ad6245d-5b4b-4e81-a15e-eabfe65c1380
+[23:08:17] error state Silz
+[23:08:17] fail Silz attempt=3
+[23:08:17] prompt Kolsassberg: ad3c0b5b-a952-4f34-ace1-6f231981b96d
+[23:08:18] error state Kolsassberg
+[23:08:18] fail Kolsassberg attempt=2
+[23:08:18] hard restart comfyui
+[23:08:19] comfyui ready
+[23:08:19] gave up Silz
+[23:08:19] [20/271] Imst / Sölden
+[23:08:19] prompt Sölden: 5f747de1-adf8-4336-802d-88136caac61c
+[23:08:21] prompt Kolsassberg: afb56a7c-d69a-4616-86db-5317c8873a8f
+[23:08:21] error state Sölden
+[23:08:21] fail Sölden attempt=1
+[23:08:21] hard restart comfyui
+[23:08:22] comfyui ready
+[23:08:22] error state Kolsassberg
+[23:08:22] fail Kolsassberg attempt=3
+[23:08:24] prompt Arzl im Pitztal: a351166f-95e8-47d6-84a2-483180484e89
+[23:08:24] prompt Sölden: 5dcbe0c7-160b-4202-9bf0-304be822b7a3
+[23:08:24] gave up Kolsassberg
+[23:08:25] [46/271] Innsbruck-Land / Lans
+[23:08:25] prompt Lans: 22c44aa5-57cc-4b6d-b664-f97aee270403
+[23:08:26] error state Arzl im Pitztal
+[23:08:26] error state Sölden
+[23:08:26] fail Sölden attempt=2
+[23:08:26] error state Lans
+[23:08:26] fail Lans attempt=1
+[23:08:26] hard restart comfyui
+[23:08:27] comfyui ready
+[23:08:28] fail Arzl im Pitztal attempt=2
+[23:08:28] hard restart comfyui
+[23:08:28] prompt Sölden: 9b9896fc-59c2-4659-90fd-91bb67ca3c21
+[23:08:29] prompt Lans: 4f3f6f9e-18e8-4da9-a525-f0172a788f64
+[23:08:29] comfyui ready
+[23:08:29] error state Sölden
+[23:08:29] fail Sölden attempt=3
+[23:08:29] hard restart comfyui
+[23:08:30] error state Lans
+[23:08:30] fail Lans attempt=2
+[23:08:30] comfyui ready
+[23:08:31] prompt Arzl im Pitztal: e39a8e24-8f0a-4db3-a336-a9d473ed2d57
+[23:08:32] gave up Sölden
+[23:08:32] prompt Lans: 6ecf4f5e-aedd-4c73-bd49-bd27a5692fce
+[23:08:32] error state Arzl im Pitztal
+[23:08:33] [21/271] Imst / Stams
+[23:08:33] prompt Stams: f85d1d56-4e53-4d4e-bf21-55c10ad2674f
+[23:08:34] error state Lans
+[23:08:34] fail Lans attempt=3
+[23:08:34] hard restart comfyui
+[23:08:34] hard restart comfyui
+[23:08:34] comfyui ready
+[23:08:34] error state Stams
+[23:08:34] fail Stams attempt=1
+[23:08:35] comfyui ready
+[23:08:35] prompt Jerzens: d2d1631b-8c39-4e01-ad48-73d368ddc5c3
+[23:08:36] gave up Lans
+[23:08:36] fail Arzl im Pitztal attempt=3
+[23:08:36] prompt Stams: 9046dd45-b58b-45c5-a072-454b050b84f0
+[23:08:37] [47/271] Innsbruck-Land / Leutasch
+[23:08:37] prompt Leutasch: bf2f81f4-e410-45bf-b33d-c7ac12473e46
+[23:08:37] error state Jerzens
+[23:08:38] error state Stams
+[23:08:38] fail Stams attempt=2
+[23:08:38] hard restart comfyui
+[23:08:38] error state Leutasch
+[23:08:38] fail Leutasch attempt=1
+[23:08:38] gave up Arzl im Pitztal
+[23:08:39] [2/271] Imst / Haiming
+[23:08:39] comfyui ready
+[23:08:40] fail Jerzens attempt=2
+[23:08:40] hard restart comfyui
+[23:08:40] prompt Haiming: 2883bc55-7053-401b-9e85-495d6d458b2e
+[23:08:40] prompt Leutasch: 12f8610c-07c4-4cea-a347-963c4fdbdfb7
+[23:08:41] comfyui ready
+[23:08:41] prompt Stams: 99389330-4003-4a92-a997-c70c5cbb8e6c
+[23:08:41] error state Haiming
+[23:08:42] error state Leutasch
+[23:08:42] fail Leutasch attempt=2
+[23:08:42] hard restart comfyui
+[23:08:42] comfyui ready
+[23:08:43] error state Stams
+[23:08:43] fail Stams attempt=3
+[23:08:43] fail Haiming attempt=1
+[23:08:43] hard restart comfyui
+[23:08:44] prompt Jerzens: 0ee19bce-5aa0-4142-92f9-45695af2c4d2
+[23:08:44] prompt Leutasch: e2b70b5f-6088-49fc-aad7-25284fbf18c4
+[23:08:45] comfyui ready
+[23:08:45] gave up Stams
+[23:08:45] [22/271] Imst / Tarrenz
+[23:08:46] prompt Tarrenz: 1eb591b6-a825-46b6-ae60-ec323bb7102d
+[23:08:46] error state Jerzens
+[23:08:46] error state Leutasch
+[23:08:46] fail Leutasch attempt=3
+[23:08:48] fail Jerzens attempt=3
+[23:08:48] prompt Haiming: ec91bf44-d423-410c-bc29-62097d4041fc
+[23:08:48] gave up Leutasch
+[23:08:48] [48/271] Innsbruck-Land / Matrei am Brenner
+[23:08:49] prompt Matrei am Brenner: d0561eac-f084-480c-ac10-2f4882db1865
+[23:08:49] error state Tarrenz
+[23:08:49] fail Tarrenz attempt=1
+[23:08:49] hard restart comfyui
+[23:08:49] error state Haiming
+[23:08:50] gave up Jerzens
+[23:08:50] comfyui ready
+[23:08:50] [6/271] Imst / Karres
+[23:08:50] error state Matrei am Brenner
+[23:08:50] fail Matrei am Brenner attempt=1
+[23:08:50] hard restart comfyui
+[23:08:51] comfyui ready
+[23:08:51] prompt Karres: 3cc01ff7-6126-4371-8f17-e84c3fa32100
+[23:08:52] prompt Tarrenz: 0615c10b-5d91-42fa-94bc-34713b838338
+[23:08:53] prompt Matrei am Brenner: 375668c2-4980-489a-90e5-8fb8a22373d6
+[23:08:53] error state Karres
+[23:08:53] error state Tarrenz
+[23:08:53] fail Tarrenz attempt=2
+[23:08:54] fail Karres attempt=1
+[23:08:54] hard restart comfyui
+[23:08:54] error state Matrei am Brenner
+[23:08:54] fail Matrei am Brenner attempt=2
+[23:08:55] comfyui ready
+[23:08:55] fail Haiming attempt=2
+[23:08:55] prompt Tarrenz: eed1ed7e-e309-452b-b8fc-66d625907cd8
+[23:08:56] prompt Matrei am Brenner: f2e4d808-ed41-4ffc-a31c-3c732cf7a4a1
+[23:08:57] error state Tarrenz
+[23:08:57] fail Tarrenz attempt=3
+[23:08:57] hard restart comfyui
+[23:08:58] comfyui ready
+[23:08:59] error state Matrei am Brenner
+[23:08:59] fail Matrei am Brenner attempt=3
+[23:08:59] hard restart comfyui
+[23:08:59] prompt Haiming: 0ea9c0c7-2b5d-4c19-b9e7-d58d12bff78b
+[23:09:00] comfyui ready
+[23:09:00] gave up Tarrenz
+[23:09:01] [23/271] Imst / Umhausen
+[23:09:01] prompt Umhausen: 0b2536aa-a5ae-455b-a45b-c6159c47b13c
+[23:09:01] error state Haiming
+[23:09:02] gave up Matrei am Brenner
+[23:09:02] prompt Karres: 7b248aeb-757c-47fd-b961-f6e1795ef0fb
+[23:09:02] [49/271] Innsbruck-Land / Mieders
+[23:09:02] prompt Mieders: 39eee5ca-0139-4d58-be6a-2f6955044c0e
+[23:09:02] error state Umhausen
+[23:09:02] fail Umhausen attempt=1
+[23:09:03] error state Karres
+[23:09:04] error state Mieders
+[23:09:04] fail Mieders attempt=1
+[23:09:04] prompt Umhausen: 714f1bfb-e95b-4224-840a-c2ac6f0029e9
+[23:09:06] prompt Mieders: c3d1d8c7-f2c0-48fc-a03b-1ed9c389280f
+[23:09:06] error state Umhausen
+[23:09:06] fail Umhausen attempt=2
+[23:09:06] hard restart comfyui
+[23:09:07] comfyui ready
+[23:09:07] error state Mieders
+[23:09:07] fail Mieders attempt=2
+[23:09:07] hard restart comfyui
+[23:09:08] comfyui ready
+[23:09:08] fail Karres attempt=2
+[23:09:09] fail Haiming attempt=3
+[23:09:09] hard restart comfyui
+[23:09:09] prompt Umhausen: ad0e907d-36c2-4c68-96cf-8689188af547
+[23:09:10] prompt Mieders: 807855c4-9545-4772-bcfc-b32a9c05c23d
+[23:09:10] comfyui ready
+[23:09:10] error state Umhausen
+[23:09:10] fail Umhausen attempt=3
+[23:09:12] gave up Haiming
+[23:09:12] gave up Umhausen
+[23:09:13] [3/271] Imst / Imst
+[23:09:13] [24/271] Imst / Wenns
+[23:09:13] prompt Wenns: 514f21ed-d123-49c6-be83-ee4c28707bff
+[23:09:13] error state Mieders
+[23:09:13] fail Mieders attempt=3
+[23:09:15] error state Wenns
+[23:09:15] fail Wenns attempt=1
+[23:09:15] hard restart comfyui
+[23:09:15] gave up Mieders
+[23:09:16] [50/271] Innsbruck-Land / Mils
+[23:09:16] prompt Mils: 8877dea1-6065-4cf0-bb26-5509503b4378
+[23:09:16] comfyui ready
+[23:09:17] error state Mils
+[23:09:17] fail Mils attempt=1
+[23:09:17] hard restart comfyui
+[23:09:17] comfyui ready
+[23:09:18] prompt Karres: bb0bd313-982d-4d12-bbf4-3e3c3fac0ace
+[23:09:18] prompt Wenns: 9fee68ca-afd0-4b49-8a4a-818746e97e0c
+[23:09:19] error state Karres
+[23:09:19] error state Wenns
+[23:09:19] fail Wenns attempt=2
+[23:09:19] prompt Mils: 359bf74b-22cc-41e1-8437-a30a371f9f70
+[23:09:21] fail Karres attempt=3
+[23:09:21] hard restart comfyui
+[23:09:21] prompt Wenns: ff027ab2-42cd-4446-9599-f7378d0b8207
+[23:09:22] comfyui ready
+[23:09:22] error state Mils
+[23:09:22] fail Mils attempt=2
+[23:09:23] error state Wenns
+[23:09:23] fail Wenns attempt=3
+[23:09:23] hard restart comfyui
+[23:09:24] prompt Imst: 13f1ef59-9053-4520-8645-b9fa60aae07c
+[23:09:24] comfyui ready
+[23:09:24] gave up Karres
+[23:09:25] prompt Mils: 829b01ca-c8a5-4402-a69f-eff1b4c10720
+[23:09:25] [7/271] Imst / Karrösten
+[23:09:25] error state Imst
+[23:09:26] error state Mils
+[23:09:26] fail Mils attempt=3
+[23:09:26] hard restart comfyui
+[23:09:26] gave up Wenns
+[23:09:26] comfyui ready
+[23:09:27] [25/271] Innsbruck-Land / Absam
+[23:09:27] prompt Absam: e694b06c-162c-4962-b3bc-5ca48f81a380
+[23:09:28] error state Absam
+[23:09:28] fail Absam attempt=1
+[23:09:28] gave up Mils
+[23:09:29] [51/271] Innsbruck-Land / Mutters
+[23:09:29] prompt Mutters: b35fe1a6-dd03-4373-a0af-b32e6ab7f196
+[23:09:30] prompt Karrösten: 783eece5-5db1-4151-8c7d-4831453a03ef
+[23:09:30] prompt Absam: 18b58822-3bae-492f-811e-6f1fd9d93cdc
+[23:09:30] error state Mutters
+[23:09:30] fail Mutters attempt=1
+[23:09:31] error state Karrösten
+[23:09:32] error state Absam
+[23:09:32] fail Absam attempt=2
+[23:09:32] hard restart comfyui
+[23:09:32] prompt Mutters: 22164cd5-0190-4ce7-a6a8-544082950ee3
+[23:09:33] comfyui ready
+[23:09:34] error state Mutters
+[23:09:34] fail Mutters attempt=2
+[23:09:34] hard restart comfyui
+[23:09:34] comfyui ready
+[23:09:35] prompt Absam: 61a847d4-2729-4643-9f73-ed3e519706a5
+[23:09:35] fail Imst attempt=1
+[23:09:36] prompt Mutters: c80eabc1-291e-4a87-a051-436a02b6f09f
+[23:09:36] error state Absam
+[23:09:36] fail Absam attempt=3
+[23:09:38] error state Mutters
+[23:09:38] fail Mutters attempt=3
+[23:09:38] gave up Absam
+[23:09:39] [26/271] Innsbruck-Land / Aldrans
+[23:09:39] prompt Aldrans: 00c8d414-3f62-4a3e-9547-3ebe45b71875
+[23:09:40] gave up Mutters
+[23:09:40] [52/271] Innsbruck-Land / Natters
+[23:09:40] prompt Natters: af5e2a06-659d-4eb4-ba6e-3c30698bfbb3
+[23:09:41] error state Aldrans
+[23:09:41] fail Aldrans attempt=1
+[23:09:41] hard restart comfyui
+[23:09:42] fail Karrösten attempt=1
+[23:09:42] comfyui ready
+[23:09:43] error state Natters
+[23:09:43] fail Natters attempt=1
+[23:09:43] hard restart comfyui
+[23:09:44] prompt Karrösten: 1681cc5d-6b55-445e-80b6-e1f66b535ced
+[23:09:44] comfyui ready
+[23:09:44] prompt Aldrans: c92e1587-8cb2-43a0-9271-cc9b332c80ac
+[23:09:45] error state Karrösten
+[23:09:45] error state Aldrans
+[23:09:45] fail Aldrans attempt=2
+[23:09:46] prompt Natters: e76bc4a4-1edc-4dbb-b86a-bcfa130fb547
+[23:09:47] error state Natters
+[23:09:47] fail Natters attempt=2
+[23:09:47] prompt Aldrans: f9f24fe9-1bc1-4849-9a9b-98c271092912
+[23:09:49] error state Aldrans
+[23:09:49] fail Aldrans attempt=3
+[23:09:49] hard restart comfyui
+[23:09:49] fail Karrösten attempt=2
+[23:09:49] hard restart comfyui
+[23:09:49] prompt Natters: ded27af1-db8f-4b11-810f-c04c153f9d8b
+[23:09:50] comfyui ready
+[23:09:50] comfyui ready
+[23:09:51] error state Natters
+[23:09:51] fail Natters attempt=3
+[23:09:51] hard restart comfyui
+[23:09:51] comfyui ready
+[23:09:52] prompt Imst: cf14e440-c737-4c63-869d-3032cdb7a501
+[23:09:52] gave up Aldrans
+[23:09:53] [27/271] Innsbruck-Land / Ampass
+[23:09:53] prompt Ampass: e6cae508-0532-4a3e-9014-fed9ab80634a
+[23:09:53] error state Imst
+[23:09:53] gave up Natters
+[23:09:54] [53/271] Innsbruck-Land / Navis
+[23:09:54] prompt Navis: 18c9c0ee-eb55-4365-b57f-3358a487b256
+[23:09:56] error state Ampass
+[23:09:56] fail Ampass attempt=1
+[23:09:57] error state Navis
+[23:09:57] fail Navis attempt=1
+[23:09:57] fail Imst attempt=2
+[23:09:57] hard restart comfyui
+[23:09:58] prompt Karrösten: 0afa1ff6-f6b1-4823-b7a3-29100db7e82f
+[23:09:58] prompt Ampass: 2282fa84-3b43-46aa-a500-5d52b9edab10
+[23:09:58] comfyui ready
+[23:09:59] prompt Navis: f4779cc2-2afa-4565-bef7-4815947943a2
+[23:09:59] error state Karrösten
+[23:09:59] error state Ampass
+[23:09:59] fail Ampass attempt=2
+[23:09:59] hard restart comfyui
+[23:10:00] comfyui ready
+[23:10:02] error state Navis
+[23:10:02] fail Navis attempt=2
+[23:10:02] hard restart comfyui
+[23:10:02] fail Karrösten attempt=3
+[23:10:02] comfyui ready
+[23:10:03] prompt Ampass: 941254b4-689a-4c92-91b4-08830488ef77
+[23:10:03] prompt Imst: 210dfc8a-878e-4bc1-aa72-1ea3b42755f6
+[23:10:04] error state Ampass
+[23:10:04] fail Ampass attempt=3
+[23:10:04] error state Imst
+[23:10:04] gave up Karrösten
+[23:10:04] prompt Navis: 316ebae8-8e8e-428a-b9b2-d4c38d057bab
+[23:10:05] [8/271] Imst / Längenfeld
+[23:10:06] error state Navis
+[23:10:06] fail Navis attempt=3
+[23:10:06] gave up Ampass
+[23:10:06] fail Imst attempt=3
+[23:10:07] [28/271] Innsbruck-Land / Axams
+[23:10:07] prompt Axams: ed704e43-f023-46d1-aee5-6b8a351222cb
+[23:10:08] gave up Navis
+[23:10:08] error state Axams
+[23:10:08] fail Axams attempt=1
+[23:10:08] hard restart comfyui
+[23:10:08] gave up Imst
+[23:10:08] [54/271] Innsbruck-Land / Neustift im Stubaital
+[23:10:08] prompt Neustift im Stubaital: a1d09e34-63bb-4d5c-9404-23838c173f82
+[23:10:09] [4/271] Imst / Imsterberg
+[23:10:09] comfyui ready
+[23:10:10] prompt Imsterberg: 9e9be0db-1b7a-4b92-b9b6-9b1021ecbf14
+[23:10:10] error state Neustift im Stubaital
+[23:10:10] fail Neustift im Stubaital attempt=1
+[23:10:10] hard restart comfyui
+[23:10:10] comfyui ready
+[23:10:11] error state Imsterberg
+[23:10:11] prompt Axams: 30abaddb-331e-4372-b3bd-0cee03fda329
+[23:10:13] prompt Neustift im Stubaital: 28f8fe5a-2366-4990-aaa8-661bd709f464
+[23:10:13] error state Axams
+[23:10:13] fail Axams attempt=2
+[23:10:15] prompt Axams: 52f5e01b-690c-4334-9dc2-ddc75f08f482
+[23:10:16] error state Neustift im Stubaital
+[23:10:16] fail Neustift im Stubaital attempt=2
+[23:10:16] error state Axams
+[23:10:16] fail Axams attempt=3
+[23:10:16] hard restart comfyui
+[23:10:17] fail Imsterberg attempt=1
+[23:10:17] hard restart comfyui
+[23:10:18] prompt Neustift im Stubaital: 82ff5d0d-d8e8-4a25-92e8-11c8f6aaf2b6
+[23:10:18] comfyui ready
+[23:10:18] comfyui ready
+[23:10:19] prompt Längenfeld: c65af3f0-7af1-46ed-8a0f-618bc8c4eeea
+[23:10:19] error state Neustift im Stubaital
+[23:10:19] fail Neustift im Stubaital attempt=3
+[23:10:19] hard restart comfyui
+[23:10:19] comfyui ready
+[23:10:20] gave up Axams
+[23:10:20] [29/271] Innsbruck-Land / Baumkirchen
+[23:10:20] prompt Baumkirchen: 68c4f57e-ffe5-49e1-b4dd-d680290ed81b
+[23:10:20] error state Längenfeld
+[23:10:21] gave up Neustift im Stubaital
+[23:10:22] error state Baumkirchen
+[23:10:22] fail Baumkirchen attempt=1
+[23:10:22] [55/271] Innsbruck-Land / Oberhofen im Inntal
+[23:10:22] prompt Oberhofen im Inntal: f01e6c91-61a0-4f94-916e-a35ebb32eaed
+[23:10:24] prompt Baumkirchen: c2c90bd8-33d4-4ce9-8092-76e2ef682f92
+[23:10:25] error state Oberhofen im Inntal
+[23:10:25] fail Oberhofen im Inntal attempt=1
+[23:10:27] fail Längenfeld attempt=1
+[23:10:27] hard restart comfyui
+[23:10:27] prompt Imsterberg: 847aaf5d-22c5-4b77-9972-90e7729d2956
+[23:10:27] error state Baumkirchen
+[23:10:27] fail Baumkirchen attempt=2
+[23:10:27] hard restart comfyui
+[23:10:27] prompt Oberhofen im Inntal: 395a96ce-fd5a-4ec5-9966-94209cd497a1
+[23:10:28] comfyui ready
+[23:10:28] comfyui ready
+[23:10:28] error state Imsterberg
+[23:10:28] fail Imsterberg attempt=2
+[23:10:29] error state Oberhofen im Inntal
+[23:10:29] fail Oberhofen im Inntal attempt=2
+[23:10:29] hard restart comfyui
+[23:10:29] comfyui ready
+[23:10:30] prompt Längenfeld: 2344188c-e12c-4124-9e31-1004ca555f35
+[23:10:30] prompt Baumkirchen: b82880ab-87ad-497c-bbc4-b0d3a47d3038
+[23:10:31] prompt Oberhofen im Inntal: b00d2004-62d9-4ce4-a641-ddee74c0db4d
+[23:10:31] error state Längenfeld
+[23:10:32] error state Baumkirchen
+[23:10:32] fail Baumkirchen attempt=3
+[23:10:34] gave up Baumkirchen
+[23:10:34] error state Oberhofen im Inntal
+[23:10:34] fail Oberhofen im Inntal attempt=3
+[23:10:34] [30/271] Innsbruck-Land / Birgitz
+[23:10:34] prompt Birgitz: c00f24ff-8f62-4f66-a1b0-529f0ba9f912
+[23:10:36] error state Birgitz
+[23:10:36] fail Birgitz attempt=1
+[23:10:36] hard restart comfyui
+[23:10:36] gave up Oberhofen im Inntal
+[23:10:36] fail Längenfeld attempt=2
+[23:10:37] [56/271] Innsbruck-Land / Obernberg am Brenner
+[23:10:37] prompt Obernberg am Brenner: 7afcdec2-3e5c-45ec-aff5-8f13ac8f7da5
+[23:10:37] comfyui ready
+[23:10:38] error state Obernberg am Brenner
+[23:10:38] fail Obernberg am Brenner attempt=1
+[23:10:38] hard restart comfyui
+[23:10:38] comfyui ready
+[23:10:39] prompt Birgitz: 9d400754-44c5-4fc8-b297-2872a0625764
+[23:10:40] error state Birgitz
+[23:10:40] fail Birgitz attempt=2
+[23:10:40] prompt Obernberg am Brenner: a9183515-e115-49f8-a394-2135d5535fb7
+[23:10:42] error state Obernberg am Brenner
+[23:10:42] fail Obernberg am Brenner attempt=2
+[23:10:42] prompt Birgitz: 00654809-4a1a-4465-9ddf-42232d6908a3
+[23:10:44] error state Birgitz
+[23:10:44] fail Birgitz attempt=3
+[23:10:44] hard restart comfyui
+[23:10:44] prompt Obernberg am Brenner: 1e9be2c7-f036-4dbd-9d1e-e6989a05bdb8
+[23:10:45] comfyui ready
+[23:10:46] prompt Imsterberg: 7ba38d93-6540-49ca-92db-4fd3f2078f1c
+[23:10:47] gave up Birgitz
+[23:10:47] error state Obernberg am Brenner
+[23:10:47] fail Obernberg am Brenner attempt=3
+[23:10:47] hard restart comfyui
+[23:10:48] comfyui ready
+[23:10:48] [31/271] Innsbruck-Land / Ellbögen
+[23:10:48] prompt Ellbögen: 219d01d3-31d3-4fa2-baf7-e294a5185905
+[23:10:48] error state Imsterberg
+[23:10:49] error state Ellbögen
+[23:10:49] fail Ellbögen attempt=1
+[23:10:50] gave up Obernberg am Brenner
+[23:10:50] [57/271] Innsbruck-Land / Oberperfuss
+[23:10:50] prompt Oberperfuss: 8ee2188e-f570-4604-8289-1228d4cc4f03
+[23:10:51] fail Imsterberg attempt=3
+[23:10:51] hard restart comfyui
+[23:10:51] prompt Ellbögen: a65f1e98-13e4-4033-bb83-c439844dd951
+[23:10:52] error state Oberperfuss
+[23:10:52] fail Oberperfuss attempt=1
+[23:10:52] comfyui ready
+[23:10:54] prompt Oberperfuss: 0ffb8c1f-86b0-4a02-b85e-38fc0e8912d9
+[23:10:54] gave up Imsterberg
+[23:10:54] error state Ellbögen
+[23:10:54] fail Ellbögen attempt=2
+[23:10:54] hard restart comfyui
+[23:10:55] [5/271] Imst / Jerzens
+[23:10:55] error state Oberperfuss
+[23:10:55] fail Oberperfuss attempt=2
+[23:10:55] hard restart comfyui
+[23:10:56] comfyui ready
+[23:10:56] comfyui ready
+[23:10:56] prompt Jerzens: 3e0eeb5a-df47-485d-a01a-e3bea1c70d3d
+[23:10:57] error state Jerzens
+[23:10:58] prompt Oberperfuss: 18959580-2636-4b54-867e-5f66790fa313
+[23:10:58] prompt Ellbögen: 451c42fc-0156-4dd7-9376-fa477b5dcbb3
+[23:10:59] hard restart comfyui
+[23:10:59] error state Oberperfuss
+[23:10:59] fail Oberperfuss attempt=3
+[23:11:00] comfyui ready
+[23:11:01] error state Ellbögen
+[23:11:01] fail Ellbögen attempt=3
+[23:11:01] prompt Längenfeld: c328bd4b-a174-4e76-b944-dfbc039da033
+[23:11:01] gave up Oberperfuss
+[23:11:02] [58/271] Innsbruck-Land / Patsch
+[23:11:02] prompt Patsch: dddcc5d8-b760-48c5-a1ed-c2c04c3ff567
+[23:11:03] error state Längenfeld
+[23:11:03] fail Längenfeld attempt=3
+[23:11:03] hard restart comfyui
+[23:11:03] gave up Ellbögen
+[23:11:03] [32/271] Innsbruck-Land / Flaurling
+[23:11:03] prompt Flaurling: 9a5904f1-bee6-4980-861e-2c525ac827e3
+[23:11:03] error state Patsch
+[23:11:03] fail Patsch attempt=1
+[23:11:03] hard restart comfyui
+[23:11:03] comfyui ready
+[23:11:04] comfyui ready
+[23:11:05] fail Jerzens attempt=1
+[23:11:06] prompt Patsch: 08394445-b336-4b48-9bd3-3de2ce264c56
+[23:11:06] gave up Längenfeld
+[23:11:06] error state Flaurling
+[23:11:06] fail Flaurling attempt=1
+[23:11:06] hard restart comfyui
+[23:11:06] [9/271] Imst / Mieming
+[23:11:07] error state Patsch
+[23:11:07] fail Patsch attempt=2
+[23:11:07] comfyui ready
+[23:11:08] prompt Jerzens: a37f763f-b943-4885-a5b8-928aeb5ec569
+[23:11:09] prompt Patsch: d39513e8-4868-4911-8e8c-62958104d004
+[23:11:09] prompt Flaurling: 4ebcd6fb-b76d-435f-8011-4ce9972e2386
+[23:11:10] error state Jerzens
+[23:11:11] error state Patsch
+[23:11:11] fail Patsch attempt=3
+[23:11:11] hard restart comfyui
+[23:11:11] error state Flaurling
+[23:11:11] fail Flaurling attempt=2
+[23:11:11] comfyui ready
+[23:11:12] fail Jerzens attempt=2
+[23:11:12] hard restart comfyui
+[23:11:12] prompt Mieming: 6762b4b9-283f-40d7-b291-fbe715269202
+[23:11:13] prompt Flaurling: 16e33b0c-470a-4468-9d52-99d347c3f897
+[23:11:13] comfyui ready
+[23:11:13] gave up Patsch
+[23:11:13] [59/271] Innsbruck-Land / Pettnau
+[23:11:13] prompt Pettnau: 3e419c34-497e-4702-95db-fca76b4f5b70
+[23:11:14] error state Mieming
+[23:11:14] error state Flaurling
+[23:11:14] fail Flaurling attempt=3
+[23:11:14] hard restart comfyui
+[23:11:15] error state Pettnau
+[23:11:15] fail Mieming attempt=1
+[23:11:15] fail Pettnau attempt=1
+[23:11:15] prompt Jerzens: e8ee7d2f-5146-44d9-a0fe-bb6350c84bad
+[23:11:16] comfyui ready
+[23:11:17] error state Jerzens
+[23:11:17] prompt Pettnau: 29babec1-eac3-4552-a806-a715c28d7cd3
+[23:11:17] prompt Mieming: 40e13e5e-b1fa-48f3-aa2a-dd9d5fbbd5f2
+[23:11:18] gave up Flaurling
+[23:11:18] [33/271] Innsbruck-Land / Fritzens
+[23:11:18] prompt Fritzens: 900124db-e8b5-40ba-978c-e4d0565ea4b2
+[23:11:19] error state Pettnau
+[23:11:19] fail Pettnau attempt=2
+[23:11:19] hard restart comfyui
+[23:11:19] error state Mieming
+[23:11:19] comfyui ready
+[23:11:21] fail Jerzens attempt=3
+[23:11:21] fail Mieming attempt=2
+[23:11:21] hard restart comfyui
+[23:11:21] prompt Pettnau: c8b9ae3d-0a53-44c4-8af2-20ac9f0c1a75
+[23:11:21] error state Fritzens
+[23:11:21] fail Fritzens attempt=1
+[23:11:22] comfyui ready
+[23:11:23] error state Pettnau
+[23:11:23] fail Pettnau attempt=3
+[23:11:23] gave up Jerzens
+[23:11:23] [6/271] Imst / Karres
+[23:11:23] prompt Karres: 937ca089-f800-44f8-9aab-0bd63301763e
+[23:11:23] prompt Fritzens: a34646d3-f3aa-4c18-b4f6-5da337c134ed
+[23:11:25] gave up Pettnau
+[23:11:25] error state Karres
+[23:11:25] error state Fritzens
+[23:11:25] fail Fritzens attempt=2
+[23:11:25] hard restart comfyui
+[23:11:25] [60/271] Innsbruck-Land / Pfaffenhofen
+[23:11:25] prompt Pfaffenhofen: b639b31a-6a7a-48dd-8fd1-d32edd6f4bba
+[23:11:26] comfyui ready
+[23:11:27] prompt Mieming: 86b1124e-cce2-404e-8bfc-558613b02915
+[23:11:28] error state Pfaffenhofen
+[23:11:28] fail Pfaffenhofen attempt=1
+[23:11:28] hard restart comfyui
+[23:11:28] prompt Fritzens: 3348e148-ce84-4056-8257-d501cf9c1aeb
+[23:11:28] comfyui ready
+[23:11:29] error state Mieming
+[23:11:30] error state Fritzens
+[23:11:30] fail Fritzens attempt=3
+[23:11:31] prompt Pfaffenhofen: b5eeaf61-b36c-4396-8613-2941c0acacbf
+[23:11:32] gave up Fritzens
+[23:11:32] fail Mieming attempt=3
+[23:11:32] fail Karres attempt=1
+[23:11:32] hard restart comfyui
+[23:11:32] [34/271] Innsbruck-Land / Fulpmes
+[23:11:32] error state Pfaffenhofen
+[23:11:32] fail Pfaffenhofen attempt=2
+[23:11:32] prompt Fulpmes: 22ca53b4-64a1-478c-a989-f8b2b62a7558
+[23:11:33] comfyui ready
+[23:11:34] gave up Mieming
+[23:11:34] error state Fulpmes
+[23:11:34] fail Fulpmes attempt=1
+[23:11:34] hard restart comfyui
+[23:11:34] [10/271] Imst / Mils bei Imst
+[23:11:34] prompt Mils bei Imst: 8e171180-bd58-490e-8d98-05f1edde682c
+[23:11:34] prompt Pfaffenhofen: 45eb1f92-8a84-4124-b0b0-aa7e3cc385fc
+[23:11:35] comfyui ready
+[23:11:36] error state Mils bei Imst
+[23:11:36] error state Pfaffenhofen
+[23:11:36] fail Pfaffenhofen attempt=3
+[23:11:36] hard restart comfyui
+[23:11:36] comfyui ready
+[23:11:37] prompt Fulpmes: 3fe0e49e-3f14-4c94-98e4-ec35a77c431e
+[23:11:38] gave up Pfaffenhofen
+[23:11:38] prompt Karres: d01a90e5-7c2c-4e58-b316-7c1d66cb563f
+[23:11:39] error state Fulpmes
+[23:11:39] fail Fulpmes attempt=2
+[23:11:39] [61/271] Innsbruck-Land / Polling in Tirol
+[23:11:39] prompt Polling in Tirol: 611cf615-fa0a-4d4b-92db-53a568bfc3ca
+[23:11:40] error state Karres
+[23:11:40] error state Polling in Tirol
+[23:11:40] fail Polling in Tirol attempt=1
+[23:11:41] prompt Fulpmes: 1c57dc7e-8966-49f3-9975-4c6889db70a7
+[23:11:42] error state Fulpmes
+[23:11:42] fail Fulpmes attempt=3
+[23:11:42] hard restart comfyui
+[23:11:42] prompt Polling in Tirol: d62eca34-54fe-4ff7-b2c1-83525b39f2df
+[23:11:43] comfyui ready
+[23:11:44] error state Polling in Tirol
+[23:11:44] fail Polling in Tirol attempt=2
+[23:11:44] hard restart comfyui
+[23:11:44] comfyui ready
+[23:11:45] fail Mils bei Imst attempt=1
+[23:11:45] hard restart comfyui
+[23:11:45] gave up Fulpmes
+[23:11:46] [35/271] Innsbruck-Land / Gnadenwald
+[23:11:46] prompt Gnadenwald: 9a10baa0-e4a9-4f9f-9874-988429627d65
+[23:11:46] comfyui ready
+[23:11:46] prompt Polling in Tirol: 08cecd1f-c6d7-44d7-932a-7d41e3e47fb4
+[23:11:47] error state Gnadenwald
+[23:11:47] fail Gnadenwald attempt=1
+[23:11:48] error state Polling in Tirol
+[23:11:48] fail Polling in Tirol attempt=3
+[23:11:48] fail Karres attempt=2
+[23:11:48] prompt Mils bei Imst: 53ed0e1b-acd7-43e6-ac96-a59fd0e4724e
+[23:11:49] prompt Gnadenwald: c01a7308-4a69-49f1-8a2f-9cec50f0ef9a
+[23:11:50] error state Mils bei Imst
+[23:11:50] gave up Polling in Tirol
+[23:11:50] [62/271] Innsbruck-Land / Ranggen
+[23:11:50] prompt Ranggen: 443e8ee8-e50e-49c5-bfe9-1faeddeec0db
+[23:11:51] error state Gnadenwald
+[23:11:51] fail Gnadenwald attempt=2
+[23:11:51] hard restart comfyui
+[23:11:52] error state Ranggen
+[23:11:52] fail Ranggen attempt=1
+[23:11:52] hard restart comfyui
+[23:11:52] comfyui ready
+[23:11:52] comfyui ready
+[23:11:53] fail Mils bei Imst attempt=2
+[23:11:54] prompt Karres: 9178028a-a55e-4121-bc27-0df5bb6ebf23
+[23:11:54] prompt Ranggen: e5e5b7a2-bf93-41c9-be73-7c0f22f15c40
+[23:11:54] prompt Gnadenwald: 6e755f1c-ff5e-42a8-88ee-032510719384
+[23:11:55] error state Karres
+[23:11:56] error state Ranggen
+[23:11:56] fail Ranggen attempt=2
+[23:11:57] error state Gnadenwald
+[23:11:57] fail Gnadenwald attempt=3
+[23:11:58] fail Karres attempt=3
+[23:11:58] hard restart comfyui
+[23:11:58] prompt Mils bei Imst: e2248213-b901-4d8f-a2b5-d3fea008ee1f
+[23:11:58] prompt Ranggen: 96661395-32bb-4db1-83e9-c07c808b813e
+[23:11:59] comfyui ready
+[23:11:59] gave up Gnadenwald
+[23:11:59] error state Mils bei Imst
+[23:11:59] fail Mils bei Imst attempt=3
+[23:11:59] hard restart comfyui
+[23:11:59] error state Ranggen
+[23:11:59] fail Ranggen attempt=3
+[23:11:59] hard restart comfyui
+[23:12:00] comfyui ready
+[23:12:00] [36/271] Innsbruck-Land / Götzens
+[23:12:00] prompt Götzens: 0a41c680-e1c7-444c-814f-856877eb97f8
+[23:12:01] comfyui ready
+[23:12:01] gave up Karres
+[23:12:01] error state Götzens
+[23:12:01] fail Götzens attempt=1
+[23:12:01] hard restart comfyui
+[23:12:01] [7/271] Imst / Karrösten
+[23:12:02] gave up Ranggen
+[23:12:02] [63/271] Innsbruck-Land / Reith bei Seefeld
+[23:12:02] prompt Reith bei Seefeld: 17dbe2dc-9cbb-4022-b6ed-159c80221a01
+[23:12:02] comfyui ready
+[23:12:03] gave up Mils bei Imst
+[23:12:03] [11/271] Imst / Mötz
+[23:12:03] prompt Mötz: 72cb0576-5895-417c-8025-3d1c8152dba2
+[23:12:04] error state Reith bei Seefeld
+[23:12:04] fail Reith bei Seefeld attempt=1
+[23:12:05] prompt Götzens: c0251451-4766-4b11-8260-f123d22e5b32
+[23:12:05] error state Mötz
+[23:12:06] prompt Reith bei Seefeld: 59845df6-205e-4bca-9744-60b89fb3d2bb
+[23:12:06] error state Götzens
+[23:12:06] fail Götzens attempt=2
+[23:12:07] error state Reith bei Seefeld
+[23:12:07] fail Reith bei Seefeld attempt=2
+[23:12:07] hard restart comfyui
+[23:12:08] comfyui ready
+[23:12:08] prompt Götzens: 37002bd1-79bd-423e-bd58-e513596f6014
+[23:12:10] error state Götzens
+[23:12:10] fail Götzens attempt=3
+[23:12:10] hard restart comfyui
+[23:12:10] prompt Reith bei Seefeld: 29aafeee-3518-4a90-a060-d5e6d13f78d1
+[23:12:11] comfyui ready
+[23:12:11] error state Reith bei Seefeld
+[23:12:11] fail Reith bei Seefeld attempt=3
+[23:12:13] prompt Karrösten: 33e01322-53d2-45dc-aecc-08bcf5fe029c
+[23:12:13] gave up Götzens
+[23:12:13] gave up Reith bei Seefeld
+[23:12:13] [37/271] Innsbruck-Land / Gries am Brenner
+[23:12:13] prompt Gries am Brenner: f3ff32f4-a754-4b34-bbd7-e0a4a95d6872
+[23:12:14] [64/271] Innsbruck-Land / Rinn
+[23:12:16] hard restart comfyui
+[23:12:17] fail Mötz attempt=1
+[23:12:40] hard restart comfyui
+[23:13:30] timeout Gries am Brenner
+[23:13:30] fail Gries am Brenner attempt=1
+[23:13:34] hard restart comfyui
+[23:13:56] comfyui did not come up in time
+[23:13:58] hard restart comfyui
+[23:14:41] comfyui did not come up in time
+[23:15:04] hard restart comfyui
+[23:15:15] timeout Karrösten
+[23:15:27] fail Karrösten attempt=1
+[23:15:35] comfyui did not come up in time
+[23:15:37] hard restart comfyui
+[23:15:39] comfyui did not come up in time
+[23:15:41] hard restart comfyui
+[23:15:50] hard restart comfyui
+[23:17:06] comfyui did not come up in time
+[23:17:21] comfyui did not come up in time
+[23:17:21] gave up Rinn
+[23:17:22] [65/271] Innsbruck-Land / Rum
+[23:17:24] hard restart comfyui
+[23:17:27] hard restart comfyui
+[23:17:39] comfyui did not come up in time
+[23:17:39] gave up Gries am Brenner
+[23:17:39] [38/271] Innsbruck-Land / Gries im Sellrain
+[23:17:41] hard restart comfyui
+[23:17:51] comfyui did not come up in time
+[23:18:14] hard restart comfyui
+[23:19:05] comfyui did not come up in time
+[23:19:07] hard restart comfyui
+[23:19:28] comfyui did not come up in time
+[23:19:42] comfyui did not come up in time
+[23:19:44] hard restart comfyui
+[23:19:51] hard restart comfyui
+[23:20:16] comfyui did not come up in time
+[23:20:37] hard restart comfyui
+[23:20:47] comfyui did not come up in time
+[23:20:49] hard restart comfyui
+[23:21:46] comfyui did not come up in time
+[23:21:48] hard restart comfyui
+[23:21:52] comfyui did not come up in time
+[23:21:52] gave up Mötz
+[23:21:53] [12/271] Imst / Nassereith
+[23:22:14] hard restart comfyui
+[23:22:30] comfyui did not come up in time
+[23:22:30] gave up Rum
+[23:22:30] [66/271] Innsbruck-Land / St. Sigmund im Sellrain
+[23:22:32] hard restart comfyui
+[23:22:38] comfyui did not come up in time
+[23:23:01] hard restart comfyui
+[23:23:49] comfyui did not come up in time
+[23:23:49] gave up Gries im Sellrain
+[23:23:50] [39/271] Innsbruck-Land / Grinzens
+[23:23:52] hard restart comfyui
+[23:24:13] comfyui did not come up in time
+[23:24:15] hard restart comfyui
+[23:24:15] comfyui did not come up in time
+[23:24:38] hard restart comfyui
+[23:25:03] comfyui did not come up in time
+[23:25:03] gave up Karrösten
+[23:25:03] [8/271] Imst / Längenfeld
+[23:25:24] hard restart comfyui
+[23:25:53] comfyui did not come up in time
+[23:25:55] hard restart comfyui
+[23:25:55] comfyui did not come up in time
+[23:25:57] hard restart comfyui
+[23:26:40] comfyui did not come up in time
+[23:27:01] hard restart comfyui
+[23:27:26] comfyui did not come up in time
+[23:27:38] comfyui did not come up in time
+[23:27:38] gave up St. Sigmund im Sellrain
+[23:27:39] [67/271] Innsbruck-Land / Scharnitz
+[23:27:41] hard restart comfyui
+[23:27:49] hard restart comfyui
+[23:27:57] comfyui did not come up in time
+[23:27:59] hard restart comfyui
+[23:29:02] comfyui did not come up in time
+[23:29:21] comfyui did not come up in time
+[23:29:23] hard restart comfyui
+[23:29:25] hard restart comfyui
+[23:29:50] comfyui did not come up in time
+[23:30:01] comfyui did not come up in time
+[23:30:01] gave up Grinzens
+[23:30:01] [40/271] Innsbruck-Land / Gschnitz
+[23:30:03] hard restart comfyui
+[23:30:11] hard restart comfyui
+[23:31:04] comfyui did not come up in time
+[23:31:06] hard restart comfyui
+[23:31:27] comfyui did not come up in time
+[23:31:48] hard restart comfyui
+[23:32:05] comfyui did not come up in time
+[23:32:07] hard restart comfyui
+[23:32:13] comfyui did not come up in time
+[23:32:36] hard restart comfyui
+[23:32:47] comfyui did not come up in time
+[23:32:47] gave up Scharnitz
+[23:32:47] [68/271] Innsbruck-Land / Schmirn
+[23:32:49] hard restart comfyui
+[23:33:50] comfyui did not come up in time
+[23:34:08] comfyui did not come up in time
+[23:34:10] hard restart comfyui
+[23:34:13] hard restart comfyui
+[23:34:30] comfyui did not come up in time
+[23:34:32] hard restart comfyui
+[23:34:37] comfyui did not come up in time
+[23:34:59] hard restart comfyui
+[23:36:12] comfyui did not come up in time
+[23:36:12] gave up Gschnitz
+[23:36:12] [41/271] Innsbruck-Land / Hatting
+[23:36:12] comfyui did not come up in time
+[23:36:14] hard restart comfyui
+[23:36:14] hard restart comfyui
+[23:36:15] comfyui did not come up in time
+[23:36:15] gave up Nassereith
+[23:36:16] [13/271] Imst / Obsteig
+[23:36:37] hard restart comfyui
+[23:37:00] comfyui did not come up in time
+[23:37:23] hard restart comfyui
+[23:37:55] comfyui did not come up in time
+[23:37:55] gave up Schmirn
+[23:37:55] [69/271] Innsbruck-Land / Schönberg im Stubaital
+[23:37:57] hard restart comfyui
+[23:38:16] comfyui did not come up in time
+[23:38:18] hard restart comfyui
+[23:38:39] comfyui did not come up in time
+[23:39:02] hard restart comfyui
+[23:39:25] comfyui did not come up in time
+[23:39:25] gave up Längenfeld
+[23:39:25] [9/271] Imst / Mieming
+[23:39:38] comfyui did not come up in time
+[23:39:40] hard restart comfyui
+[23:39:46] hard restart comfyui
+[23:40:19] comfyui did not come up in time
+[23:40:21] hard restart comfyui
+[23:41:03] comfyui did not come up in time
+[23:41:21] comfyui did not come up in time
+[23:41:23] hard restart comfyui
+[23:41:24] hard restart comfyui
+[23:41:48] comfyui did not come up in time
+[23:42:11] hard restart comfyui
+[23:42:23] comfyui did not come up in time
+[23:42:23] gave up Hatting
+[23:42:23] [42/271] Innsbruck-Land / Inzing
+[23:42:25] hard restart comfyui
+[23:43:03] comfyui did not come up in time
+[23:43:03] gave up Schönberg im Stubaital
+[23:43:04] [70/271] Innsbruck-Land / Seefeld in Tirol
+[23:43:06] hard restart comfyui
+[23:43:26] comfyui did not come up in time
+[23:43:49] hard restart comfyui
+[23:44:12] comfyui did not come up in time
+[23:44:27] comfyui did not come up in time
+[23:44:29] hard restart comfyui
+[23:44:33] hard restart comfyui
+[23:44:47] comfyui did not come up in time
+[23:44:49] hard restart comfyui
+[23:45:50] comfyui did not come up in time
+[23:46:11] hard restart comfyui
+[23:46:29] comfyui did not come up in time
+[23:46:30] comfyui did not come up in time
+[23:46:31] hard restart comfyui
+[23:46:32] hard restart comfyui
+[23:46:35] comfyui did not come up in time
+[23:46:58] hard restart comfyui
+[23:48:12] comfyui did not come up in time
+[23:48:12] gave up Seefeld in Tirol
+[23:48:12] [71/271] Innsbruck-Land / Sellrain
+[23:48:13] comfyui did not come up in time
+[23:48:14] hard restart comfyui
+[23:48:34] comfyui did not come up in time
+[23:48:34] gave up Inzing
+[23:48:34] [43/271] Innsbruck-Land / Kematen in Tirol
+[23:48:36] hard restart comfyui
+[23:48:36] hard restart comfyui
+[23:49:00] comfyui did not come up in time
+[23:49:21] hard restart comfyui
+[23:49:55] comfyui did not come up in time
+[23:49:57] hard restart comfyui
+[23:50:37] comfyui did not come up in time
+[23:50:37] gave up Obsteig
+[23:50:38] comfyui did not come up in time
+[23:50:38] [14/271] Imst / Oetz
+[23:50:40] hard restart comfyui
+[23:50:59] hard restart comfyui
+[23:51:22] comfyui did not come up in time
+[23:51:38] comfyui did not come up in time
+[23:51:40] hard restart comfyui
+[23:51:45] hard restart comfyui
+[23:52:41] comfyui did not come up in time
+[23:52:43] hard restart comfyui
+[23:53:00] comfyui did not come up in time
+[23:53:20] comfyui did not come up in time
+[23:53:20] gave up Sellrain
+[23:53:21] [72/271] Innsbruck-Land / Sistrans
+[23:53:23] hard restart comfyui
+[23:53:23] hard restart comfyui
+[23:53:47] comfyui did not come up in time
+[23:53:47] gave up Mieming
+[23:53:47] [10/271] Imst / Mils bei Imst
+[23:54:08] hard restart comfyui
+[23:54:45] comfyui did not come up in time
+[23:54:45] gave up Kematen in Tirol
+[23:54:45] [44/271] Innsbruck-Land / Kolsass
+[23:54:47] hard restart comfyui
+[23:55:04] comfyui did not come up in time
+[23:55:06] hard restart comfyui
+[23:55:25] comfyui did not come up in time
+[23:55:46] hard restart comfyui
+[23:56:10] comfyui did not come up in time
+[23:56:33] hard restart comfyui
+[23:56:46] comfyui did not come up in time
+[23:56:48] hard restart comfyui
+[23:56:49] comfyui did not come up in time
+[23:56:51] hard restart comfyui
+[23:57:48] comfyui did not come up in time
+[23:58:11] hard restart comfyui
+[23:58:29] comfyui did not come up in time
+[23:58:29] gave up Sistrans
+[23:58:29] [73/271] Innsbruck-Land / Steinach am Brenner
+[23:58:31] hard restart comfyui
+[23:58:34] comfyui did not come up in time
+[23:58:52] comfyui did not come up in time
+[23:58:54] hard restart comfyui
+[23:58:55] hard restart comfyui
+[00:00:12] comfyui did not come up in time
+[00:00:12] comfyui did not come up in time
+[00:00:14] hard restart comfyui
+[00:00:33] hard restart comfyui
+[00:00:55] comfyui did not come up in time
+[00:00:55] gave up Kolsass
+[00:00:56] [45/271] Innsbruck-Land / Kolsassberg
+[00:00:57] comfyui did not come up in time
+[00:00:58] hard restart comfyui
+[00:01:20] hard restart comfyui
+[00:01:54] comfyui did not come up in time
+[00:01:56] hard restart comfyui
+[00:02:35] comfyui did not come up in time
+[00:02:58] hard restart comfyui
+[00:02:59] comfyui did not come up in time
+[00:03:01] hard restart comfyui
+[00:03:21] comfyui did not come up in time
+[00:03:37] comfyui did not come up in time
+[00:03:37] gave up Steinach am Brenner
+[00:03:38] [74/271] Innsbruck-Land / Telfes im Stubai
+[00:03:40] hard restart comfyui
+[00:03:42] hard restart comfyui
+[00:04:59] comfyui did not come up in time
+[00:04:59] gave up Oetz
+[00:05:00] [15/271] Imst / Rietz
+[00:05:03] comfyui did not come up in time
+[00:05:05] hard restart comfyui
+[00:05:20] comfyui did not come up in time
+[00:05:21] hard restart comfyui
+[00:05:22] hard restart comfyui
+[00:05:44] comfyui did not come up in time
+[00:06:07] hard restart comfyui
+[00:07:03] comfyui did not come up in time
+[00:07:05] hard restart comfyui
+[00:07:06] comfyui did not come up in time
+[00:07:06] gave up Kolsassberg
+[00:07:07] [46/271] Innsbruck-Land / Lans
+[00:07:09] hard restart comfyui
+[00:07:22] comfyui did not come up in time

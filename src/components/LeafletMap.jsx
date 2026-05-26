@@ -52,6 +52,8 @@ export default function LeafletMap({
   const markerClusterRef = useRef(null);
   const [theme, setTheme] = useState('light');
   const [loading, setLoading] = useState(true);
+  const leafletRef = useRef(null);
+  const [currentZoom, setCurrentZoom] = useState(null);
   const [activeFilters, setActiveFilters] = useState(new Set());
 
   // Theme detection via MutationObserver
@@ -96,6 +98,13 @@ export default function LeafletMap({
       });
 
       mapInstance.current = map;
+      leafletRef.current = L;
+
+      // Re-cluster markers on zoom change
+      map.on('zoomend', () => {
+        setCurrentZoom(map.getZoom());
+      });
+
       // Leaflet needs container visible - invalidate after init
       setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 100);
       setLoading(false);
@@ -213,14 +222,17 @@ export default function LeafletMap({
     });
   }
 
-  function drawMarkers(L, map) {
+  function drawMarkers(L, map, zoomLevel) {
     if (!markers || markers.length === 0) return;
     const markerBounds = [];
-    const useClustering = markers.length > 12;
+
+    // Dynamic clustering: grid size shrinks with zoom, disabled at high zoom
+    const zoom = zoomLevel || map.getZoom();
+    const useClustering = markers.length > 12 && zoom < 14;
 
     if (useClustering) {
-      // Grid-based spatial clustering
-      const gridSize = 0.04; // ~4km at Tirol latitude
+      // Grid size halves per zoom level above 8 (~4km at zoom 8, ~250m at zoom 12)
+      const gridSize = 0.04 / Math.pow(2, Math.max(0, zoom - 8));
       const grid = new Map();
 
       markers.forEach((m, idx) => {
@@ -356,6 +368,15 @@ export default function LeafletMap({
       console.error('[LeafletMap] Failed to re-load leaflet for filter:', e);
     });
   }, [activeFilters]);
+
+  // Re-cluster markers on zoom change (preserves viewport, no fitBounds)
+  useEffect(() => {
+    if (!mapInstance.current || !leafletRef.current || currentZoom === null) return;
+    const L = leafletRef.current;
+    const map = mapInstance.current;
+    clearMarkers(map);
+    try { drawMarkers(L, map, currentZoom); } catch (e) { console.error('[LeafletMap] zoom recluster error:', e); }
+  }, [currentZoom]);
 
   return (
     <div style={{ position: 'relative', width: '100%' }}>

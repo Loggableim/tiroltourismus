@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import SegmentedNav from '../../components/SegmentedNav.astro';
 import { readSingleton } from '../../lib/content.js';
 
 const faqItems = readSingleton('faq') || [];
@@ -93,17 +94,17 @@ function catId(kategorie) {
 
     <!-- CATEGORY NAV -->
     {[...grouped.keys()].length > 0 && (
-      <section class="faq-cat-nav">
+      <section>
         <div class="container">
-          <div class="faq-cat-nav-inner">
-            {[...grouped.keys()].map((cat) => (
-              <a href={`#${catId(cat)}`} class="faq-cat-chip">
-                <span class="faq-cat-emoji">{categoryEmoji[cat] || '📌'}</span>
-                <span class="faq-cat-label">{categoryLabels[cat] || cat}</span>
-                <span class="faq-cat-count">{grouped.get(cat).length}</span>
-              </a>
-            ))}
-          </div>
+          <SegmentedNav
+            ariaLabel="FAQ Kategorien"
+            items={[...grouped.keys()].map((cat) => ({
+              href: `#${catId(cat)}`,
+              icon: categoryEmoji[cat] || '📌',
+              label: categoryLabels[cat] || cat,
+              count: grouped.get(cat).length,
+            }))}
+          />
         </div>
       </section>
     )}
@@ -220,52 +221,6 @@ function catId(kategorie) {
     max-width: 580px;
     margin: 0;
   }
-
-  /* ==============================================================
-     CATEGORY NAV
-     ============================================================== */
-  .faq-cat-nav {
-    padding: 0 0 40px;
-  }
-  .faq-cat-nav-inner {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-  }
-  .faq-cat-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    background: var(--bg2);
-    border: 1px solid var(--glass-border);
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-    transition: all 0.3s var(--ease);
-    cursor: pointer;
-    text-decoration: none;
-  }
-  .faq-cat-chip:hover {
-    border-color: var(--pink);
-    background: var(--surface-hover);
-    box-shadow: 0 4px 16px var(--pink-glow);
-    transform: translateY(-2px);
-  }
-  .faq-cat-emoji { font-size: 18px; line-height: 1; }
-  .faq-cat-count {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--text3);
-    background: var(--surface);
-    padding: 2px 8px;
-    border-radius: 100px;
-    min-width: 20px;
-    text-align: center;
-  }
-
   /* ==============================================================
      FAQ SECTION
      ============================================================== */
@@ -462,16 +417,5 @@ function catId(kategorie) {
     });
   });
 
-  // Smooth scroll for category nav chips
-  document.querySelectorAll('.faq-cat-chip').forEach((chip) => {
-    chip.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').slice(1);
-      const target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
 })();
 </script>

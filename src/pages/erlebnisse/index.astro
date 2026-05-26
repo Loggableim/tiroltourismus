@@ -4,6 +4,7 @@ import Hero from '../../components/Hero.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import SectionMap from '../../sections/SectionMap.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
 const erlebnisse = readCollection('erlebnisse').filter(e => isPublished(e.entry));
@@ -30,6 +31,7 @@ const kategorieLabel = {
   abenteuer: 'Abenteuer',
 };
 
+const erlebnisseFilterKeys = Object.keys(kategorieLabel).sort((a, b) => kategorieLabel[a].localeCompare(kategorieLabel[b], 'de'));
 const erlebnisseMitKarte = erlebnisse.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng);
 const erlebnisseMarkers = erlebnisseMitKarte.map((e) => {
   const meta = kategorieMeta[e.entry.kategorie] || {};
@@ -82,19 +84,18 @@ const erlebnisseMarkers = erlebnisseMitKarte.map((e) => {
             sub="Ob hoch über den Wolken oder tief in den Tälern – Tirols Erlebnisse warten auf dich."
           />
 
-          <div class="kategorie-tabs">
-            <button class="kategorie-btn active" data-cat="all">Alle</button>
-            {Object.keys(kategorieLabel).map((k) => (
-              <button class="kategorie-btn" data-cat={k}>{kategorieLabel[k]}</button>
-            ))}
-          </div>
+          <FilterBar
+            keyName="cat"
+            ariaLabel="Erlebnisse nach Kategorie filtern"
+            options={erlebnisseFilterKeys.map((k) => ({ value: k, label: kategorieLabel[k] }))}
+          />
 
           <div class="erlebnisse-grid" id="erlebnis-grid">
             {erlebnisse.map((e) => {
               const entry = e.entry;
               const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--pink)' };
               return (
-                <div class="erlebnis-card" data-kategorie={entry.kategorie}>
+                <div class="erlebnis-card" data-filter-card data-filter-cat={entry.kategorie}>
                   <span class="erlebnis-icon">{meta.emoji}</span>
                   <h3 class="erlebnis-title">{entry.titel}</h3>
                   <p class="erlebnis-desc">{entry.kurzbeschreibung}</p>
@@ -132,58 +133,8 @@ const erlebnisseMarkers = erlebnisseMitKarte.map((e) => {
   </main>
 </BaseLayout>
 
+
 <style is:global>
-  .kategorie-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 40px;
-  }
-
-  .kategorie-btn {
-    padding: 10px 22px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    transition: all 0.3s;
-    cursor: pointer;
-    border: 2px solid var(--glass-border);
-    background: transparent;
-    color: var(--text2);
-  }
-
-  .kategorie-btn.active {
-    background: var(--pink);
-    color: #fff;
-    border-color: var(--pink);
-    box-shadow: 0 4px 20px var(--pink-glow);
-  }
-
-  .kategorie-btn:hover:not(.active) {
-    border-color: var(--text2);
-    color: var(--text);
-  }
-
-  @media (max-width: 700px) {
-    .kategorie-tabs {
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      scrollbar-width: none;
-    }
-    .kategorie-tabs::-webkit-scrollbar { display: none; }
-    .kategorie-btn {
-      padding: 8px 14px;
-      font-size: 11px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-  }
-
   .erlebnisse-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

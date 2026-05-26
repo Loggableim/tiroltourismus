@@ -4,9 +4,12 @@ import Hero from '../../components/Hero.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import RegionCard from '../../components/RegionCard.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
-const regionen = readCollection('regionen').filter(r => isPublished(r.entry)).sort((a,b) => (b.entry.bewertung||0)-(a.entry.bewertung||0));
+const regionen = readCollection('regionen')
+  .filter((r) => isPublished(r.entry))
+  .sort((a, b) => (b.entry.bewertung || 0) - (a.entry.bewertung || 0) || (a.entry.titel || '').localeCompare(b.entry.titel || '', 'de'));
 ---
 
 <BaseLayout
@@ -39,6 +42,17 @@ const regionen = readCollection('regionen').filter(r => isPublished(r.entry)).so
               title="Wo willst du hin?"
               sub="Ob hochalpine Gipfel, glitzernde Gletscher oder urbane Bergluft – Tirols Regionen sind so vielfältig wie das Leben selbst."
             />
+
+            {regionen.length > 1 && (
+              <FilterBar
+                keyName="cat"
+                ariaLabel="Regionen filtern"
+                options={[
+                  { value: 'featured', label: 'Empfohlen' },
+                  { value: 'other', label: 'Weitere' },
+                ]}
+              />
+            )}
 
             <div class="region-grid" id="region-grid">
               {regionen.map((r) => (

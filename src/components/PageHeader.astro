@@ -1,0 +1,66 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  icon?: string;
+}
+
+const { title, description, icon } = Astro.props as Props;
+---
+
+<section class="page-header">
+  <div class="container page-header__inner">
+    {icon && <div class="page-header__icon">{icon}</div>}
+    <h1>{title}</h1>
+    {description && <p set:html={description}></p>}
+    <div class="page-header__actions">
+      <slot name="actions" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .page-header {
+    position: relative;
+    padding: 60px 0 40px;
+    text-align: center;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  .page-header__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header__icon {
+    font-size: 48px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .page-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 6vw, 80px);
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .page-header p {
+    font-size: 15px;
+    color: var(--text2);
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .page-header__actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+</style>

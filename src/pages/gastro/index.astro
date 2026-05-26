@@ -5,10 +5,28 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import GastroCard from '../../components/GastroCard.astro';
 import SectionMap from '../../sections/SectionMap.astro';
+import FilterBar from '../../components/FilterBar.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
-const gastro = readCollection('gastro').filter(g => isPublished(g.entry));
-const gastroMitCoords = gastro.filter(g => g.entry.koordinaten?.lat && g.entry.koordinaten?.lng);
+const gastro = readCollection('gastro').filter((g) => isPublished(g.entry));
+const gastroMitCoords = gastro.filter((g) => g.entry.koordinaten?.lat && g.entry.koordinaten?.lng);
+
+const kategorieLabel = {
+  almwirtschaft: '🥨 Almwirtschaft',
+  bar: '🍸 Bar',
+  cafe: '☕ Café',
+  eiscafe: '🍦 Eiscafé',
+  eissalon: '🍦 Eissalon',
+  imbiss: '🌭 Imbiss',
+  international: '🌍 International',
+  pizzeria: '🍕 Pizzeria',
+  pub: '🍺 Pub',
+  regional: '🫕 Regional',
+  restaurant: '🍽️ Restaurant',
+  tirolerisch: '🥘 Tirolerisch',
+};
+
+const kategorien = [...new Set(gastro.map((g) => g.entry.kategorie).filter(Boolean))].sort((a, b) => (kategorieLabel[a] || a).localeCompare(kategorieLabel[b] || b, 'de'));
 ---
 
 <BaseLayout
@@ -34,7 +52,7 @@ const gastroMitCoords = gastro.filter(g => g.entry.koordinaten?.lat && g.entry.k
 
     {gastroMitCoords.length > 0 && (
       <SectionMap
-        markers={gastroMitCoords.map(g => ({
+        markers={gastroMitCoords.map((g) => ({
           lat: g.entry.koordinaten.lat,
           lng: g.entry.koordinaten.lng,
           label: g.entry.name,
@@ -58,6 +76,14 @@ const gastroMitCoords = gastro.filter(g => g.entry.koordinaten?.lat && g.entry.k
             title="Gastro in Tirol"
             sub="Von urigen Hütten über traditionelle Gasthäuser bis zu moderner Haubenküche – Tirol verwöhnt deinen Gaumen."
           />
+
+          {kategorien.length > 1 && (
+            <FilterBar
+              keyName="cat"
+              ariaLabel="Gastro nach Kategorie filtern"
+              options={kategorien.map((k) => ({ value: k, label: kategorieLabel[k] || k }))}
+            />
+          )}
 
           <div class="gastro-grid" id="gastro-grid">
             {gastro.map((g) => (
@@ -91,17 +117,4 @@ const gastroMitCoords = gastro.filter(g => g.entry.koordinaten?.lat && g.entry.k
   </main>
 </BaseLayout>
 
-<style is:global>
-  .gastro-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 0 0 80px;
-  }
-  @media (max-width: 968px) {
-    .gastro-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .gastro-grid { grid-template-columns: 1fr; }
-  }
 </style>

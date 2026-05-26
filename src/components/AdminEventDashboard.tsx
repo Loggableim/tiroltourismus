@@ -9,6 +9,7 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
+import AdminTabs from './AdminTabs';
 
 /* ── Types ── */
 interface EventEntry {
@@ -281,17 +282,15 @@ export default function AdminEventDashboard() {
       </div>
 
       {/* Filter */}
-      <div class="admin-tabs">
-        {(['pending', 'approved', 'all'] as const).map(f => (
-          <button
-            key={f}
-            onClick={() => setFilter(f)}
-            class={`admin-tab ${filter === f ? 'active' : ''}`}
-          >
-            {f === 'pending' ? '📋 Ausstehend' : f === 'approved' ? '✅ Freigegeben' : '📦 Alle'}
-          </button>
-        ))}
-      </div>
+      <AdminTabs
+        active={filter}
+        onChange={setFilter}
+        items={[
+          { value: 'pending', label: '📋 Ausstehend' },
+          { value: 'approved', label: '✅ Freigegeben' },
+          { value: 'all', label: '📦 Alle' },
+        ]}
+      />
 
       {/* Loading */}
       {loading && <div class="admin-loading">⏳ Daten werden geladen…</div>}

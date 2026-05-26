@@ -47,11 +47,12 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
         title={s.title}
         subtitle={s.subtitle}
         emoji={s.emoji}
+        imageSrc={s.imageSrc}
         gradient={s.gradient}
         size={s.size || 'sm'}
         bgImage={s.bgImage}
         meta={s.meta}
-      />
+/>
     ))}
 
     {sections.filter(s => s.type === 'facts-bar').map(s => (

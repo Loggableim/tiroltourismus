@@ -8,6 +8,13 @@ import OrtCard from '../../components/OrtCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 
+const featuredWappen = [
+  { name: 'Innsbruck', src: '/wappen/ultra-minimal/statutarstadt_innsbruck/innsbruck.png' },
+  { name: 'Imst', src: '/wappen/ultra-minimal/imst/imst.png' },
+  { name: 'Kitzbühel', src: '/wappen/ultra-minimal/kitzbühel/kitzbuehel.png' },
+  { name: 'Lienz', src: '/wappen/ultra-minimal/lienz/lienz.png' },
+];
+
 const orte = readCollection('orte').filter((o) => isPublished(o.entry));
 const regionen = readCollection('regionen')
   .filter((r) => isPublished(r.entry))
@@ -38,11 +45,11 @@ const orteMarkers = orteMitKarte.map((o) => ({
 
     <Hero
       title="Orte"
-      subtitle="Entdecke die schönsten Orte in Tirol."
-      emoji="🏘️"
+      subtitle="Entdecke die schönsten Orte in Tirol – jetzt mit den Wappen im Karten-Design statt Emojis."
+      imageSrc={featuredWappen[0].src}
       size="md"
     >
-      <div slot="actions" class="hero-actions">
+
         <a href="#orte-grid" class="btn btn-pink">Orte entdecken →</a>
         <span class="hero-urgency">📍 {orte.length} Ortschaften</span>
       </div>

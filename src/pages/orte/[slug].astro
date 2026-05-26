@@ -1,6 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import PaywallOverlay from '../../components/PaywallOverlay.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
@@ -9,15 +10,29 @@ export async function getStaticPaths() {
   return all.map(o => ({ params: { slug: o.slug } }));
 }
 
+const ULTRA_MINIMAL = JSON.parse(
+  readFileSync(resolve(process.cwd(), 'wappen/sd15_ultra_minimal.json'), 'utf-8')
+) as Array<{ ort: string; img_rel: string; bezirk: string }>;
+
+const normalize = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+const wappenForOrt = (ortName: string) => {
+  const entry = ULTRA_MINIMAL.find((item) => normalize(item.ort) === normalize(ortName));
+  return entry ? `/wappen/ultra-minimal/${entry.img_rel.replace(/^img\/sd15_ultra_minimal\//, '')}` : null;
+};
+
 const { slug } = Astro.params;
 const entry = readEntry('orte', slug);
 if (!entry) return Astro.redirect('/orte/');
 
 const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
-const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
-
-const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const wappenSrc = wappenForOrt(name);
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', 'de', 8) : [];
 const mapMarkers = [];
 if (entry.koordinaten) {
@@ -26,9 +41,10 @@ if (entry.koordinaten) {
 nearbyEntries.forEach(n => {
   if (!n.entry.koordinaten) return;
   mapMarkers.push({
-    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
     label: n.entry.name || n.entry.titel,
-    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    emoji: n.entry.emoji || '🏘️',
     href: '/' + n.collection + '/' + n.slug + '/',
     category: n.collection,
   });
@@ -60,9 +76,10 @@ const relatedByTag = tags && tags.length > 0
       type: 'hero',
       title: name,
       subtitle: kurzbeschreibung,
-      emoji: emoji,
+      imageSrc: wappenSrc,
       gradient: farbe,
-      bgImage: entry.hero_bild,
+      size: 'sm',
+      bgImage: undefined,
     },
     {
       type: 'facts-bar',
@@ -73,8 +90,8 @@ const relatedByTag = tags && tags.length > 0
       ].filter(Boolean),
     },
     tags && tags.length > 0 ? { type: 'tags', tags } : null,
-    !isBasic ? mapSection : null,
-    !isBasic && relatedByTag.length > 0 ? {
+    mapSection,
+    relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: 'Weitere Orte',
       entries: relatedByTag,
@@ -86,12 +103,3 @@ const relatedByTag = tags && tags.length > 0
     } : null,
   ].filter(Boolean)}
 />
-
-<!-- Basic: Premium-Inhalte hinter Paywall -->
-{isBasic && (
-  <section class="section paywall-restricted">
-    <div class="container" style="position:relative;max-width:800px">
-      <PaywallOverlay name={name} slug={slug} />
-    </div>
-  </section>
-)}

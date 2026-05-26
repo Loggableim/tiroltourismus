@@ -1,5 +1,8 @@
 ---
 import FavHeart from './FavHeart.astro';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
 export interface Props {
   name: string;
   slug: string;
@@ -8,11 +11,31 @@ export interface Props {
   farbe?: string;
   region?: string;
 }
+
 const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--pink)', region } = Astro.props;
+
+const ULTRA_MINIMAL = JSON.parse(
+  readFileSync(resolve(process.cwd(), 'wappen/sd15_ultra_minimal.json'), 'utf-8')
+) as Array<{ ort: string; img_rel: string; bezirk: string }>;
+
+const normalize = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+const wappenEntry = ULTRA_MINIMAL.find((item) => normalize(item.ort) === normalize(name));
+const wappenSrc = wappenEntry ? `/wappen/ultra-minimal/${wappenEntry.img_rel.replace(/^img\/sd15_ultra_minimal\//, '')}` : null;
 ---
 <a href={`/orte/${slug}/`} class="ort-card" data-collection="orte" data-slug={slug} data-filter-card data-filter-cat={region || ''}>
-  <div class="ort-card-img" style={`position:relative;background:${farbe}20`}>
-    <span class="ort-emoji">{emoji}</span>
+  <div class="ort-card-img" style={`--accent:${farbe};background:${farbe}14`}>
+    {wappenSrc ? (
+      <img src={wappenSrc} alt={`${name} Wappen`} class="ort-wappen" loading="lazy" decoding="async" />
+    ) : (
+      <span class="ort-emoji">{emoji}</span>
+    )}
     <FavHeart collection="orte" slug={slug} />
   </div>
   <div class="ort-card-body">
@@ -25,19 +48,21 @@ const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--pink)', regi
 <style is:global>
   .ort-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px)}
   .ort-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 18px 44px rgba(0,0,0,.12)}
-  .ort-card-img{height:130px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.015))}
-  .ort-emoji{font-size:48px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.16))}
+  .ort-card-img{position:relative;min-height:196px;padding:18px;display:flex;align-items:center;justify-content:center;aspect-ratio:4/5;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border-bottom:1px solid rgba(255,255,255,.06)}
+  .ort-card-img::after{content:'';position:absolute;inset:18px;border-radius:22px;border:1px solid color-mix(in srgb, var(--accent) 36%, transparent);background:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.16));box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 16px 32px rgba(0,0,0,.08)}
+  .ort-wappen{position:relative;z-index:1;width:82%;max-width:230px;height:auto;object-fit:contain;filter:drop-shadow(0 12px 24px rgba(0,0,0,.16))}
+  .ort-emoji{position:relative;z-index:1;font-size:56px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.16))}
   .ort-card-body{padding:22px 20px 20px;flex:1;display:flex;flex-direction:column}
   .ort-card-body h3{font-family:var(--font-display);font-size:22px;letter-spacing:.6px;text-transform:uppercase;margin-bottom:6px;color:var(--text)}
   .ort-card-body p{font-size:14px;color:var(--text2);line-height:1.72;flex:1;margin-bottom:12px}
   .ort-link{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--pink)}
   @media(max-width:600px){
-    .ort-card-img{height:110px}
+    .ort-card-img{min-height:170px;padding:16px}
     .ort-card-body h3{font-size:20px}
     .ort-card-body{padding:18px 18px}
   }
   @media(max-width:480px){
-    .ort-card-img{height:90px}
+    .ort-card-img{min-height:150px;padding:14px}
     .ort-card-body h3{font-size:17px}
     .ort-card-body{padding:12px}
   }

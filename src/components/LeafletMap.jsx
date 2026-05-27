@@ -317,10 +317,7 @@ export default function LeafletMap({
       });
     }
 
-    // Auto-fit bounds
-    if (markerBounds.length > 1) {
-      map.fitBounds(markerBounds, { padding: [40, 40], maxZoom: 10 });
-    }
+    // Auto-fit bounds (only on initial draw, never on re-cluster/refilter)
   }
 
   function clearMarkers(map) {

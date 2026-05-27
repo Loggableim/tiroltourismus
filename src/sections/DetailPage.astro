@@ -109,6 +109,7 @@ const { title, description, breadcrumbs, sections, isArticle, locale } = Astro.p
     {sections.filter(s => s.type === 'article-hero').map(s => (
       <SectionArticleHero
         emoji={s.emoji}
+        image={s.image}
         category={s.category}
         categoryColor={s.categoryColor}
         date={s.date}

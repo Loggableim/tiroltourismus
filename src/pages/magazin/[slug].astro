@@ -92,6 +92,7 @@ const relatedByTag = entry.tags && entry.tags.length > 0
     {
       type: 'article-hero',
       emoji: emoji,
+      image: entry.hero_bild || entry.bilder?.[0]?.url,
       category: entry.kategorie,
       date: formattedDate,
       author: entry.autor,

@@ -153,14 +153,13 @@ export default function LeafletMap({
     };
   }, []); // Run once
 
-  // Re-draw markers when markers prop changes
+  // Re-draw markers when markers prop changes (no fitBounds — prevents zoom loop)
   useEffect(() => {
     if (!mapInstance.current) return;
     import('leaflet').then((L) => {
       const map = mapInstance.current;
       clearMarkers(map);
       try { drawMarkers(L, map); } catch (e) { console.error('[LeafletMap] re-draw markers error:', e); }
-      try { fitBounds(map); } catch (e) { console.error('[LeafletMap] re-fit bounds error:', e); }
     }).catch((e) => {
       console.error('[LeafletMap] Failed to re-load leaflet:', e);
     });

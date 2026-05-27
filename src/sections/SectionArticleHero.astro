@@ -1,6 +1,7 @@
 ---
 export interface Props {
   emoji?: string;
+  image?: string;
   category?: string;
   categoryColor?: string;
   date?: string;
@@ -11,6 +12,7 @@ export interface Props {
 
 const {
   emoji,
+  image,
   category,
   categoryColor,
   date,
@@ -21,6 +23,7 @@ const {
 ---
 
 <header class="sec-art-hero">
+  {image && <img src={image} alt={title} class="sec-art-bg" loading="eager" decoding="async" />}
   <div class="container">
     {emoji && <div class="sec-art-emoji">{emoji}</div>}
     <div class="sec-art-meta">
@@ -42,10 +45,27 @@ const {
 
 <style is:global>
   .sec-art-hero {
-    padding: 48px 0 40px;
+    position: relative;
+    padding: 60px 0 50px;
     text-align: center;
     background: var(--bg2);
     border-bottom: 1px solid var(--glass-border);
+    overflow: hidden;
+  }
+  .sec-art-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    opacity: 0.22;
+    pointer-events: none;
+    filter: blur(2px);
+  }
+  .sec-art-hero .container {
+    position: relative;
+    z-index: 1;
   }
   .sec-art-emoji {
     font-size: 48px;
@@ -98,7 +118,7 @@ const {
 
   @media (max-width: 768px) {
     .sec-art-hero {
-      padding: 36px 0 32px;
+      padding: 44px 0 36px;
     }
     .sec-art-emoji {
       font-size: 40px;
@@ -113,7 +133,7 @@ const {
 
   @media (max-width: 480px) {
     .sec-art-hero {
-      padding: 28px 0 24px;
+      padding: 32px 0 28px;
     }
     .sec-art-emoji {
       font-size: 32px;

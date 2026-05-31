@@ -53,12 +53,44 @@ const relatedByTag = entry.tags && entry.tags.length > 0
         entry: { ...r.entry, _emoji: r.entry.emoji || '🍽️' }
       }))
   : [];
+
+// JSON-LD: LocalBusiness
+const siteURL = 'https://www.tirol-tourismus.at';
+const businessLD = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: entry.name,
+  description: (entry.kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}/gastro/${slug}/`,
+  telephone: entry.telefon || undefined,
+  email: entry.email || undefined,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.adresse || entry.ort ? {
+    address: {
+      '@type': 'PostalAddress',
+      ...(entry.adresse ? { streetAddress: entry.adresse } : {}),
+      ...(entry.ort ? { addressLocality: entry.ort } : {}),
+      addressCountry: 'AT',
+    },
+  } : {}),
+  ...(entry.koordinaten ? {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: entry.koordinaten.lat,
+      longitude: entry.koordinaten.lng,
+    },
+  } : {}),
+  ...(entry.kategorie ? { servesCuisine: entry.kategorie } : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 ---
 
 <DetailPage
   title={entry.name}
   description={generateMetaDescription(entry, 'gastro')}
   breadcrumbs={[{ label: 'Gastro', href: '/gastro/' }, { label: entry.name }]}
+  jsonld={businessLD}
+  ogImage={ogImage}
   sections={[
     {
       type: 'hero',
@@ -113,6 +145,11 @@ const relatedByTag = entry.tags && entry.tags.length > 0
         entry.webseite ? { label: '🌐 Webseite', href: entry.webseite, variant: 'glass' } : null,
       ].filter(Boolean),
     } : null,
+    {
+      type: 'back-link',
+      href: '/gastro/',
+      text: 'Alle Gastro',
+    },
   ].filter(Boolean)}
 />
 

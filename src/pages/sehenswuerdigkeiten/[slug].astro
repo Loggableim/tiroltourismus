@@ -60,11 +60,41 @@ const relatedByTag = entry.tags && entry.tags.length > 0
         entry: { ...r.entry, _emoji: r.entry.emoji || catStyle.emoji }
       }))
   : [];
+
+// JSON-LD: TouristAttraction
+const siteURL = 'https://www.tirol-tourismus.at';
+const attractionLD = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  name: entry.name,
+  description: (entry.kurzbeschreibung || entry.beschreibung || '').replace(/<[^>]*>/g, '').substring(0, 300),
+  url: `${siteURL}/sehenswuerdigkeiten/${slug}/`,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.kategorie ? { touristType: entry.kategorie } : {}),
+  ...(entry.ort ? {
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: entry.ort,
+      addressCountry: 'AT',
+    },
+  } : {}),
+  ...(entry.koordinaten ? {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: entry.koordinaten.lat,
+      longitude: entry.koordinaten.lng,
+    },
+  } : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 ---
 
 <DetailPage
   title={entry.name}
   description={generateMetaDescription(entry, 'sehenswuerdigkeiten')}
+  breadcrumbs={[{ label: 'Sehenswürdigkeiten', href: '/sehenswuerdigkeiten/' }, { label: entry.name }]}
+  jsonld={attractionLD}
+  ogImage={ogImage}
   sections={[
     {
       type: 'custom-hero',

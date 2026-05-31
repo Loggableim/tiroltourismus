@@ -27,11 +27,29 @@ const kategorieLabel = {
 };
 
 const kategorien = [...new Set(gastro.map((g) => g.entry.kategorie).filter(Boolean))].sort((a, b) => (kategorieLabel[a] || a).localeCompare(kategorieLabel[b] || b, 'de'));
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const gastroItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Gastro in Tirol',
+  description: 'Entdecke die kulinarische Vielfalt Tirols – von urigen Hütten bis zu Sternerestaurants.',
+  url: `${siteURL}/gastro/`,
+  numberOfItems: gastro.length,
+  itemListElement: gastro.slice(0, 30).map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.entry.name,
+    url: `${siteURL}/gastro/${g.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Gastro in Tirol"
   description="Entdecke die kulinarische Vielfalt Tirols – von urigen Hütten bis zu Sternerestaurants."
+  jsonld={gastroItemList}
 >
   <main>
     <div class="container">

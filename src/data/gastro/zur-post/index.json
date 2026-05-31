@@ -1,24 +1,24 @@
-﻿{
-    "name":  "Zur Post",
-    "emoji":  "â˜•",
-    "farbe":  "#FF6B35",
-    "kategorie":  "cafe",
-    "kurzbeschreibung":  "Zur Post in Tirol",
-    "beschreibung":  "\u003cp\u003eDas \u003cstrong\u003eZur Post\u003c/strong\u003e in Tirol laedt Sie ein, die Vielfalt der Tiroler Gastronomie zu entdecken. Hier geniessen Sie erlesene Kaffeespezialitaeten und hausgemachte Kuchen. Das Team verwÃ¶hnt Sie mit einem liebevoll zusammengestellten Angebot, bei dem Qualitaet und Genuss an erster Stelle stehen. Ein Besuch lohnt sich fuer alle Kaffeeliebhaber und Geniesser.\u003c/p\u003e",
-    "ort":  "",
-    "region":  "?",
-    "plz":  "",
-    "adresse":  "",
-    "telefon":  "+43 5517 30123",
-    "email":  "",
-    "webseite":  "http://www.posthotel.cc",
-    "preis":  "â‚¬â‚¬",
-    "tags":  [
-                 "gastro"
-             ],
-    "koordinaten":  {
-                        "lat":  47.3582369,
-                        "lng":  10.1880649
-                    },
-    "status":  "published"
+{
+  "name": "Zur Post",
+  "emoji": "â˜•",
+  "farbe": "#FF6B35",
+  "kategorie": "cafe",
+  "kurzbeschreibung": "Zur Post in Tirol",
+  "beschreibung": "<p>Das <strong>Zur Post</strong> in Tirol laedt Sie ein, die Vielfalt der Tiroler Gastronomie zu entdecken. Hier geniessen Sie erlesene Kaffeespezialitaeten und hausgemachte Kuchen. Das Team verwÃ¶hnt Sie mit einem liebevoll zusammengestellten Angebot, bei dem Qualitaet und Genuss an erster Stelle stehen. Ein Besuch lohnt sich fuer alle Kaffeeliebhaber und Geniesser.</p>",
+  "ort": "",
+  "region": "?",
+  "plz": "",
+  "adresse": "",
+  "telefon": "+43 5517 30123",
+  "email": "",
+  "webseite": "http://www.posthotel.cc",
+  "preis": "â‚¬â‚¬",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.3582369,
+    "lng": 10.1880649
+  },
+  "status": "published"
 }

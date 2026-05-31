@@ -9,9 +9,26 @@ import { readCollection, isPublished } from '../../lib/content.js';
 const events = readCollection('events').filter(e => isPublished(e.entry));
 const sorted = events.sort((a, b) => (a.entry.datum_von || '').localeCompare(b.entry.datum_von || ''));
 const mitCoords = events.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng);
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const eventItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Events in Tirol',
+  description: 'Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der offizielle Event-Kalender.',
+  url: `${siteURL}/events/`,
+  numberOfItems: events.length,
+  itemListElement: sorted.slice(0, 30).map((e, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: e.entry.name || e.entry.titel,
+    url: `${siteURL}/events/${e.slug}/`,
+  })),
+};
 ---
 
-<BaseLayout title="Events in Tirol" description="Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der offizielle Event-Kalender für Tirol.">
+<BaseLayout title="Events in Tirol" description="Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der offizielle Event-Kalender für Tirol." jsonld={eventItemList}>
   <main>
     <div class="container">
       <Breadcrumbs items={[{ label: 'Events' }]} />

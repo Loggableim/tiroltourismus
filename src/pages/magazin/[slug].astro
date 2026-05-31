@@ -83,11 +83,32 @@ const relatedByTag = entry.tags && entry.tags.length > 0
         entry: { ...r.entry, _emoji: catEmoji[r.entry.kategorie] || '📰' }
       }))
   : [];
+
+// JSON-LD: Article
+const siteURL = 'https://www.tirol-tourismus.at';
+const articleImage = entry.hero_bild || entry.bilder?.[0]?.url;
+const articleLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: entry.titel,
+  description: (entry.teaser || '').substring(0, 300),
+  url: `${siteURL}/magazin/${slug}/`,
+  ...(entry.datum ? { datePublished: entry.datum } : {}),
+  ...(entry.autor ? { author: { '@type': 'Person', name: entry.autor } } : {}),
+  ...(articleImage ? { image: articleImage.startsWith('http') ? articleImage : `${siteURL}${articleImage}` } : {}),
+  ...(entry.kategorie ? { articleSection: entry.kategorie } : {}),
+};
+const articleOgImage = articleImage ? (articleImage.startsWith('http') ? articleImage : `${siteURL}${articleImage}`) : undefined;
+const articlePubDate = entry.datum ? entry.datum + 'T00:00:00' : undefined;
 ---
 
 <DetailPage
   title={entry.titel}
   description={generateMetaDescription(entry, 'magazin')}
+  jsonld={articleLD}
+  ogImage={articleOgImage}
+  type="article"
+  publishedTime={articlePubDate}
   sections={[
     {
       type: 'article-hero',

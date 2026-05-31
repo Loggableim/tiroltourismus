@@ -13,10 +13,28 @@ const wappenBezirke = wappenData.bezirke.map((b) => ({
   ...b,
   publicImg: `/wappen/${b.img.replace(/^img\//, '')}`,
 }));
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const bezirkItemList = items.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Bezirke Tirols',
+  description: 'Alle neun Bezirke Tirols im Überblick – von Innsbruck bis Osttirol, vom Außerfern bis zum Zillertal.',
+  url: `${siteURL}/bezirke/`,
+  numberOfItems: items.length,
+  itemListElement: items.filter(Boolean).map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    url: `${siteURL}/bezirke/${b.slug}/`,
+  })),
+} : undefined;
 ---
 <BaseLayout
   title="Bezirke Tirols"
   description="Alle neun Bezirke Tirols im Überblick – von Innsbruck bis Osttirol, vom Außerfern bis zum Zillertal."
+  jsonld={bezirkItemList}
 >
   <main>
     <div class="container">

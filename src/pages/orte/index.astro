@@ -38,7 +38,7 @@ const regionen = readCollection('regionen')
   .sort((a, b) => (b.entry.bewertung || 0) - (a.entry.bewertung || 0) || (a.entry.titel || '').localeCompare(b.entry.titel || '', 'de'));
 const regionFilterOptions = regionen
   .map((r) => ({ slug: r.slug, label: r.entry.titel }))
-  .sort((a, b) => a.label.localeCompare(b.label, 'de'));
+  .sort((a, b) => (a.label || '').localeCompare(b.label || '', 'de'));
 const regionLabel = Object.fromEntries(regionen.map((r) => [r.slug, r.entry.titel]));
 
 const orteMitKarte = orte.filter((o) => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
@@ -50,11 +50,29 @@ const orteMarkers = orteMitKarte.map((o) => ({
   wappenSrc: wappenForOrt(o.entry.name),
   emoji: o.entry.emoji || '🏘️',
 }));
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const orteItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Orte in Tirol',
+  description: 'Entdecke die schönsten Orte in Tirol – von charmanten Dörfern bis zu pulsierenden Städten.',
+  url: `${siteURL}/orte/`,
+  numberOfItems: orte.length,
+  itemListElement: orte.slice(0, 30).map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: o.entry.name,
+    url: `${siteURL}/orte/${o.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Orte in Tirol"
   description="Entdecke die schönsten Orte in Tirol – von charmanten Dörfern bis zu pulsierenden Städten."
+  jsonld={orteItemList}
 >
   <main>
     <div class="container">

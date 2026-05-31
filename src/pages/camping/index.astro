@@ -36,11 +36,29 @@ const sortedRegions = Object.keys(byRegion).sort((a, b) => {
   if (b === 'sonstige') return -1;
   return (regionNames[a] || a).localeCompare(regionNames[b] || b);
 });
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const campingItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Campingplätze in Tirol',
+  description: 'Entdecke die schönsten Campingplätze in Tirol. Von Alpencamping bis Zeltplatz – Dein Platz in der Natur.',
+  url: `${siteURL}/camping/`,
+  numberOfItems: camping.length,
+  itemListElement: camping.slice(0, 30).map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.entry.name,
+    url: `${siteURL}/camping/${c.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Campingplätze in Tirol"
   description="Entdecke die schönsten Campingplätze in Tirol. Von Alpencamping bis Zeltplatz – Dein Platz in der Natur."
+  jsonld={campingItemList}
 >
   <main>
     <div class="container">

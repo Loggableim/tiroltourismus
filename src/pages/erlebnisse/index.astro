@@ -43,11 +43,29 @@ const erlebnisseMarkers = erlebnisseMitKarte.map((e) => {
     emoji: e.entry.emoji || meta.emoji || '🏔️',
   };
 });
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const erlebnisItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Erlebnisse in Tirol',
+  description: 'Erlebnisse in Tirol: Wandern, Ski, Bike, Wellness, Familie, Kulinarik, Kultur & Abenteuer.',
+  url: `${siteURL}/erlebnisse/`,
+  numberOfItems: erlebnisse.length,
+  itemListElement: erlebnisse.slice(0, 30).map((e, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: e.entry.name || e.entry.titel,
+    url: `${siteURL}/erlebnisse/${e.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Erlebnisse in Tirol"
   description="Erlebnisse in Tirol: Wandern, Ski, Bike, Wellness, Familie, Kulinarik, Kultur & Abenteuer."
+  jsonld={erlebnisItemList}
 >
   <main>
     <div class="container">

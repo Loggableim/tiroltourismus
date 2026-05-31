@@ -201,12 +201,58 @@ if (relatedByTag.length > 0) {
     defaultEmoji: '🏕️',
   });
 }
+
+// Back link
+allSections.push({
+  type: 'back-link',
+  href: '/camping/',
+  text: 'Alle Campingplätze',
+});
+
+// JSON-LD: Campground (subtype of LodgingBusiness)
+const siteURL = 'https://www.tirol-tourismus.at';
+const campgroundLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Campground',
+  name: entry.name,
+  description: (entry.kurzbeschreibung || entry.beschreibung || '').replace(/<[^>]*>/g, '').substring(0, 300),
+  url: `${siteURL}/camping/${slug}/`,
+  telephone: entry.telefon || undefined,
+  email: entry.email || undefined,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.preis_ab ? { priceRange: `ab ${entry.preis_ab} €` } : {}),
+  ...(entry.adresse || entry.ort ? {
+    address: {
+      '@type': 'PostalAddress',
+      ...(entry.adresse ? { streetAddress: entry.adresse } : {}),
+      ...(entry.ort ? { addressLocality: entry.ort } : {}),
+      ...(entry.plz ? { postalCode: entry.plz } : {}),
+      addressCountry: 'AT',
+    },
+  } : {}),
+  ...(entry.koordinaten ? {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: entry.koordinaten.lat,
+      longitude: entry.koordinaten.lng,
+    },
+  } : {}),
+  ...(entry.ausstattung && entry.ausstattung.length > 0 ? {
+    amenityFeature: entry.ausstattung.map(a => ({
+      '@type': 'LocationFeatureSpecification',
+      name: a,
+    })),
+  } : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 ---
 
 <DetailPage
   title={entry.name}
   description={generateMetaDescription(entry, 'camping')}
   breadcrumbs={[{ label: 'Campingplätze', href: '/camping/' }, { label: entry.name }]}
+  jsonld={campgroundLD}
+  ogImage={ogImage}
   sections={allSections}
 />
 

@@ -90,10 +90,10 @@ const organizationLD = {
   },
 };
 
-// Allow pages to supply additional LD fragments (e.g. TouristDestination, Event)
-const extraLD = jsonld ? { ...websiteLD, ...jsonld } : null;
-const ldBlocks = [websiteLD, organizationLD];
-if (extraLD) ldBlocks.push(extraLD);
+// Allow pages to supply additional LD fragments (e.g. TouristDestination, Event, FAQPage, LocalBusiness)
+// Added as separate block — never merged into websiteLD
+const extraLD = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
+const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 ---
 
 <!DOCTYPE html>

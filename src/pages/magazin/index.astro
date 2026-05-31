@@ -20,9 +20,26 @@ function formatDate(d) {
   try { return new Date(d + 'T00:00:00').toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
   catch { return d; }
 }
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const magazinItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Tirol Magazin',
+  description: 'Das Tirol Magazin: Inspiration für Deinen nächsten Urlaub in den Alpen.',
+  url: `${siteURL}/magazin/`,
+  numberOfItems: published.length,
+  itemListElement: published.slice(0, 30).map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: a.entry.titel,
+    url: `${siteURL}/magazin/${a.slug}/`,
+  })),
+};
 ---
 
-<BaseLayout title="Tirol Magazin" description="Das Tirol Magazin: Inspiration für Deinen nächsten Urlaub in den Alpen.">
+<BaseLayout title="Tirol Magazin" description="Das Tirol Magazin: Inspiration für Deinen nächsten Urlaub in den Alpen." jsonld={magazinItemList}>
   <main>
     <div class="container">
       <Breadcrumbs items={[{ label: 'Magazin' }]} />

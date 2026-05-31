@@ -17,6 +17,7 @@ const { titel, emoji, farbe, kurzbeschreibung, bewertung, beschreibung, hoehe, f
 const unterkuenfte = readCollection('unterkuenfte').filter(u => isPublished(u.entry) && u.entry.region === slug);
 const orte = readCollection('orte').filter(o => isPublished(o.entry) && o.entry.region === slug);
 const gastro = readCollection('gastro').filter(g => isPublished(g.entry) && g.entry.region === slug);
+const sehenswuerdigkeiten = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry) && s.entry.region === slug);
 
 // Verwandte Regionen via ersten Tag
 const relatedByTag = tags && tags.length > 0
@@ -105,6 +106,22 @@ const relatedByTag = tags && tags.length > 0
       ctaText: 'Alle Gastro anzeigen',
       accentBg: true,
     },
+    sehenswuerdigkeiten.length > 0 ? {
+      type: 'related-grid',
+      label: 'Sehenswürdigkeiten',
+      title: `Sehenswürdigkeiten im ${titel}`,
+      description: sehenswuerdigkeiten.length > 0 ? `${sehenswuerdigkeiten.length} Sehenswürdigkeit${sehenswuerdigkeiten.length !== 1 ? 'en' : ''} gefunden` : undefined,
+      entries: sehenswuerdigkeiten.slice(0, 6),
+      slugPrefix: '/sehenswuerdigkeiten/',
+      nameField: 'name',
+      subtitleField: 'ort',
+      emojiField: 'emoji',
+      defaultEmoji: '🏛️',
+      emptyText: 'Noch keine Sehenswürdigkeiten in dieser Region gelistet.',
+      ctaHref: `/sehenswuerdigkeiten/?region=${slug}`,
+      ctaText: 'Alle Sehenswürdigkeiten anzeigen',
+      accentBg: true,
+    } : null,
     relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: 'Weitere Regionen',

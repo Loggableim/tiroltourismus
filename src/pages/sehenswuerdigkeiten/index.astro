@@ -11,8 +11,25 @@ import { readCollection, isPublished } from '../../lib/content.js';
 const sights = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
 const kategorieLabel = { natur: '🌿 Natur', kultur: '🎭 Kultur', aussicht: '🏔️ Aussicht', sport: '⚡ Sport', museum: '🏛️ Museum', kirche: '⛪ Kirche', burg: '🏰 Burg', wanderung: '🥾 Wanderung' };
 const kategorien = [...new Set(sights.map(s => s.entry.kategorie).filter(Boolean))].sort((a, b) => (kategorieLabel[a] || a).localeCompare(kategorieLabel[b] || b, 'de'));
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const sightItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Sehenswürdigkeiten in Tirol',
+  description: 'Entdecke die schönsten Sehenswürdigkeiten in Tirol – von Gletschern über Burgen bis zu atemberaubenden Aussichtspunkten.',
+  url: `${siteURL}/sehenswuerdigkeiten/`,
+  numberOfItems: sights.length,
+  itemListElement: sights.slice(0, 30).map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.entry.name,
+    url: `${siteURL}/sehenswuerdigkeiten/${s.slug}/`,
+  })),
+};
 ---
-<BaseLayout title="Sehenswürdigkeiten in Tirol" description="Entdecke die schönsten Sehenswürdigkeiten in Tirol – von Gletschern über Burgen bis zu atemberaubenden Aussichtspunkten.">
+<BaseLayout title="Sehenswürdigkeiten in Tirol" description="Entdecke die schönsten Sehenswürdigkeiten in Tirol – von Gletschern über Burgen bis zu atemberaubenden Aussichtspunkten." jsonld={sightItemList}>
   <main>
     <Breadcrumbs items={[{ label: 'Sehenswürdigkeiten' }]} />
     <Hero title="Sehenswürdigkeiten" subtitle="Entdecke die schönsten Orte und Highlights in Tirol." emoji="🏛️" size="md">

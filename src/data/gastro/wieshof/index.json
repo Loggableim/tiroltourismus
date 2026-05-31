@@ -1,24 +1,24 @@
-﻿{
-    "name":  "Wieshof",
-    "emoji":  "ðŸ½ï¸",
-    "farbe":  "#FF6B35",
-    "kategorie":  "restaurant",
-    "kurzbeschreibung":  "Wieshof in Tirol",
-    "beschreibung":  "\u003cp\u003eDas \u003cstrong\u003eWieshof\u003c/strong\u003e in der Festungsstadt Kufstein laedt Sie ein, die Vielfalt der Tiroler Gastronomie zu entdecken. Hier geniessen Sie authentische Tiroler Gastlichkeit mit erstklassiger Kueche. Das Team verwÃ¶hnt Sie mit einem liebevoll zusammengestellten Angebot, bei dem Qualitaet und Genuss an erster Stelle stehen. Ein kulinarisches Erlebnis, das Sie nicht verpassen sollten.\u003c/p\u003e",
-    "ort":  "",
-    "region":  "kufstein",
-    "plz":  "",
-    "adresse":  "",
-    "telefon":  "",
-    "email":  "",
-    "webseite":  "",
-    "preis":  "â‚¬â‚¬",
-    "tags":  [
-                 "gastro"
-             ],
-    "koordinaten":  {
-                        "lat":  47.5790294,
-                        "lng":  12.0607614
-                    },
-    "status":  "published"
+{
+  "name": "Wieshof",
+  "emoji": "ðŸ½ï¸",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Wieshof in Tirol",
+  "beschreibung": "<p>Das <strong>Wieshof</strong> in der Festungsstadt Kufstein laedt Sie ein, die Vielfalt der Tiroler Gastronomie zu entdecken. Hier geniessen Sie authentische Tiroler Gastlichkeit mit erstklassiger Kueche. Das Team verwÃ¶hnt Sie mit einem liebevoll zusammengestellten Angebot, bei dem Qualitaet und Genuss an erster Stelle stehen. Ein kulinarisches Erlebnis, das Sie nicht verpassen sollten.</p>",
+  "ort": "",
+  "region": "kufstein",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "â‚¬â‚¬",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.5790294,
+    "lng": 12.0607614
+  },
+  "status": "published"
 }

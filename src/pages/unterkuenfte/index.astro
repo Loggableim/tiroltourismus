@@ -12,11 +12,29 @@ const sorted = unterkuenfte.sort((a, b) => {
   const order = { gold: 0, silver: 1, basic: 2 };
   return (order[a.entry.tier || 'basic'] || 2) - (order[b.entry.tier || 'basic'] || 2);
 });
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const accommodationItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Unterkünfte in Tirol',
+  description: 'Finde Dein Zuhause in Tirol. Hotels, Ferienwohnungen & Bauernhöfe – von luxuriös bis urig.',
+  url: `${siteURL}/unterkuenfte/`,
+  numberOfItems: unterkuenfte.length,
+  itemListElement: sorted.slice(0, 30).map((u, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: u.entry.name,
+    url: `${siteURL}/unterkuenfte/${u.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Unterkünfte in Tirol"
   description="Finde Dein Zuhause in Tirol. Hotels, Ferienwohnungen & Bauernhöfe – von luxuriös bis urig."
+  jsonld={accommodationItemList}
 >
   <main>
     <div class="container">

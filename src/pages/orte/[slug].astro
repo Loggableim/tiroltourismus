@@ -33,6 +33,18 @@ if (!entry) return Astro.redirect('/orte/');
 
 const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
 const wappenSrc = wappenForOrt(name);
+
+// Verknüpfte Unterkünfte, Gastro und Sehenswürdigkeiten in diesem Ort
+const unterkuenfteImOrt = readCollection('unterkuenfte')
+  .filter(u => isPublished(u.entry) && u.entry.ort && u.entry.ort.toLowerCase() === name.toLowerCase())
+  .slice(0, 6);
+const gastroImOrt = readCollection('gastro')
+  .filter(g => isPublished(g.entry) && g.entry.ort && g.entry.ort.toLowerCase() === name.toLowerCase())
+  .slice(0, 6);
+const sehenswuerdigkeitenImOrt = readCollection('sehenswuerdigkeiten')
+  .filter(s => isPublished(s.entry) && s.entry.ort && s.entry.ort.toLowerCase() === name.toLowerCase())
+  .slice(0, 6);
+
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', 'de', 8) : [];
 const mapMarkers = [];
 if (entry.koordinaten) {
@@ -67,12 +79,36 @@ const relatedByTag = tags && tags.length > 0
         entry: { ...r.entry, _wappenSrc: wappenForOrt(r.entry.name || r.entry.titel || ''), _emoji: r.entry.emoji || '🏘️' }
       }))
   : [];
+
+// JSON-LD: TouristDestination
+const siteURL = 'https://www.tirol-tourismus.at';
+const destinationLD = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: name,
+  description: (kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}/orte/${slug}/`,
+  ...(entry.koordinaten ? {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: entry.koordinaten.lat,
+      longitude: entry.koordinaten.lng,
+    },
+  } : {}),
+  ...(entry.region ? {
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: entry.region,
+    },
+  } : {}),
+};
 ---
 
 <DetailPage
   title={name}
   description={generateMetaDescription(entry, 'orte')}
   breadcrumbs={[{ label: 'Orte', href: '/orte/' }, { label: name }]}
+  jsonld={destinationLD}
   sections={[
     {
       type: 'hero',
@@ -93,6 +129,50 @@ const relatedByTag = tags && tags.length > 0
     },
     tags && tags.length > 0 ? { type: 'tags', tags } : null,
     mapSection,
+    unterkuenfteImOrt.length > 0 ? {
+      type: 'related-grid',
+      label: 'Übernachten',
+      title: `Unterkünfte in ${name}`,
+      description: `${unterkuenfteImOrt.length} Unterkunft${unterkuenfteImOrt.length !== 1 ? 'en' : ''} gefunden`,
+      entries: unterkuenfteImOrt,
+      slugPrefix: '/unterkuenfte/',
+      nameField: 'name',
+      subtitleField: 'ort',
+      priceField: 'preis_ab',
+      emptyText: 'Noch keine Unterkünfte in diesem Ort gelistet.',
+      ctaHref: `/unterkuenfte/?ort=${encodeURIComponent(name)}`,
+      ctaText: 'Alle Unterkünfte anzeigen',
+      accentBg: true,
+    } : null,
+    gastroImOrt.length > 0 ? {
+      type: 'related-grid',
+      label: 'Gastronomie',
+      title: `Gastro in ${name}`,
+      description: `${gastroImOrt.length} Lokal${gastroImOrt.length !== 1 ? 'e' : ''} gefunden`,
+      entries: gastroImOrt,
+      slugPrefix: '/gastro/',
+      nameField: 'name',
+      subtitleField: 'ort',
+      emojiField: 'emoji',
+      emptyText: 'Noch keine Gastro in diesem Ort gelistet.',
+      ctaHref: `/gastro/?ort=${encodeURIComponent(name)}`,
+      ctaText: 'Alle Gastro anzeigen',
+    } : null,
+    sehenswuerdigkeitenImOrt.length > 0 ? {
+      type: 'related-grid',
+      label: 'Sehenswürdigkeiten',
+      title: `Sehenswürdigkeiten in ${name}`,
+      description: `${sehenswuerdigkeitenImOrt.length} Sehenswürdigkeit${sehenswuerdigkeitenImOrt.length !== 1 ? 'en' : ''} gefunden`,
+      entries: sehenswuerdigkeitenImOrt,
+      slugPrefix: '/sehenswuerdigkeiten/',
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: 'emoji',
+      defaultEmoji: '🏛️',
+      emptyText: 'Noch keine Sehenswürdigkeiten in diesem Ort gelistet.',
+      ctaHref: `/sehenswuerdigkeiten/?ort=${encodeURIComponent(name)}`,
+      ctaText: 'Alle Sehenswürdigkeiten anzeigen',
+    } : null,
     relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: 'Weitere Orte',

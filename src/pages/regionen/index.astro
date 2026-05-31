@@ -10,11 +10,29 @@ import { readCollection, isPublished } from '../../lib/content.js';
 const regionen = readCollection('regionen')
   .filter((r) => isPublished(r.entry))
   .sort((a, b) => (b.entry.bewertung || 0) - (a.entry.bewertung || 0) || (a.entry.titel || '').localeCompare(b.entry.titel || '', 'de'));
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const regionItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Regionen in Tirol',
+  description: 'Sechs Gesichter, ein Land. Jede Region in Tirol hat ihren eigenen Sound – von Gletscherflüstern bis Stadtbeat. Finde deine.',
+  url: `${siteURL}/regionen/`,
+  numberOfItems: regionen.length,
+  itemListElement: regionen.slice(0, 30).map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: r.entry.titel,
+    url: `${siteURL}/regionen/${r.slug}/`,
+  })),
+};
 ---
 
 <BaseLayout
   title="Regionen"
   description="Sechs Gesichter, ein Land. Jede Region in Tirol hat ihren eigenen Sound – von Gletscherflüstern bis Stadtbeat. Finde deine."
+  jsonld={regionItemList}
 >
   <main>
     <div class="container">

@@ -11,7 +11,7 @@ const t = { de:{ title:'Suche', desc:'Durchsuche das Tirol Tourismus Portal.' },
 const info = t[locale] || t.de;
 ---
 
-<BaseLayout title="{info.title}" description="{info.desc}" locale={locale}>
+<BaseLayout title={info.title} description={info.desc} locale={locale}>
   <main>
     <div class="pagefind-search"><link href="/pagefind/pagefind-ui.css" rel="stylesheet" /><script src="/pagefind/pagefind-ui.js" is:inline></script><div id="search"></div><script is:inline>window.addEventListener('DOMContentLoaded',function(){new PagefindUI({element:'#search',showSubResults:true,showImages:false,resetStyles:false,baseUrl:locale==='de'?'/':'/'+locale+'/'});});</script></div>
   </main>

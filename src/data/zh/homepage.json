@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ 蒂罗尔州官方旅游门户",
+    "title": ["蒂罗尔", "与众不同"],
+    "subtitle": "体验蒂罗尔的万般精彩 – 从雄伟的山峰到田园诗般的山谷，再到质朴的高山小屋。",
+    "ctaPrimary": { "text": "✦ 探索地区", "href": "#regionen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "寻找住宿", "href": "#unterkuenfte", "class": "btn-secondary" }
+  },
+  "stats": [
+    { "icon": "🏔️", "count": 788, "label": "3,000米以上山峰" },
+    { "icon": "🏡", "count": 12000, "label": "住宿选择" },
+    { "icon": "🥾", "count": 24500, "label": "徒步公里数" },
+    { "icon": "🎿", "count": 580, "label": "缆车与索道" }
+  ],
+  "whyTirol": {
+    "label": "#为什么是蒂罗尔",
+    "title": "为什么选择蒂罗尔？",
+    "desc": "三大理由诠释为何蒂罗尔是阿尔卑斯山区最美丽的度假胜地。"
+  },
+  "regionen": {
+    "label": "探索",
+    "title": "我们的地区",
+    "desc": "从州府到最偏远的山村——每个地区都有其独特的魅力，为您带来无数难忘的体验。"
+  },
+  "unterkuenfte": {
+    "label": "住宿",
+    "title": "找到您的家",
+    "desc": "从豪华养生酒店到家庭经营的农场客栈，再到舒适的度假公寓——在蒂罗尔找到适合您的完美住宿。"
+  },
+  "magazin": [
+    { "title": "蒂罗尔最色彩斑斓的徒步路线", "desc": "七条路线，证明大自然是最杰出的艺术家——从高山花卉到金色冰川湖泊。" }
+  ]
+}

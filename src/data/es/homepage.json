@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ El portal turístico oficial del Tirol",
+    "title": ["TIROL", "DIFERENTE"],
+    "subtitle": "Descubra Tirol en toda su diversidad – desde majestuosas cumbres a través de valles idílicos hasta cabañas alpinas rústicas.",
+    "ctaPrimary": { "text": "✦ Descubrir Regiones", "href": "#regionen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "Encontrar Alojamiento", "href": "#unterkuenfte", "class": "btn-secondary" }
+  },
+  "stats": [
+    { "icon": "🏔️", "count": 788, "label": "Picos de más de 3.000m" },
+    { "icon": "🏡", "count": 12000, "label": "Alojamientos" },
+    { "icon": "🥾", "count": 24500, "label": "Kilómetros de Senderismo" },
+    { "icon": "🎿", "count": 580, "label": "Teleféricos y Remontes" }
+  ],
+  "whyTirol": {
+    "label": "#poquéTirol",
+    "title": "¿Por qué Tirol?",
+    "desc": "Tres buenas razones por las que Tirol se encuentra entre las regiones vacacionales más bellas de los Alpes."
+  },
+  "regionen": {
+    "label": "Descubre",
+    "title": "Nuestras Regiones",
+    "desc": "Desde la capital del estado hasta las aldeas montañosas más remotas – cada región tiene su propio carácter y ofrece innumerables oportunidades para vivir experiencias inolvidables."
+  },
+  "unterkuenfte": {
+    "label": "Alojarse",
+    "title": "Encuentra tu Hogar",
+    "desc": "Desde hoteles de bienestar de lujo hasta granjas familiares y acogedores apartamentos vacacionales – encuentre el alojamiento perfecto en Tirol."
+  },
+  "magazin": [
+    { "title": "Las Rutas de Senderismo Más Coloridas de Tirol", "desc": "Siete rutas que demuestran que la naturaleza es la mejor artista – desde flores alpinas hasta lagos glaciares dorados." }
+  ]
+}

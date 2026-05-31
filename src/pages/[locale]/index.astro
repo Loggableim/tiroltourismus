@@ -13,14 +13,25 @@ import dePage from '../../data/homepage.json';
 import enPage from '../../data/en/homepage.json';
 import frPage from '../../data/fr/homepage.json';
 import itPage from '../../data/it/homepage.json';
+import esPage from '../../data/es/homepage.json';
+import zhPage from '../../data/zh/homepage.json';
 
 const PAGE_MAP = {
   de: dePage,
   en: enPage,
   fr: frPage,
   it: itPage,
-  es: dePage,
-  zh: dePage,
+  es: esPage,
+  zh: zhPage,
+};
+
+const SECTION_LABELS = {
+  de: { regionen: '#regionen', unterkuenfte: '#unterkuenfte', sehenswuerdigkeiten: '#sehenswuerdigkeiten', gastro: '#gastro', magazin: '#magazin' },
+  en: { regionen: '#regions', unterkuenfte: '#accommodations', sehenswuerdigkeiten: '#sights', gastro: '#food-drink', magazin: '#magazine' },
+  fr: { regionen: '#régions', unterkuenfte: '#hébergements', sehenswuerdigkeiten: '#sites', gastro: '#gastronomie', magazin: '#magazine' },
+  it: { regionen: '#regioni', unterkuenfte: '#alloggi', sehenswuerdigkeiten: '#attrazioni', gastro: '#gastronomia', magazin: '#magazine' },
+  es: { regionen: '#regiones', unterkuenfte: '#alojamientos', sehenswuerdigkeiten: '#atracciones', gastro: '#gastronomía', magazin: '#revista' },
+  zh: { regionen: '#地区', unterkuenfte: '#住宿', sehenswuerdigkeiten: '#景点', gastro: '#美食', magazin: '#杂志' },
 };
 
 export async function getStaticPaths() {
@@ -28,6 +39,7 @@ export async function getStaticPaths() {
 }
 
 const locale = Astro.params.locale || 'de';
+const sl = SECTION_LABELS[locale] || SECTION_LABELS.de;
 const page = PAGE_MAP[locale] || dePage;
 
 const regions = readCollection('regionen').filter((r) => isPublished(r.entry)).slice(0, 6);
@@ -73,7 +85,7 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
 
     <section class="section" id="regionen">
       <div class="container">
-        <SectionHeader label="#regionen" title={page.regionen.title} sub={page.regionen.desc} />
+        <SectionHeader label={sl.regionen} title={page.regionen.title} sub={page.regionen.desc} />
         <div class="section-grid">
           {regions.map((r) => (
             <RegionCard
@@ -92,18 +104,16 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
 
     <section class="section" id="unterkuenfte">
       <div class="container">
-        <SectionHeader label="#unterkuenfte" title={page.unterkuenfte.title} sub={page.unterkuenfte.desc} />
+        <SectionHeader label={sl.unterkuenfte} title={page.unterkuenfte.title} sub={page.unterkuenfte.desc} />
         <div class="section-grid">
           {stays.map((u) => (
             <AccommodationCard
-              titel={u.entry.titel}
+              name={u.entry.name || u.entry.titel}
               slug={u.slug}
-              beschreibung={u.entry.kurzbeschreibung}
               ort={u.entry.ort}
-              stern={u.entry.sterne}
-              image={u.entry.bilder?.[0] || u.entry.bild || '/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp'}
+              sterne={u.entry.sterne}
               tier={u.entry.tier}
-              preis={u.entry.preis}
+              preis_ab={u.entry.preis}
             />
           ))}
         </div>
@@ -112,7 +122,7 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
 
     <section class="section" id="sehenswuerdigkeiten">
       <div class="container">
-        <SectionHeader label="#sehenswuerdigkeiten" title={locale === 'de' ? 'Sehenswürdigkeiten' : locale === 'fr' ? 'Sites' : locale === 'it' ? 'Attrazioni' : locale === 'es' ? 'Atracciones' : locale === 'zh' ? '景点' : 'Sights'} sub={locale === 'de' ? 'Die schönsten Ausflugsziele in Tirol.' : page.whyTirol?.desc || page.regionen.desc} />
+        <SectionHeader label={sl.sehenswuerdigkeiten} title={locale === 'de' ? 'Sehenswürdigkeiten' : locale === 'fr' ? 'Sites' : locale === 'it' ? 'Attrazioni' : locale === 'es' ? 'Atracciones' : locale === 'zh' ? '景点' : 'Sights'} sub={locale === 'de' ? 'Die schönsten Ausflugsziele in Tirol.' : locale === 'en' ? 'Discover the most beautiful excursion destinations in Tyrol.' : locale === 'fr' ? 'Découvrez les plus beaux sites touristiques du Tyrol.' : locale === 'it' ? 'Scopri le più belle attrazioni del Tirolo.' : locale === 'es' ? 'Descubre los lugares de interés más bellos del Tirol.' : locale === 'zh' ? '发现蒂罗尔最美丽的景点。' : page.whyTirol?.desc || page.regionen.desc} />
         <div class="sight-grid">
           {sights.map((s) => (
             <SightCard
@@ -132,13 +142,13 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
 
     <section class="section" id="gastro">
       <div class="container">
-        <SectionHeader label="#gastro" title={locale === 'de' ? 'Gastronomie' : page.regionen.title} sub={locale === 'de' ? 'Tiroler Genuss und alpine Küche.' : page.whyTirol?.desc || page.regionen.desc} />
+        <SectionHeader label={sl.gastro} title={locale === 'de' ? 'Gastronomie' : locale === 'en' ? 'Food & Drink' : locale === 'fr' ? 'Gastronomie' : locale === 'it' ? 'Gastronomia' : locale === 'es' ? 'Gastronomía' : locale === 'zh' ? '美食' : 'Food & Drink'} sub={locale === 'de' ? 'Tiroler Genuss und alpine Küche.' : locale === 'en' ? 'Tyrolean cuisine and alpine dining experiences.' : locale === 'fr' ? 'Cuisine tyrolienne et gastronomie alpine.' : locale === 'it' ? 'Cucina tirolese e gastronomia alpina.' : locale === 'es' ? 'Cocina tirolesa y gastronomía alpina.' : locale === 'zh' ? '蒂罗尔美食与阿尔卑斯餐饮体验。' : page.whyTirol?.desc || page.regionen.desc} />
         <div class="section-grid">
           {gastro.map((g) => (
             <GastroCard
               name={g.entry.name}
               slug={g.slug}
-              kurzbeschreibung={g.entry.kurzbeschreibung}
+              beschreibung={g.entry.kurzbeschreibung}
               kategorie={g.entry.kategorie}
               emoji={g.entry.emoji}
               ort={g.entry.ort}
@@ -151,16 +161,15 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
 
     <section class="section" id="magazin">
       <div class="container">
-        <SectionHeader label="#magazin" title={locale === 'de' ? 'Magazin' : page.magazin?.[0]?.title || 'Magazine'} sub={locale === 'de' ? 'Neue Geschichten, Reiseideen und Tirol-Highlights.' : page.regionen.desc} />
+        <SectionHeader label={sl.magazin} title={locale === 'de' ? 'Magazin' : locale === 'en' ? 'Magazine' : locale === 'fr' ? 'Magazine' : locale === 'it' ? 'Magazine' : locale === 'es' ? 'Revista' : locale === 'zh' ? '杂志' : 'Magazine'} sub={locale === 'de' ? 'Neue Geschichten, Reiseideen und Tirol-Highlights.' : locale === 'en' ? 'New stories, travel ideas and Tyrolean highlights.' : locale === 'fr' ? 'Nouvelles histoires, idées de voyage et points forts du Tyrol.' : locale === 'it' ? 'Nuove storie, idee di viaggio e highlights tirolesi.' : locale === 'es' ? 'Nuevas historias, ideas de viaje y destacados del Tirol.' : locale === 'zh' ? '新故事、旅行灵感和蒂罗尔亮点。' : page.regionen.desc} />
         <div class="section-grid">
           {magazin.map((a) => (
             <ArticleCard
               slug={a.slug}
               titel={a.entry.titel}
-              kurzbeschreibung={a.entry.kurzbeschreibung}
+              teaser={a.entry.kurzbeschreibung}
               datum={a.entry.datum}
               kategorie={a.entry.kategorie}
-              bild={a.entry.bild || a.entry.bilder?.[0]}
             />
           ))}
         </div>

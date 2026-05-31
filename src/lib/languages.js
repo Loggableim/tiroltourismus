@@ -39,7 +39,7 @@ export function localePrefix(locale) {
  *   switchLangPath('/', 'de', 'en')             → '/en/'
  */
 export function switchLangPath(currentPath, fromLocale, toLocale) {
-  // Detect and strip any locale prefix (de, en, fr, it, nl)
+  // Detect and strip any locale prefix (de, en, fr, it, es, zh)
   const langCodes = LANGUAGES.map(l => l.code).join('|');
   const prefixRegex = new RegExp(`^\\/(${langCodes})(\\/|$)`);
   const match = currentPath.match(prefixRegex);

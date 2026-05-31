@@ -128,7 +128,7 @@ function formatDate(d) {
       <div class="hero-bg"><img src={page.hero.bgImage} alt="" width="1024" height="1024" loading="eager" fetchpriority="high"></div>
       <div class="hero-glow"></div>
       <div class="hero-content">
-        <div id="weatherWidget" class="hero-weather"></div>
+        <!-- weather widget is rendered in footer via BaseLayout -->
         <div class="hero-badge" set:html={page.hero.badge}></div>
         <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
         <p set:html={page.hero.subtitle}></p>
@@ -484,11 +484,6 @@ function formatDate(d) {
   .stat-num{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);line-height:1;color:var(--pink);letter-spacing:2px;margin-bottom:4px}
   .stat-label{font-size:13px;color:var(--text2);font-weight:500}
   @media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
-
-  /* ═══ SECTION HEADER ACCENT ═══ */
-  .section-header{position:relative}
-  .section-header::after{content:'';display:block;width:80px;height:3px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,var(--pink),var(--gold))}
-  .daily .section-header::after{background:linear-gradient(90deg,var(--pink),var(--gold),var(--pink))}
 
   /* ═══ SECTION GRID (shared for regionen, unterkuenfte, gastro, magazin) ═══ */
   .section-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}

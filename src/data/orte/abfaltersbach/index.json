@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/abfaltersbach/hero_1.png",
+      "alt": "Abfaltersbach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/abfaltersbach/hero_1.png",
   "koordinaten": {
     "lat": "46.7564",
     "lng": "12.5299"
-  }
+  },
+  "kategorie": "dorf"
 }

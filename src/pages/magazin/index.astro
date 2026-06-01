@@ -87,6 +87,7 @@ const magazinItemList = {
                   datum={formatDate(a.entry.datum)}
                   kategorie={(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}
                   emoji={catEmoji[a.entry.kategorie] || '📰'}
+                  hero_bild={a.entry.hero_bild}
                 />
               </div>
             ))}

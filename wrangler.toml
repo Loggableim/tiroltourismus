@@ -1,7 +1,1 @@
-# Wrangler Config für tiroltourismus.com
-# Definiert D1-DB-Binding für Cloudflare Pages Functions
-
-[[d1_databases]]
-binding = "DB"
-database_name = "tiroltourismus-db"
-database_id = "c5c06dfe-9f08-4645-8bde-5dffbfd5bbad"
+pages_build_output_dir = "dist"

@@ -12,6 +12,10 @@ const published = articles
   .filter(a => isPublished(a.entry))
   .sort((a, b) => (b.entry.datum || '').localeCompare(a.entry.datum || ''));
 
+const featured = published.slice(0, 1);
+const secondary = published.slice(1, 3);
+const rest = published.slice(3);
+
 const catEmoji = { allgemein: '📰', tipps: '💡', reiseberichte: '✈️', interview: '🎙️', hintergrund: '🔍' };
 const catLabel = { allgemein: 'Allgemein', tipps: 'Tipps', reiseberichte: 'Reiseberichte', interview: 'Interview', hintergrund: 'Hintergrund' };
 
@@ -58,42 +62,96 @@ const magazinItemList = {
     </Hero>
 
     {published.length > 0 ? (
-      <section class="section" id="magazin-grid">
-        <div class="container">
-          <SectionHeader
-            label="#magazin"
-            title="Stories aus den Bergen"
-            sub="Neueste Geschichten, Tipps & Inspirationen rund um Deinen nächsten Tirol-Urlaub."
-          />
+      <>
+        <!-- ═══ FEATURED ARTICLE ═══ -->
+        {featured.length > 0 && (
+          <section class="section featured-section">
+            <div class="container">
+              {featured.map((a) => (
+                <a href={`/magazin/${a.slug}/`} class="featured-card">
+                  <div class="featured-img">
+                    {a.entry.hero_bild ? (
+                      <img src={a.entry.hero_bild} alt={a.entry.titel} loading="eager" />
+                    ) : (
+                      <div class="featured-emoji">{catEmoji[a.entry.kategorie] || '📰'}</div>
+                    )}
+                    <div class="featured-overlay">
+                      <span class="featured-tag">{(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}</span>
+                      <h2 class="featured-title">{a.entry.titel}</h2>
+                      <p class="featured-teaser">{a.entry.teaser}</p>
+                      <span class="featured-link">Weiterlesen →</span>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
 
-          <FilterBar
-            keyName="cat"
-            ariaLabel="Magazin nach Kategorie filtern"
-            options={[
-              { value: 'tipps', label: 'Tipps' },
-              { value: 'reiseberichte', label: 'Reiseberichte' },
-              { value: 'hintergrund', label: 'Hintergrund' },
-              { value: 'allgemein', label: 'Allgemein' },
-            ]}
-          />
-
-          <div class="magazin-grid">
-            {published.map((a) => (
-              <div class="magazin-item" data-filter-card data-filter-cat={a.entry.kategorie}>
-                <ArticleCard
-                  titel={a.entry.titel}
-                  slug={a.slug}
-                  teaser={a.entry.teaser}
-                  datum={formatDate(a.entry.datum)}
-                  kategorie={(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}
-                  emoji={catEmoji[a.entry.kategorie] || '📰'}
-                  hero_bild={a.entry.hero_bild}
-                />
+        <!-- ═══ SECONDARY ROW (2 Articles) ═══ -->
+        {secondary.length > 0 && (
+          <section class="section secondary-section">
+            <div class="container">
+              <div class="secondary-grid">
+                {secondary.map((a) => (
+                  <a href={`/magazin/${a.slug}/`} class="secondary-card">
+                    <div class="secondary-img">
+                      {a.entry.hero_bild ? (
+                        <img src={a.entry.hero_bild} alt={a.entry.titel} loading="lazy" />
+                      ) : (
+                        <div style="font-size:48px;line-height:170px;text-align:center">{catEmoji[a.entry.kategorie] || '📰'}</div>
+                      )}
+                    </div>
+                    <div class="secondary-body">
+                      <span class="secondary-tag">{(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}</span>
+                      <h3 class="secondary-title">{a.entry.titel}</h3>
+                      <p class="secondary-teaser">{a.entry.teaser}</p>
+                    </div>
+                  </a>
+                ))}
               </div>
-            ))}
+            </div>
+          </section>
+        )}
+
+        <!-- ═══ ALLE ARTIKEL (Grid) ═══ -->
+        <section class="section" id="magazin-grid">
+          <div class="container">
+            <SectionHeader
+              label="#magazin"
+              title="Alle Geschichten"
+              sub="Neueste Geschichten, Tipps & Inspirationen rund um Deinen nächsten Tirol-Urlaub."
+            />
+
+            <FilterBar
+              keyName="cat"
+              ariaLabel="Magazin nach Kategorie filtern"
+              options={[
+                { value: 'tipps', label: 'Tipps' },
+                { value: 'reiseberichte', label: 'Reiseberichte' },
+                { value: 'hintergrund', label: 'Hintergrund' },
+                { value: 'allgemein', label: 'Allgemein' },
+              ]}
+            />
+
+            <div class="magazin-grid">
+              {rest.map((a) => (
+                <div class="magazin-item" data-filter-card data-filter-cat={a.entry.kategorie}>
+                  <ArticleCard
+                    titel={a.entry.titel}
+                    slug={a.slug}
+                    teaser={a.entry.teaser}
+                    datum={formatDate(a.entry.datum)}
+                    kategorie={(catLabel[a.entry.kategorie] || a.entry.kategorie || '').toUpperCase()}
+                    emoji={catEmoji[a.entry.kategorie] || '📰'}
+                    hero_bild={a.entry.hero_bild}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </>
     ) : (
       <section class="section">
         <div class="container" style="text-align:center;padding:80px 0">
@@ -110,3 +168,183 @@ const magazinItemList = {
   </main>
 </BaseLayout>
 
+<style is:global>
+  /* ═══ FEATURED ARTICLE ═══ */
+  .featured-section { padding-top: 0 !important; }
+  .featured-card {
+    display: block;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+    box-shadow: 0 12px 40px rgba(0,0,0,.15);
+  }
+  .featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  }
+  .featured-img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21/9;
+    min-height: 320px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a1028, #2d1f4a);
+  }
+  .featured-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s var(--ease);
+  }
+  .featured-card:hover .featured-img img {
+    transform: scale(1.05);
+  }
+  .featured-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 60px 40px 36px;
+    background: linear-gradient(transparent, rgba(0,0,0,.7) 30%, rgba(0,0,0,.9));
+    color: #fff;
+  }
+  .featured-tag {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    background: var(--pink);
+    color: #fff;
+    margin-bottom: 12px;
+  }
+  .featured-title {
+    font-family: var(--font-display);
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  .featured-teaser {
+    font-size: 15px;
+    color: rgba(255,255,255,.75);
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 14px;
+  }
+  .featured-link {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    color: var(--pink);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap .3s;
+  }
+  .featured-link:hover { gap: 8px; }
+  .featured-emoji {
+    font-size: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  /* ═══ SECONDARY ROW ═══ */
+  .secondary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .secondary-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.012));
+    border: 1px solid rgba(255,255,255,.08);
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+    box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  }
+  .secondary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0,0,0,.12);
+  }
+  .secondary-img {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(255,255,255,.03), rgba(255,255,255,.012));
+  }
+  .secondary-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s var(--ease);
+    display: block;
+  }
+  .secondary-card:hover .secondary-img img {
+    transform: scale(1.06);
+  }
+  .secondary-body {
+    padding: 22px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .secondary-tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 100px;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .55px;
+    background: rgba(255,255,255,.08);
+    color: var(--text2);
+    margin-bottom: 8px;
+    width: fit-content;
+  }
+  .secondary-title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    line-height: 1.15;
+    letter-spacing: .25px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+  .secondary-teaser {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.72;
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  /* ═══ MAGAZIN GRID (existing) ═══ */
+  .magazin-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  @media(max-width:900px) {
+    .secondary-grid { grid-template-columns: 1fr; }
+    .magazin-grid { grid-template-columns: repeat(2, 1fr); }
+    .featured-img { aspect-ratio: 16/9; min-height: 240px; }
+    .featured-overlay { padding: 40px 24px 24px; }
+    .featured-title { font-size: 26px; }
+  }
+  @media(max-width:600px) {
+    .magazin-grid { grid-template-columns: 1fr; }
+    .featured-img { aspect-ratio: 4/3; min-height: 200px; }
+    .featured-overlay { padding: 30px 18px 18px; }
+    .featured-title { font-size: 22px; }
+    .featured-teaser { display: none; }
+  }
+</style>

@@ -49,7 +49,7 @@ check_lang() {
 # ═══ Complete kanban tasks for a language ═══
 complete_lang_kb() {
   local lang="$1"
-  case $lang in fr) p="FR" ;; en) p="EN" ;; it) p="IT" ;; es) p="ES" ;; zh) p="ZH" ;; esac
+  case $lang in fr) p="FR" ;; en) p="EN" ;; it) p="IT" ;; es) p="ES" ;; zh) p="ZH" ;; nl) p="NL" ;; cs) p="CS" ;; esac
   local json=$($KANBAN list --json 2>/dev/null)
   for tid in $(echo "$json" | python3 -c "
 import json,sys
@@ -69,6 +69,8 @@ EN=$(check_lang en); echo "🇬🇧 EN: $EN/$LANG_TOTAL"
 IT=$(check_lang it); echo "🇮🇹 IT: $IT/$LANG_TOTAL"
 ES=$(check_lang es); echo "🇪🇸 ES: $ES/$LANG_TOTAL"
 ZH=$(check_lang zh); echo "🇨🇳 ZH: $ZH/$LANG_TOTAL"
+NL=$(check_lang nl); echo "🇳🇱 NL: $NL/$LANG_TOTAL"
+CS=$(check_lang cs); echo "🇨🇿 CS: $CS/$LANG_TOTAL"
 echo ""
 
 if [ "$FR" -lt "$LANG_TOTAL" ]; then
@@ -90,8 +92,24 @@ elif [ "$ZH" -lt "$LANG_TOTAL" ]; then
   complete_lang_kb "es"
   echo "▶️  CHINESISCH"
   bash scripts/translate_language.sh zh
-else
-  echo "🎉 ALLE FERTIG! 5240 Einträge in 5 Sprachen"
+elif [ "$NL" -lt "$LANG_TOTAL" ]; then
   complete_lang_kb "zh"
+  echo "▶️  NIEDERLÄNDISCH"
+  # Parallel: alle 9 Kategorien gleichzeitig
+  cd "$BASE"
+  for cat in gastro unterkuenfte orte camping sehenswuerdigkeiten magazin regionen erlebnisse events; do
+    $PYTHON_EXE scripts/translate_worker.py "$cat" nl &
+  done
+  wait
+  git add src/data/nl/
+  git commit -m "[i18n] NL translations complete"
+  git push origin master
+elif [ "$CS" -lt "$LANG_TOTAL" ]; then
+  complete_lang_kb "nl"
+  echo "▶️  TSCHECHISCH"
+  bash scripts/translate_language.sh cs
+else
+  echo "🎉 ALLE FERTIG! 5240 Einträge in 7 Sprachen"
+  complete_lang_kb "cs"
 fi
 echo "============================================"

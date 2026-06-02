@@ -34,7 +34,8 @@ const {
 
 // Locale helpers — dynamisch für alle Sprachen
 const langCode = locale || 'de';
-const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN', nl:'nl_NL' };
+const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN', nl:'nl_NL', cs:'cs_CZ' };
+const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN', nl:'nl-NL', cs:'cs-CZ' };
 const fullLocale = LOCALE_MAP[locale] || 'de_AT';
 const localePrefix = locale === 'de' ? '' : `/${locale}`;
 const siteDesc = description || ({ de:'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.', en:'The official tourism portal for Tyrol – Mountains, lakes, hiking trails, ski resorts, and accommodations.', fr:'Le portail touristique officiel du Tyrol – Montagnes, lacs, sentiers de randonnée, stations de ski et hébergements.', it:'Il portale turistico ufficiale del Tirolo – Montagne, laghi, sentieri escursionistici, stazioni sciistiche e alloggi.', es:'El portal turístico oficial de Tirol – Montañas, lagos, rutas de senderismo, estaciones de esquí y alojamientos.', zh:'蒂罗尔州官方旅游门户 – 山脉、湖泊、徒步小径、滑雪场和住宿。', nl:'Het officiële toerismeportaal voor Tirol – bergen, meren, wandelroutes, skigebieden en accommodaties.' }[locale] || 'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.');
@@ -56,6 +57,7 @@ const alternateLinks = LANGUAGES
   .filter((l) => l.ready)
   .map((l) => ({
     code: l.code,
+    hreflang: HREFLANG_MAP[l.code] || l.code,
     href: absoluteURL(switchLangPath(currentPath, locale, l.code)),
     ogLocale: LOCALE_MAP[l.code] || l.code,
   }));
@@ -126,7 +128,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <meta name="google-adsense-account" content="ca-pub-9094916118868532">
   {noindex && <meta name="robots" content="noindex, nofollow" />}
   {alternateLinks.map((link) => (
-    <link rel="alternate" href={link.href} hreflang={link.code} />
+    <link rel="alternate" href={link.href} hreflang={link.hreflang} />
   ))}
   <link rel="alternate" href={xDefaultURL} hreflang="x-default" />
   <!-- Fonts: display=swap + preconnect for optimal loading -->

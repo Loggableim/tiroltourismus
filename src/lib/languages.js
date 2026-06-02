@@ -10,7 +10,9 @@ export const LANGUAGES = [
   { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
   { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: true },
   { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
-  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: true },
+  // Listed for future rollout, but excluded from routes/hreflang until localized data exists.
+  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: false },
+  { code: 'cs', flag: '🇨🇿', name: 'Czech', nameNative: 'Čeština', ready: false },
 ];
 
 export const LANGUAGES_READY = LANGUAGES.filter((l) => l.ready).map((l) => l.code); // alle aktuell freigegebenen Sprachen routen
@@ -40,7 +42,7 @@ export function localePrefix(locale) {
  *   switchLangPath('/', 'de', 'en')             → '/en/'
  */
 export function switchLangPath(currentPath, fromLocale, toLocale) {
-  // Detect and strip any locale prefix (de, en, fr, it, es, zh)
+  // Detect and strip any configured locale prefix.
   const langCodes = LANGUAGES.map(l => l.code).join('|');
   const prefixRegex = new RegExp(`^\\/(${langCodes})(\\/|$)`);
   const match = currentPath.match(prefixRegex);

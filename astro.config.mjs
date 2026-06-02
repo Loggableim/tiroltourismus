@@ -2,9 +2,9 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
-const LANGUAGES = ['de', 'en', 'fr', 'it', 'es', 'zh', 'nl'];
-const LOCALE_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN', nl:'nl-NL' };
-const LOCALE_PATTERN = /^\/(en|fr|it|es|zh|nl)(\/|$)/;
+const HREFLANG_LANGUAGES = ['de', 'en', 'fr', 'it', 'es', 'zh'];
+const LOCALE_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN' };
+const LOCALE_PATTERN = /^\/(en|fr|it|es|zh)(\/|$)/;
 
 export default defineConfig({
   integrations: [react(), sitemap({
@@ -25,7 +25,7 @@ export default defineConfig({
 
       return {
         url: entry.url,
-        links: LANGUAGES.map(l => ({
+        links: HREFLANG_LANGUAGES.map(l => ({
           lang: LOCALE_MAP[l],
           url: buildUrl(l, relativePath),
         })),

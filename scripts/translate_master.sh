@@ -6,9 +6,9 @@
 BOARD="tirol-uebersetzung"
 BASE="F:/tiroltourismus"
 LOCK_FILE="/tmp/translate_master.lock"
-PYTHON_EXE="/e/HermesPortable/venv/Scripts/python"
-ENV="HERMES_KANBAN_BOARD=$BOARD PYTHONPATH=E:/HermesPortable/cids-hermes-agent"
-KANBAN="cd E:/HermesPortable && $ENV $PYTHON_EXE -m hermes_cli.main kanban"
+PYTHON_EXE="/c/HermesPortable/venv/Scripts/python"
+ENV="HERMES_KANBAN_BOARD=$BOARD PYTHONPATH=C:/HermesPortable/cids-hermes-agent"
+KANBAN="cd C:/HermesPortable && $ENV $PYTHON_EXE -m hermes_cli.main kanban"
 
 # ═══ Lock-Check ═══
 if [ -f "$LOCK_FILE" ]; then
@@ -46,6 +46,23 @@ check_lang() {
   echo $total
 }
 
+# Zählt Worker-Restanten inkl. leerer/missing übersetzbarer Felder (nicht nur fehlende Dateien).
+check_worker_remaining() {
+  local lang=$1; local total=0; local cat; local pending
+  for cat in gastro unterkuenfte orte camping sehenswuerdigkeiten magazin regionen erlebnisse events; do
+    pending=$($PYTHON_EXE - "$cat" "$lang" <<'PY' 2>/dev/null
+import sys
+sys.path.insert(0, "scripts")
+from translate_worker import get_remaining
+print(len(get_remaining(sys.argv[1], sys.argv[2])))
+PY
+)
+    pending=${pending:-0}
+    total=$((total + pending))
+  done
+  echo $total
+}
+
 # ═══ Complete kanban tasks for a language ═══
 complete_lang_kb() {
   local lang="$1"
@@ -70,6 +87,7 @@ IT=$(check_lang it); echo "🇮🇹 IT: $IT/$LANG_TOTAL"
 ES=$(check_lang es); echo "🇪🇸 ES: $ES/$LANG_TOTAL"
 ZH=$(check_lang zh); echo "🇨🇳 ZH: $ZH/$LANG_TOTAL"
 NL=$(check_lang nl); echo "🇳🇱 NL: $NL/$LANG_TOTAL"
+NL_REMAINING=$(check_worker_remaining nl); echo "🇳🇱 NL offene Worker-Einträge: $NL_REMAINING"
 CS=$(check_lang cs); echo "🇨🇿 CS: $CS/$LANG_TOTAL"
 echo ""
 
@@ -92,7 +110,7 @@ elif [ "$ZH" -lt "$LANG_TOTAL" ]; then
   complete_lang_kb "es"
   echo "▶️  CHINESISCH"
   bash scripts/translate_language.sh zh
-elif [ "$NL" -lt "$LANG_TOTAL" ]; then
+elif [ "$NL" -lt "$LANG_TOTAL" ] || [ "${NL_REMAINING:-0}" -gt 0 ]; then
   complete_lang_kb "zh"
   echo "▶️  NIEDERLÄNDISCH"
   # Parallel: alle 9 Kategorien gleichzeitig

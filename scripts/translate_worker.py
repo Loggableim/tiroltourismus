@@ -87,7 +87,7 @@ def api_call(system_prompt, user_text, timeout=120, model=None, provider="ollama
     if provider == "ollama":
         key = next_ollama_key()
         url = f"{OLLAMA_BASE_URL}/chat/completions"
-        headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
+        headers = {"Authorization": f"Bearer {key}", "Content-Type": "application/json", "User-Agent": "Mozilla/5.0"}
     elif provider == "openrouter":
         key = next_or_key()
         if not key:
@@ -96,6 +96,7 @@ def api_call(system_prompt, user_text, timeout=120, model=None, provider="ollama
         headers = {
             "Authorization": f"Bearer {key}",
             "Content-Type": "application/json",
+            "User-Agent": "Mozilla/5.0",
             "HTTP-Referer": "https://tiroltourismus.com",
             "X-Title": "Tirol Tourismus i18n",
         }
@@ -158,7 +159,7 @@ TAG_PROMPTS = {
 }
 
 TRANSLATABLE_FIELDS = {
-    "gastro":             ["kurzbeschreibung"],
+    "gastro":             ["kurzbeschreibung", "beschreibung"],
     "unterkuenfte":       ["kurzbeschreibung"],
     "camping":            ["kurzbeschreibung"],
     "orte":               ["kurzbeschreibung"],
@@ -214,14 +215,42 @@ def get_german(cat):
             pass
     return out
 
+def load_target(path):
+    """Lädt bestehende Ziel-JSONs, damit fehlende Felder ergänzt statt Metadaten überschrieben werden."""
+    try:
+        data = json.loads(open(path, encoding="utf-8").read())
+        return data if isinstance(data, dict) else None
+    except:
+        return None
+
+def has_source_text(data, field):
+    val = data.get(field, "")
+    return isinstance(val, str) and len(val.strip()) >= 3
+
+def is_missing_target_text(data, field):
+    if not isinstance(data, dict) or field not in data:
+        return True
+    val = data.get(field)
+    return val is None or (isinstance(val, str) and len(val.strip()) == 0)
+
+def needs_field_translation(cat, source, target):
+    """True, wenn ein existierendes Ziel-JSON übersetzbare Quelltexte noch leer/missing hat."""
+    fields = TRANSLATABLE_FIELDS.get(cat, ["kurzbeschreibung"])
+    return any(has_source_text(source, field) and is_missing_target_text(target, field) for field in fields)
+
 def get_remaining(cat, lang):
     if lang == "de":
         return []
     td = DATA_DIR / lang / cat
     out = []
     for slug, data in get_german(cat):
-        if not (td / slug / "index.json").exists():
-            out.append((slug, data))
+        target_path = td / slug / "index.json"
+        if not target_path.exists():
+            out.append((slug, data, None))
+            continue
+        target_data = load_target(target_path)
+        if target_data is None or needs_field_translation(cat, data, target_data):
+            out.append((slug, data, target_data))
     return out
 
 def write_out(cat, slug, data, lang):
@@ -270,16 +299,15 @@ def main():
     def worker(tid, items):
         nonlocal done, failed
         provider = get_provider(tid)
-        for slug, data in items:
+        for slug, data, target_data in items:
             try:
                 fields = TRANSLATABLE_FIELDS.get(cat, ["kurzbeschreibung"])
-                translated = dict(data)
+                translated = dict(target_data) if isinstance(target_data, dict) else dict(data)
                 for field in fields:
-                    val = data.get(field, "")
-                    if isinstance(val, str) and len(val.strip()) >= 3:
-                        translated[field] = translate_text(val, target_lang, provider=provider)
+                    if has_source_text(data, field) and (target_data is None or is_missing_target_text(translated, field)):
+                        translated[field] = translate_text(data.get(field, ""), target_lang, provider=provider)
                 tags = data.get("tags")
-                if tags:
+                if tags and (target_data is None or "tags" not in translated):
                     translated["tags"] = translate_tags(tags, target_lang, provider=provider)
                 if not args.dry_run:
                     write_out(cat, slug, translated, target_lang)

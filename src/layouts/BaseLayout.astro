@@ -150,7 +150,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   {preloadImageAbs && (
     <link rel="preload" as="image" href={preloadImageAbs} fetchpriority="high" imagesizes="100vw" />
   )}
-  <link rel="stylesheet" href="/assets/css/tirol.css" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
+  <link rel="preload" href="/assets/css/tirol.css" as="style">
+  <link rel="stylesheet" href="/assets/css/tirol.css">
   <noscript><link rel="stylesheet" href="/assets/css/tirol.css"></noscript>
   <style is:inline>
     /* ─── Critical: Design Tokens, Reset, Nav, Hero ─── */
@@ -249,6 +250,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .fl-name{flex:1}
     .fl-check{color:var(--pink);font-size:12px}
     @media(max-width:768px){.floating-lang{display:none}}
+    @media(min-width:769px){main>section:not(:first-child),.footer{content-visibility:auto;contain-intrinsic-size:1px 700px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
     /* ═══ FOOTER LANGUAGE FLAGS ═══ */
     .footer-lang{display:flex;align-items:center;gap:6px;margin-top:16px;flex-wrap:wrap}
     .footer-lang a{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;color:var(--text3);text-decoration:none;transition:all .2s;background:var(--surface);border:1px solid var(--glass-border)}

@@ -353,7 +353,7 @@
     if (bttBtn) {
       window.addEventListener('scroll', function() {
         bttBtn.classList.toggle('visible', window.scrollY > 400);
-      });
+      }, { passive: true });
       bttBtn.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
@@ -368,7 +368,7 @@
       window.addEventListener('scroll', function() {
         mainNav.classList.toggle('scrolled', window.scrollY > 0);
         if (topBar) topBar.classList.toggle('hidden', window.scrollY > 36);
-      });
+      }, { passive: true });
     }
   })();
 
@@ -376,14 +376,20 @@
   (function initScrollProgress() {
     var scrollProg = document.getElementById('scrollProgress');
     if (scrollProg) {
+      var ticking = false;
       window.addEventListener('scroll', function() {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(function() {
         var h = document.documentElement;
         var scrollTop = h.scrollTop || document.body.scrollTop;
         var scrollHeight = h.scrollHeight - h.clientHeight;
         if (scrollHeight > 0) {
-          scrollProg.style.width = ((scrollTop / scrollHeight) * 100) + '%';
+          scrollProg.style.transform = 'scaleX(' + (scrollTop / scrollHeight) + ')';
         }
-      });
+          ticking = false;
+        });
+      }, { passive: true });
     }
   })();
 
@@ -414,7 +420,7 @@
 
     var url = 'https://api.open-meteo.com/v1/forecast?latitude=47.3&longitude=11.4&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FBerlin&forecast_days=3';
 
-    fetch(url)
+    var loadWeather = function() { fetch(url)
       .then(function(res) { return res.json(); })
       .then(function(data) {
         var cur = Math.round(data.current.temperature_2m);
@@ -430,7 +436,9 @@
           ' <span class="wtemp">' + cur + '°C</span> <span class="wloc">Tirol</span></div>' +
           '<div class="weather-forecast">' + fc + '</div>';
       })
-      .catch(function() { widget.innerHTML = ''; });
+      .catch(function() { widget.innerHTML = ''; }); };
+    if ('requestIdleCallback' in window) requestIdleCallback(loadWeather, { timeout: 3500 });
+    else window.addEventListener('load', function() { setTimeout(loadWeather, 1200); }, { once: true });
   })();
 
   /* ─── 14. MOBILE MENU ─── */

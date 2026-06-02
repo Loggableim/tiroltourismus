@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
-    "build": "astro build && npx pagefind --site dist",
+    "build:astro": "astro build",
+    "build:search": "pagefind --site dist",
+    "build": "npm run build:astro && npm run build:search",
+    "build:ci": "npm run build",
     "preview": "astro preview"
   },
   "dependencies": {

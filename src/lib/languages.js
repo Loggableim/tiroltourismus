@@ -10,6 +10,7 @@ export const LANGUAGES = [
   { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
   { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: true },
   { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
+  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: true },
 ];
 
 export const LANGUAGES_READY = LANGUAGES.filter((l) => l.ready).map((l) => l.code); // alle aktuell freigegebenen Sprachen routen

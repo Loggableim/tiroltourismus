@@ -104,6 +104,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <title>{title} – tiroltourismus.com</title>
   <meta name="description" content={siteDesc}>
   <meta name="theme-color" content="#FF1493">
+  <meta name="google-adsense-account" content="ca-pub-9094916118868532">
   {noindex && <meta name="robots" content="noindex, nofollow" />}
   {LANGUAGES.map(l => (
     <link rel="alternate" href={`${siteURL}${switchLangPath(currentPath, locale, l.code)}`} hreflang={l.code} />
@@ -246,6 +247,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   {ldBlocks.map((ld) => (
     <script type="application/ld+json" set:html={JSON.stringify(ld)} />
   ))}
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="scrollProgress"></div>

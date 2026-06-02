@@ -17,6 +17,12 @@
     "lat": 47.5083,
     "lng": 11.8983
   },
-  "bilder": [],
-  "hero_bild": null
+  "bilder": [
+    {
+      "url": "/images/orte/brandenberg/hero_1.png",
+      "alt": "Brandenberg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/brandenberg/hero_1.png",
+  "kategorie": "dorf"
 }

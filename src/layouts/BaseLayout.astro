@@ -1,6 +1,6 @@
 ---
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
-// Locale-aware: supports 'de' (default) and 'en' with /en/ URL prefix
+// Locale-aware SEO: canonical + hreflang alternates for all ready languages.
 import { readSingleton } from '../lib/content.js';
 import { LANGUAGES, switchLangPath, DEFAULT_LOCALE } from '../lib/languages.js';
 import NewsletterForm from '../components/NewsletterForm.tsx';
@@ -50,9 +50,16 @@ const normalizePath = (path) => {
   const cleanPath = pathname.replace(/\/+/g, '/') || '/';
   return cleanPath === '/' || cleanPath.endsWith('/') ? `${cleanPath}${suffix}` : `${cleanPath}/${suffix}`;
 };
-const pageURL = canonicalURL
-  ? (canonicalURL.startsWith('http') ? canonicalURL : `${siteURL}${normalizePath(canonicalURL)}`)
-  : `${siteURL}${normalizePath(Astro.url.pathname)}`;
+const absoluteURL = (path) => path.startsWith('http') ? path : `${siteURL}${normalizePath(path)}`;
+const pageURL = canonicalURL ? absoluteURL(canonicalURL) : absoluteURL(Astro.url.pathname);
+const alternateLinks = LANGUAGES
+  .filter((l) => l.ready)
+  .map((l) => ({
+    code: l.code,
+    href: absoluteURL(switchLangPath(currentPath, locale, l.code)),
+    ogLocale: LOCALE_MAP[l.code] || l.code,
+  }));
+const xDefaultURL = absoluteURL(switchLangPath(currentPath, locale, DEFAULT_LOCALE));
 const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : undefined;
 const preloadImageAbs = preloadImage ? (preloadImage.startsWith('http') ? preloadImage : preloadImage) : undefined;
 const twitterCard = 'summary_large_image';
@@ -118,10 +125,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <meta name="theme-color" content="#FF1493">
   <meta name="google-adsense-account" content="ca-pub-9094916118868532">
   {noindex && <meta name="robots" content="noindex, nofollow" />}
-  {LANGUAGES.filter(l => l.ready).map(l => (
-    <link rel="alternate" href={`${siteURL}${switchLangPath(currentPath, locale, l.code)}`} hreflang={l.code} />
+  {alternateLinks.map((link) => (
+    <link rel="alternate" href={link.href} hreflang={link.code} />
   ))}
-  <link rel="alternate" href={`${siteURL}${switchLangPath(currentPath, locale, DEFAULT_LOCALE)}`} hreflang="x-default" />
+  <link rel="alternate" href={xDefaultURL} hreflang="x-default" />
   <!-- Fonts: display=swap + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -139,6 +146,9 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <meta property="og:url" content={pageURL} />
   <meta property="og:site_name" content={siteName} />
   <meta property="og:locale" content={fullLocale} />
+  {alternateLinks.filter((link) => link.code !== locale).map((link) => (
+    <meta property="og:locale:alternate" content={link.ogLocale} />
+  ))}
   {ogImage && <meta property="og:image" content={ogImageAbs} />}
   {publishedTime && <meta property="article:published_time" content={publishedTime} />}
 

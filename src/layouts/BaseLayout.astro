@@ -2,13 +2,15 @@
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
 // Locale-aware: supports 'de' (default) and 'en' with /en/ URL prefix
 import { readSingleton } from '../lib/content.js';
-import { LANGUAGES, switchLangPath } from '../lib/languages.js';
+import { LANGUAGES, switchLangPath, DEFAULT_LOCALE } from '../lib/languages.js';
 import NewsletterForm from '../components/NewsletterForm.tsx';
 
 export interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  /** Optional critical image to preload on pages with an actual above-the-fold LCP image. */
+  preloadImage?: string;
   canonicalURL?: string;
   type?: 'website' | 'article';
   locale?: string;
@@ -21,6 +23,7 @@ const {
   title,
   description,
   ogImage,
+  preloadImage,
   canonicalURL,
   type = 'website',
   locale = 'de',
@@ -31,19 +34,27 @@ const {
 
 // Locale helpers — dynamisch für alle Sprachen
 const langCode = locale || 'de';
-const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN' };
+const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN', nl:'nl_NL' };
 const fullLocale = LOCALE_MAP[locale] || 'de_AT';
 const localePrefix = locale === 'de' ? '' : `/${locale}`;
-const siteDesc = description || ({ de:'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.', en:'The official tourism portal for Tyrol – Mountains, lakes, hiking trails, ski resorts, and accommodations.', fr:'Le portail touristique officiel du Tyrol – Montagnes, lacs, sentiers de randonnée, stations de ski et hébergements.', it:'Il portale turistico ufficiale del Tirolo – Montagne, laghi, sentieri escursionistici, stazioni sciistiche e alloggi.', es:'El portal turístico oficial de Tirol – Montañas, lagos, rutas de senderismo, estaciones de esquí y alojamientos.', zh:'蒂罗尔州官方旅游门户 – 山脉、湖泊、徒步小径、滑雪场和住宿。' }[locale] || 'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.');
+const siteDesc = description || ({ de:'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.', en:'The official tourism portal for Tyrol – Mountains, lakes, hiking trails, ski resorts, and accommodations.', fr:'Le portail touristique officiel du Tyrol – Montagnes, lacs, sentiers de randonnée, stations de ski et hébergements.', it:'Il portale turistico ufficiale del Tirolo – Montagne, laghi, sentieri escursionistici, stazioni sciistiche e alloggi.', es:'El portal turístico oficial de Tirol – Montañas, lagos, rutas de senderismo, estaciones de esquí y alojamientos.', zh:'蒂罗尔州官方旅游门户 – 山脉、湖泊、徒步小径、滑雪场和住宿。', nl:'Het officiële toerismeportaal voor Tirol – bergen, meren, wandelroutes, skigebieden en accommodaties.' }[locale] || 'Das offizielle Tourismusportal für Tirol – Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.');
 const settings = readSingleton('einstellungen', locale);
 
 // Language switcher helper (imported from lib)
 const currentPath = Astro.url.pathname;
 
 const siteName = 'Tirol Tourismus';
-const siteURL = 'https://www.tirol-tourismus.at';
-const pageURL = canonicalURL ?? Astro.url.href;
+const siteURL = 'https://tiroltourismus.com';
+const normalizePath = (path) => {
+  const [pathname, suffix = ''] = String(path || '/').split(/(?=[?#])/);
+  const cleanPath = pathname.replace(/\/+/g, '/') || '/';
+  return cleanPath === '/' || cleanPath.endsWith('/') ? `${cleanPath}${suffix}` : `${cleanPath}/${suffix}`;
+};
+const pageURL = canonicalURL
+  ? (canonicalURL.startsWith('http') ? canonicalURL : `${siteURL}${normalizePath(canonicalURL)}`)
+  : `${siteURL}${normalizePath(Astro.url.pathname)}`;
 const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : undefined;
+const preloadImageAbs = preloadImage ? (preloadImage.startsWith('http') ? preloadImage : preloadImage) : undefined;
 const twitterCard = 'summary_large_image';
 
 // Nav labels — Multi-Sprachen-Map
@@ -54,6 +65,7 @@ const NAV_LABELS = {
   it: { magazin:'Magazine', preise:'Prezzi', fuerBetriebe:'Per Aziende', bezirke:'Distretti', merkliste:'♥ Preferiti', anmelden:'Accedi', konto:'Mio Account', kontakt:'Contatti', regionen:'Regioni', camping:'Campeggio', unterkuenfte:'Alloggi', orte:'Paesi', sehenswertes:'Attrazioni', gastro:'Gastronomia', erlebnisse:'Esperienze', events:'Eventi', suche:'Cerca', footer_p:'Il portale turistico ufficiale del Tirolo – scopri montagne, laghi e cultura alpina.', footer_regionen:'Regioni', footer_alle_regionen:'Tutte le Regioni', footer_erlebnisse:'Esperienze', footer_alle_erlebnisse:'Tutte le Esperienze', footer_service:'Servizio', footer_ueber_uns:'Chi Siamo', footer_fuer_betriebe:'Per Aziende', footer_kontakt:'Contatti', footer_impressum:'Impressum', footer_datenschutz:'Privacy', footer_agb:'Termini', footer_oben:'↑ Torna su' },
   es: { magazin:'Revista', preise:'Precios', fuerBetriebe:'Para Empresas', bezirke:'Distritos', merkliste:'♥ Favoritos', anmelden:'Iniciar Sesión', konto:'Mi Cuenta', kontakt:'Contacto', regionen:'Regiones', camping:'Camping', unterkuenfte:'Alojamientos', orte:'Pueblos', sehenswertes:'Atracciones', gastro:'Gastronomía', erlebnisse:'Experiencias', events:'Eventos', suche:'Buscar', footer_p:'El portal turístico oficial del Tirol – descubre montañas, lagos y cultura alpina.', footer_regionen:'Regiones', footer_alle_regionen:'Todas las Regiones', footer_erlebnisse:'Experiencias', footer_alle_erlebnisse:'Todas las Experiencias', footer_service:'Servicio', footer_ueber_uns:'Sobre Nosotros', footer_fuer_betriebe:'Para Empresas', footer_kontakt:'Contacto', footer_impressum:'Aviso Legal', footer_datenschutz:'Privacidad', footer_agb:'Términos', footer_oben:'↑ Volver arriba' },
   zh: { magazin:'杂志', preise:'价格', fuerBetriebe:'企业服务', bezirke:'行政区', merkliste:'♥ 收藏夹', anmelden:'登录', konto:'我的账户', kontakt:'联系我们', regionen:'地区', camping:'露营', unterkuenfte:'住宿', orte:'村镇', sehenswertes:'景点', gastro:'美食', erlebnisse:'体验', events:'活动', suche:'搜索', footer_p:'蒂罗尔州官方旅游门户 – 探索山脉、湖泊和阿尔卑斯文化。', footer_regionen:'地区', footer_alle_regionen:'所有地区', footer_erlebnisse:'体验', footer_alle_erlebnisse:'所有体验', footer_service:'服务', footer_ueber_uns:'关于我们', footer_fuer_betriebe:'企业服务', footer_kontakt:'联系我们', footer_impressum:'法律声明', footer_datenschutz:'隐私政策', footer_agb:'使用条款', footer_oben:'↑ 返回顶部' },
+  nl: { magazin:'Magazine', preise:'Prijzen', fuerBetriebe:'Voor bedrijven', bezirke:'Districten', merkliste:'♥ Verlanglijst', anmelden:'Inloggen', konto:'Mijn account', kontakt:'Contact', regionen:'Regio’s', camping:'Campings', unterkuenfte:'Accommodaties', orte:'Plaatsen', sehenswertes:'Bezienswaardigheden', gastro:'Eten & drinken', erlebnisse:'Belevenissen', events:'Evenementen', suche:'Zoeken', footer_p:'Het officiële toerismeportaal voor Tirol – ontdek bergen, meren en alpiene cultuur.', footer_regionen:'Regio’s', footer_alle_regionen:'Alle regio’s', footer_erlebnisse:'Belevenissen', footer_alle_erlebnisse:'Alle belevenissen', footer_service:'Service', footer_ueber_uns:'Over ons', footer_fuer_betriebe:'Voor bedrijven', footer_kontakt:'Contact', footer_impressum:'Impressum', footer_datenschutz:'Privacy', footer_agb:'Voorwaarden', footer_oben:'↑ Naar boven' },
 };
 const nav = NAV_LABELS[locale] || NAV_LABELS.de;
 
@@ -63,7 +75,7 @@ const websiteLD = {
   '@type': 'WebSite',
   name: siteName,
   url: siteURL,
-  description: ({ de:'Offizielle Tourismus-Information für Tirol, Österreich. Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.', en:'Official tourism information for Tyrol, Austria. Mountains, lakes, hiking trails, ski resorts, and accommodations.', fr:'Informations touristiques officielles pour le Tyrol, Autriche. Montagnes, lacs, sentiers de randonnée, stations de ski et hébergements.', it:'Informazioni turistiche ufficiali per il Tirolo, Austria. Montagne, laghi, sentieri escursionistici, stazioni sciistiche e alloggi.', es:'Información turística oficial de Tirol, Austria. Montañas, lagos, rutas de senderismo, estaciones de esquí y alojamientos.', zh:'奥地利蒂罗尔州官方旅游信息。山脉、湖泊、徒步小径、滑雪场和住宿。' }[locale] || 'Offizielle Tourismus-Information für Tirol, Österreich. Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.'),
+  description: ({ de:'Offizielle Tourismus-Information für Tirol, Österreich. Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.', en:'Official tourism information for Tyrol, Austria. Mountains, lakes, hiking trails, ski resorts, and accommodations.', fr:'Informations touristiques officielles pour le Tyrol, Autriche. Montagnes, lacs, sentiers de randonnée, stations de ski et hébergements.', it:'Informazioni turistiche ufficiali per il Tirolo, Austria. Montagne, laghi, sentieri escursionistici, stazioni sciistiche e alloggi.', es:'Información turística oficial de Tirol, Austria. Montañas, lagos, rutas de senderismo, estaciones de esquí y alojamientos.', zh:'奥地利蒂罗尔州官方旅游信息。山脉、湖泊、徒步小径、滑雪场和住宿。', nl:'Officiële toeristische informatie voor Tirol, Oostenrijk. Bergen, meren, wandelroutes, skigebieden en accommodaties.' }[locale] || 'Offizielle Tourismus-Information für Tirol, Österreich. Berge, Seen, Wanderwege, Skigebiete und Unterkünfte.'),
   inLanguage: langCode,
   potentialAction: {
     '@type': 'SearchAction',
@@ -82,7 +94,7 @@ const organizationLD = {
   name: siteName,
   url: siteURL,
   logo: `${siteURL}/favicon.svg`,
-  description: ({ de:'Offizielle Tourismus-Information für Tirol, Österreich.', en:'Official tourism information for Tyrol, Austria.', fr:'Informations touristiques officielles pour le Tyrol, Autriche.', it:'Informazioni turistiche ufficiali per il Tirolo, Austria.', es:'Información turística oficial de Tirol, Austria.', zh:'奥地利蒂罗尔州官方旅游信息。' }[locale] || 'Offizielle Tourismus-Information für Tirol, Österreich.'),
+  description: ({ de:'Offizielle Tourismus-Information für Tirol, Österreich.', en:'Official tourism information for Tyrol, Austria.', fr:'Informations touristiques officielles pour le Tyrol, Autriche.', it:'Informazioni turistiche ufficiali per il Tirolo, Austria.', es:'Información turística oficial de Tirol, Austria.', zh:'奥地利蒂罗尔州官方旅游信息。', nl:'Officiële toeristische informatie voor Tirol, Oostenrijk.' }[locale] || 'Offizielle Tourismus-Information für Tirol, Österreich.'),
   address: {
     '@type': 'PostalAddress',
     addressCountry: 'AT',
@@ -106,9 +118,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <meta name="theme-color" content="#FF1493">
   <meta name="google-adsense-account" content="ca-pub-9094916118868532">
   {noindex && <meta name="robots" content="noindex, nofollow" />}
-  {LANGUAGES.map(l => (
+  {LANGUAGES.filter(l => l.ready).map(l => (
     <link rel="alternate" href={`${siteURL}${switchLangPath(currentPath, locale, l.code)}`} hreflang={l.code} />
   ))}
+  <link rel="alternate" href={`${siteURL}${switchLangPath(currentPath, locale, DEFAULT_LOCALE)}`} hreflang="x-default" />
   <!-- Fonts: display=swap + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -134,8 +147,9 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <meta name="twitter:title" content={`${title} – ${siteName}`} />
   <meta name="twitter:description" content={siteDesc} />
   {ogImage && <meta name="twitter:image" content={ogImageAbs} />}
-  <!-- LCP: hero image with explicit dimensions -->
-  <link rel="preload" as="image" href="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp" fetchpriority="high" imagesrcset="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp" imagesizes="100vw">
+  {preloadImageAbs && (
+    <link rel="preload" as="image" href={preloadImageAbs} fetchpriority="high" imagesizes="100vw" />
+  )}
   <link rel="stylesheet" href="/assets/css/tirol.css" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
   <noscript><link rel="stylesheet" href="/assets/css/tirol.css"></noscript>
   <style is:inline>
@@ -247,8 +261,20 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   {ldBlocks.map((ld) => (
     <script type="application/ld+json" set:html={JSON.stringify(ld)} />
   ))}
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+  <!-- Third-party ads are delayed until after load/idle to keep the initial INP/LCP path clear. -->
+  <script is:inline>
+    window.addEventListener('load',function(){
+      var loadAds=function(){
+        if(document.getElementById('adsbygoogle-js'))return;
+        var s=document.createElement('script');
+        s.id='adsbygoogle-js';s.async=true;s.crossOrigin='anonymous';
+        s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+        document.head.appendChild(s);
+      };
+      if('requestIdleCallback'in window){requestIdleCallback(loadAds,{timeout:2500});}
+      else{setTimeout(loadAds,1800);}
+    },{once:true});
+  </script>
 </head>
 <body>
 <div id="scrollProgress"></div>
@@ -430,7 +456,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
           Einmal im Monat die schönsten Seiten Tirols – Berggeschichten,
           Events und exklusive Angebote. Kein Spam, jederzeit kündbar.
         </p>
-        <NewsletterForm client:load compact />
+        <NewsletterForm client:idle compact />
       </div>
 
       <div class="footer-bottom">

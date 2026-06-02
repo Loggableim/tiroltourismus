@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/bach/hero_1.png",
+      "alt": "Bach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/bach/hero_1.png",
   "koordinaten": {
     "lat": "47.2441",
     "lng": "10.4129"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

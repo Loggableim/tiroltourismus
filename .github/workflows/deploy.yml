@@ -1,28 +1,43 @@
-name: Deploy to GitHub Pages
+name: Deploy to Cloudflare Pages
 
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  deployments: write
+
+concurrency:
+  group: cloudflare-pages-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NODE_OPTIONS: "--max-old-space-size=4096"
+      CI: true
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
-      - run: npm run build
-        env:
-          NODE_OPTIONS: "--max-old-space-size=4096"
-      - uses: peaceiris/actions-gh-pages@v4
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages (Direct Upload)
+        uses: cloudflare/wrangler-action@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          cname: tiroltourismus.com
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=tiroltourismus --branch=${{ github.ref_name }}

@@ -29,7 +29,7 @@ const hasMarkers = markers && markers.length > 0;
     )}
     {hasMarkers && (
       <LeafletMap
-        client:load
+        client:visible={{ rootMargin: '300px' }}
         markers={markers}
         center={center}
         zoom={zoom}

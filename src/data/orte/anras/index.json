@@ -15,10 +15,17 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/anras/hero_1.png",
+      "alt": "Anras — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/anras/hero_1.png",
   "koordinaten": {
     "lat": "46.7724",
     "lng": "12.5562"
-  }
+  },
+  "beschreibung": "<p><strong>Anras</strong> liegt auf 990 Metern Höhe im sonnigen Pustertal in Osttirol und beeindruckt durch eine faszinierende Mischung aus Geschichte, Kultur und unberührter Natur. Das Dorf wird dominiert von Schloss Anras, einer mittelalterlichen Burganlage, die hoch über der Gemeinde thront und einen herrlichen Blick ins Tal bietet.</p><p>Die barocke Pfarrkirche von Anras mit ihren prächtigen Fresken ist ein weiteres kulturelles Highlight und zeugt von der bewegten Geschichte des Ortes. Wanderer und Naturliebhaber kommen in Anras voll auf ihre Kosten: Zahlreiche Wege führen durch die unberührten Landschaften des Pustertals, vorbei an traditionellen Bauernhöfen und durch dichte Wälder. Die Region ist ein Geheimtipp für alle, die Ruhe und authentische Naturerlebnisse suchen.</p><p>Im Winter locken die nahegelegenen Skigebiete Osttirols mit hervorragenden Pisten und Langlaufloipen. Die traditionelle Osttiroler Gastfreundschaft und die regionale Küche mit Spezialitäten wie Schlutzkrapfen und Tiroler Gröstl machen jeden Besuch in Anras zu einem unvergesslichen Erlebnis.</p>",
+  "kategorie": "dorf"
 }

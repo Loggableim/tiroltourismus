@@ -50,7 +50,7 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
 ---
 
 <BaseLayout
-  title={locale === 'de' ? 'Startseite' : locale === 'en' ? 'Home' : locale === 'fr' ? 'Accueil' : locale === 'it' ? 'Home' : locale === 'es' ? 'Inicio' : '首页'}
+  title={locale === 'de' ? 'Startseite' : locale === 'en' ? 'Home' : locale === 'fr' ? 'Accueil' : locale === 'it' ? 'Home' : locale === 'es' ? 'Inicio' : locale === 'zh' ? '首页' : locale === 'nl' ? 'Startpagina' : 'Startseite'}
   description={page.hero?.subtitle}
   locale={locale}
 >

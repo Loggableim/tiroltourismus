@@ -36,7 +36,7 @@ const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen
 </a>
 
 <style is:global>
-  .cp-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(0,0,0,.08);backdrop-filter:blur(12px)}
+  .cp-card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 14px 36px rgba(0,0,0,.08);backdrop-filter:blur(12px);content-visibility:auto;contain-intrinsic-size:330px 390px}
   .cp-card:hover{transform:translateY(-8px);border-color:rgba(0,200,83,.42);box-shadow:0 22px 56px rgba(0,0,0,.14)}
   .cp-img{position:relative;height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(0,200,83,.08),rgba(255,255,255,.02))}
   .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a;box-shadow:0 6px 16px rgba(255,215,0,.18)}

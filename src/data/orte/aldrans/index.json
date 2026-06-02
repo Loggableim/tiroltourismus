@@ -15,10 +15,17 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/aldrans/hero_1.png",
+      "alt": "Aldrans — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/aldrans/hero_1.png",
   "koordinaten": {
     "lat": "47.2506",
     "lng": "11.4473"
-  }
+  },
+  "beschreibung": "<p><strong>Aldrans</strong> liegt auf 760 Metern Höhe auf dem sonnigen Mittelgebirgsplateau oberhalb von Innsbruck und bietet einen der schönsten Ausblicke auf die Nordkette und das gesamte Inntal. Die ruhige Wohngemeinde ist bei Naturliebhabern und Erholungssuchenden gleichermaßen beliebt, die die Nähe zur Landeshauptstadt mit der Ruhe der alpinen Umgebung verbinden möchten.</p><p>Die Lage am sonnigen Hochplateau macht Aldrans zum idealen Ausgangspunkt für Wanderungen und Spaziergänge. Der nahegelegene Lanser See lädt im Sommer zum Baden und Entspannen ein. Zahlreiche Wanderwege führen durch die Wälder des Mittelgebirges und bieten immer wieder atemberaubende Ausblicke auf das Inntal. Im Winter sind Spaziergänge entlang der verschneiten Wege und Langlaufloipen sehr beliebt.</p><p>Kulturell prägen die gotische Pfarrkirche mit ihrem markanten Turm und die typischen Tiroler Bauernhäuser das Ortsbild. Die gute Anbindung an das öffentliche Verkehrsnetz ermöglicht einen schnellen Transfer nach Innsbruck, wo Kultur, Shopping und Gastronomie auf höchstem Niveau warten.</p>",
+  "kategorie": "marktgemeinde"
 }

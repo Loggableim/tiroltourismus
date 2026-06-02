@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/bad-haering/hero_1.png",
+      "alt": "Bad Häring — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/bad-haering/hero_1.png",
   "koordinaten": {
     "lat": "47.5107",
     "lng": "12.1188"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

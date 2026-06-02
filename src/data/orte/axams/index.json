@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/axams/hero_1.png",
+      "alt": "Axams — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/axams/hero_1.png",
   "koordinaten": {
     "lat": "47.2308",
     "lng": "11.2793"
-  }
+  },
+  "kategorie": "dorf"
 }

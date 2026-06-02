@@ -121,11 +121,11 @@ function formatDate(d) {
   catch { return d; }
 }
 ---
-<BaseLayout title="tiroltourismus.com – Das offizielle Tourismusportal" description="Das offizielle Tourismusportal für Tirol. Berge, Täler, Genuss – entdecken Sie die Vielfalt der Alpen.">
+<BaseLayout title="tiroltourismus.com – Das offizielle Tourismusportal" description="Das offizielle Tourismusportal für Tirol. Berge, Täler, Genuss – entdecken Sie die Vielfalt der Alpen." preloadImage={page.hero.bgImage}>
   <main>
     <!-- ═══ HERO ═══ -->
     <section class="hero" aria-label="Hero">
-      <div class="hero-bg"><img src={page.hero.bgImage} alt="" width="1024" height="1024" loading="eager" fetchpriority="high"></div>
+      <div class="hero-bg"><img src={page.hero.bgImage} alt="" width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high"></div>
       <div class="hero-glow"></div>
       <div class="hero-content">
         <!-- weather widget is rendered in footer via BaseLayout -->

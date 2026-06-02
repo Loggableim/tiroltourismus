@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/biberwier/hero_1.png",
+      "alt": "Biberwier — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/biberwier/hero_1.png",
   "koordinaten": {
     "lat": "47.3824",
     "lng": "10.8915"
-  }
+  },
+  "kategorie": "dorf"
 }

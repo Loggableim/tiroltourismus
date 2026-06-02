@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/ausservillgraten/hero_1.png",
+      "alt": "Außervillgraten — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/ausservillgraten/hero_1.png",
   "koordinaten": {
     "lat": "46.7865",
     "lng": "12.4291"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

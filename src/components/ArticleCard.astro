@@ -14,7 +14,7 @@ const { titel, slug, teaser, datum, kategorie, emoji = '📰', hero_bild } = Ast
 <a href={`/magazin/${slug}/`} class="article-card" data-collection="magazin" data-slug={slug}>
   <div class="article-img" style="position:relative">
     {hero_bild ? (
-      <img src={hero_bild} alt={titel} class="article-thumb" loading="lazy" />
+      <img src={hero_bild} alt={titel} class="article-thumb" loading="lazy" decoding="async" width="420" height="240" />
     ) : (
       <span style="font-size:56px;line-height:1">{emoji}</span>
     )}
@@ -30,7 +30,7 @@ const { titel, slug, teaser, datum, kategorie, emoji = '📰', hero_bild } = Ast
 </a>
 
 <style is:global>
-  .article-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px)}
+  .article-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px);content-visibility:auto;contain-intrinsic-size:360px 430px}
   .article-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 18px 44px rgba(0,0,0,.12)}
   .article-img{height:170px;display:flex;align-items:center;justify-content:center;font-size:56px;background:linear-gradient(135deg,rgba(255,255,255,.03),rgba(255,255,255,.012));overflow:hidden;position:relative}
   .article-thumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s var(--ease)}

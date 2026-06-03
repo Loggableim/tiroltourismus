@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/brixen-im-thale/hero_1.png",
+      "alt": "Brixen im Thale — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/brixen-im-thale/hero_1.png",
   "koordinaten": {
     "lat": "47.4495",
     "lng": "12.2495"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

@@ -7,7 +7,6 @@ import CampingCard from '../components/CampingCard.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import GastroCard from '../components/GastroCard.astro';
 import SightCard from '../components/SightCard.astro';
-import NewsletterForm from '../components/NewsletterForm.tsx';
 import SectionMap from '../sections/SectionMap.astro';
 import { readCollection, isPublished } from '../lib/content.js';
 import page from '../data/homepage.json';
@@ -121,16 +120,55 @@ function formatDate(d) {
   catch { return d; }
 }
 ---
-<BaseLayout title="tiroltourismus.com – Das offizielle Tourismusportal" description="Das offizielle Tourismusportal für Tirol. Berge, Täler, Genuss – entdecken Sie die Vielfalt der Alpen." preloadImage={page.hero.bgImage}>
+<BaseLayout title="tiroltourismus.com – Das offizielle Tourismusportal" description="Das offizielle Tourismusportal für Tirol. Berge, Täler, Genuss – entdecken Sie die Vielfalt der Alpen.">
   <main>
     <!-- ═══ HERO ═══ -->
     <section class="hero" aria-label="Hero">
-      <div class="hero-bg"><img src={page.hero.bgImage} alt="" width="1024" height="1024" loading="eager" decoding="async" fetchpriority="high"></div>
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <svg class="hero-alps" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="alps-grad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="rgba(255,20,147,0.06)"/>
+              <stop offset="40%" stop-color="rgba(50,30,80,0.12)"/>
+              <stop offset="100%" stop-color="rgba(5,7,12,0)"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,400 L0,240 Q90,180 144,200 Q216,220 288,160 Q324,120 360,140 L432,80 Q468,40 504,60 L576,20 Q612,0 648,10 L720,40 Q756,50 792,30 L864,70 L936,100 Q972,110 1008,90 L1080,130 L1152,160 Q1188,170 1224,150 L1296,200 Q1332,220 1368,200 L1440,240 L1440,400 Z" fill="url(#alps-grad)" opacity="0.5"/>
+          <path d="M0,400 L0,280 Q120,230 240,250 Q360,260 480,200 Q540,180 600,190 L720,120 Q756,90 792,100 L864,140 Q900,150 936,130 L1008,180 Q1044,200 1080,185 L1152,220 Q1188,240 1224,220 L1296,260 Q1332,280 1368,260 L1440,300 L1440,400 Z" fill="rgba(255,20,147,0.03)" opacity="0.4"/>
+          <path d="M0,400 L0,320 Q144,280 288,300 Q432,310 576,260 Q648,240 720,250 L864,180 Q900,165 936,175 L1008,210 Q1044,230 1080,215 L1152,260 Q1188,280 1224,260 L1296,300 Q1332,320 1368,300 L1440,340 L1440,400 Z" fill="rgba(255,255,255,0.015)" opacity="0.3"/>
+        </svg>
+        <div class="hero-mesh"></div>
+      </div>
       <div class="hero-glow"></div>
       <div class="hero-content">
         <!-- weather widget is rendered in footer via BaseLayout -->
         <div class="hero-badge" set:html={page.hero.badge}></div>
-        <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
+        <div class="hero-headline">
+          <div class="hero-logo">
+            <svg viewBox="0 0 420 48" width="150" height="17"><defs>
+              <linearGradient id="hl1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+              <linearGradient id="hl2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+              <linearGradient id="hl3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+              <linearGradient id="hl4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+              <linearGradient id="hl5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+            </defs>
+            <text x="14" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl1)">T</text>
+            <polygon points="14,36 14,10 36,36" fill="url(#hl1)" opacity="0.08"/>
+            <text x="46" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl2)">I</text>
+            <polygon points="46,36 46,14 60,36" fill="url(#hl2)" opacity="0.08"/>
+            <text x="72" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl3)">R</text>
+            <polygon points="72,36 72,8 96,36" fill="url(#hl3)" opacity="0.08"/>
+            <text x="104" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl4)">O</text>
+            <polygon points="104,36 104,10 130,36" fill="url(#hl4)" opacity="0.08"/>
+            <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl5)">L</text>
+            <polygon points="138,36 138,12 158,36" fill="url(#hl5)" opacity="0.08"/>
+            <circle cx="178" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
+            <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="rgba(255,255,255,0.9)">tourismus</text>
+          </svg>
+          </div>
+          <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
+        </div>
         <p set:html={page.hero.subtitle}></p>
         <div class="hero-actions">
           <a href={page.hero.ctaPrimary.href} class={page.hero.ctaPrimary.class}>{page.hero.ctaPrimary.text}</a>
@@ -329,9 +367,6 @@ function formatDate(d) {
       </div>
     </section>
 
-    <!-- ═══ NEWSLETTER ═══ -->
-    <NewsletterForm client:load />
-
     <!-- ═══ PARTNER ═══ -->
     <section class="partner section" aria-label="Partner">
       <div class="container">
@@ -456,7 +491,9 @@ function formatDate(d) {
   /* ═══ HERO ═══ */
   .hero{position:relative;min-height:min(100svh,980px);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:clamp(104px,11vw,152px) 24px clamp(64px,7vw,92px)}
   .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.44;filter:saturate(1.08) contrast(1.06) brightness(.95)}
+  .hero-gradient{position:absolute;inset:0;background:radial-gradient(ellipse 140% 70% at 60% 0%,rgba(180,40,120,0.18) 0%,transparent 50%),radial-gradient(ellipse 120% 60% at 30% 20%,rgba(120,30,180,0.10) 0%,transparent 45%),radial-gradient(ellipse 100% 80% at 70% 30%,rgba(212,168,0,0.06) 0%,transparent 40%),linear-gradient(180deg,var(--bg) 0%,rgba(20,12,30,1) 54%,rgba(5,7,12,1) 100%);pointer-events:none}
+  .hero-mesh{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='g' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 20' fill='none' stroke='rgba(255,255,255,0.015)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23g)'/%3E%3C/svg%3E");pointer-events:none;opacity:.6}
+  .hero-alps{position:absolute;bottom:0;left:0;width:100%;height:auto;max-height:45%;pointer-events:none}
   .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,12,.78) 0%,rgba(5,7,12,.36) 34%,rgba(5,7,12,.92) 100%),linear-gradient(0deg,rgba(255,20,147,.13) 0%,transparent 48%),radial-gradient(ellipse at center top,rgba(255,255,255,.06),transparent 42%);pointer-events:none}
   .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(255,20,147,.14) 0%, rgba(212,168,0,.06) 34%, var(--bg) 80%);z-index:1}
   .hero-content{position:relative;z-index:2;max-width:940px;padding:30px 28px 32px;background:linear-gradient(180deg,rgba(10,10,18,.52),rgba(10,10,18,.24));backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.11);border-radius:36px;box-shadow:0 28px 84px rgba(0,0,0,.28);overflow:hidden}
@@ -464,7 +501,12 @@ function formatDate(d) {
   .hero-content::after{content:'';position:absolute;inset:1px;border-radius:34px;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.06),transparent 30%);pointer-events:none}
   .hero-weather{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.12);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.16);margin-bottom:16px;font-size:13px;color:rgba(255,255,255,.92);min-height:36px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
   .hero-badge{display:inline-flex;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;background:rgba(255,255,255,.06);backdrop-filter:blur(18px);border:1px solid var(--glass-border);margin-bottom:16px;gap:6px;color:rgba(255,255,255,.92)}
-  .hero h1{font-family:'Prata',serif;font-size:clamp(54px,10.2vw,124px);line-height:.92;letter-spacing:1px;text-transform:uppercase;margin:0 auto 18px;max-width:16ch;text-wrap:balance;text-shadow:0 10px 40px rgba(0,0,0,.2)}
+  .hero-headline{display:flex;align-items:center;gap:24px;justify-content:center;margin:0 auto 18px}
+  .hero-headline h1{margin:0}
+  .hero-logo{flex-shrink:0}
+  .hero-logo svg{display:block;width:200px;height:auto}
+  @media(max-width:768px){.hero-headline{flex-direction:column;gap:12px}.hero-logo svg{width:140px}}
+  .hero h1{font-family:'Prata',serif;font-size:clamp(54px,10.2vw,124px);line-height:.92;letter-spacing:1px;text-transform:uppercase;max-width:16ch;text-wrap:balance;text-shadow:0 10px 40px rgba(0,0,0,.2)}
   .hero h1 .line:first-child{letter-spacing:2.8px;display:block;margin-bottom:4px}
   .hero h1 .line:last-child{color:var(--pink);-webkit-text-stroke:0;letter-spacing:4.2px}
   .hero p{font-size:clamp(16px,1.25vw,18px);color:rgba(255,255,255,.86);max-width:600px;margin:0 auto 26px;line-height:1.72}

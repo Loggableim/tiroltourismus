@@ -4,7 +4,7 @@ Orte-Pipeline: Enrichment + Bilder + Übersetzung in einem Durchgang.
 Läuft als no_agent Cron — 1 Ort pro Tick, dann Commit + Push.
 SDXL Watercolor-Bilder via diffusers.
 """
-import sys, json, os, time, subprocess, re, urllib.request, urllib.error, hashlib
+import sys, json, os, time, subprocess, re, urllib.request, urllib.error, hashlib, sqlite3
 from pathlib import Path
 import torch
 from diffusers import StableDiffusionXLPipeline
@@ -13,6 +13,10 @@ BASE = Path("F:/tiroltourismus")
 ORTE_DIR = BASE / "src" / "data" / "orte"
 STATE_FILE = BASE / "_orte_pipeline.json"
 PUBLIC_IMG = BASE / "public" / "images" / "orte"
+KANBAN_DBS = [
+    Path(r"C:/HermesPortable/home/spaces/tirol-tourismus/kanban/boards/tirol-cicd/kanban.db"),
+    Path(r"C:/HermesPortable/home/kanban/boards/tirol-cicd/kanban.db"),
+]
 
 # SDXL Setup
 MODEL_PATH = Path(r"C:/HermesPortable/ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors")
@@ -35,6 +39,33 @@ def load_state():
 
 def save_state(s):
     STATE_FILE.write_text(json.dumps(s, indent=2, ensure_ascii=False), encoding='utf-8')
+
+def mark_kanban_task_done(task_id, result):
+    """Markiert einen tirol-cicd Task in beiden DBs als done (idempotent)."""
+    now = time.time()
+    for db in KANBAN_DBS:
+        if not db.exists():
+            print(f"  ⚠️  Kanban-DB fehlt: {db}")
+            continue
+        try:
+            conn = sqlite3.connect(str(db))
+            cols = {row[1] for row in conn.execute("PRAGMA table_info(tasks)").fetchall()}
+            sets = ["status=?"]
+            vals = ["done"]
+            if "updated_at" in cols:
+                sets.append("updated_at=?"); vals.append(now)
+            if "completed_at" in cols:
+                sets.append("completed_at=?"); vals.append(now)
+            if "result" in cols:
+                sets.append("result=?"); vals.append(result)
+            vals.append(task_id)
+            conn.execute(f"UPDATE tasks SET {', '.join(sets)} WHERE id=?", vals)
+            conn.commit()
+            after = conn.execute("SELECT id, status FROM tasks WHERE id=?", (task_id,)).fetchone()
+            conn.close()
+            print(f"  ✅ Kanban {db.name}/{task_id}: {after}")
+        except Exception as e:
+            print(f"  ⚠️  Kanban-Update Fehler {db}: {e}")
 
 def get_orte_data(slug):
     fp = ORTE_DIR / slug / "index.json"
@@ -361,6 +392,7 @@ def main():
     
     if idx >= len(ALL_SLUGS):
         print(f"🎉 ALLE {len(ALL_SLUGS)} ORTE FERTIG!")
+        mark_kanban_task_done("t_orte_pipeline", f"Orte-Pipeline abgeschlossen: {len(ALL_SLUGS)}/{len(ALL_SLUGS)} Orte angereichert")
         return
     
     slug = ALL_SLUGS[idx]

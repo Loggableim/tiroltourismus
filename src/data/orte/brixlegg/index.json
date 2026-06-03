@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/brixlegg/hero_1.png",
+      "alt": "Brixlegg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/brixlegg/hero_1.png",
   "koordinaten": {
     "lat": "47.4302",
     "lng": "11.8772"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

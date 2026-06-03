@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/buch/hero_1.png",
+      "alt": "Buch in Tirol — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/buch/hero_1.png",
   "koordinaten": {
     "lat": "47.3733",
     "lng": "11.7517"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

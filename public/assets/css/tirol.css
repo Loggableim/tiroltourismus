@@ -177,6 +177,9 @@ img{max-width:100%;height:auto;display:block}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 24px;border-radius:100px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:20px;opacity:0;animation:fadeUp .8s var(--ease) .2s forwards}
 .hero-badge .pink{color:var(--pink);font-weight:700}
 .hero-badge .gold{color:var(--gold-light);font-weight:700}
+.hero-headline{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.hero-logo{flex-shrink:0;display:flex;align-items:center}
+.hero-logo svg{display:block;max-width:180px}
 .hero h1{font-family:'Prata',serif;font-size:clamp(72px,14vw,180px);line-height:0.75;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px;opacity:0;animation:fadeUp .8s var(--ease) .4s forwards}
 .hero h1 .line{display:block}
 .hero h1 .line:first-child{color:#fff;text-shadow:0 0 60px rgba(255,255,255,.15)}

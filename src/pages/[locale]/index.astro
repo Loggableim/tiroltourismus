@@ -60,7 +60,30 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
       <div class="hero-glow"></div>
       <div class="hero-content">
         <div class="hero-badge" set:html={page.hero.badge}></div>
-        <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
+        <div class="hero-headline">
+          <div class="hero-logo">
+            <svg viewBox="6 6 412 38" width="200" height="19"><defs>
+              <linearGradient id="hl1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+              <linearGradient id="hl2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+              <linearGradient id="hl3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+              <linearGradient id="hl4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+              <linearGradient id="hl5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+            </defs>
+            <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl1)">T</text>
+            <polygon points="10,36 10,10 34,36" fill="url(#hl1)" opacity="0.08"/>
+            <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl2)">I</text>
+            <polygon points="42,36 42,14 56,36" fill="url(#hl2)" opacity="0.08"/>
+            <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl3)">R</text>
+            <polygon points="68,36 68,8 92,36" fill="url(#hl3)" opacity="0.08"/>
+            <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl4)">O</text>
+            <polygon points="100,36 100,10 126,36" fill="url(#hl4)" opacity="0.08"/>
+            <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl5)">L</text>
+            <circle cx="172" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
+            <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
+          </svg>
+          </div>
+          <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
+        </div>
         <p set:html={page.hero.subtitle}></p>
         <div class="hero-actions">
           <a href={page.hero.ctaPrimary.href} class={page.hero.ctaPrimary.class}>{page.hero.ctaPrimary.text}</a>

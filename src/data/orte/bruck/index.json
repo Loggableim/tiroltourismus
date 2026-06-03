@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/bruck/hero_1.png",
+      "alt": "Bruck am Ziller — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/bruck/hero_1.png",
   "koordinaten": {
     "lat": "47.3905",
     "lng": "11.8517"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

@@ -223,6 +223,18 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .nav-login,.nav-dash{display:flex;align-items:center;gap:3px;padding:5px 10px;font-size:11px;font-weight:600;border-radius:100px;background:var(--pink);color:#fff!important;transition:all .3s;white-space:nowrap;letter-spacing:.2px;text-decoration:none}
     .nav-login:hover,.nav-dash:hover{opacity:.85;transform:translateY(-1px)}
     .nav-links a{padding:6px 6px;font-size:11px;font-weight:600;letter-spacing:.3px;color:#111;transition:all .3s;border-radius:100px;white-space:nowrap}
+    .mega-group{position:relative}
+    .mega-trigger{display:flex;align-items:center;gap:4px;padding:6px 10px;font-size:11px;font-weight:600;letter-spacing:.3px;color:#111;border:none;background:none;cursor:pointer;border-radius:100px;font-family:inherit;transition:all .3s}
+    [data-theme="alpenpeak"] .mega-trigger{color:var(--text)}
+    .mega-trigger:hover{background:rgba(0,0,0,.04)}
+    .mega-chev{transition:transform .2s;opacity:.6}
+    .mega-group.open .mega-chev{transform:rotate(180deg)}
+    .mega-drop{position:absolute;top:100%;left:0;margin-top:6px;min-width:200px;background:rgba(255,255,255,.98);backdrop-filter:blur(24px);border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:6px;display:none;flex-direction:column;box-shadow:0 16px 48px rgba(0,0,0,.1);z-index:2000}
+    [data-theme="alpenpeak"] .mega-drop{background:rgba(10,10,18,.95);border:1px solid var(--glass-border);box-shadow:0 16px 48px rgba(0,0,0,.5)}
+    .mega-drop a{padding:10px 14px!important;font-size:13px!important;border-radius:10px;color:#111!important}
+    [data-theme="alpenpeak"] .mega-drop a{color:var(--text)!important}
+    .mega-drop a:hover{background:rgba(255,20,147,.08)!important;color:var(--pink)!important}
+    .mega-group.open .mega-drop{display:flex}
     .nav-r{display:flex;align-items:center;gap:6px}
     .nav-search{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text2);cursor:pointer}
     .hamburger{display:none;flex-direction:column;gap:4px;padding:8px;cursor:pointer}
@@ -336,36 +348,58 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <!-- NAV -->
   <nav class="main-nav" id="mainNav">
     <div class="container">
-<a href={localePrefix || '/'} class="nav-logo">
-        <svg viewBox="4 4 404 46" width="280" height="36"><defs>
+<a href={localePrefix || '/'} class="nav-logo" style="flex-shrink:0">
+        <svg viewBox="0 0 420 48" width="380" height="40"><defs>
           <linearGradient id="nt1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
           <linearGradient id="nt2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
           <linearGradient id="nt3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
           <linearGradient id="nt4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
           <linearGradient id="nt5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
         </defs>
-        <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt1)">T</text>
-        <polygon points="10,36 10,10 34,36" fill="url(#nt1)" opacity="0.08"/>
-        <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt2)">I</text>
-        <polygon points="42,36 42,14 56,36" fill="url(#nt2)" opacity="0.08"/>
-        <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt3)">R</text>
-        <polygon points="68,36 68,8 92,36" fill="url(#nt3)" opacity="0.08"/>
-        <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt4)">O</text>
-        <polygon points="100,36 100,10 126,36" fill="url(#nt4)" opacity="0.08"/>
-        <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt5)">L</text>
-        <circle cx="172" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
-        <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
+        <text x="14" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt1)">T</text>
+        <polygon points="14,36 14,10 36,36" fill="url(#nt1)" opacity="0.08"/>
+        <text x="46" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt2)">I</text>
+        <polygon points="46,36 46,14 60,36" fill="url(#nt2)" opacity="0.08"/>
+        <text x="72" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt3)">R</text>
+        <polygon points="72,36 72,8 96,36" fill="url(#nt3)" opacity="0.08"/>
+        <text x="104" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt4)">O</text>
+        <polygon points="104,36 104,10 130,36" fill="url(#nt4)" opacity="0.08"/>
+        <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt5)">L</text>
+        <polygon points="138,36 138,12 158,36" fill="url(#nt5)" opacity="0.08"/>
+        <circle cx="178" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
+        <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
       </svg></a>
       <div class="nav-links">
-        <a href={`${localePrefix}/regionen/`} class={Astro.url.pathname.includes('regionen') ? 'active' : ''}>{nav.regionen}</a>
-        <a href={`${localePrefix}/unterkuenfte/`} class={Astro.url.pathname.includes('unterkuenfte') ? 'active' : ''}>{nav.unterkuenfte}</a>
-        <a href={`${localePrefix}/camping/`} class={Astro.url.pathname.includes('camping') ? 'active' : ''}>{nav.camping}</a>
-        <a href={`${localePrefix}/orte/`} class={Astro.url.pathname.includes('orte') ? 'active' : ''}>{nav.orte}</a>
-        <a href={`${localePrefix}/bezirke/`} class={Astro.url.pathname.includes('bezirke') ? 'active' : ''}>{nav.bezirke || 'Bezirke'}</a>
-        <a href={`${localePrefix}/sehenswuerdigkeiten/`} class={Astro.url.pathname.includes('sehenswuerdigkeiten') ? 'active' : ''}>{nav.sehenswertes}</a>
-        <a href={`${localePrefix}/gastro/`} class={Astro.url.pathname.includes('gastro') ? 'active' : ''}>{nav.gastro}</a>
-        <a href={`${localePrefix}/erlebnisse/`} class={Astro.url.pathname.includes('erlebnisse') ? 'active' : ''}>{nav.erlebnisse}</a>
-        <a href={`${localePrefix}/events/`} class={Astro.url.pathname.includes('events') ? 'active' : ''}>{nav.events}</a>
+        <div class="mega-group" data-group="entdecken">
+          <button class="mega-trigger" onclick="toggleMega('entdecken')">
+            Entdecken <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <div class="mega-drop" id="mega-entdecken">
+            <a href={`${localePrefix}/regionen/`}>{nav.regionen}</a>
+            <a href={`${localePrefix}/orte/`}>{nav.orte}</a>
+            <a href={`${localePrefix}/bezirke/`}>{nav.bezirke || 'Bezirke'}</a>
+            <a href={`${localePrefix}/sehenswuerdigkeiten/`}>{nav.sehenswertes}</a>
+          </div>
+        </div>
+        <div class="mega-group" data-group="uebernachten">
+          <button class="mega-trigger" onclick="toggleMega('uebernachten')">
+            Übernachten <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <div class="mega-drop" id="mega-uebernachten">
+            <a href={`${localePrefix}/unterkuenfte/`}>{nav.unterkuenfte}</a>
+            <a href={`${localePrefix}/camping/`}>{nav.camping}</a>
+          </div>
+        </div>
+        <div class="mega-group" data-group="aktivitaeten">
+          <button class="mega-trigger" onclick="toggleMega('aktivitaeten')">
+            Aktivitäten <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </button>
+          <div class="mega-drop" id="mega-aktivitaeten">
+            <a href={`${localePrefix}/gastro/`}>{nav.gastro}</a>
+            <a href={`${localePrefix}/erlebnisse/`}>{nav.erlebnisse}</a>
+            <a href={`${localePrefix}/events/`}>{nav.events}</a>
+          </div>
+        </div>
         <a href={`${localePrefix}/magazin/`} class={Astro.url.pathname.includes('magazin') ? 'active' : ''}>{nav.magazin}</a>
         <a href={`${localePrefix}/preise/`} class={Astro.url.pathname.includes('preise') ? 'active' : ''} style="color:var(--gold-light);font-weight:600">{nav.preise}</a>
       </div>
@@ -424,24 +458,25 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <a href={localePrefix || '/'} class="nav-logo">
-            <svg viewBox="4 4 404 46" width="340" height="46"><defs>
+            <svg viewBox="0 0 420 48" width="340" height="36"><defs>
               <linearGradient id="ft1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
               <linearGradient id="ft2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
               <linearGradient id="ft3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
               <linearGradient id="ft4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
               <linearGradient id="ft5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
             </defs>
-            <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft1)">T</text>
-            <polygon points="10,36 10,10 34,36" fill="url(#ft1)" opacity="0.08"/>
-            <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft2)">I</text>
-            <polygon points="42,36 42,14 56,36" fill="url(#ft2)" opacity="0.08"/>
-            <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft3)">R</text>
-            <polygon points="68,36 68,8 92,36" fill="url(#ft3)" opacity="0.08"/>
-            <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft4)">O</text>
-            <polygon points="100,36 100,10 126,36" fill="url(#ft4)" opacity="0.08"/>
-            <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft5)">L</text>
-            <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
-            <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink)">tourismus</text>
+            <text x="14" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft1)">T</text>
+            <polygon points="14,36 14,10 36,36" fill="url(#ft1)" opacity="0.08"/>
+            <text x="46" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft2)">I</text>
+            <polygon points="46,36 46,14 60,36" fill="url(#ft2)" opacity="0.08"/>
+            <text x="72" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft3)">R</text>
+            <polygon points="72,36 72,8 96,36" fill="url(#ft3)" opacity="0.08"/>
+            <text x="104" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft4)">O</text>
+            <polygon points="104,36 104,10 130,36" fill="url(#ft4)" opacity="0.08"/>
+            <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft5)">L</text>
+            <polygon points="138,36 138,12 158,36" fill="url(#ft5)" opacity="0.08"/>
+            <circle cx="178" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
+            <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink)">tourismus</text>
           </svg></a>
           <p>{nav.footer_p}</p>
           <div class="footer-social">
@@ -487,6 +522,23 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       if(sel&&!sel.contains(e.target))sel.classList.remove('open');
       var fl=document.getElementById('floatingLang');
       if(fl&&!fl.contains(e.target))fl.classList.remove('open');
+    });
+    // Mega Menu Toggle
+    window.toggleMega = function(group) {
+      var el = document.getElementById('mega-' + group);
+      if (!el) return;
+      var parent = el.closest('.mega-group');
+      // Close other open mega menus
+      document.querySelectorAll('.mega-group.open').forEach(function(g) {
+        if (g !== parent) g.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    };
+    // Close mega menu on outside click
+    document.addEventListener('click', function(e) {
+      document.querySelectorAll('.mega-group.open').forEach(function(g) {
+        if (!g.contains(e.target)) g.classList.remove('open');
+      });
     });
     // Session-Check: Anmelden vs. Mein Konto
     (function(){

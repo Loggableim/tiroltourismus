@@ -73,6 +73,7 @@ const catLabel = { allgemein: 'Allgemein', tipps: 'Tipps', reiseberichte: 'Reise
                   datum={formatDate(r.entry.datum)}
                   kategorie={(catLabel[r.entry.kategorie] || r.entry.kategorie || '').toUpperCase()}
                   emoji={catEmoji[r.entry.kategorie] || '📰'}
+                  hero_bild={r.entry.hero_bild}
                 />
               ))}
             </div>

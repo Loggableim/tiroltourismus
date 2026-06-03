@@ -23,7 +23,7 @@ const {
 ---
 
 <header class="sec-art-hero">
-  {image && <img src={image} alt={title} class="sec-art-bg" loading="eager" decoding="async" />}
+  {image && <img src={image} alt={title} class="sec-art-bg" loading="eager" decoding="async" fetchpriority="high" width="1200" height="600" />}
   <div class="container">
     {emoji && <div class="sec-art-emoji">{emoji}</div>}
     <div class="sec-art-meta">

@@ -36,8 +36,12 @@ export interface Props {
 }
 
 const { title, description, breadcrumbs, sections, isArticle, locale, jsonld, ogImage, type, publishedTime } = Astro.props;
+
+// Extract hero image for preloading (LCP optimization)
+const heroSection = sections?.find(s => s.type === 'hero' || s.type === 'article-hero');
+const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSection?.imageSrc || ogImage;
 ---
-<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime}>
+<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage}>
   <main>
     {breadcrumbs && breadcrumbs.length > 0 && (
       <div class="container">

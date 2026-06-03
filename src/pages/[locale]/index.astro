@@ -53,6 +53,7 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
   title={locale === 'de' ? 'Startseite' : locale === 'en' ? 'Home' : locale === 'fr' ? 'Accueil' : locale === 'it' ? 'Home' : locale === 'es' ? 'Inicio' : locale === 'zh' ? '首页' : locale === 'nl' ? 'Startpagina' : 'Startseite'}
   description={page.hero?.subtitle}
   locale={locale}
+  preloadImage={page.hero?.bgImage}
 >
   <main>
     <section class="hero" aria-label="Hero">
@@ -193,6 +194,7 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
               teaser={a.entry.kurzbeschreibung}
               datum={a.entry.datum}
               kategorie={a.entry.kategorie}
+              hero_bild={a.entry.hero_bild}
             />
           ))}
         </div>

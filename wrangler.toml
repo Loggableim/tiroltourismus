@@ -1,2 +1,11 @@
 name = "tiroltourismus"
 pages_build_output_dir = "dist"
+
+# Cloudflare Pages build configuration
+# Build command: npm run build
+# Node.js version: 20
+compatibility_date = "2025-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+# Production environment overrides (if any)

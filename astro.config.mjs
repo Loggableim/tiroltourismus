@@ -41,6 +41,7 @@ export default defineConfig({
   compressHTML: true,
   vite: {
     build: {
+      cssMinify: 'lightningcss',
       rollupOptions: {
         output: {
           manualChunks: {

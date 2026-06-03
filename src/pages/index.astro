@@ -356,7 +356,7 @@ function formatDate(d) {
           <>
             <div class="section-grid" id="magazinGrid">
               {top3Magazin.map(a => (
-                <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} />
+                <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} hero_bild={a.entry.hero_bild} />
               ))}
             </div>
             <div class="section-footer">
@@ -382,7 +382,7 @@ function formatDate(d) {
             </div>
             <a href="/fuer-betriebe/" class="btn btn-pink">Jetzt Partner werden</a>
           </div>
-          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.webp') center/cover">PINK · GOLD</div>
+          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.webp') center/cover;background-size:cover" loading="lazy">PINK · GOLD</div>
         </div>
       </div>
     </section>

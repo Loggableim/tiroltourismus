@@ -10,9 +10,9 @@ export const LANGUAGES = [
   { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
   { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: true },
   { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
-  // Listed for future rollout, but excluded from routes/hreflang until localized data exists.
-  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: false },
-  { code: 'cs', flag: '🇨🇿', name: 'Czech', nameNative: 'Čeština', ready: false },
+  // All 8 languages (DE/EN/FR/IT/ES/ZH/NL/CS) now active with full hreflang and routes.
+  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: true },
+  { code: 'cs', flag: '🇨🇿', name: 'Czech', nameNative: 'Čeština', ready: true },
 ];
 
 export const LANGUAGES_READY = LANGUAGES.filter((l) => l.ready).map((l) => l.code); // alle aktuell freigegebenen Sprachen routen

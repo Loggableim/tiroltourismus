@@ -134,7 +134,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <!-- Fonts: display=swap + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" crossorigin fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap"></noscript>
 
@@ -162,8 +162,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   {preloadImageAbs && (
     <link rel="preload" as="image" href={preloadImageAbs} fetchpriority="high" imagesizes="100vw" />
   )}
-  <link rel="preload" href="/assets/css/tirol.css" as="style">
-  <link rel="stylesheet" href="/assets/css/tirol.css">
+  <link rel="preload" href="/assets/css/tirol.css" as="style" fetchpriority="high">
+  <link rel="stylesheet" href="/assets/css/tirol.css" media="print" onload="this.media='all';this.onload=null;">
   <noscript><link rel="stylesheet" href="/assets/css/tirol.css"></noscript>
   <style is:inline>
     /* ─── Critical: Design Tokens, Reset, Nav, Hero ─── */

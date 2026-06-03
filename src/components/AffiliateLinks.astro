@@ -1,0 +1,110 @@
+---
+// AffiliateLinks.astro — Amazon-Partnerlinks für Tirol-Reisebedarf
+// Alle Links nutzen tag=nova079-20 (Amazon Deutschland)
+const links = [
+  {
+    href: 'https://www.amazon.de/dp/3831733445?tag=nova079-20&linkCode=xm2&camp=2025&creative=165953',
+    label: '📖 Tirol Reiseführer (MARCO POLO)',
+    desc: 'Aktuelle Reisetipps, Karten und Insider-Infos für deine Tirol-Reise',
+  },
+  {
+    href: 'https://www.amazon.de/dp/3886181031?tag=nova079-20&linkCode=xm2&camp=2025&creative=165953',
+    label: '🥾 Kompass Wanderkarte Tirol',
+    desc: 'Detailkarte 1:50.000 mit Wanderwegen, Hütten und Gipfeln',
+  },
+  {
+    href: 'https://www.amazon.de/dp/3765451172?tag=nova079-20&linkCode=xm2&camp=2025&creative=165953',
+    label: '⛰️ Alpenvereinsführer Tirol',
+    desc: 'Umfassender Kletter- und Wanderführer für die Tiroler Alpen',
+  },
+];
+
+const sectionTitle: string = Astro.props.sectionTitle || 'Empfohlene Reiseführer & Karten';
+---
+<section class="affiliate-section">
+  <div class="container">
+    <h3 class="affiliate-title">{sectionTitle}</h3>
+    <div class="affiliate-grid">
+      {links.map(link => (
+        <a href={link.href} target="_blank" rel="nofollow sponsored noopener" class="affiliate-card">
+          <div class="affiliate-card-body">
+            <strong>{link.label}</strong>
+            <span class="affiliate-desc">{link.desc}</span>
+          </div>
+          <span class="affiliate-cta">Bei Amazon ansehen →</span>
+        </a>
+      ))}
+    </div>
+    <p class="affiliate-disclaimer">Als Amazon-Partner verdienen wir an qualifizierten Verkäufen. <em>tag=nova079-20</em></p>
+  </div>
+</section>
+
+<style>
+  .affiliate-section {
+    padding: 40px 0 48px;
+    background: linear-gradient(180deg, transparent, var(--bg2, #10101E));
+  }
+  .affiliate-title {
+    font-family: var(--font-display, 'Bebas Neue', Impact, 'Arial Narrow', sans-serif);
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: var(--text, #F0EDEE);
+  }
+  .affiliate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .affiliate-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--surface, rgba(255,255,255,.04));
+    border: 1px solid var(--glass-border, rgba(255,255,255,.08));
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: var(--text, #F0EDEE);
+    transition: all 0.2s ease;
+  }
+  .affiliate-card:hover {
+    border-color: var(--pink, #FF1493);
+    transform: translateY(-2px);
+  }
+  .affiliate-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .affiliate-card-body strong {
+    font-size: 15px;
+  }
+  .affiliate-desc {
+    font-size: 13px;
+    color: var(--text2, rgba(255,255,255,.5));
+    line-height: 1.4;
+  }
+  .affiliate-cta {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--pink, #FF1493);
+  }
+  .affiliate-disclaimer {
+    margin-top: 16px;
+    font-size: 11px;
+    color: var(--text3, rgba(255,255,255,.3));
+    text-align: center;
+  }
+  .affiliate-disclaimer em {
+    font-style: normal;
+    background: var(--surface, rgba(255,255,255,.04));
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+  }
+  @media(max-width:768px){
+    .affiliate-grid{grid-template-columns:1fr}
+  }
+</style>

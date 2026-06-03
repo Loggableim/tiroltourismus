@@ -18,16 +18,18 @@ import urllib.request, urllib.error
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "src" / "data"
 
-# ── Ollama Cloud ──────────────────────────────────────────────
+# ── Ollama Cloud (alle 6 Keys) ─────────────────────────────────
 OLLAMA_KEYS = [
     "51484f56e01142ddaa6b247a0f19aab5.SJw0DVBs3S-BWllxSULXM17o",
     "32d793e82978472c89ae09092c65921e.x5XpxfWOplC120yClZhx6PUz",
     "72d76965979a4861bf498130535efe12.7KCt83Wvj9tOLmm13KMAEP9o",
     "b79597dbc5af4811b051cd1dcb2e8d79.rC-MYL24L5P3NShzzn0fYszQ",
+    "27c36e3e9cbe4acb8c0fa0dcde9f2017.SJjR",   # loggableim (manual)
+    "0d8ea1db6cf64aa493a63686ca6cdcf3.v8Co",    # logga23 (manual)
 ]
 OLLAMA_BASE_URL = "https://ollama.com/v1"
-OLLAMA_SHORT_MODEL = os.getenv("OLLAMA_MODEL_SHORT", "gpt-oss:20b")
-OLLAMA_LONG_MODEL  = os.getenv("OLLAMA_MODEL_LONG",  "gpt-oss:120b")
+OLLAMA_SHORT_MODEL = os.getenv("OLLAMA_MODEL_SHORT", "ministral-3:3b")
+OLLAMA_LONG_MODEL  = os.getenv("OLLAMA_MODEL_LONG",  "ministral-3:14b")
 
 # ── OpenRouter (Free) ─────────────────────────────────────────
 OPENROUTER_KEY      = os.getenv("OPENROUTER_API_KEY", "")
@@ -36,8 +38,8 @@ OPENROUTER_SHORT    = os.getenv("OR_SHORT", "google/gemma-3-27b-it:free")
 OPENROUTER_LONG     = os.getenv("OR_LONG",  "openai/gpt-oss-120b:free")
 
 LONG_TEXT_THRESHOLD = int(os.getenv("OLLAMA_LONG_TEXT_THRESHOLD", "1200"))
-MAX_PARALLEL_OLLAMA = 3
-MAX_PARALLEL_OR    = 3
+MAX_PARALLEL_OLLAMA = 6
+MAX_PARALLEL_OR    = 0  # kein OpenRouter-Key verfügbar (für später vorbereitet)
 
 # ── Provider Key-Rotation ─────────────────────────────────────
 _ollama_idx = 0
@@ -112,7 +114,8 @@ def api_call(system_prompt, user_text, timeout=120, model=None, provider="ollama
         except urllib.error.HTTPError as e:
             body = e.read().decode()
             if e.code == 429:
-                time.sleep(5 * (attempt + 1))
+                wait = 5 * (attempt + 1) + (threading.get_ident() % 3) * 2
+                time.sleep(wait)
                 continue
             raise Exception(f"HTTP {e.code}: {body[:200]}")
         except Exception as e:
@@ -260,10 +263,8 @@ def write_out(cat, slug, data, lang):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def get_provider(thread_id):
-    """Abwechselnd Ollama und OpenRouter je nach Thread-ID."""
-    if not OPENROUTER_KEYS:
-        return "ollama"
-    return "ollama" if thread_id % 2 == 0 else "openrouter"
+    """Nur Ollama (kein OpenRouter-Key verfügbar)"""
+    return "ollama"
 
 # ── Main ──────────────────────────────────────────────────────
 def main():

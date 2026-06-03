@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.krimmlerfaelle.at/caravan-camping",
-  "beschreibung": "<p>Der <strong>Camping- und Wohnmobilstellplatz Hotel Krimmlerfälle</strong> liegt in der Nähe der <strong>Krimmler Wasserfälle</strong> in Tirol. Er bietet <strong>Stellplätze</strong> für Wohnmobile und Zelte mit Stromanschlüssen. Die <strong>sanitären Einrichtungen</strong> sind modern und sauber. Gäste haben Zugang zu den Wasserfällen und Wanderwegen. Ein Restaurant im Hotel versorgt die Besucher mit Speisen. Die Umgebung eignet sich für Naturliebhaber und Wanderer. Der Stellplatz ist für Kurzaufenthalte zur Besichtigung des Nationalparks geeignet.</p>",
+  "beschreibung": null,
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.218186",
     "lng": "12.174735"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

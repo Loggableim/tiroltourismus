@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/elbigenalp/hero_1.png",
+      "alt": "Elbigenalp — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/elbigenalp/hero_1.png",
   "koordinaten": {
     "lat": "47.2910",
     "lng": "10.4369"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

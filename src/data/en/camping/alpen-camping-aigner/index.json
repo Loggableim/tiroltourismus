@@ -11,7 +11,7 @@
   "telefon": "+43 664 211 94 56",
   "email": null,
   "webseite": "https://www.aignercamping.at/",
-  "beschreibung": "<p>Der Campingplatz <strong>Alpen Camping Aigner</strong> liegt in Wald im Pinzgau, Tirol, Österreich. Er ist von der <strong>umliegenden Bergwelt</strong> der Kitzbüheler Alpen umgeben. Die Atmosphäre ist ruhig und naturnah. In der Umgebung befinden sich <strong>Wanderwege</strong> für verschiedene Schwierigkeitsgrade sowie <strong>Skigebiete</strong> für den Wintersport. Die Ausstattung umfasst <strong>Sanitäranlagen, Stromanschlüsse und einen Aufenthaltsraum</strong>. Gäste können <strong>Stellplätze für Wohnmobile, Wohnwagen und Zelte</strong> nutzen. Der Campingplatz dient als <strong>Basis für Aktivitäten in der Natur</strong>.</p>",
+  "beschreibung": "=== beschreibung ===\n<p>The **Alpen Camping Aigner** campsite is nestled in the woods of the Pinzgau region in **Tirol**, Austria. It is surrounded by the stunning **mountain scenery** of the Kitzbühel Alps, offering a peaceful and natural atmosphere. The area features **hiking trails** of varying difficulty levels, as well as **ski resorts** for winter sports enthusiasts. The facilities include **sanitary amenities, electrical hookups, and a communal lounge**. Guests can enjoy **parking spots for RVs, caravans, and tents**. This campsite serves as a perfect base for exploring the great outdoors.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.2431842",
     "lng": "12.2110899"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

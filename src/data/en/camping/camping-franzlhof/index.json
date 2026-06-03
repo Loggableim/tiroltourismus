@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5117",
   "email": "info@franzlhof.com",
   "webseite": "https://franzlhof.com/camping",
-  "beschreibung": "<p>Der Campingplatz Franzlhof liegt in der Gemeinde Söll im Tiroler Sölllandl. Die Anlage bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte sowie Mietwohnwagen. Zu den Einrichtungen zählen ein Sanitärgebäude, eine Ver- und Entsorgungsstation sowie ein kleiner Shop. Ein besonderes Merkmal ist die direkte Nähe zur <strong>Bergbahn Söll</strong> und zum Ortszentrum mit Einkaufsmöglichkeiten. Von hier aus lassen sich Wanderungen im Sommer und Skitouren im Winter unternehmen. Der Campingplatz eignet sich als Basis für Aktivitäten wie Mountainbiken oder Klettern in der Umgebung. Die Atmosphäre ist ruhig und auf die Bedürfnisse von Campern ausgelegt.</p>",
+  "beschreibung": "=== beschreibung ===\n<p>The Franzlhof Camping Ground is located in the municipality of Söll in the Tiroler Sölllandl region. The site provides pitches for RVs, caravans, and tents, along with rental caravans. Facilities include a sanitary building, waste disposal station, and a small shop. A distinctive feature is its proximity to the <strong>Söll Bergbahn lift</strong> and the town center, which offers shopping options. From here, you can enjoy hiking in the summer and skiing in the winter. The campground is ideal for activities like mountain biking or climbing in the surrounding area. The atmosphere is peaceful and tailored to campers’ needs.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,6 @@
     "lat": "47.5085533",
     "lng": "12.188787"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

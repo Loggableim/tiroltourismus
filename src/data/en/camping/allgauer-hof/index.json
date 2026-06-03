@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.kleinanzeigen.de/pro/allgaeuer-hof",
-  "beschreibung": "<p>Der <strong>Campingplatz</strong> Allgäuer Hof in Tirol ist ein ruhiger Ort für Naturliebhaber. Die <strong>Stellplätze</strong> sind für Wohnmobile, Wohnwagen und Zelte geeignet. Moderne <strong>Sanitäranlagen</strong> stehen den Gästen zur Verfügung. Wanderungen in die umliegenden Berge sind direkt vom Platz aus möglich. In der Nähe gibt es <strong>Einkaufsmöglichkeiten</strong> und Gaststätten. Der Platz ist ein guter Ausgangspunkt für Ausflüge in die Region.</p>",
+  "beschreibung": "=== description ===\n<p>The <strong>Camping site</strong> Allgäuer Hof in Tirol is a peaceful spot for nature lovers. The <strong>stalls</strong> are suitable for RVs, caravans, and tents. Modern <strong>sanitary facilities</strong> are available for guests. Hiking trails into the surrounding mountains are accessible right from the site. Nearby, there are <strong>shopping options</strong> and eateries. The site serves as a great starting point for exploring the region.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,6 @@
     "lat": "47.6530286",
     "lng": "10.5738922"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

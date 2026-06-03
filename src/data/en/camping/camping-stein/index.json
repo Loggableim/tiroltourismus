@@ -11,7 +11,7 @@
   "telefon": "+49 8053 9349",
   "email": "info@camping-stein.de",
   "webseite": "https://www.camping-stein.de/",
-  "beschreibung": "<p>Der <strong>Campingplatz Stein</strong> liegt in <strong>Bad Endorf</strong> im österreichischen Bundesland <strong>Tirol</strong>. Die Umgebung ist von <strong>Bergen</strong> und ausgedehnter <strong>Natur</strong> geprägt. In der Nähe befinden sich mehrere <strong>Skigebiete</strong> sowie <strong>Wanderwege</strong> unterschiedlicher Schwierigkeitsgrade. Der Platz selbst bietet eine <strong>ruhige Atmosphäre</strong> und ist mit <strong>Sanitäranlagen</strong> sowie <strong>Stromanschlüssen</strong> ausgestattet. Ein kleiner Laden und ein Aufenthaltsraum ergänzen die <strong>Ausstattung</strong>. Gäste nutzen den Campingplatz als <strong>Basis für Outdoor-Aktivitäten</strong> wie Wandern, Skifahren und Bergtouren. Die Anlage ist für Reisende geeignet, die eine naturnahe Unterkunft suchen.</p>",
+  "beschreibung": null,
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.8844692",
     "lng": "12.2684394"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

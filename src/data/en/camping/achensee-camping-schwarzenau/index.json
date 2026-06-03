@@ -11,7 +11,7 @@
   "telefon": "+43 664 466 20 70",
   "email": "office@schwarzenau.cc",
   "webseite": "https://campingplatz-achensee.at/",
-  "beschreibung": "<p>Der <strong>Campingplatz Achensee Camping Schwarzenau</strong> befindet sich in <strong>Achenkirch</strong> am Ufer des <strong>Achensees</strong>. Er bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte. Die Anlage verfügt über moderne Sanitäranlagen und Stromanschlüsse. Gäste können den See zum Schwimmen und für Wassersport nutzen. Die umliegende Bergwelt lädt zu Wanderungen ein. Der Campingplatz ist ein idealer Ausgangspunkt für Naturerlebnisse in Tirol.</p>",
+  "beschreibung": null,
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.4688632",
     "lng": "11.7138283"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

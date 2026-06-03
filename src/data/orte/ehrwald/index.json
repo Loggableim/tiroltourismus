@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/ehrwald/hero_1.png",
+      "alt": "Ehrwald — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/ehrwald/hero_1.png",
   "koordinaten": {
     "lat": "47.3987",
     "lng": "10.9205"
-  }
+  },
+  "kategorie": "dorf"
 }

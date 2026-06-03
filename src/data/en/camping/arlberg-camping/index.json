@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.arlbergcamping.at/",
-  "beschreibung": "<p>Der <strong>Arlberg Camping</strong> liegt in Langen am Arlberg und bietet direkten Zugang zu den Wander- und Skigebieten der Region.. Das Gelände ist terrassiert und von Bergwiesen umgeben, mit Blick auf die umliegende Alpinkulisse.. Gäste finden Stellplätze für Wohnmobile und Zelte, teils mit eigenem Zugang zu sanitären Anlagen.. Ein kleiner Spazierweg führt durch die angrenzende Natur.. In der Nähe befinden sich Restaurants und Einkaufsmöglichkeiten.",
+  "beschreibung": "=== description ===\n<p>The <strong>Arlberg Camping</strong> is located in Langen am Arlberg and provides direct access to the hiking and skiing areas of the region. The site is terraced and surrounded by rolling alpine meadows, offering stunning views of the surrounding mountain landscape. Guests can choose between pitches for RVs and tents, some with direct access to sanitary facilities. A short path leads through the adjacent natural surroundings. Nearby, you’ll find restaurants and shopping options.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.1304296",
     "lng": "10.0536585"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

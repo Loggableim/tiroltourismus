@@ -11,7 +11,7 @@
   "telefon": "+43 6547 8254",
   "email": null,
   "webseite": "http://www.campkaprun.at/",
-  "beschreibung": "<p><strong>Camping zur Mühle</strong> liegt in einem ruhigen Tiroler Tal, eingebettet in <strong>Berglandschaft und Natur</strong>. Die <strong>Lage</strong> ist abgeschieden und bietet Zugang zu <strong>Wanderwegen und Skigebieten</strong>. Die <strong>Atmosphäre</strong> auf dem Platz ist entspannt und naturnah. Zur <strong>Ausstattung</strong> gehören <strong>Sanitäranlagen</strong>, <strong>Stromanschlüsse</strong> und ein <strong>Spielplatz</strong>. Ein kleiner <strong>Kiosk</strong> versorgt Gäste mit Grundnahrungsmitteln. Gäste erwartet ein unkomplizierter Aufenthalt mit Fokus auf <strong>Outdoor-Aktivitäten</strong>. Die <strong>Umgebung</strong> ist das ganze Jahr über für <strong>Wanderer und Skifahrer</strong> geeignet.</p>",
+  "beschreibung": null,
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.2649407",
     "lng": "12.7469447"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

@@ -11,7 +11,7 @@
   "telefon": "+49 8020 555",
   "email": "info@camping-gross-seeham.de",
   "webseite": "https://www.camping-gross-seeham.de/",
-  "beschreibung": "<p>Der Campingplatz <strong>Camping Großseeham</strong> liegt in der Gemeinde Weyarn in Tirol. Die umliegende Landschaft ist von <strong>Bergen</strong> und <strong>Wäldern</strong> geprägt. In der Region gibt es mehrere <strong>Skigebiete</strong> und ein Netz von <strong>Wanderwegen</strong>. Der Platz bietet eine <strong>ruhige Atmosphäre</strong> mit Blick auf die Natur. Die <strong>Ausstattung</strong> umfasst Stellplätze für Wohnmobile, Wohnwagen und Zelte sowie Sanitäranlagen. Gäste können die Umgebung für <strong>Wanderungen</strong> und <strong>Skiausflüge</strong> nutzen.</p>",
+  "beschreibung": "=== description ===\n<p>The campsite <strong>Camping Großseeham</strong> is located in the municipality of Weyarn in Tyrol. The surrounding landscape is characterized by <strong>mountains</strong> and <strong>forests</strong>. In the area, there are several <strong>ski resorts</strong> and a network of <strong>hiking trails</strong>. The site offers a <strong>peaceful atmosphere</strong> with views of nature. The <strong>facilities</strong> include pitches for RVs, caravans, and tents, along with sanitary facilities. Guests can explore the area for <strong>hikes</strong> and <strong>ski trips</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,6 @@
     "lat": "47.8541902",
     "lng": "11.8569205"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

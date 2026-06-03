@@ -11,7 +11,7 @@
   "telefon": "+43 5472 2648",
   "email": "info@aktiv-camping.at",
   "webseite": "https://www.aktiv-camping.at/",
-  "beschreibung": "<p><strong>Aktiv Camping Prutz</strong> befindet sich in der Gemeinde <strong>Prutz</strong> im Tiroler Oberland. Der Campingplatz bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte. Die Anlage verfügt über moderne Sanitäranlagen und einen Kinderspielplatz. In der Umgebung können Gäste Rafting auf dem Inn betreiben oder Wandern. Der Campingplatz ist ideal für Familien und Aktivurlauber. Die Lage ermöglicht Erkundungen der Region Kaunertal.</p>",
+  "beschreibung": "=== beschreibung ===\n<p><strong>Aktiv Camping Prutz</strong> is located in the municipality of <strong>Prutz</strong> in the Tiroler Oberland region. The campsite provides pitches for RVs, caravans, and tents. The site features modern sanitary facilities and a children’s playground. Guests can enjoy rafting on the Inn River or hiking in the area. The campsite is perfect for families and active travelers, offering easy access to explore the <strong>Kaunertal</strong> region.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.0802581",
     "lng": "10.6596843"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

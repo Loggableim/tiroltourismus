@@ -11,7 +11,7 @@
   "telefon": "+49 8362 8276",
   "email": "info@falkencamp-schwangau.de",
   "webseite": "https://www.falkencamp-schwangau.de/",
-  "beschreibung": "<p>Der <strong>Zeltplatz Falkencamp</strong> liegt in <strong>Schwangau</strong> am Rande des Naturschutzgebiets {{location}}. Die Stellplätze sind großzügig angelegt und von Bäumen umgeben. Gäste profitieren von der <strong>Nähe zu den Königsschlössern</strong> Neuschwanstein und Hohenschwangau sowie der Berglandschaft des Allgäus. Der Campingplatz bietet <strong>moderne Sanitäranlagen</strong> und einen kleinen Lebensmittelladen. Die <strong>ruhige Atmosphäre</strong> eignet sich für Naturliebhaber und Familien, die die Umgebung aktiv erkunden möchten.</p>",
+  "beschreibung": null,
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,6 @@
     "lat": "47.5743209",
     "lng": "10.7527879"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5246 6239",
   "email": "info@camping-achensee.com",
   "webseite": "https://www.camping-achensee.com/",
-  "beschreibung": "<p>Der <strong>Alpen Caravan Park Achensee</strong> liegt in <strong>Achenkirch</strong> am Nordufer des <strong>Achensees</strong>. Die <strong>Umgebung</strong> ist durch das <strong>Karwendel</strong> und das <strong>Rofangebirge</strong> geprägt. Der Platz bietet eine <strong>ruhige Atmosphäre</strong> zwischen Bergen und See. In der Nähe befinden sich <strong>Wanderwege</strong> und <strong>Skigebiete</strong> wie der Christlum. Die <strong>Ausstattung</strong> umfasst Sanitäranlagen, <strong>Stromanschlüsse</strong> und einen Lebensmittelmarkt. Gäste erwartet ein gut ausgestatteter Campingplatz mit direktem <strong>Seezugang</strong>.</p>",
+  "beschreibung": "=== beschreibung ===\n<p>The **Alpen Caravan Park Achensee** is located in **Achenkirch** on the northern shore of the **Achensee**. The area is characterized by the **Karwendel** and **Rofangebirge** mountains. The site offers a peaceful atmosphere nestled between the mountains and the lake. Nearby, there are **hiking trails** and **ski resorts** like Christlum. The facilities include **sanitary amenities**, **electricity outlets**, and a **local market**. Guests will find a well-equipped campsite with direct **lake access**.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,6 @@
     "lat": "47.4990497",
     "lng": "11.7052597"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5353 5345",
   "email": "camping-steinplatte@aon.at",
   "webseite": "https://www.camping-steinplatte.at/",
-  "beschreibung": "<p>Der <strong>Campingplatz Steinplatte</strong> liegt in <strong>Waidring</strong> im <strong>Pillerseetal</strong>. Die Umgebung wird von der Steinplatte und den Chiemgauer Alpen bestimmt. Im Winter haben Gäste einen <strong>direkten Zugang zum Skigebiet Steinplatte</strong>. In den Sommermonaten dienen die umliegenden Berge als Ausgangspunkt für <strong>Wander- und Mountainbikestrecken</strong>. Die Ausstattung umfasst <strong>Sanitäranlagen</strong>, einen Lebensmittelladen sowie einen beheizten <strong>Außenpool</strong>. Gäste nutzen den Platz als <strong>Basislager</strong> für Aktivitäten in der Region.</p>",
+  "beschreibung": null,
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.5844756",
     "lng": "12.5842362"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

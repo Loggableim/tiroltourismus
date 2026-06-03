@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/ehenbichl/hero_1.png",
+      "alt": "Ehenbichl — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/ehenbichl/hero_1.png",
   "koordinaten": {
     "lat": "47.4723",
     "lng": "10.7010"
-  }
+  },
+  "kategorie": "dorf"
 }

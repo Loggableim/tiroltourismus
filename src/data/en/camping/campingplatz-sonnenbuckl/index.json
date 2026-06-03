@@ -11,7 +11,7 @@
   "telefon": "+49 8383 383",
   "email": "ferien@sonnenbuckl.de",
   "webseite": "https://www.sonnenbuckl.de/",
-  "beschreibung": "<p>Der Campingplatz Sonnenbuckl in Maierhöfen liegt im österreichischen Tirol und bietet Stellplätze für <strong>Wohnmobile</strong> und <strong>Zelte</strong>. Die Anlage befindet sich auf einer Anhöhe mit Ausblick auf die umliegenden <strong>Bergkuppen</strong> der Allgäuer Alpen. Die Umgebung besteht aus <strong>Wäldern</strong> und <strong>Wiesen</strong>, was eine ruhige Atmosphäre ermöglicht. Gäste erreichen mehrere <strong>Wanderwege</strong> direkt ab dem Platz sowie <strong>Skigebiete</strong> im Winter nach kurzer Fahrt. Die Ausstattung umfasst ein <strong>Sanitärgebäude</strong> mit Duschen und Toiletten sowie einen <strong>Brötchenservice</strong> in der Saison. Ein <strong>Kinderspielplatz</strong> ist auf dem Gelände vorhanden. Der Campingplatz ist Ausgangspunkt für Unternehmungen in der Natur.</p>",
+  "beschreibung": null,
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,6 @@
     "lat": "47.6420697",
     "lng": "10.0392792"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": null
 }

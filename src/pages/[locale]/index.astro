@@ -42,11 +42,11 @@ const locale = Astro.params.locale || 'de';
 const sl = SECTION_LABELS[locale] || SECTION_LABELS.de;
 const page = PAGE_MAP[locale] || dePage;
 
-const regions = readCollection('regionen').filter((r) => isPublished(r.entry)).slice(0, 6);
-const stays = readCollection('unterkuenfte').filter((u) => isPublished(u.entry)).slice(0, 3);
-const gastro = readCollection('gastro').filter((g) => isPublished(g.entry)).slice(0, 3);
-const sights = readCollection('sehenswuerdigkeiten').filter((s) => isPublished(s.entry)).slice(0, 4);
-const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).slice(0, 3);
+const regions = readCollection('regionen', locale).filter((r) => isPublished(r.entry)).slice(0, 6);
+const stays = readCollection('unterkuenfte', locale).filter((u) => isPublished(u.entry)).slice(0, 3);
+const gastro = readCollection('gastro', locale).filter((g) => isPublished(g.entry)).slice(0, 3);
+const sights = readCollection('sehenswuerdigkeiten', locale).filter((s) => isPublished(s.entry)).slice(0, 4);
+const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.entry)).slice(0, 3);
 ---
 
 <BaseLayout
@@ -63,7 +63,7 @@ const magazin = readCollection('magazin').filter((a) => isPublished(a.entry)).sl
         <div class="hero-badge" set:html={page.hero.badge}></div>
         <div class="hero-headline">
           <div class="hero-logo">
-            <svg viewBox="12 6 325 38" width="120"><defs>
+            <svg viewBox="10 0 335 42" width="100"><defs>
               <linearGradient id="hl1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
               <linearGradient id="hl2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
               <linearGradient id="hl3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>

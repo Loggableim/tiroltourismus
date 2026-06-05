@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/fuegen/hero_1.png",
+      "alt": "Fügen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/fuegen/hero_1.png",
   "koordinaten": {
     "lat": "47.3430",
     "lng": "11.8470"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

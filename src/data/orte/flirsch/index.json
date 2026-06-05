@@ -15,10 +15,38 @@
   ],
   "status": "published",
   "bezirk": "landeck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/flirsch/hero_1.png",
+      "alt": "Flirsch — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/flirsch/hero_1.png",
   "koordinaten": {
     "lat": "47.1486",
     "lng": "10.4084"
-  }
+  },
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Pfarrkirche hl. Ulrich",
+      "beschreibung": "Barocke Kirche mit sehenswertem Hochaltar und Deckenfresken aus dem 18. Jahrhundert.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Flirscher Alpe",
+      "beschreibung": "Weitläufiges Almgebiet mit Bergwiesen und traditionellen Hütten, ideal zum Wandern und Einkehren.",
+      "typ": "natur"
+    },
+    {
+      "name": "Greitspitze",
+      "beschreibung": "Aussichtsberg oberhalb von Flirsch mit schöner Rundumsicht auf die Lechtaler Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Arlbergpass",
+      "beschreibung": "Historischer Passübergang zwischen Tirol und Vorarlberg, beliebt für Ausflugsfahrten und Wanderungen.",
+      "typ": "ausflug"
+    }
+  ],
+  "kategorie": "marktgemeinde"
 }

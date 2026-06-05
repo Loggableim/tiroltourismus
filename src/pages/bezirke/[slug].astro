@@ -44,6 +44,19 @@ const allOrte = readCollection('orte').filter((o) => isPublished(o.entry));
 const orteImBezirk = allOrte.filter((o) => relevantRegions.includes(o.entry.region));
 const alleRegionen = readCollection('regionen');
 const regionenImBezirk = alleRegionen.filter((r) => relevantRegions.includes(r.slug));
+
+// Cross-Collection-Links: Gastro, Erlebnisse, Unterkünfte, Sehenswürdigkeiten
+const alleGastro = readCollection('gastro').filter((g) => isPublished(g.entry));
+const gastroImBezirk = alleGastro.filter((g) => relevantRegions.includes(g.entry.region)).slice(0, 6);
+
+const alleErlebnisse = readCollection('erlebnisse').filter((e) => isPublished(e.entry));
+const erlebnisseImBezirk = alleErlebnisse.filter((e) => relevantRegions.includes(e.entry.region)).slice(0, 6);
+
+const alleUnterkuenfte = readCollection('unterkuenfte').filter((u) => isPublished(u.entry));
+const unterkuenfteImBezirk = alleUnterkuenfte.filter((u) => relevantRegions.includes(u.entry.region)).slice(0, 6);
+
+const alleSehenswuerdigkeiten = readCollection('sehenswuerdigkeiten').filter((s) => isPublished(s.entry));
+const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => relevantRegions.includes(s.entry.region)).slice(0, 6);
 ---
 <BaseLayout
   title={bezirk.name}
@@ -116,6 +129,102 @@ const regionenImBezirk = alleRegionen.filter((r) => relevantRegions.includes(r.s
         )}
       </div>
     </section>
+
+    {sehenswuerdigkeitenImBezirk.length > 0 && (
+      <section class="section" style="padding:0 0 80px">
+        <div class="container">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+            <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
+              🏛️ Sehenswürdigkeiten
+            </h2>
+            <a href="/sehenswuerdigkeiten/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+          </div>
+          <div class="bezirk-orte-grid">
+            {sehenswuerdigkeitenImBezirk.map((s) => (
+              <a href={`/sehenswuerdigkeiten/${s.slug}/`} class="bezirk-mini-card">
+                <div class="bezirk-mini-emoji">{s.entry.emoji || '🏛️'}</div>
+                <div class="bezirk-mini-body">
+                  <h3>{s.entry.name}</h3>
+                  {s.entry.ort && <div class="bezirk-mini-meta">{s.entry.ort}</div>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {erlebnisseImBezirk.length > 0 && (
+      <section class="section" style="padding:0 0 80px">
+        <div class="container">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+            <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
+              🎯 Erlebnisse
+            </h2>
+            <a href="/erlebnisse/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+          </div>
+          <div class="bezirk-orte-grid">
+            {erlebnisseImBezirk.map((e) => (
+              <a href={`/erlebnisse/${e.slug}/`} class="bezirk-mini-card">
+                <div class="bezirk-mini-emoji">{e.entry.emoji || '🎯'}</div>
+                <div class="bezirk-mini-body">
+                  <h3>{e.entry.name}</h3>
+                  {e.entry.ort && <div class="bezirk-mini-meta">{e.entry.ort}{e.entry.kategorie ? ` · ${e.entry.kategorie}` : ''}</div>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {gastroImBezirk.length > 0 && (
+      <section class="section" style="padding:0 0 80px">
+        <div class="container">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+            <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
+              🍽️ Gastronomie
+            </h2>
+            <a href="/gastro/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+          </div>
+          <div class="bezirk-orte-grid">
+            {gastroImBezirk.map((g) => (
+              <a href={`/gastro/${g.slug}/`} class="bezirk-mini-card">
+                <div class="bezirk-mini-emoji">{g.entry.emoji || '🍽️'}</div>
+                <div class="bezirk-mini-body">
+                  <h3>{g.entry.name}</h3>
+                  {(g.entry.ort || g.entry.kategorie) && <div class="bezirk-mini-meta">{[g.entry.ort, g.entry.kategorie].filter(Boolean).join(' · ')}</div>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {unterkuenfteImBezirk.length > 0 && (
+      <section class="section" style="padding:0 0 80px">
+        <div class="container">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px">
+            <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
+              🏨 Unterkünfte
+            </h2>
+            <a href="/unterkuenfte/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+          </div>
+          <div class="bezirk-orte-grid">
+            {unterkuenfteImBezirk.map((u) => (
+              <a href={`/unterkuenfte/${u.slug}/`} class="bezirk-mini-card">
+                <div class="bezirk-mini-emoji">🏨</div>
+                <div class="bezirk-mini-body">
+                  <h3>{u.entry.name}</h3>
+                  {u.entry.ort && <div class="bezirk-mini-meta">{u.entry.ort}{u.entry.sterne ? ` · ${'★'.repeat(u.entry.sterne)}` : ''}</div>}
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>
 
@@ -205,6 +314,46 @@ const regionenImBezirk = alleRegionen.filter((r) => relevantRegions.includes(r.s
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+  }
+  .bezirk-mini-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 20px;
+    background: var(--bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text);
+    transition: all 0.25s var(--ease);
+  }
+  .bezirk-mini-card:hover {
+    border-color: var(--pink);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255,20,147,0.08);
+  }
+  .bezirk-mini-emoji {
+    font-size: 32px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .bezirk-mini-body {
+    flex: 1;
+    min-width: 0;
+  }
+  .bezirk-mini-body h3 {
+    font-family: var(--font-display);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    line-height: 1.2;
+    color: var(--text);
+  }
+  .bezirk-mini-meta {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.4;
   }
   @media(max-width:968px){
     .bezirk-orte-grid{grid-template-columns:repeat(2,1fr)}

@@ -8,17 +8,46 @@
   "hoehe": "632 m",
   "einwohner": "7.200",
   "tags": [
-    "kultur",
-    "geschichte",
-    "wandern",
+    "cultuur",
+    "geschiedenis",
+    "wandelen",
     "familie"
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/absam/hero_1.png",
+      "alt": "Absam — Aquarel"
+    }
+  ],
+  "hero_bild": "/images/orte/absam/hero_1.png",
   "koordinaten": {
     "lat": "47.2965",
     "lng": "11.5051"
-  }
+  },
+  "beschreibung": "<p>Welkom in Absam, een betoverend dorp op 632 meter hoogte, genesteld in de zachte hellingen van de Haller Salinenberge. Op een steenworp afstand van Innsbruck combineert deze plek op unieke wijze diepgewortelde cultuur, levendige geschiedenis en adembenemende natuur. Het hart van de gemeente klopt in de prachtige Basiliek St. Michael, een barok juweel en belangrijke bedevaartsplaats, waarvan de koepel ver over het dal uittorent en uitnodigt tot innerlijke rust.</p>\n\n<p>Absam is ook de wieg van een heel bijzonder handwerk: de wereldberoemde vioolbouw. Laat u betoveren door het delicate werk van de meesters, wier instrumenten op de wereldpodia klinken, en voel de eeuwenoude traditie die hier nog springlevend is. Naast cultuur ontvouwt zich een landschap dat uitnodigt tot wandelen en verblijven – van kindvriendelijke wandelingen langs de oude zoutweg tot uitdagende tochten naar de omliggende toppen met een grandioos panorama.</p>\n\n<p>Hier, waar geschiedenis het heden ontmoet en het bergpanorama dagelijks nieuwe perspectieven biedt, vinden zowel rustzoekers als actieve gezinnen hun paradijs. Beleef in Absam de Tiroler gastvrijheid, gecombineerd met culturele rijkdom en ongerepte natuur – een plek die u steeds weer zal verrassen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Basiliek St. Michael",
+      "beschreibung": "Belangrijke bedevaartsplaats met het beroemde genadebeeld van Maria met het geneigde hoofd.",
+      "typ": "cultuur"
+    },
+    {
+      "name": "Heimatmuseum Absam",
+      "beschreibung": "Museum over regionale geschiedenis, volkskunde en het kloosterleven in Absam.",
+      "typ": "cultuur"
+    },
+    {
+      "name": "Absamer Moos",
+      "beschreibung": "Natuurgebied met zeldzame planten en vogelsoorten, ideaal voor wandelingen.",
+      "typ": "natuur"
+    },
+    {
+      "name": "Halltal",
+      "beschreibung": "Historisch dal met oude mijnen en mooie wandelpaden nabij Absam.",
+      "typ": "uitstapje"
+    }
+  ],
+  "kategorie": "marktgemeinde"
 }

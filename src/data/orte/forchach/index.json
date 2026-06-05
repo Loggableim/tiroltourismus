@@ -14,10 +14,16 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/forchach/hero_1.png",
+      "alt": "Forchach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/forchach/hero_1.png",
   "koordinaten": {
     "lat": "47.4196",
     "lng": "10.5863"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

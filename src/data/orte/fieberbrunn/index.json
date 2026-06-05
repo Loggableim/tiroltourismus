@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/fieberbrunn/hero_1.png",
+      "alt": "Fieberbrunn — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/fieberbrunn/hero_1.png",
   "koordinaten": {
     "lat": "47.4762",
     "lng": "12.5455"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

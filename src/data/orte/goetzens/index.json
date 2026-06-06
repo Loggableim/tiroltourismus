@@ -15,10 +15,16 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/goetzens/hero_1.png",
+      "alt": "Götzens — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/goetzens/hero_1.png",
   "koordinaten": {
     "lat": "47.2359",
     "lng": "11.3110"
-  }
+  },
+  "kategorie": "dorf"
 }

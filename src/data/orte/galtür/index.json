@@ -16,10 +16,16 @@
   ],
   "status": "published",
   "bezirk": "landeck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/galtür/hero_1.png",
+      "alt": "Galtür — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/galtür/hero_1.png",
   "koordinaten": {
     "lat": "46.9195",
     "lng": "10.1706"
-  }
+  },
+  "kategorie": "marktgemeinde"
 }

@@ -85,6 +85,7 @@ def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise a
     if not api_key:
         # Try .env
         env_paths = [
+            "C:/HermesPortable/home/.env",
             "E:/HermesPortable/home/.env",
             os.path.expanduser("~/.hermes/.env"),
         ]

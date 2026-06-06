@@ -14,10 +14,16 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/gaimberg/hero_1.png",
+      "alt": "Gaimberg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/gaimberg/hero_1.png",
   "koordinaten": {
     "lat": "46.8532",
     "lng": "12.7866"
-  }
+  },
+  "kategorie": "dorf"
 }

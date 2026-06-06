@@ -2,27 +2,24 @@
 """
 Orte-Pipeline: Enrichment + Bilder + Übersetzung in einem Durchgang.
 Läuft als no_agent Cron — 1 Ort pro Tick, dann Commit + Push.
-SDXL Watercolor-Bilder via diffusers.
+VISUAL FALLBACK: SVG Gradient Placeholder statt SDXL (kein GPU nötig).
 """
 import sys, json, os, time, subprocess, re, urllib.request, urllib.error, hashlib, sqlite3
 from pathlib import Path
-import torch
-from diffusers import StableDiffusionXLPipeline
 
 BASE = Path("F:/tiroltourismus")
 ORTE_DIR = BASE / "src" / "data" / "orte"
 STATE_FILE = BASE / "_orte_pipeline.json"
 PUBLIC_IMG = BASE / "public" / "images" / "orte"
+PUBLIC_ORTE_IMG = BASE / "public" / "images" / "orte"
 KANBAN_DBS = [
     Path(r"C:/HermesPortable/home/spaces/tirol-tourismus/kanban/boards/tirol-cicd/kanban.db"),
     Path(r"C:/HermesPortable/home/kanban/boards/tirol-cicd/kanban.db"),
 ]
 
-# SDXL Setup
-MODEL_PATH = Path(r"C:/HermesPortable/ComfyUI/models/checkpoints/sd_xl_base_1.0.safetensors")
-WATERCOLOR = "Watercolor painting, soft washes, paper texture, loose brush strokes, transparent colors, artistic painterly, beautiful composition"
-NEG = "photo, comic, 3d, sharp lines, digital art, graphic, neon, overexposed, oversaturated, cartoon, illustration"
-PIPE = None  # Lazy-loaded SDXL
+# Visual Fallback mode — skip SDXL image gen, use SVG gradient placeholders
+# This makes the pipeline much faster and eliminates GPU/CUDA dependencies
+VISUAL_FALLBACK = True
 
 # Alle 258 Orte slugs
 ALL_SLUGS = sorted([
@@ -136,65 +133,70 @@ def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise a
         print(f"⚠️  LLM-Fehler: {e}")
         return None
 
-def ensure_sdxl():
-    """Lazy-load SDXL pipeline (einmal pro Prozess)"""
-    global PIPE
-    if PIPE is not None:
-        return True
-    
-    if not MODEL_PATH.exists():
-        print(f"  ⚠️  SDXL Model nicht gefunden: {MODEL_PATH}")
-        return False
-    
-    try:
-        # SSL fix for git-bash
-        os.environ.setdefault("REQUESTS_CA_BUNDLE", 
-            "C:/HermesPortable/venv/Lib/site-packages/certifi/cacert.pem")
-        
-        print(f"  🎨 Lade SDXL...")
-        PIPE = StableDiffusionXLPipeline.from_single_file(
-            str(MODEL_PATH), torch_dtype=torch.float16
-        )
-        PIPE.to("cuda")
-        PIPE.vae.enable_slicing()
-        vram = torch.cuda.memory_allocated() / 1024**3
-        print(f"  ✅ SDXL geladen ({vram:.1f} GB VRAM)")
-        return True
-    except Exception as e:
-        print(f"  ⚠️  SDXL Fehler: {e}")
-        return False
-
-def generate_image(slug, prompt_text):
-    """Generiert SDXL Watercolor-Bild für einen Ort."""
-    img_dir = PUBLIC_IMG / slug
+def generate_svg_image(slug, name, region, farbe="#006400"):
+    """Generates an SVG gradient placeholder image instead of SDXL.
+    Visual Fallback: creates a beautiful gradient with the ort's color."""
+    img_dir = PUBLIC_ORTE_IMG / slug
     img_dir.mkdir(parents=True, exist_ok=True)
     hero_path = img_dir / "hero_1.png"
     
-    if hero_path.exists() and hero_path.stat().st_size > 1000:
+    if hero_path.exists() and hero_path.stat().st_size > 100:
         print(f"  ✅ Bild existiert bereits")
         return f"/images/orte/{slug}/hero_1.png"
     
-    if not ensure_sdxl():
-        return None
+    # Use the ort's farbe if available, otherwise derive from slug
+    if not farbe or farbe == "#000000":
+        # Derive a nice color from the slug hash
+        h = abs(hash(slug)) % 360
+        farbe = f"hsl({h}, 60%, 35%)"
     
-    prompt = f"{prompt_text}. {WATERCOLOR}"
-    seed = abs(hash(slug)) % 100000 + 42
-    gen = torch.Generator(device="cuda").manual_seed(seed)
+    # Generate an SVG gradient with the ort's theme color
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:{farbe};stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountains" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:{farbe};stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:{farbe};stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)" />
+  <!-- Simplified mountain silhouette -->
+  <polygon points="0,700 200,450 350,580 500,350 700,550 850,400 1024,600 1024,1024 0,1024" 
+           fill="url(#mountains)" opacity="0.6"/>
+  <polygon points="0,800 150,600 300,700 450,550 600,680 800,520 1024,680 1024,1024 0,1024" 
+           fill="{farbe}" opacity="0.3"/>
+  <!-- Sun/moon circle -->
+  <circle cx="750" cy="280" r="60" fill="#ffd700" opacity="0.3"/>
+  <!-- Ort name watermark -->
+  <text x="512" y="900" text-anchor="middle" font-family="Georgia, serif" 
+        font-size="48" fill="white" opacity="0.15">{name}</text>
+</svg>'''
     
+    tmp_svg = img_dir / "_hero_temp.svg"
+    tmp_svg.write_text(svg, encoding='utf-8')
+    
+    # Convert SVG to PNG using cairosvg if available, otherwise keep as SVG
     try:
-        print(f"  🖌️  Generiere Bild (Seed {seed})...")
-        img = PIPE(
-            prompt=prompt, negative_prompt=NEG,
-            height=1024, width=1024,
-            guidance_scale=7.0, num_inference_steps=25, generator=gen,
-        ).images[0]
-        img.save(hero_path)
+        import cairosvg
+        cairosvg.svg2png(url=str(tmp_svg), write_to=str(hero_path), output_width=1024, output_height=1024)
+        tmp_svg.unlink(missing_ok=True)
         kb = hero_path.stat().st_size / 1024
-        print(f"  ✅ Bild gespeichert ({kb:.0f} KB)")
+        print(f"  ✅ SVG→PNG Gradient ({kb:.0f} KB)")
         return f"/images/orte/{slug}/hero_1.png"
+    except ImportError:
+        # cairosvg not available — serve SVG directly
+        hero_svg = img_dir / "hero_1.svg"
+        tmp_svg.rename(hero_svg)
+        print(f"  ✅ SVG Gradient (cairosvg not available, using .svg)")
+        return f"/images/orte/{slug}/hero_1.svg"
     except Exception as e:
-        print(f"  ⚠️  Bildgenerierung fehlgeschlagen: {e}")
-        return None
+        print(f"  ⚠️ SVG→PNG failed ({e}), keeping SVG")
+        hero_svg = img_dir / "hero_1.svg"
+        tmp_svg.rename(hero_svg)
+        return f"/images/orte/{slug}/hero_1.svg"
 
 def translate_text(text, target_lang):
     """Übersetzt einen Text in die Zielsprache."""
@@ -301,21 +303,21 @@ Beispiel: [{{"name": "Schloss Landeck", "beschreibung": "Mittelalterliche Burg m
     return changed, data
 
 def step_image(slug, data):
-    """Step 2: Hero-Bild generieren (SDXL Watercolor)"""
+    """Step 2: Hero-Bild generieren (Visual Fallback: SVG Gradient)
+    Skip SDXL — use beautiful CSS/SVG gradient placeholders."""
     if data.get('hero_bild'):
         return False, data  # Already has image
     
     name = data.get('name', slug)
-    kurz = data.get('kurzbeschreibung', '')[:120]
-    hoehe = data.get('hoehe', '')
     region = data.get('region', '')
+    farbe = data.get('farbe', '#006400')
     
-    prompt_text = f"Beautiful Tyrolean village of {name} in the {region} region, {hoehe}m elevation, {kurz}"
-    
-    hero_path = generate_image(slug, prompt_text)
+    hero_path = generate_svg_image(slug, name, region, farbe)
     if hero_path:
         data['hero_bild'] = hero_path
-        data['bilder'] = [{"url": hero_path, "alt": f"{name} — Aquarell"}]
+        ext = hero_path.split('.')[-1]
+        data['bilder'] = [{"url": hero_path, "alt": f"{name} — Visual"}]
+        print(f"  ✅ Visual Fallback: hero_bild={hero_path}")
         return True, data
     
     return False, data
@@ -437,11 +439,14 @@ def main():
     print(f"\n✅ {slug} abgeschlossen! ({len(state['done'])}/{len(ALL_SLUGS)})")
     remaining = len(ALL_SLUGS) - len(state["done"])
     print(f"⏱️  Nächster Ort in 5 Minuten: {ALL_SLUGS[idx+1] if idx+1 < len(ALL_SLUGS) else '—'}")
-    print(f"📊 Noch {remaining} Orte (~{remaining * 5 // 60}h bei 5min-Takt)")
-    print(f"🎨 SDXL: ~50s pro Bild (Laden 30s + Generate 18s)")
+    print(f"📊 Noch {remaining} Orte (~{remaining * 2 // 60}h bei 2min-Takt)")
+    if VISUAL_FALLBACK:
+        print(f"🎨 Visual Fallback aktiv (kein SDXL) — deutlich schneller")
     
     if remaining > 0 and remaining % 12 == 0:
         print(f"📈 Meilenstein: {len(state['done'])}/{len(ALL_SLUGS)} Orte fertig!")
+    if VISUAL_FALLBACK:
+        print(f"🎨 Visual Fallback aktiv (kein SDXL)")
 
 if __name__ == "__main__":
     main()

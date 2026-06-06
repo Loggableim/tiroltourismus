@@ -30,7 +30,7 @@ def count_lang(lang):
 
 
 def is_worker_running(lang):
-    r = subprocess.run(["ps", "-ef"], capture_output=True, text=True)
+    r = subprocess.run(["ps", "-ef"], capture_output=True, text=True, encoding="utf-8", errors="replace")
     for line in r.stdout.split("\n"):
         if "translate_worker" in line and lang in line and "grep" not in line:
             return True
@@ -40,7 +40,7 @@ def is_worker_running(lang):
 def git_has_uncommitted(lang):
     r = subprocess.run(
         ["git", "status", "--short", f"src/data/{lang}"],
-        capture_output=True, text=True, cwd=str(BASE)
+        capture_output=True, text=True, encoding="utf-8", errors="replace", cwd=str(BASE)
     )
     return len([l for l in r.stdout.split("\n") if l.strip()]) > 0
 
@@ -52,11 +52,11 @@ def git_publish(lang):
         return True
     subprocess.run(["git", "add", f"src/data/{lang}"], cwd=str(BASE), check=True)
     r = subprocess.run(["git", "commit", "-m", f"Publish {lang.upper()} translations"], cwd=str(BASE),
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
     if r.returncode != 0 and "nothing to commit" not in r.stdout and "nothing to commit" not in r.stderr:
         print(f"❌ Commit fehlgeschlagen: {r.stderr[:200]}")
         return False
-    r = subprocess.run(["git", "push", "origin", "master"], cwd=str(BASE), capture_output=True, text=True, timeout=120)
+    r = subprocess.run(["git", "push", "origin", "master"], cwd=str(BASE), capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=120)
     if r.returncode != 0:
         print(f"❌ Push fehlgeschlagen: {r.stderr[:200]}")
         return False

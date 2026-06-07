@@ -14,10 +14,16 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/grinzens/hero_1.svg",
+      "alt": "Grinzens — Visual"
+    }
+  ],
+  "hero_bild": "/images/orte/grinzens/hero_1.svg",
   "koordinaten": {
     "lat": "47.2291",
     "lng": "11.2538"
-  }
+  },
+  "kategorie": "dorf"
 }

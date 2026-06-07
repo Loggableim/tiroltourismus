@@ -74,31 +74,49 @@ def save_orte_data(slug, data):
     fp = ORTE_DIR / slug / "index.json"
     fp.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding='utf-8')
 
-def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise auf Deutsch."):
-    """Ruft OpenCode Go API für Content-Generierung auf."""
-    # OpenCode Go API via hermes
-    url = "https://opencode.ai/zen/go/v1/chat/completions"
-    api_key = os.environ.get("OPENCODE_GO_API_KEY", "")
-    if not api_key:
-        # Try .env
-        env_paths = [
-            "C:/HermesPortable/home/.env",
-            "E:/HermesPortable/home/.env",
-            os.path.expanduser("~/.hermes/.env"),
-        ]
-        for ep in env_paths:
-            if os.path.exists(ep):
-                for line in open(ep):
-                    if line.startswith("OPENCODE_GO_API_KEY="):
-                        api_key = line.strip().split("=", 1)[1]
-                        break
-                if api_key:
-                    break
-    
-    if not api_key:
-        print("⚠️  Kein API-Key — überspringe LLM-Schritt")
+def _load_env_key(key_name):
+    """Load a key from environment or .env files."""
+    val = os.environ.get(key_name, "")
+    if val:
+        return val
+    env_paths = [
+        "C:/HermesPortable/home/.env",
+        "E:/HermesPortable/home/.env",
+        os.path.expanduser("~/.hermes/.env"),
+    ]
+    for ep in env_paths:
+        if os.path.exists(ep):
+            for line in open(ep):
+                if line.startswith(f"{key_name}="):
+                    val = line.strip().split("=", 1)[1]
+                    return val
+    return ""
+
+def _llm_call(url, api_key, model, body, system, prompt, timeout=60):
+    """Single LLM API call with error handling."""
+    req = urllib.request.Request(url, data=body, method="POST")
+    req.add_header("Authorization", f"Bearer {api_key}")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("User-Agent", "Mozilla/5.0")
+    try:
+        resp = json.loads(urllib.request.urlopen(req, timeout=timeout).read())
+        return resp["choices"][0]["message"]["content"]
+    except urllib.error.HTTPError as e:
+        code, msg = e.code, e.read().decode()[:150]
+        print(f"  ⚠️  LLM-API {code}: {msg}")
         return None
+    except Exception as e:
+        print(f"  ⚠️  LLM-Fehler: {e}")
+        return None
+
+def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise auf Deutsch."):
+    """Ruft LLM API für Content-Generierung auf (Multi-Provider Fallback).
     
+    Fallback-Kette:
+      1. OpenRouter (deepseek-v4-flash) — primär
+      2. OpenCode Go (deepseek-v4-flash) — fallback
+      3. Cerebras (llama3.1-8b) — last resort
+    """
     body = json.dumps({
         "model": "deepseek-v4-flash",
         "messages": [
@@ -109,29 +127,37 @@ def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise a
         "temperature": 0.7,
     }).encode()
     
-    req = urllib.request.Request(url, data=body, method="POST")
-    req.add_header("Authorization", f"Bearer {api_key}")
-    req.add_header("Content-Type", "application/json")
-    req.add_header("User-Agent", "Mozilla/5.0")
+    providers = [
+        ("OpenRouter", "https://openrouter.ai/api/v1/chat/completions",
+         _load_env_key("OPENROUTER_API_KEY"), "deepseek-v4-flash"),
+        ("OpenCode Go", "https://opencode.ai/zen/go/v1/chat/completions",
+         _load_env_key("OPENCODE_GO_API_KEY"), "deepseek-v4-flash"),
+        ("Cerebras", "https://api.cerebras.ai/v1/chat/completions",
+         _load_env_key("CEREBRAS_API_KEY"), "llama3.1-8b"),
+    ]
     
-    try:
-        resp = json.loads(urllib.request.urlopen(req, timeout=60).read())
-        return resp["choices"][0]["message"]["content"]
-    except urllib.error.HTTPError as e:
-        if e.code == 429:
-            print(f"⚠️  Rate Limited — warte 5s...")
-            time.sleep(5)
-            try:
-                resp = json.loads(urllib.request.urlopen(req, timeout=60).read())
-                return resp["choices"][0]["message"]["content"]
-            except:
-                print(f"⚠️  Auch nach Retry fehlgeschlagen")
-                return None
-        print(f"⚠️  HTTP {e.code}: {e.read().decode()[:100]}")
-        return None
-    except Exception as e:
-        print(f"⚠️  LLM-Fehler: {e}")
-        return None
+    for name, url, api_key, model in providers:
+        if not api_key:
+            continue
+        # Use correct model name per provider
+        if model != "deepseek-v4-flash":
+            body = json.dumps({
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt}
+                ],
+                "max_tokens": 1024,
+                "temperature": 0.7,
+            }).encode()
+        print(f"  🔄 LLM via {name} ({model})...")
+        result = _llm_call(url, api_key, model, body, system, prompt)
+        if result:
+            return result
+        print(f"  ⏭️  {name} fehlgeschlagen, nächster Provider...")
+    
+    print("⚠️  Alle LLM-Provider fehlgeschlagen — überspringe LLM-Schritt")
+    return None
 
 def generate_svg_image(slug, name, region, farbe="#006400"):
     """Generates an SVG gradient placeholder image instead of SDXL.

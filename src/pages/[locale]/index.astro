@@ -15,6 +15,8 @@ import frPage from '../../data/fr/homepage.json';
 import itPage from '../../data/it/homepage.json';
 import esPage from '../../data/es/homepage.json';
 import zhPage from '../../data/zh/homepage.json';
+import nlPage from '../../data/nl/homepage.json';
+import csPage from '../../data/cs/homepage.json';
 
 const PAGE_MAP = {
   de: dePage,
@@ -23,6 +25,8 @@ const PAGE_MAP = {
   it: itPage,
   es: esPage,
   zh: zhPage,
+  nl: nlPage,
+  cs: csPage,
 };
 
 const SECTION_LABELS = {
@@ -32,6 +36,8 @@ const SECTION_LABELS = {
   it: { regionen: '#regioni', unterkuenfte: '#alloggi', sehenswuerdigkeiten: '#attrazioni', gastro: '#gastronomia', magazin: '#magazine' },
   es: { regionen: '#regiones', unterkuenfte: '#alojamientos', sehenswuerdigkeiten: '#atracciones', gastro: '#gastronomía', magazin: '#revista' },
   zh: { regionen: '#地区', unterkuenfte: '#住宿', sehenswuerdigkeiten: '#景点', gastro: '#美食', magazin: '#杂志' },
+  nl: { regionen: '#regio\'s', unterkuenfte: '#accommodaties', sehenswuerdigkeiten: '#bezienswaardigheden', gastro: '#eten-drinken', magazin: '#tijdschrift' },
+  cs: { regionen: '#regiony', unterkuenfte: '#ubytovani', sehenswuerdigkeiten: '#pametihodnosti', gastro: '#gastronomie', magazin: '#magazin' },
 };
 
 export async function getStaticPaths() {
@@ -50,7 +56,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
 ---
 
 <BaseLayout
-  title={locale === 'de' ? 'Startseite' : locale === 'en' ? 'Home' : locale === 'fr' ? 'Accueil' : locale === 'it' ? 'Home' : locale === 'es' ? 'Inicio' : locale === 'zh' ? '首页' : locale === 'nl' ? 'Startpagina' : 'Startseite'}
+  title={locale === 'de' ? 'Startseite' : locale === 'en' ? 'Home' : locale === 'fr' ? 'Accueil' : locale === 'it' ? 'Home' : locale === 'es' ? 'Inicio' : locale === 'zh' ? '首页' : locale === 'nl' ? 'Startpagina' : locale === 'cs' ? 'Domovská stránka' : 'Startseite'}
   description={page.hero?.subtitle}
   locale={locale}
   preloadImage={page.hero?.bgImage}
@@ -146,7 +152,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
 
     <section class="section" id="sehenswuerdigkeiten">
       <div class="container">
-        <SectionHeader label={sl.sehenswuerdigkeiten} title={locale === 'de' ? 'Sehenswürdigkeiten' : locale === 'fr' ? 'Sites' : locale === 'it' ? 'Attrazioni' : locale === 'es' ? 'Atracciones' : locale === 'zh' ? '景点' : 'Sights'} sub={locale === 'de' ? 'Die schönsten Ausflugsziele in Tirol.' : locale === 'en' ? 'Discover the most beautiful excursion destinations in Tyrol.' : locale === 'fr' ? 'Découvrez les plus beaux sites touristiques du Tyrol.' : locale === 'it' ? 'Scopri le più belle attrazioni del Tirolo.' : locale === 'es' ? 'Descubre los lugares de interés más bellos del Tirol.' : locale === 'zh' ? '发现蒂罗尔最美丽的景点。' : page.whyTirol?.desc || page.regionen.desc} />
+        <SectionHeader label={sl.sehenswuerdigkeiten} title={locale === 'de' ? 'Sehenswürdigkeiten' : locale === 'fr' ? 'Sites' : locale === 'it' ? 'Attrazioni' : locale === 'es' ? 'Atracciones' : locale === 'zh' ? '景点' : locale === 'nl' ? 'Bezienswaardigheden' : locale === 'cs' ? 'Pamětihodnosti' : 'Sights'} sub={locale === 'de' ? 'Die schönsten Ausflugsziele in Tirol.' : locale === 'en' ? 'Discover the most beautiful excursion destinations in Tyrol.' : locale === 'fr' ? 'Découvrez les plus beaux sites touristiques du Tyrol.' : locale === 'it' ? 'Scopri le più belle attrazioni del Tirolo.' : locale === 'es' ? 'Descubre los lugares de interés más bellos del Tirol.' : locale === 'zh' ? '发现蒂罗尔最美丽的景点。' : locale === 'nl' ? 'Ontdek de mooiste uitstapbestemmingen in Tirol.' : locale === 'cs' ? 'Objevte nejkrásnější výletní cíle v Tyrolsku.' : page.whyTirol?.desc || page.regionen.desc} />
         <div class="sight-grid">
           {sights.map((s) => (
             <SightCard
@@ -166,7 +172,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
 
     <section class="section" id="gastro">
       <div class="container">
-        <SectionHeader label={sl.gastro} title={locale === 'de' ? 'Gastronomie' : locale === 'en' ? 'Food & Drink' : locale === 'fr' ? 'Gastronomie' : locale === 'it' ? 'Gastronomia' : locale === 'es' ? 'Gastronomía' : locale === 'zh' ? '美食' : 'Food & Drink'} sub={locale === 'de' ? 'Tiroler Genuss und alpine Küche.' : locale === 'en' ? 'Tyrolean cuisine and alpine dining experiences.' : locale === 'fr' ? 'Cuisine tyrolienne et gastronomie alpine.' : locale === 'it' ? 'Cucina tirolese e gastronomia alpina.' : locale === 'es' ? 'Cocina tirolesa y gastronomía alpina.' : locale === 'zh' ? '蒂罗尔美食与阿尔卑斯餐饮体验。' : page.whyTirol?.desc || page.regionen.desc} />
+        <SectionHeader label={sl.gastro} title={locale === 'de' ? 'Gastronomie' : locale === 'en' ? 'Food & Drink' : locale === 'fr' ? 'Gastronomie' : locale === 'it' ? 'Gastronomia' : locale === 'es' ? 'Gastronomía' : locale === 'zh' ? '美食' : locale === 'nl' ? 'Eten & Drinken' : locale === 'cs' ? 'Gastronomie' : 'Food & Drink'} sub={locale === 'de' ? 'Tiroler Genuss und alpine Küche.' : locale === 'en' ? 'Tyrolean cuisine and alpine dining experiences.' : locale === 'fr' ? 'Cuisine tyrolienne et gastronomie alpine.' : locale === 'it' ? 'Cucina tirolese e gastronomia alpina.' : locale === 'es' ? 'Cocina tirolesa y gastronomía alpina.' : locale === 'zh' ? '蒂罗尔美食与阿尔卑斯餐饮体验。' : locale === 'nl' ? 'Tirolse gastronomie en alpine eetervaringen.' : locale === 'cs' ? 'Tyrolský gastronomický zážitek a alpská kuchyně.' : page.whyTirol?.desc || page.regionen.desc} />
         <div class="section-grid">
           {gastro.map((g) => (
             <GastroCard
@@ -185,7 +191,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
 
     <section class="section" id="magazin">
       <div class="container">
-        <SectionHeader label={sl.magazin} title={locale === 'de' ? 'Magazin' : locale === 'en' ? 'Magazine' : locale === 'fr' ? 'Magazine' : locale === 'it' ? 'Magazine' : locale === 'es' ? 'Revista' : locale === 'zh' ? '杂志' : 'Magazine'} sub={locale === 'de' ? 'Neue Geschichten, Reiseideen und Tirol-Highlights.' : locale === 'en' ? 'New stories, travel ideas and Tyrolean highlights.' : locale === 'fr' ? 'Nouvelles histoires, idées de voyage et points forts du Tyrol.' : locale === 'it' ? 'Nuove storie, idee di viaggio e highlights tirolesi.' : locale === 'es' ? 'Nuevas historias, ideas de viaje y destacados del Tirol.' : locale === 'zh' ? '新故事、旅行灵感和蒂罗尔亮点。' : page.regionen.desc} />
+        <SectionHeader label={sl.magazin} title={locale === 'de' ? 'Magazin' : locale === 'en' ? 'Magazine' : locale === 'fr' ? 'Magazine' : locale === 'it' ? 'Magazine' : locale === 'es' ? 'Revista' : locale === 'zh' ? '杂志' : locale === 'nl' ? 'Tijdschrift' : locale === 'cs' ? 'Časopis' : 'Magazine'} sub={locale === 'de' ? 'Neue Geschichten, Reiseideen und Tirol-Highlights.' : locale === 'en' ? 'New stories, travel ideas and Tyrolean highlights.' : locale === 'fr' ? 'Nouvelles histoires, idées de voyage et points forts du Tyrol.' : locale === 'it' ? 'Nuove storie, idee di viaggio e highlights tirolesi.' : locale === 'es' ? 'Nuevas historias, ideas de viaje y destacados del Tirol.' : locale === 'zh' ? '新故事、旅行灵感和蒂罗尔亮点。' : locale === 'nl' ? 'Nieuwe verhalen, reisideeën en Tirolse hoogtepunten.' : locale === 'cs' ? 'Nové příběhy, inspiro na cesty a tyrolské hvězdy.' : page.regionen.desc} />
         <div class="section-grid">
           {magazin.map((a) => (
             <ArticleCard

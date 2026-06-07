@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ Het Officiële Toerismeportaal voor Tirol",
+    "title": ["TIROL", "ANDERS"],
+    "subtitle": "Ervaar Tirol in al zijn diversiteit – van majesteuze pieken via idyllische valleien tot rustieke alpenhutten.",
+    "ctaPrimary": { "text": "✦ Ontdek Regio's", "href": "#regionen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "Vind Accommodatie", "href": "#unterkuenfte", "class": "btn-secondary" }
+  },
+  "stats": [
+    { "icon": "🏔️", "count": 788, "label": "Pieken boven 3.000m" },
+    { "icon": "🏡", "count": 12000, "label": "Accommodaties" },
+    { "icon": "🥾", "count": 24500, "label": "Wandelkilometers" },
+    { "icon": "🎿", "count": 580, "label": "Kabelbanen & Liften" }
+  ],
+  "seelen": {
+    "label": "#regionentyrol",
+    "title": "Regio's van Tirol",
+    "desc": "Zes regio's, zes persoonlijkheden – elk met een eigen karakter en charme.",
+    "items": [
+      { "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png", "label": "Toplijn" }
+    ]
+  },
+  "whyTirol": {
+    "label": "#whytyrol",
+    "title": "Waarom Tirol?",
+    "desc": "Drie goede redenen waarom Tirol tot de mooiste vakantieregio's in de Alpen behoort.",
+    "items": [
+      { "icon": "🏔️", "iconClass": "i1", "title": "Pieken & Valleien", "desc": "788 drieduizenders wachten op je ontdekking. Elke top biedt een nieuw perspectief – van zonnige alpenweiden tot ruige rotswanden.", "stat": "788", "statClass": "pink" },
+      { "icon": "🎨", "iconClass": "i2", "title": "Design als Ervaring", "desc": "Tirol combineert traditionele gastvrijheid met moderne flair – twee werelden van ervaring, één onvergetelijke vakantie.", "stat": "2", "statClass": "gold" },
+      { "icon": "🌱", "iconClass": "i3", "title": "Duurzaam & Authentiek", "desc": "Duurzaamheid en natuurbehoud staan centraal. Groene initiatieven, regionale keuken en oprechte respect voor de natuur vormen de Tirolse vakantiebeleving.", "stat": "100%", "statClass": "pink" }
+    ]
+  },
+  "regionen": {
+    "label": "Ontdek",
+    "title": "Onze Regio's",
+    "desc": "Van de hoofdstad tot de meest afgelegen bergdorpen – elke regio heeft een eigen karakter en talloze mogelijkheden voor onvergetelijke ervaringen.",
+    "items": [
+      { "img": "/assets/images/region_innsbruck_20260517_101459.webp", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "Stad & Berg – Urban Alpine Glow Mix", "stars": 5, "slug": "innsbruck" },
+      { "img": "/assets/images/region_oetztal_20260517_101502.webp", "tag": "NATURE", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Gletsjers, Pieken & Wilde Valleien", "stars": 4, "slug": "oetztal" },
+      { "img": "/assets/images/region_zillertal_20260517_101508.webp", "tag": "ACTIVE", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Wandelen, Fietsen, Skiën in zijn Puurste Vorm", "stars": 5, "slug": "zillertal" },
+      { "img": "/assets/images/region_stubaital_20260517_101513.webp", "tag": "CULINARY", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Genot & Bergromantiek", "stars": 4, "slug": "stubaital" },
+      { "img": "/assets/images/region_kitzbuehel_20260517_101526.webp", "tag": "LUXURY", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Alpine Elegantie & Glamour", "stars": 5, "slug": "kitzbuehel" },
+      { "img": "/assets/images/region_kaunertal_20260517_101520.webp", "tag": "SUMMIT", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Ongerept & Onaangetast", "stars": 4, "slug": "kaunertal" }
+    ]
+  },
+  "unterkuenfte": {
+    "label": "Verblijf",
+    "title": "Vind Uw Thuis",
+    "desc": "Van luxe wellnesshotels tot familiebedrijven en gezellige vakantieappartementen – vind uw perfecte accommodatie in Tirol.",
+    "tabs": ["Aanbevolen", "Best Beoordeeld", "Beste Prijs"],
+    "items": [
+      { "img": "/assets/images/hotel_1_20260517_101547.webp", "badge": "AI Keuze", "badgeClass": "pop", "type": "Design Hotel", "name": "Alpine Panorama Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
+      { "img": "/assets/images/hotel_2_20260517_101544.webp", "badge": "Top Beoordeeld", "badgeClass": "top", "type": "Alpine Lodge", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
+      { "img": "/assets/images/hotel_3_20260517_101551.webp", "badge": "Aanbieding", "badgeClass": "deal", "type": "Appartement", "name": "Alpen Panorama Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
+    ]
+  },
+  "activities": [
+    { "barColor": "c1", "icon": "🪂", "title": "Paragliden boven Innsbruck", "desc": "Zweef boven de hoofdstad en geniet van een adembenemend uitzicht op het omliggende berglandschap.", "price": 129, "link": "#" },
+    { "barColor": "c2", "icon": "🚵", "title": "E-Mountainbike Sunset Tour", "desc": "Verken de Tirolse bergwereld op een begeleide e-bike tour en ervaren de zonsondergang boven de pieken.", "price": 89, "link": "#" },
+    { "barColor": "c3", "icon": "🎨", "title": "Alpen Kruiden Wandeling", "desc": "Ontdek de lokale plantenwereld op een begeleide kruidenwandeling met proeverij van regionale producten.", "price": 55, "link": "#" },
+    { "barColor": "c4", "icon": "🌙", "title": "Begeleide Sterrenkijktocht", "desc": "Op een nachtelijke wandeling met gecertificeerde gidsen leer je meer over de sterrenhemel boven de Alpen.", "price": 45, "link": "#" },
+    { "barColor": "c5", "icon": "🧘", "title": "Alpen Yoga & Meditatie", "desc": "Vind je innerlijke rust met een yogasessie met uitzicht op de Tirolse bergen.", "price": 69, "link": "#" },
+    { "barColor": "c6", "icon": "🍷", "title": "Tirolse Gourmet Avond", "desc": "Trakteer jezelf op een exclusief diner met regionale specialiteiten en fijne wijnen.", "price": 149, "link": "#" }
+  ],
+  "events": [
+    { "day": 21, "month": "JUN", "dateBoxClass": "pink", "cat": "🎵 Muziek", "title": "Tirolse Alpen Zomerfestival", "desc": "Het grootste muziekfestival in de Alpen met internationale acts en spectaculair berglandschap op 2.000m.", "loc": "Innsbruck", "price": "vanaf €49" },
+    { "day": 5, "month": "JUL", "dateBoxClass": "gold", "cat": "🎨 Kunst", "title": "Gouden Kunstroute", "desc": "Kunstinstallaties en gouden lichtsculpturen langs een verlicht bergpad – 's avonds geopend.", "loc": "Ötztal", "price": "€22" },
+    { "day": 19, "month": "AUG", "dateBoxClass": "gold", "cat": "🥾 Sport", "title": "Top Bergfestival", "desc": "Bergloop met DJ's en sfeervol after-party op de alp – voor sportliefhebbers en fijnproevers!", "loc": "Zillertal", "price": "€35" },
+    { "day": 12, "month": "SEP", "dateBoxClass": "green", "cat": "🍽️ Culinaire", "title": "Gourmet Top Ervaring", "desc": "Topchefs presenteren hun creaties op 2.500m – een culinaire ervaring van het hoogste niveau.", "loc": "Kitzbühel", "price": "€89" }
+  ],
+  "magazin": [
+    { "img": "/assets/images/magazin_1_20260517_101554.webp", "cat": "Wandelen", "catClass": "wander", "date": "12 mei 2026", "title": "De Meest Kleurrijke Wandelroutes in Tirol", "desc": "Zeven routes die bewijzen dat natuur de beste kunstenaar is – van alpenbloemen tot gouden gletsjermeren." },
+    { "img": "/assets/images/magazin_2_20260517_101600.webp", "cat": "Natuur", "catClass": "natur", "date": "28 april 2026", "title": "Duurzaamheid Ontmoet Popcultuur", "desc": "Hoe Tirolse hotels nieuwe standaarden zetten met gedurfde ideeën, gouden accenten en groen geweten." },
+    { "img": "/assets/images/magazin_3_20260517_101603.webp", "cat": "Culinaire", "catClass": "kulin", "date": "3 april 2026", "title": "Alpenkeuken Heruitgevonden", "desc": "Van roze knoedels tot gouden schnitzel: Jonge chefs herinterpreteren Tirolse klassiekers." }
+  ]
+}

@@ -1,0 +1,319 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import FilterBar from '../../../components/FilterBar.astro';
+import FavHeart from '../../../components/FavHeart.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: {
+    title: 'Orte',
+    desc: 'Entdecke die schönsten Orte in Tirol – von charmanten Dörfern bis zu pulsierenden Städten.',
+    heroSub: 'Entdecke die schönsten Orte in Tirol',
+    ctaText: 'Orte entdecken →',
+    sectionLabel: 'Tirol entdecken',
+    sectionTitle: 'Orte in Tirol',
+    sectionSub: 'Von charmanten Dörfern bis zu pulsierenden Städten – jeder Ort in Tirol hat seinen eigenen Charakter.',
+    orteLabel: 'Orte',
+    emptyTitle: 'Bald verfügbar',
+    emptyText: 'Orte werden aktuell eingepflegt. Schau bald wieder vorbei!',
+    ariaFilter: 'Orte nach Region filtern',
+    allLabel: 'Alle',
+    mapTitle: 'Auf einen Blick',
+    mapLabel: 'Orte',
+    entdecken: 'Entdecken →',
+  },
+  en: {
+    title: 'Places',
+    desc: 'Discover the most beautiful places in Tyrol – from charming villages to vibrant cities.',
+    heroSub: "Discover Tyrol's most beautiful places",
+    ctaText: 'Discover places →',
+    sectionLabel: 'Discover Tyrol',
+    sectionTitle: 'Places in Tyrol',
+    sectionSub: 'From charming villages to vibrant cities – every place in Tyrol has its own character.',
+    orteLabel: 'Places',
+    emptyTitle: 'Coming soon',
+    emptyText: 'Places are currently being curated. Check back soon!',
+    ariaFilter: 'Filter places by region',
+    allLabel: 'All',
+    mapTitle: 'At a glance',
+    mapLabel: 'Places',
+    entdecken: 'Discover →',
+  },
+  fr: {
+    title: 'Villes et villages',
+    desc: 'Découvrez les plus beaux endroits du Tyrol – des charmants villages aux villes animées.',
+    heroSub: 'Découvrez les plus beaux endroits du Tyrol',
+    ctaText: 'Découvrir →',
+    sectionLabel: 'Découvrir le Tyrol',
+    sectionTitle: 'Villes et villages du Tyrol',
+    sectionSub: 'Des charmants villages aux villes animées – chaque endroit du Tyrol a son propre caractère.',
+    orteLabel: 'Villes et villages',
+    emptyTitle: 'Bientôt disponible',
+    emptyText: 'Les villes et villages sont en cours de préparation. Revenez bientôt!',
+    ariaFilter: 'Filtrer par région',
+    allLabel: 'Tous',
+    mapTitle: "En un coup d'œil",
+    mapLabel: 'Villes et villages',
+    entdecken: 'Découvrir →',
+  },
+  it: {
+    title: 'Località',
+    desc: 'Scopri i luoghi più belli del Tirolo – dai caratteristici villaggi alle città vibranti.',
+    heroSub: 'Scopri i luoghi più belli del Tirolo',
+    ctaText: 'Scopri le località →',
+    sectionLabel: 'Scopri il Tirolo',
+    sectionTitle: 'Località in Tirolo',
+    sectionSub: 'Dai caratteristici villaggi alle città vibranti – ogni località in Tirolo ha il proprio carattere.',
+    orteLabel: 'Località',
+    emptyTitle: 'Presto disponibile',
+    emptyText: 'Le località sono in fase di preparazione. Torna presto!',
+    ariaFilter: 'Filtra località per regione',
+    allLabel: 'Tutti',
+    mapTitle: 'A colpo d\'occhio',
+    mapLabel: 'Località',
+    entdecken: 'Scopri →',
+  },
+  es: {
+    title: 'Localidades',
+    desc: 'Descubre los lugares más bellos del Tirol – desde encantadores pueblos hasta ciudades vibrantes.',
+    heroSub: 'Descubre los lugares más bellos del Tirol',
+    ctaText: 'Descubrir localidades →',
+    sectionLabel: 'Descubre Tirol',
+    sectionTitle: 'Localidades en Tirol',
+    sectionSub: 'Desde encantadores pueblos hasta ciudades vibrantes – cada lugar en Tirol tiene su propio carácter.',
+    orteLabel: 'Localidades',
+    emptyTitle: 'Próximamente',
+    emptyText: 'Las localidades están siendo preparadas. ¡Vuelve pronto!',
+    ariaFilter: 'Filtrar localidades por región',
+    allLabel: 'Todos',
+    mapTitle: 'De un vistazo',
+    mapLabel: 'Localidades',
+    entdecken: 'Descubrir →',
+  },
+  zh: {
+    title: '地方',
+    desc: '发现蒂罗尔最美丽的地方——从迷人的村庄到充满活力的城市。',
+    heroSub: '发现蒂罗尔最美丽的地方',
+    ctaText: '探索地方 →',
+    sectionLabel: '探索蒂罗尔',
+    sectionTitle: '蒂罗尔的地方',
+    sectionSub: '从迷人的村庄到充满活力的城市——蒂罗尔的每个地方都有自己的特色。',
+    orteLabel: '地方',
+    emptyTitle: '即将推出',
+    emptyText: '地方信息正在整理中。请稍后再来！',
+    ariaFilter: '按地区筛选地方',
+    allLabel: '全部',
+    mapTitle: '一览',
+    mapLabel: '地方',
+    entdecken: '探索 →',
+  },
+  nl: {
+    title: 'Plaatsen',
+    desc: 'Ontdek de mooiste plekken in Tirol – van charmante dorpjes tot bruisende steden.',
+    heroSub: 'Ontdek de mooiste plekken in Tirol',
+    ctaText: 'Ontdek plaatsen →',
+    sectionLabel: 'Tirol ontdekken',
+    sectionTitle: 'Plaatsen in Tirol',
+    sectionSub: 'Van charmante dorpjes tot bruisende steden – elke plek in Tirol heeft zijn eigen karakter.',
+    orteLabel: 'Plaatsen',
+    emptyTitle: 'Binnenkort beschikbaar',
+    emptyText: 'Plaatsen worden momenteel ingevoerd. Kom snel nog eens langs!',
+    ariaFilter: 'Filter plaatsen op regio',
+    allLabel: 'Alle',
+    mapTitle: 'In één oogopslag',
+    mapLabel: 'Plaatsen',
+    entdecken: 'Ontdekken →',
+  },
+  cs: {
+    title: 'Místa',
+    desc: 'Objevte nejkrásnější místa v Tyrolsku – od okouzlujících vesnic po pulzující města.',
+    heroSub: 'Objevte nejkrásnější místa v Tyrolsku',
+    ctaText: 'Objevte místa →',
+    sectionLabel: 'Objevte Tyrolsko',
+    sectionTitle: 'Místa v Tyrolsku',
+    sectionSub: 'Od okouzlujících vesnic po pulzující města – každé místo v Tyrolsku má svůj vlastní charakter.',
+    orteLabel: 'Místa',
+    emptyTitle: 'Brzy k dispozici',
+    emptyText: 'Místa se právě připravují. Brzy se podívejte znovu!',
+    ariaFilter: 'Filtrovat místa podle regionu',
+    allLabel: 'Vše',
+    mapTitle: 'Na první pohled',
+    mapLabel: 'Místa',
+    entdecken: 'Objevovat →',
+  },
+};
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = LABELS[locale] || LABELS.de;
+const pref = localePrefix(locale);
+
+const orte = readCollection('orte', locale)
+  .filter((o) => isPublished(o.entry));
+
+const regionen = readCollection('regionen', locale)
+  .filter((r) => isPublished(r.entry))
+  .sort(
+    (a, b) =>
+      (b.entry.bewertung || 0) - (a.entry.bewertung || 0) ||
+      (a.entry.titel || '').localeCompare(b.entry.titel || '', locale === 'de' ? 'de' : locale)
+  );
+
+const regionFilterOptions = regionen
+  .map((r) => ({ slug: r.slug, label: r.entry.titel }))
+  .sort((a, b) => (a.label || '').localeCompare(b.label || '', locale === 'de' ? 'de' : locale));
+
+const orteMitKarte = orte.filter((o) => o.entry.koordinaten?.lat && o.entry.koordinaten?.lng);
+const orteMarkers = orteMitKarte.map((o) => ({
+  lat: o.entry.koordinaten.lat,
+  lng: o.entry.koordinaten.lng,
+  label: o.entry.name,
+  href: `${pref}/orte/${o.slug}/`,
+  emoji: o.entry.emoji || '🏘️',
+}));
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const orteItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: t.title,
+  description: t.desc,
+  url: `${siteURL}${pref}/orte/`,
+  numberOfItems: orte.length,
+  itemListElement: orte.slice(0, 30).map((o, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: o.entry.name,
+    url: `${siteURL}${pref}/orte/${o.slug}/`,
+  })),
+};
+---
+
+<BaseLayout
+  title={t.title}
+  description={t.desc}
+  locale={locale}
+  jsonld={orteItemList}
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: t.orteLabel }]} />
+    </div>
+
+    <Hero
+      title={t.title}
+      subtitle={t.heroSub}
+      emoji="🏘️"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href={`${pref}/orte/#orte-grid`} class="btn btn-pink">{t.ctaText}</a>
+        <span class="hero-urgency">📍 {orte.length} {t.orteLabel}</span>
+      </div>
+    </Hero>
+
+    <SectionMap
+      markers={orteMarkers}
+      label={`${orteMarkers.length} ${t.mapLabel}`}
+      title={t.mapTitle}
+      height="380px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
+
+    {orte.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader
+            label={t.sectionLabel}
+            title={t.sectionTitle}
+            sub={t.sectionSub}
+          />
+
+          {regionen.length > 1 && (
+            <FilterBar
+              keyName="cat"
+              ariaLabel={t.ariaFilter}
+              allLabel={t.allLabel}
+              options={regionFilterOptions.map((r) => ({ value: r.slug, label: r.label }))}
+            />
+          )}
+
+          <div class="orte-grid" id="orte-grid">
+            {orte.map((o) => (
+              <a
+                href={`${pref}/orte/${o.slug}/`}
+                class="ort-card"
+                data-collection="orte"
+                data-slug={o.slug}
+                data-filter-card
+                data-filter-cat={o.entry.region || ''}
+              >
+                <div class="ort-card-img" style={`--accent:${o.entry.farbe || 'var(--pink)'};background:linear-gradient(180deg, ${o.entry.farbe || 'var(--pink)'}18, rgba(255,255,255,.03))`}>
+                  <span class="ort-emoji">{o.entry.emoji || '🏘️'}</span>
+                  <FavHeart collection="orte" slug={o.slug} />
+                </div>
+                <div class="ort-card-body">
+                  <h3>{o.entry.name}</h3>
+                  {o.entry.kurzbeschreibung && <p>{o.entry.kurzbeschreibung}</p>}
+                  <span class="ort-link">{t.entdecken}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏘️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            {t.emptyTitle}
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            {t.emptyText}
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .orte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+  @media (max-width: 968px) {
+    .orte-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .orte-grid { grid-template-columns: 1fr; }
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .hero-urgency {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text2);
+    letter-spacing: 0.5px;
+  }
+</style>

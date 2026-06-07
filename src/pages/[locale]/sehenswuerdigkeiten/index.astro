@@ -1,0 +1,311 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import SightCard from '../../../components/SightCard.astro';
+import FilterBar from '../../../components/FilterBar.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+
+// --- Locale-aware label helper ---
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+
+// --- Page-level localized labels ---
+const labels = {
+  breadcrumb: {
+    de: 'Sehenswürdigkeiten', en: 'Sights', fr: 'Sites touristiques',
+    it: 'Attrazioni turistiche', es: 'Lugares de interés', zh: '景点',
+    nl: 'Bezienswaardigheden', cs: 'Památky',
+  },
+  heroTitle: {
+    de: 'Sehenswürdigkeiten in Tirol', en: 'Sights in Tyrol', fr: 'Sites touristiques au Tyrol',
+    it: 'Attrazioni turistiche in Tirolo', es: 'Lugares de interés en Tirol', zh: '蒂罗尔景点',
+    nl: 'Bezienswaardigheden in Tirol', cs: 'Památky v Tyrolsku',
+  },
+  heroSubtitle: {
+    de: 'Entdecke die schönsten Orte und Highlights in Tirol.',
+    en: 'Discover the most beautiful places and highlights in Tyrol.',
+    fr: 'Découvrez les plus beaux endroits et points forts du Tyrol.',
+    it: 'Scopri i luoghi più belli e i punti salienti del Tirolo.',
+    es: 'Descubre los lugares más bellos y los puntos destacados de Tirol.',
+    zh: '发现蒂罗尔最美丽的地方和亮点。',
+    nl: 'Ontdek de mooiste plekken en hoogtepunten in Tirol.',
+    cs: 'Objevte nejkrásnější místa a zajímavosti v Tyrolsku.',
+  },
+  heroButton: {
+    de: 'Highlights entdecken →', en: 'Discover highlights →',
+    fr: 'Découvrir les incontournables →', it: 'Scopri i punti salienti →',
+    es: 'Descubrir lo más destacado →', zh: '发现亮点 →',
+    nl: 'Ontdek hoogtepunten →', cs: 'Objevte zajímavosti →',
+  },
+  sightsCount: {
+    de: 'Sehenswürdigkeiten', en: 'sights', fr: 'sites touristiques',
+    it: 'attrazioni', es: 'lugares de interés', zh: '个景点',
+    nl: 'bezienswaardigheden', cs: 'památek',
+  },
+  mapTitle: {
+    de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil',
+    it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '概览',
+    nl: 'In één oogopslag', cs: 'Na první pohled',
+  },
+  sectionLabel: {
+    de: 'Highlights', en: 'Highlights', fr: 'Incontournables',
+    it: 'Punti salienti', es: 'Destacados', zh: '亮点',
+    nl: 'Hoogtepunten', cs: 'Zajímavosti',
+  },
+  sectionTitle: {
+    de: 'Was es zu sehen gibt', en: 'What to see', fr: 'Que voir',
+    it: 'Cosa vedere', es: 'Qué ver', zh: '看什么',
+    nl: 'Wat er te zien is', cs: 'Co vidět',
+  },
+  sectionSub: {
+    de: 'Burgen, Gletscher, Aussichtspunkte und Naturwunder – Tirol hat für jeden etwas.',
+    en: 'Castles, glaciers, viewpoints and natural wonders – Tyrol has something for everyone.',
+    fr: 'Châteaux, glaciers, points de vue et merveilles naturelles – le Tyrol a de quoi plaire à tous.',
+    it: 'Castelli, ghiacciai, punti panoramici e meraviglie naturali – il Tirolo ha qualcosa per tutti.',
+    es: 'Castillos, glaciares, miradores y maravillas naturales – Tirol tiene algo para todos.',
+    zh: '城堡、冰川、观景点和自然奇观——蒂罗尔满足每个人的需求。',
+    nl: 'Kastelen, gletsjers, uitkijkpunten en natuurwonderen – Tirol heeft voor ieder wat wils.',
+    cs: 'Hrady, ledovce, vyhlídky a přírodní divy – Tyrolsko má něco pro každého.',
+  },
+  filterAria: {
+    de: 'Sehenswürdigkeiten filtern', en: 'Filter sights', fr: 'Filtrer les sites touristiques',
+    it: 'Filtra le attrazioni', es: 'Filtrar lugares de interés', zh: '筛选景点',
+    nl: 'Filter bezienswaardigheden', cs: 'Filtrovat památky',
+  },
+  emptyHeading: {
+    de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible',
+    it: 'Prossimamente', es: 'Próximamente', zh: '即将上线',
+    nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici',
+  },
+  emptyText: {
+    de: 'Sehenswürdigkeiten werden aktuell eingepflegt. Schau bald wieder vorbei!',
+    en: 'Sights are being added. Check back soon!',
+    fr: 'Les sites touristiques sont en cours d\'ajout. Revenez bientôt !',
+    it: 'Le attrazioni sono in fase di inserimento. Torna presto!',
+    es: 'Los lugares de interés se están añadiendo. ¡Vuelve pronto!',
+    zh: '景点正在添加中。请稍后再来查看！',
+    nl: 'Bezienswaardigheden worden momenteel ingevoerd. Kom snel terug!',
+    cs: 'Památky se právě přidávají. Podívejte se brzy znovu!',
+  },
+  jsonldName: {
+    de: 'Sehenswürdigkeiten in Tirol', en: 'Sights in Tyrol', fr: 'Sites touristiques au Tyrol',
+    it: 'Attrazioni turistiche in Tirolo', es: 'Lugares de interés en Tirol', zh: '蒂罗尔景点',
+    nl: 'Bezienswaardigheden in Tirol', cs: 'Památky v Tyrolsku',
+  },
+  jsonldDesc: {
+    de: 'Entdecke die schönsten Sehenswürdigkeiten in Tirol – von Gletschern über Burgen bis zu atemberaubenden Aussichtspunkten.',
+    en: 'Discover the most beautiful sights in Tyrol – from glaciers to castles to breathtaking viewpoints.',
+    fr: 'Découvrez les plus beaux sites touristiques du Tyrol – des glaciers aux châteaux en passant par des points de vue à couper le souffle.',
+    it: 'Scopri le più belle attrazioni del Tirolo – dai ghiacciai ai castelli fino a punti panoramici mozzafiato.',
+    es: 'Descubre los lugares de interés más bellos de Tirol – desde glaciares hasta castillos y miradores impresionantes.',
+    zh: '发现蒂罗尔最美丽的景点——从冰川到城堡再到令人叹为观止的观景点。',
+    nl: 'Ontdek de mooiste bezienswaardigheden in Tirol – van gletsjers tot kastelen tot adembenemende uitkijkpunten.',
+    cs: 'Objevte nejkrásnější památky Tyrolska – od ledovců přes hrady až po úchvatné vyhlídky.',
+  },
+};
+
+// --- Category labels per locale (emoji + translated name) ---
+const kategorieLabelLocale = {
+  natur: {
+    de: '🌿 Natur', en: '🌿 Nature', fr: '🌿 Nature',
+    it: '🌿 Natura', es: '🌿 Naturaleza', zh: '🌿 自然',
+    nl: '🌿 Natuur', cs: '🌿 Příroda',
+  },
+  kultur: {
+    de: '🎭 Kultur', en: '🎭 Culture', fr: '🎭 Culture',
+    it: '🎭 Cultura', es: '🎭 Cultura', zh: '🎭 文化',
+    nl: '🎭 Cultuur', cs: '🎭 Kultura',
+  },
+  aussicht: {
+    de: '🏔️ Aussicht', en: '🏔️ Viewpoint', fr: '🏔️ Point de vue',
+    it: '🏔️ Panorama', es: '🏔️ Mirador', zh: '🏔️ 观景点',
+    nl: '🏔️ Uitkijkpunt', cs: '🏔️ Vyhlídka',
+  },
+  sport: {
+    de: '⚡ Sport', en: '⚡ Sports', fr: '⚡ Sport',
+    it: '⚡ Sport', es: '⚡ Deporte', zh: '⚡ 运动',
+    nl: '⚡ Sport', cs: '⚡ Sport',
+  },
+  museum: {
+    de: '🏛️ Museum', en: '🏛️ Museum', fr: '🏛️ Musée',
+    it: '🏛️ Museo', es: '🏛️ Museo', zh: '🏛️ 博物馆',
+    nl: '🏛️ Museum', cs: '🏛️ Muzeum',
+  },
+  kirche: {
+    de: '⛪ Kirche', en: '⛪ Church', fr: '⛪ Église',
+    it: '⛪ Chiesa', es: '⛪ Iglesia', zh: '⛪ 教堂',
+    nl: '⛪ Kerk', cs: '⛪ Kostel',
+  },
+  burg: {
+    de: '🏰 Burg', en: '🏰 Castle', fr: '🏰 Château',
+    it: '🏰 Castello', es: '🏰 Castillo', zh: '🏰 城堡',
+    nl: '🏰 Kasteel', cs: '🏰 Hrad',
+  },
+  wanderung: {
+    de: '🥾 Wanderung', en: '🥾 Hiking', fr: '🥾 Randonnée',
+    it: '🥾 Escursione', es: '🥾 Senderismo', zh: '🥾 徒步旅行',
+    nl: '🥾 Wandeling', cs: '🥾 Turistika',
+  },
+};
+
+const getCategoryLabel = (key) => {
+  const map = kategorieLabelLocale[key];
+  return map ? (map[locale] || map[DEFAULT_LOCALE] || key) : key;
+};
+
+// --- Data ---
+const sights = readCollection('sehenswuerdigkeiten', locale).filter((s) => isPublished(s.entry));
+const sightsMitCoords = sights.filter((s) => s.entry.koordinaten?.lat && s.entry.koordinaten?.lng);
+
+const kategorien = [...new Set(sights.map((s) => s.entry.kategorie).filter(Boolean))].sort((a, b) => {
+  const la = getCategoryLabel(a) || a;
+  const lb = getCategoryLabel(b) || b;
+  return la.localeCompare(lb, locale === 'zh' ? 'zh' : 'de');
+});
+
+// --- Internal link helpers ---
+const linkPrefix = locale === DEFAULT_LOCALE ? '/sehenswuerdigkeiten/' : `/${locale}/sehenswuerdigkeiten/`;
+
+// --- JSON-LD: ItemList ---
+const siteURL = 'https://www.tirol-tourismus.at';
+const sightItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: t(labels.jsonldName),
+  description: t(labels.jsonldDesc),
+  url: `${siteURL}${localePrefix(locale)}/sehenswuerdigkeiten/`,
+  numberOfItems: sights.length,
+  itemListElement: sights.slice(0, 30).map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.entry.name,
+    url: `${siteURL}${linkPrefix}${s.slug}/`,
+  })),
+};
+---
+
+<BaseLayout
+  title={t(labels.heroTitle)}
+  description={t(labels.jsonldDesc)}
+  jsonld={sightItemList}
+  locale={locale}
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} />
+    </div>
+
+    <Hero
+      title={t(labels.heroTitle)}
+      subtitle={t(labels.heroSubtitle)}
+      emoji="🏛️"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#sight-grid" class="btn btn-pink">{t(labels.heroButton)}</a>
+        <span class="hero-urgency">✨ {sights.length} {t(labels.sightsCount)}</span>
+      </div>
+    </Hero>
+
+    {sightsMitCoords.length > 0 && (
+      <SectionMap
+        markers={sightsMitCoords.map((s) => ({
+          lat: s.entry.koordinaten.lat,
+          lng: s.entry.koordinaten.lng,
+          label: s.entry.name,
+          emoji: s.entry.emoji || '🏛️',
+          href: `${linkPrefix}${s.slug}/`,
+          category: 'sehenswuerdigkeiten',
+        }))}
+        label={`${sightsMitCoords.length} ${t(labels.sightsCount)}`}
+        title={t(labels.mapTitle)}
+        height="380px"
+        scrollWheelZoom={true}
+        filterable={true}
+      />
+    )}
+
+    {sights.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader
+            label={t(labels.sectionLabel)}
+            title={t(labels.sectionTitle)}
+            sub={t(labels.sectionSub)}
+          />
+
+          {kategorien.length > 1 && (
+            <FilterBar
+              keyName="cat"
+              ariaLabel={t(labels.filterAria)}
+              options={kategorien.map((k) => ({ value: k, label: getCategoryLabel(k) }))}
+            />
+          )}
+
+          <div class="sight-grid" id="sight-grid">
+            {sights.map((s) => (
+              <SightCard
+                name={s.entry.name}
+                slug={s.slug}
+                kurzbeschreibung={s.entry.kurzbeschreibung}
+                kategorie={s.entry.kategorie}
+                emoji={s.entry.emoji}
+                farbe={s.entry.farbe}
+                ort={s.entry.ort}
+                preis={s.entry.preis}
+                linkPrefix={linkPrefix}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏛️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            {t(labels.emptyHeading)}
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            {t(labels.emptyText)}
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style>
+  .sight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .hero-urgency {
+    font-size: 13px;
+    color: var(--text2);
+    letter-spacing: 0.8px;
+  }
+  @media (max-width: 600px) {
+    .sight-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>

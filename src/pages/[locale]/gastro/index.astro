@@ -1,0 +1,332 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import GastroCard from '../../../components/GastroCard.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import FilterBar from '../../../components/FilterBar.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+
+// --- Locale-aware label helper ---
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+
+// --- Page-level localized labels ---
+const labels = {
+  breadcrumb: {
+    de: 'Gastro', en: 'Gastronomy', fr: 'Gastronomie',
+    it: 'Gastronomia', es: 'Gastronomía', zh: '美食',
+    nl: 'Gastronomie', cs: 'Gastronomie',
+  },
+  heroTitle: {
+    de: 'Gastro in Tirol', en: 'Gastronomy in Tyrol', fr: 'Gastronomie au Tyrol',
+    it: 'Gastronomia in Tirolo', es: 'Gastronomía en Tirol', zh: '蒂罗尔美食',
+    nl: 'Gastronomie in Tirol', cs: 'Gastronomie v Tyrolsku',
+  },
+  heroSubtitle: {
+    de: 'Entdecke die kulinarische Vielfalt Tirols.',
+    en: "Discover Tyrol's culinary diversity.",
+    fr: 'Découvrez la diversité culinaire du Tyrol.',
+    it: 'Scopri la diversità culinaria del Tirolo.',
+    es: 'Descubre la diversidad culinaria de Tirol.',
+    zh: '探索蒂罗尔的美食多样性。',
+    nl: 'Ontdek de culinaire diversiteit van Tirol.',
+    cs: 'Objevte kulinářskou rozmanitost Tyrolska.',
+  },
+  heroButton: {
+    de: 'Gastro entdecken →', en: 'Discover gastronomy →',
+    fr: 'Découvrir la gastronomie →', it: 'Scopri la gastronomia →',
+    es: 'Descubrir la gastronomía →', zh: '探索美食 →',
+    nl: 'Ontdek gastronomie →', cs: 'Objevte gastronomii →',
+  },
+  genussorte: {
+    de: 'Genussorte', en: 'culinary spots', fr: 'lieux gourmands',
+    it: 'luoghi di gusto', es: 'lugares gastronómicos', zh: '美食场所',
+    nl: 'culinaire plekken', cs: 'gurmánská místa',
+  },
+  mapTitle: {
+    de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil',
+    it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '概览',
+    nl: 'In één oogopslag', cs: 'Na první pohled',
+  },
+  sectionLabel: {
+    de: 'Tirol genießen', en: 'Enjoy Tyrol', fr: 'Savourez le Tyrol',
+    it: 'Godetevi il Tirolo', es: 'Disfruta Tirol', zh: '品味蒂罗尔',
+    nl: 'Geniet van Tirol', cs: 'Užijte si Tyrolsko',
+  },
+  sectionTitle: {
+    de: 'Gastro in Tirol', en: 'Gastronomy in Tyrol', fr: 'Gastronomie au Tyrol',
+    it: 'Gastronomia in Tirolo', es: 'Gastronomía en Tirol', zh: '蒂罗尔美食',
+    nl: 'Gastronomie in Tirol', cs: 'Gastronomie v Tyrolsku',
+  },
+  sectionSub: {
+    de: 'Von urigen Hütten über traditionelle Gasthäuser bis zu moderner Haubenküche – Tirol verwöhnt deinen Gaumen.',
+    en: 'From rustic huts to traditional inns and modern gourmet cuisine – Tyrol delights your palate.',
+    fr: 'Des chalets rustiques aux auberges traditionnelles en passant par la cuisine gastronomique moderne – le Tyrol régale vos papilles.',
+    it: 'Dalle baite rustiche alle osterie tradizionali fino alla cucina gourmet moderna – il Tirolo delizia il tuo palato.',
+    es: 'Desde cabañas rústicas hasta posadas tradicionales y cocina gourmet moderna – Tirol deleita tu paladar.',
+    zh: '从质朴的木屋到传统旅馆再到现代高级料理——蒂罗尔满足你的味蕾。',
+    nl: 'Van rustieke hutten tot traditionele herbergen en moderne gourmetkeuken – Tirol verwent je smaakpapillen.',
+    cs: 'Od rustikálních chat přes tradiční hostince až po moderní gurmánskou kuchyni – Tyrolsko potěší vaše chuťové pohárky.',
+  },
+  filterAria: {
+    de: 'Gastro nach Kategorie filtern', en: 'Filter gastronomy by category',
+    fr: 'Filtrer la gastronomie par catégorie', it: 'Filtra la gastronomia per categoria',
+    es: 'Filtrar gastronomía por categoría', zh: '按类别筛选美食',
+    nl: 'Filter gastronomie op categorie', cs: 'Filtrovat gastronomii podle kategorie',
+  },
+  emptyHeading: {
+    de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible',
+    it: 'Prossimamente', es: 'Próximamente', zh: '即将上线',
+    nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici',
+  },
+  emptyText: {
+    de: 'Gastro-Einträge werden aktuell eingepflegt. Schau bald wieder vorbei!',
+    en: 'Gastro listings are being added. Check back soon!',
+    fr: 'Les entrées gastronomiques sont en cours d\'ajout. Revenez bientôt !',
+    it: 'Le voci gastronomiche sono in fase di inserimento. Torna presto!',
+    es: 'Las entradas gastronómicas se están añadiendo. ¡Vuelve pronto!',
+    zh: '美食条目正在添加中。请稍后再来查看！',
+    nl: 'Gastronomie-gegevens worden momenteel ingevoerd. Kom snel terug!',
+    cs: 'Gastronomické záznamy se právě přidávají. Podívejte se brzy znovu!',
+  },
+  jsonldName: {
+    de: 'Gastro in Tirol', en: 'Gastronomy in Tyrol', fr: 'Gastronomie au Tyrol',
+    it: 'Gastronomia in Tirolo', es: 'Gastronomía en Tirol', zh: '蒂罗尔美食',
+    nl: 'Gastronomie in Tirol', cs: 'Gastronomie v Tyrolsku',
+  },
+  jsonldDesc: {
+    de: 'Entdecke die kulinarische Vielfalt Tirols – von urigen Hütten bis zu Sternerestaurants.',
+    en: 'Discover the culinary diversity of Tyrol – from rustic huts to Michelin-starred restaurants.',
+    fr: 'Découvrez la diversité culinaire du Tyrol – des chalets rustiques aux restaurants étoilés.',
+    it: 'Scopri la diversità culinaria del Tirolo – dalle baite rustiche ai ristoranti stellati.',
+    es: 'Descubre la diversidad culinaria de Tirol – desde cabañas rústicas hasta restaurantes con estrellas.',
+    zh: '探索蒂罗尔的美食多样性——从质朴的木屋到星级餐厅。',
+    nl: 'Ontdek de culinaire diversiteit van Tirol – van rustieke hutten tot restaurant met Michelinsterren.',
+    cs: 'Objevte kulinářskou rozmanitost Tyrolska – od rustikálních chat po restaurace s hvězdičkami.',
+  },
+};
+
+// --- Category labels per locale (emoji + translated name) ---
+const kategorieLabelLocale = {
+  almwirtschaft: {
+    de: '🥨 Almwirtschaft', en: '🥨 Alpine Dining', fr: '🥨 Cuisine Alpine',
+    it: '🥨 Cucina Alpina', es: '🥨 Cocina Alpina', zh: '🥨 阿尔卑斯美食',
+    nl: '🥨 Alpine Keuken', cs: '🥨 Alpská Kuchyně',
+  },
+  bar: {
+    de: '🍸 Bar', en: '🍸 Bar', fr: '🍸 Bar',
+    it: '🍸 Bar', es: '🍸 Bar', zh: '🍸 酒吧',
+    nl: '🍸 Bar', cs: '🍸 Bar',
+  },
+  cafe: {
+    de: '☕ Café', en: '☕ Café', fr: '☕ Café',
+    it: '☕ Caffè', es: '☕ Café', zh: '☕ 咖啡馆',
+    nl: '☕ Café', cs: '☕ Kavárna',
+  },
+  eiscafe: {
+    de: '🍦 Eiscafé', en: '🍦 Ice Cream Café', fr: '🍦 Café Glace',
+    it: '🍦 Gelateria', es: '🍦 Heladería', zh: '🍦 冰淇淋店',
+    nl: '🍦 IJssalon', cs: '🍦 Zmrzlinárna',
+  },
+  eissalon: {
+    de: '🍦 Eissalon', en: '🍦 Ice Cream Parlour', fr: '🍦 Salon de Glace',
+    it: '🍦 Gelateria', es: '🍦 Heladería', zh: '🍦 冰激凌店',
+    nl: '🍦 IJssalon', cs: '🍦 Zmrzlinárna',
+  },
+  imbiss: {
+    de: '🌭 Imbiss', en: '🌭 Snack Bar', fr: '🌭 Snack',
+    it: '🌭 Snack Bar', es: '🌭 Snack Bar', zh: '🌭 小吃店',
+    nl: '🌭 Snackbar', cs: '🌭 Občerstvení',
+  },
+  international: {
+    de: '🌍 International', en: '🌍 International', fr: '🌍 International',
+    it: '🌍 Internazionale', es: '🌍 Internacional', zh: '🌍 国际美食',
+    nl: '🌍 Internationaal', cs: '🌍 Mezinárodní',
+  },
+  pizzeria: {
+    de: '🍕 Pizzeria', en: '🍕 Pizzeria', fr: '🍕 Pizzeria',
+    it: '🍕 Pizzeria', es: '🍕 Pizzería', zh: '🍕 披萨店',
+    nl: '🍕 Pizzeria', cs: '🍕 Pizzerie',
+  },
+  pub: {
+    de: '🍺 Pub', en: '🍺 Pub', fr: '🍺 Pub',
+    it: '🍺 Pub', es: '🍺 Pub', zh: '🍺 酒吧',
+    nl: '🍺 Pub', cs: '🍺 Hospoda',
+  },
+  regional: {
+    de: '🫕 Regional', en: '🫕 Regional Cuisine', fr: '🫕 Cuisine Régionale',
+    it: '🫕 Cucina Regionale', es: '🫕 Cocina Regional', zh: '🫕 地方美食',
+    nl: '🫕 Regionale Keuken', cs: '🫕 Regionální Kuchyně',
+  },
+  restaurant: {
+    de: '🍽️ Restaurant', en: '🍽️ Restaurant', fr: '🍽️ Restaurant',
+    it: '🍽️ Ristorante', es: '🍽️ Restaurante', zh: '🍽️ 餐厅',
+    nl: '🍽️ Restaurant', cs: '🍽️ Restaurace',
+  },
+  tirolerisch: {
+    de: '🥘 Tirolerisch', en: '🥘 Tyrolean', fr: '🥘 Tyrolien',
+    it: '🥘 Tirolese', es: '🥘 Tirolés', zh: '🥘 蒂罗尔风味',
+    nl: '🥘 Tirols', cs: '🥘 Tyrolský',
+  },
+};
+
+const getCategoryLabel = (key) => {
+  const map = kategorieLabelLocale[key];
+  return map ? (map[locale] || map[DEFAULT_LOCALE] || key) : key;
+};
+
+// --- Data ---
+const gastro = readCollection('gastro', locale).filter((g) => isPublished(g.entry));
+const gastroMitCoords = gastro.filter((g) => g.entry.koordinaten?.lat && g.entry.koordinaten?.lng);
+
+const kategorien = [...new Set(gastro.map((g) => g.entry.kategorie).filter(Boolean))].sort((a, b) => {
+  const la = getCategoryLabel(a) || a;
+  const lb = getCategoryLabel(b) || b;
+  return la.localeCompare(lb, locale === 'zh' ? 'zh' : 'de');
+});
+
+// --- Internal link helpers ---
+const linkPrefix = locale === DEFAULT_LOCALE ? '/gastro/' : `/${locale}/gastro/`;
+
+// --- JSON-LD: ItemList ---
+const siteURL = 'https://www.tirol-tourismus.at';
+const gastroItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: t(labels.jsonldName),
+  description: t(labels.jsonldDesc),
+  url: `${siteURL}${localePrefix(locale)}/gastro/`,
+  numberOfItems: gastro.length,
+  itemListElement: gastro.slice(0, 30).map((g, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: g.entry.name,
+    url: `${siteURL}${linkPrefix}${g.slug}/`,
+  })),
+};
+---
+
+<BaseLayout
+  title={t(labels.heroTitle)}
+  description={t(labels.jsonldDesc)}
+  jsonld={gastroItemList}
+  locale={locale}
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} />
+    </div>
+
+    <Hero
+      title={t(labels.heroTitle)}
+      subtitle={t(labels.heroSubtitle)}
+      emoji="🍽️"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href="#gastro-grid" class="btn btn-pink">{t(labels.heroButton)}</a>
+        <span class="hero-urgency">⭐ {gastro.length} {t(labels.genussorte)}</span>
+      </div>
+    </Hero>
+
+    {gastroMitCoords.length > 0 && (
+      <SectionMap
+        markers={gastroMitCoords.map((g) => ({
+          lat: g.entry.koordinaten.lat,
+          lng: g.entry.koordinaten.lng,
+          label: g.entry.name,
+          emoji: g.entry.emoji || '🍽️',
+          href: `${linkPrefix}${g.slug}/`,
+          category: 'gastro',
+        }))}
+        label={`${gastroMitCoords.length} ${t(labels.genussorte)}`}
+        title={t(labels.mapTitle)}
+        height="380px"
+        scrollWheelZoom={true}
+        filterable={true}
+      />
+    )}
+
+    {gastro.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader
+            label={t(labels.sectionLabel)}
+            title={t(labels.sectionTitle)}
+            sub={t(labels.sectionSub)}
+          />
+
+          {kategorien.length > 1 && (
+            <FilterBar
+              keyName="cat"
+              ariaLabel={t(labels.filterAria)}
+              options={kategorien.map((k) => ({ value: k, label: getCategoryLabel(k) }))}
+            />
+          )}
+
+          <div class="gastro-grid" id="gastro-grid">
+            {gastro.map((g) => (
+              <GastroCard
+                name={g.entry.name}
+                slug={g.slug}
+                beschreibung={g.entry.kurzbeschreibung}
+                kategorie={g.entry.kategorie}
+                preis={g.entry.preis}
+                emoji={g.entry.emoji}
+                farbe={g.entry.farbe}
+                ort={g.entry.ort}
+                linkPrefix={linkPrefix}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🍽️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            {t(labels.emptyHeading)}
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            {t(labels.emptyText)}
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style>
+  .gastro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .hero-urgency {
+    font-size: 13px;
+    color: var(--text2);
+    letter-spacing: 0.8px;
+  }
+  @media (max-width: 600px) {
+    .gastro-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>

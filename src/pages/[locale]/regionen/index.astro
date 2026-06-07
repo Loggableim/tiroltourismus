@@ -1,0 +1,428 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import FilterBar from '../../../components/FilterBar.astro';
+import FavHeart from '../../../components/FavHeart.astro';
+import { readCollection, isPublished, readSingleton } from '../../../lib/content.js';
+import { LANGUAGES_READY, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: {
+    title: 'Regionen',
+    desc: 'Sechs Gesichter, ein Land. Jede Region in Tirol hat ihren eigenen Sound – von Gletscherflüstern bis Stadtbeat. Finde deine.',
+    heroSub: 'Sechs Gesichter, ein Land.',
+    ctaText: 'Regionen entdecken →',
+    sectionLabel: 'Tirol entdecken',
+    sectionTitle: 'Wo willst du hin?',
+    sectionSub: 'Ob hochalpine Gipfel, glitzernde Gletscher oder urbane Bergluft – Tirols Regionen sind so vielfältig wie das Leben selbst.',
+    filterFeatured: 'Empfohlen',
+    filterOther: 'Weitere',
+    emptyTitle: 'Bald verfügbar',
+    emptyText: 'Regionen werden aktuell eingepflegt. Schau bald wieder vorbei!',
+    regionen: 'Regionen',
+    erlebnisse: 'Erlebnisse',
+    unterkuenfte: 'Unterkünfte',
+    featuredBadge: '🔥 Empfohlen',
+    entdecken: 'Entdecken →',
+    factsRegionen: 'Regionen',
+    factsErlebnisse: 'Erlebnisse',
+    factsUnterkuenfte: 'Unterkünfte',
+    allLabel: 'Alle',
+    ariaFilter: 'Regionen filtern',
+  },
+  en: {
+    title: 'Regions',
+    desc: 'Six faces, one land. Every region in Tyrol has its own sound – from glacier whispers to city beats. Find yours.',
+    heroSub: 'Six faces, one land.',
+    ctaText: 'Discover regions →',
+    sectionLabel: 'Discover Tyrol',
+    sectionTitle: 'Where do you want to go?',
+    sectionSub: 'Whether high alpine peaks, glittering glaciers or urban mountain air – Tyrol\'s regions are as diverse as life itself.',
+    filterFeatured: 'Featured',
+    filterOther: 'Other',
+    emptyTitle: 'Coming soon',
+    emptyText: 'Regions are currently being curated. Check back soon!',
+    regionen: 'Regions',
+    erlebnisse: 'Experiences',
+    unterkuenfte: 'Accommodations',
+    featuredBadge: '🔥 Featured',
+    entdecken: 'Discover →',
+    factsRegionen: 'Regions',
+    factsErlebnisse: 'Experiences',
+    factsUnterkuenfte: 'Accommodations',
+    allLabel: 'All',
+    ariaFilter: 'Filter regions',
+  },
+  fr: {
+    title: 'Régions',
+    desc: 'Six visages, un seul pays. Chaque région du Tyrol a sa propre musique – du murmure des glaciers au rythme de la ville. Trouvez la vôtre.',
+    heroSub: 'Six visages, un seul pays.',
+    ctaText: 'Découvrir les régions →',
+    sectionLabel: 'Découvrir le Tyrol',
+    sectionTitle: 'Où veux-tu aller?',
+    sectionSub: 'Sommets alpins, glaciers scintillants ou air urbain de montagne – les régions du Tyrol sont aussi diverses que la vie elle-même.',
+    filterFeatured: 'Recommandé',
+    filterOther: 'Autres',
+    emptyTitle: 'Bientôt disponible',
+    emptyText: 'Les régions sont en cours de préparation. Revenez bientôt!',
+    regionen: 'Régions',
+    erlebnisse: 'Expériences',
+    unterkuenfte: 'Hébergements',
+    featuredBadge: '🔥 Recommandé',
+    entdecken: 'Découvrir →',
+    factsRegionen: 'Régions',
+    factsErlebnisse: 'Expériences',
+    factsUnterkuenfte: 'Hébergements',
+    allLabel: 'Tous',
+    ariaFilter: 'Filtrer les régions',
+  },
+  it: {
+    title: 'Regioni',
+    desc: 'Sei volti, una terra. Ogni regione del Tirolo ha il proprio suono – dal sussurro dei ghiacciai al ritmo della città. Trova la tua.',
+    heroSub: 'Sei volti, una terra.',
+    ctaText: 'Scopri le regioni →',
+    sectionLabel: 'Scopri il Tirolo',
+    sectionTitle: 'Dove vuoi andare?',
+    sectionSub: 'Cime alpine, ghiacciai scintillanti o aria di montagna urbana – le regioni del Tirolo sono varie come la vita stessa.',
+    filterFeatured: 'Consigliato',
+    filterOther: 'Altro',
+    emptyTitle: 'Presto disponibile',
+    emptyText: 'Le regioni sono in fase di preparazione. Torna presto!',
+    regionen: 'Regioni',
+    erlebnisse: 'Esperienze',
+    unterkuenfte: 'Alloggi',
+    featuredBadge: '🔥 Consigliato',
+    entdecken: 'Scopri →',
+    factsRegionen: 'Regioni',
+    factsErlebnisse: 'Esperienze',
+    factsUnterkuenfte: 'Alloggi',
+    allLabel: 'Tutti',
+    ariaFilter: 'Filtra regioni',
+  },
+  es: {
+    title: 'Regiones',
+    desc: 'Seis caras, una tierra. Cada región del Tirol tiene su propio sonido – desde susurros de glaciares hasta ritmos urbanos. Encuentra la tuya.',
+    heroSub: 'Seis caras, una tierra.',
+    ctaText: 'Descubrir regiones →',
+    sectionLabel: 'Descubre Tirol',
+    sectionTitle: '¿A dónde quieres ir?',
+    sectionSub: 'Picos alpinos, glaciares brillantes o aire urbano de montaña – las regiones del Tirol son tan diversas como la vida misma.',
+    filterFeatured: 'Recomendado',
+    filterOther: 'Otros',
+    emptyTitle: 'Próximamente',
+    emptyText: 'Las regiones están siendo preparadas. ¡Vuelve pronto!',
+    regionen: 'Regiones',
+    erlebnisse: 'Experiencias',
+    unterkuenfte: 'Alojamientos',
+    featuredBadge: '🔥 Recomendado',
+    entdecken: 'Descubrir →',
+    factsRegionen: 'Regiones',
+    factsErlebnisse: 'Experiencias',
+    factsUnterkuenfte: 'Alojamientos',
+    allLabel: 'Todos',
+    ariaFilter: 'Filtrar regiones',
+  },
+  zh: {
+    title: '地区',
+    desc: '六张面孔，一片土地。蒂罗尔的每个地区都有自己的声音——从冰川低语到城市节拍。找到你的那一处。',
+    heroSub: '六张面孔，一片土地。',
+    ctaText: '探索地区 →',
+    sectionLabel: '探索蒂罗尔',
+    sectionTitle: '你想去哪里？',
+    sectionSub: '高山之巅、闪耀冰川或城市山间空气——蒂罗尔的地区与生活本身一样丰富多彩。',
+    filterFeatured: '推荐',
+    filterOther: '其他',
+    emptyTitle: '即将推出',
+    emptyText: '地区信息正在整理中。请稍后再来！',
+    regionen: '地区',
+    erlebnisse: '体验',
+    unterkuenfte: '住宿',
+    featuredBadge: '🔥 推荐',
+    entdecken: '探索 →',
+    factsRegionen: '地区',
+    factsErlebnisse: '体验',
+    factsUnterkuenfte: '住宿',
+    allLabel: '全部',
+    ariaFilter: '筛选地区',
+  },
+  nl: {
+    title: "Regio's",
+    desc: "Zes gezichten, één land. Elke regio in Tirol heeft zijn eigen geluid – van gletsjerfluister tot stadsbeat. Vind de jouwe.",
+    heroSub: "Zes gezichten, één land.",
+    ctaText: "Ontdek regio's →",
+    sectionLabel: 'Tirol ontdekken',
+    sectionTitle: 'Waar wil je heen?',
+    sectionSub: "Of het nu hoogalpiene toppen, glinsterende gletsjers of stedelijke berglucht zijn – Tirols regio's zijn net zo divers als het leven zelf.",
+    filterFeatured: 'Aanbevolen',
+    filterOther: 'Andere',
+    emptyTitle: 'Binnenkort beschikbaar',
+    emptyText: "Regio's worden momenteel ingevoerd. Kom snel nog eens langs!",
+    regionen: "Regio's",
+    erlebnisse: 'Ervaringen',
+    unterkuenfte: 'Accommodaties',
+    featuredBadge: '🔥 Aanbevolen',
+    entdecken: 'Ontdekken →',
+    factsRegionen: "Regio's",
+    factsErlebnisse: 'Ervaringen',
+    factsUnterkuenfte: 'Accommodaties',
+    allLabel: 'Alle',
+    ariaFilter: "Filter regio's",
+  },
+  cs: {
+    title: 'Regiony',
+    desc: 'Šest tváří, jedna země. Každý region v Tyrolsku má svůj vlastní zvuk – od šepotu ledovců až po městský rytmus. Najděte ten svůj.',
+    heroSub: 'Šest tváří, jedna země.',
+    ctaText: 'Objevte regiony →',
+    sectionLabel: 'Objevte Tyrolsko',
+    sectionTitle: 'Kam chcete jet?',
+    sectionSub: 'Ať už vysokohorské vrcholy, třpytivé ledovce nebo městský horský vzduch – tyrolské regiony jsou stejně rozmanité jako život sám.',
+    filterFeatured: 'Doporučené',
+    filterOther: 'Další',
+    emptyTitle: 'Brzy k dispozici',
+    emptyText: 'Regiony se právě připravují. Brzy se podívejte znovu!',
+    regionen: 'Regiony',
+    erlebnisse: 'Zážitky',
+    unterkuenfte: 'Ubytování',
+    featuredBadge: '🔥 Doporučené',
+    entdecken: 'Objevovat →',
+    factsRegionen: 'Regiony',
+    factsErlebnisse: 'Zážitky',
+    factsUnterkuenfte: 'Ubytování',
+    allLabel: 'Vše',
+    ariaFilter: 'Filtrovat regiony',
+  },
+};
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = LABELS[locale] || LABELS.de;
+const pref = localePrefix(locale);
+
+const regionen = readCollection('regionen', locale)
+  .filter((r) => isPublished(r.entry))
+  .sort(
+    (a, b) =>
+      (b.entry.bewertung || 0) - (a.entry.bewertung || 0) ||
+      (a.entry.titel || '').localeCompare(b.entry.titel || '', locale === 'de' ? 'de' : locale)
+  );
+
+const bezirkeData = readSingleton('bezirke', locale);
+const bezirke = bezirkeData ? Object.values(bezirkeData) : [];
+const regionsData = readSingleton('regions', locale);
+
+// JSON-LD: ItemList
+const siteURL = 'https://www.tirol-tourismus.at';
+const regionItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: t.title,
+  description: t.desc,
+  url: `${siteURL}${pref}/regionen/`,
+  numberOfItems: regionen.length,
+  itemListElement: regionen.slice(0, 30).map((r, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: r.entry.titel,
+    url: `${siteURL}${pref}/regionen/${r.slug}/`,
+  })),
+};
+
+function stars(bewertung) {
+  return Array.from({ length: 5 }, (_, i) => i < (bewertung || 0));
+}
+---
+
+<BaseLayout
+  title={t.title}
+  description={t.desc}
+  locale={locale}
+  jsonld={regionItemList}
+>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: t.regionen, href: `${pref}/regionen/` }, { label: t.regionen }]} />
+    </div>
+
+    <Hero
+      title={t.title}
+      subtitle={t.heroSub}
+      emoji="🏔️"
+      size="md"
+    >
+      <div slot="actions" class="hero-actions">
+        <a href={`${pref}/regionen/#region-grid`} class="btn btn-pink">{t.ctaText}</a>
+        <span class="hero-urgency">🏔️ {regionen.length} {t.regionen}</span>
+      </div>
+    </Hero>
+
+    {regionen.length > 0 ? (
+      <>
+        <section class="section">
+          <div class="container">
+            <SectionHeader
+              label={t.sectionLabel}
+              title={t.sectionTitle}
+              sub={t.sectionSub}
+            />
+
+            {regionen.length > 1 && (
+              <FilterBar
+                keyName="cat"
+                ariaLabel={t.ariaFilter}
+                allLabel={t.allLabel}
+                options={[
+                  { value: 'featured', label: t.filterFeatured },
+                  { value: 'other', label: t.filterOther },
+                ]}
+              />
+            )}
+
+            <div class="region-grid" id="region-grid">
+              {regionen.map((r) => {
+                const filled = stars(r.entry.bewertung);
+                const farbe = r.entry.farbe || 'var(--pink)';
+                return (
+                  <a
+                    href={`${pref}/regionen/${r.slug}/`}
+                    class="region-card"
+                    data-collection="regionen"
+                    data-slug={r.slug}
+                    data-filter-card
+                    data-filter-cat={r.entry.featured ? 'featured' : 'other'}
+                  >
+                    <div
+                      class="region-card-img"
+                      style={`position:relative;background:linear-gradient(135deg,${farbe}15,${farbe}25)`}
+                    >
+                      {r.slug ? (
+                        <img
+                          src={`/wappen/regionen/${r.slug}.svg`}
+                          alt={`${r.entry.titel} Wappen`}
+                          class="region-badge-img"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <>
+                          <div class="region-blob" style={`background:${farbe}`}></div>
+                          <span class="region-emoji">{r.entry.emoji || '🏔️'}</span>
+                        </>
+                      )}
+                      <FavHeart collection="regionen" slug={r.slug} />
+                    </div>
+                    <div class="region-card-body">
+                      <h3>{r.entry.titel}</h3>
+                      {r.entry.kurzbeschreibung && <p>{r.entry.kurzbeschreibung}</p>}
+                      {r.entry.featured && <span class="featured-badge">{t.featuredBadge}</span>}
+                      <div class="region-stars">
+                        {filled.map((f) => (
+                          <span class={`star${f ? '' : ' empty'}`}>★</span>
+                        ))}
+                      </div>
+                      <span class="region-link">{t.entdecken}</span>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section class="facts-section">
+          <div class="container">
+            <div class="facts-grid">
+              <div class="fact-item">
+                <div class="fact-number">{regionen.length}</div>
+                <div class="fact-label">{t.factsRegionen}</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-number">∞</div>
+                <div class="fact-label">{t.factsErlebnisse}</div>
+              </div>
+              <div class="fact-item">
+                <div class="fact-number">100+</div>
+                <div class="fact-label">{t.factsUnterkuenfte}</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏔️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">
+            {t.emptyTitle}
+          </h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">
+            {t.emptyText}
+          </p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0 0 80px;
+  }
+  @media (max-width: 968px) {
+    .region-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .region-grid { grid-template-columns: 1fr; }
+  }
+
+  .facts-section {
+    background: var(--bg2);
+    padding: 60px 0;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+  .fact-number {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1;
+    color: var(--pink);
+    letter-spacing: 2px;
+  }
+  .fact-label {
+    font-size: 14px;
+    color: var(--text2);
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  @media (max-width: 600px) {
+    .facts-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .hero-urgency {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text2);
+    letter-spacing: 0.5px;
+  }
+</style>

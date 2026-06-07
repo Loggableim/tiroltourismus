@@ -9,10 +9,11 @@ export interface Props {
   emoji?: string;
   farbe?: string;
   ort?: string;
+  linkPrefix?: string;
 }
-const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '#FF6B35', ort } = Astro.props;
+const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '#FF6B35', ort, linkPrefix = '/gastro/' } = Astro.props;
 ---
-<a href={`/gastro/${slug}/`} class="gastro-card" data-collection="gastro" data-slug={slug} data-filter-card data-filter-cat={kategorie || ''}>
+<a href={`${linkPrefix}${slug}/`} class="gastro-card" data-collection="gastro" data-slug={slug} data-filter-card data-filter-cat={kategorie || ''}>
   <div class="gastro-card-img" style={`position:relative;background:${farbe}20`}>
     <span class="gastro-emoji">{emoji}</span>
     <FavHeart collection="gastro" slug={slug} />

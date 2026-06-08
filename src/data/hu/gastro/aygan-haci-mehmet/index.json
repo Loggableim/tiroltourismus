@@ -1,0 +1,24 @@
+{
+  "name": "Aygan Haci Mehmet",
+  "emoji": "🍺",
+  "farbe": "#FF6B35",
+  "kategorie": "pub",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate the German tourism text into natural Hungarian, but keep HTML tags unchanged. Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. But the text doesn't contain those. It contains \"Aygan Haci Mehmet\" which is a name. We keep it as is. We keep tags. No explanations. Just output the translated text.\n\nWe need to translate the paragraph into Hungarian. Let's do it.\n\nOriginal:\n\n<p>Das <strong>Aygan Haci Mehmet</strong> in Außerfern ist ein uriger Pub mit authentischem Ambiente und einer herzlichen Willkommenskultur. Hier treffen sich Einheimische und Gäste gleichermaßen, um bei einem kühlen Bier oder einem edlen Tropfen den Abend zu genießen. Die Speisekarte bietet klassische Pub-Spezialitäten und regionale Schmankerln, die frisch zubereitet serviert werden. Das rustikal-einladende Interieur mit gemütlichen Sitzplätzen schafft eine relaxte Atmosphäre, die zum Verweilen einlädt. Ob für einen Feierabend-Drink, ein gemütliches Beisammensein mit Freunden oder um einfach nur das bunte Treiben zu genießen - das <strong>Aygan Haci Mehmet</strong> ist die erste Adresse für gesellige Stunden in Außerfern.</p>\n\nWe need to translate to Hungarian. Let's produce:\n\n<p>Az <strong>Aygan Haci Mehmet</strong> Außerfernben egy autentikus hangulatú, barátságos üdvözlő kultúrájú pub. Itt a helyiek és a vendégek egyaránt találkoznak, hogy egy hideg sört vagy egy finom poharat élvezzék a estét. A menü klasszikus pub-specialitásokat és helyi finomságokat kínál, amelyeket frissen készítenek és tálalnak. A rusztikus, meghívó belső tér, kényelmes ülőhelyekkel, egy laza légkört teremt, amely a pihenésre ösztönöz. Akár munka után egy italra, barátokkal való kellemes összejövetelre, vagy egyszerűen csak a színes élet élvezetére - az <strong>Aygan Haci Mehmet</strong> a legjobb hely a társas órákhoz Außerfernben.</p>\n\nCheck: keep tags unchanged. Use Hungarian natural. Place names: Außerfern is a place name, keep as is. No culinary terms. Good.\n\nLet's output.",
+  "ort": "",
+  "region": "ausserfern",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.4853905,
+    "lng": 10.7206416
+  },
+  "status": "published"
+}

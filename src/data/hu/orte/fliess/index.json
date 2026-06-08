@@ -1,0 +1,57 @@
+{
+  "name": "Fließ",
+  "slug": "fliess",
+  "region": "landeck",
+  "kurzbeschreibung": "Történelmi község a Landeck felett található Sonnenplateau-n, csodálatos táj- és mélység kilátással.",
+  "emoji": "🏘️",
+  "farbe": "#B8860B",
+  "hoehe": "1.073 m",
+  "einwohner": "3.100",
+  "tags": [
+    "kultur",
+    "geschichte",
+    "wandern",
+    "familie"
+  ],
+  "status": "published",
+  "bezirk": "landeck",
+  "bilder": [
+    {
+      "url": "/images/orte/fliess/hero_1.png",
+      "alt": "Fließ — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/fliess/hero_1.png",
+  "koordinaten": {
+    "lat": "47.1197",
+    "lng": "10.6286"
+  },
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Laudegg",
+      "beschreibung": "Mittelalterliche Burganlage auf einem Felshügel über Fließ mit guter Aussicht.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Wallfahrtskirche Kaltenbrunn",
+      "beschreibung": "Barocke Wallfahrtskirche mit prächtiger Kuppel und bemalter Fassade bei Fließ.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Fließer Wasserfall",
+      "beschreibung": "Malerischer Wasserfall im Fließer Ortsteil Piller, umgeben von Wald und Felsen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Piller Sattel",
+      "beschreibung": "Hochalpine Passstraße mit Panoramablick und dem Piller Moor als Naturschutzgebiet.",
+      "typ": "ausflug"
+    },
+    {
+      "name": "Naturparkhaus Kaunergrat",
+      "beschreibung": "Erlebnisausstellung zur Natur- und Kulturgeschichte der Region Kaunergrat bei Fließ.",
+      "typ": "ausflug"
+    }
+  ],
+  "kategorie": "marktgemeinde"
+}

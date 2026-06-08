@@ -1,0 +1,24 @@
+{
+  "name": "Telfs",
+  "slug": "telfs",
+  "region": "innsbruck",
+  "kurzbeschreibung": "We need to translate the German text into natural Hungarian, but keep HTML tags unchanged. There are no HTML tags in the text. Keep place names and culinary terms in German original form. The text: \"Telfs im Oberinntal ist bekannt für den größten Faschingsumzug Tirols und das Wahrzeichen Hohe Munde als Wanderziel.\"\n\nWe need to translate into Hungarian. Place names: Telfs, Oberinntal, Tirol, Hohe Munde. Keep them in German original form. So Hungarian translation: \"Telfs im Oberinntal híres Tirol legnagyobb karneváli táncosújságjáról és a Hohe Munde jellegzetes látnivalójáról, amely egy népszerű túra célpont.\"\n\nBut we need to keep \"Faschingsumzug\" maybe keep as \"Faschingsumzug\"? The instruction: keep culinary terms in German original form. \"Faschingsumzug\" is not culinary, it's a carnival parade. So we can translate it. But we might keep \"Faschingsumzug\" as is? The instruction says keep culinary terms in German original form. So we can translate \"Faschingsumzug\" to Hungarian. So we can translate \"Faschingsumzug\" to \"karneváli táncosújság\" or \"karneváli táncosújság\". But maybe \"Faschingsumzug\" is a German term for carnival parade. So we can translate to \"karneváli táncosújság\". That is fine.\n\nAlso \"Wahrzeichen\" is \"jellegzetes látnivaló\" or \"jellegzetes szimbólum\". \"Wanderziel\" is \"túra célpont\". So final translation: \"Telfs im Oberinntal híres Tirol legnagyobb Faschingsumzugjáról és a Hohe Munde jellegzetes látnivalójáról, amely egy népszerű túra célpont.\"\n\nBut we need to keep \"Faschingsumzug\" maybe keep as is? The instruction: keep culinary terms in German original form. \"Faschingsumzug\" is not culinary. So we can translate. So we can translate to \"karneváli táncosújság\". But maybe \"Faschingsumzug\" is a proper noun? It's a specific event. We can keep it as \"Faschingsumzug\". But the instruction says keep culinary terms in German original form. So we can translate \"Faschingsumzug\" to Hungarian. It's not culinary. So we can translate.\n\nThus final: \"Telfs im Oberinntal híres Tirol legnagyobb Faschingsumzugjáról és a Hohe Munde jellegzetes látnivalójáról, amely egy népszerű túra célpont.\"\n\nBut we might want to keep \"Faschingsumzug\" as is? The instruction: \"Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form.\" So we keep place names. \"Faschingsumzug\" is not a place name nor a culinary term. So we can translate. So we can translate \"Faschingsumzug\" to Hungarian. So \"karneváli táncosújság\". But maybe \"Faschingsumzug\" is a proper noun. But it's okay.\n\nThus final translation: \"Telfs im Oberinntal híres Tirol legnagyobb Faschingsumzugjáról és a Hohe Munde jellegzetes látnivalójáról, amely egy népszerű túra célpont.\"\n\nBut we might want to keep \"Faschingsumzug\" as is: \"Telfs im Oberinntal híres Tirol legnagyobb Faschingsumzugjáról és a Hohe Munde jellegzetes látnivalójáról, amely egy népszerű túra célpont.\" That is fine.\n\nLet's produce that.assistantfinalTelfs im Oberinntal híres Tirol legnagyobb Faschingsumzugjáról és a Hohe Munde jellegzetes látnivalójáról, amely egy népszerű túra célpont.",
+  "emoji": "🏘️",
+  "farbe": "#A0522D",
+  "hoehe": "633 m",
+  "einwohner": "16.000",
+  "tags": [
+    "kultur",
+    "tradition",
+    "wandern",
+    "familie"
+  ],
+  "status": "published",
+  "bezirk": "innsbruck-land",
+  "bilder": [],
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.3047",
+    "lng": "11.0715"
+  }
+}

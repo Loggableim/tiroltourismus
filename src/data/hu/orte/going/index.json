@@ -1,0 +1,52 @@
+{
+  "name": "Going am Wilden Kaiser",
+  "slug": "going",
+  "region": "kitzbuehel",
+  "kurzbeschreibung": "Faluj a Wilden Kaiser közvetlen kilátásával és a sívilághoz való csatlakozással – ideális a természetkedvelők számára.",
+  "emoji": "🏔️",
+  "farbe": "#006400",
+  "hoehe": "773 m",
+  "einwohner": "1.900",
+  "tags": [
+    "túrázás",
+    "sí",
+    "család",
+    "természet"
+  ],
+  "status": "published",
+  "bezirk": "kitzbuehel",
+  "bilder": [
+    {
+      "url": "/images/orte/going/hero_1.png",
+      "alt": "Going am Wilden Kaiser — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/going/hero_1.png",
+  "koordinaten": {
+    "lat": "47.5330",
+    "lng": "12.3450"
+  },
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Wilder Kaiser",
+      "beschreibung": "Markantes Bergmassiv mit Wanderwegen und atemberaubender Aussicht auf das Kaisergebirge.",
+      "typ": "natur"
+    },
+    {
+      "name": "Moorerlebnisweg Going",
+      "beschreibung": "Lehrreicher Naturpfad durch ein Hochmoor mit barrierefreiem Steg und Aussichtsplattform.",
+      "typ": "natur"
+    },
+    {
+      "name": "Pfarrkirche hl. Martin",
+      "beschreibung": "Barocke Dorfkirche mit historischen Fresken und einem markanten Zwiebelturm.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Astberg",
+      "beschreibung": "Berg mit Familienpark, Sommerrodelbahn und Panoramablick auf den Wilden Kaiser.",
+      "typ": "ausflug"
+    }
+  ],
+  "kategorie": "marktgemeinde"
+}

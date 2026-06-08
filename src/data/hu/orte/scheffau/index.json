@@ -1,0 +1,24 @@
+{
+  "name": "Scheffau am Wilden Kaiser",
+  "slug": "scheffau",
+  "region": "kufstein",
+  "kurzbeschreibung": "We need to translate the German tourism text into natural Hungarian. Keep HTML tags unchanged. But there are no HTML tags in the text. Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. The text: \"Eingangstor zum Wilden Kaiser mit dem direkt angrenzenden Skigebiet Skiwelt und dem Hintersteiner See.\" So translation: \"A Wilden Kaiser bejárati kapuja a közvetlenül szomszédos Skiwelt sípálya és a Hintersteiner See mellett.\" But we need to keep place names in German original form: Wilden Kaiser, Skiwelt, Hintersteiner See. So Hungarian: \"A Wilden Kaiser bejárati kapuja a közvetlenül szomszédos Skiwelt sípálya és a Hintersteiner See mellett.\" That seems natural. Ensure no HTML tags. Output only the translated text.assistantfinalA Wilden Kaiser bejárati kapuja a közvetlenül szomszédos Skiwelt sípálya és a Hintersteiner See mellett.",
+  "emoji": "🏔️",
+  "farbe": "#006400",
+  "hoehe": "745 m",
+  "einwohner": "1.500",
+  "tags": [
+    "ski",
+    "wandern",
+    "natur",
+    "familie"
+  ],
+  "status": "published",
+  "bezirk": "kufstein",
+  "bilder": [],
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.5284",
+    "lng": "12.2507"
+  }
+}

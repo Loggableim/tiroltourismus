@@ -1,0 +1,25 @@
+{
+  "name": "Gasthof Einhorn Schaller",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Gasztó Einhorn Schaller Schwazban",
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original form. So we translate the German text into Hungarian, but keep tags <p>, <strong> etc. Keep \"Tiroler\" maybe \"Tiroler\" is German, but we keep place names like Tirol, Innsbruck, etc. In this text, we have \"Tiroler\" but that's an adjective. The instruction: Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. So we keep \"Tiroler\" maybe not a place name but an adjective. But \"Tiroler\" refers to Tirol. We might keep \"Tiroler\" as is? The instruction says keep place names in German original form. So \"Tiroler\" is an adjective meaning \"Tyrolean\". But it's derived from Tirol. The instruction might want to keep \"Tiroler\" as is. But maybe we can translate \"Tiroler\" to \"Tiroler\" still. But we can keep \"Tiroler\" as is. The text: \"traditionelle Tiroler Gastlichkeit\" -> \"hagyományos Tiroler vendégszeretet\". We keep \"Tiroler\" as is. \"Kaiserschmarrn\" not present. So we just translate.\n\nWe need to keep tags unchanged. So output:\n\n<p>Das <strong>Gasthof Einhorn Schaller</strong> in Schwaz vereint traditionelle Tiroler Gastlichkeit mit moderner Kochkunst und bietet ein rundum gelungenes kulinarisches Erlebnis. Das stilvoll eingerichtete Restaurant lädt mit seiner warmen und gemütlichen Atmosphäre zum Verweilen ein. Die Speisekarte umfasst unter anderem regionale Produkte. Alle Speisen werden mit viel Liebe zum Detail und aus hochwertigen Zutaten zubereitet. Ein Besuch lohnt sich – ob für ein gemütliches Abendessen zu zweit, eine Feier im Familienkreis oder einen geselligen Abend mit Freunden.</p>\n\nWe translate to Hungarian:\n\n<p>Az <strong>Gasthof Einhorn Schaller</strong> Schwazban ötvözi a hagyományos Tiroler vendégszeretetet a modern konyhaművészettel, és egy teljesen sikeres gasztronómiai élményt kínál. A stílusosan berendezett étterem meleg és barátságos légkörével hívja meg a vendégeket a pihenésre. A menü többek között helyi termékeket tartalmaz. Minden étel nagy odafigyeléssel és magas színvonalú alapanyagokból készül. Érdemes ellátogatni – akár egy kényelmes, két főre szóló vacsorához, egy családi ünnepséghez, vagy egy társasági esthez barátokkal.</p>\n\nCheck: keep tags unchanged. Place names: \"Schwaz\" is a place name, but the instruction says keep place names in German original form. So we should keep \"Schwaz\" as is. We used \"Schwazban\" but we changed to Hungarian \"Schwazban\". The place name \"Schwaz\" remains. Good. \"Tiroler\" remains. We used \"Tiroler\" as is. Good.\n\nWe also used \"Gasthof Einhorn Schaller\" unchanged. Good.\n\nWe used \"Kaiserschmarrn\" not present.\n\nThus final.assistantfinal<p>Az <strong>Gasthof Einhorn Schaller</strong> Schwazban ötvözi a hagyományos Tiroler vendégszeretetet a modern konyhaművészettel, és egy teljesen sikeres gasztronómiai élményt kínál. A stílusosan berendezett étterem meleg és barátságos légkörével hívja meg a vendégeket a pihenésre. A menü többek között helyi termékeket tartalmaz. Minden étel nagy odafigyeléssel és magas színvonalú alapanyagokból készül. Érdemes ellátogatni – akár egy kényelmes, két főre szóló vacsorához, egy családi ünnepséghez, vagy egy társasági esthez barátokkal.</p>",
+  "ort": "Schwaz",
+  "region": "zillertal",
+  "plz": "6130",
+  "adresse": "Innsbrucker Straße 31",
+  "telefon": "+43 5242 74047",
+  "email": "",
+  "webseite": "https://www.gasthof-schaller.at",
+  "preis": "€€",
+  "tags": [
+    "gastro",
+    "regional"
+  ],
+  "koordinaten": {
+    "lat": 47.3428646,
+    "lng": 11.7076521
+  },
+  "status": "published"
+}

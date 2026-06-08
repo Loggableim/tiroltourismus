@@ -1,0 +1,24 @@
+{
+  "name": "Golfrestaurant Lans",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "We need to translate the German tourism text into natural Hungarian. The text is \"Golfrestaurant Lans in Tirol\". It's a short phrase. We must keep HTML tags unchanged, but there are none. Keep place names and culinary terms in German original form. So \"Golfrestaurant Lans in Tirol\" should be translated into Hungarian, but keep \"Lans\" and \"Tirol\" as is. The phrase \"Golfrestaurant\" is a German word meaning \"golf restaurant\". In Hungarian, we might translate as \"Golfétterem\". So \"Golfrestaurant Lans in Tirol\" becomes \"Golfétterem Lans Tirolban\" or \"Golfétterem Lans Tirolban\". But we need to keep \"Tirol\" unchanged. In Hungarian, \"in Tirol\" would be \"Tirolban\". So final: \"Golfétterem Lans Tirolban\". That should be the translation. No tags. Output only the translated text.assistantfinal<|message|>Golfétterem Lans Tirolban",
+  "beschreibung": null,
+  "ort": "",
+  "region": "innsbruck",
+  "plz": "",
+  "adresse": "",
+  "telefon": "+43 512 37 88 16",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.2448666,
+    "lng": 11.4295337
+  },
+  "status": "published"
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Dölsach",
+  "slug": "doelsach",
+  "region": "osttirol",
+  "kurzbeschreibung": "Dölsach im Drautal lenyűgöz a római Aguntum város lelőtt helyszíneivel, egy kastélyával és a Dolomitenkulisse Osttirols.",
+  "emoji": "🏘️",
+  "farbe": "#DAA520",
+  "hoehe": "678 m",
+  "einwohner": "2.300",
+  "tags": [
+    "kultur",
+    "geschichte",
+    "familie",
+    "wandern"
+  ],
+  "status": "published",
+  "bezirk": "lienz",
+  "bilder": [
+    {
+      "url": "/images/orte/doelsach/hero_1.png",
+      "alt": "Dölsach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/doelsach/hero_1.png",
+  "koordinaten": {
+    "lat": "46.8257",
+    "lng": "12.8410"
+  },
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Römermuseum Aguntum",
+      "beschreibung": "Archäologischer Park mit Überresten der römischen Stadt Aguntum in Dölsach.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Tristacher See",
+      "beschreibung": "Idyllischer Badesee mit klarem Wasser und Blick auf die Lienzer Dolomiten.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burg in Lienz mit Museum, Kunstsammlungen und Aussichtsturm.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Hochstein",
+      "beschreibung": "Aussichtsberg mit Panoramablick und familienfreundlichen Wanderwegen oberhalb von Dölsach.",
+      "typ": "natur"
+    }
+  ],
+  "kategorie": "marktgemeinde"
+}

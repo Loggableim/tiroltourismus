@@ -1,0 +1,25 @@
+{
+  "name": "Kuckuck",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original form. So we keep Tirol, Kaiserschmarrn, Tiroler Gröstl, etc. Also keep \"Kuckuck\" as is. So translation: \"Das Kuckuck in Osttirol ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt.\" -> \"A Kuckuck Osttirolban egy népszerű étterem, amely gazdag étlapjával és regionális vendégszeretetével kényezteti vendégeit.\" Keep Tiroler Gröstl, Kaiserschmarrn. \"Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten – von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern.\" -> \"Az étlap gondosan válogatott ételeket kínál – klasszikus Tiroler specialitásoktól, mint a Tiroler Gröstl és a Kaiserschmarrn, egészen a nemzetközi klasszikusokig.\" \"Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten.\" -> \"A csapat különösen nagy hangsúlyt fektet a friss, regionális alapanyagok használatára.\" \"Das gemütliche Ambiente und der aufmerksame Service machen jeden Besuch zu einem kulinarischen Genuss.\" -> \"A kényelmes hangulat és a figyelmes kiszolgálás minden látogatást kulináris élménnyé tesz.\" \"Ob für ein romantisches Dinner, ein Geschäftsessen oder einen geselligen Abend mit Freunden – hier ist man jederzeit willkommen.\" -> \"Akár romantikus vacsorára, üzleti étkezésre vagy baráti társasági estére – itt mindig vendégül látják.\" Ensure tags remain. Let's produce final.assistantfinal<p>A <strong>Kuckuck</strong> Osttirolban egy népszerű étterem, amely gazdag étlapjával és regionális vendégszeretetével kényezteti vendégeit. Az étlap gondosan válogatott ételeket kínál – klasszikus Tiroler specialitásoktól, mint a Tiroler Gröstl és a Kaiserschmarrn, egészen a nemzetközi klasszikusokig. A csapat különösen nagy hangsúlyt fektet a friss, regionális alapanyagok használatára. A kényelmes hangulat és a figyelmes kiszolgálás minden látogatást kulináris élménnyé tesz. Akár romantikus vacsorára, üzleti étkezésre vagy baráti társasági estére – itt mindig vendégül látják.</p>",
+  "ort": "",
+  "region": "osttirol",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro",
+    "coffee_shop"
+  ],
+  "koordinaten": {
+    "lat": 47.001199,
+    "lng": 12.5380806
+  },
+  "status": "published"
+}

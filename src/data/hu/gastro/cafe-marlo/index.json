@@ -1,0 +1,24 @@
+{
+  "name": "Cafe Marlo",
+  "emoji": "☕",
+  "farbe": "#FF6B35",
+  "kategorie": "cafe",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original. The text is about Cafe Marlo in Stubaital. Place names: Stubaital, Tirol, Innsbruck, etc. But only Stubaital appears. Keep it. Also keep culinary terms: Kaffeespezialitäten, hausgemachten Kuchen, kleine Snacks, österreichische Kaffeekultur, cremige Verlängerter, milde Melange, Mehlspeisen, Konditorei. These should remain in German. So Hungarian translation but keep those terms. Also keep tags <p>, <strong>. So produce Hungarian text with those terms. Let's translate:\n\n\"Das Cafe Marlo in Stubaital ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.\"\n\nHungarian: \"A Cafe Marlo a Stubaitalban a tökéletes helyszín mindazok számára, akik egy kényelmes szünetet keresnek a mindennapokból. Ebben a szeretettel berendezett kávézóban a vendégek egy sokszínű kínálatot élveznek Kaffeespezialitäten, hausgemachten Kuchen és kleinen Snacks formájában. A hagyományos osztrák Kaffeekultur itt nagy szenvedéllyel van ápolva. Különösen népszerű a cremige Verlängerter és a milde Melange. Ezenkívül naponta friss Mehlspeisen kerülnek kínálatba a saját Konditorei-ből. A laza légkör és a kedves kiszolgálás miatt a kávézó kedvelt találkozóhely a helyiek és a vendégek számára.\"\n\nCheck for any German terms: Cafe Marlo, Stubaital, Kaffeespezialitäten, hausgemachten Kuchen, kleinen Snacks, österreichische Kaffeekultur, cremige Verlängerter, milde Melange, Mehlspeisen, Konditorei. All kept. Good.\n\nReturn with tags unchanged.assistantfinal<p>Az <strong>Cafe Marlo</strong> a Stubaitalban a tökéletes helyszín mindazok számára, akik egy kényelmes szünetet keresnek a mindennapokból. Ebben a szeretettel berendezett kávézóban a vendégek egy sokszínű kínálatot élveznek Kaffeespezialitäten, hausgemachten Kuchen és kleinen Snacks formájában. A hagyományos osztrák Kaffeekultur itt nagy szenvedéllyel van ápolva. Különösen népszerű a cremige Verlängerter és a milde Melange. Ezenkívül naponta friss Mehlspeisen kerülnek kínálatba a saját Konditorei-ből. A laza légkör és a kedves kiszolgálás miatt a kávézó kedvelt találkozóhely a helyiek és a vendégek számára.</p>",
+  "ort": "",
+  "region": "stubaital",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.1166608,
+    "lng": 11.3310041
+  },
+  "status": "published"
+}

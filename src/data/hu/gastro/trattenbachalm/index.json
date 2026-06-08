@@ -1,0 +1,25 @@
+{
+  "name": "Trattenbachalm",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate into natural Hungarian, but keep HTML tags unchanged, keep place names and culinary terms in German original form. So we keep Tirol, Kaiserschmarrn, Tiroler Gröstl, Trattenbachalm. Also keep <strong> tags. So we translate rest. Let's produce Hungarian translation.\n\nOriginal: \"Das Trattenbachalm in Jochberg ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende Atmosphäre für jeden Anlass. Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten – von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemütliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschäftliches Treffen – das Trattenbachalm heißt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service für einen rundum gelungenen Aufenthalt.\"\n\nTranslate: \"A Trattenbachalm Jochbergben egy népszerű étterem, amely gazdag étlapjával és regionális vendégszeretetével kényezteti vendégeit. A hangulat a hagyományos tiroli elemeket modern kényelemmel ötvözi, és minden alkalomra meghívó légkört teremt. Az étlap gondosan válogatott ételeket kínál – a klasszikus Tiroler Gröstl és Kaiserschmarrn-tól kezdve a nemzetközi klasszikusokig. A csapat különösen nagy hangsúlyt fektet a friss, helyi alapanyagok használatára a környékről. Legyen szó kényelmes, két főre szóló vacsoráról, családi ünneplésről vagy üzleti találkozóról – a Trattenbachalm szívélyesen üdvözli Önt, és figyelmes kiszolgálásával biztosítja a teljesen sikeres tartózkodást.\"\n\nWe need to keep HTML tags. So wrap in <p> ... </p>. Keep <strong> tags around Trattenbachalm. So final output:\n\n<p>... Hungarian ...</p>\n\nLet's produce.assistantfinal<p>A <strong>Trattenbachalm</strong> Jochbergben egy népszerű étterem, amely gazdag étlapjával és regionális vendégszeretetével kényezteti vendégeit. A hangulat a hagyományos tiroli elemeket modern kényelemmel ötvözi, és minden alkalomra meghívó légkört teremt. Az étlap gondosan válogatott ételeket kínál – a klasszikus <strong>Tiroler Gröstl</strong> és <strong>Kaiserschmarrn</strong>tól kezdve a nemzetközi klasszikusokig. A csapat különösen nagy hangsúlyt fektet a friss, helyi alapanyagok használatára a környékről. Legyen szó kényelmes, két főre szóló vacsoráról, családi ünneplésről vagy üzleti találkozóról – a <strong>Trattenbachalm</strong> szívélyesen üdvözli Önt, és figyelmes kiszolgálásával biztosítja a teljesen sikeres tartózkodást.</p>",
+  "ort": "Jochberg",
+  "region": "kitzbuehel",
+  "plz": "6373",
+  "adresse": "Trattenbachweg 4",
+  "telefon": "+43 5355 5089",
+  "email": "",
+  "webseite": "https://www.trattenbachalm.at/",
+  "preis": "€€",
+  "tags": [
+    "gastro",
+    "regional"
+  ],
+  "koordinaten": {
+    "lat": 47.3334783,
+    "lng": 12.3603949
+  },
+  "status": "published"
+}

@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import FilterBar from '../../../components/FilterBar.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+
+const LABELS = {
+  title: { de: 'Tirol Magazin', en: 'Tyrol Magazine', fr: 'Magazine du Tyrol', it: 'Rivista del Tirolo', es: 'Revista de Tirol', zh: '蒂罗尔杂志', nl: 'Tirol Tijdschrift', cs: 'Tyrolský magazín' },
+  desc: { de: 'Das Tirol Magazin: Inspiration für Deinen nächsten Urlaub in den Alpen.', en: 'The Tyrol Magazine: Inspiration for your next holiday in the Alps.', fr: 'Le Magazine du Tyrol: Inspiration pour vos prochaines vacances dans les Alpes.', it: 'La Rivista del Tirolo: Ispirazione per la vostra prossima vacanza nelle Alpi.', es: 'La Revista de Tirol: Inspiración para tus próximas vacaciones en los Alpes.', zh: '蒂罗尔杂志：为你的下一次阿尔卑斯假期提供灵感。', nl: 'Het Tirol Tijdschrift: Inspiratie voor je volgende vakantie in de Alpen.', cs: 'Tyrolský magazín: Inspirace pro vaši další dovolenou v Alpách.' },
+  heroSub: { de: 'Geschichten, Tipps & Inspirationen rund um Tirol.', en: 'Stories, tips & inspiration about Tyrol.', fr: 'Histoires, conseils & inspiration autour du Tyrol.', it: 'Storie, consigli & ispirazione sul Tirolo.', es: 'Historias, consejos e inspiración sobre Tirol.', zh: '关于蒂罗尔的故事、技巧和灵感。', nl: 'Verhalen, tips & inspiratie over Tirol.', cs: 'Příběhy, tipy a inspirace k Tyrolsku.' },
+  sectionLabel: { de: 'Aktuelle Beiträge', en: 'Latest Articles', fr: 'Derniers Articles', it: 'Ultimi Articoli', es: 'Últimos Artículos', zh: '最新文章', nl: 'Laatste Artikelen', cs: 'Nejnovější články' },
+  sectionTitle: { de: 'Stories aus den Bergen', en: 'Stories from the Mountains', fr: 'Histoires des Montagnes', it: 'Storie dalle Montagne', es: 'Historias de las Montañas', zh: '山间故事', nl: 'Verhalen uit de Bergen', cs: 'Příběhy z hor' },
+  sectionSub: { de: 'Neueste Geschichten, Tipps & Inspirationen rund um Ihren nächsten Tirol-Urlaub.', en: 'Latest stories, tips & inspiration for your next Tyrol holiday.', fr: 'Dernières histoires, conseils & inspiration pour vos prochaines vacances au Tyrol.', it: 'Ultime storie, consigli & ispirazione per la vostra prossima vacanza in Tirolo.', es: 'Últimas historias, consejos e inspiración para tus próximas vacaciones en Tirol.', zh: '为你下一次蒂罗尔假期准备的最新故事、技巧和灵感。', nl: 'Laatste verhalen, tips & inspiratie voor je volgende Tirol-vakantie.', cs: 'Nejnovější příběhy, tipy a inspirace pro vaši další dovolenou v Tyrolsku.' },
+  filterAria: { de: 'Magazin nach Kategorie filtern', en: 'Filter magazine by category', fr: 'Filtrer le magazine par catégorie', it: 'Filtra rivista per categoria', es: 'Filtrar revista por categoría', zh: '按类别筛选杂志', nl: 'Filter tijdschrift op categorie', cs: 'Filtrovat magazín podle kategorie' },
+  emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
+  emptyText: { de: 'Magazin-Beiträge werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Magazine articles are being added. Check back soon!', fr: 'Les articles du magazine sont en cours d\'ajout. Revenez bientôt!', it: 'Gli articoli della rivista sono in fase di inserimento. Torna presto!', es: 'Los artículos de la revista se están añadiendo. ¡Vuelve pronto!', zh: '杂志文章正在添加中。请稍后来看！', nl: 'Tijdschriftartikelen worden momenteel toegevoegd. Kom snel terug!', cs: 'Články magazínu se právě přidávají. Podívejte se brzy znovu!' },
+};
+
+const catLabel = {
+  allgemein: { de: 'Allgemein', en: 'General', fr: 'Général', it: 'Generale', es: 'General', zh: '综合', nl: 'Algemeen', cs: 'Obecné' },
+  tipps: { de: 'Tipps', en: 'Tips', fr: 'Conseils', it: 'Consigli', es: 'Consejos', zh: '提示', nl: 'Tips', cs: 'Tipy' },
+  reiseberichte: { de: 'Reiseberichte', en: 'Travel Reports', fr: 'Récits de Voyage', it: 'Resoconti di Viaggio', es: 'Reportajes de Viaje', zh: '旅行报告', nl: 'Reisverslagen', cs: 'Cestovní zprávy' },
+  interview: { de: 'Interview', en: 'Interview', fr: 'Interview', it: 'Intervista', es: 'Entrevista', zh: '访谈', nl: 'Interview', cs: 'Rozhovor' },
+  hintergrund: { de: 'Hintergrund', en: 'Background', fr: 'Contexte', it: 'Background', es: 'Trasfondo', zh: '背景', nl: 'Achtergrond', cs: 'Pozadí' },
+};
+const catEmoji = { allgemein: '📰', tipps: '💡', reiseberichte: '✈️', interview: '🎙️', hintergrund: '🔍' };
+
+const articles = readCollection('magazin', locale);
+const published = articles.filter(a => isPublished(a.entry)).sort((a, b) => (b.entry.datum || '').localeCompare(a.entry.datum || ''));
+const featured = published.slice(0, 1);
+const secondary = published.slice(1, 3);
+const rest = published.slice(3);
+const pref = localePrefix(locale);
+
+const cats = [...new Set(published.map(a => a.entry.kategorie).filter(Boolean))];
+
+function formatDate(d) {
+  if (!d) return '';
+  try { return new Date(d + 'T00:00:00').toLocaleDateString(locale === 'de' ? 'de-DE' : locale === 'en' ? 'en-US' : locale === 'fr' ? 'fr-FR' : locale === 'it' ? 'it-IT' : locale === 'es' ? 'es-ES' : 'de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
+  catch { return d; }
+}
+
+const siteURL = 'https://www.tirol-tourismus.at';
+const magazinItemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: LABELS.title[locale] || LABELS.title.de,
+  description: LABELS.desc[locale] || LABELS.desc.de,
+  url: `${siteURL}${pref}/magazin/`,
+  numberOfItems: published.length,
+  itemListElement: published.slice(0, 30).map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: a.entry.titel,
+    url: `${siteURL}${pref}/magazin/${a.slug}/`,
+  })),
+};
+---
+
+<BaseLayout title={LABELS.title[locale] || LABELS.title.de} description={LABELS.desc[locale] || LABELS.desc.de} locale={locale} jsonld={magazinItemList}>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: LABELS.title[locale] || LABELS.title.de }]} />
+    </div>
+
+    <Hero title={LABELS.title[locale] || LABELS.title.de} subtitle={LABELS.heroSub[locale] || LABELS.heroSub.de} emoji="📰" size="md">
+      <div slot="actions" class="hero-actions">
+        <span class="hero-urgency">📰 {published.length} {locale === 'de' ? 'Beiträge' : locale === 'cs' ? 'Články' : locale === 'nl' ? 'Artikelen' : 'Articles'}</span>
+      </div>
+    </Hero>
+
+    {published.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader label={LABELS.sectionLabel[locale] || LABELS.sectionLabel.de} title={LABELS.sectionTitle[locale] || LABELS.sectionTitle.de} sub={LABELS.sectionSub[locale] || LABELS.sectionSub.de} />
+
+          {cats.length > 1 && (
+            <FilterBar keyName="cat" ariaLabel={LABELS.filterAria[locale] || LABELS.filterAria.de} options={cats.map(c => ({ value: c, label: `${catEmoji[c] || '📄'} ${(catLabel[c] && (catLabel[c][locale] || catLabel[c].de)) || c}` }))} />
+          )}
+
+          <div class="magazin-grid">
+            {published.map(a => (
+              <ArticleCard
+                titel={a.entry.titel}
+                slug={a.slug}
+                teaser={a.entry.teaser || a.entry.kurzbeschreibung}
+                datum={formatDate(a.entry.datum)}
+                kategorie={a.entry.kategorie}
+                hero_bild={a.entry.hero_bild}
+                linkPrefix={`${pref}/magazin/`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">📰</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{LABELS.emptyTitle[locale] || LABELS.emptyTitle.de}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{LABELS.emptyText[locale] || LABELS.emptyText.de}</p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .magazin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 0 80px}
+  @media(max-width:968px){.magazin-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.magazin-grid{grid-template-columns:1fr}}
+  .hero-actions{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:20px}
+  .hero-urgency{font-size:13px;font-weight:600;color:var(--text2);letter-spacing:.5px}
+</style>

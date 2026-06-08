@@ -349,22 +349,22 @@ def step_image(slug, data):
     return False, data
 
 def step_translate(slug, data):
-    """Step 3: Beschreibung in alle Sprachen übersetzen"""
+    """Step 3: Beschreibung in alle Sprachen übersetzen (überschreibt bestehende Dateien)"""
     beschreibung = data.get('beschreibung', '')
     if not beschreibung:
+        print("  ℹ️  Keine Beschreibung zum Übersetzen vorhanden")
         return
     
     for lang in LANGUAGES:
         lang_dir = BASE / "src" / "data" / lang / "orte" / slug
         lang_file = lang_dir / "index.json"
         
-        if lang_file.exists():
-            continue  # Skip if already translated
+        # Create directory (overwrite existing files)
+        lang_dir.mkdir(parents=True, exist_ok=True)
         
         # Translate beschreibung
         trans = translate_text(beschreibung, lang)
         if trans:
-            lang_dir.mkdir(parents=True, exist_ok=True)
             lang_data = {
                 "name": data.get('name'),
                 "slug": slug,
@@ -382,13 +382,34 @@ def step_translate(slug, data):
             }
             lang_file.write_text(json.dumps(lang_data, indent=2, ensure_ascii=False), encoding='utf-8')
             print(f"  ✅ {lang}: übersetzt")
+        else:
+            print(f"  ⚠️  {lang}: Übersetzung fehlgeschlagen — überspringe")
 
 def step_commit(slug):
     """Step 4: Git Commit für diesen Ort"""
+    # Ensure git is configured
+    for cfg in [("user.name", "Tirol Bot"), ("user.email", "bot@tiroltourismus.com")]:
+        chk = subprocess.run(["git", "config", cfg[0]], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        if not chk.stdout.strip():
+            subprocess.run(["git", "config", cfg[0], cfg[1]], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+            print(f"  🔧 Git {cfg[0]} gesetzt: {cfg[1]}")
+    
+    # Add ALL related files — DE source + translations + images
+    add_patterns = [
+        f"src/data/orte/{slug}/",
+        f"src/data/*/orte/{slug}/",
+        f"public/images/orte/{slug}/",
+    ]
     result = subprocess.run(
-        ["git", "add", "-A", f"src/data/*/orte/{slug}/", f"public/images/orte/{slug}/"],
+        ["git", "add", "-A"] + add_patterns,
         capture_output=True, text=True, cwd=str(BASE), timeout=30
     )
+    if result.returncode != 0:
+        print(f"  ⚠️  git add Fehler: {result.stderr[:300]}")
+        return False
+    staged_count = len([l for l in result.stdout.split(chr(10)) if l.strip()]) if result.stdout.strip() else 0
+    if staged_count > 0:
+        print(f"  ✅ git add: {staged_count} datei(en)")
     
     result2 = subprocess.run(
         ["git", "commit", "-m", f"[orte] ✨ {slug}: Beschreibung, Bilder & Infos"],
@@ -396,19 +417,52 @@ def step_commit(slug):
     )
     
     if "nothing to commit" in result2.stdout + result2.stderr:
-        print("  ℹ️  Nichts zu committen")
+        print("  ℹ️  Nichts zu committen (keine Änderungen)")
         return False
     
-    push = subprocess.run(
-        ["git", "push", "origin", "master"],
-        capture_output=True, text=True, cwd=str(BASE), timeout=60
-    )
+    if result2.returncode != 0:
+        print(f"  ⚠️  Commit-Fehler: {result2.stderr[:300]}")
+        diff = subprocess.run(["git", "diff", "--cached", "--stat"], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        print(f"  📊 Staged: {diff.stdout.strip() or 'nichts'}")
+        return False
+    
+    print(f"  ✅ Commit: {result2.stdout.split(chr(10))[0] if result2.stdout else 'ok'}")
+    
+    # Push with optional GITHUB_TOKEN for HTTPS auth
+    push_cmd = ["git", "push", "origin", "master"]
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
+        # Try loading from .env
+        env_path = BASE / ".env"
+        if env_path.exists():
+            for line in env_path.read_text().split(chr(10)):
+                if line.startswith("GITHUB_TOKEN="):
+                    token = line.strip().split("=", 1)[1]
+    
+    if token:
+        # Rewrite remote URL to include token for auth
+        remote_url = "https://Loggableim:" + token + "@github.com/Loggableim/tiroltourismus.git"
+        subprocess.run(["git", "remote", "set-url", "origin", remote_url],
+                       capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        print(f"  🔑 GITHUB_TOKEN konfiguriert für Push")
+    
+    push = subprocess.run(push_cmd, capture_output=True, text=True, cwd=str(BASE), timeout=60)
     
     if push.returncode == 0:
         print(f"  🚀 Gepusht!")
         return True
     else:
-        print(f"  ⚠️  Push-Fehler: {push.stderr[:200]}")
+        print(f"  ⚠️  Push-Fehler: {push.stderr[:300]}")
+        # Try to detect the branch name and retry
+        branch_chk = subprocess.run(["git", "branch", "--show-current"], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        branch = branch_chk.stdout.strip()
+        if branch and branch != "master":
+            print(f"  🔄 Versuche Push zu '{branch}' statt 'master'...")
+            push2 = subprocess.run(["git", "push", "origin", branch], capture_output=True, text=True, cwd=str(BASE), timeout=60)
+            if push2.returncode == 0:
+                print(f"  🚀 Gepusht auf {branch}!")
+                return True
+            print(f"  ⚠️  Push auf {branch} auch fehlgeschlagen: {push2.stderr[:200]}")
         return False
 
 # ═══════════════════════════════════════════

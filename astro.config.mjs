@@ -9,6 +9,7 @@ const LOCALE_PATTERN = /^\/(en|fr|it|es|zh|nl|cs)(\/|$)/;
 export default defineConfig({
   integrations: [react(), sitemap({
     filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
+    entryLimit: 10000,
     serialize: (entry) => {
       const path = entry.url;
       const sitePrefix = 'https://tiroltourismus.com';

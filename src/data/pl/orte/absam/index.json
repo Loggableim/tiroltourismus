@@ -1,0 +1,53 @@
+{
+  "name": "Absam",
+  "slug": "absam",
+  "region": "innsbruck",
+  "kurzbeschreibung": "Znany dzięki Bazylika St. Michael i światowej sławy rzemiosło struniarstwa Absamer położonemu u stóp Haller Salinenberge.",
+  "emoji": "🏘️",
+  "farbe": "#8B4513",
+  "hoehe": "632 m",
+  "einwohner": "7.200",
+  "tags": [
+    "kultur",
+    "geschichte",
+    "wandern",
+    "familie"
+  ],
+  "status": "published",
+  "bezirk": "innsbruck-land",
+  "bilder": [
+    {
+      "url": "/images/orte/absam/hero_1.png",
+      "alt": "Absam — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/absam/hero_1.png",
+  "koordinaten": {
+    "lat": "47.2965",
+    "lng": "11.5051"
+  },
+  "beschreibung": "<p>Willkommen in Absam, einem bezaubernden Dorf auf 632 Metern Höhe, eingebettet in die sanften Hänge der Haller Salinenberge. Nur einen Steinwurf von Innsbruck entfernt, vereint dieser Ort auf einzigartige Weise tief verwurzelte Kultur, lebendige Geschichte und atemberaubende Natur. Das Herz der Gemeinde schlägt in der prächtigen Basilika St. Michael, einem barocken Juwel und bedeutenden Wallfahrtsort, dessen Kuppel weit über das Tal grüßt und zur inneren Einkehr einlädt.</p>\n\n<p>Absam ist aber auch die Wiege einer ganz besonderen Handwerkskunst: dem weltberühmten Geigenbau. Lassen Sie sich von der filigranen Arbeit der Meister verzaubern, deren Instrumente auf den Bühnen der Welt erklingen, und spüren Sie die jahrhundertealte Tradition, die hier noch lebendig ist. Jenseits der Kultur entfaltet sich eine Landschaft, die zum Wandern und Verweilen einlädt – von familienfreundlichen Spaziergängen entlang des alten Salzwegs bis zu anspruchsvollen Touren auf die umliegenden Gipfel mit grandiosem Panorama.</p>\n\n<p>Hier, wo Geschichte auf Gegenwart trifft und das Bergpanorama täglich neue Perspektiven schenkt, finden sowohl Erholungssuchende als auch aktive Familien ihr Paradies. Erleben Sie in Absam tirolische Gastlichkeit, gepaart mit kulturellem Reichtum und unberührter Natur – ein Ort, der Sie immer wieder von Neuem überraschen wird.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Basilika St. Michael",
+      "beschreibung": "Wichtiger Wallfahrtsort mit dem bekannten Gnadenbild der Maria mit dem geneigten Haupt.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Heimatmuseum Absam",
+      "beschreibung": "Museum zur regionalen Geschichte, Volkskunde und zum Klosterleben in Absam.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Absamer Moos",
+      "beschreibung": "Naturschutzgebiet mit seltenen Pflanzen und Vogelarten, ideal für Spaziergänge.",
+      "typ": "natur"
+    },
+    {
+      "name": "Halltal",
+      "beschreibung": "Historisches Tal mit alten Bergwerken und schönen Wanderwegen nahe Absam.",
+      "typ": "ausflug"
+    }
+  ],
+  "kategorie": "marktgemeinde"
+}

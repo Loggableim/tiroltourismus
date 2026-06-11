@@ -12,20 +12,20 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params;
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
 
-const LABELS = {
+const labels = {
   title: { de: 'Unterkünfte in Tirol', en: 'Accommodations in Tyrol', fr: 'Hébergements au Tyrol', it: 'Alloggi in Tirolo', es: 'Alojamientos en Tirol', zh: '蒂罗尔住宿', nl: 'Accommodaties in Tirol', cs: 'Ubytování v Tyrolsku' },
-  desc: { de: 'Finde Dein Zuhause in Tirol. Hotels, Ferienwohnungen & Bauernhöfe – von luxuriös bis urig.', en: 'Find your home in Tyrol. Hotels, holiday apartments & farmhouses – from luxurious to rustic.', fr: 'Trouvez votre chez-vous au Tyrol. Hôtels, appartements de vacances & fermes – du luxe au rustique.', it: 'Trova la tua casa in Tirolo. Hotel, appartamenti per vacanse & aziende agricole – dal lusso al rustico.', es: 'Encuentra tu hogar en Tirol. Hoteles, apartamentos vacacionales & casas rurales – de lujoso a rústico.', zh: '在蒂罗尔找到你的家。酒店、度假公寓和农场——从豪华到质朴。', nl: 'Vind je thuis in Tirol. Hotels, vakantieappartementen & boerderijen – van luxe tot rustiek.', cs: 'Najděte svůj domov v Tyrolsku. Hotely, pronájmy & farmy – od luxusních po rustikální.' },
-  heroSub: { de: 'Von luxuriösen Wellness-Hotels über urige Berghütten zu familiengeführten Bauernhöfen – hier wirst Du fündig.', en: 'From luxurious wellness hotels to rustic mountain huts and family-run farmhouses – you\'ll find it here.', fr: 'Des hôtels wellness de luxe aux cabanes de montagne rustiques en passant par les fermes familiales – vous trouverez votre bonheur.', it: 'Da lussuosi hotel wellness a rustiche baite e aziende agricole a conduzione familiare – qui troverai la tua soluzione.', es: 'Desde lujosos hoteles wellness hasta rústicas cabañas de montaña y casas rurales familiares – aquí lo encontrarás.', zh: '从豪华养生酒店到质朴的山间小屋和家庭经营的农场——你在这里会找到。', nl: 'Van luxe wellnesshotels tot rustieke berghutten en familieboerderijen – hier vind je wat je zoekt.', cs: 'Od luxusních wellness hotelů přes rustikální horské chaty po rodinné farmě – tady to najdete.' },
-  sectionLabel: { de: 'Übernachten & Träumen', en: 'Stay & Dream', fr: 'Dormir & Rêver', it: 'Dormire & Sognare', es: 'Dormir & Soñar', zh: '住宿与梦想', nl: 'Verblijf & Dromen', cs: 'Ubytování & Sny' },
+  desc: { de: 'Finde Dein Zuhause in Tirol. Hotels, Ferienwohnungen & Bauernhöfe – von luxuriös bis urig.', en: 'Find your home in Tyrol. Hotels, holiday apartments & farmhouses – from luxurious to rustic.', fr: 'Trouvez votre chez-vous au Tyrol. Hôtels, appartements de vacances & fermes – du luxe au rustique.', it: 'Trova la tua casa in Tirolo. Hotel, appartamenti per vacanse & fattorie – dal lusso al rustico.', es: 'Encuentra tu hogar en Tirol. Hoteles, apartamentos vacacionales & casas rurales – de lujoso a rústico.', zh: '在蒂罗尔找到您的家。酒店、度假公寓和农舍——从豪华到乡村。', nl: 'Vind jouw thuis in Tirol. Hotels, vakantieappartementen & boerderijen – van luxe tot rustiek.', cs: 'Najděte svůj domov v Tyrolsku. Hotely, prázdninové byty & farmy – od luxusních po rustikální.' },
+  heroSub: { de: 'Von luxuriösen Wellness-Hotels über urige Berghütten zu familiengeführten Bauernhöfen – hier wirst Du fündig.', en: 'From luxurious wellness hotels to rustic mountain huts to family-run farmhouses – you\'ll find it here.', fr: 'Des hôtels wellness de luxe aux cabanes de montagne rustiques en passant par les fermes familiales – vous trouverez votre bonheur.', it: 'Da hotel wellness di lusso a baite montane rustiche a fattorie a conduzione familiare – qui troverai quello che cerchi.', es: 'Desde lujosos hoteles wellness hasta rústicas cabañas de montaña y casas rurales familiares – lo encontrarás aquí.', zh: '从豪华养生酒店到乡村山间小屋再到家庭经营的农舍——您会在这里找到。', nl: 'Van luxe wellnesshotels tot rustieke berghutten tot familiebedrijven – hier vind je wat je zoekt.', cs: 'Od luxusních wellness hotelů přes rustikální horské chaty po rodinné farmě – tady to najdete.' },
+  sectionLabel: { de: 'Übernachten & Träumen', en: 'Stay & Dream', fr: 'Dormir & Rêver', it: 'Dormire & Sognare', es: 'Hospedarse & Soñar', zh: '住宿与梦想', nl: 'Verblijven & Dromen', cs: 'Ubytování & sny' },
   sectionTitle: { de: 'Unterkünfte in Tirol', en: 'Accommodations in Tyrol', fr: 'Hébergements au Tyrol', it: 'Alloggi in Tirolo', es: 'Alojamientos en Tirol', zh: '蒂罗尔住宿', nl: 'Accommodaties in Tirol', cs: 'Ubytování v Tyrolsku' },
-  sectionSub: { de: 'Von ★★★★★ Luxusresorts bis zu gemütlichen Bauernhöfen – finde den Ort, der zu Dir passt.', en: 'From ★★★★★ luxury resorts to cozy farmhouses – find the place that suits you.', fr: 'Des resorts de luxe ★★★★★ aux fermes confortables – trouvez l\'endroit qui vous convient.', it: 'Dai resort di lusso ★★★★★ alle accoglienti aziende agricole – trova il posto che fa per te.', es: 'Desde resorts de lujo ★★★★★ hasta acogedoras casas rurales – encuentra el lugar que se adapta a ti.', zh: '从★★★★★豪华度假村到舒适的农场——找到适合你的地方。', nl: 'Van ★★★★★ luxe resorts tot gezellige boerderijen – vind de plek die bij je past.', cs: 'Od ★★★★★ luxusních resortů po útulné farmy – najděte místo, které vám vyhovuje.' },
-  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '概览', nl: 'In één oogopslag', cs: 'Na první pohled' },
-  filterType: { de: 'Unterkünfte nach Typ filtern', en: 'Filter accommodations by type', fr: 'Filtrer les hébergements par type', it: 'Filtra alloggi per tipo', es: 'Filtrar alojamientos por tipo', zh: '按类型筛选住宿', nl: 'Filter accommodaties op type', cs: 'Filtrovat ubytování podle typu' },
-  filterTier: { de: 'Unterkünfte nach Kategorie filtern', en: 'Filter accommodations by tier', fr: 'Filtrer les hébergements par catégorie', it: 'Filtra alloggi per categoria', es: 'Filtrar alojamientos por categoría', zh: '按等级筛选住宿', nl: 'Filter accommodaties op niveau', cs: 'Filtrovat ubytování podle kategorie' },
-  unterkuenfteLabel: { de: 'Unterkünfte', en: 'Accommodations', fr: 'Hébergements', it: 'Alloggi', es: 'Alojamientos', zh: '住宿', nl: 'Accommodaties', cs: 'Ubytování' },
+  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '一览', nl: 'In één oogopslag', cs: 'Na první pohled' },
   emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
-  emptyText: { de: 'Unterkünfte werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Accommodations are being added. Check back soon!', fr: 'Les hébergements sont en cours d\'ajout. Revenez bientôt!', it: 'Gli alloggi sono in fase di inserimento. Torna presto!', es: 'Los alojamientos se están añadiendo. ¡Vuelve pronto!', zh: '住宿正在添加中。请稍后来看！', nl: 'Accommodaties worden momenteel toegevoegd. Kom snel terug!', cs: 'Ubytování se právě připravují. Podívejte se brzy znovu!' },
+  emptyText: { de: 'Unterkünfte werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Accommodations are being added. Check back soon!', fr: 'Les hébergements sont en cours d\'ajout. Revenez bientôt!', it: 'Gli alloggi sono in fase di inserimento. Torna presto!', es: 'Los alojamientos se están añadiendo. ¡Vuelve pronto!', zh: '住宿正在添加中。请稍后再来查看！', nl: 'Accommodaties worden momenteel toegevoegd. Kom snel terug!', cs: 'Ubytování se právě přidávají. Podívejte se brzy znovu!' },
+  filterType: { de: 'Nach Typ filtern', en: 'Filter by type', fr: 'Filtrer par type', it: 'Filtra per tipo', es: 'Filtrar por tipo', zh: '按类型筛选', nl: 'Filter op type', cs: 'Filtrovat podle typu' },
+  filterTier: { de: 'Nach Kategorie filtern', en: 'Filter by category', fr: 'Filtrer par catégorie', it: 'Filtra per categoria', es: 'Filtrar por categoría', zh: '按类别筛选', nl: 'Filter op categorie', cs: 'Filtrovat podle kategorie' },
 };
 
 const unterkuenfte = readCollection('unterkuenfte', locale).filter(u => isPublished(u.entry));
@@ -34,37 +34,29 @@ const sorted = [...unterkuenfte].sort((a, b) => {
   const order = { gold: 0, silver: 1, basic: 2 };
   return (order[a.entry.tier || 'basic'] || 2) - (order[b.entry.tier || 'basic'] || 2);
 });
-const pref = localePrefix(locale);
 
 const siteURL = 'https://www.tirol-tourismus.at';
 const accommodationItemList = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: LABELS.title[locale] || LABELS.title.de,
-  description: LABELS.desc[locale] || LABELS.desc.de,
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
   url: `${siteURL}${pref}/unterkuenfte/`,
   numberOfItems: unterkuenfte.length,
-  itemListElement: sorted.slice(0, 30).map((u, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: u.entry.name,
-    url: `${siteURL}${pref}/unterkuenfte/${u.slug}/`,
-  })),
+  itemListElement: sorted.slice(0, 30).map((u, i) => ({ '@type': 'ListItem', position: i + 1, name: u.entry.name, url: `${siteURL}${pref}/unterkuenfte/${u.slug}/` })),
 };
 ---
 
-<BaseLayout title={LABELS.title[locale] || LABELS.title.de} description={LABELS.desc[locale] || LABELS.desc.de} locale={locale} jsonld={accommodationItemList}>
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={accommodationItemList}>
   <main>
     <div class="container">
       <div class="breadcrumbs">
-        <a href={pref || '/'}>Start</a><span class="sep">›</span><span>{LABELS.unterkuenfteLabel[locale] || LABELS.unterkuenfteLabel.de}</span>
+        <a href={pref || '/'}>Startseite</a><span class="sep">›</span><span>{t(labels.title)}</span>
       </div>
     </div>
 
     <section class="page-header">
       <div class="container">
-        <h1 class="reveal">{LABELS.title[locale] || LABELS.title.de}</h1>
-        <p class="reveal r2">{LABELS.heroSub[locale] || LABELS.heroSub.de}</p>
+        <h1 class="reveal">{t(labels.title)}</h1>
+        <p class="reveal r2">{t(labels.heroSub)}</p>
       </div>
     </section>
 
@@ -72,12 +64,11 @@ const accommodationItemList = {
       <SectionMap
         markers={unterkunftMitCoords.map(u => ({
           lat: u.entry.koordinaten.lat, lng: u.entry.koordinaten.lng,
-          label: u.entry.name,
-          emoji: u.entry.typ === 'camping' ? '🏕️' : (u.entry.emoji || '🏨'),
+          label: u.entry.name, emoji: u.entry.emoji || '🏨',
           href: `${pref}/unterkuenfte/${u.slug}/`, category: 'unterkuenfte',
         }))}
-        label={`${unterkunftMitCoords.length} ${LABELS.unterkuenfteLabel[locale] || LABELS.unterkuenfteLabel.de}`}
-        title={LABELS.mapTitle[locale] || LABELS.mapTitle.de}
+        label={`${unterkunftMitCoords.length} ${t(labels.title)}`}
+        title={t(labels.mapTitle)}
         height="380px" scrollWheelZoom={true} filterable={true}
       />
     )}
@@ -85,29 +76,24 @@ const accommodationItemList = {
     {sorted.length > 0 ? (
       <section class="section">
         <div class="container">
-          <SectionHeader label={LABELS.sectionLabel[locale] || LABELS.sectionLabel.de} title={LABELS.sectionTitle[locale] || LABELS.sectionTitle.de} sub={LABELS.sectionSub[locale] || LABELS.sectionSub.de} />
+          <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.heroSub)} />
           <div class="filter-row reveal r1">
-            <FilterBar keyName="typ" ariaLabel={LABELS.filterType[locale] || LABELS.filterType.de} options={[
+            <FilterBar keyName="typ" ariaLabel={t(labels.filterType)} options={[
               { value: 'hotel', label: '🏨 Hotel' },
               { value: 'ferienwohnung', label: '🏠 Ferienwohnung' },
               { value: 'camping', label: '⛺ Camping' },
               { value: 'bauernhof', label: '🐄 Bauernhof' },
               { value: 'jugendherberge', label: '🎒 Jugendherberge' },
             ]} />
-            <FilterBar keyName="tier" compact ariaLabel={LABELS.filterTier[locale] || LABELS.filterTier.de} options={[
+            <FilterBar keyName="tier" compact ariaLabel={t(labels.filterTier)} options={[
               { value: 'gold', label: '⭐ Gold' },
               { value: 'silver', label: 'Silber' },
               { value: 'basic', label: 'Basic' },
             ]} />
           </div>
           <div class="uk-grid">
-            {sorted.map((u) => (
-              <AccommodationCard
-                name={u.entry.name} slug={u.slug} typ={u.entry.typ}
-                ort={u.entry.ort} sterne={u.entry.sterne}
-                preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'}
-                data-tier={u.entry.tier || 'basic'}
-              />
+            {sorted.map((u, i) => (
+              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} />
             ))}
           </div>
         </div>
@@ -116,8 +102,8 @@ const accommodationItemList = {
       <section class="section">
         <div class="container" style="text-align:center;padding:60px 0">
           <div style="font-size:64px;margin-bottom:16px">🏨</div>
-          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{LABELS.emptyTitle[locale] || LABELS.emptyTitle.de}</h2>
-          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{LABELS.emptyText[locale] || LABELS.emptyText.de}</p>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(labels.emptyText)}</p>
         </div>
       </section>
     )}

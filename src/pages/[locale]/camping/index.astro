@@ -12,21 +12,23 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params;
 const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
 
-const LABELS = {
-  title: { de: 'Campingplätze in Tirol', en: 'Camping in Tyrol', fr: 'Camping au Tyrol', it: 'Campeggi in Tirolo', es: 'Camping en Tirol', zh: '蒂罗尔露营', nl: 'Camping in Tirol', cs: 'Kempování v Tyrolsku' },
-  desc: { de: 'Entdecke die schönsten Campingplätze in Tirol. Von Alpencamping bis Zeltplatz – Dein Platz in der Natur.', en: 'Discover the best campsites in Tyrol. From alpine camping to tent pitches – your spot in nature.', fr: 'Découvrez les plus beaux campings du Tyrol. Du camping alpin aux emplacements de tente – votre place dans la nature.', it: 'Scopri i migliori campeggi del Tirolo. Dal campeggio alpino alle piaze per tenda – il tuo posto in natura.', es: 'Descubre los mejores campings de Tirol. Desde camping alpino hasta parcelas para tiendas – tu lugar en la naturaleza.', zh: '探索蒂罗尔最好的露营地。从高山露营到帐篷营地——你在自然中的去处。', nl: 'Ontdek de beste campings in Tirol. Van alpien camping tot tentplaats – je plek in de natuur.', cs: 'Objevte nejkrásnější kempy v Tyrolsku. Od alpských kempů po stanová místa – vaše místo v přírodě.' },
-  heroSub: { de: 'Von Alpencamping mit Bergpanorama bis zu familienfreundlichen Plätzen am See – hier findest Du Deinen Stellplatz in der Natur.', en: 'From alpine camping with mountain panoramas to family-friendly lakeside sites – find your pitch in nature.', fr: 'Du camping alpin avec panorama montagneux aux emplacements familiaux au bord du lac – trouvez votre place dans la nature.', it: 'Dal campeggio alpino con panorama montano ai siti familiari sul lago – trova il tuo posto in natura.', es: 'Desde camping alpino con panorama de montaña hasta sitios familiares junto al lago – encuentra tu lugar en la naturaleza.', zh: '从山景高山露营到家庭友好的湖畔营地——在自然中找到你的位置。', nl: 'Van alpien met bergpanorama tot familievriendelijke plekken aan het meer – vind je standplaats in de natuur.', cs: 'Od alpských kempů s horským panorama po rodinná místa u jezera – najděte své místo v přírodě.' },
-  sectionLabel: { de: 'Übernachten in der Natur', en: 'Sleep Under the Stars', fr: 'Dormir à la Belle Étoile', it: 'Dormire sotto le Stelle', es: 'Dormir Bajo las Estrellas', zh: '在星空下入睡', nl: 'Slapen onder de Sterren', cs: 'Spáči pod Hvězdami' },
-  sectionTitle: { de: 'Campingplätze', en: 'Campsites', fr: 'Campings', it: 'Campeggi', es: 'Campings', zh: '露营地', nl: 'Campings', cs: 'Kempy' },
-  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '概览', nl: 'In één oogopslag', cs: 'Na první pohled' },
-  campingLabel: { de: 'Campingplätze', en: 'Campsites', fr: 'Campings', it: 'Campeggi', es: 'Campings', zh: '露营地', nl: 'Campings', cs: 'Kempy' },
+const labels = {
+  title: { de: 'Campingplätze in Tirol', en: 'Camping in Tyrol', fr: 'Camping au Tyrol', it: 'Campeggi in Tirolo', es: 'Camping en Tirol', zh: '蒂罗尔露营', nl: 'Campings in Tirol', cs: 'Kempy v Tyrolsku' },
+  desc: { de: 'Entdecke die schönsten Campingplätze in Tirol. Von Alpencamping bis Zeltplatz – Dein Platz in der Natur.', en: 'Discover the most beautiful campsites in Tyrol. From alpine camping to tent pitches – your spot in nature.', fr: 'Découvrez les plus beaux campings du Tyrol. Du camping alpin aux emplacements de tentes – votre place dans la nature.', it: 'Scopri i campeggi più belli del Tirolo. Dal campeggio alpino alle piaze per tende – il tuo posto in natura.', es: 'Descubre los campings más bellos de Tirol. Desde camping alpino hasta parcelas para tiendas – tu lugar en la naturaleza.', zh: '发现蒂罗尔最美丽的露营地。从高山露营到帐篷营地——你在自然中的位置。', nl: 'Ontdek de mooiste campings in Tirol. Van alpiencamping tot tentplekken – jouw plek in de natuur.', cs: 'Objevte nejkrásnější kempy v Tyrolsku. Od alpského kempování po stanoviště – vaše místo v přírodě.' },
+  heroSub: { de: 'Von Alpencamping mit Bergpanorama bis zu familienfreundlichen Plätzen am See – hier findest Du Deinen Stellplatz in der Natur.', en: 'From alpine camping with mountain panoramas to family-friendly sites by the lake – find your pitch in nature.', fr: 'Du camping alpin avec panorama montagneux aux emplacements familiaux au bord du lac – trouvez votre place dans la nature.', it: 'Dal campeggio alpino con panorama montano ai siti familiari in riva al lago – trova il tuo posto in natura.', es: 'Desde camping alpino con panorama de montaña hasta sitios familiares junto al lago – encuentra tu lugar en la naturaleza.', zh: '从山景高山露营到湖边家庭友好营地——在自然中找到您的位置。', nl: 'Van alpiencamping met bergpanorama tot familiesites aan het meer – vind jouw plek in de natuur.', cs: 'Od alpského kempování s horským panorama po rodinné kempy u jezera – najděte své místo v přírodě.' },
+  sectionLabel: { de: 'Übernachten in der Natur', en: 'Sleeping Under the Stars', fr: 'Dormir en Plein Air', it: 'Dormire all\'Aperto', es: 'Dormir al Aire Libre', zh: '在星空下入睡', nl: 'Slapen in de Natuur', cs: 'Spaní v přírodě' },
+  sectionTitle: { de: 'Campingplätze in Tirol', en: 'Camping in Tyrol', fr: 'Camping au Tyrol', it: 'Campeggi in Tirolo', es: 'Camping en Tirol', zh: '蒂罗尔露营', nl: 'Campings in Tirol', cs: 'Kempy v Tyrolsku' },
+  campingCount: { de: 'Campingplätze', en: 'campsites', fr: 'campings', it: 'campeggi', es: 'campings', zh: '露营地', nl: 'campings', cs: 'kempy' },
+  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '一览', nl: 'In één oogopslag', cs: 'Na první pohled' },
   emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
-  emptyText: { de: 'Campingplätze werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Campsites are being added. Check back soon!', fr: 'Les campings sont en cours d\'ajout. Revenez bientôt!', it: 'I campeggi sono in fase di inserimento. Torna presto!', es: 'Los campings se están añadiendo. ¡Vuelve pronto!', zh: '露营地正在添加中。请稍后来看！', nl: 'Campings worden momenteel toegevoegd. Kom snel terug!', cs: 'Kempy se právě přidávají. Podívejte se brzy znovu!' },
+  emptyText: { de: 'Campingplätze werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Campsites are being added. Check back soon!', fr: 'Les campings sont en cours d\'ajout. Revenez bientôt!', it: 'I campeggi sono in fase di inserimento. Torna presto!', es: 'Los campings se están añadiendo. ¡Vuelve pronto!', zh: '露营地正在添加中。请稍后再来查看！', nl: 'Campings worden momenteel toegevoegd. Kom snel terug!', cs: 'Kempy se právě přidávají. Podívejte se brzy znovu!' },
 };
 
 const camping = readCollection('camping', locale).filter(c => isPublished(c.entry));
 const campingMitCoords = camping.filter(c => c.entry.koordinaten?.lat && c.entry.koordinaten?.lng);
+
 const byRegion = {};
 for (const c of camping) {
   const region = c.entry.region || 'sonstige';
@@ -37,7 +39,7 @@ const regionNames = {
   ausserfern: 'Außerfern', achensee: 'Achensee', arlberg: 'Arlberg', imst: 'Imst',
   innsbruck: 'Innsbruck', 'innsbruck-land': 'Innsbruck-Land', kitzbuehel: 'Kitzbühel',
   kufstein: 'Kufstein', landeck: 'Landeck', oetztal: 'Ötztal', osttirol: 'Osttirol',
-  schwaz: 'Schwaz', stubaital: 'Stubaital', zillertal: 'Zillertal', sonstige: 'Weitere',
+  schwaz: 'Schwaz', stubaital: 'Stubaital', zillertal: 'Zillertal', sonstige: 'Weitere Regionen',
 };
 const sortedRegions = Object.keys(byRegion).sort((a, b) => {
   if (a === 'sonstige') return 1;
@@ -46,35 +48,27 @@ const sortedRegions = Object.keys(byRegion).sort((a, b) => {
 });
 
 const siteURL = 'https://www.tirol-tourismus.at';
-const pref = localePrefix(locale);
 const campingItemList = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: t(LABELS.title),
-  description: t(LABELS.desc),
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
   url: `${siteURL}${pref}/camping/`,
   numberOfItems: camping.length,
-  itemListElement: camping.slice(0, 30).map((c, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: c.entry.name,
-    url: `${siteURL}${pref}/camping/${c.slug}/`,
-  })),
+  itemListElement: camping.slice(0, 30).map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.entry.name, url: `${siteURL}${pref}/camping/${c.slug}/` })),
 };
 ---
 
-<BaseLayout title={t(LABELS.title)} description={t(LABELS.desc)} locale={locale} jsonld={campingItemList}>
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={campingItemList}>
   <main>
     <div class="container">
       <div class="breadcrumbs">
-        <a href={pref || '/'}>Start</a><span class="sep">›</span><span>{t(LABELS.campingLabel)}</span>
+        <a href={pref || '/'}>Startseite</a><span class="sep">›</span><span>{t(labels.title)}</span>
       </div>
     </div>
 
     <section class="page-header">
       <div class="container">
-        <h1 class="reveal">{t(LABELS.title)}</h1>
-        <p class="reveal r2">{t(LABELS.heroSub)}</p>
+        <h1 class="reveal">{t(labels.title)}</h1>
+        <p class="reveal r2">{t(labels.heroSub)}</p>
       </div>
     </section>
 
@@ -85,8 +79,8 @@ const campingItemList = {
           label: c.entry.name, emoji: '🏕️',
           href: `${pref}/camping/${c.slug}/`, category: 'camping',
         }))}
-        label={`${campingMitCoords.length} ${t(LABELS.campingLabel)}`}
-        title={t(LABELS.mapTitle)}
+        label={`${campingMitCoords.length} ${t(labels.campingCount)}`}
+        title={t(labels.mapTitle)}
         height="380px" scrollWheelZoom={true} filterable={true}
       />
     )}
@@ -94,25 +88,28 @@ const campingItemList = {
     {camping.length > 0 ? (
       <section class="section">
         <div class="container">
-          <SectionHeader label={t(LABELS.sectionLabel)} title={t(LABELS.sectionTitle)} sub={`🏕️ ${camping.length} ${t(LABELS.campingLabel)}`} />
-          {sortedRegions.map(region => (
-            <div class="region-group">
-              <h2 class="region-title">{regionNames[region] || region} <span class="region-count">({byRegion[region].length})</span></h2>
-              <div class="cp-grid">
-                {byRegion[region].map(c => (
-                  <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} region={c.entry.region} preis_ab={c.entry.preis_ab} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
-                ))}
+          <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={`🏕️ ${camping.length} ${t(labels.campingCount)}`} />
+          {sortedRegions.map(region => {
+            const items = byRegion[region];
+            return (
+              <div class="region-group">
+                <h2 class="region-title">{regionNames[region] || region} <span class="region-count">({items.length})</span></h2>
+                <div class="cp-grid">
+                  {items.map(c => (
+                    <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} region={c.entry.region} preis_ab={c.entry.preis_ab} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
     ) : (
       <section class="section">
         <div class="container" style="text-align:center;padding:60px 0">
           <div style="font-size:64px;margin-bottom:16px">🏕️</div>
-          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(LABELS.emptyTitle)}</h2>
-          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(LABELS.emptyText)}</p>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(labels.emptyText)}</p>
         </div>
       </section>
     )}

@@ -1,0 +1,57 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: { magazin: 'Magazin', kategorie: 'Kategorie', datum: 'Datum', alleArtikel: 'Alle Artikel', weiterlesen: 'Weiterlesen →' },
+  en: { magazin: 'Magazine', kategorie: 'Category', datum: 'Date', alleArtikel: 'All Articles', weiterlesen: 'Read More →' },
+  fr: { magazin: 'Magazine', kategorie: 'Catégorie', datum: 'Date', alleArtikel: 'Tous les articles', weiterlesen: 'Lire la suite →' },
+  it: { magazin: 'Magazine', kategorie: 'Categoria', datum: 'Data', alleArtikel: 'Tutti gli articoli', weiterlesen: 'Leggi di più →' },
+  es: { magazin: 'Revista', kategorie: 'Categoría', datum: 'Fecha', alleArtikel: 'Todos los artículos', weiterlesen: 'Leer más →' },
+  zh: { magazin: '杂志', kategorie: '类别', datum: '日期', alleArtikel: '所有文章', weiterlesen: '阅读更多 →' },
+  nl: { magazin: 'Magazine', kategorie: 'Categorie', datum: 'Datum', alleArtikel: 'Alle artikelen', weiterlesen: 'Lees meer →' },
+  cs: { magazin: 'Magazín', kategorie: 'Kategorie', datum: 'Datum', alleArtikel: 'Všechny články', weiterlesen: 'Číst dále →' },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('magazin', locale).filter(a => isPublished(a.entry));
+    for (const a of all) {
+      paths.push({ params: { locale, slug: a.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('magazin', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/magazin/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+const emoji = entry.emoji || '📰';
+
+const siteURL = 'https://tiroltourismus.com';
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.titel}
+  description={generateMetaDescription(entry, 'magazin', locale)}
+  breadcrumbs={[{ label: l.magazin, href: `${prefix}/magazin/` }, { label: entry.titel }]}
+  locale={locale}
+  ogImage={ogImage}
+  sections={[
+    { type: 'hero', title: entry.titel, subtitle: entry.kategorie, emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
+    { type: 'details-grid', items: [
+      { label: l.kategorie, value: entry.kategorie || undefined },
+      { label: l.datum, value: entry.datum || undefined },
+    ].filter(Boolean) },
+    (entry.teaser || entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.titel, title: entry.titel, content: autoLinkContent([entry.teaser, entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    { type: 'back-link', href: `${prefix}/magazin/`, text: l.alleArtikel },
+  ].filter(Boolean)}
+/>

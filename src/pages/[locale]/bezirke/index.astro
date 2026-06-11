@@ -2,66 +2,54 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import { readSingleton } from '../../../lib/content.js';
-import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
 
 export async function getStaticPaths() {
   return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
 }
 
 const { locale } = Astro.params;
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
 
-const LABELS = {
+const labels = {
   title: { de: 'Bezirke Tirols', en: 'Districts of Tyrol', fr: 'Districts du Tyrol', it: 'Distretti del Tirolo', es: 'Distritos de Tirol', zh: '蒂罗尔行政区', nl: 'Districten van Tirol', cs: 'Okresy Tyrolska' },
-  desc: { de: 'Alle neun Bezirke Tirols im Überblick – von Innsbruck bis Osttirol.', en: 'All nine districts of Tyrol at a glance – from Innsbruck to East Tyrol.', fr: 'Les neuf districts du Tyrol en un coup d\'œil – d\'Innsbruck au Tyrol oriental.', it: 'Tutti e nove i distretti del Tirolo a colpo d\'occhio – da Innsbruck al Tirolo orientale.', es: 'Los nueve distritos de Tirol de un vistazo – de Innsbruck a Tirol del Este.', zh: '蒂罗尔所有九个行政区一览——从因斯布鲁克到东蒂罗尔。', nl: 'Alle negen districten van Tirol in één oogopslag – van Innsbruck tot Oost-Tirol.', cs: 'Všech devět okresů Tyrolska na první pohled – od Innsbrucku po Východní Tyrolsko.' },
-  heroSub: { de: 'Neun Bezirke – neun Persönlichkeiten. Von der Landeshauptstadt bis zu den entlegensten Tälern.', en: 'Nine districts – nine personalities. From the state capital to the most remote valleys.', fr: 'Neuf districts – neuf personnalités. De la capitale aux vallées les plus reculées.', it: 'Nove distretti – nove personalità. Dalla capitale alle valli più remote.', es: 'Nueve distritos – nueve personalidades. Desde la capital hasta los valles más remotos.', zh: '九个行政区——九种个性。从首府到最偏远的山谷。', nl: 'Negen districten – negen persoonlijkheden. Van de hoofdstad tot de meest afgelegen valleien.', cs: 'Devět okresů – devět osobností. Od hlavního města po nejzazší údolí.' },
-  wappenKicker: { de: 'Neu im Atlas', en: 'New in Atlas', fr: 'Nouveau dans l\'Atlas', it: 'Nuovo nell\'Atlante', es: 'Nuevo en el Atlas', zh: '地图册新增', nl: 'Nieuw in Atlas', cs: 'Nové v atlasy' },
-  wappenTitle: { de: 'Tiroler Wappen-Übersicht', en: 'Tyrol Coat of Arms Overview', fr: 'Aperçu des Armoiries du Tyrol', it: 'Panorama dello Stemma del Tirolo', es: 'Resumen de Escudos de Tirol', zh: '蒂罗尔徽章概览', nl: 'Tirolse Wapenoverzicht', cs: 'Přehled tyrolských erbů' },
-  wappenDesc: { de: 'Alle Bezirks- und Ortswappen in einer modernen, ultraminimalen Darstellung.', en: 'All district and town coats of arms in a modern, ultra-minimalist design.', fr: 'Toutes les armoiries des districts et villes dans un design moderne et ultra-minimaliste.', it: 'Tutti gli stemmi dei distretti e delle città in un design moderno e ultra-minimalista.', es: 'Todos los escudos de distritos y pueblos en un diseño moderno y ultra-minimalista.', zh: '所有城镇和行政区徽章，现代超极简设计。', nl: 'Alle district- en stadswapens in een modern, ultra-minimaal ontwerp.', cs: 'Všechny erby okresů a měst v moderním, ultra minimálním designu.' },
-  gemeinden: { de: '∞ Gemeinden', en: '∞ Municipalities', fr: '∞ Communes', it: '∞ Comuni', es: '∞ Municipios', zh: '∞ 市镇', nl: '∞ Gemeenten', cs: '∞ Obce' },
+  desc: { de: 'Alle neun Bezirke Tirols im Überblick – von Innsbruck bis Osttirol, vom Außerfern bis zum Zillertal.', en: 'All nine districts of Tyrol at a glance – from Innsbruck to East Tyrol, from Außerfern to Zillertal.', fr: 'Les neuf districts du Tyrol en un coup d\'œil – d\'Innsbruck au Tyrol oriental, de l\'Außerfern au Zillertal.', it: 'Tutti e nove i distretti del Tirolo a colpo d\'occhio – da Innsbruck all\'Est Tirolo, dall\'Außerfern allo Zillertal.', es: 'Los nueve distritos de Tirol de un vistazo – de Innsbruck a Tirol del Este, de Außerfern a Zillertal.', zh: '蒂罗尔所有九个行政区一览——从因斯布鲁克到东蒂罗尔，从奥斯特费恩到齐勒河谷。', nl: 'Alle negen districten van Tirol in een oogopslag – van Innsbruck tot Oost-Tirol, van Außerfern tot Zillertal.', cs: 'Všech devět okresů Tyrolska na první pohled – od Innsbrucku po Východní Tyrolsko, od Außerfernu po Zillertal.' },
+  heroSub: { de: 'Neun Bezirke – neun Persönlichkeiten. Von der Landeshauptstadt bis zu den entlegensten Tälern.', en: 'Nine districts – nine personalities. From the state capital to the most remote valleys.', fr: 'Neuf districts – neuf personnalités. De la capitale régionale aux vallées les plus reculées.', it: 'Nove distretti – nove personalità. Dalla capitale regionale alle valli più remote.', es: 'Nueve distritos – nueve personalidades. Desde la capital del estado hasta los valles más remotos.', zh: '九个行政区——九种个性。从州首府到最偏远的山谷。', nl: 'Negen districten – negen persoonlijkheden. Van de hoofdstad tot de meest afgelegen valleien.', cs: 'Devět okresů – devět osobností. Od hlavního města po nejodlehlejší údolí.' },
+  wappenKicker: { de: 'Neu im Atlas', en: 'New in Atlas', fr: 'Nouveau dans l\'Atlas', it: 'Nuovo nell\'Atlas', es: 'Nuevo en el Atlas', zh: '地图集新增', nl: 'Nieuw in Atlas', cs: 'Nové v Atlasu' },
+  wappenTitle: { de: 'Tiroler Wappen-Übersicht', en: 'Tyrol Coat of Arms Overview', fr: 'Aperçu des Armoiries du Tyrol', it: 'Panorama degli Stemmi del Tirolo', es: 'Resumen de Escudos de Armas de Tirol', zh: '蒂罗尔纹章概览', nl: 'Wapenoverzicht Tirol', cs: 'Přehled erbů Tyrolska' },
+  wappenDesc: { de: 'Alle Bezirks- und Ortswappen in einer modernen, ultraminimalen Darstellung – direkt aus der Bezirke-Übersicht erreichbar.', en: 'All district and town coats of arms in a modern, ultra-minimalist design – directly accessible from the district overview.', fr: 'Toutes les armoiries des districts et des villes dans un design moderne et ultra-minimaliste – directement accessibles depuis l\'aperçu des districts.', it: 'Tutti gli stemmi dei distretti e delle città in un design moderno e ultra-minimalista – direttamente accessibili dalla panoramica dei distretti.', es: 'Todos los escudos de armas de distritos y pueblos en un diseño moderno y ultra-minimalista – directamente accesibles desde el resumen de distritos.', zh: '所有城镇和地区的纹章采用现代超简约设计——可直接从地区概览访问。', nl: 'Alle wapens van districten en steden in een moderne, ultra-minimalistisch ontwerp – direct toegankelijk vanuit het districtsoverzicht.', cs: 'Všechny erby okresů a měst v moderních, ultraminimálních provedeních – přímo přístupné z přehledu okresů.' },
+  gemeinden: { de: '∞ Gemeinden', en: '∞ Municipalities', fr: '∞ Municipalités', it: '∞ Comuni', es: '∞ Municipios', zh: '∞ 市镇', nl: '∞ Gemeenten', cs: '∞ Obce' },
 };
 
 const bezirke = readSingleton('bezirke', locale);
 const items = bezirke ? Object.values(bezirke) : [];
-let wappenBezirke = [];
-try {
-  const wappenData = JSON.parse(readFileSync(resolve(process.cwd(), 'wappen/wappen_page_data.json'), 'utf-8'));
-  wappenBezirke = wappenData.bezirke.map((b) => ({
-    ...b,
-    publicImg: `/wappen/${b.img.replace(/^img\//, '')}`,
-  }));
-} catch (e) { console.warn('wappen data not found'); }
+const wappenData = JSON.parse(readFileSync(resolve(process.cwd(), 'wappen/wappen_page_data.json'), 'utf-8'));
+const wappenBezirke = wappenData.bezirke.map((b) => ({ ...b, publicImg: `/wappen/${b.img.replace(/^img\//, '')}` }));
 
-const pref = localePrefix(locale);
 const siteURL = 'https://www.tirol-tourismus.at';
 const bezirkItemList = items.length > 0 ? {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: LABELS.title[locale] || LABELS.title.de,
-  description: LABELS.desc[locale] || LABELS.desc.de,
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
   url: `${siteURL}${pref}/bezirke/`,
   numberOfItems: items.length,
-  itemListElement: items.filter(Boolean).map((b, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: b.name,
-    url: `${siteURL}${pref}/bezirke/${b.slug}/`,
-  })),
+  itemListElement: items.filter(Boolean).map((b, i) => ({ '@type': 'ListItem', position: i + 1, name: b.name, url: `${siteURL}${pref}/bezirke/${b.slug}/` })),
 } : undefined;
 ---
 
-<BaseLayout title={LABELS.title[locale] || LABELS.title.de} description={LABELS.desc[locale] || LABELS.desc.de} locale={locale} jsonld={bezirkItemList}>
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={bezirkItemList}>
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: LABELS.title[locale] || LABELS.title.de }]} />
+      <Breadcrumbs items={[{ label: t(labels.title) }]} />
     </div>
 
     <section class="bezirke-hero">
       <div class="container" style="text-align:center;padding:60px 0 40px">
         <div style="font-size:64px;margin-bottom:8px">🗺️</div>
-        <h1 class="bezirke-title">{LABELS.title[locale] || LABELS.title.de}</h1>
-        <p class="bezirke-sub">{LABELS.heroSub[locale] || LABELS.heroSub.de}</p>
+        <h1 class="bezirke-title">{t(labels.title)}</h1>
+        <p class="bezirke-sub">{t(labels.heroSub)}</p>
       </div>
     </section>
 
@@ -69,9 +57,9 @@ const bezirkItemList = items.length > 0 ? {
       <div class="container">
         <a href={`${pref}/wappen/`} class="wappen-feature-card">
           <div class="wappen-feature-copy">
-            <div class="wappen-feature-kicker">{LABELS.wappenKicker[locale] || LABELS.wappenKicker.de}</div>
-            <h2>{LABELS.wappenTitle[locale] || LABELS.wappenTitle.de}</h2>
-            <p>{LABELS.wappenDesc[locale] || LABELS.wappenDesc.de}</p>
+            <div class="wappen-feature-kicker">{t(labels.wappenKicker)}</div>
+            <h2>{t(labels.wappenTitle)}</h2>
+            <p>{t(labels.wappenDesc)}</p>
           </div>
           <div class="wappen-feature-preview">
             {wappenBezirke.slice(0, 4).map((b) => (
@@ -92,7 +80,7 @@ const bezirkItemList = items.length > 0 ? {
               </div>
               <p class="bezirk-card-desc">{b.beschreibung}</p>
               <div class="bezirk-card-footer">
-                <span class="bezirk-card-count">{LABELS.gemeinden[locale] || LABELS.gemeinden.de}</span>
+                <span class="bezirk-card-count">{t(labels.gemeinden)}</span>
                 <span class="bezirk-card-arrow">→</span>
               </div>
             </a>
@@ -113,7 +101,7 @@ const bezirkItemList = items.length > 0 ? {
   .wappen-feature-copy h2{font-family:var(--font-display);font-size:clamp(26px,3vw,44px);letter-spacing:1px;text-transform:uppercase;line-height:1;margin-bottom:8px}
   .wappen-feature-copy p{color:var(--text2);line-height:1.7;max-width:62ch}
   .wappen-feature-preview{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .wappen-feature-preview img{width:100%;aspect-ratio:1/1.5;object-fit:contain;background:#fff;border-radius:16px;border:1px solid var(--glass-border);padding:8px}
+  .wappen-feature-preview img{width:100%;aspect-ratio:1/1.1;object-fit:contain;background:#fff;border-radius:16px;border:1px solid var(--glass-border);padding:8px}
   .bezirke-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .bezirk-card{background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-decoration:none;color:var(--text);transition:all .3s var(--ease);display:flex;flex-direction:column;gap:12px}
   .bezirk-card:hover{border-color:var(--pink);box-shadow:0 8px 32px rgba(255,20,147,.1);transform:translateY(-2px)}

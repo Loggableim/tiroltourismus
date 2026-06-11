@@ -13,98 +13,84 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params;
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
 
-const LABELS = {
+const labels = {
   title: { de: 'Erlebnisse in Tirol', en: 'Experiences in Tyrol', fr: 'Expériences au Tyrol', it: 'Esperienze in Tirolo', es: 'Experiencias en Tirol', zh: '蒂罗尔体验', nl: 'Ervaringen in Tirol', cs: 'Zážitky v Tyrolsku' },
-  desc: { de: 'Erlebnisse in Tirol: Wandern, Ski, Bike, Wellness, Familie, Kulinarik, Kultur & Abenteuer.', en: 'Experiences in Tyrol: Hiking, Ski, Bike, Wellness, Family, Culinary, Culture & Adventure.', fr: 'Expériences au Tyrol: Randonnée, Ski, Vélo, Bien-être, Famille, Gastronomie, Culture & Aventure.', it: 'Esperienze in Tirolo: Esci, Ski, Bici, Benessere, Famiglia, Enogastronomia, Cultura & Avventura.', es: 'Experiencias en Tirol: Senderismo, Esquí, Bici, Bienestar, Familia, Gastronomía, Cultura & Aventura.', zh: '蒂罗尔体验：徒步、滑雪、骑行、养生、家庭、美食、文化与冒险。', nl: 'Ervaringen in Tirol: Wandelen, Ski, Bike, Wellness, Familie, Culinair, Cultuur & Avontuur.', cs: 'Zážitky v Tyrolsku: Turística, Lyžování, Kolo, Wellness, Rodina, Gastronomie, Kultura & Dobrodružství.' },
-  heroSub: { de: 'Wandern, Ski, Bike, Wellness, Kulinarik, Kultur & Abenteuer – Tirol hat für jeden das passende Erlebnis.', en: 'Hiking, Ski, Bike, Wellness, Culinary, Culture & Adventure – Tyrol has the right experience for everyone.', fr: 'Randonnée, Ski, Vélo, Bien-être, Gastronomie, Culture & Aventure – le Tyrol a la bonne expérience pour chacun.', it: 'Esci, Ski, Bici, Benessere, Enogastronomia, Cultura & Avventura – il Tirolo ha l\'esperienza giusta per tutti.', es: 'Senderismo, Esquí, Bici, Bienestar, Gastronomía, Cultura & Aventura – Tirol tiene la experiencia adecuada para todos.', zh: '徒步、滑雪、骑行、养生、美食、文化与冒险——蒂罗尔为每个人准备合适的体验。', nl: 'Wandelen, Ski, Bike, Wellness, Culinair, Cultuur & Avontuur – Tirol heeft de juiste ervaring voor iedereen.', cs: 'Turistika, Lyžování, Kolo, Wellness, Gastronomie, Kultura & Dobrodružství – Tyrolsko má pro každého ten správný zážitek.' },
-  sectionLabel: { de: 'Entdecken', en: 'Discover', fr: 'Découvrir', it: 'Scopri', es: 'Descubrir', zh: '探索', nl: 'Ontdekken', cs: 'Objevovat' },
-  sectionTitle: { de: 'Dein nächstes Abenteuer', en: 'Your Next Adventure', fr: 'Votre Prochaine Aventure', it: 'La Tua Prossima Avventura', es: 'Tu Próxima Aventura', zh: '你的下一次冒险', nl: 'Je Volgende Avontuur', cs: 'Váš další dobrožústvo' },
-  sectionSub: { de: 'Ob hoch über den Wolken oder tief in den Tälern – Tirols Erlebnisse warten auf dich.', en: 'Whether high above the clouds or deep in the valleys – Tyrol\'s experiences await you.', fr: 'Que ce soit haut au-dessus des nuages ou profondément dans les vallées – les expériences du Tyrol vous attendent.', it: 'Che si tratti di sopra le nuvole o in profondità nelle valli – le esperienze del Tirolo ti aspettano.', es: 'Ya sea alto sobre las nubes o profundo en los valles – las experiencias de Tirol te esperan.', zh: '无论是在云端之上还是山谷深处——蒂罗尔的体验等待着你。', nl: 'Of het nu hoog bolen de wolken of diep in de valleien is – Tirols ervaringen wachten op je.', cs: 'Ať už vysoko nad oblaky nebo hluboko v údolích – tyrolské zážitky na vás čekají.' },
+  desc: { de: 'Erlebnisse in Tirol: Wandern, Ski, Bike, Wellness, Familie, Kulinarik, Kultur & Abenteuer.', en: 'Experiences in Tyrol: Hiking, Ski, Bike, Wellness, Family, Culinary, Culture & Adventure.', fr: 'Expériences au Tyrol: Randonnée, Ski, Bike, Bien-être, Famille, Gastronomie, Culture & Aventure.', it: 'Esperienze in Tirolo: Escursionismo, Sci, Bike, Benessere, Famiglia, Enogastronomia, Cultura & Avventura.', es: 'Experiencias en Tirol: Senderismo, Esquí, Bicicleta, Bienestar, Familia, Gastronomía, Cultura y Aventura.', zh: '蒂罗尔体验：徒步、滑雪、骑行、养生、家庭、美食、文化与冒险。', nl: 'Ervaringen in Tirol: Wandelen, Ski, Bike, Wellness, Familie, Culinaire, Cultuur & Avontuur.', cs: 'Zážitky v Tyrolsku: Turistika, Lyžování, Kolo, Wellness, Rodina, Gastronomie, Kultura & Dobrodružství.' },
+  heroSub: { de: 'Wandern, Ski, Bike, Wellness, Kulinarik, Kultur & Abenteuer – Tirol hat für jeden das passende Erlebnis.', en: 'Hiking, Ski, Bike, Wellness, Culinary, Culture & Adventure – Tyrol has the right experience for everyone.', fr: 'Randonnée, Ski, Bike, Bien-être, Gastronomie, Culture & Aventure – le Tyrol a l\'expérience qu\'il vous faut.', it: 'Escursionismo, Sci, Bike, Benessere, Enogastronomia, Cultura & Avventura – il Tirolo ha l\'esperienza giusta per tutti.', es: 'Senderismo, Esquí, Bicicleta, Bienestar, Gastronomía, Cultura y Aventura – Tirol tiene la experiencia adecuada para todos.', zh: '徒步、滑雪、骑行、养生、美食、文化与冒险——蒂罗尔为每个人提供合适的体验。', nl: 'Wandelen, Ski, Bike, Wellness, Culinaire, Cultuur & Avontuur – Tirol heeft voor ieder de juiste ervaring.', cs: 'Turistika, Lyžování, Kolo, Wellness, Gastronomie, Kultura & Dobrodružství – Tyrolsko má pro každého ten správný zážitek.' },
+  sectionLabel: { de: 'Entdecken', en: 'Discover', fr: 'Découvrir', it: 'Scoprire', es: 'Descubrir', zh: '探索', nl: 'Ontdekken', cs: 'Objevovat' },
+  sectionTitle: { de: 'Dein nächstes Abenteuer', en: 'Your Next Adventure', fr: 'Votre Prochaine Aventure', it: 'La Tua Prossima Avventura', es: 'Tu Próxima Aventura', zh: '你的下一次冒险', nl: 'Jouw Volgende Avontuur', cs: 'Váš příští dobroženstvo' },
+  sectionSub: { de: 'Ob hoch über den Wolken oder tief in den Tälern – Tirols Erlebnisse warten auf dich.', en: 'Whether high above the clouds or deep in the valleys – Tyrol\'s experiences await you.', fr: 'Que ce soit haut au-dessus des nuages ou profondément dans les vallées – les expériences du Tyrol vous attendent.', it: 'Che si tratti di sopra le nuvole o in profondità nelle valli – le esperienze del Tirolo ti aspettano.', es: 'Ya sea alto sobre las nubes o profundo en los valles – las experiencias de Tirol te esperan.', zh: '无论是在云端之上还是山谷深处——蒂罗尔的体验都在等着你。', nl: 'Of het nu hoog boven de wolken of diep in de valleien is – Tirols ervaringen wachten op je.', cs: 'Ať už vysoko nad oblaky nebo hluboko v údolích – tyrolské zážitky na vás čekají.' },
   filterAria: { de: 'Erlebnisse nach Kategorie filtern', en: 'Filter experiences by category', fr: 'Filtrer les expériences par catégorie', it: 'Filtra esperienze per categoria', es: 'Filtrar experiencias por categoría', zh: '按类别筛选体验', nl: 'Filter ervaringen op categorie', cs: 'Filtrovat zážitky podle kategorie' },
-  countLabel: { de: 'Abenteuer', en: 'Adventures', fr: 'Aventures', it: 'Avventure', es: 'Aventuras', zh: '冒险', nl: 'Avonturen', cs: 'Dobrodružství' },
-  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '概览', nl: 'In één oogopslag', cs: 'Na první pohled' },
   emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
-  emptyText: { de: 'Erlebnisse werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Experiences are being added. Check back soon!', fr: 'Les expériences sont en cours d\'ajout. Revenez bientôt!', it: 'Le esperienze sono in fase di inserimento. Torna presto!', es: 'Las experiencias se están añadiendo. ¡Vuelve pronto!', zh: '体验正在添加中。请稍后来看！', nl: 'Ervaringen worden momenteel toegevoegd. Kom snel terug!', cs: 'Zážitky se právě přidávají. Podívejte se brzy znovu!' },
+  emptyText: { de: 'Erlebnisse werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Experiences are being added. Check back soon!', fr: 'Les expériences sont en cours d\'ajout. Revenez bientôt!', it: 'Le esperienze sono in fase di inserimento. Torna presto!', es: 'Las experiencias se están añadiendo. ¡Vuelve pronto!', zh: '体验正在添加中。请稍后再来查看！', nl: 'Ervaringen worden momenteel toegevoegd. Kom snel terug!', cs: 'Zážitky se právě přidávají. Podívejte se brzy znovu!' },
+  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '一览', nl: 'In één oogopslag', cs: 'Na první pohled' },
+  countLabel: { de: 'Abenteuer', en: 'adventures', fr: 'aventures', it: 'avventure', es: 'aventuras', zh: '冒险', nl: 'avonturen', cs: 'dobrodružství' },
 };
 
 const kategorieMeta = {
-  wandern: { emoji: '🥾', color: 'var(--green)' },
-  ski: { emoji: '⛷️', color: 'var(--blue)' },
-  bike: { emoji: '🚵', color: 'var(--orange)' },
-  wellness: { emoji: '♨️', color: 'var(--pink)' },
-  familie: { emoji: '👨‍👩‍👧‍👦', color: 'var(--yellow)' },
-  kulinarik: { emoji: '🍷', color: 'var(--purple)' },
-  kultur: { emoji: '🎭', color: 'var(--orange)' },
-  abenteuer: { emoji: '🧗', color: 'var(--tirol-red)' },
+  wandern: { emoji: '🥾', color: 'var(--green)' }, ski: { emoji: '⛷️', color: 'var(--blue)' },
+  bike: { emoji: '🚵', color: 'var(--orange)' }, wellness: { emoji: '♨️', color: 'var(--pink)' },
+  familie: { emoji: '👨‍👩‍👧‍👦', color: 'var(--yellow)' }, kulinarik: { emoji: '🍷', color: 'var(--purple)' },
+  kultur: { emoji: '🎭', color: 'var(--orange)' }, abenteuer: { emoji: '🧗', color: 'var(--tirol-red)' },
 };
 
 const kategorieLabel = {
   wandern: { de: 'Wandern', en: 'Hiking', fr: 'Randonnée', it: 'Escursionismo', es: 'Senderismo', zh: '徒步', nl: 'Wandelen', cs: 'Turistika' },
   ski: { de: 'Ski & Snowboard', en: 'Ski & Snowboard', fr: 'Ski & Snowboard', it: 'Sci & Snowboard', es: 'Esquí & Snowboard', zh: '滑雪', nl: 'Skiën & Snowboarden', cs: 'Lyžování & Snowboard' },
-  bike: { de: 'Bike & MTB', en: 'Bike & MTB', fr: 'Vélo & VTT', it: 'Bici & MTB', es: 'Bici & MTB', zh: '骑行', nl: 'Fiets & MTB', cs: 'Kolo & MTB' },
-  wellness: { de: 'Wellness & Erholung', en: 'Wellness & Relaxation', fr: 'Bien-être & Détente', it: 'Benessere & Relax', es: 'Bienestar & Relax', zh: '养生', nl: 'Wellness & Ontspanning', cs: 'Wellness & Odpočinek' },
+  bike: { de: 'Bike & Mountainbike', en: 'Bike & Mountain Bike', fr: 'Vélo & VTT', it: 'Bici & Mountain Bike', es: 'Bici & Mountain Bike', zh: '骑行', nl: 'Fietsen & Mountainbike', cs: 'Kolo & Horské kolo' },
+  wellness: { de: 'Wellness & Erholung', en: 'Wellness & Relaxation', fr: 'Bien-être & Détente', it: 'Benessere & Relax', es: 'Bienestar & Relajación', zh: '养生', nl: 'Wellness & Ontspanning', cs: 'Wellness & Odpočinek' },
   familie: { de: 'Familie & Kinder', en: 'Family & Kids', fr: 'Famille & Enfants', it: 'Famiglia & Bambini', es: 'Familia & Niños', zh: '家庭', nl: 'Gezin & Kinderen', cs: 'Rodina & Děti' },
-  kulinarik: { de: 'Kulinarik', en: 'Culinary', fr: 'Gastronomie', it: 'Enogastronomia', es: 'Gastronomía', zh: '美食', nl: 'Culinair', cs: 'Gastronomie' },
+  kulinarik: { de: 'Kulinarik', en: 'Culinary', fr: 'Gastronomie', it: 'Enogastronomia', es: 'Gastronomía', zh: '美食', nl: 'Culinaire', cs: 'Gastronomie' },
   kultur: { de: 'Kultur', en: 'Culture', fr: 'Culture', it: 'Cultura', es: 'Cultura', zh: '文化', nl: 'Cultuur', cs: 'Kultura' },
   abenteuer: { de: 'Abenteuer', en: 'Adventure', fr: 'Aventure', it: 'Avventura', es: 'Aventura', zh: '冒险', nl: 'Avontuur', cs: 'Dobrodružství' },
 };
 
 const erlebnisse = readCollection('erlebnisse', locale).filter(e => isPublished(e.entry));
-const erlebnisseFilterKeys = Object.keys(kategorieLabel).filter(k => erlebnisse.some(e => e.entry.kategorie === k));
+const erlebnisseFilterKeys = Object.keys(kategorieLabel).sort((a, b) => t(kategorieLabel[a]).localeCompare(t(kategorieLabel[b])));
 const erlebnisseMitKarte = erlebnisse.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng);
-const pref = localePrefix(locale);
+const erlebnisseMarkers = erlebnisseMitKarte.map((e) => {
+  const meta = kategorieMeta[e.entry.kategorie] || {};
+  return {
+    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+    label: e.entry.name || e.entry.titel,
+    href: `${pref}/erlebnisse/${e.slug}/`,
+    emoji: e.entry.emoji || meta.emoji || '🏔️',
+  };
+});
 
 const siteURL = 'https://www.tirol-tourismus.at';
 const erlebnisItemList = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: LABELS.title[locale] || LABELS.title.de,
-  description: LABELS.desc[locale] || LABELS.desc.de,
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
   url: `${siteURL}${pref}/erlebnisse/`,
   numberOfItems: erlebnisse.length,
-  itemListElement: erlebnisse.slice(0, 30).map((e, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: e.entry.name || e.entry.titel,
-    url: `${siteURL}${pref}/erlebnisse/${e.slug}/`,
-  })),
+  itemListElement: erlebnisse.slice(0, 30).map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.entry.name || e.entry.titel, url: `${siteURL}${pref}/erlebnisse/${e.slug}/` })),
 };
 ---
 
-<BaseLayout title={LABELS.title[locale] || LABELS.title.de} description={LABELS.desc[locale] || LABELS.desc.de} locale={locale} jsonld={erlebnisItemList}>
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={erlebnisItemList}>
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: LABELS.title[locale] || LABELS.title.de }]} />
+      <Breadcrumbs items={[{ label: t(labels.title) }]} />
     </div>
 
-    <Hero title={LABELS.title[locale] || LABELS.title.de} subtitle={LABELS.heroSub[locale] || LABELS.heroSub.de} emoji="🏔️" size="md">
+    <Hero title={t(labels.title)} subtitle={t(labels.heroSub)} emoji="🏔️" size="md">
       <div slot="actions" class="hero-actions">
-        <a href={`${pref}/erlebnisse/#erlebnis-grid`} class="btn btn-pink">{(LABELS.sectionLabel[locale] || LABELS.sectionLabel.de) + ' →'}</a>
-        <span class="hero-urgency">🔥 {erlebnisse.length} {LABELS.countLabel[locale] || LABELS.countLabel.de}</span>
+        <a href="#erlebnis-grid" class="btn btn-pink">{t(labels.sectionLabel)} →</a>
+        <span class="hero-urgency">🔥 {erlebnisse.length} {t(labels.countLabel)}</span>
       </div>
     </Hero>
 
-    <SectionMap
-      markers={erlebnisseMitKarte.map((e) => {
-        const meta = kategorieMeta[e.entry.kategorie] || {};
-        return {
-          lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
-          label: e.entry.name || e.entry.titel,
-          href: `${pref}/erlebnisse/${e.slug}/`,
-          emoji: e.entry.emoji || meta.emoji || '🏔️',
-        };
-      })}
-      label={`${erlebnisseMitKarte.length} ${LABELS.countLabel[locale] || LABELS.countLabel.de}`}
-      title={LABELS.mapTitle[locale] || LABELS.mapTitle.de}
-      height="380px" scrollWheelZoom={true} filterable={true}
-    />
+    <SectionMap markers={erlebnisseMarkers} label={`${erlebnisseMarkers.length} ${t(labels.countLabel)}`} title={t(labels.mapTitle)} height="380px" scrollWheelZoom={true} filterable={true} />
 
     {erlebnisse.length > 0 ? (
       <section class="section">
         <div class="container">
-          <SectionHeader label={LABELS.sectionLabel[locale] || LABELS.sectionLabel.de} title={LABELS.sectionTitle[locale] || LABELS.sectionTitle.de} sub={LABELS.sectionSub[locale] || LABELS.sectionSub.de} />
-          <FilterBar keyName="cat" ariaLabel={LABELS.filterAria[locale] || LABELS.filterAria.de} options={erlebnisseFilterKeys.map((k) => ({ value: k, label: (kategorieLabel[k][locale] || kategorieLabel[k].de) }))} />
+          <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.sectionSub)} />
+          <FilterBar keyName="cat" ariaLabel={t(labels.filterAria)} options={erlebnisseFilterKeys.map((k) => ({ value: k, label: t(kategorieLabel[k]) }))} />
           <div class="erlebnisse-grid" id="erlebnis-grid">
             {erlebnisse.map((e) => {
               const entry = e.entry;
@@ -127,11 +113,18 @@ const erlebnisItemList = {
       <section class="section">
         <div class="container" style="text-align:center;padding:60px 0">
           <div style="font-size:64px;margin-bottom:16px">🥾</div>
-          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{LABELS.emptyTitle[locale] || LABELS.emptyTitle.de}</h2>
-          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{LABELS.emptyText[locale] || LABELS.emptyText.de}</p>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(labels.emptyText)}</p>
         </div>
       </section>
     )}
+
+    <section class="quote-section">
+      <div class="container">
+        <blockquote>„Die Berge sind nicht nur aus Stein und Schnee – sie sind aus Geschichten gemacht. Jeder Gipfel hat eine, die darauf wartet, erzählt zu werden."</blockquote>
+        <cite>Tiroler Redeweisheit</cite>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
@@ -146,6 +139,8 @@ const erlebnisItemList = {
   .erlebnis-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;flex:1}
   .erlebnis-meta{font-size:12px;color:var(--text3);margin-bottom:6px}
   .erlebnis-price{font-size:14px;color:var(--pink);font-weight:700;margin-bottom:14px}
-  .hero-actions{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:20px}
-  .hero-urgency{font-size:13px;font-weight:600;color:var(--text2);letter-spacing:.5px}
+  .quote-section{background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);padding:64px 0;text-align:center}
+  .quote-section blockquote{font-size:clamp(18px,2.5vw,28px);font-weight:600;line-height:1.5;max-width:700px;margin:0 auto;color:var(--text);font-style:italic}
+  .quote-section cite{display:block;margin-top:16px;font-size:13px;color:var(--text2);font-style:normal;font-weight:500}
+  .quote-section cite::before{content:'— '}
 </style>

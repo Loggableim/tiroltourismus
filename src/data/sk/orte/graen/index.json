@@ -1,0 +1,58 @@
+{
+  "name": "Grän",
+  "slug": "graen",
+  "region": "ausserfern",
+  "kurzbeschreibung": null,
+  "emoji": "🏔️",
+  "farbe": "#4682B4",
+  "hoehe": "1.138 m",
+  "einwohner": "600",
+  "tags": [
+    "videné",
+    "turistika",
+    "príroda",
+    "rodina",
+    "kľud"
+  ],
+  "status": "published",
+  "bezirk": "reutte",
+  "bilder": [
+    {
+      "url": "/images/orte/graen/hero_1.svg",
+      "alt": "Grän — Visual"
+    }
+  ],
+  "hero_bild": "/images/orte/graen/hero_1.svg",
+  "koordinaten": {
+    "lat": "47.4989",
+    "lng": "10.5615"
+  },
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Vilsalpsee",
+      "beschreibung": "Idyllischer Gebirgssee im Naturschutzgebiet, umgeben von Wäldern und Almen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Haldensee",
+      "beschreibung": "Beliebter Badesee mit Strandbad und Liegewiesen am Fuße der Bergkulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Füssener Jöchle",
+      "beschreibung": "Aussichtsberg mit Bergbahn und Panoramablick ins Tannheimer Tal und zu den Allgäuer Alpen.",
+      "typ": "ausflug"
+    },
+    {
+      "name": "Pfarrkirche Grän",
+      "beschreibung": "Barocke Kirche mit sehenswertem Innenraum und Zwiebelturm im Ortskern.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Geisterklamm",
+      "beschreibung": "Eindrucksvolle Klamm mit Wasserfällen und Stegen, erreichbar auf einem Rundwanderweg.",
+      "typ": "natur"
+    }
+  ],
+  "kategorie": "seeort"
+}

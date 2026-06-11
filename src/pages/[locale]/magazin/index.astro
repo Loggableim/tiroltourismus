@@ -34,8 +34,24 @@ const catLabel = {
   reiseberichte: { de: 'Reiseberichte', en: 'Travel Reports', fr: 'Récits de Voyage', it: 'Resoconti di Viaggio', es: 'Relatos de Viaje', zh: '旅行报告', nl: 'Reisverslagen', cs: 'Cestovní zprávy' },
   interview: { de: 'Interview', en: 'Interview', fr: 'Interview', it: 'Intervista', es: 'Entrevista', zh: '采访', nl: 'Interview', cs: 'Rozhovor' },
   hintergrund: { de: 'Hintergrund', en: 'Background', fr: 'Contexte', it: 'Sfondo', es: 'Trasfondo', zh: '背景', nl: 'Achtergrond', cs: 'Pozadí' },
+  kulinarik: { de: 'Kulinarik', en: 'Culinary', fr: 'Gastronomie', it: 'Enogastronomia', es: 'Gastronomía', zh: '美食', nl: 'Culinaire', cs: 'Gastronomie' },
+  natur: { de: 'Natur', en: 'Nature', fr: 'Nature', it: 'Natura', es: 'Naturaleza', zh: '自然', nl: 'Natuur', cs: 'Příroda' },
+  kultur: { de: 'Kultur', en: 'Culture', fr: 'Culture', it: 'Cultura', es: 'Cultura', zh: '文化', nl: 'Cultuur', cs: 'Kultura' },
+  sport: { de: 'Sport', en: 'Sports', fr: 'Sport', it: 'Sport', es: 'Deportes', zh: '运动', nl: 'Sport', cs: 'Sport' },
+  wandern: { de: 'Wandern', en: 'Hiking', fr: 'Randonnée', it: 'Escursionismo', es: 'Senderismo', zh: '徒步', nl: 'Wandelen', cs: 'Turistika' },
+  ski: { de: 'Ski', en: 'Ski', fr: 'Ski', it: 'Sci', es: 'Esquí', zh: '滑雪', nl: 'Skiën', cs: 'Lyžování' },
+  bike: { de: 'Bike', en: 'Bike', fr: 'Vélo', it: 'Bici', es: 'Bici', zh: '骑行', nl: 'Fietsen', cs: 'Kolo' },
+  wellness: { de: 'Wellness', en: 'Wellness', fr: 'Bien-être', it: 'Benessere', es: 'Bienestar', zh: '养生', nl: 'Wellness', cs: 'Wellness' },
+  familie: { de: 'Familie', en: 'Family', fr: 'Famille', it: 'Famiglia', es: 'Familia', zh: '家庭', nl: 'Gezin', cs: 'Rodina' },
+  abenteuer: { de: 'Abenteuer', en: 'Adventure', fr: 'Aventure', it: 'Avventura', es: 'Aventura', zh: '冒险', nl: 'Avontuur', cs: 'Dobrodružství' },
+  events: { de: 'Events', en: 'Events', fr: 'Événements', it: 'Eventi', es: 'Eventos', zh: '活动', nl: 'Evenementen', cs: 'Akce' },
+  regionen: { de: 'Regionen', en: 'Regions', fr: 'Régions', it: 'Regioni', es: 'Regiones', zh: '地区', nl: "Regio's", cs: 'Regiony' },
 };
 
+const getCatLabel = (key) => {
+  const map = catLabel[key];
+  return map ? (map[locale] || map[DEFAULT_LOCALE] || key) : key;
+};
 const articles = readCollection('magazin', locale);
 const published = articles.filter(a => isPublished(a.entry)).sort((a, b) => (b.entry.datum || '').localeCompare(a.entry.datum || ''));
 const featured = published.slice(0, 1);
@@ -85,7 +101,7 @@ const magazinItemList = {
                       <div class="featured-emoji">📰</div>
                     )}
                     <div class="featured-overlay">
-                      <span class="featured-tag">{(t(catLabel[a.entry.kategorie]) || a.entry.kategorie || '').toUpperCase()}</span>
+                      <span class="featured-tag">{(getCatLabel(a.entry.kategorie) || a.entry.kategorie || '').toUpperCase()}</span>
                       <h2 class="featured-title">{a.entry.titel}</h2>
                       <p class="featured-teaser">{a.entry.teaser}</p>
                       <span class="featured-link">Weiterlesen →</span>
@@ -106,10 +122,10 @@ const magazinItemList = {
             </div>
 
             <FilterBar keyName="cat" ariaLabel={t(labels.filterAria)} options={[
-              { value: 'tipps', label: t(catLabel.tipps) },
-              { value: 'reiseberichte', label: t(catLabel.reiseberichte) },
-              { value: 'hintergrund', label: t(catLabel.hintergrund) },
-              { value: 'allgemein', label: t(catLabel.allgemein) },
+              { value: 'tipps', label: getCatLabel('tipps') },
+              { value: 'reiseberichte', label: getCatLabel('reiseberichte') },
+              { value: 'hintergrund', label: getCatLabel('hintergrund') },
+              { value: 'allgemein', label: getCatLabel('allgemein') },
             ]} />
 
             <div class="tile-grid">
@@ -129,7 +145,7 @@ const magazinItemList = {
                       </>
                     )}
                     <div class="tile-content">
-                      <span class="tile-tag">{(t(catLabel[a.entry.kategorie]) || a.entry.kategorie || '').toUpperCase()}</span>
+                      <span class="tile-tag">{(getCatLabel(a.entry.kategorie) || a.entry.kategorie || '').toUpperCase()}</span>
                       <h3 class="tile-title">{a.entry.titel}</h3>
                       {a.entry.datum && <span class="tile-date">{formatDate(a.entry.datum)}</span>}
                     </div>

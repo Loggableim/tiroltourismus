@@ -11,7 +11,7 @@ export const LANGUAGES = [
   { code: 'de', flag: '🇩🇪', name: 'Deutsch', nameNative: 'Deutsch', default: true, ready: true },
   { code: 'en', flag: '🇬🇧', name: 'English', nameNative: 'English', ready: true },
   { code: 'fr', flag: '🇫🇷', name: 'Français', nameNative: 'Français', ready: true },
-  { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
+  { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: false },
   // ES/ZH/NL/CS ready:false — Cloudflare Pages 20k file limit
   // Re-enable when upgrading to Business plan
   { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: false },

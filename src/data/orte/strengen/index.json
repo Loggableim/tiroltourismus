@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1252",
     "lng": "10.4615"
-  }
+  },
+  "beschreibung": "<p>Strengen liegt auf 1.012 Metern Seehöhe im Stanzer Tal, einem Abschnitt des oberen Inns zwischen Landeck und dem Arlbergpass, und gehört zum Bezirk Landeck. Mit rund 1.300 Einwohnerinnen und Einwohnern zählt die Gemeinde zu den kleineren Orten der Region, bewahrt aber einen bemerkenswert geschlossenen Ortskern mit bäuerlicher Architektur und der spätgotischen Pfarrkirche hl. Johannes der Täufer.</p>\n\n<p>Die Lage am Arlberg-Radweg macht Strengen zu einem logischen Etappenpunkt für Radfahrer, die den Pass in Etappen bezwingen – gleichzeitig beginnen hier ruhige Wanderwege ins Verwall und Richtung Fasulkapelle. Familien schätzen die kurzen Wege durch die Wiesen am Talboden sowie den Naturlehrpfad entlang der Rosanna. Wer Ruhe sucht, findet sie auf den Bergwiesen oberhalb des Dorfes, wo im Sommer Murmeltiere zu hören sind und im Herbst die traditionellen Almabtriebe stattfinden.</p>\n\n<p>Kulinarisch stehen die direktvermarktenden Höfe für Tiroler Grauvieh und Bergkäse, die im Dorf selbst in kleinen Buschenschänken verkostet werden können. Der Blick auf die gegenüberliegende Parseierspitze – mit 3.036 Metern der höchste Berg der Nordtiroler Kalkalpen – begleitet Besucher durch den ganzen Aufenthalt. Strengen ist kein Ort für große Inszenierung, sondern für jene, die das Stanzer Tal zwischen Pians und Flirsch abseits der Hauptverkehrsader erleben wollen. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

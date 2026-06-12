@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.5440",
     "lng": "12.1408"
-  }
+  },
+  "beschreibung": "<p>Schwoich liegt auf 620 Metern Seehöhe am Südfuß des Kaisergebirges, nur wenige Kilometer westlich von Kufstein im Tiroler Unterland. Mit rund 2.600 Einwohnerinnen und Einwohnern zählt die Gemeinde zu den ruhigeren Orten im Inntal – geprägt von traditioneller bäuerlicher Architektur, weitläufigen Wiesen und einem dörflichen Zusammenhalt, der bis heute spürbar ist.</p>\n\n<p>Die Lage direkt am Fuße des Wilden und Zahmen Kaisers macht Schwoich zum idealen Ausgangspunkt für Wanderungen und Klettertouren im Naturpark Kaisergebirge. Über zahlreiche markierte Wege erreicht man Almgebiete wie die Ritzau-Alm oder den bewirtschafteten Gasthof Kaiser Hochalm. Familien schätzen die kurzen, kinderwagentauglichen Routen rund um den Ort, Sportbegeisterte nutzen die Radwege entlang des Inns und im Winter die Loipen sowie Skitourenmöglichkeiten im Gebirge. Das milde Klima des Inntals und die geschützte Südseite des Kaisers sorgen dabei für vergleichsweise viele Sonnenstunden.</p>\n\n<p>Was Schwoich besonders macht, ist die ehrliche Mischung aus bäuerlichem Leben und alpiner Erholung: Man findet noch aktive",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    }
+  ]
 }

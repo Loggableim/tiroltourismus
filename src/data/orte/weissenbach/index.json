@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4416",
     "lng": "10.6415"
-  }
+  },
+  "beschreibung": "<p>Weißenbach am Lech liegt auf 886 Metern Seehöhe im Außerfern, dem westlichsten Zipfel Tirols im Bezirk Reutte, direkt an der Grenze zu Bayern. Der Ort zählt rund 1.300 Einwohner und bildet das westliche Tor zum Naturpark Tiroler Lech.</p>\n\n<p>Das Herzstück des Ortes ist der Lech selbst – einer der letzten weitgehend unverbauten Wildflüsse der Nordalpen. Auf einer Länge von über 20 Kilometern schlängelt sich der Fluss durch das Gemeindegebiet und bildet dabei Schwemmflächen, Auwälder und Kiesbänke, die heute unter Naturschutz stehen. Seltene Arten wie die Deutsche Tamariske oder der Flussuferläufer finden hier noch Rückzugsräume. Direkt am Fluss liegt das Flussbad Weißenbach, eine natürliche Bade- und Erholungsanlage mit Sandstrand und flachem Wasser – beliebt bei Familien, die abseits überfüllter Badeseen baden wollen. Wanderer starten von hier aus in die Jochbergrunde mit Blick auf die Lechtaler Alpen, oder folgen dem Lechweg, einem mehrtägigen Weitwanderweg, der dem Fluss bis zum Forggensee folgt.</p>\n\n<p>Die Pfarrkirche zum Hl. Sebastian mit ihrem spätgotischen Turm prägt das Ortsbild. Kulinarisch steht der Außerfern-typische Käse im Mittelpunkt – die nahe Sennerei verarbeitet Milch von Bergbauernhöfen, die teils noch auf über 1.200 Metern liegen. Wer Ruhe sucht, abseits der ausgetretenen Tirol-Pfade, findet in Weißenbach einen Ort, an dem Natur noch Natur sein darf.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/lavant/hero_1.png",
+      "alt": "Lavant — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/lavant/hero_1.png",
   "koordinaten": {
     "lat": "46.7971",
     "lng": "12.8413"
-  }
+  },
+  "beschreibung": "<p>Lavant liegt auf einem sonnigen Hochplateau in 1.063 Metern Höhe über dem Drautal, etwa fünf Kilometer nordwestlich von Lienz in Osttirol. Die Gemeinde zählt rund 350 Einwohner und besteht aus einer weitläufigen Streusiedlung, die sich über Wiesen, Wälder und traditionelle Bauernhöfe erstreckt – typisch für die bäuerliche Struktur des oberen Drautals.</p>\n\n<p>Die Hochlage zwischen Lienzer Dolomiten im Süden und Schobergruppe im Norden macht Lavant zu einem ruhigen Ausgangspunkt für Wanderungen und Bergtouren abseits der bekannten Routen. Besonders markant ist die gotische Pfarrkirche hl. Ulrich, die mit ihrem schlanken Turm weithin sichtbar über den Feldern aufragt. Auch der Dolomitengolfplatz zählt zu den Besonderheiten des Ortes – einer der höchstgelegenen Golfplätze Österreichs. Wer Stille sucht, findet sie hier auf Wegen durch Lärchenwälder und entlang der alten Höfe, wo noch heute Viehwirtschaft betrieben wird.</p>\n\n<p>Kulinarisch steht die Osttiroler Bauernküche im Mittelpunkt: Schlipfkrapfen, Kasnudeln und Produkte aus eigener Landwirtschaft. Lavant ist kein Ort für schnelle Besuche, sondern für jene, die Osttirol abseits des Trubels erleben wollen – mit Blick auf die Lienzer Dolomiten und dem Rhythmus der Jahreszeiten.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

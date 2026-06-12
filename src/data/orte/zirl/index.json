@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2734",
     "lng": "11.2422"
-  }
+  },
+  "beschreibung": "<p>Zirl liegt am westlichen Rand des Innsbrucker Raums, direkt am Ausgang des Inntals auf 622 Metern Seehöhe. Die Marktgemeinde mit rund 8.300 Einwohnern sitzt eingeklemmt zwischen dem Inn im Norden und einer der markantesten Felswände Tirols – der Martinswand, die den Ort wie eine steinerne Kulisse überragt. Zirl ist keine Durchgangsstation im üblichen Sinn: Wer hier aus dem Zug steigt oder von der Inntalautobahn abfährt, steht sofort vor diesem Felsmassiv, das die Szenerie vollständig prägt.</p>\n\n<p>Die Martinswand ist weit mehr als ein geologischer Blickfang. An ihrer Südseite führt der „Hias\"-Klettersteig senkrecht hinauf, einer der ältesten und beliebtesten Klettersteige Tirols. Am Wandfuß, auf einem vorgelagerten Felssporn, thront die barocke Wallfahrtskirche auf dem Martinsbühel – mit dem Inn im Rücken und dem Fels über dem Kopf. Die Sage vom Riesen Haymon, der einen gewaltigen Felsblock nach Zirl geschleudert haben soll, gehört zum lokalen Erzählgut wie die Aussicht vom Klettersteig aufs Inntal. Für Familien lohnt sich der gemütliche Weg zur Solsteinalm oder eine Wanderung Richtung Ehnbachklamm, die hinter dem Ort in die Bergwelt hineinführt.</p>\n\n<p>Kulturell hat Zirl mit dem Schloss Fragenstein ein weiteres Ausrufezeichen: Das spätgotische Bauwerk beherbergt heute eine Kunstsammlung. Dazu kommen typische Tiroler Wirtshäuser entlang der alten Bundesstraße, in denen Käsespätzle und Gröstl so selbstverständlich aufgetischt werden wie der Blick auf die gegenüberliegende Martinswand – ehrlich, bodenständig, ohne touristisches Brimborium.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2423",
     "lng": "10.2927"
-  }
+  },
+  "beschreibung": "<p>Steeg liegt im hinteren Lechtal auf 1.122 Metern Seehöhe und gehört zur Gemeinde Steeg im Bezirk Reutte, weit draußen im Außerfern – nahe der Grenze zu Vorarlberg. Der Ort zählt rund 700 Einwohner und ist einer der ersten Anlaufpunkte im Lechtal, wenn man von Tirol kommend Richtung Arlberg oder Flexenpass unterwegs ist. Die schmale Talstraße, der Lech direkt nebenan und die steilen Bergflanken geben dem Dorf einen deutlich anderen Charakter als den bekannten Tiroler Tourismushochburgen.</p>\n\n<p>Das Herzstück von Steeg ist der Naturpark Tiroler Lech, einer der letzten weitgehend unverbauten Wildflusslandschaften der Nordalpen. Der Lech schlängelt sich hier in weiten Schwemmkegeln durchs Tal, begleitet von Auwäldern, Schotterbänken und seltenen Pflanzen wie der Deutschen Tamariske. Familien wandern den Lechweg, beobachten im Frühjahr die Brutfärbung der Flussuferläufer oder besuchen den Naturparkhaus mit seiner Ausstellung. Mountainbiker schätzen die Tour über den Flexenpass, Bergwanderer starten direkt vom Ort zur Simmsspitze oder ins hintere Bachtal.</p>\n\n<p>Kulinarisch ist die Region bodenständig: Kasnocken, Kässpätzle und Lechtaler Bergkäse stehen in den Gasthäusern auf der Karte, der örtliche Sparverein und der Naturparkladen bieten regionale Produkte. Wer absolute Stille sucht, findet sie abseits der Hauptsaison – dann hört man tatsächlich nur den Lech rauschen. Für einen ruhigen, naturnahen Tirol-Urlaub ist Steeg eine ehrliche Adresse.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

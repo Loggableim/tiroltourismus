@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2500",
     "lng": "11.5030"
-  }
+  },
+  "beschreibung": "<p><strong>Rinn</strong> befindet sich auf 918 Metern Höhe in dem Innsbrucker Mittelgebirge und den umliegenden Tälern und ist eine idyllische Streugemeinde. Rund <strong>2.000</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Rinn eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

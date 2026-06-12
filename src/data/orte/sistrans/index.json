@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.2365",
     "lng": "11.4488"
-  }
+  },
+  "beschreibung": "<p>Sistrans liegt auf 919 Metern Höhe am Innsbrucker Mittelgebirge, rund zehn Kilometer südlich der Landeshauptstadt, und gehört zum Bezirk Innsbruck-Land. Die Gemeinde zählt etwa 2.300 Einwohner und profitiert von ihrer Lage in einem der sonnenreichsten Gebiete Tirols – pro Jahr werden hier über 2.000 Sonnenstunden gemessen, was den Ort schon früh bei Innsbrucker Ausflüglern beliebt machte.</p>\n\n<p>Der Hausberg ist der Patscherkofel, der mit seiner markanten Silhouette direkt über Sistrans aufragt. Von der Talstation der Patscherkofelbahn führt die Wanderung in rund zweieinhalb Stunden auf den 2.246 Meter hohen Gipfel, im Winter war Sistrans jahrzehntelang Ausgangspunkt einer Rodelbahn, bevor der Liftbetrieb eingestellt wurde. Ruhesuchende schätzen die gut beschilderten Spazierwege Richtung Aldrans und die Wege über die Sistranser Alm auf etwa 1.500 Meter, wo im Sommer bewirtschaftet wird. Der Blick reicht von hier weit hinein in die Tuxer Alpen.</p>\n\n<p>Kulturell ist die Sonnwendfeier am Patscherkofel ein Fixpunkt – jedes Jahr am Wochenende um den 21. Juni werden rund um den Gipfel zahlreiche Johannisfeuer entzündet, eines der höchstgelegenen Feuerschauspiele Tirols. Die Pfarrkirche zum Heiligen Georg mit ihrem spätgotischen Turm bildet das Zentrum des Ortskerns. Wer abends einkehrt, findet in den wenigen Gasthäusern bodenständige Küche – Kaiserschmarrn, Kaspressknödel und regionale Wurstspezialitäten, oft mit Blick auf die gegenüberliegende Nordkette.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

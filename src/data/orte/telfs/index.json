@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.3047",
     "lng": "11.0715"
-  }
+  },
+  "beschreibung": "<p>Telfs liegt im Oberinntal auf 633 Metern Seehöhe und ist mit rund 16.000 Einwohnern die größte Marktgemeinde Tirols – zwischen Innsbruck und dem Mieminger Plateau eingebunden, direkt an der alten Römerstraße über den Fernpass. Der Ort gehört zum Bezirk Innsbruck-Land und war über Jahrhunderte ein Knotenpunkt für Handel, Handwerk und später die Tiroler Textilindustrie, deren Spuren sich bis heute im Ortsbild finden.</p>\n\n<p>Das prägende Bergpanorama wird von der Hohen Munde (2.659 m) dominiert, einem markanten Felszahn zwischen Inntal und Gaistal, der als Hausberg von Telfs gilt. Die Wanderung auf die Hohe Munde ist anspruchsvoll, aber eines der lohnendsten Ziele für trittsichere Berggeher in der Region. Familien und Genusswanderer zieht es hingegen auf die umliegenden Almgebiete oder ins Rietzer Grieskogel-Gebiet. Im Winter liegen die Skigebiete Seefeld, Hochoetz und Kühtai in kurzer Reichweite. Kulturell ist Telfs vor allem für die „Telfer Fasnacht\" bekannt – den ältesten und größten Faschingsumzug Tirols, der jedes Jahr tausende Besucher anzieht, mit aufwändig geschnitzten Fasnachtswagen und rund 1.000 Mitwirkenden.</p>\n\n<p>Der jährliche Kirchtag im Sommer, die traditionsreiche Schützenkompanie und das Telfer Stadtmuseum zur Textilgeschichte zeigen, dass der Markt zwischen Tradition und Gegenwart lebt. Kulinarisch lohnt sich ein Abstecher in die Gasthäuser rund um den Untermarkt, wo Tiroler Küche mit regionalem Bezug serviert wird. Wer einen Ort",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

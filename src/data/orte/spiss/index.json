@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "46.9581",
     "lng": "10.4365"
-  }
+  },
+  "beschreibung": "<p>Spiss liegt auf 1.740 Metern Höhe im Bezirk Landeck, unweit der Schweizer Grenze am Eingang des Samnauntals – und ist damit die höchstgelegene dauerhaft bewohnte Siedlung im Bezirk. Der Weiler mit seinen rund 100 Einwohnerinnen und Einwohnern schmiegt sich auf einem sonnenexponierten Hochplateau zwischen dem Gribellekopf und dem Pezinerspitz, mit freiem Blick Richtung Engadin und Silvretta. Wer hierherkommt, lässt den Trubel des Inntals weit hinter sich: Die schmale Straße windet sich ab Pfunds steil hinauf, und oben angekommen ist vor allem eines spürbar – Stille.</p>\n\n<p>Wandern ist die Hauptsache in Spiss. Der Ort ist Ausgangspunkt für Touren in die umliegende Bergwelt, etwa zur Frudigerjochhütte oder hinauf Richtung Gribellekopf, wo man auf 2.500 Metern zwischen Gämsen und Alpenrosen steht. Im Winter verläuft hier die Langlaufloipe ins Schweizer Samnaun, und Skitourengeher nutzen die unberührten Hänge rund ums Dorf. Besonders charakteristisch ist die Lage am Dreiländereck Österreich–Schweiz–Italien, die Spiss trotz seiner Abgeschiedenheit schon immer zu einem kleinen Knotenpunkt alpiner Durchgangsrouten gemacht hat.</p>\n\n<p>Kulinarisch findet man in Spiss ehrliche Tiroler Kost – Graukasnocken und Kaspressknödel in einfachen Gasthäusern, oft mit Produkten von den hofeigenen Viehwirtschaften rundum. Wer absolute Ruhe sucht, fernab ausgetretener Tourismuspfade, ist hier richtig. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

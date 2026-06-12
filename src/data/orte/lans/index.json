@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/lans/hero_1.png",
+      "alt": "Lans — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/lans/hero_1.png",
   "koordinaten": {
     "lat": "47.2385",
     "lng": "11.4324"
-  }
+  },
+  "beschreibung": "<p>Lans liegt auf 870 Metern Höhe auf dem sonnigen Mittelgebirge südlich von Innsbruck, im Bezirk Innsbruck-Land. Die kleine Gemeinde mit rund 1.100 Einwohnerinnen und Einwohnern gehört zu den exklusivsten Wohnadressen Tirols und verbindet ländliche Ruhe mit der Nähe zur Landeshauptstadt.</p>\n\n<p>Wanderwege führen direkt vom Ortszentrum in die weitläufigen Wälder der Igler Wiese und weiter Richtung Patscherkofel. Der nahe Lanser See, ein kleines Moorauge, lädt im Sommer zum Spazierengehen ein und ist ein beliebtes Ausflugsziel für Innsbrucker Familien. Das Schlosshotel Igens, ein historisches Renaissance-Schloss aus dem 16. Jahrhundert, prägt den Ort – heute als Fünf-Sterne-Hotel mit weitläufigem Spa-Bereich und Golfplatz. Der Panoramablick reicht vom Inntal über die Nordkette bis zu den Stubaier Alpen, besonders eindrucksvoll an klaren Herbsttagen.</p>\n\n<p>Trotz der gehobenen Ausrichtung bleibt Lans ein gewachsener Tiroler Ort mit bäuerlicher Tradition. Kulinarisch setzt das Schlosshotel mit regionaler Küche auf höchstem Niveau Akzente, während kleine Gasthäuser bodenständige Tiroler Küche servieren. Wer Ruhe sucht, ohne auf Stadtleben verzichten zu wollen, findet hier einen seltenen Ausgleich – die Innsbrucker Innenstadt ist in rund 15 Minuten erreichbar. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/koessen/hero_1.png",
+      "alt": "Kössen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/koessen/hero_1.png",
   "koordinaten": {
     "lat": "47.6703",
     "lng": "12.4055"
-  }
+  },
+  "beschreibung": "<p>Kössen liegt auf 588 Metern Seehöhe im Bezirk Kitzbühel, eingebettet zwischen dem Kaisergebirge im Westen und den Chiemgauer Alpen im Norden. Mit rund 4.500 Einwohnern zählt der Ort zu den bekanntesten Ferienzielen im Tiroler Unterland, unmittelbar an der Grenze zu Bayern.</p>\n\n<p>Die größte Attraktion ist zweifellos der Walchsee, der mit seinen 24 Grad Wassertemperatur im Sommer zu den wärmsten Badeseen Tirols gehört. 🌊 Der Naturpark Kössener Achen umgibt den Ort mit rund 1.200 Hektar Auenlandschaft, wo die Tiroler Ache mäandrierend durch Wälder und Schilfgürtel fließt. Paraglider schätzen Kössen als eines der besten Fluggebiete Europas – der Startplatz am Unterberghorn bietet Thermik, die selbst Anfänger zuverlässig trägt. Wanderer erreichen von hier aus das Steinerne Meer über die Bergrücken des Kaisergebirges, Familien bevorzugen die leichten Routen entlang der Ache mit ihren Naturbeobachtungsstationen für Eisvogel und Biber.</p>\n\n<p>Kulturell ist Kössen vor allem durch den Kossauner Bund von 1796 bekannt, einen der frühen Tiroler Widerstände gegen die bayerische Herrschaft. Kulinarisch dominieren regionale Klassiker: Kasnocken, Zillertaler Schlipfkrapfen und der Käse aus der nahegelegenen Sennerei Hatzenstädt. Wer im Sommer Ruhe sucht, abseits der überlaufenen Kitzbüheler Hotspots, findet hier eine erstaunlich bodenständige Variante des Tiroler Tourismus.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

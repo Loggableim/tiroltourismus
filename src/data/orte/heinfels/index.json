@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/heinfels/hero_1.png",
+      "alt": "Heinfels — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/heinfels/hero_1.png",
   "koordinaten": {
     "lat": "46.7515",
     "lng": "12.4409"
-  }
+  },
+  "beschreibung": "<p>Heinfels liegt im Tiroler Pustertal auf 1.030 Metern Seehöhe, wenige Kilometer westlich von Sillian im Bezirk Lienz. Die Marktgemeinde zählt rund 1.000 Einwohner und blickt auf eine lange Geschichte als Verwaltungssitz im oberen Pustertal zurück.</p>\n\n<p>Über dem Ort thront die Burg Heinfels, eine der größten und besterhaltenen Burganlagen Osttirols. Die Wehranlage aus dem 13. Jahrhundert wurde im Laufe der Zeit mehrfach erweitert und erhebt sich markant auf einem Felssporn hoch über dem Tal. Nach aufwendiger Restaurierung ist die Anlage heute für Besucher zugänglich und Veranstaltungsort für Konzerte und Ritterspiele. Rund um Heinfels beginnen zahlreiche Wanderwege, die sowohl Familien mit Kindern als auch geübte Bergwanderer ansprechen – etwa Touren Richtung Burgberg, zum Thurntaler oder ins Villgratental. Die Nähe zur österreichisch-italienischen Grenze und zu den Dolomiten macht den Ort zudem zum idealen Ausgangspunkt für Ausflüge in beide Richtungen.</p>\n\n<p>Kulturell pflegt Heinfels einen Mix aus alter Burgtradition und lebendigem Dorfleben. Regelmäßige Feste, darunter das Burgfest, ziehen Besucher aus dem gesamten Pustertal an. In der Gastronomie dominieren klassische Osttiroler Wirtshäuser mit regionaler Küche – von Kasnocken bis zu heimischem Wild aus den Villgrater Bergen. Wer Osttirol abseits der bekannten Hotspots erleben will, findet in Heinfels einen ruhigen, geschichtsträchtigen Standort mit echtem Tiroler Charakter.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

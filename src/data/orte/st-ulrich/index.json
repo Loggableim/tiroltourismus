@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.5284",
     "lng": "12.5745"
-  }
+  },
+  "beschreibung": "<p>St. Ulrich am Pillersee liegt auf 847 m Höhe in den Kitzbüheler Alpen, eingebunden zwischen dem gleichnamigen See und den markanten Felswänden der Loferer Steinberge. Das Dorf im Bezirk Kitzbühel zählt rund 1.800 Einwohner und gehört zu den ruhigeren Ferienorten im Tiroler Unterland – wer den Trubel von Kitzbühel oder Saalbach sucht, ist hier falsch, wer naturnahe Erholung schätzt, richtig.</p>\n\n<p>Der Pillersee selbst ist das Herzstück des Ortes: ein türkisgrüner Bergsee mit Trinkwasserqualität, der im Sommer zum Schwimmen, Paddeln und Angeln einlädt. Direkt am Ostufer führt ein rund 3,5 km langer Rundwanderweg um das Gewässer, vorbei an Schilfgürteln und kleinen Badebuchten. Über dem Ort thront die Buchensteinwand mit dem Jakobskreuz, einem der größten begehbaren Gipfelkreuze Europas – der Aufstieg über Waidring oder den Sessellift dauert etwa eine Stunde, oben warten Panorama auf 1.456 m und ein kleiner Klettersteig. Im Winter zieht die Region Loipenfreunde an: Die Pillersee-Tal-Loipe gehört mit über 40 km zu den längsten präparierten Langlaufstrecken Tirols.</p>\n\n<p>Gasthäuser wie der Pillerseehof oder der Landgasthof Blattl servieren typisch Pinzgauer Küche – Kasnocken, Graukas und frischen Saibling aus dem See. Die Pfarrkirche zum Hl. Ulrich mit ihrem spätgotischen Turm prägt das Ortsbild. Wer Familienurlaub mit Wand",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

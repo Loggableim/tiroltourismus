@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1967",
     "lng": "11.8594"
-  }
+  },
+  "beschreibung": "<p>Schwendau liegt auf einem Sonnenplateau oberhalb von Mayrhofen im hinteren Zillertal, auf 810 Metern Seehöhe. Die Gemeinde mit rund 1.800 Einwohnern gehört zum Bezirk Schwaz und profitiert von ihrer direkten Nachbarschaft zum bekannten Tourismusort, bleibt dabei aber deutlich ruhiger und bodenständiger.</p>\n\n<p>Der größte Trumpf von Schwendau ist die Horbergbahn, die direkt vom Ortsgebiet auf den Penken fährt. Damit gehört der Einstieg in eines der abwechslungsreichsten Skigebiete Tirols quasi zur Infrastruktur des Dorfes. Der Penken ist berühmt für das \"Action-Penken\" mit der steilsten Piste Österreichs, dem Harakiri, und lockt Skifahrer wie Freestyler gleichermaßen. Im Sommer führt die Wanderung oder eine geführte Tour zum Schlegeis-Stausee auf 1.780 Meter – einem der größten Stauseen in den Ostalpen, dessen turquoise Wasser sich zwischen den Felsen des Zillertaler Hauptkamms staut. Auch Wanderungen auf den Ahorn oder durch die stilleren Seitentäler starten von hier aus.</p>\n\n<p>Mit der Pfarrkirche zum Hl. Johannes dem Täufer besitzt Schwendau einen der markantesten Zwiebeltürme des Zillertals, das in dieser Bauform eher selten ist. Kulinarisch lohnt sich ein Besuch in einer der kleinen Gasthäuser für echte Zillertaler Krapfen – gefüllt mit Graukäse oder Kartoffeln, in heißem Fett ausgebacken. Wer abends nach Mayrhofen möchte, ist in wenigen Minuten zu Fuß oder mit dem Ortsbus dort, kann aber im eigenen Dorf in Ruhe übernachten – ein Vorteil, den viele Urlauber schätzen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

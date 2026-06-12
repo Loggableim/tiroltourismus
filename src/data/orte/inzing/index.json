@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/inzing/hero_1.png",
+      "alt": "Inzing — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/inzing/hero_1.png",
   "koordinaten": {
     "lat": "47.2742",
     "lng": "11.1970"
-  }
+  },
+  "beschreibung": "<p>Inzing liegt auf 616 m Seehöhe im Oberinntal, rund 15 km westlich von Innsbruck, und zählt mit etwa 4.100 Einwohnern zu den traditionsreichen Marktgemeinden des Bezirks Innsbruck-Land. Die erste urkundliche Erwähnung reicht ins 12. Jahrhundert zurück, und noch heute prägt das historische Zentrum mit dem alten Kern das Ortsbild. Am Kirchenhügel thront die Pfarrkirche hl. Petrus, deren barocker Hochaltar aus dem Jahr 1709 zu den kunsthistorisch bedeutendsten Sakralwerken des mittleren Inntals zählt – ein Werk des Meisters Hans Waldner aus Imst, das Besucher wegen seiner Figurenfülle und vergoldeten Ornamente in Erstaunen versetzt.</p>\n\n<p>Geografisch ist Inzing das westliche Eingangstor zur Axamer Lizum, einem der schneereichsten Skigebiete Tirols. Die Sonnenbergbahn bringt Wanderer und Skifahrer direkt von Inzing aus ins hochalpine Gelände – ein seltener Vorteil, den nur wenige Orte im Inntal bieten. Im Sommer führen markierte Wege durch die Mischwälder des Inzinger Bergs und hinauf zur Hundsalm, wo Einkehrmöglichkeiten mit Blick auf die gegenüberliegenden Stubaier und Tuxer Alpen warten. Der Radweg entlang des Inn verbindet Inzing mit Innsbruck und Telfs und macht den Ort auch für Familien mit Kindern attraktiv.</p>\n\n<p>Kulturell hat sich Inzing seinen dörflichen Charakter bewahrt. Die örtliche Bühne, der Inzinger Musiberg, organisiert regelmäßig Konzerte und Theateraufführungen, und der alljährliche Markt mit regionalen Produkten spiegelt die Verwurzelung der Gemeinde in der Tiroler Landwirtschaft. Kulinarisch stehen regionale Klassiker wie Kaspressknödel und Graukäse auf den Speisekarten der Wirtshäuser – bodenständig, ehrlich und ohne touristischen Schnörkel. Inzing ist kein Ort, der laut auf sich aufmerksam macht, gerade deshalb lohnt sich ein genauer Blick. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

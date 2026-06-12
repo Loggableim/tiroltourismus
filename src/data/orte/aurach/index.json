@@ -26,5 +26,23 @@
     "lat": "47.4140",
     "lng": "12.4316"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Aurach bei Kitzbühel liegt auf 800 Metern Höhe im Bezirk Kitzbühel, rund fünf Kilometer südlich der bekannten Gamsstadt an der Jochbergstraße, die ins Salzburger Land hinüberführt. Der kleine Markt mit etwa 1.200 Einwohnern bewahrt sich bewusst dörflichen Charakter und bildet damit einen ruhigen Gegenpol zum lebhaften Kitzbühel, das mit dem Bus oder Rad in wenigen Minuten erreichbar ist.</p>\n\n<p>Die Aurach, ein Gebirgsbach, der dem Ort seinen Namen gibt, zieht sich durch das Tal und begleitet Wanderer auf den zahlreichen Wegen in die Kitzbüheler Alpen. Direkt vom Ortszentrum starten Touren Richtung Pengelstein, Gaisberg oder in das Naturschutzgebiet am Gamshag – beliebt bei Familien ebenso wie bei geübten Berggehern. Ein besonderes Highlight ist der Wildpark Aurach, wo heimische Alpentiere wie Steinböcke, Rothirsche und Mufflons in großzügigen Gehegen beobachtet werden können. Im Winter führen Langlaufloipen und geräumte Winterwanderwege durch die verschneite Landschaft, und die Skigebiete von Kitzbühel liegen buchstäblich vor der Haustür.</p>\n\n<p>Im alten Ortskern stehen typische Tiroler",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

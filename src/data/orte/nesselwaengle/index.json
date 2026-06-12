@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4804",
     "lng": "10.5971"
-  }
+  },
+  "beschreibung": "<p>Nesselwängle liegt auf 1.130 m Höhe am Westeingang des Tannheimer Tals im Außerfern, Bezirk Reutte, direkt an der Grenze zum Allgäu. Das Dorf zählt rund 450 Einwohner und gehört zu den ruhigsten Orten im Tannheimer Tal – ein Umstand, den Familien und Ruhesuchende bewusst suchen. Die schmale Dorfstraße schlängelt sich durch verstreute Bauernhöfe, deren Fassaden noch den typischen Tannheimer Stil zeigen: massive Blockbauten, dunkles Holz, kleine Fensterläden.</p>\n\n<p>Das Skigebiet am Hahnenkamm ist Nesselwängles bekanntester Anziehungspunkt im Winter – überschaubar, aber mit Aussicht auf die markanten Gipfel des Tals, etwa die Rotflüh oder die Krinnenspitze. Im Sommer wandert man von hier aus direkt auf die Krinnenspitze (2.000 m) oder zur Nesselwängler Scharte, beides Touren, die auch für geübte Familien machbar sind. Ein kurzer Fußweg führt hinunter zum Haldensee, einem der wärmsten Bergseen Tirols, der im Sommer zum Baden einlädt. Am Nordufer liegen kleine Badeplätze, an denen man stundenlang im klaren Wasser sitzt, ohne dass es je richtig voll wird. Der See ist das Herzstück des Dorflebens – morgens laufen Einheimische ihre Runden, abends trifft man sich auf der Wiese.</p>\n\n<p>Kulinarisch setzt Nesselwängle auf regionale Küche: Kaspressknödel, Bergkäse vom Tannheimer Almkäse und Forellen aus heimischen Gewässern stehen in den wenigen Gasthäusern auf der Karte. Die Pfarrkirche Hl. Andreas mit ihrem spitzen Turm bildet den optischen Mittelpunkt des Orts. Wer abseits der bekannten Tourismushotspots im Tannheimer Tal eine Basis sucht, findet hier genau das – ein Dorf, das sich seine Stille bewahrt hat.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.0375",
     "lng": "10.6103"
-  }
+  },
+  "beschreibung": "<p>Serfaus liegt auf einem sonnenverwöhnten Hochplateau oberhalb des Inntals im Bezirk Landeck auf 1.429 Metern Seehöhe. Mit rund 1.100 Einwohnern gehört das Dorf zu den höchstgelegenen und zugleich charmantesten Wintersportorten Tirols. Die Lage auf dem Hochplateau zwischen den Ausläufern der Samnaungruppe und den Ötztaler Alpen sorgt für ein außergewöhnlich mildes Klima und gleichzeitig kurze Wege ins hochalpine Skigebiet.</p>\n\n<p>Was Serfaus von nahezu jedem anderen Ort in den Alpen unterscheidet, ist seine autofreie Dorfkernzone – Autos bleiben am Ortseingang, Besucher bewegen sich zwischen traditionellen Engadinerhäusern und modernen Chalets zu Fuß oder mit der Dorfbahn. Diese „Dorf-U-Bahn\" ist die kleinste und höchstgelegene Luftseilbahn Europas, eine unterirdische Standseilbahn, die Gäste kostenlos durch den Ort befördert. Über den Komperdell- und Sunliner-Sessellift erreicht man direkt das Skigebiet Serfaus-Fiss-Ladis mit über 200 Pistenkilometern, das besonders bei Familien wegen seiner breiten, übersichtlichen Abfahrten und der „Murmli\"-Kinderwelten geschätzt wird. Im Sommer verwandelt sich das Plateau in ein weitläufiges Wander- und Mountainbike-Revier mit Aussichtspunkten wie der Frommes-Alm auf über 2.200 Metern.</p>\n\n<p>Kulinarisch reicht das Angebot von bodenständiger Tiroler Kost in urigen Gasthäusern bis hin zu gehobener Alpenküche mit Käse aus der hauseigenen Sennerei. Die Kombination aus autofreier Ruhe, familienfreundlicher Infrastruktur und der Anbindung an eines der größten Skigebiete Tirols macht Serfaus zu einem seltenen Gegenpol zum Massentourismus – ein Ort, der seinen Charakter bewahrt hat, ohne auf Komfort zu verzichten. 🌟</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

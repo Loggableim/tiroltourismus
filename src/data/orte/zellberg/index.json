@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2405",
     "lng": "11.8561"
-  }
+  },
+  "beschreibung": "<p>Zellberg liegt auf 770 m Höhe am sonnigen Berghang oberhalb von Zell am Ziller, im hinteren Zillertal im Bezirk Schwaz. Der kleine Ort mit rund 700 Einwohnern thront deutlich erhöht über dem Talboden und gehört damit zu den ruhigeren Weilern der Region – fernab vom Trubel der viel befahrenen Zillertaler Bundesstraße.</p>\n\n<p>Was Zellberg ausmacht, ist die Kombination aus bäuerlicher Tradition und alpiner Aussicht. Zahlreiche alte, dunkel getäfelte Holzhäuser mit Schindeldächern prägen das Dorfbild, dazwischen stehen kleine Kapellen und der typische Zillertaler Bauerngarten. Vom Ort aus starten mehrere markierte Wanderwege, unter anderem hinauf zur Hochfeldalm und weiter Richtung Kreuzjoch, mit Blick auf den Ahornspitze, den Gerlosstein und die imposante Nordkette des Zillertals. Besonders im Frühling, wenn die Wiesen um den Weiler blühen, und im Herbst zur Almabtrieb-Zeit zeigt sich Zellberg von seiner ursprünglichen Seite – genau das Richtige für Familien und Ruhesuchende, die abseits der großen Skigebiete wandern oder einfach die Stille genießen wollen. 🌲</p>\n\n<p>Kulinarisch dominiert die klassische Zillertaler Heumilch-Küche: Graukas, Zieger und selbst gemachte Butter findet man in den wenigen Direktvermarktern rund um den Ort. Die kleine Pfarrkirche mit ihrem spitzen Turm ist das Wahrzeichen des Dorfes und ein beliebtes Fotomotiv, bevor man auf einem der Bänke am Panoramaweg den Blick über das Tal schweifen lässt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

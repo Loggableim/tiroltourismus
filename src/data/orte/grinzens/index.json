@@ -25,5 +25,23 @@
     "lat": "47.2291",
     "lng": "11.2538"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Grinzens liegt auf 945 Metern Seehöhe am westlichen Rand des Innsbrucker Mittelgebirges, eingebettet zwischen der Nordkette im Süden und dem Sellraintal im Westen – und ist damit die höchstgelegene Gemeinde dieses Höhenzugs. Das Dorf mit seinen rund 1.500 Einwohnern gehört zum Bezirk Innsbruck-Land und thront auf einer sonnenverwöhnten Terrasse, von der aus der Blick weit über das Inntal bis zu den Stubaier Alpen reicht. 🌲</p>\n\n<p>Was Grinzens auszeichnet, ist sein konsequent bewahrter dörflicher Kern: enge Gassen, stattliche Einhöfe mit tief heruntergezogenen Dächern und die spätgotische Pfarrkirche zum Hl. Georg, deren hoher Turm weithin sichtbar ist. Wanderungen starten direkt vom Dorfzentrum – etwa auf die Rangger Köpfl-Region oder durch den idyllischen Kehrgraben hinauf Richtung Sellraintal. Im Winter liegt das kleine Skigebiet Kühtai in greifbarer Nähe, und auch Schneeschuh- und Winterwanderwege beginnen vor der Haustür. Die Lage zwischen Stadt und Alpennatur macht den Ort besonders bei jenen beliebt, die Ruhe suchen, ohne auf die Nähe Innsbrucks verzichten zu müssen.</p>\n\n<p>Kulturell pflegt Grinzens Tiroler Traditionen wie das Herz-Jesu-Feuer im Juni, wenn die umliegenden Berge mit lodernden Flammenmustern erstrahlen. Kulinarisch dominieren die typischen Wirtshausklassiker – Kaspressknödel, Gröstl und würziger Bergkäse von",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

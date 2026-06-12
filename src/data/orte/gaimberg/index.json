@@ -25,5 +25,23 @@
     "lat": "46.8532",
     "lng": "12.7866"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Gaimberg liegt auf einer Sonnenterrasse rund 200 Meter über dem Lienzer Talboden in Osttirol, auf etwa 930 Meter Seehöhe. Die Gemeinde mit ihren rund 850 Einwohnern thront am Eingang zum Iseltal und gehört zum Bezirk Lienz – direkt gegenüber dem Stadtgebiet, getrennt durch die Isel und die Felder der Pustertaler Straße. Diese exponierte Lage hoch über dem Tal macht Gaimberg zum bevorzugten Aussichtspunkt für alle, die die Lienzer Dolomiten in ihrer ganzen Pracht erleben wollen.</p>\n\n<p>Die Panoramablicke auf die markanten Gipfel wie den Schleinitz, den Spitzkofel und die Große Sandspitze begleiten Wanderer auf Schritt und Tritt. Besonders reizvoll ist der Aufstieg zur „Gaimberger Alm\" mit ihren bewirtschafteten Hütten, die echte Osttiroler Almwirtschaft pflegen. Direkt vom Ort aus starten zudem Touren Richtung Rauchkofel und zum idyllischen Tristacher See, einem der wärmsten Badeseen Tirols. Wer es ruhiger angehen will, findet auf den sonnigen Wiesen rund um den Ort stille Plätze, die im Sommer zum Verweilen einladen – fernab der Touristenströme, die weiter südlich durch Osttirol ziehen.</p>\n\n<p>Die Osttiroler Küche kommt in den Gasthäusern des Dorfes ehrlich und deftig auf den Tisch: Schlutzkrapfen mit Kartoffeln, geräucherter Bauernspeck und der hauseigene Almkäse schmecken hier noch so, wie man es sich auf 1.000 Metern erwartet. Auch kulturell hat Gaimberg seinen eigenen Rhythmus behalten – die kleine Pfarrkirche und die gewachsenen Bauernhöfe erzählen von einer langen bäuerlichen Tradition, die bis heute das Dorfleben prägt. Wer Lienz und die Dolomiten genießen will, ohne im",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

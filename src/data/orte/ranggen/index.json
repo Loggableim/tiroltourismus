@@ -17,5 +17,18 @@
     "lng": 11.2167
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Ranggen liegt auf 826 Metern Höhe auf dem sonnigen Mittelgebirgsplateau südlich von Innsbruck, zwischen dem Inntal und dem Eingang zum Sellraintal. Der kleine Ort gehört zum Bezirk Innsbruck-Land und zählt rund 1.060 Einwohner, die in einer Streusiedlung aus traditionellen Höfen leben – viele der Bauernhäuser mit ihren tief heruntergezogenen Dächern und gemauerten Erdgeschossen sind seit Generationen in Familienbesitz.</p>\n\n<p>Die Lage auf der Hochterrasse bringt einen weiten Blick über das Inntal bis zur Nordkette mit sich, gleichzeitig beginnt direkt hinter den letzten Höfen das Wandergebiet Richtung Rangger Köpfl und die Wipptaler Alpen. Im Winter ist die Loipe Richtung Oberperfuss und Inzing ein Geheimtipp für Skilangläufer, im Sommer führen markierte Wege durch Lärchen- und Zirbenwälder hinauf zu bewirtschafteten Almen. Besonders charakteristisch ist das dichte Nebeneinander von Wohnhaus, Stall, Troadkasten (Speicher) und Kapelle auf den einzelnen Höfen – ein Stück bäuerlicher Baukultur, das in dieser Geschlossenheit selten geworden ist.</p>\n\n<p>Die Pfarrkirche zum Heiligen Georg mit ihrem spitzen Turm bildet den Mittelpunkt des Dorfkerns. Kulinarisch stehen die Erzeugnisse der regionalen Landwirtschaft im Mittelpunkt: Graukäse, Butter und Brot aus der Hofbäckerei finden sich bei den wenigen Gasthäusern ebenso wie Tiroler Hausmannskost. Wer das echte Tiroler Dorfleben abseits der Touristenströme sucht, ist in Ranggen richtig – ohne Trubel, mit Aussicht.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

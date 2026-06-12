@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5284",
     "lng": "12.2507"
-  }
+  },
+  "beschreibung": "<p>Scheffau am Wilden Kaiser liegt auf 745 m Höhe im Bezirk Kufstein, eingebettet zwischen dem Kaisergebirge im Süden und den sanfteren Ausläufern der Kitzbüheler Alpen im Norden. Mit rund 1.500 Einwohnern zählt der Ort zu den kleineren Gemeinden im Söllandl, hat sich aber seinen dörflichen Charakter bewahrt. Über die B164 und die Loferer Bundesstraße ist Scheffau verkehrstechnisch gut angebunden, gleichzeitig wirkt der Ort abseits der Hauptrouten ruhig und ursprünglich.</p>\n\n<p>Wichtigstes Aushängeschild im Winter ist die direkte Anbindung an die SkiWelt Wilder Kaiser – Brixental, eines der größten zusammenhängenden Skigebiete Österreichs mit über 280 Pistenkilometern. Die Bergbahnen Scheffau bringen Skifahrer und Snowboarder direkt ins Skigebiet, das mit der Hohen Salve und dem Brandstätter Skigebiet vernetzt ist. Im Sommer liegt der Hintersteiner See nur wenige Kilometer vom Ortszentrum entfernt – einer der saubersten und wärmsten Badesee Tirols, umgeben von bewald",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

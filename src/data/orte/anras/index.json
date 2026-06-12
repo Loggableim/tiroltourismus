@@ -26,6 +26,23 @@
     "lat": "46.7724",
     "lng": "12.5562"
   },
-  "beschreibung": "<p><strong>Anras</strong> liegt auf 990 Metern Höhe im sonnigen Pustertal in Osttirol und beeindruckt durch eine faszinierende Mischung aus Geschichte, Kultur und unberührter Natur. Das Dorf wird dominiert von Schloss Anras, einer mittelalterlichen Burganlage, die hoch über der Gemeinde thront und einen herrlichen Blick ins Tal bietet.</p><p>Die barocke Pfarrkirche von Anras mit ihren prächtigen Fresken ist ein weiteres kulturelles Highlight und zeugt von der bewegten Geschichte des Ortes. Wanderer und Naturliebhaber kommen in Anras voll auf ihre Kosten: Zahlreiche Wege führen durch die unberührten Landschaften des Pustertals, vorbei an traditionellen Bauernhöfen und durch dichte Wälder. Die Region ist ein Geheimtipp für alle, die Ruhe und authentische Naturerlebnisse suchen.</p><p>Im Winter locken die nahegelegenen Skigebiete Osttirols mit hervorragenden Pisten und Langlaufloipen. Die traditionelle Osttiroler Gastfreundschaft und die regionale Küche mit Spezialitäten wie Schlutzkrapfen und Tiroler Gröstl machen jeden Besuch in Anras zu einem unvergesslichen Erlebnis.</p>",
-  "kategorie": "dorf"
+  "beschreibung": "<p>Anras liegt auf 990 Metern Höhe im Osttiroler Pustertal, zwischen Lienz und Sillian, eingebettet zwischen den Ausläufern der Lienzer Dolomiten im Norden und den Villgratner Bergen im Süden. Das Dorf zählt rund 1.300 Einwohner und gehört zum Bezirk Lienz. Die Lage abseits der großen Tourismusströme macht Anras zu einem ruhigen Ausgangspunkt für Entdeckungen in der Region.</p>\n\n<p>Wandern steht in Anras ganz oben: Der Gailtalberg, der mit der Kabinenbahn in wenigen Minuten erreichbar ist, lockt mit aussichtsreichen Touren über die Anraser Alm bis hinüber nach Obertilliach. Auch die keltischen Baumkreis-Forschungen am Gailtalberg-Hang geben dem Wandergebiet eine besondere Note. Kulturell ist Schloss Anras das Herzstück des Ortes. Der imposante Bau beherbergt seit 1994 ein Wohn- und Arbeitsmuseum der Lebenshilfe, das einen authentischen Einblick in die historische Lebenswelt des Pustertals bietet. Nur wenige Schritte entfernt steht die barocke Pfarrkirche zum Heiligen Stephanus mit ihrem markanten Zwiebelturm und den kunstvollen Deckenfresken im Inneren.</p>\n\n<p>Familien schätzen die kurzen Wege und die naturnahe Umgebung, in der Kinder auf Entdeckungstour gehen können. In den Gasthäusern des Dorfes werden Osttiroler Klassiker wie Kasnudeln, Graukäsesuppe und Schlutzkrapfen serviert – bodenständig und regional. Anras beweist, dass Osttirol mehr zu bieten hat als die bekannten Hauptorte, und verbindet Geschichte, Natur und tiroler Lebensart auf besondere Weise. 🏘️",
+  "kategorie": "dorf",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

@@ -25,6 +25,18 @@
     "lat": "46.7834",
     "lng": "12.7617"
   },
-  "beschreibung": "<p><strong>Amlach</strong> ist eine beschauliche Streusiedlung im sonnigen Drautal in Osttirol, gelegen auf 689 Metern Höhe. Umgeben von den markanten Gipfeln der Lienzer Dolomiten und den sanften Hügeln des Drautals, bietet der Ort eine Oase der Ruhe und Erholung für alle, die dem Alltag entfliehen möchten.</p><p>Die weit verstreuten Bauernhöfe und die unberührte Natur prägen das Bild von Amlach. Zahlreiche Wanderwege führen durch die sonnigen Hänge und Wälder der Umgebung und belohnen mit herrlichen Ausblicken auf das Drautal und die umliegende Bergwelt. Die Nähe zur Bezirkshauptstadt Lienz ermöglicht es, die Ruhe des Dorfes mit den Annehmlichkeiten der Stadt zu verbinden. Im Winter locken ruhige Winterwanderwege und Langlaufloipen.</p><p>Die traditionelle Osttiroler Lebensart ist in Amlach noch lebendig. In den umliegenden Gasthöfen können Sie regionale Spezialitäten wie den Osttiroler Schlipfkrapfen oder den Tiroler Gröstl genießen. Die herzliche Gastfreundschaft der Einheimischen macht den Aufenthalt zu einem authentischen Tiroler Erlebnis.</p>",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Amlach liegt auf 689 m Seehöhe im Osttiroler Drautal, unmittelbar östlich der Bezirkshauptstadt Lienz. Die Marktgemeinde mit ihren rund 500 Einwohnern erstreckt sich als lockere Streusiedlung am sonnigen Südhang über dem Talboden der Drau – ein typisches Bild Osttirols, wo einzelne Höfe und kleine Weiler zwischen Wiesen und Obstgärten verteilt liegen.</p>\n\n<p>Was Amlach ausmacht, ist die unmittelbare Nähe zu den Lienzer Dolomiten: Die markanten Felsformationen mit Namen wie Rote Wand, Große Sandspitze und Laserzwand bilden eine eindrucksvolle Kulisse und sind von den höher gelegenen Hofstellen gut sichtbar. Direkt vom Ort führen Wanderwege hinauf in dieses Berggebiet, etwa zur Dolomitenhütte oder weiter zur Kerschbaumer Alm. Über das Tal hinweg schweift der Blick Richtung Süden zu den Ausläufern der Schobergruppe. Wer Ruhe sucht, findet hier Forstwege und Steige abseits der Hauptrouten, die im Sommer zum Wandern und im Winter zum Schneeschuhgehen einladen. Die Tallage bringt zudem milde Temperaturen, weshalb in Amlach noch heute Mostbirnbäume und traditionelle Streuobstwiesen gepflegt werden.</p>\n\n<p>Kulturell ist Amlach eng mit der Pfarre St. Andreas verbunden, deren spätgotische Kirche das Ortsbild prägt. Kulinarisch profitiert die Gemeinde von der Osttiroler Landwirtschaft: regionale Produkte wie Osttiroler Bergkäse, Schmalz und Schnaps aus eigener Erzeugung finden sich bei den Direktvermarktern. Wer Lienz in wenigen Minuten erreichen will, aber abends die Stille eines kleinen Dorfs schätzt, ist in Amlach genau richtig. 🏘️</p>",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    }
+  ]
 }

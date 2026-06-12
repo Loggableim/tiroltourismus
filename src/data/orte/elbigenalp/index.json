@@ -26,5 +26,23 @@
     "lat": "47.2910",
     "lng": "10.4369"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Elbigenalp liegt auf 1.040 Metern Höhe im Außerfern und ist der Hauptort des Lechtals im Bezirk Reutte. Mit rund 900 Einwohnern zählt die Marktgemeinde zu den kleineren Orten des Tals, blickt aber auf eine bemerkenswerte kulturelle Tradition zurück, die weit über die Region hinaus bekannt ist.</p>\n\n<p>Das Lechtal prägt den Ort entscheidend – der Lech gehört zu den letzten weitgehend unverbauten Wildflüssen der Alpen und ist als Naturpark Tiroler Lech geschützt. Direkt am Ufer des türkisgrün schimmernden Flusses lädt der Lechweg zu ausgedehnten Wanderungen ein, die auch für Familien gut machbar sind. Wer höher hinaus will, findet rund um Elbigenalp Touren in die Lechtaler Alpen, etwa zur Simmshütte oder auf die Jöchelspitze. Im Ort selbst steht die barocke Pfarrkirche zum Heiligen Nikolaus, die mit ihrer markanten Fassade und dem prachtvollen Inneren zu den sehenswerten Sakralbauten des Außerferns zählt. Besonders stolz ist man auf die Geigenbaukunst: Im örtlichen Geigenbaumuseum wird die jahrhundertealte Tradition des Saiteninstrumentenbaus dokumentiert, die das Lechtal seit dem 17. Jahrhundert prägt.</p>\n\n<p>Kulinarisch domieren regionale Klassiker wie Kässpätzle, Kasspatzn und Wildgerichte aus heimischer Jagd. Wer den Ort besucht, sollte sich Zeit für den Besuch einer der noch aktiven Werkstätten nehmen – dort erfährt man, warum Lechtaler Geigen seit Generationen international geschätzt werden.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

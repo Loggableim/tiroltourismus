@@ -27,6 +27,23 @@
     "lat": "47.5276",
     "lng": "11.7056"
   },
-  "beschreibung": "<p><strong>Achenkirch</strong> liegt malerisch am Ufer des Achensees, dem größten See Tirols, auf 916 Metern Höhe und ist ein Paradies für Wasserliebhaber und Naturfreunde. Das Dorf erstreckt sich entlang des Seeufers und bietet einen atemberaubenden Blick auf das Karwendelgebirge und die umliegenden Berge.</p><p>Der Achensee selbst ist ein Eldorado für Wassersportler: Segeln, Surfen, Tauchen und Stand-Up-Paddling sind ebenso möglich wie Bootsfahrten mit der historischen Achensee-Dampfschifffahrt. Im Sommer laden die umliegenden Wanderwege zu ausgedehnten Touren ein – von leichten Uferwegen bis zu anspruchsvollen Bergtouren auf die Rotspitze oder das Bärenkopf. Das Skigebiet Christlum bietet im Winter familienfreundliche Pisten und herrliche Tiefschneeabfahrten.</p><p>Familien schätzen das vielfältige Angebot an Freizeitaktivitäten: Erlebnisbäder, Minigolf, Tennis und die zahlreichen Spielplätze am See sorgen für abwechslungsreiche Urlaubstage. In den gemütlichen Gasthöfen und Hotels entlang der Seepromenade genießen Sie Tiroler Spezialitäten mit Blick auf das glitzernde Wasser des Achensees.</p>",
-  "kategorie": "seeort"
+  "beschreibung": "<p>Achenkirch liegt auf 916 m Seehöhe am nördlichen Westufer des Achensees, im Bezirk Schwaz, und bildet mit seinen rund 2.200 Einwohnern den weitläufigsten Ort am \"Tiroler Meer\". Der Ort erstreckt sich über mehrere Kilometer entlang des Sees und ist der sonnenreichste Punkt am Achensee – hier regnen sich die Wolken am Karwendel ab, bevor sie das Ufer erreichen.</p>\n\n<p>🌊 Das Skigebiet Christlum direkt im Ort ist kompakt und familienfreundlich: 27 Pistenkilometer, überschaubare Liftanlagen und eine eigene Kinderskischule machen es für Anfänger und Familien attraktiv. Im Sommer verwandelt sich dasselbe Gebiet in ein Wanderrevier mit Aussicht auf den Achensee und das Karwendel. Der See selbst ist die Hauptattraktion – Achenkirch hat mehrere freie Badestellen, einen großen Yachthafen und bietet Tretboot-, Segel- und SUP-Verleih. Das Tauchen im Achensee ist wegen der hervorragenden Sichtweite überregional bekannt. Geheimtipp: Die Bucht bei der Scholastika, etwa drei Kilometer Richtung Süden, ist deutlich ruhiger als der Hauptstrand.</p>\n\n<p>Kulinarisch ist Achenkirch stark von der Fischerei geprägt – Saiblinge und Renken aus dem Achensee stehen auf fast jeder Speisekarte. Die Seeuferstraße führt ohne steile Anstiege durch den Ort, was ihn auch für Radfahrer und Urlauber mit eingeschränkter Mobilität interessant macht. Wer Ruhe sucht, findet sie besonders in den Abendstunden, wenn die Tagesausflügler aus dem Süden abgereist sind.</p>",
+  "kategorie": "seeort",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

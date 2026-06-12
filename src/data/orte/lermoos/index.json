@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/lermoos/hero_1.png",
+      "alt": "Lermoos — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/lermoos/hero_1.png",
   "koordinaten": {
     "lat": "47.3989",
     "lng": "10.8878"
-  }
+  },
+  "beschreibung": "<p>Lermoos liegt auf einem weiten Hochplateau auf 1.004 m Höhe in der Außerfern-Region im Bezirk Reutte, direkt am Fuß des Zugspitzmassivs – Deutschlands höchster Gipfel ragt hier nur wenige Kilometer jenseits der Grenze auf, das Dorf selbst gehört fest zu Tirol. Mit rund 1.100 Einwohnern zählt Lermoos zu den kleineren Orten der Zugspitzarena, hat aber durch seine Lage am Schnittpunkt von Mieminger Kette, Wetterstein und Ammergauer Alpen eine bemerkenswerte Ausgangslage für Bergtouren jeder Richtung.</p>\n\n<p>Der Hausberg Grubigstein (1.850 m) prägt das Ortsbild: Im Winter bringt die Seilbahn Skifahrer und Rodler ins Familienskigebiet, das mit breiten, übersichtlichen Pisten und einer der längsten Naturrodelbahnen Tirols (über 10 km Abfahrt) punktet. Im Sommer führt ein weit verzweigtes Wanderwegenetz vom Loisach-Quellgebiet über den Blindsee – ein smaragdgrüner Bergsee mit glasklarem Wasser – bis hinauf zur Bergstation der Tiroler Zugspitzbahn. Kletterer finden am Sonnstein und im Gamskar leichte bis mittelschwere Routen, Familien schätzen die Panoramawanderwege rund um die Wettersteinhütte.</p>\n\n<p",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.3702",
     "lng": "10.5399"
-  }
+  },
+  "beschreibung": "<p>Vorderhornbach liegt auf 970 Metern Höhe im Lechtal, am äußersten Rand des Bezirks Reutte in der Region Außerfern, kurz vor der bayerischen Grenze. Mit rund 250 Einwohnerinnen und Einwohnern zählt das Dorf zu den ruhigsten Orten im Tiroler Lechtal – und genau das macht seinen Reiz aus.</p>\n\n<p>Die Lech selbst prägt den Ort wie kaum ein anderer Fluss Tirols. Bis heute ist sie einer der letzten weitgehend ungebändigten Wildflüsse der Nordalpen, mit groben Kiesbänken, Auwäldern und einer Artenvielfalt, die im Naturpark Tiroler Lech geschützt wird. Direkt vom Dorf führen Wanderwege hinauf in die Lechtaler Alpen, etwa zur Rotspitze oder durch das Hornbachtal, wo man mit etwas Glück Steinadler und Murmeltiere beobachten kann. Die Bauernhöfe rund um den Ort sind zum Teil noch in alter Handwerkskunst aus Holz gezimmert, und wer Ruhe sucht, findet hier Wege ohne Liftanlagen oder Hüttenrummel.</p>\n\n<p>Kulinarisch lebt Vorderhornbach von alpenländischer Einfachheit: Käse von den Bergsennereien der Region, Wild aus den Wäldern am Lech und Forellen aus den klaren Zuflüssen. Wer das Echte, das Unaufgeregte sucht, abseits der ausgetretenen Routen, der ist hier richtig – ein Ort, an dem man abends noch die Stille hört.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

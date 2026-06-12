@@ -25,5 +25,23 @@
     "lat": "47.4196",
     "lng": "10.5863"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Forchach liegt auf 1.148 m Höhe am Eingang zum Lechtal im Bezirk Reutte, im äußersten Westen Tirols. Die Marktgemeinde zählt rund 250 Einwohner und gehört damit zu den kleinsten Gemeinden im Außerfern. Der Ort erstreckt sich entlang des Lechs, der hier noch über weite Strecken als einer der letzten weitgehend unverbauten Wildflüsse der Alpen fließt.</p>\n\n<p>Das Gemeindegebiet liegt im Natura-2000-Schutzgebiet Lechtal, was die unberührte Auen- und Schluchtlandschaft rund um Forchach erklärt. Wanderer finden hier den Lechweg, einen Weitwanderweg, der den Fluss auf über 125 km begleitet. Besonders lohnend ist die Johannesbachklamm, eine enge Felsschlucht mit steilen Felswänden und tosenden Wasserkaskaden, die direkt von Forchach aus erreichbar ist. Im Sommer locken zudem Forellenangeln im Lech und Bergtouren in die Lechtaler Alpen, die hier ohne Seilbahnen und Massentourismus auskommen. Die Region ist außerdem ein Hotspot für Vogelbeobachter – Eisvogel, Flussregenpfeifer und der seltene Mornellregenpfeifer sind im Lechtal heimisch.</p>\n\n<p>Wer in Forchach einkehrt, isst typisch tirolerisch: Kässpätzle, Riebel oder frische Forelle aus dem Lech, oft direkt bei den wenigen Gasthöfen im Ort oder in den Nachbardörfern. Kulturell ist die Gemeinde eng mit der Lechtaler Fasnacht verbunden, einem alten Brauch mit kunstvollen Holzlarven, der jedes Jahr zahlreiche Besucher anzieht. Forchach ist kein Ort für Hektik – wer Stille, intakte Natur und ehrliche Alpenwelt sucht, findet hier eines der letzten ruhigen Refugien Tirols. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

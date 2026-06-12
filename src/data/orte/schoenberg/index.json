@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1863",
     "lng": "11.4041"
-  }
+  },
+  "beschreibung": "<p>Schönberg im Stubaital liegt auf 1.013 Metern Seehöhe und bildet das westliche Tor zum Stubaital, nur etwa fünfzehn Kilometer von Innsbruck entfernt. Der Ort erstreckt sich über mehrere kleine Weiler wie Kreith und zieht sich entlang der Ruetz, die hier noch ruhig und breit durch das Tal fließt. Gewachsene Bauernhöfe mit typisch tirolerisch bemalten Fassaden, schmale Zufahrtsstraßen und die unmittelbare Nähe zu den schroffen Felswänden der Stubaier Alpen prägen das Bild dieses Dorfes mit seinen rund 1.100 Einwohnerinnen und Einwohnern.</p>\n\n<p>Hoch über dem Ort thront die Burgruine Schönberg,",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

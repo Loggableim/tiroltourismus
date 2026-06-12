@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4399",
     "lng": "11.8941"
-  }
+  },
+  "beschreibung": "<p>Rattenberg liegt im Tiroler Unterinntal, im Bezirk Kufstein, auf 521 Metern Seehöhe – und ist mit rund 400 Einwohnerinnen und Einwohnern die kleinste Stadt Österreichs. Der historische Ortskern drängt sich auf einem schmalen Felssporn über dem Inn, dicht an die Nordflanke des Rattenbergs gedrängt, sodass die Gassen zwischen Häuserfluchten und Felswand kaum Platz finden. Diese Enge ist nicht natürlich gewachsen, sondern Ergebnis einer mittelalterlichen Stadtanlage, die bis heute nahezu unverändert erhalten ist.</p>\n\n<p>Was Rattenberg von anderen Orten im Inntal unterscheidet, ist die Konzentration auf Handwerk und Geschichte: Die <strong>Kissling Glasbläserei</strong> ist die einzige ihrer Art in ganz Tirol und produziert noch in der Werkstatt am Augustinergässchen mundgeblasenes Glas. Das <strong>Augustinerkloster</strong> aus dem 14. Jahrhundert beherbergt eines der wenigen noch aktiven Männerklöster Österreichs und eine Sammlung gotischer Holzplastiken. Über dem Ort thront die <strong>Schlossruine Rattenberg</strong>, von der aus die Herren von Rattenberg einst den Inn-Übergang kontrollierten. Spaziergänge durch die Hauptstraße wirken wie ein Gang durch ein Freilichtmuseum – renovierungswillig, aber bewusst nicht durchsaniert.</p>\n\n<p>Kulinarisch dominieren kleine Cafés und Gasthäuser mit Tiroler Küche, darunter der <strong>Gasthof Goldene Krone</strong> mit eigener Metzgerei. Der berühmte <strong>Rattenberger Advent</strong> verwandelt den Ort jeden Dezember in eine Laternenstadt, deren warmes Licht den engen Gassen eine bes",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

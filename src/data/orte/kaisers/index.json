@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kaisers/hero_1.png",
+      "alt": "Kaisers — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kaisers/hero_1.png",
   "koordinaten": {
     "lat": "47.1953",
     "lng": "10.3380"
-  }
+  },
+  "beschreibung": "<p>Kaisers liegt auf 1.500 Metern Seehöhe im Bezirk Reutte und ist die höchstgelegene Dauersiedlung im Außerfern. Das kleine Bergdorf mit rund 350 Einwohnern thront über dem Lechtal, abseits der Hauptverkehrsader, und gehört zur Gemeinde Häselgehr. Die Zufahrt erfolgt über eine schmale Straße, die sich durch den Lech­durchbruch windet – schon der Weg dorthin vermittelt das Gefühl, in eine andere Welt einzutauchen.</p>\n\n<p>Wandern steht hier im Mittelpunkt. Vom Dorf aus führt der Weg direkt ins Kaisertal, eines der ruhigsten und ursprünglichsten Seitentäler der Lechtaler Alpen. Die Kaiseralm auf rund 1.700 Metern ist ein beliebtes Ziel für Tageswanderungen, ebenso wie der Aufstieg zur Roggspitze, die mit knapp 2.500 Metern einen weiten Blick über die umliegende Bergwelt bietet. Das Tal ist Teil des Naturpark Tiroler Lech, wo man mit etwas Glück Steinadler oder Murmeltiere beobachten kann. 🌲</p>\n\n<p>Wer Stille sucht, abseits der überlaufenen Touristen­routen im Lechtal, findet in Kaisers genau das: keine Seilbahnen, keine großen Hotels, kein Trubel. Einige wenige Privatzimmer und Ferienwohnungen bieten Übernachtungsmöglichkeiten, und die örtliche Gastronomie setzt auf regionale Produkte. Kaisers ist kein Ort für Hektik – sondern ein Ausgangspunkt für alle, die Tirols Bergnatur in ihrer stillsten Form erleben wollen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

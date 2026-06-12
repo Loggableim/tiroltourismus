@@ -26,5 +26,23 @@
     "lat": "47.3987",
     "lng": "10.9205"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Ehrwald liegt auf 994 Meter Seehöhe im Bezirk Reutte, im westlichsten Winkel Tirols – der Region Außerfern. Mit rund 2.600 Einwohnerinnen und Einwohnern ist es das größte Dorf im Loisachtal und thront direkt am Fuße der Zugspitze, die mit 2.962 Metern Deutschlands höchster Berg ist und von hier aus über die Tiroler Zugspitzbahn in nur wenigen Minuten erreichbar ist.</p>\n\n<p>Die Natur rund um Ehrwald ist geprägt von einem Gegensatz, der den Ort besonders macht: Auf der einen Seite die schroffe, wilde Wettersteinwand mit ihren markanten Felsformationen, auf der anderen Seite die sanfteren Ausläufer der Mieminger Kette und weite Almflächen wie die Ehrwalder Alm. Wanderer finden hier ein Wegenetz von der gemütlichen Familienrunde bis zum anspruchsvollen Klettersteig – etwa auf die Sonnenspitze oder den Tajakopf. Im Winter zählt das Skigebiet der Zugspitzarena mit Lermoos,",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

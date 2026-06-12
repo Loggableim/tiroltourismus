@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/jerzens/hero_1.png",
+      "alt": "Jerzens — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/jerzens/hero_1.png",
   "koordinaten": {
     "lat": "47.1512",
     "lng": "10.7469"
-  }
+  },
+  "beschreibung": "<p>Jerzens liegt auf 1.107 m Höhe im Pitztal, rund 15 km taleinwärts von Imst, und bildet mit seinen rund 1.000 Einwohnern den sonnenverwöhnten Auftakt des inneren Pitztals. Das Haufendorf thräbt auf einer Geländeterrasse über dem Talboden – wer hier steht, versteht sofort, warum die Einheimischen ihre Seite des Tals schlicht die „Sonnenseite\" nennen: Während das gegenüberliegende Arzl- und Wennser Talflanke schon am frühen Nachmittag im Schatten liegt, scheint in Jerzens bis in den späten Abend die Sonne.</p>\n\n<p>Direkt am Dorfrand startet die Hochzeiger-Gondelbahn, die das Skigebiet mit 40 Pistenkilometern erschließt – ein kompaktes, überschaubares Revier, das bei Familien besonders beliebt ist, weil Anfängerpisten und Kinderländer konsequent vom Expertengebiet getrennt liegen. Im Sommer führt der Panoramaweg am Hochzeiger durch alpine Rosshagmoore und Lärchenwälder, vorbei an bewirtschafteten Almen wie der Tanzalm, wo Kaiserschmarrn und Pitztaler Bergkäse aufgetischt werden. Unmittelbar vor den Toren des Dorfes beginnt zudem der Naturpark Kaunergrat mit seinem 3.000 m hohen Gachen Blick – ein Geheimtipp für alle, die Tirol abseits der Massen erleben wollen.</p>\n\n<p>Was Jerzens von manch anderem Pitztaler Ort unterscheidet, ist der dör",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

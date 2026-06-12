@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.0380",
     "lng": "12.3124"
-  }
+  },
+  "beschreibung": "<p><strong>Prägraten am Großvenediger</strong> erstreckt sich auf 1.312 Metern Höhe in den Lienzer Dolomiten und dem sonnigen Pustertal in Osttirol und ist eine ruhige Dorfgemeinde. Rund <strong>1.200</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten und bergsteiger und kletterer finden herausfordernde touren und klettersteige und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Wer Ruhe und Entspannung inmitten unberührter Natur sucht, wird in Prägraten am Großvenediger fündig.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

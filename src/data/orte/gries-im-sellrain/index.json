@@ -24,5 +24,23 @@
     }
   ],
   "hero_bild": "/images/orte/gries-im-sellrain/hero_1.svg",
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Gries im Sellrain liegt auf 1.184 Metern Seehöhe am Ende des Sellraintals, einem ruhigen Seitental des Inntals rund 25 Kilometer südwestlich von Innsbruck. Die Marktgemeinde zählt 622 Einwohner, die sich auf den Hauptort und mehrere verstreute Weiler wie St. Sigmund, Juifenau und Narötz verteilen. Wer hierherkommt, lässt den Trubel der Landeshauptstadt bewusst hinter sich – das Tal gilt als eines der ursprünglichsten im Großraum Innsbruck.</p>\n\n<p>Die Lage zwischen den Kalkkögeln im Norden und den Bergketten rund um den Lüsener Ferner macht Gries zum Ausgangspunkt für anspruchsvolle Bergtouren. Besonders beliebt ist der Aufstieg zum Melchboden und weiter zum Klettersteig auf die Schaufelspitze, ebenso wie der Abschnitt des Sellraintaler Höhenwegs nach St. Sigmund. Im Winter liegt die Gemeinde direkt am Einstieg zum Skigebiet Kühtai, das vom Ort aus über die Landesstraße erreichbar ist. Die Landwirtschaft prägt das Bild bis heute: steile Bergmähder, kleine Heustadel und Viehweiden gehören zum Alltag, ebenso wie die wenigen Gasthäuser, die regionale Produkte aus eigener Landwirtschaft servieren.</p>\n\n<p>Sehenswert ist die Pfarrkirche zum Hl. Nikolaus mit ihrem markanten Turm sowie das kleine Bergsteigerdorf St. Sigmund, das als eines der ersten Tirols das Prädikat „Bergsteigerdorf“ des Deutschen Alpenvereins trägt. Wer abseits der bekannten Hotspots im Stubaital oder rund um die Innsbruck",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

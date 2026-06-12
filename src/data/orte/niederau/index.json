@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4497",
     "lng": "12.0893"
-  }
+  },
+  "beschreibung": "<p>Niederau liegt auf 840 Metern Höhe im Wildschönau-Tal, einem Seitental des Inntals im Bezirk Kufstein, und zählt rund 1.200 Einwohner. Das Dorf ist der unterste Ort der vier Wildschönau-Gemeinden (Niederau, Oberau, Auffach und Thierbach) und bildet gleichzeitig den Einstieg ins Tal von Wörgl kommend. Durch seine südexponierte Hanglage gehört Niederau zu den sonnenreichsten Orten Tirols – was gerade im Winter für milde Temperaturen und Schneesicherheit sorgt.</p>\n\n<p>Im Winter startet direkt vom Ortskern die Markbachjoch-Gondelbahn, die Gäste in das zusammenhängende Skigebiet Wildschönau bringt, das mit der SkiWelt Wilder Kaiser – Brixental verbunden ist. Familien schätzen die blau markierten, breiten Pisten am Schatzberg und die Kinderareale mit Zauberteppich und Skikarussell. Im Sommer verläuft der beliebte Drachenflieger-Wanderweg von Niederau auf die Markbachjochalm, wo Sennerin Erna von Juni bis September ihre eigene Alm bewirtschaftet – ein Klassiker für Einkehrtouren mit Blick auf die Hohen Salve. Auch der Wildschönauer Alpenblumenweg startet hier und führt durch artenreiche Magerwiesen bis nach Oberau.</p>\n\n<p>Kulinarisch steht die Region für den Wildschönauer Bergkäse und die Kas Alm auf der Markbachjochalm, die ihre Milch direkt vor Ort verarbeitet. Im Dorf laden Gasthäuser wie der Gasthof Zobel oder das Hotel Residenz zur typisch tirolerischen Küche ein. Niederau ist kein Ort für große Inszenierung – genau das macht seinen Reiz aus: ein funktionierendes Bergdorf mit Skilift vor der Haustür, echter Almkultur und kurzen Wegen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

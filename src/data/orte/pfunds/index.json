@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.9985",
     "lng": "10.5830"
-  }
+  },
+  "beschreibung": "<p>Pfunds liegt im Oberinntal im Bezirk Landeck auf 970 m Seehöhe, unweit der Grenzen zur Schweiz und zu Italien. Am sogenannten Engadiner Fenster, wo sich das Inntal nach dem Engadin wieder weitet, erstreckt sich die Gemeinde mit rund 2.600 Einwohnern über den Talboden und die umliegenden Hänge. Der historische Dorfkern mit seinen tiefen, kühlen Engadiner Kellern und denkmalgeschützten Häusern zeugt von der einstigen Bedeutung als Etappenort an der alten Reschenpass-Route.</p>\n\n<p>Über dem Ort liegt das weithin bekannte Pfundser Tschey, ein nach Süden ausgerichtetes Hochplateau auf etwa 1.400 m, das traditionell als Heimbetriebsgebiet genutzt wird. Wanderungen führen von dort zur Brücke der Radurschlklamm, einem wildromantischen Schluchtweg, oder hinauf zu Aussichtspunkten mit Blick auf die Samnaungruppe. Im Herbst gehört der Almabtrieb mit seinen geschmückten Tieren zu den Fixpunkten des Dorflebens. Familien schätzen die ruhigen Wege entlang der Innauen und die Nähe zum Dreiländereck.</p>\n\n<p>Kulturell prägt die barocke Pfarrkirche St. Margaretha mit ihrem markanten Turm und den Deckenfresken das Ortsbild. In den Gasthäusern werden regionale Gerichte wie Kasnocken, Gerstensuppe oder „Pfundser Kaffe\" – ein starker Getreidekaffee – serviert. Pfunds ist kein lauter Tourismusort, sondern ein Dorf, das seinen bäuerlichen Charakter und seine Lage am Schnittpunkt dreier Länder bewahrt hat. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

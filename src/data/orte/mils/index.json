@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mils/hero_1.png",
+      "alt": "Mils — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mils/hero_1.png",
   "koordinaten": {
     "lat": "47.2875",
     "lng": "11.5293"
-  }
+  },
+  "beschreibung": "<p>Mils liegt auf 605 m Höhe am linken Innufer, eingebettet zwischen der Tiroler Landeshauptstadt Innsbruck und der historischen Stadt Hall – eine Marktgemeinde im Bezirk Innsbruck-Land mit rund 4.600 Einwohnern. Die verkehrsgünstige Lage macht den Ort zu einem ruhigen Wohnplatz, ohne abseits zu sein: Die Innsbrucker Innenstadt ist in knapp 15 Minuten erreichbar, ebenso der Flughafen.</p>\n\n<p>Das Ortsbild wird vom markanten <b>Schloss Mils</b> geprägt, dessen Ursprünge bis ins 13. Jahrhundert zurückreichen und das nach einem Brand 1921 in vereinfachter Form wiederaufgebaut wurde. Unweit davon thront die barocke <b>Pfarrkirche St. Peter</b> mit ihrem charakteristischen Zwiebelturm – ein Werk des Baumeisten Johann Georg Auer aus der Mitte des 18. Jahrhunderts. Naturbegeisterte schätzen den <b>Radweg entlang des Inns</b> sowie Wanderungen Richtung Karwendel. Der Weißenbach, der durch den Ort fließt, und die umliegenden Wiesen bieten Familien mit Kindern viel Raum für Spaziergänge und Freizeitaktivitäten.</p>\n\n<p>Kulinarisch reihen sich traditionelle Gasthäuser an Cafés, in denen Tiroler Küche von Kaspressknödel bis Gröstl aufgetischt wird. Mils vereint das, was viele am Inntal schätzen: dörfliche Ruhe, gew",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

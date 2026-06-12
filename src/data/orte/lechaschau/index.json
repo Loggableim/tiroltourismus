@@ -15,10 +15,28 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/lechaschau/hero_1.png",
+      "alt": "Lechaschau — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/lechaschau/hero_1.png",
   "koordinaten": {
     "lat": "47.4870",
     "lng": "10.7037"
-  }
+  },
+  "beschreibung": "<p>Lechaschau liegt auf 848 m Seehöhe im Bezirk Reutte, direkt am Eingang zum Lechtal und nur wenige Kilometer vom Markt Reutte entfernt. Mit rund 2.200 Einwohnern bildet die Gemeinde gemeinsam mit Reutte ein fast nahtloses Siedlungsgebiet, hat aber ihren eigenständigen, dörflichen Charakter bewahrt. Die Lage am Lech, der hier noch relativ naturnah fließt, prägt den Ort ebenso wie der Blick auf die Lechtaler Alpen im Süden.</p>\n\n<p>Für Radfahrer ist Lechaschau ein praktischer Ausgangspunkt: Der Lech-Radweg führt direkt durch den Ort und verbindet das Außerfern mit dem Allgäu. Familien schätzen die kurzen Wege zu Ausflugszielen wie der Highline179, der Hängebrücke bei der Burgenwelt Ehrenberg, oder zum nahegelegenen Badesee. Auch Wanderungen ins Lechtal oder zu den Tannheimer Bergen starten von hier aus bequem. Wer Ruhe sucht, findet sie an den Lechufern oder auf kleinen Spazierwegen durch die Auwälder.</p>\n\n<p>Kulinarisch profitiert Lechaschau von der direkten Nachbarschaft zu Reutte, wo Gasthäuser regionale Außerferner Küche servieren. Der Ort selbst ist eher Wohn- und Urlaubsgemeinde als touristischer Hotspot – genau das macht ihn für Besucher attraktiv, die eine ehrliche, unaufgeregte Tiroler Basis suchen, von der aus sich Natur, Sport und Kultur gleichermaßen erschließen lassen. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    }
+  ]
 }

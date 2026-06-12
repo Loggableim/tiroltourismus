@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kematen/hero_1.png",
+      "alt": "Kematen in Tirol — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kematen/hero_1.png",
   "koordinaten": {
     "lat": "47.2543",
     "lng": "11.2729"
-  }
+  },
+  "beschreibung": "<p>Kematen in Tirol liegt auf 610 Metern Seehöhe am westlichen Rand des Inntals, nur etwa zehn Kilometer von Innsbruck entfernt. Mit rund 3.000 Einwohnern zählt die Gemeinde zum Bezirk Innsbruck-Land und profitiert von einer direkten Anbindung an die Landeshauptstadt, ohne deren Trubel zu teilen. 🏘️</p>\n\n<p>Das Herzstück des Ortes ist zweifellos der Badesee Kematen, ein klarer, von Schilf gesäumter See, der im Sommer Familien und Schwimmer aus der ganzen Region anzieht. Direkt am Innufer gelegen, führt der beliebte Inntalradweg durch den Ort – perfekt für eine gemütliche Etappe zwischen Innsbruck und Telfs. Wanderbegeisterte schätzen Kematen als Eingangstor zum Sellraintal: Von hier aus starten Touren Richtung Stams, in das idyllische Kraspestal oder hinauf auf die Saile bei Mutters. Die Ruhe abseits der Hauptverkehrsader macht den Ort besonders für Naturliebhaber attraktiv, die trotzdem Stadtnähe suchen.</p>\n\n<p>Historisch ist Kematen vor allem für seine Zementindustrie bekannt, die dem Ort über Jahrzehnte wirtschaftliche Stabilität brachte. Heute erinnert das revitalisierte Areal an dieser industriellen Vergangenheit. Kulinarisch laden traditionelle Gasthäuser zur Einkehr, und der Blick auf die gegenüberliegende Martinswand oder die Nordkette bleibt bei jedem Besuch ein starker Eindruck. Ein Ort, der das Inntal-Gefühl zwischen Großstadt und Bergnatur überraschend gut verbindet.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

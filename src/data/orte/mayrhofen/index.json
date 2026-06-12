@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mayrhofen/hero_1.png",
+      "alt": "Mayrhofen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mayrhofen/hero_1.png",
   "koordinaten": {
     "lat": "47.1672",
     "lng": "11.8639"
-  }
+  },
+  "beschreibung": "<p>Mayrhofen liegt auf 630 m Höhe im Zillertal, Bezirk Schwaz, und ist mit rund 3.800 Einwohnern der lebendigste Ort des Tals. Wer mit der Zillertalbahn, einer der letzten Schmalspur-Dampfbahnen Österreichs, anreist, erreicht den Hauptort direkt am Talboden – umgeben von den Hausbergen Penken im Süden und Ahorn im Norden.</p>\n\n<p>Im Winter macht Mayrhofen international Furore: Jährlich pilgern Snowboarder und Freeskier zum legendären Event am Penken, wo die berüchtigte \"Harakiri\"-Piste mit über 78 Prozent Gefälle selbst Profis fordert. Die Ahornbahn bringt Wintersportler auf 1.950 m, im Sommer erschließt sie ein weitläufiges Wandergebiet mit dem markanten \"Ahornbahn Skywalk\" und Wegen zur Edelhütte. Über 200 km markierte Wanderwege führen durch das Tal – etwa hinauf zur Berliner Hütte oder rund um den Schlegeisspeicher auf 1.800 m.</p>\n\n<p>Abends trifft man sich in der \"Bruck'n\" – Wirtshäuser wie der Gasthof zum Stern oder der Wirtshaus \"Schaurhof\" servieren echte Zillertaler Küche: Kaspressknödel, Zillertaler Krapfen und Graukas mit Zwiebelringen. Das Tourismusangebot bleibt dabei bewusst bodenständig – Mayrhofen lebt von der Mischung aus alpiner Substanz, Events und der unmittel",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

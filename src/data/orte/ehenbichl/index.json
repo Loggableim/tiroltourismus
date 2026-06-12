@@ -26,5 +26,18 @@
     "lat": "47.4723",
     "lng": "10.7010"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Ehenbichl liegt auf 860 Metern Höhe im Ausserfern, direkt oberhalb von Reutte und nur wenige Kilometer vom Lech entfernt. Mit rund 850 Einwohnern zählt der Ort zu den ruhigen Dörfern im Bezirk Reutte, die abseits der großen Tourismusströme ihren ursprünglichen Charakter bewahrt haben.</p>\n\n<p>Was Ehenbichl besonders macht, ist der direkte Blick auf die Burgenwelt Ehrenberg: Die mittelalterliche Festung hoch über dem Tal, die Fort Claudia und vor allem die highline179 – mit 406 Metern die längste Fußgänger-Hängebrücke der Welt – prägen das Ortsbild entscheidend. Von Ehenbichl aus erreicht man die Burgenlandschaft in wenigen Gehminuten. Der Ort eignet sich hervorragend als Ausgangspunkt für Wanderungen ins Lechtal oder in die Ammergauer Alpen, und auch Radfahrer schätzen die ruhigen Wege rund um den Hahnenkamm. Familien finden hier einen entspannten Rahmen, weit weg vom Trubel der Skigebiete, aber mit direktem Zugang zu Natur und Geschichte.</p>\n\n<p>Kulinarisch profitiert Ehenbichl von der Nähe zu Reutte, wo regionale Küche mit Kaspressknödeln und Lechtaler Produkten serviert wird. Wer das Außerfern abseits der Postkartenmotive erleben will, findet in Ehenbichl einen ehrlichen, leisen Ort – perfekt für alle, die Ruhe suchen, ohne auf Aktivitäten und Ausflugsziele verzichten zu müssen. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    }
+  ]
 }

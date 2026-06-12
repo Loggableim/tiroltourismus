@@ -26,6 +26,23 @@
     "lat": "47.2549",
     "lng": "10.8829"
   },
-  "beschreibung": "<p>Willkommen in Haiming, dem malerischen Tor zum Ötztal auf 670 Metern Höhe. Eingebettet in die sanfte Hügellandschaft des Bezirks Imst, verbindet dieser idyllische Ort auf einzigartige Weise ländliche Ruhe mit einem breiten Sport- und Freizeitangebot. Hier, wo sich die grünen Wiesen sanft zu den Gipfeln der Ötztaler Alpen erheben, finden Familien und Aktivurlauber gleichermaßen ihr Paradies.</p>\n\n<p>Herzstück des Ortes ist der Haiminger Badesee – ein kristallklarer Naturbadeteich mit weitläufigen Liegewiesen, der im Sommer zu erfrischenden Stunden einlädt. Direkt daran schließt sich der Inn-Radweg, eine der beliebtesten Radrouten Tirols, an. Ob gemütliche Familienradtour entlang des glitzernden Flusses oder sportliche Tagestouren: die flache Strecke bietet für jedes Niveau die ideale Basis und führt durch eine reizvolle Flusslandschaft.</p>\n\n<p>Zahlreiche Wanderwege erschließen die umliegenden Berge und Täler. Vom leichten Spaziergang am Inn bis zur herausfordernden Gipfelwanderung ins Ötztal – Haiming ist der perfekte Ausgangspunkt für unvergessliche Naturerlebnisse. Auch Klettersportler und Mountainbiker kommen hier voll auf ihre Kosten. Die besondere Lage am Schnittpunkt von Tal- und Gebirgswandlungen macht das Dorf zum idealen Stützpunkt für aktive Familien: sichere Spielplätze, flache Radwege und einladende Gasthöfe runden das Angebot ab. Tauchen Sie ein in die herzliche Tiroler Gastlichkeit und erleben Sie einen Urlaub voller Entdeckungen – in Haiming, wo Natur und Sport aufeinandertreffen.</p>",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Haiming liegt auf 670 m Seehöhe am Eingang des Ötztals im Bezirk Imst und ist mit rund 4.900 Einwohnern eine der größeren Marktgemeinden im Inntal. Der Ort erstreckt sich auf einem Schwemmkegel am linken Innufer, umrahmt von den Ausläufern der Ötztaler Alpen im Süden und dem Tschirgant im Norden. Durch seine verkehrsgünstige Lage direkt an der Inntalautobahn dient Haiming vielen Urlaubern als erste Anlaufstation, bevor es weiter Richtung Sölden oder ins hintere Ötztal geht.</p>\n\n<p>Das Herzstück für Familien und Erholungssuchende ist der Haiminger Badesee – ein rund 1,5 Hektar großer Naturbadesee mit feinem Kiesstrand, der im Sommer auf bis zu 24 Grad erwärmt. Direkt am See verläuft der Inntal-Radweg, der sich über mehr als 300 Kilometer von der Schweiz bis nach Kufstein zieht. Für Wanderer bieten sich Touren auf den Tschirgant oder in die Ötztaler Bergwelt an, wobei die Seilbahnen von Hochoetz und Kühtai in kurzer Zeit erreichbar sind. Auch Kletterer kommen am nahen Klettergarten Oetz oder in der Area 47, dem Outdoor-Freizeitpark am Eingang des Ötztals, auf ihre Kosten.</p>\n\n<p>Kulinarisch stehen Gasthäuser mit Tiroler Küche bereit, darunter mehrere Wirtshäuser, die regionale Produkte aus dem Inntal verarbeiten. Kulturell lohnt sich ein Besuch der Pfarrkirche zum Hl. Johannes dem Täufer mit ihrem spätgotischen Flügelaltar. Haiming verbindet damit das Flair eines aktiven Dorfes mit der Funktion als Sprungbrett in eines der beliebtesten Täler Tirols. 🏘️",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

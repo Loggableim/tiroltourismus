@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.4046",
     "lng": "11.7986"
-  }
+  },
+  "beschreibung": "<p>Wiesing liegt auf 565 Metern Höhe genau dort, wo das Zillertal in das Inntal mündet – am Zusammenfluss von Ziller und Inn im Bezirk Schwaz. Mit rund 2.200 Einwohnern ist die Gemeinde ein kleiner, aber verkehrstechnisch gut angebundener Ort an der A12 und an der Zillertalbahn, die hier seit über 100 Jahren zwischen Jenbach und Mayrhofen verkehrt.</p>\n\n<p>Die Lage zwischen den beiden Tälern macht Wiesing zum idealen Ausgangspunkt für unterschiedliche Richtungen: Richtung Süden führt die Straße direkt ins Ziller­tal mit seinen Skigebieten wie Hochzillertal oder Spieljoch, während man Richtung Norden rasch am Inn und in der Region Schwaz mit der Burg Freundsberg und dem Silberbergwerk ist. Im Sommer laden der Radweg entlang des Inns und Wanderungen am Eingang des Zillertals ein, etwa auf den Reiterkopf oder durch die Laubwälder oberhalb des Ortes. Familien schätzen die ruhige Atmosphäre abseits der großen Tourismuszentren – hier geht es bodenständig zu.</p>\n\n<p>Kulinarisch dominiert klassische Tiroler Kost: Kasnocken, Zillertaler Krapfen und Graukäse finden sich in den wenigen Gasthäusern. Wer Ruhe, Natur und eine praktische Ausgangslage für Ausflüge in zwei Täler sucht, ist in Wiesing richtig – auch wenn der Ort selbst eher Durchgangsstation als Reiseziel ist.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

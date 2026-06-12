@@ -19,5 +19,18 @@
   "koordinaten": {
     "lat": "47.2988",
     "lng": "11.0830"
-  }
+  },
+  "beschreibung": "<p><strong>Pfaffenhofen</strong> liegt auf 642 Metern Höhe in dem Innsbrucker Mittelgebirge und den umliegenden Tälern und ist eine beschauliches Dorf. Rund <strong>1.200</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme und geschichtsliebhaber erkunden die spuren vergangener jahrhunderte – von burgen bis zu bergwerken und familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften.</p><p>Pfaffenhofen eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

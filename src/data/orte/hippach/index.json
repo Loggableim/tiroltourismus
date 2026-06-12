@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hippach/hero_1.png",
+      "alt": "Hippach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hippach/hero_1.png",
   "koordinaten": {
     "lat": "47.2045",
     "lng": "11.8646"
-  }
+  },
+  "beschreibung": "<p>Hippach liegt auf 640 Metern Höhe im mittleren Zillertal, im Bezirk Schwaz, und bildet zusammen mit den Nachbargemeinden Schwendau, Ramsau und Laimach eine beliebte Urlaubsregion am Eingang zum Tuxer Tal. Mit rund 1.500 Einwohnern ist die Gemeinde überschaubar geblieben, hat sich aber den Charakter eines echten Tiroler Dorfs bewahrt – Supermarkt, Schule, Wirtshaus, alles da, aber ohne den Trubel der größeren Zillertaler Orte.</p>\n\n<p>Wandern ist in Hippach Programm, und das nicht nur entlang der bekannten Wege. Die Gemeinde gilt als Tor zum Schmirntal, einem ruhigen Seitental, das vom Massentourismus weitgehend verschont geblieben ist. Über den Laimacher Weg oder durch den Ortsteil Laimach erreicht man diesen ursprünglichen Winkel mit seinen schroffen Felswänden und bewirtschafteten Almen. Familien schätzen den kurzen Weg zur Zillertaler Höhenstraße und die zahlreichen leichten Touren rund um das Dorf. Die barocke Pfarrkirche mit ihrem markanten Turm prägt das Ortsbild und ist einen Blick wert.</p>\n\n<p>Kulinarisch findet man in Hippach ehrliche Zillertaler Küche: Kaspressknödel, Gröstl und Zillertaler Krapfen stehen auf den Speisekarten der Gasthäuser, die zum Teil seit Generationen familiär geführt werden. Wer Ruhe sucht, abseits der Touristenströme rund um Mayrhofen, aber trotzdem zentral wohnen möchte, ist hier richtig aufgehoben. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

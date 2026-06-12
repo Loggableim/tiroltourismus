@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kaltenbach/hero_1.png",
+      "alt": "Kaltenbach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kaltenbach/hero_1.png",
   "koordinaten": {
     "lat": "47.2908",
     "lng": "11.8744"
-  }
+  },
+  "beschreibung": "<p>Kaltenbach liegt auf 558 Metern Höhe im vorderen Zillertal, im Bezirk Schwaz, und zählt rund 1.300 Einwohner. Der Ort erstreckt sich entlang der Zillertalstraße zwischen den Nachbargemeinden Stumm und Ried im Zillertal und bildet das westliche Eingangstor zum bekannten Skigebiet Zillertal Arena sowie zur Ski- und Gletscherwelt Zillertal 3000.</p>\n\n<p>Kaltenbach ist vor allem eines: ein Skiort mit direkter Bergbahnanbindung. Die Talstation der Zillertal Arena liegt mitten im Ort, von hier aus geht es mit der Gondel hinauf auf über 2.000 Meter – im Winter zum Skifahren und Snowboarden, im Sommer zum Wandern und Mountainbiken. Der Hintertuxer Gletscher ist über die gesamte Zillertal-Region erreichbar und ganzjährig befahrbar, was Kaltenbach auch für Familien mit schulpflichtigen Kindern attraktiv macht. Im Sommer locken der Erlebnispark mit Klettergerüsten, Sommerrodelbahnen und der Stausee Durlaßböde, nur wenige Kilometer taleinwärts. Das Zillertal selbst ist eine der aktivsten Tourismusregionen Tirols, und Kaltenbach profitiert direkt davon: Hotels, Pensionen und Ferienwohnungen prägen das Ortsbild, die Infrastruktur ist auf Sportgäste ausgerichtet.</p>\n\n<p>Kulinarisch dominiert klassische Zillertaler Kost: Kaspressknödel, Zillertaler Krapfen und Graukäse aus der Region. Die Zillertaler Volksmusik ist kulturell fest verankert, regelmäßig finden in den umliegenden Orten Tanzlmusig-Abende statt. Wer einen zentral gelegenen, sportlichen Ausgangspunkt im Zillertal sucht, ist in Kaltenbach richtig – ruhig genug für Erholung, direkt genug für Pistenspaß. 🎿</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

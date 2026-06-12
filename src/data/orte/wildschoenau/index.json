@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.3989",
     "lng": "12.0311"
-  }
+  },
+  "beschreibung": "<p>Die Wildschönau liegt auf rund 930 m Höhe im Bezirk Kufstein, eingebettet zwischen den Kitzbüheler und Brandenberger Alpen – ein sonnenverwöhntes Hochtal mit den vier Dörfern Niederau, Oberau, Auffach und Thierbach. Rund 4.000 Menschen leben hier auf etwa 1.000 km² Fläche, die meisten davon in der Landwirtschaft oder im Tourismus. Die Lage abseits der großen Durchzugsstraßen macht das Tal zu einem ruhigen Gegenpol zum lebhaften Inntal.</p>\n\n<p>Im Winter bildet die Wildschönau gemeinsam mit dem Alpbachtal das „Ski Juwel\" – mit über 145 Pistenkilometern, der 8er-Gondel am Schatzberg in Auffach und der Markbachjochbahn in Niederau eines der familienfreundlichsten Skigebiete Tirols. Im Sommer laden rund 300 km Wanderwege ein, darunter der spektakuläre Höhenweg zur Feldalphalm oder der Weg zum türkisblauen Feldalphasee unterhalb des Großen Beil. Auffach gilt als eines der ersten Solar­dörfer Österreichs, was den bewussten Umgang mit Natur und Tradition unterstreicht. Das älteste Bauernhaus Tirols, der „Bauer zu Thierbach\" aus dem Jahr 1276, ist ein seltenes Zeugnis bäuerlicher Baukultur.</p>\n\n<p>Kulinarisch steht das Tal ganz im Zeichen der Bregenzerwald-Tradition: Bregenzerwälder Käsknöpfle und Käsknödel mit Bergkäse, Zwiebeln und Schnittlauch stehen in fast jedem Gasthaus auf der Karte. Wer im Sommer kommt, sollte unbedingt",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

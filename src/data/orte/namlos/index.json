@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.3559",
     "lng": "10.6556"
-  }
+  },
+  "beschreibung": "<p>Namlos liegt auf 1.224 Metern Seehöhe im Bezirk Reutte, eingebettet in ein kurzes Seitental des Lechtals in der Region Außerfern – und ist mit rund 70 Einwohnerinnen und Einwohnern die kleinste Gemeinde des Bezirks. Wer hierher findet, hat oft eine der wenigen schmalen Bergstraßen genommen, die sich von Bschlabs oder vom Lechtal her durch dichte Nadelwälder schlängeln. Bereits die Anfahrt macht deutlich: Dieses Dorf ist auf Abgeschiedenheit ausgelegt.</p>\n\n<p>Die Umgebung rund um Namlos gehört zu den stillsten Ecken Tirols. Im Sommer führen markierte Wanderwege durch das Namloser Tal hinein in die Lechtaler Alpen, vorbei an bewirtschafteten Almen wie der Fallerscheinalm und der Hanauer Hütte, die als Stützpunkt für Touren dient. Die Almbewirtschaftung wird hier noch tatsächlich gelebt – kein Museum, sondern Alltag seit Jahrhunderten. Im Winter bleibt das Dorf weitgehend sich selbst überlassen: Skilifte sucht man vergebens, Schneeschuhwanderer und Langläufer schätzen genau das. Flora und Fauna sind entsprechend unberührt, Gämsen und Steinadler sind in den felsigen Flanken oberhalb des Ortes keine Seltenheit.</p>\n\n<p>Kulturell prägt die kleine Pfarrkirche zum Heiligen Nikolaus das Dorfzentrum, innen schlicht, aber mit einem bemerkenswerten spätgotischen Flügelaltar. Eine Einkehrmöglichkeit mit regionaler Kost – Käse von der Alm, Hirschwürstel, Brot aus dem Holzofen – rundet den Aufenthalt ab. Wer Ruhe sucht, abseits der ausgetretenen Tirol-Pfade, findet in Namlos einen Ort, der sich bewusst nicht inszeniert. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

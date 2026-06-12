@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kundl/hero_1.png",
+      "alt": "Kundl — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kundl/hero_1.png",
   "koordinaten": {
     "lat": "47.4691",
     "lng": "11.9846"
-  }
+  },
+  "beschreibung": "<p>Kundl liegt im Unterinntal auf 526 Metern Seehöhe, eingekeilt zwischen den Marktgemeinden Wörgl und Rattenberg im Bezirk Kufstein. Mit rund 4.700 Einwohnerinnen und Einwohnern zählt die Gemeinde zu den größeren Orten des Tiroler Unterlandes und verbindet gewachsene Tiroler Struktur mit industrieller Bedeutung. Der Inn durchfließt das Gemeindegebiet, und wer auf der Inntalautobahn A12 unterwegs ist, passiert Kundl meist im Eilverkehr – dabei lohnt sich ein bewusster Halt.</p>\n\n<p>Das Ortsbild wird vom Schloss Kundl geprägt, einem mittelalterlichen Bau, der mehrfach umgestaltet wurde und heute neben dem Gemeindeamt auch Veranstaltungsräume beherbergt. Direkt daneben steht die barocke Pfarrkirche St. Nikolaus mit ihrem auffälligen Zwiebelturm und einer bemerkenswerten Innenausstattung aus dem 18. Jahrhundert. Überregional bekannt ist Kundl allerdings vor allem als Industriestandort: Am Standort von Sandoz (ehemals Biochemie und Novartis) wird seit Jahrzehnten Penicillin für den Weltmarkt produziert – ein Fakt, der selbst vielen Tirolern nicht geläufig ist. Für Familien bietet die Gemeinde gut ausgebaute Rad- und Spazierwege entlang des Inns sowie ein aktives Vereinsleben rund um die Freiwillige Feuerwehr und die Schützenkompanie.</p>\n\n<p>Kulinarisch lohnt sich ein Abstecher in die traditionellen Wirtshäuser, in denen Tiroler Küche auf regionale Zutaten trifft. Wer die Natur sucht, erreicht in wenigen Minuten den Eingang zum Alpbachtal oder den Wildschönauer Sattel – beides beliebte Ziele für Tagesausflüge. Kundl ist kein Ort, der laut Aufmerksamkeit einfordert, aber gerade darin liegt sein Charakter: ein ehrliches Unterinntaler Dorf, das Geschichte, Industrie und Lebensqualität unaufgeregt zusammenbringt. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

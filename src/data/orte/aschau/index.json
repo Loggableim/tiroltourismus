@@ -26,6 +26,23 @@
     "lat": "47.2652",
     "lng": "11.8959"
   },
-  "beschreibung": "<p><strong>Aschau im Zillertal</strong> liegt auf 630 Metern Höhe im oberen Zillertal und ist ein beliebtes Urlaubsziel für Familien und Aktivurlauber. Das Dorf besticht durch seine sonnige Lage und die Nähe zu den imposanten Gipfeln der Zillertaler Alpen.</p><p>Aschau bietet eine Vielzahl an Freizeitmöglichkeiten für die ganze Familie. Das Erlebnisbad mit Wasserrutschen und Saunalandschaft sorgt für Spaß und Erholung an jedem Wetter. Die umliegenden Wanderwege sind ideal für ausgedehnte Touren durch die herrliche Bergkulisse, von familienfreundlichen Spaziergängen bis zu anspruchsvollen Gipfeltouren auf den Gerlosstein oder die Gamswiese. Im Winter locken die nahegelegenen Skigebiete des Zillertals mit besten Pistenbedingungen.</p><p>Die urige Gastronomie in Aschau ist legendär: In den traditionellen Gasthöfen und Hütten werden Tiroler Klassiker wie Gröstl, Kaiserschmarrn und frische Bauernkrapfen serviert. Die herzliche Gastfreundschaft der Zillertaler und die lebendige Volksmusiktradition machen jeden Aufenthalt zu einem besonderen Erlebnis.</p>",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Aschau im Zillertal liegt auf 630 Metern Seehöhe im oberen Zillertal, eingangsnah zur Zillertal Arena, und gehört mit seinen rund 1.900 Einwohnern zum Bezirk Schwaz. Die Marktgemeinde erstreckt sich am sonnigen Talboden beidseitig der Ziller, umrahmt von den Ausläufern der Tuxer Alpen – ein idealer Ausgangspunkt für alle, die sowohl die Bergwelt als auch die infrastrukturellen Vorzüge des Tales nutzen wollen.</p>\n\n<p>Das Herzstück für Familien ist das Erlebnisbad Aschau, ein weitläufiges Freibad mit Blick auf die umliegenden Bergspitzen und integriertem Kleinkinderbereich. Von hier aus starten zahlreiche leichte bis mittelschwere Wanderwege, etwa entlang der Ziller oder hinauf zur Distelalm, die mit ihrer bewirtschafteten Sonnenterrasse bei Einheimischen wie Gästen gleichermaßen beliebt ist. Im Winter bringt der Skibus die Gäste direkt in die Zillertal Arena, eines der größten Skigebiete Tirols. Wer Ruhe sucht, findet sie auf den Wegen zur Rast- und Aussichtshöhe am Astegg, abseits der Hauptrouten.</p>\n\n<p>Kulinarisch stehen in Aschau die typischen Zillertaler Klassiker auf den Speisekarten: Zillertaler Krapfen, Kaspressknödel und der regionale Bergkäse aus Heumilch. Der Dorfkern mit seiner Pfarrkirche und den traditionellen Bauernhäusern vermittelt noch jenen unverfälschten Tiroler Charakter, der das Tal über die Landesgrenzen hinaus bekannt gemacht hat. 🏘️</p>",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

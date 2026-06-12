@@ -25,6 +25,23 @@
     "lat": "47.3637",
     "lng": "11.7564"
   },
-  "beschreibung": "<p>Auf 900 Metern Höhe thront Gallzein, ein beschauliches Dorf im Bezirk Schwaz, das sich auf der Sonnenseite des Unterinntals breitmacht. Hier, am Eingang zum Zillertal, empfängt Sie eine atemberaubende Naturkulisse: Der Blick schweift ungehindert über die sanften Hügel hinweg bis hin zu den majestätischen Gipfeln der Zillertaler Alpen, die bei klarem Wetter in voller Pracht erstrahlen. Dieses kleine Juwel ist der ideale Rückzugsort für alle, die Ruhe und Entschleunigung suchen. Abseits von Hektik und Trubel können Sie hier tief durchatmen und die Stille der Bergwelt genießen.</p><p>Die weitläufigen Wälder und Almwiesen rund um Gallzein laden zu ausgedehnten Wanderungen ein – ob gemütliche Spaziergänge entlang sonniger Hänge oder anspruchsvolle Touren zu den umliegenden Gipfeln, die facettenreiche Landschaft bietet für jedes Niveau das passende Erlebnis. Besonders reizvoll ist die ursprüngliche, fast unberührte Natur, die den Ort umgibt. Im Frühling erblühen die Wiesen in sattem Grün, im Sommer locken schattige Waldwege, und der Herbst taucht die Region in ein goldenes Licht. Gallzein ist mehr als nur ein Dorf – es ist ein Ort, an dem man zur Ruhe kommt, die Seele baumeln lässt und die Kraft der Tiroler Bergwelt in vollen Zügen spürt.</p>",
-  "kategorie": "dorf"
+  "beschreibung": "<p>Gallzein liegt auf 900 Metern Seehöhe auf einem sonnigen Hochplateau über dem Inntal, zwischen Schwaz und Jenbach, mit freiem Blick auf die Zillertaler Alpen und das gegenüberliegende Karwendel. Das Dorf gehört zum Bezirk Schwaz und zählt rund 700 Einwohner, die sich auf verstreute Gehöfte und einen kompakten Ortskern verteilen. Wer hier oben steht, blickt direkt auf die vergletscherten Gipfel rund um das Tuxer Joch – ein Panorama, das man sonst eher aus den höheren Alpentälern kennt.</p>\n\n<p>Die Lage macht Gallzein zu einem ruhigen Gegenpol zum deutlich touristischeren Zillertal, das nur wenige Kilometer entfernt beginnt. Wanderwege führen direkt vom Dorf aus durch Mischwälder und über Wiesen Richtung Buch und über die Gallzeiner Höhe. Besonders im Frühling, wenn die Wiesen unterhalb des Dorfes in voller Blüte stehen, lohnt sich die Tour auf den nahen Reiterkopf. Im Winter bleiben die Wege rund um Gallzein häufig schneefrei, was Spaziergänger schätzen, während Skifahrer rasch ins Zillertal hinüberwechseln können. 🌲</p>\n\n<p>Kulturell gehört Gallzein zur Pfarre Schwaz, und das kleine Dorfwirtshaus gilt bei Einheimischen als Geheimtipp für eine ehrliche Tiroler Jause. Wer Ruhe sucht, ohne auf die Infrastruktur des Inntals verzichten zu müssen, findet hier einen authentischen Rückzugsort mit viel Aussicht und wenig Trubel.</p>",
+  "kategorie": "dorf",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

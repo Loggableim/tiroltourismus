@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "46.8796",
     "lng": "12.6568"
-  }
+  },
+  "beschreibung": "<p>Schlaiten liegt auf 876 Metern Seehöhe im Iseltal, einem westlichen Seitental des Lienzer Talbodens in Osttirol, und zählt rund 500 Einwohner. Das Bergdorf thront auf einem sonnigen Hochplateau über dem Talgrund, umgeben von den Ausläufern der Schobergruppe und des Deferegger Gebirges. Die Gemeinde erstreckt sich über mehrere verstreute Weiler und Einzelhöfe – Schlaiten, Görtschach, Messing und St. Leonhard – und bewahrt bis heute den Charakter eines bäuerlich geprägten Osttiroler Bergdorfs.</p>\n\n<p>Wandern steht in Schlaiten ganz oben: Der Thurntaler, ein 2.400 Meter hoher Aussichtsberg, ist direkt vom Dorf aus erreichbar und gilt als einer der aussichtsreichsten Panoramaberge Osttirols. Im Winter führt eine beschneite Rodelbahn vom Thurntaler ins Tal. Auch der Europaweg Etappe 5 – der bekannte Weitwanderweg durch die Schobergruppe – verläuft durch das Gemeindegebiet. Die Ruhe hier ist spürbar: Kein Durchgangsverkehr, keine Seilbahn, kein Massentourismus. Stattdessen prägen Wiesen, Wälder und traditionelle Bergbauernhöfe das Bild.</p>\n\n<p>Kulturell gehört Schlaiten zur Pfarre St. Leonhard, deren spätgotische Kirche mit bemerkenswerten Fresken aufwartet. Die Landwirtschaft – Milchkühe, Schafe, Bergheu – bildet nach wie vor das wirtschaftliche Rückgrat. Wer Osttirol abseits der bekannten Skigebiete sucht und Wert auf Stille, ursprüngliche Berglandschaft und ehrliche Gastfreundschaft legt, findet in Schlaiten einen Ort, der nichts inszenieren muss. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

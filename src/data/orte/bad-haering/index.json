@@ -26,5 +26,23 @@
     "lat": "47.5107",
     "lng": "12.1188"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Bad Häring liegt auf 650 Metern Höhe im Tiroler Inntal, eingebettet zwischen Kufstein und Wörgl direkt am Fuße des 1.562 Meter hohen Pölven. Der Markt mit rund 2.800 Einwohnern gehört zum Bezirk Kufstein und hat sich seit dem 19. Jahrhundert vom Bergbaudorf zum Thermalort entwickelt. Den Namen trägt der Ort seit 1925, als das schwefel- und calciumhaltige Thermalwasser aus rund 1.000 Metern Tiefe erstmals für Kuranwendungen genutzt wurde.</p>\n\n<p>Das Herz von Bad Häring ist die 2017 komplett neu erbaute Erlebnis-Therme, die mit moderner Architektur und einem ganzjährig beheizten Außenbecken beeindruckt. Das mineralstoffreiche Heilwasser speist mehrere Innen- und Außenpools, ergänzt durch großzügige Saunalandschaften und einen weitläufigen Kurpark mit altem Baumbestand, der zum Spazierengehen zwischen den Anwendungen einlädt. Für Familien gibt es einen separaten Kinderbereich, sportliche Gäste nutzen die zahlreichen Wanderwege rund um den Pölven – von gemütlichen Talrundwanderungen bis zur anspruchsvollen Pölven-Überschreitung mit Blick auf den Wilden Kaiser.</p>\n\n<p>Kulturell interessant ist das kleine Bergbaumuseum im Ort, das an die jahrhundertelange Silber- und Schwefelkies-Gewinnung erinnert, die Bad Häring einst wirtschaftlich prägte. Kulinarisch servieren die Wirtshäuser bodenständige Tiroler Küche – Kasnocken, Gröstl und heimischen Käse – oft mit Produkten aus der direkten Umgebung. Wer Ruhe sucht, ohne auf Komfort verzichten zu müssen, findet hier einen ehrlichen, weniger überlaufenen Gegenpol zu den großen Tourismusorten Tirols.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

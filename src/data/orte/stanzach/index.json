@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.3829",
     "lng": "10.5622"
-  }
+  },
+  "beschreibung": "<p>Stanzach liegt auf 939 Metern Höhe im hinteren Lechtal, im Bezirk Reutte, und zählt rund 500 Einwohner. Das Dorf erstreckt sich am orografisch linken Ufer des Lech, wo der gleichnamige Stanzach-Bach in den Fluss mündet. Als eine der kleineren Gemeinden im Außerfern bewahrt Stanzach den Charakter eines bäuerlich geprägten Lechtaler Dorfes mit geschlossener Siedlungsstruktur.</p>\n\n<p>Die unmittelbare Nähe zum Tiroler Lech, einem der letzten weitgehend unverbauten Wildflüsse der Nordalpen, prägt den Ort. Auf den Schotterbänken und in den Auwäldern entlang des Flussufers lassen sich Eisvogel, Flussuferläufer und im Frühjahr die seltene Deutsche Tamariske beobachten. Der Lechweg, ein 125 Kilometer langer Weitwanderweg von Steeg bis Augsburg, führt direkt durch Stanzach. Im Tal laden zudem die Klausenwand und der Thaneller zu Tagestouren ein, beides beliebte Ziele für Wanderer, die Ruhe abseits der großen Tourismuszentren suchen.</p>\n\n<p>Kulturell ist die traditionelle Lechtaler Holzbauweise mit tief heruntergezogenen Walmdächern und teilweise reich bemalten Fassaden typisch für den Ort. Die Pfarrkirche zum Heiligen Johannes dem Täufer stammt in ihren Anfängen aus dem 15. Jahrhundert. Wer authentische Außerfern-Küche sucht, findet sie in den wenigen Wirtshäusern – von Kässpätzle über Lechtaler Bergkäse bis hin zu Forellen aus heimischen Gewässern. Stanzach ist kein Ort für schnelle Besuche, sondern für jene, die das stille Lechtal zwischen Allgäuer und Lechtaler Alpen bewusst erleben wollen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

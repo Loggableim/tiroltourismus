@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1583",
     "lng": "10.5891"
-  }
+  },
+  "beschreibung": "<p>Zams liegt auf 767 Metern Seehöhe am Eingang des Stanzer Tals im Bezirk Landeck, direkt gegenüber der Bezirkshauptstadt am orografisch linken Innufer. Die Marktgemeinde zählt rund 3.600 Einwohner und bildet zusammen mit Landeck und Schönwies einen funktionalen Verbund im Tiroler Oberinntal.</p>\n\n<p>Das historische Zentrum wird von der spätgotischen Pfarrkirche zum Heiligen Jakobus dem Älteren geprägt, deren hoher Turm weithin sichtbar ist. Im Inneren beeindruckt der Flügelaltar aus dem frühen 16. Jahrhundert, ein bedeutendes Werk der Tiroler Schnitzkunst. Wanderwege führen von Zams aus direkt in die Lechtaler Alpen und ins Stanzer Tal, etwa zur Zammer Alm oder auf den Spuren des historischen Saumpfads über den Arlberg. Familien finden am Venet, dem Hausberg der Region, ein weitläufiges Wander- und Skigebiet mit Sommerrodelbahn vor. Im Winter ergänzt das kleine, familiäre Skigebiet Zams-Schönwies mit zwei Liften das Angebot – überschaubar, aber ideal für Einsteiger und Kinder.</p>\n\n<p>Kulturell ist Zams vor allem für die jährlichen Passionsspiele bekannt, die alle sechs Jahre aufgeführt werden und auf eine über 375-jährige Tradition zurückblicken. Damit zählt der Ort zu den wenigen Gemeinden Tirols, die dieses Brauchtum in ungebrochener Form pflegen. Wer regionale Küche sucht, wird in den Gasthäusern am Dorfplatz mit typischen Gerichten wie Kaspressknödeln oder Tiroler Gröstl fündig. Zams verbindet Geschichte, Natur und Familienfreundlichkeit auf engem Raum.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

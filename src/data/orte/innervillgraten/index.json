@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/innervillgraten/hero_1.png",
+      "alt": "Innervillgraten — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/innervillgraten/hero_1.png",
   "koordinaten": {
     "lat": "46.8078",
     "lng": "12.3721"
-  }
+  },
+  "beschreibung": "<p>Innervillgraten liegt auf 1.402 Metern Seehöhe im Villgratental, am hintersten Talschluss des Bezirks Lienz in Osttirol – und ist die höchstgelegene, ganzjährig bewohnte Dauersiedlung des österreichischen Teils Osttirols. Rund 900 Menschen leben in dem Dorf, das verkehrstechnisch nur über eine Straße erreichbar ist. Die Enge des Tales und die Lage am Fuße der Villgratner Berge prägen den Ort nachhaltig.</p>\n\n<p>Das Herzstück von Innervillgraten ist der <strong>Naturpark Villgratner Berge</strong>, eines der ruhigsten Schutzgebiete der Ostalpen. Im Winter gilt das Dorf als Geheimtipp für Langläufer: Über 50 Kilometer gespurte Loipen ziehen sich durch das Tal und die Seitentäler, darunter die berühmte <em>Villgratental-Loipe</em> bis nach Außervillgraten. Im Sommer erschließen rund 300 Kilometer markierte Wanderwege das Gebiet – etwa der Aufstieg zur Arntalerköpflhütte oder die Tour über den Golzentipp, einen der aussichtsreichsten Gipfel der Region. Die Ab",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

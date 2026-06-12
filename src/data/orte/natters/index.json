@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2337",
     "lng": "11.3738"
-  }
+  },
+  "beschreibung": "<p>Natters liegt auf 783 Metern Höhe auf einem sonnenverwöhnten Plateau südlich der Nordkette, nur etwa zehn Minuten von Innsbruck entfernt. Mit rund 2.100 Einwohnerinnen und Einwohnern gehört die Gemeinde zum Bezirk Innsbruck-Land und bietet eine seltene Mischung aus ländlicher Ruhe und Stadtnähe.</p>\n\n<p>Das Herzstück des Dorfes ist der Natterer Weiher 🌲, ein künstlich angelegter Badesee, der im Sommer Familien, Schwimmer und Spaziergänger anzieht. Eine flache Badestelle, Liegewiesen und ein Kinderspielplatz machen ihn zu einem beliebten Ausflugsziel – nicht nur für Einheimische, auch für Gäste aus dem Inntal. Direkt vom Dorf aus starten mehrere Wanderwege, etwa hinauf zur Natterer Alm oder entlang des Panoramawegs mit Blick auf die schroffen Kalkwände der Nordkette, die zum Greifen nah erscheint. Mountainbiker schätzen die Tour Richtung Aldrans, und im Winter liegen kleinere Skitourenrouten in Reichweite.</p>\n\n<p>Kulinarisch setzen Wirtshäuser wie der Gasthof Natters auf Tiroler Küche mit regionalen Zutaten – Kasnocken, Gröstl und hausgemachte Strudel stehen dort auf der Karte. Das Dorfleben dreht sich um die Pfarrkirche hl. Margaretha und das regelmäßige Dorffest. Wer Innsbrucks Kultur und Trubel sucht, aber abends in der Stille wohnen möchte, findet in Natters einen idealen Ausgangspunkt – ehrlich, bodenständig und ohne touristischen Overload.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

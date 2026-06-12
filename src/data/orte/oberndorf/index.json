@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4999",
     "lng": "12.3832"
-  }
+  },
+  "beschreibung": "<p><strong>Oberndorf in Tirol</strong> liegt auf 684 Metern Höhe in der Ferienregion Kitzbühel mit den Kitzbüheler Alpen und ist eine beschauliches Dorf. Rund <strong>2.300</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Oberndorf in Tirol eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

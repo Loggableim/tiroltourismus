@@ -16,10 +16,28 @@
   ],
   "status": "published",
   "bezirk": "landeck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/ladis/hero_1.png",
+      "alt": "Ladis — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/ladis/hero_1.png",
   "koordinaten": {
     "lat": "47.0725",
     "lng": "10.6495"
-  }
+  },
+  "beschreibung": "<p>Ladis liegt auf einem sonnenverwöhnten Hochplateau über dem Inntal im Bezirk Landeck, auf 1.200 Metern Seehöhe. Das Dorf mit seinen rund 550 Einwohnern gehört zur Skiregion Serfaus-Fiss-Ladis und hat sich bewusst gegen Massentourismus entschieden – hier dominieren gehobene Hotels, gepflegte Chalets und eine Ruhe, die man in den großen Tiroler Tourismuszentren selten findet.</p>\n\n<p>Was Ladis von Nachbardörfern unterscheidet, ist die Verbindung aus exklusivem Ambiente und unmittelbarem Naturerlebnis. Die Burg Laudeck thront markant über dem Ort und erzählt von der Geschichte als alter Gerichtssitz. Im Winter bringt die Gondelbahn Gäste direkt ins Skigebiet, das mit breiten Pisten, Kinderländern und der „Murmli-Welt\" besonders Familien anspricht. Im Sommer laden Wanderwege rund um den Fisser Joch und den Frommele-See zu Touren ein, bei denen die klare Höhenluft spürbar wird. Die Höhenlage zwischen den Bergketten sorgt für ein Mikroklima, das Heilklima-Status erreicht – Ladis ist offiziell als Luftkurort anerkannt.</p>\n\n<p>Kulinarisch setzen die Haubenküchen der 4- und 5-Sterne-Häuser Akzente, doch auch die traditionellen Gasthäuser servieren regionale Klassiker wie Kasnocken oder Tiroler Gröstl auf Holzbänken mit Panoramablick. Wer Abgeschiedenheit auf hohem Niveau sucht, findet in Ladis einen Ort, an dem alpiner Luxus nicht laut, sondern leise auftritt – eingerahmt von der Weite des Tiroler Hochplateaus. 🌟",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    }
+  ]
 }

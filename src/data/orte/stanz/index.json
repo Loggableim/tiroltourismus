@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1485",
     "lng": "10.5540"
-  }
+  },
+  "beschreibung": "<p>Stanz bei Landeck liegt auf einem sonnenverwöhnten Hochplateau am Eingang zum Stanzer Tal auf rund 1.040 Metern Seehöhe, etwa 700 Menschen leben hier in der Gemeinde im Bezirk Landeck. Das Dorf thront oberhalb des Inntals und blickt hinüber auf die gegenüberliegenden Bergketten – ein Postkartenblick, der sich besonders am Abend zeigt, wenn die Sonne die Kalkwände der Lechtaler Alpen in warmes Licht taucht.</p>\n\n<p>Die absolute Besonderheit von Stanz ist der \"Gotische Hof\", der als ältestes Bauernhaus Tirols gilt und auf das 15. Jahrhundert zurückgeht. Der dreigeschossige Bau mit seinen gotischen Fenstern und dem markanten Satteldach gibt Einblick in bäuerliches Wohnen vergangener Jahrhunderte und ist für Besucher zugänglich. Wanderfreunde starten direkt vom Dorf aus in die Bergwelt rund um die Parseierspitze, den höchsten Berg der Nordtiroler Kalkalpen. Besonders lohnend ist der Weg hinauf zur Starkenbergalm mit Blick ins Inntal nach Landeck und zum Venet.</p>\n\n<p>Wer Ruhe sucht, abseits der touristischen Hauptpfade, ist in Stanz richtig – das Dorf hat sich seinen dörflichen Charakter bewahrt. In den wenigen Gasthäusern wird Tiroler Hausmannskost serviert, von Kasnocken bis zu Krapfen nach regionalem Rezept. Der kulturelle Höhepunkt im Jahreskreis ist das Dorffest rund um den gotischen Hof, bei dem Geschichte lebendig bleibt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

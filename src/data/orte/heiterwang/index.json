@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/heiterwang/hero_1.png",
+      "alt": "Heiterwang — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/heiterwang/hero_1.png",
   "koordinaten": {
     "lat": "47.4458",
     "lng": "10.7459"
-  }
+  },
+  "beschreibung": "<p>Heiterwang liegt im Außerfern im Bezirk Reutte auf 970 Metern Seehöhe und zählt rund 550 Einwohner. Der kleine Ort erstreckt sich direkt am Ostufer des Heiterwanger Sees, der mit knapp sechs Kilometern Länge und bis zu 38 Metern Tiefe zu den größten Naturseen Tirols gehört. Gegenüber erheben sich die Ausläufer des Ammergebirges, die dem klaren Wasser eine beeindruckende Kulisse verleihen.</p>\n\n<p>Eine Seepromenade verbindet die wenigen Häuser mit dem Strandbad, wo im Sommer bei Temperaturen bis 24 Grad gebadet wird. Die MS Stadt Heiterwang, das älteste Linienschiff Tirols, legt regelmäßig ab und verbindet Heiterwang mit Pertisau am Achensee – eine besondere Art, die Region vom Wasser aus zu entdecken. Wanderungen führen rund um den See, auf den Thaneller (2.341 m) oder in die nahe gelegene Naturparkregion Reutte. Familien schätzen die kurzen Wege und die ruhige Atmosphäre fernab großer Touristenströme.</p>\n\n<p>Kulinarisch wird im Dorf Tiroler Hausmannskost aufgetischt – Kaspressknödel und Forelle aus dem See stehen auf den meisten Speisekarten der Gasthäuser. Die Burgruine Ehrenberg und die Highline179, eine der längsten Hängebrücken der Welt, liegen nur wenige Kilometer entfernt und lassen sich gut mit einem Besuch in Heiterwang verbinden. Wer im Außerfern einen ruhigen Badesee ohne Trubel sucht, findet hier genau das Richtige.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

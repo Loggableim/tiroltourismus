@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.5807",
     "lng": "12.0299"
-  }
+  },
+  "beschreibung": "<p>Thiersee liegt auf 678 m Seehöhe im Bezirk Kufstein, eingebettet zwischen dem markanten Pendling und den Ausläufern der Brandenberger Alpen. Die Gemeinde mit rund 3.200 Einwohnern umfasst mehrere kleine Dörfer wie Landl, Mitterland und Vorderthiersee, die sich rund um den gleichnamigen See verteilen. Die Nähe zur Stadt Kufstein – nur etwa 10 km entfernt – macht den Ort zu einem ruhigen Rückzugsort, der trotzdem gut angebunden ist.</p>\n\n<p>Das Herzstück der Gemeinde ist der Thiersee, ein klarer Badesee mit Trinkwasserqualität, der im Sommer auf bis zu 24 Grad erwärmt. Eine familienfreundliche Liegewiese, ein Kinderspielplatz und der bewirtschaftete Thierseerhof machen den See zum beliebten Ausflugsziel. Wanderer finden direkt vom Ortszentrum aus Routen unterschiedlicher Schwierigkeitsgrade – etwa auf den Pendlinggipfel mit Panoramablick über das Inntal oder durch die Wälder der Tiefen Klamm. Auch Radfahrer und Kletterer kommen in der Umgebung auf ihre Kosten. Im Winter verwandelt sich die Region in ein stilles Schneewandergebiet, abseits vom Trubel der großen Skigebiete.</p>\n\n<p>Kulturell ist Thiersee eng mit dem benachbarten Erl verbunden, das für seine Tiroler Festspiele und die weltberühmten Passionsspiele bekannt ist. In den örtlichen Gasthäusern servieren Wirtsleute regionale Schmankerl wie Kasnocken, Zillertaler Krapfen oder frischen Forellenfisch aus dem See. Wer echte Tiroler Gastlichkeit jenseits der touristischen Hotspots sucht, findet hier ein Stück unverfälschtes Landleben.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

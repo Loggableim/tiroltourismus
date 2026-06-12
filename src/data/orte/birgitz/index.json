@@ -25,5 +25,23 @@
     "lat": "47.2357",
     "lng": "11.3000"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Birgitz liegt auf 859 Metern Höhe auf dem Sonnenplateau westlich von Innsbruck, zwischen Götzens und Mutters, mit direkter Blickachse auf die Stubaier Alpen. Das Dorf zählt rund 1.500 Einwohner und gehört zum Bezirk Innsbruck-Land. Die exponierte Lage auf der Mittelgebirgsterrasse sorgt für überdurchschnittlich viele Sonnenstunden – daher der Name des Plateaus.</p>\n\n<p>Über einen kurzen, steilen Wanderweg erreicht man die Birgitzer Alm auf rund 1.800 Metern, von wo aus sich der Blick auf die Serles, den „Altar Tirols\", und das gesamte vordere Stubaital öffnet. Die Nockspitze, der Hausberg von Birgitz, ist über die Bergstation der Nockbahn auch ohne alpine Erfahrung erreichbar und bietet ein 360-Grad-Panorama von den Tuxer Alpen bis zum Karwendel. Im Winter liegen die Loipen der Olympiaregion direkt am Ortsrand, im Sommer führen markierte Wege Richtung Raitis und Fulpmes.</p>\n\n<p>Kulturell ist Birgitz vor allem durch den Maler Peter Rigler bekannt, der hier lebte und eine private Malschule betrieb. Der dörfliche Charakter hat sich trotz der Nähe zu Innsbruck erhalten – bäuerliche Architektur, die kleine Pfarrkirche und die gewachsene Wirtshauskultur mit regionaler Küche prägen den Ort. Wer Ruhe, echte Bergnähe und kurze Wege ins Inntal sucht, findet hier eine der angenehmsten Adressen am Plateau. 🌄",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

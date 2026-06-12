@@ -26,5 +26,23 @@
     "lat": "47.4887",
     "lng": "10.7277"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Breitenwang liegt auf 850 m Höhe im Bezirk Reutte, direkt an der Grenze zur Bezirkshauptstadt Reutte im Außerfern, und bildet mit rund 1.500 Einwohnern das zweitgrößte Dorf der Region. Der Ort erstreckt sich am östlichen Ufer des Lech, der hier noch naturnah und glasklar durch das Tal fließt, bevor er sich seinen Weg durch die Schluchten Richtung Füssen bahnt. Die Lage macht Breitenwang zu einem idealen Ausgangspunkt für Ausflüge in alle Richtungen – egal ob ins benachbarte Deutschland oder hoch Richtung Lechtaler Alpen.</p>\n\n<p>Besonders prägend für den Ort ist die Nähe zum Plansee, einem der tiefsten und saubersten Seen Österreichs, der nur wenige Kilometer entfernt liegt und im Sommer zum Baden, Tauchen und Bootfahren einlädt. Direkt in Breitenwang befindet sich zudem der 18-Loch-Golfplatz des Golfclubs Reutte-Steinberg, eingebettet in eine Moorlandschaft mit Blick auf die Ammergauer Alpen. Für Familien lohnt sich ein Besuch der Burgruine Ehrenberg, von deren Festungsmauern die berühmte Highline 179 – eine der längsten Fußgänger-Hängebrücken der Welt – über die Schlucht führt.</p>\n\n<p>Kulturell hat Breitenwang eine lange Geschichte: Die katholische Pfarrkirche zum Heiligen Stephan stammt in ihren Ursprüngen aus dem 8. Jahrhundert und beherbergt gotische Fresken. Wer typisch regional essen möchte, findet in den Gasthäusern rund um den Dorfplatz Kasnocken, Tiroler Gröstl oder Kässpätzle – bodenständig und hausgemacht. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kirchberg/hero_1.png",
+      "alt": "Kirchberg in Tirol — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kirchberg/hero_1.png",
   "koordinaten": {
     "lat": "47.4476",
     "lng": "12.3144"
-  }
+  },
+  "beschreibung": "<p>Kirchberg in Tirol liegt auf 837 m Höhe im Brixental, nur wenige Kilometer von Kitzbühel entfernt, und zählt rund 5.300 Einwohner. Der Ort gehört zum Bezirk Kitzbühel und bildet zusammen mit seinem berühmten Nachbarn das Herzstück einer der traditionsreichsten Wintersportregionen der Alpen. Schon auf den ersten Blick fällt die stattliche Pfarrkirche mit ihrem Zwiebelturm ins Auge, die dem Ort seinen Namen gab und den Dorfkern seit Jahrhunderten prägt.</p>\n\n<p>Über die Gaisbergbahn erreicht man direkt das Skigebiet von Kitzbühel – inklusive der legendären Streif-Abfahrt am Hahnenkamm. Damit ist Kirchberg nicht nur Anlaufpunkt für Familien, die auf den breiten Pisten am Pengelstein und am Gaisberg unterwegs sind, sondern auch für sportliche Skifahrer, die das volle Kitzbüheler Skigebiet nutzen wollen. Im Sommer verwandelt sich die Umgebung in ein weitläufiges Wandergebiet: Der Gaisberg, das Spertental und die Brixentaler Höhenwege bieten Touren für jedes Niveau, oft mit Blick auf den Wilden Kaiser gegenüber. Am Abend gehört Kirchberg zu den Orten in Tirol mit dem lebhaftesten Nachtleben – zahlreiche Bars und Hütten sorgen dafür, dass Après-Ski hier keine Nebensache ist.</p>\n\n<p>Kulinarisch steht der Ort klar auf Tiroler Boden: Kasnocken, Zillertaler Schinken und Kiachl'n gibt es in den traditionellen Gasthäusern rund um den Dorfplatz, und auch der direkte Anschluss an die Skiwelt Wilder Kaiser – Brixental macht Kirchberg ganzjährig zu einem praktischen Ausgangspunkt für Ausflüge in die Region. 🎿</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -18,5 +18,23 @@
     "lng": 11.6667
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Weerberg liegt auf 870 m Höhe am sonnenexponierten Hang des Inntals gegenüber von Schwaz und zählt mit seinen rund 2.480 Einwohnern zu den flächenmäßig größten Gemeinden Tirols. Die Besiedlung verteilt sich auf zahlreiche verstreute Weiler, Einzelhöfe und kleine Dörfer, die sich über die weitläufige Hochfläche zwischen Inntal und Tuxer Alpen ziehen – eine typische Streugemeinde mit viel Platz zwischen den Gehöften.</p>\n\n<p>🌲 Das Wanderwegenetz rund um Weerberg gehört zu den ausgedehntesten im Bezirk Schwaz: Über 150 km markierte Wege führen durch Lärchen- und Zirbenwälder, vorbei an bewirtschafteten Almen wie der Hohen Fügen oder der Grafenast, und hinauf in die Tuxer Alpen. Besonders lohnend ist der Aufstieg zur Wallfahrtskirche Maria Tax, die auf einer Anhöhe thront und bereits im 14. Jahrhundert erstmals urkundlich erwähnt wurde. Der barocke Bau mit seinem markanten Turm ist bis heute ein bedeutender Pilgerort. Im Sommer laden die Almen zum Einkehren bei Kasnocken und frischer Buttermilch ein, im Winter zieht es Skitourengeher und Schneeschuhwanderer auf die verschneiten Hänge.</p>\n\n<p>Was Weerberg von anderen Orten im Inntal unterscheidet, ist genau diese Weite: kein geschlossenes Dorfzentrum, sondern eine Landschaft, in der sich Höfe, Wiesen und Wälder abwechseln, durchzogen von alten Pilgerpfaden und Bauernwegen. Die Gemeinde lebt von der Landwirtschaft, vom Tourismus – und von der Ruhe, die man auf den Höhenwegen findet.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

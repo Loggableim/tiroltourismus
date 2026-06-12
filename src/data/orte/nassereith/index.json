@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.3148",
     "lng": "10.8379"
-  }
+  },
+  "beschreibung": "<p>Nassereith liegt auf 833 m Seehöhe am Fuße des Fernpasses im Bezirk Imst, eingangs des Gurgltals, und zählt rund 2.200 Einwohner. Die Marktgemeinde blickt auf eine lange Geschichte als Rast- und Umspannstation an der wichtigen Nord-Süd-Route über den Fernpass zurück – die Lage prägte den Ort über Jahrhunderte hinweg als Poststation und Marktort.</p>\n\n<p>Das Gurgltal, einst von einem See bedeckt, ist heute geologisch wie landschaftlich ein Kleinod. Der rund 3,5 km lange Gurgltal-Mineralienweg bei Tarrenz (nahe Nassereith) erschließt eindrucksvolle Aufschlüsse und Funde – von Mineralien über versteinerte Korallen bis zu den berühmten \"Nassereither Schiefern\". Wanderer finden zudem zahlreiche Touren rund um den Mieminger Kette und über die Hochfelder Alm. Kulturelles Herzstück ist die Nassereither Fasnacht, eine der ältesten und ursprünglichsten Fastnachtsbräuche Tirols: Am Unsinnigen Donnerstag ziehen aufwändig geschnitzte Holzlarven – darunter der \"Schellenrührer\" und der \"Zottler\" – durch den Ort, begleitet von Peitschenknallen und Glockengeläut. Die historische \"Postgarage\", ein altes Postgebäude aus der Zeit der Pferdekutschen, dient heute als Veranstaltungsort für Konzerte, Theater und Ausstellungen.</p>\n\n<p>Kulinarisch steht die Region für deftige Tiroler Kost – Kasnocken, Kiachl und Wildgerichte aus den umliegenden Wäldern. Nassereith bleibt damit ein Geheimtipp für alle, die echtes Brauchtum und stille Natur abseits der großen Touristenströme suchen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

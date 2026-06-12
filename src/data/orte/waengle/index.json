@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.4864",
     "lng": "10.6890"
-  }
+  },
+  "beschreibung": "<p>Wängle liegt auf 880 Metern Höhe im Außerfern, dem westlichsten Winkel Tirols, und zählt rund 950 Einwohner. Das Dorf sitzt direkt zwischen der Bezirkshauptstadt Reutte und dem Plansee, was es zu einem ruhigen Ausgangspunkt für Ausflüge in beide Richtungen macht. Die Gemeinde gehört zum Bezirk Reutte und ist Teil des Naturpark Tiroler Lech.</p>\n\n<p>🌲 Besonders reizvoll ist die Nähe zum Plansee, einem der tiefsten und saubersten Seen Österreichs, der mit seinem türkisgrünen Wasser im Sommer zum Baden und im Winter zum Eislaufen einlädt. Direkt hinter Wängle beginnen ausgedehnte Wanderwege durch die Ammergauer Alpen, etwa hinauf zur Neualm oder weiter zur Heiterwanger Seenplatte. Familien schätzen die gut beschilderten Touren, und im Winter führt eine gepflegte Loipe quer durch das Lechtal. Der Naturpark Tiroler Lech mit seinen ursprünglichen Wildflusslandschaften liegt buchstäblich vor der Haustür.</p>\n\n<p>Kulturell lohnt sich ein Abstecher zu den nahegelegenen Burgen Ehrenberg bei Reutte, und kulinarisch findet man in den umliegenden Gasthäusern klassische Außerferner Kost wie Kässpätzle oder Riebel. Wer abseits der großen Touristenströme echte Tiroler Stille sucht, ist in Wängle genau richtig – ein Dorf, das seine Ursprünglichkeit bewahrt hat.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    }
+  ]
 }

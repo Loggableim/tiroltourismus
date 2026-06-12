@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/holzgau/hero_1.png",
+      "alt": "Holzgau — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/holzgau/hero_1.png",
   "koordinaten": {
     "lat": "47.2601",
     "lng": "10.3446"
-  }
+  },
+  "beschreibung": "<p>Holzgau liegt auf 1.114 Metern im oberen Lechtal, im Bezirk Reutte der Region Außerfern, und zählt rund 500 Einwohner. Das Dorf thront am Eingang zum Naturpark Tiroler Lech, einem der letzten weitgehend unverbauten Wildflusslandschaften der Nordalpen. Die historische Substanz des Orts reicht bis ins Mittelalter zurück, als Walser Siedler das damals schwer zugängliche Hochtal urbar machten.</p>\n\n<p>Was Holzgau von anderen Lechtaler Dörfern unterscheidet, sind die aufwendig bemalten Bauernhäuser mit ihren kunstvollen Lüftlmalereien an den Fassaden – Häuser wie der Gasthof „Bären\" oder der „Hochschober\" gelten als Paradebeispiele dieser oberbayerisch-tirolerischen Fassadenmalerei, die einst reiche Handelsleute als Statussymbol in Auftrag gaben. Direkt oberhalb des Orts führt der 200 Meter lange und bis zu 80 Meter hohe hölzerne Steg zum Simms-Wasserfall – eine der längsten und höchsten Fußgänger-Hängebrücken Österreichs, die Wanderer über die Schlucht des Höhenbachs trägt. Von hier aus starten Touren in die Allgäuer und Lechtaler Alpen, etwa auf die 2.046 Meter hohe Jöchelspitze mit ihrem Familien-Wandergebiet.</p>\n\n<p>Wer den Wildfluss Lech mit seinen Kiesbänken und Graureiher-Kolonien erwandert, taucht in eine Landschaft ein, die in Europa selten geworden ist. Kulinarisch stehen Lechtaler Kasknöpfle, würziger Almkäse und Forelle aus dem klaren Bergwasser auf den Speisekarten der Gasthäuser. Holzgau ist kein Ort für schnelle Besuche – wer die Stille des Tals und die handwerkliche Baukultur schätzt, findet hier ein authentisches Stück Tirol abseits der großen Touristenrouten.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

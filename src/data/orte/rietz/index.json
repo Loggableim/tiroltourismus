@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.2874",
     "lng": "11.0292"
-  }
+  },
+  "beschreibung": "<p>Rietz liegt auf 650 Metern Seehöhe im Oberinntal, im Bezirk Innsbruck-Land, zwischen Telfs und dem Inntal-Durchbruch bei Karres. Das Dorf mit seinen rund 2.500 Einwohnern verteilt sich auf mehrere kleinere Weiler, darunter Rietz-Siedlung und das eigentliche Dorfzentrum rund um die Pfarrkirche. Die Lage am sonnigen Talboden des Inns bringt milde Bedingungen, während im Hintergrund die Ausläufer der Mieminger Kette aufragen.</p>\n\n<p>Die Pfarrkirche zum Hl. Petrus prägt das Ortsbild und stammt in ihren Ursprüngen aus dem 13. Jahrhundert, der spätgotische Turm ist weithin sichtbar. Von Rietz aus führen markierte Wanderwege direkt in die ausgedehnten Wälder der umliegenden Hänge, etwa Richtung Simmering oder in den Bereich des Rietzer Gries am Inn. 🌲 Die Wege sind durchwegs familientauglich und wenig frequentiert, was den Ort besonders für Ruhesuchende interessant macht. Auch Radfahrer schätzen die direkte Anbindung am Inntalradweg.</p>\n\n<p>Kulinarisch ist Rietz landwirtschaftlich geprägt – die Region gehört zum traditionellen Obst- und Gemüseanbaugebiet des Oberinntals. Gasthäuser im Dorf servieren Tiroler Hausmannskost mit regionalen Zutaten. Wer abseits der Touristenströme ein authentisches Tiroler Dorfleben sucht, findet hier ein Tirol, das noch nach bäuerlichem Alltag schmeckt und nicht nach Souvenirshop.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

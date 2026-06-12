@@ -15,10 +15,28 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hochfilzen/hero_1.png",
+      "alt": "Hochfilzen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hochfilzen/hero_1.png",
   "koordinaten": {
     "lat": "47.4699",
     "lng": "12.6184"
-  }
+  },
+  "beschreibung": "<p>Hochfilzen liegt auf 959 m Seehöhe im Bezirk Kitzbühel, eingebettet zwischen den Loferer Steinbergen und den Kitzbüheler Alpen am Übergang zum Pillerseetal. Das Dorf zählt rund 1.200 Einwohner und gehört zur Region Kitzbühel, ist aber touristisch stärker auf das PillerseeTal ausgerichtet als auf den bekannten Nachbarort.</p>\n\n<p>Der Name Hochfilzen ist international vor allem mit Biathlon verknüpft. In der Biathlon Arena finden regelmäßig Weltcup-Rennen statt – die Anlage mit Schießstand und Stadion ist ganzjährig nutzbar und gilt als eine der modernsten Biathlon-Stätten im Alpenraum. Auch im Langlauf ist Hochfilzen ein Schwerpunkt: Das Loipennetz rund um den Ort ist Teil der Tiroler Loipe und verbindet das Dorf mit dem Pillersee. Im Sommer führen Wander- und Mountainbiketouren durch die umliegenden Almgebiete, etwa Richtung Buchensteinwand mit ihrem markanten Aussichtsfelsen „Jakobskreuz\".</p>\n\n<p>Familien schätzen Hochfilzen wegen der Überschaubarkeit und des direkten Zugangs zu Natur und Sport. Kulinarisch stehen regionale Wirtshausküche und Tiroler Käsespezialitäten im Mittelpunkt, oft serviert in einfachen Gasthäusern am Dorfplatz. Wer Biathlon-Feeling abseits der Großevents sucht, kann in der Arena auch selbst zum Gewehr greifen – Schnuppertrainings werden für Gäste angeboten. 🎿</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    }
+  ]
 }

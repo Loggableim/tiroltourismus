@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1106",
     "lng": "11.3076"
-  }
+  },
+  "beschreibung": "<p><strong>Neustift im Stubaital</strong> liegt auf 994 Metern Höhe in dem Innsbrucker Mittelgebirge und den umliegenden Tälern und ist eine beschauliches Dorf. Rund <strong>4.700</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten und familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Neustift im Stubaital ist ein idealer Ort für Familien, die einen abwechslungsreichen Urlaub in den Bergen verbringen möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/musau/hero_1.png",
+      "alt": "Musau — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/musau/hero_1.png",
   "koordinaten": {
     "lat": "47.5349",
     "lng": "10.6707"
-  }
+  },
+  "beschreibung": "<p>Musau liegt auf 860 Metern Höhe im Außerfern, im Bezirk Reutte, direkt an der Grenze zu Bayern. Das Dorf zählt rund 400 Einwohner und befindet sich am Fuß des markanten Säuling, der mit 2.059 Metern die Silhouette der gesamten Umgebung prägt. Durch die Nähe zur deutschen Grenze und zum Lech gehört Musau zu den ruhigeren Ausgangspunkten für Touren ins Tannheimer Tal oder Richtung Füssen.</p>\n\n<p>Die Pfarrkirche zum Heiligsten Herzen Jesu stammt in ihrer heutigen Form aus dem 19. Jahrhundert und fällt durch ihren schlanken Turm auf, der über die Dächer des kleinen Dorfkerns hinausragt. Direkt hinter dem Ort beginnt das Wandergebiet am Säuling: Der Aufstieg über die Säulinghütte oder die Sulzspitze ist bei Bergwanderern beliebt, ebenso die Tour zur Frauensee-Hütte mit Blick ins Lechtal. Im Winter lockt eine kleine, aber feine Skitouren-Route am Vilser Kegel – Schneeschuhgeher schätzen die unberührten Hänge rund um den Pflacherrücken.</p>\n\n<p>Kulinarisch setzen die wenigen Gasthäuser im Ort auf regionale Küche mit Käse aus dem Lechtal und Wildgerichten aus heimischer Jagd. Wer Ruhe sucht, abseits der bekannten Tiroler Hotspots, findet in Musau ein Dorf, das sich seinen dörflichen Charakter bewahrt hat – ohne Trubel, aber mit direktem Zugang zu einer der schönsten Berglandschaften zwischen Lech und Ammergauer Alpen. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

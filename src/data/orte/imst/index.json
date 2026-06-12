@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/imst/hero_1.png",
+      "alt": "Imst — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/imst/hero_1.png",
   "koordinaten": {
     "lat": "47.2382",
     "lng": "10.7407"
-  }
+  },
+  "beschreibung": "<p>Imst liegt auf 827 Metern Höhe im oberen Inntal am Eingang zum Gurgltal, wo die Tiroler Ache durch eine enge Schlucht – die Rosengartenschlucht – ins Inntal durchbricht. Mit rund 10.500 Einwohnern ist die Marktgemeinde der Hauptort des gleichnamigen Bezirks und ein Knotenpunkt zwischen Inntal-Autobahn und Fernpassstrecke. Die Stadt blickt auf eine lange Bergbau- und Knappentradition zurück, die noch heute im Stadtbild sichtbar ist.</p>\n\n<p>Bekannt ist Imst vor allem als unangefochtene Faschingshochburg Tirols: Alle vier Jahre verwandelt das Schellerlaufen den Ort in eine Bühne aus bunten Holzlarven, Schellen und Glockengeklirr – ein Brauch, der seit 1538 urkundlich belegt ist und zum immateriellen Kulturerbe zählt. Abseits des Karnevals ist Imst ein Zentrum für Outdoor-Aktivitäten: Die Rosengartenschlucht und die Klettersteige im Tschirgant-Massiv ziehen Kletterer an, das weitläufige Rad- und Wanderwegenetz rund um die Muttekopfhütte sowie der Panoramaweg Richtung Hahntennjoch begeistern Bergsportler. Die Imster Bergbahnen erschließen im Winter ein kleines, aber feines Skigebiet.</p>\n\n<p>Kulinarisch steht die Region für deftige Tiroler Küche – Kasnocken, Gröstl und Imster Bergkäse vom Almkäsehof runden einen aktiven Tag ab. Die Mischung aus gelebter Fastnachtstradition, alpiner Sportinfrastruktur und der verkehrsgünstigen Lage macht Imst zu einem Ort, der Kultur und Natur ernsthaft verbindet – ohne sich dabei zu verkaufen. 🎭",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/jenbach/hero_1.png",
+      "alt": "Jenbach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/jenbach/hero_1.png",
   "koordinaten": {
     "lat": "47.3915",
     "lng": "11.7717"
-  }
+  },
+  "beschreibung": "<p>🏘️ Jenbach liegt auf 563 Metern Höhe im Bezirk Schwaz, direkt am Eingang des Zillertals und ist mit rund 7.500 Einwohnern ein wichtiger Verkehrsknotenpunkt im Tiroler Unterinntal. Hier treffen die Unterinntalbahn, die Zillertalbahn und die historische Achenseebahn aufeinander – drei Bahnstrecken, die den Ort seit jeher prägen.</p>\n\n<p>Das markanteste Bauwerk der Umgebung ist Schloss Tratzberg, eine Renaissancefeste aus dem 16. Jahrhundert, die wenige Kilometer westlich auf einem Felssporn thront. Wer mit der Achenseebahn – einer dampfbetriebenen Zahnradbahn seit 1889 – zum Achensee, dem größten See Tirols, fährt, erlebt eine der letzten aktiven Zahnradbahnen Europas. Die Zillertalbahn selbst verkehrt als historische Schmalspurbahn bis nach Mayrhofen und gehört zu den beliebtesten Ausflugszielen für Familien. Für Wanderer und Radfahrer bietet die Region rund um den Reither Kogel zahlreiche Touren mit Blick ins Inntal.</p>\n\n<p>Kulinarisch ist Jenbach Tiroler Durchschnittskost mit ein paar Highlights: regionale Wirtshäuser servieren Kasnocken, Gröstl und Zillertaler Krapfen, und wer auf der Durchreise ist, findet in der Postwirt-Tradition ein Stück Tiroler Wirtshausgeschichte. Fazit: Jenbach ist kein Ort zum Verweilen um jeden Preis, aber wer den Zillertaler Verkehrsknoten einmal versteht – Eisenbahn, Einkaufsmöglichkeiten und die schnelle Anbindung an Achensee, Schwaz und Mayrhofen – erkennt rasch den praktischen Wert dieses Städtchens.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

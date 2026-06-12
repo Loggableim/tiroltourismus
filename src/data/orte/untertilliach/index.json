@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "46.7038",
     "lng": "12.6775"
-  }
+  },
+  "beschreibung": "<p>Untertilliach liegt auf 1.180 Metern Seehöhe im hinteren Gailtal, im Bezirk Lienz in Osttirol, unweit der italienischen Grenze. Das Dorf zählt rund 250 Einwohner und gehört zu den abgelegensten Siedlungen des österreichischen Alpenraums. Wer hierherkommt, lässt die Hauptrouten bewusst hinter sich – die schmale Straße endet hier fast, und die Karnischen Alpen rücken von allen Seiten näher.</p>\n\n<p>Die Umgebung lädt zu ausgedehnten Wanderungen auf den Gailtaler Höhenweg ein, der direkt am Ort vorbeiführt und grenzüberschreitend Richtung Süden weiterläuft. Im Sommer durchziehen unzählige Almen die Hochflächen, im Winter bleibt Untertilliach weitgehend verschont von Skitourismus – Stille und ursprüngliche Berglandschaft prägen das Bild. Die Pfarrkirche St. Margaretha mit ihrem spätgotischen Flügelaltar zählt zu den kulturellen Kleinoden des Ortes. Wer das Gailtal hier oben erlebt, spürt sofort, warum die Region bei Kennern als Geheimtipp für naturnahe Auszeiten gilt: kein Durchgangsverkehr, keine Liftanlagen, nur Wiesen, Wald und das beständige Murmeln der Gail.</p>\n\n<p>Kulinarisch lebt das Dorf von der einfachen, bodenständigen Osttiroler Küche – Kasnudeln, Graukäse und regionale Wildgerichte stehen in den wenigen Gasthäusern auf der Karte. Untertilliach ist kein Ort für schnelle Besuche, sondern für alle, die bewusst Abstand vom Alltag suchen und die Langsamkeit der Berge schätzen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

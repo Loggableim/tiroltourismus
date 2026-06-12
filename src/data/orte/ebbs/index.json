@@ -26,5 +26,23 @@
     "lat": "47.6309",
     "lng": "12.2154"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Ebbs liegt auf 475 m Seehöhe im Bezirk Kufstein, direkt an der bayerischen Grenze und nur wenige Kilometer westlich der Festungsstadt Kufstein. Mit rund 5.800 Einwohnerinnen und Einwohnern ist die Marktgemeinde eine der größeren im Unterinntal und verbindet ländlichen Tiroler Charakter mit grenznaher Wirtschaftskraft.</p>\n\n<p>Am Fuß des Zahmen Kaisers gelegen, bietet Ebbs schnellen Zugang zum Kaisergebirge mit Wanderwegen hinauf zur Pyramidenspitze oder zur bewirtschafteten Aschenbrenner-Hütte. Die Wallfahrtskirche Kleinholz, ein spätbarocker Bau aus dem 18. Jahrhundert, zieht seit Generationen Pilger an und ist das spirituelle Zentrum der Gemeinde. Gleichzeitig grenzt ein großes Einkaufszentrum direkt an Ebbs – viele Kufsteiner und Deutsche erledigen hier ihren Wocheneinkauf, was der Gemeinde eine eigenwillige Mischung aus Beschaulichkeit und Konsumalltag verleiht. Familien schätzen die Nähe zur Natur ebenso wie die gute Infrastruktur mit Kindergärten, Volksschule und Mittelschule direkt vor Ort.</p>\n\n<p>Kulturell pflegt Ebbs alte Traditionen wie das Blochziehen und verschiedene Vereinsfeste. Kulinarisch findet man neben klassischen Wirtshäusern mit Tiroler Küche auch Produkte aus der Region – von heimischem Käse bis zum Most. Wer Kufstein meiden und trotzdem zentral wohnen will, ist in Ebbs richtig aufgehoben: ruhig genug für Erholung, nah genug an Stadt und Berge 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

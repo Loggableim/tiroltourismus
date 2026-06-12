@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1289",
     "lng": "10.2664"
-  }
+  },
+  "beschreibung": "<p><strong>St. Anton am Arlberg</strong> erstreckt sich auf 1.304 Metern Höhe in den sonnigen Seitentälern des Oberlands – Paznaun, Kaunertal, Stanzer Tal und ist eine ruhige Dorfgemeinde. Rund <strong>2.400</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Im winter locken gut präparierte skipisten und unberührte tiefschneeabfahrten und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>St. Anton am Arlberg ist der ideale Ausgangspunkt für Aktivurlauber und Naturfreunde, die die Vielfalt Tirols erleben möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

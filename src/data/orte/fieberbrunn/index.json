@@ -26,5 +26,23 @@
     "lat": "47.4762",
     "lng": "12.5455"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Fieberbrunn liegt auf 780 m Seehöhe im Pillerseetal, eingebettet zwischen den Kitzbüheler Alpen und den Steinbergen im Bezirk Kitzbühel. Mit rund 4.400 Einwohnern ist die Marktgemeinde der östliche Hauptzugang zum Skicircus Saalbach Hinterglemm Leogang Fieberbrunn und seit der Eröffnung der \"TirolS\"-Gondel mit dem Schattberg nahtlos in eines der größten Skigebiete Österreichs eingebunden – insgesamt 200 zusammenhängende Pistenkilometer.</p>\n\n<p>⛷️ Der Hausberg der Gemeinde ist die Buchensteinwand mit dem markanten Jakobskreuz, einem der größten begehbaren Gipfelkreuze der Welt, das bei jedem Wetter einen weiten Blick über den Wilden Kaiser und die Hohen Tauern bietet. Im Sommer führt die Wanderung weiter auf den 2.119 m hohen Wildseeloder, wo der gleichnamige Bergsee direkt unterhalb des bewirtschafteten Wildseeloderhauses liegt. Familien schätzen den Timoks Alpine Coaster am Schattberg und die leichten Touren rund um die Lärchfilzhochalm. Im Winter ist Fieberbrunn vor allem bei Skitourengehern bekannt – die Routen auf die Henne und auf den Geierstein gehören zu den Klassikern der Region.</p>\n\n<p>Kulinarisch steht die Gemeinde für bodenständige Tiroler Küche mit Kaspressknödeln und Graukas, dazu kommt das regional gebraute PillerseeTaler Bier aus der örtlichen Brauerei. Wer den Ort besucht, erlebt ein echtes Bergdorf mit aktiver Landwirtschaft – viele Höfe ringsum produzieren Käse und Pinzgauer Rindfleisch. Fieberbrunn ist damit die ruhigere, authentische Alternative zum Trubel in Kitzbühel, ohne auf Pistenkilometer oder Bergpanorama verzichten zu müssen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

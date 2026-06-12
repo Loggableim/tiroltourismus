@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2997",
     "lng": "11.8706"
-  }
+  },
+  "beschreibung": "<p><strong>Ried im Zillertal</strong> erstreckt sich auf 630 Metern Höhe in dem Zillertal, Achensee und den Tuxer Alpen und ist eine ruhige Dorfgemeinde. Rund <strong>1.300</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten und kulturell interessierte entdecken historische bauten und traditionelles brauchtum und familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Ried im Zillertal eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

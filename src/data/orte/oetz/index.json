@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.2033",
     "lng": "10.8966"
-  }
+  },
+  "beschreibung": "<p>Oetz liegt auf 812 Metern Höhe am Eingang des Ötztals im Bezirk Imst und ist mit rund 2.400 Einwohnern das erste größere Dorf, wenn man von Inntal her in das Tal einbiegt. Die Lage zwischen den Ausläufern der Stubaier Alpen und dem Taleingang macht den Ort zum natürlichen Ausgangspunkt für Ausflüge in das hintere Ötztal – Richtung Sölden, Timmelsjoch und den Gletscher.</p>\n\n<p>Über Oetz rauscht der Stuibenfall, der mit 159 Metern höchste Wasserfall Tirols. Seit 2021 ergänzt die 230 Meter lange Hängebrücke über die Ötztaler Ache das Angebot – sie gilt als längste Hängebrücke des Landes und verbindet den Ort mit dem Weiler Habichen. Für Familien und Aktivurlauber ist der Hochoetz mit seinem Skigebiet direkt erreichbar, im Sommer starten hier Wanderungen auf über 2.000 Meter. Das Ötzi-Dorf am Ortsrand greift die lokale Architekturgeschichte auf und zeigt, wie hier über Jahrhunderte gebaut wurde. Familien finden zudem den Piburgersee, einen kleinen Badesee mit Trinkwasserqualität, nur wenige Minuten oberhalb des Dorfes.</p>\n\n<p>Kulinarisch steht Oetz für klassische Tiroler Wirtshausküche – Kaspressknödel, Graukäse und regionale Schnitzelvariationen findet man in mehreren Betrieben direkt im Zentrum. Der Ortskern mit seinen freskengeschmückten Häusern aus dem 16. und 17. Jahrhundert ist überschaubar, aber echt geblieben. Wer zwischen Gletscher und Talboden einen Standort mit kurzen Wegen sucht, ist hier richtig.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -26,5 +26,18 @@
     "lat": "47.3733",
     "lng": "11.7517"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Buch in Tirol liegt auf 545 m Höhe im Inntal zwischen Jenbach und Schwaz, eingangs des Zillertals im Bezirk Schwaz. Die Marktgemeinde zählt rund 2.600 Einwohner und verbindet ländlichen Charakter mit der Nähe zu den infrastrukturellen Zentren des Unterinntals. Vom Ort aus bietet sich ein direkter Blick auf die gegenüberliegenden Zillertaler Alpen mit ihren markanten Gipfeln rund um den Hochfeiler.</p>\n\n<p>Die Lage macht Buch zu einem praktischen Ausgangspunkt für Aktivitäten in alle Richtungen: Über den Inntalradweg erreicht man Schwaz und Jenbach, während zahlreiche Wanderwege in die Tuxer Voralpen und in Richtung Karwendel führen. Die Ruhe im Ort kommt Familien entgegen, gleichzeitig liegen der Achensee und das Skigebiet Hochzillertal in vertretbarer Fahrentfernung. Sportlich wird es auf den umliegenden Mountainbiketouren oder im Winter auf den Loipen der Region.</p>\n\n<p>Kulturell ist die Pfarrkirche zum Hl. Georg einen Blick wert, und die unmittelbare Nachbarschaft zu Schwaz mit der Silbergrube und dem Freilichttheater ergänzt das Angebot. Wer Tirol abseits der großen Tourismushotspots erleben will, findet hier eine ehrliche, bodenständige Marktgemeinde mit guter Anbindung – ohne Trubel, aber mit allem, was man für einen aktiven Aufenthalt braucht. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

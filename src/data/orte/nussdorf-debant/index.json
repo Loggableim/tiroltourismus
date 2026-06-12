@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.8373",
     "lng": "12.8060"
-  }
+  },
+  "beschreibung": "<p>Nußdorf-Debant liegt auf 674 Metern Seehöhe im Bezirk Lienz in Osttirol, direkt am Eingang zum Debanttal und am Fuße der Lienzer Dolomiten. Die Gemeinde mit ihren rund 3.400 Einwohnerinnen und Einwohnern erstreckt sich über die beiden Ortsteile Nußdorf und Debant, die sich entlang der Drau aneinanderreihen, nur wenige Kilometer südlich der Bezirkshauptstadt Lienz.</p>\n\n<p>Das Herzstück für Familien und Erholungssuchende ist der Debantsee, ein Badesee mit glasklarem Wasser, der im Sommer zum Schwimmen und Sonnen einlädt. Von hier aus starten zahlreiche Wanderwege, etwa hinauf zur Lienzer Hütte, zur Kuhalm oder in das wildromantische Debanttal hinein. Im Winter sind das Skigebiet Zettersfeld-Hochstein und die Langlaufloipen schnell erreichbar. Besonders bemerkenswert ist die unmittelbare Nähe zur römischen Ausgrabungsstätte Aguntum, die als eines der bedeutendsten Bodenmonumente Tirols gilt und auf das 1. Jahrhundert nach Christus zurückgeht – ein Anziehungspunkt für Kulturinteressierte, der Nußdorf-Debant über die Region hinaus bekannt macht.</p>\n\n<p>Kulinarisch spiegelt die Gemeinde die bodenständige Osttiroler Küche wider: Schlickkrapfen, Kletzenbrot und regionale Produkte vom Lienzer Talboden finden sich in den Gasthäusern. Mit dem weitläufigen Naturraum, der kulturellen Tiefe durch Aguntum und der unmittelbaren Nähe zu Lienz vereint der Ort Lebensqualität für Familien, Sportbegeisterte und Kulturinteressierte gleichermaßen – ohne den Trubel eines Tourismusortes, aber mit allem, was Osttirol ausmacht. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.7870",
     "lng": "12.9090"
-  }
+  },
+  "beschreibung": "<p><strong>Nikolsdorf</strong> befindet sich auf 720 Metern Höhe in den Lienzer Dolomiten und dem sonnigen Pustertal in Osttirol und ist eine idyllische Streugemeinde. Rund <strong>900</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Nikolsdorf eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -26,5 +26,23 @@
     "lat": "47.1669",
     "lng": "11.9000"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Brandberg liegt auf 1.082 Metern Seehöhe hoch über dem Talboden des Zillertals, auf einem sonnenverwöhnten Hochplateau am Eingang zum Naturpark Zillertaler Alpen – und ist damit das höchstgelegene ganzjährig bewohnte Dorf im gesamten Tal. Die kleine Marktgemeinde mit rund 400 Einwohnern gehört zum Bezirk Schwaz und thront auf einem Bergrücken, von dem aus der Blick weit ins Zillertal und hinüber zu den umliegenden Gipfeln reicht.</p>\n\n<p>Was Brandberg von den bekannteren Orten im Tal unterscheidet, ist die bewusste Ruhe. Hier gibt es keine durchgehende Durchzugsstraße, keinen Skilift mit Massenbetrieb – stattdessen direkt vom Dorf aus Zugang zu über 150 Kilometern markierter Wanderwege im Naturpark. Beliebte Touren führen auf die Brandberger Kolm (2.700 m), einem der aussichtsreichsten Aussichtsberge Tirols, oder durch die spektakuläre Zemmgrund-Schlucht. Auch Bergsteiger kommen auf ihre Kosten: Die Hüttenregion rund um die Berliner Hütte ist von hier aus gut erreichbar. Im Winter ist das Dorf ein Geheimtipp für Skitourengeher und Schneeschuhwanderer.</p>\n\n<p>Kulinarisch setzen die wenigen Gasthäuser auf regionale Zillertaler Küche – Graukasnocken, Kaspressknödel und Zillertaler Krapfen, oft mit Produkten von den umliegenden Bergbauernhöfen. Wer Brandberg besucht, sucht bewusst die Stille abseits der Hauptstraße – und genau das macht den Reiz dieses Ortes aus. 🏔️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

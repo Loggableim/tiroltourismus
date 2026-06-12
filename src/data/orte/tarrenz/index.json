@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2618",
     "lng": "10.7623"
-  }
+  },
+  "beschreibung": "<p>Tarrenz liegt auf 836 Metern Höhe im Gurgltal, eingebettet zwischen den Ausläufern der Mieminger Kette und dem Tschirgant, direkt östlich der Bezirkshauptstadt Imst im Tiroler Oberinntal. Mit rund 2.800 Einwohnern ist die Marktgemeinde einer der ältesten Siedlungsräume im Tiroler Oberland – Funde aus der Bronzezeit belegen eine Besiedlung, die weit über die urkundliche Ersterwähnung im 12. Jahrhundert hinausreicht.</p>\n\n<p>Das markanteste Bauwerk über dem Ort ist die Burg Altstarkenberg, eine der ältesten und am besten erhaltenen Burganlagen Tirols. Die Stammburg der Herren von Starkenberg thront seit dem 12. Jahrhundert auf einem Felssporn und bietet heute einen seltenen Einblick in mittelalterliche Wehrarchitektur. Für Wanderer und Familien ist Tarrenz ein hervorragender Ausgangspunkt: Der Gurgltal-Radweg verläuft direkt durch den Ort, und leichte Touren führen auf die aussichtsreichen Hänge des Tschirgant-Massivs. Im Winter liegt das Skigebiet Hoch-Imst mit seiner Rodelbahn und der längsten Alpen-Achter der Welt nur wenige Minuten entfernt.</p>\n\n<p>Kulturell prägt das alljährliche Tarrenzer Fest den Sommer – ein mehrtägiges Brauchtumsfest mit Musikkapellen, Schützenkompanie und traditionellem Tiroler Handwerk. Kulinarisch stehen regionale Klassiker wie Kaspressknödel, Graukäse aus der Almsennerei und das Tarrenzer Bier aus der örtlichen Privatbrauerei auf dem Programm. Wer abseits der großen Tourismuszentren authentisches Tirol sucht, findet in Tarrenz einen Ort, der Tradition und Natur auf bemerkenswert bodenständige Weise verbindet.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

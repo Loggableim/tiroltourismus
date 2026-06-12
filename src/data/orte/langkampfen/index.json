@@ -15,10 +15,28 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/langkampfen/hero_1.png",
+      "alt": "Langkampfen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/langkampfen/hero_1.png",
   "koordinaten": {
     "lat": "47.5516",
     "lng": "12.0797"
-  }
+  },
+  "beschreibung": "<p><strong>Langkampfen</strong> erstreckt sich auf 504 Metern Höhe in dem Unterland rund um das Kaisergebirge und das Alpbachtal und ist eine ruhige Dorfgemeinde. Rund <strong>4.200</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme.</p><p>Langkampfen eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    }
+  ]
 }

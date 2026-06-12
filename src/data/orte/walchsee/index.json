@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.6512",
     "lng": "12.3186"
-  }
+  },
+  "beschreibung": "<p>Walchsee liegt auf 665 Metern Höhe im Bezirk Kufstein, eingebettet zwischen dem Kaisergebirge und dem Chiemgauer Alpenvorland, unweit der bayerischen Grenze. Der gleichnamige Ort zählt rund 2.100 Einwohner und gehört zu den ruhigeren Ferienzielen in den Tiroler Alpen – ohne den Trubel der großen Tourismushotspots, aber mit allem, was Familien und Naturliebhaber brauchen.</p>\n\n<p>Das Herzstück ist der Walchsee selbst, ein Naturbadesee, der zu den wärmsten Badeseen Tirols zählt und im Sommer angenehme Wassertemperaturen erreicht. 🌊 Der See verfügt über ein eigenes Strandbad mit Liegewiesen, und wer mag, kann Tretboot fahren oder am flachen Uferbereich mit Kindern planschen. Direkt hinter dem Dorf erhebt sich der Zahme Kaiser – hier beginnen im Sommer familienfreundliche Wanderwege durch Almlandschaften, im Winter öffnet das familienfreundliche Skigebiet Zahmer Kaiser seine Lifte mit Pisten für Anfänger und Genussskifahrer. Besonders beliebt ist der Ausflug auf die Brennauer Alm, wo man auf rund 1.200 Metern den Blick über den See und ins Inntal genießt.</p>\n\n<p>Kulinarisch steht die Region für deftige Tiroler Küche: Kasnocken, Kaspressknödel und frische Forelle aus heimischen Gewässern finden sich auf den Speisekarten der Gasthäuser rund um den See. Das jährlich im Sommer stattfindende Seefest zieht Besucher aus der Region an und zeigt, dass Walchsee trotz aller Ruhe ein lebendiges Dorf mit eigener Identität geblieben ist.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

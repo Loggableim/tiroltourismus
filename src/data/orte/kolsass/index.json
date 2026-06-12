@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kolsass/hero_1.png",
+      "alt": "Kolsass — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kolsass/hero_1.png",
   "koordinaten": {
     "lat": "47.3006",
     "lng": "11.6362"
-  }
+  },
+  "beschreibung": "<p>Kolsass liegt auf 553 Meter Seehöhe im Unterinntal, eingekeilt zwischen den bekannten Nachbargemeinden Wattens und Schwaz im Bezirk Innsbruck-Land. Die etwa 1.700 Einwohner zählende Gemeinde profitiert von ihrer verkehrsgünstigen Lage direkt an der Inntalautobahn (A12) und der Bahnstrecke – Innsbruck erreicht man in rund 20 Minuten, die Tiroler Zugspitzarena ist ebenfalls schnell erreichbar. Der Ort trägt das Wappen mit dem Schwazer Bergknappen und verweist damit auf die enge Verbindung zur Bergbautradition des Inntals.</p>\n\n<p>Die barocke Pfarrkirche zum Heiligen Kreuz ist das prägende Bauwerk im Ortskern und stammt aus dem 18. Jahrhundert – ein solider Zeuge des Tiroler Barock mit charakteristischem Zwiebelturm. Kolsass eignet sich gut als ruhiger Ausgangspunkt für Wanderungen in die Tuxer Alpen, die direkt hinter dem Ort ansteigen. Familien schätzen die überschaubare Größe, die Nähe zu den Swarovski Kristallwelten in Wattens sowie zum Silberbergwerk in Schwaz, zwei der meistbesuchten Ausflugsziele Tirols. Auch Radfahrer nutzen den Ort am Inntalradweg als Etappenziel.</p>\n\n<p>Für Einkehr sorgen einige traditionelle Gasthäuser mit Tiroler Küche, die auf regionale Produkte aus dem Unterinntal setzen. Wer eine ruhige Unterkunft abseits der großen Tourismuszentren sucht, aber dennoch zentral im Tiroler Unterland wohnen möchte, findet in Kolsass eine ehrliche, bodenständige Adresse. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

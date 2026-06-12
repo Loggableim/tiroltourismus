@@ -17,5 +17,18 @@
     "lng": 12.2167
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Niederndorf liegt auf etwa 500 Meter Seehöhe im Unterinntal im Bezirk Kufstein, unmittelbar an der bayerischen Grenze. Die Gemeinde erstreckt sich am rechten Innufer zwischen Kufstein und der deutschen Grenzstadt Oberaudorf und zählt rund 2.760 Einwohner. Durch ihre Lage an der Inntalautobahn A12 und der Bahnstrecke München-Innsbruck ist Niederndorf verkehrstechnisch gut angebunden und funktioniert als praktische Wohngemeinde für Pendler, die in der Region Kufstein arbeiten.</p>\n\n<p>Das Freizeitzentrum Niederndorf bildet das Herzstück der Gemeinde und vereint Natur und Erholung auf bemerkenswerte Weise. Hier lädt der Naturbadesee mit seiner seltenen Wasserqualität und naturnahen Gestaltung zum Schwimmen und Sonnen ein – deshalb auch der Hinweis auf die „Rarität der Natur\". Die umliegende Landschaft am Fuße des Zahmen Kaisers bietet zudem ein dichtes Netz an Wander- und Radwegen, die direkt vom Ortszentrum aus starten. Im Winter liegen kleinere Skigebiete und Loipen in greifbarer Nähe, während die Tiroler Ache und der Inn Spaziergänge entlang des Wassers ermöglichen.</p>\n\n<p>Kulinarisch profitiert Niederndorf von der Grenzlage: Tiroler Wirtshauskultur trifft auf bayerische Einflüsse, was sich in den Gasthäusern des Orts widerspiegelt. Die Nähe zu Kufstein mit seiner Festung, den Museen und dem kulturellen Programm macht Niederndorf zu einem ruhigen, gut ausgestatteten Wohnort mit hohem Freizeitwert – ohne den Trubel einer Stadt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    }
+  ]
 }

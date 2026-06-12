@@ -16,5 +16,23 @@
   "status": "published",
   "bezirk": "lienz",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Winklern liegt auf 800 Metern Seehöhe im oberen Mölltal in Osttirol, direkt an der Grenze zu Kärnten, und gehört zum Bezirk Lienz. Mit rund 950 Einwohnerinnen und Einwohnern ist die Gemeinde ein ruhiger Ausgangspunkt für alle, die die Hohen Tauern abseits der großen Touristenströme erleben möchten. Schon beim ersten Blick Richtung Süden zeigt sich, warum dieser Ort etwas Besonderes ist: der Großglockner, mit 3.798 Metern höchster Berg Österreichs, thront in voller Breite über dem Tal.</p>\n\n<p>Die Umgebung rund um Winklern lädt zu ausgedehnten Wanderungen ein, etwa auf die benachbarten Almgebiete oder in den Nationalpark Hohe Tauern, der nur wenige Kilometer entfernt beginnt. Im Sommer lockt der Winklerner Badesee mit kristallklarem Wasser und Blick auf die umliegende Bergwelt Familien und Ruhesuchende gleichermaßen an. Im Winter verwandelt sich die Region in ein stilles Schneereich mit geräumten Winterwanderwegen und Loipen, weit weg von Hektik und Massentourismus.</p>\n\n<p>Kulinarisch ist Osttirol geprägt von bodenständiger Almküche: Kasnocken, Speckknödel und Graukäse aus den Sennereien der Umgebung stehen in den Wirtshäusern auf der Karte. Wer die Region besucht, schätzt vor allem die ehrliche, unaufgeregte Art der Menschen und das Gefühl, in einer Landschaft zu stehen, die zwischen den schroffen Dreitausendern und sanften Almwiesen ihren ganz eigenen Rhythmus hat.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2873",
     "lng": "11.5653"
-  }
+  },
+  "beschreibung": "<p>Volders liegt auf 558 Metern Höhe im Unterinntal, etwa 15 Kilometer östlich von Innsbruck, und zählt rund 4.500 Einwohner. Die Gemeinde erstreckt sich am linken Innufer zwischen den Ausläufern des Karwendels und den Hängen des Wattenbergs, eingebunden in die traditionsreiche Region Innsbruck-Land.</p>\n\n<p>Das Herzstück des Ortes ist Schloss Friedberg, eine der ältesten und größten privaten Schlossanlagen Tirols. Erstmals 1167 urkundlich erwähnt, präsentiert sich die Anlage heute als barockes Kleinod mit wertvoller Innenausstattung und einem weitläufigen Schlosspark, der bei Führungen zugänglich ist. Direkt daneben befindet sich der Tiroler Kräutergarten – der größte seiner Art im Land – mit über 300 verschiedenen Heil-, Gewürz- und Duftpflanzen, die auf rund 5.000 Quadratmetern nach historischem Vorbild angebaut werden. Für Familien und Wanderfreunde bieten die umliegenden Wälder und der Wattenberg gut markierte Wege mit Blick über das Inntal bis zur Nordkette.</p>\n\n<p>Kulturell ist Volders eng mit dem Wirken der Jesuitenmissionare des 17. Jahrhunderts verbunden, deren Einfluss noch heute in der barocken Pfarrkirche spürbar ist. Kulinarisch locken traditionelle Gasthäuser mit Tiroler Küche, und der jährliche Schlosskonzerte-Sommer sowie der Kräutertag im Juni machen den Ort auch über die regionalen Grenzen hinaus bekannt. Wer Schloss, Garten und Inntal auf engem Raum erleben will, findet hier einen abwechslungsreichen Halbtagesausflug abseits der großen Touristenpfade. 🏰</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

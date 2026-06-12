@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.3423",
     "lng": "11.6833"
-  }
+  },
+  "beschreibung": "<p>Vomp liegt auf 566 Metern Höhe im Unterinntal, direkt am Eingang zum Zillertal im Bezirk Schwaz. Mit rund 5.300 Einwohnerinnen und Einwohnern bildet die Gemeinde zusammen mit dem benachbarten Stans eine lebendige Doppelgemeinde, eingebettet zwischen dem Karwendel im Norden und den Tuxer Alpen im Süden. Die verkehrsgünstige Lage an der Inntalautobahn und der Bahnstrecke macht Vomp zu einem praktischen Ausgangspunkt für Touren in alle Richtungen – sei es ins Zillertal, nach Schwaz oder hinauf Richtung Achensee.</p>\n\n<p>Wandern und Radfahren stehen in Vomp hoch im Kurs: Der Innradweg verläuft direkt durch den Ort, und über den Vomperberg oder in das Vomper Loch erwarten Besucher ruhige Routen abseits der Hauptströme. Die Tuxer Alpen liegen zum Greifen nah – der Große Bettelwurf und die Laliderer Spitze prägen den Horizont. Familien schätzen den Spielplatz am Vomperbach, und der nahe Achensee ist in einer Viertelstunde erreichbar. Kulturell prägt die barocke Pfarrkirche mit ihrem markanten Zwiebelturm das Ortsbild, und die Geschichte des Silberbergbaus im benachbarten Schwaz hat auch Vomp über Jahrhunderte geprägt.</p>\n\n<p>Für den Hunger zwischendurch laden Gasthöfe mit Tiroler Küche ein, und wer mehr über die Region erfahren möchte, findet im Schloss Tratzberg gleich um die Ecke einen der schönsten Renaissance-Bauten Tirols. Vomp ist kein Ort für große Inszenierung – gerade das macht",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2721",
     "lng": "11.6070"
-  }
+  },
+  "beschreibung": "<p>Wattenberg liegt auf 1.050 Metern Seehöhe am Sonnenplateau oberhalb von Wattens im Bezirk Innsbruck-Land, eingebettet zwischen dem Karwendel im Westen und den Tuxer Voralpen im Osten. Die kleine Bergsiedlung mit rund 750 Einwohnern thront deutlich erhöht über dem Inntal und gehört zur Region Innsbruck, ist aber touristisch weitgehend unentdeckt geblieben.</p>\n\n<p>Was Wattenberg ausmacht, sind die uralten Bauernhöfe, die zum Teil bis ins 13. Jahrhundert zurückreichen und noch heute bewirtschaftet werden. Der Ort gilt als eine der ursprünglichsten Siedlungen im Raum Innsbruck – ohne Hotelburgen, ohne Durchgangsverkehr. Wanderungen führen von hier aus auf den Wattenbergrücken Richtung Kolsassberg oder hinauf zum nahe gelegenen Grafenast. Der Blick ins Inntal reicht bei klarer Sicht bis zur Nordkette und zum Patscherkofel, nachts zeigt sich ein nahezu ungestörter Sternenhimmel. Die Stille ist tatsächlich spürbar, denn der Ort liegt abseits jeder Hauptstraße.</p>\n\n<p>Kulturell ist die Pfarrkirche hl. Primus und Felicianus erwähnenswert, die mit ihrem spätgotischen Turm das Ortsbild prägt. Kulinarisch dominieren die regionalen Wirtshäuser mit Tiroler Hausmannskost – Kasnocken, Schlutzkrapfen und Graukäse aus eigener Produktion. Wer Ruhe, echte Bergbauernkultur und authentische Natur sucht, ohne auf die Infrastruktur einer Kleinstadt verzichten zu wollen, findet in Wattenberg ein selten gewordenes Stück Tirol. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

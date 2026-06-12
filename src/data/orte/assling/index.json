@@ -26,6 +26,23 @@
     "lat": "46.7862",
     "lng": "12.6399"
   },
-  "beschreibung": "<p><strong>Assling</strong> liegt auf 820 Metern Höhe im sonnigen Pustertal in Osttirol und ist eine typische Streugemeinde mit weit verstreuten Weilern, traditionellen Bauernhöfen und einer reizvollen Kulturlandschaft. Der Ort erstreckt sich entlang des Asslinger Bachs und besticht durch seine ruhige und ursprüngliche Atmosphäre.</p><p>Der Asslinger Badesee ist der Mittelpunkt des örtlichen Freizeitgeschehens und lädt an warmen Sommertagen zum Baden, Sonnen und Picknicken ein. Die Region bietet ein dichtes Netz an Wander- und Radwegen, die durch die sanft-hügelige Landschaft des Pustertals führen. Besonders beliebt sind die Touren entlang der alten Bahntrasse und die Wege zu den traditionellen Osttiroler Bauernhöfen, die ein authentisches Bild des ländlichen Lebens vermitteln.</p><p>Kulturell sind die Kapellen und Wegkreuze entlang der Straßen und Wege sowie die Pfarrkirche mit ihren sehenswerten Fresken von Bedeutung. Die Osttiroler Gastfreundschaft und die regionale Küche machen Assling zu einem idealen Ort für entspannte Urlaubstage abseits des Trubels.</p>",
-  "kategorie": "dorf"
+  "beschreibung": "<p>Assling liegt auf 820 Metern Seehöhe im Osttiroler Pustertal, östlich von Lienz, und zählt rund 1.800 Einwohner. Die Gemeinde erstreckt sich über eine weite Talsohle und gehört zu den flächenmäßig größten Streugemeinden Tirols – die zahlreichen kleinen Weiler wie Schrottendorf, Thal-Aue, Penzendorf und Oberassling liegen teils kilometerweit voneinander entfernt und sind erst im Lauf der Jahrhunderte zusammengewachsen.</p>\n\n<p>Wandern und Radfahren stehen in Assling im Mittelpunkt: Das weitläufige Wegenetz reicht vom familientauglichen Spaziergang entlang der Pustertaler Höhenstraße bis zu anspruchsvollen Touren in die Villgrater Berge. Der Asslinger Badesee, ein kleiner Naturbadeteich mit klarem Wasser und Liegewiese, ist im Sommer ein beliebter Treffpunkt für Familien aus der Region Lienz. Auch der Drauradweg, einer der längsten Radwanderwege Österreichs, führt direkt durch das Gemeindegebiet. Im Winter locken Loipen und kleine Skitouren auf die umliegenden Almgebiete.</p>\n\n<p>Kulturell ist Assling stark osttirolerisch geprägt – die Pfarrkirche zum Hl. Ulrich mit ihrem spätgotischen Flügelaltar zählt zu den sehenswerten Sakralbauten des Pustertals. Kulinarisch dominieren regionale Klassiker wie Osttiroler Schlikkrapfen, Gerstlsuppe und Speck von heimischen Bauernhöfen, die ihre Produkte oft ab Hof verkaufen. Assling ist kein Ort für schnelle Besuche, sondern für jene, die das ursprüngliche Tirol abseits der Touristenströme suchen.</p>",
+  "kategorie": "dorf",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.3184",
     "lng": "11.0068"
-  }
+  },
+  "beschreibung": "<p>Wildermieming liegt auf 872 Metern Höhe im westlichen Mieminger Plateau, eingebettet zwischen der imposanten Mieminger Kette und dem Wettersteingebirge, unweit von Innsbruck. Das Haufendorf mit rund 1.000 Einwohnern zählt zu den ruhigsten Orten der Region und bewahrt sich seinen dörflichen Charakter abseits großer Tourismusströme.</p>\n\n<p>Das absolute Highlight ist der Stuibenfall, der höchste Wasserfall Tirols, der sich über zwei Stufen rund 150 Meter in die Tiefe stürzt. Ein gut ausgebauter Wanderweg führt vom Ortsteil Obermieming durch schattigen Mischwald zum tosenden Naturschauspiel. Vom Plateau aus eröffnen sich weite Blicke auf das Inntal und die gegenüberliegende Nordkette, was die Wanderungen rund um Wildermieming besonders abwechslungsreich macht. Familien schätzen die leichten Touren Richtung Telfs oder die gemütlichen Spazierwege entlang alter Bauernhöfe, während Geübte zur Hohen Munde oder in die Mieminger Berge aufbrechen.</p>\n\n<p>Kulinarisch verwöhnen traditionelle Gasthäuser mit Tiroler Küche, regionalem Wild und Käse aus den umliegenden Sennereien. Das jährlich stattfindende Dorffest und die gelebte Tradition des Schuhplattelns zeigen, wie eng die Gemeinschaft hier zusammenhält. Wer echte Tiroler Authentizität sucht, ohne auf Komfort und gute Infrastruktur zu verzichten, findet in Wildermieming einen Ort, der Ruhe, Natur und Bergpanorama auf ideale Weise verbindet. 🏔️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

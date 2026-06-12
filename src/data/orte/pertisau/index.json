@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.4401",
     "lng": "11.6990"
-  }
+  },
+  "beschreibung": "<p>Pertisau liegt auf 950 m Höhe am Südwestufer des Achensees im Bezirk Schwaz, eingerahmt vom Karwendel- im Westen und Rofangebirge im Osten. Der Ort gehört zur Gemeinde Eben am Achensee und zählt rund 1.100 Einwohner – ein kompaktes Dorf, das sich direkt am Ufer des größten und tiefsten Sees Tirols (133 m) erstreckt.</p>\n\n<p>Das Karwendel, eines der größten zusammenhängenden Natur- und Schutzgebiete der Ostalpen, fällt hier steil zum See ab und prägt jeden Blick aus dem Ort. Pertisau ist Ausgangspunkt für anspruchsvolle Touren wie den Aufstieg zum Bärenkopf (2.089 m) oder gemütliche Wanderungen zur Gaisalm und zur Dalfaz-Alm. Am See lockt die Achenseeschifffahrt mit Liniendiensten, und auf dem Wasser sind Segeln, Surfen und Stand-Up-Paddling möglich. Das Naturparkhaus Karwendel informiert über die Flora und Fauna des Gebiets. Familien schätzen den flachen Uferbereich am Strandbad, Radwege Richtung Achenkirch und die Achense",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "landeck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kappl/hero_1.png",
+      "alt": "Kappl — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kappl/hero_1.png",
   "koordinaten": {
     "lat": "47.0634",
     "lng": "10.3755"
-  }
+  },
+  "beschreibung": "<p>Kappl liegt auf 1.200 Metern Höhe im hinteren Paznauntal, im Bezirk Landeck, eingangsnahe zur Silvretta Hochalpenstraße. Die Gemeinde zählt rund 2.600 Einwohner und ist über die Silvretta-Bundesstraße gut erreichbar – gleichzeitig weit genug vom Trubel Ischgls entfernt, um ein deutlich ruhigeres Lebensgefühl zu bieten.</p>\n\n<p>Das Skigebiet Kappl-Fun Area zählt zu den familienfreundlichsten im Tiroler Westen. Die Sonnenhänge oberhalb des Dorfs bieten Pistenvielfalt von blauen Familienabfahrten bis zur schwarzen „Lattenabfahrt\", dazu den „Schnitzmüller-Kinderland\"-Bereich. Im Sommer verwandelt sich die Umgebung in ein Wanderrevier mit direkten Touren auf den 2.440 Meter hohen Skihaus-Gipfel oder zur Dias-Alm, wo Almkäse noch selbst erzeugt wird. Ein echtes Plus: Der Badesee Kappl auf 1.200 Metern Seehöhe – im Hochsommer eine seltene Kombination aus Bergluft und Badefreuden. Mountainbiker finden Trails Richtung Galtür, Genusswanderer erreichen die Kappler Bergeralm zu Fuß vom Ortszentrum aus.</p>\n\n<p>Kulinarisch ist die Region von der Paznauner Küche geprägt – Kasknödel, Gerstensuppe und „Kafi und Kuacha\" gehören zum Standard. Die Pfarrkirche hl. Antonius mit ihrem spätgotischen Turm bildet das historische Zentrum des Dorfs. Wer Ischgls Après-Ski sucht, ist hier falsch; wer hingegen einen familientauglichen Bergurlaub mit echtem Tiroler Charakter schätzt, findet in Kappl eine der ausgewogensten Adressen im Tiroler Oberland.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

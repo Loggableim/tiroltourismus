@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kramsach/hero_1.png",
+      "alt": "Kramsach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kramsach/hero_1.png",
   "koordinaten": {
     "lat": "47.4451",
     "lng": "11.8808"
-  }
+  },
+  "beschreibung": "<p>Kramsach liegt auf 520 m Seehöhe im Tiroler Unterinntal, rund 30 km östlich von Innsbruck und nur wenige Kilometer von Rattenberg, der kleinsten Stadt Österreichs, entfernt. Mit etwa 5.100 Einwohnern ist die Gemeinde der Hauptort des vorderen Zillertals und ein wichtiger Knotenpunkt zwischen Inntal und Achensee-Region.</p>\n\n<p>Die Gemeinde gilt als eines der besten Badeziele im Tiroler Unterland: Mit dem Reintalersee, Berglsteiner See und dem Buchsee liegen gleich drei beliebte Badeseen direkt vor der Haustür. Die bekannte Fünf-Seen-Tour verbindet diese Gewässer zu einer rund 18 km langen Wanderung mit moderaten Höhenunterschieden. Familien schätzen zudem den direkt im Ort gelegenen \"Museum Tiroler Bauernhöfe\", ein weitläufiges Freilichtmuseum mit original erhaltenen Höfen aus dem 14. bis 19. Jahrhundert – darunter die berühmte Einhofkapelle. Auch das Naturschutzgebiet Kaisertal mit seinen schroffen Felswänden ist von Kramsach aus erreichbar.</p>\n\n<p>Kulinarisch ist die Region vom Zillertaler Bier und der Direktvermarktung heimischer Bauern geprägt. Die Marienkirche mit ihren spätgotischen Fresken aus dem 15. Jahrhundert zählt zu den sehenswertesten Sakralbauten des Unterlands. Wer Kramsach als Standort wählt, hat das Achenseegebiet, das Zillertal und Kufstein gleichermaßen in Reichweite – und damit einen vielseitigen Mix aus Berg, Wasser und Kultur.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

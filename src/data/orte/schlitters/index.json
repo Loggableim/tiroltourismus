@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.3772",
     "lng": "11.8407"
-  }
+  },
+  "beschreibung": "<p>Schlitters liegt eingebettet zwischen Jenbach und Fügen im vorderen Zillertal, auf einer sonnigen Terrasse über dem Talboden. Der Ort gehört zum Bezirk Schwaz und zählt rund 1.500 Einwohner, die sich auf mehrere kleine Weiler wie Bradl, Holdernach und Hochwart verteilen. Die Pfarrkirche hl. Andreas mit ihrem markanten Turm prägt das Dorfbild und zeugt von der langen Siedlungsgeschichte. Wer mit der Zillertalbahn anreist, steigt am eigenen Bahnhof aus – ein Detail, das den Ort auch für Bahnreisende attraktiv macht.</p>\n\n<p>Direkt am Ufer der Ziller, die hier noch ruhig und naturnah dahinfließt, lädt der Naturbadeteich Schlitters im Sommer zum Verweilen ein. Das biologisch gefilterte Gewässer wird von vielen Einheimischen aus dem ganzen Tal geschätzt, weil es weit weniger überlaufen ist als die großen Bäder weiter oben im Zillertal. Eine Liegewiese, ein Kinderspielplatz und ein kleiner Kiosk gehören dazu. Entlang des Ziller-Radwegs lässt sich der Ort gut mit dem Fahrrad erreichen, und im Winter führen gespurte Loipen über die Felder Richtung Bruck und St. Margarethen.</p>\n\n<p>Abseits der Touristenströme bietet Schlitters genau das, was viele suchen: eine ehrliche, ruhige Tiroler Dorfatmosphäre mit Blick auf die gegenüberliegenden Berge des Rofan- und Karwendelkamms. Die Lage am Fuße des Hochwartbergs macht den Ort auch für Wanderer interessant, die ohne große Anfahrtswege direkt losstarten wollen. Familien schätzen die kurzen Wege und das Nebeneinander von Natur, Freizeitangebot und dörflichem Leben.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

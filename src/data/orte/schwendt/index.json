@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.6320",
     "lng": "12.3915"
-  }
+  },
+  "beschreibung": "<p>Auf etwa 700 Metern Höhe, eingebettet zwischen dem Zahmen Kaiser und den Ausläufern der Chiemgauer Alpen, liegt Schwendt – ein beschauliches Dorf im Kaiserwinkel, das zum Bezirk Kitzbühel gehört. Mit rund 900 Einwohnern hat sich der Ort seinen ursprünglichen Charakter bewahrt. Hier gibt es keine Hotelburgen, keine durchgetakteten Tourismuszentren, sondern Bauernhöfe, gepflegte Wiesen und das leise Murmeln der Bäche, die von den Berghängen herabziehen. Wer im Kaiserwinkel unterwegs ist, passiert Schwendt oft nur am Rand – und genau das macht den Reiz des Ortes aus.</p>\n\n<p>Das eigentliche Kleinod sind die Schwendter Seen, eine Gruppe kleiner, naturbelassener Gewässer, die sich in moorigen Senken südlich des Dorfes verstecken. Sie sind kein Badesee im klassischen Sinn, sondern ein geschützter Rückzugsraum für seltene Libellen, Amphibien und Wasservögel – und ein stiller Platz für Spaziergänger, die abseits der Wege Ruhe suchen. Ein kurzer Rundweg führt an mehreren dieser Wasserflächen vorbei, gesäumt von Latschen und Moorbirken, mit freiem Blick hinüber zum Wilden Kaiser.</p>\n\n<p>Für Familien und Wanderer ist Schwendt ein angenehm unaufgeregter Ausgangspunkt: leichte Touren führen Richtung Tannberg oder zum nahen Hohen Staff, und auch der Radweg entlang der Großache, der hier noch weitgehend autofrei verläuft, lädt zu entspannten Stunden ein. Wer Tirol abseits der bekannten Hotspots erleben will, findet in Schwendt genau das, was der Kaiserwinkel verspricht – Stille, Weite und eine Landschaft, die sich nicht inszenieren muss.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

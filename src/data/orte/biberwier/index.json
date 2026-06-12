@@ -26,5 +26,23 @@
     "lat": "47.3824",
     "lng": "10.8915"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Biberwier liegt auf 989 Metern Höhe am Fuße des Fernpasses, eingebettet zwischen der imposanten Bergkulisse des Wettersteinmassivs und den sanften Hängen der Mieminger Kette. Das Dorf zählt rund 650 Einwohner und gehört zur Gemeinde Ehrwald im Bezirk Reutte, mitten in der Außerferner Bergwelt. Die Lage am historischen Fernpass macht den Ort seit Jahrhunderten zu einem Knotenpunkt zwischen dem Inntal und dem oberen Lechtal – was sich bis heute in der lebendigen Mischung aus Einheimischen und Gästen widerspiegelt.</p>\n\n<p>Herzstück des Dorfes ist der Naturbadesee Biberwier, ein idyllischer Badesee mit glasklarem Wasser und kleinem Sandstrand, der im Sommer Familien und Ruhesuchende gleichermaßen anzieht. Von hier aus starten zahlreiche Wanderwege, etwa hinauf zur Coburger Hütte oder über die aussichtsreiche Höhenroute zur Leutasch. Im Winter liegt Biberwier direkt im Skigebiet der Zugspitzarena mit Anschluss an die Tiroler Zugspitzbahn sowie bestens präparierten Loipen und Winterwanderwegen durch die verschneite Landschaft.</p>\n\n<p>Wer abseits der großen Touristenströme Tiroler Gastfreundschaft sucht, findet in Biberwier typische Außerferner Gasthöfe, die regionale Küche mit Kaspressknödeln und Almkäse servieren. Die ruhige Atmosphäre, die kurzen Wege zu Bergbahnen und See sowie die unmittelbare Nähe zum Garmisch-Partenkirchener Grenzgebiet machen den Ort zu einem idealen Ausgangspunkt für alle, die Natur und Erholung in der Tiroler Bergwelt verbinden möchten.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -26,6 +26,23 @@
     "lat": "47.3551",
     "lng": "11.8413"
   },
-  "beschreibung": "<p>Fügenberg, ein malerisches Höhendorf auf 700 Metern im Zillertal (Bezirk Schwaz), verzaubert mit seiner dörflichen Streusiedlung, die sich oberhalb von Fügen in eine sanfte Hügellandschaft schmiegt. Hier, wo traditionelle Landwirtschaft noch lebendig ist, erleben Sie pure Ruhe und unberührte Natur. Die Seele baum",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Fügenberg liegt auf rund 700 Metern Seehöhe am orografisch linken Talhang des Zillertals, oberhalb des bekannteren Marktes Fügen. Als Streusiedlung zieht sich der Ort über weite Wiesen und Wälder den Hang hinauf, mit knapp 1.500 Einwohnern, die sich auf zahlreiche Einzelhöfe und kleine Weiler verteilen. Die Gemeinde gehört zum Bezirk Schwaz und bewahrt sich bis heute den Charakter eines bäuerlich geprägten Bergdorfs, das vom Massentourismus der Talsohle bewusst Abstand hält.</p>\n\n<p>Die Bergstation der Spieljochbahn ist von Fügenberg aus erreichbar und eröffnet ein weitläufiges Wandergebiet mit Routen zum Kellerjoch auf 2.344 Meter, einem markanten Aussichtsberg über dem vorderen Zillertal. Im Sommer führen Wege durch Lärchen- und Zirbenwälder hinauf zu bewirtschafteten Almen, auf denen Grauvieh und Tiroler Braunvieh den Sommer verbringen. Familien schätzen den Spieljoch-Erlebnispfad mit Kletterstationen und Bergseen, während Ruhesuchende die stillen Seitenwege ins Klamm- und Pöllattal bevorzugen. Der Blick vom Hochleger reicht vom Tuxer Hauptkamm bis in die Tuxer Alpen hinein.</p>\n\n<p>Kulinarisch wird in Fügenberg auf das gesetzt, was Hof und Wald hergeben: Graukäse, selbstgepresster Apfelsaft und Zillertaler Krapfen gehören in den Wirtsstuben zum Standard. Im Herbst, wenn das Vieh von den Almen zurückkehht, liegt der Duft von Heu und Holzfeuer über den Höfen – dann zeigt sich, warum viele Fügenberger den bewussten Gegensatz zum lebhaften Fügen unten im Tal suchen.</p>",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

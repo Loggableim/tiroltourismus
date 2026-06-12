@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kals/hero_1.png",
+      "alt": "Kals am Großglockner — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kals/hero_1.png",
   "koordinaten": {
     "lat": "47.0024",
     "lng": "12.6458"
-  }
+  },
+  "beschreibung": "<p>Kals am Großglockner liegt auf 1.324 Metern Seehöhe im Osttiroler Bezirk Lienz, am Fuße des Großglockners, des mit 3.798 Metern höchsten Bergs Österreichs. Das Dorf mit rund 1.200 Einwohnern teilt sich in die Fraktionen Kals, Ködnitz und Großdorf und gilt als das östliche Tor zum Nationalpark Hohe Tauern.</p>\n\n<p>Was Kals von anderen Alpenorten unterscheidet, ist seine kompromisslose Ausrichtung auf den Berg. Hier befindet sich keine Seilbahn, die das Naturerlebnis verkürzt – der Weg zum Gipfel beginnt direkt im Dorf. Der Kalser Höhenweg zählt zu den schönsten und anspruchsvollsten Panoramawegen der Ostalpen: Auf rund 45 Kilometern und mit etwa 3.500 Höhenmetern verbindet er sechs bewirtschaftete Hütten und umrundet das Ködnitztal in schwindelerregender Höhe. Auch die Glockner-Überschreitung, die über die Stüdlhütte und das Hofmannskees führt, startet traditionell von hier. Der Ort trägt das Prädikat „Bergsteigerdorf\" des Deutschen Alpenvereins – eine Auszeichnung, die gezielt Orte ohne Lift- und Pistentourismus auszeichnet. Wer Ruhe sucht, findet sie auf den weiten Almflächen im Talboden, wo im Sommer Grauvieh weidet.</p>\n\n<p>Kulinarisch steht Kals für Osttiroler Bodenständigkeit: Kasnocken, Schlipfkrapfen und der würzige Kalser Bergkäse, der in der örtlichen Sennerei gereift wird. Das mehrtägige Almfest, bei dem rund 700 Stück Vieh auf die Hochalmen getrieben werden, gehört zu den lebendigsten Traditionen der Region – und zeigt, dass in Kals am Großglockner das Bergleben kein Marketingversprechen ist, sondern Alltag.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

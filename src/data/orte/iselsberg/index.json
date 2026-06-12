@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/iselsberg/hero_1.png",
+      "alt": "Iselsberg-Strona — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/iselsberg/hero_1.png",
   "koordinaten": {
     "lat": "46.8542",
     "lng": "12.8581"
-  }
+  },
+  "beschreibung": "<p>Iselsberg-Strona liegt auf rund 1.100 Metern Seehöhe am namensgebenden Iselsbergpass, der Osttirol mit dem Mölltal in Kärnten verbindet – keine zehn Kilometer vom Bezirkshauptort Lienz entfernt. Die kleine Streusiedlung mit etwa 600 Einwohnern thront auf einem sonnigen Hochplateau und gehört verwaltungstechnisch zur Marktgemeinde Nikolsdorf.</p>\n\n<p>Die Lage am Pass macht den Ort zu einem bevorzugten Aussichtspunkt: Bei klarer Sicht reicht der Blick nach Süden zu den gezackten Felsformationen der Lienzer Dolomiten, während im Nordwesten der Großglockner – mit 3.798 Metern höchster Berg Österreichs – seine vergletscherte Flanke zeigt. Wanderungen starten direkt vom Ort, etwa hinauf zur Iselsberger Hütte oder entlang des historischen Saumpfades, der einst den Salzhandel über den Pass lenkte. Im Winter liegen kleine Skitourenrouten in erreichbarer Nähe, und die Langlaufloipe am Pass gehört zu den ersten schneesicheren in Osttirol.</p>\n\n<p>Kulinarisch dominieren die Osttiroler Bauernküche und bodenständige Gasthäuser, in denen Kaspressknödeln und Schlipfkrapfen aufgetischt werden. Wer Ruhe sucht, abseits der großen Tourismuszentren, findet hier ein authentisches Tiroler Bergdorf mit ehrlicher Natur – und einem Panorama, das in Osttirol kaum zu übertreffen ist. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

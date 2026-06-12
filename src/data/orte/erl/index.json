@@ -26,5 +26,23 @@
     "lat": "47.6818",
     "lng": "12.1815"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Erl liegt im Inntal direkt an der deutsch-österreichischen Grenze auf 476 Metern Seehöhe, nur wenige Kilometer von Kufstein entfernt. Die Marktgemeinde mit ihren rund 1.600 Einwohnern zählt zu den kleinsten Kulturadressen des Landes – und gleichzeitig zu den klangvollsten.</p>\n\n<p>Was Erl von anderen Orten im Tiroler Unterland unterscheidet, ist die Dichte seines kulturellen Erbes auf engstem Raum. Die Passionsspiele Erl werden seit 1613 aufgeführt und gehören damit zu den ältesten ihrer Art im deutschsprachigen Raum. Seit 1997 ergänzen die Tiroler Festspiele Erl unter der Leitung von Gustav Kuhn das Programm – zunächst in einem umgebauten Gasthof, seit 2012 im neuen, architektonisch eigenwilligen Festspielhaus, das mit seiner hölzernen Schindelfassade und dem skulpturalen Dach zum Wahrzeichen des Ortes geworden ist. Konzerte der Wiener Philharmoniker, Opernproduktionen und Kammermusik ziehen Besucher aus ganz Europa an. Daneben laden die Erler Ache, die umliegenden Wanderwege und der nahe Chiemgau zu Ausflügen in die Natur ein.</p>\n\n<p>Kulinarisch ist die Region eng mit dem bayerisch-tirolerischen Grenzland verbunden – Kasnocken, Schlipfkrapfen und regionale Biere stehen in den Wirtshäusern auf der Karte. Wer Erl besucht, kommt wegen der Festspiele und bleibt oft wegen der überraschenden Ruhe abseits der großen Tourismusrouten. Ein Ort, der zeigt, dass kulturelle Strahlkraft keine Großstadt braucht. 🎭</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

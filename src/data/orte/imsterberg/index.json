@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/imsterberg/hero_1.png",
+      "alt": "Imsterberg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/imsterberg/hero_1.png",
   "koordinaten": {
     "lat": "47.2058",
     "lng": "10.6970"
-  }
+  },
+  "beschreibung": "<p>Imsterberg liegt auf 870 Metern Seehöhe hoch über dem Inntal, sonnenseitig am Eingang zum Pitztal, und gehört zur Region Imst. Die kleine Gemeinde mit rund 800 Einwohnerinnen und Einwohnern thront auf einem sonnenverwöhnten Hochplateau, das sich nach Süden hin öffnet – mit freiem Blick auf die schroffen Gipfel der Ötztaler Alpen, die bei Föhnwetter zum Greifen nah scheinen.</p>\n\n<p>Der Ort hat sich seinen ursprünglichen Tiroler Dorfcharakter bewahrt: alte Bauernhöfe aus dem 17. und 18. Jahrhundert, schmale Gassen und die spätgotische Pfarrkirche zum Heiligen Nikolaus prägen das Bild. Die Umgebung ist ein Revier für ruhesuchende Wanderer, die abseits der großen Touristenströme auf Forstwegen und alten Almsteigen unterwegs sind. Besonders lohnend ist der Aufstieg zur Kronburg-Ruine oder die Tour durch die Rosengartenschlucht, die sich unterhalb des Dorfes in den Fels frisst. Mountainbiker schätzen die direkte Lage am Eingang des Pitztals – Startpunkt für Touren Richtung Mittelberg und zum Rifflsee.</p>\n\n<p>Wer hier einkehrt, isst regional: Käse von den Bergbauern, Graukas nudeln, Tiroler Knödel und ofenfrisches Bauernbrot. Im Sommer duftet es in den Gärten nach Holunder und wildem Thymian. Imsterberg ist kein Ort für Hektik – sondern ein Dorf, in dem man den Blick schweifen lässt und die Stille zwischen den Bergketten tatsächlich hört. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -26,6 +26,23 @@
     "lat": "47.2633",
     "lng": "11.4635"
   },
-  "beschreibung": "<p><strong>Ampass</strong> liegt auf 651 Metern Höhe am Eingang des Stubaitals, nur wenige Kilometer südlich von Innsbruck. Das ruhige Dorf ist der ideale Ausgangspunkt für Erkundungen des Stubaitals und der umliegenden Bergwelt, ohne auf die Nähe zur Landeshauptstadt verzichten zu müssen.</p><p>Die gotische Pfarrkirche mit ihrem charakteristischen Zwiebelturm prägt das Ortsbild und ist ein beliebtes Fotomotiv. Rund um Ampass erstrecken sich dichte Wälder und sanfte Hügel, die zu ausgedehnten Spaziergängen und Wanderungen einladen. Der nahegelegene Fluss Sill und die bewaldeten Hänge des Bergisel bieten abwechslungsreiche Routen für jeden Schwierigkeitsgrad.</p><p>Für Naturliebhaber ist die Umgebung von Ampass ein wahres Paradies. Die Wälder sind reich an wilden Tieren und Pflanzen, und die klare Luft lädt zu ausgedehnten Outdoor-Aktivitäten ein. Im Winter sind Spaziergänge entlang der verschneiten Wege besonders reizvoll. Die Nähe zu Innsbruck macht Ampass zu einem beliebten Wohnort und Ausgangspunkt für Tagesausflüge in die gesamte Region.</p>",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Ampass liegt auf der sonnigen Terrasse über dem Inntal, rund zehn Kilometer südöstlich von Innsbruck auf 651 Metern Seehöhe. Die Marktgemeinde zählt etwa 1.900 Einwohner und gehört zum Bezirk Innsbruck-Land. Am Eingang zum Stubaital gelegen, bildet Ampass den Übergang von der Inntal-Siedlungsachse zu den bewaldeten Südhängen der Nockspitze.</p>\n\n<p>Das Herzstück des Ortes ist die gotische Pfarrkirche zum Hl. Johannes der Täufer mit ihren außergewöhnlichen Wandmalereien aus dem späten 15. Jahrhundert – einer der bedeutendsten spätgotischen Freskenzyklen Tirols, der die Kirche weit über die Gemeindegrenzen hinaus bekannt gemacht hat. Wanderbegeisterte schätzen die ruhigen Wege durch die ausgedehnten Wälder Richtung Aldrans und Rinn, die direkt vom Dorf aus starten. Die Lage abseits der Hauptverkehrsader bringt eine bemerkenswerte Ruhe mit sich, obwohl die Landeshauptstadt in wenigen Minuten erreichbar bleibt.</p>\n\n<p>Die dörfliche Struktur hat sich trotz der Nähe zu Innsbruck erhalten: ein gewachsener Ortskern, bäuerliche Tradition und ein reges Vereinsleben prägen den Alltag. Wer authentische Tiroler Küche in familiärer Atmosphäre sucht, findet in den örtlichen Gasthäusern bodenständige Gerichte wie Kasnocken oder Gröstl. Ampass ist kein Ort für schnelle Highlights, sondern für jene, die das stille Tirol suchen – mit Geschichte im Mauerwerk und Natur vor der Haustüre. 🏘️",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4891",
     "lng": "10.7188"
-  }
+  },
+  "beschreibung": "<p>Reutte liegt auf 853 m Höhe im Außerfern, der nordwestlichsten Region Tirols, und ist mit rund 6.700 Einwohnern deren Hauptort. Das Städtchen sitzt am Rand des Lechtals direkt an der deutschen Grenze und bildet das Tor zu den Tannheimer Bergen sowie zum Naturpark Tiroler Lech.</p>\n\n<p>Über Reutte thront das beeindruckende Burgensemble von Schloss Ehrenberg – eine der größten Burganlagen Tirols mit vier Ruinen auf einem Höhenzug. Seit 2014 verbindet die Highline179 als eine der längsten Fußgänger-Hängebrücken Europas die Burg Ehrenberg mit dem Fort Claudia. Die 406 Meter lange und 114 Meter hohe Brücke ist für sich schon ein Erlebnis, ebenso wie der Audiostation-Rundweg durch die Burgruinen. Wanderer starten direkt vom Ort in die Lechtaler Bergwelt oder zur Burgenwelt Ehrenberg, Familien nutzen die Sommerrodelbahn am Hahnenkamm oder den Badesee in der Nähe.</p>\n\n<p>Reuttai, wie die Reuttener sich selbst nennen, pflegen eine lebendige Markttradition, und das Kulturhaus ist Treffpunkt für Konzerte und Veranstaltungen. Kulinarisch steht die Region für deftige Küche: Kaspressknödel, Kässpätzle und Bergkäse aus den umliegenden Sennereien gehören zum Standard. Reutte ist ein Ort, der Kultur, Geschichte und Natur auf engem Raum verbindet – 🏗️ ohne dass man dafür stundenlang reisen muss.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

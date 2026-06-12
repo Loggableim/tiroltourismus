@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hopfgarten-brixental/hero_1.png",
+      "alt": "Hopfgarten im Brixental — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hopfgarten-brixental/hero_1.png",
   "koordinaten": {
     "lat": "47.4505",
     "lng": "12.1559"
-  }
+  },
+  "beschreibung": "<p>🏘️ Hopfgarten im Brixental liegt auf 620 Metern Höhe im Brixental, einem Seitental des Leukentals im Bezirk Kitzbühel. Mit rund 5.800 Einwohnern ist der Ort das Zentrum des vorderen Brixentals und verbindet Tiroler Markttradition mit modernem Tourismus.</p>\n\n<p>Die markante barocke Pfarrkirche zum Heiligen Laurentius mit ihrem 65 Meter hohen Turm prägt das Ortsbild und gilt als eine der schönsten Dorfkirchen Tirols. Direkt vom Ortszentrum bringt die Bergbahn Hopfgarten Wintersportler in die SkiWelt Wilder Kaiser – Brixental, eines der größten zusammenhängenden Skigebiete Österreichs mit über 280 Pistenkilometern. Im Sommer führt die Gondel hinauf auf die Hohe Salve, von wo aus Wanderer und Mountainbiker auf rund 1.500 Meter Seehöhe starten. Der bekannte Pilgerweg Via Nova führt ebenfalls durch den Ort, und das barocke Mesnerhaus aus dem 17. Jahrhundert beherbergt heute ein kleines Museum.</p>\n\n<p>Kulinarisch steht das Brixental für regionale Küche: Kaspressknödel, Brixner Rindsuppe und Graukäse aus den umliegenden Almen finden sich auf den Speisekarten der Wirtshäuser am Kirchplatz. Die Kombination aus gewachsener Marktstruktur, barocker Baukultur und direktem Liftanschluss macht Hopfgarten zu einem idealen Standort für Familien, die im Winter Skifahren und im Sommer die Kitzbüheler Alpen erleben wollen – ohne auf den Charakter eines echten Tiroler Dorfs verzichten zu müssen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

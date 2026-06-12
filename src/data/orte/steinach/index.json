@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.0907",
     "lng": "11.4666"
-  }
+  },
+  "beschreibung": "<p>Steinach am Brenner liegt auf 1.048 Metern Höhe im Wipptal, eingebettet zwischen den Ausläufern der Tuxer Alpen und dem Bergkamm Richtung Gries am Brenner. Der Ort mit seinen rund 3.700 Einwohnern gehört zum Bezirk Innsbruck-Land und blickt auf eine lange Tradition als Marktort an der Brennerstraße zurück. Bereits im Mittelalter siedelten sich hier Kaufleute und Handwerker an, die den Warenverkehr über den Brennerpass zwischen Nord- und Südtirol abwickelten. Das spätgotische Zollhaus aus dem 15. Jahrhundert, eines der ältesten noch erhaltenen Profanbauten Tirols, erinnert noch heute an diese Zeit und gibt Aufschluss über die einstige wirtschaftliche Bedeutung des Ortes.</p>\n\n<p>Die Pfarrkirche Steinach, dem Heiligen Kreuz geweiht, prägt mit ihrem markanten Turm das Ortsbild. Wer durch den historischen Kern spaziert, entdeckt neben dem Zollhaus bürgerliche Häuser mit breiten Tordurchfahrten – gebaut für die Fuhrwerke, die einst auf der Brennerroute unterwegs waren. Die Lage an der Brennerbahn und an der A13 Brennerautobahn macht Steinach bis heute zu einem wichtigen Knotenpunkt im Tiroler Verkehrsnetz, gleichzeitig aber auch zu einem Ausgangspunkt für Wanderungen und Bergtouren ins hintere Wipptal oder hinauf auf die umliegenden Almen.</p>\n\n<p>Für Familien bietet die Umgebung gut markierte Wanderwege, etwa entlang der Sill oder auf die grasbewachsenen Hänge der Talschaft. Im Sommer locken Klettersteige und Mountainbiketouren, im Winter liegt Steinach am Brenner nahe mehrerer Skigebiete und Langlaufloipen. Trotz seiner Funktion als Durchgangsort hat sich Steinach einen eigenständigen Charakter bewahrt – geprägt von der Geschichte als Handelsstation, aber auch vom dörflichen Leben in den Seitengassen abseits der vielbefahrenen Hauptroute.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

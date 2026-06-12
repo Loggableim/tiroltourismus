@@ -17,5 +17,18 @@
     "lng": 11.9
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Rohrberg liegt auf einem sonnenverwöhnten Hochplateau über dem Zillertal auf 680 Metern Seehöhe, rund 530 Menschen leben hier in verstreuten Weilern zwischen Wiesen und Wald. Die Gemeinde gehört zum Bezirk Schwaz und gilt als eine der ursprünglichsten Streusiedlungen im vorderen Zillertal – ohne Durchgangsverkehr, ohne großen Rummel, dafür mit einem Panoramablick auf die gegenüberliegenden Tuxer Alpen und das Tal hinunter Richtung Zell am Ziller.</p>\n\n<p>Was Rohrberg besonders macht, ist die erhaltene bäuerliche Substanz: alte Einfirsthöfe aus dem 17. und 18. Jahrhundert mit dunklen Holzfassaden und geschnitzten Türstöcken stehen hier noch tatsächlich, nicht als Museum, sondern bewohnt. Im Sommer führen Wanderwege direkt vom Ort auf die Rohrberger Alm und weiter in die Zillertaler Bergwelt, im Winter ist die Skigebiet-Anbindung an die Zillertal Arena ein kurzer Weg. Der Naturlehrpfad rund um den Ort zeigt die typische Flora der subalpinen Bergmähder – Enzian, Almrausch und wilde Orchideen wachsen hier auf mageren Wiesen, die noch heute zweimal jährlich gemäht werden.</p>\n\n<p>Kulinarisch dominieren die kleinen Direktvermarkter: Hofkäse, Zillertaler Graukäse und frische Milch gibt es bei Bauern ab Hof. Die Wirtshauskultur ist dörflich geprägt – ehrliche Tiroler Küche, keine Touristenmenüs. Wer Ruhe sucht und das echte, bäuerliche Zillertal abseits der Hauptrouten erleben will, ist in Rohrberg richtig. 🌲</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

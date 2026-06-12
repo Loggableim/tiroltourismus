@@ -16,7 +16,7 @@ const eventItemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Events in Tirol',
-  description: 'Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der offizielle Event-Kalender.',
+  description: 'Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der Event-Kalender.',
   url: `${siteURL}/events/`,
   numberOfItems: events.length,
   itemListElement: sorted.slice(0, 30).map((e, i) => ({
@@ -28,7 +28,7 @@ const eventItemList = {
 };
 ---
 
-<BaseLayout title="Events in Tirol" description="Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der offizielle Event-Kalender für Tirol." jsonld={eventItemList}>
+<BaseLayout title="Events in Tirol" description="Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der Event-Kalender für Tirol." jsonld={eventItemList}>
   <main>
     <div class="container">
       <Breadcrumbs items={[{ label: 'Events' }]} />
@@ -38,7 +38,7 @@ const eventItemList = {
       <div class="container">
         <div style="font-size:48px;margin-bottom:8px">🎪</div>
         <h1>Events in Tirol</h1>
-        <p>Konzerte, Sport-Events, Kultur-Festivals, Märkte und kulinarische Highlights – der offizielle Event-Kalender für Tirol.</p>
+        <p>Konzerte, Sport-Events, Kultur-Festivals, Märkte und kulinarische Highlights – der Event-Kalender für Tirol.</p>
         <div style="margin-top:20px">
           <a href="/events/eintragen/" class="btn btn-pink">+ Eigenes Event eintragen</a>
         </div>
@@ -105,7 +105,7 @@ const eventItemList = {
         <div style="font-size:48px;margin-bottom:12px">📢</div>
         <h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">Event veröffentlichen</h2>
         <p style="color:var(--text2);max-width:480px;margin:0 auto 24px;line-height:1.6">
-          Du veranstaltest ein Event in Tirol? Trag es kostenlos ein und erreiche tausende Besucher auf dem offiziellen Tourismusportal.
+          Du veranstaltest ein Event in Tirol? Trag es kostenlos ein und erreiche tausende Besucher auf dem Tirol-Portal.
         </p>
         <a href="/events/eintragen/" class="btn btn-pink" style="font-size:16px;padding:14px 36px">
           🎪 Kostenlos eintragen

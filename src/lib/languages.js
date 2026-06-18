@@ -1,6 +1,10 @@
 /**
  * languages.js — Zentrale Sprachkonfiguration für tiroltourismus.com
  * Alle 3 Selector-Komponenten (Topbar, Floating, Footer) nutzen diese Config.
+ *
+ * Cloudflare Pages Free/Pro limit: 20,000 files per deploy.
+ * With 8 languages × ~5,500 pages each = 44,000 files — over limit.
+ * ES/ZH/NL/CS set to ready:false until we upgrade to Business plan.
  */
 
 export const LANGUAGES = [
@@ -8,14 +12,15 @@ export const LANGUAGES = [
   { code: 'en', flag: '🇬🇧', name: 'English', nameNative: 'English', ready: true },
   { code: 'fr', flag: '🇫🇷', name: 'Français', nameNative: 'Français', ready: true },
   { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
-  { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: true },
-  { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: true },
-  // All 8 languages (DE/EN/FR/IT/ES/ZH/NL/CS) now active with full hreflang and routes.
-  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: true },
-  { code: 'cs', flag: '🇨🇿', name: 'Czech', nameNative: 'Čeština', ready: true },
+  // ES/ZH/NL/CS ready:false — Cloudflare Pages 20k file limit
+  // Re-enable when upgrading to Business plan
+  { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: false },
+  { code: 'zh', flag: '🇨🇳', name: '中文', nameNative: '中文', ready: false },
+  { code: 'nl', flag: '🇳🇱', name: 'Nederlands', nameNative: 'Nederlands', ready: false },
+  { code: 'cs', flag: '🇨🇿', name: 'Czech', nameNative: 'Čeština', ready: false },
 ];
 
-export const LANGUAGES_READY = LANGUAGES.filter((l) => l.ready).map((l) => l.code); // alle aktuell freigegebenen Sprachen routen
+export const LANGUAGES_READY = LANGUAGES.filter((l) => l.ready).map((l) => l.code);
 export const DEFAULT_LOCALE = 'de';
 
 /**
@@ -34,20 +39,12 @@ export function localePrefix(locale) {
 
 /**
  * Pfad von einer aktuellen Sprache zu einer Zielsprache umschalten.
- * Erkennt automatisch Locale-Prefixe im Pfad (auch /de/ auf [locale]-Seiten).
- * Beispiele:
- *   switchLangPath('/en/regionen/', 'en', 'de') → '/regionen/'
- *   switchLangPath('/de/regionen/', 'de', 'en') → '/en/regionen/'
- *   switchLangPath('/regionen/', 'de', 'fr')    → '/fr/regionen/'
- *   switchLangPath('/', 'de', 'en')             → '/en/'
  */
 export function switchLangPath(currentPath, fromLocale, toLocale) {
-  // Detect and strip any configured locale prefix.
   const langCodes = LANGUAGES.map(l => l.code).join('|');
-  const prefixRegex = new RegExp(`^\\/(${langCodes})(\\/|$)`);
+  const prefixRegex = new RegExp(`^\\\\/(${langCodes})(\\\\/|$)`);
   const match = currentPath.match(prefixRegex);
   const withoutPrefix = match ? currentPath.slice(match[1].length + 1) || '/' : currentPath;
-  // Add target prefix
   if (isDefaultLocale(toLocale)) return withoutPrefix;
   if (withoutPrefix === '/') return `/${toLocale}`;
   return `/${toLocale}${withoutPrefix}`;
@@ -55,7 +52,6 @@ export function switchLangPath(currentPath, fromLocale, toLocale) {
 
 /**
  * Prüft ob eine Sprache bereits übersetzte Daten hat.
- * Für "coming soon"-Markierung im Selector.
  */
 export function isLanguageReady(code) {
   return LANGUAGES_READY.includes(code);

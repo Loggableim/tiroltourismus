@@ -1,0 +1,24 @@
+{
+  "name": "Kater Noster",
+  "emoji": "🍸",
+  "farbe": "#FF6B35",
+  "kategorie": "bar",
+  "kurzbeschreibung": "We need to translate the German tourism text into natural Hungarian, but the user only provided \"Kater Noster in Innsbruck\". That is a phrase. The instruction: \"Translate the German tourism text below into natural Hungarian. STRICT RULES: Keep HTML tags unchanged. Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. NO explanations, NO notes, NO comments. Output ONLY the translated text.\"\n\nBut the text is just \"Kater Noster in Innsbruck\". There's no HTML tags. So we just translate into Hungarian: \"Kater Noster in Innsbruck\" -> \"Kater Noster Innsbruckban\" or \"Kater Noster Innsbruckban\". But we must keep place names in German original form: Innsbruck is already German. So we keep \"Innsbruck\". The phrase \"in\" is German preposition. In Hungarian we would say \"Innsbruckban\". But we might keep \"in\" as \"in\"? The instruction: \"Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form.\" That refers to place names, not prepositions. So we can translate \"in\" to Hungarian \"in\" is \"in\" in German, but Hungarian would be \"Innsbruckban\". So we translate \"Kater Noster in Innsbruck\" to \"Kater Noster Innsbruckban\". But maybe we keep \"in\" as \"in\"? The phrase \"Kater Noster in Innsbruck\" is German. In Hungarian, we would say \"Kater Noster Innsbruckban\". That is natural. So output that. No tags. No explanation.",
+  "beschreibung": null,
+  "ort": "Innsbruck",
+  "region": "innsbruck",
+  "plz": "6020",
+  "adresse": "Leopoldstraße 7",
+  "telefon": "",
+  "email": "",
+  "webseite": "https://www.katernoster.com",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.2616263,
+    "lng": 11.3952584
+  },
+  "status": "published"
+}

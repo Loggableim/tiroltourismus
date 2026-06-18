@@ -1,0 +1,24 @@
+{
+  "name": "Sonnenhof's Wirtshaus",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Sonnenhof kocsmánya Gránban",
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original form. The text: <p>Das <strong>Sonnenhof's Wirtshaus</strong> Grän heißt seine Gäste herzlich willkommen und verwöhnt sie mit regionale und internationale Spezialitäten. In einem angenehmen Ambiente können Gäste hier die Vielfalt der Tiroler Gastronomie erleben. Die Speisekarte bietet eine sorgfältig zusammengestellte Auswahl an Gerichten und Getränken, die mit frischen Zutaten zubereitet werden. Ob für ein gemütliches Essen, einen geselligen Abend oder eine kleine Stärkung – dieses Lokal ist immer eine gute Wahl. Lassen Sie sich von der herzlichen Tiroler Gastfreundschaft verwöhnen.</p>\n\nWe need to translate to Hungarian, but keep place names: Tirol, Innsbruck etc. There is no Innsbruck here. Keep culinary terms: Kaiserschmarrn etc. Not present. So just translate.\n\nWe must keep tags: <p>, <strong>. So output:\n\n<p>Az <strong>Sonnenhof's Wirtshaus</strong> Grän szívből üdvözli vendégeit, és helyi és nemzetközi specialitásokkal kényezteti őket. Egy kellemes hangulatban a vendégek itt megtapasztalhatják a Tiroler gasztronómia sokszínűségét. A menü gondosan összeállított választékát kínálja ételeknek és italoknak, amelyeket friss hozzávalókkal készítenek el. Legyen szó egy kényelmes étkezésről, egy társas estéről vagy egy kis feltöltődésről – ez a hely mindig jó választás. Engedje, hogy a szívélyes Tiroler vendégszeretet kényeztessen.\n\nBut we need to keep German terms: \"Tiroler\" is German, but we keep it? The rule: keep place names (Tirol) and culinary terms (Kaiserschmarrn) in German original form. \"Tiroler\" is an adjective derived from Tirol. Should we keep \"Tiroler\" as is? The rule says keep place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. \"Tiroler\" is not a place name but an adjective. But maybe we keep \"Tiroler\" as is. But the text uses \"Tiroler Gastronomie\". So we might keep \"Tiroler\" unchanged. So we translate: \"Tiroler gasztronómia\" but keep \"Tiroler\". So \"Tiroler gasztronómia\". Also \"Tiroler Gastfreundschaft\" keep \"Tiroler\". So final translation:\n\n<p>Az <strong>Sonnenhof's Wirtshaus</strong> Grän szívből üdvözli vendégeit, és helyi és nemzetközi specialitásokkal kényezteti őket. Egy kellemes hangulatban a vendégek itt megtapasztalhatják a Tiroler gasztronómia sokszínűségét. A menü gondosan összeállított választékát kínálja ételeknek és italoknak, amelyeket friss hozzávalókkal készítenek el. Legyen szó egy kényelmes étkezésről, egy társas estéről vagy egy kis feltöltődésről – ez a hely mindig jó választás. Engedje, hogy a szívélyes Tiroler vendégszeretet kényeztessen.\n\nCheck: keep tags. Yes.\n\nReturn only the translated text.assistantfinal<p>Az <strong>Sonnenhof's Wirtshaus</strong> Grän szívből üdvözli vendégeit, és helyi és nemzetközi specialitásokkal kényezteti őket. Egy kellemes hangulatban a vendégek itt megtapasztalhatják a Tiroler gasztronómia sokszínűségét. A menü gondosan összeállított választékát kínálja ételeknek és italoknak, amelyeket friss hozzávalókkal készítenek el. Legyen szó egy kényelmes étkezésről, egy társas estéről vagy egy kis feltöltődésről – ez a hely mindig jó választás. Engedje, hogy a szívélyes Tiroler vendégszeretet kényeztessen.</p>",
+  "ort": "Grän",
+  "region": "ausserfern",
+  "plz": "6673",
+  "adresse": "Füssener Jöchle-Straße 5",
+  "telefon": "+43 5675 6375",
+  "email": "",
+  "webseite": "https://www.sonnenhof-tirol.com/",
+  "preis": "€€",
+  "tags": [
+    "gasztronómia"
+  ],
+  "koordinaten": {
+    "lat": 47.503241,
+    "lng": 10.5582992
+  },
+  "status": "published"
+}

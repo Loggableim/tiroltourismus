@@ -1,0 +1,24 @@
+{
+  "name": "GH Forellenstüberl",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original. The text: \"Das <strong>GH Forellenstüberl</strong> im Zillertal verwöhnt seine Gäste mit regionalen und saisonalen Köstlichkeiten in einem gemütlichen Ambiente. Das Ambiente vereint traditionelle Elemente mit modernem Komfort und schafft eine einladende Atmosphäre für jeden Anlass. Die Speisekarte umfasst sowohl bodenständige Tiroler Spezialitäten als auch kreative internationale Gerichte. Alle Speisen werden mit viel Liebe zum Detail und aus hochwertigen Zutaten zubereitet. Hier trifft Qualität auf Gastfreundschaft – ein Ort, an den man gerne zurückkehrt.\"\n\nWe must keep tags: <p>, <strong>. Place names: Zillertal, Tirol. Culinary terms: none? \"Forellenstüberl\" is a German term, but it's a name of the restaurant. Should keep as is. \"Kaiserschmarrn\" not present. So keep \"GH Forellenstüberl\" as is. \"Tiroler Spezialitäten\" keep \"Tiroler\" maybe keep \"Tiroler\" but \"Spezialitäten\" is German; but we can translate \"Tiroler Spezialitäten\" to \"Tiroler Spezialitäten\" or \"Tiroler specialitások\"? The instruction: keep culinary terms in German original form. \"Tiroler Spezialitäten\" is a culinary term? It's a phrase. But maybe we should keep \"Tiroler Spezialitäten\" as is. But the instruction says keep culinary terms in German original form. So \"Tiroler Spezialitäten\" is a culinary term. So keep it. Also \"Tiroler Spezialitäten\" is part of the sentence. So we keep that phrase. Also \"Tiroler\" is a place name. So keep. So translation: \"A <strong>GH Forellenstüberl</strong> a Zillertalben...\" etc. Use Hungarian. Let's produce.\n\nWe must keep tags unchanged. So:\n\n<p>Das <strong>GH Forellenstüberl</strong> im Zillertal verwöhnt seine Gäste mit regionalen und saisonalen Köstlichkeiten in einem gemütlichen Ambiente. Das Ambiente vereint traditionelle Elemente mit modernem Komfort und schafft eine einladende Atmosphäre für jeden Anlass. Die Speisekarte umfasst sowohl bodenständige Tiroler Spezialitäten als auch kreative internationale Gerichte. Alle Speisen werden mit viel Liebe zum Detail und aus hochwertigen Zutaten zubereitet. Hier trifft Qualität auf Gastfreundschaft – ein Ort, an den man gerne zurückkehrt.</p>\n\nTranslate to Hungarian:\n\n\"A <strong>GH Forellenstüberl</strong> a Zillertalben...\" etc.\n\nLet's produce final.assistantfinal<p>Az <strong>GH Forellenstüberl</strong> a Zillertalben vendégeit regionális és szezonális finomságokkal kényezteti egy barátságos hangulatban. A környezet ötvözi a hagyományos elemeket a modern kényelemmel, és egy meghívó atmoszférát teremt minden alkalomra. A menü mind a szilárd Tiroler Spezialitäten, mind a kreatív nemzetközi ételeket tartalmazza. Minden étel nagy odafigyeléssel és minőségi alapanyagokból készül. Itt a minőség találkozik a vendégszeretettel – egy olyan hely, ahová szívesen visszatérnek.</p>",
+  "ort": "",
+  "region": "zillertal",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.176012,
+    "lng": 11.8667271
+  },
+  "status": "published"
+}

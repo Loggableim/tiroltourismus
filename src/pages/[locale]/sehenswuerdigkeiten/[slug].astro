@@ -1,0 +1,383 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import PaywallOverlay from '../../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix } from '../../../lib/languages.js';
+
+// Localized labels for all 8 languages (DE/EN/FR/IT/ES/ZH/NL/CS)
+const LABELS = {
+  de: {
+    sehenswuerdigkeiten: 'Sehenswürdigkeiten',
+    ort: 'Ort',
+    kategorie: 'Kategorie',
+    hoehe: 'Höhe',
+    dauer: 'Dauer',
+    eintritt: 'Eintritt',
+    oeffnungszeiten: 'Öffnungszeiten',
+    webseite: 'Webseite',
+    standort: 'Standort',
+    aufDerKarte: 'Auf der Karte',
+    mehrErfahren: 'Mehr erfahren',
+    details: 'Details',
+    weitereSehenswuerdigkeiten: 'Weitere Sehenswürdigkeiten',
+    alleSehenswuerdigkeiten: 'Alle Sehenswürdigkeiten',
+    tags: 'Tags',
+    premiumInhalte: 'Premium-Inhalte',
+    sehenswuerdigkeit: 'Sehenswürdigkeit',
+  },
+  en: {
+    sehenswuerdigkeiten: 'Sights',
+    ort: 'Location',
+    kategorie: 'Category',
+    hoehe: 'Altitude',
+    dauer: 'Duration',
+    eintritt: 'Admission',
+    oeffnungszeiten: 'Opening Hours',
+    webseite: 'Website',
+    standort: 'Location',
+    aufDerKarte: 'On the Map',
+    mehrErfahren: 'Learn More',
+    details: 'Details',
+    weitereSehenswuerdigkeiten: 'More Sights',
+    alleSehenswuerdigkeiten: 'All Sights',
+    tags: 'Tags',
+    premiumInhalte: 'Premium Content',
+    sehenswuerdigkeit: 'Sight',
+  },
+  fr: {
+    sehenswuerdigkeiten: 'Sites',
+    ort: 'Lieu',
+    kategorie: 'Catégorie',
+    hoehe: 'Altitude',
+    dauer: 'Durée',
+    eintritt: 'Entrée',
+    oeffnungszeiten: 'Heures d\'ouverture',
+    webseite: 'Site Web',
+    standort: 'Emplacement',
+    aufDerKarte: 'Sur la carte',
+    mehrErfahren: 'En savoir plus',
+    details: 'Détails',
+    weitereSehenswuerdigkeiten: 'Autres sites',
+    alleSehenswuerdigkeiten: 'Tous les sites',
+    tags: 'Tags',
+    premiumInhalte: 'Contenu Premium',
+    sehenswuerdigkeit: 'Site',
+  },
+  it: {
+    sehenswuerdigkeiten: 'Attrazioni',
+    ort: 'Luogo',
+    kategorie: 'Categoria',
+    hoehe: 'Altitudine',
+    dauer: 'Durata',
+    eintritt: 'Ingresso',
+    oeffnungszeiten: 'Orari di apertura',
+    webseite: 'Sito Web',
+    standort: 'Posizione',
+    aufDerKarte: 'Sulla mappa',
+    mehrErfahren: 'Scopri di più',
+    details: 'Dettagli',
+    weitereSehenswuerdigkeiten: 'Altre attrazioni',
+    alleSehenswuerdigkeiten: 'Tutte le attrazioni',
+    tags: 'Tag',
+    premiumInhalte: 'Contenuti Premium',
+    sehenswuerdigkeit: 'Attrazione',
+  },
+  es: {
+    sehenswuerdigkeiten: 'Atracciones',
+    ort: 'Lugar',
+    kategorie: 'Categoría',
+    hoehe: 'Altitud',
+    dauer: 'Duración',
+    eintritt: 'Entrada',
+    oeffnungszeiten: 'Horario de apertura',
+    webseite: 'Sitio Web',
+    standort: 'Ubicación',
+    aufDerKarte: 'En el mapa',
+    mehrErfahren: 'Más información',
+    details: 'Detalles',
+    weitereSehenswuerdigkeiten: 'Más atracciones',
+    alleSehenswuerdigkeiten: 'Todas las atracciones',
+    tags: 'Etiquetas',
+    premiumInhalte: 'Contenido Premium',
+    sehenswuerdigkeit: 'Atracción',
+  },
+  zh: {
+    sehenswuerdigkeiten: '景点',
+    ort: '地点',
+    kategorie: '类别',
+    hoehe: '海拔',
+    dauer: '时长',
+    eintritt: '门票',
+    oeffnungszeiten: '开放时间',
+    webseite: '网站',
+    standort: '位置',
+    aufDerKarte: '在地图上',
+    mehrErfahren: '了解更多',
+    details: '详情',
+    weitereSehenswuerdigkeiten: '更多景点',
+    alleSehenswuerdigkeiten: '所有景点',
+    tags: '标签',
+    premiumInhalte: '高级内容',
+    sehenswuerdigkeit: '景点',
+  },
+  nl: {
+    sehenswuerdigkeiten: 'Bezienswaardigheden',
+    ort: 'Plaats',
+    kategorie: 'Categorie',
+    hoehe: 'Hoogte',
+    dauer: 'Duur',
+    eintritt: 'Toegang',
+    oeffnungszeiten: 'Openingstijden',
+    webseite: 'Website',
+    standort: 'Locatie',
+    aufDerKarte: 'Op de kaart',
+    mehrErfahren: 'Meer informatie',
+    details: 'Details',
+    weitereSehenswuerdigkeiten: 'Meer bezienswaardigheden',
+    alleSehenswuerdigkeiten: 'Alle bezienswaardigheden',
+    tags: 'Tags',
+    premiumInhalte: 'Premium-inhoud',
+    sehenswuerdigkeit: 'Bezienswaardigheid',
+  },
+  cs: {
+    sehenswuerdigkeiten: 'Pamětihodnosti',
+    ort: 'Místo',
+    kategorie: 'Kategorie',
+    hoehe: 'Nadmořská výška',
+    dauer: 'Doba trvání',
+    eintritt: 'Vstupné',
+    oeffnungszeiten: 'Otevírací doba',
+    webseite: 'Web',
+    standort: 'Poloha',
+    aufDerKarte: 'Na mapě',
+    mehrErfahren: 'Zjistit více',
+    details: 'Podrobnosti',
+    weitereSehenswuerdigkeiten: 'Další pamětihodnosti',
+    alleSehenswuerdigkeiten: 'Všechny pamětihodnosti',
+    tags: 'Štítky',
+    premiumInhalte: 'Prémiový obsah',
+    sehenswuerdigkeit: 'Pamětihodnost',
+  },
+};
+
+// Kategorie-Labels und Emojis (locale-unabhaengig, da Fachbegriffe)
+const CATEGORY_LABEL = {
+  natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht',
+  sport: 'Sport', museum: 'Museum', kirche: 'Kirche',
+  burg: 'Burg', wanderung: 'Wanderung',
+};
+const CATEGORY_EMOJI = {
+  natur: '🌿', kultur: '🎭', aussicht: '🏔️', sport: '⚡',
+  museum: '🏛️', kirche: '⛪', burg: '🏰', wanderung: '🥾',
+};
+
+const COLLECTION_EMOJI = {
+  sehenswuerdigkeiten: '🏛️', gastro: '🍽️', unterkuenfte: '🏨',
+  camping: '🏕️', erlebnisse: '🎯', orte: '🏘️', events: '🎪', regionen: '🏔️',
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('sehenswuerdigkeiten', locale).filter(s => isPublished(s.entry));
+    for (const s of all) {
+      paths.push({ params: { locale, slug: s.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('sehenswuerdigkeiten', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/sehenswuerdigkeiten/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+
+const emoji = entry.emoji || '🏛️';
+const catStr = entry.kategorie
+  ? `${CATEGORY_EMOJI[entry.kategorie] || ''} ${CATEGORY_LABEL[entry.kategorie] || entry.kategorie}`
+  : undefined;
+
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+
+// Karten-Marker falls Koordinaten vorhanden
+const nearbyEntries = entry.koordinaten
+  ? findNearby(entry, 'sehenswuerdigkeiten', locale, 8)
+  : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({
+    lat: entry.koordinaten.lat,
+    lng: entry.koordinaten.lng,
+    label: entry.name,
+    emoji: emoji,
+  });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: COLLECTION_EMOJI[n.collection] || '📍',
+    href: `${prefix}/${n.collection}/${n.slug}/`,
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0
+  ? {
+      type: 'map',
+      label: l.standort,
+      title: l.aufDerKarte,
+      markers: mapMarkers,
+      scrollWheelZoom: true,
+      filterable: true,
+    }
+  : null;
+
+// Verwandte Sehenswuerdigkeiten via ersten Tag
+const relatedByTag =
+  entry.tags && entry.tags.length > 0
+    ? findByTag(entry.tags[0], locale)
+        .filter(r => r.collection === 'sehenswuerdigkeiten' && r.slug !== slug)
+        .slice(0, 3)
+        .map(r => ({
+          ...r,
+          entry: { ...r.entry, _emoji: r.entry.emoji || '🏛️' },
+        }))
+    : [];
+
+// JSON-LD: TouristAttraction
+const siteURL = 'https://tiroltourismus.com';
+const attractionLD = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristAttraction',
+  name: entry.name,
+  description: (entry.kurzbeschreibung || entry.beschreibung || '')
+    .replace(/<[^>]*>/g, '')
+    .substring(0, 300),
+  url: `${siteURL}${prefix}/sehenswuerdigkeiten/${slug}/`,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.kategorie ? { touristType: entry.kategorie } : {}),
+  ...(entry.ort
+    ? {
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: entry.ort,
+          addressCountry: 'AT',
+        },
+      }
+    : {}),
+  ...(entry.koordinaten
+    ? {
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: entry.koordinaten.lat,
+          longitude: entry.koordinaten.lng,
+        },
+      }
+    : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'sehenswuerdigkeiten', locale)}
+  breadcrumbs={[
+    { label: l.sehenswuerdigkeiten, href: `${prefix}/sehenswuerdigkeiten/` },
+    { label: entry.name },
+  ]}
+  locale={locale}
+  jsonld={attractionLD}
+  ogImage={ogImage}
+  sections={[
+    {
+      type: 'custom-hero',
+      title: entry.name,
+      subtitle: entry.kurzbeschreibung,
+      emoji: emoji,
+      category: catStr,
+      location: entry.ort,
+      bgStyle: entry.farbe
+        ? `linear-gradient(135deg,${entry.farbe}15,${entry.farbe}25)`
+        : undefined,
+      bgImage: entry.hero_bild,
+    },
+    !isBasic && (entry.hoehe || entry.dauer || entry.preis)
+      ? {
+          type: 'sight-facts',
+          items: [
+            entry.hoehe ? { value: entry.hoehe, label: l.hoehe } : null,
+            entry.dauer ? { value: entry.dauer, label: l.dauer } : null,
+            entry.preis ? { value: entry.preis, label: l.eintritt } : null,
+          ].filter(Boolean),
+        }
+      : null,
+    !isBasic && entry.beschreibung
+      ? {
+          type: 'description',
+          label: l.details,
+          title: l.mehrErfahren,
+          content: autoLinkContent(entry.beschreibung, entry, locale),
+        }
+      : null,
+    !isBasic && entry.tags && entry.tags.length > 0
+      ? { type: 'tags', tags: entry.tags }
+      : null,
+    {
+      type: 'sight-info-grid',
+      items: [
+        entry.oeffnungszeiten
+          ? {
+              icon: '🕐',
+              label: l.oeffnungszeiten,
+              value: entry.oeffnungszeiten,
+            }
+          : null,
+        entry.preis
+          ? { icon: '💰', label: l.eintritt, value: entry.preis }
+          : null,
+        entry.webseite
+          ? {
+              icon: '🌐',
+              label: l.webseite,
+              value: entry.webseite.replace(/^https?:\/\//, '') + ' ↗',
+              href: entry.webseite,
+            }
+          : null,
+      ].filter(Boolean),
+    },
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0
+      ? {
+          type: 'related-grid',
+          label: l.weitereSehenswuerdigkeiten,
+          entries: relatedByTag,
+          slugPrefix: `${prefix}/sehenswuerdigkeiten/`,
+          nameField: 'name',
+          subtitleField: 'kurzbeschreibung',
+          emojiField: '_emoji',
+          defaultEmoji: '🏛️',
+        }
+      : null,
+    {
+      type: 'back-link',
+      href: `${prefix}/sehenswuerdigkeiten/`,
+      text: l.alleSehenswuerdigkeiten,
+    },
+  ].filter(Boolean)}
+/>
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+    </div>
+  </section>
+)}

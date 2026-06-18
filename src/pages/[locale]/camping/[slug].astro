@@ -1,0 +1,107 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import PremiumBadge from '../../../components/PremiumBadge.astro';
+import PaywallOverlay from '../../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: { camping: 'Camping', ort: 'Ort', region: 'Region', ausstattung: 'Ausstattung', preis: 'Preis', webseite: 'Webseite', standort: 'Standort', aufDerKarte: 'Auf der Karte', weitereCamping: 'Weitere Campingplätze', alleCamping: 'Alle Campingplätze', kontakt: 'Kontakt', anfrageStellen: 'Anfrage stellen', ctaSubtitle: 'Kontaktieren Sie den Campingplatz direkt für Reservierungen.' },
+  en: { camping: 'Camping', ort: 'Location', region: 'Region', ausstattung: 'Facilities', preis: 'Price', webseite: 'Website', standort: 'Location', aufDerKarte: 'On the Map', weitereCamping: 'More Campsites', alleCamping: 'All Camping', kontakt: 'Contact', anfrageStellen: 'Make an Inquiry', ctaSubtitle: 'Contact the campsite directly for reservations.' },
+  fr: { camping: 'Camping', ort: 'Lieu', region: 'Région', ausstattung: 'Équipements', preis: 'Prix', webseite: 'Site Web', standort: 'Emplacement', aufDerKarte: 'Sur la carte', weitereCamping: 'Plus de campings', alleCamping: 'Tout le camping', kontakt: 'Contact', anfrageStellen: 'Faire une demande', ctaSubtitle: 'Contactez le camping directement pour les réservations.' },
+  it: { camping: 'Campeggio', ort: 'Luogo', region: 'Regione', ausstattung: 'Servizi', preis: 'Prezzo', webseite: 'Sito Web', standort: 'Posizione', aufDerKarte: 'Sulla mappa', weitereCamping: 'Altri campeggi', alleCamping: 'Tutti i campeggi', kontatto: 'Contatto', anfrageStellen: 'Fare una richiesta', ctaSubtitle: 'Contatta direttamente il campeggi per le prenotazioni.' },
+  es: { camping: 'Camping', ort: 'Lugar', region: 'Región', ausstattung: 'Instalaciones', preis: 'Precio', webseite: 'Sitio Web', standort: 'Ubicación', aufDerKarte: 'En el mapa', weitereCamping: 'Más campings', alleCamping: 'Todo el camping', kontakt: 'Contacto', anfrageStellen: 'Hacer una consulta', ctaSubtitle: 'Contacta al camping directamente para reservas.' },
+  zh: { camping: '露营', ort: '地点', region: '地区', ausstattung: '设施', preis: '价格', webseite: '网站', standort: '位置', aufDerKarte: '在地图上', weitereCamping: '更多露营地', alleCamping: '所有露营', kontakt: '联系', anfrageStellen: '询价', ctaSubtitle: '直接联系露营地进行预订。' },
+  nl: { camping: 'Camping', ort: 'Plaats', region: 'Regio', ausstattung: 'Voorzieningen', preis: 'Prijs', webseite: 'Website', standort: 'Locatie', aufDerKarte: 'Op de kaart', weitereCamping: 'Meer campings', alleCamping: 'Alle campings', kontakt: 'Contact', anfrageStellen: 'Aanvraag indienen', ctaSubtitle: 'Neem direct contact op met de camping voor reserveringen.' },
+  cs: { camping: 'Kemp', ort: 'Místo', region: 'Region', ausstattung: 'Vybavení', preis: 'Cena', webseite: 'Web', standort: 'Poloha', aufDerKarte: 'Na mapě', weitereCamping: 'Další kempy', alleCamping: 'Všechny kempy', kontakt: 'Kontakt', anfrageStellen: 'Podat žádost', ctaSubtitle: 'Kontaktujte kemp přímo pro rezervace.' },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('camping', locale).filter(c => isPublished(c.entry));
+    for (const c of all) {
+      paths.push({ params: { locale, slug: c.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('camping', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/camping/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+const emoji = entry.emoji || '🏕️';
+const subtitle = entry.ort ? `${entry.ort}${entry.region ? ` · ${entry.region}` : ''}` : undefined;
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'camping', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name, emoji: emoji });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({ lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng, label: n.entry.name || n.entry.titel, emoji: CATEGORY_EMOJI[n.collection] || '📍', href: `${prefix}/${n.collection}/${n.slug}/`, category: n.collection });
+});
+const mapSection = mapMarkers.length > 0 ? { type: 'map', label: l.standort, title: l.aufDerKarte, markers: mapMarkers, scrollWheelZoom: true, filterable: true } : null;
+
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0], locale).filter(r => r.collection === 'camping' && r.slug !== slug).slice(0, 3).map(r => ({ ...r, entry: { ...r.entry, _emoji: r.entry.emoji || '🏕️' } }))
+  : [];
+
+const siteURL = 'https://tiroltourismus.com';
+const businessLD = {
+  '@context': 'https://schema.org', '@type': 'LodgingBusiness',
+  name: entry.name, description: (entry.kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}${prefix}/camping/${slug}/`,
+  telephone: entry.telefon || undefined, email: entry.email || undefined,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.adresse || entry.ort ? { address: { '@type': 'PostalAddress', ...(entry.adresse ? { streetAddress: entry.adresse } : {}), ...(entry.ort ? { addressLocality: entry.ort } : {}), addressCountry: 'AT' } } : {}),
+  ...(entry.koordinaten ? { geo: { '@type': 'GeoCoordinates', latitude: entry.koordinaten.lat, longitude: entry.koordinaten.lng } } : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'camping', locale)}
+  breadcrumbs={[{ label: l.camping, href: `${prefix}/camping/` }, { label: entry.name }]}
+  locale={locale}
+  jsonld={businessLD}
+  ogImage={ogImage}
+  sections={[
+    { type: 'hero', title: entry.name, subtitle: subtitle, emoji: emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
+    { type: 'details-grid', label: l.kontakt, items: [
+      { label: l.ort, value: entry.ort || undefined },
+      { label: l.region, value: entry.region || undefined },
+      { label: l.ausstattung, tags: entry.ausstattung || [], type: 'tags' },
+    ].filter(Boolean) },
+    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    !isBasic ? { type: 'details-grid', items: [
+      { label: l.preis, value: entry.preis_ab || undefined, type: 'price' },
+      entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,
+    ].filter(Boolean) } : null,
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? { type: 'related-grid', label: l.weitereCamping, entries: relatedByTag, slugPrefix: `${prefix}/camping/`, nameField: 'name', subtitleField: 'kurzbeschreibung', emojiField: '_emoji', defaultEmoji: '🏕️' } : null,
+    !isBasic ? { type: 'cta', label: l.kontakt, title: l.anfrageStellen, subtitle: l.ctaSubtitle, buttons: [
+      entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+      entry.webseite ? { label: `🌐 ${l.webseite}`, href: entry.webseite, variant: 'glass' } : null,
+    ].filter(Boolean) } : null,
+    { type: 'back-link', href: `${prefix}/camping/`, text: l.alleCamping },
+  ].filter(Boolean)}
+/>
+
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+    </div>
+  </section>
+)}

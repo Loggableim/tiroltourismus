@@ -1,0 +1,74 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: { event: 'Event', ort: 'Ort', kategorie: 'Kategorie', datum: 'Datum', uhrzeit: 'Uhrzeit', preis: 'Preis', standort: 'Standort', aufDerKarte: 'Auf der Karte', alleEvents: 'Alle Events' },
+  en: { event: 'Event', ort: 'Location', kategorie: 'Category', datum: 'Date', uhrzeit: 'Time', preis: 'Price', standort: 'Location', aufDerKarte: 'On the Map', alleEvents: 'All Events' },
+  fr: { event: 'Événement', ort: 'Lieu', kategorie: 'Catégorie', datum: 'Date', uhrzeit: 'Heure', preis: 'Prix', standort: 'Emplacement', aufDerKarte: 'Sur la carte', alleEvents: 'Tous les événements' },
+  it: { event: 'Evento', ort: 'Luogo', kategorie: 'Categoria', datum: 'Data', uhrzeit: 'Ora', preis: 'Prezzo', standort: 'Posizione', aufDerKarte: 'Sulla mappa', alleEvents: 'Tutti gli eventi' },
+  es: { event: 'Evento', ort: 'Lugar', kategorie: 'Categoría', datum: 'Fecha', uhrzeit: 'Hora', preis: 'Precio', standort: 'Ubicación', aufDerKarte: 'En el mapa', alleEvents: 'Todos los eventos' },
+  zh: { event: '活动', ort: '地点', kategorie: '类别', datum: '日期', uhrzeit: '时间', preis: '价格', standort: '位置', aufDerKarte: '在地图上', alleEvents: '所有活动' },
+  nl: { event: 'Evenement', ort: 'Plaats', kategorie: 'Categorie', datum: 'Datum', uhrzeit: 'Tijd', preis: 'Prijs', standort: 'Locatie', aufDerKarte: 'Op de kaart', alleEvents: 'Alle evenementen' },
+  cs: { event: 'Akce', ort: 'Místo', kategorie: 'Kategorie', datum: 'Datum', uhrzeit: 'Čas', preis: 'Cena', standort: 'Poloha', aufDerKarte: 'Na mapě', alleEvents: 'Všechny akce' },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('events', locale).filter(e => isPublished(e.entry));
+    for (const e of all) {
+      paths.push({ params: { locale, slug: e.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('events', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/events/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+const emoji = entry.emoji || '🎪';
+const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'events', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name || entry.titel, emoji });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({ lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng, label: n.entry.name || n.entry.titel, emoji: CATEGORY_EMOJI[n.collection] || '📍', href: `${prefix}/${n.collection}/${n.slug}/`, category: n.collection });
+});
+const mapSection = mapMarkers.length > 0 ? { type: 'map', label: l.standort, title: l.aufDerKarte, markers: mapMarkers, scrollWheelZoom: true, filterable: true } : null;
+
+const siteURL = 'https://tiroltourismus.com';
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.name || entry.titel}
+  description={generateMetaDescription(entry, 'events', locale)}
+  breadcrumbs={[{ label: l.event, href: `${prefix}/events/` }, { label: entry.name || entry.titel }]}
+  locale={locale}
+  ogImage={ogImage}
+  sections={[
+    { type: 'hero', title: entry.name || entry.titel, subtitle, emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
+    { type: 'details-grid', items: [
+      { label: l.ort, value: entry.ort || undefined },
+      { label: l.kategorie, value: entry.kategorie || undefined },
+      { label: l.datum, value: entry.datum_von || undefined },
+      { label: l.uhrzeit, value: entry.uhrzeit || undefined },
+      { label: l.preis, value: entry.preis || undefined, type: 'price' },
+    ].filter(Boolean) },
+    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name || entry.titel, title: entry.name || entry.titel, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    mapSection,
+    { type: 'back-link', href: `${prefix}/events/`, text: l.alleEvents },
+  ].filter(Boolean)}
+/>

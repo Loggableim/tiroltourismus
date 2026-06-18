@@ -74,31 +74,49 @@ def save_orte_data(slug, data):
     fp = ORTE_DIR / slug / "index.json"
     fp.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding='utf-8')
 
-def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise auf Deutsch."):
-    """Ruft OpenCode Go API für Content-Generierung auf."""
-    # OpenCode Go API via hermes
-    url = "https://opencode.ai/zen/go/v1/chat/completions"
-    api_key = os.environ.get("OPENCODE_GO_API_KEY", "")
-    if not api_key:
-        # Try .env
-        env_paths = [
-            "C:/HermesPortable/home/.env",
-            "E:/HermesPortable/home/.env",
-            os.path.expanduser("~/.hermes/.env"),
-        ]
-        for ep in env_paths:
-            if os.path.exists(ep):
-                for line in open(ep):
-                    if line.startswith("OPENCODE_GO_API_KEY="):
-                        api_key = line.strip().split("=", 1)[1]
-                        break
-                if api_key:
-                    break
-    
-    if not api_key:
-        print("⚠️  Kein API-Key — überspringe LLM-Schritt")
+def _load_env_key(key_name):
+    """Load a key from environment or .env files."""
+    val = os.environ.get(key_name, "")
+    if val:
+        return val
+    env_paths = [
+        "C:/HermesPortable/home/.env",
+        "E:/HermesPortable/home/.env",
+        os.path.expanduser("~/.hermes/.env"),
+    ]
+    for ep in env_paths:
+        if os.path.exists(ep):
+            for line in open(ep):
+                if line.startswith(f"{key_name}="):
+                    val = line.strip().split("=", 1)[1]
+                    return val
+    return ""
+
+def _llm_call(url, api_key, model, body, system, prompt, timeout=60):
+    """Single LLM API call with error handling."""
+    req = urllib.request.Request(url, data=body, method="POST")
+    req.add_header("Authorization", f"Bearer {api_key}")
+    req.add_header("Content-Type", "application/json")
+    req.add_header("User-Agent", "Mozilla/5.0")
+    try:
+        resp = json.loads(urllib.request.urlopen(req, timeout=timeout).read())
+        return resp["choices"][0]["message"]["content"]
+    except urllib.error.HTTPError as e:
+        code, msg = e.code, e.read().decode()[:150]
+        print(f"  ⚠️  LLM-API {code}: {msg}")
         return None
+    except Exception as e:
+        print(f"  ⚠️  LLM-Fehler: {e}")
+        return None
+
+def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise auf Deutsch."):
+    """Ruft LLM API für Content-Generierung auf (Multi-Provider Fallback).
     
+    Fallback-Kette:
+      1. OpenRouter (deepseek-v4-flash) — primär
+      2. OpenCode Go (deepseek-v4-flash) — fallback
+      3. Cerebras (llama3.1-8b) — last resort
+    """
     body = json.dumps({
         "model": "deepseek-v4-flash",
         "messages": [
@@ -109,29 +127,37 @@ def call_llm(prompt, system="Du bist ein Tirol-Reiseexperte. Antworte präzise a
         "temperature": 0.7,
     }).encode()
     
-    req = urllib.request.Request(url, data=body, method="POST")
-    req.add_header("Authorization", f"Bearer {api_key}")
-    req.add_header("Content-Type", "application/json")
-    req.add_header("User-Agent", "Mozilla/5.0")
+    providers = [
+        ("OpenRouter", "https://openrouter.ai/api/v1/chat/completions",
+         _load_env_key("OPENROUTER_API_KEY"), "deepseek-v4-flash"),
+        ("OpenCode Go", "https://opencode.ai/zen/go/v1/chat/completions",
+         _load_env_key("OPENCODE_GO_API_KEY"), "deepseek-v4-flash"),
+        ("Cerebras", "https://api.cerebras.ai/v1/chat/completions",
+         _load_env_key("CEREBRAS_API_KEY"), "llama3.1-8b"),
+    ]
     
-    try:
-        resp = json.loads(urllib.request.urlopen(req, timeout=60).read())
-        return resp["choices"][0]["message"]["content"]
-    except urllib.error.HTTPError as e:
-        if e.code == 429:
-            print(f"⚠️  Rate Limited — warte 5s...")
-            time.sleep(5)
-            try:
-                resp = json.loads(urllib.request.urlopen(req, timeout=60).read())
-                return resp["choices"][0]["message"]["content"]
-            except:
-                print(f"⚠️  Auch nach Retry fehlgeschlagen")
-                return None
-        print(f"⚠️  HTTP {e.code}: {e.read().decode()[:100]}")
-        return None
-    except Exception as e:
-        print(f"⚠️  LLM-Fehler: {e}")
-        return None
+    for name, url, api_key, model in providers:
+        if not api_key:
+            continue
+        # Use correct model name per provider
+        if model != "deepseek-v4-flash":
+            body = json.dumps({
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": prompt}
+                ],
+                "max_tokens": 1024,
+                "temperature": 0.7,
+            }).encode()
+        print(f"  🔄 LLM via {name} ({model})...")
+        result = _llm_call(url, api_key, model, body, system, prompt)
+        if result:
+            return result
+        print(f"  ⏭️  {name} fehlgeschlagen, nächster Provider...")
+    
+    print("⚠️  Alle LLM-Provider fehlgeschlagen — überspringe LLM-Schritt")
+    return None
 
 def generate_svg_image(slug, name, region, farbe="#006400"):
     """Generates an SVG gradient placeholder image instead of SDXL.
@@ -323,22 +349,22 @@ def step_image(slug, data):
     return False, data
 
 def step_translate(slug, data):
-    """Step 3: Beschreibung in alle Sprachen übersetzen"""
+    """Step 3: Beschreibung in alle Sprachen übersetzen (überschreibt bestehende Dateien)"""
     beschreibung = data.get('beschreibung', '')
     if not beschreibung:
+        print("  ℹ️  Keine Beschreibung zum Übersetzen vorhanden")
         return
     
     for lang in LANGUAGES:
         lang_dir = BASE / "src" / "data" / lang / "orte" / slug
         lang_file = lang_dir / "index.json"
         
-        if lang_file.exists():
-            continue  # Skip if already translated
+        # Create directory (overwrite existing files)
+        lang_dir.mkdir(parents=True, exist_ok=True)
         
         # Translate beschreibung
         trans = translate_text(beschreibung, lang)
         if trans:
-            lang_dir.mkdir(parents=True, exist_ok=True)
             lang_data = {
                 "name": data.get('name'),
                 "slug": slug,
@@ -356,13 +382,34 @@ def step_translate(slug, data):
             }
             lang_file.write_text(json.dumps(lang_data, indent=2, ensure_ascii=False), encoding='utf-8')
             print(f"  ✅ {lang}: übersetzt")
+        else:
+            print(f"  ⚠️  {lang}: Übersetzung fehlgeschlagen — überspringe")
 
 def step_commit(slug):
     """Step 4: Git Commit für diesen Ort"""
+    # Ensure git is configured
+    for cfg in [("user.name", "Tirol Bot"), ("user.email", "bot@tiroltourismus.com")]:
+        chk = subprocess.run(["git", "config", cfg[0]], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        if not chk.stdout.strip():
+            subprocess.run(["git", "config", cfg[0], cfg[1]], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+            print(f"  🔧 Git {cfg[0]} gesetzt: {cfg[1]}")
+    
+    # Add ALL related files — DE source + translations + images
+    add_patterns = [
+        f"src/data/orte/{slug}/",
+        f"src/data/*/orte/{slug}/",
+        f"public/images/orte/{slug}/",
+    ]
     result = subprocess.run(
-        ["git", "add", "-A", f"src/data/*/orte/{slug}/", f"public/images/orte/{slug}/"],
+        ["git", "add", "-A"] + add_patterns,
         capture_output=True, text=True, cwd=str(BASE), timeout=30
     )
+    if result.returncode != 0:
+        print(f"  ⚠️  git add Fehler: {result.stderr[:300]}")
+        return False
+    staged_count = len([l for l in result.stdout.split(chr(10)) if l.strip()]) if result.stdout.strip() else 0
+    if staged_count > 0:
+        print(f"  ✅ git add: {staged_count} datei(en)")
     
     result2 = subprocess.run(
         ["git", "commit", "-m", f"[orte] ✨ {slug}: Beschreibung, Bilder & Infos"],
@@ -370,19 +417,52 @@ def step_commit(slug):
     )
     
     if "nothing to commit" in result2.stdout + result2.stderr:
-        print("  ℹ️  Nichts zu committen")
+        print("  ℹ️  Nichts zu committen (keine Änderungen)")
         return False
     
-    push = subprocess.run(
-        ["git", "push", "origin", "master"],
-        capture_output=True, text=True, cwd=str(BASE), timeout=60
-    )
+    if result2.returncode != 0:
+        print(f"  ⚠️  Commit-Fehler: {result2.stderr[:300]}")
+        diff = subprocess.run(["git", "diff", "--cached", "--stat"], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        print(f"  📊 Staged: {diff.stdout.strip() or 'nichts'}")
+        return False
+    
+    print(f"  ✅ Commit: {result2.stdout.split(chr(10))[0] if result2.stdout else 'ok'}")
+    
+    # Push with optional GITHUB_TOKEN for HTTPS auth
+    push_cmd = ["git", "push", "origin", "master"]
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
+        # Try loading from .env
+        env_path = BASE / ".env"
+        if env_path.exists():
+            for line in env_path.read_text().split(chr(10)):
+                if line.startswith("GITHUB_TOKEN="):
+                    token = line.strip().split("=", 1)[1]
+    
+    if token:
+        # Rewrite remote URL to include token for auth
+        remote_url = "https://Loggableim:" + token + "@github.com/Loggableim/tiroltourismus.git"
+        subprocess.run(["git", "remote", "set-url", "origin", remote_url],
+                       capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        print(f"  🔑 GITHUB_TOKEN konfiguriert für Push")
+    
+    push = subprocess.run(push_cmd, capture_output=True, text=True, cwd=str(BASE), timeout=60)
     
     if push.returncode == 0:
         print(f"  🚀 Gepusht!")
         return True
     else:
-        print(f"  ⚠️  Push-Fehler: {push.stderr[:200]}")
+        print(f"  ⚠️  Push-Fehler: {push.stderr[:300]}")
+        # Try to detect the branch name and retry
+        branch_chk = subprocess.run(["git", "branch", "--show-current"], capture_output=True, text=True, cwd=str(BASE), timeout=10)
+        branch = branch_chk.stdout.strip()
+        if branch and branch != "master":
+            print(f"  🔄 Versuche Push zu '{branch}' statt 'master'...")
+            push2 = subprocess.run(["git", "push", "origin", branch], capture_output=True, text=True, cwd=str(BASE), timeout=60)
+            if push2.returncode == 0:
+                print(f"  🚀 Gepusht auf {branch}!")
+                return True
+            print(f"  ⚠️  Push auf {branch} auch fehlgeschlagen: {push2.stderr[:200]}")
         return False
 
 # ═══════════════════════════════════════════

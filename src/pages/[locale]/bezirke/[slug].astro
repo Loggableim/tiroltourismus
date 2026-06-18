@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { readEntry, readSingleton } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: { bezirke: 'Bezirke', gemeinden: 'Gemeinden', regionen: 'Regionen', alleBezirke: 'Alle Bezirke' },
+  en: { bezirke: 'Districts', gemeinden: 'Municipalities', regionen: 'Regions', alleBezirke: 'All Districts' },
+  fr: { bezirke: 'Districts', gemeinden: 'Municipalités', regionen: 'Régions', alleBezirke: 'Tous les districts' },
+  it: { bezirke: 'Distretti', gemeinden: 'Comuni', regionen: 'Regioni', alleBezirke: 'Tutti i distretti' },
+  es: { bezirke: 'Distritos', gemeinden: 'Municipios', regionen: 'Regiones', alleBezirke: 'Todos los distritos' },
+  zh: { bezirke: '行政区', gemeinden: '市镇', regionen: '地区', alleBezirke: '所有行政区' },
+  nl: { bezirke: 'Districten', gemeinden: 'Gemeenten', regionen: 'Regio\'s', alleBezirke: 'Alle districten' },
+  cs: { bezirke: 'Okresy', gemeinden: 'Obce', regionen: 'Regiony', alleBezirke: 'Všechny okresy' },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const b = readSingleton('bezirke', locale);
+    if (b) {
+      for (const key of Object.keys(b)) {
+        paths.push({ params: { locale, slug: key } });
+      }
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const bezirke = readSingleton('bezirke', locale);
+const entry = bezirke?.[slug];
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/bezirke/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+---
+
+<BaseLayout title={entry.name} description={entry.beschreibung || ''} locale={locale}>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: l.bezirke, href: `${prefix}/bezirke/` }, { label: entry.name }]} />
+    </div>
+
+    <section class="page-header">
+      <div class="container">
+        <div style="font-size:64px;margin-bottom:8px">🗺️</div>
+        <h1>{entry.name}</h1>
+        <p>{entry.beschreibung}</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="bezirke-grid">
+          {entry.regionen?.map(r => (
+            <a href={`${prefix}/regionen/${r.slug}/`} class="bezirk-card">
+              <h3>{r.name || r.slug}</h3>
+              <span>→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .page-header{position:relative;padding:60px 0 40px;text-align:center;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
+  .page-header h1{font-family:var(--font-display);font-size:clamp(42px,6vw,72px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .page-header p{font-size:15px;color:var(--text2);max-width:560px;margin:0 auto}
+  .bezirke-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .bezirk-card{background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-decoration:none;color:var(--text);transition:all .3s var(--ease);display:flex;justify-content:space-between;align-items:center}
+  .bezirk-card:hover{border-color:var(--pink);transform:translateY(-2px)}
+  @media(max-width:968px){.bezirke-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.bezirke-grid{grid-template-columns:1fr}}
+</style>

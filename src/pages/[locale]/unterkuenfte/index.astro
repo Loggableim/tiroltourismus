@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import AccommodationCard from '../../../components/AccommodationCard.astro';
+import FilterBar from '../../../components/FilterBar.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
+
+const labels = {
+  title: { de: 'Unterkünfte in Tirol', en: 'Accommodations in Tyrol', fr: 'Hébergements au Tyrol', it: 'Alloggi in Tirolo', es: 'Alojamientos en Tirol', zh: '蒂罗尔住宿', nl: 'Accommodaties in Tirol', cs: 'Ubytování v Tyrolsku' },
+  desc: { de: 'Finde Dein Zuhause in Tirol. Hotels, Ferienwohnungen & Bauernhöfe – von luxuriös bis urig.', en: 'Find your home in Tyrol. Hotels, holiday apartments & farmhouses – from luxurious to rustic.', fr: 'Trouvez votre chez-vous au Tyrol. Hôtels, appartements de vacances & fermes – du luxe au rustique.', it: 'Trova la tua casa in Tirolo. Hotel, appartamenti per vacanse & fattorie – dal lusso al rustico.', es: 'Encuentra tu hogar en Tirol. Hoteles, apartamentos vacacionales & casas rurales – de lujoso a rústico.', zh: '在蒂罗尔找到您的家。酒店、度假公寓和农舍——从豪华到乡村。', nl: 'Vind jouw thuis in Tirol. Hotels, vakantieappartementen & boerderijen – van luxe tot rustiek.', cs: 'Najděte svůj domov v Tyrolsku. Hotely, prázdninové byty & farmy – od luxusních po rustikální.' },
+  heroSub: { de: 'Von luxuriösen Wellness-Hotels über urige Berghütten zu familiengeführten Bauernhöfen – hier wirst Du fündig.', en: 'From luxurious wellness hotels to rustic mountain huts to family-run farmhouses – you\'ll find it here.', fr: 'Des hôtels wellness de luxe aux cabanes de montagne rustiques en passant par les fermes familiales – vous trouverez votre bonheur.', it: 'Da hotel wellness di lusso a baite montane rustiche a fattorie a conduzione familiare – qui troverai quello che cerchi.', es: 'Desde lujosos hoteles wellness hasta rústicas cabañas de montaña y casas rurales familiares – lo encontrarás aquí.', zh: '从豪华养生酒店到乡村山间小屋再到家庭经营的农舍——您会在这里找到。', nl: 'Van luxe wellnesshotels tot rustieke berghutten tot familiebedrijven – hier vind je wat je zoekt.', cs: 'Od luxusních wellness hotelů přes rustikální horské chaty po rodinné farmě – tady to najdete.' },
+  sectionLabel: { de: 'Übernachten & Träumen', en: 'Stay & Dream', fr: 'Dormir & Rêver', it: 'Dormire & Sognare', es: 'Hospedarse & Soñar', zh: '住宿与梦想', nl: 'Verblijven & Dromen', cs: 'Ubytování & sny' },
+  sectionTitle: { de: 'Unterkünfte in Tirol', en: 'Accommodations in Tyrol', fr: 'Hébergements au Tyrol', it: 'Alloggi in Tirolo', es: 'Alojamientos en Tirol', zh: '蒂罗尔住宿', nl: 'Accommodaties in Tirol', cs: 'Ubytování v Tyrolsku' },
+  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '一览', nl: 'In één oogopslag', cs: 'Na první pohled' },
+  emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
+  emptyText: { de: 'Unterkünfte werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Accommodations are being added. Check back soon!', fr: 'Les hébergements sont en cours d\'ajout. Revenez bientôt!', it: 'Gli alloggi sono in fase di inserimento. Torna presto!', es: 'Los alojamientos se están añadiendo. ¡Vuelve pronto!', zh: '住宿正在添加中。请稍后再来查看！', nl: 'Accommodaties worden momenteel toegevoegd. Kom snel terug!', cs: 'Ubytování se právě přidávají. Podívejte se brzy znovu!' },
+  filterType: { de: 'Nach Typ filtern', en: 'Filter by type', fr: 'Filtrer par type', it: 'Filtra per tipo', es: 'Filtrar por tipo', zh: '按类型筛选', nl: 'Filter op type', cs: 'Filtrovat podle typu' },
+  filterTier: { de: 'Nach Kategorie filtern', en: 'Filter by category', fr: 'Filtrer par catégorie', it: 'Filtra per categoria', es: 'Filtrar por categoría', zh: '按类别筛选', nl: 'Filter op categorie', cs: 'Filtrovat podle kategorie' },
+};
+
+const unterkuenfte = readCollection('unterkuenfte', locale).filter(u => isPublished(u.entry));
+const unterkunftMitCoords = unterkuenfte.filter(u => u.entry.koordinaten?.lat && u.entry.koordinaten?.lng);
+const sorted = [...unterkuenfte].sort((a, b) => {
+  const order = { gold: 0, silver: 1, basic: 2 };
+  return (order[a.entry.tier || 'basic'] || 2) - (order[b.entry.tier || 'basic'] || 2);
+});
+
+const siteURL = 'https://www.tirol-tourismus.at';
+const accommodationItemList = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
+  url: `${siteURL}${pref}/unterkuenfte/`,
+  numberOfItems: unterkuenfte.length,
+  itemListElement: sorted.slice(0, 30).map((u, i) => ({ '@type': 'ListItem', position: i + 1, name: u.entry.name, url: `${siteURL}${pref}/unterkuenfte/${u.slug}/` })),
+};
+---
+
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={accommodationItemList}>
+  <main>
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href={pref || '/'}>Startseite</a><span class="sep">›</span><span>{t(labels.title)}</span>
+      </div>
+    </div>
+
+    <section class="page-header">
+      <div class="container">
+        <h1 class="reveal">{t(labels.title)}</h1>
+        <p class="reveal r2">{t(labels.heroSub)}</p>
+      </div>
+    </section>
+
+    {unterkunftMitCoords.length > 0 && (
+      <SectionMap
+        markers={unterkunftMitCoords.map(u => ({
+          lat: u.entry.koordinaten.lat, lng: u.entry.koordinaten.lng,
+          label: u.entry.name, emoji: u.entry.emoji || '🏨',
+          href: `${pref}/unterkuenfte/${u.slug}/`, category: 'unterkuenfte',
+        }))}
+        label={`${unterkunftMitCoords.length} ${t(labels.title)}`}
+        title={t(labels.mapTitle)}
+        height="380px" scrollWheelZoom={true} filterable={true}
+      />
+    )}
+
+    {sorted.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.heroSub)} />
+          <div class="filter-row reveal r1">
+            <FilterBar keyName="typ" ariaLabel={t(labels.filterType)} options={[
+              { value: 'hotel', label: '🏨 Hotel' },
+              { value: 'ferienwohnung', label: '🏠 Ferienwohnung' },
+              { value: 'camping', label: '⛺ Camping' },
+              { value: 'bauernhof', label: '🐄 Bauernhof' },
+              { value: 'jugendherberge', label: '🎒 Jugendherberge' },
+            ]} />
+            <FilterBar keyName="tier" compact ariaLabel={t(labels.filterTier)} options={[
+              { value: 'gold', label: '⭐ Gold' },
+              { value: 'silver', label: 'Silber' },
+              { value: 'basic', label: 'Basic' },
+            ]} />
+          </div>
+          <div class="uk-grid">
+            {sorted.map((u, i) => (
+              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} />
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏨</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(labels.emptyText)}</p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .page-header{position:relative;padding:60px 0 40px;text-align:center;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
+  .page-header h1{font-family:var(--font-display);font-size:clamp(42px,6vw,80px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .page-header p{font-size:15px;color:var(--text2);max-width:480px;margin:0 auto}
+  .uk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:968px){.uk-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:550px){.uk-grid{grid-template-columns:1fr}}
+</style>

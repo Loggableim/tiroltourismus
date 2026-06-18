@@ -1,0 +1,79 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: { erlebnis: 'Erlebnis', ort: 'Ort', kategorie: 'Kategorie', dauer: 'Dauer', schwierigkeit: 'Schwierigkeit', preis: 'Preis', standort: 'Standort', aufDerKarte: 'Auf der Karte', weitereErlebnisse: 'Weitere Erlebnisse', alleErlebnisse: 'Alle Erlebnisse' },
+  en: { erlebnis: 'Experience', ort: 'Location', kategorie: 'Category', dauer: 'Duration', schwierigkeit: 'Difficulty', preis: 'Price', standort: 'Location', aufDerKarte: 'On the Map', weitereErlebnisse: 'More Experiences', alleErlebnisse: 'All Experiences' },
+  fr: { erlebnis: 'Expérience', ort: 'Lieu', kategorie: 'Catégorie', durer: 'Durée', schwierigkeit: 'Difficulté', preis: 'Prix', standort: 'Emplacement', aufDerKarte: 'Sur la carte', weitereErlebnisse: 'Plus d\'expériences', alleErlebnisse: 'Toutes les expériences' },
+  it: { erlebnis: 'Esperienza', ort: 'Luogo', kategorie: 'Categoria', dauer: 'Durata', schwierigkeit: 'Difficoltà', preis: 'Prezzo', standort: 'Posizione', aufDerKarte: 'Sulla mappa', weitereErlebnisse: 'Altre esperienze', alleErlebnisse: 'Tutte le esperienze' },
+  es: { erlebnis: 'Experiencia', ort: 'Lugar', kategorie: 'Categoría', dauer: 'Duración', schwierigkeit: 'Dificultad', preis: 'Precio', standort: 'Ubicación', aufDerKarte: 'En el mapa', weitereErlebnisse: 'Más experiencias', alleErlebnisse: 'Todas las experiencias' },
+  zh: { erlebnis: '体验', ort: '地点', kategorie: '类别', dauer: '时长', schwierigkeit: '难度', preis: '价格', standort: '位置', aufDerKarte: '在地图上', weitereErlebnisse: '更多体验', alleErlebnisse: '所有体验' },
+  nl: { erlebnis: 'Ervaring', ort: 'Plaats', kategorie: 'Categorie', dauer: 'Duur', schwierigkeit: 'Moeilijkheid', preis: 'Prijs', standort: 'Locatie', aufDerKarte: 'Op de kaart', weitereErlebnisse: 'Meer ervaringen', alleErlebnisse: 'Alle ervaringen' },
+  cs: { erlebnis: 'Zážitek', ort: 'Místo', kategorie: 'Kategorie', dauer: 'Doba trvání', schwierigkeit: 'Obtížnost', preis: 'Cena', standort: 'Poloha', aufDerKarte: 'Na mapě', weitereErlebnisse: 'Další zážitky', alleErlebnisse: 'Všechny zážitky' },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('erlebnisse', locale).filter(e => isPublished(e.entry));
+    for (const e of all) {
+      paths.push({ params: { locale, slug: e.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('erlebnisse', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/erlebnisse/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+const emoji = entry.emoji || '🏔️';
+const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'erlebnisse', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name || entry.titel, emoji });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({ lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng, label: n.entry.name || n.entry.titel, emoji: CATEGORY_EMOJI[n.collection] || '📍', href: `${prefix}/${n.collection}/${n.slug}/`, category: n.collection });
+});
+const mapSection = mapMarkers.length > 0 ? { type: 'map', label: l.standort, title: l.aufDerKarte, markers: mapMarkers, scrollWheelZoom: true, filterable: true } : null;
+
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0], locale).filter(r => r.collection === 'erlebnisse' && r.slug !== slug).slice(0, 3).map(r => ({ ...r, entry: { ...r.entry, _emoji: r.entry.emoji || '🏔️' } }))
+  : [];
+
+const siteURL = 'https://tiroltourismus.com';
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.name || entry.titel}
+  description={generateMetaDescription(entry, 'erlebnisse', locale)}
+  breadcrumbs={[{ label: l.erlebnis, href: `${prefix}/erlebnisse/` }, { label: entry.name || entry.titel }]}
+  locale={locale}
+  ogImage={ogImage}
+  sections={[
+    { type: 'hero', title: entry.name || entry.titel, subtitle, emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
+    { type: 'details-grid', items: [
+      { label: l.ort, value: entry.ort || undefined },
+      { label: l.kategorie, value: entry.kategorie || undefined },
+      { label: l.dauer, value: entry.dauer || undefined },
+      { label: l.schwierigkeit, value: entry.schwierigkeit || undefined },
+      { label: l.preis, value: entry.preis || undefined, type: 'price' },
+    ].filter(Boolean) },
+    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name || entry.titel, title: entry.name || entry.titel, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    mapSection,
+    relatedByTag.length > 0 ? { type: 'related-grid', label: l.weitereErlebnisse, entries: relatedByTag, slugPrefix: `${prefix}/erlebnisse/`, nameField: 'name', subtitleField: 'kurzbeschreibung', emojiField: '_emoji', defaultEmoji: '🏔️' } : null,
+    { type: 'back-link', href: `${prefix}/erlebnisse/`, text: l.alleErlebnisse },
+  ].filter(Boolean)}
+/>

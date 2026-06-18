@@ -1,0 +1,24 @@
+{
+  "name": "Klausboden",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate German text into natural Hungarian, but keep HTML tags unchanged, keep place names and culinary terms in German original form. So we keep Tirol, Tux, Kaiserschmarrn, Tiroler Gröstl, Klausboden. Also keep HTML tags <p>, <strong>. So translation: \"Das Klausboden in Tux ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt.\" -> \"A Klausboden Tuxban egy népszerű étterem, amely gazdag étlapával és regionális vendégszeretetével kényezteti vendégeit.\" But keep Tiroler Gröstl, Kaiserschmarrn. \"Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten – von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern.\" -> \"Az étlap gondosan válogatott ételeket kínál – klasszikus Tiroler specialitások, mint a Tiroler Gröstl és a Kaiserschmarrn, valamint nemzetközi klasszikusok között.\" \"Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten.\" -> \"A csapat különös figyelmet fordít a friss, helyi alapanyagok használatára.\" \"Das gemütliche Ambiente und der aufmerksame Service machen jeden Besuch zu einem kulinarischen Genuss.\" -> \"A kényelmes hangulat és a figyelmes kiszolgálás minden látogatást kulináris élménnyé tesz.\" \"Ob für ein romantisches Dinner, ein Geschäftsessen oder einen geselligen Abend mit Freunden – hier ist man jederzeit willkommen.\" -> \"Akár romantikus vacsorára, üzleti étkezésre vagy baráti társasági estére – itt mindig vendégül látják.\" Ensure Hungarian natural. Keep tags. Let's produce final.assistantfinal<p>Az <strong>Klausboden</strong> Tuxban egy népszerű étterem, amely gazdag étlapával és regionális vendégszeretetével kényezteti vendégeit. Az étlap gondosan válogatott ételeket kínál – klasszikus Tiroler specialitások, mint a Tiroler Gröstl és a Kaiserschmarrn, valamint nemzetközi klasszikusok között. A csapat különös figyelmet fordít a friss, helyi alapanyagok használatára. A kényelmes hangulat és a figyelmes kiszolgálás minden látogatást kulináris élménnyé tesz. Akár romantikus vacsorára, üzleti étkezésre vagy baráti társasági estére – itt mindig vendégül látják.</p>",
+  "ort": "Tux",
+  "region": "zillertal",
+  "plz": "6293",
+  "adresse": "520",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.1474987,
+    "lng": 11.7212431
+  },
+  "status": "published"
+}

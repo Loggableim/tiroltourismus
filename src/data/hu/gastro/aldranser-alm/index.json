@@ -1,0 +1,25 @@
+{
+  "name": "Aldranser Alm",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Aldranser Alm Tirolban",
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original. So we keep Tirol, Innsbruck, Kaiserschmarrn, Tiroler Gröstl. Also keep <strong>Aldranser Alm</strong> unchanged. Also keep tags <p> etc. We need to translate the rest into Hungarian. Let's produce Hungarian translation.\n\nOriginal text:\n\n<p>Das <strong>Aldranser Alm</strong> in Innsbruck ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende Atmosphäre für jeden Anlass. Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten - von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemütliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschäftliches Treffen - das <strong>Aldranser Alm</strong> heißt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service für einen rundum gelungenen Aufenthalt.</p>\n\nWe need Hungarian translation. Let's produce:\n\n<p>Az <strong>Aldranser Alm</strong> Innsbruckban egy népszerű étterem, amely vendégeit sokszínű étlapával és regionális vendégszeretetével kényezteti. A hangulat a hagyományos tiroli elemeket a modern kényelemmel ötvözi, és minden alkalomra meghívó légkört teremt. Az étlap gondosan válogatott fogásokat kínál – a klasszikus Tiroler Gröstl és Kaiserschmarrn-tól kezdve a nemzetközi klasszikusokig. A csapat különösen nagy hangsúlyt fektet a friss, helyi alapanyagok használatára a környékről. Legyen szó egy kényelmes vacsoráról kettőnek, családi ünneplésről vagy üzleti találkozóról – az <strong>Aldranser Alm</strong> szívélyesen fogadja Önt, és figyelmes kiszolgálásával biztosítja a teljesen sikeres tartózkodást.</p>\n\nCheck: keep all tags unchanged. Place names: Innsbruck, Tirol, Kaiserschmarrn, Tiroler Gröstl. We kept them. Good. Output only the translated text.assistantfinal<p>Az <strong>Aldranser Alm</strong> Innsbruckban egy népszerű étterem, amely vendégeit sokszínű étlapával és regionális vendégszeretetével kényezteti. A hangulat a hagyományos tiroli elemeket a modern kényelemmel ötvözi, és minden alkalomra meghívó légkört teremt. Az étlap gondosan válogatott fogásokat kínál – a klasszikus Tiroler Gröstl és Kaiserschmarrn-tól kezdve a nemzetközi klasszikusokig. A csapat különösen nagy hangsúlyt fektet a friss, helyi alapanyagok használatára a környékről. Legyen szó egy kényelmes vacsoráról kettőnek, családi ünneplésről vagy üzleti találkozóról – az <strong>Aldranser Alm</strong> szívélyesen fogadja Önt, és figyelmes kiszolgálásával biztosítja a teljesen sikeres tartózkodást.</p>",
+  "ort": "",
+  "region": "innsbruck",
+  "plz": "",
+  "adresse": "",
+  "telefon": "+43 681 20499402",
+  "email": "",
+  "webseite": "https://www.aldranseralm.at/",
+  "preis": "€€",
+  "tags": [
+    "gastro",
+    "regional"
+  ],
+  "koordinaten": {
+    "lat": 47.2305866,
+    "lng": 11.4877948
+  },
+  "status": "published"
+}

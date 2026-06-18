@@ -1,0 +1,382 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix } from '../../../lib/languages.js';
+
+// Localized labels for all 8 languages (DE/EN/FR/IT/ES/ZH/NL/CS)
+const LABELS = {
+  de: {
+    orte: 'Orte',
+    ort: 'Ort',
+    hoehe: 'Höhe',
+    einwohner: 'Einwohner',
+    standort: 'Standort',
+    aufDerKarte: 'Auf der Karte',
+    uebernachten: 'Übernachten',
+    unterkuenfteIn: 'Unterkünfte in',
+    unterkunft: 'Unterkunft',
+    unterkuenfte: 'Unterkünfte',
+    keineUnterkuenfte: 'Noch keine Unterkünfte in diesem Ort gelistet.',
+    alleUnterkuenfte: 'Alle Unterkünfte anzeigen',
+    gastronomie: 'Gastronomie',
+    gastroIn: 'Gastro in',
+    lokal: 'Lokal',
+    lokale: 'Lokale',
+    keineGastro: 'Noch keine Gastro in diesem Ort gelistet.',
+    alleGastro: 'Alle Gastro anzeigen',
+    sehenswuerdigkeiten: 'Sehenswürdigkeiten',
+    sehenswuerdigkeitenIn: 'Sehenswürdigkeiten in',
+    keineSehenswuerdigkeiten: 'Noch keine Sehenswürdigkeiten in diesem Ort gelistet.',
+    alleSehenswuerdigkeiten: 'Alle Sehenswürdigkeiten anzeigen',
+    weitereOrte: 'Weitere Orte',
+  },
+  en: {
+    orte: 'Towns',
+    ort: 'Town',
+    hoehe: 'Altitude',
+    einwohner: 'Population',
+    standort: 'Location',
+    aufDerKarte: 'On the Map',
+    uebernachten: 'Accommodation',
+    unterkuenfteIn: 'Accommodations in',
+    unterkunft: 'Accommodation',
+    unterkuenfte: 'Accommodations',
+    keineUnterkuenfte: 'No accommodations listed in this town yet.',
+    alleUnterkuenfte: 'View all accommodations',
+    gastronomie: 'Food & Drink',
+    gastroIn: 'Dining in',
+    lokal: 'Restaurant',
+    lokale: 'Restaurants',
+    keineGastro: 'No dining listed in this town yet.',
+    alleGastro: 'View all dining',
+    sehenswuerdigkeiten: 'Sights',
+    sehenswuerdigkeitenIn: 'Sights in',
+    keineSehenswuerdigkeiten: 'No sights listed in this town yet.',
+    alleSehenswuerdigkeiten: 'View all sights',
+    weitereOrte: 'More Towns',
+  },
+  fr: {
+    orte: 'Villes',
+    ort: 'Ville',
+    hoehe: 'Altitude',
+    einwohner: 'Population',
+    standort: 'Emplacement',
+    aufDerKarte: 'Sur la carte',
+    uebernachten: 'Hébergement',
+    unterkuenfteIn: 'Hébergements à',
+    unterkunft: 'Hébergement',
+    unterkuenfte: 'Hébergements',
+    keineUnterkuenfte: 'Aucun hébergement listé dans cette ville.',
+    alleUnterkuenfte: 'Voir tous les hébergements',
+    gastronomie: 'Gastronomie',
+    gastroIn: 'Restauration à',
+    lokal: 'Restaurant',
+    lokale: 'Restaurants',
+    keineGastro: 'Aucun restaurant listé dans cette ville.',
+    alleGastro: 'Voir tous les restaurants',
+    sehenswuerdigkeiten: 'Sites',
+    sehenswuerdigkeitenIn: 'Sites à',
+    keineSehenswuerdigkeiten: 'Aucun site listé dans cette ville.',
+    alleSehenswuerdigkeiten: 'Voir tous les sites',
+    weitereOrte: 'Autres Villes',
+  },
+  it: {
+    orte: 'Paesi',
+    ort: 'Paese',
+    hoehe: 'Altitudine',
+    einwohner: 'Popolazione',
+    standort: 'Posizione',
+    aufDerKarte: 'Sulla mappa',
+    uebernachten: 'Alloggio',
+    unterkuenfteIn: 'Alloggi a',
+    unterkunft: 'Alloggio',
+    unterkuenfte: 'Alloggi',
+    keineUnterkuenfte: 'Nessun alloggio ancora elencato in questo paese.',
+    alleUnterkuenfte: 'Vedi tutti gli alloggi',
+    gastronomie: 'Gastronomia',
+    gastroIn: 'Ristorazione a',
+    lokal: 'Ristorante',
+    lokale: 'Ristoranti',
+    keineGastro: 'Nessun ristorante ancora elencato in questo paese.',
+    alleGastro: 'Vedi tutti i ristoranti',
+    sehenswuerdigkeiten: 'Attrazioni',
+    sehenswuerdigkeitenIn: 'Attrazioni a',
+    keineSehenswuerdigkeiten: 'Nessuna attrazione ancora elencata in questo paese.',
+    alleSehenswuerdigkeiten: 'Vedi tutte le attrazioni',
+    weitereOrte: 'Altri Paesi',
+  },
+  es: {
+    orte: 'Pueblos',
+    ort: 'Pueblo',
+    hoehe: 'Altitud',
+    einwohner: 'Población',
+    standort: 'Ubicación',
+    aufDerKarte: 'En el mapa',
+    uebernachten: 'Alojamiento',
+    unterkuenfteIn: 'Alojamientos en',
+    unterkunft: 'Alojamiento',
+    unterkuenfte: 'Alojamientos',
+    keineUnterkuenfte: 'No hay alojamientos listados en este pueblo todavía.',
+    alleUnterkuenfte: 'Ver todos los alojamientos',
+    gastronomie: 'Gastronomía',
+    gastroIn: 'Gastronomía en',
+    lokal: 'Restaurante',
+    lokale: 'Restaurantes',
+    keineGastro: 'No hay restaurantes listados en este pueblo todavía.',
+    alleGastro: 'Ver todos los restaurantes',
+    sehenswuerdigkeiten: 'Atracciones',
+    sehenswuerdigkeitenIn: 'Atracciones en',
+    keineSehenswuerdigkeiten: 'No hay atracciones listadas en este pueblo todavía.',
+    alleSehenswuerdigkeiten: 'Ver todas las atracciones',
+    weitereOrte: 'Más Pueblos',
+  },
+  zh: {
+    orte: '城镇',
+    ort: '城镇',
+    hoehe: '海拔',
+    einwohner: '人口',
+    standort: '位置',
+    aufDerKarte: '在地图上',
+    uebernachten: '住宿',
+    unterkuenfteIn: '住宿在',
+    unterkunft: '住宿',
+    unterkuenfte: '住宿',
+    keineUnterkuenfte: '该城镇暂未列出住宿。',
+    alleUnterkuenfte: '查看所有住宿',
+    gastronomie: '美食',
+    gastroIn: '美食在',
+    lokal: '餐厅',
+    lokale: '餐厅',
+    keineGastro: '该城镇暂未列出餐厅。',
+    alleGastro: '查看所有餐厅',
+    sehenswuerdigkeiten: '景点',
+    sehenswuerdigkeitenIn: '景点在',
+    keineSehenswuerdigkeiten: '该城镇暂未列出景点。',
+    alleSehenswuerdigkeiten: '查看所有景点',
+    weitereOrte: '更多城镇',
+  },
+  nl: {
+    orte: 'Plaatsen',
+    ort: 'Plaats',
+    hoehe: 'Hoogte',
+    einwohner: 'Bevolking',
+    standort: 'Locatie',
+    aufDerKarte: 'Op de kaart',
+    uebernachten: 'Accommodatie',
+    unterkuenfteIn: 'Accommodaties in',
+    unterkunft: 'Accommodatie',
+    unterkuenfte: 'Accommodaties',
+    keineUnterkuenfte: 'Nog geen accommodaties vermeld in deze plaats.',
+    alleUnterkuenfte: 'Bekijk alle accommodaties',
+    gastronomie: 'Eten & Drinken',
+    gastroIn: 'Eten & drinken in',
+    lokal: 'Restaurant',
+    lokale: 'Restaurants',
+    keineGastro: 'Nog geen restaurants vermeld in deze plaats.',
+    alleGastro: 'Bekijk alle restaurants',
+    sehenswuerdigkeiten: 'Bezienswaardigheden',
+    sehenswuerdigkeitenIn: 'Bezienswaardigheden in',
+    keineSehenswuerdigkeiten: 'Nog geen bezienswaardigheden vermeld in deze plaats.',
+    alleSehenswuerdigkeiten: 'Bekijk alle bezienswaardigheden',
+    weitereOrte: 'Meer Plaatsen',
+  },
+  cs: {
+    orte: 'Města',
+    ort: 'Město',
+    hoehe: 'Nadmořská výška',
+    einwohner: 'Počet obyvatel',
+    standort: 'Poloha',
+    aufDerKarte: 'Na mapě',
+    uebernachten: 'Ubytování',
+    unterkuenfteIn: 'Ubytování v',
+    unterkunft: 'Ubytování',
+    unterkuenfte: 'Ubytování',
+    keineUnterkuenfte: 'V tomto městě zatím není uvedeno žádné ubytování.',
+    alleUnterkuenfte: 'Zobrazit všechna ubytování',
+    gastronomie: 'Gastronomie',
+    gastroIn: 'Gastronomie v',
+    lokal: 'Restaurace',
+    lokale: 'Restaurace',
+    keineGastro: 'V tomto městě zatím není uvedena žádná restaurace.',
+    alleGastro: 'Zobrazit všechny restaurace',
+    sehenswuerdigkeiten: 'Pamětihodnosti',
+    sehenswuerdigkeitenIn: 'Pamětihodnosti v',
+    keineSehenswuerdigkeiten: 'V tomto městě zatím nejsou uvedeny žádné pamětihodnosti.',
+    alleSehenswuerdigkeiten: 'Zobrazit všechny pamětihodnosti',
+    weitereOrte: 'Další města',
+  },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('orte', locale).filter(o => isPublished(o.entry));
+    for (const o of all) {
+      paths.push({ params: { locale, slug: o.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('orte', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/orte/`);
+
+const l = LABELS[locale] || LABELS.de;
+const pref = localePrefix(locale);
+
+const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+
+// Verknüpfte Unterkünfte, Gastro und Sehenswürdigkeiten in diesem Ort
+const unterkuenfteImOrt = readCollection('unterkuenfte', locale)
+  .filter(u => isPublished(u.entry) && u.entry.ort && u.entry.ort.toLowerCase() === name.toLowerCase())
+  .slice(0, 6);
+const gastroImOrt = readCollection('gastro', locale)
+  .filter(g => isPublished(g.entry) && g.entry.ort && g.entry.ort.toLowerCase() === name.toLowerCase())
+  .slice(0, 6);
+const sehenswuerdigkeitenImOrt = readCollection('sehenswuerdigkeiten', locale)
+  .filter(s => isPublished(s.entry) && s.entry.ort && s.entry.ort.toLowerCase() === name.toLowerCase())
+  .slice(0, 6);
+
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', locale, 8) : [];
+const CATEGORY_EMOJI = { sehenswuerdigkeiten: '🏛️', gastro: '🍽️', unterkuenfte: '🏨', camping: '🏕️', erlebnisse: '🎯', orte: '🏘️', events: '🎪', regionen: '🏔️' };
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: name, emoji: emoji || '🏘️' });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat,
+    lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: `${pref}/${n.collection}/${n.slug}/`,
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map', label: l.standort, title: l.aufDerKarte,
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Verwandte Orte via ersten Tag
+const relatedByTag = tags && tags.length > 0
+  ? findByTag(tags[0], locale)
+      .filter(r => r.collection === 'orte' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🏘️' }
+      }))
+  : [];
+
+// JSON-LD: TouristDestination
+const siteURL = 'https://www.tirol-tourismus.at';
+const destinationLD = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: name,
+  description: (kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}${pref}/orte/${slug}/`,
+  ...(entry.koordinaten ? {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: entry.koordinaten.lat,
+      longitude: entry.koordinaten.lng,
+    },
+  } : {}),
+  ...(entry.region ? {
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: entry.region,
+    },
+  } : {}),
+};
+---
+
+<DetailPage
+  title={name}
+  description={generateMetaDescription(entry, 'orte', locale)}
+  breadcrumbs={[{ label: l.orte, href: `${pref}/orte/` }, { label: name }]}
+  locale={locale}
+  jsonld={destinationLD}
+  sections={[
+    {
+      type: 'hero',
+      title: name,
+      subtitle: kurzbeschreibung,
+      emoji: emoji || '🏘️',
+      gradient: farbe,
+      size: 'sm',
+      bgImage: undefined,
+    },
+    {
+      type: 'facts-bar',
+      accentColor: farbe,
+      items: [
+        hoehe ? { value: hoehe, label: l.hoehe } : null,
+        einwohner ? { value: einwohner, label: l.einwohner } : null,
+      ].filter(Boolean),
+    },
+    tags && tags.length > 0 ? { type: 'tags', tags } : null,
+    mapSection,
+    unterkuenfteImOrt.length > 0 ? {
+      type: 'related-grid',
+      label: l.uebernachten,
+      title: `${l.unterkuenfteIn} ${name}`,
+      description: `${unterkuenfteImOrt.length} ${unterkuenfteImOrt.length !== 1 ? l.unterkuenfte : l.unterkunft} gefunden`,
+      entries: unterkuenfteImOrt,
+      slugPrefix: `${pref}/unterkuenfte/`,
+      nameField: 'name',
+      subtitleField: 'ort',
+      priceField: 'preis_ab',
+      emptyText: l.keineUnterkuenfte,
+      ctaHref: `${pref}/unterkuenfte/?ort=${encodeURIComponent(name)}`,
+      ctaText: l.alleUnterkuenfte,
+      accentBg: true,
+    } : null,
+    gastroImOrt.length > 0 ? {
+      type: 'related-grid',
+      label: l.gastronomie,
+      title: `${l.gastroIn} ${name}`,
+      description: `${gastroImOrt.length} ${gastroImOrt.length !== 1 ? l.lokale : l.lokal} gefunden`,
+      entries: gastroImOrt,
+      slugPrefix: `${pref}/gastro/`,
+      nameField: 'name',
+      subtitleField: 'ort',
+      emojiField: 'emoji',
+      emptyText: l.keineGastro,
+      ctaHref: `${pref}/gastro/?ort=${encodeURIComponent(name)}`,
+      ctaText: l.alleGastro,
+    } : null,
+    sehenswuerdigkeitenImOrt.length > 0 ? {
+      type: 'related-grid',
+      label: l.sehenswuerdigkeiten,
+      title: `${l.sehenswuerdigkeitenIn} ${name}`,
+      description: `${sehenswuerdigkeitenImOrt.length} ${sehenswuerdigkeitenImOrt.length !== 1 ? l.sehenswuerdigkeiten : l.sehenswuerdigkeiten} gefunden`,
+      entries: sehenswuerdigkeitenImOrt,
+      slugPrefix: `${pref}/sehenswuerdigkeiten/`,
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: 'emoji',
+      defaultEmoji: '🏛️',
+      emptyText: l.keineSehenswuerdigkeiten,
+      ctaHref: `${pref}/sehenswuerdigkeiten/?ort=${encodeURIComponent(name)}`,
+      ctaText: l.alleSehenswuerdigkeiten,
+    } : null,
+    relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: l.weitereOrte,
+      entries: relatedByTag,
+      slugPrefix: `${pref}/orte/`,
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🏘️',
+    } : null,
+  ].filter(Boolean)}
+/>

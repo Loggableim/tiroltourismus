@@ -1,0 +1,416 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import { readEntry, readCollection, isPublished, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: {
+    regionen: 'Regionen',
+    bewertung: 'Bewertung',
+    hoehe: 'Höhe',
+    flaeche: 'Fläche',
+    einwohner: 'Einwohner',
+    entdecken: 'entdecken',
+    highlights: 'Highlights',
+    uebernachten: 'Übernachten',
+    unterkunft: 'Unterkunft',
+    unterkuenfte: 'Unterkünfte',
+    unterkuenfte_im: 'Unterkünfte im',
+    keine_unterkuenfte: 'Noch keine Unterkünfte in dieser Region gelistet.',
+    alle_unterkuenfte: 'Alle Unterkünfte anzeigen',
+    orte: 'Orte',
+    ort: 'Ort',
+    orte_im: 'Orte im',
+    keine_orte: 'Noch keine Orte in dieser Region gelistet.',
+    alle_orte: 'Alle Orte anzeigen',
+    gastronomie: 'Gastronomie',
+    gastro_im: 'Gastro im',
+    lokal: 'Lokal',
+    lokale: 'Lokale',
+    keine_gastro: 'Noch keine Gastro in dieser Region gelistet.',
+    alle_gastro: 'Alle Gastro anzeigen',
+    sehenswuerdigkeiten: 'Sehenswürdigkeiten',
+    sehenswuerdigkeiten_im: 'Sehenswürdigkeiten im',
+    keine_sehenswuerdigkeiten: 'Noch keine Sehenswürdigkeiten in dieser Region gelistet.',
+    alle_sehenswuerdigkeiten: 'Alle Sehenswürdigkeiten anzeigen',
+    weitere_regionen: 'Weitere Regionen',
+  },
+  en: {
+    regionen: 'Regions',
+    bewertung: 'Rating',
+    hoehe: 'Altitude',
+    flaeche: 'Area',
+    einwohner: 'Population',
+    entdecken: 'discover',
+    highlights: 'Highlights',
+    uebernachten: 'Accommodation',
+    unterkunft: 'Accommodation',
+    unterkuenfte: 'Accommodations',
+    unterkuenfte_im: 'Accommodations in',
+    keine_unterkuenfte: 'No accommodations listed in this region yet.',
+    alle_unterkuenfte: 'View all accommodations',
+    orte: 'Towns',
+    ort: 'Town',
+    orte_im: 'Towns in',
+    keine_orte: 'No towns listed in this region yet.',
+    alle_orte: 'View all towns',
+    gastronomie: 'Food & Drink',
+    gastro_im: 'Dining in',
+    lokal: 'Restaurant',
+    lokale: 'Restaurants',
+    keine_gastro: 'No dining listed in this region yet.',
+    alle_gastro: 'View all dining',
+    sehenswuerdigkeiten: 'Sights',
+    sehenswuerdigkeiten_im: 'Sights in',
+    keine_sehenswuerdigkeiten: 'No sights listed in this region yet.',
+    alle_sehenswuerdigkeiten: 'View all sights',
+    weitere_regionen: 'More Regions',
+  },
+  fr: {
+    regionen: 'Régions',
+    bewertung: 'Note',
+    hoehe: 'Altitude',
+    flaeche: 'Superficie',
+    einwohner: 'Population',
+    entdecken: 'découvrir',
+    highlights: 'Points forts',
+    uebernachten: 'Hébergement',
+    unterkunft: 'Hébergement',
+    unterkuenfte: 'Hébergements',
+    unterkuenfte_im: 'Hébergements dans',
+    keine_unterkuenfte: 'Aucun hébergement listé dans cette région.',
+    alle_unterkuenfte: 'Voir tous les hébergements',
+    orte: 'Villes',
+    ort: 'Ville',
+    orte_im: 'Villes dans',
+    keine_orte: 'Aucune ville listée dans cette région.',
+    alle_orte: 'Voir toutes les villes',
+    gastronomie: 'Gastronomie',
+    gastro_im: 'Restauration dans',
+    lokal: 'Restaurant',
+    lokale: 'Restaurants',
+    keine_gastro: 'Aucun restaurant listé dans cette région.',
+    alle_gastro: 'Voir tous les restaurants',
+    sehenswuerdigkeiten: 'Sites',
+    sehenswuerdigkeiten_im: 'Sites dans',
+    keine_sehenswuerdigkeiten: 'Aucun site listé dans cette région.',
+    alle_sehenswuerdigkeiten: 'Voir tous les sites',
+    weitere_regionen: 'Autres Régions',
+  },
+  it: {
+    regionen: 'Regioni',
+    bewertung: 'Valutazione',
+    hoehe: 'Altitudine',
+    flaeche: 'Superficie',
+    einwohner: 'Popolazione',
+    entdecken: 'scoprire',
+    highlights: 'Punti salienti',
+    uebernachten: 'Alloggio',
+    unterkunft: 'Alloggio',
+    unterkuenfte: 'Alloggi',
+    unterkuenfte_im: 'Alloggi in',
+    keine_unterkuenfte: 'Nessun alloggio ancora elencato in questa regione.',
+    alle_unterkuenfte: 'Vedi tutti gli alloggi',
+    orte: 'Paesi',
+    ort: 'Paese',
+    orte_im: 'Paesi in',
+    keine_orte: 'Nessun paese ancora elencato in questa regione.',
+    alle_orte: 'Vedi tutti i paesi',
+    gastronomie: 'Gastronomia',
+    gastro_im: 'Ristorazione in',
+    lokal: 'Ristorante',
+    lokale: 'Ristoranti',
+    keine_gastro: 'Nessun ristorante ancora elencato in questa regione.',
+    alle_gastro: 'Vedi tutti i ristoranti',
+    sehenswuerdigkeiten: 'Attrazioni',
+    sehenswuerdigkeiten_im: 'Attrazioni in',
+    keine_sehenswuerdigkeiten: 'Nessuna attrazione ancora elencata in questa regione.',
+    alle_sehenswuerdigkeiten: 'Vedi tutte le attrazioni',
+    weitere_regionen: 'Altre Regioni',
+  },
+  es: {
+    regionen: 'Regiones',
+    bewertung: 'Valoración',
+    hoehe: 'Altitud',
+    flaeche: 'Superficie',
+    einwohner: 'Población',
+    entdecken: 'descubrir',
+    highlights: 'Destacados',
+    uebernachten: 'Alojamiento',
+    unterkunft: 'Alojamiento',
+    unterkuenfte: 'Alojamientos',
+    unterkuenfte_im: 'Alojamientos en',
+    keine_unterkuenfte: 'No hay alojamientos listados en esta región todavía.',
+    alle_unterkuenfte: 'Ver todos los alojamientos',
+    orte: 'Pueblos',
+    ort: 'Pueblo',
+    orte_im: 'Pueblos en',
+    keine_orte: 'No hay pueblos listados en esta región todavía.',
+    alle_orte: 'Ver todos los pueblos',
+    gastronomie: 'Gastronomía',
+    gastro_im: 'Gastronomía en',
+    lokal: 'Restaurante',
+    lokale: 'Restaurantes',
+    keine_gastro: 'No hay restaurantes listados en esta región todavía.',
+    alle_gastro: 'Ver todos los restaurantes',
+    sehenswuerdigkeiten: 'Atracciones',
+    sehenswuerdigkeiten_im: 'Atracciones en',
+    keine_sehenswuerdigkeiten: 'No hay atracciones listadas en esta región todavía.',
+    alle_sehenswuerdigkeiten: 'Ver todas las atracciones',
+    weitere_regionen: 'Más Regiones',
+  },
+  zh: {
+    regionen: '地区',
+    bewertung: '评分',
+    hoehe: '海拔',
+    flaeche: '面积',
+    einwohner: '人口',
+    entdecken: '探索',
+    highlights: '亮点',
+    uebernachten: '住宿',
+    unterkunft: '住宿',
+    unterkuenfte: '住宿',
+    unterkuenfte_im: '住宿在',
+    keine_unterkuenfte: '该地区暂未列出住宿。',
+    alle_unterkuenfte: '查看所有住宿',
+    orte: '城镇',
+    ort: '城镇',
+    orte_im: '城镇在',
+    keine_orte: '该地区暂未列出城镇。',
+    alle_orte: '查看所有城镇',
+    gastronomie: '美食',
+    gastro_im: '美食在',
+    lokal: '餐厅',
+    lokale: '餐厅',
+    keine_gastro: '该地区暂未列出餐厅。',
+    alle_gastro: '查看所有餐厅',
+    sehenswuerdigkeiten: '景点',
+    sehenswuerdigkeiten_im: '景点在',
+    keine_sehenswuerdigkeiten: '该地区暂未列出景点。',
+    alle_sehenswuerdigkeiten: '查看所有景点',
+    weitere_regionen: '更多地区',
+  },
+  nl: {
+    regionen: "Regio's",
+    bewertung: 'Beoordeling',
+    hoehe: 'Hoogte',
+    flaeche: 'Oppervlakte',
+    einwohner: 'Bevolking',
+    entdecken: 'ontdekken',
+    highlights: 'Hoogtepunten',
+    uebernachten: 'Accommodatie',
+    unterkunft: 'Accommodatie',
+    unterkuenfte: 'Accommodaties',
+    unterkuenfte_im: 'Accommodaties in',
+    keine_unterkuenfte: 'Nog geen accommodaties vermeld in deze regio.',
+    alle_unterkuenfte: 'Bekijk alle accommodaties',
+    orte: 'Plaatsen',
+    ort: 'Plaats',
+    orte_im: 'Plaatsen in',
+    keine_orte: 'Nog geen plaatsen vermeld in deze regio.',
+    alle_orte: 'Bekijk alle plaatsen',
+    gastronomie: 'Eten & Drinken',
+    gastro_im: 'Eten & drinken in',
+    lokal: 'Restaurant',
+    lokale: 'Restaurants',
+    keine_gastro: 'Nog geen restaurants vermeld in deze regio.',
+    alle_gastro: 'Bekijk alle restaurants',
+    sehenswuerdigkeiten: 'Bezienswaardigheden',
+    sehenswuerdigkeiten_im: 'Bezienswaardigheden in',
+    keine_sehenswuerdigkeiten: 'Nog geen bezienswaardigheden vermeld in deze regio.',
+    alle_sehenswuerdigkeiten: 'Bekijk alle bezienswaardigheden',
+    weitere_regionen: "Meer Regio's",
+  },
+  cs: {
+    regionen: 'Regiony',
+    bewertung: 'Hodnocení',
+    hoehe: 'Nadmořská výška',
+    flaeche: 'Rozloha',
+    einwohner: 'Počet obyvatel',
+    entdecken: 'objevovat',
+    highlights: 'Nejzajímavější',
+    uebernachten: 'Ubytování',
+    unterkunft: 'Ubytování',
+    unterkuenfte: 'Ubytování',
+    unterkuenfte_im: 'Ubytování v',
+    keine_unterkuenfte: 'V této oblasti zatím není uvedeno žádné ubytování.',
+    alle_unterkuenfte: 'Zobrazit všechna ubytování',
+    orte: 'Města',
+    ort: 'Město',
+    orte_im: 'Města v',
+    keine_orte: 'V této oblasti zatím nejsou uvedena žádná města.',
+    alle_orte: 'Zobrazit všechna města',
+    gastronomie: 'Gastronomie',
+    gastro_im: 'Gastronomie v',
+    lokal: 'Restaurace',
+    lokale: 'Restaurace',
+    keine_gastro: 'V této oblasti zatím není uvedena žádná restaurace.',
+    alle_gastro: 'Zobrazit všechny restaurace',
+    sehenswuerdigkeiten: 'Pamětihodnosti',
+    sehenswuerdigkeiten_im: 'Pamětihodnosti v',
+    keine_sehenswuerdigkeiten: 'V této oblasti zatím nejsou uvedeny žádné pamětihodnosti.',
+    alle_sehenswuerdigkeiten: 'Zobrazit všechny pamětihodnosti',
+    weitere_regionen: 'Další regiony',
+  },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('regionen', locale).filter((r) => isPublished(r.entry));
+    for (const r of all) {
+      paths.push({ params: { locale, slug: r.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const t = LABELS[locale] || LABELS.de;
+const pref = localePrefix(locale);
+
+const entry = readEntry('regionen', slug, locale);
+if (!entry) return Astro.redirect(`${pref}/regionen/`);
+
+const { titel, emoji, farbe, kurzbeschreibung, bewertung, beschreibung, hoehe, flaeche, einwohner, tags } = entry;
+
+const unterkuenfte = readCollection('unterkuenfte', locale).filter((u) => isPublished(u.entry) && u.entry.region === slug);
+const orte = readCollection('orte', locale).filter((o) => isPublished(o.entry) && o.entry.region === slug);
+const gastro = readCollection('gastro', locale).filter((g) => isPublished(g.entry) && g.entry.region === slug);
+const sehenswuerdigkeiten = readCollection('sehenswuerdigkeiten', locale).filter((s) => isPublished(s.entry) && s.entry.region === slug);
+
+// Verwandte Regionen via ersten Tag
+const relatedByTag = tags && tags.length > 0
+  ? findByTag(tags[0], locale)
+      .filter((r) => r.collection === 'regionen' && r.slug !== slug)
+      .slice(0, 3)
+      .map((r) => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🏔️' },
+      }))
+  : [];
+---
+
+<DetailPage
+  title={titel}
+  description={generateMetaDescription(entry, 'regionen', locale)}
+  breadcrumbs={[{ label: t.regionen, href: `${pref}/regionen/` }, { label: titel }]}
+  sections={[
+    {
+      type: 'hero',
+      title: titel,
+      subtitle: kurzbeschreibung,
+      emoji: emoji,
+      gradient: farbe,
+      size: 'sm',
+      bgImage: entry.hero_bild,
+    },
+    {
+      type: 'facts-bar',
+      accentColor: farbe,
+      items: [
+        bewertung ? { value: bewertung, suffix: '/5', label: t.bewertung } : null,
+        hoehe ? { value: hoehe, label: t.hoehe } : null,
+        flaeche ? { value: flaeche, label: t.flaeche } : null,
+        einwohner ? { value: einwohner, label: t.einwohner } : null,
+      ].filter(Boolean),
+    },
+    beschreibung
+      ? {
+          type: 'description',
+          label: `${titel} ${t.entdecken}`,
+          title: t.highlights,
+          content: autoLinkContent(beschreibung, entry, locale),
+        }
+      : null,
+    tags && tags.length > 0 ? { type: 'tags', tags: tags } : null,
+    {
+      type: 'related-grid',
+      label: t.uebernachten,
+      title: `${t.unterkuenfte_im} ${titel}`,
+      description:
+        unterkuenfte.length > 0
+          ? `${unterkuenfte.length} ${unterkuenfte.length !== 1 ? t.unterkuenfte : t.unterkunft} gefunden`
+          : undefined,
+      entries: unterkuenfte.slice(0, 6),
+      slugPrefix: `${pref}/unterkuenfte/`,
+      nameField: 'name',
+      subtitleField: 'ort',
+      priceField: 'preis_ab',
+      emptyText: t.keine_unterkuenfte,
+      ctaHref: `${pref}/unterkuenfte/?region=${slug}`,
+      ctaText: t.alle_unterkuenfte,
+      accentBg: true,
+    },
+    {
+      type: 'related-grid',
+      label: t.orte,
+      title: `${t.orte_im} ${titel}`,
+      description:
+        orte.length > 0
+          ? `${orte.length} ${orte.length !== 1 ? t.orte : t.ort} gefunden`
+          : undefined,
+      entries: orte.slice(0, 6),
+      slugPrefix: `${pref}/orte/`,
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: 'emoji',
+      emptyText: t.keine_orte,
+      ctaHref: `${pref}/orte/?region=${slug}`,
+      ctaText: t.alle_orte,
+    },
+    {
+      type: 'related-grid',
+      label: t.gastronomie,
+      title: `${t.gastro_im} ${titel}`,
+      description:
+        gastro.length > 0
+          ? `${gastro.length} ${gastro.length !== 1 ? t.lokale : t.lokal} gefunden`
+          : undefined,
+      entries: gastro.slice(0, 6),
+      slugPrefix: `${pref}/gastro/`,
+      nameField: 'name',
+      subtitleField: 'ort',
+      emojiField: 'emoji',
+      emptyText: t.keine_gastro,
+      ctaHref: `${pref}/gastro/?region=${slug}`,
+      ctaText: t.alle_gastro,
+      accentBg: true,
+    },
+    sehenswuerdigkeiten.length > 0
+      ? {
+          type: 'related-grid',
+          label: t.sehenswuerdigkeiten,
+          title: `${t.sehenswuerdigkeiten_im} ${titel}`,
+          description:
+            sehenswuerdigkeiten.length > 0
+              ? `${sehenswuerdigkeiten.length} ${sehenswuerdigkeiten.length !== 1 ? t.sehenswuerdigkeiten : t.sehenswuerdigkeiten} gefunden`
+              : undefined,
+          entries: sehenswuerdigkeiten.slice(0, 6),
+          slugPrefix: `${pref}/sehenswuerdigkeiten/`,
+          nameField: 'name',
+          subtitleField: 'ort',
+          emojiField: 'emoji',
+          defaultEmoji: '🏛️',
+          emptyText: t.keine_sehenswuerdigkeiten,
+          ctaHref: `${pref}/sehenswuerdigkeiten/?region=${slug}`,
+          ctaText: t.alle_sehenswuerdigkeiten,
+          accentBg: true,
+        }
+      : null,
+    relatedByTag.length > 0
+      ? {
+          type: 'related-grid',
+          label: t.weitere_regionen,
+          entries: relatedByTag,
+          slugPrefix: `${pref}/regionen/`,
+          nameField: 'titel',
+          subtitleField: 'kurzbeschreibung',
+          emojiField: '_emoji',
+          defaultEmoji: '🏔️',
+        }
+      : null,
+  ].filter(Boolean)}
+/>

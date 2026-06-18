@@ -9,11 +9,12 @@ export interface Props {
   farbe?: string;
   ort?: string;
   preis?: string;
+  linkPrefix?: string;
 }
-const { name, slug, kurzbeschreibung, kategorie, emoji = '🏛️', farbe = '#8B5CF6', ort, preis } = Astro.props;
+const { name, slug, kurzbeschreibung, kategorie, emoji = '🏛️', farbe = '#8B5CF6', ort, preis, linkPrefix = '/sehenswuerdigkeiten/' } = Astro.props;
 const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport: 'Sport', museum: 'Museum', kirche: 'Kirche', burg: 'Burg', wanderung: 'Wanderung' };
 ---
-<a href={`/sehenswuerdigkeiten/${slug}/`} class="sight-card" data-collection="sehenswuerdigkeiten" data-slug={slug} data-filter-card data-filter-cat={kategorie || 'all'}>
+<a href={`${linkPrefix}${slug}/`} class="sight-card" data-collection="sehenswuerdigkeiten" data-slug={slug} data-filter-card data-filter-cat={kategorie || 'all'}>
   <div class="sight-card-img" style={`position:relative;background:${farbe}18`}>
     <span class="sight-emoji">{emoji}</span>
     <FavHeart collection="sehenswuerdigkeiten" slug={slug} />

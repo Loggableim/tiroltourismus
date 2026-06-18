@@ -1,0 +1,31 @@
+{
+  "name": "Nationalpark Hohe Tauern",
+  "slug": "nationalpark-hohe-tauern",
+  "status": "published",
+  "region": "osttirol",
+  "ort": "Matrei in Osttirol",
+  "kategorie": "natur",
+  "kurzbeschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged. There are no tags in the text. Keep place names and culinary terms in German original form. The text: \"Der größte Nationalpark Österreichs mit Gletschern, Wasserfällen und einer einzigartigen alpinen Tier- und Pflanzenwelt.\" So translation: \"Az Ausztria legnagyobb nemzeti parkja, amely jéghegyekkel, vízesésekkel és egyedülálló alpesi állat- és növényvilággal rendelkezik.\" But we must keep German terms: Gletschern, Wasserfällen, Tier- und Pflanzenwelt. So we keep those words in German. So translation: \"Az Ausztria legnagyobb nemzeti parkja jéghegyekkel, vízesésekkel és egyedülálló alpesi Tier- und Pflanzenwelt.\" But we need to keep German terms in their original form. So we keep Gletschern, Wasserfällen, Tier- und Pflanzenwelt. So we can write: \"Az Ausztria legnagyobb nemzeti parkja jéghegyekkel, vízesésekkel és egyedülálló alpesi Gletschern, Wasserfällen és Tier- und Pflanzenwelt.\" But that seems unnatural. The instruction: \"Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form.\" So we should keep German terms. But we can still translate the rest. So we can say: \"Az Ausztria legnagyobb nemzeti parkja jéghegyekkel, vízesésekkel és egyedülálló alpesi Tier- und Pflanzenwelt.\" But we need to keep Gletschern, Wasserfällen. So maybe: \"Az Ausztria legnagyobb nemzeti parkja Gletschern, Wasserfällen és egyedülálló alpesi Tier- und Pflanzenwelt.\" But that is unnatural. The instruction says keep German terms in their original form. So we can embed them. So final: \"Az Ausztria legnagyobb nemzeti parkja Gletschern, Wasserfällen és egyedülálló alpesi Tier- und Pflanzenwelt.\" That seems okay. But maybe we should keep the German terms but still translate the rest: \"Az Ausztria legnagyobb nemzeti parkja jéghegyekkel, vízesésekkel és egyedülálló alpesi Tier- und Pflanzenwelt.\" But we need to keep Gletschern and Wasserfällen. So we can say: \"Az Ausztria legnagyobb nemzeti parkja Gletschern, Wasserfällen és egyedülálló alpesi Tier- und Pflanzenwelt.\" That is the best. Let's output that.assistant<|channel|>finalAz Ausztria legnagyobb nemzeti parkja Gletschern, Wasserfällen és egyedülálló alpesi Tier- und Pflanzenwelt.",
+  "beschreibung": "<p>Der <strong>Nationalpark Hohe Tauern</strong> umfasst ein Teilgebiet in der Gemeinde Matrei in Osttirol. Die Landschaft ist hochalpin geprägt und weist Gletscher, Wasserfälle sowie Almflächen auf. In Matrei befindet sich das <strong>Nationalparkhaus</strong>, das als Ausgangspunkt für Erkundungen dient und Ausstellungen bietet. Von dort führen markierte Wanderwege in verschiedene Höhenlagen. Typische Aktivitäten sind Naturbeobachtungen und geführte Touren. Die Region beherbergt unter anderem Steinböcke, Murmeltiere und Adler. Die Felbertauernstraße ermöglicht die Anreise mit dem Fahrzeug.</p>",
+  "emoji": "🌲",
+  "farbe": "#2E7D32",
+  "hoehe": "2.000–3.798 m",
+  "dauer": "Ganztag",
+  "preis": "Kostenlos (Parkeintritt); Führungen ab 15 €",
+  "tags": [
+    "nationalpark",
+    "natur",
+    "wandern",
+    "gletscher",
+    "tierschutz",
+    "wasserfall"
+  ],
+  "oeffnungszeiten": "Ganzjährig zugänglich; Besucherzentrum: täglich 9:00–18:00",
+  "webseite": "https://www.hohetauern.at",
+  "koordinaten": {
+    "lat": "47.0667",
+    "lng": "12.4167"
+  },
+  "bilder": [],
+  "hero_bild": null
+}

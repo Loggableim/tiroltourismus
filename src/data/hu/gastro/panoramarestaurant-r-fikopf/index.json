@@ -1,0 +1,24 @@
+{
+  "name": "Panoramarestaurant Rüfikopf",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate into natural Hungarian, but keep HTML tags unchanged. Keep place names and culinary terms in German original. So we keep Tirol, Innsbruck, Kaiserschmarrn etc. But the text doesn't mention Innsbruck or Kaiserschmarrn. It mentions Tirol, Südtirol, Österreich. Keep those. Also \"Panoramarestaurant Rüfikopf\" is a German name; keep it. \"Panoramarestaurant R Fikopf\" maybe a typo? The original text: \"Das <strong>Panoramarestaurant Rüfikopf</strong> in Panoramarestaurant R Fikopf bietet...\" It seems repeated. We'll keep as is. So translation: Hungarian natural. Let's produce Hungarian translation.\n\nWe must keep tags: <p>, <strong>. So output:\n\n<p>Az <strong>Panoramarestaurant Rüfikopf</strong> a Panoramarestaurant R Fikopfban egy sikeres szinergiát kínál a hagyományos Tiroli vendéglátás és a modern étteremkultúra között. A menü kreatív értelmezéseket kínál az alpesi klasszikusokról, amelyeket nemzetközi hatásokkal harmonikusan kombinálnak. Az alaposan válogatott termékkínálat a Tiroli erdők vadállat-specialitásaitól a házi süteményeknél a nagyanyák receptjei szerint terjed. Ezzel együtt kiváló borokat kínálnak a Szüdtirolból és Ausztriából. A stílusos berendezés, ízléses részletekkel, egy olyan hangulatot teremt, ahol szívesen maradsz és elhagyod a mindennapokat.</p>\n\nBut we need to keep \"Südtirol\" as German original. So \"Südtirol\" not \"Szüdtirol\". Keep \"Österreich\" as German. Keep \"Tirol\". So translation: \"Az <strong>Panoramarestaurant Rüfikopf</strong> a Panoramarestaurant R Fikopfban egy sikeres szinergiát kínál a hagyományos Tiroli vendéglátás és a modern étteremkultúra között. A menü kreatív értelmezéseket kínál az alpesi klasszikusokról, amelyeket nemzetközi hatásokkal harmonikusan kombinálnak. Az alaposan válogatott termékkínálat a Tiroli erdők vadállat-specialitásaitól a házi süteményeknél a nagyanyák receptjei szerint terjed. Ezzel együtt kiváló borokat kínálnak a Südtirolból és Österreichből. A stílusos berendezés, ízléses részletekkel, egy olyan hangulatot teremt, ahol szívesen maradsz és elhagyod a mindennapokat.\"\n\nBut we need to keep Hungarian natural. Let's refine: \"Az <strong>Panoramarestaurant Rüfikopf</strong> a Panoramarestaurant R Fikopfban egy sikeres szinergiát kínál a hagyományos Tiroli vendéglátás és a modern étteremkultúra között. A menü kreatív értelmezéseket kínál az alpesi klasszikusokról, amelyeket nemzetközi hatásokkal harmonikusan kombinálnak. Az alaposan válogatott termékkínálat a Tiroli erdők vadállat-specialitásaitól a házi süteményeknél a nagyanyák receptjei szerint terjed. Ezzel együtt kiváló borokat kínálnak a Südtirolból és Österreichből. A stílusos berendezés, ízléses részletekkel, egy olyan hangulatot teremt, ahol szívesen maradsz és elhagyod a mindennapokat.\"\n\nBut maybe \"Südtirol\" is German; keep as is. \"Österreich\" also German. So final. Ensure no extra tags.assistantfinal<p>Az <strong>Panoramarestaurant Rüfikopf</strong> a Panoramarestaurant R Fikopfban egy sikeres szinergiát kínál a hagyományos Tiroli vendéglátás és a modern étteremkultúra között. A menü kreatív értelmezéseket kínál az alpesi klasszikusokról, amelyeket nemzetközi hatásokkal harmonikusan kombinálnak. Az alaposan válogatott termékkínálat a Tiroli erdők vadállat-specialitásaitól a házi süteményeknél a nagyanyák receptjei szerint terjed. Ezzel együtt kiváló borokat kínálnak a Südtirolból és Österreichből. A stílusos berendezés, ízléses részletekkel, egy olyan hangulatot teremt, ahol szívesen maradsz és elhagyod a mindennapokat.</p>",
+  "ort": "",
+  "region": "ausserfern",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro"
+  ],
+  "koordinaten": {
+    "lat": 47.2022608,
+    "lng": 10.1662722
+  },
+  "status": "published"
+}

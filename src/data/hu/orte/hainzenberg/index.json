@@ -1,0 +1,52 @@
+{
+  "name": "Hainzenberg",
+  "slug": "hainzenberg",
+  "region": "zillertal",
+  "kurzbeschreibung": "A Zillertal felett trónoló Bergweiler hagyományos farmokkal és lélegzetelállító völgykitekettel.",
+  "emoji": "🌲",
+  "farbe": "#2E8B57",
+  "hoehe": "910 m",
+  "einwohner": "750",
+  "tags": [
+    "ruhe",
+    "natur",
+    "wandern"
+  ],
+  "status": "published",
+  "bezirk": "schwaz",
+  "bilder": [
+    {
+      "url": "/images/orte/hainzenberg/hero_1.svg",
+      "alt": "Hainzenberg — Visual"
+    }
+  ],
+  "hero_bild": "/images/orte/hainzenberg/hero_1.svg",
+  "koordinaten": {
+    "lat": "47.2182",
+    "lng": "11.9000"
+  },
+  "beschreibung": "<p>Hoch über dem Zillertal thront der idyllische Bergweiler Hainzenberg auf 910 Metern – ein Ort für alle, die Ruhe, Natur und ursprüngliches Tiroler Leben lieben. Die traditionellen, liebevoll gepflegten Bauernhöfe prägen das Ortsbild und erzählen von einer langen Geschichte der Alpwirtschaft. Von hier aus eröffnet sich ein atemberaubender Talblick, der weit über das grüne Zillertal bis zu den schneebedeckten Gipfeln reicht. Besonders eindrucksvoll ist dieses Panorama in den frühen Morgenstunden, wenn die Sonne die Gipfel in goldenes Licht taucht, oder am Abend, wenn die Lichter des Tales zu funkeln beginnen.</p><p>Rund um Hainzenberg laden gut markierte Wanderwege zu ausgedehnten Touren ein – durch dichte Wälder, über blühende Almwiesen und hinauf zu einsamen Aussichtspunkten. Die reine Bergluft und die Stille der Natur machen jeden Schritt zu einem Genuss. Hier gibt es keinen Durchgangsverkehr, nur das leise Summen der Insekten und das Glöckchen der Kühe auf den Weiden. Der Ort ist ein idealer Ausgangspunkt für Wanderungen in die umliegenden Seitentäler oder auch für entspannte Spaziergänge entlang alter Bauernwege.</p><p>Doch Hainzenberg ist mehr als nur ein Flecken Erde – es ist ein Rückzugsort, der die Seele baumeln lässt. Wer hierherkommt, taucht ein in eine Welt, in der die Zeit noch anders tickt. Die herzliche Gastfreundschaft der Einheimischen in den urigen Gasthöfen und auf den Bauernhöfen rundet den Aufenthalt ab. Egal ob Sie als Wanderer, Naturliebhaber oder Erholungssuchender reisen – Hainzenberg heißt Sie mit offenen Armen willkommen und verspricht unvergessliche Momente hoch über dem Trubel des Tales.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Wallfahrtskirche Maria Rast",
+      "beschreibung": "Barocke Wallfahrtskirche in Hainzenberg mit reicher Ausstattung und idyllischer Lage.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Erlebnisberg Spieljoch",
+      "beschreibung": "Familienfreundlicher Berg in der Nähe mit Sommerrodelbahn, Wanderwegen und Bergrestaurant.",
+      "typ": "ausflug"
+    },
+    {
+      "name": "Zillertaler Höhenstraße",
+      "beschreibung": "Panoramastraße durch die Zillertaler Alpen mit atemberaubenden Ausblicken auf Gletscher und Täler.",
+      "typ": "natur"
+    },
+    {
+      "name": "Heimatmuseum Strass im Zillertal",
+      "beschreibung": "Regionalmuseum im Nachbarort, das bäuerliches Leben und Handwerk der Zillertaler Geschichte zeigt.",
+      "typ": "kultur"
+    }
+  ],
+  "kategorie": "dorf"
+}

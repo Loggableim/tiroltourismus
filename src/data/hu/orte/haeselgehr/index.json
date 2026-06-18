@@ -1,0 +1,58 @@
+{
+  "name": "Häselgehr",
+  "slug": "haeselgehr",
+  "region": "ausserfern",
+  "kurzbeschreibung": "Häselgehr im Lechtal meggyőződik barokk templomával, történelmi farmokkal és egy épségben megőrzött természeti tájjal, amely ideális a nyugodt felfedezéshez.",
+  "emoji": "🏘️",
+  "farbe": "#CD853F",
+  "hoehe": "1.007 m",
+  "einwohner": "700",
+  "tags": [
+    "ruhe",
+    "natur",
+    "wandern",
+    "familie"
+  ],
+  "status": "published",
+  "bezirk": "reutte",
+  "bilder": [
+    {
+      "url": "/images/orte/haeselgehr/hero_1.svg",
+      "alt": "Häselgehr — Visual"
+    }
+  ],
+  "hero_bild": "/images/orte/haeselgehr/hero_1.svg",
+  "koordinaten": {
+    "lat": "47.2945",
+    "lng": "10.4892"
+  },
+  "beschreibung": "<p>Willkommen in Häselgehr, einem verborgenen Juwel im Lechtal, das mit seiner unberührten Natur und tiefen Ruhe verzaubert. Eingebettet in die majestätische Bergkulisse des Außerferns, bietet dieser Ort die perfekte Kulisse für Familien, die dem Alltag entfliehen und die Seele baumeln lassen möchten. Die prächtige barocke Pfarrkirche St. Michael, ein Meisterwerk des Rokoko, und die liebevoll gepflegten historischen Bauernhöfe erzählen von einer langen, lebendigen Tradition und laden zu kulturellen Erkundungen ein.</p><p>Doch das wahre Highlight ist die intakte Naturlandschaft: Von Häselgehr aus führen sanfte Wanderwege durch duftende Almwiesen, vorbei an rauschenden Bächen und hinauf zu atemberaubenden Aussichtspunkten. Der nahe gelegene Lechweg, ein echter Geheimtipp für Genusswanderer, schlängelt sich entlang des wilden Lechs und belohnt mit unvergesslichen Panoramablicken auf die Allgäuer und Lechtaler Alpen. Hier finden Kinder und Erwachsene gleichermaßen ihr Glück, ob beim Spielen im Grünen, beim Entdecken seltener Pflanzen oder beim Lauschen der Stille, die nur von Vogelgezwitscher unterbrochen wird.</p><p>Was Häselgehr so besonders macht, ist die harmonische Verbindung von ursprünglichem Charme und herzlicher Gastfreundschaft. Abseits von Massentourismus können Sie hier die Zeit vergessen, die frische Bergluft einatmen und intensive Momente der Ruhe genießen. Ob Sie eine erholsame Auszeit zu zweit suchen oder einen unvergesslichen Familienurlaub planen – Häselgehr heißt Sie willkommen mit offenen Armen und einer Landschaft, die Sie immer wieder neu entdecken werden.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Häselgehrer Wasserfall",
+      "beschreibung": "Natürlicher Wasserfall im Lechtal, umgeben von steilen Felswänden und Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Pfarrkirche Hl. Leonhard",
+      "beschreibung": "Barocke Dorfkirche mit sehenswertem Freskenschmuck und exponiertem Standort.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Ruine Ehrenberg",
+      "beschreibung": "Mittelalterliche Burganlage oberhalb von Reutte mit Aussicht über das Lechtal.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Lechfall",
+      "beschreibung": "Spektakulärer Wasserfall des Lechs an der Grenze zu Bayern mit Aussichtsplattform.",
+      "typ": "natur"
+    },
+    {
+      "name": "Alpentherme Ehrenberg",
+      "beschreibung": "Moderne Thermen- und Saunalandschaft mit Blick auf die Burgenwelt Ehrenberg.",
+      "typ": "ausflug"
+    }
+  ],
+  "kategorie": "marktgemeinde"
+}

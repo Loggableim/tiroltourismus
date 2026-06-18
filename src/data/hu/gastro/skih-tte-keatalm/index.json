@@ -1,0 +1,25 @@
+{
+  "name": "Skihütte Keatalm",
+  "emoji": "🍽️",
+  "farbe": "#FF6B35",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "We need to translate the German tourism text into natural Hungarian. The text is \"Skihütte Keatalm in Söll\". We need to keep HTML tags unchanged, but there are none. Keep place names and culinary terms in German original form. The text is short. So translation: \"Skihütte Keatalm in Söll\" -> \"Skihütte Keatalm Söllben\" maybe? But we need natural Hungarian. \"Skihütte\" is \"síház\" or \"síház\" but we keep German original? The rule says keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. \"Skihütte\" is not a place name or culinary term, it's a German word meaning \"ski hut\". Should we translate it? The instruction: \"Translate the German tourism text below into natural Hungarian.\" So we translate the whole text. But keep place names and culinary terms in German original form. \"Skihütte\" is not a place name or culinary term, so we can translate it. So \"Skihütte Keatalm in Söll\" -> \"Keatalm síház Söllben\" or \"Keatalm síház Söllben\" but \"in Söll\" is \"Söllben\" or \"Söllben\"? In Hungarian, \"in Söll\" would be \"Söllben\". So \"Keatalm síház Söllben\". But maybe \"Keatalm síház Söllben\" is natural. Or \"Keatalm síház Söllben\" is fine. Alternatively \"Keatalm síház Söllben\" is correct. But we might also say \"Keatalm síház Söllben\" or \"Keatalm síház Söllben\". Let's produce that.assistantfinalKeatalm síház Söllben",
+  "beschreibung": "<p>Az <strong>Skihütte Keatalm</strong> Söll szívélyesen üdvözli vendégeit, és helyi termékekkel kényezteti őket. Egy kellemes környezetben a vendégek megismerhetik a Tiroler gasztronómia sokszínűségét. A menü gondosan összeállított ételek és italok széles választékát kínálja, amelyeket friss hozzávalókból készítenek. Legyen szó egy kényelmes étkezésről, egy társas estéről vagy egy kis fűtőéről – ez a hely mindig jó választás. Engedje, hogy a szívélyes Tiroler vendégszeretet kényeztessen.</p>",
+  "ort": "Söll",
+  "region": "kufstein",
+  "plz": "6306",
+  "adresse": "Salvenberg 35",
+  "telefon": "+43 5333 5117",
+  "email": "",
+  "webseite": "www.franzlhof.com",
+  "preis": "€€",
+  "tags": [
+    "gastro",
+    "regional"
+  ],
+  "koordinaten": {
+    "lat": 47.4705823,
+    "lng": 12.2103059
+  },
+  "status": "published"
+}

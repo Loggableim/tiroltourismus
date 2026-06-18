@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import CampingCard from '../../../components/CampingCard.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
+
+const labels = {
+  title: { de: 'Campingplätze in Tirol', en: 'Camping in Tyrol', fr: 'Camping au Tyrol', it: 'Campeggi in Tirolo', es: 'Camping en Tirol', zh: '蒂罗尔露营', nl: 'Campings in Tirol', cs: 'Kempy v Tyrolsku' },
+  desc: { de: 'Entdecke die schönsten Campingplätze in Tirol. Von Alpencamping bis Zeltplatz – Dein Platz in der Natur.', en: 'Discover the most beautiful campsites in Tyrol. From alpine camping to tent pitches – your spot in nature.', fr: 'Découvrez les plus beaux campings du Tyrol. Du camping alpin aux emplacements de tentes – votre place dans la nature.', it: 'Scopri i campeggi più belli del Tirolo. Dal campeggio alpino alle piaze per tende – il tuo posto in natura.', es: 'Descubre los campings más bellos de Tirol. Desde camping alpino hasta parcelas para tiendas – tu lugar en la naturaleza.', zh: '发现蒂罗尔最美丽的露营地。从高山露营到帐篷营地——你在自然中的位置。', nl: 'Ontdek de mooiste campings in Tirol. Van alpiencamping tot tentplekken – jouw plek in de natuur.', cs: 'Objevte nejkrásnější kempy v Tyrolsku. Od alpského kempování po stanoviště – vaše místo v přírodě.' },
+  heroSub: { de: 'Von Alpencamping mit Bergpanorama bis zu familienfreundlichen Plätzen am See – hier findest Du Deinen Stellplatz in der Natur.', en: 'From alpine camping with mountain panoramas to family-friendly sites by the lake – find your pitch in nature.', fr: 'Du camping alpin avec panorama montagneux aux emplacements familiaux au bord du lac – trouvez votre place dans la nature.', it: 'Dal campeggio alpino con panorama montano ai siti familiari in riva al lago – trova il tuo posto in natura.', es: 'Desde camping alpino con panorama de montaña hasta sitios familiares junto al lago – encuentra tu lugar en la naturaleza.', zh: '从山景高山露营到湖边家庭友好营地——在自然中找到您的位置。', nl: 'Van alpiencamping met bergpanorama tot familiesites aan het meer – vind jouw plek in de natuur.', cs: 'Od alpského kempování s horským panorama po rodinné kempy u jezera – najděte své místo v přírodě.' },
+  sectionLabel: { de: 'Übernachten in der Natur', en: 'Sleeping Under the Stars', fr: 'Dormir en Plein Air', it: 'Dormire all\'Aperto', es: 'Dormir al Aire Libre', zh: '在星空下入睡', nl: 'Slapen in de Natuur', cs: 'Spaní v přírodě' },
+  sectionTitle: { de: 'Campingplätze in Tirol', en: 'Camping in Tyrol', fr: 'Camping au Tyrol', it: 'Campeggi in Tirolo', es: 'Camping en Tirol', zh: '蒂罗尔露营', nl: 'Campings in Tirol', cs: 'Kempy v Tyrolsku' },
+  campingCount: { de: 'Campingplätze', en: 'campsites', fr: 'campings', it: 'campeggi', es: 'campings', zh: '露营地', nl: 'campings', cs: 'kempy' },
+  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '一览', nl: 'In één oogopslag', cs: 'Na první pohled' },
+  emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
+  emptyText: { de: 'Campingplätze werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Campsites are being added. Check back soon!', fr: 'Les campings sont en cours d\'ajout. Revenez bientôt!', it: 'I campeggi sono in fase di inserimento. Torna presto!', es: 'Los campings se están añadiendo. ¡Vuelve pronto!', zh: '露营地正在添加中。请稍后再来查看！', nl: 'Campings worden momenteel toegevoegd. Kom snel terug!', cs: 'Kempy se právě přidávají. Podívejte se brzy znovu!' },
+};
+
+const camping = readCollection('camping', locale).filter(c => isPublished(c.entry));
+const campingMitCoords = camping.filter(c => c.entry.koordinaten?.lat && c.entry.koordinaten?.lng);
+
+const byRegion = {};
+for (const c of camping) {
+  const region = c.entry.region || 'sonstige';
+  if (!byRegion[region]) byRegion[region] = [];
+  byRegion[region].push(c);
+}
+const regionNames = {
+  ausserfern: 'Außerfern', achensee: 'Achensee', arlberg: 'Arlberg', imst: 'Imst',
+  innsbruck: 'Innsbruck', 'innsbruck-land': 'Innsbruck-Land', kitzbuehel: 'Kitzbühel',
+  kufstein: 'Kufstein', landeck: 'Landeck', oetztal: 'Ötztal', osttirol: 'Osttirol',
+  schwaz: 'Schwaz', stubaital: 'Stubaital', zillertal: 'Zillertal', sonstige: 'Weitere Regionen',
+};
+const sortedRegions = Object.keys(byRegion).sort((a, b) => {
+  if (a === 'sonstige') return 1;
+  if (b === 'sonstige') return -1;
+  return (regionNames[a] || a).localeCompare(regionNames[b] || b);
+});
+
+const siteURL = 'https://www.tirol-tourismus.at';
+const campingItemList = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
+  url: `${siteURL}${pref}/camping/`,
+  numberOfItems: camping.length,
+  itemListElement: camping.slice(0, 30).map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.entry.name, url: `${siteURL}${pref}/camping/${c.slug}/` })),
+};
+---
+
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={campingItemList}>
+  <main>
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href={pref || '/'}>Startseite</a><span class="sep">›</span><span>{t(labels.title)}</span>
+      </div>
+    </div>
+
+    <section class="page-header">
+      <div class="container">
+        <h1 class="reveal">{t(labels.title)}</h1>
+        <p class="reveal r2">{t(labels.heroSub)}</p>
+      </div>
+    </section>
+
+    {campingMitCoords.length > 0 && (
+      <SectionMap
+        markers={campingMitCoords.map(c => ({
+          lat: c.entry.koordinaten.lat, lng: c.entry.koordinaten.lng,
+          label: c.entry.name, emoji: '🏕️',
+          href: `${pref}/camping/${c.slug}/`, category: 'camping',
+        }))}
+        label={`${campingMitCoords.length} ${t(labels.campingCount)}`}
+        title={t(labels.mapTitle)}
+        height="380px" scrollWheelZoom={true} filterable={true}
+      />
+    )}
+
+    {camping.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={`🏕️ ${camping.length} ${t(labels.campingCount)}`} />
+          {sortedRegions.map(region => {
+            const items = byRegion[region];
+            return (
+              <div class="region-group">
+                <h2 class="region-title">{regionNames[region] || region} <span class="region-count">({items.length})</span></h2>
+                <div class="cp-grid">
+                  {items.map(c => (
+                    <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} region={c.entry.region} preis_ab={c.entry.preis_ab} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🏕️</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(labels.emptyText)}</p>
+        </div>
+      </section>
+    )}
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .page-header{position:relative;padding:60px 0 40px;text-align:center;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
+  .page-header h1{font-family:var(--font-display);font-size:clamp(42px,6vw,80px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .page-header p{font-size:15px;color:var(--text2);max-width:480px;margin:0 auto}
+  .cp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media(max-width:968px){.cp-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:550px){.cp-grid{grid-template-columns:1fr}}
+  .region-group{margin-bottom:48px}
+  .region-title{font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--glass-border);color:var(--text)}
+  .region-count{font-size:16px;color:var(--text3);font-weight:400}
+</style>

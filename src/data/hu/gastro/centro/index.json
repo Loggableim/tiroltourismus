@@ -1,0 +1,25 @@
+{
+  "name": "centro",
+  "emoji": "☕",
+  "farbe": "#FF6B35",
+  "kategorie": "cafe",
+  "kurzbeschreibung": null,
+  "beschreibung": "We need to translate into natural Hungarian, keep HTML tags unchanged, keep place names and culinary terms in German original form. So we keep Tirol, Kitzbühel, Kaiserschmarrn, etc. The text: \"Das centro in Kitzbühel lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen. Italienische Küche mit authentischen Rezepten und mediterranen Zutaten – ein Hauch von Dolce Vita in Tirol.\"\n\nWe need Hungarian translation. Keep tags <p>, <strong>. Keep \"centro\" as is? It's German word \"centro\" maybe Spanish? But keep as is. \"Kitzbühel\" keep. \"Café-Konditorei\" keep? It's German. But we can keep as is. \"Kaiserschmarrn\" not present. \"Baristi\" keep. \"Tirol\" keep. \"Dolce Vita\" keep. So translation: \"A <strong>centro</strong> Kitzbühelben egy élvezetes szünetet kínál. A stílusos Café-Konditorei gazdag választékát kínálja saját készítésű tortákkal, süteményekkel és édes specialitásokkal. Minden darabot nagy szeretettel és részletekre való odafigyeléssel készítenek, és művészien mutatják be. Ezzel párhuzamosan kiváló kávéspecialitásokat kínálnak, amelyeket tapasztalt baristi tökéletesen készít el. A kényelmes hangulat, a bájos belső tér meghív a pihenésre és élvezetre. Akár reggelire, délutáni kávéra vagy egy kis snackre – itt otthon érezheted magad. Olasz konyha hiteles receptekkel és mediterrán alapanyagokkal – egy csipet Dolce Vita Tirolban.\"\n\nWe must keep tags unchanged. So output: <p> ... </p>. Ensure Hungarian natural. Use \"Kitzbühelben\" maybe \"Kitzbühelben\" is correct. \"Café-Konditorei\" keep. \"Baristi\" keep. \"Tirol\" keep. \"Dolce Vita\" keep. Also \"Tirol\" maybe \"Tirol\" keep. So final.<p>A <strong>centro</strong> Kitzbühelben egy élvezetes szünetet kínál. A stílusos Café-Konditorei saját készítésű tortákkal, süteményekkel és édes specialitásokkal várja vendégeit. Minden darabot nagy szeretettel és részletekre való odafigyeléssel készítenek, és művészien mutatják be. Ezzel párhuzamosan kiváló kávéspecialitásokat kínálnak, amelyeket tapasztalt baristi tökéletesen készít el. A kényelmes hangulat, a bájos belső tér meghív a pihenésre és élvezetre. Akár reggelire, délutáni kávéra vagy egy kis snackre – itt otthon érezheted magad. Olasz konyha hiteles receptekkel és mediterrán alapanyagokkal – egy csipet Dolce Vita Tirolban.</p>",
+  "ort": "",
+  "region": "kitzbuehel",
+  "plz": "",
+  "adresse": "",
+  "telefon": "",
+  "email": "",
+  "webseite": "",
+  "preis": "€€",
+  "tags": [
+    "gastro",
+    "italian"
+  ],
+  "koordinaten": {
+    "lat": 47.4467512,
+    "lng": 12.390692
+  },
+  "status": "published"
+}

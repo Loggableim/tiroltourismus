@@ -120,7 +120,7 @@ function formatDate(d) {
   catch { return d; }
 }
 ---
-<BaseLayout title="tiroltourismus.com – Das offizielle Tourismusportal" description="Das offizielle Tourismusportal für Tirol. Berge, Täler, Genuss – entdecken Sie die Vielfalt der Alpen.">
+<BaseLayout title="tiroltourismus.com – Der smarte Tirol-Guide" description="Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse – entdecken Sie die Vielfalt der Alpen.">
   <main>
     <!-- ═══ HERO ═══ -->
     <section class="hero" aria-label="Hero">
@@ -265,7 +265,7 @@ function formatDate(d) {
     <section class="section" id="regionen" aria-label="Regionen">
       <div class="container">
         <SectionHeader label="#regionen" title="Unsere Regionen" sub="Ein Land, unendlich viele Gesichter. Jede Region Tirols hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals." />
-        <p class="regionen-lead">Egal ob actionreiche Tage im Zillertal, kulinarische Genussmomente im Stubaital oder luxuriöse Auszeiten in Kitzbühel – hier finden Sie Ihre perfekte Region. Jede Destination in unserem Portal wurde kuratiert, bewertet und mit persönlichen Beschreibungen versehen.</p>
+        <p class="regionen-lead">Egal ob actionreiche Tage im Zillertal, kulinarische Genussmomente im Stubaital oder luxuriöse Auszeiten in Kitzbühel – hier finden Sie Ihre perfekte Region. Jede Destination in unserem Portal wird mit liebevollen Beschreibungen vorgestellt.</p>
         <div class="section-grid">
           {regionen.map(r => (
             <RegionCard titel={r.entry.titel} slug={r.slug} beschreibung={r.entry.kurzbeschreibung} emoji={r.entry.emoji} bewertung={r.entry.bewertung} farbe={r.entry.farbe} featured={r.entry.featured} />
@@ -301,8 +301,8 @@ function formatDate(d) {
     <!-- ═══ UNTERKÜNFTE ═══ -->
     <section class="section" id="unterkuenfte" aria-label="Unterkünfte">
       <div class="container">
-        <SectionHeader label="#unterkuenfte" title="Top Unterkünfte" sub="Handverlesene Hotels, Ferienwohnungen und Bauernhöfe – für jeden Geschmack und jedes Budget." />
-        <p class="section-lead">Unsere Redaktion testet und bewertet jede Unterkunft persönlich. Gold-gekennzeichnete Häuser bieten das besondere Extra mit Stil und erstklassigem Service. Silber steht für exzellentes Preis-Leistungs-Verhältnis, Basic für charmant und erschwinglich.</p>
+        <SectionHeader label="#unterkuenfte" title="Top Unterkünfte" sub="Ausgewählte Hotels, Ferienwohnungen und Bauernhöfe – für jeden Geschmack und jedes Budget." />
+        <p class="section-lead">Jede Unterkunft wurde sorgfältig für dich ausgewählt. Gold-gekennzeichnete Häuser bieten das besondere Extra mit Stil und erstklassigem Service. Silber steht für exzellentes Preis-Leistungs-Verhältnis, Basic für charmant und erschwinglich.</p>
         <div class="section-grid" id="unterkunftGrid">
           {top3Unterkuenfte.length > 0 ? top3Unterkuenfte.map(u => (
             <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} />
@@ -373,9 +373,9 @@ function formatDate(d) {
         <div class="partner-grid">
           <div class="partner-text reveal r1">
             <h2>Partner <span>werden</span></h2>
-            <p>Zeige Deine Unterkunft, Dein Event oder Dein Angebot auf dem modernsten Tourismusportal der Alpen. Mit KI-gestützten Empfehlungen, intelligenter Suche und einer wachsenden Community von über 50.000 begeisterten Tirol-Fans.</p>
+            <p>Zeige Deine Unterkunft, Dein Event oder Dein Angebot auf tiroltourismus.com. Mit KI-gestützten Empfehlungen, intelligenter Suche und einer wachsenden Community.</p>
             <div class="partner-benefits">
-              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sichtbarkeit bei 50k+ Visitors</div>
+              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sichtbarkeit bei tausenden Visitors</div>
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kostenlose Einträge</div>
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Social-Media-Boost</div>
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Exklusive Events</div>

@@ -1,0 +1,23 @@
+{
+  "name": "Oberhofen im Inntal",
+  "slug": "oberhofen",
+  "region": "innsbruck",
+  "kurzbeschreibung": "We need to translate the German text into natural Hungarian, but keep HTML tags unchanged. There are no HTML tags in the text. Keep place names and culinary terms in German original form. The text: \"Freundliche Gemeinde im Inntal mit dem blauen Badesee Oberhofen und naturnahem Wohnen zwischen Inn und Autobahn.\"\n\nWe translate: \"Barátságos közösség az Inntalban a kék fürdőtó, Oberhofen és a természetközeli élet az Inn és az autópálya között.\" But we need to keep place names in German original: \"Oberhofen\" is a place name, keep it. \"Inntal\" is a place name, keep it. \"Inn\" is a river, keep it. \"Autobahn\" is a German word, but it's a place name? It's a German word for highway. The instruction: Keep all place names (Tirol, Innsbruck, etc.) and culinary terms (Kaiserschmarrn, etc.) in their German original form. \"Autobahn\" is a German word but not a place name. But it's a term. The instruction says keep culinary terms in German original form. \"Autobahn\" is not a culinary term. Should we translate it? It's a German word meaning highway. In Hungarian, \"autobahn\" is \"autópálya\". The instruction only says keep place names and culinary terms. \"Autobahn\" is not a place name or culinary term. So we can translate it. So \"Autobahn\" -> \"autópálya\". \"Inn\" is a river, keep it. \"Inntal\" is a place name, keep it. \"Oberhofen\" is a place name, keep it. \"blauen Badesee\" -> \"kék fürdőtó\". But \"Badesee\" is a German word meaning \"bath lake\". In Hungarian, \"fürdőtó\" is correct. \"blauen\" is \"kék\". \"Freundliche Gemeinde\" -> \"barátságos közösség\". \"naturnahem Wohnen\" -> \"természetközeli élet\". \"zwischen Inn und Autobahn\" -> \"az Inn és az autópálya között\". So final: \"Barátságos közösség az Inntalban a kék fürdőtó, Oberhofen és a természetközeli élet az Inn és az autópálya között.\" Wait, we need to keep \"Oberhofen\" as is. Also \"Inntal\" as is. So: \"Barátságos közösség az Inntalban a kék fürdőtó, Oberhofen és a természetközeli élet az Inn és az autópálya között.\" That seems correct. Ensure no extra punctuation. The original had \"Freundliche Gemeinde im Inntal mit dem blauen Badesee Oberhofen und naturnahem Wohnen zwischen Inn und Autobahn.\" So we can keep the same structure: \"Barátságos közösség az Inntalban a kék fürdőtó, Oberhofen és a természetközeli élet az Inn és az autópálya között.\" Good.assistantfinalBarátságos közösség az Inntalban a kék fürdőtó, Oberhofen és a természetközeli élet az Inn és az autópálya között.",
+  "emoji": "🏘️",
+  "farbe": "#BDB76B",
+  "hoehe": "622 m",
+  "einwohner": "1.900",
+  "tags": [
+    "ruhe",
+    "natur",
+    "familie"
+  ],
+  "status": "published",
+  "bezirk": "innsbruck-land",
+  "bilder": [],
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.3015",
+    "lng": "11.0952"
+  }
+}

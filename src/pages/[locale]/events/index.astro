@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import EventCard from '../../../components/EventCard.astro';
+import SectionMap from '../../../sections/SectionMap.astro';
+import { readCollection, isPublished } from '../../../lib/content.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return LANGUAGES_READY.filter((locale) => locale !== 'de').map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params;
+const t = (map) => map[locale] || map[DEFAULT_LOCALE] || '';
+const pref = localePrefix(locale);
+
+const labels = {
+  title: { de: 'Events in Tirol', en: 'Events in Tyrol', fr: 'Événements au Tyrol', it: 'Eventi in Tirolo', es: 'Eventos en Tirol', zh: '蒂罗尔活动', nl: 'Evenementen in Tirol', cs: 'Akce v Tyrolsku' },
+  desc: { de: 'Events in Tirol: Konzerte, Sport, Kultur, Feste und kulinarische Highlights – der Event-Kalender.', en: 'Events in Tyrol: Concerts, Sports, Culture, Festivals and culinary highlights – the event calendar.', fr: 'Événements au Tyrol: Concerts, Sport, Culture, Fêtes et points forts gastronomiques – le calendrier des événements.', it: 'Eventi in Tirolo: Concerti, Sport, Cultura, Feste e highlight gastronomici – il calendario degli eventi.', es: 'Eventos en Tirol: Conciertos, Deportes, Cultura, Fiestas y destacados gastronómicos – el calendario de eventos.', zh: '蒂罗尔活动：音乐会、体育、文化、节日和美食亮点——活动日历。', nl: 'Evenementen in Tirol: Concerten, Sport, Culture, Feesten en culinaire hoogtepunten – de evenementenkalender.', cs: 'Akce v Tyrolsku: Koncerty, Sport, Kultura, Festivaly a gastronomické hightlighty – kalendář akcí.' },
+  sectionLabel: { de: 'Event-Kalender', en: 'Event Calendar', fr: 'Calendrier des Événements', it: 'Calendario Eventi', es: 'Calendario de Eventos', zh: '活动日历', nl: 'Evenementenkalender', cs: 'Kalendář akcí' },
+  sectionTitle: { de: 'Anstehende Events', en: 'Upcoming Events', fr: 'Événements à Venir', it: 'Prossimi Eventi', es: 'Próximos Eventos', zh: '即将举行的活动', nl: 'Aankomende Evenementen', cs: 'Nadcházející akce' },
+  sectionSub: { de: 'Alle Termine auf einen Blick – von Bergfesten bis zu Gourmet-Erlebnissen.', en: 'All dates at a glance – from mountain festivals to gourmet experiences.', fr: 'Toutes les dates en un coup d\'œil – des festivals de montagne aux expériences gastronomiques.', it: 'Tutte le date a colpo d\'occhio – dai festival di montagna alle esperienze gastronomiche.', es: 'Todas las fechas de un vistazo – desde festivales de montaña hasta experiencias gastronómicas.', zh: '所有日期一览——从山地节到美食体验。', nl: 'Alle data in een oogopslag – van bergfestivals tot gourmet-ervaringen.', cs: 'Všechny termín na první pohled – od horských festivalů po gourmet zážitky.' },
+  mapTitle: { de: 'Auf einen Blick', en: 'At a Glance', fr: 'En un Coup d\'Œil', it: 'A Colpo d\'Occhio', es: 'De un Vistazo', zh: '一览', nl: 'In één oogopslag', cs: 'Na první pohled' },
+  emptyTitle: { de: 'Bald verfügbar', en: 'Coming Soon', fr: 'Bientôt disponible', it: 'Presto disponibile', es: 'Próximamente', zh: '即将上线', nl: 'Binnenkort beschikbaar', cs: 'Brzy k dispozici' },
+  emptyText: { de: 'Events werden aktuell eingepflegt. Schau bald wieder vorbei!', en: 'Events are being added. Check back soon!', fr: 'Les événements sont en cours d\'ajout. Revenez bientôt!', it: 'Gli eventi sono in fase di inserimento. Torna presto!', es: 'Los eventos se están añadiendo. ¡Vuelve pronto!', zh: '活动正在添加中。请稍后再来查看！', nl: 'Evenementen worden momenteel toegevoegd. Kom snel terug!', cs: 'Akce se právě přidávají. Podívejte se brzy znovu!' },
+  ctaSubmit: { de: '+ Eigenes Event eintragen', en: '+ Submit your event', fr: '+ Soumettre votre événement', it: '+ Inserisci il tuo evento', es: '+ Enviar tu evento', zh: '提交您的活动', nl: '+ Dien je evenement in', cs: '+ Přidejte svou akci' },
+  ctaPublish: { de: '🎪 Kostenlos eintragen', en: '🎪 Submit for free', fr: '🎪 Soumettre gratuitement', it: '🎪 Inserisci gratuitamente', es: '🎪 Enviar gratis', zh: '🎪 免费提交', nl: '🎪 Gratis indienen', cs: '🎪 Přidat zdarma' },
+  publishTitle: { de: 'Event veröffentlichen', en: 'Publish Event', fr: 'Publier un Événement', it: 'Pubblica Evento', es: 'Publicar Evento', zh: '发布活动', nl: 'Evenement Publiceren', cs: 'Publikovat akci' },
+  publishDesc: { de: 'Du veranstaltest ein Event in Tirol? Trag es kostenlos ein und erreiche tausende Besucher auf dem Tirol-Portal.', en: 'Are you hosting an event in Tyrol? Submit it for free and reach thousands of visitors on the Tyrol portal.', fr: 'Vous organisez un événement au Tyrol? Soumettez-le gratuitement et atteignez des milliers de visiteurs sur le portail du Tyrol.', it: 'Stai organizzando un evento in Tirolo? Inseriscilo gratuitamente e raggiungi migliaia di visitatori sul portale del Tirolo.', es: '¿Estás organizando un evento en Tirol? Envíalo gratis y alcanza a miles de visitantes en el portal de Tirol.', zh: '您在蒂罗尔举办活动吗？免费提交并在蒂罗尔门户上接触数千名游客。', nl: 'Organiseer je een evenement in Tirol? Dien het gratis in en bereiz duizenden bezoekers op het Tirol-portaal.', cs: 'Pořádáte akci v Tyrolsku? Přidejte ji zdarma a osaďte tisíce návštěvníků na tyrolském portálu.' },
+};
+
+const events = readCollection('events', locale).filter(e => isPublished(e.entry));
+const sorted = [...events].sort((a, b) => (a.entry.datum_von || '').localeCompare(b.entry.datum_von || ''));
+const mitCoords = events.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng);
+
+const siteURL = 'https://www.tirol-tourismus.at';
+const eventItemList = {
+  '@context': 'https://schema.org', '@type': 'ItemList',
+  name: t(labels.title), description: t(labels.desc),
+  url: `${siteURL}${pref}/events/`,
+  numberOfItems: events.length,
+  itemListElement: sorted.slice(0, 30).map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.entry.name || e.entry.titel, url: `${siteURL}${pref}/events/${e.slug}/` })),
+};
+---
+
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={eventItemList}>
+  <main>
+    <div class="container">
+      <Breadcrumbs items={[{ label: t(labels.title) }]} />
+    </div>
+
+    <section class="page-header">
+      <div class="container">
+        <div style="font-size:48px;margin-bottom:8px">🎪</div>
+        <h1>{t(labels.title)}</h1>
+        <p>{t(labels.desc)}</p>
+        <div style="margin-top:20px">
+          <a href={`${pref}/events/eintragen/`} class="btn btn-pink">{t(labels.ctaSubmit)}</a>
+        </div>
+      </div>
+    </section>
+
+    {mitCoords.length > 0 && (
+      <SectionMap
+        markers={mitCoords.map(e => ({
+          lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
+          label: e.entry.name || e.entry.titel, emoji: e.entry.emoji || '🎪',
+          href: `${pref}/events/${e.slug}/`, category: 'events',
+        }))}
+        label={`${mitCoords.length} Events`}
+        title={t(labels.mapTitle)}
+        height="380px" scrollWheelZoom={true} filterable={true}
+      />
+    )}
+
+    {sorted.length > 0 ? (
+      <section class="section">
+        <div class="container">
+          <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.sectionSub)} />
+          <div class="events-list">
+            {sorted.map((e, i) => (
+              <EventCard titel={e.entry.titel || e.entry.name} slug={e.slug} kategorie={e.entry.kategorie} kurzbeschreibung={e.entry.kurzbeschreibung} ort={e.entry.ort} datum_von={e.entry.datum_von} uhrzeit={e.entry.uhrzeit} preis={e.entry.preis} emoji={e.entry.emoji} />
+            ))}
+          </div>
+        </div>
+      </section>
+    ) : (
+      <section class="section">
+        <div class="container" style="text-align:center;padding:60px 0">
+          <div style="font-size:64px;margin-bottom:16px">🎪</div>
+          <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
+          <p style="color:var(--text2);max-width:400px;margin:0 auto 20px">{t(labels.emptyText)}</p>
+          <a href={`${pref}/events/eintragen/`} class="btn btn-pink">{t(labels.ctaSubmit)}</a>
+        </div>
+      </section>
+    )}
+
+    <section class="section" style="background:var(--bg2);border-top:1px solid var(--glass-border)">
+      <div class="container" style="text-align:center;padding:40px 0">
+        <div style="font-size:48px;margin-bottom:12px">📢</div>
+        <h2 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px">{t(labels.publishTitle)}</h2>
+        <p style="color:var(--text2);max-width:480px;margin:0 auto 24px;line-height:1.6">{t(labels.publishDesc)}</p>
+        <a href={`${pref}/events/eintragen/`} class="btn btn-pink" style="font-size:16px;padding:14px 36px">{t(labels.ctaPublish)}</a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  .page-header{position:relative;padding:60px 0 40px;text-align:center;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
+  .page-header h1{font-family:var(--font-display);font-size:clamp(36px,6vw,72px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+  .page-header p{font-size:15px;color:var(--text2);max-width:520px;margin:0 auto}
+  .events-list{display:flex;flex-direction:column;gap:16px}
+  .btn-pink{display:inline-flex;align-items:center;gap:6px;padding:12px 28px;background:var(--pink);color:#fff!important;border-radius:100px;font-weight:700;font-size:14px;letter-spacing:.5px;text-transform:uppercase;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
+  .btn-pink:hover{background:var(--pink-dark,#e01080);transform:translateY(-2px);box-shadow:0 6px 24px rgba(255,20,147,.3)}
+</style>

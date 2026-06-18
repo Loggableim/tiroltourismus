@@ -1,0 +1,77 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ Oficiální turistický portál pro Tyrolsko",
+    "title": ["TYROLSKO", "JINAK"],
+    "subtitle": "Zažijte Tyrolsko ve všech jeho podobách – od majestátních vrcholů přes idylické údolí až po rustikální alpské chaty.",
+    "ctaPrimary": { "text": "✦ Objevte Regiony", "href": "#regionen", "class": "btn-primary" },
+    "ctaSecondary": { "text": "Najděte Ubytování", "href": "#unterkuenfte", "class": "btn-secondary" }
+  },
+  "stats": [
+    { "icon": "🏔️", "count": 788, "label": "Vrcholky nad 3 000 m" },
+    { "icon": "🏡", "count": 12000, "label": "Ubytování" },
+    { "icon": "🥾", "count": 24500, "label": "Pěších kilometrů" },
+    { "icon": "🎿", "count": 580, "label": "Lanovky a vleky" }
+  ],
+  "seelen": {
+    "label": "#regionentyrol",
+    "title": "Regiony Tyrolska",
+    "desc": "Šest regionů, šest osobností – každý s vlastním charakterem a kouzlem.",
+    "items": [
+      { "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png", "label": "Hřebenová linie" }
+    ]
+  },
+  "whyTirol": {
+    "label": "#whytyrol",
+    "title": "Proč Tyrolsko?",
+    "desc": "Tři dobré důvody, proč Tyrolsko patří mezi nejkrásnější rekreační regiony v Alpách.",
+    "items": [
+      { "icon": "🏔️", "iconClass": "i1", "title": "Vrcholky a údolí", "desc": "788 třítisícovek čeká na vaši objevitelskou cestu. Každý vrchol nabízí novou perspektivu – od slunných alpských luk po drsné skalní stěny.", "stat": "788", "statClass": "pink" },
+      { "icon": "🎨", "iconClass": "i2", "title": "Design jako zážitek", "desc": "Tyrolsko spojuje tradiční pohostinnost s moderním flérem – dva světy zážitků, jeden nezapomenutelný dovolená.", "stat": "2", "statClass": "gold" },
+      { "icon": "🌱", "iconClass": "i3", "title": "Udržitelné a autentické", "desc": "Udržitelnost a ochrana přírody jsou v srdci všeho. Zelené iniciativy, regionální kuchyně a upřímný respekt k přírodě formují tyrolský dovolenkový zážitek.", "stat": "100%", "statClass": "pink" }
+    ]
+  },
+  "regionen": {
+    "label": "Objevte",
+    "title": "Naše Regiony",
+    "desc": "Od hlavního města po nejvzdálenější horské vesnice – každý region má svůj vlastní charakter a nesčetné příležitosti k nezapomenutelným zážitkům.",
+    "items": [
+      { "img": "/assets/images/region_innsbruck_20260517_101459.webp", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "Město a hora – Urban Alpine Glow Mix", "stars": 5, "slug": "innsbruck" },
+      { "img": "/assets/images/region_oetztal_20260517_101502.webp", "tag": "PŘÍRODA", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Ledovce, vrcholky a divoká údolí", "stars": 4, "slug": "oetztal" },
+      { "img": "/assets/images/region_zillertal_20260517_101508.webp", "tag": "AKTIVNÍ", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Turistika, cyklistika, lyžování v nejčistší podobě", "stars": 5, "slug": "zillertal" },
+      { "img": "/assets/images/region_stubaital_20260517_101513.webp", "tag": "KULINÁŘ", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Pochoutky a horská romantika", "stars": 4, "slug": "stubaital" },
+      { "img": "/assets/images/region_kitzbuehel_20260517_101526.webp", "tag": "LUXX", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Alpeská elegance a glamour", "stars": 5, "slug": "kitzbuehel" },
+      { "img": "/assets/images/region_kaunertal_20260517_101520.webp", "tag": "VRCHOL", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Nedotčené a nedotknutelné", "stars": 4, "slug": "kaunertal" }
+    ]
+  },
+  "unterkuenfte": {
+    "label": "Ubytování",
+    "title": "Najděte Svůj Domov",
+    "desc": "Od luxusních wellness hotelů po rodinné farmy a útulné byty – najděte své ideální ubytování v Tyrolsku.",
+    "tabs": ["Doporučené", "Nejlépe hodnocené", "Nejlepší cena"],
+    "items": [
+      { "img": "/assets/images/hotel_1_20260517_101547.webp", "badge": "AI Výběr", "badgeClass": "pop", "type": "Design Hotel", "name": "Alpine Panorama Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
+      { "img": "/assets/images/hotel_2_20260517_101544.webp", "badge": "Top Hodnocení", "badgeClass": "top", "type": "Alpeská chata", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
+      { "img": "/assets/images/hotel_3_20260517_101551.webp", "badge": "Akce", "badgeClass": "deal", "type": "Apartmán", "name": "Alpen Panorama Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
+    ]
+  },
+  "activities": [
+    { "barColor": "c1", "icon": "🪂", "title": "Paragliding nad Innsbruckem", "desc": "Vznášejte se nad hlavním městem a užijte si dechberoucí výhled na okolní horskou krajinu.", "price": 129, "link": "#" },
+    { "barColor": "c2", "icon": "🚵", "title": "E-horský západ slunce", "desc": "Prozkoumejte tyrolský horský svět na kole s průvodcem a zažijte západ slunce nad vrcholky.", "price": 89, "link": "#" },
+    { "barColor": "c3", "icon": "🎨", "title": "Alpeská bylinářská túra", "desc": "Objevte místní rostlinný svět na túře s průvodcem a ochutnávkou regionálních produktů.", "price": 55, "link": "#" },
+    { "barColor": "c4", "icon": "🌙", "title": "Noční hvězdářská túra", "desc": "Na noční túře s certifikovanými průvodci se dozvíte o hvězdné obloze nad Alpami.", "price": 45, "link": "#" },
+    { "barColor": "c5", "icon": "🧘", "title": "Alpeská jóga a meditace", "desc": "Najděte svůj vnitřní klid s jógovou seancí s výhledem na tyrolské hory.", "price": 69, "link": "#" },
+    { "barColor": "c6", "icon": "🍷", "title": "Tyrolský gourmet večer", "desc": "Dopřejte si exkluzivní večeři s regionálními specialitami a jemnými vín.", "price": 149, "link": "#" }
+  ],
+  "events": [
+    { "day": 21, "month": "ČER", "dateBoxClass": "pink", "cat": "🎵 Hudba", "title": "Tyrolský alpský letní festival", "desc": "Největší hudební festival v Alpách s mezinárodními hvězdami a spektakulární horskou krajinou na 2 000 m.", "loc": "Innsbruck", "price": "od €49" },
+    { "day": 5, "month": "ČVC", "dateBoxClass": "gold", "cat": "🎨 Umění", "title": "Zlatá umělecká stezka", "desc": "Umělecká díla a zlaté světelné sochy podél osvětlené horské cesty – otevřeno večer.", "loc": "Ötztal", "price": "€22" },
+    { "day": 19, "month": "SRP", "dateBoxClass": "gold", "cat": "🥾 Sport", "title": "Vrcholový horský festival", "desc": "Horský běh s DJ a atmosférální after-party na alpě – pro sportovce a labužníky!", "loc": "Zillertal", "price": "€35" },
+    { "day": 12, "month": "ZÁŘ", "dateBoxClass": "green", "cat": "🍽️ Kulinářství", "title": "Gourmet vrcholový zážitek", "desc": "Špičkoví kuchaři představují svá díla na 2 500 m – kulinářský zážitek nejvyššího řádu.", "loc": "Kitzbühel", "price": "€89" }
+  ],
+  "magazin": [
+    { "img": "/assets/images/magazin_1_20260517_101554.webp", "cat": "Turistika", "catClass": "wander", "date": "12. května 2026", "title": "Nejbarevnější turistické trasy v Tyrolsku", "desc": "Sedm tras, které dokazují, že příroda je nejlepší umělec – od alpských květin po zlatá ledovcová jezera." },
+    { "img": "/assets/images/magazin_2_20260517_101600.webp", "cat": "Příroda", "catClass": "natur", "date": "28. dubna 2026", "title": "Udržitelnost setkává se s popkulturou", "desc": "Jak tyrolské hotely nastavují nové standardy odvážnými nápady, zlatými akcenty a zeleným svědomím." },
+    { "img": "/assets/images/magazin_3_20260517_101603.webp", "cat": "Kulinářství", "catClass": "kulin", "date": "3. dubna 2026", "title": "Alpeská kuchyně znovu objevena", "desc": "Od růžových knedlíků po zlatý řízek: Mladí kuchaři reinterpretují tyrolské klasiky." }
+  ]
+}

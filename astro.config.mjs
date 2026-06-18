@@ -2,13 +2,14 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
-const HREFLANG_LANGUAGES = ['de', 'en', 'fr', 'it', 'es', 'zh'];
-const LOCALE_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN' };
-const LOCALE_PATTERN = /^\/(en|fr|it|es|zh)(\/|$)/;
+const HREFLANG_LANGUAGES = ['de', 'en', 'fr', 'it'];
+const LOCALE_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT' };
+const LOCALE_PATTERN = /^\/(en|fr|it)(\/|$)/;
 
 export default defineConfig({
   integrations: [react(), sitemap({
     filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
+    entryLimit: 10000,
     serialize: (entry) => {
       const path = entry.url;
       const sitePrefix = 'https://tiroltourismus.com';

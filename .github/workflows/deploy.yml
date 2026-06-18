@@ -16,27 +16,28 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 60
     env:
-      NODE_OPTIONS: "--max-old-space-size=4096"
+      NODE_OPTIONS: "--max-old-space-size=8192"
       CI: true
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --no-fund
 
-      - name: Build static site
-        run: npm run build
+      - name: Build static site (Astro only)
+        run: npm run build:astro
 
-      - name: Deploy to Cloudflare Pages (Direct Upload)
-        uses: cloudflare/wrangler-action@v3
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

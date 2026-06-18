@@ -1,0 +1,331 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import PaywallOverlay from '../../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix } from '../../../lib/languages.js';
+
+// Localized labels for all 8 languages (NL/CS/EN/FR/IT/ES/ZH + DE)
+const LABELS = {
+  de: {
+    gastro: 'Gastro',
+    ort: 'Ort',
+    kategorie: 'Kategorie',
+    telefon: 'Telefon',
+    adresse: 'Adresse',
+    tags: 'Tags',
+    kontaktStandort: 'Kontakt & Standort',
+    ueberDiesesLokal: 'Über dieses Lokal',
+    preis: 'Preis',
+    webseite: 'Webseite',
+    standort: 'Standort',
+    aufDerKarte: 'Auf der Karte',
+    weitereLokale: 'Weitere Lokale',
+    lustBekommen: 'Lust bekommen?',
+    jetztReservieren: 'Jetzt reservieren',
+    ctaSubtitle: 'Kontaktieren Sie das Lokal direkt für Tischreservierungen.',
+    alleGastro: 'Alle Gastro',
+  },
+  en: {
+    gastro: 'Food & Drink',
+    ort: 'Location',
+    kategorie: 'Category',
+    telefon: 'Phone',
+    adresse: 'Address',
+    tags: 'Tags',
+    kontaktStandort: 'Contact & Location',
+    ueberDiesesLokal: 'About This Restaurant',
+    preis: 'Price',
+    webseite: 'Website',
+    standort: 'Location',
+    aufDerKarte: 'On the Map',
+    weitereLokale: 'More Restaurants',
+    lustBekommen: 'Hungry yet?',
+    jetztReservieren: 'Book a Table',
+    ctaSubtitle: 'Contact the restaurant directly for table reservations.',
+    alleGastro: 'All Food & Drink',
+  },
+  fr: {
+    gastro: 'Gastronomie',
+    ort: 'Lieu',
+    kategorie: 'Catégorie',
+    telefon: 'Téléphone',
+    adresse: 'Adresse',
+    tags: 'Tags',
+    kontaktStandort: 'Contact & Lieu',
+    ueberDiesesLokal: 'À propos de ce restaurant',
+    preis: 'Prix',
+    webseite: 'Site Web',
+    standort: 'Emplacement',
+    aufDerKarte: 'Sur la carte',
+    weitereLokale: 'Plus de restaurants',
+    lustBekommen: 'Vous avez faim ?',
+    jetztReservieren: 'Réserver une table',
+    ctaSubtitle: 'Contactez le restaurant directement pour réserver une table.',
+    alleGastro: 'Toute la gastronomie',
+  },
+  it: {
+    gastro: 'Gastronomia',
+    ort: 'Luogo',
+    kategorie: 'Categoria',
+    telefon: 'Telefono',
+    adresse: 'Indirizzo',
+    tags: 'Tag',
+    kontaktStandort: 'Contatto & Luogo',
+    ueberDiesesLokal: 'Su questo ristorante',
+    preis: 'Prezzo',
+    webseite: 'Sito Web',
+    standort: 'Posizione',
+    aufDerKarte: 'Sulla mappa',
+    weitereLokale: 'Altri ristoranti',
+    lustBekommen: 'Fame?',
+    jetztReservieren: 'Prenota un tavolo',
+    ctaSubtitle: 'Contatta direttamente il ristorante per prenotare un tavolo.',
+    alleGastro: 'Tutta la gastronomia',
+  },
+  es: {
+    gastro: 'Gastronomía',
+    ort: 'Lugar',
+    kategorie: 'Categoría',
+    telefon: 'Teléfono',
+    adresse: 'Dirección',
+    tags: 'Etiquetas',
+    kontaktStandort: 'Contacto & Ubicación',
+    ueberDiesesLokal: 'Sobre este restaurante',
+    preis: 'Precio',
+    webseite: 'Sitio Web',
+    standort: 'Ubicación',
+    aufDerKarte: 'En el mapa',
+    weitereLokale: 'Más restaurantes',
+    lustBekommen: '¿Tienes hambre?',
+    jetztReservieren: 'Reservar una mesa',
+    ctaSubtitle: 'Contacte al restaurante directamente para reservar una mesa.',
+    alleGastro: 'Toda la gastronomía',
+  },
+  zh: {
+    gastro: '美食',
+    ort: '地点',
+    kategorie: '类别',
+    telefon: '电话',
+    adresse: '地址',
+    tags: '标签',
+    kontaktStandort: '联系方式与位置',
+    ueberDiesesLokal: '关于这家餐厅',
+    preis: '价格',
+    webseite: '网站',
+    standort: '位置',
+    aufDerKarte: '在地图上',
+    weitereLokale: '更多餐厅',
+    lustBekommen: '饿了吗？',
+    jetztReservieren: '预订餐桌',
+    ctaSubtitle: '直接联系餐厅预订餐桌。',
+    alleGastro: '所有美食',
+  },
+  nl: {
+    gastro: 'Eten & Drinken',
+    ort: 'Plaats',
+    kategorie: 'Categorie',
+    telefon: 'Telefoon',
+    adresse: 'Adres',
+    tags: 'Tags',
+    kontaktStandort: 'Contact & Locatie',
+    ueberDiesesLokal: 'Over dit restaurant',
+    preis: 'Prijs',
+    webseite: 'Website',
+    standort: 'Locatie',
+    aufDerKarte: 'Op de kaart',
+    weitereLokale: 'Meer restaurants',
+    lustBekommen: 'Krijg je trek?',
+    jetztReservieren: 'Reserveer een tafel',
+    ctaSubtitle: 'Neem direct contact op met het restaurant voor tafelreserveringen.',
+    alleGastro: 'Alle eetgelegenheden',
+  },
+  cs: {
+    gastro: 'Gastronomie',
+    ort: 'Místo',
+    kategorie: 'Kategorie',
+    telefon: 'Telefon',
+    adresse: 'Adresa',
+    tags: 'Štítky',
+    kontaktStandort: 'Kontakt & Místo',
+    ueberDiesesLokal: 'O této restauraci',
+    preis: 'Cena',
+    webseite: 'Web',
+    standort: 'Poloha',
+    aufDerKarte: 'Na mapě',
+    weitereLokale: 'Další restaurace',
+    lustBekommen: 'Máte hlad?',
+    jetztReservieren: 'Rezervovat stůl',
+    ctaSubtitle: 'Kontaktujte restauraci přímo pro rezervaci stolu.',
+    alleGastro: 'Všechna gastronomie',
+  },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('gastro', locale).filter(g => isPublished(g.entry));
+    for (const g of all) {
+      paths.push({ params: { locale, slug: g.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('gastro', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/gastro/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+
+const emoji = entry.emoji || '🍽️';
+const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
+
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'gastro', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name, emoji: emoji });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({
+    lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng,
+    label: n.entry.name || n.entry.titel,
+    emoji: CATEGORY_EMOJI[n.collection] || '📍',
+    href: `${prefix}/${n.collection}/${n.slug}/`,
+    category: n.collection,
+  });
+});
+const mapSection = mapMarkers.length > 0 ? {
+  type: 'map',
+  label: l.standort,
+  title: l.aufDerKarte,
+  markers: mapMarkers, scrollWheelZoom: true,
+  filterable: true,
+} : null;
+
+// Related gastro entries via first tag
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0], locale)
+      .filter(r => r.collection === 'gastro' && r.slug !== slug)
+      .slice(0, 3)
+      .map(r => ({
+        ...r,
+        entry: { ...r.entry, _emoji: r.entry.emoji || '🍽️' }
+      }))
+  : [];
+
+// JSON-LD: LocalBusiness
+const siteURL = 'https://tiroltourismus.com';
+const businessLD = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: entry.name,
+  description: (entry.kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}${prefix}/gastro/${slug}/`,
+  telephone: entry.telefon || undefined,
+  email: entry.email || undefined,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.adresse || entry.ort ? {
+    address: {
+      '@type': 'PostalAddress',
+      ...(entry.adresse ? { streetAddress: entry.adresse } : {}),
+      ...(entry.ort ? { addressLocality: entry.ort } : {}),
+      addressCountry: 'AT',
+    },
+  } : {}),
+  ...(entry.koordinaten ? {
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: entry.koordinaten.lat,
+      longitude: entry.koordinaten.lng,
+    },
+  } : {}),
+  ...(entry.kategorie ? { servesCuisine: entry.kategorie } : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'gastro', locale)}
+  breadcrumbs={[{ label: l.gastro, href: `${prefix}/gastro/` }, { label: entry.name }]}
+  locale={locale}
+  jsonld={businessLD}
+  ogImage={ogImage}
+  sections={[
+    {
+      type: 'hero',
+      title: entry.name,
+      subtitle: subtitle,
+      emoji: emoji,
+      gradient: entry.farbe,
+      bgImage: entry.hero_bild,
+    },
+    {
+      type: 'details-grid',
+      label: l.kontaktStandort,
+      items: [
+        { label: l.ort, value: entry.ort || undefined },
+        { label: l.kategorie, value: entry.kategorie || undefined },
+        { label: l.telefon, value: entry.telefon || undefined, type: 'link', href: entry.telefon ? `tel:${entry.telefon}` : undefined },
+        { label: l.adresse, value: entry.adresse || undefined },
+        { label: l.tags, tags: entry.tags || [], type: 'tags' },
+      ].filter(Boolean),
+    },
+    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? {
+      type: 'description',
+      label: entry.name,
+      title: l.ueberDiesesLokal,
+      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale),
+    } : null,
+    !isBasic ? {
+      type: 'details-grid',
+      items: [
+        { label: l.preis, value: entry.preis || undefined, type: 'price' },
+        entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,
+      ].filter(Boolean),
+    } : null,
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? {
+      type: 'related-grid',
+      label: l.weitereLokale,
+      entries: relatedByTag,
+      slugPrefix: `${prefix}/gastro/`,
+      nameField: 'name',
+      subtitleField: 'kurzbeschreibung',
+      emojiField: '_emoji',
+      defaultEmoji: '🍽️',
+    } : null,
+    !isBasic ? {
+      type: 'cta',
+      label: l.lustBekommen,
+      title: l.jetztReservieren,
+      subtitle: l.ctaSubtitle,
+      buttons: [
+        entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+        entry.webseite ? { label: `🌐 ${l.webseite}`, href: entry.webseite, variant: 'glass' } : null,
+      ].filter(Boolean),
+    } : null,
+    {
+      type: 'back-link',
+      href: `${prefix}/gastro/`,
+      text: l.alleGastro,
+    },
+  ].filter(Boolean)}
+/>
+
+<!-- Basic: Premium-Inhalte hinter Paywall -->
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+    </div>
+  </section>
+)}

@@ -1,0 +1,107 @@
+---
+import DetailPage from '../../../sections/DetailPage.astro';
+import PremiumBadge from '../../../components/PremiumBadge.astro';
+import PaywallOverlay from '../../../components/PaywallOverlay.astro';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { generateMetaDescription } from '../../../lib/seo.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
+
+const LABELS = {
+  de: { unterkunft: 'Unterkunft', ort: 'Ort', typ: 'Typ', sterne: 'Sterne', preis: 'Preis', webseite: 'Webseite', standort: 'Standort', aufDerKarte: 'Auf der Karte', weitereUnterkuenfte: 'Weitere Unterkünfte', alleUnterkuenfte: 'Alle Unterkünfte', kontakt: 'Kontakt', buchen: 'Jetzt buchen', ctaSubtitle: 'Kontaktieren Sie die Unterkunft direkt für Reservierungen.' },
+  en: { unterkunft: 'Accommodation', ort: 'Location', typ: 'Type', sterne: 'Stars', preis: 'Price', webseite: 'Website', standort: 'Location', aufDerKarte: 'On the Map', weitereUnterkuenfte: 'More Accommodations', alleUnterkuenfte: 'All Accommodations', kontakt: 'Contact', buchen: 'Book Now', ctaSubtitle: 'Contact the accommodation directly for reservations.' },
+  fr: { unterkunft: 'Hébergement', ort: 'Lieu', typ: 'Type', sterne: 'Étoiles', preis: 'Prix', webseite: 'Site Web', standort: 'Emplacement', aufDerKarte: 'Sur la carte', weitereUnterkuenfte: 'Plus d\'hébergements', alleUnterkuenfte: 'Tous les hébergements', kontakt: 'Contact', buchen: 'Réserver', ctaSubtitle: 'Contactez l\'hébergement directement pour les réservations.' },
+  it: { unterkunft: 'Alloggio', ort: 'Luogo', typ: 'Tipo', sterne: 'Stelle', preis: 'Prezzo', webseite: 'Sito Web', standort: 'Posizione', aufDerKarte: 'Sulla mappa', weitereUnterkuenfte: 'Altri alloggi', alleUnterkuenfte: 'Tutti gli alloggi', kontakt: 'Contatto', buchen: 'Prenota', ctaSubtitle: 'Contatta direttamente l\'alloggio per le prenotazioni.' },
+  es: { unterkunft: 'Alojamiento', ort: 'Lugar', typ: 'Tipo', sterne: 'Estrellas', preis: 'Precio', webseite: 'Sitio Web', standort: 'Ubicación', aufDerKarte: 'En el mapa', weitereUnterkuenfte: 'Más alojamientos', alleUnterkuenfte: 'Todos los alojamientos', kontakt: 'Contacto', buchen: 'Reservar', ctaSubtitle: 'Contacta al alojamiento directamente para reservas.' },
+  zh: { unterkunft: '住宿', ort: '地点', typ: '类型', sterne: '星级', preis: '价格', webseite: '网站', standort: '位置', aufDerKarte: '在地图上', weitereUnterkuenfte: '更多住宿', alleUnterkuenfte: '所有住宿', kontakt: '联系', buchen: '立即预订', ctaSubtitle: '直接联系住宿进行预订。' },
+  nl: { unterkunft: 'Accommodatie', ort: 'Plaats', typ: 'Type', sterne: 'Sterren', preis: 'Prijs', webseite: 'Website', standort: 'Locatie', aufDerKarte: 'Op de kaart', weitereUnterkuenfte: 'Meer accommodaties', alleUnterkuenfte: 'Alle accommodaties', kontakt: 'Contact', buchen: 'Nu boeken', ctaSubtitle: 'Neem direct contact op met de accommodatie voor reserveringen.' },
+  cs: { unterkunft: 'Ubytování', ort: 'Místo', typ: 'Typ', sterne: 'Hvězdičky', preis: 'Cena', webseite: 'Web', standort: 'Poloha', aufDerKarte: 'Na mapě', weitereUnterkuenfte: 'Další ubytování', alleUnterkuenfte: 'Všechna ubytování', kontakt: 'Kontakt', buchen: 'Rezervovat', ctaSubtitle: 'Kontaktujte ubytování přímo pro rezervace.' },
+};
+
+export async function getStaticPaths() {
+  const locales = LANGUAGES_READY.filter((l) => l !== 'de');
+  const paths = [];
+  for (const locale of locales) {
+    const all = readCollection('unterkuenfte', locale).filter(u => isPublished(u.entry));
+    for (const u of all) {
+      paths.push({ params: { locale, slug: u.slug } });
+    }
+  }
+  return paths;
+}
+
+const { locale, slug } = Astro.params;
+const entry = readEntry('unterkuenfte', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/unterkuenfte/`);
+
+const l = LABELS[locale] || LABELS.de;
+const prefix = localePrefix(locale);
+const emoji = entry.emoji || '🏨';
+const subtitle = entry.ort ? `${entry.ort}${entry.typ ? ` · ${entry.typ}` : ''}` : undefined;
+const tier = entry.tier || 'basic';
+const isBasic = tier === 'basic';
+
+const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
+const nearbyEntries = entry.koordinaten ? findNearby(entry, 'unterkuenfte', locale, 8) : [];
+const mapMarkers = [];
+if (entry.koordinaten) {
+  mapMarkers.push({ lat: entry.koordinaten.lat, lng: entry.koordinaten.lng, label: entry.name, emoji: emoji });
+}
+nearbyEntries.forEach(n => {
+  if (!n.entry.koordinaten) return;
+  mapMarkers.push({ lat: n.entry.koordinaten.lat, lng: n.entry.koordinaten.lng, label: n.entry.name || n.entry.titel, emoji: CATEGORY_EMOJI[n.collection] || '📍', href: `${prefix}/${n.collection}/${n.slug}/`, category: n.collection });
+});
+const mapSection = mapMarkers.length > 0 ? { type: 'map', label: l.standort, title: l.aufDerKarte, markers: mapMarkers, scrollWheelZoom: true, filterable: true } : null;
+
+const relatedByTag = entry.tags && entry.tags.length > 0
+  ? findByTag(entry.tags[0], locale).filter(r => r.collection === 'unterkuenfte' && r.slug !== slug).slice(0, 3).map(r => ({ ...r, entry: { ...r.entry, _emoji: r.entry.emoji || '🏨' } }))
+  : [];
+
+const siteURL = 'https://tiroltourismus.com';
+const businessLD = {
+  '@context': 'https://schema.org', '@type': 'LodgingBusiness',
+  name: entry.name, description: (entry.kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}${prefix}/unterkuenfte/${slug}/`,
+  telephone: entry.telefon || undefined, email: entry.email || undefined,
+  image: entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined,
+  ...(entry.adresse || entry.ort ? { address: { '@type': 'PostalAddress', ...(entry.adresse ? { streetAddress: entry.adresse } : {}), ...(entry.ort ? { addressLocality: entry.ort } : {}), addressCountry: 'AT' } } : {}),
+  ...(entry.koordinaten ? { geo: { '@type': 'GeoCoordinates', latitude: entry.koordinaten.lat, longitude: entry.koordinaten.lng } } : {}),
+};
+const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+---
+
+<DetailPage
+  title={entry.name}
+  description={generateMetaDescription(entry, 'unterkuenfte', locale)}
+  breadcrumbs={[{ label: l.unterkunft, href: `${prefix}/unterkuenfte/` }, { label: entry.name }]}
+  locale={locale}
+  jsonld={businessLD}
+  ogImage={ogImage}
+  sections={[
+    { type: 'hero', title: entry.name, subtitle: subtitle, emoji: emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
+    { type: 'details-grid', label: l.kontakt, items: [
+      { label: l.ort, value: entry.ort || undefined },
+      { label: l.typ, value: entry.typ || undefined },
+      { label: l.sterne, value: entry.sterne ? '★'.repeat(entry.sterne) : undefined },
+    ].filter(Boolean) },
+    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    !isBasic ? { type: 'details-grid', items: [
+      { label: l.preis, value: entry.preis_ab || undefined, type: 'price' },
+      entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,
+    ].filter(Boolean) } : null,
+    !isBasic ? mapSection : null,
+    !isBasic && relatedByTag.length > 0 ? { type: 'related-grid', label: l.weitereUnterkuenfte, entries: relatedByTag, slugPrefix: `${prefix}/unterkuenfte/`, nameField: 'name', subtitleField: 'kurzbeschreibung', emojiField: '_emoji', defaultEmoji: '🏨' } : null,
+    !isBasic ? { type: 'cta', label: l.kontakt, title: l.buchen, subtitle: l.ctaSubtitle, buttons: [
+      entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
+      entry.webseite ? { label: `🌐 ${l.webseite}`, href: entry.webseite, variant: 'glass' } : null,
+    ].filter(Boolean) } : null,
+    { type: 'back-link', href: `${prefix}/unterkuenfte/`, text: l.alleUnterkuenfte },
+  ].filter(Boolean)}
+/>
+
+{isBasic && (
+  <section class="section paywall-restricted">
+    <div class="container" style="position:relative;max-width:800px">
+      <PaywallOverlay name={entry.name} slug={slug} />
+    </div>
+  </section>
+)}

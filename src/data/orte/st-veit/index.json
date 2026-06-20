@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.9248",
     "lng": "12.4236"
-  }
+  },
+  "beschreibung": "<p>St. Veit in Defereggen liegt auf 1.008 m Seehöhe im hinteren Defereggental, einem der ursprünglichsten Seitentäler Osttirols im Bezirk Lienz. Das Dorf mit rund 700 Einwohnern schmiegt sich an den sonnenexponierten Hang, umgeben von den Ausläufern der Villgrater Berge und der Lasörlinggruppe. Wer hierherkommt, sucht bewusst die Stille – das Defereggental zählt zu den am dünnsten besiedelten Gebieten Tirols.</p>\n\n<p>Die spätgotische Pfarrkirche St. Veit mit ihrem markanten Zwiebelturm prägt das Ortsbild und beherbergt einen wertvollen Flügelaltar. Direkt vom Dorf führen Wanderwege auf die sonnigen Almwiesen der umliegenden Bergbauernhöfe, etwa zur Brugger- oder Staller Alm. Die Region gehört zum Sternendorf-Programm und ist bekannt für besonders klaren Nachthimmel – tagsüber laden Mountainbiketouren und Familienwanderungen entlang der Schwarzach ein. Im Winter bleibt es ruhig: Kein Skilift, dafür präparierte Loipen und Skitouren auf die Lasörling-Gipfel.</p>\n\n<p>Kulinarisch steht der Deferegger Bergkäse im Mittelpunkt, der auf den Almen rund um St. Veit nach überlieferter Rezeptur in Handarbeit hergestellt wird. Schutzhütten wie die Davos- und die Jagdhausalm servieren Kasnudeln, Graukäsnocken und Osttiroler Schlipfkrapfen direkt vom Hof. Wer Osttirol ohne Trubel erleben will, findet in St. Veit ein Tal, das sich seine Bodenständigkeit bewahrt hat. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "landeck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/ischgl/hero_1.png",
+      "alt": "Ischgl — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/ischgl/hero_1.png",
   "koordinaten": {
     "lat": "47.0120",
     "lng": "10.2913"
-  }
+  },
+  "beschreibung": "<p>Ischgl liegt auf 1.377 m Höhe im hinteren Paznaun, im Bezirk Landeck, und zählt rund 1.600 Einwohner – eine Zahl, die sich in der Wintersaison durch Touristen aus ganz Europa vervielfacht. Das ehemalige Bergbauerndorf hat sich seit den 1990er-Jahren zu einem der bekanntesten Wintersportorte der Alpen entwickelt und ist heute Synonym für Wintersport auf Spitzenniveau.</p>\n\n<p>Die Silvretta Arena verbindet Ischgl mit dem schweizerischen Samnaun und bietet 239 Pistenkilometer, die bis auf knapp 2.900 m reichen. Bekannt ist der Ort vor allem für sein Après-Ski: Das Pacha am Fuße der Pardatschgratbahn gilt als eine der legendärsten Partyadressen der Alpen. Höhepunkt jeder Saison sind die „Top of the Mountain\"-Konzerte auf der Idalp, bei denen Stars wie Robbie Williams, Elton John oder die Scorpions aufgetreten sind – die Eröffnungs- und Abschlusskonzerte im November und Mai ziehen jeweils rund 20.000 Besucher an. Im Sommer verwandelt sich die Region in ein Wandergebiet mit über 300 km markierten Wegen, darunter die anspruchsvolle Drei-Länder-Tour in die Schweiz und nach Italien.</p>\n\n<p>Kulinarisch stehen Paznauner Kässpätzle, Tiroler Speck und Wildgerichte aus der heimischen Jagd auf den Speisekarten der Bergrestaurants. Die Silvretta-Hochalpenstraße verbindet Ischgl mit dem benachbarten Montafon in Vorarlberg und ist im Sommer eine der schönsten Passstraßen Österreichs. Wer Après-Ski-Hochburg und hochalpine Natur sucht, findet hier beides auf engstem Raum.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

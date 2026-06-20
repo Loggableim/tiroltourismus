@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.1258",
     "lng": "10.5135"
-  }
+  },
+  "beschreibung": "<p>Tobadill liegt auf 1.136 Metern Seehöhe hoch über dem Inntal, zwischen Landeck und der Venet-Bergregion im westlichen Tirol. Das Dorf mit seinen rund 500 Einwohnern gehört zum Bezirk Landeck und ist über eine schmale Straße erreichbar, die sich serpentinenartig durch dichte Nadelwälder den Berg hinaufschlängelt. Wer hier ankommt, lässt den Trubel der Inntal-Autobahn bewusst hinter sich – Tobadill ist bewusst abseits geblieben, ohne großen Tourismus, ohne durchgestylte Infrastruktur. 🌲</p>\n\n<p>Die Umgebung rund um Tobadill ist geprägt von ausgedehnten Lärchen- und Fichtenwäldern, die sich bis in eine Höhe von knapp 2.500 Metern ziehen. Beliebte Wanderungen führen auf den Hausberg Venet mit seinem markanten Gipfel, von dem aus man bei klarem Wetter einen weiten Blick über das obere Inntal bis zu den Ötztaler und Stubaier Alpen hat. Auch die Themenwege rund um die Burg Wiesberg – dem sogenannten „Schloss ohne Türen\" – sind zu Fuß oder mit dem Rad gut erreichbar. Im Winter bleibt Tobadill bewusst ruhig: Kein Skilift, kein Après-Ski, dafür Loipen und Winterwanderwege für jene, die Stille suchen.</p>\n\n<p>Kulinarisch lebt das Dorf von der Landwirtschaft: Käse von den umliegenden Almen, regionales Rindfleisch und Most von eigenen Streuobstwiesen. Vereine und die kleine Pfarrkirche prägen das Dorfleben, das sich noch stark am bäuerlichen Jahresrhythmus orientiert. Tobadill ist kein Ort für schnelle Besuche, sondern ein Platz zum Ankommen, Durchatmen und Verweilen – genau deshalb kommt man hierher.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

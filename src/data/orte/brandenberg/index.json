@@ -24,5 +24,23 @@
     }
   ],
   "hero_bild": "/images/orte/brandenberg/hero_1.png",
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Brandenberg liegt auf 920 m Höhe im gleichnamigen Brandenberger Tal, einem ruhigen Seitental des Inntals im Bezirk Kufstein. Die 1.490 Einwohner verteilen sich über zahlreiche Einzelhöfe, Weiler und kleine Ortschaften – die typische Tiroler Streulage macht den Reiz des Dorfes aus, das sich über eine beachtliche Fläche zwischen den Ausläufern des Rofan- und des Mangfallgebirges zieht.</p>\n\n<p>Die Brandenberger Ache prägt den Ort und hat über Jahrtausende eine der eindrucksvollsten Klammen Tirols geformt: die Kaiserklamm, gesäumt von bizarren Felswänden und dichtem Bergwald. Wanderer folgen dem Bachlauf auf Stegen und durch Tunnel bis tief hinein ins Naturschutzgebiet. Über 300 km markierte Wege ziehen sich durch das Tal, vorbei an traditionellen Holzstadeln und einsamen Almen – etwa der bergseitig gelegenen Erzherzog-Johann-Klause, einem historischen Jagdgebiet. Wer Stille sucht, findet sie hier auch im Sommer, denn der Massentourismus hat das Tal bisher kaum erreicht.</p>\n\n<p>Im Winter laden gespurte Loipen und Schneeschuhrouten durch die verschneite Landschaft ein, und die heimische Gastronomie setzt auf regionale Produkte – Käse von den Bergbauern, Wild aus den heimischen Wäldern und der bekannte „Brandenberger Kasnocken\" sind feste Bestandteile der Speisekarten. Wer Tirol abseits der bekannten Hotspots erleben will, ist in diesem Tal am Rand des Alpenparks Karwendel genau richtig. 🌲",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

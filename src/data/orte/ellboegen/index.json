@@ -23,5 +23,18 @@
     }
   ],
   "hero_bild": "/images/orte/ellboegen/hero_1.png",
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Auf einer sonnenverwöhnten Hangterrasse über dem Wipptal, am Fuße des Stubaitals, liegt die Marktgemeinde Ellbögen auf rund 1.050 Metern Seehöhe. Wer von Innsbruck kommend die Serpentinen hinauffährt, taucht rasch in eine andere Welt ein: statt dichter Bebauung reihen sich einzelne Gehöfte, kleine Weiler und Bauernhöfe aneinander, eingebettet in Wiesen und Wälder. Die Streusiedlung erstreckt sich über mehrere Kilometer und bewahrt bis heute ihren dörflichen Charakter. Etwa 1.140 Menschen leben hier, viele von ihnen seit Generationen.</p>\n\n<p>Die Landwirtschaft prägt das Ortsbild nachhaltig. Im Sommer grasen Kühe und Schafe auf den steilen Bergwiesen, im Herbst duftet es nach Heu, und im Winter liegt oft genug Schnee, dass die Zufahrtsstraße zur Herausforderung wird. Die Pfarrkirche zum Heiligen Pankratius thront mittendrin, und die alten, teils denkmalgeschützten Bauernhäuser mit ihren tief heruntergezogenen Dächern erzählen von der langen Geschichte des Ortes, der erstmals 1239 urkundlich erwähnt wurde. Der Name selbst verweist auf den ellbogenartigen Knick, den das Tal hier macht.</p>\n\n<p>Was Ellbögen besonders ausmacht, ist die Weite des Blicks. Vom Höhenweg aus schweift der Blick über das Wipptal hinweg bis zur Nordkette und zum Patscherkofel, bei klarer Luft sogar bis in die Zillertaler Alpen. Wanderer schätzen die ruhigen Wege Richtung Isshütte und die naturbelassene Umgebung, abseits des Trubels der nahegelegenen Schitourismus-Hochburgen. Wer Stille sucht, findet sie hier – und mit etwas Glück einen Plausch mit einem Senner, der noch die alte Käsetechnik pflegt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.5224",
     "lng": "12.4287"
-  }
+  },
+  "beschreibung": "<p>St. Johann in Tirol liegt auf 659 Metern Seehöhe im Leukental, direkt am Schnittpunkt zwischen dem schroffen Kaisergebirge im Norden und den sanfteren Kitzbüheler Alpen im Süden. Der Ort zählt rund 9.800 Einwohner und gehört zum Bezirk Kufstein – als zweitgrößter Ort im Tal bildet er das wirtschaftliche Zentrum der Region.</p>\n\n<p>Was St. Johann besonders macht, ist diese direkte Konfrontation zweier komplett unterschiedlicher Gebirgswelten: Auf der einen Seite ragen die markanten Felswände des Wilden Kaisers mit Totenkirchl und Karlspitzen auf, die zu den schwierigsten Kletterbergen der Ostalpen zählen. Auf der anderen Seite locken die begrünten Hänge der Kitzbüheler Alpen mit einfacheren Wanderungen und Mountainbiketouren. Im Winter verbindet die Gondel das Skigebiet am Harschbichl mit der Steinplatte, und die beleuchtete Nachtskipiste ist ein Klassiker für Familien. Die Kitzbüheler Ache fließt mitten durch den Ort und bietet im Sommer beliebte Badeplätze.</p>\n\n<p>Kulturell ist St. Johann keine Hochglanz-Destination wie das benachbarte Kitzbühel, sondern bodenständig. Die Pfarrkirche mit ihrem barocken Turm prägt das Ortsbild, und im Sommer sorgen die Dorfabende mit Musikkapellen für echtes Tiroler Flair. Kulinarisch lohnen sich die traditionellen Gasthäuser rund um den Hauptplatz – Kaiserschmarrn und Kaspressknödel gibt es hier noch dort, wo sie seit Generationen gekocht werden.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

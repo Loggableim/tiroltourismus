@@ -54,11 +54,33 @@ const relatedByTag = entry.tags && entry.tags.length > 0
 
 const siteURL = 'https://tiroltourismus.com';
 const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+
+// JSON-LD: Product (Erlebnis)
+const erlebnisImage = entry.hero_bild || entry.bilder?.[0]?.url;
+const erlebnisLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: entry.name || entry.titel,
+  description: (entry.kurzbeschreibung || entry.beschreibung || '').substring(0, 500),
+  url: `${siteURL}${prefix}/erlebnisse/${slug}/`,
+  ...(entry.kategorie ? { category: entry.kategorie } : {}),
+  ...(erlebnisImage ? { image: erlebnisImage.startsWith('http') ? erlebnisImage : `${siteURL}${erlebnisImage}` } : {}),
+  ...((entry.preis || entry.preis === 0) ? {
+    offers: {
+      '@type': 'Offer',
+      price: Number(entry.preis).toFixed(2),
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url: entry.link && entry.link !== '#' ? entry.link : `${siteURL}${prefix}/erlebnisse/${slug}/`,
+    }
+  } : {}),
+};
 ---
 
 <DetailPage
   title={entry.name || entry.titel}
   description={generateMetaDescription(entry, 'erlebnisse', locale)}
+  jsonld={erlebnisLD}
   breadcrumbs={[{ label: l.erlebnis, href: `${prefix}/erlebnisse/` }, { label: entry.name || entry.titel }]}
   locale={locale}
   ogImage={ogImage}

@@ -1,6 +1,8 @@
 ---
 import FavHeart from './FavHeart.astro';
 export interface Props {
+  /** Optional locale prefix for multilang links (e.g. "fr"). */
+  locale?: string;
   name: string;
   slug: string;
   beschreibung?: string;
@@ -11,7 +13,7 @@ export interface Props {
   ort?: string;
   linkPrefix?: string;
 }
-const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '#FF6B35', ort, linkPrefix = '/gastro/' } = Astro.props;
+const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '#FF6B35', ort, linkPrefix = '/gastro/' , locale = undefined } = Astro.props;
 ---
 <a href={`${linkPrefix}${slug}/`} class="gastro-card" data-collection="gastro" data-slug={slug} data-filter-card data-filter-cat={kategorie || ''}>
   <div class="gastro-card-img" style={`position:relative;background:${farbe}20`}>
@@ -42,7 +44,7 @@ const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '
   .gastro-body p{font-size:14px;color:var(--text2);line-height:1.68;flex:1;margin-bottom:10px}
   .gastro-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
   .gastro-preis{font-size:14px;font-weight:700;color:var(--orange)}
-  .gastro-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink)}
+  .gastro-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--tirol-pink)}
   @media(max-width:600px){
     .gastro-card-img{height:95px}
     .gastro-body h3{font-size:19px}

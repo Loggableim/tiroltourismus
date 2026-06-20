@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mils-imst/hero_1.png",
+      "alt": "Mils bei Imst — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mils-imst/hero_1.png",
   "koordinaten": {
     "lat": "47.2065",
     "lng": "10.6755"
-  }
+  },
+  "beschreibung": "<p>Mils bei Imst liegt auf 743 Metern Seehöhe am rechten Innufer im Bezirk Imst, zwischen der Bezirkshauptstadt Imst im Westen und der Fernpassroute im Osten. Der Ort zählt rund 600 Einwohner und erstreckt sich als lockere Streusiedlung am Sonnenhang unterhalb des markanten Tschirgant, der mit seinen 2.370 Metern das Dorf nach Norden hin überragt. Der Inn durchfließt das schmale Tal in unmittelbarer Nähe und trennt Mils vom gegenüberliegenden Imst.</p>\n\n<p>Das Herzstück des Dorfes ist die barocke Pfarrkirche zum Heiligen Petrus mit ihrem schlanken Turm und den gut erhaltenen Deckenfresken aus dem 18. Jahrhundert – sie zählt zu den sehenswerten Sakralbauten des Tiroler Oberlandes. Wanderer schätzen Mils als ruhigen Ausgangspunkt für Touren Richtung Tschirgant, über den anspruchsvolle Klettersteige auf den Gipfel führen, sowie für leichtere Wanderungen entlang des Inntals. Der Ausblick vom sonnigen Hang reicht",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

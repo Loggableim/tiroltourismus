@@ -26,5 +26,23 @@
     "lat": "47.4785",
     "lng": "11.9738"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Breitenbach am Inn liegt auf 520 Metern Höhe im Tiroler Unterland, nur wenige Kilometer westlich von Kufstein, direkt am gleichnamigen Inn-Zufluss. Als Marktgemeinde mit rund 3.500 Einwohnern gehört der Ort zum Bezirk Kufstein und bildet einen ruhigen Kontrast zur nahegelegenen Festungsstadt. Die Lage am Übergang vom Inntal in die sanfteren Vorberge des Wilden Kaisers macht den Ort zu einem praktischen Ausgangspunkt zwischen Tal und Berg.</p>\n\n<p>Das Herzstück der Wanderregion ist der Breitenbacher Wald, ein ausgedehntes, naturnahes Waldgebiet, das mit markierten Wegen und einer gut beschilderten Rundroute besonders bei Familien und Genusswanderern beliebt ist. Im Ort selbst steht die barocke Pfarrkirche, die mit ihrer markanten Fassade das Dorfbild prägt. Wer Stille sucht, findet sie auf den schmalen Pfaden entlang des Breitenbachs, der dem Ort seinen Namen gibt. Die Nähe zu Kufstein ermöglicht zudem Ausflüge zur Festung oder in die Kaisergebirgs-Welt, ohne auf die Ruhe des Dorfes verzichten zu müssen.</p>\n\n<p>Typisch unterinntalerisch zeigt sich die Gastronomie mit bodenständigen Wirtshäusern, die regionale Küche wie Kasnocken oder Tiroler Gröstl servieren. 🏘️ Breitenbach am Inn ist kein Ort für große Inszenierung, sondern überzeugt durch das ehrliche Zusammenspiel von dörflichem Alltag, naturnaher Erholung und der schnellen Anbindung an die städtische Infrastruktur Kufsteins.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -26,5 +26,23 @@
     "lat": "46.7865",
     "lng": "12.4291"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Außervillgraten liegt auf 1.287 m Höhe im hinteren Villgratental, einem der abgelegensten Seitentäler Osttirols, rund 40 km westlich von Lienz. Die Marktgemeinde zählt etwa 900 Einwohner und bildet gemeinsam mit Innervillgraten das obere Villgratental, das zur Gänze vom Villgratner Gebirge – mit Gipfeln wie dem Hochgrabe (2.951 m) und dem Reiterbichl – umschlossen wird. Wer hierherkommt, lässt die Hauptverkehrsrouten hinter sich und taucht in eine Berglandschaft ein, die sich seit Generationen kaum verändert hat.</p>\n\n<p>Die Villgratner Berge gelten als eines der stillsten Hohen Tauern-Gebiete weit und breit, und genau das macht Außervillgraten für Wanderer aus: Weit abseits der überlaufenen Routen zieht sich ein dichtes Netz an markierten Wegen über Almen und Grate, von der aussichtsreichen Wetterkreuzkapelle bis hinauf zur Wurzeralm auf über 2.000 m. Besonders im Herbst, wenn der traditionsreiche Villgrater Viehscheid stattfindet, kehrt das Dorf zu seinen bäuerlichen Wurzeln zurück: geschmücktes Jungvieh wird von den Hochalmen ins Tal getrieben, begleitet von Musik, Handwerk und regionalen Produkten. Die klare Luft und die geringe Lichtverschmutzung machen den Nachthimmel über dem Villgratental zudem zu einem der dunkelsten in ganz Österreich.</p>\n\n<p>Kulinarisch stehen Osttiroler Klassiker auf dem Tisch: Schlickkrapfen, Kasnudeln und der deftige „Tirler\" – eine traditionelle Gerstensuppe. Mit den",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

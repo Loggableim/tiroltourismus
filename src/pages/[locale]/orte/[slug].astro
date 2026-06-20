@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix } from '../../../lib/languages.js';
 
@@ -224,6 +224,9 @@ const { locale, slug } = Astro.params;
 const entry = readEntry('orte', slug, locale);
 if (!entry) return Astro.redirect(`${localePrefix(locale)}/orte/`);
 
+// Qualitätslogik: dünne Ortsseiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'orte');
+
 const l = LABELS[locale] || LABELS.de;
 const pref = localePrefix(locale);
 
@@ -304,6 +307,7 @@ const destinationLD = {
   breadcrumbs={[{ label: l.orte, href: `${pref}/orte/` }, { label: name }]}
   locale={locale}
   jsonld={destinationLD}
+  noindex={!shouldIdx}
   sections={[
     {
       type: 'hero',

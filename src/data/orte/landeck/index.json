@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "landeck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/landeck/hero_1.png",
+      "alt": "Landeck — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/landeck/hero_1.png",
   "koordinaten": {
     "lat": "47.1424",
     "lng": "10.5705"
-  }
+  },
+  "beschreibung": "<p>Landeck liegt auf 816 m Höhe im Oberinntal, genau dort, wo die Sanna in den Inn mündet. Die Bezirkshauptstadt zählt rund 7.700 Einwohner und blickt auf eine lange Geschichte als Verkehrsknotenpunkt an der Straße über den Arlberg zurück – schon die Römer nutzten diesen Übergang, und auch heute führt eine der wichtigsten Alpenrouten direkt durch den Ort.</p>\n\n<p>Über dem Tal thront das namensgebende 🏰 Schloss Landeck, eine der besterhaltenen spätmittelalterlichen Burganlagen Tirols. Das Museum im Schloss zeigt archäologische Funde aus der Region und gewährt Einblicke in die Geschichte des Oberinntals. Wanderer schätzen Landeck als Ausgangspunkt für Touren Richtung Venet (2.512 m), dessen Seilbahnen direkt vom Ort starten, sowie für Routen entlang des Inns oder durch die Schlucht des Zammer Bachs. Die Inn-Radweg-Etappe und der Via Claudia Augusta führen ebenfalls durch die Stadt. Im Winter erreichen Skifahrer die Skigebiete Venet, Serfaus-Fiss-Ladis und St. Anton am Arlberg in kurzer Zeit.</p>\n\n<p>Kulinarisch steht die Region für Tiroler Küche mit ehrlichen Zutaten: Kaspressknödel, Gröstl und Wildgerichte aus den umliegenden Wäldern finden sich auf den Speisekarten der Gasthäuser rund um den Hauptplatz. Landeck verbindet auf seltene Weise städtische Infrastruktur mit unmittelbarem Naturzugang – ein praktischer Stützpunkt für alle, die das Tiroler Oberland erkunden wollen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

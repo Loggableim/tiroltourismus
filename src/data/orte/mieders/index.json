@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mieders/hero_1.png",
+      "alt": "Mieders — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mieders/hero_1.png",
   "koordinaten": {
     "lat": "47.1692",
     "lng": "11.3811"
-  }
+  },
+  "beschreibung": "<p>Mieders liegt auf 952 m Höhe am Eingang zum Stubaital, direkt an der Brenner-Autobahn zwischen Innsbruck und dem Stubaital, und bildet mit rund 1.900 Einwohnern den ersten Ort des Tals. Das Dorf thront auf einer sonnigen Terrasse über dem Wipptal und blickt direkt auf die markante Serles, die auch als \"Altar von Tirol\" bekannt ist.</p>\n\n<p>🌲 Die Serlesbahn bringt Besucher in wenigen Minuten auf 1.600 Meter, wo im Sommer Wanderungen über Almwiesen und im Winter Skifahren am Familienskigebiet möglich sind. Besonders beliebt ist die Serles-Hochalmlinie – einer der schönsten Panoramablicke weit und breit. Direkt im Ort wartet eine der längsten Sommerrodelbahnen Tirols mit 2,8 Kilometern und über 1.000 Höhenmetern, ein Kletterpark sowie ein idyllischer Naturbadesee, der an heißen Tagen Familien anzieht. Die Lage macht Mieders zum idealen Ausgangspunkt für Wanderungen ins Stubaital, aber auch für Radtouren entlang der Ruetz.</p>\n\n<p>Kulinarisch wird in Mieders bodenständig aufgekocht: Knödel, Kaspressknödel-Suppe und Tiroler Gröstl stehen in den Gasthäusern auf der Karte, oft mit Zutaten von den umliegenden Bergbauernhöfen. Das Dorf bleibt überschaubar und ehrlich – kein Trubel, kein Hochglanz, sondern ein praktischer, naturverbundener Ferienort, der besonders Familien alles bietet, was man für einen gelungenen Tag in den Bergen braucht.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

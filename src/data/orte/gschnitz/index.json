@@ -26,6 +26,23 @@
     "lat": "47.0449",
     "lng": "11.3521"
   },
-  "beschreibung": "<p>Willkommen in Gschnitz, einem stillen Kleinod im Wipptal, das sich als Tor zum zauberhaften Gschnitztal öffnet. Dieses idyllische Bergdorf im Bezirk Innsbruck-Land ist der perfekte Rückzugsort für alle, die Ruhe, unberührte Natur und echte Alpenstimmung suchen. Hier, umgeben von majestätischen Gipfeln, beginnt Ihr Abenteuer.</p>\n\n<p>Lassen Sie sich von der Magie des Gschnitztals verzaubern: Eine Wanderung führt Sie zum kristallklaren Bergsee, der wie ein verstecktes Juwel in der Landschaft liegt. Ein weiteres Highlight ist",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Gschnitz liegt auf 1.242 m Höhe am Eingang des gleichnamigen Gschnitztals, eines ruhigen Seitentals des Wipptals im Bezirk Innsbruck-Land, rund 25 km südlich von Innsbruck. Die Marktgemeinde zählt knapp 400 Einwohner und ist über die Brennerbundesstraße erreichbar, zweigt dann aber bewusst ab – wer hierherkommt, lässt den Durchgangsverkehr hinter sich. 🏔️</p>\n\n<p>Das Dorf ist Ausgangspunkt für Wanderungen und Bergtouren in den Stubaier Alpen, insbesondere rund um die Tribulaun-Gruppe. Der Gschnitzbach, ein wildromantischer Gebirgsbach mit glasklarem Wasser, zieht sich durch das Tal und begleitet Wanderer auf dem Weg zum Kaserstattsee – einem kleinen, von Zirben und Latschen umrahmten Bergsee auf rund 2.100 m. Die Burgruine Gschnitz, eine mittelalterliche Anlage hoch über dem Ort, erinnert an die lange Siedlungsgeschichte dieses abgelegenen Wipptaler Bergdorfes. Wer Stille sucht, abseits der stark frequentierten Nachbartäler, findet hier ein Stück ursprüngliches Tirol.</p>\n\n<p>Kulinarisch setzen die wenigen Gasthäuser auf regionale Küche: Kasnocken, Tiroler Gröstl und Wildgerichte aus heimischer Jagd stehen auf den Speisekarten. Im Winter erschließt ein kleines Schigebiet Familien und Genussfahrer, im Sommer ist das Tal vor allem bei Bergsteigern und Naturliebhabern beliebt, die das stille Gegenstück zum benachbarten Stubaital suchen.",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

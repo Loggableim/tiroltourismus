@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mieming/hero_1.png",
+      "alt": "Mieming — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mieming/hero_1.png",
   "koordinaten": {
     "lat": "47.3412",
     "lng": "10.9656"
-  }
+  },
+  "beschreibung": "<p>Mieming liegt auf 864 m Höhe auf dem weiten Mieminger Sonnenplateau, einem Hochplateau südlich des Inntals im Bezirk Imst. Die rund 3.800 Einwohner verteilen sich auf mehrere kleine Weiler wie Barwies, Obermieming, Untermieming und See – typisch für eine Tiroler Streugemeinde. Nach Norden dominiert die markante Tschirgant-Bergkette mit ihren bis zu 2.372 m aufragenden Felswänden das Panorama, nach Süden schließt die wilde Mieminger Kette mit Hoher Munde und Griesspitzen das Plateau ab.</p>\n\n<p>Das Sonnenplateau zählt zu den niederschlagsärmsten und sonnigsten Regionen Tirols – wer hier wandert, merkt schnell den Unterschied zu den nebelverhangenen Orten im Inntal. Beliebte Touren führen auf die Lehnbergalm, zur Simmeringalm oder durch die Lärchenwälder am",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

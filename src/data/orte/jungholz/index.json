@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/jungholz/hero_1.png",
+      "alt": "Jungholz — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/jungholz/hero_1.png",
   "koordinaten": {
     "lat": "47.5709",
     "lng": "10.4530"
-  }
+  },
+  "beschreibung": "<p>Jungholz liegt auf 1.054 m Höhe im Bezirk Reutte, eingebettet zwischen dem Tannheimer Tal und dem Allgäu – und ist auf dem Landweg ausschließlich über Deutschland erreichbar. Die kleine Tiroler Exklave gehört politisch zu Österreich, ist aber vollständig von bayerischem Staatsgebiet umschlossen. Wer hierherkommt, passiert zwangsläufig den deutschen Zoll, bevor er in Tirol steht.</p>\n\n<p>Mit rund 300 Einwohnern ist Jungholz überschaubar geblieben, und genau das macht den Ort aus. Statt touristischem Trubel findet man weitläufige Wiesen, stille Wälder und ein gut ausgebautes Netz an Wanderwegen Richtung Hochgehren oder in den nahen Tannheimer Bergen. Im Winter ist Jungholz vor allem bei Langläufern bekannt – das Loipennetz rund um den Ort gehört zu den schneesichersten im Außerfern. Familien schätzen die ruhige Atmosphäre, den kleinen Spielplatz am Ortsrand und kurze Wege zu Ausflugszielen wie dem Haldensee oder der Füssener Alm.</p>\n\n<p>Kulinarisch steht die Sennerei Jungholz für frischen Bergkäse aus eigener Produktion – ein Stopp, der sich beim Wandern oder auf dem Rückweg nach Deutschland anbietet. Wer den Trubel der großen Tiroler Tourismuszentren sucht, ist hier falsch. Wer aber abgeschiedene Natur, klare Luft und ein paar ehrliche Stunden in den Bergen will, findet in Jungholz genau das. 🏔️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

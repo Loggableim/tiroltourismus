@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "46.8918",
     "lng": "10.5026"
-  }
+  },
+  "beschreibung": "<p><strong>Nauders</strong> befindet sich auf 1.394 Metern Höhe in den sonnigen Seitentälern des Oberlands – Paznaun, Kaunertal, Stanzer Tal und ist eine idyllische Streugemeinde. Rund <strong>1.600</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten und im winter locken gut präparierte skipisten und unberührte tiefschneeabfahrten und erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Wer Ruhe und Entspannung inmitten unberührter Natur sucht, wird in Nauders fündig. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

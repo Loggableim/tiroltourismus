@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hall-in-tirol/hero_1.png",
+      "alt": "Hall in Tirol — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hall-in-tirol/hero_1.png",
   "koordinaten": {
     "lat": "47.2817",
     "lng": "11.5075"
-  }
+  },
+  "beschreibung": "<p>Hall in Tirol liegt auf 574 m Seehöhe nur etwa zehn Kilometer östlich von Innsbruck am rechten Ufer des Inn und bildet mit rund 13.900 Einwohnerinnen und Einwohnern eine der historisch bedeutendsten Städte des Landes. Der Name verweist auf das mittelalterliche Salz (\"hall\" = salzhaltig), das hier über Jahrhunderte gehandelt und verarbeitet wurde. Zusammen mit Innsbruck teilt sich Hall den Rang als Zentrum der Region Innsbruck, behält aber als eigenständige Stadt mit eigenem Bezirk Innsbruck-Land einen klar abgegrenzten Charakter.</p>\n\n<p>Das Herz der Stadt ist einer der besterhaltenen Altstadtkerne Tirols mit verwinkelten Gassen, spätgotischen Bürgerhäusern und dem berühmten Münzturm, der weithin sichtbar über den Dächern aufragt. Der 1505 errichtete Turm war Teil der Münzanstalt, in der zwischen 1477 und 1766 der berühmte \"Haller Thaler\" geprägt wurde – einst eines der wichtigsten Zahlungsmittel des Habsburgerreichs. Heute beherbergt der Turm das Museum „Münzturm\" und gibt Einblick in die Geschichte des Tiroler Bergbaus. Weitere Sehenswürdigkeiten sind die spätgotische Pfarrkirche St. Nikolaus mit ihrem 78 Meter hohen Turm, das Rathaus aus dem 14. Jahrhundert und die Burg Hasegg, in der das Stadtmuseum untergebracht ist. Der Oberer Stadtplatz mit seinen Arkaden und Cafés lädt zum Verweilen ein.</p>\n\n<p>Neben Kultur und Geschichte bietet Hall eine überraschend lebendige Einkaufsmeile: Die Rosengasse und der Untere Stadtplatz haben sich als beliebte Shoppingadressen etabliert, die mit Innsbrucks Innenstadt konkurrieren können. Kulinarisch reicht das Angebot vom traditionellen Tiroler Gasthof mit Kasnocken und Tiroler Gröstl bis hin zu gemütlichen Cafés in historischen Gemäuern. Wer Hall besucht, bekommt eine kompakte, ehrliche Tiroler",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

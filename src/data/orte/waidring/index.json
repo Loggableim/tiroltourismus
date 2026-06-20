@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5843",
     "lng": "12.5687"
-  }
+  },
+  "beschreibung": "<p>Waidring liegt auf 778 Metern Seehöhe im Pillerseetal im Bezirk Kitzbühel, direkt an der Grenze zum bayerischen Chiemgau. Mit rund 2.000 Einwohnern ist der Ort die letzte Tiroler Gemeinde im Tal, bevor die Straße nach Deutschland führt. Die Lage am Übergang zwischen Kitzbüheler Alpen und den Loferer Steinbergen macht den Ort zu einem Knotenpunkt für Bergsportler im Sommer wie im Winter.</p>\n\n<p>Herzstück des Ortes ist das Skigebiet Steinplatte, das Waidring mit dem bayrischen Winkelmoos verbindet und rund 42 Pistenkilometer bietet. Besonders Familien schätzen die breiten, übersichtlichen Abfahrten und den direkten Einstieg vom Ort. Im Sommer lockt der Triassic Trail auf der Steinplatte – ein Themenweg mit über 30 lebensgroßen Nachbildungen von Meeresreptilien, der an den Fundort von Fossilien aus der Urzeit der Alpen erinnert. Wanderer starten direkt vom Ortskern zu Touren Richtung Kammerköhralm oder auf die Loferer Steinberge, deren schroffe Nordwände den Talabschluss eindrucksvoll begrenzen.</p>\n\n<p>Im Dorfkern prägen alte Bauernhöfe und die spätgotische Pfarrkirche das Bild. Kulinarisch stehen regionale Klassiker auf den Speisekarten – Kasnocken, Pinzgauer Bier und Milchprodukte von umliegenden Almen. Wer Ruhe sucht, findet sie am Pillersee, fünf Kilometer taleinwärts, der im Sommer zum Baden und im Winter zum Eislaufen einlädt. Waidring ist kein Ort für Hochglanz-Tourismus, sondern für alle, die echte Bergnähe schätzen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

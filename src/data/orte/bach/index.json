@@ -26,5 +26,23 @@
     "lat": "47.2441",
     "lng": "10.4129"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>🏘️ Bach liegt auf 1.070 Metern Höhe im hinteren Lechtal, im Bezirk Reutte, und zählt rund 650 Einwohner. Die Marktgemeinde erstreckt sich entlang der B198 zwischen Steeg und Elbigenalp und gehört zu den am dünnsten besiedelten Orten Tirols – gerade das macht den Reiz des Ortes aus.</p>\n\n<p>Das Lechtal gilt als einer der letzten unverbauten Wildflusslandschaften der Nordalpen, und Bach bildet mitten in dieser Naturkulisse einen ruhigen Ausgangspunkt für Wanderungen und Familienausflüge. Direkt im Ort liegt der Naturbadesee Bach, ein kleiner Bergsee mit glasklarem Wasser und Liegewiese – im Sommer beliebt bei Familien mit Kindern. Von hier aus führen markierte Wege in die Lechtaler Alpen, etwa Richtung Almajurjoch oder zur Muttekopfhütte. Traditionelle Lechtaler Bauernhöfe mit ihren breiten, flach geneigten Dächern prägen das Dorfbild und zeugen von der langen landwirtschaftlichen Geschichte des Tales.</p>\n\n<p>Kulinarisch steht die Region für einfache, ehrliche Küche: Kaspressknödel, Kässpätzle und Wildgerichte aus heimischer Jagd findet man in den wenigen Gasthäusern des Ortes. Wer absolute Stille sucht, abseits der Touristenströme des benachbarten Lech am Arlberg, ist in Bach richtig – hier dominiert der Rhythmus der Natur, nicht der der Saison.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

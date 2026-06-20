@@ -26,5 +26,23 @@
     "lat": "47.3430",
     "lng": "11.8470"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Fügen liegt auf 545 m Seehöhe im vorderen Zillertal, etwa 30 km östlich von Innsbruck, und ist mit rund 4.200 Einwohnern die erste größere Marktgemeinde im Tal. Als Verwaltungssitz der vorderen Zillertaler Gemeinden bildet Fügen das wirtschaftliche Zentrum am Talausgang und gehört zum Bezirk Schwaz.</p>\n\n<p>Über die Spieljoch-Bergbahn, die direkt im Dorfzentrum startet, erschließt sich ein kompaktes, familienfreundliches Skigebiet bis auf rund 2.100 m, das im Sommer als Wandergebiet mit dem beliebten Geopfad und dem Spieljoch-Klettersteig genutzt wird. Wirklich einzigartig ist der „Wilde Wasser\"-Komplex: Mit dem Erlebnisterme Zillertal und dem direkt daneben liegenden, 320 m langen Kanal – dem größten künstlichen Wildwasserkanal Europas – hat sich Fügen einen Namen als Ganzjahresdestination für Aktivurlauber gemacht. Im Kanal trainieren internationale Kanuten, gleichzeitig können Anfänger ihre ersten Paddelschläge unter Anleitung machen.</p>\n\n<p>Kulinarisch steht Fügen für die Zillertaler Heumilch-Tradition; die örtliche Sennerei verarbeitet Milch von Bergbauernhöfen, die noch traditionelle Heuwirtschaft betreiben. Die barocke Pfarrkirche zum Hl. Vitus mit ihrem markanten Zwiebelturm prägt das Ortsbild, und der alljährliche Gauder Festwochen im Frühjahr zählt zu den ältesten und größten Brauchtumsfesten Tirols. Wer Action, Familienprogramm und echte Zillertaler Lebensart sucht, kommt an Fügen kaum vorbei.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

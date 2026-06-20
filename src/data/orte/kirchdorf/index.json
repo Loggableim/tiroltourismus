@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kirchdorf/hero_1.png",
+      "alt": "Kirchdorf in Tirol — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kirchdorf/hero_1.png",
   "koordinaten": {
     "lat": "47.5587",
     "lng": "12.4490"
-  }
+  },
+  "beschreibung": "<p>Kirchdorf in Tirol liegt auf 641 Metern Höhe im Bezirk Kitzbühel, eingebettet zwischen dem wilden Kaisergebirge im Norden und den sanfteren Kitzbüheler Grasbergen im Süden. Das breite Leukental gibt dem Dorf Raum, und rund 3.600 Menschen leben hier dauerhaft. Der historische Ortskern mit der Pfarrkirche und den typischen Tiroler Bauernhöfen zeigt noch heute die gewachsene Struktur eines alten Tiroler Dorfes, das seinen bäuerlichen Charakter bewahrt hat.</p>\n\n<p>Wandern steht in Kirchdorf zu Recht ganz oben: Der Hausberg ist der Schatzer mit 1.966 Metern, ein aussichtsreicher Grasberg, der in rund zweieinhalb Stunden ab dem Ort zu besteigen ist und mit Blick auf das Kaisergebirge und die Hohen Tauern belohnt. Für Familien eignet sich der kürzere Aufstieg auf den Gaisberg, von dessen Kapelle der Blick über das Tal schweift. Im Winter liegen die Skigebiete von St. Johann in Tirol und der Steinplatte in kurzer Reichweite, und das weitläufige Loipennetz im Leukental zieht Langläufer an. Der Ort bietet damit das ganze Jahr über Bewegungsmöglichkeiten direkt vor der Haustür.</p>\n\n<p>Kulinarisch dominiert klassische Tiroler Kost: Kasnocken, Kaspressknödel und heimische Produkte aus der Landwirtschaft stehen in den Gasthäusern auf der Karte. Kirchdorf bleibt damit, was es immer war – ein echtes Tiroler Dorf, das nicht auf Effekt macht, sondern mit Bodenständigkeit und Natur punktet.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

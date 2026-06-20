@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2523",
     "lng": "11.3279"
-  }
+  },
+  "beschreibung": "<p>Völs liegt am westlichen Rand von Innsbruck auf 654 Metern Seehöhe und zählt rund 7.100 Einwohner – eine Marktgemeinde, die das Beste aus zwei Welten vereint: städtische Infrastruktur und dörflichen Charakter. Der historische Ortskern rund um die Pfarrkirche zum Hl. Blasius bildet das Herz des Ortes, über ihm thront das markante <strong>Schloss Völs</strong> (auch Völsberg genannt), das bereits 1166 urkundlich erwähnt wurde und zu den ältesten Burganlagen Tirols zählt. Heute befindet es sich im Besitz der Grafen von Trapp – jener Familie, die durch das Musical \"The Sound of Music\" weltbekannt wurde. Archäologische Funde auf dem Völser Bich",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

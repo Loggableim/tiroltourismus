@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/matrei/hero_1.png",
+      "alt": "Matrei in Osttirol — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/matrei/hero_1.png",
   "koordinaten": {
     "lat": "47.0011",
     "lng": "12.5387"
-  }
+  },
+  "beschreibung": "<p>Matrei in Osttirol liegt auf 975 Metern Seehöhe am Eingang des Tauerntals im Bezirk Lienz und ist mit rund 4.600 Einwohnern der größte Marktort Osttirols. Am Zusammenfluss von Isel und Tauernbach erstreckt sich der Ort zwischen den Ausläufern der Venedigergruppe im Norden und den Lienzer Dolomiten im Süden – geographisch genau dort, wo sich das Tal für den Nationalpark Hohe Tauern weit öffnet.</p>\n\n<p>🏞️ Wer in Matrei startet, hat es nicht weit zu den höchsten Gipfeln Österreichs: Die Venedigergruppe mit dem Großvenediger (3.662 m) liegt praktisch vor der Haustür, ebenso wie das historische Tauernhaus in Felbertal, eine der ältesten Schutzhütten des Alpenvereins. Das weitläufige Wanderwegenetz reicht von gemütlichen Talwanderungen entlang der Isel bis zu hochalpinen Touren mit Gletscherberührung. Mountainbiker finden Routen durch das Defereggen und Virgental, Kletterer zieht es an die Felswände rund ums Dorf, und im Winter verwandelt sich die Umgebung in ein Tourengebiet abseits des Massentourismus. Die Burg Weißenstein aus dem 13. Jahrhundert thront über dem Ortskern und ist eines der ältesten Bauwerke Osttirols.</p>\n\n<p>Kulinarisch stehen Osttiroler Spezialitäten auf dem Tisch: Schlutzkrapfen, Schlipfkrapfen und Kaspressknödel, oft serviert in traditionsreichen Gasthäusern rund um den Marktplatz. Wer Stille sucht, findet sie hier noch – ohne Seilbahnen, ohne Après-Ski, aber mit direktem Zugang zu einer der ursprünglichsten Hochgebirgslandschaften der Ostalpen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

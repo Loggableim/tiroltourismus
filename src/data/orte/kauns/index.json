@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kauns/hero_1.png",
+      "alt": "Kauns — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kauns/hero_1.png",
   "koordinaten": {
     "lat": "47.0791",
     "lng": "10.6911"
-  }
+  },
+  "beschreibung": "<p>Kauns liegt auf einem sonnigen Plateau oberhalb des Inntals auf 1.050 Metern Seehöhe und bildet den westlichen Eingang zum Kaunertal im Bezirk Schwaz. Mit rund 600 Einwohnerinnen und Einwohnern zählt das Dorf zu den ruhigeren Orten der Region, ohne dabei abgelegen zu wirken – die Inntalautobahn verläuft wenige Kilometer tiefer im Tal.</p>\n\n<p>Die Lage auf der Sonnenterrasse bringt dem Ort ein ausgesprochen mildes Klima, das schon früh im Jahr Wanderungen entlang des Kaunsbergwegs oder hinauf zur Burgruine Berneck ermöglicht. Die Ruine thront über dem Ort und gehört zu den ältesten Adelssitzen im Oberinntal, ihre Aussicht reicht bis zu den Stubaier und Ötztaler Alpen. Im Winter ist die Straße ins Kaunertal Ausgangspunkt für den Weg zum Kaunertaler Gletscher, einem der wenigen Gletscherskigebiete Tirols mit Skibetrieb bis weit in den Frühling. Familien schätzen die überschaubare Infrastruktur, die kurzen Wege und das Naturerlebnis ohne Trubel.</p>\n\n<p>Die Pfarrkirche zum Heiligen Georg mit ihrem markanten Zwiebelturm prägt das Ortsbild und stammt in ihrer heutigen Form aus dem 18. Jahrhundert. Kulinarisch ist die Region stark von der Tiroler Berglandwirtschaft geprägt – Kasnocken, Graukäse und selbst gebrannte Schnäpse finden sich in den wenigen Gasthäusern des Dorfs. Wer Kauns besucht, sucht bewusst die Stille abseits der großen Tourismuszentren und findet hier ein intaktes Bergdorf mit echtem Alltagsleben.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/laengenfeld/hero_1.png",
+      "alt": "Längenfeld — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/laengenfeld/hero_1.png",
   "koordinaten": {
     "lat": "47.0732",
     "lng": "10.9712"
-  }
+  },
+  "beschreibung": "<p>Längenfeld liegt auf 1.179 m Höhe im hinteren Ötztal, etwa 25 km von Sölden entfernt, und zählt rund 4.600 Einwohner. Der Ort gehört zum Bezirk Imst und ist eine der wenigen Tiroler Gemeinden, in denen Thermalwasser direkt aus dem Boden kommt – bereits seit 1977 wird hier auf 40 °C warmes Quellwasser aus über 1.800 m Tiefe gebohrt.</p>\n\n<p>Das prägende Wahrzeichen ist der Aqua Dome, eine weit über die Landesgrenzen hinaus bekannte Thermenlandschaft mit futuristischer Architektur und drei schwebenden Becken, die über dem Außenbereich zu schweben scheinen. Tagsüber wandert man von Längenfeld aus auf gut markierten Steigen in die umliegenden Bergdörfer Gries, Huben oder auf den Wetterkreuzkogel, abends kehrt man in die heißen Quellen zurück. Im Winter führt die nächste Skigebiets-Anbindung nach Sölden mit dem Gletscherskigebiet am Rettenbach- und Tiefenbachferner. Die Region eignet sich damit für Familien, die Sommer wie Winter Abwechslung suchen, ohne auf den thermalen Erholungsfaktor zu verzichten.</p>\n\n<p>Kulinarisch steht das Ötztal für deftige Almküche: Kaspressknödel, Graukas und der regionale Berglammbraten finden sich auf den Speisekarten der Wirtshäuser rund um den Dorfplatz. Wer den Ort besucht, sollte einen Abstecher zur Pfarrkirche Hl. Katharina einplanen, deren spätgotischer Bau aus dem 15. Jahrhundert stammt und dem Ort einen ruhigen historischen Kontrast zur modernen Thermenwelt verleiht.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

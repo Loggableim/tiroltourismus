@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "46.9995",
     "lng": "12.4305"
-  }
+  },
+  "beschreibung": "<p>Virgen liegt auf 1.194 m Höhe im Virgental, einem osttiroler Seitental des Iseltals, und zählt rund 2.300 Einwohner. Die Marktgemeinde erstreckt sich über verstreute Weiler wie Obermauern, Welzelach, Mellitz und Ganz, die sich über mehrere Kilometer entlang des Talbodens ziehen. Virgen gehört zum Bezirk Lienz und gilt als eines der schönsten Dörfer Osttirols – nicht zuletzt wegen seiner exponierten Lage am Fuß der Lasörlinggruppe, die das Tal nach Süden hin abschließt.</p>\n\n<p>Das Wahrzeichen des Ortes ist die spätgotische Pfarrkirche zum Heiligen Virgil mit ihrem markanten, frei stehenden Turm aus dem 15. Jahrhundert – ein Bauwerk, das weit über die Gemeindegrenzen hinaus bekannt ist. Virgen ist berühmt für seinen außergewöhnlichen Blumenreichtum: Über 400 verschiedene Pflanzenarten wurden hier nachgewiesen, was den Ort zu einem Paradies für Wanderer und Naturbeobachter macht. Der Talboden und die umliegenden Almen bieten im Sommer ein Netz gut markierter Wanderwege – von gemütlichen Spaziergängen entlang der Isel bis zu anspruchsvollen Touren Richtung Venedigerstock. Auch Kletterer und Mountainbiker finden hier abwechslungsreiche Reviere.</p>\n\n<p>Kulturell pflegt Virgen typische Osttiroler Traditionen, von der Krippenbaukunst bis zu den alljährlichen Kirchtagen in den Fraktionen. Kulinarisch stehen regionale Produkte im Mittelpunkt: Osttiroler Sch",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

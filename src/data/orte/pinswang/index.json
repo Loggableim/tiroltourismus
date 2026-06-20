@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5417",
     "lng": "10.6904"
-  }
+  },
+  "beschreibung": "<p>Pinswang liegt auf 840 m Seehöhe im Außerfern, direkt an der Grenze zu Bayern – und damit nur einen Katzensprung von den berühmtesten Königsschlössern Deutschlands entfernt. Das Dorf mit seinen rund 400 Einwohnern gehört zum Bezirk Reutte und bildet den westlichsten Zipfel Tirols. Wer hier ankommt, merkt schnell: Hier ist man abseits der Touristenströme, die wenige Kilometer weiter rund um Neuschwanstein und Hohenschwangau pulsieren.</p>\n\n<p>Über dem Ort thront das sagenumwobene Schloss Pinswang, das bis ins 13. Jahrhundert zurückreicht und mit seinen Geistergeschichten für Gänsehaut sorgt. Ringsum laden gut markierte Wanderwege durch die Ammergauer Alpen und entlang des Lech zu Touren ein – etwa auf den Säuling, von dessen Gipfel man einen seltenen Blick auf gleich drei Königsschlösser hat. Die Ruhe ist spürbar: kein Durchgangsverkehr, keine Hektik, nur Wiesen, Wälder und das leise Plätschern der Bäche. Wer früh aufbricht, kann vor den Busladungen aus Füssen noch ungestört durch die Auen spazieren.</p>\n\n<p>Kulinarisch wird's bodenständig – regionale Wirtshäuser servieren Tiroler Küche mit Zutaten direkt vom Bauern. Pinswang ist kein Ort für große Programmpunkte, sondern für alle, die das Echte suchen: Geschichte zum Anfassen, Natur ohne Trubel und die seltene Gelegenheit, den bekanntesten Schlössern Bayerns ganz nah zu sein, ohne mittendrin zu wohnen. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

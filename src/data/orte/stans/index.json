@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.3680",
     "lng": "11.7163"
-  }
+  },
+  "beschreibung": "<p>Stans liegt auf 563 Meter Höhe am Eingang des Zillertals, unmittelbar nach Schwaz, wo sich das Inntal zum Zillertal hin öffnet. Die Gemeinde mit ihren rund 2.100 Einwohnern gehört zum Bezirk Schwaz und blickt auf eine lange Geschichte zurück, die eng mit dem Silberbergbau der Region verknüpft ist.</p>\n\n<p>Das Herzstück des Ortes ist das älteste Zillertaler Bauernhaus, das bis heute erhalten ist und Einblick in die bäuerliche Lebensweise vergangener Jahrhunderte gibt. Direkt daneben erhebt sich die Pfarrkirche zum Hl. Georg, die das Ortsbild prägt. Naturbegeisterte schätzen Stans als Ausgangspunkt für Wanderungen und Radtouren ins Zillertal sowie in die umliegende Bergwelt. Der Stanser Bach, der durch den Ort fließt, und die Wiesen rund um den Weiler Schlierbach laden zu Spaziergängen ein. Familien finden hier eine ruhige, überschaubare Umgebung mit kurzen Wegen zu Spielplatz, Kirche und Gasthaus.</p>\n\n<p>Kulturell pfleg",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

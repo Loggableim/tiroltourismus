@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kitzbuehel/hero_1.png",
+      "alt": "Kitzbühel — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kitzbuehel/hero_1.png",
   "koordinaten": {
     "lat": "47.4464",
     "lng": "12.3911"
-  }
+  },
+  "beschreibung": "<p>Kitzbühel liegt auf 762 Metern Höhe im gleichnamigen Bezirk in den Kitzbüheler Alpen und zählt rund 8.200 Einwohner. Die Stadt blickt auf eine über 750-jährige Geschichte zurück, geprägt vom mittelalterlichen Silberbergbau, der der Altstadt mit ihren schmalen Gassen und farbenfrohen Häuserfassaden noch heute einen eigenständigen Charakter verleiht. 1271 erstmals urkundlich erwähnt, war Kitzbühel einst eine der reichsten Bergbaustädte Tirols.</p>\n\n<p>Der Name Kitzbühel ist weltweit untrennbar mit dem Hahnenkammrennen verbunden, das jedes Jahr im Januar Tausende auf die berüchtigte Streif lockt. Die Abfahrt am Hahnenkamm zählt mit ihrer Mausefalle und der steilen Hausberg-Kante zu den anspruchsvollsten Strecken im Skiweltcup. 🏔️ Im Winter stehen rund 230 Pistenkilometer und über 50 Bergbahnen bereit, im Sommer verwandelt sich die Region in ein weitläufiges Wander- und Mountainbike-Revier mit über 1.000 Kilometern markierten Wegen. Die Kitzbüheler Hornbahn bringt Besucher auf 2.000 Meter, wo ein einmaliger Panoramablick auf 70 Dreitausender wartet.</p>\n\n<p>Kulinarisch reicht das Angebot vom traditionellen Tiroler Beisl mit Kaspressknödel und Tiroler Gröstl bis zur gehobenen Haubenküche in Restaurants wie dem Restaurant Rosengarten. Die Stadt gilt als einer der exklusivsten Orte Österreichs, was sich in den zahlreichen Luxusgeschäften rund um die Vorderstadt widerspiegelt. Wer Kitzbühel besucht, erlebt eine seltene Mischung aus sportlichem Ernst, mondänem Flair und gelebter Tiroler Tradition – und das zu jeder Jahreszeit.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

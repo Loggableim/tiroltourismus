@@ -1,6 +1,8 @@
 ---
 import FavHeart from './FavHeart.astro';
 export interface Props {
+  /** Optional locale prefix for multilang links (e.g. "fr"). */
+  locale?: string;
   name: string;
   slug: string;
   kurzbeschreibung?: string;
@@ -11,7 +13,7 @@ export interface Props {
   preis?: string;
   linkPrefix?: string;
 }
-const { name, slug, kurzbeschreibung, kategorie, emoji = '🏛️', farbe = '#8B5CF6', ort, preis, linkPrefix = '/sehenswuerdigkeiten/' } = Astro.props;
+const { name, slug, kurzbeschreibung, kategorie, emoji = '🏛️', farbe = '#8B5CF6', ort, preis, linkPrefix = '/sehenswuerdigkeiten/' , locale = undefined } = Astro.props;
 const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport: 'Sport', museum: 'Museum', kirche: 'Kirche', burg: 'Burg', wanderung: 'Wanderung' };
 ---
 <a href={`${linkPrefix}${slug}/`} class="sight-card" data-collection="sehenswuerdigkeiten" data-slug={slug} data-filter-card data-filter-cat={kategorie || 'all'}>
@@ -43,7 +45,7 @@ const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport
   .sight-body p{font-size:14px;color:var(--text2);line-height:1.72;flex:1;margin-bottom:10px}
   .sight-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
   .sight-preis{font-size:13px;font-weight:700;color:var(--purple)}
-  .sight-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink);transition:all .3s}
+  .sight-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--tirol-pink);transition:all .3s}
   .sight-link:hover{gap:6px}
   @media(max-width:600px){
     .sight-card-img{height:120px}

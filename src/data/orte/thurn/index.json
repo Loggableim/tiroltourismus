@@ -19,5 +19,18 @@
   "koordinaten": {
     "lat": "46.8485",
     "lng": "12.7611"
-  }
+  },
+  "beschreibung": "<p>Thurn liegt auf einem sonnigen Hochplateau rund 250 Meter über dem Talboden von Lienz. Auf 819 Metern Seehöhe thront das Dorf mit seinen etwa 600 Einwohnern über der Bezirkshauptstadt Osttirols und bietet einen weiten Blick hinunter ins Drautal sowie auf die Lienzer Dolomiten. Wer hier oben steht, sieht bei klarer Luft bis zur Schobergruppe und zum Großglockner hinüber.</p>\n\n<p>Der Ort gehört zur Gemeinde Thurn, die sich aus mehreren kleinen Weilern zusammensetzt. Charakteristisch sind die traditionellen Osttiroler Bauernhöfe mit ihren tief heruntergezogenen Satteldächern, die sich um die Pfarrkirche gruppieren. Die Wege zwischen den Höfen sind kurz, die Nachbarn kennen sich – das macht Thurn zu einem Ort, an dem Familien mit Kindern Ruhe finden, ohne auf die Infrastruktur von Lienz verzichten zu müssen. Die Stadt mit Schulen, Ärzten und Einkaufsmöglichkeiten ist in wenigen Minuten mit dem Auto erreichbar.</p>\n\n<p>Wandern lässt sich hier direkt vom Haus weg: Über Wiesen und durch lichte Lärchenwälder führen markierte Steige hinauf Richtung Zettersfeld und über die Hänge des Rauchkofels. Im Winter liegen die Hänge oberhalb des Dorfes oft als Erste in der Sonne, während unten im Tal noch der Nebel hängt. Thurn ist kein Ort für große touristische Inszenierung, sondern für jene, die das stille, authentische Osttirol suchen – mit Lienz buchstäblich zu Füßen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    }
+  ]
 }

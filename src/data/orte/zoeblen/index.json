@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5115",
     "lng": "10.4821"
-  }
+  },
+  "beschreibung": "<p>Zöblen liegt auf 1.100 Metern Seehöhe im Tannheimer Tal, im Bezirk Reutte, und ist das höchstgelegene Dorf des Hochtals. Mit nur rund 250 Einwohnerinnen und Einwohnern zählt der Ort zu den kleinsten und ruhigsten Siedlungen im Außerfern, nahe der Grenze zu Bayern. Das Tannheimer Tal selbst ist ein Hochtal auf etwa 1.100 Metern, eingefasst von markanten Gipfeln wie Roter Flüh, Gimpel und Köllenspitze.</p>\n\n<p>Die Umgebung prägt den Charakter des Ortes: Ausgangspunkt für Wanderungen zur Roten Flüh oder über den Jochweg, der Zöblen mit den Nachbargemeinden verbindet. Im Winter gehört das Tannheimer Tal zu den wenigen grenzüberschreitenden Skigebieten Tirols, mit Loipen, die nach Deutschland und ins Allgäu hinüberführen. Die Lage auf der Sonnenseite des Tales sorgt für lange Sonnentage, gleichzeitig ist die Höhenluft spürbar klar und trocken – ein Unterschied, den Gäste aus tieferen Lagen sofort bemerken.</p>\n\n<p>Kulinarisch dominiert die klassische Außerferner Küche mit Käsespätzle, Käsereien aus dem Tal und Wildgerichten aus heimischer Jagd. Kleine Gasthäuser und private Pensionen prägen das Bild, große Hotelburgen sucht man vergeblich. Wer abseits der ausgetretenen Tiroler Pfade absolute Stille sucht, findet in Zöblen einen der letzten ruhigen Orte des Tannheimer Tals",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

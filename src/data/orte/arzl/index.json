@@ -26,6 +26,23 @@
     "lat": "47.2062",
     "lng": "10.7606"
   },
-  "beschreibung": "<p><strong>Arzl im Pitztal</strong> liegt auf 880 Metern Höhe und ist der Hauptort des malerischen Pitztals in Tirol. Das Dorf vereint traditionelle Tiroler Architektur mit moderner touristischer Infrastruktur und ist das ganze Jahr über ein beliebtes Urlaubsziel für Aktivurlauber und Erholungssuchende.</p><p>Der direkte Zugang zum Pitztaler Gletscher, einem der schneesichersten Skigebiete Österreichs, macht Arzl zu einem Paradies für Wintersportler. Die Gletscherpisten sind von November bis Mai befahrbar und bieten hervorragende Bedingungen für Skifahrer und Snowboarder aller Könnensstufen. Im Sommer lockt der atemberaubende Pitztaler Höhenweg, der zu einer der schönsten Höhenwanderungen der Alpen zählt und spektakuläre Ausblicke auf die umliegenden Dreitausender bietet.</p><p>Neben dem Natursport hat Arzl auch kulturell einiges zu bieten: Die barocke Pfarrkirche im Ortszentrum und die traditionellen Bauernhäuser prägen das Dorfbild. In den gemütlichen Gasthöfen und Hotels können Gäste die berühmte Tiroler Gastfreundschaft und die regionale Küche in vollen Zügen genießen.</p>",
-  "kategorie": "dorf"
+  "beschreibung": "<p>Arzl im Pitztal liegt auf 880 Metern Seehöhe im Bezirk Imst und ist mit rund 3.200 Einwohnern der Hauptort des Pitztals, eines der ursprünglichsten Seitentäler des Inntals. Am Eingang des Tals gelegen, verbindet der Ort die Gemütlichkeit eines traditionellen Tiroler Dorfes mit der unmittelbaren Nähe zu hochalpinen Erlebniswelten – der Pitztaler Gletscher mit seinen Skigebieten Rifflsee und Hinterer Brunnenkogel ist über die benachbarte Mittelbergstation direkt erreichbar.</p>\n\n<p>Wandern steht in Arzl besonders hoch im Kurs: Der legendäre Pitztaler Höhenweg, ein mehrtägiger Alpintrail auf über 2.000 Metern, beginnt quasi vor der Haustür und führt durch die eindrucksvolle Bergwelt des Kaunergrats. Familien schätzen den Abenteuerpark \"Pitz Park\" mit Klettersteigen und Naturlehrpfaden, während Tierfreunde im Pitztal Steinwild-Beobachtungsgebiet den scheuen Alpensteinböcken begegnen können. Im Winter lockt der Gletscherskilauf bis auf 3.440 Meter – die Skiasse der Region, darunter Benni Raich, haben hier ihre Wurzeln. Die berühmte Benni-Raich-Hängebrücke überspannt die Pitze und gehört zu den längsten Hängebrücken Tirols.</p>\n\n<p>Kulinarisch wird's deftig und ehrlich: Pitztaler Krapfen, Graukäse und Gerstensuppe stehen in den Gasthäusern auf der Karte, oft mit Zutaten von umliegenden Bergbauernhöfen. Wer abends in den Dorfgasthäusern einkehrt, bekommt schnell ein Gefühl dafür, warum die Arzler zu Recht",
+  "kategorie": "dorf",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/muenster/hero_1.png",
+      "alt": "Münster — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/muenster/hero_1.png",
   "koordinaten": {
     "lat": "47.4208",
     "lng": "11.8330"
-  }
+  },
+  "beschreibung": "<p>Münster liegt eingebettet im Tiroler Inntal, nur wenige Kilometer hinter der deutschen Grenze bei Kiefersfelden. Auf 534 Metern Seehöhe erstreckt sich der Ort mit seinen rund 3.400 Einwohnern entlang des Inns, umrahmt von den Ausläufern des Kaisergebirges und sanften Wiesen. Die Lage macht Münster zu einem ruhigen Ausgangspunkt für alle, die Natur und bäuerliche Kultur gleichermaßen schätzen – ohne den Trubel der nahegelegenen Bezirkshauptstadt Kufstein.</p>\n\n<p>Das Herzstück des Dorfes ist die imposante Kirchenburg, eine der größten und besterhaltenen Wehrkirchen Tirols. Mit ihren dicken Mauern, Wehrgängen und dem markanten Torturm zeugt sie von der Zeit, als die Menschen hier Zuflucht vor feindlichen Überfällen suchten. Rund um die Pfarrkirche St. Peter laden kleine Gassen und traditionelle Höfe zum Verweilen ein. Besonders im Sommer, wenn die Wiesen blühen und das Inntal im Abendlicht leuchtet, entfaltet Münster seinen ganz eigenen, beschaulichen Charakter.</p>\n\n<p>Für Familien und Wanderer führt der Weg direkt hinauf auf den Hausberg. Gut markierte Routen – von gemütlichen Spaziergängen entlang des Inns bis zu anspruchsvolleren Touren Richtung Hochstein – bieten für jedes Alter das Passende. Im Winter locken geräumte Wege und Loipen, im Sommer locken die Bergwiesen mit Murmeltieren und seltenen Alpenblumen. Wer in Münster einkehrt, findet typische Tiroler Wirtshäuser mit regionaler Küche – und vor allem: die Stille, die viele in den umliegenden Touristenzentren vergeblich suchen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

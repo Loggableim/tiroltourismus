@@ -26,5 +26,23 @@
     "lat": "47.5137",
     "lng": "12.3025"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Auf 820 Metern Höhe, eingebettet in die imposante Felsarena des Wilden Kaisers, liegt Ellmau – ein Dorf, das weit über Tirol hinaus bekannt ist. Hier schuf der ORF mit der Bergdoktor-Serie eine der ikonischsten TV-Kulissen des Landes, und wer durch den Ort spaziert, erkennt die Drehorte sofort wieder. Das Ellmauer Zentrum ist überschaubar und bodenständig: kleine Gasthäuser, ein gut sortierter Spar-Markt rund um den Dorfplatz und die Pfarrkirche mit ihrem markanten Zwiebelturm prägen das Bild. Der Bezirk Kufstein liegt nur eine halbe Autostunde entfernt, doch Ellmau fühlt sich dank seiner Lage am Fuß der markanten Felswände wie eine eigene kleine Welt an.</p>\n\n<p>Die knapp 2.900 Einwohner leben hier eingebunden in eine alpine Bilderbuchlandschaft. Besonders Familien schätzen die Region, denn das Angebot reicht vom gemütlichen Spaziergang entlang der Schwarzache bis zu anspruchsvollen Bergtouren auf die Maukspitze oder den Hausberg Hartkaiser. Ein echtes Highlight für Kinder ist das Hexenwasser in Söll, das in wenigen Minuten erreichbar ist, oder der Bergdoktor-Erlebnisweg, der spielerisch durch die Seriengeschichte führt. Das Kaikogerl, ein traditionelles Almgebiet am Fuße des Kaisers, lädt im Sommer zu Einkehr und Panoramablick ein, im Winter verwandelt sich die Region in ein weitläufiges Skigebiet der SkiWelt Wilder Kaiser – Brixental.</p>\n\n<p>Wer Ruhe sucht, findet sie auf den zahlreichen Wegen rund um den Ort, etwa hinauf zur Rübezahlalm oder durch die blühenden Wiesen im Frühling. Ellmau verbindet das, was viele Tiroler Dörfer ausmacht: eine starke regionale Identität, gelebte Tradition und gleichzeitig eine Offenheit für Gäste, die das echte Tirol kennenlernen wollen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

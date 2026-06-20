@@ -27,5 +27,23 @@
     "lat": "46.9195",
     "lng": "10.1706"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Galtür liegt auf 1.600 Metern Höhe am hinteren Ende des Paznauntals im Bezirk Landeck und ist mit rund 800 Einwohnern eine der höchstgelegenen Dauersiedlungen Tirols. Wer hierherkommt, erreicht den Ort über die Silvretta-Hochalpenstraße oder durch das Tal von Landeck – und steht direkt vor einer Bergwelt, die vom Dreitausender-Massiv der Silvretta bis zum Hohen Riffler reicht.</p>\n\n<p>Das Skigebiet Silvapark Galtür gehört zu den Variantenreichsten Tirols – 40 Pistenkilometer, sechs Berge und zahlreiche Buckelpisten, Steilhänge und Tiefschneehänge, die teilweise bis ins Dorf führen. Abseits der Lifte lädt der Naturpark Tiroler Lech zum Wandern ein, eine der letzten unverbauten Wildflusslandschaften Mitteleuropas. Im Sommer starten von Galtür aus anspruchsvolle Touren in die Silvretta, etwa zum Jamtalferner oder zur Wiesbadener Hütte. Die Lawinenkatastrophe von 1999, der 31 Menschen zum Opfer fielen, hat den Ort geprägt – nicht nur das Mahnmal am Dorfplatz erinnert daran, auch das moderne Sicherheits- und Frühwarnsystem im Tal ist daraus entstanden.</p>\n\n<p>Wer abends vom Wandern oder Skifahren zurückkommt, isst in Galtür noch bodenständig: Kasnocken im Wirtshaus, Paznauner Bergkäse von der Sennerei und Schnaps aus der Brennerei Alpensenn. Das kleine, aber engagierte Alpinarium zeigt die Geschichte des Tals und arbeitet die Lawinenerfahrung als Mahnung und Forschungsprojekt auf. Wer Ruhe, Schneesicherheit und",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

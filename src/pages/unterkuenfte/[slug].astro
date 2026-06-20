@@ -1,8 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import PremiumBadge from '../../components/PremiumBadge.astro';
 import PaywallOverlay from '../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -14,14 +13,13 @@ const { slug } = Astro.params;
 const entry = readEntry('unterkuenfte', slug);
 if (!entry) return Astro.redirect('/unterkuenfte/');
 
+// Qualitätslogik: dünne Seiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'unterkuenfte');
+
 const typLabel = { hotel:'Hotel', ferienwohnung:'Ferienwohnung', bauernhof:'Bauernhof', jugendherberge:'Jugendherberge', camping:'Camping' };
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
-const isSilver = tier === 'silver';
-const isGold = tier === 'gold';
 
 const badge = null;
-const tierBadge = tier;
 
 const emoji = entry.typ === 'camping' ? '🏕️' : (entry.emoji || '🏨');
 
@@ -91,7 +89,7 @@ if (entry.beschreibung) {
 }
 
 // Vollständige Details (für Silver/Gold)
-if (!isBasic) {
+if (!(tier === 'basic')) {
   premiumSections.push({
     type: 'details-grid',
     items: [
@@ -107,7 +105,7 @@ if (!isBasic) {
 }
 
 // Preis
-if (!isBasic && entry.preis_ab) {
+if (!(tier === 'basic') && entry.preis_ab) {
   premiumSections.push({
     type: 'price',
     value: entry.preis_ab,
@@ -117,7 +115,7 @@ if (!isBasic && entry.preis_ab) {
 }
 
 // CTA
-if (!isBasic) {
+if (!(tier === 'basic')) {
   premiumSections.push({
     type: 'cta',
     label: 'Interesse?',
@@ -132,7 +130,7 @@ if (!isBasic) {
 
 // Zusammensetzen
 let allSections;
-if (isBasic) {
+if ((tier === 'basic')) {
   // Basic: Hero + Basis-Kontaktdaten
   allSections = [
     ...publicSections,
@@ -225,11 +223,12 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   breadcrumbs={[{ label: 'Unterkünfte', href: '/unterkuenfte/' }, { label: entry.name }]}
   jsonld={lodgingLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={allSections}
 />
 
 <!-- Basic: Premium-Inhalte hinter Paywall-Overlay -->
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name} slug={slug} />
@@ -264,7 +263,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 <!-- --- TIER-SPEZIFISCHE STYLES --- -->
 
 <!-- GOLD: Highlighting -->
-{isGold && (
+{(tier === 'gold') && (
   <style is:global>
     .sec-hero { background: var(--gold-soft) !important; border-bottom-color: rgba(212,168,0,.15) !important; }
     .sec-hero-badge.tag-gold { background: linear-gradient(135deg, var(--yellow), #F59E0B); color: #1a1a1a; font-weight: 800; padding: 6px 18px; }
@@ -273,7 +272,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 )}
 
 <!-- BASIC: Gedämpfter Stil -->
-{isBasic && (
+{(tier === 'basic') && (
   <style is:global>
     .sec-hero-badge.tag-basic { background: var(--surface); border: 1px solid var(--glass-border); color: var(--text3); }
     .sec-hero { opacity: 0.85; }

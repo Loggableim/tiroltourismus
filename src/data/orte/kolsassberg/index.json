@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kolsassberg/hero_1.png",
+      "alt": "Kolsassberg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kolsassberg/hero_1.png",
   "koordinaten": {
     "lat": "47.2820",
     "lng": "11.6519"
-  }
+  },
+  "beschreibung": "<p>Kolsassberg liegt auf rund 850 Metern Seehöhe oberhalb der Gemeinde Kolsass am Eingang zum Zillertal, im Bezirk Schwaz. Der kleine Bergweiler zählt etwa 900 Einwohner und gehört zu den stillen Orten Tirols, die vom Durchgangsverkehr des Tals kaum berührt werden. Die Streusiedlung erstreckt sich über weitläufige Wiesen und Wälder am Fuße der Tuxer Voralpen, mit weitem Blick ins Inntal Richtung Innsbruck und über die gegenüberliegenden Karwendelketten.</p>\n\n<p>Die Wege rund um Kolsassberg führen durch traditionelle Bauernlandschaft mit jahrhundertealten Höfen, die teilweise noch aktiv bewirtschaftet werden. Beliebte Wanderungen ziehen hinauf zur Hochsteinalm und weiter Richtung Nalpbach, wo schattige Bergmischwälder und sonnige Almflächen wechseln. Wer Ruhe sucht, abseits der stark frequentierten Tuxer und Zillertaler Hüttenrouten, findet hier markierte Wege ohne Massenandrang. Im Winter wird das Loipennetz rund um den Weerberg gespurt, Schneeschuhwanderungen führen direkt vom Ort in stille Waldgebiete. Der nahe Kolsassbergsee, ein kleiner Naturteich, ist ein stilles Ausflugsziel für Einheimische.</p>\n\n<p>Die dörfliche Struktur hat sich über Generationen kaum verändert. Einige Wirtshäuser und Hofläden bieten regionale Produkte an, von Graukäse bis zu Almbutter. Wer Kolsassberg besucht, kommt nicht wegen Sehenswürdigkeiten, sondern wegen des authentischen Tiroler Landlebens, das hier noch in seiner ursprünglichen Form existiert.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

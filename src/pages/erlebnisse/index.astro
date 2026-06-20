@@ -11,9 +11,9 @@ const erlebnisse = readCollection('erlebnisse').filter(e => isPublished(e.entry)
 
 const kategorieMeta = {
   wandern: { emoji: '🥾', color: 'var(--green)' },
-  ski: { emoji: '⛷️', color: 'var(--blue)' },
+  ski: { emoji: '⛷️', color: 'var(--ikea-blue)' },
   bike: { emoji: '🚵', color: 'var(--orange)' },
-  wellness: { emoji: '♨️', color: 'var(--pink)' },
+  wellness: { emoji: '♨️', color: 'var(--tirol-pink)' },
   familie: { emoji: '👨‍👩‍👧‍👦', color: 'var(--yellow)' },
   kulinarik: { emoji: '🍷', color: 'var(--purple)' },
   kultur: { emoji: '🎭', color: 'var(--orange)' },
@@ -111,7 +111,7 @@ const erlebnisItemList = {
           <div class="erlebnisse-grid" id="erlebnis-grid">
             {erlebnisse.map((e) => {
               const entry = e.entry;
-              const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--pink)' };
+              const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--tirol-pink)' };
               return (
                 <div class="erlebnis-card" data-filter-card data-filter-cat={entry.kategorie}>
                   <span class="erlebnis-icon">{meta.emoji}</span>
@@ -185,7 +185,7 @@ const erlebnisItemList = {
 
   .erlebnis-card:hover {
     transform: translateY(-6px);
-    border-color: var(--pink);
+    border-color: var(--tirol-pink);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
   }
 
@@ -220,7 +220,7 @@ const erlebnisItemList = {
 
   .erlebnis-price {
     font-size: 14px;
-    color: var(--pink);
+    color: var(--tirol-pink);
     font-weight: 700;
     margin-bottom: 14px;
   }

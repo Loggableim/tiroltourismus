@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.9463",
     "lng": "12.2625"
-  }
+  },
+  "beschreibung": "<p>St. Jakob in Defereggen liegt auf 1.050 m Seehöhe im hintersten Winkel des Osttiroler Defereggentals, umgeben von den Ausläufern der Hohen Tauern und der Villgratner Berge. Mit rund 850 Einwohnern ist der Hauptort des Tals zugleich dessen politisches und kulturelles Zentrum, eingebunden in eine der am dünnsten besiedelten Regionen Tirols.</p>\n\n<p>Was St. Jakob besonders macht, ist die Kombination aus Ursprünglichkeit und Familienfreundlichkeit. Während viele Tiroler Täler längst vom Massentourismus geprägt sind, hat sich das Defereggental seinen ruhigen Charakter bewahrt – kein Skigroßverband, keine überdimensionierte Infrastruktur. Dafür eine gepflegte Sommerrodelbahn, die direkt am Ortseingang startet und bei Familien beliebt ist, sowie ein weit verzweigtes Wanderwegenetz, das bis in die Schutzhütten der Rieserfernergruppe und auf den Staller Sattel führt – einen Grenzpass nach Südtirol, der bereits Goethe auf seiner Italienreise passierte. Die Pfarrkirche zum Heiligen Jakob, ein spätbarocker Bau mit hohem Turm, prägt das Ortsbild und gilt als eine der schönsten Dorfkirchen Osttirols.</p>\n\n<p>Kulinarisch steht Osttiroler Kost auf den Speisekarten: Schlickkrapfen, Kasnudeln und Graukäse aus den umliegenden Bergbauernhöfen. Wer abends in St",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

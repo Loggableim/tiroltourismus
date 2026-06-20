@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hopfgarten/hero_1.png",
+      "alt": "Hopfgarten in Defereggen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hopfgarten/hero_1.png",
   "koordinaten": {
     "lat": "46.9218",
     "lng": "12.5209"
-  }
+  },
+  "beschreibung": "<p>Hopfgarten in Defereggen liegt auf 1.100 Metern Seehöhe im hinteren Defereggental, einem der abgeschiedensten Seitentäler Osttirols im Bezirk Lienz. Mit rund 700 Einwohnerinnen und Einwohnern ist die Gemeinde der kleinere der beiden Hauptorte des Tals und bewahrt sich einen ruhigen, ursprünglichen Charakter fernab der großen Tourismusströme.</p>\n\n<p>Das Defereggental selbst ist eine markante, von den Lasörlinggruppe und den Deferegger Alpen eingerahmte Hochgebirgslandschaft, die Wanderer im Sommer zu Touren wie dem bekannten Panoramaweg oder Aufstiegen zur Brugger Alm und ins Innere Defereggen einlädt. Im Winter betreibt Hopfgarten ein eigenes, kompaktes Skigebiet mit Familienabfahrt und Blick auf die verschneiten Dreitausender – Lifte wie der Skilift Hopfgarten gelten als Geheimtipp für alle, die Osttiroler Schneesicherheit ohne Hektik suchen. Das Tal ist außerdem Teil des Naturparks Hohe Tauern, was die Region zu einem idealen Ausgangspunkt für Naturbeobachtungen und ausgedehnte Bergtouren macht.</p>\n\n<p>Zum Einkehren empfiehlt sich die Deferegger Genussregion mit heimischen Produkten wie Deferegger Bergkäse und Osttiroler Schafen – serviert in urigen Gasthäusern, in denen die Wirtsleute meist noch selbst hinter dem Herd stehen. Wer Osttirol abseits der bekannten Routen erleben will, findet in Hopfgarten einen Ort, an dem Berglandwirtschaft, gelebter Brauchtum und alpine Stille zusammenkommen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

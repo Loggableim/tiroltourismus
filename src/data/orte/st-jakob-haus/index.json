@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5006",
     "lng": "12.5504"
-  }
+  },
+  "beschreibung": "<p>St. Jakob in Haus liegt auf 810 Metern Seehöhe im Bezirk Kitzbühel, eingebunden in die Region rund um den Pillersee. Das Dorf zählt rund 800 Einwohner und gehört zu den ruhigeren Gemeinden in den Kitzbüheler Alpen. Der Name verweist auf den Apostel Jakobus, der auch die Pfarrkirche des Ortes prägt – ein spätgotischer Bau, der seit Jahrhunderten das Zentrum des Dorflebens bildet.</p>\n\n<p>Die Umgebung lädt zum Wandern und Verweilen ein. Direkt vom Ortskern aus führen Wege auf die Buchensteinwand und weiter in die Loferer Steinberge, wo Bergwanderer und Familien gleichermaßen passende Touren finden. Ein Geheimtipp ist die Burgruine Jaufenburg hoch über dem Dorf, von der sich der Blick weit ins Pillerseetal öffnet. Kulturell interessant: Das sogenannte Jauferbuch, eines der ältesten Zeugnisse mittelalterlicher deutscher Gebrauchsdichtung, soll im 12. Jahrhundert hier entstanden sein – ein seltenes Stück Tiroler Literaturgeschichte.</p>\n\n<p>Im Winter liegt St. Jakob in Haus direkt an der Pillersee-Tal-Abfahrt des Skigebiets Buchensteinwand, im Sommer lockt der Badesee Pillersee nur wenige Kilometer weiter. Wer echte Tiroler Gastlichkeit abseits der großen Touristenzentren sucht, findet hier ein authentisches Bergdorf mit",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

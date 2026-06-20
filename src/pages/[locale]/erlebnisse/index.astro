@@ -31,8 +31,8 @@ const labels = {
 };
 
 const kategorieMeta = {
-  wandern: { emoji: '🥾', color: 'var(--green)' }, ski: { emoji: '⛷️', color: 'var(--blue)' },
-  bike: { emoji: '🚵', color: 'var(--orange)' }, wellness: { emoji: '♨️', color: 'var(--pink)' },
+  wandern: { emoji: '🥾', color: 'var(--green)' }, ski: { emoji: '⛷️', color: 'var(--ikea-blue)' },
+  bike: { emoji: '🚵', color: 'var(--orange)' }, wellness: { emoji: '♨️', color: 'var(--tirol-pink)' },
   familie: { emoji: '👨‍👩‍👧‍👦', color: 'var(--yellow)' }, kulinarik: { emoji: '🍷', color: 'var(--purple)' },
   kultur: { emoji: '🎭', color: 'var(--orange)' }, abenteuer: { emoji: '🧗', color: 'var(--tirol-red)' },
 };
@@ -94,7 +94,7 @@ const erlebnisItemList = {
           <div class="erlebnisse-grid" id="erlebnis-grid">
             {erlebnisse.map((e) => {
               const entry = e.entry;
-              const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--pink)' };
+              const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--tirol-pink)' };
               return (
                 <div class="erlebnis-card" data-filter-card data-filter-cat={entry.kategorie}>
                   <span class="erlebnis-icon">{meta.emoji}</span>
@@ -133,12 +133,12 @@ const erlebnisItemList = {
   @media(max-width:968px){.erlebnisse-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.erlebnisse-grid{grid-template-columns:1fr}}
   .erlebnis-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px 24px 24px;text-align:center;transition:all .4s var(--ease);display:flex;flex-direction:column}
-  .erlebnis-card:hover{transform:translateY(-6px);border-color:var(--pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
+  .erlebnis-card:hover{transform:translateY(-6px);border-color:var(--tirol-pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
   .erlebnis-icon{font-size:52px;margin-bottom:12px;display:block;line-height:1}
   .erlebnis-title{font-family:var(--font-display);font-size:26px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
   .erlebnis-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;flex:1}
   .erlebnis-meta{font-size:12px;color:var(--text3);margin-bottom:6px}
-  .erlebnis-price{font-size:14px;color:var(--pink);font-weight:700;margin-bottom:14px}
+  .erlebnis-price{font-size:14px;color:var(--tirol-pink);font-weight:700;margin-bottom:14px}
   .quote-section{background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);padding:64px 0;text-align:center}
   .quote-section blockquote{font-size:clamp(18px,2.5vw,28px);font-weight:600;line-height:1.5;max-width:700px;margin:0 auto;color:var(--text);font-style:italic}
   .quote-section cite{display:block;margin-top:16px;font-size:13px;color:var(--text2);font-style:normal;font-weight:500}

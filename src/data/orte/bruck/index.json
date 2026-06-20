@@ -26,5 +26,23 @@
     "lat": "47.3905",
     "lng": "11.8517"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Bruck am Ziller liegt auf 579 Metern Seehöhe im vorderen Zillertal, eingebettet zwischen den Tourismuszentren Fügen im Westen und Zell am Ziller im Osten. Die Marktgemeinde im Bezirk Schwaz zählt rund 1.100 Einwohner und gehört zu den ruhigeren Orten des Tals, ohne dabei abseits zu liegen – die Zillertalbahn hält direkt im Ort, und die Inntalautobahn ist in wenigen Minuten erreichbar.</p>\n\n<p>Das Herzstück des Ortes ist zweifellos der Badesee, ein beliebtes Ausflugsziel für Familien aus dem ganzen Tal. Mit Liegewiese, Spielplatz und klarer Bergluft bietet er im Sommer eine echte Alternative zum Trubel der größeren Nachbargemeinden. Wanderer starten von Bruck aus direkt in die Zillertaler Bergwelt – die Hochzillertal-Bergbahn ist nur wenige Kilometer entfernt und erschließt über 100 Kilometer Wanderwege. Mountainbiker schätzen die zentrale Lage als Ausgangspunkt für Touren ins Inntal oder über die Hänge des Spieljochs. Auch der Zillertaler Radweg verläuft durch den Ort.</p>\n\n<p>Kulinarisch spielt die regionale Zillertaler Küche eine große Rolle, von Kaspressknödeln bis zu Zillertaler Krapfen, die in den Gasthäusern rund um den Dorfplatz serviert werden. Wer Ruhe sucht, abseits der stark frequentierten Tourismushotspots, findet in Bruck am Ziller einen authentischen Rückzugsort mit direkter Anbindung an alle Highlights des Zillertals. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

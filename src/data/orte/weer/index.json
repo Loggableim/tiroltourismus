@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.3042",
     "lng": "11.6425"
-  }
+  },
+  "beschreibung": "<p>Weer liegt auf 558 Metern Höhe im Unterinntal, direkt am Eingang zum Zillertal im Bezirk Schwaz. Das Dorf mit rund 1.700 Einwohnern erstreckt sich am rechten Innufer und wird vom Weerbach durchzogen, der dem Ort seinen Namen gibt.</p>\n\n<p>Überregional bekannt ist Weer für das größte Freibad der Region – ein weitläufiges Areal mit Schwimmbecken, Kinderbereich und Liegewiesen, das im Sommer Familien aus dem ganzen Tal anzieht. Abseits des Bades laden die umliegenden Wälder und Wiesen zu Spaziergängen und Radtouren ein. Die Weerbachklamm, ein kurzer, aber eindrucksvoller Wanderweg durch felsiges Bachbett, ist bei Einheimischen besonders beliebt. Im Winter liegen die Skigebiete des Zillertals in greifbarer Nähe, während Weer selbst mit seiner ruhigen Atmosphäre als Rückzugsort vom Trubel dient.</p>\n\n<p>Kulinarisch stehen Tiroler Klassiker wie Kaspressknödel oder Gröstl auf den Speisekarten der Gasthäuser. Die Pfarrkirche zum Heiligen Vitus mit ihrem markanten Turm prägt das Ortsbild und ist einen Blick wert. Weer ist kein Ort für große Sightseeing-Programme, sondern genau das, was viele Tirol-Reisende unterschätzen: ein authentisches kleines Dorf, das Erholung, Badespaß und Natur auf kurzem Weg vereint. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -33,15 +33,16 @@ export interface Props {
   ogImage?: string;
   type?: 'website' | 'article';
   publishedTime?: string;
+  noindex?: boolean;
 }
 
-const { title, description, breadcrumbs, sections, isArticle, locale, jsonld, ogImage, type, publishedTime } = Astro.props;
+const { title, description, breadcrumbs, sections, isArticle, locale, jsonld, ogImage, type, publishedTime, noindex } = Astro.props;
 
 // Extract hero image for preloading (LCP optimization)
 const heroSection = sections?.find(s => s.type === 'hero' || s.type === 'article-hero');
 const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSection?.imageSrc || ogImage;
 ---
-<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage}>
+<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage} noindex={noindex}>
   <main>
     {breadcrumbs && breadcrumbs.length > 0 && (
       <div class="container">
@@ -225,7 +226,7 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
   /* Custom Facts (sight detail pages) */
   .sec-custom-facts{display:flex;justify-content:center;gap:48px;padding:28px 0;flex-wrap:wrap}
   .sec-custom-fact{text-align:center}
-  .sec-custom-fact-num{font-family:var(--font-display);font-size:28px;line-height:1;color:var(--pink);letter-spacing:1px;display:block}
+  .sec-custom-fact-num{font-family:var(--font-display);font-size:28px;line-height:1;color:var(--tirol-pink);letter-spacing:1px;display:block}
   .sec-custom-fact-label{font-size:12px;color:var(--text2);margin-top:4px;display:block}
   .sec-custom-fact-label{display:block;font-size:12px;color:var(--text2);margin-top:4px}
 
@@ -235,7 +236,7 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
   .sec-custom-info-item{background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:16px 20px}
   .sec-custom-info-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:4px}
   .sec-custom-info-value{font-size:14px;color:var(--text)}
-  .sec-custom-info-value a{color:var(--pink);font-weight:600}
+  .sec-custom-info-value a{color:var(--tirol-pink);font-weight:600}
   @media(max-width:768px){.sec-custom-info-grid{grid-template-columns:1fr}}
 
   /* Custom Content (e.g. FAQ links block) */
@@ -243,7 +244,7 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
   .custom-content-links{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:32px}
   .custom-content-link{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius);color:var(--text);font-size:15px;font-weight:500;text-decoration:none;transition:all .3s var(--ease);max-width:500px;width:100%}
   .custom-content-link::before{content:'❓';font-size:16px;flex-shrink:0}
-  .custom-content-link:hover{border-color:var(--pink);background:var(--glass);color:var(--pink);transform:translateY(-2px);box-shadow:0 4px 20px var(--pink-glow)}
+  .custom-content-link:hover{border-color:var(--tirol-pink);background:var(--glass);color:var(--tirol-pink);transform:translateY(-2px);box-shadow:0 4px 20px var(--tirol-pink-glow)}
 
   @media(max-width:600px){
     .sec-custom-hero{padding:40px 0 32px}

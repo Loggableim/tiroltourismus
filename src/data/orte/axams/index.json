@@ -26,5 +26,23 @@
     "lat": "47.2308",
     "lng": "11.2793"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Axams liegt auf 874 Metern Höhe südlich von Innsbruck am Eingang zum Sellraintal und gehört mit rund 6.100 Einwohnerinnen und Einwohnern zu den größten Dörfern des Bezirks Innsbruck-Land. Der Ort thront auf einem sonnigen Plateau über dem Inntal, umrahmt von den markanten Gipfeln der Kalkkögel im Süden und dem weitläufigen Skigebiet der Axamer Lizum direkt oberhalb des Dorfs.</p>\n\n<p>Die Axamer Lizum ist das Herzstück des Ortes: ein hochalpines, baumfreies Skigebiet auf über 2.000 Metern, das bei Skitourengehern und Skifahrern gleichermaßen beliebt ist. Axams war bereits Austragungsort der Olympischen Winterspiele 1964 und 1976 – das legendäre Herren-Abfahrtsrennen von 1976, das der damalige Favorit Franz Klammer auf der Streif in Kitzbühel gewann, fand hier ebenso statt wie zahlreiche Trainingsläufe der internationalen Skinationalteams, die das Gelände bis heute als Sommer-Trainingsstätte nutzen. Im Sommer laden die Wiesen und Almen rund ums Dorf zu Wanderungen ein, etwa auf den Hoadl oder Richtung Birgitzköpfl.</p>\n\n<p>Wer Axams besucht, erlebt ein gewachsenes Tiroler Dorf mit intakter Infrastruktur: Gasthäuser servieren regionale Küche, und im Winter lockt der direkte Einstieg in die Axamer Lizum Familien wie Sportbegeisterte gleichermaßen. Ein Ort mit echtem Wintersport-Erbe – weniger inszeniert, dafür mit Substanz. 🎿</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

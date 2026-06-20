@@ -14,6 +14,29 @@
   ],
   "status": "published",
   "bezirk": "schwaz",
-  "bilder": [],
-  "hero_bild": null
+  "bilder": [
+    {
+      "url": "/images/orte/kaunenberg/hero_1.png",
+      "alt": "Kaunenberg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kaunenberg/hero_1.png",
+  "beschreibung": "<p>Kaunenberg liegt auf rund 1.550 Metern Seehöhe im hinteren Kaunertal, einem Seitental des Oberinntals im Bezirk Schwaz. Der Bergweiler zählt etwa 400 Einwohner, die sich auf wenige Höfe und kleine Weiler verteilen. Die Zufahrt führt über eine schmale Straße von Feichten im Kaunertal taleinwärts, vorbei an der Fagge, bevor sich der Weiler an einem sonnigen Hang unterhalb der Waldgrenze ausbreitet.</p>\n\n<p>Die Lage am Eingang zum Naturpark Kaunergrat macht Kaunenberg zu einem Ausgangspunkt für anspruchsvolle Bergtouren. Der Panoramaweg Richtung Galflunalm oder Aufstiege zur Verpeilspitze sind bei Wanderern beliebt, die abseits der ausgetretenen Pfade unterwegs sein wollen. Im Sommer bewirtschaften die Bergbauern ihre Almen rund um den Weiler, das Vieh weidet direkt vor den Höfen. Die Stille hier ist keine Floskel – es gibt keinen Durchzugsverkehr, keine Sehenswürdigkeit mit Eintritt, nur die Glocken der Kühe und gelegentlich ein Murmeltierpfiff. Im Winter bleibt der Ort weitgehend sich selbst überlassen, Schneeschuhwanderer finden hier unberührte Hänge.</p>\n\n<p>Kulturell prägen die alten Holzstadel und die spätbarocke kleine Kapelle das Bild. Die Kaunertaler Küche ist bodenständig: Graukas aus der eigenen Sennerei, Krapfen und die typische Kiachl-Variante der Region. Wer Kaunenberg besucht, sucht bewusst die Reduktion – gerade darin liegt der Reiz dieses Ortes, der sich gegen jede Form von Massentourismus sperrt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

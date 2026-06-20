@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/lienz/hero_1.png",
+      "alt": "Lienz — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/lienz/hero_1.png",
   "koordinaten": {
     "lat": "46.8299",
     "lng": "12.7681"
-  }
+  },
+  "beschreibung": "<p><strong>Lienz</strong> erstreckt sich auf 673 Metern Höhe in den Lienzer Dolomiten und dem sonnigen Pustertal in Osttirol und ist eine ruhige Dorfgemeinde. Rund <strong>12.000</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Kulturell interessierte entdecken historische bauten und traditionelles brauchtum und geschichtsliebhaber erkunden die spuren vergangener jahrhunderte – von burgen bis zu bergwerken und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Kulturinteressierte schätzen Lienz als Ausgangspunkt für Entdeckungsreisen in die Geschichte Tirols.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

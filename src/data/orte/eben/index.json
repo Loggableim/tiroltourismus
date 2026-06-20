@@ -27,5 +27,23 @@
     "lat": "47.4152",
     "lng": "11.7598"
   },
-  "kategorie": "seeort"
+  "kategorie": "seeort",
+  "beschreibung": "<p>Eben am Achensee liegt auf 970 Metern Höhe auf einem sonnigen Hochplateau über dem Westufer des Achensees im Bezirk Schwaz. Mit rund 3.500 Einwohnern bildet die Gemeinde zusammen mit Achenkirch und Pertisau die Region Achensee – Tirols größtem natürlichen Binnengewässer. Die Lage zwischen dem Karwendel im Westen und dem Rofangebirge im Osten verleiht Eben eine besondere Stellung: Hier oben am Plateau hat man freien Blick auf den türkisblauen See, während die Berge zum Greifen nah sind.</p>\n\n<p>Der Achensee ist das Herzstück – mit Trinkwasserqualität und Temperaturen, die im Sommer selten über 20 Grad steigen. Baden, Segeln, SUP oder eine Fahrt mit dem ältesten noch fahrenden Raddampfer Österreichs, der <em>Theresienmühle</em>, gehören zum Standardprogramm. Im Winter lockt das kleine, aber feine Skigebiet mit blau markierten Pisten, einem Übungslift und direktem Blick auf den zugefrorenen See – ideal für Familien mit Kindern, die Skifahren lernen. Das Wanderwegenetz reicht von gemütlichen Spaziergängen am Seeufer bis zu anspruchsvollen Touren auf die Rofanspitze.</p>\n\n<p>Was Eben von anderen Orten am Achensee unterscheidet, ist die Mischung: Man wohnt ruhig am Hochplateau, ist aber in wenigen Minuten am Wasser. Gasthäuser servieren Tiroler Klassiker wie Kaspressknödel und geräucherten Reinanken aus dem See, oft mit Seeblick von der Terrasse. Wer Achensee ohne den Trubel von Pertisau sucht, aber trotzdem zentral wohnen will, findet hier den richtigen Ausgangspunkt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5038",
     "lng": "12.1915"
-  }
+  },
+  "beschreibung": "<p><strong>Söll</strong> befindet sich auf 703 Metern Höhe in dem Unterland rund um das Kaisergebirge und das Alpbachtal und ist eine idyllische Streugemeinde. Rund <strong>3.700</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Im winter locken gut präparierte skipisten und unberührte tiefschneeabfahrten und familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Söll ist ein idealer Ort für Familien, die einen abwechslungsreichen Urlaub in den Bergen verbringen möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

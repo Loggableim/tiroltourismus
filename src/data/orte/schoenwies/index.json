@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.1939",
     "lng": "10.6496"
-  }
+  },
+  "beschreibung": "<p><strong>Schönwies</strong> liegt auf 857 Metern Höhe in den sonnigen Seitentälern des Oberlands – Paznaun, Kaunertal, Stanzer Tal und ist eine beschauliches Dorf. Rund <strong>1.800</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme.</p><p>Schönwies eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    }
+  ]
 }

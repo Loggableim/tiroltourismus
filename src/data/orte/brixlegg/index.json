@@ -26,5 +26,23 @@
     "lat": "47.4302",
     "lng": "11.8772"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Brixlegg liegt im Tiroler Unterinntal auf 534 Meter Seehöhe, eingebunden zwischen den Ausläufern des Rofan- und des Wildschönauer Gebirges. Der Marktort mit rund 3.100 Einwohnerinnen und Einwohnern befindet sich im Bezirk Kufstein, unweit der Mündung des Alpbachs in den Inn, und gilt als eines der ältesten Bergbaugebiete Tirols.</p>\n\n<p>Das frühere Silberbergwerk am Thurnberg, dessen Geschichte bis ins 13. Jahrhundert zurückreicht, prägt die Identität des Ortes nachhaltig. Heute noch zeugen die mächtigen Stollenanlagen vom einstigen Reichtum der Knappen, und der Rundgang durch das Bergwerk zählt zu den eindrücklichsten Besucherbergwerken des Landes. Über dem Ort thront das Schloss Matzen, eine mittelalterliche Wehranlage aus dem 12. Jahrhundert, die nach wechselvoller Besitzergeschichte als Veranstaltungsort und Schauplatz für Kunstausstellungen genutzt wird. Für Wanderungen bietet sich der Aufstieg zum Thurnberg ebenso an wie Touren in die nahegelegene Brandenberger Ache, die als einer der ursprünglichsten Flüsse Tirols gilt.</p>\n\n<p>Die spätgotische Pfarrkirche mit ihrem markanten Netzrippengewölbe beherbergt wertvolle Flügelaltäre, die den Brixlegger Krippen eine besondere regionale Bedeutung verleihen. Kulinarisch stehen Gasthäuser mit typischer Inn-taler Kost bereit, darunter Kaspressknödel und regionale Fischgerichte aus den Bergbächen. Wer Kultur, Geschichte und Natur verbinden möchte, findet in Brixlegg einen Ort, der abseits der großen Tourismusrouten ein erstaunlich dichtes Angebot bereithält.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

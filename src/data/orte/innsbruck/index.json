@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/innsbruck/hero_1.png",
+      "alt": "Innsbruck — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/innsbruck/hero_1.png",
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
-  }
+  },
+  "beschreibung": "<p>Innsbruck liegt auf 574 Metern im Inntal und ist die Landeshauptstadt Tirols – mit rund 132.000 Einwohnern die fünftgrößte Stadt Österreichs. Die Besonderheit: Mitten in der Stadt ragen die Nordkette (über 2.300 m) und die Patscherkofel (über 2.200 m) empor, sodass man von der Maria-Theresien-Straße aus direkt auf schroffe Felswände blickt. Diese Kombination aus urbanem Leben und alpiner Kulisse macht Innsbruck einzigartig unter den Alpenstädten.</p>\n\n<p>Das bekannteste Wahrzeichen ist das Goldene Dachl, ein spätgotischer Prunkerker mit 2.657 feuervergoldeten Kupferschindeln, den Kaiser Maximilian I. um 1500 errichten ließ. Direkt daneben liegt die Hofburg mit ihren prunkvollen Riesensaal-Gemälden. Wer den Kontrast sucht, fährt mit der Hungerburgbahn (eine Zaha-Hadid-Architektur) hinauf auf 2.300 Meter und steht innerhalb von 20 Minuten auf einem Gletscherskigebiet – 1964 und 1976 fanden hier die Olympischen Winterspiele statt. Die Altstadt mit ihren Lauben, die Maria-Theresien-Straße mit dem Triumphbogen und die Sprungschanze am Bergisel, die jährlich das Skispringen der Vier-Schanzen-Tournee beheimatet, zeigen die enge Verbindung von Geschichte, Kultur und Sport.</p>\n\n<p>Kulinarisch gehört Innsbruck zu den spannendsten Adressen Tirols: Vom traditionsreichen Gasthaus mit Tiroler Gröstl und Kaspressknödeln bis zur gehobenen Küche in Lokalen wie der „Lichtbrennt\" oder „Dengg\". Die Stadt ist außerdem eine Shoppingmeile – die Maria-Theresien-Straße, die Altstadtgassen und das Einkaufszentrum Sillpark bieten alles vom Trachtenladen bis zu internationalen Labels. Wer abends in einem der vielen Lokale am Inn sitzt, mit Blick auf die beleuchtete Nordkette, versteht, warum Innsbruck mehr ist als nur ein Durchreiseort Richtung Südtirol oder Italien. 🏙️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Historische Altstadt",
+      "beschreibung": "Mittelalterliche Gassen, Bürgerhäuser und das Goldene Dachl als Wahrzeichen.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Nordkettenbahn",
+      "beschreibung": "Modernste Seilbahn der Alpen – in 20 Minuten von der Stadt auf 2.256 m.",
+      "typ": "ausflug"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

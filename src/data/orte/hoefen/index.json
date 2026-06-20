@@ -15,10 +15,28 @@
   ],
   "status": "published",
   "bezirk": "reutte",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hoefen/hero_1.png",
+      "alt": "Höfen — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hoefen/hero_1.png",
   "koordinaten": {
     "lat": "47.4726",
     "lng": "10.6870"
-  }
+  },
+  "beschreibung": "<p>Höfen liegt im Bezirk Reutte im Tiroler Außerfern auf 868 Metern Seehöhe, eingangsseitig zum Lechtal an der B198 zwischen Reutte und Forchach. Mit rund 1.200 Einwohnerinnen und Einwohnern ist die Gemeinde eine der jüngeren in Tirol – sie entstand 1946 durch die Abtrennung von Ehenbichl und trägt bis heute den Charakter einer Wohngemeinde mit direkter Anbindung an den Bezirkshauptort.</p>\n\n<p>Die Lage macht Höfen zum idealen Ausgangspunkt für Touren ins Naturpark Lechtal: Die Lechtaler Alpen mit Gipfeln wie der Rotwand oder dem Fallenstein liegen direkt vor der Haustür, und über den Ort führt der Lechweg, ein beliebter Weitwanderweg entlang des noch weitgehend naturbelassenen Lechs. Im Sommer starten von hier Wanderungen zur Höfener Alm oder durch die nahe Lechschlucht bei Forchach, im Winter liegen kleinere Skigebiete wie das Berwang-Bichlbach in Reichweite. Familien schätzen die ruhige, dörfliche Struktur mit Wiesen, Wäldern und weitläufigen Spazierwegen rund um den Ort.</p>\n\n<p>Die katholische Pfarrkirche St. Michael mit ihrem barocken Zwiebelturm prägt das Ortsbild und gilt neben der landschaftlichen Kulisse als markantester Bezugspunkt. Kulinarisch zeigt sich das Außerfern von seiner bodenständigen Seite mit Käse und Almkäse aus der Region, Knödelgerichten und der typischen Außerferner Kässpätzle. Wer in Höfen übernachtet, bekommt weniger Dorfleben als vielmehr Ruhe, eine starke Naturverbundenheit und kurze Wege zu den Highlights des Lechtals.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    }
+  ]
 }

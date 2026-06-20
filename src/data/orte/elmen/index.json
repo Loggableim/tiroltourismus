@@ -25,5 +25,23 @@
     "lat": "47.3396",
     "lng": "10.5430"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Elmen liegt auf 976 Metern Höhe im hinteren Lechtal, im Bezirk Reutte, und gehört mit rund 400 Einwohnern zu den kleineren Dörfern des Außerferns. Der Ort schmiegt sich an den orografisch rechten Hang des Lechtals, wo sich die Lechtaler Alpen direkt hinter dem Dorf aufbauen. Wer hier durchfährt, sieht keine durchgestylte Tourismusmeile, sondern ein paar traditionelle Häuser, eine Kapelle und viel Stille.</p>\n\n<p>Das Lechtal selbst gilt als eines der ursprünglichsten Alpentäler Nordtirols, und Elmen profitiert unmittelbar davon: Der Lech gehört hier zu den letzten weitgehend unregulierten Alpenflüssen Europas, mit ausgedehnten Kiesbänken, Auwäldern und einer Fauna, die anderswo selten geworden ist. Der Naturpark Tiroler Lech beginnt quasi vor der Haustür. Wanderer starten von Elmen aus direkt in die Lechtaler Alpen, etwa Richtung Elmer Kreuzspitze oder in die einsamen Täler rund um die Freispitze. Mountainbiker schätzen den Lechradweg, der ohne nennenswerte Steigung durch das Tal führt.</p>\n\n<p>Kulinarisch lebt das Dorf von der regionalen Küche: Kasnocken, Kässpätzle und Wildgerichte aus den umliegenden Wäldern stehen in den wenigen Gasthäusern auf der Karte. Wer absolute Ruhe sucht, fernab von Seilbahnen und Skigebieten, findet in Elmen einen Ort, an dem die Zeit tatsächlich etwas langsamer läuft.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

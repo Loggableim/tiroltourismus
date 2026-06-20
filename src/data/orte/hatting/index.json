@@ -14,10 +14,28 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hatting/hero_1.png",
+      "alt": "Hatting — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hatting/hero_1.png",
   "koordinaten": {
     "lat": "47.2785",
     "lng": "11.1677"
-  }
+  },
+  "beschreibung": "<p>🌄 Hatting liegt auf einem sonnigen Schwemmkegel hoch über dem Inn, auf 616 Metern Seehöhe, nur rund 25 Kilometer westlich von Innsbruck im Bezirk Innsbruck-Land. Die Gemeinde thront etwas abseits der Inntal-Autobahn zwischen Pettnau und Inzing und bietet damit trotz ihrer verkehrsgünstigen Lage viel Ruhe vom Durchreiseverkehr des Unterinntals.</p>\n\n<p>Das Dorf wird landwirtschaftlich geprägt – rund um den Ortskern prägen Wiesen, Obstgärten und kleinbäuerliche Höfe das Bild. Direkt oberhalb der Siedlung erhebt sich der Hattinger Berg, ein beliebter Hausberg für Familien und Genusswanderer, der mit moderaten Anstiegen einen weiten Blick über das Inntal und hinüber zur Mieminger Kette belohnt. Am Fuße des Dorfs verläuft der Innradweg, der Radfahrer direkt bis nach Innsbruck oder Richtung Telfs verbindet. Über den nahegelegenen Seefelder Plateau-Wanderweg oder Touren in die Tuxer Alpen erreichen Wanderer rasch alpine Höhen.</p>\n\n<p>Mit etwa 1.500 Einwohnerinnen und Einwohnern bleibt Hatting überschaubar und persönlich. Traditionelle Tiroler Gasthäuser, das aktive Vereinsleben und regelmäßige Dorffeste – vom Almabtrieb im Herbst bis zum Maibaumaufstellen – halten den ländlichen Zusammenhalt lebendig. Wer naturnah wohnen und dennoch die Landeshauptstadt schnell erreichen möchte, findet hier eine selten gewordene Mischung aus dörflichem Alltag und Inntal-Anbindung.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/leutasch/hero_1.png",
+      "alt": "Leutasch — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/leutasch/hero_1.png",
   "koordinaten": {
     "lat": "47.3703",
     "lng": "11.1425"
-  }
+  },
+  "beschreibung": "<p>Leutasch liegt auf 1.136 m Höhe im Gaistal, einem weiten Hochtal zwischen Wettersteingebirge und Mieminger Kette, rund 30 km westlich von Innsbruck. Die Gemeinde erstreckt sich als klassische Streusiedlung über mehrere Kilometer – Weiler wie Weidach, Gasse, Kirchplatzl und Obern liegen verstreut zwischen Wiesen und Wäldern, eingerahmt von der markanten Hohen Munde (2.662 m) im Süden.</p>\n\n<p>Über 400 km markierte Wanderwege ziehen sich durch das gesamte Gemeindegebiet – von gemütlichen Spaziergängen entlang der Leutascher Ache bis zu anspruchsvollen Bergtouren am Wetterstein. Herzstück für Familien ist der Geisterberg, ein Sagen-Erlebnisweg mit Spielstationen rund um die Figur des Wettersteinschatzes. Die Leutascher Geisterklamm – ein rund 800 m langer, gesicherter Steig durch die enge Felsschlucht des Leutascher Baches – zählt zu den beeindruckendsten Klammen Tirols. Paraglider nutzen den Startplatz am Rauth, der als einer der besten in den Nordalpen gilt. Im Winter verbindet das Skigebiet Leutasch-Loipen ein 50 km langes Loipennetz mit der Anbindung an das Familienskigebiet Kreithlift.</p>\n\n<p>Kulinarisch dominiert deftige Tiroler Kost: Kasnocken, Gröstl und Schlipfkrapfen gibt es in den traditionellen Gasthäusern, die seit Generationen bewirtschaftet werden. Die Leutascher Kaffeerösterei ist überregional bekannt. Wer abseits der bekannten Tourismushotspots Ruhe sucht, findet in den Moorgebieten rund um den Weidachsee stille Plätze – ein Ort, der das echte,",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

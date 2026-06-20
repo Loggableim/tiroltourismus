@@ -11,7 +11,7 @@ export const LANGUAGES = [
   { code: 'de', flag: '🇩🇪', name: 'Deutsch', nameNative: 'Deutsch', default: true, ready: true },
   { code: 'en', flag: '🇬🇧', name: 'English', nameNative: 'English', ready: true },
   { code: 'fr', flag: '🇫🇷', name: 'Français', nameNative: 'Français', ready: true },
-  { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: true },
+  { code: 'it', flag: '🇮🇹', name: 'Italiano', nameNative: 'Italiano', ready: false },
   // ES/ZH/NL/CS ready:false — Cloudflare Pages 20k file limit
   // Re-enable when upgrading to Business plan
   { code: 'es', flag: '🇪🇸', name: 'Español', nameNative: 'Español', ready: false },
@@ -42,7 +42,10 @@ export function localePrefix(locale) {
  */
 export function switchLangPath(currentPath, fromLocale, toLocale) {
   const langCodes = LANGUAGES.map(l => l.code).join('|');
-  const prefixRegex = new RegExp(`^\\\\/(${langCodes})(\\\\/|$)`);
+  // RegEx: ^/de/ oder ^/en/ usw. am Anfang des Pfads erkennen und entfernen.
+  // Wichtig: KEINE doppelten Backslashes — new RegExp() braucht kein Escaping
+  // für '/' wie im Literal /pattern/. Einfach '^/(langCodes)(/|$)'.
+  const prefixRegex = new RegExp(`^/(${langCodes})(/|$)`);
   const match = currentPath.match(prefixRegex);
   const withoutPrefix = match ? currentPath.slice(match[1].length + 1) || '/' : currentPath;
   if (isDefaultLocale(toLocale)) return withoutPrefix;

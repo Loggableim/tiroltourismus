@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kartitsch/hero_1.png",
+      "alt": "Kartitsch — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kartitsch/hero_1.png",
   "koordinaten": {
     "lat": "46.7254",
     "lng": "12.4975"
-  }
+  },
+  "beschreibung": "<p>Kartitsch liegt auf 1.353 Metern Höhe im oberen Gailtal, einem ruhigen Seitental Osttirols im Bezirk Lienz, unweit der italienischen Grenze. Das Dorf zählt rund 800 Einwohner und gehört zu den am dünnsten besiedelten Gemeinden des Bezirks – gerade das macht seinen Reiz aus.</p>\n\n<p>Die Karnischen Alpen liegen hier direkt vor der Haustür, und der Karnische Höhenweg, einer der anspruchsvollsten Weitwanderwege der Ostalpen, führt auf der ehemaligen Frontlinie des Ersten Weltkriegs entlang der österreichisch-italienischen Grenze. Von Kartitsch aus starten Touren wie der Aufstieg zur Hollbrucker Spitze oder zur Filmoor-Standschützenhütte. Im Winter präpariert die Gemeinde Langlaufloipen und Winterwanderwege – Skitourengeher schätzen die stillen Hänge rund um den Toblacher Pfannhorn. Die Pfarrkirche St. Leonhard gilt als schönste Kirche Osttirols: ein spätgotischer Bau mit bemerkenswertem Netzrippengewölbe und einem filigranen Flügelaltar, der weit über die regionalen Grenzen hinaus Beachtung findet.</p>\n\n<p>Kulinarisch dominieren Osttiroler Klassiker wie Schlickkrapfen, Kasnocken und Graukäse aus den umliegenden Sennereien. Wer absolute Stille sucht, abseits der großen Touristenströme, findet in Kartitsch ein Dorf, das sich seine Bodenständigkeit bewahrt hat – ehrliche Bergluft, ehrliche Gastgeber.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

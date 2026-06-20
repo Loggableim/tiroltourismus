@@ -107,7 +107,7 @@ export default function MerklistePage() {
           label: group,
           link: `/${group}/`,
           defaultEmoji: '⭐',
-          color: 'var(--pink)',
+          color: 'var(--tirol-pink)',
         };
         return (
           <div key={group} className="merkliste-group">

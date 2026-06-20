@@ -18,5 +18,18 @@
     "lng": 12.45
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>St. Jakob im Walde thront auf 1.430 m Seehöhe als höchstgelegene Gemeinde Osttirols, umgeben von der einsamen Bergkulisse der Lienzer Dolomiten. Mit nur rund 270 Einwohnern zählt der Ort zu den kleinsten und abgelegensten Siedlungen der Region und bewahrt sich seinen ursprünglichen Charakter abseits großer Tourismusströme.</p>\n\n<p>Die Natur rund um St. Jakob im Walde ist geprägt von ausgedehnten Almwiesen, dichten Nadelwäldern und schroffen Felsgipfeln, die das Hochtal umrahmen. Wanderer und Bergsteiger finden hier ein Netz an wenig",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    }
+  ]
 }

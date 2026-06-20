@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2916",
     "lng": "11.8843"
-  }
+  },
+  "beschreibung": "<p>Tief im Zillertal, auf 550 Metern Höhe eingebettet zwischen den Ausläufern des Tuxer Kamms, liegt Stumm – ein Ort, der auf den ersten Blick beschaulich wirkt und beim zweiten Blick seine ganze Geschichte offenbart. Mit rund 1.900 Einwohnern gehört die Gemeinde zum Bezirk Schwaz und bildet gemeinsam mit Stumm, Stummerberg und Gattererberg eine lebendige Talsozietät, die den ländlichen Charakter des hinteren Zillertals bewahrt hat.</p>\n\n<p>Das Herz des Ortes schlägt rund um das eindrucksvolle Schloss Stumm, das ab 1578 von den Freiherren von Stumm erbaut wurde. Der wuchtige Bau mit seinen markanten Erkern und dem charakteristischen Treppengiebel thront über dem Dorfplatz und beherbergt heute ein Hotel sowie ein Restaurant – Geschichte zum Anfassen also. Gleich gegenüber erhebt sich die spätgotische Pfarrkirche mit ihrem schlanken Turm, deren Innenraum mit kunstvollen Fresken und einem wertvollen Hochaltar aus dem 16. Jahrhundert aufwartet. Zusammen bilden Schloss und Kirche ein Ensemble, das in Tirol seinesgleichen sucht.</p>\n\n<p>Wer durch die schmalen Gassen schlendert, spürt das besondere Gleichgewicht zwischen gewachsener Tradition und lebendigem Dorfleben. Bauernhöfe mit geschmückten Fassaden, kleine Handwerksbetriebe und gemütliche Gasthäuser prägen das Bild. Familien schätzen Stumm als ruhigen Ausgangspunkt für Wanderungen und Radtouren, während Kulturbegeisterte die historische Substanz des Ortes entdecken. Hier, wo das Zillertal noch seinen ursprünglichen Rhythmus pflegt, wird Tiroler Geschichte im Alltag greifbar.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

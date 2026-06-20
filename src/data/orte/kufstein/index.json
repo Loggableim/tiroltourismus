@@ -16,10 +16,33 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kufstein/hero_1.png",
+      "alt": "Kufstein — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kufstein/hero_1.png",
   "koordinaten": {
     "lat": "47.5830",
     "lng": "12.1692"
-  }
+  },
+  "beschreibung": "<p>Kufstein liegt auf 499 Metern Höhe am rechten Innufer, direkt an der bayerisch-tirolerischen Grenze und ist mit rund 19.500 Einwohnern die zweitgrößte Stadt Tirols. Die Festungsstadt thront über dem Inntal, dominiert von der wehrhaften Festung Kufstein, die bereits 1205 erstmals urkundlich erwähnt wurde und bis heute das Stadtbild prägt.</p>\n\n<p>Das Herzstück der Festung ist die Heldenorgel – die größte Freiorgel der Welt mit 4.948 Pfeifen, die täglich um 12:00 Uhr auf dem Festungsplateau erklingt. Von hier oben bietet sich ein direkter Blick auf das markante Kaisergebirge mit seinem zerklüfteten Felsmassiv. Die Stadt eignet sich hervorragend als Ausgangspunkt für Wanderungen: Auf den Hausberg Brentenjoch führt eine kurze Seilbahnfahrt, anspruchsvollere Touren gehen zum Hintersteiner See oder in die Wilden Kaiser. Die Römerhofgasse mit ihren bunten Fassaden und kleinen Geschäften lädt zum Bummeln ein, ergänzt durch die Fußgängerzone rund um den Unteren Stadtplatz.</p>\n\n<p>Kulturell trumpft Kufstein mit den Tiroler Festspielen auf, die alljährlich im Sommer Opern und Konzerte auf der Festung veranstalten. Kulinarisch steht der \"Kufsteiner Spargel\" im Frühling hoch im Kurs, regionale Wirtshäuser servieren Tiroler Kaspressknödel und den hauseigenen Bierbrand. Wer Tirol erleben will, ohne auf städtisches Flair zu verzichten, findet in Kufstein eine seltene Mischung aus Geschichte, Natur und urbanem Leben. 🏰</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

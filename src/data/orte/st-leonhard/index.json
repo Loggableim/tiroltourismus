@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.0660",
     "lng": "10.8456"
-  }
+  },
+  "beschreibung": "<p>St. Leonhard im Pitztal liegt auf 1.366 m Seehöhe im hinteren Pitztal, im Bezirk Imst, und ist mit rund 1.400 Einwohnern der Hauptort des Tales. Das Dorf erstreckt sich am Talausgang zum Gletscher, umgeben von den Gipfeln des Kaunergrats und des Mittagskogels. Wer hier hochkommt, fährt bewusst – das Pitztal gilt als eines der ruhigsten Seitentäler Tirols, abseits der großen Tourismusströme.</p>\n\n<p>Die Hauptattraktion liegt buchstäblich am Ende der Straße: Der Pitztaler Gletscher mit der Wildspitze (3.768 m), dem zweithöchsten Berg Österreichs, ist direkt von St. Leonhard aus erreichbar. Die Riffelseebahn bringt Wanderer und Skifahrer auf über 2.800 m hinauf zum Rifflsee, einem Bergsee auf 2.232 m, der im Sommer zum Wandern und im Winter zum Skitourengehen einlädt. Auf 3.440 m betreibt der Pitztaler Gletscher das höchstgelegene Café Österreichs – ein skurriler Rekord mit Aussicht. Der Naturpark Kaunergrat beginnt quasi vor der Haustür und schützt eine der artenreichsten Alpenfluren Tirols, mit Arnika, Alpenrosen und seltenen Murmeltierkolonien.</p>\n\n<p>Kulinarisch steht das Tal für deftige Pitztaler Küche: Kaspressknödel, Graukäse aus der Region und der hauseigene Pitztaler Schinken finden sich in den Gasthäusern rund um die Pfarrkirche zum Hl. Leonhard. Wer Bergsteigergeschichte mag, sollte im örtlichen Museum vorbeischauen – das Pitztal war Trainingsgebiet vieler Himalaya-Expeditionen. ⛷️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

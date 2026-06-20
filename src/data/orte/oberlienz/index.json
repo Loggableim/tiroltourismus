@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.8454",
     "lng": "12.7307"
-  }
+  },
+  "beschreibung": "<p><strong>Oberlienz</strong> liegt auf 756 Metern Höhe in den Lienzer Dolomiten und dem sonnigen Pustertal in Osttirol und ist eine beschauliches Dorf. Rund <strong>1.600</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Kulturell interessierte entdecken historische bauten und traditionelles brauchtum und geschichtsliebhaber erkunden die spuren vergangener jahrhunderte – von burgen bis zu bergwerken und familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Oberlienz ist ein idealer Ort für Familien, die einen abwechslungsreichen Urlaub in den Bergen verbringen möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

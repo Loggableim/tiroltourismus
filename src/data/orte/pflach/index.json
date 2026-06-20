@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.5103",
     "lng": "10.7189"
-  }
+  },
+  "beschreibung": "<p>🏘️ Pflach liegt auf 848 Metern Höhe im Außerfern, dem westlichsten Winkel Tirols, und grenzt direkt an die Bezirkshauptstadt Reutte. Das Dorf mit rund 1.500 Einwohnern erstreckt sich auf einem sanft ansteigenden Hochplateau zwischen dem Lechtal und dem Reuttener Talkessel, umgeben von den Ausläufern der Lechtaler und Ammergauer Alpen.</p>\n\n<p>Während der Sommermonate ist das Naturbad Pflach der zentrale Treffpunkt: Ein biologisch gefilterter Badesee mit Liegewiese, der bei Familien und Ruhesuchenden gleichermaßen beliebt ist. Von hier aus starten Wanderungen in die umliegende Bergwelt, etwa zur Ruine Ehrenberg oder auf die aussichtsreiche Höhe bei Frauensee. Auch Radfahrer schätzen die direkte Anbindung an den Lechradweg, der wenige Kilometer östlich verläuft. Im Winter liegt Pflach ruhig da, ist aber Ausgangspunkt für Skitouren und Schneeschuhwanderungen in den Lechtaler Alpen.</p>\n\n<p>Was Pflach ausmacht, ist seine Funktion als naturnaher Wohn- und Erholungsort am Rand des Reuttener Beckens: Wer die touristischen Hotspots der Region – die Highline179, die Burgenwelt Ehrenberg oder das Lechtal – erreichen möchte, hat es nicht weit, prof",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.3450",
     "lng": "11.7084"
-  }
+  },
+  "beschreibung": "<p>Schwaz liegt auf 545 Metern Höhe im Tiroler Unterinntal, direkt am Eingang zum Zillertal, und ist mit rund 14.000 Einwohnern die größte Stadt des gleichnamigen Bezirks. Der Ort verdankt seinen Ruf dem mittelalterlichen Silberbergbau: Zwischen dem 15. und 16. Jahrhundert war Schwaz nach Wien die zweitgrößte Siedlung im Habsburgerreich, und das Schwazer Silber finanzierte Kriege, Prunkbauten und die Expansion der Kaiser. Davon zeugen noch heute die Ruine Burg Freudenstein hoch über dem Ort, das Knappenviertel mit seinen engen Gassen und das älteste noch erhaltene Wohnhaus Tirols, das Freundsbergerhaus aus dem Jahr 1392.</p>\n\n<p>Das Herzstück für Besucher ist das Silberbergwerk Schwaz, eines der meistbesuchten Schaubergwerke Österreichs, wo man mit der Grubenbahn in den Stollen fährt und am Originalschauplatz die Geschichte des Bergbaus nachvollzieht. Über der Stadt thront der Eibl-Plateau-Weg mit Panoramablick auf das Inntal und den Karwendel – ein ruhiger Spaziergang, der im Sommer ebenso lohnt wie im Winter. Wer höher hinauswill, startet von hier aus direkt in die Skigebiete rund um das Zillertal oder auf den Kellerjoch-Gipfel auf 2.344 Meter. Schwaz ist außerdem Austragungsort der Schwazer Festspiele, die jedes Jahr im Sommer Opern und Konzerte auf die Bühne der historischen Bergbaustadt bringen.</p>\n\n<p>Kulinarisch gehört eine Einkehr im Gasthof Stern oder im traditionsreichen Hotel Cafe Klocker dazu, wo Tiroler Küche mit regionalen Zutaten serviert wird. ⛏️ Schwaz ist kein Postkartenort, sondern eine Stadt mit Tiefgang – wer sich auf ihre",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

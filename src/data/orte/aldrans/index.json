@@ -26,6 +26,23 @@
     "lat": "47.2506",
     "lng": "11.4473"
   },
-  "beschreibung": "<p><strong>Aldrans</strong> liegt auf 760 Metern Höhe auf dem sonnigen Mittelgebirgsplateau oberhalb von Innsbruck und bietet einen der schönsten Ausblicke auf die Nordkette und das gesamte Inntal. Die ruhige Wohngemeinde ist bei Naturliebhabern und Erholungssuchenden gleichermaßen beliebt, die die Nähe zur Landeshauptstadt mit der Ruhe der alpinen Umgebung verbinden möchten.</p><p>Die Lage am sonnigen Hochplateau macht Aldrans zum idealen Ausgangspunkt für Wanderungen und Spaziergänge. Der nahegelegene Lanser See lädt im Sommer zum Baden und Entspannen ein. Zahlreiche Wanderwege führen durch die Wälder des Mittelgebirges und bieten immer wieder atemberaubende Ausblicke auf das Inntal. Im Winter sind Spaziergänge entlang der verschneiten Wege und Langlaufloipen sehr beliebt.</p><p>Kulturell prägen die gotische Pfarrkirche mit ihrem markanten Turm und die typischen Tiroler Bauernhäuser das Ortsbild. Die gute Anbindung an das öffentliche Verkehrsnetz ermöglicht einen schnellen Transfer nach Innsbruck, wo Kultur, Shopping und Gastronomie auf höchstem Niveau warten.</p>",
-  "kategorie": "marktgemeinde"
+  "beschreibung": "<p>Aldrans liegt auf 760 Metern Höhe auf einem sonnigen Mittelgebirgsplateau südlich von Innsbruck und gehört zum Bezirk Innsbruck-Land. Die Marktgemeinde mit rund 2.800 Einwohnern zählt zu den ruhigen Wohnorten am Eingang des Vomper Tals, eingebettet zwischen den Dörfern Rinn, Ampass und Sistrans. Durch die erhöhte Lage auf dem Plateau bietet Aldrans einen weiten Blick über das Inntal und direkt auf die markante Nordkette, die sich gegenüber von Innsbruck aufbaut.</p>\n\n<p>Wanderbegeisterte schätzen die zahlreichen Wege rund um den Ort, darunter die Route zur Aldranser Alm und die Spazierwege entlang der sonnigen Hanglagen Richtung Tulfes. Das milde Klima auf dem Plateau macht die Gegend besonders für Familien attraktiv, die hier naturnahes Wohnen mit der Nähe zur Landeshauptstadt verbinden wollen. Auf den Wiesen rund um den Ort weiden im Sommer Schafe und Kühe, und der alte Dorfkern mit der Pfarrkirche zum Heiligen Kreuz bildet das Zentrum des dörflichen Lebens.</p>\n\n<p>Was Aldrans auszeichnet, ist die gelungene Mischung aus gewachsener Dorfgemeinschaft und Stadtnähe: In zehn Minuten erreicht man mit dem Auto die Innenstadt von Innsbruck, gleichzeitig gehört der Alltag hier deutlich weniger Hektik. Beliebt ist die Gemeinde auch als Ausgangspunkt für Touren in die Tuxer Alpen, etwa Richtung Patscherkofel oder über den Zirbenweg. Am Abend kehrt man in eines der wenigen Gasthäuser ein – bodenständige Tiroler Küche, keine Touristenshow, sondern ehrliche Wirtshauskultur. 🌲</p>",
+  "kategorie": "marktgemeinde",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "46.7505",
     "lng": "12.4871"
-  }
+  },
+  "beschreibung": "<p>Strassen liegt auf 934 m Höhe im Osttiroler Pustertal, eingebettet zwischen Lienz und der Grenze zu Südtirol. Das Dorf mit rund 850 Einwohnern erstreckt sich entlang der Drau, die hier durch ein breites Talbecken fließt, bevor sich der Talboden Richtung Sillian verengt. Strassen gehört zum Bezirk Lienz und profitiert von der sonnenreichen Südlage am Fuße der Lienzer Dolomiten.</p>\n\n<p>Wanderer schätzen Strassen als Ausgangspunkt für Touren in die umliegende Bergwelt, etwa auf die Spitzkofel oder in das wildromantische Debanttal. Familien finden im modernen Erlebnisbad Strassenbad ein Highlight – die Anlage verfügt über ein großzügiges Schwimmbecken, eine Rutsche und weitläufige Liegewiesen, eingebettet in ein naturnahes Naherholungsgebiet direkt am Fluss. Im Winter verläuft die bekannte Langlaufroute des Pustertals durch das Gemeindegebiet, und auch Schneeschuhwanderungen abseits der Pisten sind hier lohnend. Die ruhige Atmosphäre fernab der großen Tourismuszentren macht den Ort besonders für Gäste attraktiv, die Erholung statt Trubel suchen.</p>\n\n<p>Kulinarisch wird in den Gasthäusern des Dorfes bodenständige Osttiroler Küche serviert – von Schlutzkrapfen bis hin zu Kaspressknödeln, oft mit Zutaten aus der Region. Die Nähe zu Lienz mit seiner historischen Altstadt und das schöne Zusammenspiel von Tal- und Bergland machen Strassen zu einem unaufgeregten, aber vielseitigen Urlaubsziel für Naturliebhaber und Familien gleichermaßen. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

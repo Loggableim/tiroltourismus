@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mariastein/hero_1.png",
+      "alt": "Mariastein — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mariastein/hero_1.png",
   "koordinaten": {
     "lat": "47.5262",
     "lng": "12.0540"
-  }
+  },
+  "beschreibung": "<p>Mariastein (575 m) thront auf einem Felssporn hoch über dem Inntal, rund 15 Kilometer westlich von Kufstein, und ist mit etwa 400 Einwohnerinnen und Einwohnern die kleinste Gemeinde Tirols. Der Ort verdankt seine Existenz einem ganz bestimmten Stein: einem Sandsteinfelsen, in den im 14. Jahrhundert ein Marienrelief geschnitten wurde, dem man Wunderkräfte zuschrieb. Daraus entstand eine der ältesten und bedeutendsten Wallfahrtsstätten des Unterinntals.</p>\n\n<p>Das Herzstück des Ortes ist die spätgotische Wallfahrtskirche, die den Felsen regelrecht umschließt – der Sandsteinblock mit dem Marienbild steht im Altarraum und ist bis heute das eigentliche Zentrum der Anlage. Gleich daneben erhebt sich Burg Mariastein, eine schlichte, aber wehrhafte Anlage aus dem 13. Jahrhundert, die nach jahrzehntelangem Verfall aufwendig restauriert wurde und als Veranstaltungsort für Konzerte und Ausstellungen dient. Wanderwege führen von Mariastein hinunter nach Angerberg oder hinauf auf den Heuberg, der einen weiten Blick über das Inntal bis zum Kaisergebirge bietet.</p>\n\n<p>Trotz seiner Winzigkeit hat der Ort kulturell einiges zu bieten: Neben der Wallfahrtskirche und der Burg laden der Skulpturenweg rund um den Kraftstein und der historische Gasthof zur Einkehr ein. Mariastein ist kein Ort für schnelle Besuche – wer hierherkommt, sollte Zeit mitbringen für Stille, Geschichte und den Blick über das weite Tal. ⛪</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

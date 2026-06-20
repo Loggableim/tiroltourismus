@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "46.7100",
     "lng": "12.6147"
-  }
+  },
+  "beschreibung": "<p>Obertilliach liegt auf 1.380 m Seehöhe im osttirolischen Gailtal, eingebettet zwischen den Karnischen Alpen und den Lienzer Dolomiten im Bezirk Lienz. Das Dorf zählt rund 700 Einwohner und gehört zu den höchstgelegenen Dauersiedlungen Osttirols.</p>\n\n<p>Was Obertilliach von anderen Bergdörfern unterscheidet, ist seine Doppelnatur als Hochleistungs- und Erholungsort. Das internationale Biathlon-Zentrum des ÖSV (Österreichischer Skiverband) bringt im Winter Weltcup-Atmosphäre ins Tal und macht den Ort auch für Hobby-Biathleten erlebbar. Im Sommer verwandelt sich die Loipe in eine der längsten asphaltierten Rollerstrecken Tirols. Rund 200 km markierte Wanderwege ziehen sich durch die Naturparkregion Carnic Alps – vom leichten Familienweg am Thurntaler bis zu anspruchsvollen Karnischen Höhenwegen mit Blick auf die Lienzer Dolomiten.</p>\n\n<p>Kulinarisch ist die Osttiroler Bergküche bodenständig: Schlipfkrapfen, Graukäse und Zirmtorte gehören zum Standard der Wirtshäuser rund um den Dorfplatz mit seiner spätgotischen Pfarrkirche. Wer Ruhe sucht, findet sie besonders im Frühling, wenn die Lifte ruhen und die Bergwiesen zwischen Gail und Villgraten in voller Blüte stehen – dann hat Obertilliach den Charakter, den viele Tiroler Dörfer nur noch auf alten Fotos zeigen. 🏔️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

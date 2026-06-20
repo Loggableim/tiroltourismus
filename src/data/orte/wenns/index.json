@@ -17,5 +17,18 @@
     "lng": 10.7333
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Wenns liegt auf 960 Metern Seehöhe am Eingang des Pitztals im Bezirk Imst und zählt rund 2.080 Einwohner. Die Gemeinde erstreckt sich am sonnigen Talboden zwischen Imst und dem Pitztal-Hauptort St. Leonhard, umgeben von den markanten Gipfeln der Pitztaler Bergwelt wie der Hohen Geige und dem Vorderen Pitze-Kogel.</p>\n\n<p>Über dem Ort erhebt sich das Skigebiet Hochzeiger, eines der familienfreundlichsten Wintersportgebiete Tirols, das direkt von Wenns aus mit der Gondel erreichbar ist. Im Sommer führt die Hochzeiger-Bergbahn Wanderer und Mountainbiker hinauf in alpine Almregionen mit Blick auf die Ötztaler und Stubaier Alpen. Das Pitztal selbst gilt als eines der schneereichsten Täler der Ostalpen, was den Hochzeiger auch für Skitourengeher und Schneeschuhwanderer attraktiv macht. Im Ort lädt die Pfarrkirche zum Hl. Jakobus mit ihrem barocken",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    }
+  ]
 }

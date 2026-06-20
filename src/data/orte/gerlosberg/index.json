@@ -25,5 +25,23 @@
     "lat": "47.2319",
     "lng": "11.9537"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Gerlosberg liegt auf rund 1.200 Metern Höhe im Zillertal, im Bezirk Schwaz, und ist ein kleiner Bergweiler mit etwa 500 Einwohnern. Der Ort thront über dem Talboden von Zell am Ziller und ist Ausgangspunkt für Wanderungen in das wildromantische Gerlostal, das sich von hier aus stetig bergauf Richtung Gerlospass zieht. 🏔️</p>\n\n<p>Was Gerlosberg von vielen anderen Tiroler Dörfern unterscheidet, ist die spürbare Stille. Abseits der Hauptrouten konzentriert sich das Leben auf wenige Höfe, traditionelle Wohnhäuser und kleine Weiler wie Ried und Rohr. Beliebte Wanderungen führen über den Stauseeweg Richtung Durlaßboden oder auf die umliegenden Almen, wo im Sommer Senner ihre Kühe treiben. Auch der kürzlich aufgefrischte Themenweg zur \"Wasserkraft\" zeigt, wie prägend die Natur hier den Alltag bestimmt. Im Winter liegen Skitourenrouten und Rodelbahnen direkt vor der Haustür. 🌲</p>\n\n<p>Kulinarisch profitiert der Ort von seiner Nähe zu Zell am Ziller – der Zillertaler Krapfen und Kaspressknödel sind in den Wirtshäusern der Umgebung selbstverständlich. Wer Gerlosberg besucht, sucht bewusst das Langsame: kein Trubel, keine großen Hotels, dafür ehrliche Bergluft und Weitblick Richtung Tuxer Alpen. Ein Ort für alle, die Tirol abseits der Postkartenmotive erleben möchten. 🥾</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

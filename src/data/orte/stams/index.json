@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2765",
     "lng": "10.9803"
-  }
+  },
+  "beschreibung": "<p>Stams liegt auf 671 m Höhe im Oberinntal, zwischen Innsbruck und Imst, eingebettet in die weite Talebene des Inns. Der Ort zählt rund 1.600 Einwohner und ist eng mit einem der bedeutendsten Bauwerke Tirols verbunden: dem Zisterzienserkloster Stift Stams. Gegründet wurde das Stift 1273 von Meinhard II., dem Begründer der Tiroler Landesherrschaft, der hier auch seine letzte Ruhestätte fand.</p>\n\n<p>Herzstück des Ortes ist die barocke Stiftsbasilika mit ihrer markanten weißen Fassade und dem weithin sichtbaren Turm. Im Innenraum, der nach einem Brand 1592 umgestaltet wurde, steht die berühmte \"Stamser Madonna\", eine gotische Holzskulptur aus der Werkstatt des Meisters Heinrich von Stams – eines der wichtigsten gotischen Kunstwerke Tirols. Das Stift beherbergt heute das älteste Gymnasium des Landes sowie die traditionsreiche Tiroler Fachschule für Obst- und Gartenbau, die den Ort über die Region hinaus bekannt macht. Familien und Kulturinteressierte finden hier außerdem den Kreuzgang, den romanischen Brunnen und die historische Bibliothek.</p>\n\n<p>Sportlich hat Stams ebenfalls Geschichte geschrieben: Der Handballverein ist mehrfacher österreichischer Meister und trägt Heimspiele in der Halle am Sportplatz aus. Kulinarisch lohnt sich ein Besuch der Stiftswirt-Gastronomie, die regionale Küche im historischen Ambiente serviert. Wer den Ort besucht, sollte sich Zeit für einen Spaziergang durch die Obstwiesen Richtung Inn nehmen – ein Kontr",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

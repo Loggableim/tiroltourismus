@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2868",
     "lng": "11.4574"
-  }
+  },
+  "beschreibung": "<p>Rum liegt auf 619 Metern Höhe östlich von Innsbruck im Bezirk Innsbruck-Land und ist mit rund 9.400 Einwohnern die größte Gemeinde des Bezirks. Praktisch nahtlos geht der Ort in die Tiroler Landeshauptstadt über, was ihn zu einem beliebten Wohnort für all jene macht, die stadtnah leben wollen, ohne auf eigene Infrastruktur zu verzichten.</p>\n\n<p>Das Herzstück von Rum ist der Rumer Badlsee, ein beliebter Badesee mitten im Ort, der im Sommer Jung und Alt anzieht. Rund um den See laden Liegewiesen und ein Spielplatz zum Verweilen ein, während das angrenzende Freizeitzentrum mit Tennisplätzen, Eislaufhalle und Sportanlagen ganzjährig Aktivitäten bietet. Der Rumer Spazierweg entlang der Sill sowie zahlreiche Rad- und Wanderwege verbinden die Gemeinde mit dem Inntal und den umliegenden Dörfern. Familien schätzen die gute Nahversorgung mit Schulen, Kindergärten und dem Marktangebot am Rumer Platz.</p>\n\n<p>Kulturell hat Rum mit der römischen Vergangenheit einiges zu bieten: Entlang der historischen Via Claudia Augusta verlief einst eine wichtige Handelsroute durch das Inntal, wovon noch Spuren zeugen. Regelmäßige Veranstaltungen, ein aktives Vereinsleben und die unmittelbare Nähe zu Innsbrucks Kulturangebot – von den Tiroler Landestheatern bis zum Bergisel – machen Rum zu einem Ort, der Eigenständigkeit und Stadtanbindung geschickt vereint. 🏘️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

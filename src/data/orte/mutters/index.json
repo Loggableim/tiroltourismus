@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "innsbruck-land",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/mutters/hero_1.png",
+      "alt": "Mutters — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/mutters/hero_1.png",
   "koordinaten": {
     "lat": "47.2284",
     "lng": "11.3783"
-  }
+  },
+  "beschreibung": "<p>Mutters liegt auf 830 Metern Höhe auf dem Innsbrucker Mittelgebirge, nur wenige Kilometer südlich der Landeshauptstadt, und gehört zum Bezirk Innsbruck-Land. Der Ort mit rund 2.200 Einwohnern ist über die Stubaitalstraße oder bequem mit der Muttereralmbahn erreichbar, die direkt von Innsbruck auf das Hochplateau schwebt. 🏔️</p>\n\n<p>Das Herzstück des Dorfes ist die weitläufige Mutterer Alm – ein rund 60 Hektar großes Freizeitareal mit Spazierwegen, Spielplatz, Teich und der bekannten Mutterer Höhe, von der sich ein weiter Blick über das Inntal bis zur Nordkette auftut. Im Winter startet hier ein kleines Skigebiet mit Übungsliften für Familien und Anfänger, im Sommer locken Wanderwege Richtung Pfarrachalm und Raitiser Alm. Die Talstation der Hungerburgbahn verbindet Mutters außerdem direkt mit der Nordkette – ein seltener Fall, dass man vom Mittelgebirge ohne Umweg in die alpine Höhenwelt der Karwendelbahn gelangt.</p>\n\n<p>Im Dorfzentrum steht die spätgotische Pfarrkirche hl. Nikolaus mit ihrem markanten Zwiebelturm, die als Wahrzeichen von Mutters gilt. Für den Einkehrschwung empfiehlt sich die Walderbrücke oder eines der Gasthäuser am Almgelände, die deftige Tiroler Küche servieren. Wer Ruhe sucht, findet sie auf den Wegen Richtung Raitis oder Kreth – abseits der Seilbahnstationen. Mutters ist damit eine der seltenen Tiroler Gemeinden, die Stadtnähe, Familienfreundlichkeit und echte Bergnatur auf kleinem Raum verbindet.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

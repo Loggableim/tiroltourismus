@@ -14,10 +14,28 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/hart/hero_1.png",
+      "alt": "Hart im Zillertal — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/hart/hero_1.png",
   "koordinaten": {
     "lat": "47.3508",
     "lng": "11.8735"
-  }
+  },
+  "beschreibung": "<p><strong>Hart im Zillertal</strong> erstreckt sich auf 650 Metern Höhe in dem Unterland rund um das Kaisergebirge und das Alpbachtal und ist eine ruhige Dorfgemeinde. Rund <strong>1.600</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften.</p><p>Hart im Zillertal eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    }
+  ]
 }

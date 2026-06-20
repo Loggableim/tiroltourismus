@@ -27,6 +27,23 @@
     "lat": "47.3988",
     "lng": "11.9435"
   },
-  "beschreibung": "<p>Alpbach, bekannt als <strong>„das schönste Dorf Österreichs“</strong>, liegt auf 975 Metern Höhe im malerischen Alpbachtal und verzaubert Besucher mit seinen liebevoll mit Blumen geschmückten Häusern, engen Gassen und der herzlichen Atmosphäre. Das Dorf ist weit über die Grenzen Tirols hinaus für seine traditionelle Baukultur bekannt und wurde mehrfach mit Preisen für die schönste Ortsbildgestaltung ausgezeichnet.</p><p>Ringsum erhebt sich die majestätische Alpbacher Bergwelt, die im Sommer zu ausgedehnten Wanderungen und im Winter zu abwechslungsreichen Skitouren einlädt. Der Alpbacher Höhenweg und die Touren rund um den Galtenberg bieten atemberaubende Panoramen. Die Region ist ein Paradies für Naturliebhaber und Familien, die Ruhe und Erholung in unberührter Alpenlandschaft suchen.</p><p>Kulturell hat Alpbach ebenfalls viel zu bieten: Die Alpbacher Bauernhäuser, die gotische Pfarrkirche und das jährliche Alpbacher Forum ziehen Besucher aus aller Welt an. In den urigen Gasthöfen genießen Sie traditionelle Tiroler Küche und erleben die berühmte Alpbacher Gastfreundschaft.</p>",
-  "kategorie": "dorf"
+  "beschreibung": "<p>Alpbach liegt im Bezirk Kufstein auf 975 Metern Seehöhe im gleichnamigen Tal, umgeben von der markanten Bergwelt des Rofan- und Kitzbüheler Alpenkamms. Das Dorf zählt rund 2.500 Einwohner und ist über die Brixlegg erreichbar, die nächstgelegene Anschlussstelle im Inntal. Seit 1983 trägt Alpbach offiziell den Titel \"Das schönste Dorf Österreichs\" – eine Auszeichnung, die mit strengen Bauvorschriften verbunden ist: Alle Fassaden müssen in Holz gehalten sein, keine verputzten Wände, keine grellen Farben.</p>\n\n<p>Die blumengeschmückten Balkone der einheitlich braun-geölten Holzhäuser prägen das Ortsbild und sind im Sommer kein Zufall, sondern Ausdruck der tief verwurzelten Tradition. Wanderer starten direkt vom Dorfzentrum zu Touren auf das Wiedersberger Horn (2.327 m) oder zur Höhenweg-Runde rund ums Tal. Im Winter gehört das Skigebiet Alpbachtal Wildschönau mit der Hornbahn zu den familienfreundlichen Revieren Tirols – überschaubar, aber mit langer Skigeschichte, der erste Sessellift Österreichs ging hier 1952 in Betrieb.</p>\n\n<p>Das Europäische Forum Alpbach zieht seit 1945 jeden Sommer Politiker, Wissenschaftler und Intellektuelle ins Bergdorf und macht den Ort weit über die Landesgrenzen hinaus bekannt. Kulinarisch stehen der Alpbacher Bergkäse und regionale Schmankerl in den Wirtshäusern am Dorfplatz bereit. Wer Ruhe sucht, findet sie abseits der Konferenzwochen – dann zeigt sich Alpbach als das, was es am liebsten ist:",
+  "kategorie": "dorf",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

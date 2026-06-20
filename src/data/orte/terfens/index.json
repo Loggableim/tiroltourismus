@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.3225",
     "lng": "11.6432"
-  }
+  },
+  "beschreibung": "<p>Terfens liegt auf 591 m Höhe im Unterinntal am Eingang des Zillertals, zwischen Schwaz und Jenbach im Bezirk Schwaz. Die Gemeinde mit rund 2.200 Einwohnern erstreckt sich über mehrere kleine Ortsteile wie Umlberg und Hochpillberg, die sich am Fuße des Karwendelgebirges an den Hang schmiegen. Trotz der verkehrsgünstigen Lage an der Inntalautobahn bewahrt der Ort seinen dörflichen Charakter mit bäuerlicher Struktur und intakten Wiesenflächen.</p>\n\n<p>Das Herzstück für Familien und Erholungssuchende ist das weitläufige Freizeitareal Terfens mit Badesee, Spielplatz, Beachvolleyballplätzen und einer Kneippanlage. Von hier aus starten Wanderungen Richtung Hochpillberg, wo im Sommer der Klettersteif und Panoramaweg locken, während im Winter der Pillberg-Skilift kleine Skifahrer anspricht. Der Inn-Radweg führt direkt am Ort vorbei und verbindet Terfens mit dem Zillertal ebenso wie mit der Landeshauptstadt Innsbruck. Die 1713 erbaute Wallfahrtskirche Maria Schnee auf dem Hügel über dem Ort ist ein ruhiger, kultureller Anziehungspunkt mit barocker Ausstattung.</p>\n\n<p>Kulinarisch profitiert Terfens von der Landwirtschaft des Zillertals – regionale Produkte wie Zillertaler Bergkäse und hofeigene Säfte finden sich bei den ansässigen Bauernläden. Wer hier einkehrt, bekommt ehrliche Tiroler Küche ohne Touristenrummel, da der Ort abseits der großen Hotspots liegt.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

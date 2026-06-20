@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import PaywallOverlay from '../../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix } from '../../../lib/languages.js';
 
@@ -193,6 +193,9 @@ const { locale, slug } = Astro.params;
 const entry = readEntry('sehenswuerdigkeiten', slug, locale);
 if (!entry) return Astro.redirect(`${localePrefix(locale)}/sehenswuerdigkeiten/`);
 
+// Qualitätslogik: dünne POI-Seiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'sehenswuerdigkeiten');
+
 const l = LABELS[locale] || LABELS.de;
 const prefix = localePrefix(locale);
 
@@ -202,7 +205,6 @@ const catStr = entry.kategorie
   : undefined;
 
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
 
 // Karten-Marker falls Koordinaten vorhanden
 const nearbyEntries = entry.koordinaten
@@ -295,6 +297,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   locale={locale}
   jsonld={attractionLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={[
     {
       type: 'custom-hero',
@@ -308,7 +311,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
         : undefined,
       bgImage: entry.hero_bild,
     },
-    !isBasic && (entry.hoehe || entry.dauer || entry.preis)
+    !(tier === 'basic') && (entry.hoehe || entry.dauer || entry.preis)
       ? {
           type: 'sight-facts',
           items: [
@@ -318,7 +321,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
           ].filter(Boolean),
         }
       : null,
-    !isBasic && entry.beschreibung
+    !(tier === 'basic') && entry.beschreibung
       ? {
           type: 'description',
           label: l.details,
@@ -326,7 +329,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
           content: autoLinkContent(entry.beschreibung, entry, locale),
         }
       : null,
-    !isBasic && entry.tags && entry.tags.length > 0
+    !(tier === 'basic') && entry.tags && entry.tags.length > 0
       ? { type: 'tags', tags: entry.tags }
       : null,
     {
@@ -352,8 +355,8 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
           : null,
       ].filter(Boolean),
     },
-    !isBasic ? mapSection : null,
-    !isBasic && relatedByTag.length > 0
+    !(tier === 'basic') ? mapSection : null,
+    !(tier === 'basic') && relatedByTag.length > 0
       ? {
           type: 'related-grid',
           label: l.weitereSehenswuerdigkeiten,
@@ -374,7 +377,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 />
 
 <!-- Basic: Premium-Inhalte hinter Paywall -->
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name} slug={slug} />

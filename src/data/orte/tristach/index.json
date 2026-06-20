@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "46.8171",
     "lng": "12.7881"
-  }
+  },
+  "beschreibung": "<p>Tristach liegt auf 670 Metern Seehöhe am Eingang des Lienzer Beckens, nur wenige Kilometer südlich der Bezirkshauptstadt Lienz in Osttirol. Mit rund 1.500 Einwohnern zählt die Gemeinde zu den kleineren Orten im Tal, fungiert aber als beliebter Ausgangspunkt für Ausflüge in die Lienzer Dolomiten. Die Sonnenseite des Drautals bietet ein mildes Klima, das die Region auch über die Sommermonate hinaus attraktiv macht.</p>\n\n<p>Das Herzstück Tristachs ist zweifellos der Tristacher See 🌊, der mit Wassertemperaturen von bis zu 24 Grad als wärmster Badesee Osttirols gilt. Umgeben von einer großzügigen Liegewiese, einem Familienstrand und einem Kiosk, zieht er Schwimmer, Spaziergänger und Ruhesuchende gleichermaßen an. Direkt hinter dem See erheben sich die markanten Felswände der Lienzer Dolomiten, was dem Badevergnügen eine ungewöhnlich alpine Kulisse verleiht. Der knapp zweistündige Rundweg um den See zählt zu den beliebtesten Familienwanderungen im Bezirk. Wer höher hinaus will, startet von Tristach aus auf Touren zur Laserz- oder Karlsbader Hütte.</p>\n\n<p>Am Fuße des Rauchkofels thront die Pfarrkirche hl. Candidus, ein spätgotischer Bau aus dem 15. Jahrhundert, der mit seinem schlanken Turm das Ortsbild prägt. Kulinarisch laden die Gasthäuser am See und im Dorf zu Osttiroler Klassikern wie Kasnocken, Schlickkrapfen oder einer deftigen Brettljause ein. Tristach verbindet das, was Osttirol ausmacht: stille Bergseen, schroffe Dolomiten-Gipfel und die Gelassenheit eines Dorfs, das seinen Rhythmus noch nicht verloren hat.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

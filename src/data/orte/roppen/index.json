@@ -20,5 +20,18 @@
   "koordinaten": {
     "lat": "47.2183",
     "lng": "10.8147"
-  }
+  },
+  "beschreibung": "<p><strong>Roppen</strong> liegt auf 724 Metern Höhe in den Tälern des Oberlands – Ötztal, Pitztal und Imster Land und ist eine beschauliches Dorf. Rund <strong>1.900</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Familien schätzen das vielseitige angebot an freizeitaktivitäten und kinderfreundlichen unterkünften und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme.</p><p>Roppen eignet sich besonders für Familien und Erholungssuchende, die Ruhe mit Aktivitäten verbinden möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    }
+  ]
 }

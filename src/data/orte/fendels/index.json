@@ -26,5 +26,23 @@
     "lat": "47.0538",
     "lng": "10.6764"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Fendels liegt auf 1.350 Metern Seehöhe am Eingang des Kaunertals im Bezirk Schwaz und ist die höchstgelegene Dauersiedlung dieses Tals. Die kleine Marktgemeinde mit rund 300 Einwohnerinnen und Einwohnern thront auf einem sonnenreichen Plateau über dem Talboden, umgeben von den Ausläufern der Ötztaler Alpen und mit Blick auf den Naturpark Kaunergrat.</p>\n\n<p>Das Skigebiet Fendels ist kompakt und bewusst auf Familien ausgerichtet: Acht Liftanlagen, rund elf Pistenkilometer und ein eigener Kinderland-Bereich mit Zauberteppich machen den Berg zwischen 1.350 und 2.300 Metern überschaubar und sicher. Im Sommer führen markierte Wanderwege direkt vom Dorf hinauf zu bewirtschafteten Almen wie der Goglesalm, und die berühmte Kaunertaler Gletscherstraße – eine der spektakulärsten Panoramastraßen Tirols mit 29 Kehren – beginnt nur wenige Kilometer taleinwärts. Wer Ruhe sucht, findet sie auf den wenig frequentierten Steigen Richtung Venet- und Gamskopf.</p>\n\n<p>Was Fendels vom benachbarten Kaunertal und Feichten unterscheidet, ist die konsequente Besinnung auf das Kleine: keine dörfliche Durchgangsstraße, kaum touristischer Rummel, dafür bäuerliche Architektur und ein intakter Dorfkern. In den wenigen Gasthöfen wird Tiroler Küche auf hohem Niveau serviert – Kaiserschmarrn, Kasnocken und regionale Milchprodukte von den eigenen Bergbauernhöfen runden das Bild einer Gemeinde ab, die ihren ursprünglichen Charakter bewahrt hat. 🏔️</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

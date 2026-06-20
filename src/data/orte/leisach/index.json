@@ -15,10 +15,28 @@
   ],
   "status": "published",
   "bezirk": "lienz",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/leisach/hero_1.png",
+      "alt": "Leisach — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/leisach/hero_1.png",
   "koordinaten": {
     "lat": "46.8094",
     "lng": "12.7492"
-  }
+  },
+  "beschreibung": "<p>Leisach liegt auf 710 m Seehöhe am Eingang des Iseltals, nur wenige Kilometer westlich der Bezirkshauptstadt Lienz in Osttirol. Die Gemeinde mit rund 850 Einwohnerinnen und Einwohnern erstreckt sich am sonnigen Talboden und ist Ausgangspunkt für Touren ins benachbarte Defereggen oder Virgen.</p>\n\n<p>Das Herzstück für Familien ist das Erlebnisbad Leisach 🏘️, das im Sommer mit großer Liegewiese, Kinderbecken und Rutsche Besucher aus dem gesamten Tal anzieht. Direkt dahinter ragen die Lienzer Dolomiten in den Himmel – die markanten Felsformationen von Spitzkofel und Laserzsee sind von hier aus zum Greifen nah. Wanderungen wie die Tour zur Leisacher Alm oder Radwege entlang der Isel bieten Abwechslung für jeden Anspruch, während der Winter mit Langlaufloipen und Skitourenmöglichkeiten punktet. Wer Ruhe sucht, findet sie abseits der Hauptstraße in den verstreuten Gehöften der Umgebung.</p>\n\n<p>Kulinarisch lohnt sich ein Abstecher in die Lienzer Innenstadt, wo Osttiroler Spezialitäten wie Schlickkrapfen oder Kaspressknödel aufgetischt werden. Leisach selbst bleibt das, was Osttirol so sympathisch macht: ein ehrlicher, unverbrauchter Ferienort ohne Trubel, aber mit allem, was Familien für einen aktiven Bergsommer brauchen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    }
+  ]
 }

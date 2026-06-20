@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.4867",
     "lng": "10.5100"
-  }
+  },
+  "beschreibung": "<p>Tannheim liegt auf 1.097 Metern Höhe im gleichnamigen Tannheimer Tal in der Region Außerfern (Bezirk Reutte) und ist mit rund 1.100 Einwohnern der Hauptort des Hochtals. Umrahmt wird der Ort von einer geschlossenen Bergkette mit Aggenstein, Roter Flüh, Gimpel und dem markanten Einstein, die das Tal nach Süden hin abschließen. Die Lage fernab großer Durchzugsstraßen macht Tannheim zu einem ruhigen, aber bestens erschlossenen Ferienort zwischen Lech und Loisach.</p>\n\n<p>Das Herzstück der Region ist der Vilsalpsee, einer der wärmsten und saubersten Bergseen Tirols, der als Naturdenkmal unter Schutz steht und nur zu Fuß, mit dem Elektroboot oder dem Ruftaxi erreichbar ist – Autos bleiben draußen. Rund um den See führt ein etwa 12 Kilometer langer Wanderweg, der auch als familientauglich gilt. Im Winter gehört das Skigebiet Neunerköpfle mit der benachbarten Füssener Jöchle-Bahn zu den beliebtesten Familienskigebieten Tirols, ergänzt durch ein dichtes Loipennetz im Talboden. Die Tannheimer Berge bieten zudem anspruchsvolle Touren für geübte Berggeher, etwa über den Schochengipfel oder die Rote Flüh.</p>\n\n<p>Kulinarisch steht die Region für ehrliche Almküche: Käsknöpfle, Kaspressknödel und Bergkäse von der Tannheimer Sennerei, im Sommer serviert auf den umliegenden Almen wie der Lochbach- oder der Gamsalpe. Wer Tirols Bergwelt abseits der überlaufenen Hotspots sucht, findet hier ein Tal, das seinen ursprünglichen Charakter bewahrt hat.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

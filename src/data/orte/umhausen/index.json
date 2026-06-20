@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.1379",
     "lng": "10.9299"
-  }
+  },
+  "beschreibung": "<p>Umhausen liegt auf 1.031 Metern Seehöhe im vorderen Ötztal und ist die höchstgelegene Gemeinde dieses Talabschnitts im Bezirk Imst. Der Ort zählt rund 3.400 Einwohner und blickt auf eine lange Siedlungsgeschichte zurück, die bis in die Bronzezeit reicht – wovon noch heute Hügelgräber und Funde aus der keltisch-rätischen Epoche zeugen.</p>\n\n<p>Das herausragende Naturdenkmal ist der Stuibenfall, mit 159 Metern der höchste Wasserfall Tirols. Der Wasserfall ist über einen spektakulären Steig mit über 700 Stufen und Aussichtsplattformen erschlossen – ein Erlebnis, das Familien ebenso anzieht wie ambitionierte Wanderer. Direkt im Ort befindet sich das Ötzi-Dorf, ein archäologischer Freilichtpark, der das Leben der jungsteinzeitlichen Siedler rund um den legendären Mann vom Tisenjoch anschaulich rekonstruiert. Für Erholung sorgt der Naturbadeteich, der mit seinem kristallklaren Bergwasser im Sommer zum Schwimmen einlädt. Die Umgebung bietet zudem ein weitverzweigtes Wanderwegenetz Richtung Fundustal und auf die umliegenden Almen.</p>\n\n<p>Kulinarisch wird in Umhausen regionale Ötztaler Küche geboten – von Kaspressknödeln und Graukas bis hin zu Wildgerichten aus heimischer Jagd. Wer im Winter kommt, findet mit der nahe gelegenen Skiarena Hochoetz ein familienfreundliches Skigebiet direkt vor der Haustür. Umhausen verbindet auf seltene Weise Naturerlebnis, lebendige Geschichte und tiroler Gastfreundschaft – ein Ort, der weit mehr bietet als nur einen Zwischenstopp auf dem Weg Richtung Sölden.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

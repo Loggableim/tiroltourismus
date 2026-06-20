@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5405",
     "lng": "10.6155"
-  }
+  },
+  "beschreibung": "<p>Vils liegt auf 826 Metern Höhe im Außerfern, unweit der deutschen Grenze, und ist mit rund 1.500 Einwohnern die kleinste Stadt Tirols. Der historische Stadtkern mit seinen engen Gassen und der Stadtmauer zeugt von einer Vergangenheit, die eng mit dem Lech und dem Fernpass verbunden war – als Knotenpunkt für Reisende und Handelsleute auf dem Weg Richtung Süden.</p>\n\n<p>Die Vilsbrücke markiert den Übergang nach Bayern und ist einer der ältesten Grenzübergänge der Region. Im Ort erinnert das Museum im Knopfhaus an die Gerberei-Tradition, die Vils über Jahrhunderte prägte: Die Hirsch- und Rothautverarbeitung sowie der Weißgerberhandwerk machten den Ort einst überregional bekannt. Heute laden der Marktplatz, die Pfarrkirche St. Margareta und die umliegenden Spazierwege entlang der Vils zu einem ruhigen Besuch ein. Familien schätzen den kurzen Weg zum nahegelegenen Haldensee oder Ausflüge in die Lechtaler Alpen, die sich direkt vor der Haustür erheben.</p>\n\n<p>Kulturell verankert ist Vils im Naturpark Tiroler Lech, der die größte zusammenhängende Auenlandschaft Mitteleuropas schützt. Gasthäuser servieren regionale Küche mit würzigen Käsespezialitäten aus dem Tannheimer Tal, und im Sommer wie im Winter bleibt der Ort eine ehrliche, unverstellte Adresse abseits großer Touristenströme – klein, aber mit Charakter.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

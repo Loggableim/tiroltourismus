@@ -26,5 +26,23 @@
     "lat": "47.0572",
     "lng": "10.6166"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Fiss liegt auf einem sonnenverwöhnten Hochplateau im Tiroler Oberland auf 1.438 Metern Seehöhe, oberhalb des Inntals und gehört zum Bezirk Landeck. Der kleine Ort mit rund 900 Einwohnerinnen und Einwohnern bildet gemeinsam mit Serfaus und Ladis eine der bekanntesten Tourismusregionen Tirols – das Skigebiet Serfaus-Fiss-Ladis zählt zu den größten Familienskigebieten der Alpen.</p>\n\n<p>⛷️ Was Fiss von anderen Tiroler Bergdörfern unterscheidet, ist die konsequente Ausrichtung auf Familien und Aktive. Im Winter warten 214 Pistenkilometer, Kinderskischulen mit Maskottchen Murmli, die Fisser Flitzer Rodelbahn und die Skyswing-Schaukel hoch über dem Tal. Im Sommer verwandelt sich das Plateau in die Bikes-Arena Serfaus-Fiss-Ladis mit über 300 Kilometern Mountainbike- und E-Bike-Strecken, darunter legendäre Trails wie die Frommestrail. Wanderer schätzen die Sonnenhänge mit Blick auf die Ötztaler und Samnauner Alpen, und Abenteuerlustige zieht es in den Fisser Flitzer oder in den Högsee zum Canyoning.</p>\n\n<p>Kulinarisch stehen in den zahlreichen Hütten und Gasthäusern typische Tiroler Gerichte auf der Karte – von Kaspressknödeln über Gröstl bis hin zu regionalem Almkäse. Besonders beliebt ist die Sonnenalm auf 1.850 Metern, die mit regionaler Küche und Panoramablick punktet. Fiss schafft den Spagat zwischen alpiner Tradition und modernem Freizeitangebot wie kaum ein zweiter Ort im Tiroler Oberland.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

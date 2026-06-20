@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.2336",
     "lng": "11.8820"
-  }
+  },
+  "beschreibung": "<p>Zell am Ziller liegt auf 575 Metern Höhe im Herzen des gleichnamigen Tals und ist mit rund 1.700 Einwohnern der musikalische Mittelpunkt des Zillertals. Der beschauliche Ort im Bezirk Schwaz blickt auf eine lange Tradition als Marktgemeinde zurück und verbindet tirolerisches Brauchtum mit modernem Tourismus. Bereits bei der Anfahrt durch das Zillertal fällt der Blick auf die markante Pfarrkirche mit ihrem charakteristischen Turm, die das Ortsbild prägt. Zell am Ziller ist vor allem für das berühmte Gauderfest bekannt, eines der ältesten und größten Frühlings- und Trachtenfeste Österreichs, das jedes Jahr tausende Besucher anzieht und die Verbundenheit der Region zu ihrer Volksmusik und Tradition feiert.</p>\n\n<p>Als Eingangstor zur Zillertaler Arena bietet Zell am Ziller im Winter ein weitläufiges Skigebiet mit über 200 Pistenkilometern, das sowohl Familien als auch sportliche Skifahrer begeistert. Die Region ist ein Paradies für Skifahrer und Snowboarder, und im Sommer verwandelt sich die Umgebung in ein Wandergebiet mit unzähligen Touren durch die Zillertaler Alpen. Von gemütlichen Spaziergängen entlang der Ziller bis zu anspruchsvollen Bergtouren auf die umliegenden Gipfel reicht das Angebot.</p>\n\n<p>Kulinarisch verwöhnt der Ort seine Gäste mit regionalen Spezialitäten wie Zillertaler Krapfen, Kaspressknödeln und Almkäse, serviert in traditionellen Gasthäusern und urigen Hütten. Die Kombination aus 🎵 Volksmusik, Brauchtum, Familienfreundlichkeit und alpiner Vielfalt macht Zell am Ziller zu einem ganzjährigen Reiseziel, das Tirol in seiner ganzen Authentizität erlebbar macht.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

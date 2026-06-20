@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "46.9666",
     "lng": "11.0073"
-  }
+  },
+  "beschreibung": "<p>Sölden liegt im hinteren Ötztal auf 1.368 m Seehöhe und ist mit rund 3.000 Einwohnern der größte Ort des Tales. Das Dorf erstreckt sich auf etwa zehn Kilometern Länge entlang der Ötztaler Ache, umgeben von Gipfeln, die allesamt über 3.000 m aufragen – die Schwarze Schneid, der Tiefenbachkogel und der Gaislachkogel bilden das markante Skileitbild des Ortes.</p>\n\n<p>Die Skiwelt Sölden umfasst rund 144 Pistenkilometer und reicht mit dem Rettenbach- und Tiefenbachferner bis auf 3.340 m hinauf – eines der wenigen Gletscherskigebiete in Österreich. Am Gaislachkogel befindet sich seit 2018 die Erlebniswelt „007 Elements\", die direkt an den Drehort des James-Bond-Films „Spectre\" anknüpft. Im Sommer lockt das Timmelsjoch (2.509 m) mit seiner Passstraße nach Südtirol, während Wanderer die Hänge rund um das Vent und den Naturpark Ötztaler Alpen erkunden können. Der berühmte Ötzi, die gut 5.300 Jahre alte Gletschermumie, wurde unweit von Sölden am Tisenjoch gefunden – das Ötzi-Dorf in Umhausen greift diese Geschichte auf.</p>\n\n<p>Kulinarisch dominiert klassische Tiroler Kost: Käsknöpfle, Gröstl und Kaiserschmarrn werden in den Hütten und Gasthäusern deftig serviert. Die Après-Ski-Szene konzentriert sich rund um die Giggijoch-Talstation und die Dorfstraße, wo Skigebi",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

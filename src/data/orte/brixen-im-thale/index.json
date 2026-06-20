@@ -26,5 +26,23 @@
     "lat": "47.4495",
     "lng": "12.2495"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Brixen im Thale liegt auf 794 Metern Seehöhe im Bezirk Kitzbühel, eingebettet zwischen dem Wilden Kaiser im Norden und den Kitzbüheler Alpen im Süden. Die Marktgemeinde zählt rund 2.700 Einwohner und gehört flächenmäßig zu den größten Gemeinden im Tiroler Unterland – das Gemeindegebiet reicht vom Talboden der Brixentaler Ache hinauf bis in hochalpine Regionen über 2.000 Meter.</p>\n\n<p>Herzstück des Ortes ist die SkiWelt Wilder Kaiser – Brixental, eines der größten zusammenhängenden Skigebiete weltweit. Die Gondelbahn auf die Hohe Salve bringt Wintersportler direkt ins Skigebiet, im Sommer wandert man auf derselben Strecke zur beliebten Aussichtswarte. Der Badesee Brixen, ein kleiner Naturbadesee am Talboden, ist im Sommer Treffpunkt für Familien. Über 250 Kilometer markierte Wanderwege führen durch Almgebiete wie die Hochbrixen-Filzalm oder hinauf auf den Gaisberg mit Blick auf das Kaisermassiv. Auch Radfahrer schätzen die Lage als Knotenpunkt zwischen Brixental und Leukental.</p>\n\n<p>Kulinarisch steht die Gemeinde für klassische Tiroler Wirtshauskultur: Kaspressknödel, Gröstl und der hauseigene Bergkäse von den Sennereien der Umgebung gehören zum Standard. Die Pfarrkirche zum Hl. Ulrich mit ihrem spätgotischen Flügelaltar ist einen Blick wert. Wer einen Ort sucht, der das ganze Jahr über Outdoor-Programm bietet, ohne den Trubel von Kitzbühel selbst, findet in Brixen im Thale eine ehrliche, sportliche Alternative 🏔️.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

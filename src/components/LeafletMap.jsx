@@ -188,7 +188,7 @@ export default function LeafletMap({
 
       // Convert [[lat,lng],...] to Leaflet latlngs
       const latlngs = poly.coords.map(c => [parseFloat(c[0]), parseFloat(c[1])]);
-      const color = poly.color || 'var(--pink, #FF1493)';
+      const color = poly.color || 'var(--tirol-pink, #FF1493)';
 
       const polygon = L.polygon(latlngs, {
         color: color,
@@ -259,7 +259,7 @@ export default function LeafletMap({
           // Single marker
           const m = group[0];
           const catStyle = m.category ? CATEGORY_STYLES[m.category] : null;
-          const iconColor = m.color || catStyle?.color || 'var(--pink, #FF1493)';
+          const iconColor = m.color || catStyle?.color || 'var(--tirol-pink, #FF1493)';
           const markerEmoji = m.emoji || catStyle?.emoji || '📍';
           const markerImage = m.wappenSrc || m.imageSrc || null;
           const icon = L.divIcon({
@@ -276,15 +276,22 @@ export default function LeafletMap({
           }
           markersRef.current.push(marker);
         } else {
-          // Cluster
+          // Cluster with size + color tiering
           const count = group.length;
-          const clusterColor = '#a855f7';
+          // Size & color escalate with marker count for visual hierarchy
+          let size, color, glow, fontSize;
+          if (count >= 50)      { size = 64; color = '#dc2626'; glow = 'rgba(220,38,38,.45)';  fontSize = 17; }
+          else if (count >= 20) { size = 56; color = '#f59e0b'; glow = 'rgba(245,158,11,.45)'; fontSize = 15; }
+          else if (count >= 10) { size = 50; color = '#a855f7'; glow = 'rgba(168,85,247,.45)'; fontSize = 14; }
+          else                  { size = 44; color = '#3b82f6'; glow = 'rgba(59,130,246,.45)';  fontSize = 13; }
           const icon = L.divIcon({
-            html: `<div style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:${clusterColor};border-radius:50%;box-shadow:0 2px 12px rgba(168,85,247,.4);border:3px solid #fff;color:#fff;font-size:13px;font-weight:700;cursor:pointer">${count}</div>`,
-            className: '', iconSize: [44, 44], iconAnchor: [22, 22],
+            html: `<div style="width:${size}px;height:${size}px;display:flex;align-items:center;justify-content:center;background:${color};border-radius:50%;box-shadow:0 4px 16px ${glow},0 0 0 4px rgba(255,255,255,.85);color:#fff;font-size:${fontSize}px;font-weight:800;cursor:pointer;transition:transform .15s ease">${count}</div>`,
+            className: 'map-cluster',
+            iconSize: [size, size],
+            iconAnchor: [size/2, size/2],
           });
           const cluster = L.marker([centerLat, centerLng], { icon }).addTo(map);
-          cluster.bindPopup(`<strong>${count} Orte</strong><br><em>Zoom rein zum Erkunden</em>`);
+          cluster.bindPopup(`<strong>${count} Orte</strong><br><em>${count >= 10 ? 'Klicken zum Hineinzoomen' : 'Cluster'}</em>`);
           cluster.on('click', () => {
             map.fitBounds(group.map(g => [g.lat, g.lng]), { padding: [40, 40], maxZoom: 14 });
           });
@@ -298,7 +305,7 @@ export default function LeafletMap({
         const latlng = [parseFloat(m.lat), parseFloat(m.lng)];
         markerBounds.push(latlng);
         const catStyle = m.category ? CATEGORY_STYLES[m.category] : null;
-        const iconColor = m.color || catStyle?.color || 'var(--pink, #FF1493)';
+        const iconColor = m.color || catStyle?.color || 'var(--tirol-pink, #FF1493)';
         const markerEmoji = m.emoji || catStyle?.emoji || '📍';
         const markerImage = m.wappenSrc || m.imageSrc || null;
         const icon = L.divIcon({

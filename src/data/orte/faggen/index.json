@@ -25,5 +25,23 @@
     "lat": "47.0812",
     "lng": "10.6723"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Faggen liegt auf 900 Metern Höhe im Oberinntal, eingebunden in die Gemeinde Prutz im Bezirk Landeck. Das Dorf mit rund 400 Einwohnern erstreckt sich am Talboden zwischen dem Inn und den ansteigenden Wiesen am Fuße des Kaunergrats. Die Lage zwischen Prutz und Kauns macht Faggen zu einem ruhigen Ausgangspunkt abseits der Hauptverkehrsader des Tiroler Oberlandes.</p>\n\n<p>Die weiten Felder rund um den Ort prägen das Bild – hier wird noch aktiv Landwirtschaft betrieben, und die traditionellen Höfe mit ihren schindelgedeckten Fassaden erzählen von der langen Siedlungsgeschichte. Direkt gegenüber erhebt sich der Kaunergrat, dessen markante Gipfel wie die Hohe Aifner Spitze den Horizont dominieren und bei klarer Sicht bis ins Inntal leuchten. Wanderer starten von Faggen aus zu Touren Richtung Kaunerberg oder ins Naturparkhaus Kaunergrat, das nur wenige Kilometer entfernt liegt. Der Inn-Radweg verläuft direkt am Dorf vorbei und verbindet Faggen mit dem gesamten Tal bis nach Landeck und weiter Richtung Schweiz.</p>\n\n<p>Kulturell ist Faggen eng mit der Pfarre Prutz verbunden, und auch die enge Nachbarschaft zum Venet-Massiv auf der anderen Talseite prägt den Alltag. Wer Stille sucht, abseits der Touristenströme von Serfaus oder Fiss, findet hier ein Oberinntaler Dorf, das noch nach bäuerlichem Rhythmus funktioniert – mit Kirchtagen im Sommer und einer intakten Dorfgemeinschaft. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Burg Landeck",
+      "beschreibung": "Hoch über der Stadt thronende Burganlage mit Museum und herrlichem Panorama.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaunertaler Gletscher",
+      "beschreibung": "Ganzjährig schneesicheres Skigebiet mit grandiosem Gletscher-Panorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

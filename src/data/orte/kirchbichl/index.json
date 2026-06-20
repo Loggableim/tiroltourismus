@@ -15,10 +15,28 @@
   ],
   "status": "published",
   "bezirk": "kufstein",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/kirchbichl/hero_1.png",
+      "alt": "Kirchbichl — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/kirchbichl/hero_1.png",
   "koordinaten": {
     "lat": "47.5112",
     "lng": "12.0859"
-  }
+  },
+  "beschreibung": "<p>Kirchbichl liegt auf 515 Metern Seehöhe im Tiroler Inntal, wenige Kilometer östlich von Wörgl im Bezirk Kufstein, und zählt rund 5.900 Einwohner. Der Ort entstand aus mehreren Weilern, die erst 1938 zur heutigen Gemeinde zusammengeschlossen wurden – entsprechend vielfältig sind die Ortsteile wie Bichlwang, Oberlangkampfen und Häring.</p>\n\n<p>Das Herzstück für Familien und Erholungssuchende ist der Kirchbichler Weiher, ein etwa 6 Hektar großer Badesee mit Liegewiesen, Spielplatz und einem rund 1,2 Kilometer langen Rundweg – an heißen Sommertagen tummeln sich hier Einheimische aus dem ganzen Bezirk Kufstein. Direkt daneben erhebt sich das 1941 in Betrieb gegangene Innkraftwerk Kirchbichl, das bis heute Strom für die Region liefert und mit seiner markanten Staumauer ein Stück Technikgeschichte Tirols darstellt. Geschichtlich Interessierte kommen rund um das „Schlaitner-Kreuz\" auf ihre Kosten: Hier fand am 25. Mai 1809 eines der blutigsten Gefechte des Tiroler Freiheitskampfes unter Martin Speckbacher statt, bei dem über 400 Tiroler gegen bayerische und sächsische Truppen fielen. Für Sportliche bietet die Umgebung ein gut ausgebautes Wegenetz Richtung Wörgler Berg und in die Brandenberger Alpen, dazu Klettermöglichkeiten am „Steinernen Jäger\" und im Winter gespurte Loipen im Inntal.</p>\n\n<p>Wer einkehren will, findet in den Gasthäusern der Ortsteile klassische Tiroler Küche – von Kaspressknödeln bis zum traditionellen „Tiroler Gröstl\" – und im nahe gelegenen Häring eines der ältesten Kirchengebäude des Unterinntals, die Pfarrkirche zum Hl. Petrus aus dem 8. Jahrhundert. Kirchbichl ist kein Ort für Postkarten-Romantik, sondern ein lebendiger Inntaler Ort, der Industriegeschichte, Badefreuden und Bergnähe überraschend unkompliz",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    }
+  ]
 }

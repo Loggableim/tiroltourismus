@@ -17,5 +17,18 @@
     "lng": 11.1667
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p>Pettnau liegt auf 645 Metern Seehöhe im Bezirk Innsbruck-Land, eingebettet zwischen der Landeshauptstadt und Telfs im Oberinntal. Die Gemeinde zählt rund 1.040 Einwohner und verteilt sich auf die Fraktionen Pettnau, Leiblfing und Baumkirchen angrenzend. Durch das Gemeindegebiet zieht sich die Loisach, die hier noch als naturnaher Wildbach mit Schotterbänken daherkommt, bevor sie weiter westlich in den Inn mündet.</p>\n\n<p>Was Pettnau ausmacht, ist sein konsequenter Wohngemeinde-Charakter: Es gibt keinen ausgeprägten Tourismus, dafür weitläufige Wiesen, alte Bauernhöfe mit breiten Dächern und ein dörfliches Gefüge, das vom Pendleralltag lebt. Viele Bewohner arbeiten in Innsbruck oder Telfs und schätzen die kurzen Wege sowie die Ruhe abseits der Inntal-Bundesstraße. Der Loisachradweg führt direkt durch den Ort und verbindet Pettnau mit dem Mieminger Plateau und dem Innsbrucker Stadtgebiet. Spaziergänge entlang der Loisach, vorbei an kleinen Wehren und alten Holzbrücken, zeigen die landschaftliche Besonderheit dieser Gemeinde: Hier treffen Inntal-Landwirtschaft und naturnahe Bachlandschaft aufeinander.</p>\n\n<p>Kulturell ist Pettnau eng mit der Pfarre Baumkirchen verbunden, deren gotische Kirche zu den ältesten im vorderen Oberinntal zählt. Kulinarisch dominieren regionale Bauernhofprodukte – von Graukäse bis zu frischer Milch direkt vom Hof. Wer das echte, unverfälschte Tirol abseits der Hotspots sucht, findet hier einen Ort, der seinen Rhythmus noch nicht dem",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -15,7 +15,6 @@ if (!entry) return Astro.redirect('/events/');
 
 const emoji = entry.emoji || '🎪';
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
 const subtitle = [
   entry.ort,
   entry.region && entry.region !== entry.ort ? entry.region : null,
@@ -71,11 +70,52 @@ const relatedSection = related.length > 0 ? {
     preis: r.entry.preis,
   })),
 } : null;
+
+// JSON-LD: Event
+const siteURL = 'https://tiroltourismus.com';
+const eventDate = entry.datum || entry.datum_von;
+const eventLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: entry.name || entry.titel,
+  description: (entry.kurzbeschreibung || entry.beschreibung || '').substring(0, 500),
+  url: `${siteURL}/events/${slug}/`,
+  ...(eventDate ? { startDate: eventDate } : {}),
+  ...(entry.uhrzeit ? { eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode' } : {}),
+  ...(entry.ort ? {
+    location: {
+      '@type': 'Place',
+      name: entry.ort,
+      address: { '@type': 'PostalAddress', addressLocality: entry.ort, addressCountry: 'AT' },
+      ...(entry.koordinaten ? {
+        geo: { '@type': 'GeoCoordinates', latitude: parseFloat(entry.koordinaten.lat), longitude: parseFloat(entry.koordinaten.lng) }
+      } : {}),
+    }
+  } : {}),
+  ...(entry.preis ? {
+    offers: {
+      '@type': 'Offer',
+      name: 'Eintritt',
+      price: entry.preis.toString().replace(/[€\s]/g, '').trim(),
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url: entry.link && entry.link !== '#' ? entry.link : `${siteURL}/events/${slug}/`,
+    }
+  } : {}),
+  ...(entry.kategorie ? { eventCategory: entry.kategorie.replace(/^[^\w\s]+\s*/, '') } : {}),
+  eventStatus: 'https://schema.org/EventScheduled',
+  organizer: {
+    '@type': 'Organization',
+    name: 'Tirol Tourismus',
+    url: siteURL,
+  },
+};
 ---
 
 <DetailPage
   title={entry.name || entry.titel}
   description={generateMetaDescription(entry, 'events')}
+  jsonld={eventLD}
   breadcrumbs={[{ label: 'Events', href: '/events/' }, { label: entry.name || entry.titel }]}
   sections={[
     {
@@ -101,21 +141,21 @@ const relatedSection = related.length > 0 ? {
         { label: 'Tags', tags: entry.tags || [], type: 'tags' },
       ].filter(Boolean),
     },
-    !isBasic ? {
+    !(tier === 'basic') ? {
       type: 'details-grid',
       items: [
         { label: 'Preis', value: entry.preis || undefined },
         { label: 'Webseite', value: entry.webseite || undefined, type: 'link', href: entry.webseite },
       ].filter(Boolean),
     } : null,
-    !isBasic && (entry.beschreibung || entry.kurzbeschreibung) ? {
+    !(tier === 'basic') && (entry.beschreibung || entry.kurzbeschreibung) ? {
       type: 'description',
       label: entry.name || entry.titel,
       title: 'Über dieses Event',
       content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
     } : null,
-    !isBasic ? mapSection : null,
-    !isBasic ? {
+    !(tier === 'basic') ? mapSection : null,
+    !(tier === 'basic') ? {
       type: 'cta',
       label: 'Interesse?',
       title: 'Mehr erfahren',
@@ -131,7 +171,7 @@ const relatedSection = related.length > 0 ? {
 />
 
 <!-- Basic: Premium-Inhalte hinter Paywall -->
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name || entry.titel} slug={slug} />

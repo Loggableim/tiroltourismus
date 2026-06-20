@@ -1,0 +1,52 @@
+{
+  "name": "Grins",
+  "slug": "grins",
+  "region": "landeck",
+  "kurzbeschreibung": "Krásne dedné s stredovekým centrom, historickou hradou a jedným z najkrajších dedných plôch Tirolu.",
+  "emoji": "🏘️",
+  "farbe": "#696969",
+  "hoehe": "1.006 m",
+  "einwohner": "1.400",
+  "tags": [
+    "ruhe",
+    "natur",
+    "wandern",
+    "kultur"
+  ],
+  "status": "published",
+  "bezirk": "landeck",
+  "bilder": [
+    {
+      "url": "/images/orte/grins/hero_1.svg",
+      "alt": "Grins — Visual"
+    }
+  ],
+  "hero_bild": "/images/orte/grins/hero_1.svg",
+  "koordinaten": {
+    "lat": "47.1412",
+    "lng": "10.5150"
+  },
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Pfarrkirche Grins",
+      "beschreibung": "Barocke Kirche mit prächtigem Innenraum und Altären, geweiht dem heiligen Nikolaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Schloss Landeck",
+      "beschreibung": "Mittelalterliche Burganlage mit Museum zur Regionalgeschichte und herrlichem Panoramablick ins Tal.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Ruine Schrofenstein",
+      "beschreibung": "Burgruine oberhalb von Stanz mit eindrucksvoller Aussicht auf das Stanzer Tal und die Berge.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Grinser See",
+      "beschreibung": "Idyllisch gelegener Bergsee in den östlichen Venetbergen, umgeben von Almwiesen und Wäldern.",
+      "typ": "natur"
+    }
+  ],
+  "kategorie": "marktgemeinde"
+}

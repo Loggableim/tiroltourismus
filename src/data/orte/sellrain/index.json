@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2138",
     "lng": "11.2140"
-  }
+  },
+  "beschreibung": "<p><strong>Sellrain</strong> erstreckt sich auf 908 Metern Höhe in dem Innsbrucker Mittelgebirge und den umliegenden Tälern und ist eine ruhige Dorfgemeinde. Rund <strong>1.300</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Erholungssuchende genießen die ruhe und abgeschiedenheit abseits der touristenströme und die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Wer Ruhe und Entspannung inmitten unberührter Natur sucht, wird in Sellrain fündig.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

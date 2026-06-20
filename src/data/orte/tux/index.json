@@ -21,5 +21,23 @@
   "koordinaten": {
     "lat": "47.1609",
     "lng": "11.7361"
-  }
+  },
+  "beschreibung": "<p>Tux liegt auf 1.300 m Seehöhe am Ende des Tuxertals, einem ruhigen Seitental des Zillertals im Bezirk Schwaz, und zählt rund 2.000 Einwohner. Das Bergdorf erstreckt sich über mehrere Ortsteile – Lanersbach, Vorderlanersbach, Juns und Madseit –, die sich entlang der einzigen Straße durch das enge Hochtal aufreihen. Wer hierherkommt, lässt das geschäftige Zillertal hinter sich und taucht in eine alpine Welt ein, die vom Tuxer Hauptkamm mit seinen über 3.000 m hohen Gipfeln eingerahmt wird.</p>\n\n<p>Das Herzstück von Tux ist zweifellos der Hintertuxer Gletscher – das einzige Ganzjahres-Skigebiet Tirols. Selbst im Hochsommer kann man hier auf 3.250 m Abfahrten vorfinden, was den Ort für Skiteams und Familien gleichermaßen attraktiv macht. Im Winter stehen rund 200 Pistenkilometer zur Verfügung, im Sommer locken Wanderungen zum Tuxer Joch oder zur Spannagelhöhle, einer der höchstgelegenen Schauhöhlen Europas. Die Natur rund um Tux ist rau und ursprünglich: Gletscherschliffe, alpine Blumenwiesen und Murmeltierbeobachtungen gehören zum Alltag.</p>\n\n<p>Kulinarisch ist Tux seinem Zillertaler Erbe treu geblieben – in den Gasthäusern gibt es Tiroler Kasnocken, Graukäse und Zillertaler Krapfen. Besonders erwähnenswert ist die Verbundenheit zur Tradition: Die Tracht wird hier noch regelmäßig getragen, und im Sommer wie Winter finden regionale Feste statt. Tux ist kein Ort für schnelle Besuche, sondern für alle, die bewusst in die Höhe kommen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

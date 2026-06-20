@@ -1,8 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
-import PremiumBadge from '../../../components/PremiumBadge.astro';
 import PaywallOverlay from '../../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix } from '../../../lib/languages.js';
 
@@ -33,12 +32,14 @@ const { locale, slug } = Astro.params;
 const entry = readEntry('camping', slug, locale);
 if (!entry) return Astro.redirect(`${localePrefix(locale)}/camping/`);
 
+// Qualitätslogik: dünne Seiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'camping');
+
 const l = LABELS[locale] || LABELS.de;
 const prefix = localePrefix(locale);
 const emoji = entry.emoji || '🏕️';
 const subtitle = entry.ort ? `${entry.ort}${entry.region ? ` · ${entry.region}` : ''}` : undefined;
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
 
 const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'camping', locale, 8) : [];
@@ -76,6 +77,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   locale={locale}
   jsonld={businessLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={[
     { type: 'hero', title: entry.name, subtitle: subtitle, emoji: emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
     { type: 'details-grid', label: l.kontakt, items: [
@@ -83,14 +85,14 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
       { label: l.region, value: entry.region || undefined },
       { label: l.ausstattung, tags: entry.ausstattung || [], type: 'tags' },
     ].filter(Boolean) },
-    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
-    !isBasic ? { type: 'details-grid', items: [
+    !(tier === 'basic') && (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    !(tier === 'basic') ? { type: 'details-grid', items: [
       { label: l.preis, value: entry.preis_ab || undefined, type: 'price' },
       entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,
     ].filter(Boolean) } : null,
-    !isBasic ? mapSection : null,
-    !isBasic && relatedByTag.length > 0 ? { type: 'related-grid', label: l.weitereCamping, entries: relatedByTag, slugPrefix: `${prefix}/camping/`, nameField: 'name', subtitleField: 'kurzbeschreibung', emojiField: '_emoji', defaultEmoji: '🏕️' } : null,
-    !isBasic ? { type: 'cta', label: l.kontakt, title: l.anfrageStellen, subtitle: l.ctaSubtitle, buttons: [
+    !(tier === 'basic') ? mapSection : null,
+    !(tier === 'basic') && relatedByTag.length > 0 ? { type: 'related-grid', label: l.weitereCamping, entries: relatedByTag, slugPrefix: `${prefix}/camping/`, nameField: 'name', subtitleField: 'kurzbeschreibung', emojiField: '_emoji', defaultEmoji: '🏕️' } : null,
+    !(tier === 'basic') ? { type: 'cta', label: l.kontakt, title: l.anfrageStellen, subtitle: l.ctaSubtitle, buttons: [
       entry.telefon ? { label: `📞 ${entry.telefon}`, href: `tel:${entry.telefon}`, variant: 'pink' } : null,
       entry.webseite ? { label: `🌐 ${l.webseite}`, href: entry.webseite, variant: 'glass' } : null,
     ].filter(Boolean) } : null,
@@ -98,7 +100,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   ].filter(Boolean)}
 />
 
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name} slug={slug} />

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "kitzbuehel",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/jochberg/hero_1.png",
+      "alt": "Jochberg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/jochberg/hero_1.png",
   "koordinaten": {
     "lat": "47.3805",
     "lng": "12.4180"
-  }
+  },
+  "beschreibung": "<p>Jochberg liegt auf 923 Metern Seehöhe im Bezirk Kitzbühel, am Fuß des Thurnpasses zwischen Kitzbühel und dem Salzburger Land. Der Ort zählt rund 1.500 Einwohner und gehört zu den älteren Siedlungen im Brixental – urkundlich erwähnt wurde er bereits 1147, damals als Bergbauort für Silber und Kupfer.</p>\n\n<p>Heute ist Jochberg vor allem als Einstieg in das Skigebiet KitzSki bekannt. Die Bergstation der Fleckalmbahn verbindet den Ort direkt mit dem Skiverbund rund um den Hahnenkamm, und im Tal warten familienfreundliche Pisten sowie die Naturrodelbahn am Gaisberg. Im Sommer führt die alte Thurnpass-Straße Wanderer und Radfahrer über den 1.274 Meter hohen Pass nach Mittersill – eine Route, die schon vor Jahrhunderten Händler und Salzfuhrleute nutzten. Der Panoramaweg zur Jochberger Alm und die Tour zum Schwarzkogel bieten ruhige Alternativen abseits der bekannten Routen.</p>\n\n<p>Kulinarisch steht Jochberg für bodenständige Tiroler Wirtshauskultur: Kasnocken, Kaiserschmarrn und heimische Produkte vom Bergbauer finden sich in den Gasthöfen am Dorfplatz. Das Bergbau-Museum im Ort erinnert an die mittelalterliche Bergbautradition, die den Ort über Jahrhunderte prägte. Wer Kitzbühels Trubel sucht, ist in",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Kitzbüheler Horn",
+      "beschreibung": "2.000 m Gipfel mit Panoramablick und dem größten Blumenfeld der Alpen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Streif – Hahnenkamm",
+      "beschreibung": "Die berühmteste Skiabfahrt der Welt – jedes Jahr Schauplatz des Hahnenkamm-Rennens.",
+      "typ": "sport"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

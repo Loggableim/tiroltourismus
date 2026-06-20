@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.2928",
     "lng": "11.4738"
-  }
+  },
+  "beschreibung": "<p>Thaur liegt rund zehn Kilometer östlich von Innsbruck am Eingang zum Karwendel, auf etwa 625 Metern Seehöhe, und zählt rund 4.100 Einwohner. Die Gemeinde erstreckt sich über das weite Talbecken der unteren Inn-Niederung bis hinauf in die Ausläufer des Naturschutzgebiets und grenzt unmittelbar an Absam sowie Rum. Die Lage am Fuße der Nordkette macht Thaur zu einem der wenigen Orte im Großraum Innsbruck, die sowohl städtische Erreichbarkeit als auch direkten Zugang zum Hochgebirge bieten.</p>\n\n<p>Über dem Ort thront die Burg Thaur, eine der ältesten und mächtigsten Wehranlagen Tirols, deren Ursprünge bis ins 12. Jahrhundert zurückreichen. Am Burgfelsen beginnt der berühmte Pestkreuzweg mit seinen 14 Stationen, der bis zur Wallfahrtskirche Absam hinaufführt und zu den kunsthistorisch bedeutendsten Kreuzwegen des Landes zählt. Am Fuß des Felsens steht die Rote Kapelle aus dem 15. Jahrhundert, ein gotischer Bau mit gut erhaltener Innenausstattung. Der angrenzende Naturpark bietet weitläufige Wiesen, alte Bauernhöfe und Wanderwege Richtung Hochgebirge – von gemütlichen Familienrunden bis zu anspruchsvollen Touren ins Karwendel.</p>\n\n<p>Kulturell ist Thaur eng mit dem benachbarten Absam verbunden, nicht zuletzt durch das jährliche Herz-Jesu-Fest. Kulinarisch stehen traditionelle Wirtshäuser mit regionaler Küche bereit, und der direkte Blick auf die Martinswand sowie die Nordkette bleibt wohl das prägendste Merkmal dieses Ortes: ein Stück ländliches Tirol, das sich seine Eigenart trotz der Nähe zur Landeshauptstadt bewahrt hat. 🏰</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

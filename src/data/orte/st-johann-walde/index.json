@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "46.9025",
     "lng": "12.6273"
-  }
+  },
+  "beschreibung": "<p>St. Johann im Walde liegt auf einer sonnenexponierten Terrasse hoch über dem Osttiroler Drautal auf 1.068 Metern Seehöhe, eingebunden in den Bezirk Lienz. Das Dorf mit seinen rund 300 Einwohnerinnen und Einwohnern gehört zu den kleinsten Gemeinden Osttirols und hat sich seinen dörflichen Charakter bewahrt – zahlreiche Bauernhöfe verteilen sich als klassisches Streudorf über die weiten Wiesen und Hänge rund um die Pfarrkirche zum Heiligen Johannes dem Täufer.</p>\n\n<p>Die Lage am Fuß des Hochgrabe und mit Blick auf die Lienzer Dolomiten macht St. Johann im Walde zu einem Ausgangspunkt für ruhige Wanderungen abseits der Hauptrouten. Der Panoramaweg Richtung Leisach oder Touren zur Bocksteinkapelle, einem kleinen Wallfahrtsort auf einem Hügel über dem Drautal, zeigen die unberührte Seite Osttirols. Im Winter führen gespurte Loipen über die offene Hochfläche, und die nahe Schobergruppe bleibt ein Geheimtipp für Skitourengeher, die stille Hänge suchen.</p>\n\n<p>Die Osttiroler Lebensart zeigt sich hier in den vielen aktiv bewirtschafteten Höfen, die regionale Produkte wie Osttiroler Schafskäse, Speck und Brot direkt vermarkten. Wer keine Einkehrmöglichkeit mit Riesenspeisekarte sucht, sondern eine Tasse Kaffee bei einer Bäuerin auf der Terrasse, ist hier richtig. St. Johann im Walde ist kein Ort für großstädtische Erwartungen – wer das akzeptiert, bekommt ehrliche Osttiroler Gastfreundschaft und Landschaft, die noch nicht inszeniert wirkt. 🏘️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

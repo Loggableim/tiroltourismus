@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4873",
     "lng": "12.0638"
-  }
+  },
+  "beschreibung": "<p>Wörgl liegt auf 505 m Seehöhe im Tiroler Inntal, zwischen Kufstein und der Bezirksgrenze zu Kitzbühel, und zählt rund 14.000 Einwohner. Als zweitgrößte Stadt des Bezirks Kufstein ist Wörgl ein Verkehrsknotenpunkt: Hier treffen die Bahnstrecken ins Brixental, nach Kufstein und über den Inn zusammen, was die Stadt seit jeher zu einem praktischen Ausgangspunkt für Ausflüge in die Kitzbüheler Alpen macht – und gleichzeitig selbst eher von urbaner als alpiner Prägung ist.</p>\n\n<p>Was Wörgl wirklich besonders macht, ist eine der ungewöhnlichsten Wirtschaftsgeschichten des 20. Jahrhunderts: Im Sommer 1932 führte der damalige Bürgermeister Michael Unterguggenberger das berühmte „Schwundgeld\" ein, eine eigene lokale Währung mit monatlichem Stempelzweck. Das Experiment bekämpfte die Massenarbeitslosigkeit so erfolgreich, dass es internationale Beachtung fand und bis heute an der Bundesstraße in Form eines Denkmals erinnert wird. Für Familien lohnt sich ein Besuch der Wörgl Welle, dem modernen Erlebnisbad mit Rutschen und Saunabereich, oder eine Shoppingtour durch die Bahnhofstraße, die mit ihrer dichten Geschäftsstruktur eher städtisches Flair als dörfliche Idylle bietet.</p>\n\n<p>Kulinarisch ist Wörgl vor allem für die „Wörgl Brezn\" bekannt – eine besonders krosse Laugenbreze, die an mehreren Bäckere",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Historische Pfarrkirche",
+      "beschreibung": "Die ortsbildprägende Kirche mit barocker Ausstattung und kunstvollen Fresken.",
+      "typ": "kultur"
+    }
+  ]
 }

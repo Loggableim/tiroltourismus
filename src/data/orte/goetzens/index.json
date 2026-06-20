@@ -26,5 +26,23 @@
     "lat": "47.2359",
     "lng": "11.3110"
   },
-  "kategorie": "dorf"
+  "kategorie": "dorf",
+  "beschreibung": "<p>Götzens liegt auf 868 Metern Höhe auf dem sonnenverwöhnten Mittelgebirge südwestlich von Innsbruck, eingebettet zwischen Lärchenwäldern und Wiesen mit freiem Blick Richtung Stubaier Alpen und ins Inntal. Das Dorf mit rund 4.200 Einwohnern gehört zum Bezirk Innsbruck-Land und hat sich seinen dörflichen Charakter bewahrt, obwohl die Landeshauptstadt nur wenige Kilometer entfernt liegt.</p>\n\n<p>Über dem Ort thront die Nockspitze (2.409 m), Götzens' Hausberg, der mit der Birgitzer Köflerbahn bequem erreichbar ist. Von der Bergstation führen markierte Wanderwege über die Almwiesen bis hinauf zum Gipfelkreuz, wo man die gesamte Nordkette und das Karwendel zum Greifen nah vor sich hat. Die Götzenser Alm ist im Sommer ein beliebtes Ziel für Familien, im Winter starten von hier Loipen und Winterwanderwege. Wer abends durch den Ort spaziert, merkt schnell: Hier kennt man sich noch, der Stammtisch im Wirtshaus gehört zum Alltag, und die alten Bauernhöfe mit ihren breiten Holzfassaden erzählen vom einstigen Bergbauerndorf.</p>\n\n<p>Kulturell ist die Pfarrkirche zum Hl. Petrus einen Blick wert, ihr barocker Hochaltar stammt aus dem 17. Jahrhundert. Beim jährlichen Almabtrieb im September treiben die Bauern ihr Vieh mit geschmückten Tieren durchs Dorf – ein Brauch, der hier noch echt gelebt wird und nicht inszeniert wirkt. Götzens bleibt, was es immer war: ein ruhiger, sonniger Wohnort mit Bergpanorama, ideal für alle, die stadtnah wohnen und trotzdem auf der Terrasse nur Kuhglocken hören wollen.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

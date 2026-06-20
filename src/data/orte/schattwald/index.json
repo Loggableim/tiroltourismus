@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5255",
     "lng": "10.4617"
-  }
+  },
+  "beschreibung": "<p>Schattwald liegt auf 1.072 m Höhe im Tannheimer Tal, im Außerfern (Bezirk Reutte), direkt an der Grenze zu Bayern. Das Dorf mit rund 450 Einwohnern ist das westliche Eingangstor zum Tannheimer Tal auf Tiroler Seite und wird von den bizarren Kalksteinzacken der Tannheimer Berge – Gimpel, Rote Flüh und Kellenspitze – eingerahmt. Durch die südexponierte Lage des Hochtals zählt Schattwald zu den sonnenreichsten Orten Tirols.</p>\n\n<p>Im Winter bildet Schattwald zusammen mit Zöblen ein kleines, überschaubares Skigebiet mit rund 20 Pistenkilometern – ideal für Familien und Genussskifahrer, die den Trubel großer Skiarenen meiden. Der Schattwalder Naturbadesee, ein kleiner Bergsee mit Liegewiese und Blick auf die Tannheimer Gipfel, ist im Sommer ein beliebter Treffpunkt für Wanderer und Badegäste. Das Wanderwegenetz reicht von gemütlichen Talwanderungen bis zu anspruchsvollen Touren auf die umliegenden Gipfel, etwa über den Gimpelhaussteig oder zur Neunerköpfle-Bergstation.</p>\n\n<p>Kulinarisch dominieren klassische Außerferner Wirtshäuser mit Kasspatzln, Kässpätzle und regionalen Käsespezialitäten aus der nahen Sennerei. Wer Ruhe, Bergpanorama und unaufgeregten Naturtourismus sucht, findet in Schattwald einen Ort, der sich seine Bodenständigkeit bewahrt hat – ohne Lifthallen, aber mit echtem Tiroler Charakter.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

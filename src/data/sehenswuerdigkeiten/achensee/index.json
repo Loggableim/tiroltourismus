@@ -26,6 +26,11 @@
     "lat": "47.4500",
     "lng": "11.7167"
   },
-  "bilder": [],
-  "hero_bild": null
+  "bilder": [
+    {
+      "url": "/images/sehenswuerdigkeiten/achensee/hero_1.png",
+      "alt": "Achensee"
+    }
+  ],
+  "hero_bild": "/images/sehenswuerdigkeiten/achensee/hero_1.png"
 }

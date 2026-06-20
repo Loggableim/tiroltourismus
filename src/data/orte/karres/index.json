@@ -14,10 +14,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/karres/hero_1.png",
+      "alt": "Karres — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/karres/hero_1.png",
   "koordinaten": {
     "lat": "47.2187",
     "lng": "10.7791"
-  }
+  },
+  "beschreibung": "<p>Karres liegt auf 830 Metern Seehöhe im oberen Gurgltal, nur wenige Kilometer südöstlich von Imst im Tiroler Oberinntal. Das Dorf zählt rund 600 Einwohner und gehört zum Bezirk Imst. Eingebettet zwischen den bewaldeten Südhängen des Tschirgant im Norden und dem Muttlkopf im Süden, bildet Karres den ruhigen Auftakt zum Gurgltal, das sich taleinwärts Richtung Nassereith und Tarrenz erstreckt.</p>\n\n<p>Das Gurgltal ist als Natura-2000-Gebiet ausgewiesen – die Gurgel, ein naturnaher Wildbach, durchzieht die Talsohle und bietet Lebensraum für seltene Arten wie den Frauenschuh und verschiedene Libellen. Wanderer schätzen den Aufstieg auf den Muttlkopf, von dessen Gipfel man einen weiten Blick über das Inntal bis zur Mieminger Kette hat. Direkt vom Dorf aus führen markierte Wege in die umliegenden Wälder und auf die sonnigen Bergwiesen, wo im Sommer Murmeltiere und gelegentlich Gämsen zu beobachten sind. Die Nähe zum Imster Outdoor-Angebot – Klettergarten, Radweg am Inn und die Rosengartenschlucht – macht Karres trotz seiner ruhigen Lage zu einem praktischen Standort für Aktivurlauber.</p>\n\n<p>Typisch für den Ort sind die eng stehenden, teils über 200 Jahre alten Engadinerhäuser mit ihren dicken Mauern und kleinen Fenstern, die vom rauen Bergklima erzählen. Im Gasthof und den wenigen Privatzimmervermietern wird noch echte Tiroler Küche mit regionalen Produkten aus dem Gurgltal serviert. Wer abseits der ausgetretenen Touristenpfade ein ursprüngliches Tirol sucht, findet in Karres genau das: ein kleines Dorf, das sich seine Stille bewahrt hat.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

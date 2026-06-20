@@ -17,6 +17,24 @@
     "lat": 47.1303,
     "lng": 11.4533
   },
-  "bilder": [],
-  "hero_bild": null
+  "bilder": [
+    {
+      "url": "/images/orte/matrei-am-brenner/hero_1.png",
+      "alt": "Matrei am Brenner — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/matrei-am-brenner/hero_1.png",
+  "beschreibung": "<p>Matrei am Brenner thront auf 992 Metern Seehöhe am Eingang zum Wipptal, eingebettet zwischen den schroffen Ausläufern der Tuxer Alpen im Westen und den Wäldern des Patscherkofel-Massivs im Osten. Der kleine Markt mit seinen rund 940 Einwohnern blickt auf eine bewegte Vergangenheit als Poststation an der historischen Brennerstraße zurück, über die jahrhundertelang Waren und Reisende zwischen Nord- und Südtirol transportiert wurden. Noch heute prägt das rhythmische Kommen und Gehen der Züge und Autos auf der A13 Brennerautobahn sowie der Brennerbahn den Alltag des Ortes.</p>\n\n<p>Im Ortskern lohnt sich ein Besuch im Bergbauernmuseum, das in einem historischen Bauernhaus untergebracht ist und Einblicke in das entbehrungsreiche Leben der Tiroler Bergbauern vom 18. Jahrhundert bis in die Nachkriegszeit bietet. Direkt am Sill-Ufer gelegen, ist Matrei ein idealer Ausgangspunkt für Wanderungen in die Tuxer Alpen, etwa hinauf zur imposanten Serles oder in die stillen Seitentäler rund um Navis und Schmirn. Im Winter lockt das Skigebiet Bergeralm mit familiären Pisten und einem weiten Blick ins Inntal.</p>\n\n<p>Die Pfarrkirche zum Heiligen Kreuz mit ihrem markanten Turm prägt das Ortsbild ebenso wie die traditionsreichen Gasthäuser, in denen Südtiroler Küche auf Wirtshaus-Klassiker aus dem Wipptal trifft. Wer Ruhe sucht, findet sie auf den alten Saumpfaden Richtung Maria Waldrast – dem traditionsreichen Wallfahrtsort hoch über dem Tal.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -19,5 +19,23 @@
   "koordinaten": {
     "lat": "47.2914",
     "lng": "11.9063"
-  }
+  },
+  "beschreibung": "<p>Stummerberg liegt auf der Sonnenseite des Zillertals, rund 200 Meter über dem Talboden von Stumm auf einer sonnenverwöhnten Terrasse in 850 Metern Seehöhe. Der kleine Bergweiler gehört zum Bezirk Schwaz und zählt etwa 850 Einwohner, die sich auf verstreute Weiler und Einzelhöfe verteilen – kein geschlossenes Dorfzentrum, sondern eine typische Streusiedlung der Zillertaler Bergbauernregion.</p>\n\n<p>Was Stummerberg ausmacht, ist die Stille. Während im Talboden der Verkehr durchs Zillertal rollt, hört man hier vor allem Kuhglocken und das Rascheln von Fichtenwäldern. Die Wanderwege führen direkt vom Hof weg hinauf Richtung Hochzillertal und zur Maralm, mit stets freiem Blick auf die gegenüberliegenden Tuxer Alpen. Charakteristisch sind die alten Zillertaler Bauernhöfe mit ihren breiten, flach geneigten Dächern und den oft bunt bemalten Fassaden – viele werden noch heute aktiv bewirtschaftet. Für Familien und Ruhesuchende ist der Ort ein Gegenpol zum Trubel der Talstationen, auch wenn das Skigebiet Hochz",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

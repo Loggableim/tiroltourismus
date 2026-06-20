@@ -7,6 +7,18 @@ const LOCALE_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT' };
 const LOCALE_PATTERN = /^\/(en|fr|it)(\/|$)/;
 
 export default defineConfig({
+  site: 'https://tiroltourismus.com',
+  output: 'static',
+  compressHTML: true,
+  build: {
+    assets: 'assets',
+    inlineStylesheets: 'auto',
+  },
+  image: {
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+  },
   integrations: [react(), sitemap({
     filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
     entryLimit: 10000,
@@ -33,13 +45,6 @@ export default defineConfig({
       };
     },
   })],
-  output: 'static',
-  site: 'https://tiroltourismus.com',
-  build: {
-    assets: 'assets',
-    inlineStylesheets: 'auto',
-  },
-  compressHTML: true,
   vite: {
     build: {
       cssMinify: 'lightningcss',

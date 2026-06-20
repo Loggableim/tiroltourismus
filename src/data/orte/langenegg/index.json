@@ -16,6 +16,24 @@
     "lat": 47.4667,
     "lng": 10.7333
   },
-  "bilder": [],
-  "hero_bild": null
+  "bilder": [
+    {
+      "url": "/images/orte/langenegg/hero_1.png",
+      "alt": "Langenegg — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/langenegg/hero_1.png",
+  "beschreibung": "<p><strong>Langenegg</strong> liegt auf 960 Metern Höhe in den Tannheimer und Lechtaler Bergen im Außerfern und ist eine beschauliches Dorf. Rund <strong>1.180</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein.</p><p>Langenegg ist der ideale Ausgangspunkt für Aktivurlauber und Naturfreunde, die die Vielfalt Tirols erleben möchten.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    }
+  ]
 }

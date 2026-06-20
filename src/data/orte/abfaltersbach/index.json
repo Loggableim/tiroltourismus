@@ -26,6 +26,23 @@
     "lat": "46.7564",
     "lng": "12.5299"
   },
-  "beschreibung": "<p><strong>Abfaltersbach</strong> liegt auf 983 Metern Höhe im sonnigen Pustertal in Osttirol und ist ein idyllischer Ort für alle, die Ruhe, Natur und traditionelles Tiroler Leben schätzen. Umgeben von sanften Hügeln und den majestätischen Gipfeln der Lienzer Dolomiten, bietet das Dorf eine malerische Landschaft mit weit verstreuten Bauernhöfen, die das typische Bild einer Osttiroler Streugemeinde prägen.</p><p>Die Region ist ein wahres Paradies für Wanderer und Radfahrer: Zahlreiche markierte Wanderwege führen durch blühende Almwiesen und lichte Wälder, vorbei an alten Bauernhöfen und Kapellen. Im Winter locken ruhige Loipen und abwechslungsreiche Skitouren abseits des Massentourismus. Der nahe gelegene Hochpustertaler Höhenweg und die Touren rund um die Sillianer Hütte sind besonders beliebt.</p><p>Kulturelle Highlights sind die barocke Pfarrkirche und mehrere gut erhaltene Bauernhöfe, die Einblick in die bäuerliche Geschichte Osttirols geben. Die Gastfreundschaft in den traditionellen Gasthöfen und die bodenständige Tiroler Küche runden den Aufenthalt ab.</p>",
-  "kategorie": "dorf"
+  "beschreibung": "<p>Abfaltersbach liegt auf 983 m Höhe im sonnenverwöhnten Pustertal in Osttirol, eingebettet zwischen den Lienzer Dolomiten im Norden und den Karnischen Alpen im Süden. Das Dorf gehört zum Bezirk Lienz und zählt rund 650 Einwohner, die sich auf traditionelle Bauernhöfe und gepflegte Wohnhäuser verteilen. Die Lage im Talboden bringt milde Temperaturen und viele Sonnenstunden mit sich – ein Umstand, der in dieser Höhe nicht selbstverständlich ist.</p>\n\n<p>Die Umgebung lädt zu Wanderungen ein, die auch für Familien gut machbar sind. Beliebt ist der Aufstieg zur Thurntaler Alm, von der sich ein weiter Blick über das gesamte Pustertal bis zu den Lienzer Dolomiten öffnet. Über den Pustertaler Höhenweg erreichen geübte Wanderer die angrenzenden Täler wie das Defereggen oder das Villgratental. Im Winter bringt der Dorflift am Thurntaler Skispaß für Anfänger und Familien. Was Abfaltersbach besonders macht, ist die Ruhe: Hier gibt es keinen Durchzugsverkehr, keinen Lifttrubel – nur das Plätschern des nahen Baches und abends den Blick auf die beleuchteten Bergketten.</p>\n\n<p>Kulinarisch stehen Osttiroler Klassiker auf dem Tisch: Schlickkrapfen, Kasnocken und der regionale Ziegenkäse aus den umliegenden Bergbauernhöfen. Der Zusammenhalt im Dorf zeigt sich beim traditionellen Dorffest im Sommer, wenn die Blasmusik aufspielt und die Bauern ihre Höfe öffnen. 🏘️</p>",
+  "kategorie": "dorf",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lienzer Dolomiten",
+      "beschreibung": "Charakteristische Felsgipfel, die die Stadt umrahmen – ein Paradies für Bergsteiger.",
+      "typ": "natur"
+    },
+    {
+      "name": "Schloss Bruck",
+      "beschreibung": "Mittelalterliche Burganlage über Lienz mit Museum und herrlichem Blick auf die Dolomiten.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

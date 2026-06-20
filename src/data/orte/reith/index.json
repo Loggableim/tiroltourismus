@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.4168",
     "lng": "11.8798"
-  }
+  },
+  "beschreibung": "<p>Reith im Alpbachtal liegt auf 820 m Höhe im Bezirk Kufstein, eingebettet zwischen dem bekannten Holzarchitektur-Dorf Alpbach und dem Markt Brixlegg. Mit rund 1.000 Einwohnern zählt die Gemeinde zu den kleineren Orten im Tiroler Unterinntal, bewahrt sich aber durch ihre Lage am Eingang zum Alpbachtal einen eigenständigen Charakter. Der Blick auf das Schloss Tratzberg – eines der am besten erhaltenen Renaissance-Schlösser Tirols – prägt das Ortsbild von der gegenüberliegenden Talseite.</p>\n\n<p>Das Alpbachtal zählt zu den naturnahsten Seitentälern des Unterinntals. Von Reith aus führen markierte Wanderwege direkt in die Bergwelt rund um den Wiedersberger Horn und die Gratlspitze. Familien schätzen die leichten Touren entlang des Brixentaler Höhenwegs, während geübte Bergwanderer die anspruchsvollen Routen über die Zintlalm nutzen. Besonders reizvoll ist der Naturlehrpfad am Ufer der Alpbach, der die typische Flora und Fauna des Tals erklärt. Im Winter liegt der Ort in Reichweite kleinerer Skigebiete und idealer Langlaufloipen, ohne den Trubel großer Tourismuszentren.</p>\n\n<p>Kulinarisch profitieren Besucher von der Nähe zu Alpbach und Brixlegg – von der traditionellen Tiroler Jause auf der Sonnalm bis hin zu regionalen Produkten aus den umliegenden Bergbauernhöfen. Die Pfarrkirche zum Hl. Petrus mit ihrem spätgotischen Kern lohnt einen kurzen Abstecher. Wer Ruhe sucht und trotzdem zentral im Tiroler Unterland wohnen möchte, findet in Reith im Alpbachtal einen authentischen Rückzugsort abseits der ausgetretenen Pfade. 🌲",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Festung Kufstein",
+      "beschreibung": "Mächtige Festung hoch über der Stadt mit der größten Freiorgel Europas.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Kaisergebirge",
+      "beschreibung": "Wildromantisches Gebirge mit einzigartigen Felsformationen und grandiosen Wanderwegen.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

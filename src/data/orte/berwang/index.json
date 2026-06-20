@@ -27,5 +27,23 @@
     "lat": "47.3909",
     "lng": "10.7551"
   },
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Berwang liegt auf einem sonnenverwöhnten Hochplateau im oberen Lechtal, auf 1.342 Metern Seehöhe, und gehört zur Region Außerfern im Bezirk Reutte. Die Marktgemeinde mit rund 600 Einwohnern thront über dem Tal und blickt direkt auf den markanten Thaneller (2.341 m), einen der beliebtesten Aussichtsberge der Region. Trotz seiner Lage zwischen den berühmten Skigebieten ist Berwang erstaunlich ruhig geblieben – ein Geheimtipp für alle, die Tiroler Bergwelt ohne Trubel suchen.</p>\n\n<p>🌲 Das Skigebiet ist klein, aber fein: Eine 6er-Gondel und ein Sessellift erschließen rund 110 Pistenkilometer, die besonders bei Familien geschätzt werden, weil sie überschaubar und ohne Anstehen befahrbar sind. Im Sommer lockt die Wanderung auf den Thaneller, dessen lohnender Gipfelblick bis zur Zugspitze, ins Karwendel und zur Lechtaler Kette reicht. Die Rotlech, ein seltener naturbelassener Wildfluss, schlängelt sich durch das Tal und bietet zusammen mit den umliegenden Mooren ein einzigartiges Naturjuwel. Auch Mountainbiker finden markierte Routen, und im Winter stehen rund 30 Kilometer gespurte Langlaufloipen bereit.</p>\n\n<p>Was Berwang von anderen Orten unterscheidet, ist diese Kombination aus alpiner Abgeschiedenheit und gleichzeitig hervorragender Erschließung – hier steht man morgens vor der Hütte und schaut ins Lechtal, abends sitzt man bei Knödeln und Kasspatzn im Gasthof und hört den Kuhglocken zu. Beim Almabtrieb im September zieht das ganze Dorf mit, ein Brauch, der hier noch gelebt und nicht inszeniert wird.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Lechtaler Höhenweg",
+      "beschreibung": "Berühmter Weitwanderweg durch die Lechtaler Alpen mit spektakulären Ausblicken.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Plansee",
+      "beschreibung": "Einer der schönsten Seen Tirols mit türkisblauem Wasser und herrlichem Bergpanorama.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

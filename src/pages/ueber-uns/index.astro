@@ -166,6 +166,28 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
         </div>
       </div>
     </section>
+
+    <!-- ============================================================
+         TRANSPARENZ-HINWEIS
+         ============================================================ -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-card">
+          <div class="trust-icon">🔍</div>
+          <div class="trust-content">
+            <h2 class="trust-heading">Wie wir arbeiten</h2>
+            <p>
+              Wir setzen auf <strong>KI-gestützte Kuratierung mit redaktioneller 
+              Prüfung</strong> – und machen keinen Hehl daraus. Unser Ziel ist 
+              ein Portal, das ehrlich, transparent und für alle zugänglich ist.
+            </p>
+            <a href="/transparenz/" class="btn btn-pink trust-cta"
+              >Zur Transparenz-Seite →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
@@ -182,7 +204,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
   .ueber-hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, var(--pink-glow), transparent 70%);
+    background: radial-gradient(ellipse at 50% 0%, var(--tirol-pink-glow), transparent 70%);
     opacity: 0.3;
     pointer-events: none;
   }
@@ -200,7 +222,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     display: inline-block;
     padding: 6px 18px;
     border-radius: 100px;
-    background: var(--pink);
+    background: var(--tirol-pink);
     color: #fff;
     font-size: 12px;
     font-weight: 600;
@@ -217,7 +239,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     margin: 0;
   }
   .ueber-hero-title span {
-    color: var(--pink);
+    color: var(--tirol-pink);
   }
   .ueber-hero-sub {
     font-size: 16px;
@@ -263,7 +285,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     margin-bottom: 20px;
   }
   .about-text h2 span {
-    color: var(--pink);
+    color: var(--tirol-pink);
   }
   .about-text p {
     font-size: 14px;
@@ -278,7 +300,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     font-size: 16px;
     font-weight: 600;
     color: var(--text);
-    border-left: 3px solid var(--pink);
+    border-left: 3px solid var(--tirol-pink);
     padding-left: 20px;
     margin: 24px 0;
     line-height: 1.7;
@@ -304,7 +326,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, var(--pink-glow), transparent);
+    background: linear-gradient(135deg, var(--tirol-pink-glow), transparent);
     opacity: 0.25;
     pointer-events: none;
   }
@@ -331,7 +353,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     font-size: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--pink);
+    color: var(--tirol-pink);
     margin: 8px 0 0;
   }
 
@@ -352,7 +374,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
   .label-line {
     width: 40px;
     height: 1px;
-    background: var(--pink);
+    background: var(--tirol-pink);
     opacity: 0.3;
   }
   .label-text {
@@ -372,7 +394,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     margin-bottom: 40px;
   }
   .values-heading span {
-    color: var(--pink);
+    color: var(--tirol-pink);
   }
   .values-grid {
     display: grid;
@@ -393,7 +415,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
   }
   .value-card:hover {
     transform: translateY(-6px);
-    border-color: var(--pink);
+    border-color: var(--tirol-pink);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
   }
   .value-card-bg {
@@ -402,7 +424,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--pink), var(--purple));
+    background: linear-gradient(90deg, var(--tirol-pink), var(--purple));
     opacity: 0;
     transition: opacity 0.4s var(--ease);
   }
@@ -444,7 +466,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
   .value-tags span {
     padding: 3px 10px;
     border-radius: 100px;
-    background: var(--pink);
+    background: var(--tirol-pink);
     color: #fff;
     font-size: 10px;
     font-weight: 600;
@@ -480,7 +502,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     font-family: var(--font-display);
     font-size: 96px;
     line-height: 1;
-    color: var(--pink);
+    color: var(--tirol-pink);
     opacity: 0.1;
     pointer-events: none;
   }
@@ -508,7 +530,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     z-index: 1;
   }
   .about-quote cite strong {
-    color: var(--pink);
+    color: var(--tirol-pink);
   }
   .quote-decoration {
     display: flex;
@@ -522,7 +544,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--pink);
+    background: var(--tirol-pink);
     opacity: 0.2;
   }
   .quote-decoration span:nth-child(2) {
@@ -530,6 +552,55 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
   }
   .quote-decoration span:nth-child(3) {
     opacity: 0.6;
+  }
+
+  /* ==============================================================
+     TRUST / TRANSPARENZ CARD
+     ============================================================== */
+  .trust-section {
+    padding: 0 0 72px;
+  }
+  .trust-section .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .trust-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    background: linear-gradient(135deg, var(--bg2), var(--surface));
+    border: 2px solid var(--tirol-pink);
+    border-radius: var(--radius-lg);
+    padding: 36px 40px;
+    transition: all 0.4s var(--ease);
+  }
+  .trust-card:hover {
+    box-shadow: 0 8px 32px rgba(255, 20, 147, 0.08);
+    transform: translateY(-2px);
+  }
+  .trust-icon {
+    font-size: 48px;
+    flex-shrink: 0;
+  }
+  .trust-content h2 {
+    font-family: var(--font-display);
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .trust-content p {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .trust-content p strong {
+    color: var(--text);
+  }
+  .trust-cta {
+    display: inline-block;
   }
 
   /* ==============================================================

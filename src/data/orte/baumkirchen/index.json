@@ -23,5 +23,18 @@
     }
   ],
   "hero_bild": "/images/orte/baumkirchen/hero_1.png",
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "beschreibung": "<p>Baumkirchen liegt auf 563 Metern Seehöhe im Unterinntal, etwa auf halber Strecke zwischen Schwaz und Innsbruck, am linken Innufer im Bezirk Schwaz. Die Marktgemeinde mit rund 1.240 Einwohnern gehört zu den kleineren Siedlungen im Inntal und wird von der Inntalautobahn A12 sowie der Bahnstrecke erschlossen, was sie besonders für Pendler attraktiv macht.</p>\n\n<p>Die Gemeinde profitiert unmittelbar von ihrer Lage am westlichen Rand des Karwendelgebirges: Nach Süden hin blickt man über das weite Inntal, nach Norden steigen die Felswände des Karwendels steil auf, was den Ort landschaftlich deutlich von vielen anderen Inntal-Gemeinden abhebt. Über lokale Wanderwege erreicht man rasch die Inntal-Terrasse und die Ausläufer des Karwendels Richtung Vomper Loch oder Arzler Kalvarienberg. Für den täglichen Bedarf und kulturelle Angebote liegt Schwaz nur rund vier Kilometer östlich – das Silberbergwerk und die historische Altstadt sind schnell erreichbar.</p>\n\n<p>Baumkirchen ist keine Tourismusgemeinde im klassischen Sinn, sondern eine funktionierende Wohngemeinde mit gewachsenem Dorfkern. Die Pfarrkirche hl. Georg bildet zusammen mit dem Mesnerhaus und wenigen historischen Bauernhöfen den Kern des Ortes. Gasthäuser und lokale Vereine prägen das dörfliche Leben, das sich bewusst klein und überschaubar zeigt – wer hier wohnt, schätzt genau das.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    }
+  ]
 }

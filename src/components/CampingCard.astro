@@ -1,7 +1,8 @@
 ---
 import FavHeart from './FavHeart.astro';
-import PremiumBadge from './PremiumBadge.astro';
 export interface Props {
+  /** Optional locale prefix for multilang links (e.g. "fr"). */
+  locale?: string;
   name: string;
   slug: string;
   ort?: string;
@@ -11,13 +12,12 @@ export interface Props {
   tier?: string;
   'data-tier'?: string;
 }
-const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'data-tier': dataTier } = Astro.props;
+const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'data-tier': dataTier , locale = undefined } = Astro.props;
 const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen', 'wasseranschluss'].includes(a));
 // Badge handled by PremiumBadge component
 ---
-<a href={`/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
+<a href={`${locale ? '/' + locale : ''}/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
   <div class="cp-img" style="position:relative">
-    <PremiumBadge tier={tier} />
     <span class="cp-placeholder">🏕️</span>
     <FavHeart collection="camping" slug={slug} />
   </div>
@@ -49,8 +49,8 @@ const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen
   .cp-ausstattung{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
   .cp-tag{padding:2px 8px;border-radius:100px;font-size:9px;font-weight:600;background:var(--surface);border:1px solid rgba(255,255,255,.09);color:var(--text2)}
   .cp-tag-more{color:var(--text3)!important}
-  .cp-cta{display:block;width:100%;padding:12px;margin-top:auto;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
-  .cp-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
+  .cp-cta{display:block;width:100%;padding:12px;margin-top:auto;border-radius:100px;background:var(--tirol-pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
+  .cp-cta:hover{background:var(--tirol-pink-dark);transform:translateY(-2px)}
   @media(max-width:600px){
     .cp-img{height:130px}
     .cp-name{font-size:19px}

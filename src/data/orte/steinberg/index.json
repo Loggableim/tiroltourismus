@@ -20,5 +20,23 @@
   "koordinaten": {
     "lat": "47.5151",
     "lng": "11.7965"
-  }
+  },
+  "beschreibung": "<p>Steinberg am Rofan liegt auf 1.010 Metern Seehöhe im Bezirk Schwaz, direkt am Westufer des Achensees und am Fuß des gleichnamigen Rofangebirges. Mit rund 300 Einwohnern ist Steinberg die kleinste eigenständige Ortschaft im Bezirk Schwaz und gehört zur Gemeinde Eben am Achensee. Die Lage zwischen dem türkisgrünen Achensee und den steil aufragenden Felswänden der Rofan-Spitzen verleiht dem Dorf eine exponierte Position, die schon früh Bergsteiger und Naturliebhaber anzog.</p>\n\n<p>Das Rofangebirge mit seinen markanten Gipfeln wie dem Hochiss (2.299 m) und der Sagzahn (2.228 m) bildet die eindrucksvolle Kulisse für zahlreiche Wander- und Klettertouren. Beliebt ist vor allem der Aufstieg über die Erfurter Hütte sowie die aussichtsreiche Route zur Dalfazer Wände. Im Sommer lockt der Achensee – Tirols größter Natursee – zum Schwimmen, Segeln und Surfen, während im Winter die kleine, aber feine Skiarena am Zwölferkopf Ruhesuchende anzieht. Die Natur rund um Steinberg bleibt dabei auffallend unberührt: Weitläufige Almen, ursprüngliche Bergwälder und Moore prägen das Landschaftsbild.</p>\n\n<p>Kulturell ist Steinberg eng mit der Geschichte des Achensee-Tales verwoben, das über Jahrhunderte vom Holzhandel und der Schifffahrt lebte. Gasthäuser servieren regionale Tiroler Kost wie Kasnocken und frischen Reinankenfisch aus dem Achensee. Wer hierherkommt, sucht bewusst die Stille abseits der großen Touristenströme – und genau darin liegt der besondere Reiz dieses kleinen Dorfes.</p> 🏞️",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Silberbergwerk Schwaz",
+      "beschreibung": "Historisches Bergwerk aus dem 15. Jahrhundert – einst das Zentrum des europäischen Silberbergbaus.",
+      "typ": "kultur"
+    },
+    {
+      "name": "Achensee",
+      "beschreibung": "Der größte See Tirols mit kristallklarem Wasser und dem Karwendel als Kulisse.",
+      "typ": "natur"
+    },
+    {
+      "name": "Badesee in der Umgebung",
+      "beschreibung": "Ein idyllischer Bergsee lädt an warmen Tagen zum Baden und Verweilen ein.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -15,10 +15,33 @@
   ],
   "status": "published",
   "bezirk": "imst",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/orte/karrösten/hero_1.png",
+      "alt": "Karrösten — Aquarell"
+    }
+  ],
+  "hero_bild": "/images/orte/karrösten/hero_1.png",
   "koordinaten": {
     "lat": "47.2252",
     "lng": "10.7682"
-  }
+  },
+  "beschreibung": "<p>🏘️ Karrösten liegt auf 920 Metern Höhe am Eingang zum Pitztal im Bezirk Imst, rund 700 Menschen leben hier dauerhaft. Das Dorf schmiegt sich an den westlichen Ausläufern des Tschirgantstocks und bietet einen direkten Blick auf die Mieminger Kette. Wer auf der Inntalautobahn Richtung Süden fährt, sieht den Ort oft nur kurz vorbeiziehen – dabei lohnt es sich, hier abzubiegen.</p>\n\n<p>Das markanteste Naturdenkmal ist zweifellos der Karröster Wasserfall, der sich über mehrere Stufen rund 80 Meter tief durch eine bewaldete Felsschlucht stürzt. Der gut ausgebaute Wanderweg dorthin startet direkt im Dorf und führt in etwa 45 Minuten zum Aussichtspunkt – bei Sonnenschein ein Naturschauspiel, bei Regen ein tosendes Erlebnis. Oberhalb des Dorfes beginnen zudem Touren Richtung Venetgebiet und auf den Tschirgant, die für geübte Wanderer lohnende Ziele bieten. Die Ruhe abseits der Haupttouristenrouten macht Karrösten besonders für alle attraktiv, die abgeschiedene Bergdörfer dem Trubel vorziehen.</p>\n\n<p>Geschichte hat hier konkrete Spuren hinterlassen: In der Pfarrkirche zum Heiligen Ulrich sind gotische Fresken aus dem 15. Jahrhundert erhalten, die zu den ältesten im Tiroler Oberland zählen. Für eine Einkehr empfiehlt sich ein Besuch beim örtlichen Wirt, der regionale Küche mit Produkten aus dem Inntal serviert. Karrösten bleibt damit, was es immer war – ein kleines, bodenständiges Bergdorf mit Charakter.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Ötztaler Höhenweg",
+      "beschreibung": "Einer der schönsten Weitwanderwege der Alpen durch die Ötztaler Alpen.",
+      "typ": "wandern"
+    },
+    {
+      "name": "Stuibenfall",
+      "beschreibung": "Der höchste Wasserfall Tirols mit beeindruckenden 159 Metern Fallhöhe.",
+      "typ": "natur"
+    },
+    {
+      "name": "Rundwanderweg",
+      "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
+      "typ": "wandern"
+    }
+  ]
 }

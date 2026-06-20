@@ -1,0 +1,651 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+---
+
+<BaseLayout
+  title="Transparenz"
+  description="Transparenz bei tiroltourismus.com: Wie wir Inhalte erstellen, unsere redaktionellen Prozesse, Quellen und Datenstand, Werbe- und Partnerkennzeichnung sowie unsere Korrekturpolitik."
+>
+  <main>
+    <!-- ============================================================
+         BREADCRUMBS
+         ============================================================ -->
+    <div class="container">
+      <Breadcrumbs items={[{ label: 'Transparenz' }]} />
+    </div>
+
+    <!-- ============================================================
+         HEADER
+         ============================================================ -->
+    <section class="transparenz-header">
+      <div class="container">
+        <SectionHeader
+          title="Transparenz"
+          sub="Wie wir arbeiten, woher unsere Inhalte kommen und wie wir mit Werbung umgehen."
+        />
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTENT
+         ============================================================ -->
+    <section class="transparenz-content">
+      <div class="container">
+        <div class="transparenz-inner">
+
+          <!-- SECTION 1: Wie wir Inhalte erstellen -->
+          <div class="tl-section">
+            <div class="tl-section-icon">🤖</div>
+            <h2 class="tl-heading">Wie wir Inhalte erstellen</h2>
+            <div class="tl-body">
+              <p>
+                Auf tiroltourismus.com entstehen Inhalte in einer Kombination aus 
+                <strong>KI-gestützter Generierung</strong> und 
+                <strong>menschlicher redaktioneller Prüfung</strong>. Wir halten 
+                nichts davon, KI-Einsatz zu verschweigen – im Gegenteil: 
+                Wir sind überzeugt, dass unser Modell ehrlicher ist als viele 
+                traditionelle Portale, die ihre Content-Farmen hinter 
+                „Redaktion"-Labels verstecken.
+              </p>
+              <p>
+                Konkret läuft unser Prozess so ab:
+              </p>
+              <ul>
+                <li>
+                  <strong>Datensammlung:</strong> Unsere KI-Agenten durchsuchen 
+                  öffentlich zugängliche Quellen – Webseiten von Gemeinden, 
+                  Tourismusverbänden, Betrieben, amtliche Register und 
+                  Open-Data-Portale – nach aktuellen Informationen.
+                </li>
+                <li>
+                  <strong>Erstellung:</strong> Die gesammelten Rohdaten werden 
+                  von KI-Modellen (derzeit GPT-4 und hauseigene Agenten) zu 
+                  strukturierten Einträgen und redaktionellen Texten 
+                  verarbeitet. Dabei kommen mehrere Modelle gleichzeitig zum 
+                  Einsatz – sie überprüfen sich gegenseitig auf Konsistenz 
+                  und Plausibilität.
+                </li>
+                <li>
+                  <strong>Redaktionelle Prüfung:</strong> Jeder Inhalt durchläuft 
+                  vor der Veröffentlichung eine menschliche Qualitätskontrolle. 
+                  Unsere Redakteur:innen prüfen Fakten, lesen Korrektur und 
+                  entscheiden, ob ein Inhalt unseren Qualitätsstandards 
+                  entspricht.
+                </li>
+                <li>
+                  <strong>Freigabe &amp; Veröffentlichung:</strong> Erst nach 
+                  bestandener Prüfung wird der Inhalt live geschaltet.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- SECTION 2: Redaktion & Qualitätssicherung -->
+          <div class="tl-section">
+            <div class="tl-section-icon">👩‍💻</div>
+            <h2 class="tl-heading">Redaktion &amp; Qualitätssicherung</h2>
+            <div class="tl-body">
+              <p>
+                Hinter tiroltourismus.com steht ein kleines, aber engagiertes 
+                Redaktionsteam mit Sitz in <strong>Innsbruck, Tirol</strong>. 
+                Unsere Redakteur:innen bringen Erfahrung aus Journalismus, 
+                Tourismus und Content-Strategie mit.
+              </p>
+              <p>
+                Unsere Qualitätssicherung umfasst mehrere Stufen:
+              </p>
+              <ul>
+                <li>
+                  <strong>Automatisierte Plausibilitätsprüfung:</strong> Bevor 
+                  ein Inhalt überhaupt einer Person vorgelegt wird, prüft unser 
+                  System, ob die Daten konsistent sind – etwa ob Öffnungszeiten 
+                  sinnvoll sind oder Adressen existieren.
+                </li>
+                <li>
+                  <strong>Faktencheck durch die Redaktion:</strong> 
+                  Redakteur:innen gleichen stichprobenartig Inhalte mit 
+                  Primärquellen ab, insbesondere bei Zahlen, Daten, 
+                  Kontaktinformationen und rechtlichen Angaben.
+                </li>
+                <li>
+                  <strong>Feedback von Betrieben:</strong> Eingetragene Betriebe 
+                  können ihre Daten jederzeit selbst korrigieren oder 
+                  Ergänzungen vorschlagen. Wir benachrichtigen Betriebe 
+                  aktiv, wenn sich ihre Stammdaten geändert haben.
+                </li>
+                <li>
+                  <strong>Nutzermeldungen:</strong> Leser:innen können über 
+                  unsere Korrekturfunktion (siehe unten) Fehler melden, die 
+                  wir innerhalb von 48 Stunden prüfen und bearbeiten.
+                </li>
+              </ul>
+              <p class="tl-note">
+                <strong>Klarstellung:</strong> Wir bezeichnen uns bewusst nicht 
+                als „unabhängiges Redaktionshaus" im klassischen Sinne. Unser 
+                Modell ist technikgestützt, transparent und skalierbar. Wir 
+                verschweigen nicht, dass KI ein zentrales Werkzeug ist – aber 
+                wir lassen KI nicht allein entscheiden.
+              </p>
+            </div>
+          </div>
+
+          <!-- SECTION 3: Quellen & Datenstand -->
+          <div class="tl-section">
+            <div class="tl-section-icon">📚</div>
+            <h2 class="tl-heading">Quellen &amp; Datenstand</h2>
+            <div class="tl-body">
+              <p>
+                Unsere Inhalte basieren auf folgenden Quellen:
+              </p>
+              <ul>
+                <li>
+                  <strong>Betriebsdaten:</strong> Daten von Gastronomie-, 
+                  Hotel- und Freizeitbetrieben stammen entweder aus der 
+                  <strong>Eigenregistrierung der Betriebe</strong> oder aus 
+                  öffentlich zugänglichen Verzeichnissen (Gemeinde-Webseiten, 
+                  Tourismusverbände, WKO, Open Data Österreich).
+                </li>
+                <li>
+                  <strong>Regionen &amp; Orte:</strong> Informationen zu 
+                  Gemeinden und Regionen basieren auf Daten der 
+                  Landesstatistik Tirol, Gemeinde-Webseiten und 
+                  amtlichen Geodaten.
+                </li>
+                <li>
+                  <strong>Events &amp; Erlebnisse:</strong> Veranstaltungsdaten 
+                  werden aus öffentlichen Kalendern, Gemeindeankündigungen 
+                  und Einsendungen von Veranstaltern aggregiert.
+                </li>
+                <li>
+                  <strong>Magazinbeiträge:</strong> Redaktionelle Inhalte im 
+                  Magazin werden von unserem Team recherchiert und 
+                  verfasst – teils KI-gestützt, aber immer von Menschen 
+                  geprüft und verantwortet.
+                </li>
+              </ul>
+
+              <h3>Datenstand &amp; Aktualität</h3>
+              <p>
+                Wir bemühen uns um größtmögliche Aktualität. Konkret bedeutet das:
+              </p>
+              <ul>
+                <li>
+                  <strong>Stammdaten (Adressen, Kontakt, Öffnungszeiten):</strong> 
+                  Automatisierte Prüfung alle 30 Tage. Bei Änderungen werden 
+                  Betriebe benachrichtigt.
+                </li>
+                <li>
+                  <strong>Events &amp; Veranstaltungen:</strong> Tägliche 
+                  Aktualisierung während der Saison.
+                </li>
+                <li>
+                  <strong>Magazinbeiträge:</strong> Manuelle Überprüfung 
+                  mindestens alle 6 Monate.
+                </li>
+                <li>
+                  <strong>Bewertungen &amp; Bilder:</strong> Fortlaufend, 
+                  sobald Nutzer:innen oder Betriebe neue Inhalte 
+                  einspielen.
+                </li>
+              </ul>
+              <p>
+                Dennoch gilt: Trotz aller Sorgfalt können wir keine Garantie 
+                für die absolute Vollständigkeit und Fehlerfreiheit aller 
+                Daten übernehmen. Wenn Ihnen ein Fehler auffällt, freuen wir 
+                uns über einen Hinweis.
+              </p>
+              <p class="tl-stand">
+                <strong>Letzte Aktualisierung dieser Seite:</strong> Juni 2026
+              </p>
+            </div>
+          </div>
+
+          <!-- SECTION 4: Werbung & Partnerkennzeichnung -->
+          <div class="tl-section">
+            <div class="tl-section-icon">💼</div>
+            <h2 class="tl-heading">Werbung &amp; Partnerkennzeichnung</h2>
+            <div class="tl-body">
+              <p>
+                tiroltourismus.com finanziert sich durch ein 
+                <strong>Free-Mium-Modell</strong> und 
+                <strong>Partnerprogramme</strong>. Wir legen Wert auf klare 
+                Trennung zwischen redaktionellen Inhalten und werblichen 
+                Angeboten.
+              </p>
+
+              <h3>1. Premium-Einträge (Silver &amp; Gold)</h3>
+              <p>
+                Betriebe können gegen eine monatliche Gebühr ihre 
+                Sichtbarkeit erhöhen. Diese Einträge sind klar 
+                gekennzeichnet:
+              </p>
+              <ul>
+                <li>
+                  <strong>Silver-Einträge</strong> tragen ein 
+                  <span class="tl-badge tl-badge-silver">Silver</span>-Badge 
+                  und werden vor kostenlosen Einträgen gelistet.
+                </li>
+                <li>
+                  <strong>Gold-Einträge</strong> tragen ein 
+                  <span class="tl-badge tl-badge-gold">Gold</span>-Badge, 
+                  erhalten Top-Platzierungen und können auf der Startseite 
+                  als „Featured" erscheinen.
+                </li>
+              </ul>
+              <p>
+                Diese Einträge sind <strong>als Werbung gekennzeichnet</strong>. 
+                Die Kennzeichnung erfolgt durch das Badge-System und einen 
+                Hinweis „Anzeige" oder „Gesponsert" bei prominent 
+                platzierten Inhalten.
+              </p>
+
+              <h3>2. Affiliate-Links</h3>
+              <p>
+                Einige externe Links auf unserer Website (z. B. zu 
+                Buchungsplattformen, Ausrüstern oder Veranstaltern) sind 
+                sogenannte Affiliate-Links. Wenn Sie über diese Links 
+                buchen oder etwas kaufen, erhalten wir eine kleine 
+                Provision – für Sie entstehen keine Mehrkosten. 
+              </p>
+              <p>
+                Affiliate-Links sind gekennzeichnet mit einem 
+                <span class="tl-marker">*</span> oder dem Hinweis 
+                „Partnerlink". Wir empfehlen ausschließlich Produkte und 
+                Dienstleistungen, die wir für relevant und qualitativ 
+                geeignet halten.
+              </p>
+
+              <h3>3. Anzeigen Dritter</h3>
+              <p>
+                Derzeit schalten wir keine klassischen Display-Anzeigen 
+                (Banner) Dritter auf der Website. Sollte sich das ändern, 
+                werden wir diese klar als „Anzeige" oder „Werbung" 
+                kennzeichnen.
+              </p>
+
+              <h3>4. Unbezahlte Inhalte</h3>
+              <p>
+                Redaktionelle Inhalte im Magazin, Blogbeiträge und 
+                Ratgeber sind grundsätzlich <strong>unbezahlt</strong> und 
+                unterliegen keiner Einflussnahme durch zahlende Betriebe. 
+                Sollte ein Beitrag in Zusammenarbeit mit einem Partner 
+                entstehen, wird dies explizit vermerkt (z. B. „In 
+                Kooperation mit …").
+              </p>
+
+              <p class="tl-note">
+                <strong>Unser Versprechen:</strong> Wir nehmen keine 
+                Zahlungen für positive Berichterstattung. Bezahlte 
+                Einträge sind als solche erkennbar – immer.
+              </p>
+            </div>
+          </div>
+
+          <!-- SECTION 5: Korrektur melden -->
+          <div class="tl-section">
+            <div class="tl-section-icon">✏️</div>
+            <h2 class="tl-heading">Korrektur melden</h2>
+            <div class="tl-body">
+              <p>
+                Fehler passieren – auch uns. Wenn Sie auf tiroltourismus.com 
+                einen Fehler finden, freuen wir uns über Ihre Meldung. 
+                Wir nehmen jede Korrektur ernst und bearbeiten sie 
+                nachvollziehbar.
+              </p>
+
+              <h3>So melden Sie eine Korrektur</h3>
+              <ol>
+                <li>
+                  <strong>Per E-Mail:</strong> Schreiben Sie uns an 
+                  <a href="mailto:redaktion@tiroltourismus.com">redaktion@tiroltourismus.com</a> 
+                  mit dem Betreff „Korrekturmeldung" und folgenden Angaben:
+                  <ul>
+                    <li>URL der Seite mit dem Fehler</li>
+                    <li>Beschreibung des Fehlers (was ist falsch, wie müsste es richtig heißen)</li>
+                    <li>Optional: Quellenangabe für die korrekte Information</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Über das Kontaktformular:</strong> Nutzen Sie unser 
+                  <a href="/kontakt/">Kontaktformular</a> und wählen Sie als 
+                  Betreff „Korrekturmeldung".
+                </li>
+                <li>
+                  <strong>Als Betrieb:</strong> Wenn Sie ein eingetragener 
+                  Betrieb sind, können Sie Ihre Daten direkt über Ihr 
+                  Betriebs-Dashboard korrigieren.
+                </li>
+              </ol>
+
+              <h3>Was passiert nach der Meldung?</h3>
+              <ol>
+                <li>
+                  <strong>Eingangsbestätigung:</strong> Sie erhalten innerhalb 
+                  von 24 h eine Bestätigung, dass wir Ihre Meldung erhalten 
+                  haben.
+                </li>
+                <li>
+                  <strong>Prüfung:</strong> Unser Redaktionsteam prüft die 
+                  Meldung innerhalb von maximal 48 h.
+                </li>
+                <li>
+                  <strong>Umsetzung:</strong> Bei bestätigten Fehlern wird 
+                  die Korrektur innerhalb von 24 h nach Prüfung 
+                  umgesetzt.
+                </li>
+                <li>
+                  <strong>Rückmeldung:</strong> Sie erhalten eine 
+                  Benachrichtigung, ob und wie der Fehler korrigiert 
+                  wurde.
+                </li>
+              </ol>
+
+              <h3>Transparente Fehlerkultur</h3>
+              <p>
+                Größere inhaltliche Korrekturen dokumentieren wir 
+                transparent. Auf besonders relevanten Artikeln und 
+                Einträgen führen wir einen 
+                <strong>Änderungsvermerk</strong> mit Datum und Kurzbeschreibung 
+                der Korrektur. Kleine Fehler (Tippfehler, Formatierung) 
+                korrigieren wir still, aber auch hier gilt: Auf Anfrage 
+                geben wir jederzeit Auskunft über vorgenommene Änderungen.
+              </p>
+
+              <div class="tl-contact-card">
+                <div class="tl-contact-card-icon">📧</div>
+                <div class="tl-contact-card-content">
+                  <strong>Korrekturmeldungen senden an:</strong><br />
+                  <a href="mailto:redaktion@tiroltourismus.com">redaktion@tiroltourismus.com</a><br />
+                  <span class="tl-contact-note">Wir antworten innerhalb von 24 h.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 6: Transparenz-Statement -->
+          <div class="tl-section tl-section-final">
+            <div class="tl-section-icon">🔍</div>
+            <h2 class="tl-heading">Unser Transparenz-Versprechen</h2>
+            <div class="tl-body">
+              <p>
+                Wir bei tiroltourismus.com glauben, dass Ehrlichkeit der 
+                beste Weg ist. Deshalb legen wir offen, wie wir arbeiten – 
+                mit allen Ecken und Kanten.
+              </p>
+              <p>
+                <strong>Ja, wir nutzen KI.</strong> Und wir finden, das ist 
+                kein Grund, es zu verheimlichen. Viele traditionelle Portale 
+                tun im Prinzip dasselbe, nennen es nur anders. Wir nicht.
+              </p>
+              <p>
+                <strong>Ja, wir nehmen Geld von Betrieben.</strong> Aber wir 
+                machen transparent, wer zahlt und wer nicht. Bezahlte 
+                Einträge sind gekennzeichnet. Redaktionelle Inhalte bleiben 
+                unabhängig.
+              </p>
+              <p>
+                <strong>Ja, wir machen Fehler.</strong> Und wir sind froh, 
+                wenn Sie uns darauf hinweisen. Denn nur gemeinsam wird 
+                dieses Portal besser.
+              </p>
+              <p>
+                Diese Seite wird regelmäßig aktualisiert. Wenn Sie Fragen 
+                zu einem bestimmten Aspekt haben, der hier nicht behandelt 
+                wird, <a href="/kontakt/">schreiben Sie uns</a>.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style is:global>
+  /* ==============================================================
+     TRANSPARENZ HEADER
+     ============================================================== */
+  .transparenz-header {
+    padding: 0 0 40px;
+  }
+
+  /* ==============================================================
+     TRANSPARENZ CONTENT
+     ============================================================== */
+  .transparenz-content {
+    padding: 0 0 80px;
+  }
+  .transparenz-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .transparenz-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* ═══ Section Card ═══ */
+  .tl-section {
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.4s var(--ease);
+    position: relative;
+  }
+  .tl-section:hover {
+    border-color: var(--tirol-pink);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  }
+  .tl-section-final {
+    background: linear-gradient(135deg, var(--bg2), var(--surface));
+    border-color: var(--tirol-pink);
+    border-width: 2px;
+  }
+  .tl-section-final:hover {
+    border-color: var(--tirol-pink-dark);
+  }
+
+  .tl-section-icon {
+    font-size: 32px;
+    line-height: 1;
+    padding: 28px 32px 0;
+  }
+  .tl-heading {
+    font-family: var(--font-display);
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    padding: 8px 32px 0;
+    margin-bottom: 12px;
+  }
+  .tl-section:first-child .tl-heading {
+    color: var(--tirol-pink);
+  }
+  .tl-body {
+    padding: 0 32px 28px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text2);
+  }
+  .tl-body p {
+    margin-bottom: 14px;
+  }
+  .tl-body p:last-child {
+    margin-bottom: 0;
+  }
+  .tl-body strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .tl-body a {
+    color: var(--tirol-pink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+  }
+  .tl-body a:hover {
+    color: var(--tirol-pink-dark);
+  }
+  .tl-body h3 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    margin: 24px 0 8px;
+  }
+  .tl-body h3:first-child {
+    margin-top: 8px;
+  }
+  .tl-body ul,
+  .tl-body ol {
+    margin: 0 0 16px;
+    padding-left: 24px;
+  }
+  .tl-body li {
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+  .tl-body li strong {
+    color: var(--text);
+  }
+  .tl-body ol > li {
+    margin-bottom: 12px;
+  }
+  .tl-body ol > li ul {
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+
+  /* ═══ Badges ═══ */
+  .tl-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+  }
+  .tl-badge-silver {
+    background: linear-gradient(135deg, #e0e0e0, #c0c0c0);
+    color: #333;
+  }
+  .tl-badge-gold {
+    background: linear-gradient(135deg, #ffd700, #ffaa00);
+    color: #333;
+  }
+  .tl-marker {
+    color: var(--tirol-pink);
+    font-weight: 700;
+  }
+
+  /* ═══ Notes ═══ */
+  .tl-note {
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--text2);
+  }
+  .tl-note strong {
+    color: var(--text);
+  }
+  .tl-stand {
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: var(--surface);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--tirol-pink);
+    font-size: 12px;
+    color: var(--text2);
+    font-style: italic;
+  }
+
+  /* ═══ Contact Card ═══ */
+  .tl-contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    transition: border-color 0.3s;
+  }
+  .tl-contact-card:hover {
+    border-color: var(--tirol-pink);
+  }
+  .tl-contact-card-icon {
+    font-size: 28px;
+    flex-shrink: 0;
+  }
+  .tl-contact-card-content {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text2);
+  }
+  .tl-contact-card-content strong {
+    color: var(--text);
+  }
+  .tl-contact-card-content a {
+    color: var(--tirol-pink);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .tl-contact-card-content a:hover {
+    text-decoration: underline;
+  }
+  .tl-contact-note {
+    font-size: 12px;
+    color: var(--text3);
+  }
+
+  /* ==============================================================
+     RESPONSIVE
+     ============================================================== */
+  @media (max-width: 768px) {
+    .transparenz-header {
+      padding: 0 0 24px;
+    }
+    .transparenz-content {
+      padding: 0 0 48px;
+    }
+    .tl-section-icon {
+      font-size: 26px;
+      padding: 20px 20px 0;
+    }
+    .tl-heading {
+      font-size: 22px;
+      padding: 6px 20px 0;
+    }
+    .tl-body {
+      padding: 0 20px 20px;
+      font-size: 13px;
+    }
+    .tl-note {
+      padding: 14px 16px;
+      font-size: 12px;
+    }
+    .tl-contact-card {
+      padding: 16px 18px;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .tl-body h3 {
+      font-size: 16px;
+    }
+  }
+</style>

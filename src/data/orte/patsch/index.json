@@ -17,5 +17,18 @@
     "lng": 11.4167
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "beschreibung": "<p><strong>Patsch</strong> liegt auf 886 Metern Höhe in dem Innsbrucker Mittelgebirge und den umliegenden Tälern und ist eine beschauliches Dorf. Rund <strong>1.080</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Die unberührte natur rund um den ort lädt zu ausgedehnten erkundungen ein.</p><p>Patsch ist der ideale Ausgangspunkt für Aktivurlauber und Naturfreunde, die die Vielfalt Tirols erleben möchten.</p>",
+  "sehenswuerdigkeiten": [
+    {
+      "name": "Bergwanderung im Mittelgebirge",
+      "beschreibung": "Sonnige Wanderwege mit herrlichem Ausblick auf das Inntal und die Nordkette.",
+      "typ": "natur"
+    },
+    {
+      "name": "Lanser See",
+      "beschreibung": "Beliebter Badesee am sonnigen Mittelgebirgsplateau mit Liegewiesen und Kiosk.",
+      "typ": "natur"
+    }
+  ]
 }

@@ -196,13 +196,13 @@ export default function EventSubmissionForm() {
 
       <style>{`
         .ev-form{max-width:680px;margin:0 auto}
-        .ev-form-error{background:rgba(255,20,147,.1);border:1px solid var(--pink);border-radius:var(--radius);padding:12px 16px;margin-bottom:20px;color:var(--pink);font-size:14px}
+        .ev-form-error{background:rgba(255,20,147,.1);border:1px solid var(--tirol-pink);border-radius:var(--radius);padding:12px 16px;margin-bottom:20px;color:var(--tirol-pink);font-size:14px}
         .ev-form-row{display:flex;gap:16px;margin-bottom:16px}
         .ev-form-group{flex:1;display:flex;flex-direction:column;gap:4px}
         .ev-form-group.full{width:100%;margin-bottom:16px}
         .ev-form-group label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3)}
         .ev-form-group input,.ev-form-group select,.ev-form-group textarea{padding:10px 14px;border:1px solid var(--glass-border);border-radius:var(--radius-sm);background:var(--bg);color:var(--text);font-size:14px;font-family:inherit;transition:border-color .2s}
-        .ev-form-group input:focus,.ev-form-group select:focus,.ev-form-group textarea:focus{outline:none;border-color:var(--pink);box-shadow:0 0 0 3px rgba(255,20,147,.1)}
+        .ev-form-group input:focus,.ev-form-group select:focus,.ev-form-group textarea:focus{outline:none;border-color:var(--tirol-pink);box-shadow:0 0 0 3px rgba(255,20,147,.1)}
         .ev-form-group textarea{resize:vertical;min-height:100px}
         .ev-form-actions{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:8px;border-top:1px solid var(--glass-border)}
         .ev-form-hinweis{font-size:12px;color:var(--text3);margin:0}

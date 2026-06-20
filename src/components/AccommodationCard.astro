@@ -1,7 +1,8 @@
 ---
 import FavHeart from './FavHeart.astro';
-import PremiumBadge from './PremiumBadge.astro';
 export interface Props {
+  /** Optional locale prefix for multilang links (e.g. "fr"). */
+  locale?: string;
   name: string;
   slug: string;
   typ?: string;
@@ -10,18 +11,23 @@ export interface Props {
   preis_ab?: number;
   tier?: string;
   'data-tier'?: string;
+  /** Optional hero image. When provided, shown instead of placeholder icon. */
+  heroSrc?: string;
 }
-const { name, slug, typ, ort, sterne = 3, preis_ab, tier = 'basic', 'data-tier': dataTier } = Astro.props;
+const { name, slug, typ, ort, sterne = 3, preis_ab, tier = 'basic', 'data-tier': dataTier, heroSrc , locale = undefined } = Astro.props;
 const isCamping = typ === 'camping';
 const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'Bauernhof', jugendherberge: 'Jugendherberge', camping: 'Camping' };
 const placeholderIcon = isCamping ? '🏕️' : '🏨';
 // Badge handled by PremiumBadge component
 ---
-<a href={`/unterkuenfte/${slug}/`} class="uk-card" data-filter-card data-filter-tier={dataTier || tier || 'basic'} data-filter-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
+<a href={`${locale ? '/' + locale : ''}/unterkuenfte/${slug}/`} class="uk-card" data-filter-card data-filter-tier={dataTier || tier || 'basic'} data-filter-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
   <div class="uk-img" style="position:relative">
-    <PremiumBadge tier={tier} />
     {isCamping && <span class="uk-camping-badge">⛺</span>}
-    <span class="uk-placeholder">{placeholderIcon}</span>
+    {heroSrc ? (
+      <img src={heroSrc} alt={name} class="uk-photo" loading="lazy" decoding="async" width="420" height="315" />
+    ) : (
+      <span class="uk-placeholder">{placeholderIcon}</span>
+    )}
     <FavHeart collection="unterkuenfte" slug={slug} />
   </div>
   <div class="uk-body">
@@ -55,8 +61,8 @@ const placeholderIcon = isCamping ? '🏕️' : '🏨';
   .uk-price{font-size:18px;font-weight:800;color:var(--text)}
   .uk-price small{font-size:11px;font-weight:400;color:var(--text2)}
   .uk-na{font-size:12px;color:var(--text3)}
-  .uk-cta{display:block;width:100%;padding:12px;margin-top:14px;border-radius:100px;background:var(--pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
-  .uk-cta:hover{background:var(--pink-dark);transform:translateY(-2px)}
+  .uk-cta{display:block;width:100%;padding:12px;margin-top:14px;border-radius:100px;background:var(--tirol-pink);color:#fff;font-size:12px;font-weight:700;text-transform:uppercase;text-align:center;transition:all .3s}
+  .uk-cta:hover{background:var(--tirol-pink-dark);transform:translateY(-2px)}
   @media(max-width:600px){
     .uk-img{height:130px}
     .uk-name{font-size:19px}

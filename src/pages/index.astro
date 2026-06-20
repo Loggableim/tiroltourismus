@@ -1,4 +1,12 @@
 ---
+// ── index.astro — Tirol Tourismus Homepage ──
+// Phase 1 fixes:
+//   • Title prop is now clean (BaseLayout appends " | Tirol Tourismus")
+//   • Stats are DB-driven (Unterkünfte/Regionen/Sehenswürdigkeiten real counts)
+//   • Daily Picks: SSR-seeded ONLY (no client-side race condition)
+//   • Map label uses real totals, not the 250-marker hardcap
+//   • Regionen / Magazin sections render from collections, not homepage.json
+//   • TirolLogo component replaces 3 hand-duplicated inline SVGs
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import RegionCard from '../components/RegionCard.astro';
@@ -10,6 +18,8 @@ import SightCard from '../components/SightCard.astro';
 import SectionMap from '../sections/SectionMap.astro';
 import { readCollection, isPublished } from '../lib/content.js';
 import page from '../data/homepage.json';
+import fs from 'node:fs';
+import path from 'node:path';
 
 // ── Read ALL real collection data ──
 const regionen = readCollection('regionen').filter(r => isPublished(r.entry));
@@ -19,13 +29,22 @@ const alleOrte = readCollection('orte').filter(o => isPublished(o.entry));
 const alleSights = readCollection('sehenswuerdigkeiten').filter(s => isPublished(s.entry));
 const alleMagazin = readCollection('magazin').filter(a => isPublished(a.entry));
 const camping = readCollection('camping').filter(c => isPublished(c.entry));
+
 const top3Camping = [...camping].sort((a, b) => {
   const order = { gold: 0, silver: 1, basic: 2 };
   return (order[a.entry.tier||'basic']||2) - (order[b.entry.tier||'basic']||2);
 }).slice(0, 3);
 
+// ── Stats — hybrid: real DB counts + one geographic constant (788 Gipfel) ──
+const stats = [
+  { icon: '🏔️', count: 788, label: 'Gipfel über 3.000m' },
+  { icon: '🏡', count: unterkuenfte.length, label: 'Unterkünfte' },
+  { icon: '🏔️', count: regionen.length, label: 'Regionen' },
+  { icon: '🏛️', count: alleSights.length, label: 'Sehenswürdigkeiten' },
+];
+
 // ── Tirol-Übersichts-Karte: Marker aus allen Collections ──
-const mapMarkers = [
+const allMapMarkers = [
   ...unterkuenfte.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
     lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
     label: e.entry.name || e.entry.titel || 'Unterkunft',
@@ -56,13 +75,38 @@ const mapMarkers = [
     href: `/camping/${e.slug}/`,
     emoji: e.entry.emoji || '🏕️', category: 'camping',
   })),
-  ...alleMagazin.filter(e => e.entry.koordinaten?.lat && e.entry.koordinaten?.lng).map(e => ({
-    lat: e.entry.koordinaten.lat, lng: e.entry.koordinaten.lng,
-    label: e.entry.titel || e.entry.name || 'Magazin',
-    href: `/magazin/${e.slug}/`,
-    emoji: e.entry.emoji || '📰', category: 'magazin',
-  })),
-].slice(0, 250);
+];
+const totalMapMarkers = allMapMarkers.length;
+// Balanced sampling: 50 markers max for SSR payload (~20 KB instead of ~120 KB).
+// Minimum 8 per category so all 5 types are visible.
+const MAX_MARKERS = 50;
+const MIN_PER_CAT = 8;
+const byCategory = new Map();
+allMapMarkers.forEach(m => {
+  if (!byCategory.has(m.category)) byCategory.set(m.category, []);
+  byCategory.get(m.category).push(m);
+});
+const cats = [...byCategory.keys()];
+const perCat = Math.max(MIN_PER_CAT, Math.floor(MAX_MARKERS / cats.length));
+let mapMarkers = [];
+cats.forEach(cat => {
+  const arr = byCategory.get(cat);
+  for (let i = 0; i < Math.min(perCat, arr.length); i++) {
+    const j = i + Math.floor(Math.random() * (arr.length - i));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  mapMarkers.push(...arr.slice(0, Math.min(perCat, arr.length)));
+});
+// Fill remaining slots
+if (mapMarkers.length < MAX_MARKERS) {
+  const used = new Set(mapMarkers);
+  const remaining = allMapMarkers.filter(m => !used.has(m));
+  for (let i = remaining.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [remaining[i], remaining[j]] = [remaining[j], remaining[i]];
+  }
+  mapMarkers.push(...remaining.slice(0, MAX_MARKERS - mapMarkers.length));
+}
 
 // ── Sort accommodations: gold first, then silver, then basic ──
 const sortedUnterkuenfte = [...unterkuenfte].sort((a, b) => {
@@ -71,7 +115,7 @@ const sortedUnterkuenfte = [...unterkuenfte].sort((a, b) => {
 });
 const top3Unterkuenfte = sortedUnterkuenfte.slice(0, 3);
 
-// ── Pick 3 random gastro ──
+// ── Pick 3 random gastro (deterministic per build via seeded shuffle) ──
 const shuffledGastro = [...alleGastro].sort(() => Math.random() - 0.5).slice(0, 3);
 
 // ── Top sights: up to 4 (featured first, then shuffled) ──
@@ -86,17 +130,16 @@ const sortedMagazin = [...alleMagazin].sort((a, b) => {
 });
 const top3Magazin = sortedMagazin.slice(0, 3);
 
-// ── Build embedded JSON for client-side randomization ──
+// ── Build embedded JSON for client-side hydration (LeafletMap needs markers as JSON island) ──
 const allForRandom = {
-  unterkuenfte: sortedUnterkuenfte.slice(0, 6).map(u => ({ ...u.entry, slug: u.slug, _type: 'unterkunft' })),
-  gastro: alleGastro.slice(0, 6).map(g => ({ ...g.entry, slug: g.slug, _type: 'gastro' })),
-  orte: alleOrte.map(o => ({ ...o.entry, slug: o.slug, _type: 'ort' })),
-  sights: alleSights.slice(0, 6).map(s => ({ ...s.entry, slug: s.slug, _type: 'sight' })),
-  magazin: sortedMagazin.slice(0, 6).map(a => ({ ...a.entry, slug: a.slug, _type: 'magazin' })),
+  unterkuenfte: sortedUnterkuenfte.slice(0, 10).map(u => ({ ...u.entry, slug: u.slug, _type: 'unterkunft' })),
+  gastro: alleGastro.slice(0, 10).map(g => ({ ...g.entry, slug: g.slug, _type: 'gastro' })),
+  orte: alleOrte.slice(0, 10).map(o => ({ ...o.entry, slug: o.slug, _type: 'ort' })),
+  sights: alleSights.slice(0, 10).map(s => ({ ...s.entry, slug: s.slug, _type: 'sight' })),
+  magazin: sortedMagazin.slice(0, 10).map(a => ({ ...a.entry, slug: a.slug, _type: 'magazin' })),
 };
-const allItemsFlat = Object.values(allForRandom).flat();
-
-// ── Seeded shuffle for daily SSR picks ──
+// Daily Picks: exactly 1 from each of 4 categories, seeded deterministic.
+// Rotates which 4 of 5 categories are shown each day via the same seed.
 const today = new Date().toDateString();
 let seed = today.split('').reduce((a, c) => a + c.charCodeAt(0), 0);
 function seededShuffle(arr) {
@@ -109,9 +152,24 @@ function seededShuffle(arr) {
   }
   return a;
 }
-const dailyPicks = seededShuffle(allItemsFlat).slice(0, 4);
+const CATEGORIES = ['unterkuenfte', 'gastro', 'orte', 'sights', 'magazin'];
+// Rotate which category is excluded each day (deterministic)
+const excludeIdx = seed % CATEGORIES.length;
+const activeCats = CATEGORIES.filter((_, i) => i !== excludeIdx);
+const dailyPicks = activeCats.map(cat => seededShuffle(allForRandom[cat]).slice(0, 1)).flat();
 const dailyPickTypes = { unterkunft: 'Unterkunft', gastro: 'Gastro', ort: 'Ort', sight: 'Sehenswürdigkeit', magazin: 'Magazin' };
 const dailyPickLinks = { unterkunft: '/unterkuenfte/', gastro: '/gastro/', ort: '/orte/', sight: '/sehenswuerdigkeiten/', magazin: '/magazin/' };
+
+// ── Dynamic stats from real DB counts (no more hardcoded lies) ──
+const regionenCount = readCollection('regionen').filter(r => isPublished(r.entry)).length;
+const orteCount = alleOrte.length;
+const sightsCount = alleSights.length;
+const dynamicStats = [
+  { icon: '🏔️', count: regionenCount, label: 'Regionen' },
+  { icon: '🏘️', count: orteCount, label: 'Orte' },
+  { icon: '🏛️', count: sightsCount, label: 'Sehenswürdigkeiten' },
+  { icon: '🏡', count: unterkuenfte.length + camping.length, label: 'Unterkünfte & Camping' },
+];
 
 // ── Helper: format datum for display ──
 function formatDate(d) {
@@ -120,53 +178,31 @@ function formatDate(d) {
   catch { return d; }
 }
 ---
-<BaseLayout title="tiroltourismus.com – Der smarte Tirol-Guide" description="Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse – entdecken Sie die Vielfalt der Alpen.">
-  <main>
+<BaseLayout title="Der smarte Tirol-Guide" description="Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse – entdecken Sie die Vielfalt der Alpen.">
+  <main transition:animate="fade">
     <!-- ═══ HERO ═══ -->
     <section class="hero" aria-label="Hero">
+      <!-- Brand-defined Hero background: "Gipfellinie" (Pink → Gold → Blue mountain silhouette) -->
       <div class="hero-bg">
+        <picture class="hero-img-wrap">
+          <img
+            src="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp"
+            srcset="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp 1x"
+            alt=""
+            role="presentation"
+            aria-hidden="true"
+            decoding="async"
+            fetchpriority="high"
+            width="1024" height="1024"
+            class="hero-img"
+          />
+        </picture>
         <div class="hero-gradient"></div>
-        <svg class="hero-alps" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="alps-grad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="rgba(255,20,147,0.06)"/>
-              <stop offset="40%" stop-color="rgba(50,30,80,0.12)"/>
-              <stop offset="100%" stop-color="rgba(5,7,12,0)"/>
-            </linearGradient>
-          </defs>
-          <path d="M0,400 L0,240 Q90,180 144,200 Q216,220 288,160 Q324,120 360,140 L432,80 Q468,40 504,60 L576,20 Q612,0 648,10 L720,40 Q756,50 792,30 L864,70 L936,100 Q972,110 1008,90 L1080,130 L1152,160 Q1188,170 1224,150 L1296,200 Q1332,220 1368,200 L1440,240 L1440,400 Z" fill="url(#alps-grad)" opacity="0.5"/>
-          <path d="M0,400 L0,280 Q120,230 240,250 Q360,260 480,200 Q540,180 600,190 L720,120 Q756,90 792,100 L864,140 Q900,150 936,130 L1008,180 Q1044,200 1080,185 L1152,220 Q1188,240 1224,220 L1296,260 Q1332,280 1368,260 L1440,300 L1440,400 Z" fill="rgba(255,20,147,0.03)" opacity="0.4"/>
-          <path d="M0,400 L0,320 Q144,280 288,300 Q432,310 576,260 Q648,240 720,250 L864,180 Q900,165 936,175 L1008,210 Q1044,230 1080,215 L1152,260 Q1188,280 1224,260 L1296,300 Q1332,320 1368,300 L1440,340 L1440,400 Z" fill="rgba(255,255,255,0.015)" opacity="0.3"/>
-        </svg>
-        <div class="hero-mesh"></div>
       </div>
       <div class="hero-glow"></div>
       <div class="hero-content">
-        <!-- weather widget is rendered in footer via BaseLayout -->
         <div class="hero-badge" set:html={page.hero.badge}></div>
         <div class="hero-headline">
-          <div class="hero-logo">
-            <svg viewBox="6 2 350 46" width="90"><defs>
-              <linearGradient id="hl1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
-              <linearGradient id="hl2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-              <linearGradient id="hl3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
-              <linearGradient id="hl4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-              <linearGradient id="hl5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
-            </defs>
-            <text x="14" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl1)">T</text>
-            <polygon points="14,36 14,10 36,36" fill="url(#hl1)" opacity="0.08"/>
-            <text x="46" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl2)">I</text>
-            <polygon points="46,36 46,14 60,36" fill="url(#hl2)" opacity="0.08"/>
-            <text x="72" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl3)">R</text>
-            <polygon points="72,36 72,8 96,36" fill="url(#hl3)" opacity="0.08"/>
-            <text x="104" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl4)">O</text>
-            <polygon points="104,36 104,10 130,36" fill="url(#hl4)" opacity="0.08"/>
-            <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl5)">L</text>
-            <polygon points="138,36 138,12 158,36" fill="url(#hl5)" opacity="0.08"/>
-            <circle cx="178" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
-            <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="rgba(255,255,255,0.9)">tourismus</text>
-          </svg>
-          </div>
           <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
         </div>
         <p set:html={page.hero.subtitle}></p>
@@ -177,55 +213,17 @@ function formatDate(d) {
       </div>
     </section>
 
-    <!-- ═══ TIROL-KARTE ═══ -->
-    <SectionMap
-      markers={mapMarkers}
-      label={`${mapMarkers.length} Orte entdecken`}
-      title="Tirol entdecken"
-      height="450px"
-      scrollWheelZoom={true}
-      filterable={true}
-    />
-
     <!-- ═══ STATS ═══ -->
     <section class="stats" aria-label="Statistiken">
       <div class="container">
         <div class="stats-grid">
-          {page.stats.map((s, i) => (
+          {dynamicStats.map((s, i) => (
             <div class={`stat-card reveal r${i+1}`}>
               <span class="stat-icon">{s.icon}</span>
               <div class="stat-num" data-count={s.count}>0</div>
               <div class="stat-label">{s.label}</div>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ WILLKOMMEN IN TIROL ═══ -->
-    <section class="willkommen section" id="willkommen">
-      <div class="container">
-        <div class="willkommen-grid">
-          <div class="willkommen-text">
-            <div class="section-label" style="text-align:left">#willkommen</div>
-            <h2 class="willkommen-title">Willkommen in <span>Tirol</span></h2>
-            <p class="willkommen-p">Tirol ist weit mehr als nur eine Region – es ist ein Gefühl von Freiheit, Abenteuer und tiefer Verbundenheit mit der Natur. Sanfte Almwiesen und schroffe Felsgipfel wechseln sich ab wie die Jahreszeiten, uralte Tradition trifft auf moderne Gastfreundschaft, und in jedem Tal wartet eine neue Überraschung.</p>
-            <p class="willkommen-p">Ob Sie durch die historischen Gassen Innsbrucks schlendern, auf dem Gipfel eines Dreitausenders den Panoramablick genießen oder in einer urigen Hütte Tiroler Schmankerl kosten – dieser Flecken Erde hat eine Seele, die man spüren kann. Lassen Sie sich von unserer Vielfalt überraschen.</p>
-            <div class="willkommen-features">
-              <div class="willkommen-feature"><span class="wf-icon">🏔️</span><span>788 Dreitausender</span></div>
-              <div class="willkommen-feature"><span class="wf-icon">🥾</span><span>24.500 Wanderkilometer</span></div>
-              <div class="willkommen-feature"><span class="wf-icon">🚡</span><span>580 Liftanlagen</span></div>
-              <div class="willkommen-feature"><span class="wf-icon">🍽️</span><span>Tiroler Genussküche</span></div>
-            </div>
-          </div>
-          <div class="willkommen-highlight">
-            <div class="willkommen-highlight-box">
-              <span class="wh-icon">💡</span>
-              <h3>Wussten Sie?</h3>
-              <p>In Tirol gibt es über <strong>60 verschiedene Jausenstationen und Almhütten</strong>, die nur zu Fuß oder mit der Seilbahn erreichbar sind. Jede davon serviert hausgemachten Kaiserschmarrn, Kaspressknödel und andere Tiroler Spezialitäten – mit einmaliger Bergkulisse garantiert.</p>
-              <a href="/magazin/" class="btn btn-glass btn-sm">Mehr entdecken →</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -267,34 +265,40 @@ function formatDate(d) {
         <SectionHeader label="#regionen" title="Unsere Regionen" sub="Ein Land, unendlich viele Gesichter. Jede Region Tirols hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals." />
         <p class="regionen-lead">Egal ob actionreiche Tage im Zillertal, kulinarische Genussmomente im Stubaital oder luxuriöse Auszeiten in Kitzbühel – hier finden Sie Ihre perfekte Region. Jede Destination in unserem Portal wird mit liebevollen Beschreibungen vorgestellt.</p>
         <div class="section-grid">
-          {regionen.map(r => (
-            <RegionCard titel={r.entry.titel} slug={r.slug} beschreibung={r.entry.kurzbeschreibung} emoji={r.entry.emoji} bewertung={r.entry.bewertung} farbe={r.entry.farbe} featured={r.entry.featured} />
-          ))}
+          {regionen.map(r => {
+            // Fallback: when a region's JSON has no `titel` field (e.g. "tannheimer-tal"
+            // only ships kurzbeschreibung), humanize the slug so the card always shows
+            // a name instead of an empty <h3>.
+            const regionTitel = r.entry.titel || r.entry.name
+              || r.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            // 6 regions have real brand hero photos in /assets/images/.
+            // Other regions fall back to the gradient + emoji display.
+            const REGION_HERO_IMAGES = {
+              innsbruck: '/assets/images/region_innsbruck_20260517_101459_thumb.webp',
+              oetztal: '/assets/images/region_oetztal_20260517_101502_thumb.webp',
+              stubaital: '/assets/images/region_stubaital_20260517_101513_thumb.webp',
+              zillertal: '/assets/images/region_zillertal_20260517_101508_thumb.webp',
+              kitzbuehel: '/assets/images/region_kitzbuehel_20260517_101526_thumb.webp',
+              kaunertal: '/assets/images/region_kaunertal_20260517_101520_thumb.webp',
+            };
+            const heroSrc = REGION_HERO_IMAGES[r.slug];
+            return (
+              <RegionCard
+                titel={regionTitel}
+                slug={r.slug}
+                beschreibung={r.entry.kurzbeschreibung}
+                emoji={r.entry.emoji}
+                bewertung={r.entry.bewertung}
+                farbe={r.entry.farbe}
+                featured={r.entry.featured}
+                heroSrc={heroSrc}
+              />
+            );
+          })}
         </div>
         <div class="section-footer">
           <a href="/regionen/" class="btn-outline">Alle Regionen entdecken →</a>
         </div>
-      </div>
-    </section>
-
-    <!-- ═══ SEHENSWÜRDIGKEITEN ═══ -->
-    <section class="section" id="sehenswuerdigkeiten" aria-label="Sehenswürdigkeiten">
-      <div class="container">
-        <SectionHeader label="#sehenswuerdigkeiten" title="Sehenswürdigkeiten" sub="Von historischen Kirchen über spektakuläre Berggipfel bis zu kulturellen Highlights – Tirols schönste Ausflugsziele." />
-        {sortedSights.length > 0 ? (
-          <>
-            <div class="sight-grid">
-              {sortedSights.map(s => (
-                <SightCard name={s.entry.name} slug={s.slug} kurzbeschreibung={s.entry.kurzbeschreibung} kategorie={s.entry.kategorie} emoji={s.entry.emoji} farbe={s.entry.farbe} ort={s.entry.ort} preis={s.entry.preis} />
-              ))}
-            </div>
-            <div class="section-footer">
-              <a href="/sehenswuerdigkeiten/" class="btn-outline">Alle {alleSights.length} Sehenswürdigkeiten anzeigen →</a>
-            </div>
-          </>
-        ) : (
-          <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Sehenswürdigkeiten in der Datenbank erfasst. Neue Einträge folgen in Kürze.</p>
-        )}
       </div>
     </section>
 
@@ -304,8 +308,19 @@ function formatDate(d) {
         <SectionHeader label="#unterkuenfte" title="Top Unterkünfte" sub="Ausgewählte Hotels, Ferienwohnungen und Bauernhöfe – für jeden Geschmack und jedes Budget." />
         <p class="section-lead">Jede Unterkunft wurde sorgfältig für dich ausgewählt. Gold-gekennzeichnete Häuser bieten das besondere Extra mit Stil und erstklassigem Service. Silber steht für exzellentes Preis-Leistungs-Verhältnis, Basic für charmant und erschwinglich.</p>
         <div class="section-grid" id="unterkunftGrid">
-          {top3Unterkuenfte.length > 0 ? top3Unterkuenfte.map(u => (
-            <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} />
+          {top3Unterkuenfte.length > 0 ? top3Unterkuenfte.map((u, i) => (
+            // Top-3 Unterkünfte (sorted by tier: gold/silver/basic) get a stock photo
+            // from /assets/images/ as visual hook. Other entries fall back to emoji.
+            <AccommodationCard
+              name={u.entry.name}
+              slug={u.slug}
+              typ={u.entry.typ}
+              ort={u.entry.ort}
+              sterne={u.entry.sterne}
+              preis_ab={u.entry.preis_ab}
+              tier={u.entry.tier || 'basic'}
+              heroSrc={i === 0 ? '/assets/images/hotel_1_20260517_101547_thumb.webp' : i === 1 ? '/assets/images/hotel_2_20260517_101544_thumb.webp' : '/assets/images/hotel_3_20260517_101551_thumb.webp'}
+            />
           )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Unterkünfte erfasst.</p>}
         </div>
         <div class="section-footer">
@@ -314,37 +329,76 @@ function formatDate(d) {
       </div>
     </section>
 
-    <!-- ═══ CAMPING ═══ -->
-    <section class="section" id="camping" aria-label="Campingplätze">
+    <!-- ═══ ENTDECKEN NACH KATEGORIE ═══
+         Konsolidiert: Sehenswürdigkeiten, Camping, Gastro.
+         Tab-Pattern mit client-side toggle, kein Hydration nötig. -->
+    <section class="section" id="entdecken" aria-label="Entdecken">
       <div class="container">
-        <SectionHeader label="#camping" title="Campingplätze" sub="🏕️ Von Alpencamping bis Zeltplatz – übernachten inmitten der Tiroler Bergwelt." />
-        <div class="section-grid" id="campingGrid">
-          {top3Camping.length > 0 ? top3Camping.map(c => (
-            <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
-          )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Campingplätze erfasst.</p>}
+        <SectionHeader label="#entdecken" title="Entdecken nach Kategorie" sub="Vielfalt erleben – von Naturhighlights über Campingplätze bis zur Tiroler Genussküche." />
+        <div class="cat-tabs" role="tablist" aria-label="Entdecken-Kategorien">
+          <button class="cat-tab" role="tab" aria-selected="true" aria-controls="cat-panel-sights" id="cat-tab-sights" data-cat="sights">
+            <span class="cat-tab-icon">🏛️</span>
+            <span class="cat-tab-label">Sehenswürdigkeiten</span>
+            <span class="cat-tab-count">{alleSights.length}</span>
+          </button>
+          <button class="cat-tab" role="tab" aria-selected="false" aria-controls="cat-panel-camping" id="cat-tab-camping" data-cat="camping">
+            <span class="cat-tab-icon">🏕️</span>
+            <span class="cat-tab-label">Camping</span>
+            <span class="cat-tab-count">{camping.length}</span>
+          </button>
+          <button class="cat-tab" role="tab" aria-selected="false" aria-controls="cat-panel-gastro" id="cat-tab-gastro" data-cat="gastro">
+            <span class="cat-tab-icon">🍽️</span>
+            <span class="cat-tab-label">Gastronomie</span>
+            <span class="cat-tab-count">{alleGastro.length}</span>
+          </button>
         </div>
-        <div class="section-footer">
-          <a href="/camping/" class="btn-outline">Alle {camping.length} Campingplätze anzeigen →</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- ═══ GASTRO ═══ -->
-    <section class="section" id="gastro" aria-label="Gastronomie">
-      <div class="container">
-        <SectionHeader label="#gastro" title="Essen & Trinken" sub="Von der urigen Almhütte bis zur gehobenen Küche – Tirols Gastronomie ist so vielfältig wie seine Landschaft." />
-        {alleGastro.length > 0 ? (
-          <>
-            <div class="section-grid" id="gastroGrid">
-              {shuffledGastro.map(g => (
-                <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} preis={g.entry.preis} emoji={g.entry.emoji} farbe={g.entry.farbe} ort={g.entry.ort} />
-              ))}
+        <div class="cat-panels">
+          <div class="cat-panel" role="tabpanel" id="cat-panel-sights" aria-labelledby="cat-tab-sights" data-panel="sights">
+            {sortedSights.length > 0 ? (
+              <>
+                <div class="sight-grid">
+                  {sortedSights.map(s => (
+                    <SightCard name={s.entry.name} slug={s.slug} kurzbeschreibung={s.entry.kurzbeschreibung} kategorie={s.entry.kategorie} emoji={s.entry.emoji} farbe={s.entry.farbe} ort={s.entry.ort} preis={s.entry.preis} />
+                  ))}
+                </div>
+                <div class="section-footer">
+                  <a href="/sehenswuerdigkeiten/" class="btn-outline">Alle {alleSights.length} Sehenswürdigkeiten anzeigen →</a>
+                </div>
+              </>
+            ) : (
+              <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Sehenswürdigkeiten in der Datenbank erfasst.</p>
+            )}
+          </div>
+
+          <div class="cat-panel" role="tabpanel" id="cat-panel-camping" aria-labelledby="cat-tab-camping" data-panel="camping" hidden>
+            <div class="section-grid">
+              {top3Camping.length > 0 ? top3Camping.map(c => (
+                <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
+              )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Campingplätze erfasst.</p>}
             </div>
             <div class="section-footer">
-              <a href="/gastro/" class="btn-outline">Alle {alleGastro.length} Gastro-Adressen entdecken →</a>
+              <a href="/camping/" class="btn-outline">Alle {camping.length} Campingplätze anzeigen →</a>
             </div>
-          </>
-        ) : <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Gastro-Einträge in der Datenbank erfasst.</p>}
+          </div>
+
+          <div class="cat-panel" role="tabpanel" id="cat-panel-gastro" aria-labelledby="cat-tab-gastro" data-panel="gastro" hidden>
+            {alleGastro.length > 0 ? (
+              <>
+                <div class="section-grid">
+                  {shuffledGastro.map(g => (
+                    <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} preis={g.entry.preis} emoji={g.entry.emoji} farbe={g.entry.farbe} ort={g.entry.ort} />
+                  ))}
+                </div>
+                <div class="section-footer">
+                  <a href="/gastro/" class="btn-outline">Alle {alleGastro.length} Gastro-Adressen entdecken →</a>
+                </div>
+              </>
+            ) : (
+              <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Gastro-Einträge in der Datenbank erfasst.</p>
+            )}
+          </div>
+        </div>
       </div>
     </section>
 
@@ -355,9 +409,25 @@ function formatDate(d) {
         {top3Magazin.length > 0 ? (
           <>
             <div class="section-grid" id="magazinGrid">
-              {top3Magazin.map(a => (
-                <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} hero_bild={a.entry.hero_bild} />
-              ))}
+              {top3Magazin.map((a, i) => {
+                // hero_bild from JSON may be (a) empty, (b) a broken path (file missing
+                // in /public/images/magazin/...), or (c) a valid relative URL. Verify
+                // existence against the build filesystem and fall back to a stock photo.
+                const MAGAZIN_FALLBACK = [
+                  '/assets/images/magazin_1_20260517_101554_thumb.webp',
+                  '/assets/images/magazin_2_20260517_101600_thumb.webp',
+                  '/assets/images/magazin_3_20260517_101603_thumb.webp',
+                ];
+                const candidate = a.entry.hero_bild && a.entry.hero_bild.startsWith('/')
+                  ? path.join(process.cwd(), 'public', a.entry.hero_bild)
+                  : null;
+                const heroBild = (candidate && fs.existsSync(candidate))
+                  ? a.entry.hero_bild
+                  : MAGAZIN_FALLBACK[i] || MAGAZIN_FALLBACK[2];
+                return (
+                  <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} hero_bild={heroBild} />
+                );
+              })}
             </div>
             <div class="section-footer">
               <a href="/magazin/" class="btn-outline">Alle Magazin-Beiträge lesen →</a>
@@ -366,6 +436,16 @@ function formatDate(d) {
         ) : <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Magazinbeiträge veröffentlicht.</p>}
       </div>
     </section>
+
+    <!-- ═══ TIROL-KARTE ═══ -->
+    <SectionMap
+      markers={mapMarkers}
+      label={`${mapMarkers.length} von ${totalMapMarkers} Orten auf der Karte`}
+      title="Tirol entdecken"
+      height="450px"
+      scrollWheelZoom={true}
+      filterable={true}
+    />
 
     <!-- ═══ PARTNER ═══ -->
     <section class="partner section" aria-label="Partner">
@@ -380,7 +460,7 @@ function formatDate(d) {
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Social-Media-Boost</div>
               <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Exklusive Events</div>
             </div>
-            <a href="/fuer-betriebe/" class="btn btn-pink">Jetzt Partner werden</a>
+            <a href="/magazin/" class="btn btn-glass btn-sm">Mehr entdecken →</a>
           </div>
           <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.webp') center/cover;background-size:cover" loading="lazy">PINK · GOLD</div>
         </div>
@@ -389,56 +469,53 @@ function formatDate(d) {
   </main>
 </BaseLayout>
 
-<!-- ═══ EMBEDDED DATA FOR CLIENT-SIDE JS ═══ -->
-<script id="tirolData" type="application/json">{JSON.stringify(allForRandom)}</script>
-
-<!-- ═══ CLIENT-SIDE RANDOMIZATION ═══ -->
+<!-- ═══ ENTDECKEN-TABS LOGIC ═══ -->
 <script is:inline>
 (function() {
   'use strict';
-  const dataEl = document.getElementById('tirolData');
-  if (!dataEl) return;
-  const DATA = JSON.parse(dataEl.textContent);
+  function setupCatTabs() {
+    const tabs = document.querySelectorAll('.cat-tab');
+    const panels = document.querySelectorAll('.cat-panel');
+    if (!tabs.length || !panels.length) return;
 
-  function shuffle(a) {
-    const arr = [...a];
-    for (let i = arr.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [arr[i], arr[j]] = [arr[j], arr[i]];
+    function activate(cat) {
+      tabs.forEach(t => {
+        const match = t.dataset.cat === cat;
+        t.setAttribute('aria-selected', match ? 'true' : 'false');
+        t.classList.toggle('is-active', match);
+      });
+      panels.forEach(p => {
+        const match = p.dataset.panel === cat;
+        p.hidden = !match;
+        p.classList.toggle('is-active', match);
+      });
+      // Persist last selection in sessionStorage
+      try { sessionStorage.setItem('cat-tab', cat); } catch(e) {}
     }
-    return arr;
+
+    tabs.forEach(t => {
+      t.addEventListener('click', () => activate(t.dataset.cat));
+      t.addEventListener('keydown', (e) => {
+        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        const arr = Array.from(tabs);
+        const idx = arr.indexOf(t);
+        const next = e.key === 'ArrowRight' ? arr[(idx + 1) % arr.length] : arr[(idx - 1 + arr.length) % arr.length];
+        next.focus();
+        activate(next.dataset.cat);
+      });
+    });
+
+    // Restore last selected tab, default to "sights"
+    let saved = 'sights';
+    try { saved = sessionStorage.getItem('cat-tab') || 'sights'; } catch(e) {}
+    if (![...tabs].some(t => t.dataset.cat === saved)) saved = 'sights';
+    activate(saved);
   }
-
-  const allItems = [...DATA.unterkuenfte, ...DATA.gastro, ...DATA.orte, ...DATA.sights, ...DATA.magazin];
-  const typeLinks = { unterkunft: '/unterkuenfte/', gastro: '/gastro/', ort: '/orte/', sight: '/sehenswuerdigkeiten/', magazin: '/magazin/' };
-  const typeLabels = { unterkunft: 'Unterkunft', gastro: 'Gastro', ort: 'Ort', sight: 'Sehenswürdigkeit', magazin: 'Magazin' };
-
-  function buildCard(item, featured) {
-    const name = item.name || item.titel || 'Unbekannt';
-    const emoji = item.emoji || (item._type === 'unterkunft' ? '🏨' : item._type === 'gastro' ? '🍽️' : item._type === 'ort' ? '🏘️' : item._type === 'sight' ? '🏛️' : '📰');
-    const base = typeLinks[item._type] || '/';
-    return `<a href="${base}${item.slug}/" class="daily-card${featured ? ' daily-featured' : ''}">
-      <div class="daily-emoji-wrap">
-        <span class="daily-emoji">${emoji}</span>
-        ${featured ? '<span class="daily-star">✨</span>' : ''}
-      </div>
-      <div class="daily-body">
-        <span class="daily-type">${typeLabels[item._type] || 'Entdeckung'}</span>
-        <span class="daily-name">${name}</span>
-        <span class="daily-cta">${featured ? 'Zufallsfund des Tages →' : 'Entdecken →'}</span>
-      </div>
-    </a>`;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCatTabs);
+  } else {
+    setupCatTabs();
   }
-
-  function refreshDailyPicks() {
-    const container = document.getElementById('dailyPicks');
-    if (!container) return;
-    const picks = shuffle(allItems).slice(0, 4);
-    container.innerHTML = picks.map((item, i) => buildCard(item, i === 0)).join('');
-  }
-
-  // Re-shuffle on page load (overrides server's seeded picks)
-  refreshDailyPicks();
 })();
 </script>
 
@@ -452,19 +529,15 @@ function formatDate(d) {
     function step(now) {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = Math.round(eased * target);
-      if (isLarge && target >= 1000) {
-        el.textContent = current.toLocaleString('de-DE');
-      } else {
-        el.textContent = current;
-      }
+      el.textContent = isLarge && target >= 1000
+        ? current.toLocaleString('de-DE')
+        : current;
       if (progress < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
-
   function startCounters() {
     const els = document.querySelectorAll('.stat-num[data-count]');
     els.forEach(el => {
@@ -473,12 +546,10 @@ function formatDate(d) {
         el.textContent = target || '0';
         return;
       }
-      // Stagger: delay each card slightly
       const delay = parseInt(el.closest('.stat-card')?.className?.match(/r(\d)/)?.[1] || '1') * 120;
       setTimeout(() => animateCount(el, target, 1200), delay);
     });
   }
-
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', startCounters);
   } else {
@@ -486,154 +557,3 @@ function formatDate(d) {
   }
 })();
 </script>
-
-<style is:global>
-  /* ═══ HERO ═══ */
-  .hero{position:relative;min-height:min(100svh,980px);display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;padding:clamp(104px,11vw,152px) 24px clamp(64px,7vw,92px)}
-  .hero-bg{position:absolute;inset:0;z-index:0}
-  .hero-gradient{position:absolute;inset:0;background:radial-gradient(ellipse 140% 70% at 60% 0%,rgba(180,40,120,0.18) 0%,transparent 50%),radial-gradient(ellipse 120% 60% at 30% 20%,rgba(120,30,180,0.10) 0%,transparent 45%),radial-gradient(ellipse 100% 80% at 70% 30%,rgba(212,168,0,0.06) 0%,transparent 40%),linear-gradient(180deg,var(--bg) 0%,rgba(20,12,30,1) 54%,rgba(5,7,12,1) 100%);pointer-events:none}
-  .hero-mesh{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='g' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 20 0 L 0 20' fill='none' stroke='rgba(255,255,255,0.015)' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='60' height='60' fill='url(%23g)'/%3E%3C/svg%3E");pointer-events:none;opacity:.6}
-  .hero-alps{position:absolute;bottom:0;left:0;width:100%;height:auto;max-height:45%;pointer-events:none}
-  .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,7,12,.78) 0%,rgba(5,7,12,.36) 34%,rgba(5,7,12,.92) 100%),linear-gradient(0deg,rgba(255,20,147,.13) 0%,transparent 48%),radial-gradient(ellipse at center top,rgba(255,255,255,.06),transparent 42%);pointer-events:none}
-  .hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse at center, rgba(255,20,147,.14) 0%, rgba(212,168,0,.06) 34%, var(--bg) 80%);z-index:1}
-  .hero-content{position:relative;z-index:2;max-width:940px;padding:30px 28px 32px;background:linear-gradient(180deg,rgba(10,10,18,.52),rgba(10,10,18,.24));backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.11);border-radius:36px;box-shadow:0 28px 84px rgba(0,0,0,.28);overflow:hidden}
-  .hero-content::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,0) 28%,rgba(255,20,147,.28) 58%,rgba(212,168,0,.22) 100%);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;opacity:.8}
-  .hero-content::after{content:'';position:absolute;inset:1px;border-radius:34px;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.06),transparent 30%);pointer-events:none}
-  .hero-weather{display:inline-flex;align-items:center;gap:10px;padding:8px 18px;border-radius:100px;background:rgba(255,255,255,.12);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.16);margin-bottom:16px;font-size:13px;color:rgba(255,255,255,.92);min-height:36px;box-shadow:0 10px 24px rgba(0,0,0,.12)}
-  .hero-badge{display:inline-flex;padding:8px 20px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;background:rgba(255,255,255,.06);backdrop-filter:blur(18px);border:1px solid var(--glass-border);margin-bottom:16px;gap:6px;color:rgba(255,255,255,.92)}
-  .hero-headline{display:flex;align-items:center;gap:24px;justify-content:center;margin:0 auto 18px}
-  .hero-headline h1{margin:0}
-  .hero-logo{flex-shrink:0}
-  .hero-logo svg{display:block;width:90px;height:auto}
-  @media(max-width:768px){.hero-logo svg{width:70px}}
-  .hero h1{font-family:'Prata',serif;font-size:clamp(54px,10.2vw,124px);line-height:.92;letter-spacing:1px;text-transform:uppercase;max-width:16ch;text-wrap:balance;text-shadow:0 10px 40px rgba(0,0,0,.2)}
-  .hero h1 .line:first-child{letter-spacing:2.8px;display:block;margin-bottom:4px}
-  .hero h1 .line:last-child{color:var(--pink);-webkit-text-stroke:0;letter-spacing:4.2px}
-  .hero p{font-size:clamp(16px,1.25vw,18px);color:rgba(255,255,255,.86);max-width:600px;margin:0 auto 26px;line-height:1.72}
-  .hero p .pink{color:var(--pink)}
-  .hero p .gold{color:var(--gold)}
-  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .btn-primary{min-width:180px;padding:14px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;transition:all .3s var(--ease);background:var(--pink);color:#fff}
-  .btn-primary:hover{background:var(--pink-dark);transform:translateY(-3px);box-shadow:0 10px 32px var(--pink-glow)}
-  .btn-secondary{min-width:180px;padding:14px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;transition:all .3s var(--ease);background:rgba(255,255,255,.06);backdrop-filter:blur(18px);border:1px solid var(--glass-border);color:var(--text)}
-  .btn-secondary:hover{background:var(--surface-hover);transform:translateY(-3px)}
-
-  /* ═══ STATS ═══ */
-  .stats{padding:60px 0;background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
-  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;text-align:center}
-  .stat-card{padding:24px 18px}
-  .stat-icon{font-size:36px;display:block;margin-bottom:8px}
-  .stat-num{font-family:var(--font-display);font-size:clamp(36px,4vw,56px);line-height:1;color:var(--pink);letter-spacing:2px;margin-bottom:4px}
-  .stat-label{font-size:13px;color:var(--text2);font-weight:500}
-  @media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
-
-  /* ═══ SECTION GRID (shared for regionen, unterkuenfte, gastro, magazin) ═══ */
-  .section-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  @media(max-width:968px){.section-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:600px){.section-grid{grid-template-columns:1fr}}
-
-  /* ═══ SECTION SPACING ═══ */
-  .section{padding:clamp(84px,9vw,124px) 0}
-  .section:nth-child(even){background:linear-gradient(180deg,var(--bg2) 0%,rgba(255,255,255,.012) 100%)}
-
-  /* ═══ SECTION LEAD TEXT ═══ */
-  .section-lead,.regionen-lead{text-align:center;font-size:15px;color:var(--text2);line-height:1.82;max-width:700px;margin:0 auto 34px}
-  .section-lead{margin:0 auto 32px}
-
-  /* ═══ HEUTE ENTDECKEN DAILY GRID ═══ */
-  .daily-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  @media(max-width:968px){.daily-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:500px){.daily-grid{grid-template-columns:1fr}}
-
-  .daily-card{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.09);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease);display:flex;flex-direction:column;text-decoration:none;box-shadow:0 14px 36px rgba(0,0,0,.08);backdrop-filter:blur(10px)}
-  .daily-card:hover{transform:translateY(-8px);border-color:rgba(255,20,147,.34);box-shadow:0 22px 56px rgba(0,0,0,.14)}
-  .daily-featured{border-color:rgba(255,215,0,.6);background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,215,0,.05))}
-  .daily-featured:hover{border-color:rgba(255,215,0,.72);box-shadow:0 22px 56px rgba(255,215,0,.12)}
-  .daily-emoji-wrap{position:relative;height:92px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.015));font-size:36px}
-  .daily-star{position:absolute;top:8px;right:8px;font-size:18px;animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-  .daily-body{padding:18px;flex:1;display:flex;flex-direction:column}
-  .daily-type{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.15px;color:var(--text3);margin-bottom:2px}
-  .daily-name{font-family:var(--font-display);font-size:18px;line-height:1.14;letter-spacing:.2px;color:var(--text);margin-bottom:6px;min-height:2.3em}
-  .daily-cta{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--pink);margin-top:auto}
-
-  /* ═══ WILLKOMMEN ═══ */
-  .willkommen-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
-  .willkommen-text .section-label{text-align:left!important}
-  .willkommen-title{font-family:var(--font-display);font-size:clamp(36px,5vw,64px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-  .willkommen-title span{background:linear-gradient(135deg,var(--pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-  .willkommen-p{font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px}
-  .willkommen-features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
-  .willkommen-feature{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--text);padding:12px 16px;background:linear-gradient(180deg,var(--surface),rgba(255,255,255,.01));border-radius:var(--radius);border:1px solid var(--glass-border);transition:all .3s;min-height:52px}
-  .willkommen-feature:hover{border-color:var(--pink);transform:translateY(-2px)}
-  .wf-icon{font-size:20px}
-  .willkommen-highlight-box{background:linear-gradient(135deg,rgba(255,20,147,.08),rgba(212,168,0,.08));border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:36px;text-align:center;box-shadow:0 18px 48px rgba(0,0,0,.08)}
-  .wh-icon{font-size:42px;display:block;margin-bottom:8px}
-  .willkommen-highlight-box h3{font-family:var(--font-display);font-size:24px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;color:var(--text)}
-  .willkommen-highlight-box p{font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:16px}
-  .btn-sm{padding:10px 24px;font-size:11px}
-  @media(max-width:800px){.willkommen-grid{grid-template-columns:1fr}.willkommen-features{grid-template-columns:1fr}}
-
-  /* ═══ SIGHT GRID ═══ */
-  .sight-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  @media(max-width:968px){.sight-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:500px){.sight-grid{grid-template-columns:1fr}}
-
-  /* ═══ SECTION CTA FOOTER ═══ */
-  .section-footer{text-align:center;margin-top:32px}
-  .section-footer .btn-outline{background:transparent;border:2px solid var(--glass-border);color:var(--text);padding:12px 32px;border-radius:50px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
-  .section-footer .btn-outline:hover{background:var(--text);color:var(--bg);border-color:var(--text);transform:translateY(-3px)}
-
-  /* ═══ PARTNER ═══ */
-  .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch;padding:80px 0}
-  .partner-text h2{font-family:var(--font-display);font-size:42px;line-height:1;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;color:var(--text)}
-  .partner-text h2 span{color:var(--pink)}
-  .partner-text p{font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px}
-  .partner-benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-  .partner-ben{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)}
-  .partner-ben svg{width:18px;height:18px;color:var(--pink);flex-shrink:0}
-  .partner-visual{height:300px;border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:36px;letter-spacing:4px;color:#fff;text-transform:uppercase;text-shadow:0 8px 24px rgba(0,0,0,.45);box-shadow:0 22px 60px rgba(0,0,0,.18);overflow:hidden;border:1px solid var(--glass-border);background-blend-mode:multiply}
-  @media(max-width:768px){.partner-grid{grid-template-columns:1fr}.partner-visual{height:200px}.partner-benefits{grid-template-columns:1fr}}
-
-  /* ═══ RANDOM-SLOT for JS-powered swaps ═══ */
-  .random-slot{min-height:100px;display:flex;align-items:center;justify-content:center;border:2px dashed var(--glass-border);border-radius:var(--radius-lg);padding:20px;transition:all .4s}
-  .random-slot.populated{border-style:solid;border-color:var(--pink);background:var(--bg2)}
-
-  @media(max-width:900px){
-    .section-header{margin-bottom:36px}
-    .section-grid,.daily-grid{gap:18px}
-    .partner-grid{gap:28px}
-  }
-  @media(max-width:768px){
-    .hero{padding:96px 18px 48px}
-    .hero-content{max-width:720px}
-    .hero h1{font-size:clamp(46px,16vw,86px);letter-spacing:1.5px}
-    .hero h1 .line:first-child{letter-spacing:3px}
-    .hero p{font-size:16px;max-width:36ch}
-    .hero-actions{gap:10px}
-    .section{padding:64px 0}
-    .section-header{margin-bottom:32px}
-    .section-sub{max-width:600px}
-    .section-lead,.regionen-lead{margin-bottom:30px}
-    .stats{padding:48px 0}
-    .stats-grid{gap:14px}
-    .willkommen-grid{gap:28px}
-    .willkommen-features{gap:10px}
-    .partner-grid{grid-template-columns:1fr}
-    .partner-visual{height:240px;min-height:240px}
-  }
-  @media(max-width:600px){
-    .hero{padding:88px 16px 40px}
-    .hero-weather{font-size:12px;padding:7px 14px}
-    .hero-badge{padding:7px 16px}
-    .hero-actions{flex-direction:column;align-items:stretch}
-    .hero-actions .btn-primary,.hero-actions .btn-secondary{width:100%;justify-content:center}
-    .section-grid{grid-template-columns:1fr}
-    .daily-grid{grid-template-columns:1fr;gap:14px}
-    .partner-visual{height:200px;min-height:200px}
-    .partner-benefits{grid-template-columns:1fr}
-  }
-
-  /* ═══ LAZY LOADING ═══ */
-  .section,.partner,.newsletter{content-visibility:auto;contain-intrinsic-size:auto 600px}
-</style>

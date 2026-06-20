@@ -97,7 +97,26 @@ const articleLD = {
   ...(entry.autor ? { author: { '@type': 'Person', name: entry.autor } } : {}),
   ...(articleImage ? { image: articleImage.startsWith('http') ? articleImage : `${siteURL}${articleImage}` } : {}),
   ...(entry.kategorie ? { articleSection: entry.kategorie } : {}),
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tirol Tourismus',
+    url: siteURL,
+  },
 };
+// JSON-LD: FAQPage (if FAQ data exists in the entry)
+const faqSchema = entry.faq && Array.isArray(entry.faq) && entry.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: entry.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+} : null;
+const jsonld = [articleLD, faqSchema].filter(Boolean);
 const articleOgImage = articleImage ? (articleImage.startsWith('http') ? articleImage : `${siteURL}${articleImage}`) : undefined;
 const articlePubDate = entry.datum ? entry.datum + 'T00:00:00' : undefined;
 ---
@@ -105,7 +124,7 @@ const articlePubDate = entry.datum ? entry.datum + 'T00:00:00' : undefined;
 <DetailPage
   title={entry.titel}
   description={generateMetaDescription(entry, 'magazin')}
-  jsonld={articleLD}
+  jsonld={jsonld}
   ogImage={articleOgImage}
   type="article"
   publishedTime={articlePubDate}

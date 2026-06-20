@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import PaywallOverlay from '../../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix } from '../../../lib/languages.js';
 
@@ -177,6 +177,10 @@ const { locale, slug } = Astro.params;
 const entry = readEntry('gastro', slug, locale);
 if (!entry) return Astro.redirect(`${localePrefix(locale)}/gastro/`);
 
+// Qualitätslogik: dünne Seiten nicht indexieren
+const qualityScore = getContentQuality(entry);
+const shouldIdx = shouldIndex(entry, 'gastro');
+
 const l = LABELS[locale] || LABELS.de;
 const prefix = localePrefix(locale);
 
@@ -184,7 +188,6 @@ const emoji = entry.emoji || '🍽️';
 const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
 
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
 
 const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'gastro', locale, 8) : [];
@@ -259,6 +262,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   locale={locale}
   jsonld={businessLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={[
     {
       type: 'hero',
@@ -279,21 +283,21 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
         { label: l.tags, tags: entry.tags || [], type: 'tags' },
       ].filter(Boolean),
     },
-    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? {
+    !(tier === 'basic') && (entry.kurzbeschreibung || entry.beschreibung) ? {
       type: 'description',
       label: entry.name,
       title: l.ueberDiesesLokal,
       content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale),
     } : null,
-    !isBasic ? {
+    !(tier === 'basic') ? {
       type: 'details-grid',
       items: [
         { label: l.preis, value: entry.preis || undefined, type: 'price' },
         entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,
       ].filter(Boolean),
     } : null,
-    !isBasic ? mapSection : null,
-    !isBasic && relatedByTag.length > 0 ? {
+    !(tier === 'basic') ? mapSection : null,
+    !(tier === 'basic') && relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: l.weitereLokale,
       entries: relatedByTag,
@@ -303,7 +307,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
       emojiField: '_emoji',
       defaultEmoji: '🍽️',
     } : null,
-    !isBasic ? {
+    !(tier === 'basic') ? {
       type: 'cta',
       label: l.lustBekommen,
       title: l.jetztReservieren,
@@ -322,7 +326,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 />
 
 <!-- Basic: Premium-Inhalte hinter Paywall -->
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name} slug={slug} />

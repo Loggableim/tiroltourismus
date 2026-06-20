@@ -50,11 +50,51 @@ const mapSection = mapMarkers.length > 0 ? { type: 'map', label: l.standort, tit
 
 const siteURL = 'https://tiroltourismus.com';
 const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+
+// JSON-LD: Event
+const eventDate = entry.datum || entry.datum_von;
+const eventLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: entry.name || entry.titel,
+  description: (entry.kurzbeschreibung || entry.beschreibung || '').substring(0, 500),
+  url: `${siteURL}${prefix}/events/${slug}/`,
+  ...(eventDate ? { startDate: eventDate } : {}),
+  ...(entry.uhrzeit ? { eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode' } : {}),
+  ...(entry.ort ? {
+    location: {
+      '@type': 'Place',
+      name: entry.ort,
+      address: { '@type': 'PostalAddress', addressLocality: entry.ort, addressCountry: 'AT' },
+      ...(entry.koordinaten ? {
+        geo: { '@type': 'GeoCoordinates', latitude: parseFloat(entry.koordinaten.lat), longitude: parseFloat(entry.koordinaten.lng) }
+      } : {}),
+    }
+  } : {}),
+  ...(entry.preis ? {
+    offers: {
+      '@type': 'Offer',
+      name: 'Eintritt',
+      price: entry.preis.toString().replace(/[€\s]/g, '').trim(),
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+      url: entry.link && entry.link !== '#' ? entry.link : `${siteURL}${prefix}/events/${slug}/`,
+    }
+  } : {}),
+  ...(entry.kategorie ? { eventCategory: entry.kategorie.replace(/^[^\w\s]+\s*/, '') } : {}),
+  eventStatus: 'https://schema.org/EventScheduled',
+  organizer: {
+    '@type': 'Organization',
+    name: 'Tirol Tourismus',
+    url: siteURL,
+  },
+};
 ---
 
 <DetailPage
   title={entry.name || entry.titel}
   description={generateMetaDescription(entry, 'events', locale)}
+  jsonld={eventLD}
   breadcrumbs={[{ label: l.event, href: `${prefix}/events/` }, { label: entry.name || entry.titel }]}
   locale={locale}
   ogImage={ogImage}

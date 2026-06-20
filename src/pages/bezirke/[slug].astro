@@ -57,10 +57,28 @@ const unterkuenfteImBezirk = alleUnterkuenfte.filter((u) => relevantRegions.incl
 
 const alleSehenswuerdigkeiten = readCollection('sehenswuerdigkeiten').filter((s) => isPublished(s.entry));
 const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => relevantRegions.includes(s.entry.region)).slice(0, 6);
+
+// JSON-LD: AdministrativeArea
+const siteURL = 'https://tiroltourismus.com';
+const bezirkLD = {
+  '@context': 'https://schema.org',
+  '@type': 'AdministrativeArea',
+  name: bezirk.name,
+  description: (bezirk.beschreibung || '').substring(0, 500),
+  url: `${siteURL}/bezirke/${slug}/`,
+  ...(bezirk.verwaltungssitz ? {
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: 'Tirol',
+      address: { '@type': 'PostalAddress', addressRegion: 'Tirol', addressCountry: 'AT' },
+    },
+  } : {}),
+};
 ---
 <BaseLayout
   title={bezirk.name}
   description={generateMetaDescription({ name: bezirk.name, beschreibung: bezirk.beschreibung }, 'bezirke')}
+  jsonld={bezirkLD}
 >
   <main>
     <div class="container">
@@ -137,7 +155,7 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
             <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
               🏛️ Sehenswürdigkeiten
             </h2>
-            <a href="/sehenswuerdigkeiten/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+            <a href="/sehenswuerdigkeiten/" style="font-size:13px;font-weight:600;color:var(--tirol-pink);text-decoration:none">Alle anzeigen →</a>
           </div>
           <div class="bezirk-orte-grid">
             {sehenswuerdigkeitenImBezirk.map((s) => (
@@ -161,7 +179,7 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
             <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
               🎯 Erlebnisse
             </h2>
-            <a href="/erlebnisse/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+            <a href="/erlebnisse/" style="font-size:13px;font-weight:600;color:var(--tirol-pink);text-decoration:none">Alle anzeigen →</a>
           </div>
           <div class="bezirk-orte-grid">
             {erlebnisseImBezirk.map((e) => (
@@ -185,7 +203,7 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
             <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
               🍽️ Gastronomie
             </h2>
-            <a href="/gastro/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+            <a href="/gastro/" style="font-size:13px;font-weight:600;color:var(--tirol-pink);text-decoration:none">Alle anzeigen →</a>
           </div>
           <div class="bezirk-orte-grid">
             {gastroImBezirk.map((g) => (
@@ -209,7 +227,7 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
             <h2 class="section-title" style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:0">
               🏨 Unterkünfte
             </h2>
-            <a href="/unterkuenfte/" style="font-size:13px;font-weight:600;color:var(--pink);text-decoration:none">Alle anzeigen →</a>
+            <a href="/unterkuenfte/" style="font-size:13px;font-weight:600;color:var(--tirol-pink);text-decoration:none">Alle anzeigen →</a>
           </div>
           <div class="bezirk-orte-grid">
             {unterkuenfteImBezirk.map((u) => (
@@ -282,7 +300,7 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
     margin-top: 18px;
     padding: 10px 16px;
     border-radius: 999px;
-    background: var(--pink);
+    background: var(--tirol-pink);
     color: #fff;
     font-weight: 700;
     text-decoration: none;
@@ -307,8 +325,8 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
     transition: all 0.2s;
   }
   .bezirk-region-tag:hover {
-    border-color: var(--pink);
-    color: var(--pink);
+    border-color: var(--tirol-pink);
+    color: var(--tirol-pink);
   }
   .bezirk-orte-grid {
     display: grid;
@@ -328,7 +346,7 @@ const sehenswuerdigkeitenImBezirk = alleSehenswuerdigkeiten.filter((s) => releva
     transition: all 0.25s var(--ease);
   }
   .bezirk-mini-card:hover {
-    border-color: var(--pink);
+    border-color: var(--tirol-pink);
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(255,20,147,0.08);
   }

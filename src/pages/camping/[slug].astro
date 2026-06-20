@@ -1,8 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import PremiumBadge from '../../components/PremiumBadge.astro';
 import PaywallOverlay from '../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -14,10 +13,10 @@ const { slug } = Astro.params;
 const entry = readEntry('camping', slug);
 if (!entry) return Astro.redirect('/camping/');
 
+// Qualitätslogik: dünne Seiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'camping');
+
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
-const isSilver = tier === 'silver';
-const isGold = tier === 'gold';
 
 // Ausstattung Labels: translate machine keys to human-readable
 const ausstattungLabels = {
@@ -38,8 +37,6 @@ const formattedAusstattung = (entry.ausstattung || []).map(a => ({
   icon: a === 'stromanschluss' ? '⚡' : a === 'wasseranschluss' ? '💧' : a === 'sanitäranlagen' ? '🚿' : a === 'entsorgung' ? '♻️' : '✅',
 }));
 
-const badge = null; // PremiumBadge handles display
-const tierBadge = tier;
 
 const emoji = '🏕️';
 
@@ -94,7 +91,7 @@ if (formattedAusstattung.length > 0) {
 }
 
 // Full details (Silver/Gold get complete data)
-if (!isBasic) {
+if (!(tier === 'basic')) {
   // Stellplatz-Typ (future field)
   const stellplatzItems = [];
   if (entry.stellplatz_typ) {
@@ -163,7 +160,7 @@ const mapSection = mapMarkers.length > 0 ? {
 
 // Assemble sections
 let allSections;
-if (isBasic) {
+if ((tier === 'basic')) {
   allSections = [
     ...publicSections,
     {
@@ -253,11 +250,12 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   breadcrumbs={[{ label: 'Campingplätze', href: '/camping/' }, { label: entry.name }]}
   jsonld={campgroundLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={allSections}
 />
 
 <!-- Basic: Premium content behind paywall -->
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name} slug={slug} />
@@ -283,7 +281,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 )}
 
 <!-- GOLD: Highlighting -->
-{isGold && (
+{(tier === 'gold') && (
   <style is:global>
     .sec-hero { background: var(--gold-soft) !important; border-bottom-color: rgba(212,168,0,.15) !important; }
     .sec-hero-badge.tag-gold { background: linear-gradient(135deg, var(--yellow), #F59E0B); color: #1a1a1a; font-weight: 800; padding: 6px 18px; }
@@ -291,7 +289,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 )}
 
 <!-- BASIC: Gedämpfter Stil -->
-{isBasic && (
+{(tier === 'basic') && (
   <style is:global>
     .sec-hero-badge.tag-basic { background: var(--surface); border: 1px solid var(--glass-border); color: var(--text3); }
     .sec-hero { opacity: 0.85; }

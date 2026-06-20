@@ -1,9 +1,10 @@
 ---
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
 // Locale-aware SEO: canonical + hreflang alternates for all ready languages.
+import { ViewTransitions } from 'astro:transitions';
 import { readSingleton } from '../lib/content.js';
 import { LANGUAGES, switchLangPath, DEFAULT_LOCALE } from '../lib/languages.js';
-import NewsletterForm from '../components/NewsletterForm.tsx';
+import TirolLogo from '../components/TirolLogo.astro';
 
 export interface Props {
   title: string;
@@ -69,10 +70,10 @@ const twitterCard = 'summary_large_image';
 
 // Nav labels — Multi-Sprachen-Map
 const NAV_LABELS = {
-  de: { magazin:'Magazin', preise:'Preise', fuerBetriebe:'Für Betriebe', bezirke:'Bezirke', merkliste:'♥ Merkliste', anmelden:'Anmelden', konto:'Mein Konto', kontakt:'Kontakt', regionen:'Regionen', camping:'Campingplätze', unterkuenfte:'Unterkünfte', orte:'Orte', sehenswertes:'Sehenswertes', gastro:'Gastro', erlebnisse:'Erlebnisse', events:'Events', suche:'Suche', footer_p:'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.', footer_regionen:'Regionen', footer_alle_regionen:'Alle Regionen', footer_erlebnisse:'Erlebnisse', footer_alle_erlebnisse:'Alle Erlebnisse', footer_service:'Service', footer_ueber_uns:'Über uns', footer_fuer_betriebe:'Für Betriebe', footer_kontakt:'Kontakt', footer_impressum:'Impressum', footer_datenschutz:'Datenschutz', footer_agb:'AGB', footer_transparenz:'Transparenz', footer_oben:'↑ Zum Seitenanfang' },
-  en: { magazin:'Magazine', preise:'Pricing', fuerBetriebe:'For Businesses', bezirke:'Districts', merkliste:'♥ Wishlist', anmelden:'Login', konto:'My Account', kontakt:'Contact', regionen:'Regions', camping:'Camping', unterkuenfte:'Accommodations', orte:'Places', sehenswertes:'Sights', gastro:'Food & Drink', erlebnisse:'Experiences', events:'Events', suche:'Search', footer_p:'The smart Tyrol guide for trip planning, accommodations and experiences.', footer_regionen:'Regions', footer_alle_regionen:'All Regions', footer_erlebnisse:'Experiences', footer_alle_erlebnisse:'All Experiences', footer_service:'Service', footer_ueber_uns:'About Us', footer_fuer_betriebe:'For Businesses', footer_kontakt:'Contact', footer_impressum:'Imprint', footer_datenschutz:'Privacy', footer_agb:'Terms', footer_transparenz:'Transparency', footer_oben:'↑ Back to top' },
-  fr: { magazin:'Magazine', preise:'Tarifs', fuerBetriebe:'Pour les Pros', bezirke:'Districts', merkliste:'♥ Favoris', anmelden:'Connexion', konto:'Mon Compte', kontakt:'Contact', regionen:'Régions', camping:'Camping', unterkuenfte:'Hébergements', orte:'Villages', sehenswertes:'Sites', gastro:'Gastronomie', erlebnisse:'Expériences', events:'Événements', suche:'Recherche', footer_p:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', footer_regionen:'Régions', footer_alle_regionen:'Toutes les Régions', footer_erlebnisse:'Expériences', footer_alle_erlebnisse:'Toutes les Expériences', footer_service:'Service', footer_ueber_uns:'À Propos', footer_fuer_betriebe:'Pour les Pros', footer_kontakt:'Contact', footer_impressum:'Mentions Légales', footer_datenschutz:'Confidentialité', footer_agb:'CGV', footer_transparenz:'Transparence', footer_oben:'↑ Haut de page' },
-  it: { magazin:'Magazine', preise:'Prezzi', fuerBetriebe:'Per Aziende', bezirke:'Distretti', merkliste:'♥ Preferiti', anmelden:'Accedi', konto:'Mio Account', kontakt:'Contatti', regionen:'Regioni', camping:'Campeggio', unterkuenfte:'Alloggi', orte:'Paesi', sehenswertes:'Attrazioni', gastro:'Gastronomia', erlebnisse:'Esperienze', events:'Eventi', suche:'Cerca', footer_p:'La guida intelligente del Tirolo per pianificare viaggi, alloggi ed esperienze.', footer_regionen:'Regioni', footer_alle_regionen:'Tutte le Regioni', footer_erlebnisse:'Esperienze', footer_alle_erlebnisse:'Tutte le Esperienze', footer_service:'Servizio', footer_ueber_uns:'Chi Siamo', footer_fuer_betriebe:'Per Aziende', footer_kontakt:'Contatti', footer_impressum:'Impressum', footer_datenschutz:'Privacy', footer_agb:'Termini', footer_transparenz:'Trasparenza', footer_oben:'↑ Torna su' },
+  de: { entdecken:'Entdecken', uebernachten:'Übernachten', aktivitaeten:'Aktivitäten', magazin:'Magazin', preise:'Preise', fuerBetriebe:'Für Betriebe', bezirke:'Bezirke', merkliste:'♥ Merkliste', anmelden:'Anmelden', konto:'Mein Konto', kontakt:'Kontakt', regionen:'Regionen', camping:'Campingplätze', unterkuenfte:'Unterkünfte', orte:'Orte', sehenswertes:'Sehenswertes', gastro:'Gastro', erlebnisse:'Erlebnisse', events:'Events', suche:'Suche', footer_p:'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.', footer_regionen:'Regionen', footer_alle_regionen:'Alle Regionen', footer_erlebnisse:'Erlebnisse', footer_alle_erlebnisse:'Alle Erlebnisse', footer_service:'Service', footer_ueber_uns:'Über uns', footer_fuer_betriebe:'Für Betriebe', footer_kontakt:'Kontakt', footer_impressum:'Impressum', footer_datenschutz:'Datenschutz', footer_agb:'AGB', footer_transparenz:'Transparenz', footer_oben:'↑ Zum Seitenanfang' },
+  en: { entdecken:'Discover', uebernachten:'Stay', aktivitaeten:'Activities', magazin:'Magazine', preise:'Pricing', fuerBetriebe:'For Businesses', bezirke:'Districts', merkliste:'♥ Wishlist', anmelden:'Login', konto:'My Account', kontakt:'Contact', regionen:'Regions', camping:'Camping', unterkuenfte:'Accommodations', orte:'Places', sehenswertes:'Sights', gastro:'Food & Drink', erlebnisse:'Experiences', events:'Events', suche:'Search', footer_p:'The smart Tyrol guide for trip planning, accommodations and experiences.', footer_regionen:'Regions', footer_alle_regionen:'All Regions', footer_erlebnisse:'Experiences', footer_alle_erlebnisse:'All Experiences', footer_service:'Service', footer_ueber_uns:'About Us', footer_fuer_betriebe:'For Businesses', footer_kontakt:'Contact', footer_impressum:'Imprint', footer_datenschutz:'Privacy', footer_agb:'Terms', footer_transparenz:'Transparency', footer_oben:'↑ Back to top' },
+  fr: { entdecken:'Découvrir', uebernachten:'Dormir', aktivitaeten:'Activités', magazin:'Magazine', preise:'Tarifs', fuerBetriebe:'Pour les Pros', bezirke:'Districts', merkliste:'♥ Favoris', anmelden:'Connexion', konto:'Mon Compte', kontakt:'Contact', regionen:'Régions', camping:'Camping', unterkuenfte:'Hébergements', orte:'Villages', sehenswertes:'Sites', gastro:'Gastronomie', erlebnisse:'Expériences', events:'Événements', suche:'Recherche', footer_p:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', footer_regionen:'Régions', footer_alle_regionen:'Toutes les Régions', footer_erlebnisse:'Expériences', footer_alle_erlebnisse:'Toutes les Expériences', footer_service:'Service', footer_ueber_uns:'À Propos', footer_fuer_betriebe:'Pour les Pros', footer_kontakt:'Contact', footer_impressum:'Mentions Légales', footer_datenschutz:'Confidentialité', footer_agb:'CGV', footer_transparenz:'Transparence', footer_oben:'↑ Haut de page' },
+  it: { entdecken:'Scopri', uebernachten:'Dormire', aktivitaeten:'Attività', magazin:'Magazine', preise:'Prezzi', fuerBetriebe:'Per Aziende', bezirke:'Distretti', merkliste:'♥ Preferiti', anmelden:'Accedi', konto:'Mio Account', kontakt:'Contatti', regionen:'Regioni', camping:'Campeggio', unterkuenfte:'Alloggi', orte:'Paesi', sehenswertes:'Attrazioni', gastro:'Gastronomia', erlebnisse:'Esperienze', events:'Eventi', suche:'Cerca', footer_p:'La guida intelligente del Tirolo per pianificare viaggi, alloggi ed esperienze.', footer_regionen:'Regioni', footer_alle_regionen:'Tutte le Regioni', footer_erlebnisse:'Esperienze', footer_alle_erlebnisse:'Tutte le Esperienze', footer_service:'Servizio', footer_ueber_uns:'Chi Siamo', footer_fuer_betriebe:'Per Aziende', footer_kontakt:'Contatti', footer_impressum:'Impressum', footer_datenschutz:'Privacy', footer_agb:'Termini', footer_transparenz:'Trasparenza', footer_oben:'↑ Torna su' },
   es: { magazin:'Revista', preise:'Precios', fuerBetriebe:'Para Empresas', bezirke:'Distritos', merkliste:'♥ Favoritos', anmelden:'Iniciar Sesión', konto:'Mi Cuenta', kontakt:'Contacto', regionen:'Regiones', camping:'Camping', unterkuenfte:'Alojamientos', orte:'Pueblos', sehenswertes:'Atracciones', gastro:'Gastronomía', erlebnisse:'Experiencias', events:'Eventos', suche:'Buscar', footer_p:'La guía inteligente de Tirol para planificar viajes, alojamientos y experiencias.', footer_regionen:'Regiones', footer_alle_regionen:'Todas las Regiones', footer_erlebnisse:'Experiencias', footer_alle_erlebnisse:'Todas las Experiencias', footer_service:'Servicio', footer_ueber_uns:'Sobre Nosotros', footer_fuer_betriebe:'Para Empresas', footer_kontakt:'Contacto', footer_impressum:'Aviso Legal', footer_datenschutz:'Privacidad', footer_agb:'Términos', footer_transparenz:'Transparencia', footer_oben:'↑ Volver arriba' },
   zh: { magazin:'杂志', preise:'价格', fuerBetriebe:'企业服务', bezirke:'行政区', merkliste:'♥ 收藏夹', anmelden:'登录', konto:'我的账户', kontakt:'联系我们', regionen:'地区', camping:'露营', unterkuenfte:'住宿', orte:'村镇', sehenswertes:'景点', gastro:'美食', erlebnisse:'体验', events:'活动', suche:'搜索', footer_p:'智能蒂罗尔指南，用于旅行计划、住宿和体验。', footer_regionen:'地区', footer_alle_regionen:'所有地区', footer_erlebnisse:'体验', footer_alle_erlebnisse:'所有体验', footer_service:'服务', footer_ueber_uns:'关于我们', footer_fuer_betriebe:'企业服务', footer_kontakt:'联系我们', footer_impressum:'法律声明', footer_datenschutz:'隐私政策', footer_agb:'使用条款', footer_transparenz:'透明度', footer_oben:'↑ 返回顶部' },
   nl: { magazin:'Magazine', preise:'Prijzen', fuerBetriebe:'Voor bedrijven', bezirke:'Districten', merkliste:'♥ Verlanglijst', anmelden:'Inloggen', konto:'Mijn account', kontakt:'Contact', regionen:'Regio’s', camping:'Campings', unterkuenfte:'Accommodaties', orte:'Plaatsen', sehenswertes:'Bezienswaardigheden', gastro:'Eten & drinken', erlebnisse:'Belevenissen', events:'Evenementen', suche:'Zoeken', footer_p:'De slimme Tirol-gids voor reisplanning, accommodaties en ervaringen.', footer_regionen:'Regio’s', footer_alle_regionen:'Alle regio’s', footer_erlebnisse:'Belevenissen', footer_alle_erlebnisse:'Alle belevenissen', footer_service:'Service', footer_ueber_uns:'Over ons', footer_fuer_betriebe:'Voor bedrijven', footer_kontakt:'Contact', footer_impressum:'Impressum', footer_datenschutz:'Privacy', footer_agb:'Voorwaarden', footer_transparenz:'Transparantie', footer_oben:'↑ Naar boven' },
@@ -123,12 +124,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title} – tiroltourismus.com</title>
+  <title>{title}</title>
   <meta name="description" content={siteDesc}>
   <meta name="theme-color" content="#FF1493">
-  <meta name="google-adsense-account" content="ca-pub-9094916118868532">
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+  <ViewTransitions />
   {noindex && <meta name="robots" content="noindex, nofollow" />}
   {alternateLinks.map((link) => (
     <link rel="alternate" href={link.href} hreflang={link.hreflang} />
@@ -145,7 +144,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <link rel="canonical" href={pageURL} />
 
   <!-- OpenGraph -->
-  <meta property="og:title" content={`${title} – ${siteName}`} />
+  <meta property="og:title" content={title} />
   <meta property="og:description" content={siteDesc} />
   <meta property="og:type" content={type} />
   <meta property="og:url" content={pageURL} />
@@ -161,7 +160,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content={twitterCard} />
-  <meta name="twitter:title" content={`${title} – ${siteName}`} />
+  <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={siteDesc} />
   {ogImageAbs && <meta name="twitter:image" content={ogImageAbs} />}
   {preloadImageAbs && (
@@ -173,21 +172,31 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <style is:inline>
     /* ─── Critical: Design Tokens, Reset, Nav, Hero ─── */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    /* ── Design Tokens ─────────────────────────────────────
+       Naming convention: --tirol-* for brand colors,
+       --pop-* for accent/pop colors, --ikea-* for blue.
+       No aliases — use the primary name in new code.
+    ─────────────────────────────────────────────────────── */
     :root{
       --bg:#F5F3F0;--bg2:#EDE8E2;
       --surface:rgba(0,0,0,.03);--surface-hover:rgba(0,0,0,.06);
       --text:#1A1A1A;--text2:rgba(0,0,0,.60);--text3:rgba(0,0,0,.38);
-      --tirol-red:#C8102E;--ikea-blue:#0051BA;
+      /* Brand colors */
+      --tirol-red:#C8102E;
       --tirol-pink:#FF1493;--tirol-pink-dark:#C0006E;--tirol-pink-glow:rgba(255,20,147,.12);
-      --pop-yellow:#FFD700;--pop-green:#00C853;--pop-orange:#FF6B35;--pop-purple:#8B5CF6;
+      --ikea-blue:#0051BA;
+      --pop-yellow:#FFD700;
+      --pop-green:#00C853;--pop-orange:#FF6B35;--pop-purple:#8B5CF6;
+      --gold:#D4A800;--gold-light:#FFD700;--gold-glow:rgba(212,168,0,.18);--gold-soft:rgba(212,168,0,.08);
+      /* Short aliases for readability (use primary name in new code) */
+      --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);--pink-glow:var(--tirol-pink-glow);
+      --blue:var(--ikea-blue);--yellow:var(--pop-yellow);
+      --orange:var(--pop-orange);--purple:var(--pop-purple);--green:var(--pop-green);
       --glass:rgba(255,255,255,.7);--glass-border:rgba(0,0,0,.06);--glass-shadow:0 12px 48px rgba(0,0,0,.06);
       --font-display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
       --font-body:'Montserrat',-apple-system,sans-serif;
       --ease:cubic-bezier(.16,1,.3,1);
       --radius:12px;--radius-sm:8px;--radius-lg:20px;
-      --pink:var(--tirol-pink);--pink-dark:var(--tirol-pink-dark);--pink-glow:var(--tirol-pink-glow);
-      --blue:var(--ikea-blue);--yellow:var(--pop-yellow);
-      --gold:#D4A800;--gold-light:#FFD700;--gold-glow:rgba(212,168,0,.18);--gold-soft:rgba(212,168,0,.08);
     }
     [data-theme="alpenpeak"]{
       --bg:#0A0A12;--bg2:#10101E;
@@ -198,7 +207,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     }
     html{scroll-behavior:smooth}
     body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s,color .6s}
-    a{color:inherit;text-decoration:none}::selection{background:var(--pink);color:var(--bg)}img{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}::selection{background:var(--tirol-pink);color:var(--bg)}img{max-width:100%;height:auto;display:block}
 
     .topbar{background:rgba(0,0,0,.3);backdrop-filter:blur(12px);padding:8px 0;font-size:12px;color:rgba(255,255,255,.7);position:fixed;top:0;left:0;right:0;z-index:1002;transition:transform .4s var(--ease)}
     [data-theme="alpenpeak"] .topbar{background:rgba(10,10,18,.6);backdrop-filter:blur(20px);border-bottom:1px solid var(--glass-border)}
@@ -215,17 +224,17 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .topbar-lang-selector.open .lang-dropdown{display:flex}
     .lang-dropdown a{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:6px;font-size:12px;color:rgba(255,255,255,.6);text-decoration:none;transition:all .15s}
     .lang-dropdown a:hover{background:rgba(255,255,255,.06);color:#fff}
-    .lang-dropdown a.active{color:var(--pink);font-weight:600;background:rgba(255,20,147,.1)}
+    .lang-dropdown a.active{color:var(--tirol-pink);font-weight:600;background:rgba(255,20,147,.1)}
     .lang-dropdown a.disabled{opacity:.4;pointer-events:none}
     .lang-badge{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:1px 5px;border-radius:4px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)}
     .fav-link{display:inline-flex;align-items:center;gap:4px;position:relative}
-    .fav-badge{position:absolute;top:-5px;right:-8px;min-width:18px;height:18px;border-radius:50%;background:var(--pink);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
+    .fav-badge{position:absolute;top:-5px;right:-8px;min-width:18px;height:18px;border-radius:50%;background:var(--tirol-pink);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
     .main-nav{height:64px;position:fixed;top:46px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
     [data-theme="alpenpeak"] .main-nav{background:rgba(10,10,18,.5);backdrop-filter:blur(24px);border:1px solid var(--glass-border);box-shadow:none}
     .main-nav .container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:none;padding:0}
     .nav-logo{display:flex;align-items:center;font-family:var(--font-display);font-size:26px;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
     .nav-links{display:flex;gap:0;align-items:center}
-    .nav-login,.nav-dash{display:flex;align-items:center;gap:3px;padding:5px 10px;font-size:11px;font-weight:600;border-radius:100px;background:var(--pink);color:#fff!important;transition:all .3s;white-space:nowrap;letter-spacing:.2px;text-decoration:none}
+    .nav-login,.nav-dash{display:flex;align-items:center;gap:3px;padding:5px 10px;font-size:11px;font-weight:600;border-radius:100px;background:var(--tirol-pink);color:#fff!important;transition:all .3s;white-space:nowrap;letter-spacing:.2px;text-decoration:none}
     .nav-login:hover,.nav-dash:hover{opacity:.85;transform:translateY(-1px)}
     .nav-links a{padding:6px 6px;font-size:11px;font-weight:600;letter-spacing:.3px;color:#111;transition:all .3s;border-radius:100px;white-space:nowrap}
     .mega-group{position:relative}
@@ -238,7 +247,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     [data-theme="alpenpeak"] .mega-drop{background:rgba(10,10,18,.95);border:1px solid var(--glass-border);box-shadow:0 16px 48px rgba(0,0,0,.5)}
     .mega-drop a{padding:10px 14px!important;font-size:13px!important;border-radius:10px;color:#111!important}
     [data-theme="alpenpeak"] .mega-drop a{color:var(--text)!important}
-    .mega-drop a:hover{background:rgba(255,20,147,.08)!important;color:var(--pink)!important}
+    .mega-drop a:hover{background:rgba(255,20,147,.08)!important;color:var(--tirol-pink)!important}
     .mega-group.open .mega-drop{display:flex}
     .nav-r{display:flex;align-items:center;gap:6px}
     .nav-search{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--text2);cursor:pointer}
@@ -258,8 +267,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .page-header{position:relative;padding:60px 0 40px;text-align:center;background:var(--bg2);border-bottom:1px solid var(--glass-border);overflow:hidden}
     .page-header h1{font-family:var(--font-display);font-size:clamp(42px,6vw,80px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
     .section-header{text-align:center;margin-bottom:48px;position:relative}
-    .section-header::after{content:'';display:block;width:80px;height:3px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,var(--pink),var(--gold))}
-    .daily .section-header::after{background:linear-gradient(90deg,var(--pink),var(--gold),var(--pink))}
+    .section-header::after{content:'';display:block;width:80px;height:3px;margin:14px auto 0;border-radius:2px;background:linear-gradient(90deg,var(--tirol-pink),var(--gold))}
+    .daily .section-header::after{background:linear-gradient(90deg,var(--tirol-pink),var(--gold),var(--tirol-pink))}
     .section-title{font-family:var(--font-display);font-size:clamp(48px,7vw,96px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
     .section-label{font-family:var(--font-display);font-size:20px;letter-spacing:2px;margin-bottom:4px}
     .section-desc{font-size:15px;color:var(--text2);max-width:560px;margin:0 auto;line-height:1.7}
@@ -268,50 +277,83 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     /* ═══ FLOATING LANGUAGE GLOBE ═══ */
     .floating-lang{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:999}
     .floating-lang-btn{width:46px;height:46px;border-radius:50%;background:rgba(10,10,18,.5);backdrop-filter:blur(20px);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;transition:all .3s var(--ease);color:var(--text);box-shadow:0 6px 24px rgba(0,0,0,.25);border:none;font-family:inherit}
-    .floating-lang-btn:hover{transform:scale(1.1);border-color:var(--pink)}
+    .floating-lang-btn:hover{transform:scale(1.1);border-color:var(--tirol-pink)}
     .floating-lang-panel{position:absolute;right:56px;top:50%;transform:translateY(-50%);background:rgba(10,10,18,.95);backdrop-filter:blur(24px);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:6px;display:none;flex-direction:column;gap:2px;min-width:180px;box-shadow:0 16px 48px rgba(0,0,0,.5)}
     .floating-lang.open .floating-lang-panel{display:flex}
     .floating-lang-panel a{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:8px;font-size:12px;color:var(--text2);text-decoration:none;transition:all .15s}
     .floating-lang-panel a:hover{background:var(--glass);color:var(--text)}
-    .floating-lang-panel a.active{color:var(--pink);font-weight:600;background:rgba(255,20,147,.08)}
+    .floating-lang-panel a.active{color:var(--tirol-pink);font-weight:600;background:rgba(255,20,147,.08)}
     .floating-lang-panel a.disabled{opacity:.4;pointer-events:none}
     .fl-flag{font-size:18px;width:22px;text-align:center}
     .fl-name{flex:1}
-    .fl-check{color:var(--pink);font-size:12px}
+    .fl-check{color:var(--tirol-pink);font-size:12px}
     @media(max-width:768px){.floating-lang{display:none}}
     @media(min-width:769px){main>section:not(:first-child),.footer{content-visibility:auto;contain-intrinsic-size:1px 700px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
     /* ═══ FOOTER LANGUAGE FLAGS ═══ */
     .footer-lang{display:flex;align-items:center;gap:6px;margin-top:16px;flex-wrap:wrap}
     .footer-lang a{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:100px;font-size:11px;font-weight:500;color:var(--text3);text-decoration:none;transition:all .2s;background:var(--surface);border:1px solid var(--glass-border)}
-    .footer-lang a:hover{color:var(--text);border-color:var(--pink)}
-    .footer-lang a.active{color:var(--pink);background:rgba(255,20,147,.08);border-color:rgba(255,20,147,.25)}
+    .footer-lang a:hover{color:var(--text);border-color:var(--tirol-pink)}
+    .footer-lang a.active{color:var(--tirol-pink);background:rgba(255,20,147,.08);border-color:rgba(255,20,147,.25)}
     .footer-lang a.disabled{opacity:.35;pointer-events:none}
+
+    /* ═══ Above-the-Fold: Container, Hero, Stats, Buttons ─── */
+    .container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
+    @media(max-width:600px){.container{padding:0 16px}}
+
+    /* Hero */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0A0A12;padding-top:100px}
+    .hero-bg{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.45;filter:saturate(1.4) contrast(1.1) brightness(0.9);animation:none}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0A0A12 0%,transparent 40%),linear-gradient(180deg,rgba(255,20,147,0.3) 0%,transparent 40%),linear-gradient(90deg,rgba(255,20,147,0.15) 0%,transparent 50%,rgba(212,168,0,0.1) 100%);pointer-events:none}
+    .hero-glow{position:absolute;bottom:-30%;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(255,20,147,0.3) 0%,rgba(212,168,0,0.1) 30%,transparent 60%);filter:blur(80px);z-index:1;pointer-events:none;animation:glowPulse 6s ease-in-out infinite alternate}
+    .hero-content{position:relative;z-index:3;text-align:center;padding:40px 24px 80px;max-width:1100px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 24px;border-radius:100px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:20px}
+    .hero-headline{font-family:var(--font-display);font-size:clamp(48px,10vw,120px);line-height:.88;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;color:#fff}
+    .hero-headline .line{display:block}
+    .hero-headline h1{font-size:inherit;line-height:inherit;margin:0}
+    .hero p{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.7);max-width:600px;margin:0 auto 28px;line-height:1.7}
+    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-primary,.btn-secondary{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:100px;font-weight:600;font-size:14px;letter-spacing:.5px;cursor:pointer;transition:all .4s var(--ease);text-decoration:none;font-family:inherit}
+    .btn-primary{background:linear-gradient(135deg,var(--tirol-pink),var(--tirol-pink-dark));color:#fff;box-shadow:0 8px 24px var(--tirol-pink-glow, rgba(255,20,147,.35));border:none}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px var(--tirol-pink-glow, rgba(255,20,147,.5))}
+    .btn-secondary{background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.15);color:#fff}
+    .btn-secondary:hover{background:rgba(255,255,255,.16);transform:translateY(-2px)}
+    .btn-outline{display:inline-flex;align-items:center;gap:6px;padding:10px 24px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--text2);border:1px solid var(--glass-border);cursor:pointer;text-decoration:none;transition:all .3s var(--ease);font-family:inherit;background:transparent}
+    .btn-outline:hover{color:var(--text);border-color:var(--tirol-pink);background:rgba(255,20,147,.06)}
+
+    /* Stats */
+    .stats{padding:60px 0;background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border)}
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+    .stat-card{padding:24px 16px;text-align:center;background:var(--surface);border-radius:var(--radius);border:1px solid var(--glass-border);transition:all .3s var(--ease)}
+    .stat-icon{font-size:36px;display:block;margin-bottom:8px}
+    .stat-num{font-family:var(--font-display);font-size:48px;line-height:1;letter-spacing:1px;margin-bottom:4px;background:linear-gradient(135deg,var(--tirol-pink),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .stat-label{font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--text2)}
+    @media(max-width:600px){.stats{padding:40px 0}.stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}.stat-num{font-size:36px}}
+
+    /* Footer */
+    .footer{padding:48px 0 64px;background:var(--bg2);border-top:1px solid var(--glass-border)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+    .footer-col{display:flex;flex-direction:column;gap:10px}
+    .footer-logo{font-family:var(--font-display);font-size:24px;letter-spacing:2px;text-transform:uppercase;font-weight:700}
+    .footer h4{font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3)}
+    .footer a{font-size:13px;color:var(--text2);text-decoration:none}
+    .footer a:hover{color:var(--tirol-pink)}
+    .footer-social{display:flex;gap:12px;margin-top:8px}
+    .footer-small{font-size:11px;color:var(--text3);margin-top:24px;border-top:1px solid var(--glass-border);padding-top:16px}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:24px}}
+    @media(max-width:480px){.footer-grid{grid-template-columns:1fr}.footer{padding:32px 0 48px}.footer-small{font-size:10px}}
   </style>
 
   <!-- JSON-LD Structured Data -->
   {ldBlocks.map((ld) => (
     <script type="application/ld+json" set:html={JSON.stringify(ld)} />
   ))}
-  <!-- Third-party ads are delayed until after load/idle to keep the initial INP/LCP path clear. -->
-  <script is:inline>
-    window.addEventListener('load',function(){
-      var loadAds=function(){
-        if(document.getElementById('adsbygoogle-js'))return;
-        var s=document.createElement('script');
-        s.id='adsbygoogle-js';s.async=true;s.crossOrigin='anonymous';
-        s.src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
-        document.head.appendChild(s);
-      };
-      if('requestIdleCallback'in window){requestIdleCallback(loadAds,{timeout:2500});}
-      else{setTimeout(loadAds,1800);}
-    },{once:true});
-  </script>
 </head>
 <body>
-<div id="scrollProgress"></div>
-<button class="btt" id="backToTop" aria-label="Nach oben">↑</button>
-  <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten">
+<div id="scrollProgress" transition:persist></div>
+<button class="btt" id="backToTop" aria-label="Nach oben" transition:persist>↑</button>
+  <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten" transition:persist>
     <svg class="theme-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
     </svg>
@@ -343,7 +385,6 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
         <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
       </div>
       <div class="topbar-r">
-        <a href={`${localePrefix}/fuer-betriebe/`}>{nav.fuerBetriebe}</a>
         <a href={`${localePrefix}/merkliste/`} class="fav-link" id="topFavLink">{nav.merkliste} <span class="fav-badge" id="favBadge" style="display:none">0</span></a>
         <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
       </div>
@@ -351,33 +392,15 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   </div>
 
   <!-- NAV -->
-  <nav class="main-nav" id="mainNav">
+  <nav class="main-nav" id="mainNav" transition:persist>
     <div class="container">
 <a href={localePrefix || '/'} class="nav-logo" style="flex-shrink:0">
-        <svg viewBox="6 2 350 46" width="340"><defs>
-          <linearGradient id="nt1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
-          <linearGradient id="nt2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-          <linearGradient id="nt3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
-          <linearGradient id="nt4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-          <linearGradient id="nt5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
-        </defs>
-        <text x="14" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt1)">T</text>
-        <polygon points="14,36 14,10 36,36" fill="url(#nt1)" opacity="0.08"/>
-        <text x="46" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt2)">I</text>
-        <polygon points="46,36 46,14 60,36" fill="url(#nt2)" opacity="0.08"/>
-        <text x="72" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt3)">R</text>
-        <polygon points="72,36 72,8 96,36" fill="url(#nt3)" opacity="0.08"/>
-        <text x="104" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt4)">O</text>
-        <polygon points="104,36 104,10 130,36" fill="url(#nt4)" opacity="0.08"/>
-        <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#nt5)">L</text>
-        <polygon points="138,36 138,12 158,36" fill="url(#nt5)" opacity="0.08"/>
-        <circle cx="178" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
-        <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
-      </svg></a>
+  <TirolLogo width={340} idSuffix="nav" />
+</a>
       <div class="nav-links">
         <div class="mega-group" data-group="entdecken">
           <button class="mega-trigger" onclick="toggleMega('entdecken')">
-            Entdecken <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            {nav.entdecken} <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
           </button>
           <div class="mega-drop" id="mega-entdecken">
             <a href={`${localePrefix}/regionen/`}>{nav.regionen}</a>
@@ -388,7 +411,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
         </div>
         <div class="mega-group" data-group="uebernachten">
           <button class="mega-trigger" onclick="toggleMega('uebernachten')">
-            Übernachten <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            {nav.uebernachten} <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
           </button>
           <div class="mega-drop" id="mega-uebernachten">
             <a href={`${localePrefix}/unterkuenfte/`}>{nav.unterkuenfte}</a>
@@ -397,7 +420,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
         </div>
         <div class="mega-group" data-group="aktivitaeten">
           <button class="mega-trigger" onclick="toggleMega('aktivitaeten')">
-            Aktivitäten <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+            {nav.aktivitaeten} <svg class="mega-chev" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
           </button>
           <div class="mega-drop" id="mega-aktivitaeten">
             <a href={`${localePrefix}/gastro/`}>{nav.gastro}</a>
@@ -406,18 +429,15 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
           </div>
         </div>
         <a href={`${localePrefix}/magazin/`} class={Astro.url.pathname.includes('magazin') ? 'active' : ''}>{nav.magazin}</a>
-        <a href={`${localePrefix}/preise/`} class={Astro.url.pathname.includes('preise') ? 'active' : ''} style="color:var(--gold-light);font-weight:600">{nav.preise}</a>
       </div>
       <div class="nav-r">
-        <a href={`${localePrefix}/login/`} class="nav-login" id="navLoginBtn">{nav.anmelden}</a>
-        <a href={`${localePrefix}/dashboard/`} class="nav-dash" id="navDashBtn" style="display:none">{nav.konto}</a>
         <button class="nav-search" onclick={`window.location.href='${localePrefix}/suche/'`} aria-label={nav.suche}>🔍</button>
         <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
       </div>
     </div>
   </nav>
 
-  <div class="mobile-menu" id="mobileMenu" onclick="this.classList.remove('open')">
+  <div class="mobile-menu" id="mobileMenu" onclick="this.classList.remove('open')" transition:persist>
     <button class="mobile-close" id="mobileClose">&times;</button>
     <a href={`${localePrefix}/regionen/`}>{nav.regionen}</a>
     <a href={`${localePrefix}/unterkuenfte/`}>{nav.unterkuenfte}</a>
@@ -429,10 +449,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     <a href={`${localePrefix}/erlebnisse/`}>{nav.erlebnisse}</a>
     <a href={`${localePrefix}/events/`}>{nav.events}</a>
     <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
-    <a href={`${localePrefix}/preise/`} style="color:var(--gold-light)">{nav.preise}</a>
     <a href={`${localePrefix}/suche/`}>🔍 {nav.suche}</a>
-    <a href={`${localePrefix}/login/`} class="mob-login" id="mobLoginBtn" style="color:var(--pink);font-weight:600">{nav.anmelden}</a>
-    <a href={`${localePrefix}/dashboard/`} class="mob-dash" id="mobDashBtn" style="display:none;color:var(--pink);font-weight:600">{nav.konto}</a>
     <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
     <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
   </div>
@@ -455,34 +472,16 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     </div>
   </div>
 
-  <!-- Weather Widget (populated by JS) -->
-  <div id="weatherWidget" class="weather-widget"></div>
+  <!-- Weather Widget: planned for Phase 2 — currently removed to avoid empty container. -->
+
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <a href={localePrefix || '/'} class="nav-logo">
-            <svg viewBox="6 2 350 46" width="240"><defs>
-              <linearGradient id="ft1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
-              <linearGradient id="ft2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-              <linearGradient id="ft3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
-              <linearGradient id="ft4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-              <linearGradient id="ft5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
-            </defs>
-            <text x="14" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft1)">T</text>
-            <polygon points="14,36 14,10 36,36" fill="url(#ft1)" opacity="0.08"/>
-            <text x="46" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft2)">I</text>
-            <polygon points="46,36 46,14 60,36" fill="url(#ft2)" opacity="0.08"/>
-            <text x="72" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft3)">R</text>
-            <polygon points="72,36 72,8 96,36" fill="url(#ft3)" opacity="0.08"/>
-            <text x="104" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft4)">O</text>
-            <polygon points="104,36 104,10 130,36" fill="url(#ft4)" opacity="0.08"/>
-            <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#ft5)">L</text>
-            <polygon points="138,36 138,12 158,36" fill="url(#ft5)" opacity="0.08"/>
-            <circle cx="178" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
-            <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--pink)">tourismus</text>
-          </svg></a>
+            <TirolLogo width={240} idSuffix="ft" />
+          </a>
           <p>{nav.footer_p}</p>
           <div class="footer-social">
             <a href={settings?.social?.instagram || '#'} aria-label="Instagram">📷</a>
@@ -501,19 +500,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
         </div>
         <div class="footer-col"><h4>{nav.footer_regionen}</h4><a href={`${localePrefix}/regionen/`}>{nav.footer_alle_regionen}</a><a href={`${localePrefix}/regionen/oetztal/`}>Ötztal</a></div>
         <div class="footer-col"><h4>{nav.footer_erlebnisse}</h4><a href={`${localePrefix}/erlebnisse/`}>{nav.footer_alle_erlebnisse}</a></div>
-        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/preise/`} style="color:var(--gold-light);font-weight:600">{nav.preise}</a><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/fuer-betriebe/`}>{nav.footer_fuer_betriebe}</a><a href={`${localePrefix}/kontakt/`}>{nav.footer_kontakt}</a><a href={`${localePrefix}/transparenz/`}>{nav.footer_transparenz}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
-      </div>
+        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/magazin/`}>{nav.magazin}</a><a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a><a href={`${localePrefix}/transparenz/`}>{nav.footer_transparenz}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
+    </div>
 
-      <!-- NEWSLETTER SIGNUP -->
-      <div class="footer-newsletter">
-        <h3 class="footer-newsletter-title">📬 Newsletter</h3>
-        <p class="footer-newsletter-desc">
-          Einmal im Monat die schönsten Seiten Tirols – Berggeschichten,
-          Events und exklusive Angebote. Kein Spam, jederzeit kündbar.
-        </p>
-        <NewsletterForm client:idle compact />
-      </div>
-
+    <div class="footer-small">
       <div class="footer-bottom">
         <span>© 2026 tiroltourismus.com</span>
         <div><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href="#" class="footer-btt" id="footerBackToTop">{nav.footer_oben}</a></div>
@@ -592,6 +582,6 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     };
   })();
   </script>
-  <script is:inline defer src="/assets/js/tirol.js"></script>
+  <script data-astro-rerun defer src="/assets/js/tirol.js"></script>
 </body>
 </html>

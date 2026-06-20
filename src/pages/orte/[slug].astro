@@ -2,7 +2,7 @@
 import DetailPage from '../../sections/DetailPage.astro';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { readEntry, readCollection, isPublished, findNearby, findByTag } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -30,6 +30,9 @@ const wappenForOrt = (ortName: string) => {
 const { slug } = Astro.params;
 const entry = readEntry('orte', slug);
 if (!entry) return Astro.redirect('/orte/');
+
+// Qualitätslogik: dünne Ortsseiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'orte');
 
 const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
 const wappenSrc = wappenForOrt(name);
@@ -109,6 +112,7 @@ const destinationLD = {
   description={generateMetaDescription(entry, 'orte')}
   breadcrumbs={[{ label: 'Orte', href: '/orte/' }, { label: name }]}
   jsonld={destinationLD}
+  noindex={!shouldIdx}
   sections={[
     {
       type: 'hero',

@@ -18,8 +18,13 @@
   "preis": "Erwachsene € 25,00 (inkl. Bergbahn)",
   "oeffnungszeiten": "Juni-Okt & Dez-Apr täglich 9:00-17:30",
   "webseite": "https://www.007elements.com",
-  "bilder": [],
-  "hero_bild": null,
+  "bilder": [
+    {
+      "url": "/images/sehenswuerdigkeiten/007-elements/hero_1.png",
+      "alt": "007 ELEMENTS"
+    }
+  ],
+  "hero_bild": "/images/sehenswuerdigkeiten/007-elements/hero_1.png",
   "koordinaten": {
     "lat": "46.9666",
     "lng": "11.0073"

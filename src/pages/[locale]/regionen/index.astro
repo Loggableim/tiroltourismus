@@ -285,7 +285,7 @@ function stars(bewertung) {
             <div class="region-grid" id="region-grid">
               {regionen.map((r) => {
                 const filled = stars(r.entry.bewertung);
-                const farbe = r.entry.farbe || 'var(--pink)';
+                const farbe = r.entry.farbe || 'var(--tirol-pink)';
                 return (
                   <a
                     href={`${pref}/regionen/${r.slug}/`}
@@ -398,7 +398,7 @@ function stars(bewertung) {
     font-family: var(--font-display);
     font-size: clamp(48px, 6vw, 80px);
     line-height: 1;
-    color: var(--pink);
+    color: var(--tirol-pink);
     letter-spacing: 2px;
   }
   .fact-label {

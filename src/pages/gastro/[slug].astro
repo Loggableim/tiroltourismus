@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
 import PaywallOverlay from '../../components/PaywallOverlay.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -13,11 +13,14 @@ const { slug } = Astro.params;
 const entry = readEntry('gastro', slug);
 if (!entry) return Astro.redirect('/gastro/');
 
+// Qualitätslogik: dünne Seiten nicht indexieren
+const qualityScore = getContentQuality(entry);
+const shouldIdx = shouldIndex(entry, 'gastro');
+
 const emoji = entry.emoji || '🍽️';
 const subtitle = entry.ort ? `${entry.ort}${entry.kategorie ? ` · ${entry.kategorie}` : ''}` : undefined;
 
 const tier = entry.tier || 'basic';
-const isBasic = tier === 'basic';
 
 const CATEGORY_EMOJI = { sehenswuerdigkeiten:'🏛️', gastro:'🍽️', unterkuenfte:'🏨', camping:'🏕️', erlebnisse:'🎯', orte:'🏘️', events:'🎪', regionen:'🏔️' };
 const nearbyEntries = entry.koordinaten ? findNearby(entry, 'gastro', 'de', 8) : [];
@@ -91,6 +94,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   breadcrumbs={[{ label: 'Gastro', href: '/gastro/' }, { label: entry.name }]}
   jsonld={businessLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={[
     {
       type: 'hero',
@@ -111,21 +115,21 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
         { label: 'Tags', tags: entry.tags || [], type: 'tags' },
       ].filter(Boolean),
     },
-    !isBasic && (entry.kurzbeschreibung || entry.beschreibung) ? {
+    !(tier === 'basic') && (entry.kurzbeschreibung || entry.beschreibung) ? {
       type: 'description',
       label: entry.name,
       title: 'Über dieses Lokal',
       content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry),
     } : null,
-    !isBasic ? {
+    !(tier === 'basic') ? {
       type: 'details-grid',
       items: [
         { label: 'Preis', value: entry.preis || undefined, type: 'price' },
         entry.webseite ? { label: 'Webseite', value: entry.webseite, type: 'link', href: entry.webseite } : null,
       ].filter(Boolean),
     } : null,
-    !isBasic ? mapSection : null,
-    !isBasic && relatedByTag.length > 0 ? {
+    !(tier === 'basic') ? mapSection : null,
+    !(tier === 'basic') && relatedByTag.length > 0 ? {
       type: 'related-grid',
       label: 'Weitere Lokale',
       entries: relatedByTag,
@@ -135,7 +139,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
       emojiField: '_emoji',
       defaultEmoji: '🍽️',
     } : null,
-    !isBasic ? {
+    !(tier === 'basic') ? {
       type: 'cta',
       label: 'Lust bekommen?',
       title: 'Jetzt reservieren',
@@ -154,7 +158,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 />
 
 <!-- Basic: Premium-Inhalte hinter Paywall -->
-{isBasic && (
+{(tier === 'basic') && (
   <section class="section paywall-restricted">
     <div class="container" style="position:relative;max-width:800px">
       <PaywallOverlay name={entry.name} slug={slug} />

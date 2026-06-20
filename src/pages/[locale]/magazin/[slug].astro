@@ -37,14 +37,52 @@ const emoji = entry.emoji || '📰';
 
 const siteURL = 'https://tiroltourismus.com';
 const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
+
+// JSON-LD: Article
+const articleImage = entry.hero_bild || entry.bilder?.[0]?.url;
+const articleLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: entry.titel,
+  description: (entry.teaser || entry.kurzbeschreibung || '').substring(0, 300),
+  url: `${siteURL}${prefix}/magazin/${slug}/`,
+  ...(entry.datum ? { datePublished: entry.datum } : {}),
+  ...(entry.autor ? { author: { '@type': 'Person', name: entry.autor } } : {}),
+  ...(articleImage ? { image: articleImage.startsWith('http') ? articleImage : `${siteURL}${articleImage}` } : {}),
+  ...(entry.kategorie ? { articleSection: entry.kategorie } : {}),
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tirol Tourismus',
+    url: siteURL,
+  },
+};
+// JSON-LD: FAQPage (if FAQ data exists in the entry)
+const faqSchema = entry.faq && Array.isArray(entry.faq) && entry.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: entry.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+} : null;
+const jsonld = [articleLD, faqSchema].filter(Boolean);
+const articleOgImage = articleImage ? (articleImage.startsWith('http') ? articleImage : `${siteURL}${articleImage}`) : undefined;
+const articlePubDate = entry.datum ? entry.datum + 'T00:00:00' : undefined;
 ---
 
 <DetailPage
   title={entry.titel}
   description={generateMetaDescription(entry, 'magazin', locale)}
+  jsonld={jsonld}
+  ogImage={articleOgImage}
+  type="article"
+  publishedTime={articlePubDate}
   breadcrumbs={[{ label: l.magazin, href: `${prefix}/magazin/` }, { label: entry.titel }]}
   locale={locale}
-  ogImage={ogImage}
   sections={[
     { type: 'hero', title: entry.titel, subtitle: entry.kategorie, emoji, gradient: entry.farbe, bgImage: entry.hero_bild },
     { type: 'details-grid', items: [

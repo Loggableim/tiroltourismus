@@ -6,6 +6,7 @@ import AccommodationCard from '../../components/AccommodationCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import GastroCard from '../../components/GastroCard.astro';
 import SightCard from '../../components/SightCard.astro';
+import TirolLogo from '../../components/TirolLogo.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 import { LANGUAGES_READY } from '../../lib/languages.js';
 
@@ -47,6 +48,7 @@ export async function getStaticPaths() {
 const locale = Astro.params.locale || 'de';
 const sl = SECTION_LABELS[locale] || SECTION_LABELS.de;
 const page = PAGE_MAP[locale] || dePage;
+const localePrefix = locale === 'de' ? '' : `/${locale}`;
 
 const regions = readCollection('regionen', locale).filter((r) => isPublished(r.entry)).slice(0, 6);
 const stays = readCollection('unterkuenfte', locale).filter((u) => isPublished(u.entry)).slice(0, 3);
@@ -68,27 +70,6 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
       <div class="hero-content">
         <div class="hero-badge" set:html={page.hero.badge}></div>
         <div class="hero-headline">
-          <div class="hero-logo">
-            <svg viewBox="10 0 335 42" width="100"><defs>
-              <linearGradient id="hl1"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
-              <linearGradient id="hl2"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-              <linearGradient id="hl3"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
-              <linearGradient id="hl4"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-              <linearGradient id="hl5"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
-            </defs>
-            <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl1)">T</text>
-            <polygon points="10,36 10,10 34,36" fill="url(#hl1)" opacity="0.08"/>
-            <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl2)">I</text>
-            <polygon points="42,36 42,14 56,36" fill="url(#hl2)" opacity="0.08"/>
-            <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl3)">R</text>
-            <polygon points="68,36 68,8 92,36" fill="url(#hl3)" opacity="0.08"/>
-            <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl4)">O</text>
-            <polygon points="100,36 100,10 126,36" fill="url(#hl4)" opacity="0.08"/>
-            <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#hl5)">L</text>
-            <circle cx="172" cy="30" r="2.5" fill="rgba(0,0,0,0.12)" opacity="0.3"/>
-            <text x="186" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#FF1493">tourismus</text>
-          </svg>
-          </div>
           <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
         </div>
         <p set:html={page.hero.subtitle}></p>
@@ -126,6 +107,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
               bewertung={r.entry.bewertung}
               farbe={r.entry.farbe}
               featured={r.entry.featured}
+              locale={locale}
             />
           ))}
         </div>
@@ -144,6 +126,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
               sterne={u.entry.sterne}
               tier={u.entry.tier}
               preis_ab={u.entry.preis}
+              locale={locale}
             />
           ))}
         </div>
@@ -164,6 +147,8 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
               farbe={s.entry.farbe}
               ort={s.entry.ort}
               preis={s.entry.preis}
+              linkPrefix={`${localePrefix}/sehenswuerdigkeiten/`}
+              locale={locale}
             />
           ))}
         </div>
@@ -183,6 +168,8 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
               emoji={g.entry.emoji}
               ort={g.entry.ort}
               preis={g.entry.preis}
+              linkPrefix={`${localePrefix}/gastro/`}
+              locale={locale}
             />
           ))}
         </div>
@@ -201,6 +188,7 @@ const magazin = readCollection('magazin', locale).filter((a) => isPublished(a.en
               datum={a.entry.datum}
               kategorie={a.entry.kategorie}
               hero_bild={a.entry.hero_bild}
+              locale={locale}
             />
           ))}
         </div>

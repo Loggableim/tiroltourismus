@@ -1,65 +1,373 @@
 ---
-// suche/index.astro — Volltextsuche via Pagefind Default UI Web Component
-// @pagefind/default-ui generates static assets to /pagefind/ during build
+// suche/index.astro — Volltextsuche (DE/EN/FR) via client-side MiniSearch
+// Index wird pro Locale in /search-index.{locale}.json ausgeliefert (~700 KB-1.1 MB komprimiert)
+// und NUR bei Bedarf (Fokus aufs Suchfeld) geladen — kein initialer Payload-Cost.
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LANGUAGES, DEFAULT_LOCALE } from '../../lib/languages.js';
+
+export function getStaticPaths() {
+  return [
+    { params: { locale: undefined } },
+    { params: { locale: 'en' } },
+    { params: { locale: 'fr' } },
+  ];
+}
+
+// Determine current locale from URL path
+const url = Astro.url.pathname;
+const localeMatch = url.match(/^\/(en|fr)(\/|$)/);
+const locale = localeMatch ? localeMatch[1] : DEFAULT_LOCALE;
+const t = (de, en, fr) => ({ de, en, fr }[locale] || de);
+
+const title = t('Suche', 'Search', 'Recherche');
+const description = t(
+  'Durchsuche das Tirol Tourismus Portal – finde Unterkünfte, Orte, Erlebnisse und mehr.',
+  'Search the Tyrol tourism portal – find accommodations, places, experiences and more.',
+  'Recherchez dans le portail touristique du Tyrol – hébergements, villages, expériences et plus.'
+);
 ---
-<BaseLayout
-  title="Suche"
-  description="Durchsuche das Tirol Tourismus Portal – finde Unterkünfte, Orte, Erlebnisse und mehr."
->
+<BaseLayout title={title} description={description} noindex={true}>
   <main>
     <section class="search-hero">
       <div class="container" style="text-align:center;padding:80px 0 40px">
         <div style="font-size:64px;margin-bottom:8px">🔍</div>
         <h1 style="font-family:var(--font-display);font-size:48px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">
-          Suche
+          {title}
         </h1>
         <p style="color:var(--text2);max-width:500px;margin:0 auto;line-height:1.6">
-          Finde was du suchst – Unterkünfte, Orte, Erlebnisse, Events und mehr.
+          {t(
+            'Finde was du suchst – Unterkünfte, Orte, Erlebnisse, Events und mehr.',
+            'Find what you are looking for – accommodations, places, experiences, events and more.',
+            'Trouvez ce que vous cherchez – hébergements, villages, expériences, événements et plus.'
+          )}
         </p>
       </div>
     </section>
 
     <section class="section" style="padding:0 0 80px">
-      <div class="container" style="max-width:720px">
-        <div id="search"></div>
+      <div class="container" style="max-width:760px">
+        <!-- Search input — focused triggers lazy index load -->
+        <div class="search-box">
+          <input
+            type="search"
+            id="searchInput"
+            placeholder={t('Tippen zum Suchen…', 'Type to search…', 'Tapez pour rechercher…')}
+            autocomplete="off"
+            spellcheck="false"
+            aria-label={title}
+          />
+          <div class="search-status" id="searchStatus" aria-live="polite"></div>
+        </div>
+
+        <!-- Filter chips (type) -->
+        <div class="search-filters" id="searchFilters">
+          <button class="chip active" data-type="all">⭐ {t('Alle', 'All', 'Tout')}</button>
+          <button class="chip" data-type="region">🏔️ {t('Regionen', 'Regions', 'Régions')}</button>
+          <button class="chip" data-type="ort">🏘️ {t('Orte', 'Places', 'Villages')}</button>
+          <button class="chip" data-type="unterkunft">🏨 {t('Unterkünfte', 'Accommodations', 'Hébergements')}</button>
+          <button class="chip" data-type="sight">🏛️ {t('Sehenswürdigkeiten', 'Sights', 'Sites')}</button>
+          <button class="chip" data-type="gastro">🍽️ {t('Gastro', 'Food & Drink', 'Gastronomie')}</button>
+          <button class="chip" data-type="camping">🏕️ {t('Camping', 'Camping', 'Camping')}</button>
+          <button class="chip" data-type="magazin">📰 {t('Magazin', 'Magazine', 'Magazine')}</button>
+        </div>
+
+        <!-- Results list -->
+        <div class="search-results" id="searchResults"></div>
       </div>
     </section>
   </main>
 </BaseLayout>
 
-<link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
-<script src="/pagefind/pagefind-ui.js" defer></script>
+<!-- Lazy-load MiniSearch + index only when user focuses the input -->
 <script is:inline>
-  window.addEventListener('DOMContentLoaded', () => {
-    if (window.PagefindUI) {
-      new PagefindUI({ element: "#search", showSubResults: true, showImages: false });
+  (function() {
+    'use strict';
+    const LOCALE = document.documentElement.lang || 'de';
+    const input = document.getElementById('searchInput');
+    const status = document.getElementById('searchStatus');
+    const results = document.getElementById('searchResults');
+    const filterButtons = document.querySelectorAll('#searchFilters .chip');
+    if (!input || !results) return;
+
+    let activeType = 'all';
+    let miniSearch = null;
+    let indexLoading = null;
+    let lastQuery = '';
+
+    function setStatus(text, kind) {
+      if (!status) return;
+      status.textContent = text || '';
+      status.className = 'search-status' + (kind ? ' ' + kind : '');
     }
-  });
+
+    async function loadIndex() {
+      if (miniSearch) return miniSearch;
+      if (indexLoading) return indexLoading;
+      setStatus('Lade Suchindex…', 'loading');
+      try {
+        const [{ default: MiniSearch }, indexRes] = await Promise.all([
+          import('https://cdn.jsdelivr.net/npm/minisearch@7.1.2/+esm'),
+          fetch(`/search-index.${LOCALE}.json`, { credentials: 'omit' })
+        ]);
+        if (!indexRes.ok) throw new Error('HTTP ' + indexRes.status);
+        const payload = await indexRes.json();
+        miniSearch = MiniSearch.loadJSON(JSON.stringify(payload.index), {
+          idField: 'id',
+          fields: ['search', 'name', 'ort', 'region', 'kategorie', 'tags'],
+          storeFields: ['name', 'type', 'emoji', 'ort', 'region', 'url', 'locale', 'kategorie', 'tier', 'sterne', 'preis_ab', 'kurzbeschreibung'],
+          searchOptions: {
+            boost: { name: 3, ort: 2, region: 2, tags: 1.5 },
+            fuzzy: 0.2,
+            prefix: true,
+            combineWith: 'AND',
+          },
+        });
+        setStatus('Suchindex bereit ✓', 'ready');
+        setTimeout(() => setStatus(''), 2000);
+        return miniSearch;
+      } catch (err) {
+        setStatus('Suchindex konnte nicht geladen werden. Bitte erneut versuchen.', 'error');
+        console.error('Search index load failed:', err);
+        throw err;
+      }
+    }
+
+    function escapeHtml(s) {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function typeLabel(type) {
+      const map = {
+        region: ['Region', 'Region', 'Région'],
+        ort: ['Ort', 'Place', 'Village'],
+        unterkunft: ['Unterkunft', 'Accommodation', 'Hébergement'],
+        sight: ['Sehenswürdigkeit', 'Sight', 'Site'],
+        gastro: ['Gastro', 'Food & Drink', 'Gastronomie'],
+        camping: ['Camping', 'Camping', 'Camping'],
+        magazin: ['Magazin', 'Magazine', 'Magazine'],
+      };
+      const idx = LOCALE === 'en' ? 1 : LOCALE === 'fr' ? 2 : 0;
+      return (map[type] || ['Eintrag', 'Entry', 'Entrée'])[idx];
+    }
+
+    function renderResults(items) {
+      if (!items || items.length === 0) {
+        results.innerHTML = '<div class="search-empty">🔍 ' + escapeHtml(
+          LOCALE === 'en' ? 'No results. Try a different search term.' :
+          LOCALE === 'fr' ? 'Aucun résultat. Essayez un autre terme.' :
+          'Keine Ergebnisse. Versuche einen anderen Suchbegriff.'
+        ) + '</div>';
+        return;
+      }
+      results.innerHTML = items.slice(0, 50).map(r => {
+        const meta = [r.ort, r.region].filter(Boolean).join(' · ');
+        const badge = r.tier === 'gold' ? ' <span class="badge gold">★</span>' :
+                      r.tier === 'silver' ? ' <span class="badge silver">✦</span>' : '';
+        const stars = r.sterne ? ' <span class="sterne">' + '★'.repeat(Math.min(5, r.sterne)) + '</span>' : '';
+        return `<a href="${escapeHtml(r.url)}" class="result-card">
+          <div class="result-emoji">${escapeHtml(r.emoji || '✨')}</div>
+          <div class="result-body">
+            <div class="result-type">${escapeHtml(typeLabel(r.type))}${badge}${stars}</div>
+            <div class="result-name">${escapeHtml(r.name)}</div>
+            ${meta ? '<div class="result-meta">' + escapeHtml(meta) + '</div>' : ''}
+            ${r.kurzbeschreibung ? '<div class="result-desc">' + escapeHtml(r.kurzbeschreibung) + '</div>' : ''}
+          </div>
+          <div class="result-arrow">→</div>
+        </a>`;
+      }).join('');
+    }
+
+    async function runSearch(q) {
+      if (!q || q.length < 2) {
+        results.innerHTML = '';
+        setStatus('');
+        return;
+      }
+      try {
+        const ms = await loadIndex();
+        let hits = ms.search(q);
+        if (activeType !== 'all') {
+          hits = hits.filter(h => h.type === activeType);
+        }
+        renderResults(hits);
+        setStatus(hits.length + ' ' + (LOCALE === 'en' ? 'results' : LOCALE === 'fr' ? 'résultats' : 'Ergebnisse'));
+      } catch (e) {
+        // already handled in loadIndex
+      }
+    }
+
+    // Debounced input handler
+    let timer = null;
+    input.addEventListener('input', () => {
+      clearTimeout(timer);
+      const q = input.value.trim();
+      lastQuery = q;
+      timer = setTimeout(() => runSearch(q), 150);
+    });
+
+    // Trigger first index load on focus (only on first focus)
+    input.addEventListener('focus', () => {
+      if (!miniSearch) loadIndex();
+    }, { once: true });
+
+    // Filter chips
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeType = btn.dataset.type;
+        if (lastQuery) runSearch(lastQuery);
+      });
+    });
+  })();
 </script>
 
-<style is:global>
-  .pagefind-ui {
-    --pagefind-ui-font: var(--font-body);
-    --pagefind-ui-primary: var(--pink, #FF1493);
-    --pagefind-ui-text: var(--text);
-    --pagefind-ui-background: var(--bg);
-    --pagefind-ui-border: var(--glass-border);
-    --pagefind-ui-tag: var(--bg2);
+<style>
+  .search-box {
+    position: relative;
+    margin: 0 0 16px;
   }
-  .pagefind-ui__search-input {
-    background: var(--bg2) !important;
-    border: 1px solid var(--glass-border) !important;
-    color: var(--text) !important;
-    border-radius: 12px !important;
-    padding: 16px 20px !important;
-    font-size: 16px !important;
+  #searchInput {
+    width: 100%;
+    padding: 18px 22px;
+    font-size: 18px;
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
   }
-  .pagefind-ui__search-input:focus {
-    border-color: var(--pink) !important;
-    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.15) !important;
-    outline: none !important;
+  #searchInput:focus {
+    border-color: var(--tirol-pink);
+    box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.15);
   }
-  .pagefind-ui__result-title { color: var(--pink) !important; }
-  .pagefind-ui__result-excerpt { color: var(--text2) !important; }
+  .search-status {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: var(--text3);
+    pointer-events: none;
+  }
+  .search-status.loading { color: var(--ikea-blue); }
+  .search-status.ready { color: var(--green); }
+  .search-status.error { color: #c00; }
+  .search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .chip {
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--glass-border);
+    background: var(--bg2);
+    color: var(--text2);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s;
+    font-family: inherit;
+  }
+  .chip:hover { border-color: var(--tirol-pink); color: var(--text); }
+  .chip.active {
+    background: var(--tirol-pink);
+    color: #fff;
+    border-color: var(--tirol-pink);
+  }
+  .search-results { display: flex; flex-direction: column; gap: 10px; }
+  .result-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--bg2);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text);
+    transition: all .2s;
+  }
+  .result-card:hover {
+    border-color: var(--tirol-pink);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+  .result-emoji {
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    border-radius: 10px;
+  }
+  .result-body { flex: 1; min-width: 0; }
+  .result-type {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text3);
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+  .result-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .result-meta {
+    font-size: 12px;
+    color: var(--text2);
+    margin-bottom: 4px;
+  }
+  .result-desc {
+    font-size: 13px;
+    color: var(--text2);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .result-arrow {
+    color: var(--text3);
+    font-size: 20px;
+    flex-shrink: 0;
+    align-self: center;
+  }
+  .badge {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .badge.gold { background: rgba(212,168,0,0.15); color: var(--gold); }
+  .badge.silver { background: rgba(192,192,192,0.15); color: #888; }
+  .sterne { color: var(--gold); margin-left: 4px; font-size: 12px; }
+  .search-empty {
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--text2);
+    font-size: 15px;
+  }
+  @media (max-width: 600px) {
+    #searchInput { font-size: 16px; padding: 14px 16px; }
+    .result-card { padding: 12px; }
+    .result-emoji { width: 36px; height: 36px; font-size: 22px; }
+  }
 </style>

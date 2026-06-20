@@ -29,11 +29,31 @@ const relatedByTag = tags && tags.length > 0
         entry: { ...r.entry, _emoji: r.entry.emoji || '🏔️' }
       }))
   : [];
+
+// JSON-LD: TouristDestination
+const siteURL = 'https://tiroltourismus.com';
+const regionDesc = (kurzbeschreibung || '').substring(0, 500);
+const regionLD = {
+  '@context': 'https://schema.org',
+  '@type': 'TouristDestination',
+  name: titel,
+  description: regionDesc,
+  url: `${siteURL}/regionen/${slug}/`,
+  ...(entry.koordinaten ? {
+    geo: { '@type': 'GeoCoordinates', latitude: parseFloat(entry.koordinaten.lat), longitude: parseFloat(entry.koordinaten.lng) }
+  } : {}),
+  containedInPlace: {
+    '@type': 'AdministrativeArea',
+    name: 'Tirol',
+    address: { '@type': 'PostalAddress', addressRegion: 'Tirol', addressCountry: 'AT' },
+  },
+};
 ---
 
 <DetailPage
   title={titel}
   description={generateMetaDescription(entry, 'regionen')}
+  jsonld={regionLD}
   breadcrumbs={[{ label: 'Regionen', href: '/regionen/' }, { label: titel }]}
   sections={[
     {

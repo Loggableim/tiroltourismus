@@ -360,23 +360,23 @@ export default function AdminEventDashboard() {
         .admin-login-box p{font-size:13px;color:var(--text2);margin-bottom:24px}
         .admin-pw-row{display:flex;gap:8px;max-width:300px;margin:0 auto}
         .admin-pw-input{flex:1;padding:10px 14px;border:1px solid var(--glass-border);border-radius:var(--radius-sm);background:var(--bg);color:var(--text);font-size:14px;text-align:center}
-        .admin-pw-input:focus{outline:none;border-color:var(--pink)}
-        .admin-pw-btn{padding:10px 20px;background:var(--pink);color:#fff;border:none;border-radius:var(--radius-sm);font-weight:700;cursor:pointer;white-space:nowrap}
-        .admin-pw-error{color:var(--pink);font-size:13px;margin-top:12px}
+        .admin-pw-input:focus{outline:none;border-color:var(--tirol-pink)}
+        .admin-pw-btn{padding:10px 20px;background:var(--tirol-pink);color:#fff;border:none;border-radius:var(--radius-sm);font-weight:700;cursor:pointer;white-space:nowrap}
+        .admin-pw-error{color:var(--tirol-pink);font-size:13px;margin-top:12px}
 
         .admin-dash-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px}
         .admin-stats{display:flex;gap:24px}
         .admin-stat{text-align:center}
-        .admin-stat-num{font-family:var(--font-display);font-size:36px;color:var(--pink);display:block;line-height:1}
+        .admin-stat-num{font-family:var(--font-display);font-size:36px;color:var(--tirol-pink);display:block;line-height:1}
         .admin-stat-label{font-size:11px;color:var(--text3);text-transform:uppercase;letter-spacing:.5px}
         .admin-actions{display:flex;gap:8px}
         .admin-btn{padding:10px 20px;border-radius:100px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;border:1px solid var(--glass-border);background:var(--surface);color:var(--text);cursor:pointer;transition:all .2s;white-space:nowrap}
-        .admin-btn:hover{border-color:var(--pink)}
+        .admin-btn:hover{border-color:var(--tirol-pink)}
         .admin-btn-refresh{background:var(--surface)}
 
         .admin-tabs{display:flex;gap:4px;margin-bottom:24px;background:var(--surface);border:1px solid var(--glass-border);border-radius:100px;padding:4px;width:fit-content}
         .admin-tab{padding:6px 18px;border:none;border-radius:100px;font-size:12px;font-weight:600;background:transparent;color:var(--text3);cursor:pointer;transition:all .2s}
-        .admin-tab.active{background:var(--pink);color:#fff}
+        .admin-tab.active{background:var(--tirol-pink);color:#fff}
 
         .admin-loading{text-align:center;padding:60px 0;color:var(--text3)}
         .admin-empty{text-align:center;padding:60px 0}
@@ -392,10 +392,10 @@ export default function AdminEventDashboard() {
         .admin-card-title{font-family:var(--font-display);font-size:18px;letter-spacing:.5px;margin-bottom:4px}
         .admin-card-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
         .admin-card-meta span{font-size:11px;color:var(--text3)}
-        .admin-card-tag{display:inline-block;padding:2px 10px;border-radius:100px;font-size:9px;font-weight:700;background:rgba(255,20,147,.1);color:var(--pink);text-transform:uppercase}
+        .admin-card-tag{display:inline-block;padding:2px 10px;border-radius:100px;font-size:9px;font-weight:700;background:rgba(255,20,147,.1);color:var(--tirol-pink);text-transform:uppercase}
         .admin-card-desc{font-size:13px;color:var(--text2);line-height:1.5;margin-bottom:8px}
         .admin-card-details{display:flex;flex-wrap:wrap;gap:8px;font-size:11px;color:var(--text3)}
-        .admin-card-details a{color:var(--pink);text-decoration:none}
+        .admin-card-details a{color:var(--tirol-pink);text-decoration:none}
         .admin-card-actions{display:flex;flex-direction:column;gap:6px;flex-shrink:0}
         .admin-btn-publish{background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.3);color:rgb(16,185,129)}
         .admin-btn-publish:hover{background:rgba(16,185,129,.2);border-color:rgb(16,185,129)}

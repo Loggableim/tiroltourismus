@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -11,6 +11,9 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const entry = readEntry('sehenswuerdigkeiten', slug);
 if (!entry) return Astro.redirect('/sehenswuerdigkeiten/');
+
+// Qualitätslogik: dünne POI-Seiten nicht indexieren
+const shouldIdx = shouldIndex(entry, 'sehenswuerdigkeiten');
 
 const catLabel = { natur:'Natur', kultur:'Kultur', aussicht:'Aussicht', sport:'Sport', museum:'Museum', kirche:'Kirche', burg:'Burg', wanderung:'Wanderung' };
 const catEmoji = { natur:'🌿', kultur:'🎭', aussicht:'🏔️', sport:'⚡', museum:'🏛️', kirche:'⛪', burg:'🏰', wanderung:'🥾' };
@@ -95,6 +98,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
   breadcrumbs={[{ label: 'Sehenswürdigkeiten', href: '/sehenswuerdigkeiten/' }, { label: entry.name }]}
   jsonld={attractionLD}
   ogImage={ogImage}
+  noindex={!shouldIdx}
   sections={[
     {
       type: 'custom-hero',

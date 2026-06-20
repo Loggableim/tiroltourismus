@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
+    "build:search-index": "node scripts/build-search-index.mjs",
     "build:astro": "astro build",
-    "build:search": "pagefind --site dist",
-    "build": "npm run build:astro && npm run build:search",
+    "build": "npm run build:search-index && npm run build:astro",
     "build:ci": "npm run build",
     "preview": "astro preview"
   },
@@ -18,7 +18,7 @@
     "leaflet": "^1.9.4",
     "lightningcss": "^1.32.0",
     "marked": "^18.0.3",
-    "pagefind": "^1.5.2",
+    "minisearch": "^7.1.2",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },

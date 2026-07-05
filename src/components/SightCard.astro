@@ -34,16 +34,16 @@ const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport
 </a>
 
 <style is:global>
-  .sight-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px);content-visibility:auto;contain-intrinsic-size:330px 390px}
-  .sight-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 18px 44px rgba(0,0,0,.12)}
-  .sight-card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.015))}
+  .sight-card{background:var(--surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px);content-visibility:auto;contain-intrinsic-size:330px 390px}
+  .sight-card:hover{transform:translateY(-6px);border-color:var(--tirol-pink);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+  .sight-card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:48px;background:linear-gradient(135deg,var(--surface),var(--surface-hover))}
   .sight-emoji{font-size:48px;line-height:1;filter:drop-shadow(0 8px 18px rgba(0,0,0,.16))}
   .sight-body{padding:18px 20px 22px;flex:1;display:flex;flex-direction:column}
   .sight-kategorie{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--purple);margin-bottom:2px}
   .sight-body h3{font-family:var(--font-display);font-size:22px;letter-spacing:.6px;text-transform:uppercase;margin-bottom:2px;color:var(--text);line-height:1.08}
   .sight-ort{font-size:12px;color:var(--text2);margin-bottom:6px}
   .sight-body p{font-size:14px;color:var(--text2);line-height:1.72;flex:1;margin-bottom:10px}
-  .sight-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
+  .sight-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid var(--glass-border)}
   .sight-preis{font-size:13px;font-weight:700;color:var(--purple)}
   .sight-link{font-size:11px;font-weight:700;text-transform:uppercase;color:var(--tirol-pink);transition:all .3s}
   .sight-link:hover{gap:6px}

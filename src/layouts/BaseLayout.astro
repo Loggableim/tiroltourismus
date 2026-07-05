@@ -136,9 +136,9 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <!-- Fonts: display=swap + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" crossorigin fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Prata&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" crossorigin fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"></noscript>
 
   <!-- Canonical URL -->
   <link rel="canonical" href={pageURL} />
@@ -229,7 +229,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .lang-badge{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:1px 5px;border-radius:4px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.4)}
     .fav-link{display:inline-flex;align-items:center;gap:4px;position:relative}
     .fav-badge{position:absolute;top:-5px;right:-8px;min-width:18px;height:18px;border-radius:50%;background:var(--tirol-pink);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;padding:0 4px}
-    .main-nav{height:64px;position:fixed;top:46px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
+    .main-nav{height:64px;position:fixed;top:6px;left:20px;right:20px;z-index:1000;border-radius:100px;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.04);padding:0 8px 0 24px;max-width:1160px;margin:0 auto;transition:all .5s var(--ease)}
     [data-theme="alpenpeak"] .main-nav{background:rgba(10,10,18,.5);backdrop-filter:blur(24px);border:1px solid var(--glass-border);box-shadow:none}
     .main-nav .container{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:none;padding:0}
     .nav-logo{display:flex;align-items:center;font-family:var(--font-display);font-size:26px;letter-spacing:2px;text-transform:uppercase;color:var(--text)}
@@ -273,7 +273,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .section-label{font-family:var(--font-display);font-size:20px;letter-spacing:2px;margin-bottom:4px}
     .section-desc{font-size:15px;color:var(--text2);max-width:560px;margin:0 auto;line-height:1.7}
     .breadcrumbs{display:flex;align-items:center;gap:8px;padding:12px 0;font-size:12px;color:var(--text3)}
-    .theme-toggle{position:fixed;top:84px;right:28px;z-index:1001;width:40px;height:40px;border-radius:50%;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .4s var(--ease);color:var(--text);box-shadow:0 4px 16px rgba(0,0,0,.08)}
+    .theme-toggle{position:fixed;top:64px;right:28px;z-index:1001;width:40px;height:40px;border-radius:50%;background:var(--glass);backdrop-filter:blur(20px);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .4s var(--ease);color:var(--text);box-shadow:0 4px 16px rgba(0,0,0,.08)}
     /* ═══ FLOATING LANGUAGE GLOBE ═══ */
     .floating-lang{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:999}
     .floating-lang-btn{width:46px;height:46px;border-radius:50%;background:rgba(10,10,18,.5);backdrop-filter:blur(20px);border:1px solid var(--glass-border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:20px;transition:all .3s var(--ease);color:var(--text);box-shadow:0 6px 24px rgba(0,0,0,.25);border:none;font-family:inherit}
@@ -302,10 +302,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     @media(max-width:600px){.container{padding:0 16px}}
 
     /* Hero */
-    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0A0A12;padding-top:100px}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0A0A12;padding-top:80px}
     .hero-bg{position:absolute;inset:0;z-index:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
     .hero-bg img{width:100%;height:100%;object-fit:cover;opacity:0.45;filter:saturate(1.4) contrast(1.1) brightness(0.9);animation:none}
-    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0A0A12 0%,transparent 40%),linear-gradient(180deg,rgba(255,20,147,0.3) 0%,transparent 40%),linear-gradient(90deg,rgba(255,20,147,0.15) 0%,transparent 50%,rgba(212,168,0,0.1) 100%);pointer-events:none}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#0A0A12 0%,transparent 50%),linear-gradient(180deg,rgba(10,10,18,.5) 0%,transparent 30%),linear-gradient(90deg,rgba(255,20,147,0.15) 0%,transparent 50%,rgba(212,168,0,0.08) 100%);pointer-events:none}
     .hero-glow{position:absolute;bottom:-30%;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(255,20,147,0.3) 0%,rgba(212,168,0,0.1) 30%,transparent 60%);filter:blur(80px);z-index:1;pointer-events:none;animation:glowPulse 6s ease-in-out infinite alternate}
     .hero-content{position:relative;z-index:3;text-align:center;padding:40px 24px 80px;max-width:1100px}
     .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 24px;border-radius:100px;background:rgba(255,255,255,.08);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:20px}
@@ -361,35 +361,6 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   </button>
-
-  <!-- TOP BAR -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-l">
-        <div class="topbar-lang-selector" id="langSelector">
-          <button class="lang-current" onclick="this.closest('.topbar-lang-selector').classList.toggle('open')" aria-label="Sprache ändern">
-            <span class="lang-flag">{LANGUAGES.find(l => l.code === locale).flag}</span>
-            <span class="lang-code">{locale.toUpperCase()}</span>
-            <svg class="lang-chevron" viewBox="0 0 10 6" width="10" height="6"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-          </button>
-          <div class="lang-dropdown">
-            {LANGUAGES.map(l => (
-              <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale, disabled: !l.ready }}>
-                <span class="lang-flag">{l.flag}</span>
-                <span class="lang-name">{l.nameNative}</span>
-                {!l.ready && <span class="lang-badge">soon</span>}
-              </a>
-            ))}
-          </div>
-        </div>
-        <a href={`${localePrefix}/magazin/`}>{nav.magazin}</a>
-      </div>
-      <div class="topbar-r">
-        <a href={`${localePrefix}/merkliste/`} class="fav-link" id="topFavLink">{nav.merkliste} <span class="fav-badge" id="favBadge" style="display:none">0</span></a>
-        <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
-      </div>
-    </div>
-  </div>
 
   <!-- NAV -->
   <nav class="main-nav" id="mainNav" transition:persist>
@@ -513,8 +484,6 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <script is:inline>
   (function(){'use strict';
     document.addEventListener('click',function(e){
-      var sel=document.getElementById('langSelector');
-      if(sel&&!sel.contains(e.target))sel.classList.remove('open');
       var fl=document.getElementById('floatingLang');
       if(fl&&!fl.contains(e.target))fl.classList.remove('open');
     });

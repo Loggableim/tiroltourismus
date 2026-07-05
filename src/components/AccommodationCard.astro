@@ -44,9 +44,9 @@ const placeholderIcon = isCamping ? '🏕️' : '🏨';
 </a>
 
 <style is:global>
-  .uk-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px);content-visibility:auto;contain-intrinsic-size:330px 390px}
-  .uk-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 18px 44px rgba(0,0,0,.12)}
-  .uk-img{position:relative;height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.015))}
+  .uk-card{background:var(--surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px);content-visibility:auto;contain-intrinsic-size:330px 390px}
+  .uk-card:hover{transform:translateY(-6px);border-color:var(--tirol-pink);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+  .uk-img{position:relative;height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--surface),var(--surface-hover))}
   .badge-gold{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--yellow),#F59E0B);color:#1a1a1a;box-shadow:0 4px 12px rgba(255,215,0,.14)}
   .badge-silver{position:absolute;top:12px;left:12px;padding:4px 12px;border-radius:100px;font-size:10px;font-weight:700;background:linear-gradient(135deg,var(--green),#059669);color:#fff;box-shadow:0 4px 12px rgba(0,200,83,.12)}
   .uk-placeholder{font-size:48px;color:var(--text3);filter:drop-shadow(0 8px 18px rgba(0,0,0,.16))}
@@ -57,7 +57,7 @@ const placeholderIcon = isCamping ? '🏕️' : '🏨';
   .uk-name{font-family:var(--font-display);font-size:22px;line-height:1.08;letter-spacing:.35px;margin-bottom:2px;color:var(--text)}
   .uk-ort{font-size:12px;color:var(--text2);margin-bottom:8px}
   .uk-stars{color:var(--yellow);font-size:13px;letter-spacing:2px;margin-bottom:8px}
-  .uk-meta{display:flex;align-items:center;justify-content:center;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.08)}
+  .uk-meta{display:flex;align-items:center;justify-content:center;margin-top:auto;padding-top:12px;border-top:1px solid var(--glass-border)}
   .uk-price{font-size:18px;font-weight:800;color:var(--text)}
   .uk-price small{font-size:11px;font-weight:400;color:var(--text2)}
   .uk-na{font-size:12px;color:var(--text3)}

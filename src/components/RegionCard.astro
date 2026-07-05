@@ -50,9 +50,9 @@ const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
 </a>
 
 <style is:global>
-  .region-card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.012));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px)}
-  .region-card:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.18);box-shadow:0 18px 44px rgba(0,0,0,.12)}
-  .region-card-img{height:190px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.015))}
+  .region-card{background:var(--surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease),background .35s var(--ease);display:flex;flex-direction:column;box-shadow:0 12px 30px rgba(0,0,0,.06);backdrop-filter:blur(10px)}
+  .region-card:hover{transform:translateY(-6px);border-color:var(--tirol-pink);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+  .region-card-img{height:190px;display:flex;align-items:center;justify-content:center;font-size:48px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--surface),var(--surface-hover))}
   .region-card-img::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.08),transparent 60%);pointer-events:none}
   .region-card-img .region-badge-img{position:relative;z-index:1;width:86%;height:auto;max-height:88%;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,0.24))}
   .region-card-img .region-card-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}

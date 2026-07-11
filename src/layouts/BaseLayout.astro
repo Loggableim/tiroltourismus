@@ -3,7 +3,7 @@
 // Locale-aware SEO: canonical + hreflang alternates for all ready languages.
 import { ViewTransitions } from 'astro:transitions';
 import { readSingleton } from '../lib/content.js';
-import { LANGUAGES, switchLangPath, DEFAULT_LOCALE } from '../lib/languages.js';
+import { LANGUAGES, switchLangPath, DEFAULT_LOCALE, LANG_DOMAINS } from '../lib/languages.js';
 import TirolLogo from '../components/TirolLogo.astro';
 
 export interface Props {
@@ -46,7 +46,7 @@ const settings = readSingleton('einstellungen', locale);
 const currentPath = Astro.url.pathname;
 
 const siteName = 'Tirol Tourismus';
-const siteURL = 'https://tiroltourismus.com';
+const siteURL = LANG_DOMAINS[locale] || 'https://tiroltourismus.com';
 const normalizePath = (path) => {
   const [pathname, suffix = ''] = String(path || '/').split(/(?=[?#])/);
   const cleanPath = pathname.replace(/\/+/g, '/') || '/';
@@ -54,15 +54,16 @@ const normalizePath = (path) => {
 };
 const absoluteURL = (path) => path.startsWith('http') ? path : `${siteURL}${normalizePath(path)}`;
 const pageURL = canonicalURL ? absoluteURL(canonicalURL) : absoluteURL(Astro.url.pathname);
+// hreflang: ALLE 8 Sprachen (auch die auf anderen Subdomains)
+// switchLangPath liefert absolute URLs für Cross-Domain-Sprachen
 const alternateLinks = LANGUAGES
-  .filter((l) => l.ready)
   .map((l) => ({
     code: l.code,
     hreflang: HREFLANG_MAP[l.code] || l.code,
-    href: absoluteURL(switchLangPath(currentPath, locale, l.code)),
+    href: switchLangPath(currentPath, locale, l.code), // already absolute for cross-domain
     ogLocale: LOCALE_MAP[l.code] || l.code,
   }));
-const xDefaultURL = absoluteURL(switchLangPath(currentPath, locale, DEFAULT_LOCALE));
+const xDefaultURL = switchLangPath(currentPath, locale, DEFAULT_LOCALE);
 const FALLBACK_OG = `${siteURL}/images/og-default.jpg`;
 const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : FALLBACK_OG;
 const preloadImageAbs = preloadImage ? (preloadImage.startsWith('http') ? preloadImage : preloadImage) : undefined;

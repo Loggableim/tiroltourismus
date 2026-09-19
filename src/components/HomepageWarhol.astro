@@ -1,0 +1,380 @@
+---
+// HomepageWarhol.astro — Warhol × Jobs × Tourismus Design
+// Minimalistische Typo + Pop-Art-Farbblöcke + umfangreicher Content.
+// Wird testweise für CS verwendet; später ggf. für alle Sprachen.
+import RegionCard from './RegionCard.astro';
+import AccommodationCard from './AccommodationCard.astro';
+import ArticleCard from './ArticleCard.astro';
+import GastroCard from './GastroCard.astro';
+import SightCard from './SightCard.astro';
+
+export interface Props {
+  locale: string;
+  localePrefix: string;
+  page: any;
+  regions: any[];
+  stays: any[];
+  sights: any[];
+  gastro: any[];
+  magazin: any[];
+  counts: { gastro: number; unterkuenfte: number; orte: number; sights: number; camping: number; magazin: number };
+  regionNames: { slug: string; name: string }[];
+}
+
+const { locale, localePrefix, page, regions, stays, sights, gastro, magazin, counts, regionNames } = Astro.props;
+
+// ── Lokalisierte Labels ──
+const L = {
+  de: { kicker: 'Ein Land · Acht Sprachen · Alles drin', langs: 'Sprache wählen', whatsin: 'Was drin ist', worlds: 'Sechs Welten', faces: 'Vierzehn Gesichter', regions: 'Regionen', places: 'Orte', sights: 'Sehenswürdigkeiten', stays: 'Unterkünfte', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazin', entries: 'Einträge', open: 'Öffnen →', discover: 'Entdecken →', allregions: 'Alle Regionen', allstays: 'Alle Unterkünfte', allsights: 'Alle Sehenswürdigkeiten', allgastro: 'Alle Gastro-Adressen', allmag: 'Alle Magazin-Beiträge', from: 'Von Arlberg bis Zillertal' },
+  cs: { kicker: 'Jedna země · Osm jazyků · Vše v jednom', langs: 'Vyberte jazyk', whatsin: 'Co v tom je', worlds: 'Šest světů', faces: 'Čtrnáct tváří', regions: 'Regiony', places: 'Místa', sights: 'Pamětihodnosti', stays: 'Ubytování', gastro: 'Gastronomie', camping: 'Kempy', magazin: 'Časopis', entries: 'záznamů', open: 'Otevřít →', discover: 'Objevit →', allregions: 'Všechny regiony', allstays: 'Všechna ubytování', allsights: 'Všechny pamětihodnosti', allgastro: 'Všechny gastro adresy', allmag: 'Všechny články', from: 'Od Arlbergu po Zillertal' },
+  en: { kicker: 'One country · Eight languages · All in', langs: 'Choose language', whatsin: "What's inside", worlds: 'Six worlds', faces: 'Fourteen faces', regions: 'Regions', places: 'Places', sights: 'Sights', stays: 'Stays', gastro: 'Food & Drink', camping: 'Camping', magazin: 'Magazine', entries: 'entries', open: 'Open →', discover: 'Discover →', allregions: 'All regions', allstays: 'All stays', allsights: 'All sights', allgastro: 'All food & drink', allmag: 'All magazine articles', from: 'From Arlberg to Zillertal' },
+};
+const t = L[locale] || L.en;
+
+// ── Sprachen für den Switcher ──
+const LANGS = [
+  { code: 'de', flag: '🇩🇪', native: 'Deutsch',    url: 'https://de.tiroltourismus.com', color: '#FF1493' },
+  { code: 'en', flag: '🇬🇧', native: 'English',    url: 'https://en.tiroltourismus.com', color: '#FFD700' },
+  { code: 'fr', flag: '🇫🇷', native: 'Français',   url: 'https://fr.tiroltourismus.com', color: '#00E5FF' },
+  { code: 'cs', flag: '🇨🇿', native: 'Čeština',    url: 'https://cs.tiroltourismus.com', color: '#FF6B35' },
+  { code: 'nl', flag: '🇳🇱', native: 'Nederlands', url: 'https://nl.tiroltourismus.com', color: '#8B5CF6' },
+  { code: 'it', flag: '🇮🇹', native: 'Italiano',   url: 'https://it.tiroltourismus.com', color: '#00C853' },
+  { code: 'es', flag: '🇪🇸', native: 'Español',    url: 'https://es.tiroltourismus.com', color: '#FF1493' },
+  { code: 'zh', flag: '🇨🇳', native: '中文',        url: 'https://zh.tiroltourismus.com', color: '#FFD700' },
+];
+
+const CATS = [
+  { icon: '🍽️', label: t.gastro, count: counts.gastro, color: '#FF1493', href: `${localePrefix}/gastro/` },
+  { icon: '🏡', label: t.stays, count: counts.unterkuenfte, color: '#FFD700', href: `${localePrefix}/unterkuenfte/` },
+  { icon: '🏘️', label: t.places, count: counts.orte, color: '#00E5FF', href: `${localePrefix}/orte/` },
+  { icon: '🏛️', label: t.sights, count: counts.sights, color: '#FF6B35', href: `${localePrefix}/sehenswuerdigkeiten/` },
+  { icon: '🏕️', label: t.camping, count: counts.camping, color: '#8B5CF6', href: `${localePrefix}/camping/` },
+  { icon: '📰', label: t.magazin, count: counts.magazin, color: '#00C853', href: `${localePrefix}/magazin/` },
+];
+
+const fmt = (n: number) => n.toLocaleString(locale === 'cs' ? 'cs-CZ' : 'de-AT');
+
+// Hero-Bilder für Regionen (6 Regionen haben echte Fotos)
+const REGION_HERO_IMAGES: Record<string, string> = {
+  innsbruck: '/assets/images/region_innsbruck_20260517_101459_thumb.webp',
+  oetztal: '/assets/images/region_oetztal_20260517_101502_thumb.webp',
+  stubaital: '/assets/images/region_stubaital_20260517_101513_thumb.webp',
+  zillertal: '/assets/images/region_zillertal_20260517_101508_thumb.webp',
+  kitzbuehel: '/assets/images/region_kitzbuehel_20260517_101526_thumb.webp',
+  kaunertal: '/assets/images/region_kaunertal_20260517_101520_thumb.webp',
+};
+
+// Hero-Titel: erste Zeile = page.hero.title[0], zweite = title[1]
+const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
+const COLORS = ['#FF1493', '#FFD700', '#00E5FF', '#FF6B35', '#8B5CF6', '#00C853'];
+function coloredLetters(word: string) {
+  return word.split('').map((c, i) => ({ c, color: COLORS[i % COLORS.length] }));
+}
+---
+
+<!-- ═══ HERO — Warhol-Farbblöcke + Jobs-Typo ═══ -->
+<header class="wh-hero">
+  <div class="wh-wrap">
+    <div class="wh-kicker">{t.kicker}</div>
+    <h1 class="wh-title">
+      {titleLines.map((line, li) => (
+        <span class="wh-row">
+          {coloredLetters(line).map(({ c, color }) => (
+            <span class="wh-c" style={`color:${color}`}>{c}</span>
+          ))}
+        </span>
+      ))}
+    </h1>
+    <p class="wh-sub" set:html={page.hero?.subtitle}></p>
+    <div class="wh-actions">
+      <a href={page.hero?.ctaPrimary?.href || '#regionen'} class="wh-btn wh-btn-primary">{page.hero?.ctaPrimary?.text || t.discover}</a>
+      <a href={page.hero?.ctaSecondary?.href || '#unterkuenfte'} class="wh-btn">{page.hero?.ctaSecondary?.text || t.allstays}</a>
+    </div>
+  </div>
+  <div class="wh-strip" aria-hidden="true">
+    {COLORS.map(c => <span style={`background:${c}`}></span>)}
+  </div>
+</header>
+
+<!-- ═══ SPRACHEN ═══ -->
+<section class="wh-section" aria-labelledby="wh-langs">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2" id="wh-langs">{t.langs}</h2>
+      <span class="wh-note">{LANGS.length} ×</span>
+    </div>
+    <div class="wh-lang-grid">
+      {LANGS.map(l => (
+        <a href={l.url} class:list={['wh-lang-tile', { active: l.code === locale }]} hreflang={l.code}>
+          <span class="wh-lang-bar" style={`background:${l.color}`}></span>
+          <span class="wh-lang-flag">{l.flag}</span>
+          <span>
+            <span class="wh-lang-name">{l.native}</span>
+            <span class="wh-lang-go" style={`color:${l.color}`}>{l.code === locale ? '✓' : t.open}</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ZAHLEN ═══ -->
+<section class="wh-section" style="padding-top:0" aria-labelledby="wh-numbers">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2" id="wh-numbers">{t.whatsin}</h2>
+    </div>
+    <div class="wh-numbers">
+      <div class="wh-num-block">
+        <div class="wh-num-val" style="color:#FF1493">{fmt(counts.gastro)}</div>
+        <div class="wh-num-label">{t.gastro}</div>
+      </div>
+      <div class="wh-num-block">
+        <div class="wh-num-val" style="color:#FFD700">{fmt(counts.unterkuenfte)}</div>
+        <div class="wh-num-label">{t.stays}</div>
+      </div>
+      <div class="wh-num-block">
+        <div class="wh-num-val" style="color:#00E5FF">{fmt(counts.orte)}</div>
+        <div class="wh-num-label">{t.places}</div>
+      </div>
+      <div class="wh-num-block">
+        <div class="wh-num-val" style="color:#FF6B35">{fmt(counts.sights + counts.camping)}</div>
+        <div class="wh-num-label">{t.sights} & {t.camping}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ KATEGORIEN ═══ -->
+<section class="wh-section" style="padding-top:0" aria-labelledby="wh-cats">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2" id="wh-cats">{t.worlds}</h2>
+    </div>
+    <div class="wh-cat-grid">
+      {CATS.map(c => (
+        <a href={c.href} class="wh-cat-tile">
+          <span class="wh-cat-icon">{c.icon}</span>
+          <span class="wh-cat-info">
+            <span class="wh-cat-label">{c.label}</span>
+            <span class="wh-cat-count">{fmt(c.count)} {t.entries}</span>
+          </span>
+          <span class="wh-cat-dot" style={`background:${c.color}`}></span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REGIONEN ═══ -->
+<section class="wh-section" style="padding-top:0" aria-labelledby="wh-regions">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2" id="wh-regions">{t.faces}</h2>
+      <span class="wh-note">{t.from}</span>
+    </div>
+    <div class="wh-region-row">
+      {regionNames.map(r => (
+        <a href={`${localePrefix}/regionen/${r.slug}/`} class="wh-region-chip">{r.name}</a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOP REGIONEN (Cards) ═══ -->
+<section class="wh-section" id="regionen" style="padding-top:0">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2">{page.regionen?.title || t.regions}</h2>
+      <a href={`${localePrefix}/regionen/`} class="wh-more">{t.allregions} →</a>
+    </div>
+    <div class="wh-card-grid">
+      {regions.map((r) => (
+        <RegionCard
+          titel={r.entry.titel || r.entry.name || r.slug}
+          slug={r.slug}
+          beschreibung={r.entry.kurzbeschreibung}
+          emoji={r.entry.emoji}
+          bewertung={r.entry.bewertung}
+          farbe={r.entry.farbe}
+          featured={r.entry.featured}
+          heroSrc={REGION_HERO_IMAGES[r.slug]}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ UNTERKÜNFTE ═══ -->
+<section class="wh-section" id="unterkuenfte" style="padding-top:0">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2">{page.unterkuenfte?.title || t.stays}</h2>
+      <a href={`${localePrefix}/unterkuenfte/`} class="wh-more">{t.allstays} →</a>
+    </div>
+    <div class="wh-card-grid">
+      {stays.map((u) => (
+        <AccommodationCard
+          name={u.entry.name || u.entry.titel}
+          slug={u.slug}
+          ort={u.entry.ort}
+          sterne={u.entry.sterne}
+          tier={u.entry.tier}
+          preis_ab={u.entry.preis}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SEHENSWÜRDIGKEITEN ═══ -->
+<section class="wh-section" id="sehenswuerdigkeiten" style="padding-top:0">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2">{t.sights}</h2>
+      <a href={`${localePrefix}/sehenswuerdigkeiten/`} class="wh-more">{t.allsights} →</a>
+    </div>
+    <div class="wh-card-grid wh-card-grid-4">
+      {sights.map((s) => (
+        <SightCard
+          name={s.entry.name}
+          slug={s.slug}
+          kurzbeschreibung={s.entry.kurzbeschreibung}
+          kategorie={s.entry.kategorie}
+          emoji={s.entry.emoji}
+          farbe={s.entry.farbe}
+          ort={s.entry.ort}
+          preis={s.entry.preis}
+          linkPrefix={`${localePrefix}/sehenswuerdigkeiten/`}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ GASTRO ═══ -->
+<section class="wh-section" id="gastro" style="padding-top:0">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2">{t.gastro}</h2>
+      <a href={`${localePrefix}/gastro/`} class="wh-more">{t.allgastro} →</a>
+    </div>
+    <div class="wh-card-grid">
+      {gastro.map((g) => (
+        <GastroCard
+          name={g.entry.name}
+          slug={g.slug}
+          beschreibung={g.entry.kurzbeschreibung}
+          kategorie={g.entry.kategorie}
+          emoji={g.entry.emoji}
+          ort={g.entry.ort}
+          preis={g.entry.preis}
+          linkPrefix={`${localePrefix}/gastro/`}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MAGAZIN ═══ -->
+<section class="wh-section" id="magazin" style="padding-top:0">
+  <div class="wh-wrap">
+    <div class="wh-head">
+      <h2 class="wh-h2">{t.magazin}</h2>
+      <a href={`${localePrefix}/magazin/`} class="wh-more">{t.allmag} →</a>
+    </div>
+    <div class="wh-card-grid">
+      {magazin.map((a) => (
+        <ArticleCard
+          slug={a.slug}
+          titel={a.entry.titel}
+          teaser={a.entry.kurzbeschreibung}
+          datum={a.entry.datum}
+          kategorie={a.entry.kategorie}
+          hero_bild={a.entry.hero_bild}
+          locale={locale}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  /* ═══ WARHOL × JOBS HOMEPAGE ═══ */
+  .wh-wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+  .wh-hero{padding:clamp(72px,12vh,140px) 0 clamp(40px,6vh,72px);position:relative}
+  .wh-kicker{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold,#FFD700);margin-bottom:24px}
+  .wh-title{font-family:var(--font-display);font-size:clamp(72px,15vw,220px);line-height:.82;letter-spacing:.02em;text-transform:uppercase;margin:0}
+  .wh-row{display:block}
+  .wh-c{display:inline-block;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+  .wh-c:hover{transform:translateY(-8px)}
+  .wh-sub{margin-top:28px;max-width:560px;font-size:clamp(15px,1.6vw,19px);color:var(--text2,rgba(255,255,255,.55));line-height:1.7}
+  .wh-sub strong{color:var(--text,#fff);font-weight:600}
+  .wh-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+  .wh-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:100px;border:1px solid var(--glass-border,rgba(255,255,255,.2));color:var(--text,#fff);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;transition:all .25s cubic-bezier(.16,1,.3,1)}
+  .wh-btn:hover{background:var(--text,#fff);color:var(--bg,#000);transform:translateY(-2px)}
+  .wh-btn-primary{background:var(--tirol-pink,#FF1493);border-color:var(--tirol-pink,#FF1493);color:#fff}
+  .wh-btn-primary:hover{background:var(--tirol-pink-dark,#C0006E);border-color:var(--tirol-pink-dark,#C0006E);color:#fff}
+  .wh-strip{display:grid;grid-template-columns:repeat(6,1fr);height:14px;margin-top:clamp(40px,7vh,80px)}
+  .wh-strip span{display:block}
+
+  .wh-section{padding:clamp(56px,9vh,110px) 0}
+  .wh-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,4vh,48px);flex-wrap:wrap}
+  .wh-h2{font-family:var(--font-display);font-size:clamp(36px,5.5vw,76px);line-height:.9;letter-spacing:.02em;text-transform:uppercase;margin:0}
+  .wh-note{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text3,rgba(255,255,255,.35))}
+  .wh-more{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--tirol-pink,#FF1493);white-space:nowrap}
+  .wh-more:hover{text-decoration:underline}
+
+  /* Sprachen */
+  .wh-lang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+  .wh-lang-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1/1;padding:20px;background:var(--surface,rgba(255,255,255,.04));border:1px solid var(--glass-border,rgba(255,255,255,.08));transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s;overflow:hidden}
+  .wh-lang-tile:hover{transform:scale(1.02);z-index:2;background:var(--surface-hover,rgba(255,255,255,.08))}
+  .wh-lang-tile.active{border-color:var(--tirol-pink,#FF1493)}
+  .wh-lang-bar{position:absolute;left:0;top:0;bottom:0;width:5px;transition:width .3s cubic-bezier(.16,1,.3,1),opacity .3s}
+  .wh-lang-tile:hover .wh-lang-bar{width:100%;opacity:.14}
+  .wh-lang-flag{font-size:clamp(28px,3.5vw,44px);line-height:1}
+  .wh-lang-name{font-family:var(--font-display);font-size:clamp(20px,2.4vw,32px);letter-spacing:.04em;text-transform:uppercase;line-height:1;display:block}
+  .wh-lang-go{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;display:block;margin-top:8px;opacity:0;transform:translateY(6px);transition:all .25s}
+  .wh-lang-tile:hover .wh-lang-go{opacity:1;transform:translateY(0)}
+
+  /* Zahlen */
+  .wh-numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+  .wh-num-block{padding:clamp(28px,4vw,48px) 24px;background:var(--surface,rgba(255,255,255,.04));border:1px solid var(--glass-border,rgba(255,255,255,.08))}
+  .wh-num-val{font-family:var(--font-display);font-size:clamp(44px,6.5vw,92px);line-height:.9;letter-spacing:.01em}
+  .wh-num-label{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--text3,rgba(255,255,255,.4));margin-top:10px}
+
+  /* Kategorien */
+  .wh-cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+  .wh-cat-tile{display:flex;align-items:center;gap:18px;padding:24px;background:var(--surface,rgba(255,255,255,.04));border:1px solid var(--glass-border,rgba(255,255,255,.08));transition:background .25s,transform .25s cubic-bezier(.16,1,.3,1)}
+  .wh-cat-tile:hover{background:var(--surface-hover,rgba(255,255,255,.08));transform:translateY(-3px)}
+  .wh-cat-icon{font-size:32px;line-height:1}
+  .wh-cat-info{flex:1;min-width:0}
+  .wh-cat-label{font-family:var(--font-display);font-size:clamp(19px,2.1vw,27px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;display:block}
+  .wh-cat-count{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--text3,rgba(255,255,255,.4));margin-top:4px;display:block}
+  .wh-cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+  /* Regionen */
+  .wh-region-row{display:flex;flex-wrap:wrap;gap:3px}
+  .wh-region-chip{font-family:var(--font-display);font-size:clamp(17px,1.9vw,25px);letter-spacing:.05em;text-transform:uppercase;padding:14px 22px;background:var(--surface,rgba(255,255,255,.04));border:1px solid var(--glass-border,rgba(255,255,255,.08));transition:all .25s cubic-bezier(.16,1,.3,1)}
+  .wh-region-chip:hover{background:var(--text,#fff);color:var(--bg,#000);transform:translateY(-3px)}
+
+  /* Card-Grids (bestehende Karten-Komponenten) */
+  .wh-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .wh-card-grid-4{grid-template-columns:repeat(4,1fr)}
+
+  @media(max-width:968px){
+    .wh-lang-grid{grid-template-columns:repeat(2,1fr)}
+    .wh-numbers{grid-template-columns:repeat(2,1fr)}
+    .wh-cat-grid{grid-template-columns:1fr}
+    .wh-card-grid{grid-template-columns:repeat(2,1fr)}
+    .wh-card-grid-4{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:600px){
+    .wh-card-grid,.wh-card-grid-4{grid-template-columns:1fr}
+    .wh-lang-tile{aspect-ratio:auto;min-height:120px}
+  }
+</style>

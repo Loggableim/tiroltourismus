@@ -6,6 +6,7 @@ import AccommodationCard from '../../components/AccommodationCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import GastroCard from '../../components/GastroCard.astro';
 import SightCard from '../../components/SightCard.astro';
+import HomepageWarhol from '../../components/HomepageWarhol.astro';
 import TirolLogo from '../../components/TirolLogo.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 import { LANGUAGES_READY, localeParams, DEFAULT_LOCALE, localePrefix as localePrefixFn } from '../../lib/languages.js';
@@ -79,6 +80,27 @@ const dynamicStats = [
   { icon: '🏛️', count: allSights.length, label: sl2.sights },
   { icon: '🏡', count: allUnterkuenfte.length + allCamping.length, label: sl2.stays },
 ];
+
+// ── Warhol-Design: echte Zählungen + Regionsnamen ──
+const allGastro = readCollection('gastro', locale).filter(g => isPublished(g.entry));
+const allMagazin = readCollection('magazin', locale).filter(a => isPublished(a.entry));
+const whCounts = {
+  gastro: allGastro.length,
+  unterkuenfte: allUnterkuenfte.length,
+  orte: allOrte.length,
+  sights: allSights.length,
+  camping: allCamping.length,
+  magazin: allMagazin.length,
+};
+const whRegionNames = allRegionen
+  .map(r => ({ slug: r.slug, name: r.entry.titel || r.entry.name || r.slug }))
+  .sort((a, b) => a.name.localeCompare(b.name, locale === 'cs' ? 'cs' : 'de'));
+const whRegions = allRegionen.slice(0, 6);
+const whStays = allUnterkuenfte.slice(0, 3);
+const whSights = allSights.slice(0, 4);
+const whGastro = allGastro.slice(0, 3);
+const whMagazin = allMagazin.slice(0, 3);
+const useWarhol = locale === 'cs'; // Testweise nur CS
 ---
 
 <BaseLayout
@@ -87,6 +109,20 @@ const dynamicStats = [
   locale={locale}
   preloadImage={page.hero?.bgImage}
 >
+  {useWarhol ? (
+    <HomepageWarhol
+      locale={locale}
+      localePrefix={localePrefix}
+      page={page}
+      regions={whRegions}
+      stays={whStays}
+      sights={whSights}
+      gastro={whGastro}
+      magazin={whMagazin}
+      counts={whCounts}
+      regionNames={whRegionNames}
+    />
+  ) : (
   <main>
     <section class="hero" aria-label="Hero">
       <div class="hero-bg"><img src={page.hero.bgImage} alt="" width="1024" height="1024" loading="eager" fetchpriority="high"></div>
@@ -219,4 +255,5 @@ const dynamicStats = [
       </div>
     </section>
   </main>
+  )}
 </BaseLayout>

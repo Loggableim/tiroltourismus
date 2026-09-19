@@ -20,10 +20,13 @@ export const LANG_DOMAINS = {
   fr: 'https://fr.tiroltourismus.com',
   cs: 'https://cs.tiroltourismus.com',
   nl: 'https://nl.tiroltourismus.com',
+  it: 'https://it.tiroltourismus.com',
+  es: 'https://es.tiroltourismus.com',
+  zh: 'https://zh.tiroltourismus.com',
   // soon-Sprachen: noch keine Subdomain — zeigen auf die Landing
-  it: 'https://tiroltourismus.com',
-  es: 'https://tiroltourismus.com',
-  zh: 'https://tiroltourismus.com',
+  pl: 'https://tiroltourismus.com',
+  hu: 'https://tiroltourismus.com',
+  sk: 'https://tiroltourismus.com',
 };
 
 // ── Landing/Hub-Domain ──
@@ -42,10 +45,10 @@ export const LANGUAGES = [
 ];
 
 // ── Veröffentlichte Sprachen (haben Subdomain + volle Inhalte) ──
-export const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl'];
+export const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'];
 
 // ── Soon-Sprachen (Landing zeigt Vote-Button) ──
-export const SOON_LANGS = ['it', 'es', 'zh'];
+export const SOON_LANGS = ['pl', 'hu', 'sk'];
 
 // ── BUILD_LANGS env steuert, welche Sprachen in diesem Build gebaut werden ──
 const buildLangsEnv = typeof process !== 'undefined' && process.env.BUILD_LANGS;

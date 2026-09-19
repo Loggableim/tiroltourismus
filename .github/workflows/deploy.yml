@@ -31,6 +31,12 @@ jobs:
             project: tiroltourismus-cs
           - lang: nl
             project: tiroltourismus-nl
+          - lang: it
+            project: tiroltourismus-it
+          - lang: es
+            project: tiroltourismus-es
+          - lang: zh
+            project: tiroltourismus-zh
     env:
       NODE_OPTIONS: "--max-old-space-size=8192"
       CI: true

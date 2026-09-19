@@ -14,7 +14,7 @@ WORKER = str(BASE / "scripts" / "translate_worker.py")
 PYTHON = "C:/HermesPortable/venv/Scripts/python"
 
 LANG_TOTAL = 5240
-LANG_CHAIN = ["nl", "cs", "pl", "hu", "sk", "ru"]
+LANG_CHAIN = ["pl", "hu", "sk"]  # verbleibende Sprachen (de/en/fr/cs/nl/it/es/zh sind live)
 CATEGORIES = ["gastro", "unterkuenfte", "orte", "camping", "sehenswuerdigkeiten", "magazin", "regionen", "erlebnisse", "events"]
 
 ENV = os.environ.copy()

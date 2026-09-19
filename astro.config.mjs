@@ -15,10 +15,13 @@ const LANG_DOMAINS = {
   fr: 'https://fr.tiroltourismus.com',
   cs: 'https://cs.tiroltourismus.com',
   nl: 'https://nl.tiroltourismus.com',
+  it: 'https://it.tiroltourismus.com',
+  es: 'https://es.tiroltourismus.com',
+  zh: 'https://zh.tiroltourismus.com',
 };
 const LANDING_DOMAIN = 'https://tiroltourismus.com';
-const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl'];
-const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', cs:'cs-CZ', nl:'nl-NL' };
+const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'];
+const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', cs:'cs-CZ', nl:'nl-NL', it:'it-IT', es:'es-ES', zh:'zh-CN' };
 
 const siteUrl = isSingleLang ? (LANG_DOMAINS[singleLang] || LANDING_DOMAIN) : LANDING_DOMAIN;
 

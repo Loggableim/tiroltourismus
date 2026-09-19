@@ -18,18 +18,17 @@ import urllib.request, urllib.error
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "src" / "data"
 
-# ── Ollama Cloud (alle 6 Keys) ─────────────────────────────────
+# ── Ollama Cloud (Hauptkeys aus Sidekick-Credential-Pool) ─────
+# DeepSeek 4.1 Flash für alle Übersetzungen (User-Vorgabe 2026-09-19)
 OLLAMA_KEYS = [
-    "51484f56e01142ddaa6b247a0f19aab5.SJw0DVBs3S-BWllxSULXM17o",
-    "32d793e82978472c89ae09092c65921e.x5XpxfWOplC120yClZhx6PUz",
-    "72d76965979a4861bf498130535efe12.7KCt83Wvj9tOLmm13KMAEP9o",
-    "b79597dbc5af4811b051cd1dcb2e8d79.rC-MYL24L5P3NShzzn0fYszQ",
-    "27c36e3e9cbe4acb8c0fa0dcde9f2017.SJjR",   # loggableim (manual)
-    "0d8ea1db6cf64aa493a63686ca6cdcf3.v8Co",    # logga23 (manual)
+    "6ca4701713af45b6b86dbec67057b192.cgy0OtCEVaRIZUxkrnepKtQL",   # Hauptkey (10 agents)
+    "a6285d688685426fa6e1877161669c5a.QkIMfGkQvP5gLXYKjOQ0vjLg",   # Fallback 1
+    "cda2a70a1e334f83ab179deedad1f8c2.oEZpwKu9pYFLeGh1A2DZQHrN",   # Fallback 2
+    "61dfae9735174bd0924112922ed568cf.ThtyLm31CsBfqj3bIosdeFS4",   # Fallback 3
 ]
 OLLAMA_BASE_URL = "https://ollama.com/v1"
-OLLAMA_SHORT_MODEL = os.getenv("OLLAMA_MODEL_SHORT", "ministral-3:3b")
-OLLAMA_LONG_MODEL  = os.getenv("OLLAMA_MODEL_LONG",  "ministral-3:14b")
+OLLAMA_SHORT_MODEL = os.getenv("OLLAMA_MODEL_SHORT", "deepseek-v4.1-flash")
+OLLAMA_LONG_MODEL  = os.getenv("OLLAMA_MODEL_LONG",  "deepseek-v4.1-flash")
 
 # ── OpenRouter (Free) ─────────────────────────────────────────
 OPENROUTER_KEY      = os.getenv("OPENROUTER_API_KEY", "")
@@ -38,7 +37,7 @@ OPENROUTER_SHORT    = os.getenv("OR_SHORT", "google/gemma-3-27b-it:free")
 OPENROUTER_LONG     = os.getenv("OR_LONG",  "openai/gpt-oss-120b:free")
 
 LONG_TEXT_THRESHOLD = int(os.getenv("OLLAMA_LONG_TEXT_THRESHOLD", "1200"))
-MAX_PARALLEL_OLLAMA = 6
+MAX_PARALLEL_OLLAMA = 8
 MAX_PARALLEL_OR    = 0  # kein OpenRouter-Key verfügbar (für später vorbereitet)
 
 # ── Provider Key-Rotation ─────────────────────────────────────
@@ -82,7 +81,7 @@ def api_call(system_prompt, user_text, timeout=120, model=None, provider="ollama
             {"role": "system", "content": system_prompt},
             {"role": "user",   "content": user_text[:12000]}
         ],
-        "max_tokens": 4096,
+        "max_tokens": 16000,
         "temperature": 0.15,
     }).encode()
 
@@ -163,14 +162,14 @@ TAG_PROMPTS = {
 
 TRANSLATABLE_FIELDS = {
     "gastro":             ["kurzbeschreibung", "beschreibung"],
-    "unterkuenfte":       ["kurzbeschreibung"],
-    "camping":            ["kurzbeschreibung"],
-    "orte":               ["kurzbeschreibung"],
-    "sehenswuerdigkeiten":["kurzbeschreibung"],
+    "unterkuenfte":       ["kurzbeschreibung", "beschreibung"],
+    "camping":            ["kurzbeschreibung", "beschreibung"],
+    "orte":               ["kurzbeschreibung", "beschreibung"],
+    "sehenswuerdigkeiten":["kurzbeschreibung", "beschreibung"],
     "regionen":           ["kurzbeschreibung", "beschreibung", "tipps", "empfehlungen", "umgebung"],
     "magazin":            ["teaser", "inhalt", "kategorie"],
-    "erlebnisse":         ["kurzbeschreibung"],
-    "events":             ["name", "kurzbeschreibung"],
+    "erlebnisse":         ["kurzbeschreibung", "beschreibung"],
+    "events":             ["name", "kurzbeschreibung", "beschreibung"],
 }
 
 # ── Translation Functions ─────────────────────────────────────

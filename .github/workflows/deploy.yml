@@ -94,4 +94,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy landing/dist --project-name=tiroltourismus --branch=${{ github.ref_name }}
+          workingDirectory: landing
+          command: pages deploy dist --project-name=tiroltourismus --branch=${{ github.ref_name }}

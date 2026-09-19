@@ -1,0 +1,460 @@
+---
+// HomepageArt.astro — 8 künstlerische Sprach-Designs
+// Jede Sprache bekommt ein eigenes, von Tiroler Künstlern inspiriertes Design:
+//   DE: Otto Grünmandl + Paul Flora (humorvoll, minimalistisch)
+//   EN: Albin Egger-Lienz + Alfons Walde (kraftvoll, erdig, winterlich)
+//   FR: Max Weiler + Paul Flora (poetisch, organisch, Weißraum)
+//   CS: Franz von Defregger + Albin Egger-Lienz (historisch, ländlich)
+//   IT: Alfons Walde + Gustav Klimt (luxuriös, ornamental, gold)
+//   NL: Paul Flora + Salvador Dalí (surreal, dünne Linien, schwebend)
+//   ES: Max Weiler + Wassily Kandinsky (abstrakt, geometrisch)
+//   ZH: Michael Pacher + Albin Egger-Lienz (sakral, symmetrisch, dramatisch)
+import RegionCard from './RegionCard.astro';
+import AccommodationCard from './AccommodationCard.astro';
+import ArticleCard from './ArticleCard.astro';
+import GastroCard from './GastroCard.astro';
+import SightCard from './SightCard.astro';
+
+export interface Props {
+  locale: string;
+  localePrefix: string;
+  page: any;
+  regions: any[];
+  stays: any[];
+  sights: any[];
+  gastro: any[];
+  magazin: any[];
+  counts: { gastro: number; unterkuenfte: number; orte: number; sights: number; camping: number; magazin: number };
+  regionNames: { slug: string; name: string }[];
+}
+
+const { locale, localePrefix, page, regions, stays, sights, gastro, magazin, counts, regionNames } = Astro.props;
+
+// ── Design-Credit + Kicker pro Sprache ──
+const THEMES: Record<string, { credit: string; kicker: string }> = {
+  de: { credit: 'Design inspiriert von Otto Grünmandl & Paul Flora', kicker: 'Kunst trifft Tirol' },
+  en: { credit: 'Design inspired by Albin Egger-Lienz & Alfons Walde', kicker: 'Art meets Tyrol' },
+  fr: { credit: 'Design inspiré par Max Weiler & Paul Flora', kicker: "L'art rencontre le Tyrol" },
+  cs: { credit: 'Design inspirováno Franzem von Defregger & Albinem Egger-Lienzem', kicker: 'Umění potkává Tyrolsko' },
+  it: { credit: 'Design ispirato da Alfons Walde & Gustav Klimt', kicker: "L'arte incontra il Tirolo" },
+  es: { credit: 'Diseño inspirado por Max Weiler & Wassily Kandinsky', kicker: 'El arte se encuentra con Tirol' },
+  zh: { credit: '设计灵感来自 Michael Pacher 与 Albin Egger-Lienz', kicker: '艺术遇见蒂罗尔' },
+  nl: { credit: 'Design geïnspireerd door Paul Flora & Salvador Dalí', kicker: 'Kunst ontmoet Tirol' },
+};
+const theme = THEMES[locale] || THEMES.en;
+
+// ── Lokalisierte Labels ──
+const L: Record<string, any> = {
+  de: { whatsin: 'Was drin ist', worlds: 'Sechs Welten', faces: 'Vierzehn Gesichter', regions: 'Regionen', places: 'Orte', sights: 'Sehenswürdigkeiten', stays: 'Unterkünfte', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazin', entries: 'Einträge', discover: 'Entdecken →', allregions: 'Alle Regionen', allstays: 'Alle Unterkünfte', allsights: 'Alle Sehenswürdigkeiten', allgastro: 'Alle Gastro-Adressen', allmag: 'Alle Magazin-Beiträge', from: 'Von Arlberg bis Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
+  en: { whatsin: "What's inside", worlds: 'Six worlds', faces: 'Fourteen faces', regions: 'Regions', places: 'Places', sights: 'Sights', stays: 'Stays', gastro: 'Food & Drink', camping: 'Camping', magazin: 'Magazine', entries: 'entries', discover: 'Discover →', allregions: 'All regions', allstays: 'All stays', allsights: 'All sights', allgastro: 'All food & drink', allmag: 'All magazine articles', from: 'From Arlberg to Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
+  fr: { whatsin: "Ce qu'il y a dedans", worlds: 'Six mondes', faces: 'Quatorze visages', regions: 'Régions', places: 'Villages', sights: 'Sites', stays: 'Hébergements', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazine', entries: 'entrées', discover: 'Découvrir →', allregions: 'Toutes les régions', allstays: 'Tous les hébergements', allsights: 'Tous les sites', allgastro: 'Toute la gastronomie', allmag: 'Tous les articles', from: "De l'Arlberg au Zillertal", landing: 'Zur Sprachauswahl', design: 'Design' },
+  cs: { whatsin: 'Co v tom je', worlds: 'Šest světů', faces: 'Čtrnáct tváří', regions: 'Regiony', places: 'Místa', sights: 'Pamětihodnosti', stays: 'Ubytování', gastro: 'Gastronomie', camping: 'Kempy', magazin: 'Časopis', entries: 'záznamů', discover: 'Objevit →', allregions: 'Všechny regiony', allstays: 'Všechna ubytování', allsights: 'Všechny pamětihodnosti', allgastro: 'Všechny gastro adresy', allmag: 'Všechny články', from: 'Od Arlbergu po Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
+  it: { whatsin: "Cosa c'è dentro", worlds: 'Sei mondi', faces: 'Quattordici volti', regions: 'Regioni', places: 'Paesi', sights: 'Attrazioni', stays: 'Alloggi', gastro: 'Gastronomia', camping: 'Campeggio', magazin: 'Magazine', entries: 'voci', discover: 'Scoprire →', allregions: 'Tutte le regioni', allstays: 'Tutti gli alloggi', allsights: 'Tutte le attrazioni', allgastro: 'Tutta la gastronomia', allmag: 'Tutti gli articoli', from: "Dall'Arlberg allo Zillertal", landing: 'Zur Sprachauswahl', design: 'Design' },
+  es: { whatsin: 'Lo que hay dentro', worlds: 'Seis mundos', faces: 'Catorce rostros', regions: 'Regiones', places: 'Pueblos', sights: 'Atracciones', stays: 'Alojamientos', gastro: 'Gastronomía', camping: 'Camping', magazin: 'Revista', entries: 'entradas', discover: 'Descubrir →', allregions: 'Todas las regiones', allstays: 'Todos los alojamientos', allsights: 'Todas las atracciones', allgastro: 'Toda la gastronomía', allmag: 'Todos los artículos', from: 'De Arlberg a Zillertal', landing: 'Zur Sprachauswahl', design: 'Diseño' },
+  zh: { whatsin: '里面有什么', worlds: '六个世界', faces: '十四张面孔', regions: '地区', places: '村镇', sights: '景点', stays: '住宿', gastro: '美食', camping: '露营', magazin: '杂志', entries: '条目', discover: '探索 →', allregions: '所有地区', allstays: '所有住宿', allsights: '所有景点', allgastro: '所有美食', allmag: '所有文章', from: '从阿尔贝格到齐勒塔尔', landing: 'Zur Sprachauswahl', design: '设计' },
+  nl: { whatsin: 'Wat erin zit', worlds: 'Zes werelden', faces: 'Veertien gezichten', regions: "Regio's", places: 'Plaatsen', sights: 'Bezienswaardigheden', stays: 'Accommodaties', gastro: 'Eten & Drinken', camping: 'Campings', magazin: 'Tijdschrift', entries: 'vermeldingen', discover: 'Ontdekken →', allregions: "Alle regio's", allstays: 'Alle accommodaties', allsights: 'Alle bezienswaardigheden', allgastro: 'Al het eten & drinken', allmag: 'Alle artikelen', from: 'Van Arlberg tot Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
+};
+const t = L[locale] || L.en;
+
+const CATS = [
+  { icon: '🍽️', label: t.gastro, count: counts.gastro, href: `${localePrefix}/gastro/` },
+  { icon: '🏡', label: t.stays, count: counts.unterkuenfte, href: `${localePrefix}/unterkuenfte/` },
+  { icon: '🏘️', label: t.places, count: counts.orte, href: `${localePrefix}/orte/` },
+  { icon: '🏛️', label: t.sights, count: counts.sights, href: `${localePrefix}/sehenswuerdigkeiten/` },
+  { icon: '🏕️', label: t.camping, count: counts.camping, href: `${localePrefix}/camping/` },
+  { icon: '📰', label: t.magazin, count: counts.magazin, href: `${localePrefix}/magazin/` },
+];
+
+const fmt = (n: number) => n.toLocaleString(locale === 'cs' ? 'cs-CZ' : locale === 'zh' ? 'zh-CN' : 'de-AT');
+
+const REGION_HERO_IMAGES: Record<string, string> = {
+  innsbruck: '/assets/images/region_innsbruck_20260517_101459_thumb.webp',
+  oetztal: '/assets/images/region_oetztal_20260517_101502_thumb.webp',
+  stubaital: '/assets/images/region_stubaital_20260517_101513_thumb.webp',
+  zillertal: '/assets/images/region_zillertal_20260517_101508_thumb.webp',
+  kitzbuehel: '/assets/images/region_kitzbuehel_20260517_101526_thumb.webp',
+  kaunertal: '/assets/images/region_kaunertal_20260517_101520_thumb.webp',
+};
+
+const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
+---
+
+<div class={`art-root art-${locale}`}>
+  <!-- ═══ HERO ═══ -->
+  <header class="art-hero">
+    <!-- Theme-Dekoration -->
+    {locale === 'en' && (
+      <svg class="art-deco art-deco-mountains" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,320 L180,110 L330,215 L520,55 L710,235 L890,95 L1070,255 L1250,135 L1440,290 L1440,320 Z" fill="currentColor" opacity=".14"/>
+        <path d="M0,320 L250,175 L430,255 L630,135 L830,275 L1030,175 L1230,295 L1440,215 L1440,320 Z" fill="currentColor" opacity=".22"/>
+      </svg>
+    )}
+    {locale === 'it' && (
+      <svg class="art-deco art-deco-klimt" viewBox="0 0 400 400" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5" opacity=".5">
+          <rect x="40" y="40" width="60" height="60"/><rect x="120" y="40" width="60" height="60"/>
+          <rect x="200" y="40" width="60" height="60"/><rect x="280" y="40" width="60" height="60"/>
+          <rect x="40" y="120" width="60" height="60"/><rect x="200" y="120" width="60" height="60"/>
+          <rect x="120" y="200" width="60" height="60"/><rect x="280" y="200" width="60" height="60"/>
+          <rect x="40" y="280" width="60" height="60"/><rect x="200" y="280" width="60" height="60"/>
+        </g>
+        <circle cx="320" cy="120" r="26" fill="currentColor" opacity=".25"/>
+      </svg>
+    )}
+    {locale === 'nl' && (
+      <div class="art-deco art-deco-surreal" aria-hidden="true">
+        <svg class="sur-obj sur-moon" viewBox="0 0 60 60"><circle cx="30" cy="30" r="24" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="38" cy="26" r="20" fill="var(--art-bg)" stroke="none"/></svg>
+        <svg class="sur-obj sur-key" viewBox="0 0 80 40"><circle cx="16" cy="20" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="26" y1="20" x2="70" y2="20" stroke="currentColor" stroke-width="1.5"/><line x1="60" y1="20" x2="60" y2="30" stroke="currentColor" stroke-width="1.5"/><line x1="68" y1="20" x2="68" y2="28" stroke="currentColor" stroke-width="1.5"/></svg>
+        <svg class="sur-obj sur-eye" viewBox="0 0 70 40"><path d="M5,20 Q35,0 65,20 Q35,40 5,20 Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="35" cy="20" r="7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    )}
+    {locale === 'es' && (
+      <svg class="art-deco art-deco-kandinsky" viewBox="0 0 400 400" aria-hidden="true">
+        <circle cx="120" cy="140" r="70" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+        <circle cx="120" cy="140" r="34" fill="currentColor" opacity=".16"/>
+        <path d="M240,80 L330,230 L150,230 Z" fill="none" stroke="currentColor" stroke-width="2" opacity=".45"/>
+        <line x1="60" y1="300" x2="340" y2="260" stroke="currentColor" stroke-width="2" opacity=".4"/>
+        <line x1="80" y1="340" x2="300" y2="320" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+        <circle cx="300" cy="150" r="12" fill="currentColor" opacity=".5"/>
+      </svg>
+    )}
+    {locale === 'fr' && (
+      <div class="art-deco art-deco-blobs" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+      </div>
+    )}
+    {locale === 'cs' && (
+      <svg class="art-deco art-deco-ornament" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+        <defs><pattern id="csdia" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M30,8 L52,30 L30,52 L8,30 Z" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="30" cy="30" r="4" fill="currentColor"/></pattern></defs>
+        <rect width="1440" height="60" fill="url(#csdia)" opacity=".5"/>
+      </svg>
+    )}
+    {locale === 'zh' && (
+      <svg class="art-deco art-deco-arch" viewBox="0 0 400 300" aria-hidden="true">
+        <path d="M60,300 L60,140 Q200,20 340,140 L340,300" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".5"/>
+        <path d="M100,300 L100,160 Q200,70 300,160 L300,300" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".3"/>
+        <circle cx="200" cy="120" r="16" fill="currentColor" opacity=".4"/>
+      </svg>
+    )}
+    {locale === 'de' && (
+      <svg class="art-deco art-deco-line" viewBox="0 0 300 120" aria-hidden="true">
+        <line x1="10" y1="100" x2="290" y2="100" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M120,100 Q130,60 150,58 Q170,56 175,70 Q180,84 165,86 Q150,88 148,76" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="152" cy="64" r="2.5" fill="currentColor"/>
+        <path d="M175,70 L200,64 M175,74 L202,76" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+    )}
+
+    <div class="art-wrap">
+      <div class="art-kicker">{theme.kicker}</div>
+      <h1 class="art-title">
+        {titleLines.map((line: string) => <span class="art-title-line">{line}</span>)}
+      </h1>
+      <p class="art-sub" set:html={page.hero?.subtitle}></p>
+      <div class="art-actions">
+        <a href={page.hero?.ctaPrimary?.href || '#regionen'} class="art-btn art-btn-primary">{page.hero?.ctaPrimary?.text || t.discover}</a>
+        <a href={page.hero?.ctaSecondary?.href || '#unterkuenfte'} class="art-btn">{page.hero?.ctaSecondary?.text || t.allstays}</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ ZAHLEN ═══ -->
+  <section class="art-section" aria-labelledby="art-numbers">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2" id="art-numbers">{t.whatsin}</h2>
+      </div>
+      <div class="art-numbers">
+        <div class="art-num-block"><div class="art-num-val">{fmt(counts.gastro)}</div><div class="art-num-label">{t.gastro}</div></div>
+        <div class="art-num-block"><div class="art-num-val">{fmt(counts.unterkuenfte)}</div><div class="art-num-label">{t.stays}</div></div>
+        <div class="art-num-block"><div class="art-num-val">{fmt(counts.orte)}</div><div class="art-num-label">{t.places}</div></div>
+        <div class="art-num-block"><div class="art-num-val">{fmt(counts.sights + counts.camping)}</div><div class="art-num-label">{t.sights} & {t.camping}</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ KATEGORIEN ═══ -->
+  <section class="art-section" style="padding-top:0" aria-labelledby="art-cats">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2" id="art-cats">{t.worlds}</h2>
+      </div>
+      <div class="art-cat-grid">
+        {CATS.map(c => (
+          <a href={c.href} class="art-cat-tile">
+            <span class="art-cat-icon">{c.icon}</span>
+            <span class="art-cat-info">
+              <span class="art-cat-label">{c.label}</span>
+              <span class="art-cat-count">{fmt(c.count)} {t.entries}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REGIONEN ═══ -->
+  <section class="art-section" style="padding-top:0" aria-labelledby="art-regions">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2" id="art-regions">{t.faces}</h2>
+        <span class="art-note">{t.from}</span>
+      </div>
+      <div class="art-region-row">
+        {regionNames.map(r => (
+          <a href={`${localePrefix}/regionen/${r.slug}/`} class="art-region-chip">{r.name}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TOP REGIONEN ═══ -->
+  <section class="art-section" id="regionen" style="padding-top:0">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2">{page.regionen?.title || t.regions}</h2>
+        <a href={`${localePrefix}/regionen/`} class="art-more">{t.allregions} →</a>
+      </div>
+      <div class="art-card-grid">
+        {regions.map((r) => (
+          <RegionCard titel={r.entry.titel || r.entry.name || r.slug} slug={r.slug} beschreibung={r.entry.kurzbeschreibung} emoji={r.entry.emoji} bewertung={r.entry.bewertung} farbe={r.entry.farbe} featured={r.entry.featured} heroSrc={REGION_HERO_IMAGES[r.slug]} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ UNTERKÜNFTE ═══ -->
+  <section class="art-section" id="unterkuenfte" style="padding-top:0">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2">{page.unterkuenfte?.title || t.stays}</h2>
+        <a href={`${localePrefix}/unterkuenfte/`} class="art-more">{t.allstays} →</a>
+      </div>
+      <div class="art-card-grid">
+        {stays.map((u) => (
+          <AccommodationCard name={u.entry.name || u.entry.titel} slug={u.slug} ort={u.entry.ort} sterne={u.entry.sterne} tier={u.entry.tier} preis_ab={u.entry.preis} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SEHENSWÜRDIGKEITEN ═══ -->
+  <section class="art-section" id="sehenswuerdigkeiten" style="padding-top:0">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2">{t.sights}</h2>
+        <a href={`${localePrefix}/sehenswuerdigkeiten/`} class="art-more">{t.allsights} →</a>
+      </div>
+      <div class="art-card-grid art-card-grid-4">
+        {sights.map((s) => (
+          <SightCard name={s.entry.name} slug={s.slug} kurzbeschreibung={s.entry.kurzbeschreibung} kategorie={s.entry.kategorie} emoji={s.entry.emoji} farbe={s.entry.farbe} ort={s.entry.ort} preis={s.entry.preis} linkPrefix={`${localePrefix}/sehenswuerdigkeiten/`} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GASTRO ═══ -->
+  <section class="art-section" id="gastro" style="padding-top:0">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2">{t.gastro}</h2>
+        <a href={`${localePrefix}/gastro/`} class="art-more">{t.allgastro} →</a>
+      </div>
+      <div class="art-card-grid">
+        {gastro.map((g) => (
+          <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} emoji={g.entry.emoji} ort={g.entry.ort} preis={g.entry.preis} linkPrefix={`${localePrefix}/gastro/`} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MAGAZIN ═══ -->
+  <section class="art-section" id="magazin" style="padding-top:0">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2">{t.magazin}</h2>
+        <a href={`${localePrefix}/magazin/`} class="art-more">{t.allmag} →</a>
+      </div>
+      <div class="art-card-grid">
+        {magazin.map((a) => (
+          <ArticleCard slug={a.slug} titel={a.entry.titel} teaser={a.entry.kurzbeschreibung} datum={a.entry.datum} kategorie={a.entry.kategorie} hero_bild={a.entry.hero_bild} locale={locale} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DESIGN-CREDIT + LANDING-LINK ═══ -->
+  <footer class="art-footer">
+    <div class="art-wrap art-footer-inner">
+      <div class="art-credit">
+        <span class="art-credit-label">{t.design}</span>
+        <span class="art-credit-text">{theme.credit}</span>
+      </div>
+      <a href="https://tiroltourismus.com/" class="art-landing-link">🌐 {t.landing}</a>
+    </div>
+  </footer>
+</div>
+
+<style is:global>
+  /* ═══════════════════════════════════════════════════════════
+     ART HOMEPAGE — Basis + Theme-Variablen
+     ═══════════════════════════════════════════════════════════ */
+  .art-root{min-height:100vh;background:var(--art-bg);color:var(--art-text);font-family:var(--font-body);
+    --text:var(--art-text);--text2:var(--art-text2);--text3:var(--art-text3);
+    --surface:var(--art-surface);--surface-hover:var(--art-surface-hover);
+    --glass-border:var(--art-border);--tirol-pink:var(--art-accent);
+    --tirol-pink-dark:var(--art-accent-dark);--bg:var(--art-bg);--bg2:var(--art-bg2);
+    --yellow:var(--art-gold);--gold:var(--art-gold);
+  }
+  .art-wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+  /* ── Theme: DE — Grünmandl + Flora (minimalistisch, humorvoll) ── */
+  .art-de{--art-bg:#faf9f6;--art-bg2:#f2f0ea;--art-text:#1c1c1a;--art-text2:rgba(28,28,26,.62);--art-text3:rgba(28,28,26,.38);
+    --art-accent:#c44536;--art-accent-dark:#9e3529;--art-gold:#8a6d1f;--art-surface:rgba(28,28,26,.035);--art-surface-hover:rgba(28,28,26,.07);--art-border:rgba(28,28,26,.12)}
+  .art-de .art-title{font-family:var(--font-display);font-size:clamp(64px,13vw,190px);line-height:.85;letter-spacing:.01em}
+  .art-de .art-title-line:last-child{transform:rotate(-1.5deg);display:inline-block;color:var(--art-accent)}
+  .art-de .art-kicker{color:var(--art-accent)}
+
+  /* ── Theme: EN — Egger-Lienz + Walde (kraftvoll, erdig, winterlich) ── */
+  .art-en{--art-bg:#2b211a;--art-bg2:#33281f;--art-text:#f5f0e8;--art-text2:rgba(245,240,232,.66);--art-text3:rgba(245,240,232,.4);
+    --art-accent:#a63d40;--art-accent-dark:#7f2e31;--art-gold:#c9a227;--art-surface:rgba(245,240,232,.05);--art-surface-hover:rgba(245,240,232,.1);--art-border:rgba(245,240,232,.14)}
+  .art-en .art-title{font-family:var(--font-display);font-size:clamp(72px,15vw,220px);line-height:.82;letter-spacing:.02em;color:#f5f0e8}
+  .art-en .art-title-line:last-child{color:var(--art-gold)}
+  .art-en .art-kicker{color:var(--art-gold)}
+  .art-en .art-deco-mountains{color:#f5f0e8}
+
+  /* ── Theme: FR — Weiler + Flora (poetisch, organisch, Weißraum) ── */
+  .art-fr{--art-bg:#f4f1ea;--art-bg2:#ece8de;--art-text:#3a3a35;--art-text2:rgba(58,58,53,.6);--art-text3:rgba(58,58,53,.36);
+    --art-accent:#7a8b6f;--art-accent-dark:#5f6e56;--art-gold:#c2a05a;--art-surface:rgba(58,58,53,.03);--art-surface-hover:rgba(58,58,53,.06);--art-border:rgba(58,58,53,.1)}
+  .art-fr .art-title{font-family:var(--font-body);font-weight:400;font-size:clamp(44px,8.5vw,120px);line-height:1.02;letter-spacing:.12em;text-transform:uppercase}
+  .art-fr .art-title-line:last-child{color:var(--art-accent);font-style:italic}
+  .art-fr .art-kicker{color:#d97d54}
+
+  /* ── Theme: CS — Defregger + Egger-Lienz (historisch, ländlich) ── */
+  .art-cs{--art-bg:#ede4d3;--art-bg2:#e3d8c2;--art-text:#2e1f14;--art-text2:rgba(46,31,20,.64);--art-text3:rgba(46,31,20,.4);
+    --art-accent:#7a2e2e;--art-accent-dark:#5c2121;--art-gold:#b8860b;--art-surface:rgba(46,31,20,.045);--art-surface-hover:rgba(46,31,20,.09);--art-border:rgba(46,31,20,.16)}
+  .art-cs .art-title{font-family:var(--font-display);font-size:clamp(64px,13vw,190px);line-height:.85;letter-spacing:.03em}
+  .art-cs .art-title-line:last-child{color:var(--art-accent)}
+  .art-cs .art-kicker{color:var(--art-gold)}
+  .art-cs .art-deco-ornament{color:var(--art-accent)}
+
+  /* ── Theme: IT — Walde + Klimt (luxuriös, ornamental, gold) ── */
+  .art-it{--art-bg:#faf8f5;--art-bg2:#f1ede6;--art-text:#1a2a4a;--art-text2:rgba(26,42,74,.62);--art-text3:rgba(26,42,74,.38);
+    --art-accent:#b8912e;--art-accent-dark:#96741f;--art-gold:#d4af37;--art-surface:rgba(26,42,74,.035);--art-surface-hover:rgba(26,42,74,.07);--art-border:rgba(26,42,74,.14)}
+  .art-it .art-title{font-family:var(--font-display);font-size:clamp(68px,14vw,205px);line-height:.84;letter-spacing:.03em;color:#1a2a4a}
+  .art-it .art-title-line:last-child{background:linear-gradient(135deg,#d4af37,#b8912e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .art-it .art-kicker{color:var(--art-accent)}
+  .art-it .art-deco-klimt{color:#b8912e}
+
+  /* ── Theme: NL — Flora + Dalí (surreal, dünne Linien, schwebend) ── */
+  .art-nl{--art-bg:#f7f7f5;--art-bg2:#efefec;--art-text:#111;--art-text2:rgba(17,17,17,.6);--art-text3:rgba(17,17,17,.36);
+    --art-accent:#4a4aff;--art-accent-dark:#3232d6;--art-gold:#c98a2e;--art-surface:rgba(17,17,17,.03);--art-surface-hover:rgba(17,17,17,.06);--art-border:rgba(17,17,17,.14)}
+  .art-nl .art-title{font-family:var(--font-display);font-size:clamp(64px,13vw,190px);line-height:.85;letter-spacing:.02em;color:transparent;-webkit-text-stroke:2px #111}
+  .art-nl .art-title-line:last-child{-webkit-text-stroke:0;color:var(--art-accent)}
+  .art-nl .art-kicker{color:var(--art-accent)}
+  .art-nl .art-deco-surreal{color:#111}
+
+  /* ── Theme: ES — Weiler + Kandinsky (abstrakt, geometrisch) ── */
+  .art-es{--art-bg:#f2efe9;--art-bg2:#e9e5dc;--art-text:#2a2a2a;--art-text2:rgba(42,42,42,.62);--art-text3:rgba(42,42,42,.38);
+    --art-accent:#d64545;--art-accent-dark:#b23535;--art-gold:#e8b84b;--art-surface:rgba(42,42,42,.035);--art-surface-hover:rgba(42,42,42,.07);--art-border:rgba(42,42,42,.12)}
+  .art-es .art-title{font-family:var(--font-display);font-size:clamp(64px,13vw,190px);line-height:.85;letter-spacing:.02em}
+  .art-es .art-title-line:first-child{color:#3a5fcd}
+  .art-es .art-title-line:last-child{color:var(--art-accent)}
+  .art-es .art-kicker{color:#3a5fcd}
+  .art-es .art-deco-kandinsky{color:#3a5fcd}
+
+  /* ── Theme: ZH — Pacher + Egger-Lienz (sakral, symmetrisch, dramatisch) ── */
+  .art-zh{--art-bg:#1a1520;--art-bg2:#221b2a;--art-text:#e8dcc8;--art-text2:rgba(232,220,200,.64);--art-text3:rgba(232,220,200,.38);
+    --art-accent:#8b2e2e;--art-accent-dark:#6e2222;--art-gold:#c9a227;--art-surface:rgba(232,220,200,.05);--art-surface-hover:rgba(232,220,200,.1);--art-border:rgba(232,220,200,.14)}
+  .art-zh .art-title{font-family:var(--font-display);font-size:clamp(60px,12vw,180px);line-height:.86;letter-spacing:.04em;color:#e8dcc8;text-shadow:0 8px 40px rgba(139,46,46,.5)}
+  .art-zh .art-title-line:last-child{color:var(--art-gold)}
+  .art-zh .art-kicker{color:var(--art-gold)}
+  .art-zh .art-deco-arch{color:#c9a227}
+
+  /* ═══ HERO ═══ */
+  .art-hero{position:relative;padding:clamp(72px,12vh,140px) 0 clamp(48px,7vh,84px);overflow:hidden}
+  .art-kicker{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;margin-bottom:24px;position:relative;z-index:2}
+  .art-title{font-family:var(--font-display);text-transform:uppercase;margin:0;position:relative;z-index:2}
+  .art-title-line{display:block}
+  .art-sub{margin-top:28px;max-width:560px;font-size:clamp(15px,1.6vw,19px);color:var(--art-text2);line-height:1.7;position:relative;z-index:2}
+  .art-sub strong{color:var(--art-text);font-weight:600}
+  .art-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;position:relative;z-index:2}
+  .art-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:2px;border:1.5px solid var(--art-border);color:var(--art-text);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;transition:all .25s cubic-bezier(.16,1,.3,1)}
+  .art-btn:hover{background:var(--art-text);color:var(--art-bg);transform:translateY(-2px)}
+  .art-btn-primary{background:var(--art-accent);border-color:var(--art-accent);color:#fff}
+  .art-btn-primary:hover{background:var(--art-accent-dark);border-color:var(--art-accent-dark);color:#fff}
+
+  /* Dekorationen */
+  .art-deco{position:absolute;pointer-events:none;z-index:1}
+  .art-deco-mountains{left:0;right:0;bottom:-2px;width:100%;height:min(42vh,340px)}
+  .art-deco-klimt{right:-40px;top:40px;width:min(38vw,420px);height:auto;opacity:.5}
+  .art-deco-kandinsky{right:-30px;top:30px;width:min(36vw,400px);height:auto;opacity:.6}
+  .art-deco-ornament{left:0;right:0;bottom:0;width:100%;height:60px}
+  .art-deco-arch{left:50%;transform:translateX(-50%);top:20px;width:min(60vw,520px);height:auto;opacity:.55}
+  .art-deco-line{right:24px;bottom:24px;width:min(30vw,300px);height:auto;opacity:.5}
+  .art-deco-blobs{inset:0}
+  .art-deco-blobs .blob{position:absolute;border-radius:60% 40% 30% 70% / 60% 30% 70% 40%;filter:blur(2px);opacity:.5}
+  .art-deco-blobs .blob-1{width:min(30vw,340px);height:min(30vw,340px);right:-60px;top:20px;background:#7a8b6f}
+  .art-deco-blobs .blob-2{width:min(20vw,220px);height:min(20vw,220px);right:18%;bottom:-40px;background:#d97d54;opacity:.35}
+  .art-deco-blobs .blob-3{width:min(14vw,150px);height:min(14vw,150px);left:8%;top:60px;background:#c2a05a;opacity:.3}
+  .art-deco-surreal .sur-obj{position:absolute;color:#111}
+  .art-deco-surreal .sur-moon{width:64px;right:12%;top:30px;animation:artFloat 7s ease-in-out infinite}
+  .art-deco-surreal .sur-key{width:84px;right:28%;top:150px;animation:artFloat 9s ease-in-out infinite reverse}
+  .art-deco-surreal .sur-eye{width:74px;right:6%;top:260px;animation:artFloat 8s ease-in-out infinite}
+  @keyframes artFloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+
+  /* ═══ SECTIONS ═══ */
+  .art-section{padding:clamp(56px,9vh,110px) 0}
+  .art-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,4vh,48px);flex-wrap:wrap}
+  .art-h2{font-family:var(--font-display);font-size:clamp(36px,5.5vw,76px);line-height:.9;letter-spacing:.02em;text-transform:uppercase;margin:0}
+  .art-note{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--art-text3)}
+  .art-more{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--art-accent);white-space:nowrap}
+  .art-more:hover{text-decoration:underline}
+
+  /* Zahlen */
+  .art-numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+  .art-num-block{padding:clamp(28px,4vw,48px) 24px;background:var(--art-surface);border:1px solid var(--art-border)}
+  .art-num-val{font-family:var(--font-display);font-size:clamp(44px,6.5vw,92px);line-height:.9;letter-spacing:.01em;color:var(--art-accent)}
+  .art-num-label{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--art-text3);margin-top:10px}
+
+  /* Kategorien */
+  .art-cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+  .art-cat-tile{display:flex;align-items:center;gap:18px;padding:24px;background:var(--art-surface);border:1px solid var(--art-border);transition:background .25s,transform .25s cubic-bezier(.16,1,.3,1)}
+  .art-cat-tile:hover{background:var(--art-surface-hover);transform:translateY(-3px)}
+  .art-cat-icon{font-size:32px;line-height:1}
+  .art-cat-info{flex:1;min-width:0}
+  .art-cat-label{font-family:var(--font-display);font-size:clamp(19px,2.1vw,27px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;display:block}
+  .art-cat-count{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--art-text3);margin-top:4px;display:block}
+
+  /* Regionen */
+  .art-region-row{display:flex;flex-wrap:wrap;gap:3px}
+  .art-region-chip{font-family:var(--font-display);font-size:clamp(17px,1.9vw,25px);letter-spacing:.05em;text-transform:uppercase;padding:14px 22px;background:var(--art-surface);border:1px solid var(--art-border);transition:all .25s cubic-bezier(.16,1,.3,1)}
+  .art-region-chip:hover{background:var(--art-accent);border-color:var(--art-accent);color:#fff;transform:translateY(-3px)}
+
+  /* Card-Grids */
+  .art-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .art-card-grid-4{grid-template-columns:repeat(4,1fr)}
+
+  /* Footer */
+  .art-footer{padding:48px 0 56px;border-top:1px solid var(--art-border);margin-top:24px}
+  .art-footer-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .art-credit{display:flex;flex-direction:column;gap:4px}
+  .art-credit-label{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--art-text3)}
+  .art-credit-text{font-size:13px;font-weight:600;color:var(--art-text2)}
+  .art-landing-link{font-size:13px;font-weight:700;letter-spacing:.5px;color:var(--art-accent);border:1.5px solid var(--art-accent);padding:10px 20px;border-radius:2px;transition:all .25s}
+  .art-landing-link:hover{background:var(--art-accent);color:#fff}
+
+  @media(max-width:968px){
+    .art-numbers{grid-template-columns:repeat(2,1fr)}
+    .art-cat-grid{grid-template-columns:1fr}
+    .art-card-grid{grid-template-columns:repeat(2,1fr)}
+    .art-card-grid-4{grid-template-columns:repeat(2,1fr)}
+    .art-deco-klimt,.art-deco-kandinsky,.art-deco-arch{opacity:.25}
+  }
+  @media(max-width:600px){
+    .art-card-grid,.art-card-grid-4{grid-template-columns:1fr}
+    .art-deco-line,.art-deco-surreal{display:none}
+  }
+</style>

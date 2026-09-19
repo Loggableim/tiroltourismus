@@ -16,6 +16,7 @@ import ArticleCard from '../components/ArticleCard.astro';
 import GastroCard from '../components/GastroCard.astro';
 import SightCard from '../components/SightCard.astro';
 import SectionMap from '../sections/SectionMap.astro';
+import HomepageArt from '../components/HomepageArt.astro';
 import { readCollection, isPublished } from '../lib/content.js';
 import page from '../data/homepage.json';
 import fs from 'node:fs';
@@ -177,296 +178,38 @@ function formatDate(d) {
   try { return new Date(d).toLocaleDateString('de-DE', { year: 'numeric', month: 'long', day: 'numeric' }); }
   catch { return d; }
 }
+
+// ── Art-Design (DE): Daten für HomepageArt ──
+const artCounts = {
+  gastro: alleGastro.length,
+  unterkuenfte: unterkuenfte.length,
+  orte: alleOrte.length,
+  sights: alleSights.length,
+  camping: camping.length,
+  magazin: alleMagazin.length,
+};
+const artRegionNames = regionen
+  .map(r => ({ slug: r.slug, name: r.entry.titel || r.entry.name || r.slug }))
+  .sort((a, b) => a.name.localeCompare(b.name, 'de'));
+const artRegions = regionen.slice(0, 6);
+const artStays = unterkuenfte.slice(0, 3);
+const artSights = alleSights.slice(0, 4);
+const artGastro = alleGastro.slice(0, 3);
+const artMagazin = alleMagazin.slice(0, 3);
 ---
 <BaseLayout title="Der smarte Tirol-Guide" description="Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse – entdecken Sie die Vielfalt der Alpen.">
-  <main transition:animate="fade">
-    <!-- ═══ HERO ═══ -->
-    <section class="hero" aria-label="Hero">
-      <!-- Brand-defined Hero background: "Gipfellinie" (Pink → Gold → Blue mountain silhouette) -->
-      <div class="hero-bg">
-        <picture class="hero-img-wrap">
-          <img
-            src="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp"
-            srcset="/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp 1x"
-            alt=""
-            role="presentation"
-            aria-hidden="true"
-            decoding="async"
-            fetchpriority="high"
-            width="1024" height="1024"
-            class="hero-img"
-          />
-        </picture>
-        <div class="hero-gradient"></div>
-      </div>
-      <div class="hero-glow"></div>
-      <div class="hero-content">
-        <div class="hero-badge" set:html={page.hero.badge}></div>
-        <div class="hero-headline">
-          <h1>{page.hero.title.map(line => <span class="line">{line}</span>)}</h1>
-        </div>
-        <p set:html={page.hero.subtitle}></p>
-        <div class="hero-actions">
-          <a href={page.hero.ctaPrimary.href} class={page.hero.ctaPrimary.class}>{page.hero.ctaPrimary.text}</a>
-          <a href={page.hero.ctaSecondary.href} class={page.hero.ctaSecondary.class}>{page.hero.ctaSecondary.text}</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ STATS ═══ -->
-    <section class="stats" aria-label="Statistiken">
-      <div class="container">
-        <div class="stats-grid">
-          {dynamicStats.map((s, i) => (
-            <div class={`stat-card reveal r${i+1}`}>
-              <span class="stat-icon">{s.icon}</span>
-              <div class="stat-num" data-count={s.count}>0</div>
-              <div class="stat-label">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ HEUTE ENTDECKEN ═══ -->
-    <section class="daily section" id="heute" aria-label="Heute entdecken">
-      <div class="container">
-        <SectionHeader label="#heute" title="Heute entdecken" sub="Zufallsfunde aus allen Kategorien – jeden Tag neu. Klick Dich durch Tirols bunteste Seiten." />
-        <div class="daily-grid" id="dailyPicks">
-          {dailyPicks.map((item, i) => {
-            const name = item.name || item.titel || 'Unbekannt';
-            const emoji = item.emoji || (item._type === 'unterkunft' ? '🏨' : item._type === 'gastro' ? '🍽️' : item._type === 'ort' ? '🏘️' : item._type === 'sight' ? '🏛️' : '📰');
-            const typeLabel = dailyPickTypes[item._type] || 'Entdeckung';
-            const linkBase = dailyPickLinks[item._type] || '/';
-            return (
-              <a href={`${linkBase}${item.slug}/`} class={`daily-card${i === 0 ? ' daily-featured' : ''}`}>
-                <div class="daily-emoji-wrap">
-                  <span class="daily-emoji">{emoji}</span>
-                  {i === 0 && <span class="daily-star">✨</span>}
-                </div>
-                <div class="daily-body">
-                  <span class="daily-type">{typeLabel}</span>
-                  <span class="daily-name">{name}</span>
-                  <span class="daily-cta">{i === 0 ? 'Zufallsfund des Tages →' : 'Entdecken →'}</span>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-        <div class="section-footer">
-          <a href="/orte/" class="btn-outline">Alle Orte &amp; Sehenswürdigkeiten entdecken →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ REGIONEN ═══ -->
-    <section class="section" id="regionen" aria-label="Regionen">
-      <div class="container">
-        <SectionHeader label="#regionen" title="Unsere Regionen" sub="Ein Land, unendlich viele Gesichter. Jede Region Tirols hat ihren eigenen Charakter – von der urbanen Alpenstadt Innsbruck bis zu den unberührten Gletscherwelten des Kaunertals." />
-        <p class="regionen-lead">Egal ob actionreiche Tage im Zillertal, kulinarische Genussmomente im Stubaital oder luxuriöse Auszeiten in Kitzbühel – hier finden Sie Ihre perfekte Region. Jede Destination in unserem Portal wird mit liebevollen Beschreibungen vorgestellt.</p>
-        <div class="section-grid">
-          {regionen.map(r => {
-            // Fallback: when a region's JSON has no `titel` field (e.g. "tannheimer-tal"
-            // only ships kurzbeschreibung), humanize the slug so the card always shows
-            // a name instead of an empty <h3>.
-            const regionTitel = r.entry.titel || r.entry.name
-              || r.slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-            // 6 regions have real brand hero photos in /assets/images/.
-            // Other regions fall back to the gradient + emoji display.
-            const REGION_HERO_IMAGES = {
-              innsbruck: '/assets/images/region_innsbruck_20260517_101459_thumb.webp',
-              oetztal: '/assets/images/region_oetztal_20260517_101502_thumb.webp',
-              stubaital: '/assets/images/region_stubaital_20260517_101513_thumb.webp',
-              zillertal: '/assets/images/region_zillertal_20260517_101508_thumb.webp',
-              kitzbuehel: '/assets/images/region_kitzbuehel_20260517_101526_thumb.webp',
-              kaunertal: '/assets/images/region_kaunertal_20260517_101520_thumb.webp',
-            };
-            const heroSrc = REGION_HERO_IMAGES[r.slug];
-            return (
-              <RegionCard
-                titel={regionTitel}
-                slug={r.slug}
-                beschreibung={r.entry.kurzbeschreibung}
-                emoji={r.entry.emoji}
-                bewertung={r.entry.bewertung}
-                farbe={r.entry.farbe}
-                featured={r.entry.featured}
-                heroSrc={heroSrc}
-              />
-            );
-          })}
-        </div>
-        <div class="section-footer">
-          <a href="/regionen/" class="btn-outline">Alle Regionen entdecken →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ UNTERKÜNFTE ═══ -->
-    <section class="section" id="unterkuenfte" aria-label="Unterkünfte">
-      <div class="container">
-        <SectionHeader label="#unterkuenfte" title="Top Unterkünfte" sub="Ausgewählte Hotels, Ferienwohnungen und Bauernhöfe – für jeden Geschmack und jedes Budget." />
-        <p class="section-lead">Jede Unterkunft wurde sorgfältig für dich ausgewählt. Gold-gekennzeichnete Häuser bieten das besondere Extra mit Stil und erstklassigem Service. Silber steht für exzellentes Preis-Leistungs-Verhältnis, Basic für charmant und erschwinglich.</p>
-        <div class="section-grid" id="unterkunftGrid">
-          {top3Unterkuenfte.length > 0 ? top3Unterkuenfte.map((u, i) => (
-            // Top-3 Unterkünfte (sorted by tier: gold/silver/basic) get a stock photo
-            // from /assets/images/ as visual hook. Other entries fall back to emoji.
-            <AccommodationCard
-              name={u.entry.name}
-              slug={u.slug}
-              typ={u.entry.typ}
-              ort={u.entry.ort}
-              sterne={u.entry.sterne}
-              preis_ab={u.entry.preis_ab}
-              tier={u.entry.tier || 'basic'}
-              heroSrc={i === 0 ? '/assets/images/hotel_1_20260517_101547_thumb.webp' : i === 1 ? '/assets/images/hotel_2_20260517_101544_thumb.webp' : '/assets/images/hotel_3_20260517_101551_thumb.webp'}
-            />
-          )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Unterkünfte erfasst.</p>}
-        </div>
-        <div class="section-footer">
-          <a href="/unterkuenfte/" class="btn-outline">Alle {unterkuenfte.length} Unterkünfte anzeigen →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ ENTDECKEN NACH KATEGORIE ═══
-         Konsolidiert: Sehenswürdigkeiten, Camping, Gastro.
-         Tab-Pattern mit client-side toggle, kein Hydration nötig. -->
-    <section class="section" id="entdecken" aria-label="Entdecken">
-      <div class="container">
-        <SectionHeader label="#entdecken" title="Entdecken nach Kategorie" sub="Vielfalt erleben – von Naturhighlights über Campingplätze bis zur Tiroler Genussküche." />
-        <div class="cat-tabs" role="tablist" aria-label="Entdecken-Kategorien">
-          <button class="cat-tab" role="tab" aria-selected="true" aria-controls="cat-panel-sights" id="cat-tab-sights" data-cat="sights">
-            <span class="cat-tab-icon">🏛️</span>
-            <span class="cat-tab-label">Sehenswürdigkeiten</span>
-            <span class="cat-tab-count">{alleSights.length}</span>
-          </button>
-          <button class="cat-tab" role="tab" aria-selected="false" aria-controls="cat-panel-camping" id="cat-tab-camping" data-cat="camping">
-            <span class="cat-tab-icon">🏕️</span>
-            <span class="cat-tab-label">Camping</span>
-            <span class="cat-tab-count">{camping.length}</span>
-          </button>
-          <button class="cat-tab" role="tab" aria-selected="false" aria-controls="cat-panel-gastro" id="cat-tab-gastro" data-cat="gastro">
-            <span class="cat-tab-icon">🍽️</span>
-            <span class="cat-tab-label">Gastronomie</span>
-            <span class="cat-tab-count">{alleGastro.length}</span>
-          </button>
-        </div>
-
-        <div class="cat-panels">
-          <div class="cat-panel" role="tabpanel" id="cat-panel-sights" aria-labelledby="cat-tab-sights" data-panel="sights">
-            {sortedSights.length > 0 ? (
-              <>
-                <div class="sight-grid">
-                  {sortedSights.map(s => (
-                    <SightCard name={s.entry.name} slug={s.slug} kurzbeschreibung={s.entry.kurzbeschreibung} kategorie={s.entry.kategorie} emoji={s.entry.emoji} farbe={s.entry.farbe} ort={s.entry.ort} preis={s.entry.preis} />
-                  ))}
-                </div>
-                <div class="section-footer">
-                  <a href="/sehenswuerdigkeiten/" class="btn-outline">Alle {alleSights.length} Sehenswürdigkeiten anzeigen →</a>
-                </div>
-              </>
-            ) : (
-              <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Sehenswürdigkeiten in der Datenbank erfasst.</p>
-            )}
-          </div>
-
-          <div class="cat-panel" role="tabpanel" id="cat-panel-camping" aria-labelledby="cat-tab-camping" data-panel="camping" hidden>
-            <div class="section-grid">
-              {top3Camping.length > 0 ? top3Camping.map(c => (
-                <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
-              )) : <p style="text-align:center;color:var(--text2);grid-column:1/-1;padding:40px 0">Aktuell sind keine Campingplätze erfasst.</p>}
-            </div>
-            <div class="section-footer">
-              <a href="/camping/" class="btn-outline">Alle {camping.length} Campingplätze anzeigen →</a>
-            </div>
-          </div>
-
-          <div class="cat-panel" role="tabpanel" id="cat-panel-gastro" aria-labelledby="cat-tab-gastro" data-panel="gastro" hidden>
-            {alleGastro.length > 0 ? (
-              <>
-                <div class="section-grid">
-                  {shuffledGastro.map(g => (
-                    <GastroCard name={g.entry.name} slug={g.slug} beschreibung={g.entry.kurzbeschreibung} kategorie={g.entry.kategorie} preis={g.entry.preis} emoji={g.entry.emoji} farbe={g.entry.farbe} ort={g.entry.ort} />
-                  ))}
-                </div>
-                <div class="section-footer">
-                  <a href="/gastro/" class="btn-outline">Alle {alleGastro.length} Gastro-Adressen entdecken →</a>
-                </div>
-              </>
-            ) : (
-              <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Gastro-Einträge in der Datenbank erfasst.</p>
-            )}
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ MAGAZIN ═══ -->
-    <section class="section" id="magazin" aria-label="Magazin">
-      <div class="container">
-        <SectionHeader label="#magazin" title="Stories aus den Bergen" sub="Neueste Geschichten, Tipps & Inspirationen rund um Ihren nächsten Tirol-Urlaub." />
-        {top3Magazin.length > 0 ? (
-          <>
-            <div class="section-grid" id="magazinGrid">
-              {top3Magazin.map((a, i) => {
-                // hero_bild from JSON may be (a) empty, (b) a broken path (file missing
-                // in /public/images/magazin/...), or (c) a valid relative URL. Verify
-                // existence against the build filesystem and fall back to a stock photo.
-                const MAGAZIN_FALLBACK = [
-                  '/assets/images/magazin_1_20260517_101554_thumb.webp',
-                  '/assets/images/magazin_2_20260517_101600_thumb.webp',
-                  '/assets/images/magazin_3_20260517_101603_thumb.webp',
-                ];
-                const candidate = a.entry.hero_bild && a.entry.hero_bild.startsWith('/')
-                  ? path.join(process.cwd(), 'public', a.entry.hero_bild)
-                  : null;
-                const heroBild = (candidate && fs.existsSync(candidate))
-                  ? a.entry.hero_bild
-                  : MAGAZIN_FALLBACK[i] || MAGAZIN_FALLBACK[2];
-                return (
-                  <ArticleCard titel={a.entry.titel} slug={a.slug} teaser={a.entry.teaser} datum={formatDate(a.entry.datum)} kategorie={a.entry.kategorie} hero_bild={heroBild} />
-                );
-              })}
-            </div>
-            <div class="section-footer">
-              <a href="/magazin/" class="btn-outline">Alle Magazin-Beiträge lesen →</a>
-            </div>
-          </>
-        ) : <p style="text-align:center;color:var(--text2);padding:40px 0">Aktuell sind keine Magazinbeiträge veröffentlicht.</p>}
-      </div>
-    </section>
-
-    <!-- ═══ TIROL-KARTE ═══ -->
-    <SectionMap
-      markers={mapMarkers}
-      label={`${mapMarkers.length} von ${totalMapMarkers} Orten auf der Karte`}
-      title="Tirol entdecken"
-      height="450px"
-      scrollWheelZoom={true}
-      filterable={true}
-    />
-
-    <!-- ═══ PARTNER ═══ -->
-    <section class="partner section" aria-label="Partner">
-      <div class="container">
-        <div class="partner-grid">
-          <div class="partner-text reveal r1">
-            <h2>Partner <span>werden</span></h2>
-            <p>Zeige Deine Unterkunft, Dein Event oder Dein Angebot auf tiroltourismus.com. Mit KI-gestützten Empfehlungen, intelligenter Suche und einer wachsenden Community.</p>
-            <div class="partner-benefits">
-              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sichtbarkeit bei tausenden Visitors</div>
-              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Kostenlose Einträge</div>
-              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Social-Media-Boost</div>
-              <div class="partner-ben"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Exklusive Events</div>
-            </div>
-            <a href="/magazin/" class="btn btn-glass btn-sm">Mehr entdecken →</a>
-          </div>
-          <div class="partner-visual reveal r2" style="background:url('/assets/images/partner_20260517_101605.webp') center/cover;background-size:cover" loading="lazy">PINK · GOLD</div>
-        </div>
-      </div>
-    </section>
-  </main>
+  <HomepageArt
+    locale="de"
+    localePrefix=""
+    page={page}
+    regions={artRegions}
+    stays={artStays}
+    sights={artSights}
+    gastro={artGastro}
+    magazin={artMagazin}
+    counts={artCounts}
+    regionNames={artRegionNames}
+  />
 </BaseLayout>
 
 <!-- ═══ ENTDECKEN-TABS LOGIC ═══ -->

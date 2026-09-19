@@ -6,7 +6,7 @@ import AccommodationCard from '../../components/AccommodationCard.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import GastroCard from '../../components/GastroCard.astro';
 import SightCard from '../../components/SightCard.astro';
-import HomepageWarhol from '../../components/HomepageWarhol.astro';
+import HomepageArt from '../../components/HomepageArt.astro';
 import TirolLogo from '../../components/TirolLogo.astro';
 import { readCollection, isPublished } from '../../lib/content.js';
 import { LANGUAGES_READY, localeParams, DEFAULT_LOCALE, localePrefix as localePrefixFn } from '../../lib/languages.js';
@@ -100,7 +100,8 @@ const whStays = allUnterkuenfte.slice(0, 3);
 const whSights = allSights.slice(0, 4);
 const whGastro = allGastro.slice(0, 3);
 const whMagazin = allMagazin.slice(0, 3);
-const useWarhol = locale === 'cs'; // Testweise nur CS
+// Alle 8 Sprachen bekommen das künstlerische Design
+const useArt = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'].includes(locale);
 ---
 
 <BaseLayout
@@ -109,8 +110,8 @@ const useWarhol = locale === 'cs'; // Testweise nur CS
   locale={locale}
   preloadImage={page.hero?.bgImage}
 >
-  {useWarhol ? (
-    <HomepageWarhol
+  {useArt ? (
+    <HomepageArt
       locale={locale}
       localePrefix={localePrefix}
       page={page}

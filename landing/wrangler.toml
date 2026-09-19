@@ -1,0 +1,8 @@
+name = "tiroltourismus"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-07-11"
+
+# KV für das Sprach-Vote-System (it/es/zh)
+[[kv_namespaces]]
+binding = "VOTE_KV"
+id = "1f574339d6fc457d9b70bb9c17554f73"

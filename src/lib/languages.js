@@ -22,7 +22,7 @@ export const LANG_DOMAINS = {
   nl: 'https://nl.tiroltourismus.com',
   it: 'https://it.tiroltourismus.com',
   es: 'https://es.tiroltourismus.com',
-  zh: 'https://zh.tiroltourismus.com',
+  zh: 'https://cn.tiroltourismus.com',
   // soon-Sprachen: noch keine Subdomain — zeigen auf die Landing
   pl: 'https://tiroltourismus.com',
   hu: 'https://tiroltourismus.com',

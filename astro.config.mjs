@@ -17,7 +17,7 @@ const LANG_DOMAINS = {
   nl: 'https://nl.tiroltourismus.com',
   it: 'https://it.tiroltourismus.com',
   es: 'https://es.tiroltourismus.com',
-  zh: 'https://zh.tiroltourismus.com',
+  zh: 'https://cn.tiroltourismus.com',
 };
 const LANDING_DOMAIN = 'https://tiroltourismus.com';
 const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'];

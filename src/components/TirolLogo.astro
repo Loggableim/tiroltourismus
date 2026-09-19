@@ -23,13 +23,29 @@ export interface Props {
   idSuffix?: string;
   /** When true, prefix letters render in white instead of red (for use on red backgrounds). */
   inverted?: boolean;
+  /** Locale for the suffix word (de: tourismus, en: tourism, fr: tourisme, etc.) */
+  locale?: string;
 }
 const {
   width = 240,
   suffixColor,
   idSuffix = 'tl',
   inverted = false,
+  locale = 'de',
 } = Astro.props;
+
+// Suffix word per locale
+const SUFFIX = {
+  de: 'tourismus',
+  en: 'tourism',
+  fr: 'tourisme',
+  it: 'turismo',
+  es: 'turismo',
+  zh: '旅游',
+  nl: 'toerisme',
+  cs: 'turistika',
+};
+const suffixWord = SUFFIX[locale] || SUFFIX.de;
 
 // Theme-aware color: red on light, lighter red on dark theme.
 // Inverted mode: white prefix on red bg.
@@ -37,7 +53,7 @@ const prefixStart = inverted ? '#FFFFFF' : '#A00D24';
 const prefixEnd   = inverted ? '#F5E6E8' : '#C8102E';
 const suffixColorFinal = suffixColor ?? (inverted ? '#FFFFFF' : 'var(--tirol-red)');
 ---
-<svg viewBox="0 2 375 46" width={width} aria-label="Tirol Tourismus" role="img">
+<svg viewBox="0 2 375 46" width={width} aria-label={`Tirol ${suffixWord}`} role="img">
   <defs>
     <linearGradient id={`${idSuffix}-g1`}><stop offset="0%" stop-color={prefixStart}/><stop offset="100%" stop-color={prefixEnd}/></linearGradient>
     <linearGradient id={`${idSuffix}-g2`}><stop offset="0%" stop-color={prefixStart}/><stop offset="100%" stop-color={prefixEnd}/></linearGradient>
@@ -56,7 +72,7 @@ const suffixColorFinal = suffixColor ?? (inverted ? '#FFFFFF' : 'var(--tirol-red
   <text x="138" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill={`url(#${idSuffix}-g5)`}>L</text>
   <polygon points="138,36 138,12 158,36" fill={`url(#${idSuffix}-g5)`} opacity="0.08"/>
   <circle cx="178" cy="30" r="2.5" fill={inverted ? 'rgba(255,255,255,0.3)' : 'rgba(0,0,0,0.12)'} opacity="0.3"/>
-  <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill={suffixColorFinal}>tourismus</text>
+  <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill={suffixColorFinal}>{suffixWord}</text>
 </svg>
 
 <style is:global>

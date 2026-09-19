@@ -37,6 +37,16 @@ const {
 const langCode = locale || 'de';
 const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN', nl:'nl_NL', cs:'cs_CZ' };
 const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN', nl:'nl-NL', cs:'cs-CZ' };
+// Art-Theme Fonts pro Sprache (müssen im <head> geladen werden, nicht im Body)
+const ART_FONTS = {
+  en: 'https://fonts.googleapis.com/css2?family=Anton&display=swap',
+  fr: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap',
+  cs: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap',
+  it: 'https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap',
+  es: 'https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap',
+  zh: 'https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&display=swap',
+  nl: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap',
+};
 const fullLocale = LOCALE_MAP[locale] || 'de_AT';
 const localePrefix = localePrefixFn(locale);
 const siteDesc = description || ({ de:'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.', en:'The smart Tyrol guide for trip planning, accommodations and experiences.', fr:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', it:'La guida intelligente del Tirolo per pianificare viaggi, alloggi ed esperienze.', es:'La guía inteligente de Tirol para planificar viajes, alojamientos y experiencias.', zh:'智能蒂罗尔指南，用于旅行计划、住宿和体验。', nl:'De slimme Tirol-gids voor reisplanning, accommodaties en ervaringen.', cs:'Chytrý průvodce Tyrolskem pro plánování cest, ubytování a zážitky.' }[locale] || 'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.');
@@ -141,6 +151,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" crossorigin fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"></noscript>
+  <!-- Art-Theme Fonts (pro Sprache) -->
+  {ART_FONTS[locale] && (
+    <link rel="stylesheet" href={ART_FONTS[locale]} />
+  )}
 
   <!-- Canonical URL -->
   <link rel="canonical" href={pageURL} />
@@ -368,7 +382,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <nav class="main-nav" id="mainNav" transition:persist>
     <div class="container">
 <a href={localePrefix || '/'} class="nav-logo" style="flex-shrink:0">
-  <TirolLogo width={340} idSuffix="nav" />
+  <TirolLogo width={340} idSuffix="nav" locale={locale} />
 </a>
       <div class="nav-links">
         <div class="mega-group" data-group="entdecken">
@@ -460,7 +474,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       <div class="footer-grid">
         <div class="footer-col footer-brand">
           <a href={localePrefix || '/'} class="nav-logo">
-            <TirolLogo width={240} idSuffix="ft" />
+            <TirolLogo width={240} idSuffix="ft" locale={locale} />
           </a>
           <p>{nav.footer_p}</p>
           <div class="footer-social">

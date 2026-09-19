@@ -51,6 +51,9 @@ jobs:
       - name: Stash DE pages (non-DE builds)
         run: node scripts/prepare-build.mjs
 
+      - name: Generate robots.txt
+        run: node scripts/generate-robots.mjs
+
       - name: Build search index
         run: npm run build:search-index
 

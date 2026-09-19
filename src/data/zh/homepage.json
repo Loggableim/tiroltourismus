@@ -2,16 +2,43 @@
   "hero": {
     "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
     "badge": "🏔️ 蒂罗尔州官方旅游门户",
-    "title": ["蒂罗尔", "与众不同"],
+    "title": [
+      "蒂罗尔",
+      "与众不同"
+    ],
     "subtitle": "体验蒂罗尔的万般精彩 – 从雄伟的山峰到田园诗般的山谷，再到质朴的高山小屋。",
-    "ctaPrimary": { "text": "✦ 探索地区", "href": "#regionen", "class": "btn-primary" },
-    "ctaSecondary": { "text": "寻找住宿", "href": "#unterkuenfte", "class": "btn-secondary" }
+    "ctaPrimary": {
+      "text": "✦ 探索地区",
+      "href": "#regionen",
+      "class": "btn-primary"
+    },
+    "ctaSecondary": {
+      "text": "寻找住宿",
+      "href": "#unterkuenfte",
+      "class": "btn-secondary"
+    }
   },
   "stats": [
-    { "icon": "🏔️", "count": 788, "label": "3,000米以上山峰" },
-    { "icon": "🏡", "count": 12000, "label": "住宿选择" },
-    { "icon": "🥾", "count": 24500, "label": "徒步公里数" },
-    { "icon": "🎿", "count": 580, "label": "缆车与索道" }
+    {
+      "icon": "🏔️",
+      "count": 788,
+      "label": "3,000米以上山峰"
+    },
+    {
+      "icon": "🏡",
+      "count": 12000,
+      "label": "住宿选择"
+    },
+    {
+      "icon": "🥾",
+      "count": 24500,
+      "label": "徒步公里数"
+    },
+    {
+      "icon": "🎿",
+      "count": 580,
+      "label": "缆车与索道"
+    }
   ],
   "whyTirol": {
     "label": "#为什么是蒂罗尔",
@@ -21,7 +48,63 @@
   "regionen": {
     "label": "探索",
     "title": "我们的地区",
-    "desc": "从州府到最偏远的山村——每个地区都有其独特的魅力，为您带来无数难忘的体验。"
+    "desc": "从州府到最偏远的山村——每个地区都有其独特的魅力，为您带来无数难忘的体验。",
+    "items": [
+      {
+        "img": "/assets/images/region_innsbruck_20260517_101459.webp",
+        "tag": "流行",
+        "tagColor": "var(--pink)",
+        "name": "Innsbruck",
+        "meta": "城市与山——都市阿尔卑斯霞光混搭",
+        "stars": 5,
+        "slug": "innsbruck"
+      },
+      {
+        "img": "/assets/images/region_oetztal_20260517_101502.webp",
+        "tag": "自然",
+        "tagColor": "var(--green)",
+        "name": "Ötztal",
+        "meta": "冰川、山峰与狂野山谷",
+        "stars": 4,
+        "slug": "oetztal"
+      },
+      {
+        "img": "/assets/images/region_zillertal_20260517_101508.webp",
+        "tag": "活力",
+        "tagColor": "var(--blue)",
+        "name": "Zillertal",
+        "meta": "纯粹的徒步、骑行、滑雪",
+        "stars": 5,
+        "slug": "zillertal"
+      },
+      {
+        "img": "/assets/images/region_stubaital_20260517_101513.webp",
+        "tag": "美食",
+        "tagColor": "var(--orange)",
+        "name": "Stubaital",
+        "meta": "享受与山间浪漫",
+        "stars": 4,
+        "slug": "Stubaital"
+      },
+      {
+        "img": "/assets/images/region_kitzbuehel_20260517_101526.webp",
+        "tag": "奢华",
+        "tagColor": "var(--purple)",
+        "name": "Kitzbühel",
+        "meta": "阿尔卑斯式的优雅与魅力",
+        "stars": 5,
+        "slug": "kitzbuehel"
+      },
+      {
+        "img": "/assets/images/region_kaunertal_20260517_101520.webp",
+        "tag": "峰顶",
+        "tagColor": "var(--gold)",
+        "name": "Kaunertal",
+        "meta": "原始 & 未受破坏",
+        "stars": 4,
+        "slug": "kaunertal"
+      }
+    ]
   },
   "unterkuenfte": {
     "label": "住宿",
@@ -29,6 +112,132 @@
     "desc": "从豪华养生酒店到家庭经营的农场客栈，再到舒适的度假公寓——在蒂罗尔找到适合您的完美住宿。"
   },
   "magazin": [
-    { "title": "蒂罗尔最色彩斑斓的徒步路线", "desc": "七条路线，证明大自然是最杰出的艺术家——从高山花卉到金色冰川湖泊。" }
+    {
+      "img": "/assets/images/magazin_1_20260517_101554.webp",
+      "cat": "徒步",
+      "catClass": "徒步",
+      "date": "2026年5月12日",
+      "title": "Tirol最色彩斑斓的徒步路线",
+      "desc": "七条路线，证明大自然本身就是最杰出的艺术家——从高山花卉到金色的冰川湖。"
+    },
+    {
+      "img": "/assets/images/magazin_2_20260517_101600.webp",
+      "cat": "自然",
+      "catClass": "自然",
+      "date": "2026年4月28日",
+      "title": "可持续性遇上流行文化",
+      "desc": "Tiroler 酒店如何以大胆创意、金色点缀和绿色理念树立新标杆。"
+    },
+    {
+      "img": "/assets/images/magazin_3_20260517_101603.webp",
+      "cat": "美食",
+      "catClass": "美食",
+      "date": "2026年4月3日",
+      "title": "阿尔卑斯美食新演绎",
+      "desc": "从粉色的 Knödeln 到金色的 Schnitzel：年轻厨师重新诠释 Tiroler 经典。"
+    }
+  ],
+  "seelen": {
+    "label": "#regionentirols",
+    "title": "Tirol 各地区",
+    "desc": "六个地区，六种个性——每一个都拥有自己独特的性格与魅力。",
+    "items": [
+      {
+        "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png",
+        "label": "峰顶线"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "barColor": "c1",
+      "icon": "🪂",
+      "title": "在Innsbruck上空滑翔伞飞行",
+      "desc": "翱翔于州首府上空，饱览四周令人叹为观止的山峦美景。",
+      "price": 129,
+      "link": "#"
+    },
+    {
+      "barColor": "c2",
+      "icon": "🚵",
+      "title": "电动山地自行车日落之旅",
+      "desc": "参加有导游的电动自行车之旅，探索 Tiroler 高山世界，并体验群峰之上的日落。",
+      "price": 89,
+      "link": "#"
+    },
+    {
+      "barColor": "c3",
+      "icon": "🎨",
+      "title": "阿尔卑斯香草徒步",
+      "desc": "在导游带领的香草徒步之旅中探索当地植物世界，并品尝地方特产。",
+      "price": 55,
+      "link": "#"
+    },
+    {
+      "barColor": "c4",
+      "icon": "🌙",
+      "title": "导览星空徒步",
+      "desc": "在认证向导的带领下进行夜间徒步，您将认识 Alpen 上空的星空。",
+      "price": 45,
+      "link": "#"
+    },
+    {
+      "barColor": "c5",
+      "icon": "🧘",
+      "title": "阿尔卑斯瑜伽与冥想",
+      "desc": "在瑜伽课程中，伴着 Tiroler 群山全景，找到您内心的宁静。",
+      "price": 69,
+      "link": "#"
+    },
+    {
+      "barColor": "c6",
+      "icon": "🍷",
+      "title": "Tiroler 美食之夜",
+      "desc": "在一场专属晚宴上，尽情享用当地特色美食与精选葡萄酒，享受惬意款待。",
+      "price": 149,
+      "link": "#"
+    }
+  ],
+  "events": [
+    {
+      "day": 21,
+      "month": "JUN",
+      "dateBoxClass": "pink",
+      "cat": "🎵 音乐",
+      "title": "Tiroler 山地夏日节",
+      "desc": "Alpen 地区规模最大的音乐节，汇聚国际演出阵容，坐拥海拔 2,000 米的壮丽山景。",
+      "loc": "Innsbruck",
+      "price": "ab €49"
+    },
+    {
+      "day": 5,
+      "month": "JUL",
+      "dateBoxClass": "gold",
+      "cat": "🎨 艺术",
+      "title": "黄金艺术步道",
+      "desc": "艺术装置和金色发光雕塑，沿着一条灯光照亮的山间小径——晚间开放。",
+      "loc": "Ötztal",
+      "price": "€22"
+    },
+    {
+      "day": 19,
+      "month": "AUG",
+      "dateBoxClass": "gold",
+      "cat": "🥾 运动",
+      "title": "山顶上的山地节",
+      "desc": "高山牧场上的山地跑，DJ 助阵，还有氛围十足的赛后派对——运动爱好者和享受派都能尽兴！",
+      "loc": "Zillertal",
+      "price": "€35"
+    },
+    {
+      "day": 12,
+      "month": "SEP",
+      "dateBoxClass": "green",
+      "cat": "🍽️ 美食",
+      "title": "Gourmet 巅峰体验",
+      "desc": "顶级厨师在海拔2500米处呈现他们的创意之作——一场超凡脱俗的美食体验。",
+      "loc": "Kitzbühel",
+      "price": "€89"
+    }
   ]
 }

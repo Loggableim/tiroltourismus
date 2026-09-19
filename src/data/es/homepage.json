@@ -2,16 +2,43 @@
   "hero": {
     "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
     "badge": "🏔️ El portal turístico oficial del Tirol",
-    "title": ["TIROL", "DIFERENTE"],
+    "title": [
+      "TIROL",
+      "DIFERENTE"
+    ],
     "subtitle": "Descubra Tirol en toda su diversidad – desde majestuosas cumbres a través de valles idílicos hasta cabañas alpinas rústicas.",
-    "ctaPrimary": { "text": "✦ Descubrir Regiones", "href": "#regionen", "class": "btn-primary" },
-    "ctaSecondary": { "text": "Encontrar Alojamiento", "href": "#unterkuenfte", "class": "btn-secondary" }
+    "ctaPrimary": {
+      "text": "✦ Descubrir Regiones",
+      "href": "#regionen",
+      "class": "btn-primary"
+    },
+    "ctaSecondary": {
+      "text": "Encontrar Alojamiento",
+      "href": "#unterkuenfte",
+      "class": "btn-secondary"
+    }
   },
   "stats": [
-    { "icon": "🏔️", "count": 788, "label": "Picos de más de 3.000m" },
-    { "icon": "🏡", "count": 12000, "label": "Alojamientos" },
-    { "icon": "🥾", "count": 24500, "label": "Kilómetros de Senderismo" },
-    { "icon": "🎿", "count": 580, "label": "Teleféricos y Remontes" }
+    {
+      "icon": "🏔️",
+      "count": 788,
+      "label": "Picos de más de 3.000m"
+    },
+    {
+      "icon": "🏡",
+      "count": 12000,
+      "label": "Alojamientos"
+    },
+    {
+      "icon": "🥾",
+      "count": 24500,
+      "label": "Kilómetros de Senderismo"
+    },
+    {
+      "icon": "🎿",
+      "count": 580,
+      "label": "Teleféricos y Remontes"
+    }
   ],
   "whyTirol": {
     "label": "#poquéTirol",
@@ -21,7 +48,63 @@
   "regionen": {
     "label": "Descubre",
     "title": "Nuestras Regiones",
-    "desc": "Desde la capital del estado hasta las aldeas montañosas más remotas – cada región tiene su propio carácter y ofrece innumerables oportunidades para vivir experiencias inolvidables."
+    "desc": "Desde la capital del estado hasta las aldeas montañosas más remotas – cada región tiene su propio carácter y ofrece innumerables oportunidades para vivir experiencias inolvidables.",
+    "items": [
+      {
+        "img": "/assets/images/region_innsbruck_20260517_101459.webp",
+        "tag": "POP",
+        "tagColor": "var(--pink)",
+        "name": "Innsbruck",
+        "meta": "Ciudad y montaña – mezcla urbana de resplandor alpino",
+        "stars": 5,
+        "slug": "Innsbruck"
+      },
+      {
+        "img": "/assets/images/region_oetztal_20260517_101502.webp",
+        "tag": "NATURALEZA",
+        "tagColor": "var(--green)",
+        "name": "Ötztal",
+        "meta": "Glaciares, cumbres y valles salvajes",
+        "stars": 4,
+        "slug": "oetztal"
+      },
+      {
+        "img": "/assets/images/region_zillertal_20260517_101508.webp",
+        "tag": "ACTIVO",
+        "tagColor": "var(--blue)",
+        "name": "Zillertal",
+        "meta": "Senderismo, bici y esquí en estado puro",
+        "stars": 5,
+        "slug": "Zillertal"
+      },
+      {
+        "img": "/assets/images/region_stubaital_20260517_101513.webp",
+        "tag": "GASTRONOMÍA",
+        "tagColor": "var(--orange)",
+        "name": "Stubaital",
+        "meta": "Placer & romanticismo de montaña",
+        "stars": 4,
+        "slug": "stubaital"
+      },
+      {
+        "img": "/assets/images/region_kitzbuehel_20260517_101526.webp",
+        "tag": "LUJO",
+        "tagColor": "var(--purple)",
+        "name": "Kitzbühel",
+        "meta": "Elegancia alpina y glamour",
+        "stars": 5,
+        "slug": "Kitzbühel"
+      },
+      {
+        "img": "/assets/images/region_kaunertal_20260517_101520.webp",
+        "tag": "CUMBRE",
+        "tagColor": "var(--gold)",
+        "name": "Kaunertal",
+        "meta": "Auténtico e intacto",
+        "stars": 4,
+        "slug": "kaunertal"
+      }
+    ]
   },
   "unterkuenfte": {
     "label": "Alojarse",
@@ -29,6 +112,132 @@
     "desc": "Desde hoteles de bienestar de lujo hasta granjas familiares y acogedores apartamentos vacacionales – encuentre el alojamiento perfecto en Tirol."
   },
   "magazin": [
-    { "title": "Las Rutas de Senderismo Más Coloridas de Tirol", "desc": "Siete rutas que demuestran que la naturaleza es la mejor artista – desde flores alpinas hasta lagos glaciares dorados." }
+    {
+      "img": "/assets/images/magazin_1_20260517_101554.webp",
+      "cat": "Senderismo",
+      "catClass": "Camina",
+      "date": "12 de mayo de 2026",
+      "title": "Las rutas de senderismo más coloridas de Tirol",
+      "desc": "Siete rutas que demuestran que la naturaleza misma es la mejor artista: desde las flores alpinas hasta los lagos glaciares dorados."
+    },
+    {
+      "img": "/assets/images/magazin_2_20260517_101600.webp",
+      "cat": "Naturaleza",
+      "catClass": "naturaleza",
+      "date": "28 de abril de 2026",
+      "title": "La sostenibilidad se encuentra con la cultura pop",
+      "desc": "Cómo los hoteles de Tirol marcan nuevos estándares con ideas llamativas, acentos dorados y conciencia ecológica."
+    },
+    {
+      "img": "/assets/images/magazin_3_20260517_101603.webp",
+      "cat": "Gastronomía",
+      "catClass": "culinario",
+      "date": "03 de abril de 2026",
+      "title": "Cocina alpina reinterpretada",
+      "desc": "De Knödeln rosas al Schnitzel dorado: jóvenes cocineros reinterpretan los clásicos de Tirol."
+    }
+  ],
+  "seelen": {
+    "label": "#regionentirols",
+    "title": "Regiones del Tirol",
+    "desc": "Seis regiones, seis personalidades – cada una con su carácter y encanto totalmente propios.",
+    "items": [
+      {
+        "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png",
+        "label": "Línea de cumbres"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "barColor": "c1",
+      "icon": "🪂",
+      "title": "Parapente sobre Innsbruck",
+      "desc": "Flote sobre la capital del estado y disfrute de una vista impresionante de las montañas circundantes.",
+      "price": 129,
+      "link": "#"
+    },
+    {
+      "barColor": "c2",
+      "icon": "🚵",
+      "title": "Ruta al atardecer en bicicleta eléctrica de montaña",
+      "desc": "Explore el mundo montañoso del Tirol en una ruta guiada en e-bike y viva el atardecer sobre las cumbres.",
+      "price": 89,
+      "link": "#"
+    },
+    {
+      "barColor": "c3",
+      "icon": "🎨",
+      "title": "Caminata alpina de hierbas",
+      "desc": "Descubra la flora autóctona en una excursión guiada de hierbas con degustación de productos regionales.",
+      "price": 55,
+      "link": "#"
+    },
+    {
+      "barColor": "c4",
+      "icon": "🌙",
+      "title": "Caminata guiada bajo las estrellas",
+      "desc": "En una caminata nocturna con guías certificados, conocerá el cielo estrellado sobre los Alpen.",
+      "price": 45,
+      "link": "#"
+    },
+    {
+      "barColor": "c5",
+      "icon": "🧘",
+      "title": "Yoga y meditación alpinos",
+      "desc": "Encuentre su paz interior en una sesión de yoga con vistas panorámicas al mundo montañoso del Tirol.",
+      "price": 69,
+      "link": "#"
+    },
+    {
+      "barColor": "c6",
+      "icon": "🍷",
+      "title": "Noche de placer tirolés",
+      "desc": "Déjese mimar en una cena exclusiva con especialidades regionales y vinos selectos.",
+      "price": 149,
+      "link": "#"
+    }
+  ],
+  "events": [
+    {
+      "day": 21,
+      "month": "JUN",
+      "dateBoxClass": "pink",
+      "cat": "🎵 Música",
+      "title": "Festival de Verano en la Montaña del Tirol",
+      "desc": "El mayor festival de música de los Alpen con actuaciones internacionales y un espectacular paisaje montañoso a 2.000 m.",
+      "loc": "Innsbruck",
+      "price": "ab €49"
+    },
+    {
+      "day": 5,
+      "month": "JUL",
+      "dateBoxClass": "gold",
+      "cat": "🎨 Arte",
+      "title": "Ruta del Arte Dorado",
+      "desc": "Instalaciones artísticas y esculturas luminosas doradas a lo largo de un sendero de montaña iluminado – abierto por la noche.",
+      "loc": "Ötztal",
+      "price": "€22"
+    },
+    {
+      "day": 19,
+      "month": "AUG",
+      "dateBoxClass": "gold",
+      "cat": "🥾 Deporte",
+      "title": "Fiesta de montaña en la cumbre",
+      "desc": "¡Carrera de montaña con DJs y una after-party con mucho ambiente en la pradera alpina – para deportistas y sibaritas!",
+      "loc": "Zillertal",
+      "price": "€35"
+    },
+    {
+      "day": 12,
+      "month": "SEP",
+      "dateBoxClass": "green",
+      "cat": "🍽️ Gastronomía",
+      "title": "Experiencia gourmet en la cumbre",
+      "desc": "Chefs de alta cocina presentan sus creaciones a 2.500 m: una experiencia gastronómica de primera categoría.",
+      "loc": "Kitzbühel",
+      "price": "€89"
+    }
   ]
 }

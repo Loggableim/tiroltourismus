@@ -1,0 +1,312 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ Tirol: fedezd fel, tervezd meg és éld át!",
+    "title": [
+      "TIROL",
+      "TURIZMUS"
+    ],
+    "subtitle": "Élje át Tirol teljes sokszínűségét – a fenséges csúcsoktól az idilli völgyeken át a hangulatos alpesi kunyhókig.",
+    "ctaPrimary": {
+      "text": "✦ Régiók felfedezése",
+      "href": "#regionen",
+      "class": "btn-primary"
+    },
+    "ctaSecondary": {
+      "text": "Szállások keresése",
+      "href": "#unterkuenfte",
+      "class": "btn-secondary"
+    }
+  },
+  "stats": [
+    {
+      "icon": "🏔️",
+      "count": 788,
+      "label": "3000 m feletti csúcsok"
+    },
+    {
+      "icon": "🏡",
+      "count": 12000,
+      "label": "Szállások"
+    },
+    {
+      "icon": "🥾",
+      "count": 24500,
+      "label": "Túrakilométer"
+    },
+    {
+      "icon": "🎿",
+      "count": 580,
+      "label": "Felvonók"
+    }
+  ],
+  "seelen": {
+    "label": "#regionentirols",
+    "title": "Tirol régiói",
+    "desc": "Hat régió, hat személyiség – mindegyik a maga egészen sajátos karakterével és bájával.",
+    "items": [
+      {
+        "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png",
+        "label": "Csúcsvonal"
+      }
+    ]
+  },
+  "whyTirol": {
+    "label": "#warumtirol",
+    "title": "Miért Tirol?",
+    "desc": "Három jó ok, amiért Tirol az Alpok legszebb üdülőrégiói közé tartozik.",
+    "items": [
+      {
+        "icon": "🏔️",
+        "iconClass": "i1",
+        "title": "Csúcsok és völgyek",
+        "desc": "788 háromezres csúcs vár arra, hogy Ön felfedezze. Minden csúcs egy új perspektíva – a napfényes alpesi rétektől a meredek sziklafalakig.",
+        "stat": "788",
+        "statClass": "pink"
+      },
+      {
+        "icon": "🎨",
+        "iconClass": "i2",
+        "title": "Design mint élmény",
+        "desc": "Tirol ötvözi a hagyományos vendégszeretetet a modern hangulattal – két élményvilág, egy felejthetetlen nyaralás.",
+        "stat": "2",
+        "statClass": "gold"
+      },
+      {
+        "icon": "🌱",
+        "iconClass": "i3",
+        "title": "Fenntartható & Valódi",
+        "desc": "A fenntarthatóság és a természetvédelem állnak a középpontban. A zöld kezdeményezések, a regionális konyha és a természet iránti igazi tisztelet határozzák meg a Tiroler nyaralási élményt.",
+        "stat": "100%",
+        "statClass": "pink"
+      }
+    ]
+  },
+  "regionen": {
+    "label": "Fedezd fel",
+    "title": "Régióink",
+    "desc": "A tartományi fővárostól a legeldugottabb hegyi falvakig – minden régiónak megvan a maga karaktere és számtalan lehetősége a felejthetetlen élményekhez.",
+    "items": [
+      {
+        "img": "/assets/images/region_innsbruck_20260517_101459.webp",
+        "tag": "POP",
+        "tagColor": "var(--pink)",
+        "name": "Innsbruck",
+        "meta": "Város & Hegy – urbánus Alpenglühn-mix",
+        "stars": 5,
+        "slug": "innsbruck"
+      },
+      {
+        "img": "/assets/images/region_oetztal_20260517_101502.webp",
+        "tag": "NATUR",
+        "tagColor": "var(--green)",
+        "name": "Ötztal",
+        "meta": "Gleccserek, csúcsok és vad völgyek",
+        "stars": 4,
+        "slug": "oetztal"
+      },
+      {
+        "img": "/assets/images/region_zillertal_20260517_101508.webp",
+        "tag": "AKTIV",
+        "tagColor": "var(--blue)",
+        "name": "Zillertal",
+        "meta": "Túrázás, bringázás, síelés – a javából",
+        "stars": 5,
+        "slug": "zillertal"
+      },
+      {
+        "img": "/assets/images/region_stubaital_20260517_101513.webp",
+        "tag": "KULINARIK",
+        "tagColor": "var(--orange)",
+        "name": "Stubaital",
+        "meta": "Élvezet és hegyi romantika",
+        "stars": 4,
+        "slug": "stubaital"
+      },
+      {
+        "img": "/assets/images/region_kitzbuehel_20260517_101526.webp",
+        "tag": "LUXUS",
+        "tagColor": "var(--purple)",
+        "name": "Kitzbühel",
+        "meta": "Alpesi elegancia és glamour",
+        "stars": 5,
+        "slug": "kitzbuehel"
+      },
+      {
+        "img": "/assets/images/region_kaunertal_20260517_101520.webp",
+        "tag": "GIPFEL",
+        "tagColor": "var(--gold)",
+        "name": "Kaunertal",
+        "meta": "Eredeti & érintetlen",
+        "stars": 4,
+        "slug": "kaunertal"
+      }
+    ]
+  },
+  "unterkuenfte": {
+    "label": "Szállás",
+    "title": "Találd meg az otthonod",
+    "desc": "A luxus wellness-szállodáktól a családi vezetésű farmokon át a hangulatos nyaralóapartmanokig – találja meg a tökéletes szálláshelyét Tirolban.",
+    "tabs": [
+      "Ajánlott",
+      "Legjobb értékelés",
+      "Legjobb ár"
+    ],
+    "items": [
+      {
+        "img": "/assets/images/hotel_1_20260517_101547.webp",
+        "badge": "MI-ajánlás",
+        "badgeClass": "pop",
+        "type": "Design szálloda",
+        "name": "Alpesi Panoráma Lodge",
+        "loc": "Innsbruck",
+        "stars": 5,
+        "score": 9.4,
+        "price": 189,
+        "slug": "pop-mountain-lodge"
+      },
+      {
+        "img": "/assets/images/hotel_2_20260517_101544.webp",
+        "badge": "Kiválóan értékelt",
+        "badgeClass": "top",
+        "type": "Alpesi ház",
+        "name": "Hegyi kilátású lakosztály",
+        "loc": "Ötztal",
+        "stars": 5,
+        "score": 9.7,
+        "price": 245,
+        "slug": "bergblick-suite"
+      },
+      {
+        "img": "/assets/images/hotel_3_20260517_101551.webp",
+        "badge": "Kedvezményes ajánlat",
+        "badgeClass": "deal",
+        "type": "Nyaralóapartman",
+        "name": "Alpen Panoráma Stúdió",
+        "loc": "Zillertal",
+        "stars": 4,
+        "score": 8.9,
+        "price": 79,
+        "slug": "alpen-pop-studio"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "barColor": "c1",
+      "icon": "🪂",
+      "title": "Siklóernyőzés Innsbruck felett",
+      "desc": "Lebegjen a tartományi főváros felett, és élvezze a környező hegyek lélegzetelállító panorámáját.",
+      "price": 129,
+      "link": "#"
+    },
+    {
+      "barColor": "c2",
+      "icon": "🚵",
+      "title": "E-Mountainbike naplemente túra",
+      "desc": "Fedezze fel Tirol hegyvilágát egy vezetett E-Bike-túrán, és élje át a naplementét a csúcsok felett.",
+      "price": 89,
+      "link": "#"
+    },
+    {
+      "barColor": "c3",
+      "icon": "🎨",
+      "title": "Alpesi gyógynövénytúra",
+      "desc": "Fedezze fel a hazai növényvilágot egy vezetett gyógynövénytúrán, regionális termékek kóstolásával.",
+      "price": 55,
+      "link": "#"
+    },
+    {
+      "barColor": "c4",
+      "icon": "🌙",
+      "title": "Vezetett csillagászati túra",
+      "desc": "Egy éjszakai túrán tanúsított vezetőkkel ismerkedhet meg az Alpok feletti csillagos éggel.",
+      "price": 45,
+      "link": "#"
+    },
+    {
+      "barColor": "c5",
+      "icon": "🧘",
+      "title": "Alpesi jóga és meditáció",
+      "desc": "Találja meg belső nyugalmát egy jógaóra során, panorámás kilátással a Tiroler hegyvilágra.",
+      "price": 69,
+      "link": "#"
+    },
+    {
+      "barColor": "c6",
+      "icon": "🍷",
+      "title": "Tiroler ínyencest",
+      "desc": "Kényeztesse magát egy exkluzív vacsorán regionális specialitásokkal és válogatott borokkal.",
+      "price": 149,
+      "link": "#"
+    }
+  ],
+  "events": [
+    {
+      "day": 21,
+      "month": "JUN",
+      "dateBoxClass": "pink",
+      "cat": "🎵 Zene",
+      "title": "Tiroli Hegyi Nyár Fesztivál",
+      "desc": "Az Alpen legnagyobb zenei fesztiválja nemzetközi fellépőkkel és lenyűgöző hegyi panorámával 2000 méter magasan.",
+      "loc": "Innsbruck",
+      "price": "ab €49"
+    },
+    {
+      "day": 5,
+      "month": "JUL",
+      "dateBoxClass": "gold",
+      "cat": "🎨 Művészet",
+      "title": "Arany Művészeti Ösvény",
+      "desc": "Művészeti installációk és arany fényszobrok egy megvilágított hegyi ösvény mentén – este nyitva.",
+      "loc": "Ötztal",
+      "price": "€22"
+    },
+    {
+      "day": 19,
+      "month": "AUG",
+      "dateBoxClass": "gold",
+      "cat": "🥾 Sport",
+      "title": "Hegyi fesztivál a csúcson",
+      "desc": "Hegyifutás DJ-kkel és hangulatos after-partival a havasi legelőn – sportolóknak és élvezetek kedvelőinek!",
+      "loc": "Zillertal",
+      "price": "€35"
+    },
+    {
+      "day": 12,
+      "month": "SEP",
+      "dateBoxClass": "green",
+      "cat": "🍽️ Kulinária",
+      "title": "Gourmet csúcsélmény",
+      "desc": "Élvonalbeli séfek mutatják be alkotásaikat 2500 méter magasságban – egy extraklasszis gasztronómiai élmény.",
+      "loc": "Kitzbühel",
+      "price": "€89"
+    }
+  ],
+  "magazin": [
+    {
+      "img": "/assets/images/magazin_1_20260517_101554.webp",
+      "cat": "Túrázás",
+      "catClass": "wander",
+      "date": "2026. május 12.",
+      "title": "Tirol legszínesebb túraútvonalai",
+      "desc": "Hét útvonal, amelyek bizonyítják, hogy maga a természet a legjobb művész – az alpesi virágoktól az arany gleccsertavakig."
+    },
+    {
+      "img": "/assets/images/magazin_2_20260517_101600.webp",
+      "cat": "Természet",
+      "catClass": "natur",
+      "date": "2026. április 28.",
+      "title": "Fenntarthatóság találkozik a popkultúrával",
+      "desc": "Hogyan állítanak új mércét a Tiroler szállodák harsány ötletekkel, arany akcentusokkal és zöld lelkiismerettel."
+    },
+    {
+      "img": "/assets/images/magazin_3_20260517_101603.webp",
+      "cat": "Kulinária",
+      "catClass": "kulin",
+      "date": "2026. április 3.",
+      "title": "Alpesi konyha újraértelmezve",
+      "desc": "A rózsaszín Knödeln-től az arany Schnitzelig: fiatal szakácsok újraértelmezik a Tiroler klasszikusokat."
+    }
+  ]
+}

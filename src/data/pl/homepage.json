@@ -1,0 +1,312 @@
+{
+  "hero": {
+    "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
+    "badge": "🏔️ Odkrywaj Tirol, planuj i przeżywaj",
+    "title": [
+      "TIROL",
+      "TURYSTYKA"
+    ],
+    "subtitle": "Poznaj Tirol w całej jego różnorodności – od majestatycznych szczytów przez idylliczne doliny aż po przytulne alpejskie chaty.",
+    "ctaPrimary": {
+      "text": "✦ Odkrywaj regiony",
+      "href": "#regionen",
+      "class": "btn-primary"
+    },
+    "ctaSecondary": {
+      "text": "Znajdź noclegi",
+      "href": "#unterkuenfte",
+      "class": "btn-secondary"
+    }
+  },
+  "stats": [
+    {
+      "icon": "🏔️",
+      "count": 788,
+      "label": "Szczyty powyżej 3 000 m"
+    },
+    {
+      "icon": "🏡",
+      "count": 12000,
+      "label": "Noclegi"
+    },
+    {
+      "icon": "🥾",
+      "count": 24500,
+      "label": "Kilometry szlaków turystycznych"
+    },
+    {
+      "icon": "🎿",
+      "count": 580,
+      "label": "Wyciągi"
+    }
+  ],
+  "seelen": {
+    "label": "#regionentirols",
+    "title": "Regiony Tirolu",
+    "desc": "Sześć regionów, sześć osobowości – każda z własnym, całkiem odrębnym charakterem i urokiem.",
+    "items": [
+      {
+        "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png",
+        "label": "Linia szczytowa"
+      }
+    ]
+  },
+  "whyTirol": {
+    "label": "#warumtirol",
+    "title": "Dlaczego Tirol?",
+    "desc": "Trzy dobre powody, dla których Tirol należy do najpiękniejszych regionów urlopowych w Alpach.",
+    "items": [
+      {
+        "icon": "🏔️",
+        "iconClass": "i1",
+        "title": "Szczyty i doliny",
+        "desc": "788 trzytysięczników czeka na odkrycie przez Państwa. Każdy szczyt to nowa perspektywa – od słonecznych hal po strome skalne ściany.",
+        "stat": "788",
+        "statClass": "pink"
+      },
+      {
+        "icon": "🎨",
+        "iconClass": "i2",
+        "title": "Design jako przeżycie",
+        "desc": "Tirol łączy tradycyjną gościnność z nowoczesnym urokiem – dwa światy wrażeń, niezapomniane wakacje.",
+        "stat": "2",
+        "statClass": "gold"
+      },
+      {
+        "icon": "🌱",
+        "iconClass": "i3",
+        "title": "Zrównoważony & Autentyczny",
+        "desc": "Zrównoważony rozwój i ochrona przyrody są w centrum uwagi. Zielone inicjatywy, regionalna kuchnia i prawdziwy szacunek do natury kształtują doświadczenie urlopowe w regionie Tirol.",
+        "stat": "100%",
+        "statClass": "pink"
+      }
+    ]
+  },
+  "regionen": {
+    "label": "Odkryj",
+    "title": "Nasze regiony",
+    "desc": "Od stolicy kraju związkowego aż po najbardziej odległe górskie wioski – każdy region ma swój własny charakter i niezliczone możliwości niezapomnianych przeżyć.",
+    "items": [
+      {
+        "img": "/assets/images/region_innsbruck_20260517_101459.webp",
+        "tag": "POP",
+        "tagColor": "var(--pink)",
+        "name": "Innsbruck",
+        "meta": "Miasto & Góry – miejski mix alpejskiej poświaty",
+        "stars": 5,
+        "slug": "innsbruck"
+      },
+      {
+        "img": "/assets/images/region_oetztal_20260517_101502.webp",
+        "tag": "NATUR",
+        "tagColor": "var(--green)",
+        "name": "Ötztal",
+        "meta": "Lodowce, szczyty i dzikie doliny",
+        "stars": 4,
+        "slug": "oetztal"
+      },
+      {
+        "img": "/assets/images/region_zillertal_20260517_101508.webp",
+        "tag": "AKTIV",
+        "tagColor": "var(--blue)",
+        "name": "Zillertal",
+        "meta": "Wędrówki, kolarstwo, narciarstwo w czystej postaci",
+        "stars": 5,
+        "slug": "zillertal"
+      },
+      {
+        "img": "/assets/images/region_stubaital_20260517_101513.webp",
+        "tag": "KULINARIK",
+        "tagColor": "var(--orange)",
+        "name": "Stubaital",
+        "meta": "Przyjemność i romantyka górska",
+        "stars": 4,
+        "slug": "stubaital"
+      },
+      {
+        "img": "/assets/images/region_kitzbuehel_20260517_101526.webp",
+        "tag": "LUXUS",
+        "tagColor": "var(--purple)",
+        "name": "Kitzbühel",
+        "meta": "Alpejska elegancja i glamour",
+        "stars": 5,
+        "slug": "kitzbuehel"
+      },
+      {
+        "img": "/assets/images/region_kaunertal_20260517_101520.webp",
+        "tag": "GIPFEL",
+        "tagColor": "var(--gold)",
+        "name": "Kaunertal",
+        "meta": "Pierwotne i nietknięte",
+        "stars": 4,
+        "slug": "kaunertal"
+      }
+    ]
+  },
+  "unterkuenfte": {
+    "label": "Noclegi",
+    "title": "Znajdź swoje miejsce",
+    "desc": "Od luksusowych hoteli wellness przez rodzinne gospodarstwa rolne aż po przytulne apartamenty wakacyjne – znajdą Państwo swoje idealne zakwaterowanie w Tirol.",
+    "tabs": [
+      "Polecane",
+      "Najlepsza ocena",
+      "Najlepsza cena"
+    ],
+    "items": [
+      {
+        "img": "/assets/images/hotel_1_20260517_101547.webp",
+        "badge": "Rekomendacja AI",
+        "badgeClass": "pop",
+        "type": "Hotel designerski",
+        "name": "Alpejski Panorama Lodge",
+        "loc": "Innsbruck",
+        "stars": 5,
+        "score": 9.4,
+        "price": 189,
+        "slug": "pop-mountain-lodge"
+      },
+      {
+        "img": "/assets/images/hotel_2_20260517_101544.webp",
+        "badge": "Najwyżej oceniane",
+        "badgeClass": "top",
+        "type": "Alpejski domek",
+        "name": "Apartament z widokiem na góry",
+        "loc": "Ötztal",
+        "stars": 5,
+        "score": 9.7,
+        "price": 245,
+        "slug": "bergblick-suite"
+      },
+      {
+        "img": "/assets/images/hotel_3_20260517_101551.webp",
+        "badge": "Oferta oszczędnościowa",
+        "badgeClass": "deal",
+        "type": "Apartament wakacyjny",
+        "name": "Alpen Panorama Studio",
+        "loc": "Zillertal",
+        "stars": 4,
+        "score": 8.9,
+        "price": 79,
+        "slug": "alpen-pop-studio"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "barColor": "c1",
+      "icon": "🪂",
+      "title": "Paragliding nad Innsbruck",
+      "desc": "Unieś się nad stolicą kraju związkowego i ciesz się zapierającym dech w piersiach widokiem na otaczającą górską panoramę.",
+      "price": 129,
+      "link": "#"
+    },
+    {
+      "barColor": "c2",
+      "icon": "🚵",
+      "title": "Wycieczka e-rowerem górskim o zachodzie słońca",
+      "desc": "Odkryj górski świat regionu Tirol podczas wycieczki e-rowerowej z przewodnikiem i przeżyj zachód słońca nad szczytami.",
+      "price": 89,
+      "link": "#"
+    },
+    {
+      "barColor": "c3",
+      "icon": "🎨",
+      "title": "Alpejska wędrówka ziołowa",
+      "desc": "Odkryj rodzimą roślinność podczas wędrówki ziołowej z przewodnikiem i degustacją regionalnych produktów.",
+      "price": 55,
+      "link": "#"
+    },
+    {
+      "barColor": "c4",
+      "icon": "🌙",
+      "title": "Wędrówka pod gwiazdami z przewodnikiem",
+      "desc": "Podczas nocnej wędrówki z certyfikowanymi przewodnikami poznasz rozgwieżdżone niebo nad Alpen.",
+      "price": 45,
+      "link": "#"
+    },
+    {
+      "barColor": "c5",
+      "icon": "🧘",
+      "title": "Alpejska joga i medytacja",
+      "desc": "Odnajdź swój wewnętrzny spokój podczas sesji jogi z panoramą na Tiroler Bergwelt.",
+      "price": 69,
+      "link": "#"
+    },
+    {
+      "barColor": "c6",
+      "icon": "🍷",
+      "title": "Tiroler wieczór smaków",
+      "desc": "Pozwól się rozpieszczać podczas ekskluzywnej kolacji z regionalnymi specjałami i wybornymi winami.",
+      "price": 149,
+      "link": "#"
+    }
+  ],
+  "events": [
+    {
+      "day": 21,
+      "month": "JUN",
+      "dateBoxClass": "pink",
+      "cat": "🎵 Muzyka",
+      "title": "Festiwal Górskiego Lata w Tirolu",
+      "desc": "Największy festiwal muzyczny w Alpen z międzynarodowymi wykonawcami i spektakularną scenerią górską na wysokości 2.000 m.",
+      "loc": "Innsbruck",
+      "price": "ab €49"
+    },
+    {
+      "day": 5,
+      "month": "JUL",
+      "dateBoxClass": "gold",
+      "cat": "🎨 Sztuka",
+      "title": "Szlak Sztuki Złota",
+      "desc": "Instalacje artystyczne i złote świecące rzeźby wzdłuż oświetlonej górskiej ścieżki – otwarte wieczorem.",
+      "loc": "Ötztal",
+      "price": "€22"
+    },
+    {
+      "day": 19,
+      "month": "AUG",
+      "dateBoxClass": "gold",
+      "cat": "🥾 Sport",
+      "title": "Festiwal górski na szczycie",
+      "desc": "Bieg górski z DJ-ami i nastrojową afterparty na hali – dla sportowców i smakoszy!",
+      "loc": "Zillertal",
+      "price": "€35"
+    },
+    {
+      "day": 12,
+      "month": "SEP",
+      "dateBoxClass": "green",
+      "cat": "🍽️ Kulinaria",
+      "title": "Doświadczenie Gourmet na szczycie",
+      "desc": "Najlepsi szefowie kuchni prezentują swoje kreacje na wysokości 2500 m – kulinarne doznanie najwyższej klasy.",
+      "loc": "Kitzbühel",
+      "price": "€89"
+    }
+  ],
+  "magazin": [
+    {
+      "img": "/assets/images/magazin_1_20260517_101554.webp",
+      "cat": "Wędrówki",
+      "catClass": "wander",
+      "date": "12 maja 2026",
+      "title": "Najbarwniejsze trasy wędrówkowe w Tirol",
+      "desc": "Siedem tras, które dowodzą, że natura sama jest najlepszą artystką – od alpejskich kwiatów po złote jeziora lodowcowe."
+    },
+    {
+      "img": "/assets/images/magazin_2_20260517_101600.webp",
+      "cat": "Przyroda",
+      "catClass": "natur",
+      "date": "28 kwietnia 2026",
+      "title": "Zrównoważony rozwój spotyka popkulturę",
+      "desc": "Jak hotele w Tirolu dzięki krzykliwym pomysłom, złotym akcentom i zielonemu sumieniu wyznaczają nowe standardy."
+    },
+    {
+      "img": "/assets/images/magazin_3_20260517_101603.webp",
+      "cat": "Kulinaria",
+      "catClass": "kulin",
+      "date": "3 kwietnia 2026",
+      "title": "Alpejska kuchnia w nowej interpretacji",
+      "desc": "Od różowych Knödeln do złotego Schnitzel: Młodzi kucharze na nowo interpretują Tiroler Klassiker."
+    }
+  ]
+}

@@ -2,39 +2,311 @@
   "hero": {
     "bgImage": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.webp",
     "badge": "🏔️ Découvrir, planifier, profiter",
-    "title": ["TIROL", "ANDERS"],
+    "title": [
+      "TIROL",
+      "ANDERS"
+    ],
     "subtitle": "Découvrez le Tyrol dans toute sa diversité – des sommets majestueux aux vallées idylliques en passant par les alpages authentiques.",
-    "ctaPrimary": { "text": "✦ Découvrir les régions", "href": "#regionen", "class": "btn-primary" },
-    "ctaSecondary": { "text": "Trouver un hébergement", "href": "#unterkuenfte", "class": "btn-secondary" }
+    "ctaPrimary": {
+      "text": "✦ Découvrir les régions",
+      "href": "#regionen",
+      "class": "btn-primary"
+    },
+    "ctaSecondary": {
+      "text": "Trouver un hébergement",
+      "href": "#unterkuenfte",
+      "class": "btn-secondary"
+    }
   },
   "stats": [
-    { "icon": "🏔️", "count": 14, "label": "Régions" },
-    { "icon": "🏘️", "count": 258, "label": "Villages" },
-    { "icon": "🏛️", "count": 154, "label": "Sites touristiques" },
-    { "icon": "🏡", "count": 1292, "label": "Hébergements & Camping" }
+    {
+      "icon": "🏔️",
+      "count": 14,
+      "label": "Régions"
+    },
+    {
+      "icon": "🏘️",
+      "count": 258,
+      "label": "Villages"
+    },
+    {
+      "icon": "🏛️",
+      "count": 154,
+      "label": "Sites touristiques"
+    },
+    {
+      "icon": "🏡",
+      "count": 1292,
+      "label": "Hébergements & Camping"
+    }
   ],
   "regionen": {
     "label": "Entdecke",
     "title": "Nos Régions",
     "desc": "De la capitale régionale aux villages de montagne les plus reculés – chaque région a son propre caractère et d'innombrables possibilités pour des expériences inoubliables.",
     "items": [
-      { "img": "/assets/images/region_innsbruck_20260517_101459.webp", "tag": "POP", "tagColor": "var(--pink)", "name": "Innsbruck", "meta": "Ville & montagne – un mix alpin urbain", "stars": 5, "slug": "innsbruck" },
-      { "img": "/assets/images/region_oetztal_20260517_101502.webp", "tag": "NATURE", "tagColor": "var(--green)", "name": "Ötztal", "meta": "Glaciers, sommets & vallées sauvages", "stars": 4, "slug": "oetztal" },
-      { "img": "/assets/images/region_zillertal_20260517_101508.webp", "tag": "ACTIF", "tagColor": "var(--blue)", "name": "Zillertal", "meta": "Randonnée, vélo, ski pur", "stars": 5, "slug": "zillertal" },
-      { "img": "/assets/images/region_stubaital_20260517_101513.webp", "tag": "GASTRONOMIE", "tagColor": "var(--orange)", "name": "Stubaital", "meta": "Plaisir & romantisme alpin", "stars": 4, "slug": "stubaital" },
-      { "img": "/assets/images/region_kitzbuehel_20260517_101526.webp", "tag": "LUXE", "tagColor": "var(--purple)", "name": "Kitzbühel", "meta": "Élégance alpine & glamour", "stars": 5, "slug": "kitzbuehel" },
-      { "img": "/assets/images/region_kaunertal_20260517_101520.webp", "tag": "SOMMETS", "tagColor": "var(--gold)", "name": "Kaunertal", "meta": "Authentique & préservé", "stars": 4, "slug": "kaunertal" }
+      {
+        "img": "/assets/images/region_innsbruck_20260517_101459.webp",
+        "tag": "POP",
+        "tagColor": "var(--pink)",
+        "name": "Innsbruck",
+        "meta": "Ville & montagne – un mix alpin urbain",
+        "stars": 5,
+        "slug": "innsbruck"
+      },
+      {
+        "img": "/assets/images/region_oetztal_20260517_101502.webp",
+        "tag": "NATURE",
+        "tagColor": "var(--green)",
+        "name": "Ötztal",
+        "meta": "Glaciers, sommets & vallées sauvages",
+        "stars": 4,
+        "slug": "oetztal"
+      },
+      {
+        "img": "/assets/images/region_zillertal_20260517_101508.webp",
+        "tag": "ACTIF",
+        "tagColor": "var(--blue)",
+        "name": "Zillertal",
+        "meta": "Randonnée, vélo, ski pur",
+        "stars": 5,
+        "slug": "zillertal"
+      },
+      {
+        "img": "/assets/images/region_stubaital_20260517_101513.webp",
+        "tag": "GASTRONOMIE",
+        "tagColor": "var(--orange)",
+        "name": "Stubaital",
+        "meta": "Plaisir & romantisme alpin",
+        "stars": 4,
+        "slug": "stubaital"
+      },
+      {
+        "img": "/assets/images/region_kitzbuehel_20260517_101526.webp",
+        "tag": "LUXE",
+        "tagColor": "var(--purple)",
+        "name": "Kitzbühel",
+        "meta": "Élégance alpine & glamour",
+        "stars": 5,
+        "slug": "kitzbuehel"
+      },
+      {
+        "img": "/assets/images/region_kaunertal_20260517_101520.webp",
+        "tag": "SOMMETS",
+        "tagColor": "var(--gold)",
+        "name": "Kaunertal",
+        "meta": "Authentique & préservé",
+        "stars": 4,
+        "slug": "kaunertal"
+      }
     ]
   },
   "unterkuenfte": {
     "label": "Hébergement",
     "title": "Trouvez votre chez-vous",
     "desc": "Des hôtels de luxe aux fermes familiales en passant par les appartements de vacances confortables – trouvez l'hébergement parfait au Tyrol.",
-    "tabs": ["Recommandé", "Meilleure note", "Meilleur prix"],
+    "tabs": [
+      "Recommandé",
+      "Meilleure note",
+      "Meilleur prix"
+    ],
     "items": [
-      { "img": "/assets/images/hotel_1_20260517_101547.webp", "badge": "Recommandé", "badgeClass": "pop", "type": "Design Hôtel", "name": "Alpine Panorama Lodge", "loc": "Innsbruck", "stars": 5, "score": 9.4, "price": 189, "slug": "pop-mountain-lodge" },
-      { "img": "/assets/images/hotel_2_20260517_101544.webp", "badge": "Top évalué", "badgeClass": "top", "type": "Lodge Alpin", "name": "Bergblick Suite", "loc": "Ötztal", "stars": 5, "score": 9.7, "price": 245, "slug": "bergblick-suite" },
-      { "img": "/assets/images/hotel_3_20260517_101551.webp", "badge": "Offre spéciale", "badgeClass": "deal", "type": "Appartement", "name": "Alpen Panorama Studio", "loc": "Zillertal", "stars": 4, "score": 8.9, "price": 79, "slug": "alpen-pop-studio" }
+      {
+        "img": "/assets/images/hotel_1_20260517_101547.webp",
+        "badge": "Recommandé",
+        "badgeClass": "pop",
+        "type": "Design Hôtel",
+        "name": "Alpine Panorama Lodge",
+        "loc": "Innsbruck",
+        "stars": 5,
+        "score": 9.4,
+        "price": 189,
+        "slug": "pop-mountain-lodge"
+      },
+      {
+        "img": "/assets/images/hotel_2_20260517_101544.webp",
+        "badge": "Top évalué",
+        "badgeClass": "top",
+        "type": "Lodge Alpin",
+        "name": "Bergblick Suite",
+        "loc": "Ötztal",
+        "stars": 5,
+        "score": 9.7,
+        "price": 245,
+        "slug": "bergblick-suite"
+      },
+      {
+        "img": "/assets/images/hotel_3_20260517_101551.webp",
+        "badge": "Offre spéciale",
+        "badgeClass": "deal",
+        "type": "Appartement",
+        "name": "Alpen Panorama Studio",
+        "loc": "Zillertal",
+        "stars": 4,
+        "score": 8.9,
+        "price": 79,
+        "slug": "alpen-pop-studio"
+      }
     ]
-  }
+  },
+  "seelen": {
+    "label": "#regionentirols",
+    "title": "Régions du Tirol",
+    "desc": "Six régions, six personnalités – chacune avec son propre caractère et son charme unique.",
+    "items": [
+      {
+        "img": "/brand/hero-logos/konzept1_gipfellinie_20260517_083224.png",
+        "label": "Ligne des sommets"
+      }
+    ]
+  },
+  "whyTirol": {
+    "label": "#warumtirol",
+    "title": "Pourquoi Tirol ?",
+    "desc": "Trois bonnes raisons pour lesquelles Tirol compte parmi les plus belles régions de vacances des Alpes.",
+    "items": [
+      {
+        "icon": "🏔️",
+        "iconClass": "i1",
+        "title": "Sommets & Vallées",
+        "desc": "788 sommets de plus de 3 000 mètres attendent d'être découverts par vous. Chaque sommet, une nouvelle perspective – des alpages ensoleillés aux parois rocheuses escarpées.",
+        "stat": "788",
+        "statClass": "pink"
+      },
+      {
+        "icon": "🎨",
+        "iconClass": "i2",
+        "title": "Le design comme expérience",
+        "desc": "Tirol allie l’hospitalité traditionnelle à un flair moderne – deux univers d’expérience, des vacances inoubliables.",
+        "stat": "2",
+        "statClass": "gold"
+      },
+      {
+        "icon": "🌱",
+        "iconClass": "i3",
+        "title": "Durable & Authentique",
+        "desc": "La durabilité et la protection de la nature sont au centre. Des initiatives vertes, une cuisine régionale et un véritable respect de la nature marquent l'expérience de vacances au Tirol.",
+        "stat": "100%",
+        "statClass": "pink"
+      }
+    ]
+  },
+  "activities": [
+    {
+      "barColor": "c1",
+      "icon": "🪂",
+      "title": "Parapente au-dessus d'Innsbruck",
+      "desc": "Survolez la capitale régionale et profitez d'une vue à couper le souffle sur les montagnes environnantes.",
+      "price": 129,
+      "link": "#"
+    },
+    {
+      "barColor": "c2",
+      "icon": "🚵",
+      "title": "Excursion en VTT électrique au coucher du soleil",
+      "desc": "Explorez les montagnes du Tirol lors d'une excursion guidée en e-bike et vivez le coucher du soleil au-dessus des sommets.",
+      "price": 89,
+      "link": "#"
+    },
+    {
+      "barColor": "c3",
+      "icon": "🎨",
+      "title": "Randonnée alpine aux herbes",
+      "desc": "Découvrez la flore locale lors d'une randonnée guidée aux herbes avec dégustation de produits régionaux.",
+      "price": 55,
+      "link": "#"
+    },
+    {
+      "barColor": "c4",
+      "icon": "🌙",
+      "title": "Randonnée guidée sous les étoiles",
+      "desc": "Lors d'une randonnée nocturne avec des guides certifiés, vous découvrez le ciel étoilé au-dessus des Alpen.",
+      "price": 45,
+      "link": "#"
+    },
+    {
+      "barColor": "c5",
+      "icon": "🧘",
+      "title": "Yoga et méditation alpins",
+      "desc": "Trouvez votre paix intérieure lors d'une séance de yoga avec vue panoramique sur les montagnes du Tirol.",
+      "price": 69,
+      "link": "#"
+    },
+    {
+      "barColor": "c6",
+      "icon": "🍷",
+      "title": "Soirée gourmande du Tirol",
+      "desc": "Laissez-vous choyer lors d'un dîner exclusif avec des spécialités régionales et des vins sélectionnés.",
+      "price": 149,
+      "link": "#"
+    }
+  ],
+  "events": [
+    {
+      "day": 21,
+      "month": "JUN",
+      "dateBoxClass": "pink",
+      "cat": "🎵 Musique",
+      "title": "Festival d'été en montagne du Tirol",
+      "desc": "Le plus grand festival de musique des Alpes, avec des artistes internationaux et un panorama montagneux spectaculaire à 2 000 m d'altitude.",
+      "loc": "Innsbruck",
+      "price": "ab €49"
+    },
+    {
+      "day": 5,
+      "month": "JUL",
+      "dateBoxClass": "gold",
+      "cat": "🎨 Art",
+      "title": "Sentier de l'art de l'or",
+      "desc": "Installations artistiques et sculptures lumineuses dorées le long d’un sentier de montagne éclairé – ouvert le soir.",
+      "loc": "Ötztal",
+      "price": "€22"
+    },
+    {
+      "day": 19,
+      "month": "AUG",
+      "dateBoxClass": "gold",
+      "cat": "🥾 Sport",
+      "title": "Fête montagnarde au sommet",
+      "desc": "Course en montagne avec DJs et after-party pleine d’ambiance sur l’alpage – pour les sportifs et les gourmets !",
+      "loc": "Zillertal",
+      "price": "€35"
+    },
+    {
+      "day": 12,
+      "month": "SEP",
+      "dateBoxClass": "green",
+      "cat": "🍽️ Gastronomie",
+      "title": "Expérience Gourmet au Sommet",
+      "desc": "Des chefs de premier plan présentent leurs créations à 2 500 m – une expérience gastronomique d'exception.",
+      "loc": "Kitzbühel",
+      "price": "€89"
+    }
+  ],
+  "magazin": [
+    {
+      "img": "/assets/images/magazin_1_20260517_101554.webp",
+      "cat": "Randonnée",
+      "catClass": "wander",
+      "date": "12 mai 2026",
+      "title": "Les itinéraires de randonnée les plus colorés du Tirol",
+      "desc": "Sept itinéraires qui prouvent que la nature elle-même est la meilleure artiste – des fleurs alpines aux lacs glaciaires dorés."
+    },
+    {
+      "img": "/assets/images/magazin_2_20260517_101600.webp",
+      "cat": "Nature",
+      "catClass": "natur",
+      "date": "28 avril 2026",
+      "title": "La durabilité rencontre la pop culture",
+      "desc": "Comment les hôtels de Tirol, avec des idées percutantes, des accents dorés et une conscience verte, établissent de nouveaux standards."
+    },
+    {
+      "img": "/assets/images/magazin_3_20260517_101603.webp",
+      "cat": "Gastronomie",
+      "catClass": "kulin",
+      "date": "03 avril 2026",
+      "title": "Cuisine alpine réinterprétée",
+      "desc": "Des Knödeln roses au Schnitzel doré : de jeunes chefs réinterprètent les classiques du Tirol."
+    }
+  ]
 }

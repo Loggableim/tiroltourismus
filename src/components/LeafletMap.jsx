@@ -8,14 +8,72 @@
  * - Polygon hover glow/tooltip
  * - Responsive height
  * - Loading skeleton
+ *
+ * Basemap: OpenFreeMap (https://openfreemap.org) — free, no watermark, no API key.
+ * Vector tiles rendered via MapLibre GL Leaflet bridge.
  */
 import { useEffect, useRef, useState } from 'react';
 
-const TILES = {
-  light: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+const OFM_STYLES = {
+  light: 'https://tiles.openfreemap.org/styles/positron',
+  dark: 'https://tiles.openfreemap.org/styles/dark',
+  attribution: '&copy; <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>',
 };
+
+// ── Leaflet loader (CDN global — mutable window.L, required for the MapLibre bridge) ──
+let leafletPromise = null;
+function loadLeaflet() {
+  if (leafletPromise) return leafletPromise;
+  leafletPromise = new Promise((resolve, reject) => {
+    if (typeof window !== 'undefined' && window.L) { resolve(window.L); return; }
+    // CSS
+    if (!document.getElementById('leaflet-css')) {
+      const link = document.createElement('link');
+      link.id = 'leaflet-css';
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+      document.head.appendChild(link);
+    }
+    const s = document.createElement('script');
+    s.id = 'leaflet-js';
+    s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    s.onload = () => resolve(window.L);
+    s.onerror = reject;
+    document.head.appendChild(s);
+  });
+  return leafletPromise;
+}
+
+// ── MapLibre GL + Leaflet bridge loader (singleton) ──
+let maplibrePromise = null;
+function loadMapLibre() {
+  if (maplibrePromise) return maplibrePromise;
+  maplibrePromise = new Promise((resolve, reject) => {
+    // CSS
+    if (!document.getElementById('maplibre-css')) {
+      const link = document.createElement('link');
+      link.id = 'maplibre-css';
+      link.rel = 'stylesheet';
+      link.href = 'https://unpkg.com/maplibre-gl@5.5.0/dist/maplibre-gl.css';
+      document.head.appendChild(link);
+    }
+    // MapLibre GL JS
+    const loadScript = (src, id) => new Promise((res, rej) => {
+      if (document.getElementById(id)) { res(); return; }
+      const s = document.createElement('script');
+      s.id = id;
+      s.src = src;
+      s.onload = res;
+      s.onerror = rej;
+      document.head.appendChild(s);
+    });
+    loadScript('https://unpkg.com/maplibre-gl@5.5.0/dist/maplibre-gl.js', 'maplibre-js')
+      .then(() => loadScript('https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.3/leaflet-maplibre-gl.js', 'maplibre-leaflet-bridge'))
+      .then(resolve)
+      .catch(reject);
+  });
+  return maplibrePromise;
+}
 
 const TIROL_CENTER = { lat: 47.15, lng: 11.4 };
 
@@ -68,17 +126,8 @@ export default function LeafletMap({
   useEffect(() => {
     if (!mapContainer.current || typeof window === 'undefined') return;
 
-    import('leaflet').then((L) => {
+    loadLeaflet().then((L) => {
       if (mapInstance.current) return;
-
-      // Load Leaflet CSS
-      if (!document.getElementById('leaflet-css')) {
-        const link = document.createElement('link');
-        link.id = 'leaflet-css';
-        link.rel = 'stylesheet';
-        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-        document.head.appendChild(link);
-      }
 
       // Fix default icon paths
       delete (L.Icon.Default.prototype)._getIconUrl;
@@ -111,14 +160,25 @@ export default function LeafletMap({
       // Re-invalidate when fully rendered
       setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 500);
 
-      // Tile layer
-      const tiles = L.tileLayer(activeTheme === 'dark' ? TILES.dark : TILES.light, {
-        attribution: TILES.attribution,
-        maxZoom: 19,
-      }).addTo(map);
-
-      // Store tiles ref for theme switching
-      map._tileLayer = tiles;
+      // ── Basemap: OpenFreeMap (vector tiles via MapLibre GL bridge) ──
+      // Fallback: if MapLibre fails to load, keep the map usable (blank basemap,
+      // markers/polygons still render — better than a broken map).
+      loadMapLibre().then(() => {
+        if (!mapInstance.current) return;
+        try {
+          const glLayer = L.maplibreGL({
+            style: activeTheme === 'dark' ? OFM_STYLES.dark : OFM_STYLES.light,
+            attribution: OFM_STYLES.attribution,
+          }).addTo(map);
+          map._glLayer = glLayer;
+          // MapLibre needs a nudge after mount
+          setTimeout(() => { try { map.invalidateSize(); } catch(e) {} }, 300);
+        } catch (e) {
+          console.error('[LeafletMap] OpenFreeMap layer error:', e);
+        }
+      }).catch((e) => {
+        console.error('[LeafletMap] MapLibre load failed:', e);
+      });
 
       try {
         // Draw polygons
@@ -156,7 +216,7 @@ export default function LeafletMap({
   // Re-draw markers when markers prop changes (no fitBounds — prevents zoom loop)
   useEffect(() => {
     if (!mapInstance.current) return;
-    import('leaflet').then((L) => {
+    loadLeaflet().then((L) => {
       const map = mapInstance.current;
       clearMarkers(map);
       try { drawMarkers(L, map); } catch (e) { console.error('[LeafletMap] re-draw markers error:', e); }
@@ -165,12 +225,26 @@ export default function LeafletMap({
     });
   }, [markers, polygons]);
 
-  // Switch tiles on theme change
+  // Switch basemap on theme change (OpenFreeMap styles)
   useEffect(() => {
     if (!mapInstance.current) return;
     const map = mapInstance.current;
-    if (map._tileLayer) {
-      map._tileLayer.setUrl(theme === 'dark' ? TILES.dark : TILES.light);
+    if (map._glLayer) {
+      try {
+        map.removeLayer(map._glLayer);
+      } catch (e) {}
+      loadMapLibre(leafletRef.current).then(() => {
+        if (!mapInstance.current) return;
+        try {
+          const glLayer = leafletRef.current.maplibreGL({
+            style: theme === 'dark' ? OFM_STYLES.dark : OFM_STYLES.light,
+            attribution: OFM_STYLES.attribution,
+          }).addTo(map);
+          map._glLayer = glLayer;
+        } catch (e) {
+          console.error('[LeafletMap] theme switch error:', e);
+        }
+      }).catch(() => {});
     }
   }, [theme]);
 
@@ -369,7 +443,7 @@ export default function LeafletMap({
   // Re-draw markers on filter change
   useEffect(() => {
     if (!mapInstance.current) return;
-    import('leaflet').then(L => {
+    loadLeaflet().then(L => {
       clearMarkers(mapInstance.current);
       try { drawMarkers(L, mapInstance.current); } catch (e) { console.error('[LeafletMap] filter draw error:', e); }
       try { fitBounds(mapInstance.current); } catch (e) { console.error('[LeafletMap] filter fitBounds error:', e); }

@@ -1,0 +1,7 @@
+# robots.txt — tiroltourismus.com (Landing/Hub)
+User-agent: *
+Allow: /
+
+# Migration: alte Sitemaps bleiben erreichbar — Google crawlt die alten URLs
+# und folgt den 301-Redirects zu den Sprach-Subdomains.
+Sitemap: https://tiroltourismus.com/sitemap-index.xml

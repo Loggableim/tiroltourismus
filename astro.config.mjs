@@ -2,32 +2,25 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
-// ── Subdomain-Split: site-URL hängt von BUILD_LANGS ab ──
-const buildLangs = process.env.BUILD_LANGS || 'de,en,fr';
-const langs = buildLangs.split(',').map(s => s.trim()).filter(Boolean);
+// ── Subdomain-Architektur: site-URL hängt von BUILD_LANGS ab ──
+// Single-Lang-Build (z.B. BUILD_LANGS=cs) → alle Seiten auf cs.tiroltourismus.com (Root-Paths)
+// Multi-Lang (Dev, ohne BUILD_LANGS) → de auf Root, andere mit Prefix (lokales Dev)
+const buildLangs = (process.env.BUILD_LANGS || '').split(',').map(s => s.trim()).filter(Boolean);
+const isSingleLang = buildLangs.length === 1;
+const singleLang = isSingleLang ? buildLangs[0] : null;
 
-// Wenn nur eine Sprache gebaut wird (z.B. cs), ist das die Default-Sprache
-const isSingleLang = langs.length === 1;
-const singleLang = isSingleLang ? langs[0] : null;
-
-// Domain-Map
 const LANG_DOMAINS = {
-  de: 'https://tiroltourismus.com',
-  en: 'https://tiroltourismus.com',
-  fr: 'https://tiroltourismus.com',
-  it: 'https://tiroltourismus.com',
-  es: 'https://tiroltourismus.com',
-  zh: 'https://tiroltourismus.com',
-  nl: 'https://nl.tiroltourismus.com',
+  de: 'https://de.tiroltourismus.com',
+  en: 'https://en.tiroltourismus.com',
+  fr: 'https://fr.tiroltourismus.com',
   cs: 'https://cs.tiroltourismus.com',
+  nl: 'https://nl.tiroltourismus.com',
 };
+const LANDING_DOMAIN = 'https://tiroltourismus.com';
+const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl'];
+const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', cs:'cs-CZ', nl:'nl-NL' };
 
-const siteUrl = isSingleLang ? LANG_DOMAINS[singleLang] : 'https://tiroltourismus.com';
-
-// Hreflang: alle 8 Sprachen (auch wenn nicht alle in diesem Build sind)
-const HREFLANG_LANGUAGES = ['de', 'en', 'fr', 'it', 'es', 'zh', 'nl', 'cs'];
-const LOCALE_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN', nl:'nl-NL', cs:'cs-CZ' };
-const LOCALE_PATTERN = /^\/(en|fr|it|es|zh|nl|cs)(\/|$)/;
+const siteUrl = isSingleLang ? (LANG_DOMAINS[singleLang] || LANDING_DOMAIN) : LANDING_DOMAIN;
 
 export default defineConfig({
   site: siteUrl,
@@ -46,27 +39,14 @@ export default defineConfig({
     filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
     entryLimit: 10000,
     serialize: (entry) => {
-      const path = entry.url;
-      const sitePrefix = siteUrl;
-      const relativePath = path.startsWith(sitePrefix) ? path.slice(sitePrefix.length) : path;
-      const match = relativePath.match(LOCALE_PATTERN);
-      const currentLang = match ? match[1] : 'de';
-
-      const buildUrl = (lang, relPath) => {
-        const p = relPath.replace(LOCALE_PATTERN, '/').replace(/\/+/g, '/');
-        const domain = LANG_DOMAINS[lang] || LANG_DOMAINS.de;
-        if (lang === 'de') return `${domain}${p}`;
-        const prefix = p === '/' ? `/${lang}` : `/${lang}${p}`;
-        return `${domain}${prefix}`;
-      };
-
-      return {
-        url: entry.url,
-        links: HREFLANG_LANGUAGES.map(l => ({
-          lang: LOCALE_MAP[l],
-          url: buildUrl(l, relativePath),
-        })),
-      };
+      // Single-Lang: alle Seiten liegen auf der Sprach-Subdomain an Root-Paths.
+      // hreflang-Links zeigen cross-domain auf die anderen Sprach-Subdomains.
+      const relPath = entry.url.startsWith(siteUrl) ? entry.url.slice(siteUrl.length) : entry.url;
+      const links = PUBLISHED_LANGS.map(l => ({
+        lang: HREFLANG_MAP[l],
+        url: `${LANG_DOMAINS[l]}${relPath}`,
+      }));
+      return { url: entry.url, links };
     },
   })],
   vite: {

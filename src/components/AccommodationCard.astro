@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
   locale?: string;
@@ -20,7 +21,7 @@ const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'B
 const placeholderIcon = isCamping ? '🏕️' : '🏨';
 // Badge handled by PremiumBadge component
 ---
-<a href={`${locale ? '/' + locale : ''}/unterkuenfte/${slug}/`} class="uk-card" data-filter-card data-filter-tier={dataTier || tier || 'basic'} data-filter-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
+<a href={`${localePrefixFn(locale)}/unterkuenfte/${slug}/`} class="uk-card" data-filter-card data-filter-tier={dataTier || tier || 'basic'} data-filter-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
   <div class="uk-img" style="position:relative">
     {isCamping && <span class="uk-camping-badge">⛺</span>}
     {heroSrc ? (

@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
   locale?: string;
@@ -13,7 +14,7 @@ export interface Props {
 }
 const { titel, slug, teaser, datum, kategorie, emoji = '📰', hero_bild , locale = undefined } = Astro.props;
 ---
-<a href={`${locale ? '/' + locale : ''}/magazin/${slug}/`} class="article-card" data-collection="magazin" data-slug={slug}>
+<a href={`${localePrefixFn(locale)}/magazin/${slug}/`} class="article-card" data-collection="magazin" data-slug={slug}>
   <div class="article-img" style="position:relative">
     {hero_bild ? (
       <img src={hero_bild} alt={titel} class="article-thumb" loading="lazy" decoding="async" width="420" height="240" />

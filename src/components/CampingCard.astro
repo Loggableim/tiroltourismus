@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
   locale?: string;
@@ -16,7 +17,7 @@ const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'da
 const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen', 'wasseranschluss'].includes(a));
 // Badge handled by PremiumBadge component
 ---
-<a href={`${locale ? '/' + locale : ''}/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
+<a href={`${localePrefixFn(locale)}/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
   <div class="cp-img" style="position:relative">
     <span class="cp-placeholder">🏕️</span>
     <FavHeart collection="camping" slug={slug} />

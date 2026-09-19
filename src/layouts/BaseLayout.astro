@@ -3,7 +3,7 @@
 // Locale-aware SEO: canonical + hreflang alternates for all ready languages.
 import { ViewTransitions } from 'astro:transitions';
 import { readSingleton } from '../lib/content.js';
-import { LANGUAGES, switchLangPath, DEFAULT_LOCALE, LANG_DOMAINS } from '../lib/languages.js';
+import { LANGUAGES, switchLangPath, DEFAULT_LOCALE, LANG_DOMAINS, PUBLISHED_LANGS, SOON_LANGS, localePrefix as localePrefixFn } from '../lib/languages.js';
 import TirolLogo from '../components/TirolLogo.astro';
 
 export interface Props {
@@ -38,7 +38,7 @@ const langCode = locale || 'de';
 const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN', nl:'nl_NL', cs:'cs_CZ' };
 const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN', nl:'nl-NL', cs:'cs-CZ' };
 const fullLocale = LOCALE_MAP[locale] || 'de_AT';
-const localePrefix = locale === 'de' ? '' : `/${locale}`;
+const localePrefix = localePrefixFn(locale);
 const siteDesc = description || ({ de:'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.', en:'The smart Tyrol guide for trip planning, accommodations and experiences.', fr:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', it:'La guida intelligente del Tirolo per pianificare viaggi, alloggi ed esperienze.', es:'La guía inteligente de Tirol para planificar viajes, alojamientos y experiencias.', zh:'智能蒂罗尔指南，用于旅行计划、住宿和体验。', nl:'De slimme Tirol-gids voor reisplanning, accommodaties en ervaringen.', cs:'Chytrý průvodce Tyrolskem pro plánování cest, ubytování a zážitky.' }[locale] || 'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.');
 const settings = readSingleton('einstellungen', locale);
 
@@ -54,9 +54,10 @@ const normalizePath = (path) => {
 };
 const absoluteURL = (path) => path.startsWith('http') ? path : `${siteURL}${normalizePath(path)}`;
 const pageURL = canonicalURL ? absoluteURL(canonicalURL) : absoluteURL(Astro.url.pathname);
-// hreflang: ALLE 8 Sprachen (auch die auf anderen Subdomains)
+// hreflang: nur VERÖFFENTLICHTE Sprachen (de/en/fr/cs/nl) — it/es/zh haben keine Inhalte
 // switchLangPath liefert absolute URLs für Cross-Domain-Sprachen
 const alternateLinks = LANGUAGES
+  .filter((l) => PUBLISHED_LANGS.includes(l.code))
   .map((l) => ({
     code: l.code,
     hreflang: HREFLANG_MAP[l.code] || l.code,
@@ -434,11 +435,18 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       🌐
     </button>
     <div class="floating-lang-panel">
-      {LANGUAGES.map(l => (
-        <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale, disabled: !l.ready }}>
+      {LANGUAGES.filter(l => PUBLISHED_LANGS.includes(l.code)).map(l => (
+        <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale }}>
           <span class="fl-flag">{l.flag}</span>
           <span class="fl-name">{l.name}</span>
           {l.code === locale && <span class="fl-check">✓</span>}
+        </a>
+      ))}
+      {LANGUAGES.filter(l => SOON_LANGS.includes(l.code)).map(l => (
+        <a href={`https://tiroltourismus.com/#vote-${l.code}`} class="fl-soon" title="Coming soon — vote on the landing page">
+          <span class="fl-flag">{l.flag}</span>
+          <span class="fl-name">{l.name}</span>
+          <span class="fl-check">soon</span>
         </a>
       ))}
     </div>
@@ -463,9 +471,14 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
           </div>
           <!-- ═══ FOOTER LANGUAGE FLAGS ═══ -->
           <div class="footer-lang">
-            {LANGUAGES.map(l => (
-              <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale, disabled: !l.ready }}>
+            {LANGUAGES.filter(l => PUBLISHED_LANGS.includes(l.code)).map(l => (
+              <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale }}>
                 {l.flag} {l.name}
+              </a>
+            ))}
+            {LANGUAGES.filter(l => SOON_LANGS.includes(l.code)).map(l => (
+              <a href={`https://tiroltourismus.com/#vote-${l.code}`} class="footer-lang-soon" title="Coming soon — vote on the landing page">
+                {l.flag} {l.name} <small>soon</small>
               </a>
             ))}
           </div>

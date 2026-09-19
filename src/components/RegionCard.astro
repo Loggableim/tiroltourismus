@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
   locale?: string;
@@ -17,7 +18,7 @@ export interface Props {
 const { titel, slug, beschreibung, emoji = '🏔️', wappenSrc, heroSrc, bewertung = 0, farbe = 'var(--tirol-pink)', featured , locale = undefined } = Astro.props;
 const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
 ---
-<a href={`${locale ? '/' + locale : ''}/regionen/${slug}/`} class="region-card" data-collection="regionen" data-slug={slug} data-filter-card data-filter-cat={featured ? 'featured' : 'other'}>
+<a href={`${localePrefixFn(locale)}/regionen/${slug}/`} class="region-card" data-collection="regionen" data-slug={slug} data-filter-card data-filter-cat={featured ? 'featured' : 'other'}>
   <div class="region-card-img" style={`position:relative;background:linear-gradient(135deg,${farbe}15,${farbe}25)`}>
     {heroSrc ? (
       <img

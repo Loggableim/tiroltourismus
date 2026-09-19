@@ -33,7 +33,7 @@ const COLLECTIONS = [
   { name: 'magazin', path: 'magazin', type: 'magazin', emoji: '📰' },
 ];
 
-const LOCALES = ['de', 'en', 'fr']; // it/es/zh/nl/cs are not yet ready
+const LOCALES = ['de', 'en', 'fr', 'cs', 'nl']; // alle veröffentlichten Sprachen
 
 // Common stop words per locale — drops ~30% of index tokens that
 // carry no search signal. Tuned manually for German + English.
@@ -146,9 +146,16 @@ function main() {
   console.log('🔍 Building search indexes per locale…');
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
+  // BUILD_LANGS-aware: nur die Sprachen bauen, die in diesem Build gebraucht werden
+  const buildLangs = (process.env.BUILD_LANGS || '').split(',').map(s => s.trim()).filter(Boolean);
+  const localesToBuild = buildLangs.length > 0
+    ? LOCALES.filter(l => buildLangs.includes(l))
+    : LOCALES;
+  console.log(`   Locales: ${localesToBuild.join(', ')}`);
+
   let totalDocs = 0;
 
-  for (const locale of LOCALES) {
+  for (const locale of localesToBuild) {
     const docs = [];
     for (const coll of COLLECTIONS) {
       const entries = readCollection(coll.path, locale);
@@ -204,7 +211,7 @@ function main() {
     totalDocs += docs.length;
   }
 
-  console.log(`✅ ${totalDocs} total docs indexed across ${LOCALES.length} locales`);
+  console.log(`✅ ${totalDocs} total docs indexed across ${localesToBuild.length} locales`);
 }
 
 main();

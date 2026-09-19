@@ -1,0 +1,66 @@
+# ═══════════════════════════════════════════════════════════════
+# tiroltourismus.com — Landing/Hub Redirects (301)
+# Migration: alte URLs → Sprach-Subdomains
+# GSC-freundlich: alte Sitemaps bleiben erreichbar, alle URLs 301en
+# ═══════════════════════════════════════════════════════════════
+
+# ── Sprach-Prefixe → Subdomains (alte /en/, /fr/, /cs/, /nl/, /de/ URLs) ──
+/en/* https://en.tiroltourismus.com/:splat 301
+/fr/* https://fr.tiroltourismus.com/:splat 301
+/cs/* https://cs.tiroltourismus.com/:splat 301
+/nl/* https://nl.tiroltourismus.com/:splat 301
+/de/* https://de.tiroltourismus.com/:splat 301
+/en https://en.tiroltourismus.com/ 301
+/fr https://fr.tiroltourismus.com/ 301
+/cs https://cs.tiroltourismus.com/ 301
+/nl https://nl.tiroltourismus.com/ 301
+/de https://de.tiroltourismus.com/ 301
+
+# ── DE-Root-Pfade → DE-Subdomain (alle Content-Segmente) ──
+/gastro/* https://de.tiroltourismus.com/gastro/:splat 301
+/unterkuenfte/* https://de.tiroltourismus.com/unterkuenfte/:splat 301
+/orte/* https://de.tiroltourismus.com/orte/:splat 301
+/regionen/* https://de.tiroltourismus.com/regionen/:splat 301
+/sehenswuerdigkeiten/* https://de.tiroltourismus.com/sehenswuerdigkeiten/:splat 301
+/camping/* https://de.tiroltourismus.com/camping/:splat 301
+/magazin/* https://de.tiroltourismus.com/magazin/:splat 301
+/erlebnisse/* https://de.tiroltourismus.com/erlebnisse/:splat 301
+/events/* https://de.tiroltourismus.com/events/:splat 301
+/bezirke/* https://de.tiroltourismus.com/bezirke/:splat 301
+/wappen/* https://de.tiroltourismus.com/wappen/:splat 301
+
+# ── Service-Seiten → DE-Subdomain ──
+/agb/* https://de.tiroltourismus.com/agb/:splat 301
+/datenschutz/* https://de.tiroltourismus.com/datenschutz/:splat 301
+/impressum/* https://de.tiroltourismus.com/impressum/:splat 301
+/kontakt/* https://de.tiroltourismus.com/kontakt/:splat 301
+/faq/* https://de.tiroltourismus.com/faq/:splat 301
+/merkliste/* https://de.tiroltourismus.com/merkliste/:splat 301
+/ueber-uns/* https://de.tiroltourismus.com/ueber-uns/:splat 301
+/transparenz/* https://de.tiroltourismus.com/transparenz/:splat 301
+/suche/* https://de.tiroltourismus.com/suche/:splat 301
+
+# ── Exakte Root-Pfade (ohne trailing content) ──
+/gastro/ https://de.tiroltourismus.com/gastro/ 301
+/unterkuenfte/ https://de.tiroltourismus.com/unterkuenfte/ 301
+/orte/ https://de.tiroltourismus.com/orte/ 301
+/regionen/ https://de.tiroltourismus.com/regionen/ 301
+/sehenswuerdigkeiten/ https://de.tiroltourismus.com/sehenswuerdigkeiten/ 301
+/camping/ https://de.tiroltourismus.com/camping/ 301
+/magazin/ https://de.tiroltourismus.com/magazin/ 301
+/erlebnisse/ https://de.tiroltourismus.com/erlebnisse/ 301
+/events/ https://de.tiroltourismus.com/events/ 301
+/bezirke/ https://de.tiroltourismus.com/bezirke/ 301
+/wappen/ https://de.tiroltourismus.com/wappen/ 301
+/agb/ https://de.tiroltourismus.com/agb/ 301
+/datenschutz/ https://de.tiroltourismus.com/datenschutz/ 301
+/impressum/ https://de.tiroltourismus.com/impressum/ 301
+/kontakt/ https://de.tiroltourismus.com/kontakt/ 301
+/faq/ https://de.tiroltourismus.com/faq/ 301
+/merkliste/ https://de.tiroltourismus.com/merkliste/ 301
+/ueber-uns/ https://de.tiroltourismus.com/ueber-uns/ 301
+/transparenz/ https://de.tiroltourismus.com/transparenz/ 301
+/suche/ https://de.tiroltourismus.com/suche/ 301
+
+# ── Legacy: sitemap.xml → sitemap-index.xml ──
+/sitemap.xml /sitemap-index.xml 301

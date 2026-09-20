@@ -33,7 +33,7 @@ const COLLECTIONS = [
   { name: 'magazin', path: 'magazin', type: 'magazin', emoji: '📰' },
 ];
 
-const LOCALES = ['de', 'en', 'fr', 'cs', 'nl']; // alle veröffentlichten Sprachen
+const LOCALES = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh']; // alle veröffentlichten Sprachen
 
 // Common stop words per locale — drops ~30% of index tokens that
 // carry no search signal. Tuned manually for German + English.

@@ -41,6 +41,7 @@ export default defineConfig({
   integrations: [react(), sitemap({
     filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
     entryLimit: 10000,
+    lastmod: new Date(),
     serialize: (entry) => {
       // Single-Lang: alle Seiten liegen auf der Sprach-Subdomain an Root-Paths.
       // hreflang-Links zeigen cross-domain auf die anderen Sprach-Subdomains.

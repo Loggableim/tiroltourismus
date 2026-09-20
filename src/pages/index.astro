@@ -196,6 +196,12 @@ const artStays = unterkuenfte.slice(0, 3);
 const artSights = alleSights.slice(0, 4);
 const artGastro = alleGastro.slice(0, 3);
 const artMagazin = alleMagazin.slice(0, 3);
+// Onepage-Erweiterung: Erlebnisse, Events, Camping
+const alleErlebnisse = readCollection('erlebnisse').filter(e => isPublished(e.entry));
+const alleEvents = readCollection('events').filter(e => isPublished(e.entry));
+const artErlebnisse = alleErlebnisse.slice(0, 4);
+const artEvents = alleEvents.slice(0, 4);
+const artCamping = camping.slice(0, 3);
 ---
 <BaseLayout title="Der smarte Tirol-Guide" description="Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse – entdecken Sie die Vielfalt der Alpen.">
   <HomepageArt
@@ -209,6 +215,9 @@ const artMagazin = alleMagazin.slice(0, 3);
     magazin={artMagazin}
     counts={artCounts}
     regionNames={artRegionNames}
+    erlebnisse={artErlebnisse}
+    events={artEvents}
+    camping={artCamping}
   />
 </BaseLayout>
 

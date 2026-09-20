@@ -22,6 +22,8 @@ import AccommodationCard from './AccommodationCard.astro';
 import ArticleCard from './ArticleCard.astro';
 import GastroCard from './GastroCard.astro';
 import SightCard from './SightCard.astro';
+import CampingCard from './CampingCard.astro';
+import EventCard from './EventCard.astro';
 
 export interface Props {
   locale: string;
@@ -32,11 +34,19 @@ export interface Props {
   sights: any[];
   gastro: any[];
   magazin: any[];
-  counts: { gastro: number; unterkuenfte: number; orte: number; sights: number; camping: number; magazin: number };
+  counts: { gastro: number; unterkuenfte: number; orte: number; sights: number; camping: number; magazin: number; erlebnisse?: number; events?: number };
   regionNames: { slug: string; name: string }[];
+  /** Optional: Erlebnisse für die Onepage */
+  erlebnisse?: any[];
+  /** Optional: Events für die Onepage */
+  events?: any[];
+  /** Optional: Camping für die Onepage */
+  camping?: any[];
+  /** Optional: Bezirke für die Onepage */
+  bezirke?: any[];
 }
 
-const { locale, localePrefix, page, regions, stays, sights, gastro, magazin, counts, regionNames } = Astro.props;
+const { locale, localePrefix, page, regions, stays, sights, gastro, magazin, counts, regionNames, erlebnisse = [], events = [], camping = [], bezirke = [] } = Astro.props;
 
 // ── Design-Credit + Kicker + Font pro Sprache ──
 const THEMES: Record<string, { credit: string; kicker: string; font: string; fontUrl: string }> = {
@@ -93,14 +103,14 @@ const theme = THEMES[locale] || THEMES.en;
 
 // ── Lokalisierte Labels ──
 const L: Record<string, any> = {
-  de: { whatsin: 'Was drin ist', worlds: 'Sechs Welten', faces: 'Vierzehn Gesichter', regions: 'Regionen', places: 'Orte', sights: 'Sehenswürdigkeiten', stays: 'Unterkünfte', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazin', entries: 'Einträge', discover: 'Entdecken →', allregions: 'Alle Regionen', allstays: 'Alle Unterkünfte', allsights: 'Alle Sehenswürdigkeiten', allgastro: 'Alle Gastro-Adressen', allmag: 'Alle Magazin-Beiträge', from: 'Von Arlberg bis Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
-  en: { whatsin: "What's inside", worlds: 'Six worlds', faces: 'Fourteen faces', regions: 'Regions', places: 'Places', sights: 'Sights', stays: 'Stays', gastro: 'Food & Drink', camping: 'Camping', magazin: 'Magazine', entries: 'entries', discover: 'Discover →', allregions: 'All regions', allstays: 'All stays', allsights: 'All sights', allgastro: 'All food & drink', allmag: 'All magazine articles', from: 'From Arlberg to Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
-  fr: { whatsin: "Ce qu'il y a dedans", worlds: 'Six mondes', faces: 'Quatorze visages', regions: 'Régions', places: 'Villages', sights: 'Sites', stays: 'Hébergements', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazine', entries: 'entrées', discover: 'Découvrir →', allregions: 'Toutes les régions', allstays: 'Tous les hébergements', allsights: 'Tous les sites', allgastro: 'Toute la gastronomie', allmag: 'Tous les articles', from: "De l'Arlberg au Zillertal", landing: 'Zur Sprachauswahl', design: 'Design' },
-  cs: { whatsin: 'Co v tom je', worlds: 'Šest světů', faces: 'Čtrnáct tváří', regions: 'Regiony', places: 'Místa', sights: 'Pamětihodnosti', stays: 'Ubytování', gastro: 'Gastronomie', camping: 'Kempy', magazin: 'Časopis', entries: 'záznamů', discover: 'Objevit →', allregions: 'Všechny regiony', allstays: 'Všechna ubytování', allsights: 'Všechny pamětihodnosti', allgastro: 'Všechny gastro adresy', allmag: 'Všechny články', from: 'Od Arlbergu po Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
-  it: { whatsin: "Cosa c'è dentro", worlds: 'Sei mondi', faces: 'Quattordici volti', regions: 'Regioni', places: 'Paesi', sights: 'Attrazioni', stays: 'Alloggi', gastro: 'Gastronomia', camping: 'Campeggio', magazin: 'Magazine', entries: 'voci', discover: 'Scoprire →', allregions: 'Tutte le regioni', allstays: 'Tutti gli alloggi', allsights: 'Tutte le attrazioni', allgastro: 'Tutta la gastronomia', allmag: 'Tutti gli articoli', from: "Dall'Arlberg allo Zillertal", landing: 'Zur Sprachauswahl', design: 'Design' },
-  es: { whatsin: 'Lo que hay dentro', worlds: 'Seis mundos', faces: 'Catorce rostros', regions: 'Regiones', places: 'Pueblos', sights: 'Atracciones', stays: 'Alojamientos', gastro: 'Gastronomía', camping: 'Camping', magazin: 'Revista', entries: 'entradas', discover: 'Descubrir →', allregions: 'Todas las regiones', allstays: 'Todos los alojamientos', allsights: 'Todas las atracciones', allgastro: 'Toda la gastronomía', allmag: 'Todos los artículos', from: 'De Arlberg a Zillertal', landing: 'Zur Sprachauswahl', design: 'Diseño' },
-  zh: { whatsin: '里面有什么', worlds: '六个世界', faces: '十四张面孔', regions: '地区', places: '村镇', sights: '景点', stays: '住宿', gastro: '美食', camping: '露营', magazin: '杂志', entries: '条目', discover: '探索 →', allregions: '所有地区', allstays: '所有住宿', allsights: '所有景点', allgastro: '所有美食', allmag: '所有文章', from: '从阿尔贝格到齐勒塔尔', landing: 'Zur Sprachauswahl', design: '设计' },
-  nl: { whatsin: 'Wat erin zit', worlds: 'Zes werelden', faces: 'Veertien gezichten', regions: "Regio's", places: 'Plaatsen', sights: 'Bezienswaardigheden', stays: 'Accommodaties', gastro: 'Eten & Drinken', camping: 'Campings', magazin: 'Tijdschrift', entries: 'vermeldingen', discover: 'Ontdekken →', allregions: "Alle regio's", allstays: 'Alle accommodaties', allsights: 'Alle bezienswaardigheden', allgastro: 'Al het eten & drinken', allmag: 'Alle artikelen', from: 'Van Arlberg tot Zillertal', landing: 'Zur Sprachauswahl', design: 'Design' },
+  de: { whatsin: 'Was drin ist', worlds: 'Sechs Welten', faces: 'Vierzehn Gesichter', regions: 'Regionen', places: 'Orte', sights: 'Sehenswürdigkeiten', stays: 'Unterkünfte', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazin', entries: 'Einträge', discover: 'Entdecken →', allregions: 'Alle Regionen', allstays: 'Alle Unterkünfte', allsights: 'Alle Sehenswürdigkeiten', allgastro: 'Alle Gastro-Adressen', allmag: 'Alle Magazin-Beiträge', from: 'Von Arlberg bis Zillertal', landing: 'Zur Sprachauswahl', design: 'Design', why: 'Warum Tirol?', whySub: 'Drei gute Gründe für Ihren nächsten Urlaub', exp: 'Erlebnisse', expSub: 'Aktivitäten und Abenteuer in den Alpen', events: 'Events', eventsSub: 'Feste, Festivals und Veranstaltungen', campingTitle: 'Camping in Tirol', campingSub: 'Natur pur – Stellplätze und Campingplätze', allExp: 'Alle Erlebnisse', allEvents: 'Alle Events', allCamping: 'Alle Campingplätze', designTitle: 'Das Design dieser Seite', designSub: 'Jede Sprache hat ihre eigene künstlerische Handschrift', inspiration: 'Inspiration', scrollHint: 'Nach unten scrollen', quickNav: 'Schnellnavigation' },
+  en: { whatsin: "What's inside", worlds: 'Six worlds', faces: 'Fourteen faces', regions: 'Regions', places: 'Places', sights: 'Sights', stays: 'Stays', gastro: 'Food & Drink', camping: 'Camping', magazin: 'Magazine', entries: 'entries', discover: 'Discover →', allregions: 'All regions', allstays: 'All stays', allsights: 'All sights', allgastro: 'All food & drink', allmag: 'All magazine articles', from: 'From Arlberg to Zillertal', landing: 'Zur Sprachauswahl', design: 'Design', why: 'Why Tyrol?', whySub: 'Three good reasons for your next holiday', exp: 'Experiences', expSub: 'Activities and adventures in the Alps', events: 'Events', eventsSub: 'Festivals and celebrations', campingTitle: 'Camping in Tyrol', campingSub: 'Pure nature – pitches and campsites', allExp: 'All experiences', allEvents: 'All events', allCamping: 'All campsites', designTitle: 'The design of this page', designSub: 'Each language has its own artistic signature', inspiration: 'Inspiration', scrollHint: 'Scroll down', quickNav: 'Quick navigation' },
+  fr: { whatsin: "Ce qu'il y a dedans", worlds: 'Six mondes', faces: 'Quatorze visages', regions: 'Régions', places: 'Villages', sights: 'Sites', stays: 'Hébergements', gastro: 'Gastronomie', camping: 'Camping', magazin: 'Magazine', entries: 'entrées', discover: 'Découvrir →', allregions: 'Toutes les régions', allstays: 'Tous les hébergements', allsights: 'Tous les sites', allgastro: 'Toute la gastronomie', allmag: 'Tous les articles', from: "De l'Arlberg au Zillertal", landing: 'Zur Sprachauswahl', design: 'Design', why: 'Pourquoi le Tyrol ?', whySub: 'Trois bonnes raisons pour vos prochaines vacances', exp: 'Expériences', expSub: 'Activités et aventures dans les Alpes', events: 'Événements', eventsSub: 'Fêtes et festivals', campingTitle: 'Camping au Tyrol', campingSub: 'Nature pure – emplacements et campings', allExp: 'Toutes les expériences', allEvents: 'Tous les événements', allCamping: 'Tous les campings', designTitle: 'Le design de cette page', designSub: 'Chaque langue a sa propre signature artistique', inspiration: 'Inspiration', scrollHint: 'Défiler vers le bas', quickNav: 'Navigation rapide' },
+  cs: { whatsin: 'Co v tom je', worlds: 'Šest světů', faces: 'Čtrnáct tváří', regions: 'Regiony', places: 'Místa', sights: 'Pamětihodnosti', stays: 'Ubytování', gastro: 'Gastronomie', camping: 'Kempy', magazin: 'Časopis', entries: 'záznamů', discover: 'Objevit →', allregions: 'Všechny regiony', allstays: 'Všechna ubytování', allsights: 'Všechny pamětihodnosti', allgastro: 'Všechny gastro adresy', allmag: 'Všechny články', from: 'Od Arlbergu po Zillertal', landing: 'Zur Sprachauswahl', design: 'Design', why: 'Proč Tyrolsko?', whySub: 'Tři dobré důvody pro vaši příští dovolenou', exp: 'Zážitky', expSub: 'Aktivity a dobrodružství v Alpách', events: 'Akce', eventsSub: 'Slavnosti a festivaly', campingTitle: 'Kempování v Tyrolsku', campingSub: 'Čistá příroda – místa a kempy', allExp: 'Všechny zážitky', allEvents: 'Všechny akce', allCamping: 'Všechny kempy', designTitle: 'Design této stránky', designSub: 'Každý jazyk má svůj vlastní umělecký rukopis', inspiration: 'Inspirace', scrollHint: 'Posouvat dolů', quickNav: 'Rychlá navigace' },
+  it: { whatsin: "Cosa c'è dentro", worlds: 'Sei mondi', faces: 'Quattordici volti', regions: 'Regioni', places: 'Paesi', sights: 'Attrazioni', stays: 'Alloggi', gastro: 'Gastronomia', camping: 'Campeggio', magazin: 'Magazine', entries: 'voci', discover: 'Scoprire →', allregions: 'Tutte le regioni', allstays: 'Tutti gli alloggi', allsights: 'Tutte le attrazioni', allgastro: 'Tutta la gastronomia', allmag: 'Tutti gli articoli', from: "Dall'Arlberg allo Zillertal", landing: 'Zur Sprachauswahl', design: 'Design', why: 'Perché il Tirolo?', whySub: 'Tre buoni motivi per la prossima vacanza', exp: 'Esperienze', expSub: 'Attività e avventure nelle Alpi', events: 'Eventi', eventsSub: 'Feste e festival', campingTitle: 'Campeggio in Tirolo', campingSub: 'Natura pura – piazzole e campeggi', allExp: 'Tutte le esperienze', allEvents: 'Tutti gli eventi', allCamping: 'Tutti i campeggi', designTitle: 'Il design di questa pagina', designSub: 'Ogni lingua ha la sua firma artistica', inspiration: 'Ispirazione', scrollHint: 'Scorri verso il basso', quickNav: 'Navigazione rapida' },
+  es: { whatsin: 'Lo que hay dentro', worlds: 'Seis mundos', faces: 'Catorce rostros', regions: 'Regiones', places: 'Pueblos', sights: 'Atracciones', stays: 'Alojamientos', gastro: 'Gastronomía', camping: 'Camping', magazin: 'Revista', entries: 'entradas', discover: 'Descubrir →', allregions: 'Todas las regiones', allstays: 'Todos los alojamientos', allsights: 'Todas las atracciones', allgastro: 'Toda la gastronomía', allmag: 'Todos los artículos', from: 'De Arlberg a Zillertal', landing: 'Zur Sprachauswahl', design: 'Diseño', why: '¿Por qué Tirol?', whySub: 'Tres buenas razones para tus próximas vacaciones', exp: 'Experiencias', expSub: 'Actividades y aventuras en los Alpes', events: 'Eventos', eventsSub: 'Fiestas y festivales', campingTitle: 'Camping en Tirol', campingSub: 'Naturaleza pura – parcelas y campings', allExp: 'Todas las experiencias', allEvents: 'Todos los eventos', allCamping: 'Todos los campings', designTitle: 'El diseño de esta página', designSub: 'Cada idioma tiene su propia firma artística', inspiration: 'Inspiración', scrollHint: 'Desplázate hacia abajo', quickNav: 'Navegación rápida' },
+  zh: { whatsin: '里面有什么', worlds: '六个世界', faces: '十四张面孔', regions: '地区', places: '村镇', sights: '景点', stays: '住宿', gastro: '美食', camping: '露营', magazin: '杂志', entries: '条目', discover: '探索 →', allregions: '所有地区', allstays: '所有住宿', allsights: '所有景点', allgastro: '所有美食', allmag: '所有文章', from: '从阿尔贝格到齐勒塔尔', landing: 'Zur Sprachauswahl', design: '设计', why: '为什么选择蒂罗尔？', whySub: '下次度假的三个好理由', exp: '体验', expSub: '阿尔卑斯山的活动与冒险', events: '活动', eventsSub: '节庆与庆典', campingTitle: '蒂罗尔露营', campingSub: '纯正自然 – 营地和露营地', allExp: '所有体验', allEvents: '所有活动', allCamping: '所有露营地', designTitle: '本页面的设计', designSub: '每种语言都有自己的艺术签名', inspiration: '灵感', scrollHint: '向下滚动', quickNav: '快速导航' },
+  nl: { whatsin: 'Wat erin zit', worlds: 'Zes werelden', faces: 'Veertien gezichten', regions: "Regio's", places: 'Plaatsen', sights: 'Bezienswaardigheden', stays: 'Accommodaties', gastro: 'Eten & Drinken', camping: 'Campings', magazin: 'Tijdschrift', entries: 'vermeldingen', discover: 'Ontdekken →', allregions: "Alle regio's", allstays: 'Alle accommodaties', allsights: 'Alle bezienswaardigheden', allgastro: 'Al het eten & drinken', allmag: 'Alle artikelen', from: 'Van Arlberg tot Zillertal', landing: 'Zur Sprachauswahl', design: 'Design', why: 'Waarom Tirol?', whySub: 'Drie goede redenen voor je volgende vakantie', exp: 'Belevenissen', expSub: 'Activiteiten en avonturen in de Alpen', events: 'Evenementen', eventsSub: 'Feesten en festivals', campingTitle: 'Camping in Tirol', campingSub: 'Pure natuur – standplaatsen en campings', allExp: 'Alle belevenissen', allEvents: 'Alle evenementen', allCamping: 'Alle campings', designTitle: 'Het design van deze pagina', designSub: 'Elke taal heeft zijn eigen artistieke signatuur', inspiration: 'Inspiratie', scrollHint: 'Scroll naar beneden', quickNav: 'Snelle navigatie' },
 };
 const t = L[locale] || L.en;
 
@@ -112,6 +122,18 @@ const CATS = [
   { icon: '🏕️', label: t.camping, count: counts.camping, href: `${localePrefix}/camping/` },
   { icon: '📰', label: t.magazin, count: counts.magazin, href: `${localePrefix}/magazin/` },
 ];
+
+// ── Design-Inspiration pro Sprache (für die Design-Sektion) ──
+const DESIGN_INFO: Record<string, { artists: string; desc: string; elements: string[] }> = {
+  de: { artists: 'Otto Grünmandl & Paul Flora', desc: 'Minimalistische Linienzeichnung trifft satirischen Humor. Reduzierte Farbpalette, viel Weißraum, feine Illustrationen.', elements: ['Dünne Linienzeichnungen', 'Cremeweiße Leinwand', 'Rot-Akzente', 'Spielerische Typografie'] },
+  en: { artists: 'Albin Egger-Lienz & Alfons Walde', desc: 'Monumental mountain silhouettes, earthy tones, winter sky. Powerful typography and heavy surfaces.', elements: ['Mountain silhouettes', 'Winter sky gradient', 'Golden sun', 'Monumental lettering'] },
+  fr: { artists: 'Max Weiler & Paul Flora', desc: 'Formes organiques poétiques, feuilles flottantes, élégance sérif. Espace blanc généreux et contrastes subtils.', elements: ['Formes organiques', 'Feuilles flottantes', 'Typographie sérif', 'Tons naturels délicats'] },
+  cs: { artists: 'Franz von Defregger & Albin Egger-Lienz', desc: 'Historická figurální malba, venkovské motivy, estetika dřevořezu. Kosočtvercové ornamenty a teplé zemité tóny.', elements: ['Kosočtvercový ornament', 'Rám dřevořezu', 'Okrová a tmavě červená', 'Historický serif'] },
+  it: { artists: 'Alfons Walde & Gustav Klimt', desc: 'Lussuosa ornamentazione dorata, montagne innevate, motivi geometrici. Eleganti maiuscole e profondità atmosferica.', elements: ['Griglia d\'oro Klimt', 'Cornice dorata', 'Silhouette montagne innevate', 'Maiuscole Cinzel'] },
+  es: { artists: 'Max Weiler & Wassily Kandinsky', desc: 'Formas naturales abstractas se encuentran con la abstracción geométrica. Círculos, triángulos, líneas dinámicas y colores primarios.', elements: ['Geometría Kandinsky', 'Líneas dinámicas', 'Colores primarios', 'Tipografía geométrica'] },
+  zh: { artists: 'Michael Pacher & Albin Egger-Lienz', desc: '神圣的祭坛构图，对称的建筑，戏剧性的光线。金色点缀和深邃的色彩空间。', elements: ['祭坛拱门', '光线', '金色与深红', '对称'] },
+  nl: { artists: 'Paul Flora & Salvador Dalí', desc: 'Surreële zwevende objecten, dunne zwarte lijnen, onverwachte perspectieven. Droge humor ontmoet droomwereld.', elements: ['Zwevende objecten', 'Outline-typografie', 'Surreële details', 'Gereduceerd palet'] },
+};
 
 // Zahlenformat pro Locale (EN: 3,415 — DE: 3.415 — FR: 3 415)
 const NUM_LOCALE: Record<string, string> = { de: 'de-AT', en: 'en-US', fr: 'fr-FR', cs: 'cs-CZ', nl: 'nl-NL', it: 'it-IT', es: 'es-ES', zh: 'zh-CN' };
@@ -308,6 +330,28 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
     </div>
   </section>
 
+  <!-- ═══ WARUM TIROL (whyTirol) ═══ -->
+  {page.whyTirol?.items?.length > 0 && (
+    <section class="art-section" style="padding-top:0" aria-labelledby="art-why">
+      <div class="art-wrap">
+        <div class="art-head">
+          <h2 class="art-h2" id="art-why">{t.why}</h2>
+          <span class="art-note">{t.whySub}</span>
+        </div>
+        <div class="art-why-grid">
+          {page.whyTirol.items.map((item: any, i: number) => (
+            <div class="art-why-card">
+              <span class="art-why-icon">{item.icon}</span>
+              <h3 class="art-why-title">{item.title}</h3>
+              <p class="art-why-desc">{item.desc}</p>
+              {item.stat && <span class="art-why-stat">{item.stat}</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <!-- ═══ KATEGORIEN ═══ -->
   <section class="art-section" style="padding-top:0" aria-labelledby="art-cats">
     <div class="art-wrap">
@@ -327,6 +371,84 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+
+  <!-- ═══ ERLEBNISSE (Onepage-Erweiterung) ═══ -->
+  {erlebnisse.length > 0 && (
+    <section class="art-section" style="padding-top:0" id="erlebnisse" aria-labelledby="art-exp">
+      <div class="art-wrap">
+        <div class="art-head">
+          <h2 class="art-h2" id="art-exp">{t.exp}</h2>
+          <a href={`${localePrefix}/erlebnisse/`} class="art-more">{t.allExp} →</a>
+        </div>
+        <div class="art-exp-grid">
+          {erlebnisse.slice(0, 4).map((e: any) => (
+            <a href={`${localePrefix}/erlebnisse/${e.slug}/`} class="art-exp-card">
+              <span class="art-exp-emoji">{e.entry.emoji || '🎯'}</span>
+              <span class="art-exp-body">
+                <span class="art-exp-name">{e.entry.name || e.entry.titel}</span>
+                {e.entry.ort && <span class="art-exp-ort">📍 {e.entry.ort}</span>}
+                {e.entry.kurzbeschreibung && <span class="art-exp-desc">{e.entry.kurzbeschreibung.slice(0, 100)}</span>}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══ EVENTS (Onepage-Erweiterung) ═══ -->
+  {events.length > 0 && (
+    <section class="art-section" style="padding-top:0" id="events" aria-labelledby="art-events">
+      <div class="art-wrap">
+        <div class="art-head">
+          <h2 class="art-h2" id="art-events">{t.events}</h2>
+          <a href={`${localePrefix}/events/`} class="art-more">{t.allEvents} →</a>
+        </div>
+        <div class="art-events-list">
+          {events.slice(0, 4).map((e: any) => (
+            <EventCard
+              titel={e.entry.titel || e.entry.name}
+              slug={e.slug}
+              kategorie={e.entry.kategorie}
+              kurzbeschreibung={e.entry.kurzbeschreibung}
+              ort={e.entry.ort}
+              datum_von={e.entry.datum_von}
+              uhrzeit={e.entry.uhrzeit}
+              preis={e.entry.preis}
+              emoji={e.entry.emoji}
+              locale={locale}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══ CAMPING (Onepage-Erweiterung) ═══ -->
+  {camping.length > 0 && (
+    <section class="art-section" style="padding-top:0" id="camping" aria-labelledby="art-camping">
+      <div class="art-wrap">
+        <div class="art-head">
+          <h2 class="art-h2" id="art-camping">{t.campingTitle}</h2>
+          <a href={`${localePrefix}/camping/`} class="art-more">{t.allCamping} →</a>
+        </div>
+        <div class="art-card-grid">
+          {camping.slice(0, 3).map((c: any) => (
+            <CampingCard
+              name={c.entry.name}
+              slug={c.slug}
+              ort={c.entry.ort}
+              region={c.entry.region}
+              preis_ab={c.entry.preis_ab}
+              ausstattung={c.entry.ausstattung}
+              tier={c.entry.tier || 'basic'}
+              locale={locale}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- ═══ REGIONEN ═══ -->
   <section class="art-section" style="padding-top:0" aria-labelledby="art-regions">
@@ -418,6 +540,28 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
     </div>
   </section>
 
+  <!-- ═══ DESIGN-INSPIRATION ═══ -->
+  <section class="art-section art-design-section" aria-labelledby="art-design">
+    <div class="art-wrap">
+      <div class="art-head">
+        <h2 class="art-h2" id="art-design">{t.designTitle}</h2>
+        <span class="art-note">{t.designSub}</span>
+      </div>
+      <div class="art-design-grid">
+        <div class="art-design-artists">
+          <span class="art-design-label">{t.inspiration}</span>
+          <span class="art-design-names">{(DESIGN_INFO[locale] || DESIGN_INFO.en).artists}</span>
+          <p class="art-design-desc">{(DESIGN_INFO[locale] || DESIGN_INFO.en).desc}</p>
+        </div>
+        <div class="art-design-elements">
+          {(DESIGN_INFO[locale] || DESIGN_INFO.en).elements.map((el: string) => (
+            <span class="art-design-chip">{el}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ DESIGN-CREDIT + LANDING-LINK ═══ -->
   <footer class="art-footer">
     <div class="art-wrap art-footer-inner">
@@ -475,6 +619,38 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
   .art-cat-tile{display:flex;align-items:center;gap:18px;padding:24px;background:var(--art-surface);border:1px solid var(--art-border);transition:background .25s,transform .25s cubic-bezier(.16,1,.3,1)}
   .art-cat-tile:hover{background:var(--art-surface-hover);transform:translateY(-3px)}
   .art-cat-icon{font-size:32px;line-height:1}
+
+  /* ═══ WARUM TIROL ═══ */
+  .art-why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+  .art-why-card{padding:clamp(28px,4vw,44px) 24px;background:var(--art-surface);border:1px solid var(--art-border);display:flex;flex-direction:column;gap:12px;position:relative}
+  .art-why-icon{font-size:40px;line-height:1}
+  .art-why-title{font-size:clamp(20px,2.2vw,28px);letter-spacing:.03em;text-transform:uppercase;margin:0;line-height:1.1}
+  .art-why-desc{font-size:14px;line-height:1.7;color:var(--art-text2);margin:0;flex:1}
+  .art-why-stat{font-size:clamp(28px,3.5vw,44px);font-weight:800;color:var(--art-accent);line-height:1}
+
+  /* ═══ ERLEBNISSE ═══ */
+  .art-exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
+  .art-exp-card{display:flex;gap:18px;padding:24px;background:var(--art-surface);border:1px solid var(--art-border);transition:background .25s,transform .25s cubic-bezier(.16,1,.3,1);align-items:flex-start}
+  .art-exp-card:hover{background:var(--art-surface-hover);transform:translateY(-3px)}
+  .art-exp-emoji{font-size:36px;line-height:1;flex-shrink:0}
+  .art-exp-body{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .art-exp-name{font-size:clamp(18px,2vw,24px);letter-spacing:.03em;text-transform:uppercase;line-height:1.15}
+  .art-exp-ort{font-size:12px;color:var(--art-text3)}
+  .art-exp-desc{font-size:13px;line-height:1.6;color:var(--art-text2)}
+
+  /* ═══ EVENTS ═══ */
+  .art-events-list{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+  /* ═══ DESIGN-INSPIRATION ═══ */
+  .art-design-section{background:var(--art-surface);border-top:1px solid var(--art-border);border-bottom:1px solid var(--art-border)}
+  .art-design-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+  .art-design-artists{display:flex;flex-direction:column;gap:10px}
+  .art-design-label{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--art-text3)}
+  .art-design-names{font-size:clamp(22px,2.6vw,34px);letter-spacing:.02em;line-height:1.2;color:var(--art-accent)}
+  .art-design-desc{font-size:15px;line-height:1.75;color:var(--art-text2);margin:0}
+  .art-design-elements{display:flex;flex-wrap:wrap;gap:8px;align-content:flex-start}
+  .art-design-chip{font-size:12px;font-weight:600;letter-spacing:.5px;padding:10px 18px;border:1px solid var(--art-border);color:var(--art-text2);transition:all .25s}
+  .art-design-chip:hover{border-color:var(--art-accent);color:var(--art-accent)}
   .art-cat-info{flex:1;min-width:0}
   .art-cat-label{font-size:clamp(19px,2.1vw,27px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1;display:block}
   .art-cat-count{font-size:12px;font-weight:700;letter-spacing:1.5px;color:var(--art-text3);margin-top:4px;display:block}
@@ -695,6 +871,10 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
   @media(max-width:968px){
     .art-numbers{grid-template-columns:repeat(2,1fr)}
     .art-cat-grid{grid-template-columns:1fr}
+    .art-why-grid{grid-template-columns:1fr}
+    .art-exp-grid{grid-template-columns:1fr}
+    .art-events-list{grid-template-columns:1fr}
+    .art-design-grid{grid-template-columns:1fr}
     .art-card-grid{grid-template-columns:repeat(2,1fr)}
     .art-card-grid-4{grid-template-columns:repeat(2,1fr)}
     .art-deco-klimt,.art-deco-kandinsky,.art-deco-gold-frame,.art-deco-cs-frame,.art-deco-zh-arch,.art-deco-zh-rays{opacity:.2}

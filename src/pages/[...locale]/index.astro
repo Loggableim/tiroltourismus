@@ -100,6 +100,12 @@ const whStays = allUnterkuenfte.slice(0, 3);
 const whSights = allSights.slice(0, 4);
 const whGastro = allGastro.slice(0, 3);
 const whMagazin = allMagazin.slice(0, 3);
+// Onepage-Erweiterung: Erlebnisse, Events, Camping
+const allErlebnisse = readCollection('erlebnisse', locale).filter(e => isPublished(e.entry));
+const allEvents = readCollection('events', locale).filter(e => isPublished(e.entry));
+const whErlebnisse = allErlebnisse.slice(0, 4);
+const whEvents = allEvents.slice(0, 4);
+const whCamping = allCamping.slice(0, 3);
 // Alle 8 Sprachen bekommen das künstlerische Design
 const useArt = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'].includes(locale);
 ---
@@ -122,6 +128,9 @@ const useArt = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'].includes(locale)
       magazin={whMagazin}
       counts={whCounts}
       regionNames={whRegionNames}
+      erlebnisse={whErlebnisse}
+      events={whEvents}
+      camping={whCamping}
     />
   ) : (
   <main>

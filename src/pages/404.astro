@@ -257,20 +257,20 @@
       <div class="error-code">404</div>
 
       <!-- Title -->
-      <h1 class="error-title">Seite nicht gefunden</h1>
+      <h1 class="error-title" id="errTitle">Seite nicht gefunden</h1>
 
       <!-- Description -->
-      <p class="error-desc">
+      <p class="error-desc" id="errDesc">
         Die von Ihnen aufgerufene Seite existiert leider nicht oder wurde verschoben.<br />
         Vielleicht hilft die Suche oder ein Blick auf die Startseite weiter.
       </p>
 
       <!-- Actions -->
       <div class="error-actions">
-        <a href="/" class="error-btn error-btn-primary">
+        <a href="/" class="error-btn error-btn-primary" id="errHome">
           ← Zurück zur Startseite
         </a>
-        <a href="/suche/" class="error-btn error-btn-secondary">
+        <a href="/suche/" class="error-btn error-btn-secondary" id="errSearch">
           🔍 Suche
         </a>
       </div>
@@ -280,6 +280,38 @@
       &copy; 2026 tiroltourismus.com
     </div>
   </div>
+
+  <!-- Sprach-Erkennung: passt Texte an die Subdomain an -->
+  <script is:inline>
+    (function() {
+      var T = {
+        de: { title: 'Seite nicht gefunden', desc: 'Die von Ihnen aufgerufene Seite existiert leider nicht oder wurde verschoben.<br>Vielleicht hilft die Suche oder ein Blick auf die Startseite weiter.', home: '← Zurück zur Startseite', search: '🔍 Suche' },
+        en: { title: 'Page not found', desc: 'The page you requested does not exist or has been moved.<br>Try the search or take a look at the homepage.', home: '← Back to homepage', search: '🔍 Search' },
+        fr: { title: 'Page introuvable', desc: "La page demandée n'existe pas ou a été déplacée.<br>Essayez la recherche ou consultez la page d'accueil.", home: "← Retour à l'accueil", search: '🔍 Recherche' },
+        cs: { title: 'Stránka nenalezena', desc: 'Požadovaná stránka neexistuje nebo byla přesunuta.<br>Zkuste vyhledávání nebo se podívejte na domovskou stránku.', home: '← Zpět na domovskou stránku', search: '🔍 Hledání' },
+        nl: { title: 'Pagina niet gevonden', desc: 'De opgevraagde pagina bestaat niet of is verplaatst.<br>Probeer de zoekfunctie of bekijk de homepage.', home: '← Terug naar homepage', search: '🔍 Zoeken' },
+        it: { title: 'Pagina non trovata', desc: 'La pagina richiesta non esiste o è stata spostata.<br>Prova la ricerca o dai un\'occhiata alla homepage.', home: '← Torna alla homepage', search: '🔍 Ricerca' },
+        es: { title: 'Página no encontrada', desc: 'La página solicitada no existe o ha sido movida.<br>Prueba la búsqueda o echa un vistazo a la página de inicio.', home: '← Volver a la página de inicio', search: '🔍 Búsqueda' },
+        zh: { title: '页面未找到', desc: '您请求的页面不存在或已被移动。<br>请尝试搜索或查看主页。', home: '← 返回主页', search: '🔍 搜索' }
+      };
+      // Sprachcode aus Subdomain ableiten (de./en./fr./cs./nl./it./es./cn.)
+      var host = location.hostname;
+      var sub = host.split('.')[0];
+      var langMap = { de: 'de', en: 'en', fr: 'fr', cs: 'cs', nl: 'nl', it: 'it', es: 'es', cn: 'zh' };
+      var lang = langMap[sub] || 'de';
+      var t = T[lang] || T.de;
+      var titleEl = document.getElementById('errTitle');
+      var descEl = document.getElementById('errDesc');
+      var homeEl = document.getElementById('errHome');
+      var searchEl = document.getElementById('errSearch');
+      if (titleEl) titleEl.textContent = t.title;
+      if (descEl) descEl.innerHTML = t.desc;
+      if (homeEl) homeEl.textContent = t.home;
+      if (searchEl) searchEl.textContent = t.search;
+      document.documentElement.lang = lang;
+      document.title = '404 – ' + t.title + ' – tiroltourismus.com';
+    })();
+  </script>
 
   <!-- Theme toggle logic (matching tirol.js but self-contained) -->
   <script is:inline>

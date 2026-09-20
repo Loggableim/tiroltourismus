@@ -117,7 +117,7 @@ const organizationLD = {
   '@type': 'Organization',
   name: siteName,
   url: siteURL,
-  logo: `${siteURL}/favicon.svg`,
+  logo: `${siteURL}/favicon.ico`,
   description: ({ de:'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.', en:'The smart Tyrol guide for trip planning, accommodations and experiences.', fr:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', it:'La guida intelligente del Tirolo per pianificare viaggi, alloggi ed esperienze.', es:'La guía inteligente de Tirol para planificar viajes, alojamientos y experiencias.', zh:'智能蒂罗尔指南，用于旅行计划、住宿和体验。', nl:'De slimme Tirol-gids voor reisplanning, accommodaties en ervaringen.' }[locale] || 'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.'),
   address: {
     '@type': 'PostalAddress',
@@ -140,6 +140,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <title>{title}</title>
   <meta name="description" content={siteDesc}>
   <meta name="theme-color" content="#FF1493">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/favicon.ico">
   <ViewTransitions />
   {noindex && <meta name="robots" content="noindex, nofollow" />}
   {alternateLinks.map((link) => (

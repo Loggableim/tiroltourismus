@@ -2,7 +2,7 @@
 import DetailPage from '../../sections/DetailPage.astro';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex } from '../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex, autoLinkContent } from '../../lib/content.js';
 import { generateMetaDescription } from '../../lib/seo.js';
 
 export async function getStaticPaths() {
@@ -34,7 +34,7 @@ if (!entry) return Astro.redirect('/orte/');
 // Qualitätslogik: dünne Ortsseiten nicht indexieren
 const shouldIdx = shouldIndex(entry, 'orte');
 
-const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const { name, kurzbeschreibung, beschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
 const wappenSrc = wappenForOrt(name);
 
 // Verknüpfte Unterkünfte, Gastro und Sehenswürdigkeiten in diesem Ort
@@ -132,6 +132,13 @@ const destinationLD = {
       ].filter(Boolean),
     },
     tags && tags.length > 0 ? { type: 'tags', tags } : null,
+    // Langbeschreibung (wird bisher nicht angezeigt — Bug)
+    beschreibung ? {
+      type: 'description',
+      label: name,
+      title: 'Über den Ort',
+      content: autoLinkContent(beschreibung, entry, 'de'),
+    } : null,
     mapSection,
     unterkuenfteImOrt.length > 0 ? {
       type: 'related-grid',

@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
-import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex } from '../../../lib/content.js';
+import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex, autoLinkContent } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix, localeParams } from '../../../lib/languages.js';
 
@@ -8,6 +8,7 @@ import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix, localeP
 const LABELS = {
   de: {
     orte: 'Orte',
+    ueberDenOrt: 'Über den Ort',
     ort: 'Ort',
     hoehe: 'Höhe',
     einwohner: 'Einwohner',
@@ -33,6 +34,7 @@ const LABELS = {
   },
   en: {
     orte: 'Towns',
+    ueberDenOrt: 'About the town',
     ort: 'Town',
     hoehe: 'Altitude',
     einwohner: 'Population',
@@ -58,6 +60,7 @@ const LABELS = {
   },
   fr: {
     orte: 'Villes',
+    ueberDenOrt: 'À propos du village',
     ort: 'Ville',
     hoehe: 'Altitude',
     einwohner: 'Population',
@@ -83,6 +86,7 @@ const LABELS = {
   },
   it: {
     orte: 'Paesi',
+    ueberDenOrt: 'Sul paese',
     ort: 'Paese',
     hoehe: 'Altitudine',
     einwohner: 'Popolazione',
@@ -108,6 +112,7 @@ const LABELS = {
   },
   es: {
     orte: 'Pueblos',
+    ueberDenOrt: 'Sobre el pueblo',
     ort: 'Pueblo',
     hoehe: 'Altitud',
     einwohner: 'Población',
@@ -133,6 +138,7 @@ const LABELS = {
   },
   zh: {
     orte: '城镇',
+    ueberDenOrt: '关于该地',
     ort: '城镇',
     hoehe: '海拔',
     einwohner: '人口',
@@ -158,6 +164,7 @@ const LABELS = {
   },
   nl: {
     orte: 'Plaatsen',
+    ueberDenOrt: 'Over de plaats',
     ort: 'Plaats',
     hoehe: 'Hoogte',
     einwohner: 'Bevolking',
@@ -183,6 +190,7 @@ const LABELS = {
   },
   cs: {
     orte: 'Města',
+    ueberDenOrt: 'O místě',
     ort: 'Město',
     hoehe: 'Nadmořská výška',
     einwohner: 'Počet obyvatel',
@@ -232,7 +240,7 @@ const shouldIdx = shouldIndex(entry, 'orte');
 const l = LABELS[locale] || LABELS.de;
 const pref = localePrefix(locale);
 
-const { name, kurzbeschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const { name, kurzbeschreibung, beschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
 
 // Verknüpfte Unterkünfte, Gastro und Sehenswürdigkeiten in diesem Ort
 const unterkuenfteImOrt = readCollection('unterkuenfte', locale)
@@ -329,6 +337,13 @@ const destinationLD = {
       ].filter(Boolean),
     },
     tags && tags.length > 0 ? { type: 'tags', tags } : null,
+    // Langbeschreibung (wird bisher nicht angezeigt — Bug)
+    beschreibung ? {
+      type: 'description',
+      label: name,
+      title: l.ueberDenOrt || name,
+      content: autoLinkContent(beschreibung, entry, locale),
+    } : null,
     mapSection,
     unterkuenfteImOrt.length > 0 ? {
       type: 'related-grid',

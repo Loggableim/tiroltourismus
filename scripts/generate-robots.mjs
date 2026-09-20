@@ -17,6 +17,9 @@ const LANG_DOMAINS = {
   fr: 'https://fr.tiroltourismus.com',
   cs: 'https://cs.tiroltourismus.com',
   nl: 'https://nl.tiroltourismus.com',
+  it: 'https://it.tiroltourismus.com',
+  es: 'https://es.tiroltourismus.com',
+  zh: 'https://cn.tiroltourismus.com',
 };
 
 const domain = isSingleLang ? (LANG_DOMAINS[buildLangs[0]] || 'https://tiroltourismus.com') : 'https://tiroltourismus.com';

@@ -123,10 +123,14 @@ export function generateMetaDescription(entry, collection, locale = 'de', opts =
     let result = keyword;
     let separator = '';
     if (body) {
-      // "keyword: body. CTA" oder "keyword – body. CTA"
-      separator = body.length > 80 ? ': ' : ' – ';
-      // Hangingen an body, der ggf. schon mit Punkt endet
-      result += separator + body.replace(/[.!?]+$/, '').trim();
+      // Bug-Fix: Body, der mit dem Namen beginnt → Duplikat entfernen
+      if (keyword && body.toLowerCase().startsWith(keyword.toLowerCase())) {
+        body = body.substring(keyword.length).replace(/^[\s:–\-.,]+/, '').trim();
+      }
+      if (body) {
+        separator = body.length > 80 ? ': ' : ' – ';
+        result += separator + body.replace(/[.!?]+$/, '').trim();
+      }
     }
     // CTA anhängen (wenn Platz)
     const ctaJoined = '. ' + cta;

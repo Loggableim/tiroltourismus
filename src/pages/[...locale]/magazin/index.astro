@@ -126,7 +126,8 @@ const magazinItemList = {
               { value: 'reiseberichte', label: getCatLabel('reiseberichte') },
               { value: 'hintergrund', label: getCatLabel('hintergrund') },
               { value: 'allgemein', label: getCatLabel('allgemein') },
-            ]} />
+            ]}   locale={locale}
+            />
 
             <div class="tile-grid">
               {[secondary, rest].flat().map((a, i) => {

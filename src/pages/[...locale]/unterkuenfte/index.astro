@@ -84,12 +84,14 @@ const accommodationItemList = {
               { value: 'camping', label: '⛺ Camping' },
               { value: 'bauernhof', label: '🐄 Bauernhof' },
               { value: 'jugendherberge', label: '🎒 Jugendherberge' },
-            ]} />
+            ]}   locale={locale}
+            />
             <FilterBar keyName="tier" compact ariaLabel={t(labels.filterTier)} options={[
               { value: 'gold', label: '⭐ Gold' },
               { value: 'silver', label: 'Silber' },
               { value: 'basic', label: 'Basic' },
-            ]} />
+            ]}   locale={locale}
+            />
           </div>
           <div class="uk-grid">
             {sorted.map((u, i) => (

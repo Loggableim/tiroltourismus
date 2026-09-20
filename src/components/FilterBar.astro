@@ -12,26 +12,35 @@ export interface Props {
   ariaLabel?: string;
   compact?: boolean;
   class?: string;
+  /** Optional locale for localized default labels. */
+  locale?: string;
 }
+
+// Lokalisierte "Alle"-Labels
+const ALL_LABEL = { de: 'Alle', en: 'All', fr: 'Tous', cs: 'Vše', nl: 'Alle', it: 'Tutti', es: 'Todos', zh: '全部' };
+const FILTER_LABEL = { de: 'filtern', en: 'filter', fr: 'filtrer', cs: 'filtrovat', nl: 'filteren', it: 'filtrare', es: 'filtrar', zh: '筛选' };
 
 const {
   keyName,
   options,
-  allLabel = 'Alle',
+  allLabel,
   allValue = 'all',
   ariaLabel,
   compact = false,
   class: className,
+  locale = undefined,
 } = Astro.props;
+const resolvedAllLabel = allLabel || ALL_LABEL[locale] || ALL_LABEL.de;
+const resolvedAriaLabel = ariaLabel || `${keyName} ${FILTER_LABEL[locale] || FILTER_LABEL.de}`;
 ---
 <div
   class:list={['filter-bar', compact && 'filter-bar--compact', className]}
   data-filter-bar
   data-filter-key={keyName}
   data-filter-all={allValue}
-  aria-label={ariaLabel || `${keyName} filtern`}
+  aria-label={resolvedAriaLabel}
 >
-  <button type="button" class="filter-pill active" data-filter-value={allValue}>{allLabel}</button>
+  <button type="button" class="filter-pill active" data-filter-value={allValue}>{resolvedAllLabel}</button>
   {options.map((option) => (
     <button type="button" class="filter-pill" data-filter-value={option.value}>
       {option.label}

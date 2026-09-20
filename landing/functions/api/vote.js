@@ -6,10 +6,10 @@
  * - IP wird gehasht (SHA-256 mit Salt) — nie im Klartext gespeichert
  * - 1 Vote pro Sprache pro IP-Hash (KV-TTL 90 Tage)
  * - Rate-Limit: max 10 Votes/Stunde pro IP-Hash (global über alle Sprachen)
- * - Nur erlaubte Sprachen (pl/hu/sk)
+ * - Nur erlaubte Sprachen (7 soon-Sprachen)
  */
 
-const ALLOWED_LANGS = ['pl', 'hu', 'sk'];
+const ALLOWED_LANGS = ['pl', 'hu', 'sk', 'ru', 'ja', 'sl', 'hr'];
 const VOTE_TTL = 90 * 24 * 60 * 60;       // 90 Tage: "hat für Sprache X gestimmt"
 const RATE_TTL = 60 * 60;                  // 1 Stunde Rate-Limit-Fenster
 const RATE_MAX = 10;                       // max Votes/Stunde/IP

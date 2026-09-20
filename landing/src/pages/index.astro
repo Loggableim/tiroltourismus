@@ -1,9 +1,8 @@
 ---
 // tiroltourismus.com — Landing/Hub
 // Design: Warhol × Jobs × Tourismus
-//   Warhol: Pop-Art-Farbblöcke, Repetition, Factory-Energie
-//   Jobs:   Radikale Typo, schwarze Leinwand, ein Gedanke pro Screen
-//   Tourismus: Echte Daten — 14 Regionen, 5.200+ Einträge, 8 Sprachen
+// Jede Sprach-Karte nennt ihr Künstlerpaar + Link zur Sprachseite.
+// 7 soon-Sprachen mit Vote (KV-backed, anti-collusion).
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -41,21 +40,35 @@ const COUNTS = {
 };
 const TOTAL = Object.values(COUNTS).reduce((a, b) => a + b, 0);
 
-// ── Sprachen ──
+// ── Sprachen mit Künstlerpaar + Design-Info ──
 const LANGS = [
-  { code: 'de', flag: '🇩🇪', native: 'Deutsch',    url: 'https://de.tiroltourismus.com', color: '#FF1493', label: 'DE' },
-  { code: 'en', flag: '🇬🇧', native: 'English',    url: 'https://en.tiroltourismus.com', color: '#FFD700', label: 'EN' },
-  { code: 'fr', flag: '🇫🇷', native: 'Français',   url: 'https://fr.tiroltourismus.com', color: '#00E5FF', label: 'FR' },
-  { code: 'cs', flag: '🇨🇿', native: 'Čeština',    url: 'https://cs.tiroltourismus.com', color: '#FF6B35', label: 'CS' },
-  { code: 'nl', flag: '🇳🇱', native: 'Nederlands', url: 'https://nl.tiroltourismus.com', color: '#8B5CF6', label: 'NL' },
-  { code: 'it', flag: '🇮🇹', native: 'Italiano',   url: 'https://it.tiroltourismus.com', color: '#00C853', label: 'IT' },
-  { code: 'es', flag: '🇪🇸', native: 'Español',    url: 'https://es.tiroltourismus.com', color: '#FF1493', label: 'ES' },
-  { code: 'zh', flag: '🇨🇳', native: '中文',        url: 'https://cn.tiroltourismus.com', color: '#FFD700', label: 'ZH' },
+  { code: 'de', flag: '🇩🇪', native: 'Deutsch',    url: 'https://de.tiroltourismus.com', color: '#FF1493',
+    artists: 'Otto Grünmandl & Paul Flora', style: 'Minimalistische Linienzeichnung trifft satirischen Humor' },
+  { code: 'en', flag: '🇬🇧', native: 'English',    url: 'https://en.tiroltourismus.com', color: '#FFD700',
+    artists: 'Albin Egger-Lienz & Alfons Walde', style: 'Monumentale Bergsilhouetten, erdig & winterlich' },
+  { code: 'fr', flag: '🇫🇷', native: 'Français',   url: 'https://fr.tiroltourismus.com', color: '#00E5FF',
+    artists: 'Max Weiler & Paul Flora', style: 'Poetische organische Formen, Serif-Eleganz' },
+  { code: 'cs', flag: '🇨🇿', native: 'Čeština',    url: 'https://cs.tiroltourismus.com', color: '#FF6B35',
+    artists: 'Franz von Defregger & Albin Egger-Lienz', style: 'Historische Figurenmalerei, Rauten-Ornament' },
+  { code: 'nl', flag: '🇳🇱', native: 'Nederlands', url: 'https://nl.tiroltourismus.com', color: '#8B5CF6',
+    artists: 'Paul Flora & Salvador Dalí', style: 'Surreale schwebende Objekte, Outline-Typo' },
+  { code: 'it', flag: '🇮🇹', native: 'Italiano',   url: 'https://it.tiroltourismus.com', color: '#00C853',
+    artists: 'Alfons Walde & Gustav Klimt', style: 'Luxuriöse Goldornamentik, Schneeweiß & Navy' },
+  { code: 'es', flag: '🇪🇸', native: 'Español',    url: 'https://es.tiroltourismus.com', color: '#FF1493',
+    artists: 'Max Weiler & Wassily Kandinsky', style: 'Abstrakte Natur trifft Geometrie' },
+  { code: 'zh', flag: '🇨🇳', native: '中文',        url: 'https://cn.tiroltourismus.com', color: '#FFD700',
+    artists: 'Michael Pacher & Albin Egger-Lienz', style: 'Sakral, symmetrisch, dramatisches Licht' },
 ];
+
+// ── Soon-Sprachen (7 für Vote) ──
 const SOON = [
-  { code: 'pl', flag: '🇵🇱', native: 'Polski',   color: '#00E5FF' },
-  { code: 'hu', flag: '🇭🇺', native: 'Magyar',   color: '#FF6B35' },
+  { code: 'pl', flag: '🇵🇱', native: 'Polski',     color: '#00E5FF' },
+  { code: 'hu', flag: '🇭🇺', native: 'Magyar',     color: '#FF6B35' },
   { code: 'sk', flag: '🇸🇰', native: 'Slovenčina', color: '#8B5CF6' },
+  { code: 'ru', flag: '🇷🇺', native: 'Русский',    color: '#FF1493' },
+  { code: 'ja', flag: '🇯🇵', native: '日本語',      color: '#FFD700' },
+  { code: 'sl', flag: '🇸🇮', native: 'Slovenščina', color: '#00C853' },
+  { code: 'hr', flag: '🇭🇷', native: 'Hrvatski',   color: '#FF6B35' },
 ];
 
 const CATS = [
@@ -139,7 +152,7 @@ const fmt = (n) => n.toLocaleString('de-AT');
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
 
-    /* ═══ HERO — Warhol-Farbblöcke + Jobs-Typo ═══ */
+    /* ═══ HERO ═══ */
     .hero{padding:clamp(72px,12vh,140px) 0 clamp(40px,6vh,72px);position:relative}
     .hero-kicker{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
     .hero-title{font-family:var(--font-display);font-size:clamp(88px,19vw,260px);line-height:.82;letter-spacing:.02em;text-transform:uppercase}
@@ -150,29 +163,30 @@ const fmt = (n) => n.toLocaleString('de-AT');
     .c-orange{color:var(--orange)}.c-purple{color:var(--purple)}.c-green{color:var(--green)}
     .hero-sub{margin-top:28px;max-width:560px;font-size:clamp(15px,1.6vw,19px);color:rgba(255,255,255,.55);line-height:1.7}
     .hero-sub strong{color:var(--white);font-weight:600}
-
-    /* Warhol-Streifen */
     .strip{display:grid;grid-template-columns:repeat(6,1fr);height:14px;margin-top:clamp(40px,7vh,80px)}
     .strip span{display:block}
 
-    /* ═══ SPRACHEN — Warhol-Repetition ═══ */
+    /* ═══ SECTIONS ═══ */
     .section{padding:clamp(64px,10vh,120px) 0}
     .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:clamp(32px,5vh,56px);flex-wrap:wrap}
     .sec-title{font-family:var(--font-display);font-size:clamp(40px,6vw,84px);line-height:.9;letter-spacing:.02em;text-transform:uppercase}
     .sec-note{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35)}
 
-    .lang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
-    .lang-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:1/1;padding:20px;background:var(--grey);transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s;overflow:hidden}
-    .lang-tile:hover{transform:scale(1.02);z-index:2}
-    .lang-tile .flag{font-size:clamp(28px,3.5vw,44px);line-height:1}
-    .lang-tile .native{font-family:var(--font-display);font-size:clamp(22px,2.6vw,34px);letter-spacing:.04em;text-transform:uppercase;line-height:1}
-    .lang-tile .go{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:all .25s}
-    .lang-tile:hover .go{opacity:1;transform:translateY(0)}
-    .lang-tile .bar{position:absolute;left:0;top:0;bottom:0;width:5px}
-    .lang-tile:hover .bar{width:100%;opacity:.14}
-    .lang-tile .bar{transition:width .3s cubic-bezier(.16,1,.3,1),opacity .3s}
+    /* ═══ SPRACH-KARTEN (mit Künstler) ═══ */
+    .lang-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
+    .lang-tile{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px 26px;background:var(--grey);transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s;overflow:hidden;min-height:200px}
+    .lang-tile:hover{transform:scale(1.01);z-index:2;background:var(--grey2)}
+    .lang-tile .bar{position:absolute;left:0;top:0;bottom:0;width:5px;transition:width .3s cubic-bezier(.16,1,.3,1),opacity .3s}
+    .lang-tile:hover .bar{width:100%;opacity:.1}
+    .lang-top{display:flex;align-items:center;gap:14px}
+    .lang-flag{font-size:clamp(32px,4vw,48px);line-height:1}
+    .lang-native{font-family:var(--font-display);font-size:clamp(24px,3vw,38px);letter-spacing:.04em;text-transform:uppercase;line-height:1}
+    .lang-artists{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+    .lang-style{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.5}
+    .lang-go{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:all .25s;margin-top:auto}
+    .lang-tile:hover .lang-go{opacity:1;transform:translateY(0)}
 
-    /* ═══ ZAHLEN — Jobs: ein Gedanke pro Screen ═══ */
+    /* ═══ ZAHLEN ═══ */
     .numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
     .num-block{padding:clamp(28px,4vw,48px) 24px;background:var(--grey)}
     .num-val{font-family:var(--font-display);font-size:clamp(48px,7vw,96px);line-height:.9;letter-spacing:.01em}
@@ -188,13 +202,13 @@ const fmt = (n) => n.toLocaleString('de-AT');
     .cat-count{font-size:12px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,.4);margin-top:4px}
     .cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
 
-    /* ═══ REGIONEN — Warhol-Reihe ═══ */
+    /* ═══ REGIONEN ═══ */
     .region-row{display:flex;flex-wrap:wrap;gap:3px}
     .region-chip{font-family:var(--font-display);font-size:clamp(18px,2vw,26px);letter-spacing:.05em;text-transform:uppercase;padding:14px 22px;background:var(--grey);transition:all .25s cubic-bezier(.16,1,.3,1)}
     .region-chip:hover{background:var(--white);color:var(--black);transform:translateY(-3px)}
 
     /* ═══ SOON + VOTE ═══ */
-    .soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+    .soon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:3px}
     .soon-tile{padding:28px 24px;background:var(--grey);display:flex;flex-direction:column;gap:16px;border:1px dashed rgba(255,255,255,.14)}
     .soon-top{display:flex;align-items:center;gap:14px}
     .soon-flag{font-size:32px}
@@ -214,14 +228,13 @@ const fmt = (n) => n.toLocaleString('de-AT');
     .footer-links a:hover{color:var(--white)}
 
     @media(max-width:900px){
-      .lang-grid{grid-template-columns:repeat(2,1fr)}
+      .lang-grid{grid-template-columns:1fr}
       .numbers{grid-template-columns:repeat(2,1fr)}
       .cat-grid{grid-template-columns:1fr}
-      .soon-grid{grid-template-columns:1fr}
+      .soon-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
     }
     @media(max-width:520px){
-      .lang-grid{grid-template-columns:repeat(2,1fr)}
-      .lang-tile{aspect-ratio:auto;min-height:120px}
+      .numbers{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -250,22 +263,24 @@ const fmt = (n) => n.toLocaleString('de-AT');
     </div>
   </header>
 
-  <!-- ═══ SPRACHEN ═══ -->
-  <section class="section" aria-labelledby="langs-title">
+  <!-- ═══ SPRACHEN (mit Künstler-Erwähnung) ═══ -->
+  <section class="section" aria-labelledby="langs-title" id="sprachen">
     <div class="wrap">
       <div class="sec-head">
         <h2 class="sec-title" id="langs-title">Sprache wählen</h2>
-        <span class="sec-note">{LANGS.length} vollständige Versionen</span>
+        <span class="sec-note">{LANGS.length} vollständige Versionen · jede mit eigener künstlerischer Handschrift</span>
       </div>
       <div class="lang-grid">
         {LANGS.map(l => (
           <a href={l.url} class="lang-tile" hreflang={l.code} aria-label={`Tirol Tourismus auf ${l.native}`}>
             <span class="bar" style={`background:${l.color}`}></span>
-            <span class="flag">{l.flag}</span>
-            <span>
-              <span class="native">{l.native}</span>
-              <span class="go" style={`color:${l.color};display:block;margin-top:8px`}>Öffnen →</span>
+            <span class="lang-top">
+              <span class="lang-flag">{l.flag}</span>
+              <span class="lang-native">{l.native}</span>
             </span>
+            <span class="lang-artists" style={`color:${l.color}`}>🎨 {l.artists}</span>
+            <span class="lang-style">{l.style}</span>
+            <span class="lang-go" style={`color:${l.color}`}>Öffnen →</span>
           </a>
         ))}
       </div>
@@ -337,12 +352,12 @@ const fmt = (n) => n.toLocaleString('de-AT');
     </div>
   </section>
 
-  <!-- ═══ SOON + VOTE ═══ -->
-  <section class="section" aria-labelledby="soon-title" style="padding-top:0">
+  <!-- ═══ SOON + VOTE (7 Sprachen) ═══ -->
+  <section class="section" aria-labelledby="soon-title" style="padding-top:0" id="voting">
     <div class="wrap">
       <div class="sec-head">
         <h2 class="sec-title" id="soon-title">Als Nächstes</h2>
-        <span class="sec-note">Stimme ab — wir bauen, was gewünscht wird</span>
+        <span class="sec-note">{SOON.length} Sprachen in Vorbereitung — stimme ab</span>
       </div>
       <div class="soon-grid">
         {SOON.map(l => (

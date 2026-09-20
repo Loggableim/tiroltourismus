@@ -24,7 +24,20 @@ const COLLECTION_META: Record<string, { label: string; link: string; defaultEmoj
   magazin: { label: 'Magazin', link: '/magazin/', defaultEmoji: '📰', color: '#FF1493' },
 };
 
-export default function MerklistePage() {
+// Lokalisierte Texte für die Merkliste
+const T: Record<string, any> = {
+  de: { loading: 'Lade Merkliste…', emptyTitle: 'Deine Merkliste ist leer', emptyText: 'Markiere Unterkünfte, Erlebnisse, Events, Sehenswürdigkeiten und mehr als Favorit – sie erscheinen dann hier.', discover: 'Entdecken →', clearAll: 'Alle löschen', clearTitle: 'Alle entfernen', entry: 'Eintrag', entries: 'Einträge', remove: 'Entfernen', removeAria: 'von Merkliste entfernen' },
+  en: { loading: 'Loading wishlist…', emptyTitle: 'Your wishlist is empty', emptyText: 'Mark accommodations, experiences, events, sights and more as favorites – they will appear here.', discover: 'Discover →', clearAll: 'Clear all', clearTitle: 'Remove all', entry: 'entry', entries: 'entries', remove: 'Remove', removeAria: 'remove from wishlist' },
+  fr: { loading: 'Chargement des favoris…', emptyTitle: 'Votre liste de favoris est vide', emptyText: 'Marquez des hébergements, expériences, événements, sites et plus comme favoris – ils apparaîtront ici.', discover: 'Découvrir →', clearAll: 'Tout effacer', clearTitle: 'Tout supprimer', entry: 'entrée', entries: 'entrées', remove: 'Supprimer', removeAria: 'retirer des favoris' },
+  cs: { loading: 'Načítání seznamu…', emptyTitle: 'Váš seznam je prázdný', emptyText: 'Označte ubytování, zážitky, akce, pamětihodnosti a další jako oblíbené – objeví se zde.', discover: 'Objevit →', clearAll: 'Vymazat vše', clearTitle: 'Odebrat vše', entry: 'záznam', entries: 'záznamů', remove: 'Odebrat', removeAria: 'odebrat ze seznamu' },
+  nl: { loading: 'Verlanglijst laden…', emptyTitle: 'Je verlanglijst is leeg', emptyText: 'Markeer accommodaties, ervaringen, evenementen, bezienswaardigheden en meer als favoriet – ze verschijnen hier.', discover: 'Ontdekken →', clearAll: 'Alles wissen', clearTitle: 'Alles verwijderen', entry: 'item', entries: 'items', remove: 'Verwijderen', removeAria: 'van verlanglijst verwijderen' },
+  it: { loading: 'Caricamento preferiti…', emptyTitle: 'La tua lista è vuota', emptyText: 'Contrassegna alloggi, esperienze, eventi, attrazioni e altro come preferiti – appariranno qui.', discover: 'Scoprire →', clearAll: 'Cancella tutto', clearTitle: 'Rimuovi tutto', entry: 'voce', entries: 'voci', remove: 'Rimuovi', removeAria: 'rimuovi dai preferiti' },
+  es: { loading: 'Cargando favoritos…', emptyTitle: 'Tu lista está vacía', emptyText: 'Marca alojamientos, experiencias, eventos, atracciones y más como favoritos – aparecerán aquí.', discover: 'Descubrir →', clearAll: 'Borrar todo', clearTitle: 'Eliminar todo', entry: 'entrada', entries: 'entradas', remove: 'Eliminar', removeAria: 'eliminar de favoritos' },
+  zh: { loading: '加载收藏夹…', emptyTitle: '您的收藏夹是空的', emptyText: '将住宿、体验、活动、景点等标记为收藏 – 它们将显示在这里。', discover: '探索 →', clearAll: '全部清除', clearTitle: '全部移除', entry: '条目', entries: '条目', remove: '移除', removeAria: '从收藏夹移除' },
+};
+
+export default function MerklistePage({ locale = 'de' }: { locale?: string }) {
+  const t = T[locale] || T.de;
   const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -61,20 +74,19 @@ export default function MerklistePage() {
   };
 
   if (loading) {
-    return <div className="merkliste-loading">Lade Merkliste…</div>;
+    return <div className="merkliste-loading">{t.loading}</div>;
   }
 
   if (favorites.length === 0) {
     return (
       <div className="merkliste-empty">
         <div className="merkliste-empty-icon">💔</div>
-        <h2 className="merkliste-empty-title">Deine Merkliste ist leer</h2>
+        <h2 className="merkliste-empty-title">{t.emptyTitle}</h2>
         <p className="merkliste-empty-text">
-          Markiere Unterkünfte, Erlebnisse, Events, Sehenswürdigkeiten und mehr
-          als Favorit – sie erscheinen dann hier.
+          {t.emptyText}
         </p>
         <a href="/" className="btn btn-pink">
-          Entdecken →
+          {t.discover}
         </a>
       </div>
     );
@@ -94,10 +106,10 @@ export default function MerklistePage() {
     <div className="merkliste-page">
       <div className="merkliste-header">
         <span className="merkliste-count">
-          ❤️ <strong>{favorites.length}</strong> {favorites.length === 1 ? 'Eintrag' : 'Einträge'}
+          ❤️ <strong>{favorites.length}</strong> {favorites.length === 1 ? t.entry : t.entries}
         </span>
-        <button className="merkliste-clear" onClick={clearAll} title="Alle entfernen">
-          🗑️ Alle löschen
+        <button className="merkliste-clear" onClick={clearAll} title={t.clearTitle}>
+          🗑️ {t.clearAll}
         </button>
       </div>
 
@@ -133,8 +145,8 @@ export default function MerklistePage() {
                     <button
                       className="merkliste-card-remove"
                       onClick={() => removeFavorite(fav.id)}
-                      aria-label={`${fav.name} von Merkliste entfernen`}
-                      title="Entfernen"
+                      aria-label={`${fav.name} ${t.removeAria}`}
+                      title={t.remove}
                     >
                       ✕
                     </button>

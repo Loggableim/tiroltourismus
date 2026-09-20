@@ -1,9 +1,15 @@
 ---
+import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   items: Array<{ label: string; href?: string }>;
+  /** Optional locale for localized "Home" label and link prefix. */
+  locale?: string;
 }
-const { items } = Astro.props;
-const all = [{ label: 'Startseite', href: '/' }, ...items];
+const { items, locale = undefined } = Astro.props;
+// Lokalisierte "Startseite"-Labels
+const HOME_LABEL = { de: 'Startseite', en: 'Home', fr: 'Accueil', cs: 'Domů', nl: 'Home', it: 'Home', es: 'Inicio', zh: '首页' };
+const homeLabel = HOME_LABEL[locale] || HOME_LABEL.de;
+const all = [{ label: homeLabel, href: localePrefixFn(locale) || '/' }, ...items];
 ---
 <div class="breadcrumbs container">
   {all.map((item, i) => (

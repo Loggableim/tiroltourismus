@@ -23,7 +23,7 @@ for (const c of catOrder) {
 
 <BaseLayout title="{t[locale] || t.de} – Tirol" description="Antworten auf die häufigsten Fragen zu Tirol" locale={locale}>
   <main>
-    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" /></div>
+    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" locale={locale} /></div>
     <SectionHeader title="{t[locale] || t.de}" sub="Häufige Fragen zu Tirol" />
     {[...grouped.entries()].map(([cat, items]) => (
       <div class="faq-group">

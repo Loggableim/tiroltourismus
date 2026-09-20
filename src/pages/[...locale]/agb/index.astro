@@ -16,7 +16,7 @@ const nav = { de:'AGB', en:'Terms & Conditions', fr:'Conditions Générales', it
 
 <BaseLayout title="{nav[locale] || nav.de}" description="Allgemeine Geschäftsbedingungen von tiroltourismus.com" locale={locale}>
   <main>
-    <Breadcrumbs items="{[{ label: nav[locale] || nav.de }]}" />
+    <Breadcrumbs items="{[{ label: nav[locale] || nav.de }]}" locale={locale} />
     <section class="legal-page section">
       <div class="container" style="max-width:720px">
         <SectionHeader title="{nav[locale] || nav.de}" />

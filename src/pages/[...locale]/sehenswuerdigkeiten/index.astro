@@ -201,7 +201,7 @@ const sightItemList = {
 >
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} />
+      <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} locale={locale} />
     </div>
 
     <Hero
@@ -263,6 +263,7 @@ const sightItemList = {
                 ort={s.entry.ort}
                 preis={s.entry.preis}
                 linkPrefix={linkPrefix}
+                locale={locale}
               />
             ))}
           </div>

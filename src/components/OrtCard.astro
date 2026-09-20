@@ -2,8 +2,11 @@
 import FavHeart from './FavHeart.astro';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { localePrefix as localePrefixFn } from '../lib/languages.js';
 
 export interface Props {
+  /** Optional locale prefix for multilang links (e.g. "fr"). */
+  locale?: string;
   name: string;
   slug: string;
   beschreibung?: string;
@@ -12,7 +15,11 @@ export interface Props {
   region?: string;
 }
 
-const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--tirol-pink)', region } = Astro.props;
+const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--tirol-pink)', region, locale = undefined } = Astro.props;
+
+// Lokalisierte Link-Texte
+const LINK_TEXT = { de: 'Entdecken →', en: 'Discover →', fr: 'Découvrir →', cs: 'Objevit →', nl: 'Ontdekken →', it: 'Scoprire →', es: 'Descubrir →', zh: '探索 →' };
+const linkText = LINK_TEXT[locale] || LINK_TEXT.de;
 
 const ULTRA_MINIMAL = JSON.parse(
   readFileSync(resolve(process.cwd(), 'wappen/sd15_ultra_minimal.json'), 'utf-8')
@@ -29,8 +36,8 @@ const normalize = (value: string) =>
 const wappenEntry = ULTRA_MINIMAL.find((item) => normalize(item.ort) === normalize(name));
 const wappenSrc = wappenEntry ? `/wappen/ultra-minimal/${wappenEntry.img_rel.replace(/^img\/sd15_ultra_minimal\//, '')}` : null;
 ---
-<a href={`/orte/${slug}/`} class="ort-card" data-collection="orte" data-slug={slug} data-filter-card data-filter-cat={region || ''}>
-  <div class="ort-card-img" style={`--accent:${farbe};background:linear-gradient(180deg, ${farbe}18, rgba(255,255,255,.03))`}>
+<a href={`${localePrefixFn(locale)}/orte/${slug}/`} class="ort-card" data-collection="orte" data-slug={slug} data-filter-card data-filter-cat={region || ''}>
+  <div class="ort-card-img" style={`--accent:${farbe};background:linear-gradient(180deg, ${farbe}18, var(--surface))`}>
     {wappenSrc ? (
       <img src={wappenSrc} alt={`${name} Wappen`} class="ort-wappen" loading="lazy" decoding="async" />
     ) : (
@@ -41,7 +48,7 @@ const wappenSrc = wappenEntry ? `/wappen/ultra-minimal/${wappenEntry.img_rel.rep
   <div class="ort-card-body">
     <h3>{name}</h3>
     {beschreibung && <p>{beschreibung}</p>}
-    <span class="ort-link">Entdecken →</span>
+    <span class="ort-link">{linkText}</span>
   </div>
 </a>
 

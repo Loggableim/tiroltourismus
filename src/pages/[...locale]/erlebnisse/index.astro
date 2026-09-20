@@ -74,7 +74,7 @@ const erlebnisItemList = {
 <BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={erlebnisItemList}>
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: t(labels.title) }]} />
+      <Breadcrumbs items={[{ label: t(labels.title) }]} locale={locale} />
     </div>
 
     <Hero title={t(labels.title)} subtitle={t(labels.heroSub)} emoji="🏔️" size="md">

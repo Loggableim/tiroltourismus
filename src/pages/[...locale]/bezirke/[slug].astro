@@ -58,7 +58,7 @@ const bezirkLD = {
 <BaseLayout title={entry.name} description={entry.beschreibung || ''} locale={locale} jsonld={bezirkLD}>
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: l.bezirke, href: `${prefix}/bezirke/` }, { label: entry.name }]} />
+      <Breadcrumbs items={[{ label: l.bezirke, href: `${prefix}/bezirke/` }, { label: entry.name }]} locale={locale} />
     </div>
 
     <section class="page-header">

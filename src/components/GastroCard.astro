@@ -14,6 +14,9 @@ export interface Props {
   linkPrefix?: string;
 }
 const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '#FF6B35', ort, linkPrefix = '/gastro/' , locale = undefined } = Astro.props;
+// Lokalisierter CTA-Text
+const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →', cs: 'Detaily →', nl: 'Details →', it: 'Dettagli →', es: 'Detalles →', zh: '详情 →' };
+const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
 ---
 <a href={`${linkPrefix}${slug}/`} class="gastro-card" data-collection="gastro" data-slug={slug} data-filter-card data-filter-cat={kategorie || ''}>
   <div class="gastro-card-img" style={`position:relative;background:${farbe}20`}>
@@ -27,7 +30,7 @@ const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '
     {beschreibung && <p>{beschreibung}</p>}
     <div class="gastro-meta">
       {preis && <span class="gastro-preis">{preis}</span>}
-      <span class="gastro-link">Details →</span>
+      <span class="gastro-link">{detailsText}</span>
     </div>
   </div>
 </a>

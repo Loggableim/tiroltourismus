@@ -20,6 +20,9 @@ const isCamping = typ === 'camping';
 const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'Bauernhof', jugendherberge: 'Jugendherberge', camping: 'Camping' };
 const placeholderIcon = isCamping ? '🏕️' : '🏨';
 // Badge handled by PremiumBadge component
+// Lokalisierter CTA-Text
+const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →', cs: 'Detaily →', nl: 'Details →', it: 'Dettagli →', es: 'Detalles →', zh: '详情 →' };
+const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
 ---
 <a href={`${localePrefixFn(locale)}/unterkuenfte/${slug}/`} class="uk-card" data-filter-card data-filter-tier={dataTier || tier || 'basic'} data-filter-typ={typ || 'unknown'} data-collection="unterkuenfte" data-slug={slug}>
   <div class="uk-img" style="position:relative">
@@ -40,7 +43,7 @@ const placeholderIcon = isCamping ? '🏕️' : '🏨';
     <div class="uk-meta">
       {preis_ab ? <span class="uk-price">ab {preis_ab}€<small>/Nacht</small></span> : <span class="uk-na">{isCamping ? 'Stellplatz' : 'Preis auf Anfrage'}</span>}
     </div>
-    <span class="uk-cta">Details →</span>
+    <span class="uk-cta">{detailsText}</span>
   </div>
 </a>
 

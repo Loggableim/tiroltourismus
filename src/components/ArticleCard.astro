@@ -13,6 +13,9 @@ export interface Props {
   hero_bild?: string;
 }
 const { titel, slug, teaser, datum, kategorie, emoji = '📰', hero_bild , locale = undefined } = Astro.props;
+// Lokalisierte Link-Texte
+const LINK_TEXT = { de: 'Weiterlesen →', en: 'Read more →', fr: 'Lire la suite →', cs: 'Číst dále →', nl: 'Lees verder →', it: 'Leggi di più →', es: 'Leer más →', zh: '阅读更多 →' };
+const linkText = LINK_TEXT[locale] || LINK_TEXT.de;
 ---
 <a href={`${localePrefixFn(locale)}/magazin/${slug}/`} class="article-card" data-collection="magazin" data-slug={slug}>
   <div class="article-img" style="position:relative">
@@ -28,7 +31,7 @@ const { titel, slug, teaser, datum, kategorie, emoji = '📰', hero_bild , local
     {datum && <div class="article-date">{datum}</div>}
     <h3>{titel}</h3>
     {teaser && <p>{teaser}</p>}
-    <span class="article-link">Weiterlesen →</span>
+    <span class="article-link">{linkText}</span>
   </div>
 </a>
 

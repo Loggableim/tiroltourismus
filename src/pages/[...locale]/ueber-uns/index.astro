@@ -14,7 +14,7 @@ const info = t[locale] || t.de;
 
 <BaseLayout title="{info.title}" description="{info.desc}" locale={locale}>
   <main>
-    <div class="container"><Breadcrumbs items="{[{ label: info.title }]}" /></div>
+    <div class="container"><Breadcrumbs items="{[{ label: info.title }]}" locale={locale} /></div>
     <section class="ueber-uns">
       <h1>{info.title}</h1>
       <p>tiroltourismus.com ist das moderne Tourismusportal für Tirol – kuratiert, KI-gestützt und community-basiert. Unser Ziel: Besuchern die schönsten Seiten Tirols zu zeigen und Betrieben eine smarte Präsentationsplattform zu bieten.</p>

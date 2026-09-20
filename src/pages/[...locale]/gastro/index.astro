@@ -222,7 +222,7 @@ const gastroItemList = {
 >
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} />
+      <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} locale={locale} />
     </div>
 
     <Hero
@@ -284,6 +284,7 @@ const gastroItemList = {
                 farbe={g.entry.farbe}
                 ort={g.entry.ort}
                 linkPrefix={linkPrefix}
+                locale={locale}
               />
             ))}
           </div>

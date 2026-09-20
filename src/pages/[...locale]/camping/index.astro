@@ -96,7 +96,7 @@ const campingItemList = {
                 <h2 class="region-title">{regionNames[region] || region} <span class="region-count">({items.length})</span></h2>
                 <div class="cp-grid">
                   {items.map(c => (
-                    <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} region={c.entry.region} preis_ab={c.entry.preis_ab} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} />
+                    <CampingCard name={c.entry.name} slug={c.slug} ort={c.entry.ort} region={c.entry.region} preis_ab={c.entry.preis_ab} ausstattung={c.entry.ausstattung} tier={c.entry.tier || 'basic'} locale={locale} />
                   ))}
                 </div>
               </div>

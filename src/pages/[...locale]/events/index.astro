@@ -47,7 +47,7 @@ const eventItemList = {
 <BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={eventItemList}>
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: t(labels.title) }]} />
+      <Breadcrumbs items={[{ label: t(labels.title) }]} locale={locale} />
     </div>
 
     <section class="page-header">
@@ -80,7 +80,7 @@ const eventItemList = {
           <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.sectionSub)} />
           <div class="events-list">
             {sorted.map((e, i) => (
-              <EventCard titel={e.entry.titel || e.entry.name} slug={e.slug} kategorie={e.entry.kategorie} kurzbeschreibung={e.entry.kurzbeschreibung} ort={e.entry.ort} datum_von={e.entry.datum_von} uhrzeit={e.entry.uhrzeit} preis={e.entry.preis} emoji={e.entry.emoji} />
+              <EventCard titel={e.entry.titel || e.entry.name} slug={e.slug} kategorie={e.entry.kategorie} kurzbeschreibung={e.entry.kurzbeschreibung} ort={e.entry.ort} datum_von={e.entry.datum_von} uhrzeit={e.entry.uhrzeit} preis={e.entry.preis} emoji={e.entry.emoji} locale={locale} />
             ))}
           </div>
         </div>

@@ -17,6 +17,11 @@ export interface Props {
 }
 const { titel, slug, beschreibung, emoji = '🏔️', wappenSrc, heroSrc, bewertung = 0, farbe = 'var(--tirol-pink)', featured , locale = undefined } = Astro.props;
 const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
+// Lokalisierte Link-Texte
+const LINK_TEXT = { de: 'Entdecken →', en: 'Discover →', fr: 'Découvrir →', cs: 'Objevit →', nl: 'Ontdekken →', it: 'Scoprire →', es: 'Descubrir →', zh: '探索 →' };
+const linkText = LINK_TEXT[locale] || LINK_TEXT.de;
+const FEATURED_TEXT = { de: '🔥 Empfohlen', en: '🔥 Featured', fr: '🔥 Recommandé', cs: '🔥 Doporučeno', nl: '🔥 Aanbevolen', it: '🔥 Consigliato', es: '🔥 Recomendado', zh: '🔥 推荐' };
+const featuredText = FEATURED_TEXT[locale] || FEATURED_TEXT.de;
 ---
 <a href={`${localePrefixFn(locale)}/regionen/${slug}/`} class="region-card" data-collection="regionen" data-slug={slug} data-filter-card data-filter-cat={featured ? 'featured' : 'other'}>
   <div class="region-card-img" style={`position:relative;background:linear-gradient(135deg,${farbe}15,${farbe}25)`}>
@@ -42,11 +47,11 @@ const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
   <div class="region-card-body">
     <h3>{titel}</h3>
     {beschreibung && <p>{beschreibung}</p>}
-    {featured && <span class="featured-badge">🔥 Empfohlen</span>}
+    {featured && <span class="featured-badge">{featuredText}</span>}
     <div class="region-stars">
       {filledStars.map(f => <span class={`star${f ? '' : ' empty'}`}>★</span>)}
     </div>
-    <span class="region-link">Entdecken →</span>
+    <span class="region-link">{linkText}</span>
   </div>
 </a>
 

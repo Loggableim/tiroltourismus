@@ -93,7 +93,7 @@ const accommodationItemList = {
           </div>
           <div class="uk-grid">
             {sorted.map((u, i) => (
-              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} />
+              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} locale={locale} />
             ))}
           </div>
         </div>

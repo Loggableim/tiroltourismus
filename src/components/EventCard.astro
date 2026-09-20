@@ -2,6 +2,8 @@
 import FavHeart from './FavHeart.astro';
 // EventCard.astro — Karte für Event-Liste (events/index.astro)
 export interface Props {
+  /** Optional locale for localized texts (e.g. "fr"). */
+  locale?: string;
   titel: string;
   slug: string;
   kategorie?: string;
@@ -13,9 +15,20 @@ export interface Props {
   emoji?: string;
 }
 
-const { titel, slug, kategorie, kurzbeschreibung, ort, datum_von, uhrzeit, preis, emoji } = Astro.props;
+const { titel, slug, kategorie, kurzbeschreibung, ort, datum_von, uhrzeit, preis, emoji, locale = undefined } = Astro.props;
 
-const monate = ['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+// Lokalisierte Monatsnamen
+const MONATE = {
+  de: ['Jänner','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'],
+  en: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+  fr: ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+  cs: ['Leden','Únor','Březen','Duben','Květen','Červen','Červenec','Srpen','Září','Říjen','Listopad','Prosinec'],
+  nl: ['Januari','Februari','Maart','April','Mei','Juni','Juli','Augustus','September','Oktober','November','December'],
+  it: ['Gennaio','Febbraio','Marzo','Aprile','Maggio','Giugno','Luglio','Agosto','Settembre','Ottobre','Novembre','Dicembre'],
+  es: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+  zh: ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'],
+};
+const monate = MONATE[locale] || MONATE.de;
 let dateStr = '';
 if (datum_von) {
   try {
@@ -23,6 +36,9 @@ if (datum_von) {
     dateStr = `${parseInt(d)}. ${monate[parseInt(m)-1]} ${y}`;
   } catch {}
 }
+// Lokalisierter CTA-Text
+const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →', cs: 'Detaily →', nl: 'Details →', it: 'Dettagli →', es: 'Detalles →', zh: '详情 →' };
+const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
 ---
 
 <a href={`/events/${slug}/`} class="event-card-link" data-collection="events" data-slug={slug}>
@@ -42,7 +58,7 @@ if (datum_von) {
       <div class="event-meta">
         {uhrzeit && <span class="event-time">🕐 {uhrzeit}</span>}
         {preis && preis !== '#' && <span class="event-price">{preis}</span>}
-        <span class="event-link">Details →</span>
+        <span class="event-link">{detailsText}</span>
       </div>
     </div>
   </div>

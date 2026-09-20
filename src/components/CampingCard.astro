@@ -16,6 +16,9 @@ export interface Props {
 const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'data-tier': dataTier , locale = undefined } = Astro.props;
 const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen', 'wasseranschluss'].includes(a));
 // Badge handled by PremiumBadge component
+// Lokalisierter CTA-Text
+const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →', cs: 'Detaily →', nl: 'Details →', it: 'Dettagli →', es: 'Detalles →', zh: '详情 →' };
+const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
 ---
 <a href={`${localePrefixFn(locale)}/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
   <div class="cp-img" style="position:relative">
@@ -32,7 +35,7 @@ const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen
         {ausstattung.length > 4 && <span class="cp-tag cp-tag-more">+{ausstattung.length - 4}</span>}
       </div>
     )}
-    <span class="cp-cta">Details →</span>
+    <span class="cp-cta">{detailsText}</span>
   </div>
 </a>
 

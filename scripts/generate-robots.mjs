@@ -24,6 +24,8 @@ const LANG_DOMAINS = {
 
 const domain = isSingleLang ? (LANG_DOMAINS[buildLangs[0]] || 'https://tiroltourismus.com') : 'https://tiroltourismus.com';
 
+// Language sites advertise only the Astro sitemap on this domain.
+// Do not reference landing migration files (sitemap-migration-*.xml).
 const content = `# robots.txt for ${domain.replace('https://', '')}
 User-agent: *
 Allow: /

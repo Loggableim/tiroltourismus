@@ -1,9 +1,10 @@
 ---
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
-// Locale-aware SEO: canonical + hreflang alternates for all ready languages.
+// Locale-aware SEO: hreflang only for published locale entries; none when noindex.
 import { ViewTransitions } from 'astro:transitions';
-import { readSingleton, getAvailableLocalesForPath } from '../lib/content.js';
-import { LANGUAGES, switchLangPath, DEFAULT_LOCALE, LANG_DOMAINS, PUBLISHED_LANGS, SOON_LANGS, localePrefix as localePrefixFn } from '../lib/languages.js';
+import { readSingleton } from '../lib/content.js';
+import { hreflangAlternates } from '../lib/hreflang.js';
+import { LANGUAGES, switchLangPath, LANG_DOMAINS, PUBLISHED_LANGS, SOON_LANGS, localePrefix as localePrefixFn } from '../lib/languages.js';
 import TirolLogo from '../components/TirolLogo.astro';
 
 export interface Props {
@@ -38,7 +39,6 @@ const {
 // Locale helpers — dynamisch für alle Sprachen
 const langCode = locale || 'de';
 const LOCALE_MAP = { de:'de_AT', en:'en_US', fr:'fr_FR', it:'it_IT', es:'es_ES', zh:'zh_CN', nl:'nl_NL', cs:'cs_CZ' };
-const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', it:'it-IT', es:'es-ES', zh:'zh-CN', nl:'nl-NL', cs:'cs-CZ' };
 // Art-Theme Fonts pro Sprache (müssen im <head> geladen werden, nicht im Body)
 const ART_FONTS = {
   en: 'https://fonts.googleapis.com/css2?family=Anton&display=swap',
@@ -66,26 +66,14 @@ const normalizePath = (path) => {
 };
 const absoluteURL = (path) => path.startsWith('http') ? path : `${siteURL}${normalizePath(path)}`;
 const pageURL = canonicalURL ? absoluteURL(canonicalURL) : absoluteURL(Astro.url.pathname);
-// hreflang: nur Sprachen, in denen der Eintrag wirklich existiert (mit korrektem Slug)
-// switchLangPath liefert absolute URLs für Cross-Domain-Sprachen
-const pathAvailableLangs = (availableLanguages && Array.isArray(availableLanguages))
-  ? availableLanguages.filter((l) => PUBLISHED_LANGS.includes(l))
-  : getAvailableLocalesForPath(currentPath, { locales: PUBLISHED_LANGS });
-
-const alternateLinks = LANGUAGES
-  .filter((l) => pathAvailableLangs.includes(l.code))
-  .map((l) => ({
-    code: l.code,
-    hreflang: HREFLANG_MAP[l.code] || l.code,
-    href: switchLangPath(currentPath, locale, l.code), // already absolute for cross-domain
-    ogLocale: LOCALE_MAP[l.code] || l.code,
-  }));
-const xDefaultLang = pathAvailableLangs.includes(DEFAULT_LOCALE)
-  ? DEFAULT_LOCALE
-  : (pathAvailableLangs[0] || DEFAULT_LOCALE);
-const xDefaultURL = pathAvailableLangs.length > 0
-  ? switchLangPath(currentPath, locale, xDefaultLang)
-  : null;
+// Detail-URLs: hreflang nur wo der Eintrag published ist, mit dem Slug dieser Sprache.
+// noindex: keine Alternates, auch kein x-default. x-default ist de, sonst der erste Alternate.
+const { links: alternateLinks, xDefault: xDefaultURL } = hreflangAlternates({
+  path: currentPath,
+  locale,
+  noindex: Boolean(noindex),
+  availableLanguages,
+});
 const FALLBACK_OG = `${siteURL}/images/og-default.jpg`;
 const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : FALLBACK_OG;
 const preloadImageAbs = preloadImage ? (preloadImage.startsWith('http') ? preloadImage : preloadImage) : undefined;
@@ -158,7 +146,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   {alternateLinks.map((link) => (
     <link rel="alternate" href={link.href} hreflang={link.hreflang} />
   ))}
-  <link rel="alternate" href={xDefaultURL} hreflang="x-default" />
+  {xDefaultURL && <link rel="alternate" href={xDefaultURL} hreflang="x-default" />}
   <!-- Fonts: display=swap + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

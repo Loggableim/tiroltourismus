@@ -14,7 +14,9 @@ import SectionArticleContent from './SectionArticleContent.astro';
 import SectionMap from './SectionMap.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { DEFAULT_LOCALE } from '../lib/languages.js';
 
 export interface SectionConfig {
   type: string;
@@ -130,6 +132,10 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
 
     {sections.filter(s => s.type === 'description').map(s => (
       <SectionDescription label={s.label} title={s.title} content={s.content} />
+    ))}
+
+    {sections.filter(s => s.type === 'related-links').map(s => (
+      <RelatedLinks collection={s.collection} slug={s.slug} locale={s.locale ?? locale ?? DEFAULT_LOCALE} />
     ))}
 
     {sections.filter(s => s.type === 'details-grid').map(s => (

@@ -288,8 +288,9 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
       type: 'description',
       label: entry.name,
       title: l.ueberDiesesLokal,
-      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale),
+      content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale, 5, 'gastro', slug),
     } : null,
+    { type: 'related-links', collection: 'gastro', slug },
     !(tier === 'basic') ? {
       type: 'details-grid',
       items: [

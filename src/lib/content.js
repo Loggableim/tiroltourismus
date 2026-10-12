@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { linkDescriptionText } from './related.js';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 const _collectionCache = new Map();
@@ -338,30 +339,24 @@ function _buildEntityMap(locale = 'de') {
 }
 
 /**
- * HTML-Content mit automatischen internen Links anreichern.
- * Überspringt bereits bestehende Links und HTML-Tags.
- * Linkt maximal `maxLinks` Entitäten (Standard: 2).
+ * HTML-Content mit automatischen internen Links anreichern (siehe related.js).
+ * @param {string} [collection] — Collection des aktuellen Eintrags
+ * @param {string} [slug] — Slug des aktuellen Eintrags
  */
-export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLinks = 2) {
+export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLinks = 5, collection = null, slug = null) {
   if (!html || typeof html !== 'string') return html || '';
-  
+  if (collection && slug) {
+    return linkDescriptionText(html, collection, slug, locale, maxLinks, currentEntry);
+  }
   const entityMap = _buildEntityMap(locale);
-  const currentSlug = currentEntry?.slug;
   const currentName = (currentEntry?.name || currentEntry?.titel || '').toLowerCase();
-  
   let linked = 0;
   let result = html;
-  
   for (const entity of entityMap) {
     if (linked >= maxLinks) break;
-    
-    // Skip self-linking
-    if (currentSlug && entity.slug === currentSlug) continue;
     if (currentName && entity.name.toLowerCase() === currentName) continue;
-    
     const escaped = entity.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(?<!<[^>]*)(?<!href="[^"]*)(?<![\\w\\d])(${escaped})(?![\\w\\d])`, 'gi');
-    
     if (regex.test(result)) {
       result = result.replace(regex, (match) => {
         if (linked >= maxLinks) return match;
@@ -370,7 +365,6 @@ export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLin
       });
     }
   }
-  
   return result;
 }
 

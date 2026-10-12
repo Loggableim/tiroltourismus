@@ -327,9 +327,10 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
           type: 'description',
           label: l.details,
           title: l.mehrErfahren,
-          content: autoLinkContent(entry.beschreibung, entry, locale),
+          content: autoLinkContent(entry.beschreibung, entry, locale, 5, 'sehenswuerdigkeiten', slug),
         }
       : null,
+    { type: 'related-links', collection: 'sehenswuerdigkeiten', slug },
     !(tier === 'basic') && entry.tags && entry.tags.length > 0
       ? { type: 'tags', tags: entry.tags }
       : null,

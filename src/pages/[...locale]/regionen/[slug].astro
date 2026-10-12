@@ -345,9 +345,10 @@ const regionLD = {
           type: 'description',
           label: `${titel} ${t.entdecken}`,
           title: t.highlights,
-          content: autoLinkContent(beschreibung, entry, locale),
+          content: autoLinkContent(beschreibung, entry, locale, 5, 'regionen', slug),
         }
       : null,
+    { type: 'related-links', collection: 'regionen', slug },
     tags && tags.length > 0 ? { type: 'tags', tags: tags } : null,
     {
       type: 'related-grid',

@@ -86,7 +86,8 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
       { label: l.region, value: entry.region || undefined },
       { label: l.ausstattung, tags: entry.ausstattung || [], type: 'tags' },
     ].filter(Boolean) },
-    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale, 5, 'camping', slug) } : null,
+    { type: 'related-links', collection: 'camping', slug },
     !(tier === 'basic') ? { type: 'details-grid', items: [
       { label: l.preis, value: entry.preis_ab || undefined, type: 'price' },
       entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,

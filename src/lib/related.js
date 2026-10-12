@@ -312,6 +312,14 @@ export function linkDescriptionText(
   ).toLowerCase();
   const selfSlug = slug;
 
+  const htmlLower = html.replace(/<[^>]+>/g, ' ').toLowerCase();
+  const linkableNames = store.names.filter((ent) => {
+    if (ent.slug === selfSlug && ent.collection === collection) return false;
+    if (ent.name.length < 6) return false;
+    if (selfName && ent.name.toLowerCase() === selfName) return false;
+    return htmlLower.includes(ent.name.toLowerCase());
+  });
+
   let linked = 0;
   const segments = splitHtmlSegments(html);
   const result = segments.map((seg) => {
@@ -319,11 +327,8 @@ export function linkDescriptionText(
     if (seg.startsWith('<')) return seg;
     let text = seg;
     const segLower = text.toLowerCase();
-    for (const ent of store.names) {
+    for (const ent of linkableNames) {
       if (linked >= maxLinks) break;
-      if (ent.slug === selfSlug && ent.collection === collection) continue;
-      if (ent.name.length < 6) continue;
-      if (selfName && ent.name.toLowerCase() === selfName) continue;
       const nameLower = ent.name.toLowerCase();
       if (!segLower.includes(nameLower)) continue;
       const escaped = ent.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

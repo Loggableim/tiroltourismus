@@ -1,7 +1,7 @@
 {
   "name": "tiroltourismus",
   "version": "2.0.0",
-  "description": "Tirol Tourismus Portal — JSON-driven, Astro 5",
+  "description": "Tirol Tourismus Portal \u2014 JSON-driven, Astro 5",
   "type": "module",
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
@@ -9,7 +9,9 @@
     "build:astro": "astro build",
     "build": "npm run build:search-index && npm run build:astro",
     "build:ci": "npm run build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "check:chrono-contrast": "node scripts/check-chronochrom-contrast.mjs",
+    "check:chrono-live": "node scripts/check-chronochrom-live.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

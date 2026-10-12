@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, autoLinkContent } from '../../../lib/content.js';
-import { generateMetaDescription } from '../../../lib/seo.js';
+import { generateMetaDescription, buildPageTitle } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
 
 const LABELS = {
@@ -77,7 +77,7 @@ const articlePubDate = entry.datum ? entry.datum + 'T00:00:00' : undefined;
 ---
 
 <DetailPage
-  title={entry.titel}
+  title={buildPageTitle(entry, 'magazin', locale)}
   description={generateMetaDescription(entry, 'magazin', locale)}
   jsonld={jsonld}
   ogImage={articleOgImage}

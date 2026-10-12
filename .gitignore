@@ -17,3 +17,15 @@ scripts/__pycache__/
 _live_now.html
 _land.html
 _kuf.html
+
+# Local Node binary drop. Deploy uses actions/setup-node (Node 24).
+node-v20/
+
+# Node compile cache directory.
+declaredeclare/
+
+# Backup archives.
+*.tar.gz
+
+# Generator and batch logs.
+*.log

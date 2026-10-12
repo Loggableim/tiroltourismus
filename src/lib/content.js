@@ -373,3 +373,67 @@ export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLin
   
   return result;
 }
+
+const _existsCache = new Map();
+
+/**
+ * Prüft schnell (mit Cache), ob ein Eintrag in einer Sprache existiert und veröffentlicht ist.
+ */
+export function entryExists(collection, slug, locale = 'de') {
+  const key = `${locale}:${collection}:${slug}`;
+  if (_existsCache.has(key)) return _existsCache.get(key);
+  const dataDir = !locale || locale === 'de' ? DATA_DIR : path.join(DATA_DIR, locale);
+  const jsonPath = path.join(dataDir, collection, slug, 'index.json');
+  if (!fs.existsSync(jsonPath)) {
+    _existsCache.set(key, false);
+    return false;
+  }
+  const entry = readEntry(collection, slug, locale);
+  const valid = Boolean(entry && isPublished(entry));
+  _existsCache.set(key, valid);
+  return valid;
+}
+
+/**
+ * Gibt alle Sprachen aus den übergebenen Locales (Standard: alle 8) zurück,
+ * in denen ein Eintrag wirklich existiert und veröffentlicht ist.
+ * Wenn indexableOnly: true, werden für Qualitäts-Collections nur indexierbare Einträge gezählt.
+ */
+export function getAvailableLocalesForEntry(collection, slug, options = {}) {
+  const { indexableOnly = false, locales = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'] } = options;
+  if (collection === 'bezirke') {
+    return locales.filter(l => {
+      const b = readSingleton('bezirke', l);
+      return Boolean(b && b[slug]);
+    });
+  }
+
+  const QUALITY_COLLECTIONS = ['unterkuenfte', 'gastro', 'camping', 'orte', 'sehenswuerdigkeiten'];
+  return locales.filter(l => {
+    if (!entryExists(collection, slug, l)) return false;
+    if (indexableOnly && QUALITY_COLLECTIONS.includes(collection)) {
+      const entry = readEntry(collection, slug, l);
+      return Boolean(entry && shouldIndex(entry, collection));
+    }
+    return true;
+  });
+}
+
+/**
+ * Ermittelt verfügbare Sprachen für einen gegebenen Pfad (z.B. /unterkuenfte/alpenrose/ oder /en/magazin/xyz/).
+ */
+export function getAvailableLocalesForPath(pathname, options = {}) {
+  const locales = options.locales || ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'];
+  const prefixRegex = new RegExp(`^/(${locales.join('|')})(/|$)`);
+  const match = pathname.match(prefixRegex);
+  const cleanPath = (match ? pathname.slice(match[1].length + 1) : pathname).replace(/^\/+|\/+$/g, '');
+  const segments = cleanPath.split('/').filter(Boolean);
+
+  if (segments.length === 2) {
+    const [collection, slug] = segments;
+    return getAvailableLocalesForEntry(collection, slug, { ...options, locales });
+  }
+
+  // Alle anderen Seiten (Home, Listen, Info/Service) existieren in allen veröffentlichten Sprachen
+  return locales;
+}

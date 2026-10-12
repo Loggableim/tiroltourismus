@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
+import { readEntry, isPublished, shouldIndex, readSingleton, getAvailableLocalesForEntry } from './src/lib/content.js';
+
 // ── Subdomain-Architektur: site-URL hängt von BUILD_LANGS ab ──
 // Single-Lang-Build (z.B. BUILD_LANGS=cs) → alle Seiten auf cs.tiroltourismus.com (Root-Paths)
 // Multi-Lang (Dev, ohne BUILD_LANGS) → de auf Root, andere mit Prefix (lokales Dev)
@@ -39,16 +41,70 @@ export default defineConfig({
     },
   },
   integrations: [react(), sitemap({
-    filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
+    filter: (page) => {
+      try {
+        const url = new URL(page);
+        const segments = url.pathname.split('/').filter(Boolean);
+
+        let locale = isSingleLang ? (singleLang || 'de') : 'de';
+        let pathSegments = segments;
+        if (!isSingleLang && segments.length > 0 && PUBLISHED_LANGS.includes(segments[0])) {
+          locale = segments[0];
+          pathSegments = segments.slice(1);
+        }
+
+        const normalizedPath = '/' + pathSegments.join('/') + (pathSegments.length > 0 ? '/' : '');
+        const EXCLUDED_PREFIXES = ['/404', '/500', '/login', '/dashboard', '/admin', '/suche'];
+        if (EXCLUDED_PREFIXES.some(p => normalizedPath === p || normalizedPath.startsWith(p + '/'))) {
+          return false;
+        }
+
+        if (pathSegments.length === 2) {
+          const [collection, slug] = pathSegments;
+          if (collection === 'bezirke') {
+            const b = readSingleton('bezirke', locale);
+            return Boolean(b && b[slug]);
+          }
+          const QUALITY_COLLECTIONS = ['unterkuenfte', 'gastro', 'camping', 'orte', 'sehenswuerdigkeiten'];
+          if (QUALITY_COLLECTIONS.includes(collection)) {
+            const entry = readEntry(collection, slug, locale);
+            if (!entry || !isPublished(entry) || !shouldIndex(entry, collection)) {
+              return false;
+            }
+          } else {
+            const entry = readEntry(collection, slug, locale);
+            if (!entry || !isPublished(entry)) {
+              return false;
+            }
+          }
+        }
+        return true;
+      } catch {
+        return true;
+      }
+    },
     entryLimit: 10000,
     lastmod: new Date(),
     serialize: (entry) => {
-      // Single-Lang: alle Seiten liegen auf der Sprach-Subdomain an Root-Paths.
-      // hreflang-Links zeigen cross-domain auf die anderen Sprach-Subdomains.
       const relPath = entry.url.startsWith(siteUrl) ? entry.url.slice(siteUrl.length) : entry.url;
-      const links = PUBLISHED_LANGS.map(l => ({
+      const cleanPath = relPath.replace(/^\/+|\/+$/g, '');
+      const segments = cleanPath.split('/').filter(Boolean);
+
+      let pathSegments = segments;
+      if (!isSingleLang && segments.length > 0 && PUBLISHED_LANGS.includes(segments[0])) {
+        pathSegments = segments.slice(1);
+      }
+
+      let availableLangs = PUBLISHED_LANGS;
+      if (pathSegments.length === 2) {
+        const [collection, slug] = pathSegments;
+        availableLangs = getAvailableLocalesForEntry(collection, slug, { indexableOnly: true });
+      }
+
+      const pathSuffix = pathSegments.length > 0 ? `/${pathSegments.join('/')}/` : '/';
+      const links = availableLangs.map(l => ({
         lang: HREFLANG_MAP[l],
-        url: `${LANG_DOMAINS[l]}${relPath}`,
+        url: `${LANG_DOMAINS[l]}${pathSuffix}`,
       }));
       return { url: entry.url, links };
     },

@@ -2,7 +2,7 @@
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
 // Locale-aware SEO: canonical + hreflang alternates for all ready languages.
 import { ViewTransitions } from 'astro:transitions';
-import { readSingleton } from '../lib/content.js';
+import { readSingleton, getAvailableLocalesForPath } from '../lib/content.js';
 import { LANGUAGES, switchLangPath, DEFAULT_LOCALE, LANG_DOMAINS, PUBLISHED_LANGS, SOON_LANGS, localePrefix as localePrefixFn } from '../lib/languages.js';
 import TirolLogo from '../components/TirolLogo.astro';
 
@@ -18,6 +18,7 @@ export interface Props {
   publishedTime?: string;
   jsonld?: Record<string, unknown>;
   noindex?: boolean;
+  availableLanguages?: string[];
 }
 
 const {
@@ -31,6 +32,7 @@ const {
   publishedTime,
   jsonld,
   noindex,
+  availableLanguages,
 } = Astro.props;
 
 // Locale helpers — dynamisch für alle Sprachen
@@ -64,17 +66,26 @@ const normalizePath = (path) => {
 };
 const absoluteURL = (path) => path.startsWith('http') ? path : `${siteURL}${normalizePath(path)}`;
 const pageURL = canonicalURL ? absoluteURL(canonicalURL) : absoluteURL(Astro.url.pathname);
-// hreflang: nur VERÖFFENTLICHTE Sprachen (de/en/fr/cs/nl) — it/es/zh haben keine Inhalte
+// hreflang: nur Sprachen, in denen der Eintrag wirklich existiert (mit korrektem Slug)
 // switchLangPath liefert absolute URLs für Cross-Domain-Sprachen
+const pathAvailableLangs = (availableLanguages && Array.isArray(availableLanguages))
+  ? availableLanguages.filter((l) => PUBLISHED_LANGS.includes(l))
+  : getAvailableLocalesForPath(currentPath, { locales: PUBLISHED_LANGS });
+
 const alternateLinks = LANGUAGES
-  .filter((l) => PUBLISHED_LANGS.includes(l.code))
+  .filter((l) => pathAvailableLangs.includes(l.code))
   .map((l) => ({
     code: l.code,
     hreflang: HREFLANG_MAP[l.code] || l.code,
     href: switchLangPath(currentPath, locale, l.code), // already absolute for cross-domain
     ogLocale: LOCALE_MAP[l.code] || l.code,
   }));
-const xDefaultURL = switchLangPath(currentPath, locale, DEFAULT_LOCALE);
+const xDefaultLang = pathAvailableLangs.includes(DEFAULT_LOCALE)
+  ? DEFAULT_LOCALE
+  : (pathAvailableLangs[0] || DEFAULT_LOCALE);
+const xDefaultURL = pathAvailableLangs.length > 0
+  ? switchLangPath(currentPath, locale, xDefaultLang)
+  : null;
 const FALLBACK_OG = `${siteURL}/images/og-default.jpg`;
 const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : FALLBACK_OG;
 const preloadImageAbs = preloadImage ? (preloadImage.startsWith('http') ? preloadImage : preloadImage) : undefined;

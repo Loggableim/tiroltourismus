@@ -3,7 +3,7 @@
  * Konvertiert src/pages/[locale]/ → src/pages/[...locale]/ für Root-Serving.
  *
  * Änderungen pro Datei:
- * 1. getStaticPaths → localeParams() (Single-Lang: [undefined] für Root, [] für DE)
+ * 1. getStaticPaths → localeParams() (Single-Lang: [undefined] für Root, auch DE)
  * 2. const { locale } = Astro.params → const locale = Astro.params.locale || DEFAULT_LOCALE
  * 3. [slug]-Loops: for (const loc of locales) { const locale = loc || DEFAULT_LOCALE; ... params: { locale: loc, slug } }
  * 4. Imports: localeParams + DEFAULT_LOCALE ergänzen

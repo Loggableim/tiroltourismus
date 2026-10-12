@@ -87,17 +87,17 @@ export function localePrefix(locale) {
 
 /**
  * Static-Path-Parameter für [...locale]-Routen.
- * Single-Lang-Build:
- *   de  → []            (DE-Root-Seiten übernehmen)
- *   en  → [undefined]   (Root-Serving auf en.tiroltourismus.com)
- * Multi-Lang (Dev):
- *   → ['en', 'fr', ...] (mit Prefix; de übernimmt Root)
+ * Es gibt keine separaten DE-Root-Seiten mehr. Jede Sprache, auch Deutsch,
+ * kommt aus src/pages/[...locale].
+ * Single-Lang-Build (de, en, …): [undefined] → Root-Serving auf der Subdomain.
+ * Multi-Lang (Dev): undefined für de (Root) plus Prefix-Locales.
  */
 export function localeParams() {
   if (BUILD_LANGS.length === 1) {
-    return BUILD_LANGS[0] === 'de' ? [] : [undefined];
+    return [undefined];
   }
-  return BUILD_LANGS.filter(l => l !== 'de');
+  const prefixed = BUILD_LANGS.filter((l) => l !== 'de');
+  return BUILD_LANGS.includes('de') ? [undefined, ...prefixed] : prefixed;
 }
 
 /**

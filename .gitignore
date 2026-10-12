@@ -14,6 +14,14 @@ landing/dist/
 landing/.astro/
 _kv_id.txt
 scripts/__pycache__/
+__pycache__/
+*.pyc
 _live_now.html
 _land.html
 _kuf.html
+
+# Local env files. Tracked templates stay tracked; this does not untrack them.
+.env*
+
+# Log files
+*.log

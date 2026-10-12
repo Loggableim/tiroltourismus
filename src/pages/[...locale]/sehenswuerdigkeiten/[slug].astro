@@ -1,6 +1,5 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
-import PaywallOverlay from '../../../components/PaywallOverlay.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
@@ -323,7 +322,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
           ].filter(Boolean),
         }
       : null,
-    !(tier === 'basic') && entry.beschreibung
+    entry.beschreibung
       ? {
           type: 'description',
           label: l.details,
@@ -377,12 +376,3 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
     },
   ].filter(Boolean)}
 />
-
-<!-- Basic: Premium-Inhalte hinter Paywall -->
-{(tier === 'basic') && (
-  <section class="section paywall-restricted">
-    <div class="container" style="position:relative;max-width:800px">
-      <PaywallOverlay name={entry.name} slug={slug} />
-    </div>
-  </section>
-)}

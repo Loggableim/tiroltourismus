@@ -3,7 +3,8 @@
  * Fetches each host's /assets/js/tirol.js, evaluates CHRONOCHROM_CORE at key hours,
  * asserts --text vs --bg >= 4.5:1. Per-locale HomepageArt palettes are not modified.
  */
-import { chromium } from '/workspace/tirol/review/shots/node_modules/playwright/index.js';
+import pkg from '/workspace/tirol/review/shots/node_modules/playwright/index.js';
+const { chromium } = pkg;
 
 const MIN = 4.5;
 const HOURS = [2, 5.5, 7.5, 10, 13, 16.5, 17.5, 18.5, 21.5];

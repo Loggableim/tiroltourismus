@@ -36,5 +36,14 @@ __pycache__/
 *secret*temp*
 tmp_*decrypt*
 
-# Logs
+# Local Node binary drop. Deploy uses actions/setup-node (Node 24).
+node-v20/
+
+# Node compile cache directory.
+declaredeclare/
+
+# Backup archives.
+*.tar.gz
+
+# Generator and batch logs.
 *.log

@@ -5,13 +5,13 @@
   "region": "zillertal",
   "ort": "Schwaz",
   "kategorie": "burg",
-  "kurzbeschreibung": "Mittelalterliche Höhenburg über Schwaz mit Museum zur Bergbaugeschichte und atemberaubendem Blick über das Inntal und die Zillertaler Alpen.",
-  "beschreibung": "Die <strong>Burg Freundsberg</strong> thront auf einem bewaldeten Hügel oberhalb der Stadt Schwaz – einst eine der reichsten Städte Europas dank des Silberbergbaus. Die um 1150 erbaute Burganlage diente den Landesfürsten als Verwaltungssitz. Heute beherbergt sie das <strong>Museum der Stadt Schwaz</strong> mit einer beeindruckenden Sammlung zur Geschichte des Silberbergbaus, zur Stadtentwicklung und zur Volkskunde des Zillertals. Der mächtige Bergfried aus dem 12. Jahrhundert kann bestiegen werden und belohnt mit einem <strong>herrlichen Panoramablick</strong> über das Inntal, die Stadt Schwaz und die Bergkulisse der Zillertaler und Tuxer Alpen.",
+  "kurzbeschreibung": "Burg Freundsberg thront über Schwaz: 1122 gegründete Stammburg, 28 Meter hoher Wohnturm mit Silberbergbau-Museum und gemütlicher Schlossschenke.",
+  "beschreibung": "<h2>Überblick</h2><p>Die <strong>Burg Freundsberg</strong> erhebt sich auf einem steilen Felsvorsprung auf 675 Metern Seehöhe rund 130 Meter über der Altstadt von Schwaz im Tiroler Unterinntal. Als einstiger Stammsitz des mächtigen Rittergeschlechts der Herren von Freundsberg prägt der markante, weithin sichtbare Bergfried seit über 900 Jahren das Stadtbild. Heute beherbergt die Anlage das <em>Museum der Stadt Schwaz</em>, das sich der faszinierenden Historie des Schwazer Silber- und Kupferbergbaus widmet, sowie eine beliebte historische Burggaststätte mit schattigem Gastgarten.</p><h2>Geschichte & Architektur</h2><p>Die Anlage wurde um 1122 von den <em>Herren von Freundsberg</em> gegründet; die dazugehörige Burgkapelle wurde 1176 geweiht. Als die Freundsberger 1467 in finanzielle Bedrängnis gerieten, verkaufte Ulrich von Freundsberg die Burg an den Tiroler Landesfürsten <strong>Herzog Sigmund den Münzreichen</strong>. Sigmund ließ die Wehranlage großzügig erweitern und nutzte sie als fürstliches Jagdschloss. Das architektonische Kernstück ist der fünfgeschossige, 28 Meter hohe römisch-gotische <em>Wohnturm (Bergfried)</em>: Seine massiven Mauern beherbergen seltene spätgotische Wandfresken, Wappenzyklen und Renaissance-Täfelungen. Unmittelbar neben dem Turm errichteten die Gewerkenfamilien zwischen 1634 und 1637 die barocke Schlosskirche mit Stuckaturen und Altarbildern. Seit 1931 zeigt das Stadtmuseum im Bergfried kostbare Exponate aus der Blütezeit von Schwaz, als die Stadt im 15. und 16. Jahrhundert zur größten Silbermetropole Europas aufstieg und Handelsdynastien wie die Fugger finanzierte.</p><h2>Besuch & Anreise</h2><p>Das Museum im Schlossturm ist von Anfang Mai bis Ende Oktober von Dienstag bis Sonntag jeweils von 11:30 bis 17:00 Uhr geöffnet (Montag Ruhetag). Der Außenbereich der Burganlage und der Burghof sind ganzjährig frei zugänglich. Eintrittspreise Museum (Stand 2025/2026): Erwachsene ca. 6,00 €, Ermäßigte und Studenten 4,50 €, Kinder bis 14 Jahre 3,50 €; Inhaber der regionalen Gästekarte <em>Silbercard</em> erhalten Ermäßigung. Die <em>Schlossschenke Freundsberg</em> bietet traditionelle Tiroler Wirtshausküche. Anreise mit den Öffis: ÖBB bzw. S-Bahn Tirol bis Bahnhof Schwaz, von dort mit dem Schwazer Stadtbus (Linie 1) bis Haltestelle Freundsberg oder zu Fuß über den historischen Schlossweg (ca. 25–30 Minuten bergauf). Mit dem Auto: Inntalautobahn A12, Ausfahrt Schwaz, der Beschilderung Richtung Burg Freundsberg / Burggasse folgen; Parkplätze stehen direkt unterhalb des Schlosses zur Verfügung.</p><h2>Tipps</h2><p>Der Aufstieg über die historischen Holzstiegen im Bergfried wird im obersten Stockwerk mit einem atemberaubenden Rundblick über das Silberbergbaurevier, das Inntal und das Karwendelgebirge belohnt. Wegen der historischen Bausubstanz ist der Turm nicht barrierefrei; der Burghof und die Schlossschenke sind jedoch ebenerdig passierbar. Planen Sie Zeit für ein Mittagessen oder eine Marende im schattigen Burghof der Schlossschenke ein.</p>",
   "emoji": "🏰",
   "farbe": "#5D4037",
   "hoehe": "680 m",
   "dauer": "1–2 Stunden",
-  "preis": "6 € (Erwachsene)",
+  "preis": "Erwachsene ca. 6,00 €, Kinder 3,50 €",
   "tags": [
     "burg",
     "museum",
@@ -20,10 +20,16 @@
     "bergbau",
     "schwaz"
   ],
-  "oeffnungszeiten": "Mai–Okt: Di–So 10:00–17:00; Nov–Apr: Do–So 10:00–16:00",
-  "webseite": "https://www.schwaz.at",
+  "oeffnungszeiten": "Mai bis Oktober Di–So 11:30–17:00 Uhr (Mo Ruhetag)",
+  "webseite": "https://www.freundsberg.at",
   "koordinaten": {
     "lat": "47.3400",
     "lng": "11.7100"
-  }
+  },
+  "sources": [
+    "https://www.freundsberg.at",
+    "https://www.silberregion-karwendel.com",
+    "https://www.schwaz.at",
+    "https://de.wikipedia.org/wiki/Burg_Freundsberg"
+  ]
 }

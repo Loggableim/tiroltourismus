@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Landeck",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Mittelalterliche Höhenburg oberhalb von Landeck mit Museum zur Stadtgeschichte und einem herrlichen Blick über das Inntal.",
-  "beschreibung": "Die Burg Landeck thront auf einem Felskopf über der Stadt Landeck und ist das Wahrzeichen der Region. Die im 13. Jahrhundert erbaute Anlage beherbergt heute das <strong>Burgmuseum</strong> mit einer umfangreichen Sammlung zur Stadt- und Regionalgeschichte, darunter Waffen, Möbel, sakrale Kunst und archäologische Funde aus der Bronzezeit. Der mächtige Bergfried bietet einen beeindruckenden Rundblick über das Inntal, die umliegenden Berge und den Talkessel von Landeck. Der Rittersaal und der Zinnenturm sind bei Führungen erlebbar.",
+  "kurzbeschreibung": "Schloss Landeck thront auf einem Felssporn über dem Inn: 1250 erbaut, landesfürstlicher Gerichtssitz, gotische Kapelle von 1522 und Bezirksmuseum.",
+  "beschreibung": "<h2>Überblick</h2><p>Das weithin sichtbare <strong>Schloss Landeck</strong> (auch <em>Burg Landeck</em> genannt) thront auf einem steil abfallenden Felssporn hoch über der Bezirkshauptstadt Landeck im Tiroler Oberland auf 817 Metern Seehöhe. Als unverkennbares Wahrzeichen der Stadt überwachte die Wehranlage seit dem Hochmittelalter den Knotenpunkt dreier bedeutender Alpenübergänge (Arlberg, Reschenpass, Fernpass). Heute beherbergt das sorgfältig restaurierte Schloss das preisgekrönte <em>Bezirksmuseum Landeck</em>, eine renommierte Kunstgalerie und ein lebendiges Kulturzentrum.</p><h2>Geschichte & Architektur</h2><p>Die Burg wurde in der ersten Hälfte des 13. Jahrhunderts – vermutlich um 1250 – von den <em>Grafen von Ulten</em> an der antiken Trasse der Via Claudia Augusta erbaut. Nach dem Aussterben der Ulter Grafen baute Graf <strong>Meinhard II. von Tirol-Görz</strong> die Anlage um 1290 massiv aus; ab 1282 fungierte das Schloss als bedeutender landesfürstlicher Gerichtssitz. Seine architektonische Glanzzeit erlebte der Komplex im 15. und 16. Jahrhundert unter den Rittern von Schrofenstein: Zu dieser Epoche entstand die spätgotische <em>Burgkapelle zum Hl. Stephanus</em> mit wertvollen Wandmalereien aus dem Jahr 1522, die den Hl. Stephanus und den Erzengel Michael darstellen. Zur historischen Bausubstanz zählen der wuchtige Bergfried, ein dreigeschossiger Palas und ein idyllischer gotischer Arkadenhof. Nach vorbildlichen Sanierungen durch den Verein Schloss Landeck wurde das Bezirksmuseum mit dem Österreichischen Museumsgütesiegel prämiert. Im Mittelpunkt der Dauerausstellung „Bleiben oder Gehen\" steht das Schicksal der legendären <em>Schwabenkinder</em> – Tiroler Bergbauernkinder, die im 19. Jahrhundert zur sommerlichen Saisonarbeit nach Schwaben zogen.</p><h2>Besuch & Anreise</h2><p>Das Bezirksmuseum ist in der Sommersaison (25. April bis 26. Oktober) täglich von 10:00 bis 17:00 Uhr geöffnet (kein Ruhetag). In der Wintersaison (Mitte Dezember bis 6. Jänner) öffnet das Haus täglich von 13:00 bis 17:00 Uhr (am 1. Jänner geschlossen). Eintrittspreise (Stand Saison 2025/2026): Erwachsene 9,00 €, Senioren 8,00 €, Personen mit Beeinträchtigung 5,00 €, Schüler und Studenten 4,50 €, Kinder unter 6 Jahren frei. Familienkarten kosten zwischen 12,00 und 19,00 €. Mit der Gästekarte <em>TirolWest Card</em> ist der Museumseintritt kostenlos. Anreise mit der Bahn: ÖBB bis zum Schnellzughalt Bahnhof Landeck-Zams, von dort mit dem Stadtbus (Linie 2 oder 3) bis zur Stadtpfarrkirche, dann ca. 10 bis 15 Minuten Fußweg hinauf zum Schloss. Mit dem Auto: Über die Inntalautobahn A12 bzw. Arlbergschnellstraße S16 bis Landeck; Parkmöglichkeiten im Tal am Innparkplatz oder in der Kurzparkzone nahe der Volksschule / Stadtpfarrkirche.</p><h2>Tipps</h2><p>Der Schlossinnenhof und das Erdgeschoss mit barrierefreiem WC sind stufenlos zugänglich; die Ausstellungsräume im Turm und Obergeschoss sind über historische Holztreppen erreichbar. Die Dauerausstellung zu den Schwabenkindern bietet einen tief berührenden Einblick in die alpine Sozialgeschichte. Vom Schlossgarten aus eröffnet sich ein grandioser Blick über die Talkessel von Landeck und Zams sowie auf die Lechtaler Alpen.</p>",
   "emoji": "🏰",
   "farbe": "#795548",
   "hoehe": "870 m",
   "dauer": "1–2 Stunden",
-  "preis": "8 € (Erwachsene)",
+  "preis": "Erwachsene 9,00 €, Senioren 8,00 €, Schüler 4,50 €",
   "tags": [
     "burg",
     "museum",
@@ -19,12 +19,18 @@
     "aussicht",
     "kultur"
   ],
-  "oeffnungszeiten": "Mai–Okt: Di–So 10:00–17:00",
-  "webseite": "https://www.burglandeck.at",
+  "oeffnungszeiten": "Sommer täglich 10:00–17:00 Uhr, Winter tgl. 13:00–17:00 Uhr",
+  "webseite": "https://www.schlosslandeck.at",
   "koordinaten": {
     "lat": "47.1333",
     "lng": "10.5667"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.schlosslandeck.at",
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Schloss_Landeck_(Tirol)",
+    "https://www.tagdesdenkmals.at"
+  ]
 }

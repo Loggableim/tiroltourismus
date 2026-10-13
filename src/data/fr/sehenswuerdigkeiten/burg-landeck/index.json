@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Landeck",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Forteresse médiévale en hauteur au-dessus de Landeck , avec un musée dédié à l’histoire de la ville et une vue magnifique sur la vallée de l’ Inn .",
-  "beschreibung": "Die Burg Landeck thront auf einem Felskopf über der Stadt Landeck und ist das Wahrzeichen der Region. Die im 13. Jahrhundert erbaute Anlage beherbergt heute das <strong>Burgmuseum</strong> mit einer umfangreichen Sammlung zur Stadt- und Regionalgeschichte, darunter Waffen, Möbel, sakrale Kunst und archäologische Funde aus der Bronzezeit. Der mächtige Bergfried bietet einen beeindruckenden Rundblick über das Inntal, die umliegenden Berge und den Talkessel von Landeck. Der Rittersaal und der Zinnenturm sind bei Führungen erlebbar.",
+  "kurzbeschreibung": "Schloss Landeck domine l'Inn depuis son ?peron rocheux : b?ti en 1250, si?ge de justice comtale, chapelle gothique de 1522 et mus?e r?gional.",
+  "beschreibung": "<h2>Aper?u</h2><p>Visible de loin, <strong>Schloss Landeck</strong> (aussi appel? <em>Burg Landeck</em>) tr?ne sur un ?peron rocheux escarp? surplombant la ville de Landeck dans le Tiroler Oberland, ? 817 m?tres d'altitude. Embl?me incontournable de la cit?, la forteresse surveillait depuis le Moyen ?ge classique le carrefour strat?gique de trois cols alpins majeurs (Arlberg, Reschenpass, Fernpass). Aujourd'hui, le ch?teau soigneusement restaur? abrite le prestigieux <em>Bezirksmuseum Landeck</em>, une galerie d'art r?put?e et un centre culturel dynamique.</p><h2>Histoire et architecture</h2><p>Le ch?teau a ?t? ?difi? dans la premi?re moiti? du XIIIe si?cle ? probablement vers 1250 ? par les <em>Grafen von Ulten</em> le long de l'ancien trac? de la Via Claudia Augusta. Apr?s l'extinction des comtes d'Ulten, le comte <strong>Meinhard II. von Tirol-G?rz</strong> agrandit massivement l'?difice vers 1290 ; ? partir de 1282, le ch?teau servit de haut si?ge de tribunal souverain. Le complexe connut son apog?e architectural aux XVe et XVIe si?cles sous les chevaliers de Schrofenstein : c'est ? cette ?poque que fut ?rig?e la chapelle gothique tardif <em>Burgkapelle zum Hl. Stephanus</em>, orn?e de pr?cieuses fresques murales datant de 1522 repr?sentant saint ?tienne et l'archange saint Michel. Le patrimoine historique comprend un puissant donjon, un logis seigneurial ? trois ?tages et une cour idyllique ? arcades gothiques. Gr?ce ? des restaurations exemplaires men?es par l'association Verein Schloss Landeck, le mus?e de district a ?t? r?compens? par le label de qualit? des mus?es autrichiens. Au c?ur de l'exposition permanente ? Bleiben oder Gehen ?, les visiteurs d?couvrent le destin poignant des l?gendaires <em>Schwabenkinder</em>, ces enfants de paysans tyroliens contraints au XIXe si?cle de partir en Souabe pour des travaux saisonniers estivaux.</p><h2>Visite et acc?s</h2><p>Le mus?e de district est ouvert pendant la saison estivale (du 25 avril au 26 octobre) tous les jours de 10h00 ? 17h00 (sans jour de fermeture). Pendant la saison hivernale (de mi-d?cembre au 6 janvier), il ouvre tous les jours de 13h00 ? 17h00 (ferm? le 1er janvier). Tarifs d'entr?e (saison 2025/2026) : adultes 9,00 ?, seniors 8,00 ?, personnes en situation de handicap 5,00 ?, scolaires et ?tudiants 4,50 ?, gratuit pour les enfants de moins de 6 ans. Cartes familiales de 12,00 ? 19,00 ?. Avec la carte d'h?te <em>TirolWest Card</em>, l'entr?e au mus?e est gratuite. En train : ?BB jusqu'? la gare grande ligne de Landeck-Zams, puis bus urbain (ligne 2 ou 3) jusqu'? la Stadtpfarrkirche, suivi de 10 ? 15 minutes de marche jusqu'au ch?teau. En voiture : via l'autoroute Inntalautobahn A12 ou la voie rapide Arlbergschnellstra?e S16 jusqu'? Landeck ; stationnement dans la vall?e au parking de l'Inn ou pr?s de l'?cole/?glise paroissiale.</p><h2>Conseils</h2><p>La cour int?rieure du ch?teau et le rez-de-chauss?e avec toilettes adapt?es sont accessibles de plain-pied ; les salles d'exposition de la tour et des ?tages sup?rieurs sont accessibles par des escaliers en bois historiques. L'exposition sur les Schwabenkinder offre un aper?u profond?ment ?mouvant de l'histoire sociale alpine. Depuis le jardin du ch?teau, vous profiterez d'un magnifique panorama sur les bassins de Landeck et Zams ainsi que sur les Lechtaler Alpen.</p>",
   "emoji": "🏰",
   "farbe": "#795548",
   "hoehe": "870 m",
   "dauer": "1–2 Stunden",
-  "preis": "8 € (Erwachsene)",
+  "preis": "Erwachsene 9,00 €, Senioren 8,00 €, Schüler 4,50 €",
   "tags": [
     "château",
     "musée",
@@ -19,12 +19,18 @@
     "vue panoramique",
     "culture"
   ],
-  "oeffnungszeiten": "Mai–Okt: Di–So 10:00–17:00",
-  "webseite": "https://www.burglandeck.at",
+  "oeffnungszeiten": "Sommer täglich 10:00–17:00 Uhr, Winter tgl. 13:00–17:00 Uhr",
+  "webseite": "https://www.schlosslandeck.at",
   "koordinaten": {
     "lat": "47.1333",
     "lng": "10.5667"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.schlosslandeck.at",
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Schloss_Landeck_(Tirol)",
+    "https://www.tagdesdenkmals.at"
+  ]
 }

@@ -3,15 +3,15 @@
   "slug": "karwendelbahn",
   "status": "published",
   "region": "achensee",
-  "ort": "Maurach",
+  "ort": "Pertisau",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Téléphérique spectaculaire reliant le lac d’ Achensee au sommet du Bärenkopf (1 844 m), offrant une vue à couper le souffle sur les montagnes du Karwendelgebirge .",
-  "beschreibung": "<p>Die <strong>Karwendelbahn</strong> in Maurach ist eine Standseilbahn, die vom Achensee auf die Erfurter Hütte führt. Sie überwindet auf einer Länge von rund 3,6 Kilometern einen Höhenunterschied von etwa 1000 Metern. Die Talstation liegt auf 800 Metern Seehöhe, die Bergstation auf 1800 Metern. Im Sommer dient die Bahn vorrangig als Aufstiegshilfe für Wanderer und Ausgangspunkt für Touren im Karwendelgebirge. Im Winter erschließt sie das Skigebiet Achenkirch und verbindet die Abfahrten mit dem Tal. Die Fahrt bietet einen Blick auf den gesamten Achensee und die umliegenden Bergketten. Die Bahn ist familientauglich und ermöglicht einen Zugang zur Hochgebirgslandschaft ohne große eigene Anstrengung.</p>",
+  "kurzbeschreibung": "La Karwendel-Bergbahn à Pertisau emmène les visiteurs au sommet du Zwölferkopf à 1 491 m : vue panoramique sur l'Achensee, haut lieu du parapente et sentiers de randonnée.",
+  "beschreibung": "<h2>Aperçu</h2><p>La traditionnelle <strong>Karwendel-Bergbahn</strong> (souvent appelée <em>Karwendelbahn am Achensee</em>) part directement du centre idyllique du village de Pertisau, à 963 mètres d'altitude, sur la rive ouest de l'Achensee. Cette télécabine pulsée moderne dessert le <strong>Zwölferkopf</strong> (1 491 m), une montagne panoramique et de loisirs ensoleillée aux portes du <em>Naturpark Karwendel</em>. Pendant la courte montée et depuis la station amont, un panorama spectaculaire s'ouvre sur la « mer tyrolienne » aux reflets émeraude, le massif du Rofangebirge et les crêtes escarpées de la chaîne du Karwendel.</p><h2>Sport, randonnée et nature</h2><p>L'aménagement touristique du Zwölferkopf a débuté en 1959 avec la construction du téléphérique d'origine ; l'installation n'a cessé d'être modernisée depuis. Sur le plateau sommital, randonneurs et amoureux de la nature profitent d'un vaste réseau de sentiers : des itinéraires prisés mènent par des chemins aménagés au rustique refuge <em>Bärenbadalm</em>, au sommet marquant du Bärenkopf (1 991 m) ou autour du circuit de randonnée du Tristenau. Pour les enfants, un sentier thématique alpin ludique jalonné d'aires de jeux entoure la station supérieure. Le Zwölferkopf est également réputé à l'international comme haut lieu des sports aériens : grâce à d'excellentes ascendances thermiques, la montagne est considérée comme l'un des spots de parapente et de vol en tandem les plus prisés de tout l'ouest autrichien ; des aires de décollage et d'atterrissage sont aménagées directement aux stations amont et aval. En hiver, le domaine se transforme en une station familiale de ski sur neige naturelle avec des pistes exigeantes descendant dans la vallée et des sentiers de randonnée hivernale.</p><h2>Visite et accès</h2><p>La Karwendel-Bergbahn fonctionne en saison estivale de début mai à fin octobre, tous les jours de 08h30 à 17h00 (en hiver, selon l'enneigement, de mi-décembre à fin mars). Tarifs été 2025/2026 (montée et descente) : adultes 27,50 €, seniors env. 25,50 €, enfants (classes d'âge 2010–2018) 15,50 €, gratuit pour les tout-petits. Les détenteurs de la carte régionale <em>Achensee Erlebniscard</em> empruntent la remontée gratuitement et en illimité. Accès en voiture : par l'autoroute de l'Inntal A12, sortie Wiesing/Achensee, suivre la route fédérale Achenseebundesstraße B181 jusqu'à Maurach puis continuer vers Pertisau jusqu'à la station aval (Naturparkstraße 1 ; parking payant, tarif réduit pour les passagers de la remontée). En transports en commun : en train jusqu'à la gare de Jenbach, puis bus régional VVT ligne 4080 direct jusqu'à l'arrêt <em>Pertisau Karwendellift</em>.</p><h2>Conseils</h2><p>Les cabines de la télécabine et la terrasse ensoleillée de l'auberge Alpengasthaus Karwendel à la station supérieure sont accessibles de plain-pied sans barrières pour les fauteuils roulants et les poussettes. Profitez du coucher de soleil depuis la plate-forme panoramique et observez les voiles colorées des parapentistes décoller juste devant la station supérieure.</p>",
   "emoji": "🚡",
   "farbe": "#FF5722",
   "hoehe": "1.844 m",
   "dauer": "Halbtag",
-  "preis": "32 € (Erwachsene, Hin & Rück)",
+  "preis": "Berg- und Talfahrt Erwachsene 27,50 €, Kinder 15,50 €",
   "tags": [
     "téléphérique",
     "panorama",
@@ -19,12 +19,18 @@
     "randonnée",
     "famille"
   ],
-  "oeffnungszeiten": "Mai–Okt: täglich 9:00–17:00",
-  "webseite": "https://www.karwendelbahn.at",
+  "oeffnungszeiten": "Anfang Mai bis Ende Okt täglich 08:30–17:00 Uhr (Winter Dez–März)",
+  "webseite": "https://www.karwendel-bergbahn.at",
   "koordinaten": {
     "lat": "47.4333",
     "lng": "11.7500"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.karwendel-bergbahn.at",
+    "https://www.achensee.com",
+    "https://de.wikipedia.org/wiki/Zw%C3%B6lferkopf_(Karwendel)",
+    "https://www.tirol.at/reisefuehrer/sport/bergbahnen/a-karwendel-bergbahn-pertisau"
+  ]
 }

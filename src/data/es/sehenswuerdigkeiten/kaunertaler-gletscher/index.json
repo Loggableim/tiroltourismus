@@ -4,13 +4,13 @@
   "region": "kaunertal",
   "ort": "Kaunertal",
   "kategorie": "natur",
-  "kurzbeschreibung": "Uno de los últimos glaciares transitables todo el año en el Tirol. Hasta los 3.350 metros de altitud – con carretera de glaciar, zona de esquí y espectacular carretera panorámica.",
-  "beschreibung": "<p>Der <strong>Kaunertaler Gletscher</strong> befindet sich am Talschluss des Kaunertals in Tirol und ist ganzjährig über die Mautstraße erreichbar. Diese führt bis zum Parkplatz auf rund 2.800 Metern Höhe. Die vergletscherte Hochfläche bietet Wintersportmöglichkeiten von Oktober bis Mai im Skigebiet <strong>Kaunertaler Gletscher</strong>. Im Sommer sind geführte Gletscherwanderungen und der Einstieg in den Gletscherlehrweg möglich. Die Umgebung ist durch Gletscherspalten, Moränen und blankes Eis geprägt. Aufgrund der Höhenlage kann die Witterung schnell umschlagen, weshalb warme Kleidung ratsam ist. Von den Aussichtspunkten ergeben sich Blicke auf die umliegenden Dreitausender der Ötztaler Alpen.</p>",
+  "kurzbeschreibung": "El Kaunertaler Gletscher cautiva hasta los 3.113 m de altitud con esquí con nieve garantizada, la Falginjochbahn 100 % accesible y una grieta glaciar visitable.",
+  "beschreibung": "<h2>Descripción general</h2><p>El <strong>Kaunertaler Gletscher</strong>, ubicado al final del valle tirolés Kaunertal, figura entre las estaciones glaciares y de alta montaña más espectaculares de Austria. Enmarcada en el imponente mundo alpino de los Ötztaler Alpen al pie de la <strong>Weißseespitze</strong> (3.518 m), la zona glaciar abarca el extenso glaciar <em>Weißseeferner</em> desde los 2.150 metros hasta los 3.113 metros de altitud con nieve garantizada en el Karlesjoch. En el plano internacional, el complejo marca pautas en materia de sostenibilidad e inclusión: premiado en repetidas ocasiones como paraíso para monoesquí y handbike, el glaciar brinda un acceso completamente libre de barreras a todos sus remontes y miradores.</p><h2>Mundo glaciar, Falginjochbahn y naturaleza</h2><p>El desarrollo turístico del Weißseeferner se inició en 1980 con la construcción de los primeros telesquís. En la actualidad, modernas instalaciones de remontes mecánicos recorren el hielo eterno: un hito arquitectónico es la <strong>Falginjochbahn</strong>, inaugurada en 2019: esta telecabina Funifor para 100 personas, sumamente resistente al viento, supera el trazado hasta los 3.108 metros completamente sin torres de soporte y cuenta con certificación de accesibilidad al 100 %. Desde el mirador del <strong>Karlesjoch</strong> (3.113 m), situado directamente sobre la frontera estatal entre Austria e Italia, los visitantes contemplan la célebre <em>Dreiländerblick</em> hacia las cumbres de Austria, Italia y Suiza, alcanzando el glaciar del Ortler (3.905 m) y el grupo de la Berninagruppe. En verano cautiva la grieta glaciar visitable de unos 40 metros de longitud (<strong>Begehbare Gletscherspalte</strong>) en el Weißseeferner: el público camina con total seguridad por las entrañas del glaciar, maravillándose con el hielo milenario de reflejos azul intenso y singulares cristales de hielo. Para los interesados en geología y naturaleza, un sendero didáctico ilustra sobre el clima alpino y el retroceso de los glaciares.</p><h2>Visita y cómo llegar</h2><p>El Kaunertaler Gletscher ofrece temporada de esquí desde principios de octubre hasta finales de mayo; en verano los remontes funcionan para excursionistas a pie desde mediados de junio hasta mediados de septiembre a diario de 09:00 a 16:00 horas. Tarifas verano 2025/2026: ida y vuelta en Karlesjochbahn adultos 29,00 €, niños 17,00 €; ¡el recorrido por la grieta glaciar está incluido <strong>gratis</strong> con el billete del teleférico! Llegando en vehículo propio, el peaje de la Kaunertaler Gletscherstraße está incluido al comprar un billete de remonte. En coche: desde Landeck por la Reschenstraße B180 hasta Prutz, luego por la L18 hacia Kaunertal y continuando por la carretera de peaje Kaunertaler Gletscherstraße directamente hasta el restaurante del glaciar a 2.750 metros. En transporte público: tren ÖBB hasta la estación de Landeck-Zams, y desde allí con la línea de Postbus 230 directo al Kaunertaler Gletscher.</p><h2>Consejos</h2><p>Toda la zona, incluidos el restaurante del glaciar, la terraza solárium, las cabinas y la plataforma del Karlesjoch, cuenta con accesibilidad ejemplar para sillas de ruedas. Incluso en pleno verano conviene llevar calzado firme y abrigado y ropa impermeable, ya que en el interior de la grieta glaciar reina una temperatura constante de 0 °C. Combine la excursión con una parada en el histórico Gepatschhaus.</p>",
   "emoji": "🏔️",
   "farbe": "#0066FF",
   "hoehe": "3.350 m",
   "dauer": "Halbtag",
-  "preis": "42 € (Erwachsene)",
+  "preis": "Gondelfahrt Karlesjochbahn Erwachsene 29,00 €, Kinder 17,00 € (Gletscherspalte frei)",
   "tags": [
     "glaciar",
     "esquí",
@@ -18,12 +18,18 @@
     "naturaleza",
     "carretera panorámica"
   ],
-  "oeffnungszeiten": "Täglich 8:00–18:00 (Mai–Okt)",
+  "oeffnungszeiten": "Sommerbetrieb Mitte Juni bis Mitte Sep tgl. 09:00–16:00 Uhr; Skibetrieb Okt–Mai tgl. 08:30–16:00 Uhr",
   "webseite": "https://www.kaunertaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9833",
     "lng": "10.6833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaunertaler-gletscher.at",
+    "https://www.kaunertal.com",
+    "https://de.wikipedia.org/wiki/Kaunertaler_Gletscher",
+    "https://www.tirol.at/reisefuehrer/sport/skigebiete/a-skigebiet-kaunertaler-gletscher"
+  ]
 }

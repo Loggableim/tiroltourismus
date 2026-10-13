@@ -5,13 +5,13 @@
   "region": "innsbruck",
   "ort": "Lans",
   "kategorie": "natur",
-  "kurzbeschreibung": "Idyllic lakeside resort at the foot of the Patscherkofel, featuring crystal-clear waters, sunbathing lawns, and stunning mountain views.",
-  "beschreibung": "Der <strong>Lanser See</strong> liegt auf 992 m Höhe in der Gemeinde Lans, nur wenige Kilometer südöstlich von Innsbruck. Der natürliche Moorsee besticht durch sein kristallklares, türkisgrünes Wasser und die idyllische Lage am Fuße des Patscherkofels. Im Sommer lädt die große Liegewiese zum Sonnenbaden und Picknicken ein, während das warme Wasser zum Schwimmen und Plantschen einlädt. Ein Rundwanderweg führt um den gesamten See – ideal für einen entspannten Spaziergang. Das <strong>Seehof-Restaurant</strong> direkt am Ufer serviert Tiroler Spezialitäten und erfrischende Getränke mit Seeblick.",
+  "kurzbeschreibung": "Lanser See at 840 m at the foot of the Patscherkofel: idyllic moorland bathing lake near Innsbruck with healing waters, sunbathing lawn, and Waldstraßenbahn.",
+  "beschreibung": "<h2>Overview</h2><p>Steeped in tradition, the <strong>Lanser See</strong> is a picturesque natural moorland lake nestled on the sunny southern low-mountain plateau, roughly six kilometres south of Tyrol's provincial capital Innsbruck. Situated in the municipality of Lans at an elevation of 840 metres above sea level at the base of the mighty <strong>Patscherkofel</strong> (2,246 m), this protected body of water covers a surface area of approximately 12,000 m² (1.2 hectares) and reaches a maximum water depth of about 12 metres. As the oldest and most popular natural bathing lake in the Innsbruck region, it delights visitors with first-rate water quality, an idyllic forest backdrop, and sweeping vistas of the rugged limestone crags of the Nordkette.</p><h2>Moorland Water, Bathing Culture & Nature</h2><p>Lanser See was formed at the end of the last ice age around 15,000 years ago as a dead-ice lake left behind in the ground following the retreat of the Inn Valley glaciers. Fed by subterranean springs, the lake owes its dark, emerald-green shimmer to its peat-rich moorland bed. The oxygen-rich, slightly peaty moor water warms up swiftly in the summer months to pleasant temperatures between 22 and 25 °C, and is prized in naturopathy as exceptionally soothing and skin-regenerating. As early as the second half of the 19th century, the lake established itself as a favoured summer retreat for Innsbruck's bourgeois society. Today, the traditional <strong>Strandbad Lanser See</strong> offers an expansive, manicured sunbathing lawn shaded by mature trees, sunny wooden jetties, a children's pool, a diving tower, pedal boat and stand-up paddleboard rentals, as well as a separate, secluded nudist area on the southern shore. The lakeside restaurant with its panoramic terrace treats bathers to regional Tyrolean delicacies and refreshments.</p><h2>Visit & Getting There</h2><p>The Strandbad Lanser See is open daily during the bathing season from mid-May to early September from 09:00 to 19:00 (extended until 20:00 on warm midsummer days); outside the bathing season, the lake grounds are freely accessible as a local recreation area. Admission prices for the lido (season 2025/2026): adult day ticket €6.50 (from 14:00 €5.00, from 17:00 €3.50), youth and students €5.00, children (6–15 years) €3.50, children under 6 years free. A charming nostalgic highlight is arriving by public transport: the historic <strong>Straßenbahnlinie 6</strong> (the romantic “Waldstraßenbahn” or Igler) winds its way uphill from Innsbruck Bergisel through dense spruce forests directly to the <em>Lanser See</em> stop; alternatively, VVT regional bus route 540 operates regularly from Innsbruck Hauptbahnhof. By car: from Innsbruck via Aldrans or Igls to Lans; pay-and-display parking spaces are available directly by the lake.</p><h2>Tips</h2><p>The lakeside promenade, the lakeside restaurant, and the primary access route to the sunbathing lawn are level and barrier-free for pushchairs and wheelchairs. Take a relaxing walk around the adjacent Lanser Moor (a protected natural monument) or combine your swimming day with a cable car ride up the Patscherkofel.</p>",
   "emoji": "🏞️",
   "farbe": "#00BCD4",
   "hoehe": "992 m",
   "dauer": "Halbtag",
-  "preis": "Kostenlos (Naturbadestelle)",
+  "preis": "Tageskarte Strandbad Erwachsene 6,50 €, Kinder 3,50 €",
   "tags": [
     "nature",
     "lake",
@@ -20,12 +20,18 @@
     "family",
     "excursion"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich (Badesaison: Mai–Sep)",
-  "webseite": "https://www.lans.at",
+  "oeffnungszeiten": "Mitte Mai bis Anfang Sep täglich 09:00–19:00/20:00 Uhr; außerhalb frei zugänglich",
+  "webseite": "https://www.lansersee.at",
   "koordinaten": {
     "lat": "47.2375",
     "lng": "11.4331"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lansersee.at",
+    "https://www.innsbruck.info/sehenswuerdigkeiten/sightseeing/seen-und-wasserwelten/detail/infrastruktur/lanser-see-lans.html",
+    "https://de.wikipedia.org/wiki/Lanser_See",
+    "https://www.tirol.at/reisefuehrer/sport/baden/badeseen/a-lanser-see"
+  ]
 }

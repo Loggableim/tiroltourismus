@@ -1,10 +1,10 @@
 {
   "name": "Burgruine Schrofenstein",
   "slug": "burgruine-schrofenstein",
-  "region": "landeck",
+  "region": "tiroler-oberland",
   "ort": "Stanz bei Landeck",
   "kategorie": "burg",
-  "kurzbeschreibung": "Sur un rocher escarpé se dresse la ruine du château fort médiéval du Tirol, datant du XIIIᵉ siècle, offrant une vue imprenable sur la vallée de l’Inn jusqu’au Kaunergrat.",
+  "kurzbeschreibung": "Burgruine Schrofenstein domine hardiment les gorges de la Sanna près de Stanz : donjon de 12 mètres, berceau des chevaliers de Schrofenstein et accès libre.",
   "emoji": "🏰",
   "farbe": "#696969",
   "tags": [
@@ -15,13 +15,20 @@
     "histoire"
   ],
   "dauer": "1 Stunde",
-  "preis": "Kostenlos",
-  "oeffnungszeiten": "Jederzeit frei zugänglich",
-  "webseite": "https://www.schrofenstein.at",
+  "preis": "Eintritt frei",
+  "oeffnungszeiten": "Ganzjährig frei und jederzeit zugänglich (Außenbereich)",
+  "webseite": "https://www.tirolwest.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.1485",
     "lng": "10.5540"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>La spectaculaire <strong>Burgruine Schrofenstein</strong> se dresse hardiment sur un piton rocheux isolé à 1 114 mètres d'altitude, dominant la cuvette de Landeck et la commune de Stanz dans l'Oberland tyrolien. Vers l'ouest, la paroi rocheuse plonge sur plus de 150 mètres quasi à la verticale dans les gorges sauvages de la tumultueuse rivière Sanna. Dès le haut Moyen Âge, ce château fort d'altitude surveillait le carrefour stratégique de trois grandes voies alpines traversant l'Arlberg, le Fernpass et le Reschenpass. Depuis la ruine sécurisée, la vue plongeante sur le confluent de la Sanna et de l'Inn ainsi que sur les sommets environnants de plus de 3 000 mètres du massif de Samnaun et des Alpes du Lechtal est saisissante.</p><h2>Histoire et architecture</h2><p>Mentionnée dès 1196 comme château ministériel, la forteresse devint vers 1220 le fief d'origine des respectés chevaliers <strong>Herren von Schrofenstein</strong>, vassaux des évêques de Coire et des comtes du Tyrol. Pendant des siècles, le château servit de centre administratif et de siège temporaire du tribunal de district de Stanz. Son représentant le plus illustre fut <strong>Christoph von Schrofenstein</strong>, prince-évêque de Brixen de 1509 à 1521, qui influença profondément la politique princière du Tyrol. Après l'extinction de la lignée masculine en 1546, la forteresse changea plusieurs fois de propriétaires (notamment les comtes de Trautson et les princes d'Auersperg) et tomba en ruine à partir du XVIIIe siècle. L'emblème incontournable du site est son puissant <strong>donjon (Bergfried) romano-gothique</strong> haut de 12 mètres : ses murs massifs en pierre de taille soigneusement équarrie défient les intempéries depuis plus de 800 ans. De remarquables vestiges du logis gothique (palas), des pans du mur d'enceinte et les fondations d'anciennes écuries et dépendances agricoles subsistent également.</p><h2>Visite et accès</h2><p>Les abords et le plateau rocheux de Burgruine Schrofenstein sont en accès libre toute l'année et <strong>totalement gratuits</strong> (l'accès se fait aux risques et périls des visiteurs ; l'intérieur du donjon est verrouillé pour des raisons de sécurité). Accès en transports en commun : trains ÖBB jusqu'à la gare express de Landeck-Zams, puis bus VVT ligne 4236 en environ 10 minutes jusqu'à Stanz bei Landeck (arrêt <em>Stanz Dorf</em>). Depuis le centre du village, un sentier de randonnée balisé et panoramique mène en 30 à 40 minutes (environ 100 m de dénivelé) à travers vergers et clairières montagnardes jusqu'à la ruine. En voiture : via l'autoroute A12 ou la voie rapide S16 jusqu'à la sortie Landeck-West, puis par la L331 jusqu'à Stanz ; des possibilités de stationnement existent à l'entrée du village près du centre municipal.</p><h2>Conseils</h2><p>En raison du sentier étroit, rocailleux et garni de racines sur le dernier tronçon, la ruine n'est pas accessible aux personnes à mobilité réduite ni adaptée aux poussettes ; de bonnes chaussures de randonnée et un pied sûr sont indispensables. Stanz bei Landeck est réputé comme le premier village de distilleries reconnu d'Autriche pour ses savoureuses prunes <em>Stanzer Zwetschken</em> (plus de 50 distilleries artisanales en activité pour moins de 600 habitants). Associez impérativement votre randonnée à une dégustation d'eaux-de-vie réputées dans les distilleries de Stanz ou à une promenade le long du bisse historique Stanzer Waalweg.</p>",
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.stanz-landeck.gv.at",
+    "https://www.vvt.at",
+    "https://de.wikipedia.org/wiki/Burg_Schrofenstein"
+  ]
 }

@@ -2,16 +2,16 @@
   "name": "Burgruine Ehrenberg",
   "slug": "burgruine-ehrenberg",
   "status": "published",
-  "region": "ausserfern",
+  "region": "naturparkregion-reutte",
   "ort": "Reutte",
   "kategorie": "kultur",
-  "kurzbeschreibung": "One of the largest fortress complexes in Central Europe near Reutte, with an adventure museum, inclined lifts and the highline179 suspension bridge, which is over 400 m long.",
-  "beschreibung": "<p>The <strong>Burgenwelt Ehrenberg</strong> is located on the historic Via Claudia Augusta south of Reutte and is one of the most important fortress complexes in Central Europe. It combines four sites: the Ehrenberger Klause, the Ehrenberg castle ruins, the Schlosskopf fortress and Fort Claudia. In the adventure museum \"Dem Ritter auf der Spur\" (\"On the Trail of the Knight\"), 14 themed rooms tell the story of the complex.</p><p>The highlight is the highline179 suspension bridge, over 400 metres long, spanning the valley. Two inclined lifts, the Ehrenberg Liner and the Top Liner, make the fortress complex accessible without barriers. An inn with a hotel, the Café Klause, a museum and dairy shop, as well as playgrounds round off the offer. Open daily: in summer from 9 am to 6 pm, in winter from 10 am to 4 pm.</p>",
+  "kurzbeschreibung": "Burgruine Ehrenberg near Reutte: built in 1290 by Graf Meinhard II., contested stronghold during the Schmalkaldic War, and freely accessible year-round.",
+  "beschreibung": "<h2>Overview</h2><p>The monumental <strong>Burgruine Ehrenberg</strong> rises on a wooded rocky ridge at an altitude of 1,100 meters high above the Klause near Reutte in the Tyrolean Außerfern. As the historic core castle of Burgenwelt Ehrenberg, this hilltop castle formed the military backbone of Tyrol's northern defense for over five centuries. With its sturdy curtain walls, massive palas, and outer hornwork, the freely accessible ruin provides breathtaking panoramic views of the Reutte basin, the Lech River, and the rugged peaks of the Ammergau and Lechtal Alps.</p><h2>History & Architecture</h2><p>The castle was founded around 1290 by Tyrol's sovereign <strong>Graf Meinhard II. von Görz-Tirol</strong> to secure the newly acquired border territory. As early as 1293, the nobleman <strong>Heinrich von Starkenberg</strong> is documented as its first princely castle captain. During the Schmalkaldic War in 1546, the stronghold endured its most dramatic ordeal: Protestant troops under commander <strong>Sebastian Schertlin von Burtenbach</strong> succeeded in hauling heavy artillery onto the then unfortified Falkenberg and capturing the castle after intense bombardment. This military lesson led to the subsequent construction of Fort Claudia on the opposite slope. During the Thirty Years' War, Ehrenberg successfully repelled Swedish attackers in 1632; in 1703, during the War of the Spanish Succession, it was briefly occupied by Bavarian troops before Tyrolean riflemen recaptured it by storm. Following its decommissioning in 1782 under Emperor Joseph II, the compound fell into ruin until extensive archaeological research and conservation secured the masonry for future generations starting in 2001. The architecture stands out with its Late Romanesque core building, cistern systems, Gothic residential wings, and imposing bailey walls.</p><h2>Visit & Getting There</h2><p>Burgruine Ehrenberg is open 24 hours a day, 365 days a year, and is <strong>completely free to visit</strong> (€0.00 admission). There are no gates or ticket barriers at the ruin walls. Getting there by public transport: take the Außerfernbahn railway to Reutte in Tirol station, and from there take VVT regional bus route 150/4250 directly to the <em>Reutte Klause</em> stop. By car: via the B179 Fernpass road to the Klause (large parking areas available). From the Klause, a well-maintained gravel forest trail leads up to the ruin in about 20 to 25 minutes (approx. 110 meters of elevation gain). Alternatively, the <em>Ehrenberg Liner</em> inclined elevator transports visitors to the mountain station at the hornwork directly below the core castle in about two and a half minutes (round trip €9.00).</p><h2>Tips</h2><p>The path from the inclined elevator to the outer bailey is wheelchair accessible; the interior of the ruin consists of natural ground, bedrock, and stone staircases, requiring sturdy hiking footwear. A rewarding circular hike leads from the core castle further up to the Schlosskopf fortress (1,250 m) and across the highline179 suspension bridge over to Fort Claudia. Information panels in the castle courtyard vividly illustrate medieval siege warfare techniques.</p>",
   "emoji": "🏚️",
   "farbe": "#8D6E63",
   "hoehe": "1.058 m",
   "dauer": "2–3 Stunden",
-  "preis": "13 € (Kombi Burg + Brücke)",
+  "preis": "Eintritt frei (Aufstieg zu Fuß kostenlos, Lift optional)",
   "tags": [
     "castle",
     "ruin",
@@ -20,12 +20,18 @@
     "museum",
     "excursion"
   ],
-  "oeffnungszeiten": "Mai–Okt: täglich 9:00–18:00; Nov–Apr: Di–So 10:00–16:00",
-  "webseite": "https://www.burgenwelt-ehrenberg.at",
+  "oeffnungszeiten": "Ganzjährig rund um die Uhr frei zugänglich",
+  "webseite": "https://www.ehrenberg.at",
   "koordinaten": {
     "lat": "47.4833",
     "lng": "10.7167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.ehrenberg.at",
+    "https://www.burgen-austria.com",
+    "https://www.reutte.com",
+    "https://de.wikipedia.org/wiki/Burg_Ehrenberg_(Reutte)"
+  ]
 }

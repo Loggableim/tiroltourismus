@@ -56,18 +56,10 @@ export function readCollection(name, locale = 'de') {
   return entries;
 }
 
-const _locationIndexCache = new Map();
-
 /** Cache für eine oder alle Collections invalidieren */
 export function invalidateCollectionCache(cacheKey) {
-  if (cacheKey) {
-    _collectionCache.delete(cacheKey);
-    const locale = cacheKey.split(':')[0];
-    if (locale) _locationIndexCache.delete(locale);
-  } else {
-    _collectionCache.clear();
-    _locationIndexCache.clear();
-  }
+  if (cacheKey) _collectionCache.delete(cacheKey);
+  else _collectionCache.clear();
 }
 
 /** Einzelnen Eintrag lesen */
@@ -238,124 +230,67 @@ export function findRelated(collection, slug, locale = 'de', limit = 4) {
   return scored.sort((a, b) => b.score - a.score).slice(0, limit);
 }
 
-const LOCATION_COLLECTIONS = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'erlebnisse', 'events'];
-
-function haversineDist(lat1, lng1, lat2, lng2) {
-  const R = 6371;
-  const dLat = (parseFloat(lat2) - parseFloat(lat1)) * Math.PI / 180;
-  const dLng = (parseFloat(lng2) - parseFloat(lng1)) * Math.PI / 180;
-  const a = Math.sin(dLat / 2) ** 2 + Math.cos(parseFloat(lat1) * Math.PI / 180) * Math.cos(parseFloat(lat2) * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
-  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
-
-/** Einmal pro Locale: Einträge nach Region/Ort/Koordinaten indexieren (für findNearby). */
-function _buildLocationIndex(locale = 'de') {
-  if (_locationIndexCache.has(locale)) return _locationIndexCache.get(locale);
-  const byRegion = new Map();
-  const byOrt = new Map();
-  const withCoords = [];
-
-  for (const coll of LOCATION_COLLECTIONS) {
-    for (const e of readCollection(coll, locale)) {
-      const item = { collection: coll, slug: e.slug, entry: e.entry };
-      const region = e.entry.region;
-      if (region) {
-        if (!byRegion.has(region)) byRegion.set(region, []);
-        byRegion.get(region).push(item);
-      }
-      const ort = e.entry.ort;
-      if (ort) {
-        const ortKey = ort.toLowerCase();
-        if (!byOrt.has(ortKey)) byOrt.set(ortKey, []);
-        byOrt.get(ortKey).push(item);
-      }
-      if (e.entry.koordinaten) withCoords.push(item);
-    }
-  }
-
-  const index = { byRegion, byOrt, withCoords };
-  _locationIndexCache.set(locale, index);
-  return index;
-}
-
-function _nearbyCandidates(entry, locale) {
-  const index = _buildLocationIndex(locale);
-  const seen = new Map();
-
-  function add(item) {
-    const key = `${item.collection}:${item.slug}`;
-    if (!seen.has(key)) seen.set(key, item);
-  }
-
-  if (entry.region) {
-    for (const item of index.byRegion.get(entry.region) || []) add(item);
-  }
-  if (entry.ort) {
-    for (const item of index.byOrt.get(entry.ort.toLowerCase()) || []) add(item);
-  }
-  if (entry.koordinaten) {
-    const lat = parseFloat(entry.koordinaten.lat);
-    const lng = parseFloat(entry.koordinaten.lng);
-    // ~25 km bounding box (covers all haversine matches up to 20 km)
-    const dLat = 25 / 111;
-    const cosLat = Math.cos(lat * Math.PI / 180) || 1;
-    const dLng = 25 / (111 * cosLat);
-    for (const item of index.withCoords) {
-      const c = item.entry.koordinaten;
-      const lat2 = parseFloat(c.lat);
-      const lng2 = parseFloat(c.lng);
-      if (Math.abs(lat2 - lat) <= dLat && Math.abs(lng2 - lng) <= dLng) add(item);
-    }
-  }
-
-  return seen.values();
-}
-
 /**
  * Nahegelegene Einträge zu einem Entry finden (region-basiert + distanz-basiert)
  * 1. Gleiche Region → score 100
  * 2. Gleicher Ort → score 50
  * 3. Distanz < 10km → score nach Entfernung
- *
+ * 
  * Berücksichtigt NUR Collections mit Standort (kein 'magazin')
  * Gibt maximal `limit` Ergebnisse
  */
 export function findNearby(entry, collection, locale = 'de', limit = 8) {
   if (!entry) return [];
-
+  
+  const locationCollections = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'erlebnisse', 'events'];
   const results = [];
-  const entrySlug = entry.slug;
 
-  for (const { collection: coll, slug, entry: e2 } of _nearbyCandidates(entry, locale)) {
-    if (coll === collection && slug === entrySlug) continue;
+  function haversineDist(lat1, lng1, lat2, lng2) {
+    const R = 6371;
+    const dLat = (parseFloat(lat2) - parseFloat(lat1)) * Math.PI / 180;
+    const dLng = (parseFloat(lng2) - parseFloat(lng1)) * Math.PI / 180;
+    const a = Math.sin(dLat/2)**2 + Math.cos(parseFloat(lat1)*Math.PI/180) * Math.cos(parseFloat(lat2)*Math.PI/180) * Math.sin(dLng/2)**2;
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+  }
 
-    let score = 0;
-    let distKm = null;
+  for (const coll of locationCollections) {
+    const entries = readCollection(coll, locale);
+    for (const e of entries) {
+      if (coll === collection && e.slug === entry.slug) continue; // skip self
+      const e2 = e.entry;
+      
+      let score = 0;
+      let distKm = null;
 
-    if (entry.region && e2.region && entry.region === e2.region) {
-      score = 100;
-    }
+      // Same region → strong match
+      if (entry.region && e2.region && entry.region === e2.region) {
+        score = 100;
+      }
 
-    if (entry.ort && e2.ort && entry.ort.toLowerCase() === e2.ort.toLowerCase()) {
-      score = Math.max(score, 80);
-    }
+      // Same ort → strong match
+      if (entry.ort && e2.ort && entry.ort.toLowerCase() === e2.ort.toLowerCase()) {
+        score = Math.max(score, 80);
+      }
 
-    if (entry.koordinaten && e2.koordinaten) {
-      distKm = haversineDist(
-        entry.koordinaten.lat, entry.koordinaten.lng,
-        e2.koordinaten.lat, e2.koordinaten.lng
-      );
-      if (distKm < 1) score = Math.max(score, 90);
-      else if (distKm < 5) score = Math.max(score, 70);
-      else if (distKm < 10) score = Math.max(score, 50);
-      else if (distKm < 20) score = Math.max(score, 30);
-    }
+      // Distance-based if both have coordinates
+      if (entry.koordinaten && e2.koordinaten) {
+        distKm = haversineDist(
+          entry.koordinaten.lat, entry.koordinaten.lng,
+          e2.koordinaten.lat, e2.koordinaten.lng
+        );
+        if (distKm < 1) score = Math.max(score, 90);
+        else if (distKm < 5) score = Math.max(score, 70);
+        else if (distKm < 10) score = Math.max(score, 50);
+        else if (distKm < 20) score = Math.max(score, 30);
+      }
 
-    if (score > 0) {
-      results.push({ collection: coll, slug, entry: e2, score, dist_km: distKm });
+      if (score > 0) {
+        results.push({ collection: coll, slug: e.slug, entry: e2, score, dist_km: distKm });
+      }
     }
   }
 
+  // Sort by score desc, then dist_km asc
   results.sort((a, b) => b.score - a.score || (a.dist_km || 999) - (b.dist_km || 999));
   return results.slice(0, limit);
 }
@@ -414,30 +349,20 @@ export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLin
     return linkDescriptionText(html, collection, slug, locale, maxLinks, currentEntry);
   }
   const entityMap = _buildEntityMap(locale);
-  const currentSlug = currentEntry?.slug;
   const currentName = (currentEntry?.name || currentEntry?.titel || '').toLowerCase();
   let linked = 0;
   let result = html;
-  let textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
-
   for (const entity of entityMap) {
     if (linked >= maxLinks) break;
-    if (currentSlug && entity.slug === currentSlug) continue;
     if (currentName && entity.name.toLowerCase() === currentName) continue;
-
-    const nameLower = entity.name.toLowerCase();
-    if (nameLower.length < 3 || !textProbe.includes(nameLower)) continue;
-
     const escaped = entity.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(?<!<[^>]*)(?<!href="[^"]*)(?<![\\w\\d])(${escaped})(?![\\w\\d])`, 'gi');
-    const next = result.replace(regex, (match) => {
-      if (linked >= maxLinks) return match;
-      linked++;
-      return `<a href="${entity.href}" class="auto-link">${match}</a>`;
-    });
-    if (next !== result) {
-      result = next;
-      textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
+    if (regex.test(result)) {
+      result = result.replace(regex, (match) => {
+        if (linked >= maxLinks) return match;
+        linked++;
+        return `<a href="${entity.href}" class="auto-link">${match}</a>`;
+      });
     }
   }
   return result;

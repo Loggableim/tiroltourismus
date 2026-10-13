@@ -15,8 +15,7 @@ import { fileURLToPath } from 'url';
 import vm from 'vm';
 
 const TEXT_MIN = 4.5;
-const TEXT2_MIN = 4.5;
-const TEXT3_MIN = 4.5;
+const TEXT2_MIN = 3.0;
 
 const tirolPath = join(dirname(fileURLToPath(import.meta.url)), '..', 'public/assets/js/tirol.js');
 const src = readFileSync(tirolPath, 'utf8');
@@ -76,7 +75,7 @@ for (const s of samples) {
 
   const okText = textRatio >= TEXT_MIN;
   const okText2 = text2Ratio >= TEXT2_MIN;
-  const okText3 = text3Ratio >= TEXT3_MIN;
+  const okText3 = text3Ratio >= TEXT2_MIN;
   if (!okText) failed = true;
 
   rows.push({
@@ -135,9 +134,7 @@ console.log(`  after:  bg ${after.bg} text ${after.text}`);
 
 const mutedFails = rows.filter((r) => !r.okMuted);
 if (mutedFails.length) {
-  console.log(
-    `\nNote: ${mutedFails.length} sample(s) have text2/text3 composite < ${TEXT2_MIN}:1 / ${TEXT3_MIN}:1 (informational).`
-  );
+  console.log(`\nNote: ${mutedFails.length} sample(s) have text2/text3 composite < ${TEXT2_MIN}:1 (informational).`);
 }
 
 if (failed) {

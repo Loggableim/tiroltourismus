@@ -4,14 +4,14 @@
   "typ": "hotel",
   "sterne": 5,
   "preis_ab": null,
-  "ort": "See",
-  "region": "landeck",
+  "ort": "Maurach am Achensee",
+  "region": "achensee",
   "plz": "6212",
   "adresse": "Mühltalweg 10",
   "telefon": "+43 5243 52930",
   "email": "info@alpenrose.at",
   "webseite": "https://www.alpenrose.at/",
-  "beschreibung": "<p>Sporthotel Alpenrose Wellness Residenz in <strong>See, Tirol</strong>, liegt ruhig am Ortsrand mit Blick auf die umliegenden <strong>Berge</strong>. Das Hotel kombiniert alpine Tradition mit modernem Komfort und bietet <strong>Wellnessbereich</strong>, großzügige Zimmer sowie regionale Küche. Gäste können <strong>Wandern</strong>, <strong>Skifahren</strong> und Erholung im Spa nutzen.</p>",
+  "beschreibung": "<h2>Geschichte</h2><p>Die Website alpenrose.at nennt das Haus Wellnessresidenz Alpenrose, Mühltalweg 10, 6212 Maurach am Achensee, Telefon +43 5243 52930, E-Mail info@alpenrose.at, WhatsApp +43 677 61125450. Der Lageplan schreibt, das Stammhaus bestehe seit 1959 und sei das Herz des Areals, mit 92 Zimmern und Suiten auf fünf Etagen. Das Cocoon, eine Alpine Boutique Lodge, wurde 2017 neu errichtet und hat 25 Suiten. Gezeichnet ist die Begrüßung mit Wolfgang Kostenzer senior. Ein Yoga- und Meditationshaus aus heimischen Hölzern ist laut Seite für den Winter 2026 zur Eröffnung geplant und damit noch kein fertiger Gebäudeteil. Die Postleitzahl 6212 und die Straße Mühltalweg 10 gehören nach Maurach am Achensee. Der bisherige Ortsname See steht auf der Website nicht. Sie nennt Maurach am Achensee. Der alte Regionsschlüssel Landeck steht dort ebenfalls nicht. Das Haus selbst nennt den Achensee, den Rofan und das Karwendel.</p><h2>Anreise</h2><p>Die veröffentlichte Adresse ist Mühltalweg 10, 6212 Maurach am Achensee. Die Rezeption ist laut Lageplan rund um die Uhr besetzt. Geparkt wird kostenfrei in der Tiefgarage, E-Autos an einer E-Tankstelle des Hauses. Eine Bahnhofs- oder Busbeschreibung steht auf der abgerufenen Seite nicht. Das Haus beschreibt die Lage zwischen Achensee und Rofan beziehungsweise Karwendel.</p><h2>Tipps</h2><p>Das Haus nennt eine Bade-, Sauna- und Wohlfühllandschaft auf über 8500 Quadratmetern und einen Garten auf über 10.000 Quadratmetern mit zwei Biotop-Schwimmteichen. Im Stammhaus beginnen der Tag mit Frühstück, mittags gibt es Kleingerichte, Kuchen und Imbisse, abends ein Menü. Der Quellengarten ist ein Hallenbad mit Wasserfall und Blick aufs Karwendel, verbunden mit einem Außenbecken. Die Beautyfarm im ersten Obergeschoss ist täglich von 9:00 bis 19:00 Uhr geöffnet. Der Vitaltempel im ersten Untergeschoss hat Saunen, Dampfbäder, Infrarotliegen und Ruheräume, täglich 9:00 bis 20:00 Uhr, Saunen ab 11:00 Uhr, Zutritt ab 14 Jahren. Die Kräuteralm im Garten hat dreimal täglich Aufgüsse, geöffnet 14:00 bis 19:00 Uhr. Die Holzblocksauna ist täglich 12:00 bis 19:00 Uhr geöffnet. Die Stille Alm liegt im fünften Stock, die Stille Hochalm im sechsten, mit Hölzern aus alten Bauernhäusern, Mühlen und Kornkästen, die laut Seite mehr als 50 Jahre alt sind, und einer Dachterrasse. Die Gartenvilla misst rund 160 Quadratmeter für 2 bis 4 Personen. Der Fun- und Actionpark misst 800 Quadratmeter, mit Flying Fox, Sandbagger, Zirbenturm, Funcourt, Baumkarussell, Trampolinen, Indianerland und einer 20 Meter hohen Kletterwand. Der Kinderclub für 3- bis 10-Jährige misst 220 Quadratmeter und ist täglich von 9:30 bis 22:00 Uhr geöffnet, mit Kinderstammtisch um 12:00 und 18:00 Uhr. Die Jugendlounge hat Kino, Tischtennis, Air-Hockey, Tischfußball, Billard, Spielkonsolen und Disco. Das Fitnessstudio misst 450 Quadratmeter auf zwei Etagen mit Technogym-Geräten, täglich 7:45 bis 19:00 Uhr. Das Alpenrose-Spa hat ein 25-Meter-Sportbecken, einen 10-Meter-Infinity-Außenpool, ein Solebecken und die Panoramasauna Himmelreich, Zutritt ab 18 Jahren, täglich 12:00 bis 20:00 Uhr. Die Zeitgeist-Boutique misst 250 Quadratmeter. Kräuter kommen aus dem eigenen Garten, genannt werden Schnittlauch und Koriander. Beispielpakete auf der Seite, Stand des Abrufs: Alpengolf fünf Nächte ab 1624 Euro und drei Nächte ab 974 Euro, ein TCM-Paket mit Luisa Zhang über sieben Nächte ab 1757 Euro. Das sind Angebotspreise der Website, keine allgemeine Nachtpauschale.</p>",
   "ausstattung": [
     "bar"
   ],
@@ -27,5 +27,9 @@
     "lat": "47.4214504",
     "lng": "11.7514439"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": "5-Sterne-Wellnessresidenz Alpenrose der Familie Kostenzer, Mühltalweg 10, 6212 Maurach am Achensee. Das Stammhaus besteht seit 1959. Der Datensatzort See passt nicht zur Adresse.",
+  "quellen": [
+    "https://www.alpenrose.at/"
+  ]
 }

@@ -4,14 +4,14 @@
   "typ": "hotel",
   "sterne": 5,
   "preis_ab": null,
-  "ort": "See",
-  "region": "landeck",
+  "ort": "Maurach am Achensee",
+  "region": "achensee",
   "plz": "6212",
   "adresse": "Mühltalweg 10",
   "telefon": "+43 5243 52930",
   "email": "info@alpenrose.at",
   "webseite": "https://www.alpenrose.at/",
-  "beschreibung": "<p>Sporthotel Alpenrose Wellness Residenz in <strong>See, Tirol</strong>, liegt ruhig am Ortsrand mit Blick auf die umliegenden <strong>Berge</strong>. Das Hotel kombiniert alpine Tradition mit modernem Komfort und bietet <strong>Wellnessbereich</strong>, großzügige Zimmer sowie regionale Küche. Gäste können <strong>Wandern</strong>, <strong>Skifahren</strong> und Erholung im Spa nutzen.</p>",
+  "beschreibung": "<h2>Histoire</h2><p>Le site alpenrose.at nomme la maison Wellnessresidenz Alpenrose, Mühltalweg 10, 6212 Maurach am Achensee, téléphone +43 5243 52930, e-mail info@alpenrose.at, WhatsApp +43 677 61125450. Le plan de situation écrit que la maison d'origine existe depuis 1959 et est le cœur du domaine, avec 92 chambres et suites sur cinq étages. Le Cocoon, une Alpine Boutique Lodge, a été construit à neuf en 2017 et compte 25 suites. L'accueil est signé Wolfgang Kostenzer senior. Une maison de yoga et de méditation en bois locaux est, selon la page, prévue pour une ouverture à l'hiver 2026 et n'est donc pas encore une partie de bâtiment achevée. Le code postal 6212 et la rue Mühltalweg 10 appartiennent à Maurach am Achensee. L'ancien nom de lieu See ne figure pas sur le site. Il indique Maurach am Achensee. L'ancienne clé de région Landeck n'y figure pas non plus. La maison elle-même cite l'Achensee, le Rofan et le Karwendel.</p><h2>Accès</h2><p>L'adresse publiée est Mühltalweg 10, 6212 Maurach am Achensee. La réception est occupée en permanence selon le plan de situation. On se gare gratuitement dans le garage souterrain, les voitures électriques à une borne de recharge de la maison. Une description de gare ou de bus ne figure pas sur la page consultée. La maison décrit la situation entre l'Achensee et le Rofan ou le Karwendel.</p><h2>Conseils</h2><p>La maison indique un paysage de bain, de sauna et de bien-être de plus de 8500 mètres carrés et un jardin de plus de 10000 mètres carrés avec deux étangs de baignade biotope. Dans la maison d'origine, la journée commence par le petit-déjeuner, à midi il y a de petits plats, du gâteau et des en-cas, le soir un menu. Le Quellengarten est une piscine couverte avec cascade et vue sur le Karwendel, reliée à un bassin extérieur. La beauty farm au premier étage est ouverte tous les jours de 9:00 à 19:00. Le Vitaltempel au premier sous-sol a des saunas, des bains de vapeur, des transats infrarouges et des salles de repos, tous les jours de 9:00 à 20:00, saunas à partir de 11:00, accès à partir de 14 ans. La Kräuteralm dans le jardin a des infusions trois fois par jour, ouverte de 14:00 à 19:00. Le sauna en rondins est ouvert tous les jours de 12:00 à 19:00. La Stille Alm se trouve au cinquième étage, la Stille Hochalm au sixième, avec des bois d'anciennes fermes, de moulins et de greniers à grain qui, selon la page, ont plus de 50 ans, et une terrasse de toit. La villa de jardin mesure environ 160 mètres carrés pour 2 à 4 personnes. Le parc fun et action mesure 800 mètres carrés, avec Flying Fox, Sandbagger, Zirbenturm, Funcourt, carrousel d'arbres, trampolines, Indianerland et un mur d'escalade de 20 mètres de haut. Le club enfants pour les 3 à 10 ans mesure 220 mètres carrés et est ouvert tous les jours de 9:30 à 22:00, avec un Kinderstammtisch à 12:00 et à 18:00. Le salon des jeunes a un cinéma, un tennis de table, un air-hockey, un baby-foot, un billard, des consoles de jeux et une disco. La salle de fitness mesure 450 mètres carrés sur deux étages avec des appareils Technogym, tous les jours de 7:45 à 19:00. L'Alpenrose-Spa a un bassin sportif de 25 mètres, une piscine extérieure infinity de 10 mètres, un bassin d'eau salée et le sauna panoramique Himmelreich, accès à partir de 18 ans, tous les jours de 12:00 à 20:00. La boutique Zeitgeist mesure 250 mètres carrés. Les herbes viennent du jardin propre ; la ciboulette et la coriandre sont citées. Exemples de forfaits sur la page, état de la consultation : Alpengolf cinq nuits à partir de 1624 euros et trois nuits à partir de 974 euros, un forfait TCM avec Luisa Zhang sur sept nuits à partir de 1757 euros. Ce sont des prix d'offre du site, pas un forfait nuit général.</p>",
   "ausstattung": [
     "bar"
   ],
@@ -27,5 +27,9 @@
     "lat": "47.4214504",
     "lng": "11.7514439"
   },
-  "status": "published"
+  "status": "published",
+  "kurzbeschreibung": "Résidence bien-être 5 étoiles Alpenrose de la famille Kostenzer, Mühltalweg 10, 6212 Maurach am Achensee. La maison d'origine existe depuis 1959. Le lieu See du jeu de données ne correspond pas à l'adresse.",
+  "quellen": [
+    "https://www.alpenrose.at/"
+  ]
 }

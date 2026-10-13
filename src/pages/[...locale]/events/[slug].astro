@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findNearby, autoLinkContent } from '../../../lib/content.js';
-import { generateMetaDescription } from '../../../lib/seo.js';
+import { generateMetaDescription, buildPageTitle } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
 
 const LABELS = {
@@ -94,7 +94,7 @@ const eventLD = {
 ---
 
 <DetailPage
-  title={entry.name || entry.titel}
+  title={buildPageTitle(entry, 'events', locale)}
   description={generateMetaDescription(entry, 'events', locale)}
   jsonld={eventLD}
   breadcrumbs={[{ label: l.event, href: `${prefix}/events/` }, { label: entry.name || entry.titel }]}

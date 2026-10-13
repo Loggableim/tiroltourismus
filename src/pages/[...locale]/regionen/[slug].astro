@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findByTag, autoLinkContent } from '../../../lib/content.js';
-import { generateMetaDescription } from '../../../lib/seo.js';
+import { generateMetaDescription, buildPageTitle } from '../../../lib/seo.js';
 import { LANGUAGES_READY, localePrefix, localeParams, DEFAULT_LOCALE, LANG_DOMAINS } from '../../../lib/languages.js';
 
 const LABELS = {
@@ -315,7 +315,7 @@ const regionLD = {
 ---
 
 <DetailPage
-  title={titel}
+  title={buildPageTitle(entry, 'regionen', locale)}
   description={generateMetaDescription(entry, 'regionen', locale)}
   locale={locale}
   jsonld={regionLD}

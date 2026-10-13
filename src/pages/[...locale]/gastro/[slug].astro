@@ -1,7 +1,7 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../../lib/content.js';
-import { generateMetaDescription } from '../../../lib/seo.js';
+import { generateMetaDescription, buildPageTitle } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
 
 // Localized labels for all 8 languages (NL/CS/EN/FR/IT/ES/ZH + DE)
@@ -257,7 +257,7 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
 ---
 
 <DetailPage
-  title={entry.name}
+  title={buildPageTitle(entry, 'gastro', locale)}
   description={generateMetaDescription(entry, 'gastro', locale)}
   breadcrumbs={[{ label: l.gastro, href: `${prefix}/gastro/` }, { label: entry.name }]}
   locale={locale}

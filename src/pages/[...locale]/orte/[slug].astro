@@ -342,8 +342,9 @@ const destinationLD = {
       type: 'description',
       label: name,
       title: l.ueberDenOrt || name,
-      content: autoLinkContent(beschreibung, entry, locale),
+      content: autoLinkContent(beschreibung, entry, locale, 5, 'orte', slug),
     } : null,
+    { type: 'related-links', collection: 'orte', slug },
     mapSection,
     unterkuenfteImOrt.length > 0 ? {
       type: 'related-grid',

@@ -8,7 +8,7 @@ Orte: Innsbruck Stadt, Götzens, Wattens
 import requests, json, base64, os, sys, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-API_KEY = "sk-jflggfbmhvbarpjfgifnhusjvyggksbqbmtdebjxrvjtqwnl"
+API_KEY = os.environ.get("FLUX_API_KEY", "")
 URL = "https://api.siliconflow.com/v1/images/generations"
 OUT_DIR = "img/generiert"
 os.makedirs(OUT_DIR, exist_ok=True)

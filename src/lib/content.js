@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { linkDescriptionText } from './related.js';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 const _collectionCache = new Map();
@@ -55,10 +56,18 @@ export function readCollection(name, locale = 'de') {
   return entries;
 }
 
+const _locationIndexCache = new Map();
+
 /** Cache für eine oder alle Collections invalidieren */
 export function invalidateCollectionCache(cacheKey) {
-  if (cacheKey) _collectionCache.delete(cacheKey);
-  else _collectionCache.clear();
+  if (cacheKey) {
+    _collectionCache.delete(cacheKey);
+    const locale = cacheKey.split(':')[0];
+    if (locale) _locationIndexCache.delete(locale);
+  } else {
+    _collectionCache.clear();
+    _locationIndexCache.clear();
+  }
 }
 
 /** Einzelnen Eintrag lesen */
@@ -229,67 +238,124 @@ export function findRelated(collection, slug, locale = 'de', limit = 4) {
   return scored.sort((a, b) => b.score - a.score).slice(0, limit);
 }
 
+const LOCATION_COLLECTIONS = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'erlebnisse', 'events'];
+
+function haversineDist(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (parseFloat(lat2) - parseFloat(lat1)) * Math.PI / 180;
+  const dLng = (parseFloat(lng2) - parseFloat(lng1)) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(parseFloat(lat1) * Math.PI / 180) * Math.cos(parseFloat(lat2) * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+/** Einmal pro Locale: Einträge nach Region/Ort/Koordinaten indexieren (für findNearby). */
+function _buildLocationIndex(locale = 'de') {
+  if (_locationIndexCache.has(locale)) return _locationIndexCache.get(locale);
+  const byRegion = new Map();
+  const byOrt = new Map();
+  const withCoords = [];
+
+  for (const coll of LOCATION_COLLECTIONS) {
+    for (const e of readCollection(coll, locale)) {
+      const item = { collection: coll, slug: e.slug, entry: e.entry };
+      const region = e.entry.region;
+      if (region) {
+        if (!byRegion.has(region)) byRegion.set(region, []);
+        byRegion.get(region).push(item);
+      }
+      const ort = e.entry.ort;
+      if (ort) {
+        const ortKey = ort.toLowerCase();
+        if (!byOrt.has(ortKey)) byOrt.set(ortKey, []);
+        byOrt.get(ortKey).push(item);
+      }
+      if (e.entry.koordinaten) withCoords.push(item);
+    }
+  }
+
+  const index = { byRegion, byOrt, withCoords };
+  _locationIndexCache.set(locale, index);
+  return index;
+}
+
+function _nearbyCandidates(entry, locale) {
+  const index = _buildLocationIndex(locale);
+  const seen = new Map();
+
+  function add(item) {
+    const key = `${item.collection}:${item.slug}`;
+    if (!seen.has(key)) seen.set(key, item);
+  }
+
+  if (entry.region) {
+    for (const item of index.byRegion.get(entry.region) || []) add(item);
+  }
+  if (entry.ort) {
+    for (const item of index.byOrt.get(entry.ort.toLowerCase()) || []) add(item);
+  }
+  if (entry.koordinaten) {
+    const lat = parseFloat(entry.koordinaten.lat);
+    const lng = parseFloat(entry.koordinaten.lng);
+    // ~25 km bounding box (covers all haversine matches up to 20 km)
+    const dLat = 25 / 111;
+    const cosLat = Math.cos(lat * Math.PI / 180) || 1;
+    const dLng = 25 / (111 * cosLat);
+    for (const item of index.withCoords) {
+      const c = item.entry.koordinaten;
+      const lat2 = parseFloat(c.lat);
+      const lng2 = parseFloat(c.lng);
+      if (Math.abs(lat2 - lat) <= dLat && Math.abs(lng2 - lng) <= dLng) add(item);
+    }
+  }
+
+  return seen.values();
+}
+
 /**
  * Nahegelegene Einträge zu einem Entry finden (region-basiert + distanz-basiert)
  * 1. Gleiche Region → score 100
  * 2. Gleicher Ort → score 50
  * 3. Distanz < 10km → score nach Entfernung
- * 
+ *
  * Berücksichtigt NUR Collections mit Standort (kein 'magazin')
  * Gibt maximal `limit` Ergebnisse
  */
 export function findNearby(entry, collection, locale = 'de', limit = 8) {
   if (!entry) return [];
-  
-  const locationCollections = ['regionen', 'unterkuenfte', 'camping', 'gastro', 'orte', 'sehenswuerdigkeiten', 'erlebnisse', 'events'];
+
   const results = [];
+  const entrySlug = entry.slug;
 
-  function haversineDist(lat1, lng1, lat2, lng2) {
-    const R = 6371;
-    const dLat = (parseFloat(lat2) - parseFloat(lat1)) * Math.PI / 180;
-    const dLng = (parseFloat(lng2) - parseFloat(lng1)) * Math.PI / 180;
-    const a = Math.sin(dLat/2)**2 + Math.cos(parseFloat(lat1)*Math.PI/180) * Math.cos(parseFloat(lat2)*Math.PI/180) * Math.sin(dLng/2)**2;
-    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-  }
+  for (const { collection: coll, slug, entry: e2 } of _nearbyCandidates(entry, locale)) {
+    if (coll === collection && slug === entrySlug) continue;
 
-  for (const coll of locationCollections) {
-    const entries = readCollection(coll, locale);
-    for (const e of entries) {
-      if (coll === collection && e.slug === entry.slug) continue; // skip self
-      const e2 = e.entry;
-      
-      let score = 0;
-      let distKm = null;
+    let score = 0;
+    let distKm = null;
 
-      // Same region → strong match
-      if (entry.region && e2.region && entry.region === e2.region) {
-        score = 100;
-      }
+    if (entry.region && e2.region && entry.region === e2.region) {
+      score = 100;
+    }
 
-      // Same ort → strong match
-      if (entry.ort && e2.ort && entry.ort.toLowerCase() === e2.ort.toLowerCase()) {
-        score = Math.max(score, 80);
-      }
+    if (entry.ort && e2.ort && entry.ort.toLowerCase() === e2.ort.toLowerCase()) {
+      score = Math.max(score, 80);
+    }
 
-      // Distance-based if both have coordinates
-      if (entry.koordinaten && e2.koordinaten) {
-        distKm = haversineDist(
-          entry.koordinaten.lat, entry.koordinaten.lng,
-          e2.koordinaten.lat, e2.koordinaten.lng
-        );
-        if (distKm < 1) score = Math.max(score, 90);
-        else if (distKm < 5) score = Math.max(score, 70);
-        else if (distKm < 10) score = Math.max(score, 50);
-        else if (distKm < 20) score = Math.max(score, 30);
-      }
+    if (entry.koordinaten && e2.koordinaten) {
+      distKm = haversineDist(
+        entry.koordinaten.lat, entry.koordinaten.lng,
+        e2.koordinaten.lat, e2.koordinaten.lng
+      );
+      if (distKm < 1) score = Math.max(score, 90);
+      else if (distKm < 5) score = Math.max(score, 70);
+      else if (distKm < 10) score = Math.max(score, 50);
+      else if (distKm < 20) score = Math.max(score, 30);
+    }
 
-      if (score > 0) {
-        results.push({ collection: coll, slug: e.slug, entry: e2, score, dist_km: distKm });
-      }
+    if (score > 0) {
+      results.push({ collection: coll, slug, entry: e2, score, dist_km: distKm });
     }
   }
 
-  // Sort by score desc, then dist_km asc
   results.sort((a, b) => b.score - a.score || (a.dist_km || 999) - (b.dist_km || 999));
   return results.slice(0, limit);
 }
@@ -338,38 +404,105 @@ function _buildEntityMap(locale = 'de') {
 }
 
 /**
- * HTML-Content mit automatischen internen Links anreichern.
- * Überspringt bereits bestehende Links und HTML-Tags.
- * Linkt maximal `maxLinks` Entitäten (Standard: 2).
+ * HTML-Content mit automatischen internen Links anreichern (siehe related.js).
+ * @param {string} [collection] — Collection des aktuellen Eintrags
+ * @param {string} [slug] — Slug des aktuellen Eintrags
  */
-export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLinks = 2) {
+export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLinks = 5, collection = null, slug = null) {
   if (!html || typeof html !== 'string') return html || '';
-  
+  if (collection && slug) {
+    return linkDescriptionText(html, collection, slug, locale, maxLinks, currentEntry);
+  }
   const entityMap = _buildEntityMap(locale);
   const currentSlug = currentEntry?.slug;
   const currentName = (currentEntry?.name || currentEntry?.titel || '').toLowerCase();
-  
   let linked = 0;
   let result = html;
-  
+  let textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
+
   for (const entity of entityMap) {
     if (linked >= maxLinks) break;
-    
-    // Skip self-linking
     if (currentSlug && entity.slug === currentSlug) continue;
     if (currentName && entity.name.toLowerCase() === currentName) continue;
-    
+
+    const nameLower = entity.name.toLowerCase();
+    if (nameLower.length < 3 || !textProbe.includes(nameLower)) continue;
+
     const escaped = entity.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const regex = new RegExp(`(?<!<[^>]*)(?<!href="[^"]*)(?<![\\w\\d])(${escaped})(?![\\w\\d])`, 'gi');
-    
-    if (regex.test(result)) {
-      result = result.replace(regex, (match) => {
-        if (linked >= maxLinks) return match;
-        linked++;
-        return `<a href="${entity.href}" class="auto-link">${match}</a>`;
-      });
+    const next = result.replace(regex, (match) => {
+      if (linked >= maxLinks) return match;
+      linked++;
+      return `<a href="${entity.href}" class="auto-link">${match}</a>`;
+    });
+    if (next !== result) {
+      result = next;
+      textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
     }
   }
-  
   return result;
+}
+
+const _existsCache = new Map();
+
+/**
+ * Prüft schnell (mit Cache), ob ein Eintrag in einer Sprache existiert und veröffentlicht ist.
+ */
+export function entryExists(collection, slug, locale = 'de') {
+  const key = `${locale}:${collection}:${slug}`;
+  if (_existsCache.has(key)) return _existsCache.get(key);
+  const dataDir = !locale || locale === 'de' ? DATA_DIR : path.join(DATA_DIR, locale);
+  const jsonPath = path.join(dataDir, collection, slug, 'index.json');
+  if (!fs.existsSync(jsonPath)) {
+    _existsCache.set(key, false);
+    return false;
+  }
+  const entry = readEntry(collection, slug, locale);
+  const valid = Boolean(entry && isPublished(entry));
+  _existsCache.set(key, valid);
+  return valid;
+}
+
+/**
+ * Gibt alle Sprachen aus den übergebenen Locales (Standard: alle 8) zurück,
+ * in denen ein Eintrag wirklich existiert und veröffentlicht ist.
+ * Wenn indexableOnly: true, werden für Qualitäts-Collections nur indexierbare Einträge gezählt.
+ */
+export function getAvailableLocalesForEntry(collection, slug, options = {}) {
+  const { indexableOnly = false, locales = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'] } = options;
+  if (collection === 'bezirke') {
+    return locales.filter(l => {
+      const b = readSingleton('bezirke', l);
+      return Boolean(b && b[slug]);
+    });
+  }
+
+  const QUALITY_COLLECTIONS = ['unterkuenfte', 'gastro', 'camping', 'orte', 'sehenswuerdigkeiten'];
+  return locales.filter(l => {
+    if (!entryExists(collection, slug, l)) return false;
+    if (indexableOnly && QUALITY_COLLECTIONS.includes(collection)) {
+      const entry = readEntry(collection, slug, l);
+      return Boolean(entry && shouldIndex(entry, collection));
+    }
+    return true;
+  });
+}
+
+/**
+ * Ermittelt verfügbare Sprachen für einen gegebenen Pfad (z.B. /unterkuenfte/alpenrose/ oder /en/magazin/xyz/).
+ */
+export function getAvailableLocalesForPath(pathname, options = {}) {
+  const locales = options.locales || ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'];
+  const prefixRegex = new RegExp(`^/(${locales.join('|')})(/|$)`);
+  const match = pathname.match(prefixRegex);
+  const cleanPath = (match ? pathname.slice(match[1].length + 1) : pathname).replace(/^\/+|\/+$/g, '');
+  const segments = cleanPath.split('/').filter(Boolean);
+
+  if (segments.length === 2) {
+    const [collection, slug] = segments;
+    return getAvailableLocalesForEntry(collection, slug, { ...options, locales });
+  }
+
+  // Alle anderen Seiten (Home, Listen, Info/Service) existieren in allen veröffentlichten Sprachen
+  return locales;
 }

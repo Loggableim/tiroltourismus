@@ -91,7 +91,8 @@ const articlePubDate = entry.datum ? entry.datum + 'T00:00:00' : undefined;
       { label: l.kategorie, value: entry.kategorie || undefined },
       { label: l.datum, value: entry.datum || undefined },
     ].filter(Boolean) },
-    (entry.teaser || entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.titel, title: entry.titel, content: autoLinkContent([entry.teaser, entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    (entry.teaser || entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.titel, title: entry.titel, content: autoLinkContent([entry.teaser, entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale, 5, 'magazin', slug) } : null,
+    { type: 'related-links', collection: 'magazin', slug },
     { type: 'back-link', href: `${prefix}/magazin/`, text: l.alleArtikel },
   ].filter(Boolean)}
 />

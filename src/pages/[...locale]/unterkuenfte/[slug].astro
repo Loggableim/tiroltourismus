@@ -1,6 +1,5 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
-import PaywallOverlay from '../../../components/PaywallOverlay.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent, shouldIndex, getContentQuality } from '../../../lib/content.js';
 import { generateMetaDescription } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
@@ -87,7 +86,8 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
       { label: l.typ, value: entry.typ || undefined },
       { label: l.sterne, value: entry.sterne ? '★'.repeat(entry.sterne) : undefined },
     ].filter(Boolean) },
-    !(tier === 'basic') && (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name, title: entry.name, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale, 5, 'unterkuenfte', slug) } : null,
+    { type: 'related-links', collection: 'unterkuenfte', slug },
     !(tier === 'basic') ? { type: 'details-grid', items: [
       { label: l.preis, value: entry.preis_ab || undefined, type: 'price' },
       entry.webseite ? { label: l.webseite, value: entry.webseite, type: 'link', href: entry.webseite } : null,
@@ -101,11 +101,3 @@ const ogImage = entry.hero_bild ? `${siteURL}${entry.hero_bild}` : undefined;
     { type: 'back-link', href: `${prefix}/unterkuenfte/`, text: l.alleUnterkuenfte },
   ].filter(Boolean)}
 />
-
-{(tier === 'basic') && (
-  <section class="section paywall-restricted">
-    <div class="container" style="position:relative;max-width:800px">
-      <PaywallOverlay name={entry.name} slug={slug} />
-    </div>
-  </section>
-)}

@@ -9,6 +9,8 @@
      3-State Button: auto → Tag → Nacht → auto
      ════════════════════════════════════════════════════════ */
 
+  /* CHRONOCHROM_CORE_START — extracted by scripts/check-chronochrom-contrast.mjs */
+
   /* ─── 1. PHASEN-DEFINITIONEN ─── */
   // peak = Uhrzeit des stärksten Einflusses (0-24)
   // Hex-Farben + rgba Opazitäten für 15 interpoliere Variablen
@@ -100,6 +102,158 @@
     return 'rgba(' + Math.round(r) + ',' + Math.round(g) + ',' + Math.round(b) + ',' + a.toFixed(3) + ')';
   }
 
+  /* WCAG 2.x relative luminance + contrast (same math as scripts/check-chronochrom-contrast.mjs) */
+  function channelLinear(c) {
+    c = c / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  }
+
+  function relativeLuminanceFromRgb(r, g, b) {
+    return 0.2126 * channelLinear(r) + 0.7152 * channelLinear(g) + 0.0722 * channelLinear(b);
+  }
+
+  function contrastRatioRgb(r1, g1, b1, r2, g2, b2) {
+    var l1 = relativeLuminanceFromRgb(r1, g1, b1);
+    var l2 = relativeLuminanceFromRgb(r2, g2, b2);
+    var lighter = Math.max(l1, l2);
+    var darker = Math.min(l1, l2);
+    return (lighter + 0.05) / (darker + 0.05);
+  }
+
+  function contrastRatioHex(bgHex, fgHex) {
+    var bg = hexToRgb(bgHex);
+    var fg = hexToRgb(fgHex);
+    return contrastRatioRgb(bg[0], bg[1], bg[2], fg[0], fg[1], fg[2]);
+  }
+
+  function compositeRgbOnBg(fgR, fgG, fgB, alpha, bgRgb) {
+    var a = alpha;
+    return [
+      fgR * a + bgRgb[0] * (1 - a),
+      fgG * a + bgRgb[1] * (1 - a),
+      fgB * a + bgRgb[2] * (1 - a)
+    ];
+  }
+
+  function contrastRgbaOnBg(bgHex, rgbaStr) {
+    var bg = hexToRgb(bgHex);
+    var rgba = parseRgba(rgbaStr);
+    var comp = compositeRgbOnBg(rgba.r, rgba.g, rgba.b, rgba.a, bg);
+    return contrastRatioRgb(bg[0], bg[1], bg[2], comp[0], comp[1], comp[2]);
+  }
+
+  var CHRONO_TEXT_MIN = 4.5;
+  var CHRONO_TEXT2_MIN = 4.5;
+  var CHRONO_TEXT3_MIN = 4.5;
+  var CHRONO_DARK_TEXT = '#1A1A1A';
+  var CHRONO_LIGHT_TEXT = '#F5F3F0';
+  var CHRONO_TEXT_CLAMP_CANDIDATES = ['#0A0A0A', '#000000', CHRONO_DARK_TEXT, '#FFFFFF', CHRONO_LIGHT_TEXT];
+
+  function pickClampedTextHex(bgHex) {
+    var bestHex = null;
+    var bestRatio = 0;
+    for (var i = 0; i < CHRONO_TEXT_CLAMP_CANDIDATES.length; i++) {
+      var candidate = CHRONO_TEXT_CLAMP_CANDIDATES[i];
+      var ratio = contrastRatioHex(bgHex, candidate);
+      if (ratio >= CHRONO_TEXT_MIN && ratio > bestRatio) {
+        bestRatio = ratio;
+        bestHex = candidate;
+      }
+    }
+    if (bestHex) return bestHex;
+    var blackRatio = contrastRatioHex(bgHex, '#000000');
+    var whiteRatio = contrastRatioHex(bgHex, '#FFFFFF');
+    return blackRatio >= whiteRatio ? '#000000' : '#FFFFFF';
+  }
+
+  var CHRONO_PURPLE_DEFAULT = '#8B5CF6';
+  var CHRONO_PURPLE_CLAMP_CANDIDATES = [
+    '#C4B5FD',
+    '#DDD6FE',
+    '#E9D5FF',
+    '#F5F3FF',
+    '#A78BFA',
+    CHRONO_DARK_TEXT,
+    CHRONO_LIGHT_TEXT
+  ];
+
+  function pickClampedPurpleHex(bgHex) {
+    var bestHex = null;
+    var bestRatio = 0;
+    for (var i = 0; i < CHRONO_PURPLE_CLAMP_CANDIDATES.length; i++) {
+      var candidate = CHRONO_PURPLE_CLAMP_CANDIDATES[i];
+      var ratio = contrastRatioHex(bgHex, candidate);
+      if (ratio >= CHRONO_TEXT_MIN && ratio > bestRatio) {
+        bestRatio = ratio;
+        bestHex = candidate;
+      }
+    }
+    if (bestHex) return bestHex;
+    return pickClampedTextHex(bgHex);
+  }
+
+  /** After Gaussian blend: ensure --text/--text2/--text3 meet contrast on --bg (peaks unchanged if already OK). */
+  function clampChronochromTextContrast(colors) {
+    var bgHex = colors.bg;
+    var bgRgb = hexToRgb(bgHex);
+    var bgLum = relativeLuminanceFromRgb(bgRgb[0], bgRgb[1], bgRgb[2]);
+    var text2Alpha = 0.55;
+    var text3Alpha = 0.32;
+
+    function fallbackMutedRgba(alpha) {
+      var target = bgLum > 0.179 ? CHRONO_DARK_TEXT : CHRONO_LIGHT_TEXT;
+      var tr = hexToRgb(target);
+      return rgbaToString(tr[0], tr[1], tr[2], alpha);
+    }
+
+    var textHex = colors.text;
+    var textClamped = false;
+    if (contrastRatioHex(bgHex, textHex) < CHRONO_TEXT_MIN) {
+      textHex = pickClampedTextHex(bgHex);
+      colors.text = textHex;
+      textClamped = true;
+    }
+
+    if (textClamped) {
+      var textRgb = hexToRgb(textHex);
+      colors.text2 = rgbaToString(textRgb[0], textRgb[1], textRgb[2], text2Alpha);
+      colors.text3 = rgbaToString(textRgb[0], textRgb[1], textRgb[2], text3Alpha);
+    }
+
+    function clampMutedOnBg(rgbaStr, minRatio, defaultAlpha) {
+      var parsed = parseRgba(rgbaStr);
+      var r = parsed.r;
+      var g = parsed.g;
+      var b = parsed.b;
+      var startA = parsed.a;
+      for (var step = 0; step <= 100; step++) {
+        var a = Math.min(1, startA + step * 0.01);
+        var candidate = rgbaToString(r, g, b, a);
+        if (contrastRgbaOnBg(bgHex, candidate) >= minRatio) return candidate;
+      }
+      var solid = fallbackMutedRgba(1);
+      if (contrastRgbaOnBg(bgHex, solid) >= minRatio) return solid;
+      var target = bgLum > 0.179 ? CHRONO_DARK_TEXT : CHRONO_LIGHT_TEXT;
+      var tr = hexToRgb(target);
+      return rgbaToString(tr[0], tr[1], tr[2], 1);
+    }
+
+    if (contrastRgbaOnBg(bgHex, colors.text2) < CHRONO_TEXT2_MIN) {
+      colors.text2 = clampMutedOnBg(colors.text2, CHRONO_TEXT2_MIN, text2Alpha);
+    }
+    if (contrastRgbaOnBg(bgHex, colors.text3) < CHRONO_TEXT3_MIN) {
+      colors.text3 = clampMutedOnBg(colors.text3, CHRONO_TEXT3_MIN, text3Alpha);
+    }
+
+    var purpleHex = colors.purple || CHRONO_PURPLE_DEFAULT;
+    if (contrastRatioHex(bgHex, purpleHex) < CHRONO_TEXT_MIN) {
+      purpleHex = pickClampedPurpleHex(bgHex);
+    }
+    colors.purple = purpleHex;
+
+    return colors;
+  }
+
   /* ─── 3. INTERPOLATIONS-MOTOR ─── */
   // Für eine gegebene Stunde: berechne GAUSS-Gewichte für alle 7 Phasen,
   // normalisiere, dann interpoliere jede Farb-Variable als gewichteten Durchschnitt.
@@ -177,8 +331,10 @@
       result[item.key] = item.format(kr, kg, kb, ka);
     });
 
-    return result;
+    return clampChronochromTextContrast(result);
   }
+
+  /* CHRONOCHROM_CORE_END */
 
   /* ─── 4. CSS-VARS SETZEN ─── */
   function applyChronochrom(colors) {
@@ -212,6 +368,7 @@
       '--tirol-red': '#C8102E',
       '--orange': colors.orange || '#FF6B35',
       '--purple': colors.purple || '#8B5CF6',
+      '--pop-purple': colors.purple || '#8B5CF6',
       '--green': colors.green || '#00C853'
     };
 

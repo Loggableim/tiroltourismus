@@ -18,6 +18,24 @@ _live_now.html
 _land.html
 _kuf.html
 
+# Local secrets. Keep example env files.
+.env
+.env.*
+!.env.example
+!.env*.example
+!.env.sample
+!.env*.sample
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Key and secret scratch files
+*_key*
+*key_temp*
+*secret*temp*
+tmp_*decrypt*
+
 # Local Node binary drop. Deploy uses actions/setup-node (Node 24).
 node-v20/
 

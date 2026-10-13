@@ -289,7 +289,7 @@ src/data/
 #### 9.5 Bilder fehlen flächendeckend
 - **Problem:** Keine Collection hat Bilder (außer Magazin mit 43)
 - **Auswirkung:** Detailseiten haben keine visuellen Inhalte
-- **Lösung:** FLUX-API (Key vorhanden: sk-yhwjsrzaorlcrqjcpgwveuzbugitxpgwehawlmpozeoavtxu) für autom. Bildgenerierung
+- **Lösung:** FLUX-API (Key vorhanden: [REDACTED]) für autom. Bildgenerierung
 - **Script-Ansätze:** `scripts/add_image_fields.py` (rudimentär)
 
 #### 9.6 Events & Erlebnisse extrem dünn
@@ -477,8 +477,8 @@ generateMetaDescription(entry, 'unterkuenfte', 'de', {typLabel: 'Hotel'})
 
 ### 12.5 API-Keys & Credentials
 ```
-FLUX-Key:     sk-yhwjsrzaorlcrqjcpgwveuzbugitxpgwehawlmpozeoavtxu
-Ollama Keys:  4 Keys in scripts/translate.py rotierend
+FLUX-Key:     [REDACTED]
+Ollama Keys:  OLLAMA_API_KEYS env (comma-separated; not committed)
 Store-ID:     379815 (LemonSqueezy)
 Variant-IDs:  silver=1671559, gold=1671576
 ```

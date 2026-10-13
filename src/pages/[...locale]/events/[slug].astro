@@ -109,7 +109,8 @@ const eventLD = {
       { label: l.uhrzeit, value: entry.uhrzeit || undefined },
       { label: l.preis, value: entry.preis || undefined, type: 'price' },
     ].filter(Boolean) },
-    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name || entry.titel, title: entry.name || entry.titel, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale) } : null,
+    (entry.kurzbeschreibung || entry.beschreibung) ? { type: 'description', label: entry.name || entry.titel, title: entry.name || entry.titel, content: autoLinkContent([entry.kurzbeschreibung, entry.beschreibung].filter(Boolean).join('<br><br>'), entry, locale, 5, 'events', slug) } : null,
+    { type: 'related-links', collection: 'events', slug },
     mapSection,
     { type: 'back-link', href: `${prefix}/events/`, text: l.alleEvents },
   ].filter(Boolean)}

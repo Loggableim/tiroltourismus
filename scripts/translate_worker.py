@@ -18,13 +18,12 @@ import urllib.request, urllib.error
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "src" / "data"
 
-# ── Ollama Cloud (Hauptkeys aus Sidekick-Credential-Pool) ─────
+# ── Ollama Cloud (OLLAMA_API_KEYS, comma-separated; do not commit credentials) ─────
 # DeepSeek 4.1 Flash für alle Übersetzungen (User-Vorgabe 2026-09-19)
 OLLAMA_KEYS = [
-    "6ca4701713af45b6b86dbec67057b192.cgy0OtCEVaRIZUxkrnepKtQL",   # Hauptkey (10 agents)
-    "a6285d688685426fa6e1877161669c5a.QkIMfGkQvP5gLXYKjOQ0vjLg",   # Fallback 1
-    "cda2a70a1e334f83ab179deedad1f8c2.oEZpwKu9pYFLeGh1A2DZQHrN",   # Fallback 2
-    "61dfae9735174bd0924112922ed568cf.ThtyLm31CsBfqj3bIosdeFS4",   # Fallback 3
+    part.strip()
+    for part in os.environ.get("OLLAMA_API_KEYS", "").split(",")
+    if part.strip()
 ]
 OLLAMA_BASE_URL = "https://ollama.com/v1"
 OLLAMA_SHORT_MODEL = os.getenv("OLLAMA_MODEL_SHORT", "deepseek-v4.1-flash")

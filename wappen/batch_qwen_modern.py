@@ -5,7 +5,7 @@ Logs progress to batch_qwen_modern.log for monitoring.
 import requests, json, base64, os, sys, time, re, random
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-API_KEY = "sk-jflggfbmhvbarpjfgifnhusjvyggksbqbmtdebjxrvjtqwnl"
+API_KEY = os.environ.get("FLUX_API_KEY", "")
 URL = "https://api.siliconflow.com/v1/images/generations"
 OUT_DIR = "img/qwen_modern"
 LOG = "batch_qwen_modern.log"

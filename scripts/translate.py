@@ -3,7 +3,7 @@
 🌍 Tirol Tourismus — Mehrsprachen-Übersetzungs-Engine
 
 Verwendet:
-  4 Ollama API Keys (rotierend)
+  Ollama API keys from OLLAMA_API_KEYS (comma-separated, not committed)
   ≤600 Wörter → ministral-3:3b
   >600 Wörter → ministral-3:14b
   Sprache 'zh' → deepseek-v4-flash via opencode-go
@@ -22,14 +22,15 @@ from collections import OrderedDict
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, 'src', 'data')
 
-# 4 Ollama Keys rotierend
+# Ollama keys from the environment. Do not commit credentials.
 OLLAMA_KEYS = [
-    ("51484f56e01142ddaa6b247a0f19aab5.SJw0DVBs3S-BWllxSULXM17o", "key0"),
-    ("32d793e82978472c89ae09092c65921e.x5XpxfWOplC120yClZhx6PUz", "key1"),
-    ("72d76965979a4861bf498130535efe12.7KCt83Wvj9tOLmm13KMAEP9o", "key2"),
-    ("b79597dbc5af4811b051cd1dcb2e8d79.rC-MYL24L5P3NShzzn0fYszQ", "key3"),
+    (key, f"key{i}")
+    for i, key in enumerate(
+        part.strip()
+        for part in os.environ.get("OLLAMA_API_KEYS", "").split(",")
+        if part.strip()
+    )
 ]
-
 OLLAMA_BASE = "https://ollama.com/v1"
 OPENCODE_BASE = "https://opencode.ai/zen/go/v1"
 OPENCODE_KEY = os.environ.get("OPENCODE_GO_API_KEY", "")

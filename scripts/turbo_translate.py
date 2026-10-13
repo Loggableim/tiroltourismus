@@ -36,10 +36,11 @@ OR_MODELS = [
     "qwen/qwen3-coder:free",
 ]
 
-# ── Provider 2: Ollama Cloud ───
+# ── Provider 2: Ollama Cloud (keys from the environment; do not commit credentials) ───
 OLLAMA_KEYS = [
-    "32d793e82978472c89ae09092c65921e.x5XpxfWOplC120yClZhx6PUz",
-    "72d76965979a4861bf498130535efe12.7KCt83Wvj9tOLmm13KMAEP9o",
+    part.strip()
+    for part in os.environ.get("OLLAMA_API_KEYS", "").split(",")
+    if part.strip()
 ]
 OLLAMA_BASE = "https://ollama.com/v1"
 OLLAMA_MODEL = "ministral-3:3b"

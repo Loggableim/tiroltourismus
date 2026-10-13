@@ -1,10 +1,10 @@
 {
   "name": "Hintersteiner See",
   "slug": "hintersteiner-see",
-  "region": "kufstein",
+  "region": "wilder-kaiser",
   "ort": "Scheffau am Wilden Kaiser",
   "kategorie": "natur",
-  "kurzbeschreibung": "Le Hintersteiner See aux reflets émeraude, niché au cœur des montagnes sauvages du Wilden Kaiser, est une destination de détente idéale pour se baigner et se promener.",
+  "kurzbeschreibung": "Le Hintersteiner See à 882 m dans le Naturschutzgebiet Wilder Kaiser : eau de source cristalline de qualité potable, plage et sentier de 5 km.",
   "emoji": "🏞️",
   "farbe": "#2E8B57",
   "tags": [
@@ -14,13 +14,20 @@
     "randonnée"
   ],
   "dauer": "2-3 Stunden",
-  "preis": "Kostenlos",
-  "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.scheffau.at/hintersteiner-see",
+  "preis": "Rundweg kostenlos; Strandbad Erwachsene ca. 6,00 €, Kinder 4,50 €",
+  "oeffnungszeiten": "Rundweg 24/7 frei zugänglich; Strandbad Ende Mai–Sep täglich ca. 08:30–19:00 Uhr",
+  "webseite": "https://www.wilderkaiser.info",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.5284",
     "lng": "12.2507"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Hintersteiner See</strong> est un lac de montagne aux eaux cristallines situé à 882 mètres d'altitude sur la commune de Scheffau am Wilden Kaiser dans l'Unterland tyrolien. Enchâssé dans la réserve hautement protégée du <em>Naturschutzgebiet Wilder Kaiser</em>, le lac s'étend sur une superficie d'environ 0,56 kilomètre carré et atteint 36 mètres de profondeur en son point le plus bas. Le plan d'eau est alimenté par des sources karstiques souterraines issues du puissant massif du Wilder Kaiser et offre une qualité d'eau minérale potable. En raison de ses nuances bleu turquoise et de son écrin naturel préservé, le Hintersteiner See est considéré comme l'un des plus précieux joyaux naturels de l'ensemble de l'espace alpin.</p><h2>Phénomène naturel & Sentier circulaire</h2><p>Le lac s'est formé lors de la dernière période glaciaire il y a environ 15 000 ans, lorsqu'un vallum morainique laissé par le retrait du glacier a barré le bassin. L'eau est d'une pureté remarquable et délicieusement fraîche : même au cœur de l'été, la température dépasse rarement 20 à 22 °C. Sur la rive orientale se trouve le site officiel du <strong>Strandbad Scheffau am Hintersteiner See</strong> : une pelouse idyllique avec terrasse ensoleillée, cabines pour se changer et pontons de baignade. Les autres berges étant sous stricte protection naturelle, la baignade est exclusivement autorisée dans l'enceinte de la plage aménagée. Parmi les randonnées les plus prisées de la région figure le <strong>Hintersteiner See-Rundweg</strong> de 5,2 kilomètres : cette marche accessible dure environ 1,5 à 2 heures et fait le tour complet du plan d'eau. La rive nord, ensoleillée, longe une route goudronnée à très faible circulation, tandis que la rive sud, ombragée, séduit sous la forme d'un sentier forestier naturel avec de légères pentes, des passages racineux et des panoramas spectaculaires plongeant sur les eaux turquoise.</p><h2>Visite & Accès</h2><p>Le sentier circulaire et les berges sont en accès libre tout au long de l'année. Le <em>Strandbad Hintersteiner See</em> est ouvert par temps favorable de fin mai à septembre, tous les jours d'environ 08h00/09h00 à 19h00. Tarifs d'entrée du Strandbad (saison 2025/2026) : ticket journée adulte env. 6,00 € (avec la carte régionale Wilder Kaiser GästeCard 5,50 €), enfants env. 4,50 € ; tickets demi-journée à partir de 13h00 dès 5,00 €. En voiture : depuis Scheffau, empruntez l'étroite Hintersteiner-See-Straße pour monter au parking payant de la rive est (Hinterstein 52/57). Le parking affichant rapidement complet lors des chaudes journées estivales et le camping sauvage étant strictement interdit, il est vivement conseillé d'emprunter la navette écologique <strong>KaiserJet-Wanderbus</strong> (ligne Hintersteiner See), qui relie le village de Scheffau et la télécabine directement au lac chaque heure en été (gratuit avec la carte d'hôte).</p><h2>Conseils</h2><p>La rive nord du circuit est goudronnée, plate et accessible aux poussettes et fauteuils roulants ; la rive sud forestière exige de bonnes chaussures de marche et d'avoir le pied sûr. Après la randonnée, le <em>Seestüberl</em> sur la rive est ou l'auberge d'alpage <em>Goingstätt</em> sur la rive ouest vous invitent à savourer des spécialités tyroliennes face au lac.</p>",
+  "sources": [
+    "https://www.wilderkaiser.info/de/scheffau/natur-erlebnis/hintersteiner-see.html",
+    "https://www.tirol.at/reisefuehrer/sport/baden/badeseen/a-hintersteiner-see",
+    "https://de.wikipedia.org/wiki/Hintersteiner_See",
+    "https://www.strandbad-hintersteinersee.at"
+  ]
 }

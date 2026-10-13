@@ -40,7 +40,7 @@ const wappenSrc = wappenEntry ? `/wappen/ultra-minimal/${wappenEntry.img_rel.rep
 <a href={`${localePrefixFn(locale)}/orte/${slug}/`} class="ort-card" data-collection="orte" data-slug={slug} data-filter-card data-filter-cat={region || ''}>
   <div class="ort-card-img" style={`--accent:${farbe};background:linear-gradient(180deg, ${farbe}18, var(--surface))`}>
     {wappenSrc ? (
-      <img src={wappenSrc} alt={`${name} Wappen`} class="ort-wappen" loading="lazy" decoding="async" />
+      <img src={wappenSrc} alt={`${name} Wappen`} class="ort-wappen" loading="lazy" decoding="async" width="220" height="220" />
     ) : (
       <CategoryPlaceholder collection="orte" locale={locale} />
     )}

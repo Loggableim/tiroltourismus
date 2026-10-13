@@ -28,7 +28,17 @@ const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
   <div class="uk-img" style="position:relative">
     {isCamping && <span class="uk-camping-badge">⛺</span>}
     {heroSrc ? (
-      <img src={heroSrc} alt={name} class="uk-photo" loading="lazy" decoding="async" width="420" height="315" />
+      <img
+        src={heroSrc}
+        srcset={heroSrc.endsWith('.png') ? `${heroSrc.replace(/\.png$/, '.webp')} 800w, ${heroSrc.replace(/\.png$/, '_thumb.webp')} 420w` : (heroSrc.endsWith('.webp') && !heroSrc.includes('_thumb') ? `${heroSrc} 800w, ${heroSrc.replace(/\.webp$/, '_thumb.webp')} 420w` : undefined)}
+        sizes="(max-width: 600px) 100vw, 420px"
+        alt={name}
+        class="uk-photo"
+        loading="lazy"
+        decoding="async"
+        width="420"
+        height="315"
+      />
     ) : (
       <CategoryPlaceholder collection={isCamping ? 'camping' : 'unterkuenfte'} locale={locale} />
     )}

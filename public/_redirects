@@ -19,3 +19,7 @@
 /es https://es.tiroltourismus.com/ 301
 /zh https://cn.tiroltourismus.com/ 301
 /cn https://cn.tiroltourismus.com/ 301
+
+# Takedown: Vorarlberg entry (not Tirol) — force 301 until edge cache of old HTML expires
+/gastro/willi-s-pilsst-ble /gastro/ 301
+/gastro/willi-s-pilsst-ble/ /gastro/ 301

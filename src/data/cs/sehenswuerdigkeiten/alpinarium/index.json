@@ -2,15 +2,15 @@
   "name": "Alpinarium",
   "slug": "alpinarium",
   "status": "published",
-  "region": "imst",
-  "ort": "Imst",
+  "region": "landeck",
+  "ort": "Galtür",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Jedinečné centrum pro lezení a kulturu v Imst s kladivovou halou, oblastí pro bouldering, muzeem a prostory pro akce.",
-  "beschreibung": "<p>Das <strong>Alpinarium</strong> in Imst ist ein begehbares Gesteinsdenkmal und Informationszentrum zur <strong>alpinen Geschichte der Region</strong>. Es liegt am Ortseingang von Imst und verbindet Architektur mit den angrenzenden Felsformationen. Das Haus dokumentiert die Entwicklung von Natur, Berglandwirtschaft und Tourismus im Gurgltal. Besucher erwarten eine <strong>multimediale Dauerausstellung</strong> zur Entstehung der Alpen und zum Leben im Gebirge. Ergänzt wird das Angebot durch Sonderausstellungen zu zeitgenössischen Themen aus Kultur und Wissenschaft. Das Gebäude selbst ist aus regionalen Materialien errichtet und fügt sich in die Felslandschaft ein.</p>",
-  "emoji": "🧗",
-  "farbe": "#FF9800",
-  "hoehe": "827 m",
-  "dauer": "2–3 Stunden",
+  "kurzbeschreibung": "Alpinarium Galtür spojuje monumentální protilavinovou ochrannou zeď s moderním zážitkovým muzeem věnovaným vysokohorskému prostředí.",
+  "beschreibung": "<h2>Přehled</h2><p><strong>Alpinarium Galtür</strong> v zadní části údolí Paznaun je celosvětově unikátním dokumentačním centrem a zážitkovým muzeem: je přímo integrováno do mohutné, 345 metrů dlouhé a až 19 metrů vysoké protilavinové ochranné zdi v Galtür. Tato výrazná stavba vznikla jako přímá architektonická i společenská odpověď na ničivé lavinové neštěstí z 23. února 1999, při němž přišlo o život 31 lidí. V nadmořské výšce 1 584 metrů propojuje moderně pojatý památník s fascinující zážitkovou expozicí o alpském biotopu, kultuře osadníků Walser a vztahu člověka k vysokohorské přírodě.</p><h2>Historie a architektura</h2><p>Po lavinové katastrofě v roce 1999 rozhodla obec Galtür o vybudování monumentálního ochranného valu, který má vesnici do budoucna chránit před lavinami ze strmých svahů vrcholů Sonnberg a Grisköpfe. Tyrolská architektonická kancelář Falch nenavrhla ochrannou zeď jako strohý betonový val, nýbrž budovu muzea harmonicky včlenila do zadní konstrukce valu. Vnější fasáda byla obložena více než 20 000 tunami místního přírodního kamene a přimyká se k údolí jako moderní pevnost. Alpinarium, slavnostně otevřené v roce 2003, získalo řadu mezinárodních ocenění, včetně nominace na prestižní Evropské muzeum roku a Rakouské pečetě kvality muzeí. Jádrem prohlídky je stálá expozice „GANZ OBEN“, která prostřednictvím multimediálních prostorových instalací, výpovědí pamětníků a vědeckých stanovišť přibližuje vznik lavin, historické přežití v alpských údolích i průkopnické výkony alpinismu.</p><h2>Návštěva a příjezd</h2><p>Alpinarium je otevřeno v letní i zimní sezóně (od začátku června do poloviny října a od poloviny prosince do Velikonoc, vždy od úterý do neděle od 10:00 do 18:00 hodin, v pondělí zavřeno). Běžné vstupné (stav pro sezónu 2025/2026): dospělí 10,00 €, senioři a studenti 8,50 €, děti od 6 do 15 let 5,50 €, děti do 6 let zdarma. Držitelé karty hosta Silvretta Card Premium mají vstup zdarma nebo se slevou. Autem se do Galtür dostanete po dálnici Inntal A12 nebo rychlostní silnici Arlberg S16 k výjezdu Pians a odtud po B188 (Paznauntalstraße) přes Ischgl do Galtür. Parkovací místa jsou k dispozici přímo u budovy. Veřejnou dopravou se cestuje vlakem (ÖBB/Railjet) do stanice Landeck-Zams a odtud autobusem VVT linky 260, který pravidelně jezdí na zastávku Galtür Dorfplatz (cca 5 minut chůze k Alpinarium).</p><h2>Tipy</h2><p>Celá budova muzea je bezbariérová a vybavená výtahy vhodnými pro vozíčkáře, širokými průchody i bezbariérovými toaletami. Vedle výstavních prostor se v budově nachází vnitřní boulderingová stěna o rozloze cca 70 m² v kavárně „Gefrorene Wasser“, která přes panoramatická okna od podlahy ke stropu nabízí velkolepý výhled na třítisícovky pohoří Silvretta. Na prohlídku si vyhraďte přibližně 1,5 až 2 hodiny.</p>",
+  "emoji": "🗻",
+  "farbe": "#8B0000",
+  "hoehe": "1.584 m",
+  "dauer": "1,5–2 Stunden",
   "preis": "14 € (Kletterhalle Erwachsene)",
   "tags": [
     "horolezectví",
@@ -22,9 +22,15 @@
   "oeffnungszeiten": "Mo–Fr 10:00–22:00, Sa–So 9:00–21:00",
   "webseite": "https://www.alpinarium.at",
   "koordinaten": {
-    "lat": "47.2333",
-    "lng": "10.7333"
+    "lat": "46.9688",
+    "lng": "10.1872"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.alpinarium.at",
+    "https://de.wikipedia.org/wiki/Alpinarium_Galt%C3%BCr",
+    "https://www.galtuer.com",
+    "https://www.paznaun-ischgl.com"
+  ]
 }

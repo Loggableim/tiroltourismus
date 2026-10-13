@@ -2,15 +2,15 @@
   "name": "Alpinarium",
   "slug": "alpinarium",
   "status": "published",
-  "region": "imst",
-  "ort": "Imst",
+  "region": "landeck",
+  "ort": "Galtür",
   "kategorie": "kultur",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Das <strong>Alpinarium</strong> in Imst ist ein begehbares Gesteinsdenkmal und Informationszentrum zur <strong>alpinen Geschichte der Region</strong>. Es liegt am Ortseingang von Imst und verbindet Architektur mit den angrenzenden Felsformationen. Das Haus dokumentiert die Entwicklung von Natur, Berglandwirtschaft und Tourismus im Gurgltal. Besucher erwarten eine <strong>multimediale Dauerausstellung</strong> zur Entstehung der Alpen und zum Leben im Gebirge. Ergänzt wird das Angebot durch Sonderausstellungen zu zeitgenössischen Themen aus Kultur und Wissenschaft. Das Gebäude selbst ist aus regionalen Materialien errichtet und fügt sich in die Felslandschaft ein.</p>",
-  "emoji": "🧗",
-  "farbe": "#FF9800",
-  "hoehe": "827 m",
-  "dauer": "2–3 Stunden",
+  "kurzbeschreibung": "Alpinarium Galtür将雄伟的防雪崩护墙与探索高山生境的现代体验式博物馆融为一体。",
+  "beschreibung": "<h2>概述</h2><p>位于Paznaun山谷深处的<strong>Alpinarium Galtür</strong>是一座举世无双的文献中心与体验式博物馆：它直接筑建在Galtür长达345米、高逾19米的巨型防雪崩保护墙内。这座醒目的建筑是对1999年2月23日造成31人遇难的灾难性雪崩事件的直接建筑与社会回应。在海拔1584米的高度上，该场馆将具有现代设计感的缅怀空间与引人入胜的阿尔卑斯生态展览相结合，生动展示了高山生境、Walser定居者文化以及人类与高山自然之间的互动关系。</p><h2>历史与建筑</h2><p>在1999年雪崩灾难发生后，Galtür市镇决定修建一座纪念碑式的防护屏障，以防止未来再次发生来自Sonnberg和Grisköpfe陡峭山坡的雪崩危害。蒂罗尔Falch建筑事务所并未将保护墙设计成冰冷的混凝土护栏，而是将博物馆建筑和谐地融入后部墙体结构中。外立面铺设了超过2万吨的当地天然石材，犹如一座现代要塞般依偎在山谷之中。Alpinarium于2003年隆重开放，多次荣获国际赞誉，包括获得久负盛名的欧洲年度博物馆奖提名及奥地利博物馆品质认证。展馆核心是常设展览“GANZ OBEN”，通过多媒体空间装置、目击者口述史和互动科研站，让游客身临其境地了解雪崩的形成原理、高山峡谷中的历史生存智慧以及阿尔卑斯登山运动的开拓性成就。</p><h2>参观与交通</h2><p>Alpinarium在夏季和冬季均对外开放（6月初至10月中旬，以及12月中旬至复活节后，开放时间为周二至周日10:00至18:00，周一闭馆）。标准门票价格（2025/2026年度）：成人10.00欧元，长者及学生8.50欧元，6至15岁儿童5.50欧元，6岁以下儿童免费。持Silvretta Card Premium游客卡的客人可享免费或优惠入场。自驾可沿Inntal高速公路A12或Arlberg快速路S16行驶至Pians出口，随后沿B188公路（Paznauntalstraße）经Ischgl到达Galtür。馆前设有专属停车场。公共交通方面，搭乘火车（ÖBB/Railjet）至Landeck-Zams站，换乘VVT 260路公交车直达Galtür Dorfplatz站（下车步行约5分钟即可到达Alpinarium）。</p><h2>实用贴士</h2><p>整座博物馆建筑均实现无障碍通行，配有轮椅电梯、宽敞通道及无障碍卫生间。除展厅外，馆内位于“Gefrorene Wasser”咖啡馆旁还建有一座约70平方米的室内抱石攀岩墙，落地观景窗可尽览Silvretta群峰三千米级雪山的壮美景色。建议预留约1.5至2小时进行参观游览。</p>",
+  "emoji": "🗻",
+  "farbe": "#8B0000",
+  "hoehe": "1.584 m",
+  "dauer": "1,5–2 Stunden",
   "preis": "14 € (Kletterhalle Erwachsene)",
   "tags": [
     "klettern",
@@ -22,9 +22,15 @@
   "oeffnungszeiten": "Mo–Fr 10:00–22:00, Sa–So 9:00–21:00",
   "webseite": "https://www.alpinarium.at",
   "koordinaten": {
-    "lat": "47.2333",
-    "lng": "10.7333"
+    "lat": "46.9688",
+    "lng": "10.1872"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.alpinarium.at",
+    "https://de.wikipedia.org/wiki/Alpinarium_Galt%C3%BCr",
+    "https://www.galtuer.com",
+    "https://www.paznaun-ischgl.com"
+  ]
 }

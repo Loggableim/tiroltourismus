@@ -4,13 +4,13 @@
   "region": "kaunertal",
   "ort": "Kaunertal",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Der <strong>Gletscherweg Kaunertal</strong> liegt auf dem Gletscher des Kaunertals in Tirol auf einer Höhe zwischen etwa 2.800 und 3.100 Metern. Er ist als präparierter <strong>Themenweg</strong> angelegt, der die Dynamik und Geologie des Gletschers veranschaulicht. Entlang des Weges informieren Tafeln über die Bewegung des Eises, Klimaeinflüsse und die Entstehung der Gletscherlandschaft. Die Route erfordert aufgrund der hochalpinen Bedingungen Trittsicherheit und eine entsprechende Ausrüstung. Der Weg ist in der Regel während der Sommermonate zugänglich, jedoch abhängig von den aktuellen Schneeverhältnissen. Besucher erhalten hier einen direkten Einblick in die natürlichen Prozesse eines Gletschers und die Veränderungen durch Klimawandel. Ein Besuch sollte daher sorgfältig geplant werden, mit festem Schuhwerk und wetterfester Kleidung.</p>",
+  "kurzbeschreibung": "El sendero Gletscherweg Kaunertal se adentra en la zona proglaciar del Gepatschferner a más de 2.000 m: rocas aborregadas, morrenas y cambio climático.",
+  "beschreibung": "<h2>Descripción general</h2><p>El <strong>Gletscherweg Kaunertal</strong> es un fascinante sendero didáctico alpino y glaciológico en el extremo más profundo del valle de Kaunertal, en el Tiroler Oberland. Da acceso al impresionante antepaís glaciar del Gepatschferner, que con unos 16 kilómetros cuadrados de superficie helada es el segundo glaciar más grande de Austria y el mayor glaciar individual de los Alpes orientales. Enclavado en el prístino paisaje de alta montaña de los Ötztaler Alpen bajo la cumbre helada del Weißseespitze (3.518 m), el sendero ilustra, a una altitud de entre 1.900 y 2.200 metros, la fuerza telúrica del hielo modelando el paisaje y las visibles consecuencias del cambio climático.</p><h2>Fenómenos naturales y estaciones</h2><p>El sendero temático fue diseñado en colaboración con glaciólogos de la Universidad de Innsbruck. Partiendo del histórico refugio Gepatschhaus (1.928 m) o del aparcamiento de Fernergries, la ruta circular discurre por el valle modelado por el retroceso de los hielos. A lo largo del camino, paneles informativos numerados documentan las posiciones históricas del glaciar desde el máximo de la Pequeña Edad de Hielo en 1856. Los senderistas atraviesan diversas zonas de vegetación y erosión: desde antiguos bosques de pino cembro y alerces hasta coloridos rodales de rododendros alpinos y escasa vegetación pionera sobre morrenas recientes. Un punto culminante geológico son las <strong>Roten Felsen</strong>: colosales rocas aborregadas de gneis rojizo pulidas por el flujo del glaciar con evidentes estrías y hendiduras glaciares. Más arriba, la panorámica se abre a impetuosos arroyos de deshielo, marmitas glaciares y la imponente lengua del Gepatschferner. La ruta circular abarca unos seis kilómetros con aproximadamente 250 metros de desnivel y requiere un tiempo neto de marcha de entre dos horas y media y tres horas.</p><h2>Visita y cómo llegar</h2><p>El sendero Gletscherweg Kaunertal es transitable de forma libre y gratuita durante los meses estivales sin nieve, desde mediados de junio hasta mediados de octubre (tenga en cuenta las limitaciones por nevadas recientes o riesgo de desprendimiento de piedras). El acceso se realiza por la carretera de peaje <strong>Kaunertaler Gletscherstraße</strong> (peaje diario por turismo aprox. 32,00 €; el peaje tiene descuento o está incluido para titulares de la tarjeta de huésped regional <em>Summercard GOLD</em> o con billete de remontes). En coche: autopista Inntal A12 hasta la salida Oberinntal/Prutz, por el valle Kaunertal pasando por Feichten y siguiendo por la carretera de montaña de peaje hasta el aparcamiento de Fernergries o el Gepatschhaus. En transporte público: tren ÖBB hasta la estación de Landeck-Zams, y luego autobús Postbus línea 230 por Prutz y Feichten hasta la parada <em>Gepatschhaus</em> o <em>Fernergries</em>.</p><h2>Consejos</h2><p>Debido al terreno de alta montaña con senderos morrénicos pedregosos, bloques de roca y pasarelas de madera, el sendero no está adaptado para personas con movilidad reducida ni es apto para cochecitos infantiles comunes; es imprescindible llevar botas de montaña de caña alta con suela de relieve y ropa para todo tipo de clima. Tras la caminata, vale la pena hacer una parada en el histórico <em>Gepatschhaus</em> —el refugio del Club Alpino más antiguo de Austria, construido en 1873— para disfrutar de la cocina tradicional tirolesa de montaña. Con buen tiempo, se recomienda continuar por la carretera del glaciar hasta el Weißseeferner a 2.750 metros.</p>",
   "emoji": "🏔️",
   "farbe": "#0099CC",
   "hoehe": "2.750 m",
   "dauer": "1-2 Stunden",
-  "preis": "Inkl. Gletscherbahn-Ticket",
+  "preis": "Weg kostenlos; Kaunertaler Gletscherstraße Maut ca. 32,00 € / PKW",
   "tags": [
     "natur",
     "gletscher",
@@ -18,13 +18,19 @@
     "familie",
     "wissen"
   ],
-  "oeffnungszeiten": "Täglich 8:30–17:00 (Jun–Okt)",
-  "webseite": "https://www.kaunertaler-gletscher.at",
+  "oeffnungszeiten": "Mitte Juni bis Mitte Oktober frei zugänglich (witterungsabhängig)",
+  "webseite": "https://www.kaunertal.com",
   "status": "published",
   "koordinaten": {
     "lat": "46.9963736",
     "lng": "10.6942103"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaunertal.com/de/aktivitaeten/wandern/themenwege/gletscherweg-gepatsch",
+    "https://www.kaunertaler-gletscher.at",
+    "https://de.wikipedia.org/wiki/Gepatschferner",
+    "https://de.wikipedia.org/wiki/Gepatschhaus"
+  ]
 }

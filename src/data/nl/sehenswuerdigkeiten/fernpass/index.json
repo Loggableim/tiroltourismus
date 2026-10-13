@@ -1,10 +1,10 @@
 {
   "name": "Fernpass",
   "slug": "fernpass",
-  "region": "ausserfern",
+  "region": "tiroler-zugspitz-arena",
   "ort": "Biberwier",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "De historische Fernpass op 1.211 m verbindt het Außerfern met het Inntal en biedt een indrukwekkend uitzicht op de Lechtaler Alpen.",
+  "kurzbeschreibung": "De Fernpass op 1.216 m hoogte verbindt het Inntal met het Außerfern: prehistorische bergstorting, Blindsee en antieke Romeinse weg Via Claudia Augusta.",
   "emoji": "⛰️",
   "farbe": "#607D8B",
   "tags": [
@@ -14,9 +14,9 @@
     "natuur"
   ],
   "dauer": "30-60 Minuten",
-  "preis": "Kostenlos",
-  "oeffnungszeiten": "Ganzjährig frei zugänglich",
-  "webseite": "https://www.tirol.at/reisefuehrer/sport/natur/fernpass",
+  "preis": "Kostenlos / mautfrei auf der B179",
+  "oeffnungszeiten": "Ganzjährig rund um die Uhr geöffnet",
+  "webseite": "https://www.zugspitzarena.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,12 @@
     "lng": "10.8915"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Fernpass</strong> – Die Fernpass bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Der historische Fernpass auf 1.211 m verbindet das Außerfern mit dem Inntal und bietet eine beeindruckende Aussicht auf die Lechtaler Alpen Vom Gipfel aus eröffnet sich ein 360-Grad-Panorama, das bei klarer Sicht bis zu den Gletschern der Hohen Tauern reicht. Die bequeme Bergbahn bringt Besucher mühelos auf die Höhe, wo mehrere Panoramaterrassen und ein Bergrestaurant zum Genießen einladen. Nur wenige Kilometer von Biberwier entfernt, wartet mit der Fernpass ein Stück unberührte Natur darauf, entdeckt zu werden. Die Lage bietet zudem einen herrlichen Panoramablick auf die umliegenden Bergketten. Ob Sommer oder Winter: Die Fernpass ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Fernpass</strong> is een geschiedenisrijke bergpas op 1.216 meter hoogte in de Noordelijke Kalkalpen in het Tiroolse Außerfern. De pas vormt de centrale wegverbinding tussen het bovenste Inntal bij Nassereith en Imst en het Zwischentoren-bekken bij Lermoos, Ehrwald en Biberwier in het district Reutte. Als een van de drukste Alpenpassen van West-Oostenrijk verbindt de Fernpass het Duitse Alpenvoorland met het Tiroler Oberland. Omlijst door de machtige rotsmassieven van de Mieminger Kette en de Lechtaler Alpen, betovert het paslandschap met zijn dramatische natuurlijke decor en smaragdgroene bergmeren.</p><h2>Geologie & geschiedenis</h2><p>De huidige topografie van de Fernpass gaat terug op een gigantische natuurramp: zo'n 4.000 tot 4.100 jaar geleden vond op de zuidflank van het Wannig-massief de prehistorische <strong>Fernpass-Bergsturz</strong> plaats. Ongeveer een miljard kubieke meter gesteente denderde het dal in en vormde een heuvelachtig tomalandschap van beboste puinheuvels. Door het opstuwen van natuurlijke waterlopen ontstonden verschillende idyllische bergmeren: de diepblauwe <em>Blindsee</em> (1.093 m), de Mittersee, de Weißensee en de Fernsteinsee. Al in de oudheid zagen de Romeinen het strategische belang van dit lage bergpad in: rond 46/47 na Chr. legden zij onder keizer Claudius de legendarische <strong>Via Claudia Augusta</strong> aan als eerste berijdbare militaire weg tussen de Povlakte en de Donau. Resten van het historische tracé met in de rotsen gesleten wagensporen zijn tot op de dag van vandaag bewaard gebleven. In de late middeleeuwen liet hertog <strong>Sigmund der Münzreiche</strong> vanaf 1462 de verdedigingswerken van Festung Fernstein en het schilderachtige kasteel Schloss Sigmundsburg op een rotseiland in de Fernsteinsee bouwen om het lucratieve goederenverkeer en het tolwegennet te controleren.</p><h2>Bezoek & bereikbaarheid</h2><p>De Fernpassstraße (B179) is het hele jaar door 24 uur per dag vrij toegankelijk. Over de gehele rijksweg geldt noch een tolvignet noch een tolheffing – de oversteek van de pas is dus volledig <strong>tolvrij</strong> (de geplande kruintunnel wordt op zijn vroegst aan het einde van het decennium voltooid). In de wintermaanden geldt een wettelijke winteruitrustingsplicht. Bereikbaarheid met de auto: vanuit het noorden tolvrij vanaf Füssen of Garmisch-Partenkirchen via Reutte en Lermoos via de B179 naar de pashoogte. Vanuit het zuiden via de Inntalautobahn A12 (afrit Mötz of Imst) via de B189 over Nassereith omhoog naar de pas. Met het openbaar vervoer: de VVT-regiobus lijn 150 rijdt meerdere keren per dag tussen Reutte, Nassereith en Imst/Landeck direct over de Fernpass (met haltes bij o.a. Fernpass Hotel Fernau en Fernsteinsee).</p><h2>Tips</h2><p>Vanaf de uitzichtparkeerplaats boven de haarspeldbochten geniet u van een adembenemend uitzicht op de Blindsee en het Zugspitze-massief. Liefhebbers van geschiedenis kunnen het archeologische wandelpad langs de Via Claudia Augusta te voet of per mountainbike ontdekken. De glasheldere Blindsee geldt als een eldorado voor sportduikers (duikvergunningen en toegang via Hotel Fernsteinsee). De wandelpaden langs de Fernsteinsee en de kasteelvijver zijn op delen ook goed begaanbaar met kinderwagens en rolstoelen.</p>",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/sport/radfahren/biketouren/a-via-claudia-augusta-radweg",
+    "https://www.zugspitzarena.com/de/Region/Biberwier",
+    "https://de.wikipedia.org/wiki/Fernpass",
+    "https://de.wikipedia.org/wiki/Via_Claudia_Augusta",
+    "https://www.hotel-fernsteinsee.at"
+  ]
 }

@@ -2,16 +2,16 @@
   "name": "Fisser Sonnenterrasse",
   "slug": "fisser-sonnenterrasse",
   "status": "published",
-  "region": "landeck",
+  "region": "serfaus-fiss-ladis",
   "ort": "Fiss",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Sunny panoramic viewing platform at 2,000 m in Fiss, offering a 360° view over the Tiroler and Ötztaler Alpen.",
-  "beschreibung": "<p>The **Fisser Sonnenterrasse** is located at around 1,450 meters above **Fiss**, offering a **panoramic view** of the **Samnaun** and **Verwall** mountain ranges as well as the **Inn Valley**. The **viewing platform** is equipped with benches and a sunbathing lawn. Visitors can reach it via hiking trails or by taking the gondola lift. The terrace serves as a **starting point** for walks and tours in the **Naturpark**. Its **south-facing slope** ensures exceptionally high sunshine hours. On-site, there is a **place to stop for refreshments**. Guests can enjoy an unobstructed view and a peaceful stay.</p>",
+  "kurzbeschreibung": "The Fisser Sonnenterrasse at 1,436 m altitude enchants with its Rhaeto-Romanic village core, over 2,000 sunshine hours, and the s’Paules und s’Seppls Haus museum.",
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Fisser Sonnenterrasse</strong> forms the picturesque centerpiece of the popular Serfaus-Fiss-Ladis high plateau in the Tyrolean Oberland. High above the deeply incised valley of the upper Inn River, the municipality of Fiss nestles on a sunny hillside terrace at around 1,436 meters above sea level. With more than 2,000 guaranteed hours of sunshine per year, the high plateau ranks among the sunniest regions in the entire Alps. Nestled between the mountain flanks of the Samnaungruppe to the west and the Ötztaler Alpen to the east, the village harmoniously combines authentic Alpine heritage with state-of-the-art tourism infrastructure.</p><h2>Village History & Architecture</h2><p>Settlement of the sunny plateau dates back long before the birth of Christ: archaeological finds verify Bronze Age and Rhaetic settlement traces before the Romans integrated the territory into the province of Raetia. The village was first documented in 1288 as <em>Fizes</em>. Unlike most Tyrolean farming villages, Fiss has preserved its distinctive identity as a <strong>Rhaeto-Romanic clustered village</strong> (Haufendorf). Because the sunny arable land was precious for grain cultivation, the buildings were constructed extremely close together. Typical Fiss farmhouses are characterized by solid stone walls, small window openings, richly decorated arched portals, and wooden passageway gates. An outstanding testament to this architectural culture is the <strong>Museum s’Paules und s’Seppls Haus</strong>: this heritage-listed Rhaeto-Romanic dual farmhouse dating from the 16th and 17th centuries has been meticulously restored, offering authentic insights into the arduous everyday life of bygone centuries with its original parlors, smoke kitchen, and historic threshing barn. A cultural highlight is the traditional <em>Fisser Blochziehen</em> – an archaic carnival custom inscribed on the UNESCO Intangible Cultural Heritage list.</p><h2>Visit & Getting There</h2><p>The traffic-calmed village center of Fiss as well as the sunny walking and panorama promenades on the sun terrace are freely accessible year-round free of charge. The Museum s’Paules und s’Seppls Haus opens on fixed days weekly during the summer and winter seasons (usually Tuesdays and Thursdays from 16:00 to 18:30; admission approx. €5.00 for adults). By car: via the Inntalautobahn A12 or expressway S16 to Ried im Oberinntal, then winding up the well-developed Serfauser Landesstraße L19 in switchbacks to Fiss (parking is available at the signposted large car parks at the village entrance and near the cable cars). By public transport: by train (ÖBB) to the Landeck-Zams long-distance railway station, and from there by VVT bus line 220 running at frequent intervals directly to the <em>Fiss Postamt</em> stop (travel time approx. 45 minutes).</p><h2>Tips</h2><p>The main promenades and village streets in the center are asphalted and wonderfully suited for exploration with wheelchairs and strollers. From Fiss, the Schönjochbahn gondola floats up to over 2,430 meters altitude to panoramic high-altitude trails and the Fisser Flitzer alpine coaster. Be sure to schedule a stroll to the Gothic parish church of St. Johannes der Täufer and enjoy the view of the Obere Gericht valley from the sunny panoramic benches on the edge of the village.</p>",
   "emoji": "☀️",
   "farbe": "#FFC107",
   "hoehe": "2.000 m",
   "dauer": "Halbtag",
-  "preis": "36 € (Bergbahn Sommer)",
+  "preis": "Dorfbesuch kostenlos; Museum ca. 5,00 €",
   "tags": [
     "scenic view",
     "panoramic view",
@@ -19,12 +19,18 @@
     "hiking",
     "mountain railway"
   ],
-  "oeffnungszeiten": "Sommer: täglich 8:30–17:00; Winter: täglich 8:30–16:00",
+  "oeffnungszeiten": "Dorfkern ganzjährig frei zugänglich; Museum saisonal Di/Do 16:00–18:30 Uhr",
   "webseite": "https://www.serfaus-fiss-ladis.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "10.6167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/Fiss",
+    "https://www.museum-fiss.at",
+    "https://de.wikipedia.org/wiki/Fiss",
+    "https://www.tirol.at/orte/a-fiss"
+  ]
 }

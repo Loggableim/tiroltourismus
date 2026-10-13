@@ -1,10 +1,10 @@
 {
   "name": "Franziskanerkloster Schwaz",
   "slug": "franziskanerkloster-schwaz",
-  "region": "zillertal",
+  "region": "silberregion-karwendel",
   "ort": "Schwaz",
   "kategorie": "kirche",
-  "kurzbeschreibung": "Le Franziskanerkloster à Schwaz est un monastère historique majeur, doté d’une somptueuse église baroque et d’un paisible cloître.",
+  "kurzbeschreibung": "Fondé en 1507 par Maximilian I., le Franziskanerkloster Schwaz abrite un cloître gothique mondialement réputé orné de 22 fresques de la Passion.",
   "emoji": "⛪",
   "farbe": "#8B4513",
   "tags": [
@@ -15,13 +15,20 @@
     "Schwaz"
   ],
   "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
-  "oeffnungszeiten": "Täglich 8:00-18:00",
-  "webseite": "https://www.schwaz.at/franziskanerkloster",
+  "preis": "Kostenlos (Spenden erbeten)",
+  "oeffnungszeiten": "Täglich 08:00–18:30 Uhr (Sommer bis 19:00 Uhr)",
+  "webseite": "https://www.silberregion-karwendel.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.3450",
     "lng": "11.7084"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Franziskanerkloster Schwaz</strong>, situé dans la cité d'argent historique de Schwaz dans l'Unterinntal tyrolien, est un monument sacré et culturel d'un rayonnement européen exceptionnel. Établi dans la Gilmstraße au pied du Kellerjoch, cet ensemble monastique de style gothique tardif constitue une oasis de paix et de recueillement au cœur de l'espace urbain. Réputé bien au-delà des frontières du Tyrol, le couvent est mondialement célèbre pour son cloître gothique magistral, qui abrite l'un des cycles monumentaux de la Passion du Christ les plus remarquables et les mieux conservés de toute l'Europe centrale.</p><h2>Histoire et trésors artistiques</h2><p>Au début du XVIe siècle, Schwaz connut un essor économique sans précédent grâce à ses mines d'argent et de cuivre, s'élevant au rang de deuxième ville de l'Empire des Habsbourg. Afin d'offrir un soutien spirituel aux milliers de mineurs et d'immigrés, le futur empereur <strong>Maximilian I.</strong> fonda en 1507 ce monastère destiné à l'ordre mendiant des Franciscains. Dès 1509, le cloître et la chapelle Bonaventure furent consacrés ; l'église abbatiale à trois nefs Saint-François (St. Franziskus) fut achevée en 1515. Le joyau d'histoire de l'art est le cloître de plus de 200 m² : entre 1512 et 1526, un artiste anonyme – salué par les spécialistes sous le nom de <strong>Meister des Schwazer Kreuzgangs</strong> – peignit un cycle monumental de la Passion sur 22 grands panneaux muraux. Les peintures s'inspirent fidèlement de gravures sur bois de maîtres contemporains tels qu'Albrecht Dürer, Martin Schongauer et Hans Schäufelein. La singularité de l'œuvre réside dans sa technique subtile : les esquisses préliminaires furent exécutées à la plume fine puis rehaussées de glacis colorés, conférant aux fresques l'allure saisissante de xylographies géantes. De plus, les peintures reflètent fidèlement l'époque de la Renaissance : les soldats bibliques y apparaissent vêtus en lansquenets d'époque portant des hallebardes, les mineurs de Schwaz y sont représentés avec un réalisme minutieux, et les blasons des donateurs, notamment ceux de la puissante famille exploitante Fieger, ornent les voûtes. L'église conventuelle impressionne également par ses stucs rococo raffinés, ses stalles sculptées de 1735 et son maître-autel baroque.</p><h2>Visite et accès</h2><p>Le cloître historique et l'église conventuelle sont en accès libre toute l'année, tous les jours de 08h00 à 18h30 environ (jusqu'à 19h00 en été). L'entrée au cloître et à l'église est <strong>gratuite</strong> (les dons pour la restauration et la préservation de cet ensemble classé sont les bienvenus). Des visites guidées culturelles sont proposées par l'office de tourisme Silberregion Karwendel. Accès en transports en commun : par les trains ÖBB ou le S-Bahn Tirol (lignes S4, S5) jusqu'à la gare de Schwaz, puis à environ dix minutes à pied à travers la vieille ville jusqu'au 1 Gilmstraße, ou en bus urbain de Schwaz directement jusqu'à l'arrêt <em>Klosterkirche</em>. En voiture : autoroute A12 Inntalautobahn, sortie Schwaz ; des places de stationnement sont disponibles dans les parkings couverts Stadtgalerien et Stadtplatz à proximité.</p><h2>Conseils</h2><p>L'entrée du monastère, l'église et le cloître sont de plain-pied et parfaitement accessibles aux personnes en fauteuil roulant ainsi qu'aux poussettes. L'atmosphère paisible de la cour intérieure végétalisée du cloître invite à la contemplation et au repos après la découverte artistique. Associez votre visite à une promenade dans la vieille ville historique de Schwaz, à la visite de la mine d'argent (Silberbergwerk) et de l'église paroissiale Maria Himmelfahrt.</p>",
+  "sources": [
+    "https://www.franziskaner.at/schwaz",
+    "https://www.schwaz.at",
+    "https://www.silberregion-karwendel.com/de/kultur/sehenswertes/franziskanerkloster-schwaz",
+    "https://de.wikipedia.org/wiki/Franziskanerkloster_Schwaz"
+  ]
 }

@@ -1,0 +1,121 @@
+---
+import { getRelatedForEntry } from '../lib/related.js';
+
+export interface Props {
+  collection: string;
+  slug: string;
+  locale?: string;
+}
+
+const { collection, slug, locale = 'de' } = Astro.props;
+const { sameCategory, crossCategory, headings } = getRelatedForEntry(collection, slug, locale);
+
+const hasAny = sameCategory.length > 0 || crossCategory.length > 0;
+---
+
+{hasAny && (
+  <section class="related-links section" aria-label={headings.same}>
+    <div class="container" style="max-width:800px">
+      {sameCategory.length > 0 && (
+        <div class="related-links-group">
+          <h3 class="related-links-subtitle">{headings.same}</h3>
+          <ul class="related-links-list">
+            {sameCategory.map((item) => (
+              <li>
+                <a href={item.href} class="related-links-card">
+                  <span class="related-links-emoji" aria-hidden="true">{item.emoji}</span>
+                  <span class="related-links-text">
+                    <span class="related-links-name">{item.name}</span>
+                    {item.kurzbeschreibung && (
+                      <span class="related-links-desc">{item.kurzbeschreibung}</span>
+                    )}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {crossCategory.length > 0 && (
+        <div class="related-links-group">
+          <h3 class="related-links-subtitle">{headings.cross}</h3>
+          <ul class="related-links-list">
+            {crossCategory.map((item) => (
+              <li>
+                <a href={item.href} class="related-links-card">
+                  <span class="related-links-emoji" aria-hidden="true">{item.emoji}</span>
+                  <span class="related-links-text">
+                    <span class="related-links-name">{item.name}</span>
+                    {item.kurzbeschreibung && (
+                      <span class="related-links-desc">{item.kurzbeschreibung}</span>
+                    )}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-links {
+    padding: 32px 0 8px;
+    border-top: 1px solid var(--glass-border);
+  }
+  .related-links-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 3vw, 28px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    color: var(--text);
+  }
+  .related-links-group + .related-links-group {
+    margin-top: 28px;
+  }
+  .related-links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .related-links-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    background: var(--bg2);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+  }
+  .related-links-card:hover {
+    border-color: var(--tirol-pink);
+    transform: translateY(-1px);
+  }
+  .related-links-emoji {
+    font-size: 24px;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .related-links-name {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .related-links-desc {
+    display: block;
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+</style>

@@ -1,1 +1,21 @@
 /sitemap.xml /sitemap-index.xml 301
+
+# ── Sprach-Prefixe → Subdomains ──
+/en/* https://en.tiroltourismus.com/:splat 301
+/fr/* https://fr.tiroltourismus.com/:splat 301
+/cs/* https://cs.tiroltourismus.com/:splat 301
+/nl/* https://nl.tiroltourismus.com/:splat 301
+/de/* https://de.tiroltourismus.com/:splat 301
+/it/* https://it.tiroltourismus.com/:splat 301
+/es/* https://es.tiroltourismus.com/:splat 301
+/zh/* https://cn.tiroltourismus.com/:splat 301
+/cn/* https://cn.tiroltourismus.com/:splat 301
+/en https://en.tiroltourismus.com/ 301
+/fr https://fr.tiroltourismus.com/ 301
+/cs https://cs.tiroltourismus.com/ 301
+/nl https://nl.tiroltourismus.com/ 301
+/de https://de.tiroltourismus.com/ 301
+/it https://it.tiroltourismus.com/ 301
+/es https://es.tiroltourismus.com/ 301
+/zh https://cn.tiroltourismus.com/ 301
+/cn https://cn.tiroltourismus.com/ 301

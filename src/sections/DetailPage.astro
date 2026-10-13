@@ -14,7 +14,9 @@ import SectionArticleContent from './SectionArticleContent.astro';
 import SectionMap from './SectionMap.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { DEFAULT_LOCALE } from '../lib/languages.js';
 
 export interface SectionConfig {
   type: string;
@@ -34,15 +36,16 @@ export interface Props {
   type?: 'website' | 'article';
   publishedTime?: string;
   noindex?: boolean;
+  availableLanguages?: string[];
 }
 
-const { title, description, breadcrumbs, sections, isArticle, locale, jsonld, ogImage, type, publishedTime, noindex } = Astro.props;
+const { title, description, breadcrumbs, sections, isArticle, locale, jsonld, ogImage, type, publishedTime, noindex, availableLanguages } = Astro.props;
 
 // Extract hero image for preloading (LCP optimization)
 const heroSection = sections?.find(s => s.type === 'hero' || s.type === 'article-hero');
 const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSection?.imageSrc || ogImage;
 ---
-<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage} noindex={noindex}>
+<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage} noindex={noindex} availableLanguages={availableLanguages}>
   <main>
     {breadcrumbs && breadcrumbs.length > 0 && (
       <div class="container">
@@ -129,6 +132,10 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
 
     {sections.filter(s => s.type === 'description').map(s => (
       <SectionDescription label={s.label} title={s.title} content={s.content} />
+    ))}
+
+    {sections.filter(s => s.type === 'related-links').map(s => (
+      <RelatedLinks collection={s.collection} slug={s.slug} locale={s.locale ?? locale ?? DEFAULT_LOCALE} />
     ))}
 
     {sections.filter(s => s.type === 'details-grid').map(s => (

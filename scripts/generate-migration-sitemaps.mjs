@@ -8,7 +8,11 @@
  * Output:
  *   landing/public/sitemap-migration-0.xml  (erste 10k alte URLs)
  *   landing/public/sitemap-migration-1.xml  (Rest)
- *   landing/public/sitemap-index.xml        (Index: Migration + Hub)
+ *
+ * Die Dateien bleiben abrufbar, werden aber nicht beworben.
+ * Dieses Script schreibt sitemap-index.xml nicht neu und trägt die
+ * Migration-Dateien nicht wieder in den Index ein.
+ * Sprach-Subdomains zeigen auf ihre eigene Astro-sitemap-index.xml.
  *
  * Die hreflang-Links werden entfernt — die alten URLs sind reine Redirects,
  * die neuen hreflang-Beziehungen leben in den Subdomain-Sitemaps.
@@ -53,12 +57,5 @@ ${slice.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}
   console.log(`  ${out}: ${slice.length} URLs`);
 }
 
-// Sitemap-Index
-const index = `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${chunks.map(c => `  <sitemap><loc>https://tiroltourismus.com/${c}</loc></sitemap>`).join('\n')}
-</sitemapindex>
-`;
-fs.writeFileSync(path.join(OUT_DIR, 'sitemap-index.xml'), index);
-console.log(`  ${OUT_DIR}/sitemap-index.xml: ${chunks.length} sitemaps`);
+console.log(`Migration XML written (${chunks.length} files). Not added to sitemap-index.xml.`);
 console.log('DONE');

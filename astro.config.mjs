@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
+import { includeInSitemap, sitemapAlternateLinks } from './src/lib/hreflang.js';
 
 // ── Subdomain-Architektur: site-URL hängt von BUILD_LANGS ab ──
 // Single-Lang-Build (z.B. BUILD_LANGS=cs) → alle Seiten auf cs.tiroltourismus.com (Root-Paths)
@@ -20,8 +21,6 @@ const LANG_DOMAINS = {
   zh: 'https://cn.tiroltourismus.com',
 };
 const LANDING_DOMAIN = 'https://tiroltourismus.com';
-const PUBLISHED_LANGS = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'];
-const HREFLANG_MAP = { de:'de-AT', en:'en-US', fr:'fr-FR', cs:'cs-CZ', nl:'nl-NL', it:'it-IT', es:'es-ES', zh:'zh-CN' };
 
 const siteUrl = isSingleLang ? (LANG_DOMAINS[singleLang] || LANDING_DOMAIN) : LANDING_DOMAIN;
 
@@ -39,19 +38,16 @@ export default defineConfig({
     },
   },
   integrations: [react(), sitemap({
-    filter: (page) => !['/404/', '/500/', '/login/', '/dashboard/', '/admin/'].some(p => page.startsWith(p)),
+    filter: (page) => includeInSitemap(page),
     entryLimit: 10000,
     lastmod: new Date(),
-    serialize: (entry) => {
-      // Single-Lang: alle Seiten liegen auf der Sprach-Subdomain an Root-Paths.
-      // hreflang-Links zeigen cross-domain auf die anderen Sprach-Subdomains.
-      const relPath = entry.url.startsWith(siteUrl) ? entry.url.slice(siteUrl.length) : entry.url;
-      const links = PUBLISHED_LANGS.map(l => ({
-        lang: HREFLANG_MAP[l],
-        url: `${LANG_DOMAINS[l]}${relPath}`,
-      }));
-      return { url: entry.url, links };
-    },
+    serialize: (entry) => ({
+      url: entry.url,
+      lastmod: entry.lastmod,
+      changefreq: entry.changefreq,
+      priority: entry.priority,
+      links: sitemapAlternateLinks(entry.url),
+    }),
   })],
   vite: {
     build: {

@@ -1,17 +1,17 @@
 {
-  "name": "Stuibenfall",
+  "name": "Stuibenfall Umhausen",
   "slug": "stuibenfall",
   "status": "published",
   "region": "imst",
   "ort": "Umhausen",
   "kategorie": "natur",
   "kurzbeschreibung": "De hoogste waterval van Tirol (159 m) in het Ötztal – een donderend natuurverschijnsel met een uitkijkplatform en een klimmuur.",
-  "beschreibung": "<p>Der <strong>Stuibenfall</strong> liegt in der Gemeinde Umhausen im Ötztal und zählt mit einer Fallhöhe von rund 159 Metern zu den höchsten Wasserfällen Tirols. Seine Entstehung verdankt er einem historischen Felssturz, der den Stuibenbach aufstaute. Ein gut ausgebauter Wanderweg, der <strong>Stuibenfallweg</strong>, führt entlang des Wasserfalls und ermöglicht an mehreren Aussichtspunkten Blicke auf die fallenden Wassermassen. Eine über die Schlucht führende <strong>Hängebrücke</strong> bietet eine besondere Perspektive auf den Wasserfall und die umliegende Landschaft. Darüber hinaus führt der Stuibenfall-Klettersteig direkt neben dem Fall entlang und ist für geübte Kletterer zugänglich. Der Wasserfall ist ganzjährig erreichbar, wobei der Wanderweg im Winter teils gesperrt sein kann.</p>",
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Stuibenfall</strong> in Umhausen in het Ötztal is met 159 meter de hoogste waterval van Tirol. Gevoed door gletsjers stort tot 2.000 liter water per seconde over twee enorme rotstrappen naar beneden. Een spectaculaire hangbrugconstructie met 700 treden en een 80 meter lange touwbrug brengt wandelaars oog in oog met het bulderende water.</p><h2>Route &amp; Vereisten</h2><p>Start bij Ötzi-Dorf in Umhausen. Vlak wandelpad naar de voet (30 min, T1) en daarna via het trappenstelsel omhoog naar Niederthai (700 treden, 350 m stijgen, 1,5 à 2 uur, T2). Uitdagende klettersteig (C) vlak langs de waternevel. Bergschoenen verplicht. De roostertrappen zijn ongeschikt voor honden (hondenkennels aanwezig bij de start).</p><h2>Bereikbaarheid</h2><p>Met de trein naar station Ötztal en bus 320 naar Umhausen. Met de auto via de A12 over de B186 naar de grote parkeerplaats bij Ötzi-Dorf.</p><h2>Tips</h2><p>Bewonder de magische nachtverlichting van de waterval op woensdagavond in de zomer en combineer de tocht met een bezoek aan het openluchtmuseum Ötzi-Dorf en het roofvogelpark.</p>",
   "emoji": "💦",
   "farbe": "#2196F3",
   "hoehe": "1.400 m",
-  "dauer": "1–2 Stunden",
-  "preis": "Kostenlos; Klettersteig-Ausrüstung ab 15 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Bischoffsplatz ca. 5–7 € pro Tag)",
   "tags": [
     "wasserfall",
     "natur",
@@ -20,11 +20,21 @@
     "aussicht"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.stuibenfall.info",
+  "webseite": "https://www.oetztal.com/stuibenfall",
   "koordinaten": {
-    "lat": "47.1500",
-    "lng": "10.9167"
+    "lat": "47.1389",
+    "lng": "10.9278"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Mai bis Oktober (während der Wintermonate Treppenanlage gesperrt)",
+  "familie": true,
+  "hunde": false,
+  "sources": [
+    "https://www.oetztal.com/de/sommer/sehenswertes/stuibenfall.html",
+    "https://www.umhausen.com/stuibenfall/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-stuibenfall-umhausen",
+    "https://www.alpenvereinaktiv.com/de/tour/zum-stuibenfall-in-umhausen/1381455/",
+    "https://www.vvt.at/"
+  ]
 }

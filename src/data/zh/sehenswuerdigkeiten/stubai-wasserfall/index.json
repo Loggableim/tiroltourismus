@@ -1,16 +1,16 @@
 {
-  "name": "Stubai Wasserfall",
+  "name": "Grawa-Wasserfall",
   "slug": "stubai-wasserfall",
   "region": "stubaital",
   "ort": "Neustift",
   "kategorie": "natur",
   "kurzbeschreibung": "强大的 Stubaier Wasserfall 垂直落下 80 m，冲入一条狂野的峡谷——这是全家人的自然奇观。",
-  "beschreibung": "<p>该条目将“Stubai Wasserfall”描述为Neustift im Stubaital市镇的一处自然奇观可以进行描述。该堪布有约80米的落差。多个观景平台。一家絣邻的客栅。一个全年免费开放的游览地。标注坐标位于Neustift市区。此地是Stubaital山谿的首废。海拴略上略1000米以下。距离因斯布鲁克之南约25公里。Neustift是贯罗尔州面积第二大市镇。也是前往Elfer徒步的起点。Stubaital因Stubaier Gletscher冰川及沿地有多堪的WildeWasserWeg步道而问名。此处不提供其他可核实信息。</p>",
+  "beschreibung": "<h2>概览</h2><p>坐落于斯图拜山谷（Stubaital）深处的<strong>格拉瓦瀑布</strong>（Grawa-Wasserfall，海拔约1,530米）是全东阿尔卑斯山脉水幅最宽阔的瀑布（落水面宽达85米）。奔涌的冰融溪流从苏尔策瑙冰川倾泻而下，沿着被远古冰川研磨光滑的花岗岩绝壁咆哮跌落180米垂直深渊，构成举世闻名的“狂野水路”（WildeWasserWeg）核心景观。萨尔茨堡医科大学临床研究表明，瀑布撞击产生的极细负氧离子与水雾对哮喘与呼吸道过敏具有卓越的自然吸入疗愈功效。瀑布脚下特别依山搭建了弧形落叶松日光浴木台与人体工学躺椅，是一处世界级的高山天然氧吧。</p><h2>路线与体能要求</h2><p>瀑布亲水设施全年龄友好。从格拉瓦高山客栈停车场漫步至底部全景疗愈躺椅平台仅需10至15分钟，步道平整宽阔铺设沥青（极易T1级，支持婴儿车与轮椅通行）。登山爱好者可沿第二段“狂野水路”攀登：步道依悬崖盘旋而上，途经数处凌空观景台直抵瀑布顶端断崖，随后穿行于石松林前往风景如画的苏尔策瑙高山牧场（Sulzenaualm）及高山小屋（海拔2,191米，徒步约2.5小时，落差660米，T2级）。高山路段必须穿着防滑登山鞋并备好防溅水衣物。宠物犬系牵引绳允许随行。</p><h2>交通指南</h2><p>搭乘奥地利联邦铁路ÖBB至因斯布鲁克主火车站，换乘VVT 590路斯图拜区域专线长途班车直抵Neustift i. St. Grawa Alm站。自驾沿布伦纳A13高速公路（Schönberg/Stubaital出口）接B183公路沿山谷向南行驶30公里直达瀑布收费停车场。</p><h2>游览建议</h2><p>务必在瀑布脚下的原木躺椅上静卧放松至少20分钟，深呼吸富含天然矿物离子的清凉飞瀑水雾。随后步入已有400余年历史的格拉瓦传统木屋客栈（Grawa Alm），在向阳露台品尝刚出炉的热苹果卷配香草冰淇淋。</p>",
   "emoji": "🌊",
   "farbe": "#00BCD4",
   "hoehe": "80 m",
-  "dauer": "1 Stunde",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos (Parkplatz ca. 5–7 € pro Tag)",
   "tags": [
     "自然",
     "徒步旅行",
@@ -18,12 +18,22 @@
     "免费"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "",
+  "webseite": "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
   "status": "published",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.1106",
-    "lng": "11.3076"
-  }
+    "lat": "47.0142",
+    "lng": "11.1856"
+  },
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-grawa-wasserfall",
+    "https://www.neustift.tirol.gv.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/am-wildewasserweg-zum-grawa-wasserfall/1381445/",
+    "https://www.vvt.at/"
+  ]
 }

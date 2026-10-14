@@ -1,17 +1,17 @@
 {
-  "name": "Venetbahn & Venet",
+  "name": "Venet & Venetbahn",
   "slug": "venet",
   "status": "published",
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Le Hausberg de Landeck – accessible en Panoramabahn, avec la plus longue zipline du Tirol et une vue imprenable à 360° sur la vallée de l’Oberinntal. Une expérience inoubliable !",
-  "beschreibung": "<p>Der <strong>Venet</strong> ist mit 2.508 m der markante Hausberg der Region Landeck-Zams.. Die <strong>Venetbahn</strong>, eine moderne Panorama-Seilbahn, bringt Besucher in nur 10 Minuten von Zams auf 2.185 m Höhe.. Oben angekommen erwartet Sie eines der schönsten Panoramen Tirols mit Blick auf das Inntal, die Ötztaler Alpen und die Silvretta-Gruppe.. Der <strong>Venet Zipflyer</strong> ist mit 1.500 m Länge und 200 Höhenmetern die längste Zipline Tirols und ein Adrenalinkick der Extraklasse.. Zahlreiche Wanderwege führen vom Bergrestaurant aus zu den umliegenden Gipfeln.</p>",
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Venet</strong> (2 208 m au Krahberg) est la montagne panoramique emblématique dominant Landeck et Zams. Accessible en 8 minutes par le téléphérique Venetbahn, il offre un balcon panoramique exceptionnel à 360 degrés sur 82 sommets de plus de 3 000 m (Zugspitze, Wildspitze, Ortles) et abrite le plus haut observatoire astronomique du Tyrol.</p><h2>Parcours &amp; Exigences</h2><p>Sentier panoramique plat et accessible autour du Krahberg (45 min, T1, poussettes). Traversée facile des crêtes vers l'alpage traditionnel de Goglesalm (1h30, T1/T2). Randonnée alpine vers la Glanderspitze (2 512 m, T2/T3). Très réputé pour le parapente. Bonnes chaussures de marche recommandées. Chiens admis en laisse dans les bennes.</p><h2>Accès</h2><p>Gare ÖBB de Landeck-Zams à 10 minutes à pied du téléphérique à Zams. En voiture par l'A12 sortie Zams/Landeck. Grand parking gratuit au départ.</p><h2>Conseils</h2><p>Participez à une soirée d'observation aux télescopes de l'observatoire astronomique du Venet et profitez de la terrasse panoramique du refuge sommital.</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "Halbtag",
-  "preis": "Bergbahn: 34 € (Erwachsene); Zipflyer: 49 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
   "tags": [
     "vue panoramique",
     "randonnée",
@@ -23,7 +23,19 @@
   "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt); Winter: Di–So 9:00–16:00",
   "webseite": "https://www.venet.at",
   "koordinaten": {
-    "lat": "47.1528",
-    "lng": "10.5861"
-  }
+    "lat": "47.1500",
+    "lng": "10.6167"
+  },
+  "saison": "Ende Mai bis Mitte Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "hunde": true,
+  "bilder": [],
+  "hero_bild": null,
+  "sources": [
+    "https://www.venet.at/",
+    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-venet-bergbahnen",
+    "https://www.alpenvereinaktiv.com/de/tour/panoramarunde-am-venet/1381475/",
+    "https://www.vvt.at/"
+  ]
 }

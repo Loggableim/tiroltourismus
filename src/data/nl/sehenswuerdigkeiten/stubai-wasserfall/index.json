@@ -1,16 +1,16 @@
 {
-  "name": "Stubai Wasserfall",
+  "name": "Grawa-Wasserfall",
   "slug": "stubai-wasserfall",
   "region": "stubaital",
   "ort": "Neustift",
   "kategorie": "natur",
   "kurzbeschreibung": "De machtige Stubaier waterval stort 80 m diep in een wilde kloof – een natuurwonder voor het hele gezin.",
-  "beschreibung": "<p>Deze entry beschrijft de ‘Stubai Wasserfall’ als een natuurverschijnsel in de gemeente Neustift im Stubaital: een waterval met een valhoogte van ongeveer 80 meter, meerdere kijkplatformen, een direct aangrenzend gasthuis en een uitstapje dat het hele jaar gratis toegankelijk is. De aangegeven coördinaten liggen in het gemeentegebied van Neustift, de hoofdplaats van de Stubaital op iets minder dan 1.000 meter hoogte, ongeveer 25 kilometer ten zuiden van Innsbruck. Neustift is naar oppervlakte de op een na grootste gemeente van Tirol en uitgangspunt voor wandelingen naar de Elfer. De Stubaital is onder andere bekend door de Stubaier Gletscher en de WildeWasserWeg met zijn watervallen. Er liggen geen verdere verifieerbare gegevens over de beschreven locatie voor.</p>",
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Grawa-Wasserfall</strong> in het Stubaital is met een breedte van 85 meter de breedste waterval van de Oostelijke Alpen. Gevoed door de Sulzenau-gletsjer dondert het water 180 meter naar beneden over granieten rotsen. De fijn vernevelde waterdruppels hebben een wetenschappelijk bewezen helende werking op de luchtwegen.</p><h2>Route &amp; Vereisten</h2><p>Houten relaxplatform met ligstoelen bereikbaar via een vlak geasfalteerd pad in slechts 10 minuten (eenvoudig T1, kinderwagen- en rolstoeltoegankelijk). Het wandelpad WildeWasserWeg stijgt langs de waterval omhoog naar de Sulzenaualm en berghut Sulzenauhütte (2,5 uur, 660 m stijgen, T2). Bergschoenen en regenjas aanbevolen. Honden aangelijnd toegestaan.</p><h2>Bereikbaarheid</h2><p>Met de trein naar Innsbruck en bus 590 rechtstreeks naar halte Grawa Alm. Met de auto via de A13 (afrit Schönberg) over de B183 (30 km) naar de parkeerplaats bij de waterval.</p><h2>Tips</h2><p>Neem 20 minuten rust op de ergonomische houten ligstoelen om de gezonde nevel in te ademen en proef huisgemaakte apfelstrudel op het zonneterras van de 400 jaar oude Grawa Alm.</p>",
   "emoji": "🌊",
   "farbe": "#00BCD4",
   "hoehe": "80 m",
-  "dauer": "1 Stunde",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos (Parkplatz ca. 5–7 € pro Tag)",
   "tags": [
     "natuur",
     "wandeling",
@@ -18,12 +18,22 @@
     "gratis"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "",
+  "webseite": "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
   "status": "published",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.1106",
-    "lng": "11.3076"
-  }
+    "lat": "47.0142",
+    "lng": "11.1856"
+  },
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-grawa-wasserfall",
+    "https://www.neustift.tirol.gv.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/am-wildewasserweg-zum-grawa-wasserfall/1381445/",
+    "https://www.vvt.at/"
+  ]
 }

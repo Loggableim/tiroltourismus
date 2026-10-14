@@ -6,12 +6,12 @@
   "ort": "Tannheim",
   "kategorie": "natur",
   "kurzbeschreibung": "Hautes vallon dans les Alpes de l'Allgäu – célèbre pour son Vilsalpsee en arrière-plan montagneux, ses kilomètres de sentiers de randonnée et ses fermes d’alpage traditionnelles.",
-  "beschreibung": "<p>Das Tannheimer Tal liegt im österreichischen Bundesland Tirol, an der Grenze zu Bayern. Die Landschaft ist von Almflächen, Bergseen und bewaldeten Hängen geprägt. Der Vilsalpsee im südlichen Teil des Tals ist Teil eines Naturschutzgebiets. Das Tal bietet ein Wegenetz für <strong>Wanderungen</strong> und <strong>Radtouren</strong> im Sommer sowie präparierte Pisten und Loipen für den Wintersport. Die umliegenden Gipfel der Allgäuer Alpen, darunter der Einstein und das Gaishorn, rahmen die Region ein. Die touristische Infrastruktur ist auf Aktivitäten in der Natur ausgerichtet. Die Ortschaft Tannheim dient als zentraler Ort für Unterkünfte und Versorgung.</p>",
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Tannheimer Tal</strong> (1 100 m) est souvent désigné comme la « plus belle haute vallée d'Europe ». Située au nord-ouest du Tyrol à la frontière bavaroise, cette vallée préservée offre de superbes lacs de montagne (Vilsalpsee et Haldensee), de vastes prairies alpines et les spectaculaires sommets calcaires de la Rote Flüh et du Gimpel.</p><h2>Parcours &amp; Exigences</h2><p>Le tour du lac Haldensee est une promenade familiale entièrement plate et accessible (4,5 km, 1h30, T1). La télécabine du Neunerköpfle donne accès au « plus grand livre de sommet des Alpes » à 1 860 m (T1). Les alpinistes chevronnés s'attaquent à la via ferrata de la Lachenspitze (C/D) et aux arêtes de la Rote Flüh (T3/T4). Bonnes chaussures de montagne en altitude. Chiens admis en laisse.</p><h2>Accès</h2><p>Gare de Reutte ou de Sonthofen (Bavière) puis bus réguliers 120/121. En voiture, accès sans vignette ni péage depuis l'Allemagne via l'A7 et le col d'Oberjoch. Parkings aux remontées mécaniques.</p><h2>Conseils</h2><p>Profitez de la carte « Remontées incluses » offerte par de nombreux hébergements partenaires et dégustez le fromage d'alpage traditionnel dans les chalets d'altitude.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Halbtags bis Ganztags",
+  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
   "tags": [
     "randonnée",
     "randonnée pédestre",
@@ -21,11 +21,21 @@
     "famille"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.tannheimer-tal.at",
+  "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
-    "lat": "47.5000",
-    "lng": "10.5167"
+    "lat": "47.4989",
+    "lng": "10.5178"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.tannheimertal.com/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://www.naturpark-tiroler-lech.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-haldensee/1381460/",
+    "https://www.vvt.at/"
+  ]
 }

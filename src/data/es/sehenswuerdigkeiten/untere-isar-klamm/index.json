@@ -1,10 +1,10 @@
 {
-  "name": "Untere Isar",
+  "name": "Untere Isar & Karwendelschlucht",
   "slug": "untere-isar-klamm",
   "region": "achensee",
   "ort": "Vomp",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Die wildromantische Fluss- und Schluchtlandschaft der jungen Isar im Naturpark Karwendel – breite Kiesbänke, türkisblaues Wasser und Urnatur.",
   "emoji": "🌊",
   "farbe": "#2F4F4F",
   "tags": [
@@ -13,16 +13,26 @@
     "senderismo",
     "cascada"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene: € 4,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Karwendeltäler ca. 6–8 € pro Tag)",
   "oeffnungszeiten": "Mai-Okt 9:00-17:00",
-  "webseite": "https://www.vomp.at/untere-isar-klamm",
+  "webseite": "https://www.karwendel.org/lebensraum/wildfluss-isar/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.3423",
-    "lng": "11.6833"
+    "lat": "47.3889",
+    "lng": "11.2611"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Untere Isar</strong> – Die Untere Isar zählt zu den schönsten Natursehenswürdigkeiten der Region Achensee. Die Untere Isar-Klamm ist eine beeindruckende Felsschlucht mit tosendem Wasser und abenteuerlichen Stegen entlang der Isar Rund um die Untere Isar führen gut markierte Wanderwege durch abwechslungsreiche Landschaften. Im Sommer bieten sich hier ideale Bedingungen für ausgedehnte Touren, während im Winter oft Schneeschuh- und Skitouren möglich sind. Die Ruhe und die klare Bergluft machen jeden Besuch zu einem erholsamen Erlebnis. Nur wenige Kilometer von Vomp entfernt, wartet mit der Untere Isar ein Stück unberührte Natur darauf, entdeckt zu werden. Die Lage bietet zudem einen herrlichen Panoramablick auf die umliegenden Bergketten. Ob Sommer oder Winter: Die Untere Isar ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El cañón del <strong>Bajo Isar</strong> en el Parque Natural de Karwendel es uno de los últimos ríos alpinos verdaderamente salvajes y no canalizados de Europa central. Con aguas de un azul turquesa resplandeciente, el joven río Isar fluye entre inmensas playas de grava blanca, desfiladeros rocosos y bosques de ribera que albergan aves y plantas de gran valor ecológico.</p><h2>Ruta y Requisitos</h2><p>Paseo suave y panorámico de 6 a 8 km junto al cauce del río partiendo de Scharnitz (2 a 2,5 horas, fácil T1/T2, apto para carritos todoterreno). Pasarelas y miradores sobre las pozas de agua viva. Los más montañeros pueden adentrarse en el desfiladero de Gleirschklamm (T2). Calzado de senderismo y protección solar recomendados. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a la estación fronteriza de Scharnitz y 10 minutos a pie. En coche por la carretera B177 hasta los aparcamientos del Parque Natural de Karwendel en Scharnitz.</p><h2>Consejos</h2><p>Haga un picnic sobre las piedras blancas del río con vistas a las paredes verticales del Karwendel y visite el centro de interpretación del parque natural en Scharnitz.</p>",
+  "saison": "Mai bis Oktober (Winterwanderung bei geräumtem Weg möglich)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.karwendel.org/lebensraum/wildfluss-isar/",
+    "https://www.seefeld.com/de/wandern/isarursprung.html",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-isarursprung",
+    "https://www.alpenvereinaktiv.com/de/tour/entlang-der-jungen-isar-im-karwendel/1381470/",
+    "https://www.vvt.at/"
+  ]
 }

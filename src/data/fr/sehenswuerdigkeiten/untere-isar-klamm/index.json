@@ -1,5 +1,5 @@
 {
-  "name": "Untere Isar",
+  "name": "Untere Isar & Karwendelschlucht",
   "slug": "untere-isar-klamm",
   "region": "achensee",
   "ort": "Vomp",
@@ -13,14 +13,26 @@
     "randonnée",
     "chute d'eau"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene: € 4,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Karwendeltäler ca. 6–8 € pro Tag)",
   "oeffnungszeiten": "Mai-Okt 9:00-17:00",
-  "webseite": "https://www.vomp.at/untere-isar-klamm",
+  "webseite": "https://www.karwendel.org/lebensraum/wildfluss-isar/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.3423",
-    "lng": "11.6833"
-  }
+    "lat": "47.3889",
+    "lng": "11.2611"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Les <strong>Gorges de l'Isar inférieure</strong> dans le parc naturel du Karwendel constituent l'un des derniers écosystèmes fluviaux sauvages et préservés d'Europe centrale. Née de sources calcaires limpides, la jeune Isar serpente entre bancs de galets blancs éclatants, défilés rocheux turquoise et forêts alluviales protégées abritant une faune rare.</p><h2>Parcours &amp; Exigences</h2><p>Randonnée familiale facile de 6 à 8 km le long du lit de la rivière depuis Scharnitz (2h à 2h30, T1/T2, praticable en poussette tout-terrain). Découverte de la flore pionnière et passerelles panoramiques au-dessus de l'eau vive. Randonneurs avertis peuvent s'engager dans les gorges sauvages de la Gleirschklamm (T2). Chaussures de marche recommandées. Chiens admis en laisse avec baignade autorisée sur les berges.</p><h2>Accès</h2><p>Train transfrontalier jusqu'à la gare de Scharnitz puis 10 minutes à pied jusqu'à l'entrée du parc. En voiture par la route B177 jusqu'au grand parking des Karwendeltäler à Scharnitz.</p><h2>Conseils</h2><p>Profitez d'un bain de pieds vivifiant dans les eaux cristallines sur les bancs de galets face aux falaises du Karwendel et visitez le centre d'information du parc naturel à Scharnitz.</p>",
+  "saison": "Mai bis Oktober (Winterwanderung bei geräumtem Weg möglich)",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.karwendel.org/lebensraum/wildfluss-isar/",
+    "https://www.seefeld.com/de/wandern/isarursprung.html",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-isarursprung",
+    "https://www.alpenvereinaktiv.com/de/tour/entlang-der-jungen-isar-im-karwendel/1381470/",
+    "https://www.vvt.at/"
+  ]
 }

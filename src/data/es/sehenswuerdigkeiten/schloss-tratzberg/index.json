@@ -4,17 +4,19 @@
   "region": "innsbruck",
   "ort": "Jenbach",
   "kategorie": "burg",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Castillo renacentista encaramado sobre el valle del Inn con estancias originales intactas, armería y audioguías teatralizadas.",
   "emoji": "🏰",
   "farbe": "#A0522D",
   "tags": [
-    "schloss",
-    "renaissance",
-    "museum",
-    "geschichte"
+    "Kultur",
+    "Schloss",
+    "Geschichte",
+    "Familie",
+    "Silberregion Karwendel",
+    "Jenbach"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 14,00, Kinder € 7,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 15,00 €, Kinder ca. 9,00 €, inklusive Hörspielführung",
   "oeffnungszeiten": "Mitte April-Okt: Di-So 9:00-17:00",
   "webseite": "https://www.schloss-tratzberg.at/",
   "bilder": [],
@@ -24,5 +26,14 @@
     "lng": "11.7717"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Schloss Tratzberg</strong> – Die Schloss Tratzberg gehört zum kulturellen Erbe Tirols und bietet einen faszinierenden Einblick in vergangene Zeiten. Dieses prachtvoll erhaltene Renaissance-Schloss oberhalb des Inntals führt durch original eingerichtete Fürstenwohnungen und die Rüstkammer Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Die Schloss Tratzberg befindet sich im Herzen von Jenbach und ist bequem zu Fuß oder mit öffentlichen Verkehrsmitteln zu erreichen. Die zentrale Lage macht sie zum idealen Ausgangspunkt für einen Kulturspaziergang durch die Stadt. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Überblick</h2>\n<p>El imponente <strong>Schloss Tratzberg</strong> corona una cresta boscosa sobre el valle del Inn, entre Jenbach y Stans. Reconstruido tras un devastador incendio por los ricos propietarios mineros de Schwaz, los hermanos Tänzl, bajo los auspicios del emperador Maximiliano I, es una joya del Renacimiento tirolés. Residencia de los condes de Enzenberg desde 1848, conserva intacto su mobiliario original de época y excepcionales techos de madera tallada.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>Se accede al castillo mediante un apacible paseo por el bosque de 20 minutos o en el tren turístico Tratzberg-Express. La visita interior de 60 minutos se realiza con audioguía teatralizada inalámbrica donde monarcas históricos narran los secretos del patio porticado, la Sala de los Habsburgo con su árbol genealógico pintado de 46 metros y la Armería. Para los niños existe una audioguía especial con el fantasma Tratzi.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Abierto diariamente de primeros de abril a principios de noviembre, de 10:00 a 16:00. Entrada aprox. 15,00 € adultos, 9,00 € niños con audioguía incluida. En coche por la A12 salida Jenbach hasta el aparcamiento de la posada Schlosswirt. En tren hasta Jenbach y 25 minutos a pie.</p>\n\n<h2>Tipps</h2>\n<p>Disfruta de la gastronomía tirolesa en el restaurante Schlosswirt al pie de la colina. Muy recomendable completar la jornada con la ruta por el cañón Wolfsklamm hasta el monasterio de St. Georgenberg.</p>",
+  "sources": [
+    "https://www.schloss-tratzberg.com/",
+    "https://www.silberregion-karwendel.com/de/schloss-tratzberg",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-schloss-tratzberg",
+    "https://de.wikipedia.org/wiki/Schloss_Tratzberg",
+    "https://de.wikipedia.org/wiki/Jenbach"
+  ],
+  "saison": "Anfang April bis Anfang November",
+  "familie": true
 }

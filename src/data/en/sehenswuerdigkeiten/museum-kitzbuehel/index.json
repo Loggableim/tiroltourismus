@@ -4,17 +4,19 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "The Museum Kitzbühel showcases the vibrant history of the town across three floors—from the Middle Ages to the present day—with a focus on mining and tourism.",
+  "kurzbeschreibung": "Museum Kitzbühel showcases the cultural and legendary skiing history of the town alongside the world's premier art collection of Alfons Walde.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museum",
-    "history",
-    "culture",
-    "mining"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 10,00 €, Kinder und Jugendliche bis 18 Jahre frei",
   "oeffnungszeiten": "Di-So 10:00-17:00",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": null
+  "beschreibung": "<h2>Überblick</h2>\n<p>The <strong>Museum Kitzbühel – Alfons Walde Collection</strong> is housed in a stately 16th-century former granary and medieval tower in the centre of Kitzbühel's picturesque old town. As the cultural showpiece of the region, it spans millennia of regional history, from prehistoric Bronze Age copper mining to Kitzbühel's ascent as a world-famous Alpine winter sports destination. The museum is celebrated globally for hosting the largest permanent collection of paintings by artist and architect Alfons Walde (1891–1958), whose vibrant winter scenes and ski posters shaped the global romantic image of Tyrol.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>The self-guided exhibition path unfolds across several levels. Exhibits trace the town's medieval charter, folklore, and the thrilling origins of Alpine skiing, displaying historic equipment and Olympic trophies of pioneers like Franz Reisch and Toni Sailer's legendary 1950s team. The upper gallery showcases Walde's celebrated masterworks such as \"Ascending Skiers\" and radiant mountain views. The visit culminates on the accessible rooftop terrace, which provides sweeping 360-degree vistas over the town's medieval rooftops toward the Hahnenkamm and Kitzbüheler Horn. The museum is equipped with elevators and fully barrier-free. Allow 1.5 to 2 hours.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Museum Kitzbühel is open year-round from Tuesday to Sunday, 10:00 to 17:00 (closed Mondays; Thursday evenings in summer open until 20:00). Standard adult admission is roughly 10.00 Euro; children and teenagers under 18 enter free. Situated in the pedestrianised town centre (Hinterstadt), it is an easy 8-minute walk from Kitzbühel main railway station. Underground parking is available within a short walk.</p>\n\n<h2>Tipps</h2>\n<p>Be sure to step onto the panoramic rooftop terrace, which provides an unmatched direct view up towards the famous Streif downhill race course on the slopes of the Hahnenkamm.</p>",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-museum-kitzbuehel",
+    "https://www.kitzbuehel.com/",
+    "https://de.wikipedia.org/wiki/Alfons_Walde",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

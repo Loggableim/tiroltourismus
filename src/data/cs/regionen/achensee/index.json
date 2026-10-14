@@ -2,7 +2,7 @@
   "titel": "Achensee",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Achensee je největší tyrolské jezero – tyrkysově modrá voda obklopená strmými horskými svahy, známá jako „moře Alp“.",
   "emoji": "🌊",
   "bewertung": 5,
   "farbe": "#00A8CC",
@@ -13,14 +13,14 @@
     "natur",
     "familie"
   ],
-  "hoehe": "2.500 m",
-  "flaeche": "200 km²",
-  "einwohner": "10.000",
+  "hoehe": "2.457 m",
+  "flaeche": "389 km²",
+  "einwohner": "8.500",
   "beschreibung": "<p>Leží v trojúhelníku mezi Innsbruck, Kufstein a Bayern a je s rozlohou 6,8 km² největším jezerem Tirolu. Křišťálově čistá, tyrkysově modrá voda dosahuje teplot až 25 °C v létě – ideální pro plavání, jachting, surfování a potápění. Jezero je obklopen strmými stěnami Karwendelu a Brandenberger Alpen. Hlavní města <strong>Achenkirch</strong> a <strong>Pertisau</strong> nabízejí přímý přístup k jezeru, rodinné hotely a mnoho horských lanovek. Zimou láká lyžařské středisko Christlum v Achenkirch. Achenseeschifffahrt s historickými parními loděmi spojuje místa od roku 1887.</p>",
   "tipps": [
-    "Die Achenseebahn ist eine historische Dampfzahnradbahn von Jenbach an den See – ein nostalgisches Erlebnis.",
-    "Der Achensee-Panoramaweg führt auf rund 40 km rund um den gesamten See.",
-    "Das Karwendel am Westufer ist eines der größten Naturparkgebiete Österreichs."
+    "Achenseebahn je historická parní ozubnicová železnice z Jenbachu k jezeru – nostalgický zážitek.",
+    "Panoramatická stezka kolem Achensee měří přibližně 40 km a obepíná celé jezero.",
+    "Karwendel na západním břehu je jedním z největších přírodních parků v Rakousku."
   ],
   "empfehlungen": "<p>Určitě: Výlet s <strong>Achensee-Schifffahrt</strong> z Pertisau do Achenkirch – tyrkysové vodu obklopující strmé hory Karwendel je nezapomenutelná. Poté si dejte posezení v <strong>Seehotel Einwaller</strong> pro rakouské klasiky s výhledem na jezero.</p>",
   "umgebung": "<p>Achensee se nachází v severovýchodním Tirolu, zabalený mezi Karwendel (západ) a Brandenberger Alpen (východ). Na severu se region hraničí s Bayern (Syrienstein), na jihu s Inntal (Jenbach). Nejbližší města: Jenbach (10 km), Schwaz (20 km). Achenseebahn spojuje jezero s Inntalem.</p>",
@@ -75,5 +75,11 @@
   "koordinaten": {
     "lat": 47.4333,
     "lng": 11.7167
-  }
+  },
+  "sources": [
+    "https://www.achensee.com",
+    "https://www.tirol.at/regionen/a-achensee",
+    "https://www.tirol.gv.at/statistik-budget/statistik/",
+    "https://de.wikipedia.org/wiki/Achensee"
+  ]
 }

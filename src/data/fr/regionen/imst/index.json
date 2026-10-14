@@ -15,15 +15,15 @@
   ],
   "hoehe": "3.774 m",
   "flaeche": "350 km²",
-  "einwohner": "27.000",
+  "einwohner": "25.000",
   "beschreibung": "<p>Le district d’<strong>Imst</strong> se situe dans la vallée de l’Inn supérieure et englobe la ville d’<strong>Imst</strong> ainsi que les communes des vallées environnantes. La ville d’<strong>Imst</strong> est réputée pour son <strong>Imster Fasching</strong>, qui a lieu tous les quatre ans, l’un des plus anciens carnavals traditionnels du <strong>Tirol</strong>, avec ses somptueux costumes de *Schellerlaufen*. La région est un paradis pour les grimpeurs et les cyclistes de montagne, grâce au célèbre parc d’escalade d’<strong>Imst</strong> et au réseau de pistes de *mountainbike*. En hiver, la station de ski de <strong>Hoch-Imst</strong> attire avec sa garantie de neige. Les alentours offrent l’accès aux vallées sauvages et romantiques du <strong>Gurgltal</strong> et du <strong>Pitztal</strong>.</p>",
   "tipps": [
-    "Der Imster Fasching findet nur alle 4 Jahre statt – nächstes Mal 2027!",
-    "Der Mountainbike-Trail „Imster Bergl“ ist einer der anspruchsvollsten Trails im Oberland.",
-    "Der Gurgltal-Mineralienwanderweg bei Tarrenz ist ein Geheimtipp für Familien."
+    "Le carnaval traditionnel Schemenlaufen d'Imst n'a lieu que tous les 4 ans – prochaine édition en 2027 !",
+    "Le sentier VTT « Imster Bergl » compte parmi les parcours les plus exigeants de l'Oberland tyrolien.",
+    "Le sentier des minéraux de la vallée de Gurgl près de Tarrenz est une belle idée de randonnée en famille."
   ],
   "empfehlungen": "<p>Découvrez la vieille ville historique d’<strong>Imst</strong> avec ses arcades et son clocher paroissial baroque. Ensuite, une séance d’escalade au <strong>Klettergarten Imst</strong> ou une randonnée jusqu’à la <strong>Muttekopfhütte</strong> (2 034 m).</p>",
-  "umgebung": "<p>La région d’**Imst** se situe dans la vallée de l’**Oberinntal**, entre le **Tschirgant** au nord et les Alpes de l’**Ötztal** au sud. Régions voisines : **Ötztal** (sud), **Pitztal** (ouest), **Telfs** (est), **Außerfern** (nord via le **Fernpass**). Ville la plus proche : **Innsbruck** (50 km).</p>",
+  "umgebung": "<p>La région d’<strong>Imst</strong> se situe dans la vallée de l’<strong>Oberinntal</strong>, entre le <strong>Tschirgant</strong> au nord et les Alpes de l’<strong>Ötztal</strong> au sud. Régions voisines : <strong>Ötztal</strong> (sud), <strong>Pitztal</strong> (ouest), <strong>Telfs</strong> (est), <strong>Außerfern</strong> (nord via le <strong>Fernpass</strong>). Ville la plus proche : <strong>Innsbruck</strong> (50 km).</p>",
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -41,7 +41,7 @@
     ],
     [
       47.22,
-      11.0
+      11
     ],
     [
       47.18,
@@ -84,7 +84,7 @@
       10.6
     ],
     [
-      47.0,
+      47,
       10.5
     ],
     [
@@ -111,5 +111,15 @@
       47.25,
       10.68
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at/regionen/a-ferienregion-imst",
+    "https://www.tirol.gv.at/imst/",
+    "https://de.wikipedia.org/wiki/Imst"
+  ],
+  "koordinaten": {
+    "lat": 47.2333,
+    "lng": 10.7333
+  }
 }

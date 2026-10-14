@@ -1,16 +1,91 @@
 {
-  "name": "Tannheimer Tal",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": "Region Tannheimer Tal in Tirol",
+  "titel": "Tannheimer Tal",
+  "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "Das Tannheimer Tal gilt als 'wohl schönstes Hochtal Europas' – ein Paradies für Wanderer und Langläufer rund um den smaragdgrünen Vilsalpsee und das Neunerköpfle.",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "wandern",
+    "hochgebirge",
+    "seen",
+    "langlauf",
+    "natur"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p>Das <strong>Tannheimer Tal</strong> im Bezirk Reutte (Außerfern) liegt auf einem sonnigen Hochplateau auf über 1.100 m Seehöhe und wird vielfach als das 'schönste Hochtal Europas' gerühmt. Eingebettet zwischen den kühnen Kalkfelsen der Tannheimer Berge mit der <strong>Kellenspitze (2.238 m)</strong>, der Roten Flüh und dem Gimpel im Norden sowie den sanfteren Grashängen der Allgäuer Alpen im Süden, umfasst das Tal die sechs charmanten Gemeinden <strong>Tannheim</strong>, <strong>Grän</strong>, <strong>Nesselwängle</strong>, <strong>Schattwald</strong>, <strong>Zöblen</strong> und die funktionale Enklave <strong>Jungholz</strong>. Zu den landschaftlichen Juwelen zählen das geschützte Naturreservat <strong>Vilsalpsee</strong> und der malerische <strong>Haldensee</strong>. Im Sommer locken Panoramawanderwege, Klettersteige und das <em>größte Gipfelbuch der Alpen</em> auf dem Neunerköpfle, im Winter ein über 140 km langes, prämiertes Loipennetz.</p>",
+  "tipps": [
+    "Besuchen Sie das Naturschutzgebiet Vilsalpsee bequem mit dem Tannheimer Alpenexpress (Bummelzug) und wandern Sie zum Bergaicht-Wasserfall.",
+    "Tragen Sie sich auf dem Neunerköpfle (1.862 m) in das überdimensionale, 3 Meter breite größte Gipfelbuch der Alpen ein.",
+    "Erleben Sie im Januar das Internationale Ballonfestival Tannheimer Tal mit farbenprächtigem Ballonglühen am Nachthimmel."
+  ],
+  "empfehlungen": "<p>Fahren Sie mit der Gondelbahn auf das <strong>Neunerköpfle</strong> für den familienfreundlichen 9er-Erlebnisweg mit atemberaubendem Blick über das gesamte Hochtal. Kehren Sie anschließend im traditionellen <strong>Gasthof Vilsalpsee</strong> oder im feinen <strong>Lumberger Hof</strong> in Grän ein.</p>",
+  "umgebung": "<p>Das Tannheimer Tal ist über den Gaichtpass im Osten an das Tiroler Lechtal und Reutte angebunden. Im Norden und Westen grenzt es direkt an Bayern (Landkreise Oberallgäu und Ostallgäu mit Bad Hindelang und Pfronten) über den Oberjochpass. Im Süden trennen die Allgäuer Alpen das Hochtal vom Lechtal.</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
+  "bilder": [],
+  "hero_bild": "",
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
   "koordinaten": {
     "lat": 47.5167,
     "lng": 10.6167
   },
-  "tags": [
-    "tannheimer-tal",
-    "region"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": ""
+  "slug": "tannheimer-tal",
+  "name": "Tannheimer Tal"
 }

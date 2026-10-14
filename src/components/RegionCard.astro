@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
@@ -37,10 +38,7 @@ const featuredText = FEATURED_TEXT[locale] || FEATURED_TEXT.de;
     ) : wappenSrc ? (
       <img src={wappenSrc} alt={`${titel} Wappen`} class="region-badge-img" loading="lazy" decoding="async" />
     ) : (
-      <>
-        <div class="region-blob" style={`background:${farbe}`}></div>
-        <span class="region-emoji">{emoji}</span>
-      </>
+      <CategoryPlaceholder collection="regionen" locale={locale} />
     )}
     <FavHeart collection="regionen" slug={slug} />
   </div>

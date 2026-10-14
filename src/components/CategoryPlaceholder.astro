@@ -1,4 +1,6 @@
 ---
+import { randomUUID } from 'node:crypto';
+
 /**
  * CategoryPlaceholder.astro
  * Schlanker SVG-Platzhalter für Einträge ohne Foto.
@@ -11,6 +13,9 @@ export interface Props {
 }
 
 const { collection, locale = 'de', className = '' } = Astro.props;
+// Each inline SVG needs its own gradient ID, even when the same category is
+// rendered more than once on a page.
+const gradientId = `cat-placeholder-bg-${randomUUID()}`;
 
 // Künstler- und Designstile pro Subdomain/Sprache:
 // DE: Linienzeichnung & Reduktion (Paul Flora / Otto Grünmandl)
@@ -41,21 +46,21 @@ const palette = PALETTES[locale] || PALETTES.de;
 <div class={`cat-placeholder-wrap cat-placeholder-${locale} ${className}`}>
   <svg
     viewBox="0 0 100 100"
-    preserveAspectRatio="xMidYMid meet"
+    preserveAspectRatio="xMidYMid slice"
     class="cat-placeholder-svg"
     xmlns="http://www.w3.org/2000/svg"
-    role="img"
-    aria-label={`${collection} Platzhalter`}
+    aria-hidden="true"
+    focusable="false"
   >
     <defs>
-      <linearGradient id={`bg-grad-${collection}-${locale}`} x1="0%" y1="0%" x2="100%" y2="100%">
+      <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color={palette.bg1} />
         <stop offset="100%" stop-color={palette.bg2} />
       </linearGradient>
     </defs>
 
     {/* Hintergrundfläche */}
-    <rect width="100" height="100" fill={`url(#bg-grad-${collection}-${locale})`} />
+    <rect width="100" height="100" fill={`url(#${gradientId})`} />
 
     {/* Design-spezifische Hintergrund-Akzente je Subdomain */}
     {locale === 'de' && (

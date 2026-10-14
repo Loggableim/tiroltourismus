@@ -1,50 +1,300 @@
 ---
-// 500 — Interner Serverfehler
-// Self-contained error page with Tirol dark-theme styling
+// 500 — Interner Serverfehler / Server Error
+// Dynamic error page with localized designs and top categories across all 8 subdomains
+import { DEFAULT_LOCALE } from '../lib/languages.js';
+
+const initialLocale = DEFAULT_LOCALE || 'de';
+
+const TOP_CATEGORIES = [
+  {
+    key: 'regionen',
+    path: 'regionen/',
+    icon: '🏔️',
+    labels: { de: 'Regionen', en: 'Regions', fr: 'Régions', cs: 'Regiony', nl: "Regio's", it: 'Regioni', es: 'Regiones', zh: '地区' },
+    descs: {
+      de: '14 alpine Urlaubsregionen',
+      en: '14 alpine holiday regions',
+      fr: '14 régions alpines de vacances',
+      cs: '14 alpských prázdninových regionů',
+      nl: '14 alpiene vakantieregio’s',
+      it: '14 splendide regioni alpine',
+      es: '14 regiones alpinas de vacaciones',
+      zh: '14个阿尔卑斯度假胜地',
+    }
+  },
+  {
+    key: 'unterkuenfte',
+    path: 'unterkuenfte/',
+    icon: '🏨',
+    labels: { de: 'Unterkünfte', en: 'Accommodations', fr: 'Hébergements', cs: 'Ubytování', nl: 'Accommodaties', it: 'Alloggi', es: 'Alojamientos', zh: '住宿' },
+    descs: {
+      de: 'Hotels, Chalets & Ferienwohnungen',
+      en: 'Hotels, chalets & apartments',
+      fr: 'Hôtels, chalets & appartements',
+      cs: 'Hotely, chaty a apartmány',
+      nl: 'Hotels, chalets & appartementen',
+      it: 'Hotel, chalet e appartamenti',
+      es: 'Hoteles, chalets y apartamentos',
+      zh: '高山酒店、小木屋与公寓',
+    }
+  },
+  {
+    key: 'orte',
+    path: 'orte/',
+    icon: '🏘️',
+    labels: { de: 'Orte', en: 'Places', fr: 'Villages', cs: 'Místa', nl: 'Plaatsen', it: 'Paesi', es: 'Pueblos', zh: '村镇' },
+    descs: {
+      de: 'Städte & charmante Bergdörfer',
+      en: 'Towns & charming mountain villages',
+      fr: 'Villes & charmants villages alpins',
+      cs: 'Města a kouzelné horské vesnice',
+      nl: 'Steden & charmante bergdorpjes',
+      it: 'Città e caratteristici borghi',
+      es: 'Ciudades y pintorescos pueblos',
+      zh: '城市与迷人的高山村落',
+    }
+  },
+  {
+    key: 'sehenswuerdigkeiten',
+    path: 'sehenswuerdigkeiten/',
+    icon: '🏛️',
+    labels: { de: 'Sehenswertes', en: 'Sights', fr: 'Sites touristiques', cs: 'Pamětihodnosti', nl: 'Bezienswaardigheden', it: 'Attrazioni', es: 'Atracciones', zh: '景点' },
+    descs: {
+      de: 'Kultur, Schlösser & Naturwunder',
+      en: 'Culture, castles & natural wonders',
+      fr: 'Culture, châteaux & merveilles',
+      cs: 'Kultura, hrady a přírodní krásy',
+      nl: 'Cultuur, kastelen & natuurwonderen',
+      it: 'Cultura, castelli e meraviglie',
+      es: 'Cultura, castillos y maravillas',
+      zh: '文化名胜、古堡与自然奇观',
+    }
+  },
+  {
+    key: 'gastro',
+    path: 'gastro/',
+    icon: '🍽️',
+    labels: { de: 'Gastronomie', en: 'Food & Drink', fr: 'Gastronomie', cs: 'Gastronomie', nl: 'Eten & Drinken', it: 'Gastronomia', es: 'Gastronomía', zh: '美食' },
+    descs: {
+      de: 'Tiroler Küche, Hütten & Genuss',
+      en: 'Tyrolean cuisine, alpine huts & dining',
+      fr: 'Cuisine tyrolienne, auberges & refuges',
+      cs: 'Tyrolská kuchyně a horské chaty',
+      nl: 'Tiroolse keuken, berghutten & restaurants',
+      it: 'Cucina tipica tirolese e rifugi',
+      es: 'Gastronomía tirolesa y refugios',
+      zh: '地道提洛风味美食与高山木屋',
+    }
+  },
+  {
+    key: 'camping',
+    path: 'camping/',
+    icon: '🏕️',
+    labels: { de: 'Camping', en: 'Camping', fr: 'Camping', cs: 'Kempy', nl: 'Campings', it: 'Campeggio', es: 'Camping', zh: '露营' },
+    descs: {
+      de: 'Natur-Campingplätze mit Bergblick',
+      en: 'Scenic campsites with mountain views',
+      fr: 'Campings en pleine nature alpine',
+      cs: 'Přírodní kempy s výhledem na hory',
+      nl: 'Natuurcampings met bergzicht',
+      it: 'Campeggi nella natura panoramici',
+      es: 'Campings en plena naturaleza alpina',
+      zh: '享有壮丽山景的自然露营营地',
+    }
+  },
+  {
+    key: 'magazin',
+    path: 'magazin/',
+    icon: '📰',
+    labels: { de: 'Magazin', en: 'Magazine', fr: 'Magazine', cs: 'Časopis', nl: 'Tijdschrift', it: 'Magazine', es: 'Revista', zh: '杂志' },
+    descs: {
+      de: 'Reisetipps, Touren & Insider-Wissen',
+      en: 'Travel tips, tours & insider guides',
+      fr: 'Guides, récits de voyage & conseils',
+      cs: 'Tipy na cesty a průvodce',
+      nl: 'Reistips, tochten & insidertips',
+      it: 'Consigli di viaggio e itinerari',
+      es: 'Consejos de viaje y rutas',
+      zh: '旅行指南、深度路线与当地贴士',
+    }
+  },
+  {
+    key: 'suche',
+    path: 'suche/',
+    icon: '🔍',
+    labels: { de: 'Suche & Filter', en: 'Search & Filters', fr: 'Recherche', cs: 'Hledání', nl: 'Zoeken', it: 'Ricerca', es: 'Búsqueda', zh: '搜索与筛选' },
+    descs: {
+      de: 'Portal gezielt durchsuchen',
+      en: 'Search the entire portal',
+      fr: 'Rechercher dans tout le portail',
+      cs: 'Vyhledávat na celém portálu',
+      nl: 'Doorzoek het hele portaal',
+      it: 'Cerca in tutto il portale',
+      es: 'Buscar en todo el portal',
+      zh: '精准搜索全站内容',
+    }
+  },
+];
+
+const I18N = {
+  de: {
+    title: 'Interner Serverfehler',
+    sub: 'Ein kleiner Felssturz auf unseren Leitungen.',
+    desc: 'Ein temporärer Fehler ist aufgetreten. Bitte lade die Seite in Kürze neu oder nutze unsere Hauptkategorien für deine Reiseplanung.',
+    home: '← Zurück zur Startseite',
+    retry: '↻ Seite neu laden',
+    categoriesTitle: 'Beliebte Bereiche erkunden',
+  },
+  en: {
+    title: 'Internal Server Error',
+    sub: 'A temporary rockslide in our system.',
+    desc: 'An unexpected error occurred. Please reload the page in a moment or continue exploring our top categories.',
+    home: '← Back to Homepage',
+    retry: '↻ Reload Page',
+    categoriesTitle: 'Explore Top Categories',
+  },
+  fr: {
+    title: 'Erreur interne du serveur',
+    sub: 'Un petit éboulement temporaire sur nos serveurs.',
+    desc: 'Une erreur imprévue est survenue. Veuillez rafraîchir la page dans un instant ou naviguer vers nos catégories phares.',
+    home: '← Retour à l’accueil',
+    retry: '↻ Rafraîchir la page',
+    categoriesTitle: 'Explorer les catégories principales',
+  },
+  cs: {
+    title: 'Interní chyba serveru',
+    sub: 'Dočasný zával na našich serverech.',
+    desc: 'Došlo k neočekávané chybě. Zkuste prosím stránku za chvíli obnovit nebo pokračujte výběrem z hlavních kategorií.',
+    home: '← Zpět na domovskou stránku',
+    retry: '↻ Obnovit stránku',
+    categoriesTitle: 'Prozkoumat hlavní kategorie',
+  },
+  nl: {
+    title: 'Interne serverfout',
+    sub: 'Een tijdelijke storing in ons systeem.',
+    desc: 'Er is een onverwachte fout opgetreden. Vernieuw de pagina over een ogenblik of bekijk onze hoofdcategorieën.',
+    home: '← Terug naar homepage',
+    retry: '↻ Pagina vernieuwen',
+    categoriesTitle: 'Ontdek populaire categorieën',
+  },
+  it: {
+    title: 'Errore interno del server',
+    sub: 'Una frana temporanea nei nostri sistemi.',
+    desc: 'Si è verificato un errore inatteso. Ricarica la pagina tra qualche istante o naviga tra le nostre categorie principali.',
+    home: '← Torna alla homepage',
+    retry: '↻ Ricarica pagina',
+    categoriesTitle: 'Esplora le categorie principali',
+  },
+  es: {
+    title: 'Error interno del servidor',
+    sub: 'Un desprendimiento temporal en nuestros sistemas.',
+    desc: 'Ha ocurrido un error inesperado. Por favor, recarga la página en unos momentos o continúa explorando nuestras categorías.',
+    home: '← Volver a la página de inicio',
+    retry: '↻ Recargar página',
+    categoriesTitle: 'Explorar categorías principales',
+  },
+  zh: {
+    title: '内部服务器错误',
+    sub: '系统遇到临时故障。',
+    desc: '服务器发生意外错误。请稍后刷新页面，或浏览下方热门分类继续您的旅程规划。',
+    home: '← 返回主页',
+    retry: '↻ 刷新页面',
+    categoriesTitle: '探索热门分类',
+  },
+};
+
+const curT = I18N[initialLocale] || I18N.de;
 ---
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang={initialLocale} data-lang={initialLocale}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>500 – Interner Serverfehler – tiroltourismus.com</title>
-  <meta name="description" content="Ein interner Fehler ist aufgetreten. Bitte versuchen Sie es später erneut." />
+  <title id="docTitle">500 – {curT.title} – tiroltourismus.com</title>
+  <meta name="description" id="metaDesc" content={curT.desc} />
   <meta name="robots" content="noindex, nofollow" />
   <meta name="theme-color" content="#0A0A12" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/tirol.css" />
   <style>
-    /* ─── Error Page Overrides ─── */
+    :root, [data-lang="de"] {
+      --lang-accent: #FF1493;
+      --lang-accent-glow: rgba(255, 20, 147, 0.22);
+      --lang-grad: linear-gradient(135deg, #FF1493 0%, #FFD700 100%);
+      --lang-font: 'Bebas Neue', 'Impact', sans-serif;
+    }
+    [data-lang="en"] {
+      --lang-accent: #0066FF;
+      --lang-accent-glow: rgba(0, 102, 255, 0.22);
+      --lang-grad: linear-gradient(135deg, #0051BA 0%, #00C4FF 100%);
+      --lang-font: 'Montserrat', sans-serif;
+    }
+    [data-lang="fr"] {
+      --lang-accent: #8B1E3F;
+      --lang-accent-glow: rgba(139, 30, 63, 0.22);
+      --lang-grad: linear-gradient(135deg, #8B1E3F 0%, #D4AF37 100%);
+      --lang-font: 'Georgia', 'Playfair Display', serif;
+    }
+    [data-lang="it"] {
+      --lang-accent: #C84B31;
+      --lang-accent-glow: rgba(200, 75, 49, 0.22);
+      --lang-grad: linear-gradient(135deg, #C84B31 0%, #D4A800 100%);
+      --lang-font: 'Georgia', serif;
+    }
+    [data-lang="es"] {
+      --lang-accent: #FF6B35;
+      --lang-accent-glow: rgba(255, 107, 53, 0.22);
+      --lang-grad: linear-gradient(135deg, #FF6B35 0%, #F4A261 100%);
+      --lang-font: 'Plus Jakarta Sans', sans-serif;
+    }
+    [data-lang="nl"] {
+      --lang-accent: #FF7A00;
+      --lang-accent-glow: rgba(255, 122, 0, 0.22);
+      --lang-grad: linear-gradient(135deg, #FF7A00 0%, #00C853 100%);
+      --lang-font: 'Plus Jakarta Sans', sans-serif;
+    }
+    [data-lang="cs"] {
+      --lang-accent: #9B111E;
+      --lang-accent-glow: rgba(155, 17, 30, 0.22);
+      --lang-grad: linear-gradient(135deg, #9B111E 0%, #A0522D 100%);
+      --lang-font: 'Plus Jakarta Sans', sans-serif;
+    }
+    [data-lang="zh"] {
+      --lang-accent: #DE2910;
+      --lang-accent-glow: rgba(222, 41, 16, 0.22);
+      --lang-grad: linear-gradient(135deg, #DE2910 0%, #D4A800 100%);
+      --lang-font: 'PingFang SC', 'Noto Sans SC', sans-serif;
+    }
+
     .error-page {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 40px 24px;
+      padding: 60px 20px 48px;
       text-align: center;
       background: var(--bg);
       color: var(--text);
-      transition: background .6s, color .6s;
+      transition: background .4s, color .4s;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
-    /* Mountain silhouette background */
     .error-page::before {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 200px;
+      height: 220px;
       background:
-        linear-gradient(135deg, var(--tirol-pink-glow) 0%, transparent 60%),
-        linear-gradient(225deg, var(--gold-glow) 0%, transparent 60%);
-      opacity: 0.5;
+        linear-gradient(135deg, var(--lang-accent-glow) 0%, transparent 60%),
+        linear-gradient(225deg, rgba(255, 215, 0, 0.12) 0%, transparent 60%);
+      opacity: 0.6;
       pointer-events: none;
       -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath d='M0,200 L0,120 L120,80 L200,110 L280,60 L360,90 L440,40 L520,70 L600,50 L680,80 L760,30 L840,65 L920,20 L1000,55 L1080,35 L1160,70 L1240,10 L1320,45 L1440,0 L1440,200 Z'/%3E%3C/svg%3E");
       mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 200'%3E%3Cpath d='M0,200 L0,120 L120,80 L200,110 L280,60 L360,90 L440,40 L520,70 L600,50 L680,80 L760,30 L840,65 L920,20 L1000,55 L1080,35 L1160,70 L1240,10 L1320,45 L1440,0 L1440,200 Z'/%3E%3C/svg%3E");
@@ -52,69 +302,76 @@
       mask-size: cover;
     }
 
-    /* Floating decorative elements */
     .error-deco {
       position: absolute;
       border-radius: 50%;
       pointer-events: none;
-      filter: blur(80px);
+      filter: blur(90px);
     }
     .error-deco-1 {
-      width: 400px;
-      height: 400px;
-      background: var(--tirol-pink-glow);
-      top: -100px;
-      right: -100px;
+      width: 440px;
+      height: 440px;
+      background: var(--lang-accent-glow);
+      top: -120px;
+      right: -120px;
     }
     .error-deco-2 {
-      width: 300px;
-      height: 300px;
-      background: var(--gold-glow);
-      bottom: -50px;
-      left: -80px;
+      width: 320px;
+      height: 320px;
+      background: rgba(255, 215, 0, 0.08);
+      bottom: -60px;
+      left: -90px;
     }
 
     .error-content {
       position: relative;
       z-index: 1;
-      max-width: 520px;
+      max-width: 860px;
+      width: 100%;
     }
 
     .error-logo {
-      margin-bottom: 48px;
+      margin-bottom: 28px;
       display: flex;
       justify-content: center;
     }
     .error-logo svg {
-      width: 280px;
+      width: 240px;
       height: auto;
     }
 
     .error-code {
-      font-family: var(--font-display);
-      font-size: clamp(120px, 20vw, 200px);
-      line-height: 1;
+      font-family: var(--font-display, 'Bebas Neue', sans-serif);
+      font-size: clamp(100px, 16vw, 170px);
+      line-height: 0.95;
       letter-spacing: 4px;
-      background: linear-gradient(135deg, var(--tirol-pink) 0%, var(--gold-light) 50%, var(--tirol-pink) 100%);
+      background: var(--lang-grad);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       animation: errorPulse 3s ease-in-out infinite;
     }
 
     @keyframes errorPulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.85; }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(0.99); }
     }
 
     .error-title {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 4vw, 42px);
-      line-height: 1.1;
-      letter-spacing: 2px;
+      font-family: var(--lang-font, var(--font-display));
+      font-size: clamp(26px, 4vw, 38px);
+      line-height: 1.15;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .error-sub {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--lang-accent);
       margin-bottom: 12px;
     }
 
@@ -122,21 +379,23 @@
       font-size: 15px;
       color: var(--text2);
       line-height: 1.7;
-      margin-bottom: 36px;
+      max-width: 580px;
+      margin: 0 auto 32px;
     }
 
     .error-actions {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 48px;
     }
 
     .error-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 14px 32px;
+      padding: 13px 28px;
       border-radius: 100px;
       font-family: var(--font-body);
       font-size: 13px;
@@ -144,44 +403,125 @@
       letter-spacing: 0.5px;
       text-transform: uppercase;
       text-decoration: none;
-      transition: all .3s var(--ease);
+      transition: all .25s ease;
       cursor: pointer;
-      border: none;
     }
 
     .error-btn-primary {
-      background: var(--tirol-pink);
+      background: var(--lang-accent);
       color: #fff;
-      box-shadow: 0 4px 20px var(--tirol-pink-glow);
+      box-shadow: 0 4px 20px var(--lang-accent-glow);
+      border: 1px solid transparent;
     }
     .error-btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px var(--tirol-pink-glow);
+      box-shadow: 0 8px 28px var(--lang-accent-glow);
+      filter: brightness(1.1);
     }
 
     .error-btn-secondary {
-      background: var(--glass);
-      backdrop-filter: blur(12px);
+      background: var(--bg2);
       border: 1px solid var(--glass-border);
       color: var(--text);
     }
     .error-btn-secondary:hover {
-      background: var(--surface-hover);
+      border-color: var(--lang-accent);
+      color: var(--lang-accent);
       transform: translateY(-2px);
     }
 
-    .error-footer {
-      position: absolute;
-      bottom: 24px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 12px;
-      color: var(--text3);
-      z-index: 1;
+    /* ─── Top Categories Section ─── */
+    .top-categories-section {
+      background: var(--bg2);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      padding: 28px 24px 32px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+      text-align: left;
     }
 
-    /* Dark mode toggle */
+    .categories-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+
+    .categories-heading {
+      font-family: var(--lang-font, var(--font-display));
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .category-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      padding: 14px 16px;
+      background: var(--bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--text);
+      transition: all 0.2s ease;
+    }
+    .category-card:hover {
+      border-color: var(--lang-accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px var(--lang-accent-glow);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .category-icon {
+      font-size: 22px;
+    }
+    .card-arrow {
+      font-size: 14px;
+      color: var(--text3);
+      transition: transform 0.2s;
+    }
+    .category-card:hover .card-arrow {
+      color: var(--lang-accent);
+      transform: translateX(3px);
+    }
+
+    .category-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .category-desc {
+      font-size: 11px;
+      color: var(--text2);
+      line-height: 1.4;
+    }
+
+    .error-footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--text3);
+    }
+
     .theme-toggle {
       position: fixed;
       top: 24px;
@@ -202,21 +542,21 @@
       box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
     }
 
-    @media (max-width: 600px) {
-      .error-page { padding: 24px 16px; }
-      .error-logo svg { width: 200px; }
-      .error-btn { padding: 12px 24px; font-size: 12px; }
-      .error-page::before { height: 120px; }
+    @media (max-width: 640px) {
+      .error-page { padding: 40px 16px; }
+      .error-logo svg { width: 180px; }
+      .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+      .category-card { padding: 12px; }
+      .category-desc { display: none; }
+      .error-btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 <body>
   <div class="error-page" id="errorPage">
-    <!-- Floating decorations -->
     <div class="error-deco error-deco-1"></div>
     <div class="error-deco error-deco-2"></div>
 
-    <!-- Theme Toggle -->
     <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten">
       <svg class="theme-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
@@ -227,53 +567,77 @@
     </button>
 
     <div class="error-content">
-      <!-- TIROL Logo -->
+      <!-- Tirol Logo -->
       <div class="error-logo">
         <svg viewBox="6 2 420 42" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="fl1" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
-            <linearGradient id="fl2" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-            <linearGradient id="fl3" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
-            <linearGradient id="fl4" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
-            <linearGradient id="fl5" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
+            <linearGradient id="el1" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/></linearGradient>
+            <linearGradient id="el2" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+            <linearGradient id="el3" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#D4A800"/><stop offset="100%" stop-color="#FFD700"/></linearGradient>
+            <linearGradient id="el4" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#C0006E"/><stop offset="100%" stop-color="#FF1493"/></linearGradient>
+            <linearGradient id="el5" x1="0.5" y1="1" x2="0.5" y2="0"><stop offset="0%" stop-color="#003A8A"/><stop offset="100%" stop-color="#0066FF"/></linearGradient>
           </defs>
-          <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#fl1)">T</text>
-          <polygon points="10,36 10,10 34,36" fill="url(#fl1)" opacity="0.08"/>
-          <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#fl2)">I</text>
-          <polygon points="42,36 42,14 56,36" fill="url(#fl2)" opacity="0.08"/>
-          <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#fl3)">R</text>
-          <polygon points="68,36 68,8 92,36" fill="url(#fl3)" opacity="0.08"/>
-          <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#fl4)">O</text>
-          <polygon points="100,36 100,10 126,36" fill="url(#fl4)" opacity="0.08"/>
-          <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#fl5)">L</text>
-          <polygon points="134,36 134,8 158,36" fill="url(#fl5)" opacity="0.08"/>
+          <text x="10" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el1)">T</text>
+          <polygon points="10,36 10,10 34,36" fill="url(#el1)" opacity="0.08"/>
+          <text x="42" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el2)">I</text>
+          <polygon points="42,36 42,14 56,36" fill="url(#el2)" opacity="0.08"/>
+          <text x="68" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el3)">R</text>
+          <polygon points="68,36 68,8 92,36" fill="url(#el3)" opacity="0.08"/>
+          <text x="100" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el4)">O</text>
+          <polygon points="100,36 100,10 126,36" fill="url(#el4)" opacity="0.08"/>
+          <text x="134" y="38" font-family="'Bebas Neue','Impact','Arial Narrow',sans-serif" font-size="36" font-weight="bold" fill="url(#el5)">L</text>
+          <polygon points="134,36 134,8 158,36" fill="url(#el5)" opacity="0.08"/>
           <circle cx="172" cy="30" r="2.5" fill="rgba(255,255,255,0.12)" opacity="0.3"/>
-          <text x="186" y="38" font-family="'Montserrat','Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--tirol-pink, #FF1493)">tourismus</text>
+          <text x="186" y="38" font-family="'Montserrat','Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="var(--lang-accent, #FF1493)">tourismus</text>
           <text x="388" y="38" font-family="'Montserrat','Helvetica Neue',Arial,sans-serif" font-size="10" font-weight="500" fill="var(--text3, rgba(255,255,255,0.15))">.com</text>
         </svg>
       </div>
 
-      <!-- Error Code -->
+      <!-- Error Code & Headings -->
       <div class="error-code">500</div>
+      <h1 class="error-title" id="errTitle">{curT.title}</h1>
+      <p class="error-sub" id="errSub">{curT.sub}</p>
+      <p class="error-desc" id="errDesc">{curT.desc}</p>
 
-      <!-- Title -->
-      <h1 class="error-title">Interner Serverfehler</h1>
-
-      <!-- Description -->
-      <p class="error-desc">
-        Ein unerwarteter Fehler ist aufgetreten.<br />
-        Bitte versuchen Sie es später erneut oder kontaktieren Sie uns.
-      </p>
-
-      <!-- Actions -->
+      <!-- Primary Action Buttons -->
       <div class="error-actions">
-        <a href="/" class="error-btn error-btn-primary">
-          ← Zurück zur Startseite
+        <a href="/" class="error-btn error-btn-primary" id="errHome">
+          {curT.home}
         </a>
-        <a href="/kontakt/" class="error-btn error-btn-secondary">
-          ✉ Kontakt
-        </a>
+        <button type="button" class="error-btn error-btn-secondary" id="errRetry" onclick="location.reload()">
+          {curT.retry}
+        </button>
       </div>
+
+      <!-- Top Categories Navigation Grid -->
+      <section class="top-categories-section">
+        <div class="categories-header">
+          <h2 class="categories-heading" id="catHeading">
+            🧭 {curT.categoriesTitle}
+          </h2>
+        </div>
+        <div class="categories-grid" id="catGrid">
+          {TOP_CATEGORIES.map((cat) => {
+            const label = cat.labels[initialLocale] || cat.labels.de;
+            const desc = cat.descs[initialLocale] || cat.descs.de;
+            return (
+              <a
+                href={`/${cat.path}`}
+                class="category-card"
+                data-key={cat.key}
+                data-basepath={cat.path}
+              >
+                <div class="card-top">
+                  <span class="category-icon" aria-hidden="true">{cat.icon}</span>
+                  <span class="card-arrow" aria-hidden="true">→</span>
+                </div>
+                <span class="category-label">{label}</span>
+                <span class="category-desc">{desc}</span>
+              </a>
+            );
+          })}
+        </div>
+      </section>
     </div>
 
     <div class="error-footer">
@@ -281,7 +645,69 @@
     </div>
   </div>
 
-  <!-- Theme toggle logic (matching tirol.js but self-contained) -->
+  <!-- Subdomain & Language detection script -->
+  <script is:inline define:vars={{ I18N, TOP_CATEGORIES }}>
+    (function() {
+      var host = location.hostname.toLowerCase();
+      var sub = host.split('.')[0];
+      var langMap = { de: 'de', en: 'en', fr: 'fr', cs: 'cs', nl: 'nl', it: 'it', es: 'es', cn: 'zh', zh: 'zh' };
+      var detectedLang = langMap[sub];
+
+      if (!detectedLang) {
+        var path = location.pathname.toLowerCase();
+        var match = path.match(/^\/([a-z]{2})(\/|$)/);
+        if (match && I18N[match[1]]) {
+          detectedLang = match[1];
+        }
+      }
+
+      var lang = detectedLang || document.documentElement.lang || 'de';
+      var t = I18N[lang] || I18N.de;
+
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+
+      var docTitle = document.getElementById('docTitle');
+      var metaDesc = document.getElementById('metaDesc');
+      var titleEl = document.getElementById('errTitle');
+      var subEl = document.getElementById('errSub');
+      var descEl = document.getElementById('errDesc');
+      var homeEl = document.getElementById('errHome');
+      var retryEl = document.getElementById('errRetry');
+      var catHeading = document.getElementById('catHeading');
+
+      if (docTitle) document.title = '500 – ' + t.title + ' – tiroltourismus.com';
+      if (metaDesc) metaDesc.setAttribute('content', t.desc);
+      if (titleEl) titleEl.textContent = t.title;
+      if (subEl) subEl.textContent = t.sub;
+      if (descEl) descEl.textContent = t.desc;
+      if (homeEl) homeEl.textContent = t.home;
+      if (retryEl) retryEl.textContent = t.retry;
+      if (catHeading) catHeading.textContent = '🧭 ' + t.categoriesTitle;
+
+      var isSubdomain = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'cn', 'zh'].indexOf(sub) !== -1;
+      var prefix = isSubdomain ? '' : (lang === 'de' ? '' : '/' + lang);
+
+      if (homeEl) homeEl.href = prefix ? prefix + '/' : '/';
+
+      var cards = document.querySelectorAll('.category-card');
+      cards.forEach(function(card) {
+        var key = card.getAttribute('data-key');
+        var basePath = card.getAttribute('data-basepath');
+        var catInfo = TOP_CATEGORIES.find(function(c) { return c.key === key; });
+
+        if (catInfo) {
+          card.href = (prefix ? prefix + '/' : '/') + basePath;
+          var labelEl = card.querySelector('.category-label');
+          var descEl = card.querySelector('.category-desc');
+          if (labelEl) labelEl.textContent = catInfo.labels[lang] || catInfo.labels.de;
+          if (descEl) descEl.textContent = catInfo.descs[lang] || catInfo.descs.de;
+        }
+      });
+    })();
+  </script>
+
+  <!-- Theme toggle logic -->
   <script is:inline>
     (function() {
       const html = document.documentElement;

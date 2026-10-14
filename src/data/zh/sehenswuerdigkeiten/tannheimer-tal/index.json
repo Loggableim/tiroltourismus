@@ -6,12 +6,12 @@
   "ort": "Tannheim",
   "kategorie": "natur",
   "kurzbeschreibung": "Hochtal 位于 Allgäuer Alpen – 以其 Vilsalpsee 的山景、数公里长的徒步路线和传统的 Alpwirtschaft 而闻名。",
-  "beschreibung": "<p>Das Tannheimer Tal liegt im österreichischen Bundesland Tirol, an der Grenze zu Bayern. Die Landschaft ist von Almflächen, Bergseen und bewaldeten Hängen geprägt. Der Vilsalpsee im südlichen Teil des Tals ist Teil eines Naturschutzgebiets. Das Tal bietet ein Wegenetz für <strong>Wanderungen</strong> und <strong>Radtouren</strong> im Sommer sowie präparierte Pisten und Loipen für den Wintersport. Die umliegenden Gipfel der Allgäuer Alpen, darunter der Einstein und das Gaishorn, rahmen die Region ein. Die touristische Infrastruktur ist auf Aktivitäten in der Natur ausgerichtet. Die Ortschaft Tannheim dient als zentraler Ort für Unterkünfte und Versorgung.</p>",
+  "beschreibung": "<h2>概览</h2><p>位于蒂罗尔州西北部、毗邻德国巴伐利亚边境的<strong>坦海姆山谷</strong>（Tannheimer Tal，海拔约1,100米）曾多次荣膺国际旅游杂志“欧洲最美高山河谷”桂冠。这条长达16公里的开阔高山谷地，完美融合了苍翠的高山牧场草甸、原汁原味的阿尔卑斯木构村落与巍峨峥嵘的石灰岩名峰（罗特弗吕峰Rote Flüh、金佩尔峰Gimpel与诺伊纳尔峰Neunerköpfle）。谷内坐落着纯净无瑕的维尔斯阿尔普湖（Vilsalpsee自然保护区）与温暖宜人的哈尔登湖（Haldensee），是欧洲首屈一指的徒步漫游、公路骑行与攀岩度假胜地。</p><h2>路线与体能要求</h2><p>山谷户外步道极具包容性。家庭首选哈尔登湖环湖漫步道：全长4.5公里，平缓铺设且全线无障碍，极适合婴儿车与轮椅通行（徒步约1.5小时，简易T1级）。搭乘8人座高速索道登上海拔1,860米的Neunerköpfle峰顶，探访生动有趣的“九感探索小径”并打卡“阿尔卑斯最大的登山名册”（简易合家欢T1级）。高阶登山者可挑战险峻的拉亨峰高空铁道攀登（Lachenspitze-Klettersteig，C/D级）。山谷平原穿便鞋即可，高山徒步必须穿着高帮登山鞋。宠物犬全程系牵引绳允许随行。</p><h2>交通指南</h2><p>搭乘火车至奥地利Reutte或德国Sonthofen火车站，换乘VVT 120或121路区域长途公交贯通全谷各大村落。自驾车经德国A7高速公路（Oy-Mittelberg出口）越过Oberjoch高山山口直达，全程免购奥地利高速票。各大缆车站与湖滨均设有大型停车场。</p><h2>游览建议</h2><p>夏季预订合作酒店可免费获赠“高山缆车全包通票”，每日免费不限次搭乘各大索道及哈尔登湖露天湖滨浴场。务必前往维尔斯高山牧场（Vilsalpe）品尝正宗金黄浓香的坦海姆手工高山干酪配黑麦酸面包。</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Halbtags bis Ganztags",
+  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
   "tags": [
     "山谷",
     "徒步",
@@ -21,11 +21,19 @@
     "家庭"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.tannheimer-tal.at",
+  "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
     "lng": "10.5167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "sources": [
+    "https://www.tannheimertal.com/",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal",
+    "https://www.naturpark-tiroler-lech.at/",
+    "https://www.vvt.at/"
+  ]
 }

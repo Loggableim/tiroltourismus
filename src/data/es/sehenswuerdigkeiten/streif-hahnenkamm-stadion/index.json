@@ -1,10 +1,10 @@
 {
-  "name": "Streif / Hahnenkamm-Stadion",
+  "name": "Streif & Hahnenkamm-Stadion",
   "slug": "streif-hahnenkamm-stadion",
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "sport",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Die legendärste Weltcup-Abfahrt der Welt in Kitzbühel – Streif-Panoramaweg, Mausefalle mit 85 % Gefälle und das Hahnenkamm-Stadion.",
   "emoji": "⛷️",
   "farbe": "#DC143C",
   "tags": [
@@ -14,10 +14,10 @@
     "deporte",
     "copa del mundo"
   ],
-  "dauer": "1 Stunde (Besichtigung)",
-  "preis": "Kostenlos zugänglich",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Hahnenkamm Berg- und Talfahrt ca. 31 € (Einzelfahrt ca. 22 €)",
   "oeffnungszeiten": "Ganzjährig frei zugänglich",
-  "webseite": "https://www.hahnenkamm.com",
+  "webseite": "https://hahnenkamm.com/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Streif / Hahnenkamm-Stadion</strong> – Adrenalin, Spaß und Bewegung – dafür steht die Streif / Hahnenkamm-Stadion in Kitzbühel. Das Hahnenkamm-Stadion ist das Ziel der berühmten Streif-Abfahrt und Austragungsort des legendären Hahnenkamm-Rennens im Skiweltcup Das abwechslungsreiche Angebot reicht von actiongeladenen Outdoor-Aktivitäten bis zu entspannten Wellness-Stunden. Professionelle Guides und modernste Ausrüstung sorgen für Sicherheit und maximalen Spaß. Auch für das leibliche Wohl ist mit Restaurants und Snackbars bestens gesorgt. Eingebettet in die beeindruckende Berglandschaft der Region Kitzbühel, bietet die Streif / Hahnenkamm-Stadion nicht nur sportliche Herausforderungen, sondern auch eine grandiose Aussicht. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>La <strong>Streif</strong> en el monte Hahnenkamm de Kitzbühel es la pista de descenso de esquí alpino más legendaria, veloz y peligrosa del planeta. Con pendientes de vértigo del 85% en la 'Mausefalle' (Ratonera), en verano se convierte en una apasionante ruta panorámica que recorre a pie los tramos míticos de la Copa del Mundo hasta el estadio de meta.</p><h2>Ruta y Requisitos</h2><p>Subida en la telecabina de Hahnenkamm con cabinas bautizadas con los nombres de los campeones. Descenso a pie por el trazado de la carrera hasta la meta en Kitzbühel (860 m de desnivel en bajada, 2 a 2,5 horas, T2). Pasos empinados acondicionados con escalones de seguridad. Calzado de montaña imprescindible. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>Estación de tren ÖBB \"Kitzbühel Hahnenkamm\" a 2 minutos a pie de la telecabina. En coche por la autopista A12 (salida Wörgl-Ost) y B170 hasta el aparcamiento de la estación inferior.</p><h2>Consejos</h2><p>Asómese a la caseta de salida para sentir la inclinación vertiginosa que afrontan los esquiadores y haga una pausa en el albergue histórico de Seidlalm, cuna de la Copa del Mundo de Esquí en 1966.</p>",
+  "saison": "Mai bis Oktober (Hahnenkammbahn täglich in Betrieb)",
+  "familie": true,
+  "sources": [
+    "https://hahnenkamm.com/",
+    "https://de.wikipedia.org/wiki/Streif",
+    "https://www.kitzbuehel.com/sommer",
+    "https://www.kitzski.at/",
+    "https://www.vvt.at/"
+  ]
 }

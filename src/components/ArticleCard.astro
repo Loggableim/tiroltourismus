@@ -23,7 +23,6 @@ const linkText = LINK_TEXT[locale] || LINK_TEXT.de;
     {hero_bild ? (
       <img
         src={hero_bild}
-        srcset={hero_bild.endsWith('.png') ? `${hero_bild.replace(/\.png$/, '.webp')} 800w, ${hero_bild.replace(/\.png$/, '_thumb.webp')} 420w` : (hero_bild.endsWith('.webp') && !hero_bild.includes('_thumb') ? `${hero_bild} 800w, ${hero_bild.replace(/\.webp$/, '_thumb.webp')} 420w` : undefined)}
         sizes="(max-width: 600px) 100vw, 420px"
         alt={titel}
         class="article-thumb"

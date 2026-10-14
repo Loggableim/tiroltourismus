@@ -30,7 +30,6 @@ const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
     {heroSrc ? (
       <img
         src={heroSrc}
-        srcset={heroSrc.endsWith('.png') ? `${heroSrc.replace(/\.png$/, '.webp')} 800w, ${heroSrc.replace(/\.png$/, '_thumb.webp')} 420w` : (heroSrc.endsWith('.webp') && !heroSrc.includes('_thumb') ? `${heroSrc} 800w, ${heroSrc.replace(/\.webp$/, '_thumb.webp')} 420w` : undefined)}
         sizes="(max-width: 600px) 100vw, 420px"
         alt={name}
         class="uk-photo"

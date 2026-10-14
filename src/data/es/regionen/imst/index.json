@@ -15,15 +15,15 @@
   ],
   "hoehe": "3.774 m",
   "flaeche": "350 km²",
-  "einwohner": "27.000",
-  "beschreibung": "<p>El distrito de **Imst** se encuentra en el valle del Alto Inno (*Oberinntal*) e incluye la ciudad de **Imst** y los municipios de los valles circundantes. La ciudad de **Imst** es famosa por su **Imster Fasching**, que se celebra cada cuatro años, uno de los carnavales tradicionales más antiguos de Tirol, con espléndidos trajes de *Schellerlaufen*. La región es un paraíso para escaladores y ciclistas de montaña, gracias al famoso jardín de escalada de **Imst** y a la red de rutas para *mountainbike*. En invierno, la estación de esquí **Hoch-Imst** atrae con su garantía de nieve. Los alrededores ofrecen acceso a los valles salvajes y románticos del **Gurgltal** y el **Pitztal**.</p>",
+  "einwohner": "25.000",
+  "beschreibung": "<p>El distrito de <strong>Imst</strong> se encuentra en el valle del Alto Inno (*Oberinntal*) e incluye la ciudad de <strong>Imst</strong> y los municipios de los valles circundantes. La ciudad de <strong>Imst</strong> es famosa por su <strong>Imster Fasching</strong>, que se celebra cada cuatro años, uno de los carnavales tradicionales más antiguos de Tirol, con espléndidos trajes de *Schellerlaufen*. La región es un paraíso para escaladores y ciclistas de montaña, gracias al famoso jardín de escalada de <strong>Imst</strong> y a la red de rutas para *mountainbike*. En invierno, la estación de esquí <strong>Hoch-Imst</strong> atrae con su garantía de nieve. Los alrededores ofrecen acceso a los valles salvajes y románticos del <strong>Gurgltal</strong> y el <strong>Pitztal</strong>.</p>",
   "tipps": [
-    "Der Imster Fasching findet nur alle 4 Jahre statt – nächstes Mal 2027!",
-    "Der Mountainbike-Trail „Imster Bergl“ ist einer der anspruchsvollsten Trails im Oberland.",
-    "Der Gurgltal-Mineralienwanderweg bei Tarrenz ist ein Geheimtipp für Familien."
+    "El carnaval tradicional Schemenlaufen de Imst se celebra solo cada cuatro años: ¡la próxima cita es en 2027!",
+    "La pista de bicicleta de montaña «Imster Bergl» es una de las más desafiantes del Oberland tirolés.",
+    "La ruta de los minerales en el valle de Gurgltal, cerca de Tarrenz, es una recomendación ideal para familias."
   ],
   "empfehlungen": "<p>Exploren la histórica <strong>Altstadt de Imst</strong> con sus arcadas y la torre parroquial barroca. Luego, una sesión de escalada en el <strong>Klettergarten Imst</strong> o una caminata hasta la <strong>Muttekopfhütte</strong> (2.034 m).</p>",
-  "umgebung": "<p>La región de **Imst** se encuentra en el valle del **Oberinntal**, entre el **Tschirgant** al norte y los Alpes de **Ötztal** al sur. Regiones vecinas: **Ötztal** (sur), **Pitztal** (oeste), **Telfs** (este), **Außerfern** (norte, a través del **Fernpass**). Ciudad más cercana: **Innsbruck** (50 km).</p>",
+  "umgebung": "<p>La región de <strong>Imst</strong> se encuentra en el valle del <strong>Oberinntal</strong>, entre el <strong>Tschirgant</strong> al norte y los Alpes de <strong>Ötztal</strong> al sur. Regiones vecinas: <strong>Ötztal</strong> (sur), <strong>Pitztal</strong> (oeste), <strong>Telfs</strong> (este), <strong>Außerfern</strong> (norte, a través del <strong>Fernpass</strong>). Ciudad más cercana: <strong>Innsbruck</strong> (50 km).</p>",
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -41,7 +41,7 @@
     ],
     [
       47.22,
-      11.0
+      11
     ],
     [
       47.18,
@@ -84,7 +84,7 @@
       10.6
     ],
     [
-      47.0,
+      47,
       10.5
     ],
     [
@@ -111,5 +111,15 @@
       47.25,
       10.68
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at/regionen/a-ferienregion-imst",
+    "https://www.tirol.gv.at/imst/",
+    "https://de.wikipedia.org/wiki/Imst"
+  ],
+  "koordinaten": {
+    "lat": 47.2333,
+    "lng": 10.7333
+  }
 }

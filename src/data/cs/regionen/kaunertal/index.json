@@ -13,14 +13,14 @@
     "klid",
     "rodina"
   ],
-  "hoehe": "3.522 m",
+  "hoehe": "3.518 m",
   "flaeche": "290 km²",
-  "einwohner": "3.200",
+  "einwohner": "1.800",
   "beschreibung": "<p><strong>Kaunertal</strong> je tiché, 28 kilometrů dlouhé vedlejší údolí Horního Inntalu a patří mezi nejprimitivnější oblasti Tirolu. <strong>Kaunertaler Gletscher</strong> (Weißseeferner) nabízí lyžařskou činnost až do března na výšce až 3 110 m. V létě lákají Kaunertaler Gletscherweg, lehká horská túra, a úchvatná údolí „Walschensaal“ u Feichten. Údolí je známé svou rozsáhlou zemědělskou činností a Kaunergrat, který odděluje údolí od Pitztalu.</p>",
   "tipps": [
-    "Die Kaunertaler Gletscherstraße ist eine der höchsten mautpflichtigen Straßen Österreichs (4,50 €).",
-    "Der Naturpark Kaunergrat bietet geführte Touren und Schutzhütten mit regionaler Küche.",
-    "Der Gletscherparkplatz ist bis ca. 10:00 Uhr noch gut erreichbar."
+    "Vysokohorská silnice na ledovec Kaunertal patří k nejvýše položeným mýtným silnicím v Rakousku.",
+    "Přírodní park Kaunergrat nabízí výlety s průvodcem a horské chaty s vynikající tyrolskou kuchyní.",
+    "Příjezd na parkoviště u ledovce před 10:00 zajistí pohodlný přístup bez zbytečného čekání."
   ],
   "empfehlungen": "<p>Náš tip: Vydáte se na <strong>Gletscherweg Kaunertal</strong> – rodinná horská stezka s fantastickým výhledem na Weißseeferner. Poté se zastavte na <strong>Verpeilalm</strong> a vychutnejte si domácí Kaiserschmarrn.</p>",
   "umgebung": "<p>Kaunertal je na východě omezen Kaunergratem na Pitztal, na západě se nachází Oberinntal s obcí Prutz. Severně se hraničí s Alpenhauptkamm (Ötztaler Alpen). Nejbližší město: Landeck im Oberinntal. Reschenpass do Itálie je asi 45 km daleko.</p>",
@@ -44,7 +44,7 @@
       10.88
     ],
     [
-      47.0,
+      47,
       10.88
     ],
     [
@@ -72,7 +72,7 @@
       10.58
     ],
     [
-      47.0,
+      47,
       10.58
     ],
     [
@@ -91,5 +91,12 @@
   "koordinaten": {
     "lat": 47.0333,
     "lng": 10.75
-  }
+  },
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertaler-gletscher.at",
+    "https://www.naturpark-kaunergrat.at",
+    "https://www.kaunertal.com/",
+    "https://de.wikipedia.org/wiki/Kaunertal"
+  ]
 }

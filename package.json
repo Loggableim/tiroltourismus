@@ -12,7 +12,8 @@
     "preview": "astro preview",
     "test:content": "node --test src/lib/content.test.js",
     "check:chrono-contrast": "node scripts/check-chronochrom-contrast.mjs",
-    "check:chrono-live": "node scripts/check-chronochrom-live.mjs"
+    "check:chrono-live": "node scripts/check-chronochrom-live.mjs",
+    "check:content": "node scripts/check-content-gate.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",

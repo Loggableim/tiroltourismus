@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Heiligenblut",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Jedna z nejkrásnějších alpských silnic Evropy s 36 zatáčkami a dechberoucími panoramatickými výhledy na nejvyšší horu Österreichs.",
-  "beschreibung": "<p>Die <strong>Großglockner Hochalpenstraße</strong> liegt in der Gemeinde <strong>Heiligenblut</strong> in <strong>Tirol</strong>. Sie verbindet das Bundesland Salzburg mit Osttirol und quert den <strong>Nationalpark Hohe Tauern</strong>. Der höchste Punkt der Strecke ist das <strong>Hochtor</strong> auf 2.504 Metern. Entlang der Straße bieten Aussichtsplattformen den Blick auf den <strong>Großglockner</strong> und die <strong>Pasterze</strong>. Ein zentraler Aussichtspunkt ist die <strong>Kaiser-Franz-Josefs-Höhe</strong> mit Ausstellungen zur Nationalparkregion. Die Mautstraße ist in der Regel von Mai bis Oktober geöffnet. Besucher erwartet eine hochalpine Gebirgslandschaft.</p>",
+  "kurzbeschreibung": "Großglockner Hochalpenstraße stoupá do nadmořské výšky 2 504 m: nejvyšší hora Rakouska (3 798 m), Kaiser-Franz-Josefs-Höhe, Pasterze a mistrovské dílo alpského inženýrství.",
+  "beschreibung": "<h2>Přehled</h2><p><strong>Großglockner Hochalpenstraße</strong> je nejproslulejší alpskou silniční památkou Rakouska a patří k nejpozoruhodnějším panoramatickým silnicím světa. Překonává hlavní hřeben pohoří Hohe Tauern a spojuje spolkovou zemi Salcbursko s východním Tyrolskem (Osttirol) a Korutany přes Hochtor v nadmořské výšce 2 504 metrů. Trasa o délce 48 kilometrů, zasazená do <em>Nationalpark Hohe Tauern</em>, vede přímo do srdce skupiny Glocknergruppe na úpatí hory <strong>Großglockner</strong> (3 798 m), nejvyššího vrcholu Rakouské republiky. Památkově chráněné mistrovské dílo každoročně uchvátí stovky tisíc návštěvníků.</p><h2>Historie a inženýrské umění</h2><p>Trasa sleduje prastaré stezky: soumarskou cestu přes Hochtor využívali kupci již v době bronzové a římské, což dokládají archeologické nálezy římské sošky Herkula. V krizových letech 30. let 20. století rozhodla rakouská spolková vláda o stavbě moderní vyhlídkové silnice s cílem vytvořit pracovní místa a podpořit cestovní ruch. Pod vedením nadaného stavebního inženýra <strong>Franz Wallack</strong> tesalo v letech 1930 až 1935 více než 3 000 dělníků silnici do strmého skalního terénu. Dne 3. srpna 1935 byla vysokohorská silnice slavnostně otevřena. Wallack začlenil trasu s 36 serpentinami harmonicky do vysokohorské krajiny. Absolutním vrcholem odbočky je <strong>Kaiser-Franz-Josefs-Höhe</strong> v nadmořské výšce 2 369 metrů: pojmenovaná po císařské návštěvě Františka Josefa I. v roce 1856, nabízí tamní čtyřpodlažní návštěvnické centrum glaciologické výstavy, kino Glocknerkino, pozorovatelnu Wilhelm-Swarovski-Beobachtungswarte i ohromující hluboký pohled na <em>Pasterze</em>, s délkou zhruba osm kilometrů nejdelší ledovec Rakouska.</p><h2>Návštěva a příjezd</h2><p>Großglockner Hochalpenstraße je sezónně sjízdná od začátku května do začátku listopadu denně (v noci platí úřední zákaz vjezdu). Otevírací doba mýtnic: červen až srpen denně 05:30 až 21:00 hodin (poslední vjezd ve 20:15); květen a od září denně od 06:00 do 19:30/20:00 hodin. Denní sazby mýtného (stav sezóny 2025/2026): osobní automobil 46,50 € (zvýhodněný elektromobil 40,00 €), motocykl 36,50 € (elektrický motocykl 32,50 €). Příjezd autem: ze severu přes Zell am See/Bruck po silnici B107 přes Ferleiten; z jihu přes Lienz v Osttirol a Heiligenblut. Veřejnou dopravou: v letních měsících jezdí výletní autobusy (Glocknerbus) z Lienzu a Zell am See přímo na Kaiser-Franz-Josefs-Höhe.</p><h2>Tipy</h2><p>Moderní návštěvnické centrum na Kaiser-Franz-Josefs-Höhe i parkovací dům jsou bezbariérové a vybavené výtahy; vyhlídkové terasy jsou přístupné pro vozíčkáře i kočárky. Z vyhlídkových plošin sledujte krotké alpské sviště a kozorohy. I uprostřed léta si vezměte větruodolné a nepromokavé oblečení, protože v nadmořských výškách nad 2 300 metrů může docházet k rychlým zvratům počasí.</p>",
   "emoji": "🏔️",
   "farbe": "#4CAF50",
   "hoehe": "2.576 m (Hochtor)",
   "dauer": "Halbtag",
-  "preis": "43 € pro Fahrzeug",
+  "preis": "PKW Tageskarte 46,50 € (E-PKW 40,00 €), Motorrad 36,50 €",
   "tags": [
     "panoramatická silnice",
     "výhled",
@@ -19,12 +19,18 @@
     "Velký Glockner",
     "příroda"
   ],
-  "oeffnungszeiten": "Anfang Mai bis Ende Oktober, täglich 6:00–20:00",
+  "oeffnungszeiten": "Mai–Nov täglich ab 05:30/06:00 Uhr (letzte Einfahrt ca. 45 Min vor Nachtsperre)",
   "webseite": "https://www.grossglockner.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "12.8333"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.grossglockner.at",
+    "https://www.nationalpark.at",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner-Hochalpenstra%C3%9Fe",
+    "https://de.wikipedia.org/wiki/Pasterze"
+  ]
 }

@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
@@ -20,9 +21,18 @@ const linkText = LINK_TEXT[locale] || LINK_TEXT.de;
 <a href={`${localePrefixFn(locale)}/magazin/${slug}/`} class="article-card" data-collection="magazin" data-slug={slug}>
   <div class="article-img" style="position:relative">
     {hero_bild ? (
-      <img src={hero_bild} alt={titel} class="article-thumb" loading="lazy" decoding="async" width="420" height="240" />
+      <img
+        src={hero_bild}
+        sizes="(max-width: 600px) 100vw, 420px"
+        alt={titel}
+        class="article-thumb"
+        loading="lazy"
+        decoding="async"
+        width="420"
+        height="240"
+      />
     ) : (
-      <span style="font-size:56px;line-height:1">{emoji}</span>
+      <CategoryPlaceholder collection="magazin" locale={locale} />
     )}
     <FavHeart collection="magazin" slug={slug} />
   </div>

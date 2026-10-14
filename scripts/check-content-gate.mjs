@@ -235,6 +235,8 @@ async function main() {
         } else {
           addFinding(file, entry, '5 HTTP-Status', 'warn', `${status} (andere Quelle 200): ${url}`);
         }
+      } else if (status?.startsWith('error:')) {
+        addFinding(file, entry, '5 HTTP-Status', 'error', `${status} (TLS/DNS/Netzwerk) ${url}`);
       } else if (status && !/^2\d\d$/.test(status) && !status.startsWith('3')) {
         addFinding(file, entry, '5 HTTP-Status', 'warn', `${status} ${url}`);
       }

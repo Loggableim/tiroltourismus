@@ -2,7 +2,7 @@
   "titel": "Arlberg",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Arlberg je kolébkou alpského lyžování – legendární sjezdy, luxusní horské vesničky a nedotčená příroda ve výšce přes 2 800 m.",
   "emoji": "⛷️",
   "bewertung": 5,
   "farbe": "#FF6B35",
@@ -14,13 +14,13 @@
     "natur"
   ],
   "hoehe": "2.811 m",
-  "flaeche": "320 km²",
-  "einwohner": "10.500",
+  "flaeche": "330 km²",
+  "einwohner": "6.100",
   "beschreibung": "<p>Arlberg-Region je největší souvislý lyžařský středisko v Rakousku a rozprostírá se kolem Arlbergpassu mezi Tirol a Vorarlberg. S 305 Pistenkilometern, hlubokým powderem a náročnými sjezdy se považuje za jedno z nejlepších lyžařských středisek na světě. St. Anton je pulzující srdce regionu s legendárním Après-Ski, zatímco Ischgl a Serfaus se pyšní luxusními resorty a prvotřídní gastronomií. V létě lákají 400 km turistických stezek a Klettersteige skrze impozantní horskou krajinu.</p>",
   "tipps": [
-    "Der Arlberg-Pass ist im Winter oft schneebedeckt – Schneeketten oder öffentliche Anreise empfohlen.",
-    "Die Flexenbahn verbindet St. Anton mit Zürs – eine der modernsten Seilbahnen der Alpen.",
-    "Beste Powder-Abfahrten: Schindlerkar, Mattun und Maroi."
+    "Průsmyk Arlberg bývá v zimě často pod sněhem – doporučují se sněhové řetězy nebo veřejná doprava.",
+    "Lanovka Flexenbahn spojuje St. Anton se Zürsem – jedna z nejmodernějších lanovek v Alpách.",
+    "Nejlepší sjezdy v prašanu: Schindlerkar, Mattun a Maroi."
   ],
   "empfehlungen": "<p>Povinné: sjezd z <strong>Vallugagrat</strong> (2.811 m) dolů do St. Anton – jeden z nejdelších a nejkrásnějších sjezdů v Alpách. Poté posezení v <strong>MooserWirt</strong> pro legendární Après-Ski zážitek.</p>",
   "umgebung": "<p>Arlbergská oblast hraničí na západě s Vorarlbergem (Lech, Zürs), na východě se Stanzer Tal (Landeck) a na jihu s Paznauntal (Ischgl). Nejbližší město: Landeck (20 km). Arlbergpass spojuje Tirol s Vorarlbergem na výšce 1.793 m.</p>",
@@ -91,5 +91,11 @@
   "koordinaten": {
     "lat": 47.1333,
     "lng": 10.2167
-  }
+  },
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.skiarlberg.at",
+    "https://www.tirol.at/regionen/a-st-anton-am-arlberg",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg"
+  ]
 }

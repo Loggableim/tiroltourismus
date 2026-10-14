@@ -410,14 +410,15 @@ function _buildEntityMap(locale = 'de') {
  */
 export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLinks = 5, collection = null, slug = null) {
   if (!html || typeof html !== 'string') return html || '';
+  const preparedHtml = stripDescriptionSectionMarkers(html);
   if (collection && slug) {
-    return linkDescriptionText(html, collection, slug, locale, maxLinks, currentEntry);
+    return linkDescriptionText(preparedHtml, collection, slug, locale, maxLinks, currentEntry);
   }
   const entityMap = _buildEntityMap(locale);
   const currentSlug = currentEntry?.slug;
   const currentName = (currentEntry?.name || currentEntry?.titel || '').toLowerCase();
   let linked = 0;
-  let result = html;
+  let result = preparedHtml;
   let textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
 
   for (const entity of entityMap) {
@@ -441,6 +442,19 @@ export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLin
     }
   }
   return result;
+}
+
+/** Remove the standalone field heading accidentally included in legacy rich text. */
+export function stripDescriptionSectionMarkers(html) {
+  if (typeof html !== 'string' || !html) return html || '';
+
+  return html
+    .replace(
+      /(^|<br\s*\/?>|<\/p>|<p\b[^>]*>|\r?\n)\s*===\s*beschreibung\s*===\s*(?=<br\s*\/?>|<\/p>|<p\b|\r?\n|$)/gi,
+      '$1',
+    )
+    .replace(/<p\b[^>]*>\s*<\/p>/gi, '')
+    .replace(/^\s+|^(?:<br\s*\/?>\s*)+/i, '');
 }
 
 const _existsCache = new Map();

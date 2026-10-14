@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { localePrefix as localePrefixFn } from '../lib/languages.js';
@@ -41,7 +42,7 @@ const wappenSrc = wappenEntry ? `/wappen/ultra-minimal/${wappenEntry.img_rel.rep
     {wappenSrc ? (
       <img src={wappenSrc} alt={`${name} Wappen`} class="ort-wappen" loading="lazy" decoding="async" />
     ) : (
-      <span class="ort-emoji">{emoji}</span>
+      <CategoryPlaceholder collection="orte" locale={locale} />
     )}
     <FavHeart collection="orte" slug={slug} />
   </div>

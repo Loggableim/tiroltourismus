@@ -1,0 +1,242 @@
+---
+import { randomUUID } from 'node:crypto';
+
+/**
+ * CategoryPlaceholder.astro
+ * Schlanker SVG-Platzhalter für Einträge ohne Foto.
+ * Passend zum Design der jeweiligen Subdomain/Locale und Kategorie gestaltet.
+ */
+export interface Props {
+  collection: string; // 'unterkuenfte' | 'camping' | 'gastro' | 'sehenswuerdigkeiten' | 'erlebnisse' | 'events' | 'orte' | 'regionen' | 'magazin'
+  locale?: string;
+  className?: string;
+}
+
+const { collection, locale = 'de', className = '' } = Astro.props;
+// Each inline SVG needs its own gradient ID, even when the same category is
+// rendered more than once on a page.
+const gradientId = `cat-placeholder-bg-${randomUUID()}`;
+
+// Künstler- und Designstile pro Subdomain/Sprache:
+// DE: Linienzeichnung & Reduktion (Paul Flora / Otto Grünmandl)
+// EN: Monumentale & alpine Schichtung (Albin Egger-Lienz & Alfons Walde)
+// FR: Organische & poetische Bögen (Max Weiler & Paul Flora)
+// IT: Geometrische & elegante Ornamente (Alfons Walde & Gustav Klimt)
+// ES: Dynamische & abstrakte Winkel (Max Weiler & Wassily Kandinsky)
+// NL: Surrealistisch-präzise Konturen (Paul Flora & Salvador Dalí)
+// CS: Strukturierte Rauten & Stiche (Franz von Defregger & Albin Egger-Lienz)
+// ZH: Ausgewogene, ruhige Symmetrie (Michael Pacher & Albin Egger-Lienz)
+
+const PALETTES: Record<string, { bg1: string; bg2: string; accent: string; stroke: string }> = {
+  de: { bg1: '#F5F3F0', bg2: '#E7E2DB', accent: '#C8102E', stroke: '#1A1A1A' },
+  en: { bg1: '#EAE6DF', bg2: '#D8D0C5', accent: '#0051BA', stroke: '#2B2824' },
+  fr: { bg1: '#F7F4EF', bg2: '#ECE4D8', accent: '#8B5CF6', stroke: '#3A322D' },
+  it: { bg1: '#F4EFE6', bg2: '#DFD5C0', accent: '#D4A800', stroke: '#2A241C' },
+  es: { bg1: '#F9EFEB', bg2: '#EED6CC', accent: '#FF6B35', stroke: '#2D201A' },
+  nl: { bg1: '#EFF4F5', bg2: '#D6E2E4', accent: '#00C853', stroke: '#1B292B' },
+  cs: { bg1: '#F4ECE4', bg2: '#DFCFC1', accent: '#A0522D', stroke: '#2B221B' },
+  zh: { bg1: '#F7ECE9', bg2: '#E7D1CC', accent: '#DE2910', stroke: '#291815' },
+};
+
+const palette = PALETTES[locale] || PALETTES.de;
+
+// Ikonische Vektor-Silhouetten je Kategorie (100x100 ViewBox)
+---
+
+<div class={`cat-placeholder-wrap cat-placeholder-${locale} ${className}`}>
+  <svg
+    viewBox="0 0 100 100"
+    preserveAspectRatio="xMidYMid meet"
+    class="cat-placeholder-svg"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <defs>
+      <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color={palette.bg1} />
+        <stop offset="100%" stop-color={palette.bg2} />
+      </linearGradient>
+    </defs>
+
+    {/* Hintergrundfläche */}
+    <rect width="100" height="100" fill={`url(#${gradientId})`} />
+
+    {/* Design-spezifische Hintergrund-Akzente je Subdomain */}
+    {locale === 'de' && (
+      /* Flora Linienraster */
+      <g stroke={palette.stroke} stroke-width="0.35" opacity="0.18" fill="none">
+        <line x1="0" y1="20" x2="100" y2="20" />
+        <line x1="0" y1="50" x2="100" y2="50" />
+        <line x1="0" y1="80" x2="100" y2="80" />
+      </g>
+    )}
+
+    {locale === 'en' && (
+      /* Walde alpine Schichtung */
+      <path d="M-10 100 L35 48 L75 82 L110 52 L110 100 Z" fill={palette.accent} opacity="0.12" />
+    )}
+
+    {locale === 'fr' && (
+      /* Organische Weiler-Bögen */
+      <path d="M0 80 Q50 30 100 80 T100 100 L0 100 Z" fill={palette.accent} opacity="0.1" />
+    )}
+
+    {locale === 'it' && (
+      /* Klimt geometrische Quadrate */
+      <g fill={palette.accent} opacity="0.15">
+        <circle cx="85" cy="18" r="6" />
+        <circle cx="15" cy="82" r="4" />
+        <rect x="78" y="75" width="8" height="8" rx="2" />
+      </g>
+    )}
+
+    {locale === 'es' && (
+      /* Kandinsky dynamische Diagonalen */
+      <g stroke={palette.accent} stroke-width="0.8" opacity="0.22">
+        <line x1="10" y1="90" x2="90" y2="10" />
+        <circle cx="70" cy="30" r="12" fill={palette.accent} opacity="0.1" />
+      </g>
+    )}
+
+    {locale === 'nl' && (
+      /* Dalí Schwebekreise & Horizonte */
+      <g stroke={palette.stroke} stroke-width="0.5" opacity="0.2">
+        <line x1="0" y1="65" x2="100" y2="65" />
+        <circle cx="30" cy="35" r="8" fill="none" stroke-dasharray="1.5,1.5" />
+      </g>
+    )}
+
+    {locale === 'cs' && (
+      /* Defregger Rautenmuster */
+      <g fill={palette.accent} opacity="0.12">
+        <polygon points="12,18 18,12 24,18 18,24" />
+        <polygon points="80,78 86,72 92,78 86,84" />
+      </g>
+    )}
+
+    {locale === 'zh' && (
+      /* Symmetrische Pacher-Rahmen */
+      <rect x="12" y="12" width="76" height="76" fill="none" stroke={palette.accent} stroke-width="0.6" opacity="0.2" rx="4" />
+    )}
+
+    {/* Kategorie-Icons (schlankes, zeitloses Vektormotiv) */}
+    {collection === 'unterkuenfte' && (
+      /* Hotel / Giebel-Gebäude */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M50 24 L26 44 L26 76 L74 76 L74 44 Z" />
+        <path d="M42 76 L42 60 L58 60 L58 76" />
+        <rect x="34" y="48" width="8" height="8" rx="1" fill={palette.accent} opacity="0.3" stroke="none" />
+        <rect x="58" y="48" width="8" height="8" rx="1" fill={palette.accent} opacity="0.3" stroke="none" />
+        <path d="M50 32 L50 36" stroke={palette.accent} stroke-width="2.5" />
+      </g>
+    )}
+
+    {collection === 'camping' && (
+      /* Zelt / Natur */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M50 25 L24 75 L76 75 Z" />
+        <path d="M50 25 L50 75" />
+        <path d="M42 75 L50 55 L58 75" fill={palette.accent} opacity="0.3" stroke="none" />
+        <line x1="18" y1="75" x2="82" y2="75" />
+        <path d="M72 40 L80 34 L80 50" stroke-width="1.5" opacity="0.7" />
+      </g>
+    )}
+
+    {collection === 'gastro' && (
+      /* Besteck / Teller */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <circle cx="50" cy="50" r="22" />
+        <circle cx="50" cy="50" r="16" fill={palette.accent} opacity="0.2" stroke="none" />
+        <path d="M22 36 L22 64" />
+        <path d="M18 36 L26 36" />
+        <path d="M78 36 L78 64" />
+        <path d="M78 48 Q84 48 84 36" />
+      </g>
+    )}
+
+    {collection === 'sehenswuerdigkeiten' && (
+      /* Historisches Portal / Säulen */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M22 32 L50 18 L78 32 Z" fill={palette.accent} opacity="0.25" />
+        <line x1="18" y1="34" x2="82" y2="34" stroke-width="2.5" />
+        <line x1="30" y1="36" x2="30" y2="70" />
+        <line x1="50" y1="36" x2="50" y2="70" />
+        <line x1="70" y1="36" x2="70" y2="70" />
+        <line x1="20" y1="72" x2="80" y2="72" stroke-width="2.5" />
+      </g>
+    )}
+
+    {collection === 'erlebnisse' && (
+      /* Berggipfel / Kompass */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M20 74 L46 32 L60 52 L68 40 L84 74 Z" />
+        <path d="M46 32 L54 44 L44 48 L46 32" fill={palette.accent} opacity="0.4" stroke="none" />
+        <circle cx="50" cy="22" r="4" fill={palette.accent} stroke="none" />
+      </g>
+    )}
+
+    {collection === 'events' && (
+      /* Zirkuszelt / Kalender */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <rect x="25" y="28" width="50" height="48" rx="6" />
+        <line x1="25" y1="42" x2="75" y2="42" />
+        <line x1="38" y1="20" x2="38" y2="30" stroke-width="2.5" />
+        <line x1="62" y1="20" x2="62" y2="30" stroke-width="2.5" />
+        <circle cx="50" cy="58" r="5" fill={palette.accent} stroke="none" />
+      </g>
+    )}
+
+    {collection === 'orte' && (
+      /* Dorf / Kirchturm / Häuser */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M42 22 L50 14 L58 22 L58 74 L42 74 Z" />
+        <path d="M22 50 L34 40 L42 48 L42 74 L22 74 Z" />
+        <path d="M58 48 L68 38 L80 50 L80 74 L58 74 Z" />
+        <line x1="50" y1="14" x2="50" y2="8" stroke={palette.accent} stroke-width="2" />
+        <line x1="47" y1="10" x2="53" y2="10" stroke={palette.accent} stroke-width="2" />
+      </g>
+    )}
+
+    {collection === 'regionen' && (
+      /* Bergmassiv Panorama */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M12 76 L38 30 L54 54 L70 24 L90 76 Z" />
+        <path d="M38 30 L45 42 L35 46 Z" fill={palette.accent} opacity="0.35" stroke="none" />
+        <path d="M70 24 L76 34 L66 38 Z" fill={palette.accent} opacity="0.35" stroke="none" />
+        <line x1="8" y1="76" x2="94" y2="76" />
+      </g>
+    )}
+
+    {collection === 'magazin' && (
+      /* Buch / Magazinseite */
+      <g stroke={palette.stroke} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M25 24 C35 21, 45 23, 50 26 C55 23, 65 21, 75 24 L75 74 C65 71, 55 73, 50 76 C45 73, 35 71, 25 74 Z" />
+        <line x1="50" y1="26" x2="50" y2="76" />
+        <line x1="32" y1="38" x2="44" y2="38" stroke-width="1.5" opacity="0.6" />
+        <line x1="32" y1="46" x2="44" y2="46" stroke-width="1.5" opacity="0.6" />
+        <line x1="56" y1="38" x2="68" y2="38" stroke-width="1.5" opacity="0.6" />
+        <line x1="56" y1="46" x2="68" y2="46" stroke-width="1.5" opacity="0.6" />
+      </g>
+    )}
+  </svg>
+</div>
+
+<style>
+  .cat-placeholder-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  .cat-placeholder-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>

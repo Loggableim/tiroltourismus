@@ -13,9 +13,9 @@
     "tranquillità",
     "famiglia"
   ],
-  "hoehe": "3.522 m",
+  "hoehe": "3.518 m",
   "flaeche": "290 km²",
-  "einwohner": "3.200",
+  "einwohner": "1.800",
   "beschreibung": "<p>Il <strong>Kaunertal</strong> è una valle laterale tranquilla, lunga 28 chilometri, dell’<strong>Oberinntal</strong> e appartiene alle regioni più autentiche del <strong>Tirol</strong>. Il <strong>Kaunertaler Gletscher</strong> (Weißseeferner) offre impianti sciistici fino a giugno, fino a 3.110 metri di quota. D’estate attraggono il <strong>Kaunertaler Gletscherweg</strong>, un’agevole escursione in alta montagna, e la mozzafiato <strong>gola „Walschensaal“</strong> presso Feichten. La valle è famosa per la sua agricoltura estensiva e per il <strong>Kaunergrat</strong>, che la separa dalla valle del <strong>Pitztal</strong>.</p>",
   "tipps": [
     "Die Kaunertaler Gletscherstraße ist eine der höchsten mautpflichtigen Straßen Österreichs (4,50 €).",
@@ -44,7 +44,7 @@
       10.88
     ],
     [
-      47.0,
+      47,
       10.88
     ],
     [
@@ -72,7 +72,7 @@
       10.58
     ],
     [
-      47.0,
+      47,
       10.58
     ],
     [
@@ -87,5 +87,16 @@
       47.08,
       10.72
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertaler-gletscher.at",
+    "https://www.naturpark-kaunergrat.at",
+    "https://www.tirol.at/regionen/a-kaunertal",
+    "https://de.wikipedia.org/wiki/Kaunertal"
+  ],
+  "koordinaten": {
+    "lat": 47.0333,
+    "lng": 10.75
+  }
 }

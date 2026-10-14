@@ -13,9 +13,9 @@
     "tranquility",
     "family-friendly"
   ],
-  "hoehe": "3.522 m",
+  "hoehe": "3,518 m",
   "flaeche": "290 km²",
-  "einwohner": "3.200",
+  "einwohner": "1,800",
   "beschreibung": "<p>The **Kaunertal** is a quiet, 28-kilometer-long side valley of the Upper Inn Valley and belongs to the most original regions of Tirol. The **Kaunertaler Gletscher** (Weißseeferner) offers skiing up to June at heights of up to 3,110 meters. In summer, the **Kaunertaler Gletscherweg**, an easy high-alpine hike, and the breathtaking **gorge \"Walschensaal\"** near Feichten attract visitors. The valley is known for its extensive farming and the **Kaunergrat**, which separates it from the Pitztal.</p>",
   "tipps": [
     "Die Kaunertaler Gletscherstraße ist eine der höchsten mautpflichtigen Straßen Österreichs (4,50 €).",
@@ -44,7 +44,7 @@
       10.88
     ],
     [
-      47.0,
+      47,
       10.88
     ],
     [
@@ -72,7 +72,7 @@
       10.58
     ],
     [
-      47.0,
+      47,
       10.58
     ],
     [
@@ -87,5 +87,16 @@
       47.08,
       10.72
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertaler-gletscher.at",
+    "https://www.naturpark-kaunergrat.at",
+    "https://www.tirol.at/regionen/a-kaunertal",
+    "https://de.wikipedia.org/wiki/Kaunertal"
+  ],
+  "koordinaten": {
+    "lat": 47.0333,
+    "lng": 10.75
+  }
 }

@@ -14,8 +14,8 @@
     "naturaleza"
   ],
   "hoehe": "2.811 m",
-  "flaeche": "320 km²",
-  "einwohner": "10.500",
+  "flaeche": "330 km²",
+  "einwohner": "6.100",
   "beschreibung": "<p>La <strong>Arlberg-Region</strong> es el mayor dominio esquiable continuo de Austria y se extiende alrededor del puerto del Arlberg entre Tirol y Vorarlberg. Con <strong>305 kilómetros de pistas</strong>, polvo virgen profundo y descensos exigentes, se considera uno de los mejores destinos de esquí del mundo. <strong>St. Anton</strong> es el corazón vibrante de la región, con un legendario *Après-Ski*, mientras que <strong>Ischgl</strong> y <strong>Serfaus</strong> destacan por sus resorts de lujo y una gastronomía de primera. En verano, 400 km de rutas de senderismo y vías de escalada atraen a los amantes de la naturaleza a través del impresionante paisaje montañoso.</p>",
   "tipps": [
     "Der Arlberg-Pass ist im Winter oft schneebedeckt – Schneeketten oder öffentliche Anreise empfohlen.",
@@ -87,5 +87,15 @@
       47.18,
       10.15
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.skiarlberg.at",
+    "https://www.tirol.at/regionen/a-st-anton-am-arlberg",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.2167
+  }
 }

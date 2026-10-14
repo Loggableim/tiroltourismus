@@ -13,9 +13,9 @@
     "宁静",
     "家庭"
   ],
-  "hoehe": "3.522 m",
-  "flaeche": "290 km²",
-  "einwohner": "3.200",
+  "hoehe": "3,518 米",
+  "flaeche": "290 平方公里",
+  "einwohner": "1,800",
   "beschreibung": "<p>Das <strong>Kaunertal</strong> ist ein stilles, 28 Kilometer langes Seitental des Oberinntals und gehört zu den ursprünglichsten Regionen Tirols. Der <strong>Kaunertaler Gletscher</strong> (Weißseeferner) bietet bis in den Juni hinein Skibetrieb auf bis zu 3.110 m Höhe. Im Sommer locken der <strong>Kaunertaler Gletscherweg</strong>, eine leichte Hochgebirgswanderung, und die atemberaubende <strong>Schlucht „Walschensaal“</strong> bei Feichten. Das Tal ist bekannt für seine extensive Landwirtschaft und den <strong>Kaunergrat</strong>, der das Tal vom Pitztal trennt.</p>",
   "tipps": [
     "Die Kaunertaler Gletscherstraße ist eine der höchsten mautpflichtigen Straßen Österreichs (4,50 €).",
@@ -44,7 +44,7 @@
       10.88
     ],
     [
-      47.0,
+      47,
       10.88
     ],
     [
@@ -72,7 +72,7 @@
       10.58
     ],
     [
-      47.0,
+      47,
       10.58
     ],
     [
@@ -87,5 +87,16 @@
       47.08,
       10.72
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertaler-gletscher.at",
+    "https://www.naturpark-kaunergrat.at",
+    "https://www.tirol.at/regionen/a-kaunertal",
+    "https://de.wikipedia.org/wiki/Kaunertal"
+  ],
+  "koordinaten": {
+    "lat": 47.0333,
+    "lng": 10.75
+  }
 }

@@ -2,7 +2,7 @@
   "titel": "Ötztal",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Gletscher, akce a starodávná tradice. Das Ötztal je největší údolí Tirolu.",
+  "kurzbeschreibung": "Ötztal je nejdelší postranní údolí Tyrolska – údolí superlativů s mohutnými ledovci, vrcholem Wildspitze (3 768 m), střediskem Sölden a lázněmi Aqua Dome.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#0051BA",
@@ -12,8 +12,8 @@
     "příroda",
     "kultura"
   ],
-  "hoehe": "3.774 m",
-  "flaeche": "530 km²",
+  "hoehe": "3.768 m",
+  "flaeche": "880 km²",
   "einwohner": "17.000",
   "bilder": [],
   "hero_bild": null,
@@ -106,5 +106,21 @@
   "koordinaten": {
     "lat": 46.9833,
     "lng": 10.95
-  }
+  },
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.soelden.com",
+    "https://www.gurgl.com",
+    "https://www.aqua-dome.at",
+    "https://www.tirol.at/regionen/a-oetztal",
+    "https://de.wikipedia.org/wiki/%C3%96tztal"
+  ],
+  "beschreibung": "<p><strong>Ötztal</strong> se táhne v délce 65 kilometrů jako nejdelší postranní údolí Inntalu a patří k nejúchvatnějším vysokohorským oblastem celých Alp. Oblast lemuje 250 třítisícovek v čele s majestátní <strong>Wildspitze</strong> (3 768 m), nejvyšší horou Severního Tyrolska. Od vstupu do údolí u obce <strong>Oetz</strong> s teplým jezerem Piburger See vede trasa přes <strong>Umhausen</strong> s vodopádem Stuibenfall – nejvyšším vodopádem Tyrolska – a lázeňský <strong>Längenfeld</strong> až k vyhlášeným lyžařským střediskům <strong>Sölden</strong> a <strong>Gurgl</strong>. V zimě lákají ledovcové areály Rettenbach a Tiefenbach i vyhlídkové plošiny BIG 3 ve výšce přes 3 000 metrů. V Umhausenu zaujme také archeologický skanzen <em>Ötzi-Dorf</em> věnovaný pravěkému muži z ledovce.</p>",
+  "tipps": [
+    "Vodopád Stuibenfall u Umhausenu je se 159 m nejvyšším vodopádem Tyrolska – přístupný přes visutý most a 700 schodů.",
+    "Termální lázně Aqua Dome v Längenfeldu nabízejí futuristickou architekturu s levitujícími venkovními mísami a horkými prameny.",
+    "Zážitkový svět Jamese Bonda 007 ELEMENTS na Gaislachkoglu (3 048 m) v Söldenu zve do útrob hory, kde se natáčel film Spectre."
+  ],
+  "empfehlungen": "<p>Nezapomenutelný zážitek: Výjezd po vysokohorské silnici na <strong>ledovce Rettenbach a Tiefenbach</strong> nebo lanovkou na <strong>Gaislachkogl</strong> do expozice <strong>007 ELEMENTS</strong>. K relaxaci lákají termální lázně <strong>Aqua Dome</strong> v Längenfeldu s panoramatickým výhledem na Alpy.</p>",
+  "umgebung": "<p>Ötztal odbočuje u Haimingu jižně z údolí Inntal a táhne se až k hlavnímu hřebeni Alp na hranici s Jižním Tyrolskem (Itálie). Sousední regiony: Imst (sever), Pitztal (západ), Stubaital (východ) a průsmyk Timmelsjoch (2 474 m) vedoucí do Itálie.</p>"
 }

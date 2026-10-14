@@ -15,8 +15,8 @@
   ],
   "hoehe": "2.344 m",
   "flaeche": "1.031 km²",
-  "einwohner": "108.000",
-  "beschreibung": null,
+  "einwohner": "113.000",
+  "beschreibung": "<p>De regio <strong>Kufstein & Wilder Kaiser</strong> strekt zich uit langs het lagere Inntal tot aan de Duitse grens. De middeleeuwse <strong>Vesting Kufstein</strong> torent majestueus boven de stad uit en is het iconische symbool van de regio. Het <strong>Kaisergebergte</strong> – bestaande uit de Wilder Kaiser en de Zahmer Kaiser – vormt een van de meest markante bergmassieven van de oostelijke Alpen. Bekende vakantieoorden zoals <strong>Ellmau</strong> en <strong>Söll</strong> bieden directe toegang tot de uitgestrekte SkiWelt Wilder Kaiser–Brixental. Authentieke dorpen zoals <strong>Alpbach</strong> en het historische glasblazersstadje <strong>Rattenberg</strong> maken de rijke cultuur van het Tiroler Unterland compleet.</p>",
   "tipps": [
     "Die Festung Kufstein bietet die größte Freiorgel Europas – das Heldenorgel-Konzert täglich um 12 Uhr.",
     "Alpbach ist besonders im Herbst sehenswert – der Dorfkern mit seinen typischen Balkonhäusern ist einzigartig.",
@@ -33,7 +33,7 @@
     ],
     [
       47.63,
-      12.0
+      12
     ],
     [
       47.65,
@@ -95,5 +95,17 @@
       47.62,
       11.9
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.wilderkaiser.info",
+    "https://www.festung.kufstein.at",
+    "https://www.tirol.at/regionen/a-kufsteinerland",
+    "https://www.tirol.gv.at/bezirke-tirol/kufstein/",
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ],
+  "koordinaten": {
+    "lat": 47.5833,
+    "lng": 12.1667
+  }
 }

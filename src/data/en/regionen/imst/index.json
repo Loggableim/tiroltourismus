@@ -13,9 +13,9 @@
     "tradition",
     "nature"
   ],
-  "hoehe": "3.774 m",
+  "hoehe": "2,774 m",
   "flaeche": "350 km²",
-  "einwohner": "27.000",
+  "einwohner": "25,000",
   "beschreibung": "<p>The district of **Imst** is located in the Upper Inn Valley and includes the town of **Imst** as well as the surrounding valley communities. The town of **Imst** is famous for its **Imster Fasching**, a traditional carnival festival held every four years, one of Tirol’s oldest with magnificent Schellerlaufen costumes. The region is a paradise for climbers and mountain bikers, featuring the renowned **Klettergarten Imst** and an extensive mountain bike trail network. In winter, the **Hoch-Imst** ski area beckons with guaranteed snow reliability. The surrounding area offers access to the wild and romantic valleys of the **Gurgltal** and the **Pitztal**.</p>",
   "tipps": [
     "Der Imster Fasching findet nur alle 4 Jahre statt – nächstes Mal 2027!",
@@ -41,7 +41,7 @@
     ],
     [
       47.22,
-      11.0
+      11
     ],
     [
       47.18,
@@ -84,7 +84,7 @@
       10.6
     ],
     [
-      47.0,
+      47,
       10.5
     ],
     [
@@ -111,5 +111,15 @@
       47.25,
       10.68
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at/regionen/a-ferienregion-imst",
+    "https://www.tirol.gv.at/bezirke-tirol/imst/",
+    "https://de.wikipedia.org/wiki/Imst"
+  ],
+  "koordinaten": {
+    "lat": 47.2333,
+    "lng": 10.7333
+  }
 }

@@ -15,7 +15,7 @@
   ],
   "hoehe": "2.344 m",
   "flaeche": "1.031 km²",
-  "einwohner": "108.000",
+  "einwohner": "113.000",
   "beschreibung": "<p>Die Region <strong>Kufstein & Wilder Kaiser</strong> erstreckt sich entlang des unteren Inntals bis zur deutschen Grenze. Die mittelalterliche <strong>Festung Kufstein</strong> thront majestätisch über der Stadt und ist Wahrzeichen der Region. Das <strong>Kaisergebirge</strong> – bestehend aus Wildem Kaiser und Zahmem Kaiser – ist eines der markantesten Bergmassive der Ostalpen. <strong>St. Johann in Tirol</strong> und <strong>Ellmau</strong> sind bekannte Urlaubsorte mit direkter Anbindung an die Skiwelt Wilder Kaiser–Brixental. Die <strong>Söll</strong> verbindet Tradition und Moderne im Zentrum des Skigebiets. <strong>Alpbach</strong> wurde mehrfach zum schönsten Dorf Österreichs gewählt. Das mittelalterliche <strong>Rattenberg</strong> ist mit nur 400 Einwohnern die kleinste Stadt Österreichs.</p>",
   "tipps": [
     "Die Festung Kufstein bietet die größte Freiorgel Europas – das Heldenorgel-Konzert täglich um 12 Uhr.",
@@ -33,7 +33,7 @@
     ],
     [
       47.63,
-      12.0
+      12
     ],
     [
       47.65,
@@ -99,5 +99,13 @@
   "koordinaten": {
     "lat": 47.5833,
     "lng": 12.1667
-  }
+  },
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.wilderkaiser.info",
+    "https://www.festung.kufstein.at",
+    "https://www.tirol.at/regionen/a-kufsteinerland",
+    "https://www.tirol.gv.at/bezirke-tirol/kufstein/",
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

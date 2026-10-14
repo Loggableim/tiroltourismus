@@ -13,7 +13,7 @@
     "kultur",
     "bergsteigen"
   ],
-  "hoehe": "3.000 m",
+  "hoehe": "3.399 m",
   "flaeche": "750 km²",
   "einwohner": "25.000",
   "beschreibung": "<p>De regio <strong>Landeck</strong> omvat het Oberinntal rond de regiostad Landeck en het diep ingesneden <strong>Paznauntal</strong>. <strong>Landeck</strong> zelf is een historische handelsstad met het herkenningspunt <strong>Schloss Landeck</strong> uit de 13e eeuw. Het <strong>Paznauntal</strong> is een van de belangrijkste toeristische regio's van Tirol met de wereldberoemde skigebieden <strong>Ischgl</strong> en <strong>See</strong>. <strong>Serfaus</strong> en <strong>Fiss</strong> vormen samen met Ladis het luxueuze skigebied Serfaus-Fiss-Ladis met ultramodern faciliteiten en eersteklas gastronomie. <strong>Nauders</strong> ligt op het zonnige hoogplateau aan de grens met Italië en Zwitserland en is de zuidelijkste stad van Tirol met meer dan 300 zonuren per jaar.</p>",
@@ -52,7 +52,7 @@
       10.68
     ],
     [
-      47.0,
+      47,
       10.68
     ],
     [
@@ -80,7 +80,7 @@
       10.22
     ],
     [
-      47.0,
+      47,
       10.18
     ],
     [
@@ -103,5 +103,16 @@
       47.18,
       10.38
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.paznaun-ischgl.com",
+    "https://www.tirol.at/regionen/a-tirolwest",
+    "https://www.tirol.gv.at/bezirke-tirol/landeck/",
+    "https://de.wikipedia.org/wiki/Paznaun"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.5667
+  }
 }

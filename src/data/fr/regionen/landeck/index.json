@@ -13,7 +13,7 @@
     "culture",
     "alpinisme"
   ],
-  "hoehe": "3.000 m",
+  "hoehe": "3.399 m",
   "flaeche": "750 km²",
   "einwohner": "25.000",
   "beschreibung": "<p>Le district de <strong>Landeck</strong> englobe la vallée de l’Inn supérieure autour de la ville de district <strong>Landeck</strong>, ainsi que la vallée profondément encaissée du <strong>Paznauntal</strong>. <strong>Landeck</strong> elle-même est une ville historique du commerce, marquée par son emblème, le <strong>Schloss Landeck</strong>, datant du XIIIe siècle. Le <strong>Paznauntal</strong> est l’une des régions touristiques les plus importantes du <strong>Tirol</strong>, avec les stations de ski mondialement connues que sont <strong>Ischgl</strong> et <strong>See</strong>. <strong>Serfaus</strong> et <strong>Fiss</strong>, associés à Ladis, forment le domaine skiable luxueux de <strong>Serfaus-Fiss-Ladis</strong>, doté d’installations ultra-modernes et d’une gastronomie d’exception. <strong>Nauders</strong> se situe sur le haut plateau ensoleillé à la frontière avec l’Italie et la Suisse, et est le point le plus au sud du <strong>Tirol</strong>, avec plus de 300 jours de soleil par an.</p>",
@@ -52,7 +52,7 @@
       10.68
     ],
     [
-      47.0,
+      47,
       10.68
     ],
     [
@@ -80,7 +80,7 @@
       10.22
     ],
     [
-      47.0,
+      47,
       10.18
     ],
     [
@@ -103,5 +103,16 @@
       47.18,
       10.38
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.paznaun-ischgl.com",
+    "https://www.tirol.at/regionen/a-tirolwest",
+    "https://www.tirol.gv.at/bezirke-tirol/landeck/",
+    "https://de.wikipedia.org/wiki/Paznaun"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.5667
+  }
 }

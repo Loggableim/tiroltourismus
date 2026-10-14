@@ -13,9 +13,9 @@
     "culture",
     "mountaineering"
   ],
-  "hoehe": "3.000 m",
+  "hoehe": "3,399 m",
   "flaeche": "750 km²",
-  "einwohner": "25.000",
+  "einwohner": "25,000",
   "beschreibung": "<p>The district of **Landeck** covers the Upper Inn Valley around the district town of **Landeck**, as well as the deeply carved **Paznauntal** valley. **Landeck** itself is a historic trading town with the landmark **Schloss Landeck**, dating back to the 13th century. The **Paznauntal** is one of Tirol’s most important tourism regions, home to the world-famous ski resorts **Ischgl** and **See**. **Serfaus** and **Fiss** together with Ladis form the luxurious ski area **Serfaus-Fiss-Ladis**, featuring top-modern facilities and excellent gastronomy. **Nauders** is located on the sunny high plateau at the border with Italy and Switzerland and is Tirol’s southernmost town with over 300 sunny days a year.</p>",
   "tipps": [
     "Die Bergbahnen Serfaus-Fiss-Ladis gehören zu den modernsten der Alpen – die U-Bahn von Serfaus ist einzigartig.",
@@ -52,7 +52,7 @@
       10.68
     ],
     [
-      47.0,
+      47,
       10.68
     ],
     [
@@ -80,7 +80,7 @@
       10.22
     ],
     [
-      47.0,
+      47,
       10.18
     ],
     [
@@ -103,5 +103,16 @@
       47.18,
       10.38
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.paznaun-ischgl.com",
+    "https://www.tirol.at/regionen/a-tirolwest",
+    "https://www.tirol.gv.at/bezirke-tirol/landeck/",
+    "https://de.wikipedia.org/wiki/Paznaun"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.5667
+  }
 }

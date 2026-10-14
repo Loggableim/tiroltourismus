@@ -2,7 +2,7 @@
   "titel": "Ötztal",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Ghiacciai, azione e tradizione antichissima. L’Ötztal è la valle estrema del Tirol.",
+  "kurzbeschreibung": "La Ötztal è la valle laterale più lunga del Tirolo – un paradiso alpino con ghiacciai maestosi, la cima della Wildspitze (3.768 m), Sölden e le terme dell’Aqua Dome.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#0051BA",
@@ -12,8 +12,8 @@
     "natura",
     "cultura"
   ],
-  "hoehe": "3.774 m",
-  "flaeche": "530 km²",
+  "hoehe": "3.768 m",
+  "flaeche": "880 km²",
   "einwohner": "17.000",
   "bilder": [],
   "hero_bild": null,
@@ -102,5 +102,25 @@
       47.28,
       10.88
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.soelden.com",
+    "https://www.gurgl.com",
+    "https://www.aqua-dome.at",
+    "https://www.tirol.at/regionen/a-oetztal",
+    "https://de.wikipedia.org/wiki/%C3%96tztal"
+  ],
+  "beschreibung": "<p>La <strong>Ötztal</strong> si estende per 65 chilometri come la più lunga valle laterale dell’Inntal ed è una delle regioni d’alta quota più spettacolari delle Alpi. Circondata da 250 cime oltre i tremila metri, culmina nella <strong>Wildspitze</strong> (3.768 m), la montagna più alta del Tirolo Settentrionale. Dalla soleggiata imboccatura di <strong>Oetz</strong> con il lago di Piburg, la valle prosegue oltre <strong>Umhausen</strong> con la cascata Stuibenfall – la più alta del Tirolo – e la conca di <strong>Längenfeld</strong> fino ai rinomati centri sciistici di <strong>Sölden</strong> e <strong>Gurgl</strong>. In inverno attirano i comprensori sui ghiacciai di Rettenbach e Tiefenbach e le piattaforme panoramiche BIG 3 oltre i 3.000 metri. A Umhausen, il parco archeologico <em>Ötzi-Dorf</em> racconta l’avvincente storia dell’uomo venuto dal ghiaccio.</p>",
+  "tipps": [
+    "La cascata Stuibenfall vicino a Umhausen è con 159 m di salto la più alta del Tirolo – visitabile tramite ponte sospeso e 700 scalini.",
+    "L’Aqua Dome a Längenfeld offre un’architettura termale futuristica con vasche sospese all’aperto e acque calde terapeutiche.",
+    "L’installazione cinematografica di James Bond 007 ELEMENTS sul Gaislachkogl (3.048 m) a Sölden vi porta nel cuore della location di Spectre."
+  ],
+  "empfehlungen": "<p>Da non perdere: Una salita lungo la strada panoramica verso i <strong>ghiacciai di Rettenbach e Tiefenbach</strong> o in cima al <strong>Gaislachkogl</strong> per visitare <strong>007 ELEMENTS</strong>. Per rigenerarsi, concedetevi una sosta alle terme <strong>Aqua Dome</strong> a Längenfeld.</p>",
+  "umgebung": "<p>La Ötztal si dirama verso sud a Haiming dalla valle dell’Inn fino alla cresta principale delle Alpi al confine con l’Alto Adige (Italia). Regioni confinanti: Imst (nord), Pitztal (ovest), Stubaital (est) e la Val Passiria attraverso il Passo del Rombo (2.474 m).</p>",
+  "koordinaten": {
+    "lat": 46.9833,
+    "lng": 10.95
+  }
 }

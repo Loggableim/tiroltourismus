@@ -13,9 +13,9 @@
     "luxury",
     "events"
   ],
-  "hoehe": "2.556 m",
-  "flaeche": "580 km²",
-  "einwohner": "8.200",
+  "hoehe": "2,556 m",
+  "flaeche": "280 km²",
+  "einwohner": "13,000",
   "beschreibung": "<p><strong>Kitzbühel</strong> is one of the world’s most famous ski resorts. Every January, the best racers compete on the <strong>„Hahnenkamm“</strong> track—the steepest and most demanding downhill in the Ski World Cup. Yet **Kitzbühel** is so much more than winter sports: its medieval old town with pastel-colored houses and narrow alleys, the <strong>Schwarzer See</strong>, and the <strong>Kitzbüheler Horn</strong> make the region a year-round destination. In summer, over 1,000 km of hiking trails, the Panoramaweg **„Kitzbühel Alps Trail“**, and the **Kitzbühel-Schwarzsee** Golf Club offer premium sports.</p>",
   "tipps": [
     "Die Hahnenkamm-Abfahrt kann im Sommer zu Fuß begangen werden – nichts für schwache Nerven!",
@@ -99,5 +99,16 @@
       47.55,
       12.28
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.kitzski.at",
+    "https://www.tirol.at/regionen/a-kitzbuehel",
+    "https://www.tirol.gv.at/bezirke-tirol/kitzbuehel/",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ],
+  "koordinaten": {
+    "lat": 47.45,
+    "lng": 12.3833
+  }
 }

@@ -13,10 +13,10 @@
     "奢华",
     "自然"
   ],
-  "hoehe": "2.811 m",
-  "flaeche": "320 km²",
-  "einwohner": "10.500",
-  "beschreibung": "",
+  "hoehe": "2,811 米",
+  "flaeche": "330 平方公里",
+  "einwohner": "6,100",
+  "beschreibung": "<p><strong>阿尔山谷/阿尔山（Arlberg）</strong>被誉为高山滑雪运动的发源地，横跨蒂罗尔州与福拉尔贝格州之间的阿尔山山口。凭借<strong>Ski Arlberg超过300公里的连绵雪道</strong>、优质粉雪和极具挑战性的滑雪坡道，这里被公认为世界顶级的冬季运动胜地之一。<strong>圣安东（St. Anton am Arlberg）</strong>是该地区的活力心脏，以悠久的滑雪传统和浓厚的阿尔卑斯文化闻名，而斯坦策尔塔尔山谷的佩特诺伊（Pettneu）、弗利尔施（Flirsch）和施特伦根（Strengen）则保留着宁静质朴的乡村风貌。在夏季，数百公里的徒步小径和铁索攀岩路线引领旅行者探索维尔瓦尔山脉和莱希塔尔阿尔卑斯山脉的宏伟自然。</p>",
   "tipps": [
     "Der Arlberg-Pass ist im Winter oft schneebedeckt – Schneeketten oder öffentliche Anreise empfohlen.",
     "Die Flexenbahn verbindet St. Anton mit Zürs – eine der modernsten Seilbahnen der Alpen.",
@@ -87,5 +87,15 @@
       47.18,
       10.15
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.skiarlberg.at",
+    "https://www.tirol.at/regionen/a-st-anton-am-arlberg",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.2167
+  }
 }

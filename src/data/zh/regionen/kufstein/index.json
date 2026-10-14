@@ -13,9 +13,9 @@
     "自然",
     "家庭"
   ],
-  "hoehe": "2.344 m",
-  "flaeche": "1.031 km²",
-  "einwohner": "108.000",
+  "hoehe": "2,344 米",
+  "flaeche": "1,031 平方公里",
+  "einwohner": "113,000",
   "beschreibung": "<p>该地区<strong>Kufstein & Wilder Kaiser</strong>沿着下伊恩河延伸至德国边界。中世纪的<strong>Festung Kufstein</strong>巍然屹立在城上，是该地区的标志。<strong>Kaisergebirge</strong>——由Wildem Kaiser和Zahmem Kaiser组成——是东阿尔卑斯山脉中最具特色的山体之一。<strong>St. Johann in Tirol</strong>和<strong>Ellmau</strong>是著名的度假胜地，直接连通Wilder Kaiser–Brixental滑雪世界。<strong>Söll</strong>在滑雪区中心融合了传统与现代。<strong>Alpbach</strong>多次被评为奥地利最美的村庄。中世纪的<strong>Rattenberg</strong>仅有400名居民，是奥地利最小的城市。</p>",
   "tipps": [
     "Die Festung Kufstein bietet die größte Freiorgel Europas – das Heldenorgel-Konzert täglich um 12 Uhr.",
@@ -33,7 +33,7 @@
     ],
     [
       47.63,
-      12.0
+      12
     ],
     [
       47.65,
@@ -95,5 +95,17 @@
       47.62,
       11.9
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.wilderkaiser.info",
+    "https://www.festung.kufstein.at",
+    "https://www.tirol.at/regionen/a-kufsteinerland",
+    "https://www.tirol.gv.at/bezirke-tirol/kufstein/",
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ],
+  "koordinaten": {
+    "lat": 47.5833,
+    "lng": 12.1667
+  }
 }

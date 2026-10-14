@@ -13,9 +13,9 @@
     "tradizione",
     "natura"
   ],
-  "hoehe": "3.774 m",
+  "hoehe": "2.774 m",
   "flaeche": "350 km²",
-  "einwohner": "27.000",
+  "einwohner": "25.000",
   "beschreibung": "<p>Il distretto di **Imst** si trova nell’**Oberinntal** e comprende la città di **Imst** e i comuni delle valli circostanti. La città di **Imst** è famosa per il suo **Imster Fasching**, che si svolge ogni quattro anni, uno dei più antichi e tradizionali carnevali del **Tirol**, con sontuosi costumi da **Schellerlaufen**. La zona è un paradiso per arrampicatori e mountainbiker, grazie al rinomato **Klettergarten Imst** e alla rete di percorsi per mountain bike. D’inverno, la stazione sciistica di **Hoch-Imst** attrae con la garanzia di neve sicura. I dintorni offrono l’accesso alle valli selvagge e romantiche del **Gurgltal** e del **Pitztal**.</p>",
   "tipps": [
     "Der Imster Fasching findet nur alle 4 Jahre statt – nächstes Mal 2027!",
@@ -41,7 +41,7 @@
     ],
     [
       47.22,
-      11.0
+      11
     ],
     [
       47.18,
@@ -84,7 +84,7 @@
       10.6
     ],
     [
-      47.0,
+      47,
       10.5
     ],
     [
@@ -111,5 +111,15 @@
       47.25,
       10.68
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at/regionen/a-ferienregion-imst",
+    "https://www.tirol.gv.at/bezirke-tirol/imst/",
+    "https://de.wikipedia.org/wiki/Imst"
+  ],
+  "koordinaten": {
+    "lat": 47.2333,
+    "lng": 10.7333
+  }
 }

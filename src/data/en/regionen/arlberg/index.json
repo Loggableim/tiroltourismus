@@ -13,9 +13,9 @@
     "luxury",
     "nature"
   ],
-  "hoehe": "2.811 m",
-  "flaeche": "320 km²",
-  "einwohner": "10.500",
+  "hoehe": "2,811 m",
+  "flaeche": "330 km²",
+  "einwohner": "6,100",
   "beschreibung": "<p>The **Arlberg-Region** is Austria’s largest contiguous ski area, stretching around the Arlberg Pass between Tirol and Vorarlberg. With **305 kilometers of groomed runs**, deep powder snow, and challenging descents, it’s considered one of the world’s top ski destinations. **St. Anton** is the region’s vibrant hub, famous for its legendary Après-Ski, while **Ischgl** and **Serfaus** shine with luxury resorts and top-tier dining. In summer, 400 km of hiking and climbing trails wind through the breathtaking mountain landscape.</p>",
   "tipps": [
     "Der Arlberg-Pass ist im Winter oft schneebedeckt – Schneeketten oder öffentliche Anreise empfohlen.",
@@ -87,5 +87,15 @@
       47.18,
       10.15
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.skiarlberg.at",
+    "https://www.tirol.at/regionen/a-st-anton-am-arlberg",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.2167
+  }
 }

@@ -13,7 +13,7 @@
     "kultur",
     "bergsteigen"
   ],
-  "hoehe": "3.000 m",
+  "hoehe": "3.399 m",
   "flaeche": "750 km²",
   "einwohner": "25.000",
   "beschreibung": "<p>Der Bezirk <strong>Landeck</strong> umfasst das Oberinntal rund um die Bezirksstadt Landeck sowie das tief eingeschnittene <strong>Paznauntal</strong>. <strong>Landeck</strong> selbst ist eine historische Handelsstadt mit dem Wahrzeichen <strong>Schloss Landeck</strong> aus dem 13. Jahrhundert. Das <strong>Paznauntal</strong> ist eine der bedeutendsten Tourismusregionen Tirols mit den weltbekannten Skiorten <strong>Ischgl</strong> und <strong>See</strong>. <strong>Serfaus</strong> und <strong>Fiss</strong> bilden gemeinsam mit Ladis das luxuriöse Skigebiet Serfaus-Fiss-Ladis mit topmodernen Anlagen und erstklassiger Gastronomie. <strong>Nauders</strong> liegt am sonnigen Hochplateau an der Grenze zu Italien und der Schweiz und ist der südlichste Ort Tirols mit über 300 Sonnentagen im Jahr.</p>",
@@ -52,7 +52,7 @@
       10.68
     ],
     [
-      47.0,
+      47,
       10.68
     ],
     [
@@ -80,7 +80,7 @@
       10.22
     ],
     [
-      47.0,
+      47,
       10.18
     ],
     [
@@ -107,5 +107,12 @@
   "koordinaten": {
     "lat": 47.1333,
     "lng": 10.5667
-  }
+  },
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.paznaun-ischgl.com",
+    "https://www.tirol.at/regionen/a-tirolwest",
+    "https://www.tirol.gv.at/bezirke-tirol/landeck/",
+    "https://de.wikipedia.org/wiki/Paznaun"
+  ]
 }

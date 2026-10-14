@@ -15,7 +15,7 @@
   ],
   "hoehe": "2.344 m",
   "flaeche": "1.031 km²",
-  "einwohner": "108.000",
+  "einwohner": "113.000",
   "beschreibung": "<p>Región <strong>Kufstein & Wilder Kaiser</strong> se rozprostírá podél dolního Inntalu až k německé hranici. Středověká <strong>Festung Kufstein</strong> se majestátně tyčí nad městem a je znakem regionu. <strong>Kaisergebirge</strong> – složené z <strong>Wildem Kaiser</strong> a <strong>Zahmem Kaiser</strong> – je jedním z nejvýraznějších horových masivů východních Alp. <strong>St. Johann in Tirol</strong> a <strong>Ellmau</strong> jsou známé dovolené destinace s přímým připojením k lyžařskému světu Wilder Kaiser–Brixental. <strong>Söll</strong> spojuje tradici a modernitu v centru lyžařského střediska. <strong>Alpbach</strong> byl několikrát zvolen nejkrásnějším vesnicí Rakouska. Středověké <strong>Rattenberg</strong> s pouhými 400 obyvateli je nejmenším městem Rakouska.</p>",
   "tipps": [
     "Die Festung Kufstein bietet die größte Freiorgel Europas – das Heldenorgel-Konzert täglich um 12 Uhr.",
@@ -33,7 +33,7 @@
     ],
     [
       47.63,
-      12.0
+      12
     ],
     [
       47.65,
@@ -99,5 +99,13 @@
   "koordinaten": {
     "lat": 47.5833,
     "lng": 12.1667
-  }
+  },
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.wilderkaiser.info",
+    "https://www.festung.kufstein.at",
+    "https://www.tirol.at/regionen/a-kufsteinerland",
+    "https://www.tirol.gv.at/bezirke-tirol/kufstein/",
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

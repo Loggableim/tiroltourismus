@@ -94,7 +94,7 @@ async function checkUrl(url) {
     const res = await fetch(url, {
       redirect: 'follow',
       signal: AbortSignal.timeout(HTTP_TIMEOUT_MS),
-      headers: { 'User-Agent': 'Mozilla/5.0 (tiroltourismus-content-gate)', Accept: 'text/html,*/*' },
+      headers: { 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36', Accept: 'text/html,*/*' },
     });
     res.body?.cancel();
     return String(res.status);

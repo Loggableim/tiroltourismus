@@ -1,9 +1,9 @@
 {
-  "name": "Zettersfeld",
+  "name": "Zettersfeld Sonnenbalkon Lienz",
   "slug": "zettersfeld",
   "region": "osttirol",
   "ort": "Lienz",
-  "kategorie": "sport",
+  "kategorie": "aussicht",
   "kurzbeschreibung": "Le plateau ensoleillé de Zettersfeld, situé au-dessus de Lienz, offre un panorama inégalé sur les Dolomites de Lienz et est un paradis pour les randonneurs et les amateurs de sports d’hiver.",
   "emoji": "⛰️",
   "farbe": "#5B8C5A",
@@ -14,14 +14,26 @@
     "panorama",
     "sport"
   ],
-  "dauer": "Halbtag bis Ganztag",
-  "preis": "Bergfahrt Erwachsene € 19,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Zettersfeld Berg- und Talfahrt ca. 24 €",
   "oeffnungszeiten": "Sommer- und Winterbetrieb",
-  "webseite": "https://www.zettersfeld.at/",
+  "webseite": "https://www.lienzer-bergbahnen.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "46.8299",
-    "lng": "12.7681"
-  }
+    "lat": "46.8667",
+    "lng": "12.7833"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Zettersfeld</strong> (2 213 m au Steinermandl) est le balcon panoramique ensoleillé dominant la ville de Lienz dans le Tyrol oriental. Accessible rapidement par la télécabine et le télésiège, il offre une vue imprenable à 360 degrés sur les Dolomites de Lienz et le massif des Hohe Tauern, ainsi qu'un sentier d'observation des marmottes.</p><h2>Parcours &amp; Exigences</h2><p>Boucle familiale très facile autour du plateau central avec observatoire des marmottes et étangs alpins (1h30, T1, accessible aux poussettes). Randonnée panoramique vers le sommet du Goiselemandl (2 433 m) et le refuge Naturfreundehütte (3h, dénivelé 350 m, T2). Chaussures de marche confortables conseillées. Chiens admis en laisse dans les remontées.</p><h2>Accès</h2><p>Train ÖBB jusqu'à Lienz puis bus urbain direct vers la télécabine à Gaimberg. En voiture par la B100 ou la B108 jusqu'au grand parking gratuit de la station inférieure.</p><h2>Conseils</h2><p>Installez-vous sur les transats panoramiques au sommet du Steinermandl face aux aiguilles des Dolomites de Lienz et goûtez les pâtisseries traditionnelles à l'alpage Faschingalm.</p>",
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.lienzer-bergbahnen.at/",
+    "https://www.osttirol.com/entdecken-und-erleben/sommer/bergbahnen/zettersfeld/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-lienzer-bergbahnen",
+    "https://www.alpenvereinaktiv.com/de/tour/steinermandl-panoramarunde-am-zettersfeld/1381500/",
+    "https://www.vvt.at/"
+  ]
 }

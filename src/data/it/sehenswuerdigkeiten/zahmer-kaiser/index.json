@@ -1,5 +1,5 @@
 {
-  "name": "Zahmer Kaiser",
+  "name": "Zahmer Kaiser & Kaisertal",
   "slug": "zahmer-kaiser",
   "region": "kufstein",
   "ort": "Ebbs",
@@ -13,16 +13,26 @@
     "famiglia",
     "natura"
   ],
-  "dauer": "Variabel",
-  "preis": "Kostenlos",
+  "dauer": "2–5 Stunden",
+  "preis": "Kostenlos (Parkplatz Kaisertal Sparchen ca. 5–6 € pro Tag)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.kaisergebirge.de/",
+  "webseite": "https://www.kufstein.com/de/ebbs/kultur-ausflugsziele/kaisertal.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.6148",
-    "lng": "12.2952"
+    "lat": "47.5833",
+    "lng": "12.2167"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zahmer Kaiser</strong> – Die Zahmer Kaiser begeistert Besucher mit ihrer ursprünglichen Schönheit und lädt zum Entdecken und Verweilen ein. Der Zahme Kaiser mit seinen sanften Gipfeln und weiten Almwiesen ist ein ideales Wandergebiet für Familien und Genusswanderer Die einzigartige Landschaft mit ihren schroffen Felsformationen, glasklaren Bergbächen und duftenden Almwiesen zieht Naturliebhaber aus aller Welt an. Ein Besuch am frühen Morgen oder zur Abenddämmerung belohnt mit besonders stimmungsvollen Lichtverhältnissen. Eingebettet in die malerische Kulisse der Tiroler Alpen, präsentiert sich die Zahmer Kaiser als Ort der Ruhe und Erholung. Die gute Erreichbarkeit von Ebbs aus macht sie zu einem lohnenden Tagesausflugsziel.  Auch für Familien mit Kindern gibt es hier viel zu entdecken und zu erleben. Ob Sommer oder Winter: Die Zahmer Kaiser ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Panoramica</h2><p>Il <strong>Zahmer Kaiser</strong> (2.002 m) costituisce la catena montuosa settentrionale del Kaisergebirge sopra Kufstein ed Ebbs. Caratterizzato da pascoli e boschi lussureggianti, domina la valle incontaminata Kaisertal e custodisce la leggendaria <strong>grotta Tischofer Höhle</strong>, grandioso sito archeologico dell'Età della Pietra noto per i resti di orsi delle caverne.</p><h2>Percorso &amp; Requisiti</h2><p>Classica salita lungo i gradoni del Kaiseraufstieg da Kufstein-Sparchen verso la Kaisertal con deviazione nel bosco fino alla grotta (1h30, facile T1/T2). Salita alpinistica più impegnativa alla vetta Pyramidenspitze da Durchholzen (1.997 m, 4 ore, dislivello 1.300 m, T3). Scarpe comode e torcia raccomandate per la grotta. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>In treno fino alla stazione di Kufstein e poi con il bus urbano 1 o 2 fino alla fermata Kaisertal/Sparchen. In auto dall'autostrada A12 (uscita Kufstein-Nord) al parcheggio di Sparchen.</p><h2>Consigli</h2><p>Portate una torcia per ammirare le dimensioni imponenti della grotta di Tischofer e concedetevi una sosta per gustare i canederli al formaggio nei masi storici Veitenhof o Pfandlhof.</p>",
+  "saison": "Mai bis Oktober (Kaisertal-Hauptweg auch im Winter geräumt)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.kufstein.com/de/ebbs/kultur-ausflugsziele/kaisertal.html",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-tischofer-hoehle",
+    "https://www.alpenvereinaktiv.com/de/tour/ins-kaisertal-zur-tischofer-hoehle/1381495/",
+    "https://www.kaisergebirge-online.de/",
+    "https://www.vvt.at/"
+  ]
 }

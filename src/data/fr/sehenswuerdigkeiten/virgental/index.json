@@ -1,5 +1,5 @@
 {
-  "name": "Virgental",
+  "name": "Virgental & Umbalfälle",
   "slug": "virgental",
   "region": "osttirol",
   "ort": "Prägraten am Großvenediger",
@@ -14,14 +14,26 @@
     "vallée de l'Unstrut",
     "alpinisme"
   ],
-  "dauer": "Ganztag/Mehrtag",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Ströden ca. 7 € pro Tag; Kutschfahrt ca. 8–10 €)",
   "oeffnungszeiten": "Ganzjährig geöffnet",
-  "webseite": "https://www.virgental.at/",
+  "webseite": "https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/wasserfaelle/umbalfaelle/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.0140",
-    "lng": "12.4138"
-  }
+    "lat": "47.0139",
+    "lng": "12.3361"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>Virgental</strong> est l'une des vallées alpines les plus sauvages et préservées du Tyrol oriental, dominée par les glaciers du Grossvenediger. Au bout de la vallée, les spectaculaires <strong>chutes d'eau d'Umbal</strong> (Umbalfälle), formées par la rivière glaciaire Isel, offrent le premier sentier pédagogique de l'eau d'Europe au cœur du parc national des Hohe Tauern.</p><h2>Parcours &amp; Exigences</h2><p>Balade familiale facile de 40 min depuis le parking de Ströden jusqu'aux alpages d'Islitzeralm et de Pebellalm (T1, poussettes tout-terrain). Le sentier des cascades s'élève ensuite le long des gorges avec des plateformes panoramiques vertigineuses au-dessus des remous (boucle de 1h, T1/T2). Randonneurs alpins peuvent continuer vers le refuge Clarahütte (2 038 m). Bonnes chaussures de marche conseillées. Chiens bienvenus en laisse.</p><h2>Accès</h2><p>Train ÖBB jusqu'à Lienz puis bus postal 951 jusqu'à Prägraten/Ströden. En voiture par la route du Felbertauern (B108) puis la L24 jusqu'au grand parking payant de Ströden. Calèches disponibles en été.</p><h2>Conseils</h2><p>Avancez sur les passerelles d'observation pour respirer les embruns bienfaisants de l'eau glaciaire et dégustez les ravioles traditionnelles Schlipfkrapfen à l'Islitzeralm.</p>",
+  "saison": "Mai bis Oktober (Wasserschaupfad im Winter schneebedeckt)",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/wasserfaelle/umbalfaelle/",
+    "https://hohetauern.at/de/besuchen/ausflugsziele/umbalfaelle.html",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-umbalfaelle",
+    "https://www.alpenvereinaktiv.com/de/tour/wasserschaupfad-umbalfaelle/1381485/",
+    "https://www.vvt.at/"
+  ]
 }

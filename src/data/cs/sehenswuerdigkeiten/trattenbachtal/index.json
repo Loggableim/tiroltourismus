@@ -1,8 +1,8 @@
 {
-  "name": "Trattenbachtal",
+  "name": "Trattenbachtal & Trattenbachalm",
   "slug": "trattenbachtal",
-  "region": "kitzbuehel",
-  "ort": "Reith bei Kitzbühel",
+  "region": "kitzbueheler-alpen",
+  "ort": "Jochberg",
   "kategorie": "natur",
   "kurzbeschreibung": "Divokoromantické Trattenbachtal láká kouzelným vodopádem, stinnými turistickými stezkami a idylickou lesní scenérií.",
   "emoji": "🌲",
@@ -14,16 +14,26 @@
     "tal",
     "erholung"
   ],
-  "dauer": "1,5-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz Sauerkaser gebührenfrei)",
   "oeffnungszeiten": "Ganzjährig frei zugänglich",
-  "webseite": "https://www.kitzbuehel.com/natur/trattenbachtal",
+  "webseite": "https://www.kitzbuehel.com/entdecken/orte/jochberg/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.4760",
-    "lng": "12.3422"
+    "lat": "47.3667",
+    "lng": "12.4167"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Trattenbachtal</strong> – Die Trattenbachtal begeistert Besucher mit ihrer ursprünglichen Schönheit und lädt zum Entdecken und Verweilen ein. Das wildromantische Trattenbachtal lockt mit einem märchenhaften Wasserfall, schattigen Wanderwegen und einer idyllischen Waldszenerie Die Umgebung lädt zu vielfältigen Aktivitäten ein: Wandern, Mountainbiken und im Winter Skifahren oder Schneeschuhwandern. Entlang der Wege laden gemütliche Almhütten zur Einkehr mit regionalen Spezialitäten ein. Die Aussicht auf die umliegenden Gipfel ist zu jeder Jahreszeit spektakulär. Die Trattenbachtal liegt in der Region Kitzbühel und ist von Reith bei Kitzbühel aus in kurzer Zeit zu erreichen. Die Anfahrt führt durch eine reizvolle Landschaft, die bereits auf dem Weg dorthin beeindruckt. Planen Sie ausreichend Zeit ein – die Trattenbachtal wird Sie mit ihrer Schönheit und Vielfalt begeistern.</p>"
+  "beschreibung": "<h2>Přehled</h2><p>Údolí <strong>Trattenbachtal</strong> je romantické a zachovalé boční údolí v Kitzbühelských Alpách u Jochbergu pod průsmykem Pass Thurn. Mimo rušná střediska nabízí divoký horský potok Trattenbach s hučícími vodopády a hlubokými tůněmi, rozkvetlé louky a více než 300 let starou salaš <strong>Trattenbachalm</strong> v 1 540 m.</p><h2>Trasa a náročnost</h2><p>Pohodová rodinná túra vede podél potoka po mírně stoupající lesní cestě až k salaši (4,5 km, 1,5 hodiny chůze, 350 m převýšení, snadná T1/T2, vhodná pro sportovní kočárky). Dřevěná lávka s vyhlídkou na vodopád. Zdatnější turisté mohou vystoupit na vrchol Zweitausender (2 004 m, T2). Turistická obuv nutná. Psi na vodítku vítáni.</p><h2>Příjezd a doprava</h2><p>Vlakem do Kitzbühelu a autobusem 4010 na zastávku Jochberg Wald/Sauerkaser. Autem po silnici Pass-Thurn-Straße B161 na bezplatné parkoviště u vstupu do údolí. Přístupné od května do konce října.</p><h2>Tipy</h2><p>Dopřejte si tradiční tyrolské prkénko se špekem a horským sýrem na dřevěné terase salaše Trattenbachalm s výhledem na Kleiner Rettenstein a osvěžte se v horském potoce.</p>",
+  "saison": "Mai bis Oktober (Almbewirtschaftung Mitte Juni bis Anfang Oktober)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.kitzbuehel.com/entdecken/orte/jochberg/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-trattenbachtal",
+    "https://www.alpenvereinaktiv.com/de/tour/ins-trattenbachtal-zur-trattenbachalm/1381525/",
+    "https://www.kitzbueheler-alpen.com/",
+    "https://www.vvt.at/"
+  ]
 }

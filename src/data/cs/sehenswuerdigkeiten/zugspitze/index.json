@@ -1,17 +1,17 @@
 {
-  "name": "Zugspitze",
+  "name": "Tiroler Zugspitzbahn & Zugspitze",
   "slug": "zugspitze",
   "status": "published",
-  "region": "ausserfern",
+  "region": "zugspitz-arena",
   "ort": "Ehrwald",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Nejvyšší hora Německa (2.962 m) s dechberoucím 360° panoramatem přes čtyři země – dosažitelná železniční tratí Tiroler Zugspitzbahn.",
-  "beschreibung": "<p>Die <strong>Zugspitze</strong> ist mit 2.962 Metern der höchste Berg Deutschlands und liegt an der Grenze zu Tirol. Von <strong>Ehrwald</strong> aus führt die <strong>Tiroler Zugspitzbahn</strong> ganzjährig auf das Gipfelplateau. Oben erwartet Besucher eine großzügige <strong>Aussichtsplattform</strong>, die bei klarer Sicht einen weiten Rundumblick auf bis zu vier Länder ermöglicht. Auf dem Gipfel befinden sich zudem ein Restaurant und eine Wetterstation. Der Berg ist ein beliebtes Ziel für Wanderer und bietet mehrere Routen, wobei der Aufstieg auch über Klettersteige möglich ist. Die gesamte Anlage ist barrierefrei zugänglich und wird auch im Winter betrieben.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Hora <strong>Zugspitze</strong> (2 962 m) je nejvyšším vrcholem pohoří Wetterstein na hranici Tyrolska a Bavorska. Z tyrolské strany vyjíždí moderní kabinová lanovka Tiroler Zugspitzbahn, která překonává 1 725 výškových metrů za pouhých 10 minut. Z vyhlídkové terasy se otevírá kruhový výhled na více než 400 alpských vrcholů ve 4 zemích (Rakousko, Německo, Švýcarsko, Itálie).</p><h2>Trasa a náročnost</h2><p>Návštěva vrcholu je bezbariérová a vhodná pro celou rodinu díky krytým terasám a muzeu \"Fascinace Zugspitze\" (snadná T1, pro kočárky a vozíčkáře). Ke zlatému vrcholovému kříži vede krátký zajištěný skalní hřebínek (T3, nutná jistota chůze). Pěší výstup z Ehrwaldu přes Gatterl je celodenní túrou (6 hodin, 1 800 m převýšení, T3). Teplé oblečení nutné po celý rok. Psi v lanovce povoleni s náhubkem.</p><h2>Příjezd a doprava</h2><p>Vlakem do Ehrwaldu a odtud bezplatným skibusem/turistickým autobusem k dolní stanici v Ehrwald-Obermoos. Autem přes Fernpass či z Garmische na bezplatné parkoviště u lanovky.</p><h2>Tipy</h2><p>Zarezervujte si speciální jízdu na východ slunce se snídaní v panoramatické restauraci a vyzkoušejte prosklenou vyhlídkovou lávku přímo nad kilometrovou propastí.</p>",
   "emoji": "🗻",
   "farbe": "#9C27B0",
   "hoehe": "2.962 m",
-  "dauer": "Halbtag",
-  "preis": "56 € (Bergbahn Hin & Rück)",
+  "dauer": "2–4 Stunden",
+  "preis": "Tiroler Zugspitzbahn Berg- und Talfahrt ca. 65 € (inkl. Museum Faszination Zugspitze)",
   "tags": [
     "gipfel",
     "panorama",
@@ -22,9 +22,19 @@
   "oeffnungszeiten": "Ganzjährig; Bahn: täglich 8:20–16:30",
   "webseite": "https://www.zugspitze.at",
   "koordinaten": {
-    "lat": "47.4222",
+    "lat": "47.4167",
     "lng": "10.9833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig (außer Revisionszeiten im Frühjahr und Spätherbst)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.zugspitze.at/",
+    "https://www.zugspitzarena.com/de/region/orte/ehrwald/tiroler-zugspitzbahn",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-tiroler-zugspitzbahn",
+    "https://www.alpenvereinaktiv.com/de/tour/tiroler-zugspitze-aussichtsplattform/1381510/",
+    "https://www.vvt.at/"
+  ]
 }

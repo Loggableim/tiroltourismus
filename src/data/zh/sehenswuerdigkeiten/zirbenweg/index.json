@@ -1,17 +1,17 @@
 {
-  "name": "Zirbenweg",
+  "name": "Zirbenweg Patscherkofel & Glungezer",
   "slug": "zirbenweg",
   "status": "published",
   "region": "innsbruck",
-  "ort": "Tulfes",
+  "ort": "Igls",
   "kategorie": "wanderung",
   "kurzbeschreibung": "位于Patscherkofel的阿尔卑斯山最高的柏树学习步道——一场穿越芬芳柏树森林、欣赏壮丽全景的梦幻徒步之旅。",
-  "beschreibung": "Der <strong>Zirbenweg</strong> ist ein rund 7 km langer Höhenwanderweg auf dem Patscherkofel-Plateau zwischen Tulfes und der Bergstation Patscherkofelbahn. Auf einer Höhe von 1.700 bis 1.900 m führt der Weg durch einen der größten zusammenhängenden <strong>Zirbenwälder</strong> der Ostalpen. Entlang des Weges informieren Schautafeln über die Besonderheiten der Zirbe (Zirbelkiefer) – ihre Heilwirkungen, ihr Holz und ihre ökologische Bedeutung. Mehrere Aussichtskanzeln bieten atemberaubende Blicke auf das Inntal, die Nordkette, den Patscherkofel und das Stubaital. Der Weg ist auch für Kinder gut geeignet und ganzjährig begehbar.",
+  "beschreibung": "<h2>概览</h2><p>高悬于因斯布鲁克上空海拔2,000米处的<strong>石松全景步道</strong>（Zirbenweg）是阿尔卑斯山脉中最经典、香气扑鼻的天然漫步胜地。全景步道自伊格尔斯的帕切科菲尔索道顶站（Patscherkofelbahn，海拔1,964米）绵延至图尔费斯的格伦格泽索道顶站（Glungezerbahn，海拔2,035米），穿行于中欧面积最大、树龄最古老的瑞士五针松（石松）森林。部分盘根错节的苍劲古松树龄已逾700年。漫步其间，游人不仅能深呼吸高浓度天然松香精油，更能北眺脚下宛如星河点缀的因河河谷与因斯布鲁克全城，对岸北链山脉与卡尔文德尔群峰拔地而起，雄浑壮美。</p><h2>路线与体能要求</h2><p>步道被誉为全家庭高山轻松徒步的天花板。全长约7公里，沿等高线缓坡前行，全程累积爬升仅约200米（步行约2.5小时，简易T1/T2级）。步道维护极佳，沿途经过木栈道与幽香松林。中途建有温馨古朴的Boscheben高山客栈（海拔2,035米）。景区推出一体化“石松步道环游联票”：搭乘帕切科菲尔缆车上山，漫步至格伦格泽木屋，乘缆车下山后搭乘定点接驳专线大巴返回出发点（亦可反向）。建议穿着防滑徒步鞋并备防风衣。宠物犬全程系牵引绳允许随行与乘缆车。</p><h2>交通指南</h2><p>因斯布鲁克公共交通极具优势：市区J路公交车自因斯布鲁克中央火车站直达伊格尔斯缆车下站；4134路大巴直达图尔费斯缆车站。两缆车站之间开行接驳班车。自驾经A13高速（Innsbruck-Süd出口）或A12高速直达缆车站大型停车场。步道每年6月初至10月底开放。</p><h2>游览建议</h2><p>途中切勿错过被列为自然历史遗产保护的“蒂罗尔最古老石松”——这棵历经700余年风霜的自然奇迹依然生机盎然。在Boscheben客栈露天长凳品尝酥脆金黄的蒂罗尔压榨奶酪丸子配自酿石松烈酒。</p>",
   "emoji": "🥾",
   "farbe": "#4CAF50",
   "hoehe": "1.900 m",
-  "dauer": "2–3 Stunden",
-  "preis": "Bergbahn: 28 € (Erwachsene); Wanderung kostenlos",
+  "dauer": "3–4 Stunden",
+  "preis": "Zirbenweg-Rundfahrtticket (2 Bergbahnen + Shuttlebus) ca. 36 €",
   "tags": [
     "徒步",
     "自然",
@@ -21,11 +21,21 @@
     "桦树"
   ],
   "oeffnungszeiten": "Ganzjährig begehbar; Patscherkofelbahn: täglich 9:00–17:00",
-  "webseite": "https://www.patscherkofelbahn.at",
+  "webseite": "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
   "koordinaten": {
-    "lat": "47.2150",
-    "lng": "11.4580"
+    "lat": "47.2083",
+    "lng": "11.4500"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Anfang Juni bis Ende Oktober",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
+    "https://www.patscherkofelbahn.at/de/sommer/zirbenweg",
+    "https://www.glungezerbahn.at/de/sommer/zirbenweg",
+    "https://www.tirol.at/reisefuehrer/sport/wandern/wandertouren/a-zirbenweg",
+    "https://www.vvt.at/"
+  ]
 }

@@ -1,8 +1,8 @@
 {
-  "name": "Trattenbachtal",
+  "name": "Trattenbachtal & Trattenbachalm",
   "slug": "trattenbachtal",
-  "region": "kitzbuehel",
-  "ort": "Reith bei Kitzbühel",
+  "region": "kitzbueheler-alpen",
+  "ort": "Jochberg",
   "kategorie": "natur",
   "kurzbeschreibung": "Le Trattenbachtal, sauvage et romantique, séduit par son Wasserfall féerique, ses sentiers ombragés de randonnée et une scène forestière idyllique.",
   "emoji": "🌲",
@@ -14,14 +14,26 @@
     "vallée",
     "repos"
   ],
-  "dauer": "1,5-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz Sauerkaser gebührenfrei)",
   "oeffnungszeiten": "Ganzjährig frei zugänglich",
-  "webseite": "https://www.kitzbuehel.com/natur/trattenbachtal",
+  "webseite": "https://www.kitzbuehel.com/entdecken/orte/jochberg/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.4760",
-    "lng": "12.3422"
-  }
+    "lat": "47.3667",
+    "lng": "12.4167"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Trattenbachtal</strong> est une vallée latérale sauvage et préservée des Alpes de Kitzbühel près de Jochberg, au pied du col du Pass Thurn. Épargnée par les grands aménagements, elle offre un torrent impétueux aux cascades rugissantes, des pâturages fleuris et l'authentique alpage tricentenaire de la <strong>Trattenbachalm</strong> à 1 540 m d'altitude.</p><h2>Parcours &amp; Exigences</h2><p>Belle randonnée familiale le long du torrent sur un chemin forestier montant en douceur jusqu'à l'alpage (4,5 km, 1h30 de marche, dénivelé 350 m, T1/T2, accessible aux poussettes tout-terrain). Passerelle aménagée au-dessus de la cascade. Les montagnards peuvent poursuivre vers le sommet du Zweitausender (2 004 m, T2). Chaussures de marche conseillées. Chiens admis en laisse.</p><h2>Accès</h2><p>Gare de Kitzbühel puis bus 4010 jusqu'à l'arrêt Jochberg Wald/Sauerkaser. En voiture par la route du Pass Thurn (B161) jusqu'au parking gratuit à l'entrée de la vallée. Vallée accessible de mai à octobre.</p><h2>Conseils</h2><p>Dégustez une assiette de charcuterie et de fromage d'alpage sur la terrasse en bois de la Trattenbachalm face au Kleiner Rettenstein et profitez d'un bain de pieds rafraîchissant dans le torrent.</p>",
+  "saison": "Mai bis Oktober (Almbewirtschaftung Mitte Juni bis Anfang Oktober)",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com/entdecken/orte/jochberg/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-trattenbachtal",
+    "https://www.alpenvereinaktiv.com/de/tour/ins-trattenbachtal-zur-trattenbachalm/1381525/",
+    "https://www.kitzbueheler-alpen.com/",
+    "https://www.vvt.at/"
+  ]
 }

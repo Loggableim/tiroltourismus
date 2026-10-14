@@ -2,7 +2,7 @@
   "name": "Zillertaler Höhenstraße",
   "slug": "zillertaler-hoehenstrasse",
   "region": "zillertal",
-  "ort": "Mayrhofen",
+  "ort": "Kaltenbach",
   "kategorie": "aussicht",
   "kurzbeschreibung": "La Zillertaler Höhenstraße est une route panoramique de 42 km offrant des vues à couper le souffle sur les Alpes du Zillertal et leurs glaciers.",
   "emoji": "🚗",
@@ -13,14 +13,26 @@
     "nature",
     "voiture"
   ],
-  "dauer": "Halber Tag",
-  "preis": "Maut: € 15,00 pro Fahrzeug",
+  "dauer": "2–5 Stunden",
+  "preis": "Mautgebühr ca. 8–10 € pro PKW / Motorrad",
   "oeffnungszeiten": "Mai bis Oktober, wetterabhängig",
-  "webseite": "https://www.zillertal.at/hoehenstrasse",
+  "webseite": "https://www.zillertaler-hoehenstrasse.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.1672",
-    "lng": "11.8639"
-  }
+    "lat": "47.2833",
+    "lng": "11.8333"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>Zillertaler Höhenstraße</strong> est l'une des routes panoramiques de haute montagne les plus spectaculaires des Alpes, grimpant jusqu'à 2 020 mètres d'altitude. Longue de près de 50 km, elle offre des plongeons visuels vertigineux sur le Zillertal et un panorama grandiose sur les glaciers des Alpes de Zillertal et de Tux.</p><h2>Parcours &amp; Exigences</h2><p>Route alpine goudronnée à péage (environ 8 à 10 € par véhicule) accessible depuis Ried, Kaltenbach ou Hippach. Étroite avec nombreux refuges de croisement. Au sommet (2 020 m à l'alpage de Hirschbichlalm), départs de randonnées familiales comme le parc aux marmottes Murmelland (T1) ou l'ascension du Gedrechter à 2 217 m (T2). Prudence au volant recommandée. Chiens admis en laisse.</p><h2>Accès</h2><p>Train Zillertalbahn jusqu'à Kaltenbach ou Ried puis bus panoramique en été. En voiture par la B169 jusqu'aux péages de montée. Route ouverte de mi-mai à fin octobre selon météo.</p><h2>Conseils</h2><p>Faites une halte photo à la chapelle isolée Hubertuskapelle face aux glaciers et dégustez une soupe traditionnelle au fromage gris à la Hirschbichlalm.</p>",
+  "saison": "Mitte Mai bis Ende Oktober (im Winter komplett schneebedingt gesperrt)",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.zillertaler-hoehenstrasse.com/",
+    "https://www.best-of-zillertal.at/sommer/ausflugsziele/zillertaler-hoehenstrasse/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-zillertaler-hoehenstrasse",
+    "https://www.alpenvereinaktiv.com/de/tour/zillertaler-hoehenstrasse-rundtour/1381505/",
+    "https://www.vvt.at/"
+  ]
 }

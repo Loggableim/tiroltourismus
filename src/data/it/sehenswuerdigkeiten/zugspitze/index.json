@@ -1,17 +1,17 @@
 {
-  "name": "Zugspitze",
+  "name": "Tiroler Zugspitzbahn & Zugspitze",
   "slug": "zugspitze",
   "status": "published",
-  "region": "ausserfern",
+  "region": "zugspitz-arena",
   "ort": "Ehrwald",
   "kategorie": "aussicht",
   "kurzbeschreibung": "La montagna più alta della Germania (2.962 m) con un mozzafiato panorama a 360° su quattro paesi – raggiungibile con la Tiroler Zugspitzbahn.",
-  "beschreibung": "<p>Die <strong>Zugspitze</strong> ist mit 2.962 Metern der höchste Berg Deutschlands und liegt an der Grenze zu Tirol. Von <strong>Ehrwald</strong> aus führt die <strong>Tiroler Zugspitzbahn</strong> ganzjährig auf das Gipfelplateau. Oben erwartet Besucher eine großzügige <strong>Aussichtsplattform</strong>, die bei klarer Sicht einen weiten Rundumblick auf bis zu vier Länder ermöglicht. Auf dem Gipfel befinden sich zudem ein Restaurant und eine Wetterstation. Der Berg ist ein beliebtes Ziel für Wanderer und bietet mehrere Routen, wobei der Aufstieg auch über Klettersteige möglich ist. Die gesamte Anlage ist barrierefrei zugänglich und wird auch im Winter betrieben.</p>",
+  "beschreibung": "<h2>Panoramica</h2><p>La <strong>Zugspitze</strong> (2.962 m) è la vetta più alta del massiccio del Wetterstein, situata sul confine tra Tirolo e Baviera. Sul versante tirolese la modernissima funivia Tiroler Zugspitzbahn supera 1.725 metri di dislivello in soli 10 minuti da Ehrwald. Dalla terrazza sommitale la vista spazia su oltre 400 cime alpine in 4 paesi (Austria, Germania, Svizzera e Italia).</p><h2>Percorso &amp; Requisiti</h2><p>Visita completamente priva di barriere architettoniche tra le terrazze panoramiche e il museo \"Fascinazione Zugspitze\" (T1, per carrozzine e passeggini). La croce di vetta dorata è raggiungibile con una breve cresta attrezzata (T3, passo sicuro ed assenza di vertigini). Salita a piedi per alpinisti da Ehrwald via Gatterl (6 ore, dislivello 1.800 m, T3). Abbigliamento caldo obbligatorio in quota. Cani ammessi con museruola.</p><h2>Come arrivare</h2><p>In treno con la ferrovia dell'Außerfern fino a Ehrwald e bus navetta gratuito per la funivia a Obermoos. In auto attraverso il Passo Fernpass o via Garmisch. Ampio parcheggio gratuito alla partenza.</p><h2>Consigli</h2><p>Prenotate la salita all'alba con colazione gourmet nel ristorante panoramico a 2.962 metri e provate la pedana con pavimento in vetro sospesa nel vuoto della parete nord.</p>",
   "emoji": "🗻",
   "farbe": "#9C27B0",
   "hoehe": "2.962 m",
-  "dauer": "Halbtag",
-  "preis": "56 € (Bergbahn Hin & Rück)",
+  "dauer": "2–4 Stunden",
+  "preis": "Tiroler Zugspitzbahn Berg- und Talfahrt ca. 65 € (inkl. Museum Faszination Zugspitze)",
   "tags": [
     "vetta",
     "panorama",
@@ -22,9 +22,19 @@
   "oeffnungszeiten": "Ganzjährig; Bahn: täglich 8:20–16:30",
   "webseite": "https://www.zugspitze.at",
   "koordinaten": {
-    "lat": "47.4222",
+    "lat": "47.4167",
     "lng": "10.9833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig (außer Revisionszeiten im Frühjahr und Spätherbst)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.zugspitze.at/",
+    "https://www.zugspitzarena.com/de/region/orte/ehrwald/tiroler-zugspitzbahn",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-tiroler-zugspitzbahn",
+    "https://www.alpenvereinaktiv.com/de/tour/tiroler-zugspitze-aussichtsplattform/1381510/",
+    "https://www.vvt.at/"
+  ]
 }

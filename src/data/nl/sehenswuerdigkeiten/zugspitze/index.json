@@ -1,17 +1,17 @@
 {
-  "name": "Zugspitze",
+  "name": "Tiroler Zugspitzbahn & Zugspitze",
   "slug": "zugspitze",
   "status": "published",
-  "region": "ausserfern",
+  "region": "zugspitz-arena",
   "ort": "Ehrwald",
   "kategorie": "aussicht",
   "kurzbeschreibung": "De hoogste berg van Duitsland (2.962 m) met adembenemend 360°-panorama over vier landen – bereikbaar met de Tiroler Zugspitzbahn.",
-  "beschreibung": "<p>Die <strong>Zugspitze</strong> ist mit 2.962 Metern der höchste Berg Deutschlands und liegt an der Grenze zu Tirol. Von <strong>Ehrwald</strong> aus führt die <strong>Tiroler Zugspitzbahn</strong> ganzjährig auf das Gipfelplateau. Oben erwartet Besucher eine großzügige <strong>Aussichtsplattform</strong>, die bei klarer Sicht einen weiten Rundumblick auf bis zu vier Länder ermöglicht. Auf dem Gipfel befinden sich zudem ein Restaurant und eine Wetterstation. Der Berg ist ein beliebtes Ziel für Wanderer und bietet mehrere Routen, wobei der Aufstieg auch über Klettersteige möglich ist. Die gesamte Anlage ist barrierefrei zugänglich und wird auch im Winter betrieben.</p>",
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Zugspitze</strong> (2.962 m) is de hoogste berg van het Wettersteingebergte op de grens van Tirol en Beieren. Aan Tiroolse zijde overbrugt de moderne Tiroler Zugspitzbahn 1.725 hoogtemeters in slechts 10 minuten vanuit Ehrwald. Boven biedt het panoramaterras een 360-graden uitzicht over 400 alpentoppen in 4 landen (Oostenrijk, Duitsland, Zwitserland en Italië).</p><h2>Route &amp; Vereisten</h2><p>Volledig barrièrevrij en geschikt voor alle leeftijden met uitzichtplatforms en het belevingsmuseum \"Faszination Zugspitze\" (T1, rolstoel- en kinderwagentoegankelijk). Het gouden bergtopkruis is bereikbaar via een korte gezekerde rotsgraat (T3, tredzekerheid vereist). Bergbeklimmers kunnen vanuit Ehrwald via de Gatterl omhoog wandelen (6 uur, 1.800 m stijgen, T3). Warme kleding altijd noodzakelijk. Honden met muilkorf toegestaan in de lift.</p><h2>Bereikbaarheid</h2><p>Met de trein naar Ehrwald en per gratis shuttlebus naar het dalstation in Ehrwald-Obermoos. Met de auto via de Fernpass of via Garmisch naar de gratis parkeerplaats bij de lift.</p><h2>Tips</h2><p>Boek een zonsopgangtocht met ontbijtbuffet in het panoramarestaurant op de top en stap op het glazen uitkijkplatform dat over de steile noordwand uitsteekt.</p>",
   "emoji": "🗻",
   "farbe": "#9C27B0",
   "hoehe": "2.962 m",
-  "dauer": "Halbtag",
-  "preis": "56 € (Bergbahn Hin & Rück)",
+  "dauer": "2–4 Stunden",
+  "preis": "Tiroler Zugspitzbahn Berg- und Talfahrt ca. 65 € (inkl. Museum Faszination Zugspitze)",
   "tags": [
     "gipfel",
     "panorama",
@@ -22,9 +22,19 @@
   "oeffnungszeiten": "Ganzjährig; Bahn: täglich 8:20–16:30",
   "webseite": "https://www.zugspitze.at",
   "koordinaten": {
-    "lat": "47.4222",
+    "lat": "47.4167",
     "lng": "10.9833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig (außer Revisionszeiten im Frühjahr und Spätherbst)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.zugspitze.at/",
+    "https://www.zugspitzarena.com/de/region/orte/ehrwald/tiroler-zugspitzbahn",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-tiroler-zugspitzbahn",
+    "https://www.alpenvereinaktiv.com/de/tour/tiroler-zugspitze-aussichtsplattform/1381510/",
+    "https://www.vvt.at/"
+  ]
 }

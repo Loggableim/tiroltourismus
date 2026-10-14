@@ -1,17 +1,17 @@
 {
-  "name": "Zugspitze",
+  "name": "Tiroler Zugspitzbahn & Zugspitze",
   "slug": "zugspitze",
   "status": "published",
-  "region": "ausserfern",
+  "region": "zugspitz-arena",
   "ort": "Ehrwald",
   "kategorie": "aussicht",
   "kurzbeschreibung": "The highest mountain in Germany (2,962 m) with breathtaking 360° views over four countries – accessible via the Tiroler Zugspitzbahn.",
-  "beschreibung": null,
+  "beschreibung": "<h2>Overview</h2><p>Rising to 2,962 meters, the <strong>Zugspitze</strong> presides as Germany's highest elevation and the monumental crown of the Wetterstein mountain range, straddling the border between Tyrol and Bavaria. From the Tyrolean side, the ultra-modern <strong>Tyrolean Zugspitze Cable Car</strong> (Tiroler Zugspitzbahn) accesses this rock colossus with superlative engineering: in less than ten minutes, the spacious panoramic aerial tramway ascends an astonishing 1,725 vertical meters from Ehrwald-Obermoos directly to the summit crest, skimming vertically along sheer limestone walls. The sprawling observation terrace unveils an extraordinary 4-country alpine panorama: on crystal-clear days, guests gaze across more than 400 peaks spanning Austria, Germany, Italy, and Switzerland—stretching from the Großglockner and Wildspitze to the Bernina Range. Summit attractions include the interactive museum \"Fascination Zugspitze,\" a dedicated Snow Crystal gallery, and cantilevered glass-bottom balconies peering into a 1,000-meter vertical abyss.</p><h2>Route &amp; Requirements</h2><p>Ascending the Zugspitze via the Tyrolean cableway is barrier-free, weather-resilient, and accessible for visitors of all generations. The multi-tiered summit complex features heated indoor corridors, escalators, and protected viewing galleries (easy grade T1, wheelchair and stroller friendly). Experienced alpine walkers seeking to touch the historic gilded summit cross can cross the narrow, secured iron ladder ridge during snow-free summer weeks (grade T3, requiring alpine surefootedness and total head for heights). For endurance mountaineers, hiking up to the Zugspitze from Ehrwald via the \"Gatterl\" pass and Zugspitzplatt glacier cirque is a benchmark day trek (5 to 6 hours, 1,800 vertical meters gain, grade T3). Thermal jackets and sturdy footwear are essential year-round, as sub-zero weather and snow flurries can occur even in July. Leashed and muzzled dogs are permitted inside the cable car.</p><h2>Visit &amp; Arrival</h2><p>Rail passengers travel via the Außerfernbahn line to Ehrwald railway station, connecting directly to complimentary regional hiking shuttles serving the lower cable car terminal at Ehrwald-Obermoos. Motorists access Ehrwald toll-free from Bavaria via Garmisch-Partenkirchen or Füssen, or across Tyrol's Fernpass highway B179. Expansive free parking and EV chargers are located at the base station. The Tiroler Zugspitzbahn operates year-round (except brief spring and late-autumn maintenance periods), running departures every 20 minutes daily.</p><h2>Tips</h2><p>Reserve an exclusive sunrise or full-moon ascent with the Tiroler Zugspitzbahn to witness the golden alpine dawn breaking over an ocean of clouds while savoring a lavish breakfast buffet in the Summit Panorama Restaurant. Don't miss stepping onto the daring cantilevered glass-floored viewing ledge projecting out over the north face.</p>",
   "emoji": "🗻",
   "farbe": "#9C27B0",
   "hoehe": "2.962 m",
-  "dauer": "Halbtag",
-  "preis": "56 € (Bergbahn Hin & Rück)",
+  "dauer": "2–4 Stunden",
+  "preis": "Tiroler Zugspitzbahn Berg- und Talfahrt ca. 65 € (inkl. Museum Faszination Zugspitze)",
   "tags": [
     "summit",
     "panorama",
@@ -22,9 +22,19 @@
   "oeffnungszeiten": "Ganzjährig; Bahn: täglich 8:20–16:30",
   "webseite": "https://www.zugspitze.at",
   "koordinaten": {
-    "lat": "47.4222",
+    "lat": "47.4167",
     "lng": "10.9833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig (außer Revisionszeiten im Frühjahr und Spätherbst)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.zugspitze.at/",
+    "https://www.zugspitzarena.com/de/region/orte/ehrwald/tiroler-zugspitzbahn",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-tiroler-zugspitzbahn",
+    "https://www.alpenvereinaktiv.com/de/tour/tiroler-zugspitze-aussichtsplattform/1381510/",
+    "https://www.vvt.at/"
+  ]
 }

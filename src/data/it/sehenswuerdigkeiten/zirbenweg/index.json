@@ -1,17 +1,17 @@
 {
-  "name": "Zirbenweg",
+  "name": "Zirbenweg Patscherkofel & Glungezer",
   "slug": "zirbenweg",
   "status": "published",
   "region": "innsbruck",
-  "ort": "Tulfes",
+  "ort": "Igls",
   "kategorie": "wanderung",
   "kurzbeschreibung": "Il sentiero didattico di Zirben più alto delle Alpi sul Patscherkofel – un'escursione da sogno tra boschi profumati di Zirben e un panorama mozzafiato.",
-  "beschreibung": "Der <strong>Zirbenweg</strong> ist ein rund 7 km langer Höhenwanderweg auf dem Patscherkofel-Plateau zwischen Tulfes und der Bergstation Patscherkofelbahn. Auf einer Höhe von 1.700 bis 1.900 m führt der Weg durch einen der größten zusammenhängenden <strong>Zirbenwälder</strong> der Ostalpen. Entlang des Weges informieren Schautafeln über die Besonderheiten der Zirbe (Zirbelkiefer) – ihre Heilwirkungen, ihr Holz und ihre ökologische Bedeutung. Mehrere Aussichtskanzeln bieten atemberaubende Blicke auf das Inntal, die Nordkette, den Patscherkofel und das Stubaital. Der Weg ist auch für Kinder gut geeignet und ganzjährig begehbar.",
+  "beschreibung": "<h2>Panoramica</h2><p>Il <strong>Zirbenweg</strong> (Sentiero dei Cembri) a quota 2.000 metri sopra Innsbruck è una delle escursioni panoramiche più amate e suggestive delle Alpi. Si snoda tra la stazione a monte del Patscherkofel e la Tulfeinalm sul Glungezer attraversando la più antica e vasta foresta di pini cembri dell'Europa centrale, con alberi monumentali di oltre 700 anni.</p><h2>Percorso &amp; Requisiti</h2><p>Camminata pianeggiante e agevole di circa 7 km con soli 200 m di dislivello complessivo (2,5 ore, facile T1/T2), ideale per tutta la famiglia. Ristoro tradizionale a metà percorso presso la baita Boscheben (2.035 m). Comodo biglietto circolare combinato che include le due funivie e il bus navetta di collegamento tra le stazioni a valle. Scarpe da trekking comode consigliate. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>Da Innsbruck bus cittadino J fino alla funivia Patscherkofel a Igls o bus 4134 fino a Tulfes. Bus navetta dedicato tra i due impianti. In auto dall'A13 (uscita Innsbruck-Süd) o A12 (Hall-Mitte).</p><h2>Consigli</h2><p>Cercate lungo il percorso il \"Cembro più antico del Tirolo\", monumento naturale con 700 anni di vita, e gustate i canederli al formaggio pressato con liquore al pino cembro a Boscheben.</p>",
   "emoji": "🥾",
   "farbe": "#4CAF50",
   "hoehe": "1.900 m",
-  "dauer": "2–3 Stunden",
-  "preis": "Bergbahn: 28 € (Erwachsene); Wanderung kostenlos",
+  "dauer": "3–4 Stunden",
+  "preis": "Zirbenweg-Rundfahrtticket (2 Bergbahnen + Shuttlebus) ca. 36 €",
   "tags": [
     "trekking",
     "natura",
@@ -21,11 +21,21 @@
     "pino mugo"
   ],
   "oeffnungszeiten": "Ganzjährig begehbar; Patscherkofelbahn: täglich 9:00–17:00",
-  "webseite": "https://www.patscherkofelbahn.at",
+  "webseite": "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
   "koordinaten": {
-    "lat": "47.2150",
-    "lng": "11.4580"
+    "lat": "47.2083",
+    "lng": "11.4500"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Anfang Juni bis Ende Oktober",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
+    "https://www.patscherkofelbahn.at/de/sommer/zirbenweg",
+    "https://www.glungezerbahn.at/de/sommer/zirbenweg",
+    "https://www.tirol.at/reisefuehrer/sport/wandern/wandertouren/a-zirbenweg",
+    "https://www.vvt.at/"
+  ]
 }

@@ -1,10 +1,10 @@
 {
-  "name": "Schloss Fernsteinsee",
+  "name": "Schloss Fernsteinsee & Bergsee",
   "slug": "schloss-fernsteinsee",
   "region": "ausserfern",
   "ort": "Nassereith",
   "kategorie": "kultur",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Märchenhaftes Schlossensemble am smaragdgrünen Fernsteinsee – Ruine Sigmundsburg auf der Insel, Taucherparadies und königliche Ludwig-Geschichte.",
   "emoji": "🏰",
   "farbe": "#9C27B0",
   "tags": [
@@ -14,16 +14,26 @@
     "natur",
     "kultur"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Besichtigung kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos frei zugänglich (Bootsverleih ca. 10–15 € pro Stunde; Parkplatz ca. 5 €)",
   "oeffnungszeiten": "Täglich zugänglich",
-  "webseite": "https://www.schloss-fernsteinsee.at",
+  "webseite": "https://www.fernsteinsee.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.3148",
-    "lng": "10.8379"
+    "lat": "47.3389",
+    "lng": "10.8333"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Schloss Fernsteinsee</strong> – Mit ihrer beeindruckenden Geschichte und Architektur zählt die Schloss Fernsteinsee zu den bedeutendsten Kulturdenkmälern der Region Außerfern. Das märchenhafte Wasserschloss am idyllischen Fernsteinsee verbindet Geschichte, Gastronomie und eine traumhafte See-Landschaft Besucher können hier in die faszinierende Welt der Tiroler Kunst und Kultur eintauchen. Die sorgfältig restaurierten Räume erzählen Geschichten aus längst vergangenen Epochen, während moderne Inszenierungen neue Perspektiven eröffnen. Mitten in der reizvollen Altstadt von Nassereith gelegen, fügt sich die Schloss Fernsteinsee harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Planen Sie ausreichend Zeit ein – die Schloss Fernsteinsee wird Sie mit ihrer Schönheit und Vielfalt begeistern.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>castillo de Fernsteinsee</strong> es una joya histórica situada a orillas de un lago alpino color esmeralda al pie del puerto de Fernpass, en Nassereith. Famoso por sus aguas cristalinas con más de 20 metros de visibilidad, acoge en una isla boscosa las románticas <strong>ruinas de Sigmundsburg</strong> y estancias de recreo del rey Luis II de Baviera.</p><h2>Ruta y Requisitos</h2><p>Paseo circular llano alrededor del lago bajo la sombra de los abetos (45 min, 2,5 km, fácil T1, apto para carritos). Alquiler de barcas de remos y pedales para navegar hasta la isla medieval. Destino de fama mundial para buceadores. Calzado cómodo recomendado. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a Imst-Pitztal y autobús de línea 150/160 hasta la parada de Fernsteinsee. En coche por la carretera B179 del Fernpass con aparcamiento en el complejo del hotel-castillo. Sendero libre todo el año.</p><h2>Consejos</h2><p>Alquile una barca en el embarcadero para navegar tranquilamente alrededor de la isla del castillo y pruebe la famosa tarta casera Fernsteinsee en la terraza del restaurante.</p>",
+  "saison": "Ganzjährig frei zugänglich (Bootsverleih von Mai bis Oktober)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.fernsteinsee.at/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-schloss-fernsteinsee",
+    "https://www.nassereith.tirol.gv.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-fernsteinsee/1381555/",
+    "https://www.vvt.at/"
+  ]
 }

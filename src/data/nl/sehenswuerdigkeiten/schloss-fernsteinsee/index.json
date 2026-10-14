@@ -1,5 +1,5 @@
 {
-  "name": "Schloss Fernsteinsee",
+  "name": "Schloss Fernsteinsee & Bergsee",
   "slug": "schloss-fernsteinsee",
   "region": "ausserfern",
   "ort": "Nassereith",
@@ -14,16 +14,26 @@
     "natuur",
     "cultuur"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Besichtigung kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos frei zugänglich (Bootsverleih ca. 10–15 € pro Stunde; Parkplatz ca. 5 €)",
   "oeffnungszeiten": "Täglich zugänglich",
-  "webseite": "https://www.schloss-fernsteinsee.at",
+  "webseite": "https://www.fernsteinsee.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.3148",
-    "lng": "10.8379"
+    "lat": "47.3389",
+    "lng": "10.8333"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Schloss Fernsteinsee</strong> – Mit ihrer beeindruckenden Geschichte und Architektur zählt die Schloss Fernsteinsee zu den bedeutendsten Kulturdenkmälern der Region Außerfern. Das märchenhafte Wasserschloss am idyllischen Fernsteinsee verbindet Geschichte, Gastronomie und eine traumhafte See-Landschaft Besucher können hier in die faszinierende Welt der Tiroler Kunst und Kultur eintauchen. Die sorgfältig restaurierten Räume erzählen Geschichten aus längst vergangenen Epochen, während moderne Inszenierungen neue Perspektiven eröffnen. Mitten in der reizvollen Altstadt von Nassereith gelegen, fügt sich die Schloss Fernsteinsee harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Planen Sie ausreichend Zeit ein – die Schloss Fernsteinsee wird Sie mit ihrer Schönheit und Vielfalt begeistern.</p>"
+  "beschreibung": "<h2>Overzicht</h2><p>Het sprookjesachtige <strong>Schloss Fernsteinsee</strong> ligt aan een smaragdgroen bergmeer aan de voet van de Fernpass bij Nassereith. Het kristalheldere water met meer dan 20 meter zicht herbergt op een bebost eiland de romantische <strong>ruïne Sigmundsburg</strong> uit de 15e eeuw, ooit een favoriet toevluchtsoord van koning Ludwig II van Beieren.</p><h2>Route &amp; Vereisten</h2><p>Zeer toegankelijke, vlakke rondwandeling door het bos rond het meer (45 min, 2,5 km, T1, kinderwagentoegankelijk). Roeiboot- en waterfietsverhuur bij de kasteelsteiger om naar het eiland te varen. Wereldberoemde duikstek. Gemakkelijke schoenen volstaan. Honden aangelijnd toegestaan.</p><h2>Bereikbaarheid</h2><p>Met de trein naar Imst-Pitztal en bus 150/160 naar halte Fernsteinsee. Met de auto via de Fernpassstraße B179 naar de parkeerplaats bij het kasteelhotel. De oevers zijn vrij toegankelijk.</p><h2>Tips</h2><p>Huur een houten roeiboot om geruisloos rond het eiland met de Sigmundsburg te varen en geniet op het terras van de befaamde huisgemaakte Fernsteinsee-taart.</p>",
+  "saison": "Ganzjährig frei zugänglich (Bootsverleih von Mai bis Oktober)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.fernsteinsee.at/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-schloss-fernsteinsee",
+    "https://www.nassereith.tirol.gv.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-fernsteinsee/1381555/",
+    "https://www.vvt.at/"
+  ]
 }

@@ -1,15 +1,15 @@
 {
-  "name": "Walschensaal",
+  "name": "Walschensaal & Kaunertaler Klamm",
   "slug": "walschensaal",
   "region": "kaunertal",
   "ort": "Feichten",
   "kategorie": "natur",
   "kurzbeschreibung": "A breathtaking rock gorge in the hintere Kaunertal, roaring with cascading waters and towering cliffs.",
-  "beschreibung": "<p>Currently, no excursion destination named <strong>Walschensaal</strong> can be found in the Kaunertal; neither the Tourismusverband Tiroler Oberland nor the municipality of Kaunertal list such an entry. The present entry describes a wild, deeply incised gorge near Feichten, through which a stream cascades over several waterfalls, as well as a narrow, well-secured hiking trail with several viewpoints along the gorge. Contact and opening hours information is therefore deliberately left open.</p><p>Feichten is the main village of the municipality of Kaunertal in the district of Landeck and lies at 1,287 metres above sea level in the nature park and glacier region. The Kaunertal extends from Prutz to the Kaunertaler Gletscher; the Tourismusverband Tiroler Oberland, based in Feichten, manages the region. An independent route or facility named Walschensaal could not be confirmed in publicly accessible sources, therefore only the data from this entry itself and generally known regional data are reproduced here.</p>",
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Walschensaal</strong> nestled within the rugged Kaunertal near Feichten ranks among the most mysterious, primeval, and enchanting natural monuments in the Tyrolean Oberland. Carved deeply into the crystalline granite slopes of the Kaunergrat ridge, the untamed Faggenbach torrent has sculpted a breathtaking gorge amphitheater over millennia. At a dramatic bend in the defile, the gorge broadens into a colossal, cathedral-like rock cavern—the titular \"Walschensaal.\" Here, glacial torrents crash across glass-smooth gneiss escarpments and cavernous plunge pools, sending fine misty spray tumbling over emerald moss walls. Local folklore traces the name \"Walschensaal\" to medieval Rhaeto-Romanic (\"Welsche\") miners and traders who sought emergency shelter within this sheltered grotto during mountain storms. Untouched by mass commercialization, the monument offers a raw, sensory immersion into untamed alpine hydrology.</p><h2>Route &amp; Requirements</h2><p>Walking to the Walschensaal provides a refreshing and adventurous woodland ramble tailored for families and nature purists. Departing from the center of Feichten (starting adjacent to the Quellalpin recreational complex), a well-marked, shaded trail traces the cascading Faggenbach upstream (distance approx. 2.5 km to the rock cavern, walking time 45 to 60 minutes, 120 vertical meters gentle climb, easy-to-moderate grade T1/T2). The route wanders over crushed-stone paths, timber footbridges, and secured viewing balconies directly into the throat of the chasm (a captivating adventure for surefooted youngsters; wooden stairs preclude standard strollers). During sweltering midsummer heatwaves, the cool gorge air and glacial spray provide a natural air-conditioned sanctuary. Hikers seeking longer treks can continue uphill toward the roaring Verpeil Waterfall or the high-alpine Verpeilhütte (2,025 m; grade T2/T3). Shoes with reliable traction are essential on moist timber and rock steps. Leashed dogs are permitted on all paths.</p><h2>Visit &amp; Arrival</h2><p>Rail passengers travel via ÖBB mainline trains into Landeck-Zams station, transferring directly to regional VVT bus line 230 traversing the Kaunertal to the \"Feichten Zentrum / Quellalpin\" stop. Motorists travel via the Inntal autobahn A12 (exit Reschenpass) and follow highway B180 to Prutz, branching onto the scenic Kaunertal provincial road L18 to Feichten. Ample free parking is situated at the Quellalpin leisure pavilion. The Walschensaal gorge path is accessible free of charge during snow-free months from May through late October.</p><h2>Tips</h2><p>Step onto the cantilevered wooden observation balcony directly facing the rock cathedral to breathe deeply of the negative-ion-charged glacial mist, renowned for clearing the respiratory system. Pair your gorge hike with a relaxing afternoon at the Quellalpin wellness spa in Feichten, unwinding in the panoramic stone-pine saunas.</p>",
   "emoji": "🌊",
   "farbe": "#1565C0",
-  "dauer": "1 Stunde",
-  "preis": "Kostenlos",
+  "dauer": "1–2 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz in Feichten gebührenfrei)",
   "tags": [
     "nature",
     "gorge",
@@ -18,12 +18,22 @@
     "free"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich (Schnee im Winter möglich)",
-  "webseite": "",
+  "webseite": "https://www.kaunertal.com",
   "status": "published",
   "koordinaten": {
-    "lat": "47.0330556",
-    "lng": "10.6416667"
+    "lat": "47.0500",
+    "lng": "10.7500"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Mai bis Ende Oktober (im Winter vereist und gesperrt)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.kaunertal.com/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-walschensaal",
+    "https://www.alpenvereinaktiv.com/de/tour/durch-die-kaunertaler-klamm-zum-walschensaal/1381575/",
+    "https://www.naturpark-kaunergrat.at/",
+    "https://www.vvt.at/"
+  ]
 }

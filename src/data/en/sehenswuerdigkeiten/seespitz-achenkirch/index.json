@@ -1,17 +1,17 @@
 {
-  "name": "Seespitz Achenkirch",
+  "name": "Seespitz Achenkirch & Strandbad",
   "slug": "seespitz-achenkirch",
   "status": "published",
   "region": "achensee",
   "ort": "Achenkirch",
   "kategorie": "natur",
   "kurzbeschreibung": "The southern tip of Achensee, featuring the largest swimming bay, a playground, and stunning views of the Karwendel – perfect for families.",
-  "beschreibung": null,
+  "beschreibung": "<h2>Overview</h2><p><strong>Seespitz Achenkirch</strong> and its adjacent lakeside beach park define the sun-drenched northern shore of Lake Achensee—Tyrol's largest and deepest natural lake, frequently celebrated as the \"Tyrolean Sea\" owing to its majestic fjord-like setting nestled between the Karwendel and Rofan mountain ranges. At Achenkirch, the otherwise sheer-sided alpine lake opens into a gently shelving natural river delta, transformed through sheltered gravel bays and landscaped islets into a premier recreational wonderland. Boasting expansive sunbathing lawns, timber swimming jetties, and an adventure water playground, Seespitz represents the crown jewel of lakeside leisure in the Achen Valley. The area also serves as a primary port of call for the historic <strong>Achensee Ferry Line</strong>, whose classic white passenger vessels cruise the emerald waters toward Pertisau and Maurach. Furthermore, Seespitz marks the official trailhead for the renowned shoreline hike to rustic Gaisalm.</p><h2>Route &amp; Requirements</h2><p>Lakeside trails surrounding Seespitz accommodate all ages and walking preferences. The lakeside promenade provides a level, scenic stroll on paved and crushed-gravel pathways winding past recreational marinas and reed sanctuaries toward Achenkirch village (approx. 1 hour stroll, easy grade T1, fully wheelchair and stroller accessible). Energetic trekkers utilize Seespitz as the gateway to the celebrated Gaisalm Shoreline Trail: carved directly into vertical limestone bluffs and secured with steel wire handrails, the path contours the sheer western shore to reach the only alpine pasture chalet in Tyrol accessible exclusively on foot or by passenger ferry (distance approx. 5 km, 1.5 to 2 hours, moderate grade T2, requiring surefootedness on exposed rock steps; return comfortably by ferry). The beach lido offers changing facilities, snack kiosks, beach volleyball, and pedal boat hire. Leashed dogs are permitted along the public promenade, though restricted from designated swimming lawns.</p><h2>Visit &amp; Arrival</h2><p>Rail passengers travel via mainline ÖBB trains to Jenbach railway junction. From there, regional VVT bus line 8332 departs frequently via Maurach straight to the \"Achenkirch Strandbad\" stop right beside the lake. Motorists arrive toll-free from Bavaria via Tegernsee and the Achen Pass, or take the Inntal autobahn A12 (exit Wiesing/Achensee) along highway B181. Generous pay parking is situated directly at the beach park. Lake shores remain publicly accessible year-round; the beach facilities operate from June through September.</p><h2>Tips</h2><p>Pair an exhilarating morning hike along the cliffside trail to Gaisalm with a scenic boat cruise return across the lake back to Seespitz, taking in the sheer limestone amphitheaters of the Rofan Range. Indulge in artisanal gelato on the timber jetty at the Strandcafé while watching windsurfers skimming across turquoise waters.</p>",
   "emoji": "🏖️",
   "farbe": "#4DD0E1",
   "hoehe": "929 m",
-  "dauer": "Half-/Halbtag",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos frei zugänglich (Strandbad Achenkirch ca. 5 €, Parkplatz ca. 6–8 € pro Tag)",
   "tags": [
     "bathing",
     "family",
@@ -21,11 +21,21 @@
     "nature"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich (Badewetter: Mai–Sep)",
-  "webseite": "https://www.achensee.info/seespitz",
+  "webseite": "https://www.achensee.com/entdecken-erleben/sommer/seen-wasser/strandbad-achenkirch/",
   "koordinaten": {
     "lat": "47.5167",
     "lng": "11.7000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig frei zugänglich (Badesaison Juni bis September)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.achensee.com/entdecken-erleben/sommer/seen-wasser/strandbad-achenkirch/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-strandbad-achensee-nord",
+    "https://www.alpenvereinaktiv.com/de/tour/von-achenkirch-ueber-die-gaisalm-nach-pertisau/1381560/",
+    "https://www.tirolerschifffahrt.at/",
+    "https://www.vvt.at/"
+  ]
 }

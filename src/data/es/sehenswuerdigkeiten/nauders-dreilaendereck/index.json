@@ -1,17 +1,17 @@
 {
-  "name": "Nauders Dreiländereck",
+  "name": "Nauders Dreiländereck & Festung",
   "slug": "nauders-dreilaendereck",
   "status": "published",
   "region": "landeck",
   "ort": "Nauders",
   "kategorie": "aussicht",
   "kurzbeschreibung": "La Dreiländerstein, cerca de Nauders, marca el punto fronterizo donde se encuentran Austria, Suiza e Italia.",
-  "beschreibung": "<p>La <strong>Dreiländerstein</strong>, cerca de Nauders, marca el punto donde se encuentran las fronteras de Austria, Suiza e Italia. Se encuentra a más de 2.000 metros de altitud en la ladera del Piz Lad y es un destino de senderismo muy popular en el trifinio del paso de Reschen.</p><p>La ruta clásica comienza en la estación de montaña Mutzkopf y pasa junto al Schwarzer See y el Grünsee, atraviesa los prados de Gufra hasta llegar a la piedra. Las fronteras de los tres países están dibujadas con precisión en la piedra. Como recompensa, espera una amplia vista sobre la Baja Engadina con el Muttler, así como sobre el valle superior del Inn tiroles cerca de Finstermünz.</p>",
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Dreiländereck de Nauders</strong> (2.179 m) en el paso de Reschenpass es el histórico hito fronterizo donde confluyen Austria, Suiza e Italia. Enmarcado por las cumbres del macizo de Ortler, alberga además la colosal <strong>Fortaleza de Nauders</strong>, el único fuerte de bloqueo vial austrohúngaro del siglo XIX conservado íntegramente.</p><h2>Ruta y Requisitos</h2><p>Ruta senderista desde la estación superior del teleférico Bergkastel (2.200 m) hasta el hito de las tres fronteras (1,5 horas, T2, terreno rocoso). Visita guiada al interior de la fortaleza militar de piedra (1 hora, T1, llevar chaqueta). Calzado de montaña y documento de identidad indispensables. Perros permitidos con correa en el monte.</p><h2>Cómo llegar</h2><p>En tren a Landeck-Zams y autobús 210 a Nauders. En coche por la carretera B180 hacia el Reschenpass con aparcamientos gratuitos en el fuerte y la telecabina. Abierto de junio a octubre.</p><h2>Consejos</h2><p>Póngase con un pie en Suiza, otro en Italia y una mano en Austria para una foto inolvidable junto al monolito y disfrute de la panorámica del monte Ortler desde la terraza de Bergkastel.</p>",
   "emoji": "📍",
   "farbe": "#F44336",
   "hoehe": "2.175 m",
-  "dauer": "2–3 Stunden",
-  "preis": "7 € (Festungseintritt)",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos frei zugänglich (Führung Festung Nauders ca. 9 €; Bergkastelbahn ca. 26 €)",
   "tags": [
     "aussicht",
     "geschichte",
@@ -21,11 +21,21 @@
     "panorama"
   ],
   "oeffnungszeiten": "Mai–Okt: täglich 9:00–17:00",
-  "webseite": "https://www.nauders.com/dreilaendereck",
+  "webseite": "https://www.nauders.com",
   "koordinaten": {
-    "lat": "46.8667",
-    "lng": "10.5333"
+    "lat": "46.8833",
+    "lng": "10.5000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Juni bis Oktober (Festungsführungen von Mai bis Oktober)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.nauders.com/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-festung-nauders",
+    "https://www.alpenvereinaktiv.com/de/tour/zum-dreilaendergrenzstein-in-nauders/1381535/",
+    "https://www.festung-nauders.at/",
+    "https://www.vvt.at/"
+  ]
 }

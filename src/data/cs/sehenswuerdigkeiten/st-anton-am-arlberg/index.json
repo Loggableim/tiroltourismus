@@ -1,17 +1,17 @@
 {
-  "name": "St. Anton am Arlberg",
+  "name": "St. Anton am Arlberg & Valluga",
   "slug": "st-anton-am-arlberg",
   "status": "published",
   "region": "landeck",
   "ort": "St. Anton am Arlberg",
   "kategorie": "sport",
   "kurzbeschreibung": "Kolébka alpského lyžování: St. Anton am Arlberg nabízí ve Ski Arlberg 301 kilometrů sjezdovek, přes 200 km hlubokého sněhu a legendární après-ski.",
-  "beschreibung": "<p><strong>St. Anton am Arlberg</strong> leží ve výšce 1 304 metrů na konci údolí Stanzertal v Tyrolsku a je považován za kolébku alpského lyžování. Již v roce 1901 zde byl založen Ski-Club Arlberg, v roce 1904 se konal první lyžařský závod a v roce 1921 otevřel Hannes Schneider první lyžařskou školu. Dnes tvoří obec společně se St. Christoph a Stuben východní část <strong>Ski Arlberg</strong>, největšího souvislého lyžařského areálu v Rakousku. Nabízí 301 kilometrů sjezdovek, více než 200 kilometrů variant hlubokého sněhu a 85 lanovek a vleků. Valluga s vyhlídkovou plošinou ve výšce 2 811 metrů je nejvyšším bodem. Legendární jsou závody Arlberg-Kandahar, hromadný závod Der Weisse Rausch a živý après-ski. V létě láká pěší turistika, cyklistika a Arlberg Trail.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Městečko <strong>St. Anton am Arlberg</strong> je celosvětově uznáváno jako kolébka alpského lyžování. Dominuje mu mohutný vrchol <strong>Valluga</strong> (2 811 m) s vyhlídkovou terasou nabízející kruhový výhled na více než 500 alpských vrcholů v 5 zemích (Rakousko, Německo, Švýcarsko, Itálie, Lichtenštejnsko) a rodinné jezero Verwallsee.</p><h2>Trasa a náročnost</h2><p>Pohodlný výjezd lanovkami na vyhlídkovou galerii Vallugy ve 2 811 m (snadná T1, pro rodiny). Příjemná rovinatá procházka údolím k jezeru Verwallsee s 35 m dlouhým visutým mostem (1 hodina chůze, 3,5 km, snadná T1, pro kočárky). Náročná zajištěná cesta Arlberger Klettersteig pro zkušené horolezce (D). Pevná obuv nutná. Psi v lanovkách povoleni na vodítku.</p><h2>Příjezd a doprava</h2><p>Mezinárodní rychlíkové nádraží Railjet St. Anton am Arlberg leží přímo v centru. Autem po rychlostní silnici S16 na velká parkoviště u lanovek Galzigbahn a Rendlbahn.</p><h2>Tipy</h2><p>Vyjeďte historickou kabinkou Vallugabahn II na nejvyšší vyhlídku a spatřete Bodamské jezero. Navštivte muzeum lyžování v historické vile v lázeňském parku.</p>",
   "emoji": "⛷️",
   "farbe": "#2E7D32",
   "hoehe": "2.810 m (Valluga)",
-  "dauer": "Ganztag",
-  "preis": "Skipass: ab 72 € (Erwachsene, Tagesticket)",
+  "dauer": "2–5 Stunden",
+  "preis": "Bergbahn Galzig- & Vallugabahn Berg- und Talfahrt ca. 36 €",
   "tags": [
     "ski",
     "sport",
@@ -22,9 +22,21 @@
     "arlberg"
   ],
   "oeffnungszeiten": "Skibetrieb: Dez–Apr; Sommer: Jun–Okt",
-  "webseite": "https://www.st-anton.at",
+  "webseite": "https://www.stantonamarlberg.com",
   "koordinaten": {
-    "lat": "47.1275",
-    "lng": "10.2639"
-  }
+    "lat": "47.1333",
+    "lng": "10.2667"
+  },
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "hunde": true,
+  "bilder": [],
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.arlbergerbergbahnen.com/de/sommer/bergbahnen/valluga/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-valluga",
+    "https://www.alpenvereinaktiv.com/de/tour/zum-verwallsee-in-st.-anton-am-arlberg/1381565/",
+    "https://www.vvt.at/"
+  ]
 }

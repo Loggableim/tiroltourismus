@@ -1,5 +1,5 @@
 {
-  "name": "Ötztaler Höhenstraße",
+  "name": "Ötztaler Gletscherstraße",
   "slug": "oetztaler-hoehenstrasse",
   "region": "oetztal",
   "ort": "Sölden",
@@ -13,14 +13,26 @@
     "nature",
     "voiture"
   ],
-  "dauer": "3-5 Stunden",
-  "preis": "Maut: € 19,00 (Auto)",
+  "dauer": "2–4 Stunden",
+  "preis": "Mautgebühr ca. 24–26 € pro PKW (mit Ötztal Summer Card kostenlos)",
   "oeffnungszeiten": "Mitte Mai bis Ende Oktober",
-  "webseite": "https://www.oetztal.com/hoehenstrasse",
+  "webseite": "https://www.soelden.com/de/sommer/ausflugsziele/oetztaler-gletscherstrasse.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "46.9666",
-    "lng": "11.0073"
-  }
+    "lat": "46.9333",
+    "lng": "10.9333"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>route des glaciers de l'Ötztal</strong> (Ötztaler Gletscherstraße) au-dessus de Sölden est la plus haute route goudronnée des Alpes orientales, grimpant jusqu'à 2 830 m d'altitude au glacier de Tiefenbach. Empruntant le tunnel routier le plus haut d'Europe (tunnel Rosi Mittermaier à 2 829 m), elle a servi de décor spectaculaire au film de James Bond <em>007 Spectre</em>.</p><h2>Parcours &amp; Exigences</h2><p>Route alpine goudronnée à péage (environ 25 € par voiture, gratuite avec l'Ötztal Summer Card). Large et sécurisée, elle donne accès à la passerelle panoramique du Tiefenbachkogl suspendue au-dessus du vide (T1) et à des sentiers vers le refuge Braunschweiger Hütte (T2). Vêtements chauds indispensables en altitude. Chiens admis en laisse.</p><h2>Accès</h2><p>Train jusqu'à Ötztal-Bahnhof puis bus 320 vers Sölden et navette régulière des glaciers. En voiture par l'A12 puis la B186 jusqu'à Sölden. Grands parkings gratuits aux deux glaciers. Ouverte de juin à début novembre.</p><h2>Conseils</h2><p>Avancez sur la passerelle panoramique suspendue dans le vide face à la face nord de la Wildspitze (3 770 m) et visitez l'installation cinématographique 007 ELEMENTS à proximité.</p>",
+  "saison": "Anfang Juni bis Anfang November (witterungsabhängig)",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.soelden.com/de/sommer/ausflugsziele/oetztaler-gletscherstrasse.html",
+    "https://www.oetztal.com/de/sommer/ausflugsziele/gletscherstrasse.html",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-oetztaler-gletscherstrasse",
+    "https://www.alpenvereinaktiv.com/de/tour/zur-tiefenbachkogl-footbridge-am-gletscher/1381540/",
+    "https://www.vvt.at/"
+  ]
 }

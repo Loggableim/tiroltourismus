@@ -1,5 +1,5 @@
 {
-  "name": "Trisannabrücke",
+  "name": "Trisannabrücke & Schloss Wiesberg",
   "slug": "trisannabruecke",
   "region": "arlberg",
   "ort": "Strengen",
@@ -14,14 +14,26 @@
     "technique",
     "randonnée"
   ],
-  "dauer": "30-60 Minuten",
-  "preis": "Kostenlos",
+  "dauer": "1–2 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz an der B188 gebührenfrei)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.trisannabruecke.info",
+  "webseite": "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-trisannabruecke-schloss-wiesberg",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.1252",
-    "lng": "10.4615"
-  }
+    "lat": "47.1167",
+    "lng": "10.4833"
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>pont de la Trisanna</strong> (Trisannabrücke) et le <strong>Schloss Wiesberg</strong> forment un chef-d'œuvre spectaculaire d'ingénierie ferroviaire et d'architecture médiévale à l'entrée de la vallée du Paznaun. Construit en 1884 sur la ligne de l'Arlberg, ce viaduc vertigineux franchit les gorges à 87 mètres de hauteur à côté d'un château fort du XIIIe siècle.</p><h2>Parcours &amp; Exigences</h2><p>Halte photo panoramique au belvédère ou agréable boucle pédestre dans les gorges de la Trisanna depuis Pians ou Tobadill (4 km, 1h30 de marche, dénivelé 150 m, T1/T2). Vue spectaculaire sur le passage des trains Railjet au-dessus du gouffre. Château privé visible de l'extérieur. Chaussures de marche conseillées. Chiens admis en laisse.</p><h2>Accès</h2><p>Train jusqu'à Landeck-Zams puis bus 260 (direction Ischgl) jusqu'à l'arrêt Schloss Wiesberg. En voiture par la voie rapide S16 puis route B188 du Silvretta avec parking gratuit au belvédère.</p><h2>Conseils</h2><p>Patientez quelques instants au point de vue pour photographier un train express rouge traversant l'arche au-dessus du vide avec le château médiéval en arrière-plan.</p>",
+  "saison": "Ganzjährig frei zugänglich",
+  "familie": true,
+  "hunde": true,
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-trisannabruecke-schloss-wiesberg",
+    "https://www.tobadill.tirol.gv.at/Kultur/Sehenswuerdigkeiten",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-schloss-wiesberg-und-die-trisannabruecke/1381570/",
+    "https://www.oebb.at/",
+    "https://www.vvt.at/"
+  ]
 }

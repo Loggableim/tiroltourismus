@@ -1,17 +1,17 @@
 {
-  "name": "Seespitz Achenkirch",
+  "name": "Seespitz Achenkirch & Strandbad",
   "slug": "seespitz-achenkirch",
   "status": "published",
   "region": "achensee",
   "ort": "Achenkirch",
   "kategorie": "natur",
   "kurzbeschreibung": "Le point sud du lac d’Achensee , avec la plus grande baie de bain , une aire de jeux et une vue sur le Karwendel – parfait pour les familles .",
-  "beschreibung": "<p>Der <strong>Seespitz</strong> liegt am Nordufer des <strong>Achensees</strong> in der Gemeinde Achenkirch und ist ein zentraler Anlaufpunkt für Seeausflüge. Die <strong>Schiffsanlegestelle</strong> ermöglicht Rundfahrten auf dem See sowie die Überfahrt nach Pertisau oder Gaislach. Ein <strong>Strandbad</strong> mit Liegewiese und abgetrenntem Badebereich sorgt für Bademöglichkeiten. Vom Ufer eröffnet sich ein weiter Blick über die Wasserfläche zum gegenüberliegenden <strong>Karwendelgebirge</strong>. Zwei Restaurants mit Seeterrassen und ein Kiosk sind vor Ort vorhanden. Der <strong>Achenseeradweg</strong> und mehrere Spazierwege passieren den Seespitz direkt. Wassersportmöglichkeiten wie Segeln und Surfen werden am angrenzenden Surf- und Segelzentrum angeboten.</p>",
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Seespitz Achenkirch</strong> forme la rive nord ensoleillée de l'Achensee, le plus grand lac naturel du Tyrol surnommé le « fjord tyrolien ». Avec sa plage aménagée, ses pelouses ombragées et son ponton d'embarquement pour les bateaux à vapeur historiques, c'est un havre de détente aquatique et le départ du célèbre sentier de la Gaisalm.</p><h2>Parcours &amp; Exigences</h2><p>Promenade au bord de l'eau facile et entièrement plate sur la rive (1h, T1, accessible aux poussettes et fauteuils roulants). Randonnée sportive en balcon le long des falaises vers l'alpage isolé de Gaisalm (5 km, 2h de marche, T2, pied sûr requis, retour possible en bateau). Baignade, aire de jeux et pédalos. Chiens admis en laisse sur la promenade.</p><h2>Accès</h2><p>Train jusqu'à Jenbach puis bus 8332 direct jusqu'à la plage d'Achenkirch. En voiture par la route B181 du col de l'Achenpass avec grand parking payant sur place.</p><h2>Conseils</h2><p>Combinez la randonnée à flanc de falaise jusqu'à la Gaisalm avec une traversée retour relaxante en bateau jusqu'à Achenkirch et savourez une glace sur le ponton en bois face aux montagnes.</p>",
   "emoji": "🏖️",
   "farbe": "#4DD0E1",
   "hoehe": "929 m",
-  "dauer": "Half-/Halbtag",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos frei zugänglich (Strandbad Achenkirch ca. 5 €, Parkplatz ca. 6–8 € pro Tag)",
   "tags": [
     "bains",
     "famille",
@@ -21,11 +21,21 @@
     "nature"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich (Badewetter: Mai–Sep)",
-  "webseite": "https://www.achensee.info/seespitz",
+  "webseite": "https://www.achensee.com/entdecken-erleben/sommer/seen-wasser/strandbad-achenkirch/",
   "koordinaten": {
     "lat": "47.5167",
     "lng": "11.7000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig frei zugänglich (Badesaison Juni bis September)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.achensee.com/entdecken-erleben/sommer/seen-wasser/strandbad-achenkirch/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-strandbad-achensee-nord",
+    "https://www.alpenvereinaktiv.com/de/tour/von-achenkirch-ueber-die-gaisalm-nach-pertisau/1381560/",
+    "https://www.tirolerschifffahrt.at/",
+    "https://www.vvt.at/"
+  ]
 }

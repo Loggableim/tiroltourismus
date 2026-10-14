@@ -4,7 +4,7 @@
   "region": "osttirol",
   "ort": "Matrei in Osttirol",
   "kategorie": "museum",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Das moderne Besucherzentrum des Nationalparks Hohe Tauern in Osttirol – interaktive Ausstellung 'Tauernblicke', 360°-Kino und Ranger-Programme.",
   "emoji": "🦅",
   "farbe": "#556B2F",
   "tags": [
@@ -14,16 +14,26 @@
     "natur",
     "familie"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 8,00",
+  "dauer": "1,5–2,5 Stunden",
+  "preis": "Erwachsene ca. 8 €, Kinder ca. 4 € (mit Osttirol Card kostenlos)",
   "oeffnungszeiten": "Mai-Okt tägl. 9-18, Nov-Apr Mo-Fr 9-17",
-  "webseite": "https://www.hohetauern.at/nationalparkhaus-matrei",
+  "webseite": "https://hohetauern.at/de/besuchen/besucherzentren/nationalparkhaus-matrei.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "47.0011",
-    "lng": "12.5387"
+    "lat": "47.0000",
+    "lng": "12.5417"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Nationalparkhaus Matrei</strong> – Die Nationalparkhaus Matrei in Matrei in Osttirol verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Nationalparkhaus Matrei bietet interaktive Einblicke in die beeindruckende Tier- und Pflanzenwelt des Nationalparks Hohe Tauern Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Die Nationalparkhaus Matrei befindet sich im Herzen von Matrei in Osttirol und ist bequem zu Fuß oder mit öffentlichen Verkehrsmitteln zu erreichen. Die zentrale Lage macht sie zum idealen Ausgangspunkt für einen Kulturspaziergang durch die Stadt.  Auch für Familien mit Kindern gibt es hier viel zu entdecken und zu erleben. Die Nationalparkhaus Matrei ist ein Muss für jeden Tirol-Besucher und verspricht unvergessliche Eindrücke.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Nationalparkhaus Matrei</strong> es el centro de interpretación oficial del Parque Nacional Hohe Tauern en el Tirol Oriental. Ubicado en Matrei, acoge la exposición interactiva \"Tauernblicke\" y un espectacular cine panorámico de 360 grados que sumerge al visitante en los glaciares del Grossglockner y la fauna alpina.</p><h2>Ruta y Requisitos</h2><p>Instalación completamente accesible para carritos y sillas de ruedas en dos plantas (fácil T1). Duración de la visita recomendada de 1,5 a 2 horas. Espacios didácticos para niños y reserva de rutas de senderismo guiadas con guardaparques. No se admiten perros en las salas de exposición.</p><h2>Cómo llegar</h2><p>En tren a Lienz y autobús 951 hasta la parada frente al museo en Matrei. En coche por la carretera B108 de Felbertauern, con aparcamiento gratuito en el recinto. Abierto a diario de mayo a octubre de 9:00 a 17:00.</p><h2>Consejos</h2><p>Apúntese a una excursión guiada con un guardaparques al valle de Gschlößtal para divisar quebrantahuesos y cabras montesas con telescopios. Entrada libre con la tarjeta turística Osttirol Card.</p>",
+  "saison": "Mai bis Oktober täglich (im Winter wochentags geöffnet)",
+  "familie": true,
+  "hunde": false,
+  "sources": [
+    "https://hohetauern.at/de/besuchen/besucherzentren/nationalparkhaus-matrei.html",
+    "https://www.osttirol.com/entdecken-und-erleben/sommer/nationalpark-hohe-tauern/nationalparkhaus-matrei/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-nationalparkhaus-matrei",
+    "https://www.alpenvereinaktiv.com/de/punkt/nationalparkhaus-matrei-in-osttirol/1381530/",
+    "https://www.vvt.at/"
+  ]
 }

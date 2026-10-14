@@ -1,17 +1,17 @@
 {
-  "name": "Seespitz Achenkirch",
+  "name": "Seespitz Achenkirch & Strandbad",
   "slug": "seespitz-achenkirch",
   "status": "published",
   "region": "achensee",
   "ort": "Achenkirch",
   "kategorie": "natur",
   "kurzbeschreibung": "Achensee 的南端拥有最大的游泳湾、游乐场和 Karwendel 的景观——非常适合家庭。",
-  "beschreibung": "<p>Der <strong>Seespitz</strong> liegt am Nordufer des <strong>Achensees</strong> in der Gemeinde Achenkirch und ist ein zentraler Anlaufpunkt für Seeausflüge. Die <strong>Schiffsanlegestelle</strong> ermöglicht Rundfahrten auf dem See sowie die Überfahrt nach Pertisau oder Gaislach. Ein <strong>Strandbad</strong> mit Liegewiese und abgetrenntem Badebereich sorgt für Bademöglichkeiten. Vom Ufer eröffnet sich ein weiter Blick über die Wasserfläche zum gegenüberliegenden <strong>Karwendelgebirge</strong>. Zwei Restaurants mit Seeterrassen und ein Kiosk sind vor Ort vorhanden. Der <strong>Achenseeradweg</strong> und mehrere Spazierwege passieren den Seespitz direkt. Wassersportmöglichkeiten wie Segeln und Surfen werden am angrenzenden Surf- und Segelzentrum angeboten.</p>",
+  "beschreibung": "<h2>概览</h2><p><strong>阿亨基希湖角与海滩浴场</strong>（Seespitz Achenkirch）坐落于蒂罗尔最大天然冰川高山湖泊阿亨湖（Achensee）日照最充足的北岸。因其被卡尔文德尔山脉与罗凡山脉紧紧怀抱、宛如挪威峡湾般的磅礴气势，阿亨湖被誉为“蒂罗尔的高山之海”。阿亨基希一侧湖底平缓浅润，建有宽阔的细石湖滨浴场、木质休闲亲水栈桥与大片遮阳绿地。这里也是百年<strong>阿亨湖观光轮船</strong>（Achensee-Schifffahrt）的核心母港码头之一，同时是通往只能徒步或乘船抵达的高山秘境盖斯木屋（Gaisalm）峭壁步道的官方起点。</p><h2>路线与体能要求</h2><p>湖滨活动丰富，兼顾轻松推车漫步与刺激岩壁徒步。环湖平整碎石林荫栈道沿岸铺展（往返约1小时，极易T1级，全程支持婴儿车与轮椅）。中阶徒步健将首推经典的盖斯木屋（Gaisalm）峭壁悬崖步道：步道直接开凿于垂直石灰岩悬崖腰部，配有安全钢缆护栏，紧贴碧蓝水面穿行（单程约5公里，耗时约1.5至2小时，中等T2级，窄小石阶需脚步稳健；返程建议搭乘游船直达码头）。浴场备有更衣室、水上排球场与脚踏游船租赁。宠物犬全程系牵引绳允许在湖滨漫步道随行（草坪游泳区除外）。</p><h2>交通指南</h2><p>搭乘奥铁ÖBB火车至Jenbach火车站，换乘8332路区域大巴直达“Achenkirch Strandbad”湖畔站。自驾经A12高速（Wiesing出口）沿B181号联邦公路直达浴场大型收费生态停车场。湖岸全年免费开放，浴场每年6月至9月运营。</p><h2>游览建议</h2><p>将徒步峭壁步道探访盖斯木屋与搭乘百年游轮返程完美串联，从水陆双重角度饱览罗凡山脉直插深蓝湖水的雄奇岩壁。午后在湖畔咖啡厅点一份手工冰淇淋，坐在伸向湖心的原木栈桥上尽赏帆影点点。</p>",
   "emoji": "🏖️",
   "farbe": "#4DD0E1",
   "hoehe": "929 m",
-  "dauer": "Half-/Halbtag",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos frei zugänglich (Strandbad Achenkirch ca. 5 €, Parkplatz ca. 6–8 € pro Tag)",
   "tags": [
     "泡澡",
     "家庭",
@@ -21,11 +21,21 @@
     "自然"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich (Badewetter: Mai–Sep)",
-  "webseite": "https://www.achensee.info/seespitz",
+  "webseite": "https://www.achensee.com/entdecken-erleben/sommer/seen-wasser/strandbad-achenkirch/",
   "koordinaten": {
     "lat": "47.5167",
     "lng": "11.7000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig frei zugänglich (Badesaison Juni bis September)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.achensee.com/entdecken-erleben/sommer/seen-wasser/strandbad-achenkirch/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-strandbad-achensee-nord",
+    "https://www.alpenvereinaktiv.com/de/tour/von-achenkirch-ueber-die-gaisalm-nach-pertisau/1381560/",
+    "https://www.tirolerschifffahrt.at/",
+    "https://www.vvt.at/"
+  ]
 }

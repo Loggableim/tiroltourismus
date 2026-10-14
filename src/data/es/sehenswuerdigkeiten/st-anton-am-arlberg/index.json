@@ -1,17 +1,17 @@
 {
-  "name": "St. Anton am Arlberg",
+  "name": "St. Anton am Arlberg & Valluga",
   "slug": "st-anton-am-arlberg",
   "status": "published",
   "region": "landeck",
   "ort": "St. Anton am Arlberg",
   "kategorie": "sport",
   "kurzbeschreibung": "La cuna del esquí alpino: St. Anton am Arlberg ofrece en Ski Arlberg 301 kilómetros de pistas, más de 200 km de nieve virgen y un legendario après-ski.",
-  "beschreibung": "<p><strong>St. Anton am Arlberg</strong> se encuentra a 1.304 metros al final del valle de Stanzertal, en el Tirol, y está considerada la cuna del esquí alpino. Ya en 1901 se fundó aquí el Ski-Club Arlberg, en 1904 se celebró la primera carrera de esquí y en 1921 Hannes Schneider abrió la primera escuela de esquí. Hoy, junto con St. Christoph y Stuben, la localidad forma la parte oriental de <strong>Ski Arlberg</strong>, el mayor dominio esquiable conectado de Austria. Ofrece 301 kilómetros de pistas, más de 200 kilómetros de variantes de nieve virgen y 85 remontes y teleféricos. La Valluga, con su plataforma mirador a 2.811 metros, es el punto más alto. Son legendarias las carreras Arlberg-Kandahar, la carrera con salida en masa Der Weisse Rausch y la animada vida del après-ski. En verano atraen el senderismo, la bicicleta y el Arlberg Trail.</p>",
+  "beschreibung": "<h2>Visión general</h2><p><strong>St. Anton am Arlberg</strong> es mundialmente conocida como la cuna histórica del esquí alpino. Coronada por la cumbre del monte <strong>Valluga</strong> (2.811 m), ofrece en verano un mirador de 360 grados sobre más de 500 picos alpinos en 5 países (Austria, Suiza, Alemania, Italia y Liechtenstein) y excursiones familiares al idílico lago Verwallsee.</p><h2>Ruta y Requisitos</h2><p>Acceso panorámico en teleférico a la plataforma de cumbre de Valluga (fácil T1). Paseo familiar muy agradable junto al río Rosanna hasta el lago esmeralda de Verwallsee con puente colgante de 35 metros (1 hora, 3,5 km, fácil T1, apto para carritos). Vía ferrata deportiva del Arlberg para montañeros expertos (D). Calzado de montaña imprescindible. Perros con correa.</p><h2>Cómo llegar</h2><p>Estación de tren internacional Railjet de St. Anton am Arlberg en pleno centro urbano. En coche por la vía rápida S16 con grandes aparcamientos en las estaciones de teleférico.</p><h2>Consejos</h2><p>Tome la pequeña cabina de Vallugabahn II hasta los 2.811 m para divisar el lago de Constanza y visite el Museo del Esquí en el palacete Arlberg-Kandahar en el parque central.</p>",
   "emoji": "⛷️",
   "farbe": "#2E7D32",
   "hoehe": "2.810 m (Valluga)",
-  "dauer": "Ganztag",
-  "preis": "Skipass: ab 72 € (Erwachsene, Tagesticket)",
+  "dauer": "2–5 Stunden",
+  "preis": "Bergbahn Galzig- & Vallugabahn Berg- und Talfahrt ca. 36 €",
   "tags": [
     "ski",
     "sport",
@@ -22,9 +22,21 @@
     "arlberg"
   ],
   "oeffnungszeiten": "Skibetrieb: Dez–Apr; Sommer: Jun–Okt",
-  "webseite": "https://www.st-anton.at",
+  "webseite": "https://www.stantonamarlberg.com",
   "koordinaten": {
-    "lat": "47.1275",
-    "lng": "10.2639"
-  }
+    "lat": "47.1333",
+    "lng": "10.2667"
+  },
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "hunde": true,
+  "bilder": [],
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.arlbergerbergbahnen.com/de/sommer/bergbahnen/valluga/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-valluga",
+    "https://www.alpenvereinaktiv.com/de/tour/zum-verwallsee-in-st.-anton-am-arlberg/1381565/",
+    "https://www.vvt.at/"
+  ]
 }

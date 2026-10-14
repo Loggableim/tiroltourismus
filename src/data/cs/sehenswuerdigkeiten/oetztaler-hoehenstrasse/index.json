@@ -1,5 +1,5 @@
 {
-  "name": "Ötztaler Höhenstraße",
+  "name": "Ötztaler Gletscherstraße",
   "slug": "oetztaler-hoehenstrasse",
   "region": "oetztal",
   "ort": "Sölden",
@@ -13,16 +13,26 @@
     "natur",
     "auto"
   ],
-  "dauer": "3-5 Stunden",
-  "preis": "Maut: € 19,00 (Auto)",
+  "dauer": "2–4 Stunden",
+  "preis": "Mautgebühr ca. 24–26 € pro PKW (mit Ötztal Summer Card kostenlos)",
   "oeffnungszeiten": "Mitte Mai bis Ende Oktober",
-  "webseite": "https://www.oetztal.com/hoehenstrasse",
+  "webseite": "https://www.soelden.com/de/sommer/ausflugsziele/oetztaler-gletscherstrasse.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
-    "lat": "46.9666",
-    "lng": "11.0073"
+    "lat": "46.9333",
+    "lng": "10.9333"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Ötztaler Höhenstraße</strong> – Die Ötztaler Höhenstraße bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Die 83 km lange Panoramastraße führt entlang der Ötztaler Berge mit zahlreichen Aussichtspunkten, Wanderwegen und Hütten Vom Gipfel aus eröffnet sich ein 360-Grad-Panorama, das bei klarer Sicht bis zu den Gletschern der Hohen Tauern reicht. Die bequeme Bergbahn bringt Besucher mühelos auf die Höhe, wo mehrere Panoramaterrassen und ein Bergrestaurant zum Genießen einladen. Nur wenige Kilometer von Sölden entfernt, wartet mit der Ötztaler Höhenstraße ein Stück unberührte Natur darauf, entdeckt zu werden. Die Lage bietet zudem einen herrlichen Panoramablick auf die umliegenden Bergketten. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Přehled</h2><p>Vysokohorská silnice <strong>Ötztaler Gletscherstraße</strong> nad Söldenem je nejvýše položenou asfaltovou silnicí ve Východních Alpách, stoupající až do nadmořské výšky 2 830 metrů k ledovci Tiefenbachferner. Prochází nejvýše položeným silničním tunelem Evropy (2 829 m) a posloužila jako kulisa pro film o Jamesi Bondovi <em>Spectre</em>.</p><h2>Trasa a náročnost</h2><p>Dvouproudá mýtná silnice (cca 25 € za auto, zdarma s Ötztal Summer Card). U ledovců láká visutá vyhlídková lávka na Tiefenbachkoglu vyčnívající nad ledovcovou propast (snadná T1) i túra k chatě Braunschweiger Hütte (T2). Teplé oblečení v nadmořské výšce 3 000 m nutné i v létě. Psi na vodítku vítáni.</p><h2>Příjezd a doprava</h2><p>Vlakem do stanice Ötztal a autobusem 320 do Söldenu, odtud letním ledovcovým busem. Autem po dálnici A12 a silnici B186 do Söldenu. Velká bezplatná parkoviště u obou ledovců. Otevřeno od června do začátku listopadu.</p><h2>Tipy</h2><p>Vstupte na visutou vyhlídkovou rampu na Tiefenbachkoglu s přímým pohledem na severní stěnu hory Wildspitze (3 770 m) a navštivte futuristické filmové muzeum 007 ELEMENTS.</p>",
+  "saison": "Anfang Juni bis Anfang November (witterungsabhängig)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.soelden.com/de/sommer/ausflugsziele/oetztaler-gletscherstrasse.html",
+    "https://www.oetztal.com/de/sommer/ausflugsziele/gletscherstrasse.html",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-oetztaler-gletscherstrasse",
+    "https://www.alpenvereinaktiv.com/de/tour/zur-tiefenbachkogl-footbridge-am-gletscher/1381540/",
+    "https://www.vvt.at/"
+  ]
 }

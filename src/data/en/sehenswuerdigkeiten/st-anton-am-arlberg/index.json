@@ -1,17 +1,17 @@
 {
-  "name": "St. Anton am Arlberg",
+  "name": "St. Anton am Arlberg & Valluga",
   "slug": "st-anton-am-arlberg",
   "status": "published",
   "region": "landeck",
   "ort": "St. Anton am Arlberg",
   "kategorie": "sport",
   "kurzbeschreibung": "The cradle of alpine skiing: St. Anton am Arlberg offers 301 kilometres of pistes in Ski Arlberg, over 200 km of deep snow and legendary après-ski.",
-  "beschreibung": "<p><strong>St. Anton am Arlberg</strong> lies at 1,304 metres at the end of the Stanzertal valley in Tyrol and is regarded as the cradle of alpine skiing. The Ski-Club Arlberg was founded here as early as 1901, the first ski race took place in 1904 and in 1921 Hannes Schneider opened the first ski school. Today, together with St. Christoph and Stuben, the village forms the eastern part of <strong>Ski Arlberg</strong>, Austria's largest connected ski area. It offers 301 kilometres of pistes, more than 200 kilometres of deep-snow variants and 85 lifts and cable cars. The Valluga, with its viewing platform at 2,811 metres, is the highest point. The Arlberg-Kandahar races, the mass-start race Der Weisse Rausch and the lively après-ski are legendary. In summer, hiking, biking and the Arlberg Trail are the main attractions.</p>",
+  "beschreibung": "<h2>Overview</h2><p><strong>St. Anton am Arlberg</strong> is universally acclaimed as the legendary \"Cradle of Alpine Skiing\" and stands among the most storied mountain resorts on earth. Resting at 1,304 meters elevation at the foot of the historic Arlberg Pass, this cosmopolitan village revolutionized winter sports during the early 20th century through pioneers like Hannes Schneider and the founding of the Alps' first ski club in 1901. Today, St. Anton anchors <em>Ski Arlberg</em>, Austria's largest interconnected ski arena and one of the premier winter domains worldwide. In summer, the valley transforms into an extraordinary haven for trekking, mountaineering, and trail running: the undisputed crown is Mount <strong>Valluga</strong> (2,811 m). Ascending via the state-of-the-art Galzig and Valluga cableways, visitors reach the highest panoramic peak on the Arlberg crest, where an engineered observation platform reveals a 360-degree panorama over 500 alpine peaks across five nations (Austria, Germany, Switzerland, Italy, and Liechtenstein).</p><h2>Route &amp; Requirements</h2><p>Outdoor adventures surrounding St. Anton span relaxed family rambles to extreme high-alpine traverses. Reaching the Valluga summit observation platform (2,811 m) is comfortable and barrier-free via three interconnected aerial tramway stages (easy grade T1, family-friendly; the compact Vallugabahn II gondola delivers sightseers straight to the exposed summit gallery). Families and leisure strollers should not miss the idyllic outing to emerald Lake <strong>Verwallsee</strong>: a broad, gently graded riverside lane traces the rushing Rosanna torrent through the Verwall Valley to the lake, featuring a 35-meter steel suspension bridge and interactive wildlife stations (approx. 1 hour, 3.5 km, easy grade T1, fully stroller accessible). Hardcore alpinists tackle the demanding Arlberg Via Ferrata—one of Tyrol's most exposed and thrilling ridge traverses (4 to 6 hours, grade D, technical harness gear and alpine experience required). Rigid hiking boots and warm layers are essential in high zones. Leashed dogs are welcome on all paths and inside cable cars.</p><h2>Visit &amp; Arrival</h2><p>Public transit connectivity is world-class: St. Anton am Arlberg features the highest mainline EuroCity and Railjet railway terminal in the world, positioned right in the pedestrian town center. Direct international express trains from Zurich, Vienna, Munich, and Innsbruck stop hourly. Motorists arrive via the Arlberg expressway S16 (exit St. Anton am Arlberg). Spacious pay parking lots and EV charging stations are located directly at the Galzigbahn and Rendlbahn base terminals. Summer lift operations run daily from mid-June through early October.</p><h2>Tips</h2><p>Ride the historic, intimate cabin of the Vallugabahn II to the summit crows-nest at 2,811 meters to gaze across five nations toward Lake Constance and the icy peaks of the Swiss Bernina Alps. Visit the Museum St. Anton housed within the heritage Arlberg-Kandahar chalet in the central park to discover how skiing conquered the world.</p>",
   "emoji": "⛷️",
   "farbe": "#2E7D32",
   "hoehe": "2.810 m (Valluga)",
-  "dauer": "Ganztag",
-  "preis": "Skipass: ab 72 € (Erwachsene, Tagesticket)",
+  "dauer": "2–5 Stunden",
+  "preis": "Bergbahn Galzig- & Vallugabahn Berg- und Talfahrt ca. 36 €",
   "tags": [
     "ski",
     "sports",
@@ -22,9 +22,21 @@
     "arlberg"
   ],
   "oeffnungszeiten": "Skibetrieb: Dez–Apr; Sommer: Jun–Okt",
-  "webseite": "https://www.st-anton.at",
+  "webseite": "https://www.stantonamarlberg.com",
   "koordinaten": {
-    "lat": "47.1275",
-    "lng": "10.2639"
-  }
+    "lat": "47.1333",
+    "lng": "10.2667"
+  },
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "hunde": true,
+  "bilder": [],
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.arlbergerbergbahnen.com/de/sommer/bergbahnen/valluga/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-valluga",
+    "https://www.alpenvereinaktiv.com/de/tour/zum-verwallsee-in-st.-anton-am-arlberg/1381565/",
+    "https://www.vvt.at/"
+  ]
 }

@@ -1,17 +1,17 @@
 {
-  "name": "St. Anton am Arlberg",
+  "name": "St. Anton am Arlberg & Valluga",
   "slug": "st-anton-am-arlberg",
   "status": "published",
   "region": "landeck",
   "ort": "St. Anton am Arlberg",
   "kategorie": "sport",
   "kurzbeschreibung": "阿尔卑斯滑雪的发源地：圣安东阿尔贝格（St. Anton am Arlberg）在 Ski Arlberg 拥有301公里雪道、200多公里深雪和传奇的滑雪后娱乐。",
-  "beschreibung": "<p><strong>St. Anton am Arlberg</strong> 位于蒂罗尔州施坦策河谷（Stanzertal）尽头的海拔1,304米处，被誉为阿尔卑斯滑雪的发源地。早在1901年这里就成立了 Ski-Club Arlberg，1904年举办了首届滑雪比赛，1921年 Hannes Schneider 开设了第一所滑雪学校。如今，该镇与 St. Christoph 和 Stuben 一起构成 <strong>Ski Arlberg</strong> 的东部区域，这是奥地利最大的连片滑雪区。它拥有301公里雪道、200多公里深雪线路以及85条缆车和索道。海拔2,811米、设有观景平台的 Valluga 是最高点。著名的 Arlberg-Kandahar 赛事、集体出发比赛 Der Weisse Rausch 以及热闹的滑雪后娱乐都堪称传奇。夏季则吸引人们前来徒步、骑行和体验 Arlberg Trail。</p>",
+  "beschreibung": "<h2>概览</h2><p><strong>阿尔山麓圣安东</strong>（St. Anton am Arlberg）被公认为现代高山滑雪运动的发祥地与世界滑雪胜地皇冠上的明珠。坐落于阿尔贝格山口山脚海拔1,304米处，早在20世纪初这里便诞生了现代滑雪转弯技术与阿尔卑斯首个滑雪俱乐部。夏秋时节，这座国际度假小镇蜕变为徒步与登山者的乐园：最高地标当属海拔2,811米的<strong>瓦卢加峰</strong>（Valluga）。搭乘大容量高空索道仅需数分钟即可直达山巅，全景露台展现纵览奥地利、德国、瑞士、意大利与列支敦士登五国逾500座雪峰的360度雄伟视界。</p><h2>路线与体能要求</h2><p>景区步道兼顾高阶极限探险与惬意亲子漫步。搭乘索道登临瓦卢加观景台全程便捷无障碍（极易T1级，全家老少皆宜；最后一级小缆车直达悬空石顶观景廊）。家庭游客必打卡碧绿的<strong>费尔瓦尔湖</strong>（Verwallsee）：沿平整林间道紧傍罗珊娜溪流漫步，湖面横跨一条长达35米的钢索悬桥与野趣科普站（徒步约1小时，单程3.5公里，极易T1级，全程支持婴儿车）。极限攀岩者可挑战著名的阿尔贝格铁索攀登线路（难度D级，需专业装备与无眩晕体能）。高山区必须穿着保暖防风外套。宠物犬全程系牵引绳允许随行及搭乘缆车。</p><h2>交通指南</h2><p>公共交通极为完善：小镇拥有全球海拔最高的高铁主线火车站（St. Anton am Arlberg），维也纳、苏黎世、慕尼黑特快列车直达镇中心。自驾经S16快速路直达缆车站大型停车场（配充电桩）。缆车每年6月中旬至10月初运营。</p><h2>游览建议</h2><p>务必搭乘瓦卢加II号特种缆车登上2,811米高耸观景塔，极目远眺博登湖与瑞士伯尔尼纳冰川巨峰。下午走进中心公园阿尔贝格坎达哈尔历史庄园内的滑雪博物馆，重温百年滑雪先锋的传奇岁月。</p>",
   "emoji": "⛷️",
   "farbe": "#2E7D32",
   "hoehe": "2.810 m (Valluga)",
-  "dauer": "Ganztag",
-  "preis": "Skipass: ab 72 € (Erwachsene, Tagesticket)",
+  "dauer": "2–5 Stunden",
+  "preis": "Bergbahn Galzig- & Vallugabahn Berg- und Talfahrt ca. 36 €",
   "tags": [
     "滑雪",
     "运动",
@@ -22,9 +22,21 @@
     "阿尔伯格"
   ],
   "oeffnungszeiten": "Skibetrieb: Dez–Apr; Sommer: Jun–Okt",
-  "webseite": "https://www.st-anton.at",
+  "webseite": "https://www.stantonamarlberg.com",
   "koordinaten": {
-    "lat": "47.1275",
-    "lng": "10.2639"
-  }
+    "lat": "47.1333",
+    "lng": "10.2667"
+  },
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "hunde": true,
+  "bilder": [],
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.arlbergerbergbahnen.com/de/sommer/bergbahnen/valluga/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-valluga",
+    "https://www.alpenvereinaktiv.com/de/tour/zum-verwallsee-in-st.-anton-am-arlberg/1381565/",
+    "https://www.vvt.at/"
+  ]
 }

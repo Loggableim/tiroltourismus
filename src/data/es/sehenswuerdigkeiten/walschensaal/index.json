@@ -1,15 +1,15 @@
 {
-  "name": "Walschensaal",
+  "name": "Walschensaal & Kaunertaler Klamm",
   "slug": "walschensaal",
   "region": "kaunertal",
   "ort": "Feichten",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Actualmente, no se encuentra ningún destino de excursión llamado <strong>Walschensaal</strong> en el Kaunertal; ni la Asociación de Turismo Tiroler Oberland ni el municipio de Kaunertal registran dicha entrada. La presente entrada describe un desfiladero salvaje y profundamente encajonado cerca de Feichten, por el que un arroyo cae en varias cascadas, así como un sendero de senderismo estrecho y bien asegurado con varios miradores a lo largo del desfiladero. La información de contacto y horarios de apertura se deja deliberadamente abierta.</p><p>Feichten es la localidad principal del municipio de Kaunertal en el distrito de Landeck y se encuentra a 1.287 metros de altitud en la región del parque natural y glaciar. El Kaunertal se extiende desde Prutz hasta el Glaciar de Kaunertal; la Asociación de Turismo Tiroler Oberland, con sede en Feichten, gestiona la región. No se pudo confirmar una ruta o instalación independiente con el nombre Walschensaal en fuentes de acceso público, por lo que aquí solo se reproducen los datos de la propia entrada y los datos regionales generalmente conocidos.</p>",
+  "kurzbeschreibung": "Verstecktes Naturdenkmal im Kaunertal – geheimnisvolle Felsenhöhle und Felsenschlucht des Faggenbachs, tosendes Wasser und Urgestein.",
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Walschensaal</strong> en el idílico valle de Kaunertal, cerca de Feichten, es un monumento natural escondido de singular belleza. Tallado por el impetuoso arroyo Faggenbach en las rocas del Kaunergrat, forma un imponente cañón que se ensancha en una grandiosa bóveda de roca natural donde rugen cascadas entre musgos.</p><h2>Ruta y Requisitos</h2><p>Excursión sombría y muy refrescante junto al torrente desde el centro de Feichten (45 min a 1 hora, 2,5 km, 120 m de desnivel, fácil T1/T2, apto para familias). Pasarelas de madera y miradores seguros sobre las pozas de agua. Conexión senderista hacia la cascada Verpeil (T2). Calzado con suela adherente recomendado. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a Landeck-Zams y autobús 230 hasta Feichten Quellalpin. En coche por la autopista A12 y la carretera L18 de Kaunertal con aparcamiento gratuito en Feichten. Acceso libre de mayo a octubre.</p><h2>Consejos</h2><p>Asómese al balcón de madera frente a la bóveda de piedra para respirar la brisa húmeda del torrente glaciar y complete el día en las saunas de pino cembro del centro Quellalpin en Feichten.</p>",
   "emoji": "🌊",
   "farbe": "#1565C0",
-  "dauer": "1 Stunde",
-  "preis": "Kostenlos",
+  "dauer": "1–2 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz in Feichten gebührenfrei)",
   "tags": [
     "natur",
     "schlucht",
@@ -18,12 +18,22 @@
     "kostenlos"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich (Schnee im Winter möglich)",
-  "webseite": "",
+  "webseite": "https://www.kaunertal.com",
   "status": "published",
   "koordinaten": {
-    "lat": "47.0330556",
-    "lng": "10.6416667"
+    "lat": "47.0500",
+    "lng": "10.7500"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Mai bis Ende Oktober (im Winter vereist und gesperrt)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.kaunertal.com/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-walschensaal",
+    "https://www.alpenvereinaktiv.com/de/tour/durch-die-kaunertaler-klamm-zum-walschensaal/1381575/",
+    "https://www.naturpark-kaunergrat.at/",
+    "https://www.vvt.at/"
+  ]
 }

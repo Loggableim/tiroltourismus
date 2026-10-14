@@ -1,27 +1,48 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
+  "name": "Bauernhof- & Almerlebnis Greissl Alm im Alpbachtal",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
-  "region": "alpbach",
-  "beschreibung": "Ein Tag auf der Greissl Alm – hier erleben Familien das echte Tiroler Bauernleben. Kinder dürfen Kühe streicheln, Ziegen füttern und bei der Käseherstellung zusehen. Der Almwirt erzählt spannende Geschichten aus dem Alpenalltag, während die Erwachsenen bei einer zünftigen Brettljause und hausgemachtem Most verweilen.",
+  "region": "Alpbachtal",
+  "beschreibung": "### Überblick\nDas Bauernhof- und Almerlebnis auf der Greissl Alm im Alpbachtal entführt Groß und Klein in den lebendigen Alltag der traditionellen Tiroler Almwirtschaft. Alpbach, mehrfach als „Schönstes Dorf Österreichs“ und „Schönstes Blumendorf Europas“ ausgezeichnet, besticht durch seine einheitliche Holzarchitektur und tief verwurzelte Bergbauertraditionen. Hoch über dem Talboden eröffnet die Alm einen authentischen Einblick in die handwerkliche Milchverarbeitung, das Butterschlagen im Holzfass und die traditionelle Almkäseherstellung. Kinder dürfen die Kälber, Ziegen und Hühner füttern und streicheln, während die Erwachsenen die unvergleichliche Ruhe, den Duft frischer Almkräuter und den weiten Panoramablick auf das Wiedersberger Horn und die Kitzbüheler Alpen genießen.\n\n### Route & Anforderungen\nAusgangspunkt des Almtages ist das Dorfzentrum von Alpbach (975 m) bzw. die Mittelstation der Wiedersbergerhornbahn. Von dort führt ein familienfreundlicher, sanft ansteigender Forst- und Wanderweg durch schattige Bergwälder und blühende Almwiesen hinauf zur Alm auf rund 1.350 Metern Seehöhe. Die Gehdistanz beträgt einfach rund 3,5 Kilometer bei einem moderaten Höhenunterschied von etwa 250 Höhenmetern. Die reine Gehzeit liegt bei einer Stunde für den Aufstieg; der gesamte Aufenthalt mit Käsereiführung, Tierfütterung und Verkostung umfasst rund vier Stunden. Die Wege sind breit, gut befestigt und für geländegängige Kinderwägen geeignet. Normale bequeme Freizeitschuhe oder leichte Wanderschuhe genügen vollkommen. Ideal für Familien mit Kindern jeden Alters sowie für Genusswanderer. Hunde dürfen an der Leine auf das Außengelände der Alm mitgeführt werden (im Bereich der Schaukäserei aus hygienischen Gründen nicht gestattet).\n\n### Anreise\nMit dem Pkw erreicht man Alpbach über die Inntalautobahn A12 (Ausfahrt Kramsach/Alpbachtal) und folgt der Landesstraße L5 durch Reith im Alpbachtal hinauf nach Alpbach (Fahrzeit ab Autobahn ca. 15 Minuten). Kostenfreie Parkplätze stehen an der Talstation der Wiedersbergerhornbahn sowie im Ortszentrum zur Verfügung. Mit den öffentlichen Verkehrsmitteln reist man per ÖBB bis zum Bahnhof Brixlegg und nimmt dort die direkte VVT-Buslinie 4074 bis zur Haltestelle „Alpbach Wiedersbergerhornbahn“ oder „Alpbach Raika“.\n\n### Tipps\nInhaber der Alpbachtal Card nutzen die Sommerbergbahnen sowie die regionalen Buslinien der Region völlig kostenlos. Nehmen Sie an der Schaukäserei teil und verkosten Sie den würzigen Alpbachtaler Bergkäse zusammen mit frischem Bauernbrot und selbst gerührter Almbutter auf der sonnigen Holzterrasse. Für Kinder ist der nahegelegene Erlebnisspielplatz „Lauserland“ an der Bergstation der Wiedersbergerhornbahn mit Flying Fox, Klettergerüsten und dem rasanten „Lauser Sauser“-Alpine-Coaster ein unvergessliches Zusatzhighlight.",
   "preis": 35,
   "dauer": "4 Stunden",
   "tags": [
-    "familie",
-    "bauernhof",
-    "alm",
+    "almerlebnis",
     "alpbach",
-    "tiere"
+    "alpbachtal",
+    "familie",
+    "kinder",
+    "bauernhof",
+    "kaese",
+    "tradition"
   ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
+  "koordinaten": [
+    47.3989,
+    11.9431
+  ],
   "status": "published",
-  "link": "#",
+  "link": "https://www.alpbachtal.at/",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "titel": "Bauernhof- & Almerlebnis auf der Greissl Alm im Alpbachtal",
+  "saison": "Juni bis Oktober (Almsommer)",
+  "familie": true,
+  "hunde": true,
+  "sources": [
+    "https://www.alpbachtal.at/de/region-orte/alpbach",
+    "https://www.alpbachtal.at/de/sommer/wandern/almen-huetten",
+    "https://www.tirol.at/orte/a-alpbach",
+    "https://www.tirol.at/reisefuehrer/kultur-tirol/brauchtum/almsommer",
+    "https://www.alpbachtal.at/de/sommer/familienurlaub"
+  ],
+  "beschreibung_en": "### Überblick\nThe traditional mountain farm and alpine pasture experience at Greissl Alm in the Alpbachtal Valley immerses families in authentic Tyrolean farming heritage. Celebrated as \"Austria's Most Beautiful Village,\" Alpbach is famed for its uniform wooden chalets and well-preserved alpine customs. Perched high above the valley floor, the pasture offers interactive demonstrations of artisan butter churning in wooden casks and copper-kettle cheese production. Children can meet calves, dairy cows, and pygmy goats, while adults unwind in serene mountain air with sweeping views across the Wiedersberger Horn.\n\n### Route & Anforderungen\nThe excursion begins in the village of Alpbach (975 m) or via the Wiedersbergerhornbahn gondola. A gentle, gravel farm path ascends through fir forests and flower meadows to the alpine dairy pasture at 1,350 meters elevation. Spanning 3.5 km and 250 meters of elevation change, the walk takes about an hour uphill, forming a rewarding 4-hour visit including cheese tasting and livestock visits. Suitable for all-terrain strollers and multi-generational families. Comfortable footwear is advised. Leashed dogs are permitted on outdoor pasture grounds.\n\n### Anreise\nBy road, exit the A12 motorway at Kramsach/Alpbachtal and follow the L5 road through Reith up to Alpbach (approx. 15 minutes). Free parking is located at the Wiedersbergerhornbahn base. By public rail, take the train to Brixlegg station and connect via local bus 4074 directly to Alpbach.\n\n### Tipps\nThe regional Alpbachtal Card grants free transport on summer cable cars and local buses. Enjoy a fresh farmer's snack (\"Almjause\") featuring handmade butter, rustic sourdough bread, and aged mountain cheese on the sun terrace. After visiting the dairy farm, take the family to \"Lauserland\" adventure playground and the \"Lauser Sauser\" alpine coaster near the mountain lift summit.",
+  "beschreibung_fr": "### Überblick\nL'expérience à la ferme d'alpage Greissl Alm dans la vallée d'Alpbachtal fait découvrir aux familles le quotidien traditionnel des paysans de montagne tyroliens. Réputé comme le « plus beau village d'Autriche », Alpbach offre un décor enchanteur pour s'initier à la fabrication du beurre et du fromage artisanal.\n\n### Route & Anforderungen\nDépart depuis le village d'Alpbach ou la télécabine du Wiedersbergerhorn. Une piste carrossable douce mène à l'alpage à 1 350 mètres (3,5 km, 250 m de dénivelé, 1 h de marche). Visite globale de 4 heures avec dégustation. Accessible aux poussettes tout-terrain. Chaussures de marche confortables conseillées. Chiens admis en laisse à l'extérieur.\n\n### Anreise\nAutoroute A12 sortie Kramsach puis route L5 jusqu'à Alpbach (15 min). Parkings gratuits aux remontées. En train : gare de Brixlegg puis bus direct 4074.\n\n### Tipps\nLa carte Alpbachtal Card offre la gratuité sur les télécabines et les bus. Dégustez le fromage d'alpage affiné en terrasse et découvrez le grand parc de jeux « Lauserland » au sommet du téléphérique.",
+  "beschreibung_it": "### Überblick\nL'esperienza in malga e fattoria didattica alla Greissl Alm nella valle Alpbachtal introduce grandi e piccini ai segreti dell'agricoltura alpina tradizionale. Nel pittoresco borgo montano di Alpbach si assiste alla mungitura e alla preparazione del burro e del tipico formaggio di malga.\n\n### Route & Anforderungen\nPartenza da Alpbach salendo per una comoda strada forestale fino a 1.350 metri (circa 3,5 km e 250 metri di dislivello, 1 ora di cammino). Esperienza totale di 4 ore con laboratorio e assaggi. Adatto a passeggini e famiglie. Scarpe comode da passeggiata. Cani ammessi al guinzaglio all'esterno.\n\n### Anreise\nDall'autostrada A12 uscita Kramsach/Alpbachtal lungo la strada L5 fino ad Alpbach (15 minuti). Parcheggio gratuito. In treno a Brixlegg e poi autobus di linea 4074.\n\n### Tipps\nGli impianti di risalita sono gratuiti con l'Alpbachtal Card. Gustate un tagliere di formaggi e burro fresco di malga e portate i bambini al parco avventura «Lauserland» in quota.",
+  "beschreibung_es": "### Überblick\nLa jornada tradicional en la granja y majada alpina Greissl Alm en el valle de Alpbachtal acerca a toda la familia a las costumbres campesinas tirolesas. En Alpbach, premiado como el pueblo más florido y bello de Austria, grandes y pequeños descubren la elaboración artesana de mantequilla y queso de montaña.\n\n### Route & Anforderungen\nSubida desde Alpbach por pista de tierra acondicionada hasta los 1.350 metros (3,5 km y 250 m de desnivel, 1 hora de subida). Programa de 4 horas con demostración quesera y degustación. Apto para cochecitos todoterreno. Calzado cómodo. Perros con correa permitidos en el exterior.\n\n### Anreise\nPor la A12 salida Kramsach y carretera L5 hasta Alpbach (15 minutos). Aparcamiento junto a los remontes. En tren a Brixlegg y autobús 4074.\n\n### Tipps\nAproveche las telecabinas gratuitas con la tarjeta Alpbachtal Card. Deguste los quesos en la terraza rústica y visite el parque temático infantil «Lauserland» en la cumbre.",
+  "beschreibung_cs": "### Überblick\nDen na salaši a horské farmě Greissl Alm v údolí Alpbachtal přibližuje návštěvníkům tradiční hospodaření v Tyrolsku. V malebné vesnici Alpbach zažijete ukázky výroby domácího másla a horského sýra s krmením zvířat.\n\n### Route & Anforderungen\nCesta z Alpbachu stoupá po široké lesní cestě na salaš v nadmořské výšce 1 350 m (3,5 km, převýšení 250 m, 1 hodina chůze). Celkový program trvá 4 hodiny. Vhodné pro terénní kočárky a rodiny s dětmi. Pohodlná obuv. Psi na vodítku ve venkovních prostorách povoleni.\n\n### Anreise\nZ dálnice A12 sjezd Kramsach po silnici L5 do Alpbachu (15 minut). Bezplatné parkování. Vlakem do Brixleggu a autobusem 4074.\n\n### Tipps\nS kartou Alpbachtal Card jsou lanovky i autobusy zdarma. Ochutnejte čerstvý sýr na terase a navštivte dětský zábavní park „Lauserland“ u horní stanice lanovky.",
+  "beschreibung_nl": "### Überblick\nDe boerderij- en alpenweidebeleving op de Greissl Alm in het Alpbachtal laat gezinnen kennismaken met het traditionele boerenleven. In het bloemendorp Alpbach ziet u hoe ambachtelijke boter en alpenkaas worden gemaakt.\n\n### Route & Anforderungen\nWandeling vanuit Alpbach over een zacht stijgende bosweg naar 1.350 meter hoogte (3,5 km, 250 hoogtemeters, 1 uur lopen). Totale duur 4 uur inclusief proeverij. Toegankelijk voor kinderwagens. Gemakkelijke wandelschoenen. Aangelijnde honden buiten welkom.\n\n### Anreise\nVia de A12 afrit Kramsach en de L5 naar Alpbach (15 minuten). Gratis parkeren bij de kabelbaan. Per trein naar Brixlegg en bus 4074 naar Alpbach.\n\n### Tipps\nKabelbanen zijn gratis met de Alpbachtal Card. Geniet van verse melkproducten op het terras en bezoek speelpark «Lauserland» op de bergtop.",
+  "beschreibung_cn": "### Überblick\n在阿尔卑巴赫山谷（Alpbachtal）的Greissl Alm高山牧场体验传统农庄农牧生活，是亲子家庭领略正宗蒂罗尔农耕文明的绝佳机会。在被评为“欧洲最美鲜花村庄”的阿尔卑巴赫，游客不仅能亲睹木桶手工搅黄油与高山铜锅奶酪制作工序，孩子们还可亲手抚摸喂养牛犊与小羊。\n\n### Route & Anforderungen\n路线自阿尔卑巴赫村或缆车站出发，沿平缓林间农路徒步至海拔1350米的牧场（单程3.5公里，落差250米，步行约1小时）。含奶酪坊参观与品尝全程约4小时。步道路况极佳，支持全地形婴儿推车。穿着轻便便鞋即可。允许携牵绳犬只在室外草场活动。\n\n### Anreise\n自A12高速Kramsach出口驶出，沿L5公路行驶15分钟即达缆车站免费停车场。公交乘火车至Brixlegg站转乘4074路班车直达。\n\n### Tipps\n持有Alpbachtal游客卡可免费乘坐夏季缆车与班车。推荐在露台品尝原生态手作高山奶酪拼盘，并前往山顶“Lauserland”大型森林冒险乐园体验极速滑轨过山车。"
 }

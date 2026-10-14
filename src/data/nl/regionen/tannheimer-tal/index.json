@@ -1,16 +1,92 @@
 {
-  "name": "Tannheimer Tal",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": "Regio Tannheimer Tal in Tirol",
-  "koordinaten": {
-    "lat": 47.5167,
-    "lng": 10.6167
-  },
-  "tags": [
-    "tannheimer-vallei",
-    "regio"
-  ],
+  "titel": "Tannheimer Tal",
   "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "Het Tannheimer Tal staat bekend als het 'mooiste hoogdal van Europa' – een eldorado voor wandelaars en langlaufers rond de Vilsalpsee en de Neunerköpfle.",
+  "emoji": "🌲",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "wandelen",
+    "hooggebergte",
+    "meren",
+    "langlaufen",
+    "natuur"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p>Het <strong>Tannheimer Tal</strong> in het district Reutte ligt op een zonrijk hoogplateau op ruim 1.100 m hoogte en wordt veelvuldig bezongen als het 'mooiste hoogdal van Europa'. Ingeklemd tussen de steile kalkrotsen van de Tannheimer Berge met de <strong>Kellenspitze (2.238 m)</strong>, Rote Flüh en Gimpel aan de noordzijde en de grazige Allgäuer Alpen aan de zuidzijde, omvat het dal zes schilderachtige dorpen: <strong>Tannheim</strong>, <strong>Grän</strong>, <strong>Nesselwängle</strong>, <strong>Schattwald</strong>, <strong>Zöblen</strong> en de enclave <strong>Jungholz</strong>. Natuurhoogtepunten zijn het beschermde natuurgebied <strong>Vilsalpsee</strong>, de kristalheldere <strong>Haldensee</strong> en het <em>grootste toppenboek van de Alpen</em> op de Neunerköpfle. In de winter trekt het dal langlaufers uit heel Europa met 140 km aan loipes.</p>",
+  "tipps": [
+    "Neem het gezellige Alpenexpress-treintje naar de beschermde Vilsalpsee en wandel naar de Bergaicht-waterval.",
+    "Schrijf uw naam in het 3 meter brede grootste toppenboek van de Alpen op de Neunerköpfle (1.862 m).",
+    "Beleef het Internationale Ballonfestival in januari wanneer tientallen heteluchtballonnen het winterse berglandschap sieren."
+  ],
+  "empfehlungen": "<p>Neem de kabelbaan naar de <strong>Neunerköpfle</strong> voor de gezinsvriendelijke 9er-belevenisroute met weidse panorama's. Strijk daarna neer bij <strong>Gasthof Vilsalpsee</strong> of geniet van de verfijnde alpenkeuken in het hotel-restaurant <strong>Lumberger Hof</strong> in Grän.</p>",
+  "umgebung": "<p>Het Tannheimer Tal sluit in het oosten via de Gaichtpas aan op het Lechtal en Reutte. In het noorden en westen grenst het via de Oberjochpas direct aan Beieren (Duitsland; Bad Hindelang en Pfronten). In het zuiden vormen de Allgäuer Alpen de scheiding met het Lechtal.</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/bezirke-tirol/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
   "bilder": [],
-  "hero_bild": ""
+  "hero_bild": null,
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
+  "koordinaten": {
+    "lat": 47.498,
+    "lng": 10.518
+  },
+  "slug": "tannheimer-tal",
+  "name": "Tannheimer Tal"
 }

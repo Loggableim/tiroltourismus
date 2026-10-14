@@ -1,29 +1,36 @@
 {
-  "titel": "Osttirol",
+  "titel": "东蒂罗尔",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Osttirol 是位于高耸的 Hohen Tauern 与 Lienzer Dolomiten 之间的阳光沐浴的高山峡谷。",
+  "kurzbeschreibung": "东蒂罗尔是阳光普照的阿尔卑斯明珠，坐落在大格洛克纳峰所在的高地陶恩国家公园与险峻的利恩茨多洛米蒂山脉之间。",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#E67E22",
   "tags": [
-    "徒步旅行",
+    "徒步",
     "自然",
     "登山",
     "文化",
     "宁静"
   ],
   "hoehe": "3.798 m",
-  "flaeche": "2.019 km²",
+  "flaeche": "2.020 km²",
   "einwohner": "49.000",
-  "beschreibung": "<p><strong>Osttirol</strong> 是奥地利最阳光的地区，也是山爱好者的天堂。Lienz 区被北部的 Nationalpark Hohe Tauern 的雄伟山峰和南部的 Lienzer Dolomiten 的显著山峰所环绕。区首府 Lienz 以其中世纪老城区和 Schloss Bruck 而闻名。Matrei in Osttirol 是通往国家公园的大门，也是前往 Großglockner（3.798 米），奥地利最高峰的徒步起点。Kals am Großglockner 是 Glockner 攀登的重要支点，著名的 Kalser Höhenweg 在此起点。</p>",
+  "beschreibung": "<p><strong>东蒂罗尔</strong>（Osttirol，利恩茨区）是蒂罗尔阳光最充足的地区，也是高山户外爱好者的净土。这里环抱266座海拔三千米以上的雪峰，北部坐落着广袤的<strong>高地陶恩国家公园</strong>与奥地利最高峰<strong>大格洛克纳峰（3,798米）</strong>，南部则是险峻迷人的<strong>利恩茨多洛米蒂山脉</strong>与卡尔尼克阿尔卑斯山。首府<strong>利恩茨（Lienz）</strong>洋溢着地中海风情，中心广场绿意盎然，布鲁克城堡珍藏着著名画家埃格-利恩茨的杰作。德费雷根谷、维尔根谷与维尔格拉滕谷等原生态山谷保留着质朴的高山农庄与纯净自然。</p>",
   "tipps": [
-    "Der Kalser Höhenweg ist eine anspruchsvolle Mehrtagestour – Trittsicherheit unbedingt erforderlich.",
-    "Der Nationalpark Hohe Tauern bietet kostenlose geführte Rangertouren an.",
-    "Die Großglockner-Hochalpenstraße führt direkt zum Fuscher Törl – ein unvergessliches Panorama."
+    "探访维尔根谷的翁巴尔瀑布（Umbalfälle），这是欧洲首条冰川活水自然科普步道。",
+    "在传统山间客栈品尝地道的东蒂罗尔特色饺子（Schlipfkrapfen）与受保护的普雷格勒烈酒（Pregler）。",
+    "卡尔斯全景高山步道（Kalser Höhenweg）可近距离仰望大格洛克纳峰南壁的壮阔全景。"
   ],
-  "empfehlungen": "<p>参观 <strong>Nationalpark Hohe Tauern</strong> 并沿着 Glocknerwand 徒步走 <strong>Kalser Höhenweg</strong>。随后在 Kals 的 <strong>Lucknerhaus</strong> 享用正宗的 Osttiroler Kasnocken。</p>",
-  "umgebung": "",
+  "empfehlungen": "<p>跟随国家公园护林员探访<strong>高地陶恩国家公园</strong>，追寻金雕与阿尔卑斯野山羊的踪迹。随后前往悬立于悬崖峭壁之上的<strong>多洛米蒂山间木屋（Dolomitenhütte）</strong>或卡尔斯的<strong>卢克纳之屋（Lucknerhaus）</strong>品尝地道高山珍馐。</p>",
+  "umgebung": "<p>东蒂罗尔通过费尔伯陶恩隧道公路连接北蒂罗尔。北部与萨尔茨堡州接壤，东部和东南部邻接克恩顿州，南部与西部接壤意大利南蒂罗尔与威尼托。主要山谷包括伊瑟尔谷、德劳谷、维尔根谷、德费雷根谷与维尔格拉滕谷。</p>",
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.nationalpark-hohetauern.at",
+    "https://www.tirol.gv.at/bezirke-tirol/lienz/",
+    "https://www.tirol.at/regionen/osttirol",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -111,5 +118,10 @@
       46.95,
       12.25
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 46.8297,
+    "lng": 12.7686
+  },
+  "slug": "osttirol"
 }

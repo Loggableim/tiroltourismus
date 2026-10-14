@@ -2,7 +2,7 @@
   "titel": "Osttirol",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Osttirol ist das sonnenverwöhnte Hochtal zwischen den schroffen Gipfeln der Hohen Tauern und den Lienzer Dolomiten.",
+  "kurzbeschreibung": "Osttirol ist das sonnenverwöhnte Alpenparadies zwischen den majestätischen Hohen Tauern mit dem Großglockner und den schroffen Lienzer Dolomiten.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#E67E22",
@@ -14,16 +14,23 @@
     "ruhe"
   ],
   "hoehe": "3.798 m",
-  "flaeche": "2.019 km²",
+  "flaeche": "2.020 km²",
   "einwohner": "49.000",
-  "beschreibung": "<p><strong>Osttirol</strong> ist der sonnenreichste Bezirk Österreichs und ein Paradies für Bergliebhaber. Der Bezirk Lienz ist umgeben von den mächtigen Gipfeln des <strong>Nationalparks Hohe Tauern</strong> im Norden und den markanten <strong>Lienzer Dolomiten</strong> im Süden. Die Bezirkshauptstadt <strong>Lienz</strong> besticht durch ihre mittelalterliche Altstadt und das Schloss Bruck. <strong>Matrei in Osttirol</strong> ist das Tor zum Nationalpark und Ausgangspunkt für Touren auf den <strong>Großglockner</strong> (3.798 m), Österreichs höchsten Berg. <strong>Kals am Großglockner</strong> ist der wichtigste Stützpunkt für Glockner-Besteigungen mit dem bekannten Kalser Höhenweg.</p>",
+  "beschreibung": "<p><strong>Osttirol</strong> (Bezirk Lienz) ist die sonnenreichste Region Tirols und ein Sehnsuchtsort für Bergliebhaber. Umrahmt von 266 Dreitausendern erstreckt sich die Region vom mächtigen <strong>Nationalpark Hohe Tauern</strong> mit Österreichs höchstem Gipfel, dem <strong>Großglockner (3.798 m)</strong> und dem Großvenediger im Norden, bis zu den markanten Kalkformationen der <strong>Lienzer Dolomiten</strong> und Karnischen Alpen im Süden. Die sonnige Bezirkshauptstadt <strong>Lienz</strong> begeistert mit mediterranem Charme, Palmen am Hauptplatz und dem geschichtsträchtigen Schloss Bruck mit Werken von Albin Egger-Lienz. Urige Hochtäler wie das Defereggental, das Virgental, das Kalser Tal und das naturbelassene Villgratental bieten gelebte Bergbauerntradition fernab des Massentourismus.</p>",
   "tipps": [
-    "Der Kalser Höhenweg ist eine anspruchsvolle Mehrtagestour – Trittsicherheit unbedingt erforderlich.",
-    "Der Nationalpark Hohe Tauern bietet kostenlose geführte Rangertouren an.",
-    "Die Großglockner-Hochalpenstraße führt direkt zum Fuscher Törl – ein unvergessliches Panorama."
+    "Besuchen Sie die Umbalfälle im Virgental – den ersten europäischen Wasserschaupfad an den tosenden Kaskaden der Isel.",
+    "Genießen Sie echte Osttiroler Schlipfkrapfen und den geschützten Osttiroler Pregler in traditionellen Gasthöfen.",
+    "Der Kalser Höhenweg bietet atemberaubende Blicke auf die mächtige Glocknerwand; Trittsicherheit erforderlich."
   ],
-  "empfehlungen": "<p>Besuchen Sie den <strong>Nationalpark Hohe Tauern</strong> und wandern Sie auf dem <strong>Kalser Höhenweg</strong> entlang der Glocknerwand. Danach Einkehr im <strong>Lucknerhaus</strong> in Kals für original Osttiroler Kasnocken.</p>",
-  "umgebung": "<p>Osttirol ist über den Felbertauerntunnel von Nordtirol erreichbar und grenzt im Süden an Südtirol (Italien) sowie im Osten an Kärnten. Die Hohen Tauern im Norden trennen Osttirol von Salzburg. Benachbarte Regionen: Defereggental (Westen), Virgental (Süden), Iseltal (Osten).</p>",
+  "empfehlungen": "<p>Erkunden Sie den <strong>Nationalpark Hohe Tauern</strong> auf geführten Touren mit Nationalpark-Rangern zu Steinadler und Steinbock. Kehren Sie anschließend in der spektakulär auf einem Felssporn gelegenen <strong>Dolomitenhütte</strong> oder im <strong>Lucknerhaus</strong> in Kals für traditionelle Almschmankerl ein.</p>",
+  "umgebung": "<p>Osttirol ist über die Felbertauernstraße mit Nordtirol verbunden. Es grenzt im Norden an das Land Salzburg (Hohe Tauern), im Osten und Südosten an Kärnten (Mölltal, Drautal, Lesachtal) sowie im Süden und Westen an Italien (Südtirol mit Pustertal/Gsieser Tal und Venetien). Wichtige Täler sind das Iseltal, Drautal, Virgental, Defereggental und Villgratental.</p>",
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.nationalpark-hohetauern.at",
+    "https://www.tirol.gv.at/bezirke-tirol/lienz/",
+    "https://www.tirol.at/regionen/osttirol",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -111,5 +118,9 @@
       46.95,
       12.25
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 46.8297,
+    "lng": 12.7686
+  }
 }

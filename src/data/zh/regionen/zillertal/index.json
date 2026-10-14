@@ -1,9 +1,9 @@
 {
-  "titel": "Zillertal",
+  "titel": "齐勒谷地",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Zillertal 是 Tirol 最大的侧谷——是滑雪者、徒步旅行者和家庭的乐园，拥有著名的 Zillertaler Arena.",
-  "emoji": "🏞️",
+  "kurzbeschreibung": "齐勒谷地（Zillertal）是享誉世界的“音乐之乡”与阿尔卑斯度假胜地，拥有全年365天开放的欣特图克斯冰川及548公里庞大滑雪网络。",
+  "emoji": "🎶",
   "bewertung": 5,
   "farbe": "#E30613",
   "tags": [
@@ -14,16 +14,24 @@
     "美食"
   ],
   "hoehe": "3.509 m",
-  "flaeche": "1.044 km²",
-  "einwohner": "36.000",
-  "beschreibung": "",
+  "flaeche": "1.098 km²",
+  "einwohner": "38.000",
+  "beschreibung": "<p>位于施瓦茨区的<strong>齐勒谷地（Zillertal）</strong>是因河谷地最宽阔、最具名望的南部支谷。山谷绵延40余公里，从施特拉斯经菲根、卡尔滕巴赫、齐勒河畔采尔、迈尔霍芬一直延伸至欣特图克斯的高山终点。谷内的<strong>欣特图克斯冰川（Hintertuxer Gletscher）</strong>是奥地利唯一全年365天开放的滑雪天堂。连同齐勒竞技场（Zillertal Arena）、迈尔霍芬（拥有坡度达78%的著名“切腹”雪道Harakiri）与高齐勒滑雪区，全谷共有548公里雪道。夏季，<strong>齐勒阿尔卑斯高山自然公园</strong>以施莱盖斯绿松石色水库、柏林高山步道以及<strong>霍赫法伊勒峰（Hochfeiler，3509米）</strong>等巍峨山峰吸引着全世界游客。</p>",
   "tipps": [
-    "Die Zillertaler Museumsbahn fährt im Sommer mit Dampflokomotive durchs Tal.",
-    "Der Wildwasserkanal in Fügen ist Europas größte künstliche Wildwasseranlage.",
-    "Die Schlegeis-Alm-Straße ist mautpflichtig, aber die Aussicht lohnt sich."
+    "徒步前往施莱盖斯水库上方的奥尔佩勒木屋（Olpererhütte），在横跨湖面之上的著名悬索桥上拍照留念。",
+    "探秘欣特图克斯冰川深处的天然冰宫（Natur Eis Palast），观赏地下冰川湖与冰晶奇观。",
+    "在传统高山牧场木屋品尝地道的齐勒炸馅饼（Zillertaler Krapfen）与灰奶酪（Graukäse）。"
   ],
-  "empfehlungen": "<p>我们的首选推荐：在<strong>Schlegeisspeicher</strong>周围徒步旅行——这座天蓝色的水库背景是Tirol最常被拍摄的景象之一。随后前往Friesenberghütte的Alpenrose休息。</p>",
-  "umgebung": "<p>Zillertal在北部与Inntal相邻，在南部与Alpenhauptkamm（Italien）相接。邻近地区：Tuxertal（Zillertaler Seitental）、Gerlos、Krimml（Salzburg）。Zillertaler Alpen是zentralen Ostalpen的一部分。</p>",
+  "empfehlungen": "<p>乘坐历史悠久的<strong>齐勒蒸汽窄轨小火车（Zillertalbahn）</strong>从延巴赫穿行至迈尔霍芬。随后前往壮观的<strong>施莱盖斯高山水库（Schlegeisspeicher）</strong>，或乘缆车登上欣特图克斯冰川3250米观景台，并在备受赞誉的<strong>克里斯塔尔木屋（Kristallhütte）</strong>或<strong>韦德尔木屋（Wedelhütte）</strong>享用高山美馔。</p>",
+  "umgebung": "<p>齐勒谷地在施特拉斯从因河谷分出。北靠因河谷与罗凡山脉，西邻图克斯阿尔卑斯山与维普谷，东经格洛斯山口通往萨尔茨堡州与基茨比厄尔阿尔卑斯山，南沿阿尔卑斯主脊与意大利南蒂罗尔接壤。</p>",
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.best-of-zillertal.at",
+    "https://www.zillertalarena.com",
+    "https://www.hintertuxergletscher.at",
+    "https://www.tirol.at/regionen/a-zillertal",
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -45,7 +53,7 @@
     ],
     [
       47.3,
-      12.0
+      12
     ],
     [
       47.25,
@@ -53,7 +61,7 @@
     ],
     [
       47.2,
-      12.0
+      12
     ],
     [
       47.15,
@@ -103,5 +111,10 @@
       47.4,
       11.78
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 47.2667,
+    "lng": 11.8833
+  },
+  "slug": "zillertal"
 }

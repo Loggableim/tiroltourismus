@@ -1,16 +1,92 @@
 {
-  "name": "Tannheimer Tal",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": "Tannheimer Tal region in Tyrol",
-  "koordinaten": {
-    "lat": 47.5167,
-    "lng": 10.6167
-  },
-  "tags": [
-    "tannheimer-tal",
-    "region"
-  ],
+  "titel": "Tannheimer Tal",
   "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "The Tannheim Valley is widely celebrated as 'Europe's most beautiful high valley' – a haven for hikers and cross-country skiers around emerald Lake Vilsalpsee.",
+  "emoji": "🌲",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "hiking",
+    "mountains",
+    "lakes",
+    "cross-country",
+    "nature"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p>The <strong>Tannheim Valley (Tannheimer Tal)</strong> in the district of Reutte sits on a sun-drenched plateau at 1,100 m altitude, often lauded as 'Europe's most beautiful high valley'. Flanked by the rugged limestone towers of the Tannheim Mountains—dominated by <strong>Kellenspitze (2,238 m)</strong>, Rote Flüh, and Gimpel—and the gentler ridges of the Allgäu Alps, the valley encompasses six idyllic villages: <strong>Tannheim</strong>, <strong>Grän</strong>, <strong>Nesselwängle</strong>, <strong>Schattwald</strong>, <strong>Zöblen</strong>, and the enclave of <strong>Jungholz</strong>. Iconic highlights include the protected nature reserve of emerald <strong>Lake Vilsalpsee</strong>, clear <strong>Lake Haldensee</strong>, and the <em>largest summit logbook in the Alps</em> on Mount Neunerköpfle. Winter turns the valley into a top-rated nordic paradise with over 140 km of groomed cross-country tracks.</p>",
+  "tipps": [
+    "Ride the quaint Tannheimer Alpenexpress mini-train to protected Lake Vilsalpsee and hike along the lakeshore to Bergaicht waterfall.",
+    "Sign your name in the Alps' largest summit logbook (3 m wide) atop Mount Neunerköpfle (1,862 m).",
+    "Witness the International Hot Air Balloon Festival each January filling the winter skies with colorful balloons."
+  ],
+  "empfehlungen": "<p>Ascend Mount <strong>Neunerköpfle</strong> via cable car to walk the scenic '9er Erlebnisweg' trail and enjoy 360-degree vistas across Tyrol and Bavaria. Afterwards, treat yourself to regional fare at <strong>Gasthof Vilsalpsee</strong> or the gourmet restaurant at <strong>Lumberger Hof</strong> in Grän.</p>",
+  "umgebung": "<p>The Tannheim Valley is accessed from the east via the Gaicht Pass connecting to the Lech Valley and Reutte. To the north and west, it borders Bavaria (Germany) via the Oberjoch Pass towards Bad Hindelang and Pfronten. To the south, the Allgäu Alps divide it from the Lechtal.</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/bezirke-tirol/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
   "bilder": [],
-  "hero_bild": ""
+  "hero_bild": null,
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
+  "koordinaten": {
+    "lat": 47.498,
+    "lng": 10.518
+  },
+  "slug": "tannheimer-tal",
+  "name": "Tannheimer Tal"
 }

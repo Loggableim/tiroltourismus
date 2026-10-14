@@ -2,8 +2,8 @@
   "titel": "Zillertal",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Das Zillertal ist Tirols größtes Seitental – ein Paradies für Skifahrer, Wanderer und Familien mit der berühmten Zillertaler Arena.",
-  "emoji": "🏞️",
+  "kurzbeschreibung": "Das Zillertal begeistert als weltberühmtes 'Tal der Musik' und alpine Wintersport- und Wanderdestination mit dem ganzjährigen Hintertuxer Gletscher und 548 Pistenkilometern.",
+  "emoji": "🎶",
   "bewertung": 5,
   "farbe": "#E30613",
   "tags": [
@@ -14,16 +14,24 @@
     "kulinarik"
   ],
   "hoehe": "3.509 m",
-  "flaeche": "1.044 km²",
-  "einwohner": "36.000",
-  "beschreibung": "<p>Das <strong>Zillertal</strong> erstreckt sich über 40 Kilometer von Strass im Zillertal bis hinauf zum Tuxer Fernerhaus. Mit seinen sieben Seitentälern bietet es eine der vielfältigsten Urlaubslandschaften Tirols. Im Winter locken die Skigebiete Zillertal Arena, Ski & Gletscherwelt Zillertal 3000 und Spieljoch-Fügen mit über 500 Pistenkilometern. Im Sommer lockt eines der größten zusammenhängenden Wandergebiete der Alpen mit dem Berliner Höhenweg und dem Wildwasser-Kajak auf der Ziller.</p>",
+  "flaeche": "1.098 km²",
+  "einwohner": "38.000",
+  "beschreibung": "<p>Das <strong>Zillertal</strong> im Bezirk Schwaz ist das breiteste und bekannteste südliche Seitental des Tiroler Inntals. Auf über 40 Kilometern Länge erstreckt sich die Urlaubsregion von Strass über Fügen, Kaltenbach, Zell am Ziller und Mayrhofen bis zum hochalpinen Talschluss in Hintertux. Mit dem <strong>Hintertuxer Gletscher</strong> beherbergt das Tal Österreichs einziges 365 Tage im Jahr geöffnetes Ganzjahresskigebiet. Zusammen mit der Zillertal Arena, Mayrhofen (Mountopolis mit der steilen 'Harakiri'-Piste) und Hochzillertal-Hochfügen stehen über 548 Pistenkilometer zur Verfügung. Im Sommer lockt der <strong>Hochgebirgs-Naturpark Zillertaler Alpen</strong> mit dem Schlegeisstausee, spektakulären Höhenwegen wie dem Berliner Höhenweg und Berggipfeln wie dem <strong>Hochfeiler (3.509 m)</strong> und Olperer (3.476 m).</p>",
   "tipps": [
-    "Die Zillertaler Museumsbahn fährt im Sommer mit Dampflokomotive durchs Tal.",
-    "Der Wildwasserkanal in Fügen ist Europas größte künstliche Wildwasseranlage.",
-    "Die Schlegeis-Alm-Straße ist mautpflichtig, aber die Aussicht lohnt sich."
+    "Wandern Sie zur Olpererhütte am Schlegeisstausee für das weltberühmte Fotomotiv der Hängebrücke über dem türkisen Stausee.",
+    "Entdecken Sie den Natur Eis Palast tief im Hintertuxer Gletscher mit gefrorenem Gletschersee und Eisstalaktiten.",
+    "Besuchen Sie das BrauKunstHaus der Zillertal Bier in Zell am Ziller und verkosten Sie echten Zillertaler Graukäse und Krapfen."
   ],
-  "empfehlungen": "<p>Unsere Top-Empfehlung: Unternehmen Sie eine Wanderung rund um den <strong>Schlegeisspeicher</strong> – die türkisblaue Stausee-Kulisse ist eines der meistfotografierten Motive Tirols. Anschließend einkehren in der Alpenrose auf der Friesenberghütte.</p>",
-  "umgebung": "<p>Das Zillertal grenzt im Norden an das Inntal, im Süden an den Alpenhauptkamm (Italien). Benachbarte Regionen: Tuxertal (Zillertaler Seitental), Gerlos, Krimml (Salzburg). Die Zillertaler Alpen sind Teil der zentralen Ostalpen.</p>",
+  "empfehlungen": "<p>Erleben Sie eine Nostalgiefahrt mit der dampfbetriebenen <strong>Zillertalbahn</strong> von Jenbach nach Mayrhofen. Fahren Sie anschließend hinauf zum <strong>Schlegeisspeicher</strong> oder schweben Sie mit dem Gletscherbus hinauf auf 3.250 m Höhe am Hintertuxer Gletscher mit Einkehr in der legendären <strong>Wedelhütte</strong> oder <strong>Kristallhütte</strong>.</p>",
+  "umgebung": "<p>Das Zillertal zweigt bei Strass im Zillertal vom Inntal ab. Es grenzt im Norden an das Inntal und Rofan, im Westen an die Tuxer Voralpen und das Wipptal, im Osten über den Gerlospass an das Land Salzburg (Pinzgau) und die Kitzbüheler Alpen sowie im Süden entlang des Alpenhauptkamms an Südtirol (Italien; Ahrntal und Sterzing).</p>",
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.best-of-zillertal.at",
+    "https://www.zillertalarena.com",
+    "https://www.hintertuxergletscher.at",
+    "https://www.tirol.at/regionen/a-zillertal",
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -45,7 +53,7 @@
     ],
     [
       47.3,
-      12.0
+      12
     ],
     [
       47.25,
@@ -53,7 +61,7 @@
     ],
     [
       47.2,
-      12.0
+      12
     ],
     [
       47.15,

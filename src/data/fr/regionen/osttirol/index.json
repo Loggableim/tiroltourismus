@@ -1,8 +1,8 @@
 {
-  "titel": "Osttirol",
+  "titel": "Tyrol oriental",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Osttirol est la vallée ensoleillée des Alpes, nichée entre les pics abrupts des Hohen Tauern et les dolomites de Lienz.",
+  "kurzbeschreibung": "Le Tyrol oriental est un paradis alpin ensoleillé, niché entre les sommets imposants des Hohe Tauern avec le Grossglockner et les falaises des Dolomites de Lienz.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#E67E22",
@@ -14,16 +14,23 @@
     "calme"
   ],
   "hoehe": "3.798 m",
-  "flaeche": "2.019 km²",
+  "flaeche": "2.020 km²",
   "einwohner": "49.000",
-  "beschreibung": "<p><strong>L'Osttirol</strong> est le district le plus ensoleillé d’Autriche et un paradis pour les amateurs de montagne. Le district de <strong>Lienz</strong> est entouré par les imposants sommets du <strong>Nationalpark Hohe Tauern</strong> au nord et les <strong>Lienzer Dolomiten</strong> au sud, marquants. La ville principale du district, <strong>Lienz</strong>, séduit par son centre historique médiéval et le château de Bruck. <strong>Matrei in Osttirol</strong> est la porte d’entrée du parc national et le point de départ pour des excursions vers le <strong>Großglockner</strong> (3 798 m), le plus haut sommet d’Autriche. <strong>Kals am Großglockner</strong> est le principal point d’appui pour les ascensions du Glockner, avec le célèbre sentier des hauteurs de Kals.</p>",
+  "beschreibung": "<p>Le <strong>Tyrol oriental</strong> (Osttirol, district de Lienz) est la région la plus ensoleillée du Tyrol et un sanctuaire pour les amateurs de grands espaces alpins. Entouré de 266 sommets dépassant 3 000 mètres, il s'étend du <strong>Parc national des Hohe Tauern</strong> au nord—dominé par le point culminant de l'Autriche, le <strong>Grossglockner (3 798 m)</strong>—jusqu'aux crêtes calcaires des <strong>Dolomites de Lienz</strong> et des Alpes carniques au sud. La capitale de district <strong>Lienz</strong> charme par son ambiance méridionale, sa place pavée bordée de terrasses et le château de Bruck. Des vallées préservées comme le Defereggental, le Virgental et le Villgratental perpétuent un art de vivre montagnard authentique.</p>",
   "tipps": [
-    "Der Kalser Höhenweg ist eine anspruchsvolle Mehrtagestour – Trittsicherheit unbedingt erforderlich.",
-    "Der Nationalpark Hohe Tauern bietet kostenlose geführte Rangertouren an.",
-    "Die Großglockner-Hochalpenstraße führt direkt zum Fuscher Törl – ein unvergessliches Panorama."
+    "Découvrez les cascades de l'Umbal dans le Virgental, premier sentier pédagogique aquatique d'Europe sur la rivière Isel.",
+    "Savourez les fameux Schlipfkrapfen du Tyrol oriental et l'eau-de-vie Pregler dans les auberges locales.",
+    "Empruntez le sentier panoramique de Kals offrant une vue grandiose sur la face sud du Grossglockner."
   ],
-  "empfehlungen": "<p>Découvrez le <strong>Nationalpark Hohe Tauern</strong> et marchez sur le <strong>Kalser Höhenweg</strong> le long de la paroi du <strong>Glockner</strong>. Ensuite, faites une halte au <strong>Lucknerhaus</strong> à Kals pour déguster des <strong>Kasnocken</strong> typiques de l’Est du <strong>Tirol</strong>.</p>",
-  "umgebung": "<p>L’**Osttirol** est accessible depuis le **Nordtirol** via le tunnel du **Felbertauern** et est bordé au sud par le **Südtirol** (Italie) ainsi qu’à l’est par la **Kärnten**. Les **Hohen Tauern** au nord séparent l’**Osttirol** de la **Salzburg**. Régions voisines : **Defereggental** (ouest), **Virgental** (sud), **Iseltal** (est).</p>",
+  "empfehlungen": "<p>Partez à la découverte du <strong>Parc national des Hohe Tauern</strong> avec un garde-moniteur pour observer aigles royaux et bouquetins. Faites une halte gourmande au refuge <strong>Dolomitenhütte</strong>, perché de façon vertigineuse sur un promontoire rocheux, ou au <strong>Lucknerhaus</strong> à Kals.</p>",
+  "umgebung": "<p>Le Tyrol oriental est relié au Tyrol du Nord par la route du tunnel du Felbertauern. Il est bordé au nord par Salzbourg, à l'est par la Carinthie, et au sud/ouest par l'Italie (Sud-Tyrol et Vénétie). Ses vallées emblématiques comprennent l'Iseltal, le Drautal, le Virgental, le Defereggental et le Villgratental.</p>",
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.nationalpark-hohetauern.at",
+    "https://www.tirol.gv.at/bezirke-tirol/lienz/",
+    "https://www.tirol.at/regionen/osttirol",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -111,5 +118,10 @@
       46.95,
       12.25
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 46.8297,
+    "lng": 12.7686
+  },
+  "slug": "osttirol"
 }

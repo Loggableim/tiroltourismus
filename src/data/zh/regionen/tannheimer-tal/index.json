@@ -1,16 +1,92 @@
 {
-  "name": "坦海默谷",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": "蒂罗尔州的坦海默谷地区",
-  "koordinaten": {
-    "lat": 47.5167,
-    "lng": 10.6167
-  },
-  "tags": [
-    "tannheimer-tal",
-    "region"
-  ],
+  "titel": "坦海姆山谷",
   "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "坦海姆山谷被誉为“欧洲最美高山河谷”——环绕碧绿的菲尔斯阿尔普湖与诺伊纳克普夫勒峰，是徒步与越野滑雪者的世外桃源。",
+  "emoji": "🌲",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "徒步",
+    "高山",
+    "湖泊",
+    "越野滑雪",
+    "自然"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p>位于罗伊特区（Reutte）的<strong>坦海姆山谷（Tannheimer Tal）</strong>坐落于海拔1100米的阳光高原上，常被赞誉为“欧洲最美的高山河谷”。北侧伫立着坦海姆山脉的险峻石灰岩绝壁与主峰<strong>凯伦峰（Kellenspitze，2238米）</strong>、红岩峰及金佩尔峰，南侧则是阿尔高阿尔卑斯山的温缓草坡。山谷由<strong>坦海姆</strong>、<strong>格伦（Grän）</strong>、<strong>内塞尔旺勒（Nesselwängle）</strong>、<strong>沙特瓦尔德（Schattwald）</strong>、<strong>策布伦（Zöblen）</strong>以及飞地<strong>永霍尔茨（Jungholz）</strong>六个秀丽村落组成。这里坐落着如翡翠般清澈的<strong>菲尔斯阿尔普自然保护区湖泊（Vilsalpsee）</strong>、哈尔登湖，以及诺伊纳克普夫勒峰上<em>阿尔卑斯山最大的登山名册木雕</em>。冬季更拥有超过140公里获殊荣的越野滑雪雪道。</p>",
+  "tipps": [
+    "搭乘充满童趣的坦海姆阿尔卑斯观光小火车前往菲尔斯阿尔普湖自然保护区，漫步至贝尔盖希特瀑布。",
+    "登上诺伊纳克普夫勒峰（1862米），在宽达3米的“阿尔卑斯最大登顶纪念册”上写下您的名字。",
+    "每年一月亲临坦海姆国际热气球节，欣赏五彩斑斓的热气球点亮雪峰夜空的光影奇观。"
+  ],
+  "empfehlungen": "<p>乘坐缆车登上<strong>诺伊纳克普夫勒峰（Neunerköpfle）</strong>，体验老少皆宜的全景探索步道，尽览蒂罗尔与巴伐利亚群山。下山后在湖畔的<strong>菲尔斯阿尔普湖客栈（Gasthof Vilsalpsee）</strong>或格伦的<strong>伦贝格霍夫高山酒店（Lumberger Hof）</strong>享用地道特色菜肴。</p>",
+  "umgebung": "<p>坦海姆山谷东面通过盖希特山口（Gaichtpass）通往莱赫山谷与罗伊特。北面与西面通过上约赫山口（Oberjochpass）紧邻德国巴伐利亚州（欣德朗与普夫龙滕），南面隔阿尔高山脉与莱赫山谷相望。</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/bezirke-tirol/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
   "bilder": [],
-  "hero_bild": ""
+  "hero_bild": null,
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
+  "koordinaten": {
+    "lat": 47.498,
+    "lng": 10.518
+  },
+  "slug": "tannheimer-tal",
+  "name": "坦海姆山谷"
 }

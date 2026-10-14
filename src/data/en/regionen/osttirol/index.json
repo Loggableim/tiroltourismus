@@ -1,8 +1,8 @@
 {
-  "titel": "Osttirol",
+  "titel": "East Tyrol",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "East Tirol is the sun-drenched high valley nestled between the jagged peaks of the Hohe Tauern and the Lienzer Dolomiten.",
+  "kurzbeschreibung": "East Tyrol is a sun-drenched alpine paradise between the majestic Hohe Tauern range with Mount Grossglockner and the rugged Lienz Dolomites.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#E67E22",
@@ -14,16 +14,23 @@
     "tranquility"
   ],
   "hoehe": "3.798 m",
-  "flaeche": "2.019 km²",
+  "flaeche": "2.020 km²",
   "einwohner": "49.000",
-  "beschreibung": "<p><strong>East Tyrol</strong> is Austria’s sunniest district and a paradise for mountain lovers. The district of Lienz is surrounded by the mighty peaks of the <strong>Hohe Tauern National Park</strong> in the north and the striking <strong>Lienzer Dolomites</strong> in the south. The district capital, <strong>Lienz</strong>, charms with its medieval old town and Schloss Bruck. <strong>Matrei in Osttirol</strong> serves as the gateway to the national park and is the starting point for hikes to the <strong>Großglockner</strong> (3,798 m), Austria’s highest mountain. <strong>Kals am Großglockner</strong> is the key base for Großglockner ascents, featuring the famous Kalser Höhenweg trail.</p>",
+  "beschreibung": "<p><strong>East Tyrol</strong> (Osttirol, district of Lienz) is Tyrol's sunniest region and a haven for alpine enthusiasts. Surrounded by 266 three-thousand-meter peaks, the territory stretches from the vast <strong>Hohe Tauern National Park</strong>—crowned by Austria's highest summit, <strong>Grossglockner (3,798 m)</strong>, and the Grossvenediger in the north—down to the limestone spires of the <strong>Lienz Dolomites</strong> and Carnic Alps in the south. The charming district capital of <strong>Lienz</strong> delights visitors with its Mediterranean flair, palm trees on the main square, and medieval Bruck Castle featuring artwork by Albin Egger-Lienz. Pristine valleys like Defereggental, Virgental, Kalsertal, and Villgratental preserve authentic mountain farming traditions away from mass tourism.</p>",
   "tipps": [
-    "Der Kalser Höhenweg ist eine anspruchsvolle Mehrtagestour – Trittsicherheit unbedingt erforderlich.",
-    "Der Nationalpark Hohe Tauern bietet kostenlose geführte Rangertouren an.",
-    "Die Großglockner-Hochalpenstraße führt direkt zum Fuscher Törl – ein unvergessliches Panorama."
+    "Visit the Umbal Falls in Virgental – Europe's first water-themed nature trail along the cascading Isel glacial river.",
+    "Taste authentic East Tyrolean Schlipfkrapfen and protected regional Pregler schnapps at local inns.",
+    "Hike the Kalser Höhenweg trail offering breathtaking vistas of the imposing Grossglockner south face."
   ],
-  "empfehlungen": "<p>Explore the <strong>Nationalpark Hohe Tauern</strong> and hike along the <strong>Kalser Höhenweg</strong> by the Glocknerwand. Afterwards, stop by the <strong>Lucknerhaus</strong> in Kals for authentic Osttiroler Kasnocken.</p>",
-  "umgebung": "<p>East Tyrol (Osttirol) is accessible from North Tyrol (Nordtirol) via the Felbertauern Tunnel. To the south, it borders South Tyrol (Südtirol, Italy), and to the east, it borders Carinthia (Kärnten). The High Tauern (Hohe Tauern) in the north separate East Tyrol from Salzburg. Neighboring regions include the Defereggen Valley (Defereggental) to the west, the Virgental Valley (Virgental) to the south, and the Isel Valley (Iseltal) to the east.</p>",
+  "empfehlungen": "<p>Explore the <strong>Hohe Tauern National Park</strong> on ranger-guided wildlife safaris in search of golden eagles and ibex. Afterwards, treat yourself to hearty regional cuisine at the spectacular <strong>Dolomitenhütte</strong> perched on a rocky cliff or at <strong>Lucknerhaus</strong> in Kals.</p>",
+  "umgebung": "<p>East Tyrol is linked to North Tyrol via the Felbertauern Tunnel road. It borders Salzburg to the north, Carinthia to the east and south-east, and Italy (South Tyrol and Veneto) to the south and west. Key valleys include the Isel Valley, Drau Valley, Virgental, Defereggen Valley, and Villgraten Valley.</p>",
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.nationalpark-hohetauern.at",
+    "https://www.tirol.gv.at/bezirke-tirol/lienz/",
+    "https://www.tirol.at/regionen/osttirol",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -111,5 +118,10 @@
       46.95,
       12.25
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 46.8297,
+    "lng": 12.7686
+  },
+  "slug": "osttirol"
 }

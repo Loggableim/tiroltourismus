@@ -1,29 +1,36 @@
 {
-  "titel": "Stubaital",
+  "titel": "Údolí Stubaital",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": null,
-  "emoji": "🏔️",
+  "kurzbeschreibung": "Stubaital láká na Stubaiský ledovec, největší ledovcový lyžařský areál v Rakousku, dravé vodopády na stezce WildeWasserWeg a úchvatné třítisícovky.",
+  "emoji": "❄️",
   "bewertung": 5,
   "farbe": "#004B93",
   "tags": [
-    "gletscher",
-    "wandern",
-    "ski",
-    "natur",
-    "familie"
+    "ledovec",
+    "turistika",
+    "lyzovani",
+    "priroda",
+    "rodina"
   ],
   "hoehe": "3.507 m",
   "flaeche": "650 km²",
-  "einwohner": "14.000",
-  "beschreibung": "<p>Stubaital se nachází pouhých 30 kilometrů jižně od Innsbrucku a je tedy jednou z nejlépe dostupných dovolených v Tirolsku. Der Stubaier Gletscher je jedním z největších lyžařských oblastí s ledovcem v Rakousku a je otevřen od října do června. Der Stubaier Höhenweg patří mezi nejkrásnější vícedenní túry v Alpách. Der Sulzenauhütte-Wasserfall a der malerische Falbesoner See jsou oblíbenými výletními cíli.</p>",
+  "einwohner": "14.400",
+  "beschreibung": "<p><strong>Stubaital</strong> leží pouhých 20 minut jižně od zemského hlavního města Innsbrucku a patří k nejvyhledávanějším vysokohorským údolím v Tyrolsku. Pětice obcí <strong>Schönberg</strong>, <strong>Mieders</strong>, <strong>Telfes</strong>, <strong>Fulpmes</strong> a <strong>Neustift</strong> spojuje tyrolskou pohostinnost s moderním zázemím. V závěru údolí kraluje <strong>Stubaiský ledovec</strong>, největší ledovcový areál Rakouska se zárukou sněhu od října do května a vyhlídkou <em>Top of Tyrol (3 210 m)</em>. Kolem vrcholu Zuckerhütl (3 507 m) láká sedm dominantních vrcholů 'Seven Summits' a slavná dálková trasa <strong>Stubaier Höhenweg</strong>.</p>",
   "tipps": [
-    "Der Stubaier Höhenweg erfordert Schwindelfreiheit – aber es gibt kürzere Alternativen wie die Elfer-Nordkette.",
-    "Der Parkplatz am Stubaier Gletscher ist vor allem in der Sommersaison schnell voll – früh anreisen!",
-    "Der Milser Weiher ist ein Naturbadesee mit Strandbad und Liegewiese."
+    "Navštivte mohutný vodopád Grawa na stezce WildeWasserWeg – s šířkou 85 m nejširší vodopád Východních Alp.",
+    "Zavítejte do Kovářského muzea ve Fulpmesu s dlouhou tradicí výroby horolezeckého náčiní.",
+    "Svezte se romantickou úzkokolejkou Stubaitalbahn (STB) vedoucí z Innsbrucku až do Fulpmesu."
   ],
-  "empfehlungen": null,
-  "umgebung": "<p>Stubaital se na severu sousedí s Innsbruck, na jihu se sousedí se Südtirol (Italien). Stubaier Alpen jsou odděleny od Ötztaler Alpen hlavním alpským hřbete. Sousedi: Sellraintal (západ), Wipptal (východ). Brennerpass spojuje jako důležitou sever-jihovou osu.</p>",
+  "empfehlungen": "<p>Nenechte si ujít výjezd lanovkou 3S Eisgrat na <strong>Stubaiský ledovec</strong> s prohlídkou ledovcové jeskyně a vyhlídkou <em>Top of Tyrol</em>. K obědu se zastavte v oceňované restauraci <strong>Schaufelspitz (2 900 m)</strong> nebo na útulné salaši <strong>Tschangelair Alm</strong>.</p>",
+  "umgebung": "<p>Stubaital odbočuje u Schönbergu z údolí Wipptal. Na severu hraničí s Innsbruckem a Sellraintalem, na západě s údolím Ötztal, na východě s Wipptalem a na jihu po hlavním alpském hřebeni s Jižním Tyrolskem (Itálie).</p>",
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubaier-gletscher.com",
+    "https://www.schlick2000.at",
+    "https://www.tirol.at/regionen/a-stubaital",
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -99,5 +106,6 @@
   "koordinaten": {
     "lat": 47.1167,
     "lng": 11.3
-  }
+  },
+  "slug": "stubaital"
 }

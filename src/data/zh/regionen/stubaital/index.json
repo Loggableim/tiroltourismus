@@ -1,9 +1,9 @@
 {
-  "titel": "Stubaital",
+  "titel": "斯图拜山谷",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Stubaital 以全年可访的 Stubaier Gletscher、狂野浪漫的瀑布以及 Tirol 最美的山湖之一而令人惊叹。",
-  "emoji": "🏔️",
+  "kurzbeschreibung": "斯图拜山谷以奥地利最大的冰川滑雪区斯图拜冰川、野水步道上奔腾的格拉瓦瀑布以及壮美的阿尔卑斯山景而闻名。",
+  "emoji": "❄️",
   "bewertung": 5,
   "farbe": "#004B93",
   "tags": [
@@ -15,15 +15,22 @@
   ],
   "hoehe": "3.507 m",
   "flaeche": "650 km²",
-  "einwohner": "14.000",
-  "beschreibung": "<p>Das <strong>Stubaital</strong> 位于 Innsbruck 以南仅30公里，并且是 Tirol 最易到达的度假区之一。Der <strong>Stubaier Gletscher</strong> 是奥地利最大的冰川滑雪区之一，开放时间从十月到六月。Der <strong>Stubaier Höhenweg</strong> 是阿尔卑斯山最美的多日徒步路线之一。Der <strong>Sulzenauhütte</strong>-Wasserfall 和风景如画的 <strong>Falbesoner See</strong> 是受欢迎的游览目的地。</p>",
+  "einwohner": "14.400",
+  "beschreibung": "<p><strong>斯图拜山谷（Stubaital）</strong>距离蒂罗尔州首府因斯布鲁克仅20分钟车程，是阿尔卑斯山最负盛名的高山河谷之一。谷内的五个城镇<strong>申贝格（Schönberg）</strong>、<strong>米德斯（Mieders）</strong>、<strong>泰尔芬斯（Telfes）</strong>、<strong>富尔普梅斯（Fulpmes）</strong>与<strong>纽施蒂夫特（Neustift）</strong>将传统阿尔卑斯风情与现代度假设施完美融合。山谷尽头的<strong>斯图拜冰川</strong>是奥地利最大的冰川滑雪胜地，每年10月至次年5月均有优质雪况，并建有海拔3210米的“蒂罗尔之巅”（Top of Tyrol）观景台。围绕楚克许特尔峰（Zuckerhütl，3507米），著名的“斯图拜七峰”与<strong>斯图拜高山环线步道（Stubaier Höhenweg）</strong>吸引着全球徒步者。</p>",
   "tipps": [
-    "Der Stubaier Höhenweg erfordert Schwindelfreiheit – aber es gibt kürzere Alternativen wie die Elfer-Nordkette.",
-    "Der Parkplatz am Stubaier Gletscher ist vor allem in der Sommersaison schnell voll – früh anreisen!",
-    "Der Milser Weiher ist ein Naturbadesee mit Strandbad und Liegewiese."
+    "漫步野水步道（WildeWasserWeg），领略宽达85米的格拉瓦瀑布（Grawa-Wasserfall）的壮观水雾与康养功效。",
+    "参观富尔普梅斯的铁匠手工艺博物馆，了解延续数百年的著名登山户外工具制造历史。",
+    "乘坐历史悠久的斯图拜轻轨火车（STB），从因斯布鲁克穿越落叶松林直达富尔普梅斯。"
   ],
-  "empfehlungen": "<p>必去：乘坐<strong>Eisgratbahn</strong>上升至2,900米，去Stubaier Gletscher进行全景环游。随后前往<strong>Naturhotel Stubai</strong>在Neustift，享受正宗的Tiroler Brettljause。</p>",
-  "umgebung": "<p>Stubaital 位于北部与 Innsbruck 接壤，南部与 Südtirol（Italien）接壤。Stubaier Alpen 通过 Alpenhauptkamm 与 Ötztaler Alpen 分隔。邻近山谷：Sellraintal（西部），Wipptal（东部）。Brennerpass 作为重要的 Nord-Süd-Achse 连接。</p>",
+  "empfehlungen": "<p>乘坐3S艾斯格拉特缆车登上<strong>斯图拜冰川</strong>，探索深藏于冰川内部的天然冰洞，并登上<em>蒂罗尔之巅</em>俯瞰百座雪峰。中午可在海拔2900米的帽子峰餐厅（Restaurant Schaufelspitz）或山下的<strong>灿格莱尔高山牧场木屋（Tschangelair Alm）</strong>享用精致美食。</p>",
+  "umgebung": "<p>斯图拜山谷在申贝格从维普谷（Wipptal）向西分岔。北面接壤因斯布鲁克地区与塞尔兰谷，西面隔山与厄茨谷（Ötztal）相望，东面为维普谷，南面沿阿尔卑斯主脊与意大利南蒂罗尔接壤。</p>",
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubaier-gletscher.com",
+    "https://www.schlick2000.at",
+    "https://www.tirol.at/regionen/a-stubaital",
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -95,5 +102,10 @@
       47.2,
       11.28
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 47.1167,
+    "lng": 11.3
+  },
+  "slug": "stubaital"
 }

@@ -2,28 +2,36 @@
   "titel": "Zillertal",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "El Zillertal es el valle lateral más grande de Tirol – un paraíso para esquiadores, senderistas y familias con la famosa Zillertaler Arena.",
-  "emoji": "🏞️",
+  "kurzbeschreibung": "El valle de Zillertal es mundialmente célebre como el 'valle de la música' y un destino alpino cumbre con el glaciar de Hintertux abierto todo el año y 548 km de pistas.",
+  "emoji": "🎶",
   "bewertung": 5,
   "farbe": "#E30613",
   "tags": [
     "senderismo",
-    "esquí",
+    "esqui",
     "familia",
     "naturaleza",
-    "gastronomía"
+    "gastronomia"
   ],
   "hoehe": "3.509 m",
-  "flaeche": "1.044 km²",
-  "einwohner": "36.000",
-  "beschreibung": "<p>El <strong>Zillertal</strong> se extiende durante 40 kilómetros, desde Strass im Zillertal hasta el Tuxer Fernerhaus. Con sus siete valles laterales, ofrece una de las paisajes de vacaciones más variadas de Tirol. En invierno, atraen los dominios esquiables Zillertal Arena, Ski & Gletscherwelt Zillertal 3000 y Spieljoch-Fügen, con más de 500 kilómetros de pistas. En verano, seduce uno de los mayores territorios de senderismo contiguos de los Alpes, junto con el Berliner Höhenweg y el kayak de aguas bravas en la Ziller.</p>",
+  "flaeche": "1.098 km²",
+  "einwohner": "38.000",
+  "beschreibung": "<p>El <strong>valle de Zillertal</strong>, en el distrito de Schwaz, es el valle lateral más extenso y famoso de la cuenca del Eno tirolés. A lo largo de más de 40 kilómetros abarca desde Strass, pasando por Fügen, Kaltenbach, Zell am Ziller y Mayrhofen, hasta la cabecera alpina en Hintertux. Con el <strong>glaciar de Hintertux</strong> alberga la única estación de esquí de Austria operativa los 365 días del año. Junto a Zillertal Arena, Mayrhofen (con su famosa pista 'Harakiri' de un 78 % de inclinación) y Hochzillertal suma más de 548 km de pistas. En verano, el <strong>Parque Natural de Alta Montaña de los Alpes de Zillertal</strong> cautiva con el embalse de Schlegeis, la travesía Berliner Höhenweg y cumbres como el <strong>Hochfeiler (3.509 m)</strong> y el Olperer (3.476 m).</p>",
   "tipps": [
-    "Die Zillertaler Museumsbahn fährt im Sommer mit Dampflokomotive durchs Tal.",
-    "Der Wildwasserkanal in Fügen ist Europas größte künstliche Wildwasseranlage.",
-    "Die Schlegeis-Alm-Straße ist mautpflichtig, aber die Aussicht lohnt sich."
+    "Camine hasta el refugio Olpererhütte sobre el embalse de Schlegeis para lograr la emblemática foto en el puente colgante.",
+    "Adéntrese en el Palacio de Hielo Natural (Natur Eis Palast) en el glaciar de Hintertux, con un lago subterráneo helado.",
+    "Deguste las empanadillas tradicionales Zillertaler Krapfen y el queso curado Graukäse en las queserías alpinas."
   ],
-  "empfehlungen": "<p>Nuestra mejor recomendación: emprenda una caminata alrededor del <strong>Schlegeisspeicher</strong> – el paisaje turquesa del embalse es uno de los motivos más fotografiados de **Tirol**. Después, tome un descanso en la *Alpenrose* de la cabaña *Friesenberghütte*.</p>",
-  "umgebung": "<p>El valle de **Zillertal** limita al norte con el valle del **Inn**, al sur con la cresta principal de los Alpes (Italia). Regiones vecinas: **Tuxertal** (valle lateral de **Zillertal**), **Gerlos**, **Krimml** (Salzburgo). Los Alpes de **Zillertal** forman parte de los Alpes orientales centrales.</p>",
+  "empfehlungen": "<p>Disfrute de un viaje de época en el tren de vapor <strong>Zillertalbahn</strong> desde Jenbach hasta Mayrhofen. Continúe hasta el impresionante <strong>embalse de Schlegeis</strong> o suba a 3.250 m en el glaciar de Hintertux, disfrutando de la cocina de altura en la célebre <strong>Kristallhütte</strong> o <strong>Wedelhütte</strong>.</p>",
+  "umgebung": "<p>El valle de Zillertal se abre en Strass desde el valle del Eno. Limita al norte con Inntal y Rofan, al oeste con los Alpes de Tux y Wipptal, al este por el paso de Gerlos con Salzburgo y los Alpes de Kitzbühel, y al sur con el Tirol del Sur (Italia).</p>",
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.best-of-zillertal.at",
+    "https://www.zillertalarena.com",
+    "https://www.hintertuxergletscher.at",
+    "https://www.tirol.at/regionen/a-zillertal",
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -45,7 +53,7 @@
     ],
     [
       47.3,
-      12.0
+      12
     ],
     [
       47.25,
@@ -53,7 +61,7 @@
     ],
     [
       47.2,
-      12.0
+      12
     ],
     [
       47.15,
@@ -103,5 +111,10 @@
       47.4,
       11.78
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 47.2667,
+    "lng": 11.8833
+  },
+  "slug": "zillertal"
 }

@@ -2,28 +2,35 @@
   "titel": "Stubaital",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Het Stubaital verblijdt met het hele jaar door te bezoeken Stubaier Gletscher, wildromantische watervallen en een van de mooiste bergmeren van Tirol.",
-  "emoji": "🏔️",
+  "kurzbeschreibung": "Het Stubaital fascineert met de Stubaier Gletsjer als grootste gletsjerskigebied van Oostenrijk, denderende watervallen en majestueuze bergtoppen.",
+  "emoji": "❄️",
   "bewertung": 5,
   "farbe": "#004B93",
   "tags": [
     "gletsjer",
     "wandelen",
-    "skiën",
+    "skien",
     "natuur",
     "familie"
   ],
   "hoehe": "3.507 m",
   "flaeche": "650 km²",
-  "einwohner": "14.000",
-  "beschreibung": "<p>Het <strong>Stubaital</strong> ligt slechts 30 kilometer ten zuiden van Innsbruck en is daarmee een van de best bereikbare vakantiegebieden van Tirol. De <strong>Stubaier Gletscher</strong> is een van de grootste gletsjer-ski-gebieden van Oostenrijk en is van oktober tot juni geopend. De <strong>Stubaier Höhenweg</strong> behoort tot de mooiste meerdaagse tochten in de Alpen. De <strong>Sulzenauhütte</strong>-waterval en het schilderachtige <strong>Falbesoner See</strong> zijn populaire uitjesbestemmingen.</p>",
+  "einwohner": "14.400",
+  "beschreibung": "<p>Het <strong>Stubaital</strong> ligt op slechts 20 minuten ten zuiden van Innsbruck en is een van de indrukwekkendste hooggebergtedalen van Tirol. De vijf dorpen <strong>Schönberg</strong>, <strong>Mieders</strong>, <strong>Telfes</strong>, <strong>Fulpmes</strong> en <strong>Neustift</strong> bieden een ideale mix van traditie en moderne sportfaciliteiten. Blikvanger aan het daluiteinde is de <strong>Stubaier Gletsjer</strong>, het grootste gletsjerskigebied van Oostenrijk met sneeuwzekerheid van oktober tot mei en het uitzichtsplatform <em>Top of Tyrol (3.210 m)</em>. Rondom de Zuckerhütl (3.507 m) trekken de 'Seven Summits' en de vermaarde <strong>Stubaier Höhenweg</strong> bergliefhebbers van heinde en verre.</p>",
   "tipps": [
-    "Der Stubaier Höhenweg erfordert Schwindelfreiheit – aber es gibt kürzere Alternativen wie die Elfer-Nordkette.",
-    "Der Parkplatz am Stubaier Gletscher ist vor allem in der Sommersaison schnell voll – früh anreisen!",
-    "Der Milser Weiher ist ein Naturbadesee mit Strandbad und Liegewiese."
+    "Bewonder de Grawa-waterval langs de WildeWasserWeg – met 85 meter de breedste waterval van de Oostalpen.",
+    "Bezoek het Smederijmuseum in Fulpmes en ontdek de rijke geschiedenis van de gereedschapsmakerij.",
+    "Reis met de nostalgische Stubaitalbahn (STB) vanuit Innsbruck door bloeiende alpenweiden naar Fulpmes."
   ],
-  "empfehlungen": "<p>Een must: de rit met de <strong>Eisgratbahn</strong> naar 2.900 m, om de panoramische rondleiding op de Stubaier Gletscher te maken. Dan in het <strong>Naturhotel Stubai</strong> in Neustift voor een originele Tiroler Brettljause.</p>",
-  "umgebung": "<p>Het Stubaital grenst in het noorden aan Innsbruck, in het zuiden aan Südtirol (Italië). De Stubaier Alpen zijn gescheiden door de Alpenhauptkamm van de Ötztaler Alpen. Nabergebieden: Sellraintal (westen), Wipptal (oosten). De Brennerpass verbindt als belangrijke noord-zuid-as.</p>",
+  "empfehlungen": "<p>Een tocht met de 3S Eisgratbahn naar de <strong>Stubaier Gletsjer</strong> is een must: ontdek de fascinerende ijsgrot en geniet van het panorama vanaf <em>Top of Tyrol</em>. Dineer vorstelijk bij <strong>Restaurant Schaufelspitz (2.900 m)</strong> of geniet van verse forel bij de <strong>Tschangelair Alm</strong>.</p>",
+  "umgebung": "<p>Het Stubaital takt bij Schönberg af van het Wipptal. Het grenst in het noorden aan Innsbruck en het Sellraintal, in het westen aan het Ötztal, in het oosten aan het Wipptal en in het zuiden aan Zuid-Tirol (Italië).</p>",
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubaier-gletscher.com",
+    "https://www.schlick2000.at",
+    "https://www.tirol.at/regionen/a-stubaital",
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -95,5 +102,10 @@
       47.2,
       11.28
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 47.1167,
+    "lng": 11.3
+  },
+  "slug": "stubaital"
 }

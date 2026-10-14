@@ -1,9 +1,9 @@
 {
-  "titel": "Stubaital",
+  "titel": "Vallée de Stubai",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Le Stubaital séduit avec le Stubaier Gletscher, accessible toute l’année, des cascades sauvages et romantiques, ainsi que l’un des plus beaux lacs de montagne du Tirol. *(HTML tags et termes originaux conservés.)*",
-  "emoji": "🏔️",
+  "kurzbeschreibung": "La vallée de Stubai séduit par son glacier emblématique, le plus grand domaine skiable sur glacier d'Autriche, ses cascades spectaculaires et ses sommets majestueux.",
+  "emoji": "❄️",
   "bewertung": 5,
   "farbe": "#004B93",
   "tags": [
@@ -15,15 +15,22 @@
   ],
   "hoehe": "3.507 m",
   "flaeche": "650 km²",
-  "einwohner": "14.000",
-  "beschreibung": "<p>La vallée du **Stubaital** se trouve à seulement 30 kilomètres au sud d’**Innsbruck** et fait ainsi partie des régions de vacances les plus accessibles du **Tirol**. Le glacier du **Stubaier Gletscher** est l’un des plus grands domaines skiables de glace d’**Autriche** et reste ouvert d’octobre à juin. Le sentier des sommets du **Stubaier Höhenweg** figure parmi les plus belles randonnées de plusieurs jours des **Alpes**. La cascade de la **Sulzenauhütte** et le pittoresque lac du **Falbesoner See** sont des destinations d’excursion très prisées.</p>",
+  "einwohner": "14.400",
+  "beschreibung": "<p>La <strong>vallée de Stubai (Stubaital)</strong>, située à une vingtaine de minutes au sud d'Innsbruck, compte parmi les plus belles vallées glaciaires du Tyrol. Ses cinq villages—<strong>Schönberg</strong>, <strong>Mieders</strong>, <strong>Telfes</strong>, <strong>Fulpmes</strong> et <strong>Neustift</strong>—offrent une villégiature alpine d'exception. Au fond de la vallée s'élève le <strong>glacier de Stubai</strong>, plus grand domaine skiable sur glacier d'Autriche, ouvert d'octobre à mai avec sa plateforme belvédère <em>Top of Tyrol (3 210 m)</em>. Autour du Zuckerhütl (3 507 m), les randonneurs profitent des 'Seven Summits' et du célèbre <strong>sentier de haute montagne de Stubai</strong>.</p>",
   "tipps": [
-    "Der Stubaier Höhenweg erfordert Schwindelfreiheit – aber es gibt kürzere Alternativen wie die Elfer-Nordkette.",
-    "Der Parkplatz am Stubaier Gletscher ist vor allem in der Sommersaison schnell voll – früh anreisen!",
-    "Der Milser Weiher ist ein Naturbadesee mit Strandbad und Liegewiese."
+    "Admirez la cascade de Grawa sur le sentier des Eaux Vives (WildeWasserWeg), la plus large des Alpes orientales avec ses 85 mètres.",
+    "Visitez le musée de la forge à Fulpmes, berceau d'une coutellerie et d'un outillage de montagne réputés.",
+    "Prenez le tramway panoramique Stubaitalbahn reliant Innsbruck à Fulpmes à travers champs et forêts de mélèzes."
   ],
-  "empfehlungen": "<p>À ne pas manquer : la montée en <strong>Eisgratbahn</strong> jusqu’à 2 900 m pour une balade panoramique sur le glacier du Stubaier. Ensuite, direction le <strong>Naturhotel Stubai</strong> à Neustift pour une authentique *Brettljause* tyrolienne.</p>",
-  "umgebung": "<p>La vallée de la Stubai est bordée au nord par Innsbruck, au sud par le Tyrol du Sud (Italie). Les Alpes de Stubai sont séparées des Alpes de l'Ötztal par la crête principale des Alpes. Vallées voisines : la vallée de la Sellra (à l'ouest), la vallée de la Wipptal (à l'est). Le col du Brenner assure une importante liaison nord-sud.</p>",
+  "empfehlungen": "<p>Montez au <strong>glacier de Stubai</strong> en télécabine 3S pour visiter la grotte de glace et admirer la vue à 360° depuis <em>Top of Tyrol</em>. Dégustez une cuisine alpine raffinée au restaurant étoilé <strong>Schaufelspitz (2 900 m)</strong> ou au refuge champêtre <strong>Tschangelair Alm</strong>.</p>",
+  "umgebung": "<p>La vallée de Stubai s'ouvre à Schönberg depuis le Wipptal. Elle est délimitée au nord par la région d'Innsbruck et le Sellraintal, à l'ouest par la crête menant à l'Ötztal, à l'est par le Wipptal et au sud par la frontière italienne avec le Sud-Tyrol.</p>",
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubaier-gletscher.com",
+    "https://www.schlick2000.at",
+    "https://www.tirol.at/regionen/a-stubaital",
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -95,5 +102,10 @@
       47.2,
       11.28
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 47.1167,
+    "lng": 11.3
+  },
+  "slug": "stubaital"
 }

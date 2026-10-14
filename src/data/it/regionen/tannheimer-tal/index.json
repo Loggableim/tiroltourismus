@@ -1,16 +1,92 @@
 {
-  "name": "Tannheimer Tal",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": "Regione Tannheimer Tal nel Tirolo",
-  "koordinaten": {
-    "lat": 47.5167,
-    "lng": 10.6167
-  },
-  "tags": [
-    "tannheimer-tal",
-    "region"
-  ],
+  "titel": "Valle di Tannheim",
   "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "La Valle di Tannheim è celebrata come 'l'alta valle più bella d'Europa' – un paradiso per escursionisti e fondisti attorno al lago Vilsalpsee e al Neunerköpfle.",
+  "emoji": "🌲",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "escursionismo",
+    "montagna",
+    "laghi",
+    "sci-di-fondo",
+    "natura"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p>La <strong>Valle di Tannheim (Tannheimer Tal)</strong> nel distretto di Reutte si estende su un altopiano soleggiato a 1.100 m di quota, spesso definita 'la più bella alta valle d'Europa'. Custodita tra le pareti calcaree dei monti di Tannheim con la <strong>Kellenspitze (2.238 m)</strong>, la Rote Flüh e il Gimpel a nord e i rilievi delle Alpi dell'Algovia a sud, la valle comprende sei pittoreschi borghi: <strong>Tannheim</strong>, <strong>Grän</strong>, <strong>Nesselwängle</strong>, <strong>Schattwald</strong>, <strong>Zöblen</strong> e l'enclave di <strong>Jungholz</strong>. Simboli indiscussi del paesaggio sono l'area protetta del <strong>lago Vilsalpsee</strong>, il balneabile <strong>Haldensee</strong> e il <em>libro di vetta più grande delle Alpi</em> sul Neunerköpfle. In inverno offre una rete di oltre 140 km di piste da fondo premiate.</p>",
+  "tipps": [
+    "Raggiungete la riserva naturale del lago Vilsalpsee con il trenino turistico Alpenexpress e camminate fino alla cascata di Bergaicht.",
+    "Apponete la vostra firma sul libro di vetta più grande delle Alpi (largo 3 metri) in cima al Neunerköpfle (1.862 m).",
+    "Ammirate il Festival Internazionale delle Mongolfiere a gennaio, con decine di palloni aerostatici che colorano i cieli innevati."
+  ],
+  "empfehlungen": "<p>Salite con la cabinovia sul <strong>Neunerköpfle</strong> per percorrere il sentiero panoramico con vista mozzafiato sulle Alpi tirolesi e bavaresi. Assaporate i piatti tipici al <strong>Gasthof Vilsalpsee</strong> o l'alta cucina del <strong>Lumberger Hof</strong> a Grän.</p>",
+  "umgebung": "<p>La Valle di Tannheim è collegata a est con la valle del Lech e Reutte tramite il passo del Gaichtpass. A nord e a ovest confina con la Baviera (Germania) attraverso il passo dell'Oberjoch verso Bad Hindelang e Pfronten.</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/bezirke-tirol/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
   "bilder": [],
-  "hero_bild": ""
+  "hero_bild": null,
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
+  "koordinaten": {
+    "lat": 47.498,
+    "lng": 10.518
+  },
+  "slug": "tannheimer-tal",
+  "name": "Valle di Tannheim"
 }

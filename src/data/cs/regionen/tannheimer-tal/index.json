@@ -1,16 +1,92 @@
 {
-  "name": "Tannheimer Tal",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": null,
-  "koordinaten": {
-    "lat": 47.5167,
-    "lng": 10.6167
-  },
-  "tags": [
-    "tannheimer-tal",
-    "region"
-  ],
+  "titel": "Údolí Tannheimer Tal",
   "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "Tannheimer Tal je oslavováno jako 'nejkrásnější vysokohorské údolí Evropy' – ráj turistů a běžkařů kolem smaragdového jezera Vilsalpsee.",
+  "emoji": "🌲",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "turistika",
+    "hory",
+    "jezera",
+    "bezkarske-lyzovani",
+    "priroda"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p><strong>Tannheimer Tal</strong> v okrese Reutte leží na prosluněné náhorní plošině v nadmořské výšce přes 1 100 m a právem se pyšní přídomkem 'nejkrásnější vysokohorské údolí Evropy'. Údolí je sevřeno vápencovými štíty Tannheimských hor s nejvyšší <strong>Kellenspitze (2 238 m)</strong>, Rote Flüh a Gimpel na severu a travnatými hřebeny Allgäuských Alp na jihu. Zahrnuje šest malebných obcí: <strong>Tannheim</strong>, <strong>Grän</strong>, <strong>Nesselwängle</strong>, <strong>Schattwald</strong>, <strong>Zöblen</strong> a enklávu <strong>Jungholz</strong>. Mezi klenoty oblasti patří přírodní rezervace u jezera <strong>Vilsalpsee</strong>, jezero <strong>Haldensee</strong> a <em>největší vrcholová kniha Alp</em> na Neunerköpfle. V zimě údolí nabízí přes 140 km špičkově upravených běžeckých tratí.</p>",
+  "tipps": [
+    "Vydejte se k chráněnému jezeru Vilsalpsee výletním vláčkem Alpenexpress a projděte se k vodopádu Bergaicht.",
+    "Zapište se do největší vrcholové knihy v Alpách (3 metry široké) na vrcholu Neunerköpfle (1 862 m).",
+    "Zažijte lednový Mezinárodní festival horkovzdušných balonů s večerním nočním rozsvícením balonů."
+  ],
+  "empfehlungen": "<p>Vyjeďte lanovkou na <strong>Neunerköpfle</strong> a projděte si zážitkovou hřebenovou stezku s dalekými výhledy do Allgäu i Tyrolska. Poté ochutnejte tradiční tyrolské sýrové speciality v <strong>Gasthof Vilsalpsee</strong> nebo v gurmánském <strong>Lumberger Hofu</strong> v Gränu.</p>",
+  "umgebung": "<p>Tannheimer Tal je na východě spojen průsmykem Gaichtpass s údolím Lechtal a městem Reutte. Na severu a západě hraničí přes průsmyk Oberjoch s Bavorskem (Německo; Bad Hindelang a Pfronten). Na jihu jej od Lechtalu oddělují Allgäuské Alpy.</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/bezirke-tirol/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
   "bilder": [],
-  "hero_bild": ""
+  "hero_bild": null,
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
+  "koordinaten": {
+    "lat": 47.498,
+    "lng": 10.518
+  },
+  "slug": "tannheimer-tal",
+  "name": "Údolí Tannheimer Tal"
 }

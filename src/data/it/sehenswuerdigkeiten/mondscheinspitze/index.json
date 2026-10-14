@@ -4,14 +4,14 @@
   "status": "published",
   "region": "achensee",
   "ort": "Achenkirch",
-  "kategorie": "aussicht",
+  "kategorie": "natur",
   "kurzbeschreibung": "Punta panoramica (2.106 m) nel Karwendel con una vista mozzafiato sul lago di Achensee, il massiccio del Karwendel e fino alle Alpi dello Zillertal. *(HTML tags e nomi propri invariati, come richiesto.)*",
-  "beschreibung": "<p>Die <strong>Mondscheinspitze</strong> liegt oberhalb von <strong>Achenkirch</strong> am Westufer des <strong>Achensees</strong>. Der Gipfel ist ein Ausflugsziel für Wanderer und bietet einen umfassenden Blick auf den See und die umliegenden <strong>Karwendelberge</strong>. Erreicht wird der Aussichtspunkt über markierte Wanderwege, die von verschiedenen Ausgangspunkten in Achenkirch führen. Eine Einkehrmöglichkeit besteht in der nahegelegenen <strong>Bärenbadalm</strong>. Auf dem Gipfel selbst informieren Tafeln über die umliegende Bergwelt. Besucher sollten festes Schuhwerk und ausreichend Verpflegung mitbringen, da die Hütte nicht ganzjährig bewirtschaftet ist. Der Aufstieg erfordert eine gewisse Grundkondition, ist aber auch für geübte Wanderer gut zu bewältigen.</p>",
+  "beschreibung": "<h2>Panoramica</h2><p>La <strong>Mondscheinspitze</strong> (2.106 m) è una magnifica piramide rocciosa nel massiccio del Karwendel sopra la sponda occidentale del lago Achensee. Famosa per il suo profilo elegante e la vista a 360 gradi che abbraccia il lago blu, il gruppo del Rofan e le vette innevate delle Alpi della Zillertal, è una delle vette più amate del Tirolo.</p><h2>Percorso &amp; Requisiti</h2><p>La classica via normale parte dalla malga Gernalm (1.172 m) sopra Pertisau, sale alla sella e al rifugio Plumsjochhütte (1.630 m) e affronta la ripida cresta ovest (dislivello di 950 m, 5-6 ore andata e ritorno, difficoltà T3+/T4). Tratti rocciosi aerei attrezzati con funi d'acciaio che richiedono passo sicuro e assenza di vertigini. Scarponi da trekking a caviglia alta obbligatori. Itinéraire sconsigliato ai cani.</p><h2>Come arrivare</h2><p>In treno ÖBB fino a Jenbach e bus 4080 fino a Pertisau, poi navetta estiva per la Gernalm. In auto dall'autostrada A12 (uscita Wiesing) via B181 fino a Pertisau e strada a pedaggio fino alla Gernalm.</p><h2>Consigli</h2><p>Partite presto la mattina in piena estate per evitare il sole cocente sui pendii meridionali. Concludete l'escursione con un Kaiserschmarrn fatto in casa sulla terrazza della Plumsjochhütte.</p>",
   "emoji": "🔭",
   "farbe": "#795548",
   "hoehe": "2.106 m",
-  "dauer": "5–7 Stunden (Aufstieg)",
-  "preis": "Kostenlos",
+  "dauer": "5–6 Stunden",
+  "preis": "Kostenlos (Mautstraße Gerntal ca. 5–7 € pro PKW)",
   "tags": [
     "vetta",
     "escursionismo",
@@ -27,5 +27,12 @@
     "lng": "11.5833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.achensee.info/mondscheinspitze",
+    "https://www.karwendel.org/",
+    "https://www.alpenvereinaktiv.com/de/tour/mondscheinspitze-aus-dem-gerntal/1376173/",
+    "https://www.bergsteigen.com/touren/bergsteigen/mondscheinspitze-karwendel/",
+    "https://www.vvt.at/"
+  ]
 }

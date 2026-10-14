@@ -4,14 +4,14 @@
   "status": "published",
   "region": "achensee",
   "ort": "Achenkirch",
-  "kategorie": "aussicht",
+  "kategorie": "natur",
   "kurzbeschreibung": "观景山（海拔2,106米）位于卡文德尔山脉，俯瞰阿赫恩湖（Achensee）、壮丽的卡文德尔山脉（Karwendelgebirge），远眺至齐勒塔勒阿尔卑斯山（Zillertaler Alpen），景色一览无余。",
-  "beschreibung": "<p>Die <strong>Mondscheinspitze</strong> liegt oberhalb von <strong>Achenkirch</strong> am Westufer des <strong>Achensees</strong>. Der Gipfel ist ein Ausflugsziel für Wanderer und bietet einen umfassenden Blick auf den See und die umliegenden <strong>Karwendelberge</strong>. Erreicht wird der Aussichtspunkt über markierte Wanderwege, die von verschiedenen Ausgangspunkten in Achenkirch führen. Eine Einkehrmöglichkeit besteht in der nahegelegenen <strong>Bärenbadalm</strong>. Auf dem Gipfel selbst informieren Tafeln über die umliegende Bergwelt. Besucher sollten festes Schuhwerk und ausreichend Verpflegung mitbringen, da die Hütte nicht ganzjährig bewirtschaftet ist. Der Aufstieg erfordert eine gewisse Grundkondition, ist aber auch für geübte Wanderer gut zu bewältigen.</p>",
+  "beschreibung": "<h2>概览</h2><p><strong>月光峰</strong>（Mondscheinspitze，海拔2,106米）是卡尔文德尔山脉（Karwendel）中一座俊美匀称的石灰岩金字塔形名峰，耸立于阿亨湖西侧的格恩山谷（Gerntal）上空。相传满月之夜峰顶岩壁会闪耀银白幽光，故而得名。登顶十字架可俯瞰360度极致高山全景：阿亨湖碧波荡漾，罗凡山脉峭壁森立，远方齐勒河谷与斯图拜阿尔卑斯的冰川雪峰尽收眼底。</p><h2>路线与体能要求</h2><p>最经典的徒步线路始于佩尔蒂绍附近的格恩山庄（Gernalm，海拔1,172米），途经普鲁姆斯山口高山小屋（Plumsjochhütte，海拔1,630米），沿西侧陡峭岩脊攀登至峰顶（单程爬升约950米，往返耗时5至6小时，高山徒步难度T3+/T4）。山脊关键岩壁路段配有钢缆防护（UIAA I级攀爬），要求攀登者具备极高踩踏稳定性与良好抗眩晕能力。必须穿着专业高帮登山鞋并备足饮用水。因岩脊暴露且设有铁锁梯级，不适合携带宠物犬。</p><h2>交通指南</h2><p>搭乘奥地利联邦铁路ÖBB至Jenbach火车站，换乘VVT 4080路区域班车至Pertisau，夏季搭乘山谷徒步摆渡车直抵Gernalm终点站。自驾沿A12高速公路（Wiesing出口）转B181公路至佩尔蒂绍，经全景收费公路驶抵Gernalm停车场。</p><h2>游览建议</h2><p>因山坡朝南日照极强，盛夏建议早晨6至7点出发以避开午后高温与雷阵雨。下山后务必在Plumsjochhütte高山小屋阳光露台品尝一份香甜松软的传统蒂罗尔皇帝松饼（Kaiserschmarrn）。</p>",
   "emoji": "🔭",
   "farbe": "#795548",
   "hoehe": "2.106 m",
-  "dauer": "5–7 Stunden (Aufstieg)",
-  "preis": "Kostenlos",
+  "dauer": "5–6 Stunden",
+  "preis": "Kostenlos (Mautstraße Gerntal ca. 5–7 € pro PKW)",
   "tags": [
     "gipfel",
     "wandern",
@@ -27,5 +27,12 @@
     "lng": "11.5833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.achensee.info/mondscheinspitze",
+    "https://www.karwendel.org/",
+    "https://www.alpenvereinaktiv.com/de/tour/mondscheinspitze-aus-dem-gerntal/1376173/",
+    "https://www.bergsteigen.com/touren/bergsteigen/mondscheinspitze-karwendel/",
+    "https://www.vvt.at/"
+  ]
 }

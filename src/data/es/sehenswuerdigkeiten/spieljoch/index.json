@@ -5,12 +5,12 @@
   "ort": "Fügen",
   "kategorie": "aussicht",
   "kurzbeschreibung": "El Erlebnisberg familiar en el Zillertal, con vistas panorámicas, parque de escalada, pista de bolitas y aventuras en la Alm. *(HTML tags unchanged, place names and culinary terms preserved as requested.)*",
-  "beschreibung": "<p>Das <strong>Spieljoch</strong> ist ein 2.236 Meter hoher Aussichtsberg oberhalb von Fügen im Zillertal. Die <strong>Spieljochbahn</strong> erschließt das Gebiet und endet auf 1.950 Metern. Vom Gipfelkreuz aus bietet sich ein Rundumblick auf das Zillertal, die angrenzenden Alpen und die Zillertaler Gletscherregion. Ein ausgeschilderter Panoramaweg führt um die Bergstation und informiert über die umliegende Bergwelt. Die <strong>Spieljochalm</strong> steht Besuchern als Einkehrmöglichkeit zur Verfügung. Das Areal eignet sich sowohl für Spaziergänger als auch für erfahrene Wanderer, die die umliegenden Gipfel anstreben.</p>",
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Spieljoch</strong> (1.865–1.920 m) es la montaña de aventura familiar por excelencia sobre Fügen en el valle de Zillertal. Conectada en 10 minutos por una moderna telecabina, acoge un gran parque acuático con balsa, tirolina Flying Fox, sendero descalzo, vía ferrata y la mina histórica visitable más alta de Austria (Öxltal).</p><h2>Ruta y Requisitos</h2><p>Paseo sensorial y familiar alrededor del embalse hasta la capilla (45 min, T1, apto para carritos). Visita guiada a la mina subterránea de Öxltal a 45 minutos a pie de la estación (T1/T2). Sendero panorámico al refugio Geolsalm (1 hora, T1/T2). Calzado de montaña recomendado. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren Zillertalbahn a la estación de Fügen y autobús lanzadera a la telecabina. En coche por la A12 (salida Wiesing) y B169 a Fügen. Aparcamiento gratuito en la estación inferior.</p><h2>Consejos</h2><p>Lleve una chaqueta de abrigo para la visita guiada a la mina histórica de Öxltal (6 °C en el interior) y saboree una pizza en horno de leña en la terraza del restaurante Mountain Loft.</p>",
   "emoji": "🎡",
   "farbe": "#FF6B35",
   "hoehe": "1.950 m",
-  "dauer": "Halbtag",
-  "preis": "24 € (Bergbahn, Erwachsene)",
+  "dauer": "3–5 Stunden",
+  "preis": "Bergbahn Berg- und Talfahrt ca. 27 € (Schaubergwerk Führung ca. 10 €)",
   "tags": [
     "vistas",
     "familia",
@@ -19,12 +19,19 @@
     "niños"
   ],
   "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt)",
-  "webseite": "https://www.spieljoch.at",
+  "webseite": "https://www.spieljochbahn.at",
   "status": "published",
   "koordinaten": {
-    "lat": "47.3341667",
-    "lng": "11.8400000"
+    "lat": "47.3375",
+    "lng": "11.8333"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.spieljochbahn.at/",
+    "https://www.best-of-zillertal.at/sommer/spieljoch/",
+    "https://www.zillertal.at/sommer/familie/spieljoch",
+    "https://www.alpenvereinaktiv.com/de/tour/vom-spieljoch-zur-geolsalm/1381430/",
+    "https://www.vvt.at/"
+  ]
 }

@@ -6,12 +6,12 @@
   "ort": "Ischgl",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Route spectaculaire à travers les Alpes avec 58 virages menant du Tirol au Montafon – offrant des vues grandioses sur la Silvretta, ce monde glaciaire. *(Note : Les termes techniques comme \"Kehren\" et noms géographiques comme \"Silvretta\" restent en allemand, comme demandé.)*",
-  "beschreibung": "Die Silvretta Hochalpenstraße verbindet Tirol mit Vorarlberg und zählt zu den schönsten Alpenstraßen der Ostalpen. Auf 58 Kehren überwindet sie den knapp 2.032 m hohen Bielerhöhe-Pass und führt entlang der <strong>Silvretta-Stauseen</strong> mit ihrer beeindruckenden Berg- und Gletscherkulisse. Zahlreiche Aussichtspunkte ermöglichen spektakuläre Fotos der Silvretta-Gletscher. Die Straße ist auch bei Motorradfahrern und Rennradfahrern äußerst beliebt. Am Bielerhöhe laden die Staumauer und mehrere Wandertouren zum Verweilen ein.",
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>Silvretta-Hochalpenstraße</strong> est l'une des plus belles routes panoramiques d'altitude d'Europe. Reliant le Tyrol et le Vorarlberg sur 22,3 km et 34 virages en épingle jusqu'au col de la Bielerhöhe (2 037 m), elle longe le magnifique lac de barrage de Silvretta dominé par le majestueux Piz Buin (3 312 m) et ses glaciers étincelants.</p><h2>Parcours &amp; Exigences</h2><p>Le tour complet du lac de Silvretta est une boucle familiale facile de 6,3 km sur piste presque plate (1h30 à 2h, T1). Les randonneurs montent au refuge Wiesbadener Hütte (2 443 m) au pied des glaciers (2h30, dénivelé 400 m, T2). Le bateau à moteur MS Silvretta est le plus haut service de navigation régulier d'Europe à plus de 2 000 m. Vêtements chauds obligatoires en haute altitude. Chiens admis en laisse.</p><h2>Accès</h2><p>Train ÖBB jusqu'à Landeck-Zams puis bus régulier 260 traversant la vallée de Paznaun jusqu'au col de la Bielerhöhe. En voiture via la route B188 depuis Galtür. Route à péage ouverte de juin à fin octobre (fermée l'hiver). Grands parkings au col.</p><h2>Conseils</h2><p>Embarquez sur le bateau MS Silvretta pour une croisière glaciaire unique en altitude et dégustez un Kaiserschmarrn traditionnel face au Piz Buin à la terrasse du Silvretta-Haus.</p>",
   "emoji": "🗻",
   "farbe": "#4CAF50",
   "hoehe": "2.032 m (Bielerhöhe)",
-  "dauer": "Halbtag",
-  "preis": "21 € pro Fahrzeug",
+  "dauer": "3–5 Stunden",
+  "preis": "Mautgebühr Silvretta-Hochalpenstraße ca. 18–21 € pro PKW (Schifffahrt ca. 7 €)",
   "tags": [
     "route panoramique",
     "vue panoramique",
@@ -20,11 +20,18 @@
     "glacier"
   ],
   "oeffnungszeiten": "Mitte Juni bis Mitte Oktober, täglich 6:00–20:00",
-  "webseite": "https://www.silvretta-hochalpenstrasse.at",
+  "webseite": "https://www.silvretta-bielerhoehe.at",
   "koordinaten": {
-    "lat": "46.9333",
-    "lng": "10.0833"
+    "lat": "46.9189",
+    "lng": "10.0917"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.silvretta-bielerhoehe.at/",
+    "https://www.paznaun-ischgl.com/de/aktivitaeten/highlights/silvretta-hochalpenstrasse",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-silvretta-hochalpenstrasse",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-silvretta-stausee/1381426/",
+    "https://www.vvt.at/"
+  ]
 }

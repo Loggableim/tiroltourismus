@@ -6,12 +6,12 @@
   "ort": "Ischgl",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Spektakulární alpská silnice s 58 křivkami, která vede z Tirol do Montafonu – s grandiózními výhledy na Silvretta-Gletscherwelt.",
-  "beschreibung": "Die Silvretta Hochalpenstraße verbindet Tirol mit Vorarlberg und zählt zu den schönsten Alpenstraßen der Ostalpen. Auf 58 Kehren überwindet sie den knapp 2.032 m hohen Bielerhöhe-Pass und führt entlang der <strong>Silvretta-Stauseen</strong> mit ihrer beeindruckenden Berg- und Gletscherkulisse. Zahlreiche Aussichtspunkte ermöglichen spektakuläre Fotos der Silvretta-Gletscher. Die Straße ist auch bei Motorradfahrern und Rennradfahrern äußerst beliebt. Am Bielerhöhe laden die Staumauer und mehrere Wandertouren zum Verweilen ein.",
+  "beschreibung": "<h2>Přehled</h2><p><strong>Vysokohorská silnice Silvretta</strong> (Silvretta-Hochalpenstraße) je legendární vyhlídková horská silnice dlouhá 22,3 km se 34 serpentinami, spojující tyrolské údolí Paznaun s Vorarlberskem přes sedlo Bielerhöhe (2 037 m). Korunou trasy je tyrkysová přehrada Silvretta-Stausee s výhledem na nejvyšší horu Vorarlberska Piz Buin (3 312 m).</p><h2>Trasa a náročnost</h2><p>Pohodlný okruh kolem přehrady měří 6,3 km po rovinatých cestách s výhledem na ledovec (1,5 až 2 hodiny chůze, snadná T1). Horský výstup vede k chatě Wiesbadener Hütte (2 443 m) údolím Ochsental (2,5 hodiny, 400 m převýšení, T2). Po jezeře jezdí motorová loď MS Silvretta – nejvýše položená lodní linka v Evropě. Teplé oblečení nutné. Psi na vodítku povoleni.</p><h2>Příjezd a doprava</h2><p>Vlakem ÖBB do Landeck-Zams a autobusem 260 údolím Paznaun přes Ischgl a Galtür přímo do sedla Bielerhöhe. Autem po B188 přes Galtür po mýtné silnici (v provozu od června do konce října). Velká parkoviště v sedle.</p><h2>Tipy</h2><p>Vyzkoušejte plavbu lodí MS Silvretta po ledovcové přehradě a vychutnejte si tradiční trhanec Kaiserschmarrn na panoramatické terase horského hotelu Silvretta-Haus.</p>",
   "emoji": "🗻",
   "farbe": "#4CAF50",
   "hoehe": "2.032 m (Bielerhöhe)",
-  "dauer": "Halbtag",
-  "preis": "21 € pro Fahrzeug",
+  "dauer": "3–5 Stunden",
+  "preis": "Mautgebühr Silvretta-Hochalpenstraße ca. 18–21 € pro PKW (Schifffahrt ca. 7 €)",
   "tags": [
     "panoramastrasse",
     "aussicht",
@@ -20,11 +20,18 @@
     "gletscher"
   ],
   "oeffnungszeiten": "Mitte Juni bis Mitte Oktober, täglich 6:00–20:00",
-  "webseite": "https://www.silvretta-hochalpenstrasse.at",
+  "webseite": "https://www.silvretta-bielerhoehe.at",
   "koordinaten": {
-    "lat": "46.9333",
-    "lng": "10.0833"
+    "lat": "46.9189",
+    "lng": "10.0917"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.silvretta-bielerhoehe.at/",
+    "https://www.paznaun-ischgl.com/de/aktivitaeten/highlights/silvretta-hochalpenstrasse",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-silvretta-hochalpenstrasse",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-silvretta-stausee/1381426/",
+    "https://www.vvt.at/"
+  ]
 }

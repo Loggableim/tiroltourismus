@@ -6,12 +6,12 @@
   "ort": "Imst",
   "kategorie": "natur",
   "kurzbeschreibung": "Uno spettacolo mozzafiato di gole con cascate ruggenti, passerelle e ponti – un’esperienza naturale di rara bellezza proprio presso Imst.",
-  "beschreibung": "<p>Die <strong>Rosengartenschlucht</strong> liegt am südlichen Stadtrand von Imst in Tirol. Es handelt sich um eine rund zwei Kilometer lange Klamm, die vom Rosengartenbach durchflossen wird. Ein gesicherter <strong>Wanderweg</strong> mit Brücken, Stegen und Galerien führt durch die enge Schlucht. Entlang des Weges bieten sich Blicke auf Wasserfälle und die bis zu hundert Meter hohen Felswände. Die Begehung erfordert Trittsicherheit und festes Schuhwerk. Die Schlucht ist von Mai bis Oktober zugänglich. Ein Besuch vermittelt einen unmittelbaren Eindruck von der geologischen Entstehung und der Erosionskraft des Wassers.</p>",
+  "beschreibung": "<h2>Panoramica</h2><p>La <strong>Gola del Rosengarten</strong> (Rosengartenschlucht) è uno dei monumenti naturali più affascinanti del Tirolo, situata nel cuore della città di Imst. Scavata dal torrente Schinderbach per 1,5 km nella roccia calcarea, presenta passerelle in legno sospese su cascate fragorose e conduce alla suggestiva Grotta Blu (Blaue Grotte), un'antica miniera di piombo risalente all'epoca romana.</p><h2>Percorso &amp; Requisiti</h2><p>Percorso attrezzato di 1,5 km con un dislivello di 250 metri dall'abitato di Imst fino a Hoch-Imst (1h30 di cammino, T2). Ponti in legno, scalinate scavate nella roccia e brevi gallerie. Scarponcini con suola antiscivolo obbligatori a causa dell'umidità costante. Non accessibile a passeggini. Cani ammessi al guinzaglio corto.</p><h2>Come arrivare</h2><p>In treno ÖBB fino alla stazione Imst-Pitztal e autobus urbano fino alla chiesa Johanneskirche a Imst. In auto dall'autostrada A12 (uscita Imst) fino ai parcheggi del centro. Aperta da maggio a fine ottobre.</p><h2>Consigli</h2><p>Unite la risalita della gola a una discesa mozzafiato con l'Alpine Coaster Imst da Hoch-Imst: un'esperienza rigenerante e freschissima nelle calde giornate estive.</p>",
   "emoji": "🌊",
   "farbe": "#00BCD4",
   "hoehe": "827 m",
-  "dauer": "1–2 Stunden",
-  "preis": "6 € (Erwachsene)",
+  "dauer": "1,5–2,5 Stunden",
+  "preis": "Kostenlos (Eintritt frei; Rückfahrt Wanderbus ca. 2–3 €)",
   "tags": [
     "gola",
     "cascata",
@@ -20,11 +20,18 @@
     "escursionismo"
   ],
   "oeffnungszeiten": "Mai–Okt: täglich 9:00–18:00",
-  "webseite": "https://www.rosengartenschlucht.at",
+  "webseite": "https://www.imst.at/rosengartenschlucht",
   "koordinaten": {
-    "lat": "47.2333",
-    "lng": "10.7333"
+    "lat": "47.2392",
+    "lng": "10.7389"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at/erlebnisse/wandern/rosengartenschlucht",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-rosengartenschlucht",
+    "https://www.alpenvereinaktiv.com/de/tour/durch-die-rosengartenschlucht-zur-blauen-grotte/1381415/",
+    "https://www.bergfex.at/sommer/tirol/touren/wanderung/2135,durch-die-rosengartenschlucht/",
+    "https://www.vvt.at/"
+  ]
 }

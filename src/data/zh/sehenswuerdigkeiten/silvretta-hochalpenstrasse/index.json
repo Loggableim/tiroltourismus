@@ -6,12 +6,12 @@
   "ort": "Ischgl",
   "kategorie": "aussicht",
   "kurzbeschreibung": "壮观的阿尔卑斯公路，拥有58个弯道，从Tirol通往Montafon——可欣赏到Silvretta冰川世界的壮丽景色。",
-  "beschreibung": "Die Silvretta Hochalpenstraße verbindet Tirol mit Vorarlberg und zählt zu den schönsten Alpenstraßen der Ostalpen. Auf 58 Kehren überwindet sie den knapp 2.032 m hohen Bielerhöhe-Pass und führt entlang der <strong>Silvretta-Stauseen</strong> mit ihrer beeindruckenden Berg- und Gletscherkulisse. Zahlreiche Aussichtspunkte ermöglichen spektakuläre Fotos der Silvretta-Gletscher. Die Straße ist auch bei Motorradfahrern und Rennradfahrern äußerst beliebt. Am Bielerhöhe laden die Staumauer und mehrere Wandertouren zum Verweilen ein.",
+  "beschreibung": "<h2>概览</h2><p><strong>席尔夫雷塔高山全景公路</strong>（Silvretta-Hochalpenstraße）全长22.3公里，拥有34道盘旋于坚固岩壁上的发卡急弯，是全欧最著名的顶级阿尔卑斯公路之一。公路连通蒂罗尔州帕兹瑙恩山谷（Paznaun）与福拉尔贝格州，最高点耸立于海拔2,037米的别勒霍赫山口（Bielerhöhe）。坐落于山口核心的是宏伟的<strong>席尔夫雷塔高山水库</strong>（Silvretta-Stausee）：在福拉尔贝格最高峰彼兹布因峰（Piz Buin，海拔3,312米）与璀璨冰川雪峰环抱下，如绿松石般乳蓝的冰川融水闪耀生辉，每年盛夏吸引无数自驾客、摩托骑士、公路骑行者与徒步爱好者朝圣。</p><h2>路线与体能要求</h2><p>别勒霍赫山口是高山户外运动的黄金枢纽。最受欢迎的家庭徒步是席尔夫雷塔环湖步道：全长约6.3公里，平整碎石步道环湖延展，全程几乎零落差，沿途可近距离仰望奥克森塔尔冰川冰舌与雪峰飞瀑（徒步约1.5至2小时，简易T1级）。登山爱好者可从水库出发沿着壮丽峡谷攀升至威斯巴登高山木屋（Wiesbadener Hütte，海拔2,443米，单程2.5小时，落差400米，T2级），此处是系绳攀登Piz Buin峰的大本营。水库上运行着“MS Silvretta”号机动客轮——这是全欧洲海拔最高的定期水上航线（海拔逾2,000米）。地处树线以上高寒地带，必须穿着保暖防风衣物并做好高倍防晒。宠物犬全程系牵引绳允许随行及登船。</p><h2>交通指南</h2><p>搭乘ÖBB干线火车至Landeck-Zams火车站，出站换乘VVT 260路长途公交，经伊施格尔（Ischgl）与加尔蒂尔（Galtür）直达Bielerhöhe水库山口站。自驾沿B188公路经加尔蒂尔驶入席尔夫雷塔高山收费公路（每年6月初至10月底通车，冬季封路）。山口备有超大型免费停车场。</p><h2>游览建议</h2><p>搭乘MS Silvretta号游船进行30分钟高山冰川巡航，聆听水坝建造历史传奇。游玩后在别勒霍赫山口历史名店Silvretta-Haus餐厅观景露台享用一份热气腾腾的苹果卷配香草酱，饱览彼兹布因雪峰壮景。</p>",
   "emoji": "🗻",
   "farbe": "#4CAF50",
   "hoehe": "2.032 m (Bielerhöhe)",
-  "dauer": "Halbtag",
-  "preis": "21 € pro Fahrzeug",
+  "dauer": "3–5 Stunden",
+  "preis": "Mautgebühr Silvretta-Hochalpenstraße ca. 18–21 € pro PKW (Schifffahrt ca. 7 €)",
   "tags": [
     "全景大道",
     "观景",
@@ -20,11 +20,18 @@
     "冰川"
   ],
   "oeffnungszeiten": "Mitte Juni bis Mitte Oktober, täglich 6:00–20:00",
-  "webseite": "https://www.silvretta-hochalpenstrasse.at",
+  "webseite": "https://www.silvretta-bielerhoehe.at",
   "koordinaten": {
-    "lat": "46.9333",
-    "lng": "10.0833"
+    "lat": "46.9189",
+    "lng": "10.0917"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.silvretta-bielerhoehe.at/",
+    "https://www.paznaun-ischgl.com/de/aktivitaeten/highlights/silvretta-hochalpenstrasse",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-silvretta-hochalpenstrasse",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-silvretta-stausee/1381426/",
+    "https://www.vvt.at/"
+  ]
 }

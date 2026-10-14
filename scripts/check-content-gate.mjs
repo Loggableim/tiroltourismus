@@ -181,8 +181,11 @@ async function main() {
       if (baseData) {
         const keys = new Set([...Object.keys(baseData), ...Object.keys(data)]);
         for (const key of keys) {
-          if (BLOCKED_FIELDS.has(key) && !sameJson(baseData[key], data[key])) {
+          if (!BLOCKED_FIELDS.has(key) || sameJson(baseData[key], data[key])) continue;
+          if (key in baseData) {
             addFinding(file, entry, '3 Nur Inhaltsfelder', 'error', `Blockiertes Feld geändert: ${key}`);
+          } else {
+            addFinding(file, entry, '3 Nur Inhaltsfelder', 'warn', `Blockiertes Feld neu ergänzt: ${key}`);
           }
         }
       }

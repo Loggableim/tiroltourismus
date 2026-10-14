@@ -3,7 +3,6 @@
   "status": "published",
   "featured": true,
   "kurzbeschreibung": "Het Tannheimer Tal staat bekend als het 'mooiste hoogdal van Europa' – een eldorado voor wandelaars en langlaufers rond de Vilsalpsee en de Neunerköpfle.",
-  "emoji": "🌲",
   "bewertung": 5,
   "farbe": "#27AE60",
   "tags": [
@@ -27,12 +26,12 @@
   "sources": [
     "https://www.tannheimertal.com",
     "https://www.tannheimer-bergbahnen.at",
-    "https://www.tirol.gv.at/bezirke-tirol/reutte/",
+    "https://www.tirol.gv.at/reutte/",
     "https://www.tirol.at/regionen/a-tannheimer-tal",
     "https://de.wikipedia.org/wiki/Tannheimer_Tal"
   ],
   "bilder": [],
-  "hero_bild": null,
+  "hero_bild": "",
   "grenzen": [
     [
       47.53,
@@ -84,8 +83,8 @@
     ]
   ],
   "koordinaten": {
-    "lat": 47.498,
-    "lng": 10.518
+    "lat": 47.5167,
+    "lng": 10.6167
   },
   "slug": "tannheimer-tal",
   "name": "Tannheimer Tal"

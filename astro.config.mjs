@@ -38,7 +38,7 @@ export default defineConfig({
     },
   },
   integrations: [react(), sitemap({
-    filter: (page) => includeInSitemap(page) && !page.includes('/demofrontneu'),
+    filter: (page) => includeInSitemap(page) && !page.includes('/demofrontneu') && !page.includes('/demo-tvb/'),
     entryLimit: 10000,
     lastmod: new Date(),
     serialize: (entry) => ({

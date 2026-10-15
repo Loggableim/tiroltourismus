@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { plainText } from '../../../lib/richtext.js';
 import Hero from '../../../components/Hero.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
@@ -98,8 +99,8 @@ const erlebnisItemList = {
               return (
                 <div class="erlebnis-card" data-filter-card data-filter-cat={entry.kategorie}>
                   <span class="erlebnis-icon">{meta.emoji}</span>
-                  <h3 class="erlebnis-title">{entry.titel}</h3>
-                  <p class="erlebnis-desc">{entry.kurzbeschreibung}</p>
+                  <h3 class="erlebnis-title">{plainText(entry.titel)}</h3>
+                  <p class="erlebnis-desc">{plainText(entry.kurzbeschreibung)}</p>
                   {entry.dauer && <div class="erlebnis-meta">⏱ {entry.dauer}</div>}
                   {entry.schwierigkeit && <div class="erlebnis-meta">📊 {entry.schwierigkeit}</div>}
                   {entry.preis && <div class="erlebnis-price">{entry.preis}</div>}

@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../../lib/richtext.js';
 // HomepageArt.astro — 8 künstlerische Sprach-Designs (v2: maximale Differenzierung)
 //
 // Jede Sprache verkörpert den Stil ihres Künstlerpaars durch:
@@ -425,9 +426,9 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
             <a href={`${localePrefix}/erlebnisse/${e.slug}/`} class="art-exp-card">
               <span class="art-exp-emoji">{e.entry.emoji || '🎯'}</span>
               <span class="art-exp-body">
-                <span class="art-exp-name">{e.entry.name || e.entry.titel}</span>
-                {e.entry.ort && <span class="art-exp-ort">📍 {e.entry.ort}</span>}
-                {e.entry.kurzbeschreibung && <span class="art-exp-desc">{e.entry.kurzbeschreibung.slice(0, 100)}</span>}
+                <span class="art-exp-name">{plainText(e.entry.name || e.entry.titel)}</span>
+                {e.entry.ort && <span class="art-exp-ort">📍 {plainText(e.entry.ort)}</span>}
+                {e.entry.kurzbeschreibung && <span class="art-exp-desc">{plainText(e.entry.kurzbeschreibung).slice(0, 100)}</span>}
               </span>
             </a>
           ))}

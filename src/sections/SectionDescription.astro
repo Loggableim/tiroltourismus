@@ -1,4 +1,5 @@
 ---
+import { plainText, richText } from '../lib/richtext.js';
 // Komponente: SectionDescription – Rich-Text-Inhaltsbereich
 // Styling-Klasse-Prefix: sec-
 // Props
@@ -9,19 +10,22 @@ export interface Props {
 }
 
 const { label, title, content } = Astro.props;
+const safeLabel = plainText(label);
+const safeTitle = plainText(title);
+const safeContent = richText(content);
 ---
 
 <section class="sec-desc section">
   <div class="container" style="max-width:800px">
-    {label && title && (
+    {safeLabel && safeTitle && (
       <div class="section-header" style="margin-bottom:24px">
-        <div class="section-label">{label}</div>
+        <div class="section-label">{safeLabel}</div>
         <h2 class="section-title" style="font-size:clamp(32px,4vw,48px)">
-          {title}
+          {safeTitle}
         </h2>
       </div>
     )}
-    <div class="sec-desc-body" set:html={content}></div>
+    <div class="sec-desc-body" set:html={safeContent}></div>
   </div>
 </section>
 

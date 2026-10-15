@@ -1,7 +1,9 @@
 ---
+import { plainText, richText } from '../lib/richtext.js';
 // Komponente: SectionHero – Hero-Bereich für Detailseiten
 // Styling-Klasse-Prefix: sec-
 // Props
+
 export interface Props {
   title: string;
   subtitle?: string;
@@ -18,6 +20,8 @@ export interface Props {
 }
 
 const { title, subtitle, emoji, imageSrc, gradient, size = 'sm', bgImage, meta } = Astro.props;
+const safeTitle = plainText(title);
+const safeSubtitle = subtitle ? richText(subtitle) : '';
 ---
 
 <section class={`sec-hero sec-hero-${size}${bgImage ? ' sec-hero-has-img' : ''}`} style={bgImage ? `background-image:url(${bgImage})` : ''}>
@@ -29,8 +33,8 @@ const { title, subtitle, emoji, imageSrc, gradient, size = 'sm', bgImage, meta }
   )}
   <div class="container">
     {imageSrc ? <img src={imageSrc} alt="" class="sec-hero-image" loading="eager" decoding="async" fetchpriority="high" width="220" height="220" /> : emoji && <div class="sec-hero-emoji">{emoji}</div>}
-    <h1>{title}</h1>
-    {subtitle && <p class="sec-hero-sub">{subtitle}</p>}
+    <h1>{safeTitle}</h1>
+    {safeSubtitle && <div class="sec-hero-sub" set:html={safeSubtitle}></div>}
     {meta && (
       <div class="sec-hero-meta">
         {meta.stars && (

@@ -1,7 +1,8 @@
 ---
+import { plainText } from '../../../lib/richtext.js';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
-import { readEntry, readSingleton } from '../../../lib/content.js';
+import { readEntry, readSingleton, readCollection, isPublished, BEZIRK_REGIONS } from '../../../lib/content.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
 
 const LABELS = {
@@ -39,13 +40,27 @@ if (!entry) return Astro.redirect(`${localePrefix(locale)}/bezirke/`);
 const l = LABELS[locale] || LABELS.de;
 const prefix = localePrefix(locale);
 
+const bezirkName = plainText(entry.name);
+const bezirkDescription = plainText(entry.beschreibung);
+
+// Regionen des Bezirks aus den vorhandenen Regionsdaten aufbauen.
+// (bezirke.json selbst hat kein `regionen`-Array → Seiten waren sonst dünn.)
+const regionSlugs = BEZIRK_REGIONS[slug] || [];
+const bezirkRegionen = readCollection('regionen', locale)
+  .filter((r) => isPublished(r.entry) && regionSlugs.includes(r.slug))
+  .map((r) => ({
+    slug: r.slug,
+    name: plainText(r.entry.titel || r.entry.name || r.slug),
+    beschreibung: plainText(r.entry.kurzbeschreibung),
+  }));
+
 // JSON-LD: AdministrativeArea
 const siteURL = LANG_DOMAINS[locale] || 'https://tiroltourismus.com';
 const bezirkLD = {
   '@context': 'https://schema.org',
   '@type': 'AdministrativeArea',
-  name: entry.name,
-  description: (entry.beschreibung || '').substring(0, 500),
+  name: bezirkName,
+  description: bezirkDescription,
   url: `${siteURL}${prefix}/bezirke/${slug}/`,
   containedInPlace: {
     '@type': 'AdministrativeArea',
@@ -55,32 +70,45 @@ const bezirkLD = {
 };
 ---
 
-<BaseLayout title={entry.name} description={entry.beschreibung || ''} locale={locale} jsonld={bezirkLD}>
+<BaseLayout title={bezirkName} description={bezirkDescription} locale={locale} jsonld={bezirkLD}>
   <main>
     <div class="container">
-      <Breadcrumbs items={[{ label: l.bezirke, href: `${prefix}/bezirke/` }, { label: entry.name }]} locale={locale} />
+      <Breadcrumbs items={[{ label: l.bezirke, href: `${prefix}/bezirke/` }, { label: bezirkName }]} locale={locale} />
     </div>
 
     <section class="page-header">
       <div class="container">
         <div style="font-size:64px;margin-bottom:8px">🗺️</div>
-        <h1>{entry.name}</h1>
-        <p>{entry.beschreibung}</p>
+        <h1>{bezirkName}</h1>
+        <p>{bezirkDescription}</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="bezirke-grid">
-          {entry.regionen?.map(r => (
-            <a href={`${prefix}/regionen/${r.slug}/`} class="bezirk-card">
-              <h3>{r.name || r.slug}</h3>
-              <span>→</span>
-            </a>
-          ))}
+    {bezirkRegionen.length > 0 && (
+      <section class="section">
+        <div class="container" style="max-width:800px">
+          <h2 class="bezirk-subtitle">{l.regionen}</h2>
+          <div class="bezirke-grid">
+            {bezirkRegionen.map(r => (
+              <a href={`${prefix}/regionen/${r.slug}/`} class="bezirk-card">
+                <h3>{r.name}</h3>
+                {r.beschreibung && <p class="bezirk-card-text">{r.beschreibung}</p>}
+                <span class="bezirk-card-arrow">→</span>
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    )}
+
+    {entry.gemeinden > 0 && (
+      <section class="section">
+        <div class="container">
+          <h2 class="bezirk-subtitle">{l.gemeinden}</h2>
+          <p>{entry.gemeinden} {l.gemeinden}</p>
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>
 
@@ -88,9 +116,13 @@ const bezirkLD = {
   .page-header{position:relative;padding:60px 0 40px;text-align:center;background:var(--bg2);border-bottom:1px solid var(--glass-border)}
   .page-header h1{font-family:var(--font-display);font-size:clamp(42px,6vw,72px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
   .page-header p{font-size:15px;color:var(--text2);max-width:560px;margin:0 auto}
+  .bezirk-subtitle{font-family:var(--font-display);font-size:clamp(24px,3vw,36px);letter-spacing:1px;text-transform:uppercase;margin-bottom:16px}
   .bezirke-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .bezirk-card{background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-decoration:none;color:var(--text);transition:all .3s var(--ease);display:flex;justify-content:space-between;align-items:center}
+  .bezirk-card{background:var(--bg);border:1px solid var(--glass-border);border-radius:var(--radius);padding:28px;text-decoration:none;color:var(--text);transition:all .3s var(--ease);display:flex;flex-direction:column;justify-content:space-between;gap:8px}
   .bezirk-card:hover{border-color:var(--tirol-pink);transform:translateY(-2px)}
+  .bezirk-card h3{font-family:var(--font-display);font-size:20px;letter-spacing:1px;text-transform:uppercase}
+  .bezirk-card-text{font-size:13px;color:var(--text2);line-height:1.6;flex:1}
+  .bezirk-card-arrow{color:var(--tirol-pink);font-size:18px}
   @media(max-width:968px){.bezirke-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.bezirke-grid{grid-template-columns:1fr}}
 </style>

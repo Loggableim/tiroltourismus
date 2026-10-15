@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import FavHeart from './FavHeart.astro';
 import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { localePrefix as localePrefixFn } from '../lib/languages.js';
@@ -15,6 +16,7 @@ export interface Props {
   'data-tier'?: string;
 }
 const { name, slug, ort, region, preis_ab, ausstattung = [], tier = 'basic', 'data-tier': dataTier , locale = undefined } = Astro.props;
+const safeName = plainText(name);
 const hasUtilities = ausstattung.filter(a => ['stromanschluss', 'sanitäranlagen', 'wasseranschluss'].includes(a));
 // Badge handled by PremiumBadge component
 // Lokalisierter CTA-Text
@@ -28,7 +30,7 @@ const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
   </div>
   <div class="cp-body">
     <div class="cp-type">Campingplatz</div>
-    <div class="cp-name">{name}</div>
+    <div class="cp-name">{safeName}</div>
     <div class="cp-ort">{ort || 'Tirol'}</div>
     {ausstattung.length > 0 && (
       <div class="cp-ausstattung">

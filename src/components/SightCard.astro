@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import FavHeart from './FavHeart.astro';
 import CategoryPlaceholder from './CategoryPlaceholder.astro';
 export interface Props {
@@ -15,6 +16,8 @@ export interface Props {
   linkPrefix?: string;
 }
 const { name, slug, kurzbeschreibung, kategorie, emoji = '🏛️', farbe = '#8B5CF6', ort, preis, linkPrefix = '/sehenswuerdigkeiten/' , locale = undefined } = Astro.props;
+const safeName = plainText(name);
+const safeKurzbeschreibung = plainText(kurzbeschreibung);
 const catLabel = { natur: 'Natur', kultur: 'Kultur', aussicht: 'Aussicht', sport: 'Sport', museum: 'Museum', kirche: 'Kirche', burg: 'Burg', wanderung: 'Wanderung' };
 // Lokalisierte Texte
 const LINK_TEXT = { de: 'Entdecken →', en: 'Discover →', fr: 'Découvrir →', cs: 'Objevit →', nl: 'Ontdekken →', it: 'Scoprire →', es: 'Descubrir →', zh: '探索 →' };
@@ -29,9 +32,9 @@ const fallbackLabel = FALLBACK_LABEL[locale] || FALLBACK_LABEL.de;
   </div>
   <div class="sight-body">
     <div class="sight-kategorie">{catLabel[kategorie] || kategorie || fallbackLabel}</div>
-    <h3>{name}</h3>
+    <h3>{safeName}</h3>
     {ort && <div class="sight-ort">{ort}</div>}
-    {kurzbeschreibung && <p>{kurzbeschreibung}</p>}
+    {safeKurzbeschreibung && <p>{safeKurzbeschreibung}</p>}
     <div class="sight-meta">
       {preis && <span class="sight-preis">{preis}</span>}
       <span class="sight-link">{linkText}</span>

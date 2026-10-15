@@ -84,19 +84,19 @@ const CHIPS = [
   </script>
   <style is:global>
     :root {
-      --bg: #F5F3F0; --bg2: #EDE8E2;
-      --surface: rgba(0,0,0,.03); --surface-hover: rgba(0,0,0,.06);
-      --text: #1A1A1A; --text2: rgba(0,0,0,.60); --text3: rgba(0,0,0,.38);
+      --bg: #0B0F14; --bg2: #131A22;
+      --surface: rgba(255,255,255,.06); --surface-hover: rgba(255,255,255,.12);
+      --text: #F5F3F0; --text2: rgba(255,255,255,.78); --text3: rgba(255,255,255,.5);
       --tirol-red: #C8102E;
-      --tirol-pink: #FF1493; --tirol-pink-dark: #C0006E; --tirol-pink-glow: rgba(255,20,147,.12);
-      --ikea-blue: #0051BA;
+      --tirol-pink: #FF1493; --tirol-pink-dark: #C0006E; --tirol-pink-glow: rgba(255,20,147,.35);
+      --ikea-blue: #4A90E2;
       --pop-green: #00C853; --pop-orange: #FF6B35; --pop-purple: #8B5CF6;
-      --gold: #D4A800;
-      --glass-border: rgba(0,0,0,.06);
+      --gold: #E0B72C; --gold-soft: rgba(224,183,44,.16);
+      --glass-border: rgba(255,255,255,.16);
       --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
       --font-body: 'Montserrat', system-ui, sans-serif;
       --ease: cubic-bezier(.16,1,.3,1);
-      --radius: 12px;
+      --radius: 14px;
     }
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -111,24 +111,54 @@ const CHIPS = [
     a { color: inherit; text-decoration: none; }
     a:focus-visible, button:focus-visible { outline: 3px solid var(--tirol-pink); outline-offset: 3px; }
 
+    /* ─── Full-viewport hero ─── */
     .df-picker {
       position: relative;
       height: 100dvh;
       min-height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      isolation: isolate;
+    }
+    .df-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      z-index: 0;
+    }
+    .df-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(7,10,15,.74) 0%, rgba(7,10,15,.46) 40%, rgba(7,10,15,.86) 100%),
+        radial-gradient(90% 70% at 50% 8%, rgba(7,10,15,.15), rgba(7,10,15,.72) 100%);
+    }
+    .df-content {
+      position: relative;
+      z-index: 2;
+      width: min(1140px, 100%);
+      height: 100%;
       display: flex;
       flex-direction: column;
-      gap: clamp(6px, 1.2vh, 14px);
-      padding: clamp(8px, 1.6vh, 20px) clamp(10px, 3vw, 40px) clamp(10px, 1.8vh, 22px);
-      overflow: hidden;
-      background:
-        radial-gradient(60% 45% at 15% 0%, rgba(255, 20, 147, .08), transparent 70%),
-        radial-gradient(55% 45% at 90% 100%, rgba(212, 168, 0, .10), transparent 70%),
-        var(--bg);
+      justify-content: center;
+      gap: clamp(12px, 2.2vh, 30px);
+      padding: clamp(16px, 3.6vh, 40px) clamp(16px, 5vw, 56px);
     }
 
+    /* ─── "Continue in" banner ─── */
     .df-banner {
-      align-self: center;
-      flex: 0 0 auto;
+      position: absolute;
+      top: clamp(12px, 2.6vh, 26px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -139,183 +169,202 @@ const CHIPS = [
       font-size: clamp(11px, 1.5vh, 13px);
       font-weight: 700;
       letter-spacing: .3px;
-      box-shadow: 0 8px 24px var(--tirol-pink-glow);
+      box-shadow: 0 10px 30px rgba(0,0,0,.45);
     }
     .df-banner[hidden] { display: none; }
     .df-banner:hover { filter: brightness(1.08); }
 
+    /* ─── Header ─── */
     .df-head {
-      flex: 0 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: clamp(4px, .8vh, 10px);
+      gap: clamp(4px, 1vh, 12px);
       text-align: center;
     }
     .df-brand { display: inline-flex; line-height: 0; }
-    .df-brand svg { width: clamp(150px, 22vw, 200px); height: auto; }
+    .df-brand svg { width: clamp(118px, 15vw, 168px); height: auto; filter: drop-shadow(0 4px 18px rgba(0,0,0,.55)); }
+    .df-brand svg text, .df-brand svg circle { fill: #fff; }
     .df-claim {
       font-family: var(--font-display);
-      font-size: clamp(24px, 3.6vh, 40px);
       font-weight: 400;
-      letter-spacing: 1px;
+      font-size: clamp(50px, 10.4vh, 118px);
+      line-height: .9;
+      letter-spacing: .02em;
       text-transform: uppercase;
-      color: var(--text);
-      line-height: 1;
+      text-shadow: 0 8px 44px rgba(0,0,0,.55);
     }
+    .df-claim em { font-style: normal; color: var(--gold); }
     .df-sub {
-      font-size: clamp(10px, 1.5vh, 13px);
+      font-size: clamp(11px, 1.7vh, 15px);
       color: var(--text2);
-      max-width: 60ch;
+      max-width: 56ch;
+      text-wrap: balance;
     }
 
+    /* ─── Language tiles: slim, compact ─── */
     .df-langs {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
       min-height: 0;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: clamp(6px, 1.1vh, 14px);
+      gap: clamp(8px, 1.1vw, 14px);
       margin: 0;
     }
     .df-tile {
       position: relative;
-      min-height: 0;
       min-width: 0;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: clamp(2px, .6vh, 6px);
-      text-align: center;
-      padding: clamp(6px, 1.4vh, 18px) clamp(8px, 1.4vw, 16px);
+      gap: 1px;
+      padding: clamp(9px, 1.6vh, 15px) clamp(30px, 3vw, 40px) clamp(9px, 1.6vh, 15px) clamp(15px, 1.7vw, 20px);
       border: 1px solid var(--glass-border);
-      border-top: 4px solid var(--accent);
+      border-left: 3px solid var(--accent);
       border-radius: var(--radius);
-      background: var(--bg2);
-      color: var(--text);
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+      background: rgba(12,16,22,.42);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      color: #fff;
+      overflow: hidden;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
+    }
+    .df-tile::after {
+      content: '→';
+      position: absolute;
+      right: clamp(11px, 1.4vw, 16px);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(12px, 1.6vh, 16px);
+      color: rgba(255,255,255,.5);
+      transition: transform .25s var(--ease), color .25s var(--ease);
     }
     .df-tile:hover {
       transform: translateY(-3px);
-      border-color: var(--tirol-pink);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, .12);
+      border-color: var(--accent);
+      background: rgba(18,24,32,.6);
+      box-shadow: 0 16px 40px rgba(0,0,0,.42);
     }
+    .df-tile:hover::after { transform: translate(3px, -50%); color: #fff; }
     .df-name {
       font-family: var(--font-display);
-      font-size: clamp(20px, 3.6vh, 34px);
-      line-height: 1;
-      letter-spacing: 1px;
+      font-size: clamp(18px, 2.5vh, 27px);
+      line-height: 1.02;
+      letter-spacing: .6px;
     }
     .df-tile[lang="zh"] .df-name { letter-spacing: 4px; }
     .df-tagline {
-      font-size: clamp(9px, 1.5vh, 13px);
-      line-height: 1.25;
-      color: var(--text2);
+      font-size: clamp(9.5px, 1.35vh, 12px);
+      line-height: 1.2;
+      color: rgba(255,255,255,.72);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .df-tile.recommended {
-      border-color: var(--tirol-pink);
-      box-shadow: 0 0 0 2px var(--tirol-pink), 0 12px 34px var(--tirol-pink-glow);
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold), 0 12px 34px rgba(0,0,0,.4);
     }
     .df-rec {
       position: absolute;
-      top: clamp(4px, .8vh, 8px);
-      right: clamp(4px, .8vh, 8px);
+      top: 0;
+      right: 0;
       display: none;
       align-items: center;
-      padding: 1px 7px;
-      border-radius: 100px;
+      padding: 2px 8px 3px;
+      border-bottom-left-radius: 8px;
       background: var(--gold);
       color: #1A1A1A;
-      font-size: clamp(8px, 1.1vh, 10px);
+      font-size: clamp(7.5px, 1vh, 9.5px);
       font-weight: 700;
       letter-spacing: .5px;
       text-transform: uppercase;
     }
     .df-tile.recommended .df-rec { display: inline-flex; }
 
+    /* ─── Category chips: deliberately tiny/subtle ─── */
     .df-cats {
       flex: 0 0 auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: clamp(4px, .9vh, 10px);
+      gap: clamp(5px, .9vh, 8px);
     }
     .df-chip {
       display: inline-flex;
       align-items: center;
-      padding: clamp(4px, .9vh, 9px) clamp(8px, 1.4vw, 15px);
+      padding: 3px 10px;
       border-radius: 100px;
-      background: var(--surface);
-      border: 1px solid var(--glass-border);
-      color: var(--text);
-      font-size: clamp(10px, 1.5vh, 13px);
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.14);
+      color: rgba(255,255,255,.66);
+      font-size: clamp(9px, 1.2vh, 11px);
       font-weight: 600;
+      letter-spacing: .3px;
       white-space: nowrap;
       transition: border-color .2s, color .2s, background .2s;
     }
-    .df-chip:hover {
-      border-color: var(--tirol-pink);
-      color: var(--tirol-pink);
-      background: rgba(255, 20, 147, .06);
-    }
+    .df-chip:hover { border-color: var(--tirol-pink); color: #fff; background: rgba(255,20,147,.12); }
 
-    @media (max-width: 640px) {
+    @media (max-width: 760px) {
       .df-langs {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        gap: clamp(8px, 2.2vw, 12px);
       }
+      .df-claim { font-size: clamp(46px, 9.4vh, 88px); }
     }
+    /* Guarantee the one-screen fit on short / small devices. */
+    @media (max-height: 780px) { .df-cats { display: none; } }
+    @media (max-width: 520px) { .df-cats { display: none; } }
+    @media (max-height: 620px) { .df-sub { display: none; } }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .df-tile, .df-chip { transition: none; }
+      .df-tile, .df-chip, .df-tile::after { transition: none; }
     }
   </style>
 </head>
 <body>
   <section id="sprache" class="df-picker" aria-label="Sprachauswahl">
+    <img class="df-bg" src="/hero-tirol.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+    <div class="df-scrim" aria-hidden="true"></div>
+
     <a class="df-banner" id="dfContinueBanner" href="https://de.tiroltourismus.com/" hidden>
       <span>Weiter auf</span> <span id="dfContinueLang"></span> <span aria-hidden="true">→</span>
     </a>
 
-    <header class="df-head">
-      <a class="df-brand" href="https://tiroltourismus.com/" aria-label="Tirol Tourismus">
-        <svg viewBox="0 2 375 46" role="img" aria-label="Tirol Tourismus">
-          <defs>
-            <linearGradient id="ttlg" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#A00D24"/><stop offset="100%" stop-color="#C8102E"/>
-            </linearGradient>
-          </defs>
-          <text x="14" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold" fill="url(#ttlg)">T</text>
-          <text x="46" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold" fill="url(#ttlg)">I</text>
-          <text x="72" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold" fill="url(#ttlg)">R</text>
-          <text x="104" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold" fill="url(#ttlg)">O</text>
-          <text x="138" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold" fill="url(#ttlg)">L</text>
-          <circle cx="178" cy="30" r="2.5" fill="rgba(0,0,0,.12)"/>
-          <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8" fill="#C8102E">tourismus</text>
-        </svg>
-      </a>
-      <h1 class="df-claim">Wähle deine Sprache</h1>
-      <p class="df-sub">Wähle deine Sprache und entdecke Tirol auf einer Seite.</p>
-    </header>
-
-    <main class="df-langs" aria-label="Sprachauswahl">
-      {TILES.map((t) => (
-        <a class="df-tile" href={t.href} lang={t.htmlLang} data-lang={t.code} style={`--accent:${t.accent}`}>
-          <span class="df-rec" aria-hidden="true">Empfohlen</span>
-          <span class="df-name">{t.name}</span>
-          <span class="df-tagline">{t.tagline}</span>
+    <div class="df-content">
+      <header class="df-head">
+        <a class="df-brand" href="https://tiroltourismus.com/" aria-label="Tirol Tourismus">
+          <svg viewBox="0 2 375 46" role="img" aria-label="Tirol Tourismus">
+            <text x="14" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">T</text>
+            <text x="46" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">I</text>
+            <text x="72" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">R</text>
+            <text x="104" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">O</text>
+            <text x="138" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">L</text>
+            <circle cx="178" cy="30" r="2.5" style="fill:rgba(255,255,255,.35)"/>
+            <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8">tourismus</text>
+          </svg>
         </a>
-      ))}
-    </main>
+        <h1 class="df-claim">Tirol<em>.</em></h1>
+        <p class="df-sub">Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite.</p>
+      </header>
 
-    <nav class="df-cats" aria-label="Kategorien">
-      {CHIPS.map((c) => (
-        <a class="df-chip" href={c.href}>{c.label}</a>
-      ))}
-    </nav>
+      <main class="df-langs" aria-label="Sprachauswahl">
+        {TILES.map((t) => (
+          <a class="df-tile" href={t.href} lang={t.htmlLang} data-lang={t.code} style={`--accent:${t.accent}`}>
+            <span class="df-rec" aria-hidden="true">Empfohlen</span>
+            <span class="df-name">{t.name}</span>
+            <span class="df-tagline">{t.tagline}</span>
+          </a>
+        ))}
+      </main>
+
+      <nav class="df-cats" aria-label="Kategorien">
+        {CHIPS.map((c) => (
+          <a class="df-chip" href={c.href}>{c.label}</a>
+        ))}
+      </nav>
+    </div>
   </section>
 
   <script is:inline>

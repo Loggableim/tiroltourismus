@@ -6,7 +6,7 @@
   "kategorie": "wandern",
   "ort": "Zillertal",
   "region": "zillertal",
-  "beschreibung": "<p>La scheda descrive un’escursione notturna guidata alle stelle nella <strong>Zillertal</strong>. Secondo la scheda, i partecipanti imparano a conoscere il cielo stellato sopra le Alpi durante una passeggiata notturna con guide certificate. L’attenzione è rivolta all’osservazione di stelle cadenti, pianeti e della Via Lattea, lontano dall’inquinamento luminoso. Il tour dura 2–3 ore, costa 45 euro e dovrebbe essere adatto anche a famiglie con bambini dai 10 anni in su.</p><p>La Zillertal è una delle valli laterali più note dell’Inntal in Tirolo e si estende da Jenbach a nord fino alle montagne ghiacciate delle Alpi della Zillertal a sud. Località come Mayrhofen, Fügen-Kaltenbach, Stumm e Zell am Ziller si trovano nella valle. Gran parte dell’area appartiene al Parco Naturale Alpi della Zillertal. La regione è considerata relativamente buia e povera di luce, quindi ben adatta all’osservazione delle stelle.</p>",
+  "beschreibung": "### Überblick\nLa camminata notturna sotto le stelle nella Zillertal Arena, nei pressi del borgo alpino di Königsleiten sul passo Gerlos, è un'esperienza suggestiva per tutta la famiglia. A oltre 1.600 metri di quota, lontani da fonti di inquinamento luminoso, il cielo notturno offre una limpidezza straordinaria. Qui sorge un osservatorio astronomico con planetario. Guidati da esperti, si impara a riconoscere le costellazioni e la Via Lattea nella quiete della notte alpina.\n\n### Route & Anforderungen\nL'itinerario parte dall'osservatorio e segue il sentiero didattico dei pianeti lungo facili stradine di montagna. Percorso di circa 4 km e 100 metri di dislivello per una durata totale di 2,5-3 ore comprensive di spiegazioni e osservazioni al telescopio. Adatto a famiglie con bambini dai 6 anni. Necessarie scarpe comode, abbigliamento caldo (le notti estive in quota sono fresche) e torcia frontale con luce rossa. Cani ammessi al guinzaglio.\n\n### Anreise\nAutostrada A12 uscita Zillertal, statale B169 fino a Zell am Ziller e poi strada B165 del Gerlos fino a Königsleiten. Parcheggio gratuito all'osservatorio. In treno con la ferrovia Zillertalbahn fino a Zell am Ziller e autobus 4094 fino a «Königsleiten Dorf».\n\n### Tipps\nVisitate prima della passeggiata il planetario Zeiss di Königsleiten con le sue spettacolari proiezioni a cupola piena. Le serate di luna nuova offrono la vista migliore della Via Lattea, mentre a metà agosto si possono ammirare le scie luminose delle Perseidi.",
   "preis": 45,
   "dauer": "2–3 Stunden",
   "link": "#",
@@ -23,5 +23,12 @@
   "koordinaten": {
     "lat": "47.2817",
     "lng": "11.8821"
-  }
+  },
+  "sources": [
+    "https://www.zillertalarena.com/",
+    "https://www.sterngucker-koenigsleiten.com/sommer/wandern-in-koenigsleiten/",
+    "https://www.tirol.de/reisefuehrer/s/sommersport-in-tirol/zillertal-arena/planetarium-sternenwarte-koenigsleiten-und-planetarium-schwaz.html",
+    "https://de.wikipedia.org/wiki/Zillertal_Arena",
+    "https://www.gerlos.at/"
+  ]
 }

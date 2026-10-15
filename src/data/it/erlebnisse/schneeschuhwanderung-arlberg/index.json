@@ -1,12 +1,12 @@
 {
-  "name": "Schneeschuhwanderung Arlberg",
+  "name": "Escursione guidata con racchette da neve all'Arlberg",
   "slug": "schneeschuhwanderung-arlberg",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "winter",
   "ort": "St. Anton am Arlberg",
   "region": "st-anton",
-  "beschreibung": "Lontano dalle piste, godetevi la quiete invernale: con le ciaspole e una guida alpina esperta camminerete attraverso la neve polverosa profonda dell'Arlberg. Passando davanti a baite innevate e boschi da fiaba, raggiungerete un punto panoramico con un panorama grandioso. Il coronamento finale è una Jause in una baita caratteristica con Glühwein.",
+  "beschreibung": "### Panoramica\nLe escursioni guidate con le ciaspole nella culla dello sci alpino svelano una dimensione invernale autentica lontana dall'affollamento delle piste di Ski Arlberg. St. Anton am Arlberg, insieme alle vicine Pettneu e Flirsch, vanta oltre ottanta chilometri di sentieri battuti e pendii di neve fresca immacolata. La meta regina è la selvaggia valle Verwalltal: risalendo la forra della Rosanna tra cascate di ghiaccio, uno scenografico ponte sospeso e fitti boschi fino al lago ghiacciato Verwallsee. Con le guide alpine certificate delle scuole Arlberg Free Moving e Skischule Arlberg si ammirano le tracce della fauna selvatica nel silenzio delle vette.\n\n### Percorso e requisiti\nL'itinerario più celebre parte dalla località Mooserkreuz a St. Anton e risale dolcemente la Verwalltal fino alla baita Wagner Hütte e attorno al lago Verwallsee (circa 10 km, 150 metri di dislivello, 2,5-3,5 ore). Itinerari più impegnativi partono da Pettneu verso la malga Nessleralm (400 metri di dislivello) o solcano i crinali del Galzig oltre i 2.000 metri. Ciaspolare nella neve fresca richiede un buon allenamento fisico. Fuori dalle piste battute sono indispensabili pala, sonda, dispositivo ARTVA e la verifica del bollettino valanghe.\n\n### Come arrivare\nSt. Anton am Arlberg dispone della stazione ferroviaria internazionale più alta delle Alpi, situata in pieno centro e comodamente raggiungibile senza auto. Gli skibus gratuiti e la linea 6 del Verwallbus collegano direttamente le stazioni ai punti di partenza. In auto si arriva dalla superstrada S16 dell'Arlberg, con parcheggi a pagamento presso gli impianti Rendl e Nasserein (circa 8,00 € al giorno).\n\n### Tips\nIl noleggio di ciaspole e bastoncini con rotelle da neve costa circa 15-19 € al giorno nei negozi specializzati come Sport Matt a Pettneu. Molto suggestive sono le ciaspolate notturne con torce frontali. Adatto a ragazzi dagli 8-10 anni in su. I cani al guinzaglio sono ammessi; si consiglia una crema protettiva per i polpastrelli contro la neve ghiacciata.",
   "preis": 69,
   "dauer": "4 Stunden",
   "tags": [
@@ -23,5 +23,14 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/de/winter/winter-und-schneeschuhwandern",
+    "https://www.stantonamarlberg.com/de/die-region-st-anton-am-arlberg/anreise",
+    "https://www.arlbergerbergbahnen.com",
+    "https://www.skiarlberg.at",
+    "https://arlberg-free-moving.com",
+    "https://www.skischule-arlberg.com",
+    "https://lawinen.report"
+  ]
 }

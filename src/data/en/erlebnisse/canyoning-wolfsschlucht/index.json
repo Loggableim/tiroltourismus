@@ -1,36 +1,35 @@
 {
-  "name": "Canyoning in der Wolfsschlucht",
   "slug": "canyoning-wolfsschlucht",
   "emoji": "🧗",
   "farbe": "var(--tirol-red)",
   "kategorie": "abenteuer",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>Abseiling, jumping, sliding and wading through crystal-clear Alpine water – <strong>canyoning</strong> is one of the most thrilling outdoor adventures in the Tyrolean mountains. The Stubaital itself offers spectacular nature trails along wild mountain streams (WildeWasserWeg, Burkhardsklamm), while guided canyoning tours head to the established gorge areas of the neighbouring Inn Valley and Ötztal.</p><h3>Tours &amp; Offers</h3><p><strong>Sport Stubai</strong> in Neustift (Stubaitalstraße 62) organises guided canyoning tours to Tyrol's best-known gorges, including the <strong>Alpenrosenklamm</strong>, <strong>Rosengartenschlucht</strong> near Imst and the more challenging <strong>Auerklamm</strong> in the Ötztal (approx. 45–60 min from Stubaital).</p><p><strong>Beginner canyoning</strong> (e.g. Alpenrosenklamm): difficulty Level 1–2, minimum age 10–12, total guided tour duration approx. 3.5–5 hours. Price: approx. <strong>€75–95</strong> per person incl. equipment and certified guide.</p><p><strong>Advanced tours</strong> (e.g. lower Auerklamm): Level 3, jumps up to 10 m, abseils up to 40 m. Minimum age: 16–18. Price: approx. <strong>€110–145</strong> per person. Season: approx. <strong>1 May to 15 October</strong>.</p><p><strong>Important:</strong> Commercial canyoning tours in Tyrol may only be led by state-certified guides (Tiroler Bergsportführergesetz). Never enter unknown gorges independently!</p><h3>Getting There</h3><p>Booking: <strong>Sport Stubai KG</strong>, Stubaitalstraße 62, 6167 Neustift im Stubaital, Tel. +43 5226 30288. By public transport: Stubaitalbahn (STB) from Innsbruck to Neustift/Fulpmes.</p>",
-  "preis": 119,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Canyoning in the Wolfsschlucht Gorge",
+  "beschreibung": "### Overview\nCanyoning in Tyrol delivers adrenaline-charged whitewater action inside dramatic alpine gorges. Essential for trip planning: searches for 'Wolfsschlucht' often stem from confusion with the Wolfsklamm gorge in Stans, where canyoning is strictly prohibited and reserved exclusively for wooden boardwalk hikers. The world-famous Tyrolean canyoning route associated with this name is the Auerklamm starting at Wolfsbrücke bridge in the lower Ötztal Valley (Nederbach creek near Oetz). Auerklamm is revered by outdoor professionals as the absolute benchmark and most spectacular canyoning descent in the Eastern Alps (graded v4 a5 IV). Carved deeply into Tyrolean granite, the canyon offers an intense progression of roaring waterfalls, emerald plunge pools, natural stone slides, and massive abseiling pitches directly in the riverbed.\n\n### Route & Requirements\nThe standard route enters at historic Wolfsbrücke bridge, descending the gorge's aquatic core. Highlights include jumps of up to 10 to 14 metres into crystal-clear pools, natural waterslides carved into slick granite reaching up to 18 metres in length (such as the infamous 'Devil's Hole'), and waterfall rappels up to 40 metres high. On professionally guided excursions, the rule 'Jump or Rope' applies: high jumps are always optional and can be abseiled or bypassed. Given the cold mountain water and powerful hydraulics, Auerklamm demands solid physical fitness, head for heights, proficient swimming skills, and a minimum age of 14 to 16 years. It is completely unsuitable for small children and dogs (family-friendly novice trips from age 8 run instead in Alpenrosenklamm or Rosengartenschlucht).\n\n### Arrival\nThe staging bases of certified Tyrolean canyoning guides are located in the Inn Valley and Ötztal entrance area around Haiming, Sautens, and Ötztal-Bahnhof (including AREA 47). Motorists arrive via the A12 Inntal Autobahn (exit 123 Ötztal) and B186 Ötztal road. Free parking is available at all outdoor operator bases, with guides transporting groups to Wolfsbrücke in private shuttles. Rail travellers arrive at Ötztal-Bahnhof station, located within walking distance or brief shuttle transfer from most outfitters.\n\n### Tips\nGuided trips cost approximately €90 to €130 per person. Full professional gear—including a 5–7 mm reinforced canyoning wetsuit, neoprene booties, whitewater helmet, high-friction canyoning boots, and harness with protective seat pad—is provided by the operator. Guests only need swimwear and a towel. The season spans from late May to early October, with spring snowmelt heavily dictating water volume. Vital safety rule: under the Tyrolean Mountain Guide Act, commercial canyoning may only be conducted by certified Tyrolean canyoning guides; during high water or thunderstorm risk, entering the gorge is strictly illegal.",
+  "sources": [
+    "https://area47.at/outdoor/canyoning/",
+    "https://www.wolfsklamm.tirol",
+    "https://www.tirol.at",
+    "https://www.bergsportfuehrer-tirol.at",
+    "https://alpinesicherheit.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 119,
   "tags": [
     "canyoning",
     "wasser",
     "abenteuer",
     "stubaital",
     "action"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null,
-  "sources": [
-    "https://sport-stubai.com",
-    "https://www.stubai.at",
-    "https://www.stubaierbergfuehrer.at",
-    "https://www.tirol.at/aktivitaeten/sport/canyoning",
-    "https://www.oetztal.com/canyoning",
-    "https://www.wolfsklamm.tirol"
   ]
 }

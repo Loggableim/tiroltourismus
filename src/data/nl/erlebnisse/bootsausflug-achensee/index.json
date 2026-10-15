@@ -1,34 +1,33 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "<p>Het <strong>Achensee</strong> is het grootste en diepste meer van Tirol. De <strong>Achenseeschifffahrt GmbH</strong> verzorgt al sinds 1887 regelmatige lijnvaarten.</p><h3>Overzicht &amp; Routes</h3><p>Drie moderne passagiersschepen – <strong>MS Stadt Innsbruck</strong> (2007), <strong>MS Tirol</strong> (1995) en <strong>MS Achensee</strong> (2016) – bedienen <strong>6 aanlegplaatsen</strong>: Pertisau, Buchau, Seespitz, Gaisalm, Seehofkapelle/Lido en Scholastika.</p><p>Dagticket Hop-on/Hop-off: volwassenen €32–34 | kinderen 7–15 jaar: €16–17 (tarief 2025). Kinderen tot 6 jaar gratis. Familieticket: ca. €64–68 €. Rondvaart Noord: ca. 75 min, volwassenen €30. Rondvaart Zuid: ca. 45 min, volwassenen €21. Seizoen: begin mei – begin november.</p>",
-  "preis": 22,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Boottocht op de Achensee – grote rondvaart",
+  "beschreibung": "### Overzicht\nDe Achenseeschifffahrt, in 1887 opgericht door abt Albert Wildauer van het stift Fiecht, combineert ruim een eeuw scheepvaarthistorie met hedendaags recreatieplezier. Op het grootste meer van Tirol, ingeklemd tussen het ruige Karwendelgebergte en het Rofanmassief, varen drie moderne passagiersschepen: het vlaggenschip MS Tirol met capaciteit voor 600 gasten en ruime zonnedekken, de drempelvrije MS Stadt Innsbruck (470 personen) met restaurantdek, en het partyschip MS Achensee (500 personen). Op het tot 133 meter diepe, fjordachtige water biedt de rondvaart adembenemende bergzichten. Een bijzondere trekpleister is de halte bij de Gaisalm aan de westelijke steiloever: de enige alpenboerderij van heel Tirol die uitsluitend te voet over rotspaden of per schip bereikbaar is, omdat er geen enkele weg naartoe leidt.\n\n### Route & Vereisten\nDe vloot bedient zes aanlegsteigers: Pertisau (thuishaven en werf), Seespitz aan de zuidoever, Buchau, de idyllische Gaisalm, Seehofkapelle en Scholastika bij Achenkirch aan de noordzijde. De Grote Merenrondvaart (Hop-on Hop-off dagkaart) duurt zonder tussenstop 2 uur en 10 minuten. Kortere alternatieven zijn de Noordelijke Ronde (ca. 75 minuten) en Zuidelijke Ronde (ca. 45 minuten). De schepen zijn volledig toegankelijk voor mindervaliden met drempelvrije loopbruggen, aangepaste toiletten en ruime binnensalons. De tocht vergt geen lichamelijke inspanning en is ideaal voor gezinnen met kinderwagens. Honden mogen mee aan boord (hondenticket circa € 4,00); conform Oostenrijkse regelgeving geldt een strikte muilkorf- en aanlijnplicht.\n\n### Bereikbaarheid\nDe centrale vertrekhaven bevindt zich in Pertisau aan de meerpromenade. Met de auto bereikbaar vanaf de snelweg A12 (afrit Wiesing/Achensee) via de provinciale weg B181. Betaalde parkeerplaatsen zijn beschikbaar in Pertisau, bij het strand van Buchau en bij Scholastika in Achenkirch. Een nostalgisch alternatief is de trein naar Jenbach met overstap op de stoomtandradbaan Achenseebahn (geopend in 1889): station Seespitz ligt direct aan de kade met aansluiting op de gereedliggende boot. Tevens rijdt de VVT-streekbus lijn 4080 vanaf Jenbach.\n\n### Tips\nEen Hop-on Hop-off dagkaart kost € 34,00 voor volwassenen (€ 17,00 voor kinderen 7–15 jaar; familiekaart € 68,00; kinderen t/m 6 jaar gratis). Houders van de AchenseeCard ontvangen 10% korting. Zeer populair is het combiticket voor boot en stoomtrein Achenseebahn (€ 72,00 volwassene). Tip voor een dagtocht: vaar van Pertisau naar de Gaisalm voor een alpenlunch en wandel via het schilderachtige maar rotsachtige kustpad Gaisalmsteig in circa 1,5 uur terug naar Pertisau (tredzekerheid vereist). Het hoofdseizoen loopt van mei tot eind oktober; in december varen sfeervolle kerstschepen.",
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ],
+  "bilder": [],
   "dauer": "2 Stunden",
+  "link": "#",
+  "preis": 22,
   "tags": [
     "boot",
     "Achensee",
     "scheepvaart",
     "natuur",
     "panorama"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://achenseeschifffahrt.at",
-    "https://shop.achenseeschifffahrt.at",
-    "https://www.achenseebahn.at",
-    "https://de.wikipedia.org/wiki/Achensee",
-    "https://www.achensee.com/achensee/"
   ]
 }

@@ -1,35 +1,33 @@
 {
-  "name": "Fuchsbau-Rodeln in Serfaus",
   "slug": "fuchsbau-rodelbahn-serfaus",
   "emoji": "🛷",
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
   "region": "serfaus-fiss-ladis",
-  "beschreibung": "<p>Sull'altopiano soleggiato di Serfaus, la <strong>pista naturale per slittino di Serfaus</strong> (Komperdell–Serfaus) offre oltre quattro chilometri di tracciato curato con discese serali illuminate ogni mercoledì.</p><h3>Percorso &amp; Prezzi</h3><p>Partenza a 1.980 m presso la stazione intermedia Komperdell, arrivo a 1.440 m: <strong>550 metri di dislivello</strong> per <strong>4,0 km</strong> di lunghezza. Tempo di discesa: 20–35 minuti. Impianto aperto dalle 08:15 alle 16:20; notturna il mercoledì fino alle 23:30. Corsa singola adulti: 18,50 € (bambini 11,50 €). Slittino notturno: 20,00 €. Noleggio slitte disponibile nei negozi sportivi.</p><h3>Come Arrivare</h3><p>Serfaus è a traffico limitato. Parcheggio all'ingresso del paese e navetta con la metropolitana sotterranea <strong>Dorfbahn Serfaus</strong>. Con i mezzi: treno fino a Landeck-Zams, poi bus VVT 220.</p><h3>Consigli</h3><ul><li><strong>Famiglie:</strong> Ideale per famiglie; da soli a partire da 8 anni.</li><li><strong>Cani:</strong> Severamente vietati sulla pista da slittino.</li><li><strong>Sicurezza:</strong> Scarpe invernali profilate e casco raccomandati.</li></ul>",
-  "preis": 19,
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Piste per slittini per famiglie a Serfaus-Fiss-Ladis",
+  "beschreibung": "### Panoramica\nIl soleggiato altopiano di Serfaus-Fiss-Ladis è uno dei comprensori invernali per famiglie più rinomati delle Alpi e vanta piste da slittino preparate a regola d'arte. Chiarimento fondamentale: non esiste una pista per slittino ufficiale denominata «Fuchsbau» nel comprensorio; il nome fa riferimento a «Bertas Fuchsbau», un percorso didattico sulla neve per bambini sciatori nell'area Berta's Kinderland a Fiss. Le vere piste da slittino della regione offrono però un'esperienza invernale al top: la pista naturale di Serfaus scende per 4,0 chilometri dalla stazione a monte di Komperdell (1.980 m) tra boschi e sottopassi fino al paese (550 metri di dislivello). A Fiss la celebre pista Hexen-Rodelbahn (pendenza media del 12,5%) copre 4,0 km da Steinegg (1.920 m) fino alla stazione a valle. Completa l'offerta l'Alpine Coaster su rotaia Schneisenfeger all'Erlebnispark Hög, con curve paraboliche e giri della morte a 40 km/h.\n\n### Percorso & Requisiti\nLe due piste sono perfettamente battute e servite da comodi impianti di risalita:\n1. Pista da slittino Serfaus: salita con la cabinovia Komperdellbahn a 1.980 metri. Pista naturale di 4,0 chilometri di media difficoltà, con possibilità di sosta gastronomica presso il lago Högsee.\n2. Hexen-Rodelbahn Fiss: salita con la Schönjochbahn I fino a Steinegg. Larga 3 metri e lunga 4,0 chilometri, è la pista ideale per principianti e famiglie con bambini dai 5 anni in su.\nNon è richiesta salita a piedi. Sono indispensabili abbigliamento invernale caldo, scarponcini invernali alti con suola scolpita (vietati gli scarponi da sci!) e casco protettivo. I cani sono severamente vietati sulle piste da slittino.\n\n### Come arrivare\nIn auto dall'autostrada A12 Inntal (uscita Oberinntal/Reschenpass) si segue la statale B180 fino a Ried im Oberinntal, salendo poi lungo la provinciale L19 sull'altopiano. A Serfaus vige in inverno il divieto di circolazione per le auto private; gli ospiti giornalieri parcheggiano nel grande parcheggio all'ingresso del paese. Da lì la metropolitana sotterranea su cuscini d'aria Dorfbahn Serfaus porta gratuitamente i passeggeri alle stazioni delle cabinovie attraverso quattro fermate. A Fiss e Ladis sono presenti parcheggi presso gli impianti. In treno si scende a Landeck-Zams e si prosegue in autobus.\n\n### Consigli\nDi giorno la discesa è compresa nello skipass o nel biglietto pedonale; il noleggio della slitta costa circa 10-15 euro al giorno nei negozi sportivi alle stazioni a valle. Imperdibile lo slittino notturno: ogni mercoledì sera la pista di Serfaus è illuminata fino alle 23:00 in concomitanza con lo show Adventure Night, mentre Fiss organizza serate di slittino illuminato e fonduta ogni giovedì. Regola di sicurezza: regolate la velocità, non fermatevi mai in curva e allacciate la corda della slitta al polso.",
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/rodeln",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/attraktionen",
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/U-Bahn-Serfaus"
+  ],
+  "bilder": [],
   "dauer": "1–2 Stunden",
+  "link": "#",
+  "preis": 19,
   "tags": [
     "rodeln",
     "serfaus",
     "winter",
     "familie",
     "rodelbahn"
-  ],
-  "koordinaten": {
-    "lat": "47.0386",
-    "lng": "10.5739"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.serfaus-fiss-ladis.at/",
-    "https://www.serfaus-fiss-ladis.at/de",
-    "https://www.serfaus-fiss-ladis.at/de/Winterurlaub",
-    "https://www.serfaus-fiss-ladis.at/winter",
-    "https://de.wikipedia.org/wiki/Serfaus-Fiss-Ladis",
-    "https://www.bergfex.at/serfaus-fiss-ladis/"
   ]
 }

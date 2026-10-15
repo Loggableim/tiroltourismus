@@ -1,35 +1,34 @@
 {
-  "name": "Eisklettern im Kaunertal",
   "slug": "eisklettern-kaunertal",
   "emoji": "🧊",
   "farbe": "var(--light-blue)",
   "kategorie": "winter",
   "ort": "Kaunertal",
   "region": "kaunertal",
-  "beschreibung": "<p>Il <strong>Kaunertal</strong> è uno dei comprensori di arrampicata su ghiaccio più rinomati delle Alpi.</p><p>Il <strong>Parco del ghiaccio al Mühlbachfall</strong> a Feichten (5 min dal parcheggio Quellalpin) è ideale per principianti. Prezzo di prova: ca. <strong>65 €</strong>/persona incluso equipaggiamento. Durata: 2–2,5 ore. Stagione: fine novembre/dicembre – metà/fine marzo; condizioni ottimali gennaio-febbraio.</p><p>Fornitore ufficiale: Kaunertaler Berg- &amp; Skiführer, Feichten 112, tel. +43 664 472 1100.</p>",
-  "preis": 139,
+  "koordinaten": {
+    "lat": "46.9917",
+    "lng": "10.6239"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Arrampicata su ghiaccio in Val Kaunertal",
+  "beschreibung": "### Panoramica\nLa valle Kaunertal nel Tirolo occidentale è considerata dagli appassionati di arrampicata su ghiaccio uno dei comprensori più sicuri e variegati delle Alpi orientali. Dalla palestra di roccia ghiacciata illuminata a fondo valle fino alle imponenti cascate alte oltre 200 metri nei circhi d'alta quota, la vallata conta oltre 20 itinerari di ghiaccio e misto documentati. Il punto di riferimento per corsi e allenamento serale è l'Eispark Mühlbachfall a Feichten, all'imbocco della gola Verpeilschlucht: curata dal soccorso alpino locale, questa parete di 35 metri offre vie dal grado WI 3 al WI 6+ ed è illuminata con riflettori ogni sera fino alle 22:30. Per gli alpinisti esperti, sopra la valle nella zona del rifugio Anton-Renk a oltre 2.000 metri si ergono le mitiche cascate di Renk, una colata colossale che vanta linee storiche come la «Klassischer Renkfall» (WI 4+) e «The Wind Corner» (WI 6).\n\n### Percorso & Requisiti\nI settori si dividono per livello tecnico:\n1. Eispark Mühlbachfall (Feichten): avvicinamento di soli 5 minuti dal centro benessere Quellalpin. Perfetto per lezioni di base, arrampicata in top-rope, posizionamento delle viti da ghiaccio e uscite serali.\n2. Cascate Anton-Renk (Ried/Fendels): avvicinamento alpinistico di circa 2 ore (800 metri di dislivello) dalla sbarra della Stalanzer Alm, consigliato con sci da scialpinismo o ciaspole. La discesa si effettua obbligatoriamente in corda doppia su clessidre di ghiaccio (Abalakov), essendo il pendio della capanna estremamente esposto a valanghe.\nL'arrampicata su ghiaccio richiede ottima forma fisica, resistenza alle basse temperature e passo sicuro in montagna. I corsi base sono aperti a giovani sportivi dai 14 anni. L'ambiente è precluso a bambini piccoli e cani per il pericolo di caduta ghiaccio.\n\n### Come arrivare\nIn auto dall'autostrada A12 Inntal si prosegue verso Landeck/Prutz e lungo la strada provinciale L18 fino a Feichten. Parcheggio gratuito presso il centro Quellalpin. Più a monte si snoda la strada panoramica a pedaggio del ghiacciaio del Kaunertal fino al Weißseeferner (2.750 m; pedaggio incluso nello skipass). Con i mezzi pubblici si viaggia in treno fino a Landeck-Zams e con l'autobus di linea 230, gratuito per i titolari di tessera ospiti.\n\n### Consigli\nI corsi con le guide alpine abilitate del Kaunertal partono da circa 95 euro a persona (attrezzatura tecnica inclusa: ramponi, piccozze da cascata, imbrago e casco). Sono richiesti scarponi da alpinismo rigidi ramponabili (categoria D) e abbigliamento termico a strati. Il ghiaccio migliore si forma da gennaio a metà marzo. Sicurezza alpinistica imprescindibile: consultare sempre il bollettino valanghe ufficiale del Tirolo (lawine.tirol). Molti avvicinamenti attraversano canali valanghivi; l'uso del casco e il kit di autosoccorso in valanga (ARTVA, pala, sonda) sono tassativi.",
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertal.com/en/Your-Kaunertal/In-Winter/Ice-Climbing",
+    "https://www.kaunertaler-bergfuehrer.com",
+    "https://www.kaunertaler-gletscher.at/kaunertaler-gletscherstrasse.html",
+    "https://lawine.tirol"
+  ],
+  "bilder": [],
   "dauer": "5 Stunden",
+  "link": "#",
+  "preis": 139,
   "tags": [
     "eisklettern",
     "winter",
     "kaunertal",
     "bergsport",
     "adrenalin"
-  ],
-  "koordinaten": {
-    "lat": "46.9917",
-    "lng": "10.6239"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.kaunertal.com",
-    "https://www.kaunertaler-bergfuehrer.com",
-    "https://www.climbers-paradise.com",
-    "https://www.kaunertaler-gletscher.at",
-    "https://lawine.tirol.gv.at",
-    "https://www.vvt.at"
   ]
 }

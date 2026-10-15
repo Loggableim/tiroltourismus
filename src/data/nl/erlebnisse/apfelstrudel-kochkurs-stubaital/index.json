@@ -1,35 +1,32 @@
 {
-  "name": "Apfelstrudel-Kochkurs",
   "slug": "apfelstrudel-kochkurs-stubaital",
   "emoji": "🥟",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>De <strong>Apfelstrudel</strong> is de koningin van de Tiroolse meelspijzenkeuken en weinig dalen bewaren deze traditie zo zorgvuldig als het Stubaital. Het geheim zit in het met de hand uitgestrekte deeg, zo dun dat je er een krant doorheen kunt lezen. Kook- en bakworkshops laten gasten dit eeuwenoude ambacht leren.</p><h3>Cursussen &amp; Aanbod</h3><p>De <strong>VHS Tirol</strong> organiseert baklessen in de keuken van de Mittelschule Fulpmes. Duur: ca. <strong>3 uur</strong>. Prijs: ca. <strong>€32</strong>. Reserveren: vhs-tirol.at.</p><p>De cursus <em>„Strudel aus eigener Hand“</em> van LFI Tirol (Innsbruck, ~20 min) wordt gegeven door ervaren Tiroolse boerinnen. Duur: 3–4 lessen. Prijs: <strong>€85</strong>. Reserveren: tirol.lfi.at.</p><h3>Bereikbaarheid</h3><p>Met de <strong>Stubaitalbahn (STB)</strong> vanuit Innsbruck naar Fulpmes (ca. 55 min). Met de <strong>auto</strong> via de B183.</p>",
-  "preis": 49,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Tiroler appelstrudel-kookcursus in het Stubaital",
+  "beschreibung": "### Overzicht\nDe traditionele met de hand getrokken Tiroolse apfelstrudel is het kroonjuweel van de Oostenrijkse gebakstraditie. In het Stubaital staat dit warme gerecht volgens de plaatselijke VVV op de tweede plaats van populairste berghutklassiekers. In bakkerijen, op boerderijen en in kookworkshops leren deelnemers de kunst van het strudelbakken volgens aloud familierecept, zoals de Stubaier traditie 'à la Urli Maria uit 1900'. Het geheim schuilt in het deeg: bloem, lauw water, ei, olie en een snufje zout worden krachtig gekneed tot een elastisch deeg. Na het rusten onder een warme kom wordt het deeg op een bebloemde linnen theedoek met de handrug zo flinterdun uitgetrokken dat men er spreekwoordelijk de krant doorheen zou kunnen lezen.\n\n### Route & Vereisten\nDe workshops vinden plaats in sfeervolle herbergkeukens of in de kookstudio van Genusswerk Tirol. Na het uittrekken van het deeg maken de deelnemers de vulling: friszure Tiroolse appels (bij voorkeur goudrenetten) worden dun geschaafd en gemengd met in boerenboter goudbruin geroosterd paneermeel, kaneel, suiker, citroensap en in rum gewelde rozijnen. Met behulp van de doek wordt de strudel opgerold, met gesmolten boter bestreken en op 190 °C goudbruin gebakken. Kennis van koken is niet vereist; de cursus is zeer geschikt voor gezinnen met kinderen vanaf zes jaar. Vanwege hygiënevoorschriften zijn honden niet toegestaan in de bereidingsruimtes.\n\n### Bereikbaarheid\nLocaties in het Stubaital (zoals Neustift, Fulpmes of Telfes) liggen op circa 25 minuten rijden van Innsbruck via de A13 Brenner-snelweg (afrit Schönberg/Stubaital) en de B183. Parkeergelegenheid is aanwezig in de dorpscentra. Met het openbaar vervoer reist men ontspannen: streekbus VVT lijn 590 vertrekt elk halfuur vanaf Innsbruck Hauptbahnhof rechtstreeks naar Neustift. Vanaf Fulpmes rijdt bovendien de historische Stubaitalbahn (STB) naar Innsbruck.\n\n### Tips\nIn de cursusprijs (circa 45 tot 85 euro) zijn alle verse ingrediënten, een leenschort, recepten en het gezamenlijk proeven van de ovenverse strudel met vanillesaus of slagroom inbegrepen. Overgebleven porties mogen mee naar huis. Omdat groepen beperkt zijn tot 8 à 12 deelnemers, is vroegtijdig reserveren via de VVV of LFI Tirol sterk aangeraden. Tip voor fijnproevers: alpenhutten zoals de Schlickeralm en het panoramarestaurant Kreuzjoch serveren dagelijks versgebakken strudel met uitzicht op gletsjers.",
+  "sources": [
+    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
+    "https://www.stubai.at/stubaital/essen-und-trinken/",
+    "https://tirol.lfi.at"
+  ],
+  "bilder": [],
   "dauer": "2,5 Stunden",
+  "link": "#",
+  "preis": 49,
   "tags": [
     "culinair",
     "strudel",
     "kookcursus",
     "Stubaital",
     "bakken"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
-    "https://www.vhs-tirol.at",
-    "https://tirol.lfi.at/",
-    "https://www.untersillerhof.com/",
-    "https://www.stubai.at",
-    "https://www.stubai.at/blog/"
   ]
 }

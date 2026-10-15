@@ -1,35 +1,32 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
   "region": "alpbach",
-  "beschreibung": "<p>En el <strong>Alpbachtal</strong> – frecuentemente citado como „el pueblo más bonito de Austria“ – el vínculo entre personas, animales y naturaleza perdura de forma auténtica.</p><h3>Experiencias en Granja y Alpe</h3><p>La <strong>Steinbergalm</strong> en Inneralpbach (1.712 m) permite observar la elaboración tradicional de queso desde 1558. Temporada: principios de junio – principios de octubre.</p><p>La <strong>Bischofer Käsalm</strong> ofrece quesería y tabla alpina. Temporada: mayo–octubre aprox.</p><p>El <strong>Bergbauernmuseum Vorder-Unterberg</strong> es un museo viviente de 1636. Entrada: 3 € (adultos), 1,50 € (niños). Abierto: Pentecostés–fin de septiembre, lun. y jue. 13:00–16:00.</p><h3>Cómo Llegar</h3><p>En <strong>coche</strong>: A12, salida Kramsach/Alpbachtal, luego L5 hacia Alpbach. En <strong>transporte público</strong>: tren ÖBB hasta Brixlegg, luego autobús VVT 620 hasta Inneralpbach (~35 min).</p>",
-  "preis": 35,
+  "koordinaten": {
+    "lat": "47.3983",
+    "lng": "11.9452"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Experiencia de granja y pradera alpina en la Greissl Alm de Alpbach",
+  "beschreibung": "### Resumen\nEn Alpbach, célebre como el pueblo de madera más bello de Austria, las tradiciones campesinas y la ganadería alpina se conservan con autenticidad desde hace siglos. Aclaración clave para el viajero: no existe ninguna majada oficial llamada «Greißl-Alm» en el catastro tirolés; el nombre obedece a una ficha ficticia previa. No obstante, los auténticos masi y pastos del valle de Alpbachtal brindan con creces las vivencias rurales que buscan las familias. La joya indiscutible es el museo campesino de montaña «Vorder-Unterberg» en Inneralpbach. Construido entre 1636 y 1638 y habitado hasta 1952, funciona como museo vivo: mientras en la rústica cocina de humo («Rauchkuchl») aún se ahúma el tocino tradicional, en el establo anexo y en los prados sigue criándose ganado vacuno y animales de granja. Destacan también queserías tradicionales como la Bischofer Käsalm y majadas históricas en el barranco Greiter Graben.\n\n### Ruta y Requisitos\nLas excursiones campesinas más destacadas de Alpbach comprenden:\n1. Museo rural Vorder-Unterberg (Inneralpbach): desde el aparcamiento de Inneralpbach, una pista asfaltada sube a la granja en unos 15 minutos (40 metros de desnivel), apta para cochecitos de bebé.\n2. Bischofer Käsalm (1.334 m): concurrida majada en la ladera soleada bajo el pico Gratlspitze con quesería artesanal y bodega de maduración visitable. La ruta circular desde el pueblo de Alpbach cubre 6,8 kilómetros y 367 metros de desnivel (unas 2,5 horas de marcha; transitable con carrito por la pista forestal).\n3. Farmkehralm (1.521 m) en el Greiter Graben: refugio de pastores con más de 400 años de historia bajo el Großer Galtenberg. Desde Inneralpbach se asciende por una pista ancha en 1,5 horas (450 metros de desnivel).\nLas rutas exigen calzado de montaña con buen agarre. Los perros con correa son bienvenidos en los senderos, pero no pueden ingresar al interior del museo.\n\n### Cómo llegar\nEn coche se accede desde la autopista A12 Inntal (salida Kramsach/Brixlegg) siguiendo la carretera L5 hacia Alpbach e Inneralpbach. Hay aparcamientos en el centro de Alpbach y en las cabeceras de senderos en Inneralpbach y Hochberg. En transporte público se llega en tren a la estación de Brixlegg y se enlaza con el autobús regional VVT línea 4074 (servicio cada hora) hasta Inneralpbach. Los autobuses de línea son gratuitos con la tarjeta de huésped Alpbachtal Card.\n\n### Consejos\nLa entrada al museo Vorder-Unterberg ronda los 3,00 € para adultos (2,00 € con tarjeta de huésped) y 1,50 € para niños. En verano se organizan visitas guiadas periódicas. En las cabañas alpinas no deje de probar la merienda rústica con queso Graukäse del Tirol, mantequilla de pasto y pan campesino. En verano pastan vacas nodrizas en Greiter Graben; guarde una distancia prudente de al menos 20 metros y suelte a su perro de inmediato si el ganado vacuno muestra signos de inquietud.",
+  "sources": [
+    "https://www.alpbachtal.at",
+    "https://www.alpbachtal.at/de/aktivitaeten/top-ausflugsziele",
+    "https://www.schuleambauernhof.at"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 35,
   "tags": [
     "familie",
     "bauernhof",
     "alm",
     "alpbach",
     "tiere"
-  ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.alpbachtal.at/",
-    "https://www.alpbachtal.at/de",
-    "https://www.alpbachtal.at/de/sommer",
-    "https://www.bergbauernmuseum.at/",
-    "https://de.wikipedia.org/wiki/Alpbach",
-    "https://www.vvt.at"
   ]
 }

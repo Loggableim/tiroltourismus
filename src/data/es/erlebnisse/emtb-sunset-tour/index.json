@@ -1,36 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>El <strong>Ötztal</strong> es uno de los principales destinos de MTB de los Alpes. Los <strong>Sunset Rides</strong> guiados son especialmente populares.</p><p>La <strong>Bike Republic Sölden</strong> amplía la Gaislachkoglbahn I cada <strong>viernes de julio y agosto</strong> hasta las 19:15. Guía privado desde 99 €/persona. Alquiler de e-MTB: aprox. 49–59 €/día.</p><p>Tours regulares: <strong>AREA 47</strong> (Haiming): aprox. 83 €/pers. (incl. e-MTB en alquiler) | Bikeschule Ötztal: aprox. 109 €/pers. (incl. alquiler e-bike, mar. y jue.).</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "Tour al atardecer en eMTB por el Ötztal",
+  "beschreibung": "### Resumen\nUna excursión guiada en e-mountain bike al atardecer en el valle de Ötztal combina el dinamismo de la bicicleta eléctrica con la mágica atmósfera dorada sobre picos de tres mil metros. Gracias a la orientación oeste y suroeste de las laderas de Sölden, la luz crepuscular se prolonga antes de encender las crestas glaciares con el resplandor alpino (Alpenglühen). Uno de los destinos estrella es la cabaña tradicional Gampe Thaya a 2.000 metros de altitud en la ladera del Giggijoch (ruta 643): una majada gastronómica distinguida por su quesería artesanal y productos 100 % autóctonos. Una opción más apacible es la ruta 652 a Brunnenbergalm (1.971 m) en la vertiente virgen de Sölden, con una panorámica frontal inigualable de la silueta piramidal del Gaislachkogl al atardecer.\n\n### Ruta y Requisitos\nLa ruta parte de Sölden y remonta pistas forestales anchas a lo largo de 12 a 15 kilómetros salvando entre 600 y 700 metros de desnivel. Con e-bikes modernas la subida constante resulta asequible para cualquier ciclista aficionado; el pedaleo efectivo ronda las 2 a 2,5 horas, sumando unas 3,5 a 4 horas en total con la cena alpina. El descenso al anochecer por pista de grava requiere buen tacto de frenada. Pueden participar jóvenes de 12 a 14 años acompañados. No es apto para perros ni niños pequeños debido a la velocidad de bajada y la oscuridad.\n\n### Cómo llegar\nEl punto de encuentro suele fijarse en el centro de Sölden (Freizeit Arena o teleférico Gaislachkoglbahn). En coche se llega por la autopista A12 Inntal (salida Ötztal) y la carretera B186 hasta Sölden. Hay aparcamiento en el garaje subterráneo de la Freizeit Arena y junto al teleférico. En transporte público, el autobús regional VVT línea 4194 conecta con frecuencia la estación ferroviaria de Ötztal con Sölden. Los autobuses disponen de remolques portabicicletas con transporte gratuito incluido.\n\n### Consejos\nLas salidas guiadas con escuelas de ciclismo rondan los 65 a 85 € (alquiler de e-MTB aparte desde 55 € en tiendas locales). Comience siempre con la batería al 100 % (mínimo 625 Wh). Equipo obligatorio imprescindible para el descenso nocturno: foco delantero potente de al menos 1.000 lúmenes en el manillar y linterna frontal en el casco para anticipar las curvas cerradas. Como la temperatura a 2.000 metros desciende entre 10 y 15 °C nada más ponerse el sol, lleve siempre chaqueta cortavientos, guantes largos y cinta térmica.",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "mountain bike",
     "bicicleta eléctrica",
     "atardecer",
     "Ötztal",
     "tour guiada"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  },
-  "sources": [
-    "https://www.oetztal.com",
-    "https://www.soelden.com",
-    "https://www.area47.at",
-    "https://www.bike-oetztal.at",
-    "https://www.rideon-soelden.com",
-    "https://www.feelfree-bike.at",
-    "https://www.oetztaler.at"
   ]
 }

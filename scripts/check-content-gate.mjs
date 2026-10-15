@@ -30,7 +30,7 @@ const BASE = baseIdx >= 0 ? args[baseIdx + 1] : 'origin/master';
 const NO_NETWORK = args.includes('--no-network');
 
 function git(gitArgs) {
-  return execFileSync('git', gitArgs, { cwd: ROOT, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024 });
+  return execFileSync('git', ['-c', 'core.quotepath=off', ...gitArgs], { cwd: ROOT, encoding: 'utf8', maxBuffer: 256 * 1024 * 1024 });
 }
 
 function gitShow(ref, file) {

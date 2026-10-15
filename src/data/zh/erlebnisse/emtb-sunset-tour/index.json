@@ -1,36 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p><strong>厄茨塔尔（Ötztal）</strong>是阿尔卑斯山最顶尖的山地自行车目的地之一，电动山地自行车（E-MTB）让骑手无需专业体能即可征服高达数百米的山路。日落骑行（<strong>Sunset Rides</strong>）尤为受游客喜爱——夕阳将三千米高峰染成金橙色。</p><p><strong>索尔登Bike Republic</strong>每年<strong>7月和8月的每个星期五</strong>延长盖斯拉赫科格尔一号缆车（Gaislachkoglbahn I）的运营时间至19:15（末班上行），小道开放至20:00，提供官方日落骑行。私人导游：从每人99欧元起（仅导游费，不含自行车）。E-MTB租车：约49–59欧元/天。</p><p>定期导游行程：<strong>AREA 47</strong>（海明）：约83欧元/人（含全悬浮E-MTB租用）；厄茨塔尔Bikeschule：约109欧元/人（含e-bike租用，周二和周四）。</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "厄茨谷电动山地车日落巡游",
+  "beschreibung": "### 概览\n在厄茨山谷（Ötztal）参加有向导带领的电动山地车（E-MTB）日落骑行，将现代电助力骑行的畅快与三千米级阿尔卑斯雪山日落金山的震撼完美交融。得益于索尔登（Sölden）周边朝向西面与西南面的开阔山坡，落日余晖在此处停留格外长久，随后化作将冰川峰峦染成玫瑰金色的阿尔卑斯晚霞（Alpenglühen）。黄昏骑行的经典打卡地当属吉吉约赫峰山坡上海拔2,000米的甘珀塔亚高山木屋（Gampe Thaya，骑行643号线）：这座历史木屋是荣获殊荣的慢食认证高山农庄，拥有自己的阿尔卑斯高山奶酪工坊与全本土特色菜肴。另一处清幽秘境则是通往索尔登“静谧之侧”布伦嫩贝格高山牧场（Brunnenbergalm，海拔1,971米）的652号线，正对着盖斯拉赫峰（Gaislachkogl）巍峨如金字塔般的壮美剪影。\n\n### 流程与要求\n常规路线自Sölden山谷平地出发，沿宽阔平整的林道与碎石路盘旋爬升12至15公里，累计爬升600至700米。借助强劲的电动山地车辅助动力，常规体能骑友亦能轻松登顶；纯骑行时间约2至2.5小时，包含木屋晚餐在内总耗时约3.5至4小时。暮色中下坡碎石路对碟刹点刹控车能力有一定要求。12至14岁以上青少年可在监护人陪同下参加。鉴于下坡速度快且夜间骑行，严禁携带宠物犬及幼童同行。\n\n### 交通路线\n集合点通常设在索尔登村中心（Freizeit Arena休闲中心前或Gaislachkoglbahn索道站）。自驾经A12因河谷高速公路（Ötztal出口）驶入B186公路直达Sölden。休闲中心地下车库与索道站前均设充足车位。公共交通方面，乘VVT区域客运巴士4194线从Ötztal火车站高频直达Sölden；巴士配备专属自行车拖车，持车票乘客可在山谷内免费托运电助力单车。\n\n### 实用贴士\n单人向导团费约为65至85欧元（专业电助力全避震山地车租赁另计，当地运动店日租约55欧元起）。请务必以100%满电电池启程（电池容量至少625瓦时），高山夜间低温会加速电池消耗。夜骑下撤的强制必备安全装备：车把必须配备亮度不低于1,000流明的专业车灯，且头盔上须佩戴头灯以便看清急弯盲区。日落后两千米海拔气温骤降10至15摄氏度，背包中必须常备防风冲锋衣、全指加厚骑行手套及保暖防风头巾。",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "山地自行车",
     "电动自行车",
     "日落",
     "奥茨塔尔",
     "导游之旅"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  },
-  "sources": [
-    "https://www.oetztal.com",
-    "https://www.soelden.com",
-    "https://www.area47.at",
-    "https://www.bike-oetztal.at",
-    "https://www.rideon-soelden.com",
-    "https://www.feelfree-bike.at",
-    "https://www.oetztaler.at"
   ]
 }

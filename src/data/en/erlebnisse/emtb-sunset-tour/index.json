@@ -1,36 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>The <strong>Ötztal</strong> is one of the Alps' premier bike destinations – and e-mountain bike tours let you enjoy the valley's dramatic elevation and scenic alpine trails without professional-level fitness. Guided <strong>sunset tours</strong> are especially popular, with the setting sun bathing the 3,000 m peaks in golden light.</p><h3>Sunset Rides</h3><p><strong>Bike Republic Sölden</strong> extends Gaislachkoglbahn I operations every <strong>Friday in July and August</strong> until 19:15 (last uphill), with trails open until 20:00 for official sunset rides. Providers such as <em>E-Bike Guide Ötztal by Lohmann</em>, <em>RIDE ON Sölden</em> and <em>Feelfree Bike Center</em> offer tailor-made private sunset tours. Typical: start ~16:30–17:00, ride up to scenic alms (e.g. Kleblealm 1,983 m), watch the sunset, descend in fading light. Duration: ~3–4 hours. Private guiding from ~€99 per person (guide only, bike extra).</p><h3>Regular Guided Tours</h3><p><strong>AREA 47</strong> (Haiming): „E-MTB All Ride“ (20 km / 500 m ascent, ~3.5 hrs, ~€83 incl. rental e-MTB). Bikeschule Ötztal: guided tours <strong>Tue &amp; Thu</strong> (mid-June–mid-Sept), 13:30–16:30, ~3 hrs, ~€109 incl. e-bike rental. E-Bike Guide Ötztal: weekly „Ebike meets Trail“ (Wed), 4–5 hrs, €39 guiding fee (without bike).</p><h3>Getting There</h3><p><strong>Ötztal Bike Bus</strong>: all line buses Haiming–Obergurgl run half-hourly with bike trailers (up to 16 bikes, incl. e-bikes). Free with <strong>Ötztal Inside Summer Card</strong>. ÖBB station: Ötztal-Bahnhof/Haiming.</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "E-Mountainbike Sunset Tour in the Ötztal",
+  "beschreibung": "### Overview\nA guided E-Mountainbike Sunset Tour in the Ötztal Valley pairs alpine cycling with the golden hour against high-alpine 3,000-metre peaks. Thanks to west- and southwest-facing slopes framing Sölden, warm evening light lingers long into dusk, setting glaciated ridges ablaze with legendary Alpenglow. A premier destination is the historic Gampe Thaya hut at 2,000 metres elevation along the Giggijoch slopes (Route 643): celebrated as a certified Slow Food gourmet alpine hut, it features an on-site dairy and 100% locally sourced regional produce. An equally stunning, serene alternative is Route 652 leading up to Brunnenbergalm (1,971 m) on Sölden's 'Quiet Side', granting front-row panoramic vistas of the Gaislachkogl peak bathed in pink and amber hues.\n\n### Route & Requirements\nThe typical circuit begins in the valley floor of Sölden, ascending along wide gravel and forestry roads across 12 to 15 kilometres and 600 to 700 metres of elevation gain. Aboard modern electric mountain bikes, the continuous climb is easily manageable for leisure cyclists with basic fitness; riding time is about 2 to 2.5 hours, with total trip time around 3.5 to 4 hours including an alpine dinner. Riding down loose gravel paths at dusk demands confident disc-brake control. Teenagers aged 12 to 14 can participate when accompanied by adults. The tour is unsuitable for dogs and young children due to downhill speeds and night riding.\n\n### Arrival\nTours generally depart from central Sölden (Freizeit Arena or Gaislachkoglbahn valley terminal). Drivers arrive via the A12 Inntal Autobahn (Ötztal exit) along federal highway B186 to Sölden. Ample parking is provided at the Freizeit Arena underground garage and Gaislachkoglbahn lots. By public transport, the VVT regional bus line 4194 connects Ötztal rail station to Sölden with frequent service. Buses are equipped with dedicated bike trailers, allowing free bicycle transport along the valley for ticket holders.\n\n### Tips\nGuided group tours booked through local bike academies cost around €65 to €85 per rider (rental E-MTB available from €55 at shops like Intersport Glanzer or Sport4You). Always begin with a 100% fully charged battery (minimum 625 Wh), as evening cold noticeably drains lithium cells. Compulsory gear for the nocturnal descent: a powerful handlebar headlight delivering at least 1,000 lumens, paired with a helmet headlamp to track switchbacks. Because temperatures at 2,000 metres plunge by 10 to 15 °C immediately after sunset, pack a windproof jacket, warm full-finger cycling gloves, and a thermal headband.",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "mountain biking",
     "e-bike",
     "sunset",
     "Ötztal",
     "guided tour"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  },
-  "sources": [
-    "https://www.oetztal.com",
-    "https://www.soelden.com",
-    "https://www.area47.at",
-    "https://www.bike-oetztal.at",
-    "https://www.rideon-soelden.com",
-    "https://www.feelfree-bike.at",
-    "https://www.oetztaler.at"
   ]
 }

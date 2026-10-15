@@ -6,7 +6,7 @@
   "kategorie": "wandern",
   "ort": "Osttirol",
   "region": "osttirol",
-  "beschreibung": "Gemeinsam mit einem Nationalpark-Ranger begeben Sie sich auf die Spur der Könige der Lüfte. Die Wanderung durch den Nationalpark Hohe Tauern führt zu den Brutplätzen der Bartgeier und Steinadler. Mit Fernglas und fachkundigen Erläuterungen beobachten Sie die majestätischen Vögel in ihrer natürlichen Umgebung.",
+  "beschreibung": "<p>Le <strong>parc national des Hohe Tauern</strong> constitue le plus vaste sanctuaire alpin pour les grands rapaces. Autour du Großglockner s'élèvent le <strong>Gypaète barbu</strong> (près de 3 m d'envergure) et le <strong>Vautour fauve</strong> en estive. Des sorties accompagnées par des gardes-moniteurs du parc permettent d'observer ces géants au téléobjectif.</p><p>Dans la vallée du Ködnitztal à Kals (départ au refuge Lucknerhaus à 1 920 m), le circuit <em>Big Five</em> propose <strong>4 km et 350 m de dénivelé</strong> (1h30 de marche, 3 à 4 heures au total). Tarif : env. <strong>22 € par adulte</strong>, 15 € pour les enfants. Saison : de début juillet à fin septembre. Accès via la route à péage de Kals ou la ligne de bus VVT 952 depuis Lienz.</p><p>Chiens strictement interdits lors des sorties guidées avec les gardes du parc (autorisés en laisse courte sur les chemins individuels). Chaussures de marche montantes et jumelles indispensables.</p>",
   "preis": 59,
   "dauer": "5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hohetauern.at/de/wildtiere/bartgeier/",
+    "https://www.hohetauern.at/de/wildtiere/gaensegeier/",
+    "https://www.glocknerstrasse.at",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern"
+  ]
 }

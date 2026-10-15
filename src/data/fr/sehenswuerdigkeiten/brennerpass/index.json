@@ -5,13 +5,13 @@
   "region": "innsbruck-land",
   "ort": "Brenner",
   "kategorie": "natur",
-  "kurzbeschreibung": "Le plus bas col alpin à 1 374 m – frontière historique entre l'Autriche et l'Italie avec la Brennerbahn, la Brennerautobahn et une piste cyclable vers Bozen.",
-  "beschreibung": "<p>Le <strong>col du Brenner</strong> relie le Tyrol autrichien au Tyrol du Sud à 1 374 mètres d'altitude et constitue le plus important passage alpin entre l'Autriche et l'Italie. Depuis des siècles, les voyageurs et les marchands empruntent ce plus bas col des Alpes centrales comme liaison nord-sud. Après la fin de la Première Guerre mondiale, il forme la frontière nationale entre les deux pays. Aujourd'hui, la Brennerautobahn et l'historique Brennerbahn franchissent le col et relient Innsbruck à Sterzing, Brixen et Bozen. Sur environ 96 kilomètres, la piste cyclable Brenner–Bozen suit l'ancienne voie ferrée à travers l'Eisacktal. La vue s'étend loin dans le Wipptal et vers les massifs environnants. Le col est praticable toute l'année, mais en hiver il faut tenir compte des conditions météorologiques et routières.</p>",
+  "kurzbeschreibung": "? 1 370 m, le Brennerpass relie l'Autriche et l'Italie : passage alpin romain historique, ligne ferroviaire de Carl von Etzel et grand axe europ?en.",
+  "beschreibung": "<h2>Aper?u</h2><p>Le <strong>Brennerpass</strong> (en italien <em>Passo del Brennero</em>) forme, ? une altitude de 1 370 m?tres, la fronti?re d'?tat entre le Land autrichien du Tyrol et la province autonome de Bozen-S?dtirol en Italie. Situ? entre les Alpes de Stubai et du Zillertal, le col du Brenner constitue la br?che topographique la plus basse de toute la cr?te principale des Alpes centrales. Pendant des mill?naires, ce passage a fait office de voie de communication primordiale entre l'Europe centrale et le bassin m?diterran?en, et demeure ? ce jour l'axe de transit le plus fr?quent? ? travers les Alpes.</p><h2>Histoire & Transports</h2><p>D?s l'?ge de la pierre et du bronze, chasseurs et marchands empruntaient ce col peu escarp?. Vers l'an 200 apr. J.-C., l'empereur romain <strong>Septimius Severus</strong> fit am?nager l'itin?raire existant en voie militaire carrossable, la <em>Via Raetia</em>, reliant V?rone ? Augsbourg. Au Moyen ?ge, sous le nom de <em>Via Imperii</em>, la majorit? des rois et empereurs germaniques franchirent le Brenner pour se faire couronner ? Rome. Entre 1772 et 1777, l'imp?ratrice <strong>Maria Theresia</strong> fit transformer le chemin muletier en la premi?re route carrossable moderne des Alpes orientales. En 1867, l'ing?nieur <strong>Carl von Etzel</strong> signa une prouesse technique mondiale : il acheva la <em>Brennerbahn</em> ? la premi?re liaison ferroviaire transalpine continue sans tunnel de fa?te. Apr?s la Premi?re Guerre mondiale, le trait? de Saint-Germain de 1919 fixa la fronti?re d'?tat au col. Entre 1959 et 1974 fut ?rig?e l'autoroute du Brenner A13 avec le monumental Europabr?cke. Le <em>Brenner Basistunnel (BBT)</em>, long de 55 kilom?tres, constitue actuellement un chantier ferroviaire historique de report modal.</p><h2>Visite & Acc?s</h2><p>Le col et les liaisons routi?res sont ouverts 24 heures sur 24 et 7 jours sur 7 tout au long de l'ann?e. La route f?d?rale B182 (Brennerstra?e) c?t? autrichien est totalement <strong>sans p?age</strong>. L'autoroute A13 du Brenner fait l'objet d'un p?age sp?cial g?r? par l'ASFINAG (trajet simple voiture env. 11,50 ? 12,00 ?). C?t? sud-tyrolien, l'autoroute ? p?age A22 prend le relais. Directement pr?s de la gare fronti?re se trouve le centre commercial <em>Designer Outlet Brenner (DOB)</em> regroupant plus de 70 boutiques, ouvert tous les jours de 09h00 ? 19h00. Acc?s en train : la ligne de S-Bahn S3 relie toutes les 30 minutes la gare centrale d'Innsbruck ? la gare fronti?re de Brenner (trajet env. 35 minutes) ; les trains internationaux Eurocity s'y arr?tent aussi. En voiture : par l'autoroute A13 (sortie Brennersee) ou par la route panoramique B182.</p><h2>Conseils</h2><p>La gare modernis?e du Brenner ainsi que le Designer Outlet sont parfaitement accessibles aux personnes ? mobilit? r?duite gr?ce ? des acc?s de plain-pied, des all?es larges et des ascenseurs adapt?s. Directement au col d?bute la c?l?bre v?loroute <em>Eisacktal-Radweg</em>, permettant aux cyclistes de descendre sur 96 kilom?tres presque en continu sur une ancienne voie ferr?e, via Sterzing et Brixen jusqu'? Bozen. Ne manquez pas de visiter au col l'?glise <em>Maria am Wege</em> construite en 1962, remarquable pour son architecture frontali?re symbolique.</p>",
   "emoji": "🏔️",
   "farbe": "#78909C",
   "hoehe": "1.374 m",
   "dauer": "2–3 Stunden",
-  "preis": "Kostenlos (Passstraße mautfrei)",
+  "preis": "Passhöhe und B182 kostenlos (A13 Sondermaut ca. 12,00 €)",
   "tags": [
     "nature",
     "histoire",
@@ -20,10 +20,17 @@
     "vélo",
     "vallée de la Wipptal"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.brennerpass.at",
+  "oeffnungszeiten": "Ganzjährig rund um die Uhr frei befahrbar",
+  "webseite": "https://www.wipptal.at",
   "koordinaten": {
     "lat": "47.0044",
     "lng": "11.5075"
-  }
+  },
+  "sources": [
+    "https://www.bbt-se.com",
+    "https://www.outletcenterbrenner.com",
+    "https://www.asfinag.at",
+    "https://www.wipptal.at",
+    "https://de.wikipedia.org/wiki/Brennerpass"
+  ]
 }

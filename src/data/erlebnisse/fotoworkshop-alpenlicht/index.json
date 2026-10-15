@@ -1,27 +1,37 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
+  "name": "Fotoworkshop Alpenlicht & Bergfotografie",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
-  "ort": "Pitztal",
+  "ort": "Mandarfen im Pitztal",
   "region": "pitztal",
-  "beschreibung": "Die goldene Morgenstunde im Pitztal – ein professioneller Fotograf zeigt Ihnen, wie Sie die einzigartige Berglandschaft perfekt in Szene setzen. Der Workshop behandelt Lichtstimmung, Komposition Langzeitbelichtung und Nachbearbeitung. Kamera und Stativ können ausgeliehen werden.",
-  "preis": 79,
-  "dauer": "4 Stunden",
+  "beschreibung": "### Überblick\nEin Fotoworkshop Alpenlicht im Pitztal und Kaunertal führt ambitionierte Fotografen zu den spektakulärsten Lichtstimmungen der Tiroler Hochalpen. Im Schnittpunkt von schroffen Felsgraten, unberührten Gletschern und tiefblauen Bergseen lernen Teilnehmer die Kunst der Landschafts- und Bergfotografie zur Goldenen und Blauen Stunde sowie das Einfangen des magischen Alpenglühens. Zu den herausragenden Fotospots gehört der Rifflsee auf 2.232 Metern Seehöhe – Österreichs höchster Bergsee spiegelt im windstillen Morgen- und Abendlicht die markanten Gipfel des Kaunergrats wider. Noch spektakulärer präsentiert sich das Café 3440 am Pitztaler Gletscher: Auf der freischwebenden Panoramaterrasse am Hinteren Brunnenkogel, Österreichs höchstem Aussichtspunkt, öffnet sich ein 360-Grad-Blick auf über 50 Dreitausender und die mächtige Wildspitze (3.768 m). Ergänzt wird das Programm durch Astrofotografie im hinteren Kaunertal, das dank minimaler Lichtverschmutzung zu den dunkelsten Sternenregionen der Alpen zählt.\n\n### Route & Anforderungen\nDie Fotoworkshops kombinieren theoretische Module zur Kameratechnik mit praktischen Shootings im Gelände. Typische Stationen sind der barrierefreie Uferrundweg um den Rifflsee (Gehzeit ca. 1 Stunde, 50 Höhenmeter), die Bergstation der Wildspitzbahn auf 3.440 Metern sowie die Aussichtsplattform „Gacher Blick“ am Naturparkhaus Kaunergrat (1.560 m). Die Touren erfordern Trittsicherheit auf alpinen Steigen und wetterfeste Bergschuhe, stellen jedoch keine extremen klettertechnischen Ansprüche. Teilnehmer sollten eine digitale System- oder Spiegelreflexkamera mit manuellem Modus, ein stabiles Dreibeinstativ, Weitwinkel- und Teleobjektive sowie ND- und Polfilter mitbringen. Für Kinder und Hunde ist der Workshop aufgrund langer statischer Wartezeiten bei Kälte und Konzentration auf die Bildgestaltung ungeeignet.\n\n### Anreise\nHauptausgangspunkt im Pitztal ist Mandarfen an der Talstation der Rifflseebahn bzw. Mittelberg am Pitztaler Gletscher. Autofahrer erreichen das Tal über die A12 Inntalautobahn (Ausfahrt Imst/Pitztal) und folgen der Landesstraße L16 bis zum Talschluss. An beiden Talstationen stehen kostenlose Großparkplätze zur Verfügung. Mit öffentlichen Verkehrsmitteln reist man per Bahn bis zum Bahnhof Imst-Pitztal und nimmt den VVT-Regiobus Linie 4204, der im dichten Takt direkt zu den Bergbahnen fährt (für Übernachtungsgäste mit Pitztal Sommer Card kostenlos).\n\n### Tipps\nDie Workshopgebühr liegt je nach Dauer und Guide zwischen ca. 85 und 190 Euro (Bergbahnfahrten separat; mit der Pitztal Sommer Card ist die Rifflseebahn täglich frei). Besondere Highlights sind die offiziellen Sonnenaufgangsfahrten zum Café 3440 inklusive Bergfrühstück. Kleidungstipp: Auf über 2.000 bis 3.400 Metern sinken die Temperaturen selbst im Hochsommer nach Sonnenuntergang auf den Gefrierpunkt. Kleiden Sie sich nach dem Zwiebelprinzip mit warmer Daunenjacke, Mütze und speziellen Fotohandschuhen mit umklappbaren Fingerkuppen. Nehmen Sie ausreichend geladene Ersatzakkus mit, da Kälte die Batterielaufzeit drastisch verkürzt.",
+  "preis": 85,
+  "dauer": "4 bis 6 Stunden",
   "tags": [
     "fotografie",
-    "workshop",
-    "alpen",
+    "alpenlicht",
     "pitztal",
-    "landschaft"
+    "rifflsee",
+    "gletscher",
+    "panorama",
+    "workshop",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "46.9792",
     "lng": "10.8725"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.pitztal.com/de/sommer/highlights/rifflsee",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ]
 }

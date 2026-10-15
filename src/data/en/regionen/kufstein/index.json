@@ -13,17 +13,17 @@
     "nature",
     "family-friendly"
   ],
-  "hoehe": "2.344 m",
-  "flaeche": "1.031 km²",
-  "einwohner": "108.000",
-  "beschreibung": "<p>The **Kufstein & Wilder Kaiser** region stretches along the lower Inn Valley up to the German border. The medieval **Festung Kufstein** fortress dominates the city majestically and serves as the region’s landmark. The **Kaisergebirge**—comprising the Wilder Kaiser and Zahmer Kaiser—is one of the most distinctive mountain ranges in the Eastern Alps. **St. Johann in Tirol** and **Ellmau** are well-known holiday destinations with direct access to the Wilder Kaiser–Brixental ski area. **Söll** blends tradition and modernity at the heart of the ski resort. **Alpbach** has been repeatedly named Austria’s most beautiful village. The medieval **Rattenberg**, with just 400 inhabitants, is Austria’s smallest town.</p>",
+  "hoehe": "2,344 m",
+  "flaeche": "1,031 km²",
+  "einwohner": "113,000",
+  "beschreibung": "<p>The <strong>Kufstein & Wilder Kaiser</strong> region stretches along the lower Inn Valley up to the German border. The medieval <strong>Festung Kufstein</strong> fortress dominates the city majestically and serves as the region’s landmark. The <strong>Kaisergebirge</strong>—comprising the Wilder Kaiser and Zahmer Kaiser—is one of the most distinctive mountain ranges in the Eastern Alps. <strong>St. Johann in Tirol</strong> and <strong>Ellmau</strong> are well-known holiday destinations with direct access to the Wilder Kaiser–Brixental ski area. <strong>Söll</strong> blends tradition and modernity at the heart of the ski resort. <strong>Alpbach</strong> has been repeatedly named Austria’s most beautiful village. The medieval <strong>Rattenberg</strong>, with just 400 inhabitants, is Austria’s smallest town.</p>",
   "tipps": [
-    "Die Festung Kufstein bietet die größte Freiorgel Europas – das Heldenorgel-Konzert täglich um 12 Uhr.",
-    "Alpbach ist besonders im Herbst sehenswert – der Dorfkern mit seinen typischen Balkonhäusern ist einzigartig.",
-    "Das Skigebiet Skiwelt Wilder Kaiser–Brixental ist Österreichs größtes zusammenhängendes Skigebiet."
+    "Kufstein Fortress houses Europe's largest outdoor organ – the daily Heldenorgel concert takes place at 12:00 noon.",
+    "The historic fortress and town center offer captivating cultural festivals and picturesque alleyways year-round.",
+    "The SkiWelt Wilder Kaiser–Brixental is one of the largest and most modern interconnected ski resorts in Austria."
   ],
-  "empfehlungen": "<p>A must: Climbing up to the **Festung Kufstein** for a panoramic view over the Inntal. Afterwards, a hike in the **Kaisergebirge** to the **Stripsenjochhütte** – one of the most beautiful day-trip destinations in the region.</p>",
-  "umgebung": "<p>The **Kufstein** region borders **Bayern** (Germany) to the north, **Salzburger Land** (**Saalbach**) to the east, and the **Kitzbüheler Alpen** to the south. Neighboring regions include **Kitzbühel** (south), **Zillertal** (west), and **Achensee** (southwest). The fortress town of **Kufstein** lies just 10 km from the German border.</p>",
+  "empfehlungen": "<p>A must: Climbing up to the <strong>Festung Kufstein</strong> for a panoramic view over the Inntal. Afterwards, a hike in the <strong>Kaisergebirge</strong> to the <strong>Stripsenjochhütte</strong> – one of the most beautiful day-trip destinations in the region.</p>",
+  "umgebung": "<p>The <strong>Kufstein</strong> region borders <strong>Bayern</strong> (Germany) to the north, <strong>Salzburger Land</strong> (<strong>Saalbach</strong>) to the east, and the <strong>Kitzbüheler Alpen</strong> to the south. Neighboring regions include <strong>Kitzbühel</strong> (south), <strong>Zillertal</strong> (west), and <strong>Achensee</strong> (southwest). The fortress town of <strong>Kufstein</strong> lies just 10 km from the German border.</p>",
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -33,7 +33,7 @@
     ],
     [
       47.63,
-      12.0
+      12
     ],
     [
       47.65,
@@ -95,5 +95,17 @@
       47.62,
       11.9
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.wilderkaiser.info",
+    "https://www.festung.kufstein.at",
+    "https://www.tirol.at/regionen/a-kufsteinerland",
+    "https://www.tirol.gv.at/kufstein/",
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ],
+  "koordinaten": {
+    "lat": 47.5833,
+    "lng": 12.1667
+  }
 }

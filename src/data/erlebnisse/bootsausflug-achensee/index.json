@@ -1,27 +1,36 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
+  "name": "Achenseeschifffahrt – Große Seerundfahrt",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
-  "ort": "Achensee",
+  "ort": "Pertisau am Achensee",
   "region": "achensee",
-  "beschreibung": "Die MS Stadt Innsbruck, das Achenseeschiff, nimmt Sie mit auf eine entspannte Rundfahrt über den grössten See Tirols. Vorbei an idyllischen Buchten und steilen Felswänden geniessen Sie die frische Bergluft und den einzigartigen Blick auf das Karwendel- und Rofangebirge. Ein Mittagessen im Bordrestaurant ist optional buchbar.",
-  "preis": 22,
-  "dauer": "2 Stunden",
+  "beschreibung": "### Überblick\nDie Achenseeschifffahrt verbindet seit ihrer Gründung im Jahr 1887 durch Abt Albert Wildauer vom Stift Fiecht historische Seefahrertradition mit modernem Ausflugsvergnügen. Auf Tirols größtem See, eingebettet zwischen dem schroffen Karwendelgebirge im Westen und dem mächtigen Rofan im Osten, kreuzen heute drei moderne Fahrgastschiffe: das Flaggschiff MS Tirol mit Platz für bis zu 600 Passagiere und weitläufigen Panorama-Sonnendecks, die barrierearme MS Stadt Innsbruck (Kapazität 470 Personen) mit großzügigen Restaurantbereichen sowie das elegante Galaschiff MS Achensee (500 Personen). Auf der rund 133 Meter tiefen, fjordähnlichen Wasserfläche bietet die Seerundfahrt spektakuläre Perspektiven auf die hochalpine Bergwelt. Das Besondere: Die Schifffahrt bedient die urige Gaisalm am westlichen Steilufer – die einzige bewirtschaftete Alm ganz Tirols, die ausschließlich zu Fuß über schmale Felsensteige oder übers Wasser per Schiff erreichbar ist, da keinerlei Straße dorthin führt.\n\n### Route & Anforderungen\nDie Schiffe steuern insgesamt sechs Anlegestellen rund um den See an: Pertisau (Heimathafen und Werft), Seespitz am Südufer, Buchau, die abgeschiedene Gaisalm, Seehofkapelle und Scholastika am Nordufer in Achenkirch. Die Große Seerundfahrt (Hop-on Hop-off Tagesticket) dauert ohne Ausstieg rund 2 Stunden und 10 Minuten. Für kürzere Touren bieten sich die Rundfahrt Nord (ca. 75 Minuten) oder die Rundfahrt Süd (ca. 45 Minuten) an. Die Schiffe sind vollkommen barrierefrei und verfügen über stufenlose Einstiegsrampen, rollstuhlgerechte Sanitäranlagen und großzügige Salons. Die Fahrt erfordert keinerlei körperliche Anstrengung und ist für Familien mit Kleinkindern und Kinderwagen uneingeschränkt zu empfehlen. Hunde sind an Bord herzlich willkommen (eigenes Hundeticket ca. 4,00 Euro); gemäß den österreichischen Beförderungsrichtlinien besteht an Bord jedoch strikte Leinen- und Maulkorbpflicht.\n\n### Anreise\nHauptabfahrtsort und Direktionssitz ist Pertisau (Seepromenade). Autofahrer erreichen Pertisau mautfrei über die Inntalautobahn A12 (Ausfahrt Wiesing/Achensee) und die B181. Gebührenpflichtige Parkplätze stehen in Pertisau (hinter dem Hotel Christina und an der Seepromenade), am Badestrand Buchau sowie an der Station Scholastika in Achenkirch zur Verfügung. Umweltfreundlich und nostalgisch reist man mit der Bahn bis Jenbach und steigt dort in die historische, dampfbetriebene Achenseebahn um: Die 1889 eröffnete Zahnradbahn endet direkt am Bahnhof Seespitz, wo Fahrgäste niveaugleich vom Zug auf das wartende Schiff umsteigen. Alternativ verkehrt der VVT-Regiobus Linie 4080 ab Jenbach.\n\n### Tipps\nDas Hop-on Hop-off Tagesticket für Erwachsene kostet 34,00 Euro (Kinder 7–15 Jahre 17,00 Euro, Familienkarte 68,00 Euro; Kinder bis 6 Jahre frei). Inhaber der regionalen AchenseeCard erhalten 10 Prozent Ermäßigung. Besonders lohnend ist das Kombiticket Schiff & Achenseebahn (Erwachsene 72,00 Euro). Eine beliebte Ausflugskombination: Mit dem Schiff von Pertisau zur Gaisalm fahren, dort einkehren und über den landschaftlich atemberaubenden, aber trittsicheren Gaisalmsteig in rund 1,5 Stunden zu Fuß am Seeufer zurück nach Pertisau wandern. Die Hauptsaison läuft von Mai bis Ende Oktober; im Dezember verkehren zudem stimmungsvolle Weihnachtsschiffe.",
+  "preis": 34,
+  "dauer": "1,5 bis 2,5 Stunden",
   "tags": [
-    "boot",
-    "achensee",
     "schifffahrt",
-    "natur",
-    "panorama"
+    "achensee",
+    "pertisau",
+    "ausflug",
+    "see",
+    "rundfahrt",
+    "familie",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.4419",
     "lng": "11.7352"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://achenseeschifffahrt.at",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ]
 }

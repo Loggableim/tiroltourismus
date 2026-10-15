@@ -1,27 +1,33 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "La MS Stadt Innsbruck, la nave dell'Achensee, vi accompagna in una rilassante crociera sul lago più grande del Tirol. Passando davanti a baie idilliache e ripide pareti rocciose, godrete dell'aria fresca di montagna e della vista unica sul Karwendel e sul Rofangebirge. Un pranzo al ristorante di bordo può essere prenotato opzionalmente.",
-  "preis": 22,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Giro in battello sul lago di Achensee – grande crociera panoramica",
+  "beschreibung": "### Panoramica\nFondata nel 1887 dall'abate Albert Wildauer del convento di Fiecht, la navigazione sul lago Achensee (Achenseeschifffahrt) unisce il fascino storico della marineria lacustre a una moderna esperienza di svago. Sul lago più grande del Tirolo, incastonato tra le pareti del Karwendel e le cime del Rofan, navigano tre moderne imbarcazioni: l'ammiraglia MS Tirol con una capienza di 600 passeggeri e ampi ponti prendisole, la confortevole MS Stadt Innsbruck (470 passeggeri) priva di barriere architettoniche e con ristorante a bordo, e l'elegante battello per eventi MS Achensee (500 passeggeri). Su acque profonde fino a 133 metri dall'aspetto fiordico, la crociera regala visuali mozzafiato. Il punto forte è lo scalo alla malga Gaisalm sulla ripida sponda occidentale: l'unica malga attiva di tutto il Tirolo raggiungibile esclusivamente a piedi lungo ripidi sentieri o via lago a bordo del battello, poiché non esistono strade.\n\n### Percorso & Requisiti\nI battelli effettuano servizio presso sei pontili: Pertisau (porto principale), Seespitz sulla riva meridionale, Buchau, la pittoresca Gaisalm, Seehofkapelle e Scholastika ad Achenkirch a nord. Il giro grande del lago (biglietto giornaliero Hop-on Hop-off) dura circa 2 ore e 10 minuti senza soste. Sono disponibili anche il tour Nord (circa 75 minuti) e il tour Sud (circa 45 minuti). Le motonavi sono accessibili alle persone con disabilità, provviste di rampe a filo, servizi igienici per disabili e saloni panoramici riscaldati. L'escursione non richiede alcuno sforzo fisico ed è ideale per famiglie con bambini e passeggini. I cani sono ammessi a bordo (biglietto dedicato di circa 4,00 euro); per legge vige l'obbligo assoluto di guinzaglio e museruola.\n\n### Come arrivare\nIl punto di partenza principale è Pertisau sulla passeggiata lungolago. In auto si giunge a Pertisau dall'autostrada A12 Inntal (uscita Wiesing/Achensee) lungo la strada statale B181. Parcheggi a pagamento sono situati a Pertisau (dietro l'Hotel Christina e lungo il lago), presso la spiaggia di Buchau e a Scholastika. Suggestivo è l'arrivo in treno fino a Jenbach e il trasbordo sulla storica ferrovia a cremagliera a vapore Achenseebahn (inaugurata nel 1889): il treno ferma direttamente al pontile di Seespitz consentendo un comodo trasbordo immediato. In alternativa è attivo l'autobus regionale VVT linea 4080.\n\n### Consigli\nIl biglietto giornaliero Hop-on Hop-off costa 34,00 euro per gli adulti (17,00 euro per ragazzi 7–15 anni; biglietto famiglia 68,00 euro; gratis sotto i 6 anni). I titolari della tessera ospiti AchenseeCard usufruiscono del 10% di sconto. Molto conveniente è il biglietto combinato battello e ferrovia a vapore Achenseebahn (72,00 euro adulti). L'itinerario più amato: navigare da Pertisau alla Gaisalm, pranzare in riva al lago e rientrare a piedi a Pertisau lungo il panoramico sentiero Gaisalmsteig in circa 1,5 ore (necessario passo sicuro). La stagione ordinaria va da maggio a fine ottobre; a dicembre sono attive suggestive corse natalizie.",
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ],
+  "bilder": [],
   "dauer": "2 Stunden",
+  "link": "#",
+  "preis": 22,
   "tags": [
     "barca",
     "Achensee",
     "navigazione",
     "natura",
     "panorama"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

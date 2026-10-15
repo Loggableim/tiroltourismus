@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import { getRelatedForEntry } from '../lib/related.js';
 import CategoryPlaceholder from './CategoryPlaceholder.astro';
 
@@ -45,11 +46,11 @@ const catMap = CATEGORY_LABELS[locale] || CATEGORY_LABELS.de;
                 <div class="related-card-content">
                   <div class="related-card-meta">
                     <span class="related-card-cat">{catMap[item.collection] || item.collection}</span>
-                    {item.ort && <span class="related-card-loc">📍 {item.ort}</span>}
+                    {item.ort && <span class="related-card-loc">📍 {plainText(item.ort)}</span>}
                   </div>
-                  <h4 class="related-card-name">{item.name}</h4>
+                  <h4 class="related-card-name">{plainText(item.name)}</h4>
                   {item.kurzbeschreibung && (
-                    <p class="related-card-desc">{item.kurzbeschreibung}</p>
+                    <p class="related-card-desc">{plainText(item.kurzbeschreibung)}</p>
                   )}
                 </div>
               </a>
@@ -74,11 +75,11 @@ const catMap = CATEGORY_LABELS[locale] || CATEGORY_LABELS.de;
                 <div class="related-card-content">
                   <div class="related-card-meta">
                     <span class="related-card-cat">{catMap[item.collection] || item.collection}</span>
-                    {item.ort && <span class="related-card-loc">📍 {item.ort}</span>}
+                    {item.ort && <span class="related-card-loc">📍 {plainText(item.ort)}</span>}
                   </div>
-                  <h4 class="related-card-name">{item.name}</h4>
+                  <h4 class="related-card-name">{plainText(item.name)}</h4>
                   {item.kurzbeschreibung && (
-                    <p class="related-card-desc">{item.kurzbeschreibung}</p>
+                    <p class="related-card-desc">{plainText(item.kurzbeschreibung)}</p>
                   )}
                 </div>
               </a>

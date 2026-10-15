@@ -1,17 +1,18 @@
 ---
 // tiroltourismus.com — Apex Sprach-Hub
 // Self-contained one-screen (#sprache) language picker. 8 tiles (4x2 desktop /
-// 2x4 mobile), "Recommended" badge from navigator.languages, localStorage
-// "Continue in" banner. A small legal footer sits at the bottom edge.
+// 2x4 mobile): all tiles are equal; each reveals a per-language hover/focus
+// hint, and the hero tagline split-flaps into the hovered language.
+// A small legal footer sits at the bottom edge.
 const TILES = [
-  { code: 'de', htmlLang: 'de', name: 'Deutsch',    tagline: 'Tirol entdecken',    accent: 'var(--tirol-red)',       href: 'https://de.tiroltourismus.com/' },
-  { code: 'en', htmlLang: 'en', name: 'English',    tagline: 'Discover Tirol',     accent: 'var(--ikea-blue)',       href: 'https://en.tiroltourismus.com/' },
-  { code: 'fr', htmlLang: 'fr', name: 'Français',   tagline: 'Découvrir le Tyrol', accent: 'var(--pop-purple)',      href: 'https://fr.tiroltourismus.com/' },
-  { code: 'cs', htmlLang: 'cs', name: 'Čeština',    tagline: 'Objevte Tyrolsko',   accent: 'var(--pop-green)',       href: 'https://cs.tiroltourismus.com/' },
-  { code: 'nl', htmlLang: 'nl', name: 'Nederlands', tagline: 'Ontdek Tirol',       accent: 'var(--pop-orange)',      href: 'https://nl.tiroltourismus.com/' },
-  { code: 'it', htmlLang: 'it', name: 'Italiano',   tagline: 'Scopri il Tirolo',   accent: 'var(--tirol-pink-dark)', href: 'https://it.tiroltourismus.com/' },
-  { code: 'es', htmlLang: 'es', name: 'Español',    tagline: 'Descubre el Tirol',  accent: 'var(--gold)',            href: 'https://es.tiroltourismus.com/' },
-  { code: 'zh', htmlLang: 'zh', name: '中文',        tagline: '探索蒂罗尔',         accent: 'var(--tirol-pink)',      href: 'https://cn.tiroltourismus.com/' },
+  { code: 'de', htmlLang: 'de', name: 'Deutsch',    tagline: 'Tirol entdecken',    accent: 'var(--tirol-red)',       href: 'https://de.tiroltourismus.com/', hint: 'Weiter auf Deutsch',      sub: 'Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite.' },
+  { code: 'en', htmlLang: 'en', name: 'English',    tagline: 'Discover Tirol',     accent: 'var(--ikea-blue)',       href: 'https://en.tiroltourismus.com/', hint: 'Continue in English',    sub: 'One land. Eight languages. Everything inside — pick your language and discover Tirol on one page.' },
+  { code: 'fr', htmlLang: 'fr', name: 'Français',   tagline: 'Découvrir le Tyrol', accent: 'var(--pop-purple)',      href: 'https://fr.tiroltourismus.com/', hint: 'Continuer en français',  sub: 'Un pays. Huit langues. Tout y est — choisis ta langue et découvre le Tyrol sur une seule page.' },
+  { code: 'cs', htmlLang: 'cs', name: 'Čeština',    tagline: 'Objevte Tyrolsko',   accent: 'var(--pop-green)',       href: 'https://cs.tiroltourismus.com/', hint: 'Pokračovat v češtině',   sub: 'Jedna země. Osm jazyků. Všechno v jednom — vyber si jazyk a objev Tyrolsko na jedné stránce.' },
+  { code: 'nl', htmlLang: 'nl', name: 'Nederlands', tagline: 'Ontdek Tirol',       accent: 'var(--pop-orange)',      href: 'https://nl.tiroltourismus.com/', hint: 'Verder in het Nederlands', sub: 'Eén land. Acht talen. Alles erin — kies je taal en ontdek Tirol op één pagina.' },
+  { code: 'it', htmlLang: 'it', name: 'Italiano',   tagline: 'Scopri il Tirolo',   accent: 'var(--tirol-pink-dark)', href: 'https://it.tiroltourismus.com/', hint: 'Continua in italiano',   sub: 'Una terra. Otto lingue. Tutto dentro — scegli la tua lingua e scopri il Tirolo in una pagina.' },
+  { code: 'es', htmlLang: 'es', name: 'Español',    tagline: 'Descubre el Tirol',  accent: 'var(--gold)',            href: 'https://es.tiroltourismus.com/', hint: 'Continuar en español',   sub: 'Una tierra. Ocho idiomas. Todo dentro — elige tu idioma y descubre el Tirol en una sola página.' },
+  { code: 'zh', htmlLang: 'zh', name: '中文',        tagline: '探索蒂罗尔',         accent: 'var(--tirol-pink)',      href: 'https://cn.tiroltourismus.com/', hint: '继续使用中文',            sub: '一片土地。八种语言。应有尽有 — 选择你的语言，在一页上探索蒂罗尔。' },
 ];
 ---
 <!DOCTYPE html>
@@ -140,28 +141,6 @@ const TILES = [
       padding: clamp(16px, 3.6vh, 40px) clamp(16px, 5vw, 56px) clamp(32px, 5.2vh, 50px);
     }
 
-    /* ─── "Continue in" banner ─── */
-    .df-banner {
-      position: absolute;
-      top: clamp(12px, 2.6vh, 26px);
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 5;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: clamp(5px, 1vh, 9px) clamp(12px, 2vw, 20px);
-      border-radius: 100px;
-      background: var(--tirol-pink-dark);
-      color: #fff;
-      font-size: clamp(11px, 1.5vh, 13px);
-      font-weight: 700;
-      letter-spacing: .3px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.45);
-    }
-    .df-banner[hidden] { display: none; }
-    .df-banner:hover { filter: brightness(1.08); }
-
     /* ─── Header ─── */
     .df-head {
       display: flex;
@@ -185,9 +164,18 @@ const TILES = [
     .df-claim em { font-style: normal; color: var(--gold); }
     .df-sub {
       font-size: clamp(11px, 1.7vh, 15px);
+      line-height: 1.5;
       color: var(--text2);
       max-width: 56ch;
+      min-height: calc(1.5em * 3);
       text-wrap: balance;
+      perspective: 500px;
+    }
+    .df-sub .df-ch {
+      display: inline-block;
+      transform-origin: 50% 100%;
+      backface-visibility: hidden;
+      will-change: transform, opacity;
     }
 
     /* ─── Language tiles: slim, compact ─── */
@@ -248,27 +236,37 @@ const TILES = [
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      transition: opacity .2s var(--ease);
     }
-    .df-tile.recommended {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 1px var(--gold), 0 12px 34px rgba(0,0,0,.4);
+    @media (hover: hover) {
+      .df-tile:hover .df-tagline,
+      .df-tile:focus-visible .df-tagline { opacity: 0; }
     }
-    .df-rec {
+    .df-hint {
       position: absolute;
-      top: 0;
+      left: 0;
       right: 0;
-      display: none;
-      align-items: center;
-      padding: 2px 8px 3px;
-      border-bottom-left-radius: 8px;
-      background: var(--gold);
-      color: #1A1A1A;
-      font-size: clamp(7.5px, 1vh, 9.5px);
-      font-weight: 700;
-      letter-spacing: .5px;
-      text-transform: uppercase;
+      bottom: clamp(9px, 1.4vh, 13px);
+      padding: 0 clamp(15px, 1.7vw, 20px);
+      font-size: clamp(9.5px, 1.35vh, 12px);
+      line-height: 1.2;
+      color: rgba(255,255,255,.75);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .25s var(--ease), transform .25s var(--ease);
     }
-    .df-tile.recommended .df-rec { display: inline-flex; }
+    .df-tile:hover .df-hint,
+    .df-tile:focus-visible .df-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (hover: none) {
+      .df-hint { display: none; }
+    }
 
     /* ─── Legal footer: small, muted, pinned to the bottom edge ─── */
     .df-foot {
@@ -304,7 +302,7 @@ const TILES = [
     @media (max-height: 620px) { .df-sub { display: none; } }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .df-tile, .df-tile::after, .df-foot a { transition: none; }
+      .df-tile, .df-tile::after, .df-hint, .df-foot a { transition: none; }
     }
   </style>
 </head>
@@ -312,10 +310,6 @@ const TILES = [
   <section id="sprache" class="df-picker" aria-label="Sprachauswahl">
     <img class="df-bg" src="/hero-tirol.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
     <div class="df-scrim" aria-hidden="true"></div>
-
-    <a class="df-banner" id="dfContinueBanner" href="https://de.tiroltourismus.com/" hidden>
-      <span>Weiter auf</span> <span id="dfContinueLang"></span> <span aria-hidden="true">→</span>
-    </a>
 
     <div class="df-content">
       <header class="df-head">
@@ -331,15 +325,15 @@ const TILES = [
           </svg>
         </a>
         <h1 class="df-claim">Tirol<em>.</em></h1>
-        <p class="df-sub">Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite.</p>
+        <p class="df-sub" aria-live="off">Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite.</p>
       </header>
 
       <main class="df-langs" aria-label="Sprachauswahl">
         {TILES.map((t) => (
-          <a class="df-tile" href={t.href} lang={t.htmlLang} data-lang={t.code} style={`--accent:${t.accent}`}>
-            <span class="df-rec" aria-hidden="true">Empfohlen</span>
+          <a class="df-tile" href={t.href} lang={t.htmlLang} data-lang={t.code} data-sub={t.sub} style={`--accent:${t.accent}`}>
             <span class="df-name">{t.name}</span>
             <span class="df-tagline">{t.tagline}</span>
+            <span class="df-hint" aria-hidden="true">{t.hint} →</span>
           </a>
         ))}
       </main>
@@ -359,12 +353,11 @@ const TILES = [
       'use strict';
       var STORE = 'tirol-demo-lang';
       var tiles = {};
-      var NAMES = {};
+      var SUBS = {};
       document.querySelectorAll('.df-tile[data-lang]').forEach(function (a) {
         var code = a.getAttribute('data-lang');
         tiles[code] = a;
-        var nameEl = a.querySelector('.df-name');
-        NAMES[code] = nameEl ? nameEl.textContent.trim() : code;
+        SUBS[code] = a.getAttribute('data-sub') || '';
       });
 
       var FOOTER = {
@@ -385,14 +378,12 @@ const TILES = [
         return tiles[base] ? base : null;
       }
 
-      // 1) Recommend the browser language (no auto redirect)
+      // 1) Localise the footer to the browser language (no auto redirect)
       var langs = [];
       try { langs = navigator.languages || [navigator.language]; } catch (e) {}
       var match = null;
       for (var i = 0; i < langs.length && !match; i++) match = normalize(langs[i]);
       if (match) {
-        tiles[match].classList.add('recommended');
-        tiles[match].setAttribute('aria-current', 'true');
         var labels = FOOTER[match];
         var imp = document.getElementById('dfImprint');
         var priv = document.getElementById('dfPrivacy');
@@ -402,24 +393,123 @@ const TILES = [
         }
       }
 
-      // 2) Return visit → "Continue in <language> →"
-      var saved = null;
-      try { saved = localStorage.getItem(STORE); } catch (e) {}
-      if (saved && tiles[saved]) {
-        var banner = document.getElementById('dfContinueBanner');
-        var label = document.getElementById('dfContinueLang');
-        if (banner && label) {
-          label.textContent = NAMES[saved] || saved;
-          banner.setAttribute('href', tiles[saved].getAttribute('href'));
-          banner.hidden = false;
-        }
-      }
-
-      // 3) Save the chosen language on click
+      // 2) Save the chosen language on click
       Object.keys(tiles).forEach(function (code) {
         tiles[code].addEventListener('click', function () {
           try { localStorage.setItem(STORE, code); } catch (e) {}
         });
+      });
+
+      // ─── Split-flap (airport board) hero tagline ───
+      var subEl = document.querySelector('.df-sub');
+      if (!subEl) return;
+      subEl.setAttribute('aria-live', 'off');
+      var BASE = SUBS['de'] || subEl.textContent;
+
+      var REDUCED = false;
+      try { REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+      var GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@$%&*/<>';
+      var FLAP_MS = 700;
+      var raf = 0;
+      var fadeTimer = 0;
+
+      function cancelAll() {
+        if (raf) { cancelAnimationFrame(raf); raf = 0; }
+        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = 0; }
+      }
+
+      function crossfade(text) {
+        cancelAll();
+        subEl.style.transition = 'opacity .18s ease';
+        subEl.style.opacity = '0';
+        fadeTimer = setTimeout(function () {
+          fadeTimer = 0;
+          subEl.textContent = text;
+          subEl.style.opacity = '1';
+        }, 180);
+      }
+
+      function flapTo(text) {
+        if (!text) text = BASE;
+        if (REDUCED) { crossfade(text); return; }
+        cancelAll();
+        subEl.style.transition = '';
+        subEl.style.opacity = '';
+
+        var chars = Array.from(text);
+        var frag = document.createDocumentFragment();
+        var nodes = [];
+        for (var i = 0; i < chars.length; i++) {
+          var ch = chars[i];
+          if (ch === ' ') { frag.appendChild(document.createTextNode(' ')); continue; }
+          var span = document.createElement('span');
+          span.className = 'df-ch';
+          span.textContent = ch;
+          frag.appendChild(span);
+          nodes.push({ el: span, target: ch, glyph: GLYPHS[(Math.random() * GLYPHS.length) | 0] });
+        }
+        subEl.textContent = '';
+        subEl.appendChild(frag);
+
+        var count = nodes.length;
+        if (!count) { subEl.textContent = text; return; }
+
+        var start = 0;
+        var lastGlyph = 0;
+        var lead = FLAP_MS * 0.12;
+        var span0 = FLAP_MS * 0.78;
+        var settle = nodes.map(function (n, idx) {
+          return count > 1 ? lead + (idx / (count - 1)) * span0 : FLAP_MS * 0.5;
+        });
+
+        function frame(now) {
+          if (!start) start = now;
+          var elapsed = now - start;
+          var step = elapsed - lastGlyph >= 55;
+          if (step) lastGlyph = elapsed;
+          var done = true;
+          for (var j = 0; j < count; j++) {
+            var n = nodes[j];
+            if (elapsed >= settle[j]) {
+              n.el.textContent = n.target;
+              n.el.style.transform = 'rotateX(0deg)';
+              n.el.style.opacity = '1';
+            } else {
+              done = false;
+              if (step) n.glyph = GLYPHS[(Math.random() * GLYPHS.length) | 0];
+              n.el.textContent = n.glyph;
+              var phase = elapsed / 48 + j * 0.7;
+              n.el.style.transform = 'rotateX(' + (Math.sin(phase) * 42).toFixed(1) + 'deg)';
+              n.el.style.opacity = String(0.5 + 0.5 * Math.abs(Math.cos(phase)));
+            }
+          }
+          if (done) {
+            raf = 0;
+            subEl.textContent = text;
+          } else {
+            raf = requestAnimationFrame(frame);
+          }
+        }
+        raf = requestAnimationFrame(frame);
+      }
+
+      // Hover / focus a tile → flap into its language; leave → back to German.
+      var revertTimer = 0;
+      function enter(code) {
+        if (revertTimer) { clearTimeout(revertTimer); revertTimer = 0; }
+        flapTo(SUBS[code] || BASE);
+      }
+      function leave() {
+        if (revertTimer) clearTimeout(revertTimer);
+        revertTimer = setTimeout(function () { revertTimer = 0; flapTo(BASE); }, 60);
+      }
+      Object.keys(tiles).forEach(function (code) {
+        var t = tiles[code];
+        t.addEventListener('mouseenter', function () { enter(code); });
+        t.addEventListener('mouseleave', leave);
+        t.addEventListener('focus', function () { enter(code); });
+        t.addEventListener('blur', leave);
       });
     })();
   </script>

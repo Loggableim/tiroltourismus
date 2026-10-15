@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import FavHeart from './FavHeart.astro';
 import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { localePrefix as localePrefixFn } from '../lib/languages.js';
@@ -17,6 +18,8 @@ export interface Props {
   featured?: boolean;
 }
 const { titel, slug, beschreibung, emoji = '🏔️', wappenSrc, heroSrc, bewertung = 0, farbe = 'var(--tirol-pink)', featured , locale = undefined } = Astro.props;
+const safeTitel = plainText(titel);
+const safeBeschreibung = plainText(beschreibung);
 const filledStars = Array.from({length:5}, (_, i) => i < bewertung);
 // Lokalisierte Link-Texte
 const LINK_TEXT = { de: 'Entdecken →', en: 'Discover →', fr: 'Découvrir →', cs: 'Objevit →', nl: 'Ontdekken →', it: 'Scoprire →', es: 'Descubrir →', zh: '探索 →' };
@@ -45,8 +48,8 @@ const featuredText = FEATURED_TEXT[locale] || FEATURED_TEXT.de;
     <FavHeart collection="regionen" slug={slug} />
   </div>
   <div class="region-card-body">
-    <h3>{titel}</h3>
-    {beschreibung && <p>{beschreibung}</p>}
+    <h3>{safeTitel}</h3>
+    {safeBeschreibung && <p>{safeBeschreibung}</p>}
     {featured && <span class="featured-badge">{featuredText}</span>}
     <div class="region-stars">
       {filledStars.map(f => <span class={`star${f ? '' : ' empty'}`}>★</span>)}

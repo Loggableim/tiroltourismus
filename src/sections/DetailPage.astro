@@ -1,4 +1,5 @@
 ---
+import { plainText, richText } from '../lib/richtext.js';
 // DetailPage.astro — Lego-Orchestrator für alle Detailseiten
 // Nimmt ein sections-Array mit Konfiguration und rendert die passenden Blöcke
 import SectionHero from './SectionHero.astro';
@@ -75,10 +76,10 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
         {s.bgImage && <div class="sec-custom-hero-overlay"></div>}
         <div class="container" style="position:relative;z-index:2">
           {s.emoji && <div class="sec-custom-hero-emoji">{s.emoji}</div>}
-          {s.category && <div class="sec-custom-hero-cat">{s.category}</div>}
-          <h1>{s.title}</h1>
-          {s.location && <p class="sec-custom-hero-loc">📍 {s.location}</p>}
-          {s.subtitle && <p class="sec-custom-hero-sub">{s.subtitle}</p>}
+          {s.category && <div class="sec-custom-hero-cat">{plainText(s.category)}</div>}
+          <h1>{plainText(s.title)}</h1>
+          {s.location && <p class="sec-custom-hero-loc">📍 {plainText(s.location)}</p>}
+          {s.subtitle && <div class="sec-custom-hero-sub" set:html={richText(s.subtitle)}></div>}
         </div>
       </header>
     ))}
@@ -89,8 +90,8 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
           <div class="sec-custom-facts">
             {s.items.map(f => (
               <div class="sec-custom-fact">
-                <span class="sec-custom-fact-num">{f.value}</span>
-                <span class="sec-custom-fact-label">{f.label}</span>
+                <span class="sec-custom-fact-num">{plainText(f.value)}</span>
+                <span class="sec-custom-fact-label">{plainText(f.label)}</span>
               </div>
             ))}
           </div>
@@ -107,8 +108,8 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
                 <div class="sec-custom-info-label">{i.icon} {i.label}</div>
                 <div class="sec-custom-info-value">
                   {i.href
-                    ? <a href={i.href} target="_blank" rel="noopener">{i.value}</a>
-                    : i.value}
+                    ? <a href={i.href} target="_blank" rel="noopener" set:html={richText(i.value)}></a>
+                    : <span set:html={richText(i.value)}></span>}
                 </div>
               </div>
             ))}

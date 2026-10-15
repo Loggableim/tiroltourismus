@@ -26,6 +26,8 @@ const labels = {
 
 const bezirke = readSingleton('bezirke', locale);
 const items = bezirke ? Object.values(bezirke) : [];
+// Sprachen ohne Bezirks-Daten würden eine leere Liste rendern → noindex.
+const isEmpty = items.length === 0;
 const wappenData = JSON.parse(readFileSync(resolve(process.cwd(), 'wappen/wappen_page_data.json'), 'utf-8'));
 const wappenBezirke = wappenData.bezirke.map((b) => ({ ...b, publicImg: `/wappen/${b.img.replace(/^img\//, '')}` }));
 
@@ -39,7 +41,7 @@ const bezirkItemList = items.length > 0 ? {
 } : undefined;
 ---
 
-<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={bezirkItemList}>
+<BaseLayout title={t(labels.title)} description={t(labels.desc)} locale={locale} jsonld={bezirkItemList} noindexFollow={isEmpty} noindex={isEmpty}>
   <main>
     <div class="container">
       <Breadcrumbs items={[{ label: t(labels.title) }]} locale={locale} />

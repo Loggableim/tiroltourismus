@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import FavHeart from './FavHeart.astro';
 import CategoryPlaceholder from './CategoryPlaceholder.astro';
 export interface Props {
@@ -15,6 +16,8 @@ export interface Props {
   linkPrefix?: string;
 }
 const { name, slug, beschreibung, kategorie, preis, emoji = '🍽️', farbe = '#FF6B35', ort, linkPrefix = '/gastro/' , locale = undefined } = Astro.props;
+const safeName = plainText(name);
+const safeBeschreibung = plainText(beschreibung);
 // Lokalisierter CTA-Text
 const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →', cs: 'Detaily →', nl: 'Details →', it: 'Dettagli →', es: 'Detalles →', zh: '详情 →' };
 const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
@@ -26,9 +29,9 @@ const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
   </div>
   <div class="gastro-body">
     <div class="gastro-type">{kategorie || 'Kulinarik'}</div>
-    <h3>{name}</h3>
+    <h3>{safeName}</h3>
     {ort && <div class="gastro-ort">{ort}</div>}
-    {beschreibung && <p>{beschreibung}</p>}
+    {safeBeschreibung && <p>{safeBeschreibung}</p>}
     <div class="gastro-meta">
       {preis && <span class="gastro-preis">{preis}</span>}
       <span class="gastro-link">{detailsText}</span>

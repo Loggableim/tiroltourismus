@@ -9,13 +9,23 @@
  */
 
 /**
- * Stripped HTML-Tags aus einem String
+ * Stripped HTML-Tags (roh oder escaped) aus einem String und dekodiert Entities.
  */
 function stripHtml(html) {
   if (!html) return '';
-  return html
+  return String(html)
+    .replace(/&(?:#x?[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);/g, (m, e) => {
+      const body = m.slice(1, -1);
+      if (body[0] === '#') {
+        const hex = body[1] === 'x' || body[1] === 'X';
+        const code = hex ? parseInt(body.slice(2), 16) : parseInt(body.slice(1), 10);
+        if (!Number.isNaN(code)) { try { return String.fromCodePoint(code); } catch { return ' '; } }
+        return ' ';
+      }
+      const NAMED = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–', hellip: '…', euro: '€' };
+      return NAMED[body] ?? NAMED[body.toLowerCase()] ?? ' ';
+    })
     .replace(/<[^>]+>/g, ' ')    // Tags entfernen
-    .replace(/&[a-z]+;/g, ' ')   // HTML-Entities
     .replace(/\s+/g, ' ')        // Mehrfach-Leerzeichen
     .trim();
 }
@@ -187,8 +197,8 @@ export const COLLECTION_CATEGORY_TITLES = {
 export function buildPageTitle(entry, collection, locale = 'de') {
   if (!entry) return 'tiroltourismus';
 
-  const name = (entry.name || entry.titel || '').trim();
-  const ort = (entry.ort || '').trim();
+  const name = stripHtml(entry.name || entry.titel || '');
+  const ort = stripHtml(entry.ort || '');
   const catMap = COLLECTION_CATEGORY_TITLES[locale] || COLLECTION_CATEGORY_TITLES.de;
   const category = (catMap && catMap[collection]) || collection || '';
   const brand = 'tiroltourismus';
@@ -359,8 +369,8 @@ export const CTAS_EN = CTAS_BY_LOCALE.en;
 export function generateMetaDescription(entry, collection, locale = 'de', opts = {}) {
   if (!entry) return '';
 
-  const name = entry.name || entry.titel || '';
-  const ort = entry.ort || '';
+  const name = stripHtml(entry.name || entry.titel || '');
+  const ort = stripHtml(entry.ort || '');
   const localeCTAs = CTAS_BY_LOCALE[locale] || CTAS_BY_LOCALE.de;
   const cta = localeCTAs[collection] || localeCTAs.default;
   const isDE = locale === 'de';

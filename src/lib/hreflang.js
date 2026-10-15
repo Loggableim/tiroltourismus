@@ -39,7 +39,7 @@ const SITEMAP_QUALITY_COLLECTIONS = [
   'sehenswuerdigkeiten',
 ];
 
-const SITEMAP_EXCLUDED = new Set(['suche', '404', '500', 'login', 'dashboard', 'admin']);
+const SITEMAP_EXCLUDED = new Set(['suche', 'merkliste', '404', '500', 'login', 'dashboard', 'admin']);
 
 function pathnameOf(input) {
   if (typeof input !== 'string' || !input) return '/';
@@ -148,6 +148,12 @@ export function includeInSitemap(pageUrl) {
   const parsed = parseLocalizedPath(pageUrl);
   const top = parsed.segments[0];
   if (top && SITEMAP_EXCLUDED.has(top)) return false;
+
+  // Leere Bezirks-Übersicht (Sprachen ohne bezirke.json) nicht in die Sitemap.
+  if (top === 'bezirke' && !parsed.slug) {
+    const data = readSingleton('bezirke', parsed.locale);
+    if (!data || Object.keys(data).length === 0) return false;
+  }
 
   if (parsed.isEntryDetail) {
     if (parsed.collection === 'bezirke') {

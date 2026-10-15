@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,6 +18,9 @@ export interface Props {
   hero_bild?: string;
 }
 const { titel, slug, teaser, datum, kategorie, emoji = '📰', hero_bild , locale = undefined } = Astro.props;
+const safeTitel = plainText(titel);
+const safeTeaser = plainText(teaser);
+const safeKategorie = plainText(kategorie);
 // Lokalisierte Link-Texte
 const LINK_TEXT = { de: 'Weiterlesen →', en: 'Read more →', fr: 'Lire la suite →', cs: 'Číst dále →', nl: 'Lees verder →', it: 'Leggi di più →', es: 'Leer más →', zh: '阅读更多 →' };
 const linkText = LINK_TEXT[locale] || LINK_TEXT.de;
@@ -58,8 +62,8 @@ const heroSrcset = variantSrcset(hero_bild);
   <div class="article-body">
     {kategorie && <span class="article-tag">{kategorie}</span>}
     {datum && <div class="article-date">{datum}</div>}
-    <h3>{titel}</h3>
-    {teaser && <p>{teaser}</p>}
+    <h3>{safeTitel}</h3>
+    {safeTeaser && <p>{safeTeaser}</p>}
     <span class="article-link">{linkText}</span>
   </div>
 </a>

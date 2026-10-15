@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { plainText } from '../../../lib/richtext.js';
 import Hero from '../../../components/Hero.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
@@ -317,8 +318,8 @@ function stars(bewertung) {
                       <FavHeart collection="regionen" slug={r.slug} />
                     </div>
                     <div class="region-card-body">
-                      <h3>{r.entry.titel}</h3>
-                      {r.entry.kurzbeschreibung && <p>{r.entry.kurzbeschreibung}</p>}
+                      <h3>{plainText(r.entry.titel)}</h3>
+                      {r.entry.kurzbeschreibung && <p>{plainText(r.entry.kurzbeschreibung)}</p>}
                       {r.entry.featured && <span class="featured-badge">{t.featuredBadge}</span>}
                       <div class="region-stars">
                         {filled.map((f) => (

@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../lib/richtext.js';
 import FavHeart from './FavHeart.astro';
 import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { readFileSync } from 'node:fs';
@@ -17,6 +18,8 @@ export interface Props {
 }
 
 const { name, slug, beschreibung, emoji = '🏘️', farbe = 'var(--tirol-pink)', region, locale = undefined } = Astro.props;
+const safeName = plainText(name);
+const safeBeschreibung = plainText(beschreibung);
 
 // Lokalisierte Link-Texte
 const LINK_TEXT = { de: 'Entdecken →', en: 'Discover →', fr: 'Découvrir →', cs: 'Objevit →', nl: 'Ontdekken →', it: 'Scoprire →', es: 'Descubrir →', zh: '探索 →' };
@@ -47,8 +50,8 @@ const wappenSrc = wappenEntry ? `/wappen/ultra-minimal/${wappenEntry.img_rel.rep
     <FavHeart collection="orte" slug={slug} />
   </div>
   <div class="ort-card-body">
-    <h3>{name}</h3>
-    {beschreibung && <p>{beschreibung}</p>}
+    <h3>{safeName}</h3>
+    {safeBeschreibung && <p>{safeBeschreibung}</p>}
     <span class="ort-link">{linkText}</span>
   </div>
 </a>

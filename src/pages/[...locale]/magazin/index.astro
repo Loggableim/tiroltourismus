@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { plainText } from '../../../lib/richtext.js';
 import Hero from '../../../components/Hero.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
@@ -96,14 +97,14 @@ const magazinItemList = {
                 <a href={`${pref}/magazin/${a.slug}/`} class="featured-card">
                   <div class="featured-img">
                     {a.entry.hero_bild ? (
-                      <img src={a.entry.hero_bild} alt={a.entry.titel} loading="eager" />
+                      <img src={a.entry.hero_bild} alt={plainText(a.entry.titel)} loading="eager" />
                     ) : (
                       <div class="featured-emoji">📰</div>
                     )}
                     <div class="featured-overlay">
-                      <span class="featured-tag">{(getCatLabel(a.entry.kategorie) || a.entry.kategorie || '').toUpperCase()}</span>
-                      <h2 class="featured-title">{a.entry.titel}</h2>
-                      <p class="featured-teaser">{a.entry.teaser}</p>
+                      <span class="featured-tag">{(getCatLabel(a.entry.kategorie) || plainText(a.entry.kategorie) || '').toUpperCase()}</span>
+                      <h2 class="featured-title">{plainText(a.entry.titel)}</h2>
+                      <p class="featured-teaser">{plainText(a.entry.teaser)}</p>
                       <span class="featured-link">Weiterlesen →</span>
                     </div>
                   </div>
@@ -141,13 +142,13 @@ const magazinItemList = {
                   <a href={`${pref}/magazin/${a.slug}/`} class={tileClass} data-filter-card data-filter-cat={a.entry.kategorie}>
                     {a.entry.hero_bild && (
                       <>
-                        <img src={a.entry.hero_bild} alt={a.entry.titel} class="tile-img" loading="lazy" />
+                        <img src={a.entry.hero_bild} alt={plainText(a.entry.titel)} class="tile-img" loading="lazy" />
                         <div class="tile-overlay"></div>
                       </>
                     )}
                     <div class="tile-content">
-                      <span class="tile-tag">{(getCatLabel(a.entry.kategorie) || a.entry.kategorie || '').toUpperCase()}</span>
-                      <h3 class="tile-title">{a.entry.titel}</h3>
+                      <span class="tile-tag">{(getCatLabel(a.entry.kategorie) || plainText(a.entry.kategorie) || '').toUpperCase()}</span>
+                      <h3 class="tile-title">{plainText(a.entry.titel)}</h3>
                       {a.entry.datum && <span class="tile-date">{formatDate(a.entry.datum)}</span>}
                     </div>
                   </a>

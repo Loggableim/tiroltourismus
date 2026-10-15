@@ -1,4 +1,5 @@
 ---
+import { richText } from '../lib/richtext.js';
 export interface Props {
   items: Array<{
     label: string;
@@ -24,12 +25,12 @@ const { items } = Astro.props;
             <div class="sec-detail-label">{item.label}</div>
             <div class="sec-detail-value">
               {item.type === 'link' && item.href
-                ? <a href={item.href} target="_blank" rel="noopener">{item.value} ↗</a>
+                ? <a href={item.href} target="_blank" rel="noopener" set:html={`${richText(item.value)} ↗`}></a>
                 : item.type === 'price'
                   ? <span class="sec-detail-price">{item.value}</span>
                   : item.type === 'tags' && item.tags
                     ? <div class="sec-detail-tags">{item.tags.map(t => <span class="tag">{t}</span>)}</div>
-                    : item.value
+                    : <span set:html={richText(item.value)}></span>
               }
             </div>
           </div>

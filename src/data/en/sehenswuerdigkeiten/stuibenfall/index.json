@@ -1,17 +1,17 @@
 {
-  "name": "Stuibenfall",
+  "name": "Stuibenfall Umhausen",
   "slug": "stuibenfall",
   "status": "published",
   "region": "imst",
   "ort": "Umhausen",
   "kategorie": "natur",
   "kurzbeschreibung": "The highest waterfall in Tirol (159 m) in the Ötztal – a thundering natural spectacle with a viewing platform and via ferrata.",
-  "beschreibung": "<p>Der <strong>Stuibenfall</strong> liegt in der Gemeinde Umhausen im Ötztal und zählt mit einer Fallhöhe von rund 159 Metern zu den höchsten Wasserfällen Tirols. Seine Entstehung verdankt er einem historischen Felssturz, der den Stuibenbach aufstaute. Ein gut ausgebauter Wanderweg, der <strong>Stuibenfallweg</strong>, führt entlang des Wasserfalls und ermöglicht an mehreren Aussichtspunkten Blicke auf die fallenden Wassermassen. Eine über die Schlucht führende <strong>Hängebrücke</strong> bietet eine besondere Perspektive auf den Wasserfall und die umliegende Landschaft. Darüber hinaus führt der Stuibenfall-Klettersteig direkt neben dem Fall entlang und ist für geübte Kletterer zugänglich. Der Wasserfall ist ganzjährig erreichbar, wobei der Wanderweg im Winter teils gesperrt sein kann.</p>",
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Stuibenfall</strong> in Umhausen (Ötztal Valley) reigns as the highest and most powerful waterfall in all of Tyrol, dropping an astounding 159 vertical meters across two colossal granite cataracts. Created roughly 9,000 years ago when the cataclysmic post-glacial Köfels rockslide blocked the valley drainage, the Horlachbach torrent now hurtles with untamed fury over towering precipices. During peak snowmelt, up to 2,000 liters of glacial water per second crash down the cliff faces, generating an ethereal, health-giving cloud of ionized spray. Visitors experience this elemental force via a world-class architectural engineering marvel: an exposed steel trail system featuring 700 cantilevered steps and an 80-meter suspension footbridge suspended directly over the thunderous cataract edge.</p><h2>Route &amp; Requirements</h2><p>The excursion departs from the spacious parking area at Ötzi-Dorf / Bischoffsplatz in Umhausen. A scenic, gently graded farm path winds through pine forests to the base of the waterfall (approx. 30 minutes, easy grade T1). Here begins the thrilling ascent via the modern steel staircase network, linking five exposed panoramic viewing platforms up to the high plateau of Niederthai (700 steps, 350 vertical meters, 1.5 to 2 hours walking time, moderate grade T2). The uppermost platform is connected by a suspension bridge dangling dramatically across the spray. Parallel to the falls runs the acclaimed Stuibenfall Via Ferrata (grade C): featuring wire crossings directly through the roaring waterfall spray, it provides an unforgettable vertical adventure (certified lanyard set and climbing helmet mandatory). Rigid footwear with deep lugged soles is essential, as steel grates remain perpetually damp. The metal stairs are impassable for strollers and wheelchairs (though the lower viewing deck is accessible via woodland tracks). Metal grates are dangerous for canine paws; shaded kennel bays are provided at the trail base, or hikers can take the parallel forest trail to Niederthai.</p><h2>Visit &amp; Arrival</h2><p>By rail, travelers arrive at Ötztal Bahnhof station, transferring to regional VVT bus line 320 running directly to Umhausen (Feuerwehr stop). Motorists follow the Inntal autobahn A12 to exit Ötztal and travel federal route B186 south for 20 minutes into Umhausen. Large pay parking is provided at Bischoffsplatz beside Ötzi-Dorf.</p><h2>Tips</h2><p>Experience the Stuibenfall after dusk: every Wednesday evening throughout the summer, the falls are illuminated by brilliant floodlights until midnight, accompanied by atmospheric guided lantern walks. Combine your trek with a tour of the prehistoric open-air museum Ötzi-Dorf and the majestic eagle flight shows at the adjacent Birds of Prey Park.</p>",
   "emoji": "💦",
   "farbe": "#2196F3",
   "hoehe": "1.400 m",
-  "dauer": "1–2 Stunden",
-  "preis": "Kostenlos; Klettersteig-Ausrüstung ab 15 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Bischoffsplatz ca. 5–7 € pro Tag)",
   "tags": [
     "waterfall",
     "nature",
@@ -20,11 +20,20 @@
     "viewpoint"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.stuibenfall.info",
+  "webseite": "https://www.oetztal.com/stuibenfall",
   "koordinaten": {
     "lat": "47.1500",
     "lng": "10.9167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Mai bis Oktober (während der Wintermonate Treppenanlage gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://www.oetztal.com/stuibenfall",
+    "https://de.wikipedia.org/wiki/Stuibenfall",
+    "https://www.umhausen.com/",
+    "https://www.oetztal.com/",
+    "https://www.vvt.at/"
+  ]
 }

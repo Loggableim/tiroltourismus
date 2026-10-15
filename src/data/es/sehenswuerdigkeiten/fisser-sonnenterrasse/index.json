@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Fiss",
   "kategorie": "aussicht",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Die Fisser Sonnenterrasse liegt auf rund 1.450 Metern oberhalb von Fiss und bietet einen <strong>Panoramablick</strong> auf die Samnaun- und Verwallgruppe sowie das Inntal. Die <strong>Aussichtsplattform</strong> ist mit Ruhebänken und einer Liegewiese ausgestattet. Besucher erreichen sie über Wanderwege oder mit der Gondelbahn. Die Terrasse dient als <strong>Startpunkt</strong> für Spaziergänge und Touren im Naturpark. Die <strong>Südhanglage</strong> sorgt für überdurchschnittlich viele Sonnenstunden. Vor Ort befindet sich eine <strong>Einkehrmöglichkeit</strong>. Gäste erwartet eine unverbaute Aussicht und ein ruhiger Aufenthalt.</p>",
+  "kurzbeschreibung": "La Fisser Sonnenterrasse a 1.436 m cautiva con su casco retorrománico, más de 2.000 horas de sol y el museo s’Paules und s’Seppls Haus.",
+  "beschreibung": "<h2>Descripción general</h2><p>La terraza <strong>Fisser Sonnenterrasse</strong> constituye el pintoresco corazón de la popular meseta de Serfaus-Fiss-Ladis en el Tiroler Oberland. Situado muy por encima del profundo cauce del alto río Inn, el municipio de Fiss reposa sobre una soleada terraza de ladera a unos 1.436 metros de altitud. Con más de 2.000 horas de sol garantizadas al año, la meseta se cuenta entre las comarcas más soleadas de todos los Alpes. Enmarcado entre las faldas del Samnaungruppe al oeste y los Ötztaler Alpen al este, el pueblo aúna el auténtico patrimonio alpino tradicional con una moderna infraestructura turística.</p><h2>Historia del pueblo y arquitectura</h2><p>El poblamiento de la soleada altiplanicie se remonta a mucho antes de nuestra era: los hallazgos arqueológicos documentan vestigios de la Edad del Bronce y de época retia antes de que los romanos integraran la zona en la provincia de Raetia. La primera mención documental del lugar data de 1288 bajo el nombre de <em>Fizes</em>. A diferencia de la mayoría de las aldeas rurales tirolesas, Fiss ha conservado su singular fisonomía como <strong>aldea apiñada retorrománica</strong> (Haufendorf). Dado que el terreno agrícola soleado era muy valioso para el cultivo de cereales, las edificaciones se construyeron sumamente juntas. Las casas campesinas típicas de Fiss destacan por sus macizos muros de piedra, pequeños vanos de ventanas, portales de medio punto profusamente decorados y pasos elevados de madera sobre los callejones. Un exponente extraordinario de esta arquitectura es el <strong>Museum s’Paules und s’Seppls Haus</strong>: la granja doble retorrománica protegida como monumento histórico, originaria de los siglos XVI y XVII, ha sido fielmente restaurada y, con sus estancias originales, su cocina de humo y su era tradicional, brinda una profunda mirada a la dura vida cotidiana de antaño. Un hito cultural es el tradicional <em>Fisser Blochziehen</em>, una arcaica costumbre de carnaval declarada Patrimonio Cultural Inmaterial por la UNESCO.</p><h2>Visita y cómo llegar</h2><p>El centro urbano peatonalizado de Fiss y los soleados paseos panorámicos de la terraza son de libre y gratuito acceso durante todo el año. El Museum s’Paules und s’Seppls Haus abre días fijados por semana durante las temporadas de verano e invierno (normalmente martes y jueves de 16:00 a 18:30; entrada aprox. 5,00 € para adultos). En coche: por la autopista del Inntal A12 o la vía rápida S16 hasta Ried im Oberinntal, y desde allí serpenteando por la carretera bien acondicionada Serfauser Landesstraße L19 hasta Fiss (aparcamiento en los amplios estacionamientos señalizados a la entrada del pueblo o en los teleféricos). En transporte público: en tren (ÖBB) hasta la estación de largo recorrido de Landeck-Zams, y desde allí con el autobús VVT línea 220 de alta frecuencia directamente hasta la parada <em>Fiss Postamt</em> (tiempo de viaje unos 45 minutos).</p><h2>Consejos</h2><p>Los paseos principales y las calles del centro del pueblo están asfaltados y se recorren de maravilla con sillas de ruedas y carritos infantiles. Desde Fiss, el telecabina Schönjochbahn se eleva a más de 2.430 metros de altura hacia senderos de altura con amplias vistas y el tobogán alpino Fisser Flitzer. No deje de planear un paseo hasta la iglesia parroquial gótica de St. Johannes der Täufer y disfrute, desde los bancos panorámicos situados al borde del pueblo, de las vistas del valle del Obere Gericht.</p>",
   "emoji": "☀️",
   "farbe": "#FFC107",
   "hoehe": "2.000 m",
   "dauer": "Halbtag",
-  "preis": "36 € (Bergbahn Sommer)",
+  "preis": "Dorfbesuch kostenlos; Museum ca. 5,00 €",
   "tags": [
     "aussicht",
     "panorama",
@@ -19,12 +19,18 @@
     "wandern",
     "bergbahn"
   ],
-  "oeffnungszeiten": "Sommer: täglich 8:30–17:00; Winter: täglich 8:30–16:00",
+  "oeffnungszeiten": "Dorfkern ganzjährig frei zugänglich; Museum saisonal Di/Do 16:00–18:30 Uhr",
   "webseite": "https://www.serfaus-fiss-ladis.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "10.6167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/Fiss",
+    "https://www.museum-fiss.at",
+    "https://de.wikipedia.org/wiki/Fiss",
+    "https://www.fiss.at"
+  ]
 }

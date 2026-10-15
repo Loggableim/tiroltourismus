@@ -26,7 +26,7 @@
     "lat": "47.2965",
     "lng": "11.5051"
   },
-  "beschreibung": "<p>Willkommen in Absam, einem bezaubernden Dorf auf 632 Metern Höhe, eingebettet in die sanften Hänge der Haller Salinenberge. Nur einen Steinwurf von Innsbruck entfernt, vereint dieser Ort auf einzigartige Weise tief verwurzelte Kultur, lebendige Geschichte und atemberaubende Natur. Das Herz der Gemeinde schlägt in der prächtigen Basilika St. Michael, einem barocken Juwel und bedeutenden Wallfahrtsort, dessen Kuppel weit über das Tal grüßt und zur inneren Einkehr einlädt.</p>\n\n<p>Absam ist aber auch die Wiege einer ganz besonderen Handwerkskunst: dem weltberühmten Geigenbau. Lassen Sie sich von der filigranen Arbeit der Meister verzaubern, deren Instrumente auf den Bühnen der Welt erklingen, und spüren Sie die jahrhundertealte Tradition, die hier noch lebendig ist. Jenseits der Kultur entfaltet sich eine Landschaft, die zum Wandern und Verweilen einlädt – von familienfreundlichen Spaziergängen entlang des alten Salzwegs bis zu anspruchsvollen Touren auf die umliegenden Gipfel mit grandiosem Panorama.</p>\n\n<p>Hier, wo Geschichte auf Gegenwart trifft und das Bergpanorama täglich neue Perspektiven schenkt, finden sowohl Erholungssuchende als auch aktive Familien ihr Paradies. Erleben Sie in Absam tirolische Gastlichkeit, gepaart mit kulturellem Reichtum und unberührter Natur – ein Ort, der Sie immer wieder von Neuem überraschen wird.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Absam leží v nadmořské výšce 632 metrů na jižním úpatí pohoří Karwendel při severním okraji údolí řeky Inn. Obec v okrese Innsbruck-venkov bezprostředně sousedí s historickým městem Hall in Tirol a nachází se pouhých deset kilometrů východně od zemského hlavního města Innsbrucku. S více než 7 300 obyvateli patří Absam k nejvýznamnějším obcím v regionu. Katastr obce má rozlohu téměř 52 km² a zasahuje hluboko do přírodního parku Karwendel, kde se tyčí vrchol Großer Bettelwurf (2 725 m). Absam v sobě spojuje kouzlo tradičního tyrolského venkova s významem nejvýznamnějšího mariánského poutního místa západního Rakouska a kolébky houslařského řemesla.</p><h2>Historie</h2><p>Osídlení má kořeny v římské antice; název pochází z latinského jména Abazanes a poprvé se objevuje kolem roku 995 v zápisech brixenského biskupství. Po staletí byl život obyvatel spjat s těžbou soli v údolí Halltal. Celosvětový věhlas přinesly obci dvě události: v 17. století zde působil Jakob Stainer (1617–1683), zakladatel německé houslařské školy, jehož nástroje byly na evropských dvorech ceněny více než kreemonské housle. Dne 17. ledna 1797 spatřila selská dívka Rosina Bucher na okenní tabulce tvář Panny Marie, kterou nebylo možné smýt. Milostný obraz byl přenesen do farního kostela svatého Michala, který papež Jan Pavel II. v roce 2000 povýšil na baziliku minor.</p><h2>Příjezd a doprava</h2><p>Z Innsbrucku je Absam velmi snadno dostupný: regionální autobusová linka VVT 503 jezdí v hustém taktu přímo z hlavního nádraží přes Rum a Thaur do centra Absamu (doba jízdy cca 25–30 minut). Příměstské vlaky S-Bahn S1 a S2 spojují Innsbruck s městem Hall in Tirol v desetiminutových intervalech, odkud navazují místní autobusy. Autem trvá cesta po dálnici A12 se sjezdem Hall-West nebo Hall-Mitte přibližně 15 minut. Zvolit lze i bezplatnou trasu po zemské silnici B171.</p><h2>Tipy</h2><p>Duchovním středobodem je bazilika svatého Michala s milostným obrazem z roku 1797 a rokokovými freskami Josefa Antona Zollera. Naproti kostelu stojí dům zjevení v rodném statku Bucherových. Obecní muzeum Absam vystavuje originální housle Jakoba Stainera a dokumentaci k těžbě soli. Milovníci horské turistiky mohou vyrazit do údolí Halltal, kde vede historická Solná stezka a náročné výstupy k chatě Bettelwurfhütte (2 077 m). Pozoruhodnou tradicí je masopustní průvod Absamer Matschgerer zapsaný na seznamu nehmotného dědictví UNESCO.</p>",
   "sehenswuerdigkeiten": [
     {
       "name": "Basilika St. Michael",
@@ -49,5 +49,13 @@
       "typ": "ausflug"
     }
   ],
-  "kategorie": "marktgemeinde"
+  "kategorie": "marktgemeinde",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Absam",
+    "https://de.wikipedia.org/wiki/Basilika_St._Michael_(Absam)",
+    "https://de.wikipedia.org/wiki/Jakob_Stainer",
+    "https://www.absam.at",
+    "https://www.hall-wattens.at/de/absam.html",
+    "https://www.tirol.at"
+  ]
 }

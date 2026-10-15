@@ -6,7 +6,7 @@
   "kategorie": "wandern",
   "ort": "Osttirol",
   "region": "osttirol",
-  "beschreibung": "Insieme a un ranger del parco nazionale vi metterete sulle tracce dei re dell'aria. L'escursione attraverso il Nationalpark Hohe Tauern conduce ai siti di nidificazione del gipeto e dell'aquila reale. Con il binocolo e spiegazioni competenti, osserverete gli uccelli maestosi nel loro ambiente naturale.",
+  "beschreibung": "<p>Il <strong>Parco Nazionale degli Alti Tauri</strong> è il rifugio alpino per eccellenza dei grandi rapaci. Ai piedi del Großglockner nidifica il <strong>gipeto barbuto</strong> e trascorrono l'estate stormi di <strong>grifoni</strong>. Escursioni guidate con i ranger del parco consentono avvistamenti ravvicinati con potenti cannocchiali.</p><p>Nella valle Ködnitztal a Kals (ritrovo al rifugio Lucknerhaus, 1.920 m), il tour guidato <em>Big Five</em> si snoda su <strong>4 km e 350 metri di dislivello</strong> (ca. 3–4 ore complessive con soste di osservazione). Costo: <strong>22 € adulti</strong>, 15 € bambini. Periodo: da inizio luglio a fine settembre. Accesso tramite la strada panoramica a pedaggio di Kals o autobus di linea VVT 952 da Lienz.</p><p>Cani rigorosamente vietati durante i tour guidati con i ranger (ammessi al guinzaglio corto nelle escursioni autonome). Scarponi da trekking e binocolo raccomandati.</p>",
   "preis": 59,
   "dauer": "5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hohetauern.at/de/wildtiere/bartgeier/",
+    "https://www.hohetauern.at/de/wildtiere/gaensegeier/",
+    "https://www.glocknerstrasse.at",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern"
+  ]
 }

@@ -6,7 +6,7 @@
   "kategorie": "kultur",
   "ort": "Kramsach",
   "region": "alpbach",
-  "beschreibung": "Nella Glashütte Kramsach, una delle più antiche manifatture del vetro del Tirol, potrete diventare voi stessi soffiatori del vetro. Sotto la guida di un maestro, create il vostro pezzo unico: un vaso colorato, una filigranata pallina di Natale o un bicchiere. Un'esperienza di fuoco del tutto speciale, che rende vivo un antico artigianato.",
+  "beschreibung": "<p>Il comprensorio di Kramsach e l'antico borgo medievale di Rattenberg custodiscono la più illustre tradizione vetraria d'Austria, sede dell'<strong>Istituto d'Arte Vetraria HTL Kramsach</strong> e di storiche botteghe artigiane.</p><p>L'esperienza più celebre è la <strong>soffiatura del vetro per turisti presso Kisslinger Kristall-Glas</strong>: al forno a 1.400 °C, adulti e bambini possono soffiare la propria sfera decorativa con la canna da maestro vetraio (5 minuti di lavorazione, ca. <strong>18 €</strong>, da maggio a ottobre il lunedì e venerdì pomeriggio). Nelle botteghe artigiane del borgo è possibile ammirare maestri incisori e molatori all'opera. Accesso alle vetrerie dimostrative gratuito.</p><p>Rattenberg è interamente pedonale (parcheggi P1–P5 all'esterno). Stazione ferroviaria ÖBB a soli 5 minuti a piedi. Adatto ai bambini dai 3 anni in su.</p>",
   "preis": 89,
   "dauer": "2,5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.glas-schwarz.at",
+    "https://www.kisslinger-kristall.com",
+    "https://www.htl-kramsach.ac.at",
+    "https://www.alpbachtal.at/",
+    "https://www.kramsach.at/"
+  ]
 }

@@ -165,19 +165,25 @@ const DEFAULT_ITEM = LANGUAGES.find((l) => l.code === 'en') || LANGUAGES[0];
   <link rel="canonical" href="https://tiroltourismus.com/demofrontpage" />
   <meta name="theme-color" content="#0A0D12" />
   <link rel="icon" href="/favicon.ico" />
+  <link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 </head>
 <body>
   <div class="tt-stage" id="ttStage" data-light="day">
-    <img
-      class="tt-hero-img tt-hero"
-      src="/hero-tirol.jpg"
-      alt=""
-      width="1920"
-      height="1080"
-      fetchpriority="high"
-      decoding="async"
-      aria-hidden="true"
-    />
+    <picture class="tt-hero-picture">
+      <source type="image/avif" srcset="/hero-tirol.avif" />
+      <source type="image/webp" srcset="/hero-tirol.webp" />
+      <img
+        class="tt-hero-img tt-hero"
+        src="/hero-tirol.jpg"
+        alt=""
+        width="1280"
+        height="720"
+        fetchpriority="high"
+        decoding="async"
+        aria-hidden="true"
+      />
+    </picture>
 
     <div class="tt-scrim" aria-hidden="true"></div>
     <div class="tt-contours" aria-hidden="true"></div>

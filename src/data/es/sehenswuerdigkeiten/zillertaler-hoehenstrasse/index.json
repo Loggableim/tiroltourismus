@@ -2,7 +2,7 @@
   "name": "Zillertaler Höhenstraße",
   "slug": "zillertaler-hoehenstrasse",
   "region": "zillertal",
-  "ort": "Mayrhofen",
+  "ort": "Kaltenbach",
   "kategorie": "aussicht",
   "kurzbeschreibung": "La Zillertaler Höhenstraße es una carretera panorámica de 42 km con vistas alucinantes sobre los Alpes de Zillertal y sus glaciares.",
   "emoji": "🚗",
@@ -13,10 +13,10 @@
     "naturaleza",
     "coche"
   ],
-  "dauer": "Halber Tag",
-  "preis": "Maut: € 15,00 pro Fahrzeug",
+  "dauer": "2–5 Stunden",
+  "preis": "Mautgebühr ca. 8–10 € pro PKW / Motorrad",
   "oeffnungszeiten": "Mai bis Oktober, wetterabhängig",
-  "webseite": "https://www.zillertal.at/hoehenstrasse",
+  "webseite": "https://www.zillertaler-hoehenstrasse.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,14 @@
     "lng": "11.8639"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zillertaler Höhenstraße</strong> – Die Zillertaler Höhenstraße bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Die Zillertaler Höhenstraße ist eine 42 km lange Panoramastraße mit atemberaubenden Ausblicken auf die Zillertaler Alpen und ihre Gletscher Vom Gipfel aus eröffnet sich ein 360-Grad-Panorama, das bei klarer Sicht bis zu den Gletschern der Hohen Tauern reicht. Die bequeme Bergbahn bringt Besucher mühelos auf die Höhe, wo mehrere Panoramaterrassen und ein Bergrestaurant zum Genießen einladen. Die Zillertaler Höhenstraße liegt in der Region Zillertal und ist von Mayrhofen aus in kurzer Zeit zu erreichen. Die Anfahrt führt durch eine reizvolle Landschaft, die bereits auf dem Weg dorthin beeindruckt. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>La <strong>Zillertaler Höhenstraße</strong> es una de las carreteras alpinas panorámicas más impresionantes de Europa, elevándose hasta los 2.020 metros de altitud. Con casi 50 km de recorrido, ofrece vistas aéreas vertiginosas sobre el fondo del valle de Zillertal y los glaciares alpinos que coronan la frontera italiana.</p><h2>Ruta y Requisitos</h2><p>Carretera asfaltada de peaje (8 a 10 € por vehículo) con accesos desde Ried, Kaltenbach o Hippach. Trazado estrecho de montaña con apartaderos. En la cota máxima (Hirschbichlalm, 2.020 m) se ubica el parque de marmotas Murmelland (fácil T1) y rutas a la cumbre Gedrechter (2.217 m, T2). Conducción prudente indispensable. Perros con correa.</p><h2>Cómo llegar</h2><p>En el tren Zillertalbahn a Kaltenbach o Ried y autobús de montaña en verano. En coche por la carretera B169 hacia los puntos de peaje. Abierta de mediados de mayo a finales de octubre.</p><h2>Consejos</h2><p>Fotografíe la solitaria capilla Hubertuskapelle con los glaciares de fondo y disfrute de una sopa tradicional de queso gris tirolés en la terraza de la Hirschbichlalm.</p>",
+  "saison": "Mitte Mai bis Ende Oktober (im Winter komplett schneebedingt gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertaler_H%C3%B6henstra%C3%9Fe",
+    "https://www.zillertal.at/",
+    "https://www.mayrhofen.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/zillertaler-hoehenstrasse-rundtour/1381505/",
+    "https://www.vvt.at/"
+  ]
 }

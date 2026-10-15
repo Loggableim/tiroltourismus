@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
   locale?: string;
@@ -19,8 +20,8 @@ const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →',
 const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
 ---
 <a href={`${linkPrefix}${slug}/`} class="gastro-card" data-collection="gastro" data-slug={slug} data-filter-card data-filter-cat={kategorie || ''}>
-  <div class="gastro-card-img" style={`position:relative;background:${farbe}20`}>
-    <span class="gastro-emoji">{emoji}</span>
+  <div class="gastro-card-img" style="position:relative">
+    <CategoryPlaceholder collection="gastro" locale={locale} />
     <FavHeart collection="gastro" slug={slug} />
   </div>
   <div class="gastro-body">

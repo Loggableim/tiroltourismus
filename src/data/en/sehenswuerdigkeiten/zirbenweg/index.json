@@ -1,17 +1,17 @@
 {
-  "name": "Zirbenweg",
+  "name": "Zirbenweg Patscherkofel & Glungezer",
   "slug": "zirbenweg",
   "status": "published",
   "region": "innsbruck",
-  "ort": "Tulfes",
+  "ort": "Igls",
   "kategorie": "wanderung",
   "kurzbeschreibung": "The highest Zirbenlehrpfad in the Alps on the Patscherkofel – a dream hike through fragrant Zirbenwälder, with breathtaking panoramic views.",
-  "beschreibung": null,
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Zirbenweg</strong> (Stone Pine Trail) traversing the Tux Prealps high above Innsbruck is universally celebrated as one of the most scenic and fragrant high-altitude panoramic walks in the European Alps. Hovering at a gentle elevation of roughly 2,000 meters, this ridge trail links the upper mountain terminal of the Patscherkofelbahn (1,964 m) in Igls with the Tulfeinalm at the Glungezerbahn (2,035 m) in Tulfes. The route threads through one of the oldest and largest contiguous stone pine forests in Central Europe, home to gnarled arboreal veterans documented at over 700 years of age. While breathing in the therapeutic, woodsy fragrance of pinosylvin oils released by ancient trees, walkers enjoy uninterrupted vistas plunging toward Innsbruck in the Inn Valley, backdropped by the vertical limestone ramparts of the Nordkette and Karwendel mountain ranges.</p><h2>Route &amp; Requirements</h2><p>The Zirbenweg represents the gold standard of accessible alpine pleasure for walkers of all fitness levels. Spanning approximately seven kilometers, the path undulates gently across minor gradient shifts (approx. 200 vertical meters of rolling elevation across the entire length, walking time roughly 2.5 hours, easy grade T1/T2). The trail is expertly maintained, wandering over soft forest loam, natural tree roots, and timber footbridges. At the halfway junction, the rustic Boscheben refuge (2,035 m) offers an idyllic pause. Logistics are effortlessly streamlined by the integrated \"Zirbenweg Circular Ticket\": ride up via the Patscherkofel gondola, stroll scenic miles to Tulfeinalm, descend via the Glungezer gondola, and hop aboard the dedicated Zirbenweg shuttle bus connecting the base stations (or vice versa). Sturdy walking shoes and wind shells are advisable. Leashed dogs are permitted on trails and inside cable cars.</p><h2>Visit &amp; Arrival</h2><p>Public transit connectivity from Innsbruck is exemplary: Innsbruck IVB city bus line \"J\" departs central station at frequent intervals directly to the Patscherkofelbahn base terminal in Igls. Regional bus 4134 connects central station to the Glungezerbahn terminal in Tulfes. The dedicated Zirbenweg shuttle links both base terminals throughout the hiking day. Motorists reach Igls via the Brenner autobahn A13 (exit Innsbruck-Süd) or Tulfes via the Inntal autobahn A12 (exit Hall-Mitte). Ample pay parking is provided at both lift stations. Lifts and trail access operate daily from early June through late October.</p><h2>Tips</h2><p>Pause beside the officially protected \"Oldest Stone Pine of Tyrol\"—a gnarled botanical landmark surviving here for over seven centuries. Stop at rustic Gasthaus Boscheben to savor crispy pan-fried cheese dumplings (Kaspressknödel) and artisanal pine liqueur on the open terrace overlooking the Karwendel mountains.</p>",
   "emoji": "🥾",
   "farbe": "#4CAF50",
   "hoehe": "1.900 m",
-  "dauer": "2–3 Stunden",
-  "preis": "Bergbahn: 28 € (Erwachsene); Wanderung kostenlos",
+  "dauer": "3–4 Stunden",
+  "preis": "Zirbenweg-Rundfahrtticket (2 Bergbahnen + Shuttlebus) ca. 36 €",
   "tags": [
     "hiking",
     "nature",
@@ -21,11 +21,20 @@
     "Swiss_pine"
   ],
   "oeffnungszeiten": "Ganzjährig begehbar; Patscherkofelbahn: täglich 9:00–17:00",
-  "webseite": "https://www.patscherkofelbahn.at",
+  "webseite": "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
   "koordinaten": {
     "lat": "47.2150",
     "lng": "11.4580"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Anfang Juni bis Ende Oktober",
+  "familie": true,
+  "sources": [
+    "https://www.tyrol.com/",
+    "https://www.patscherkofelbahn.at/",
+    "https://www.glungezerbahn.at/",
+    "https://de.wikipedia.org/wiki/Patscherkofel",
+    "https://www.vvt.at/"
+  ]
 }

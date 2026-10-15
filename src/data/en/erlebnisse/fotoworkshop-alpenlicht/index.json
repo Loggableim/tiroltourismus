@@ -1,28 +1,35 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Pitztal",
   "region": "pitztal",
-  "beschreibung": "=== description ===\nGolden hour in the Pitztal – a professional photographer will guide you on how to capture the unique mountain scenery beautifully. The workshop covers light moods, composition, long-exposure techniques, and post-processing. Cameras and tripods are available for rental.",
-  "preis": 79,
+  "koordinaten": {
+    "lat": "46.9792",
+    "lng": "10.8725"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Alpine Light Photography Workshop",
+  "beschreibung": "### Overview\nAn Alpine Light photography workshop across the Pitztal and Kaunertal valleys introduces passionate photographers to the most dramatic lighting conditions of the Tyrolean Alps. Positioned amidst rugged rock ridges, pristine glaciers, and deep-blue alpine tarns, participants master mountain landscape photography during the Golden and Blue Hours as well as capturing glowing Alpenglow on towering summits. Iconic locations include Lake Rifflsee at 2,232 metres—Austria's highest mountain lake, where glassy dawn and dusk reflections mirror the jagged peaks of the Kaunergrat. An even higher dimension awaits at Café 3440 atop Pitztal Glacier: situated on a cantilevered terrace at Hinterer Brunnenkogel, Austria's highest vantage point commands a 360-degree vista of over 50 three-thousanders and the commanding Wildspitze (3,768 m). Night photography modules in the upper Kaunertal explore dark-sky astrophotography free from urban light pollution.\n\n### Route & Requirements\nWorkshops blend technical instruction with practical on-location shooting. Typical field sessions include the loop path encircling Lake Rifflsee (1 hour, 50 metres elevation gain), the Wildspitzbahn summit station at 3,440 metres, and the 'Gacher Blick' panoramic cantilever at Kaunergrat Nature Park House (1,560 m). The itineraries require standard mountain surefootedness and sturdy hiking boots but involve no technical climbing. Participants should bring a mirrorless or DSLR camera with manual controls, a rigid tripod, wide-angle and telephoto lenses, and polarizing/neutral-density filters. The workshop is unsuitable for children and dogs due to extended static waiting in sub-zero temperatures and technical focus.\n\n### Arrival\nThe primary starting base in Pitztal is Mandarfen at the Rifflseebahn valley station or Mittelberg at the glacier terminal. Drivers arrive from the A12 Inntal Autobahn (Imst/Pitztal exit) along the L16 provincial road to the valley head. Free parking is available at both cable car bases. By public transit, take the train to Imst-Pitztal station and board the regional VVT bus line 4204, running frequent direct services (free of charge for guests holding the Pitztal Sommer Card).\n\n### Tips\nWorkshop tuition ranges from €85 to €190 depending on duration and coaching format (cable car tickets separate; Rifflseebahn is included free daily with the Pitztal Sommer Card). Special highlights include official sunrise cable car ascents to Café 3440 with breakfast. Clothing advice: at elevations between 2,200 and 3,440 metres, evening temperatures frequently drop to freezing even in midsummer. Dress in layers with a warm down jacket, beanie, and photography gloves with fold-back fingertips. Carry multiple spare batteries, as cold air rapidly degrades charge capacity.",
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 79,
   "tags": [
     "fotografie",
     "workshop",
     "alpen",
     "pitztal",
     "landschaft"
-  ],
-  "koordinaten": {
-    "lat": "46.9792",
-    "lng": "10.8725"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

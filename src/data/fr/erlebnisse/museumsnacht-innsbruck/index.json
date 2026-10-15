@@ -1,12 +1,12 @@
 {
-  "name": "Museumsnacht Innsbruck",
+  "name": "Nuit des musées d'Innsbruck (ORF)",
   "slug": "museumsnacht-innsbruck",
   "emoji": "🏛️",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Einmal im Jahr öffnen die Innsbrucker Museen ihre Türen für eine lange Nacht voller Kunst, Geschichte und Kultur. Mit einem Armband besuchen Sie alle teilnehmenden Häuser – vom Alpenvereinsmuseum über das Zeughaus bis zur Hofkirche. Überall gibt es Spezialführungen, Workshops und Live-Musik.",
+  "beschreibung": "### Aperçu\nLa Nuit des Musées ORF transforme la capitale tyrolienne Innsbruck en un vaste parcours culturel chaque premier samedi d'octobre. De 18h00 à 01h00, plus de vingt musées, galeries d'art et monuments historiques accueillent les visiteurs nocturnes. Un billet unique donne accès à des sites d'exception tels que le palais impérial de la Hofburg, le château d'Ambras et son cabinet de curiosités de la Renaissance, le musée d'art populaire tyrolien, l'Arsenal Zeughaus et le centre interactif Audioversum. Alors que le bâtiment principal du Ferdinandeum fait l'objet d'une rénovation majeure jusqu'en 2028, des programmes satellites exclusifs, concerts et ateliers artistiques rythment la soirée.\n\n### Itinéraire et exigences\nLe parcours se compose en toute liberté selon vos envies. Les sites s'étendent de la vieille ville historique jusqu'au château perché d'Ambras. Des chaussures confortables sont indispensables pour déambuler dans ces édifices patrimoniaux. La plupart des grandes institutions sont accessibles aux personnes à mobilité réduite. Les activités dédiées aux familles et enfants ont principalement lieu de 18h00 à 21h00.\n\n### Accès\nLe point névralgique se situe à la Haus der Musik sur la Rennweg, face à la Hofburg, ainsi qu'à la gare centrale d'Innsbruck. Les transports urbains IVB déploient un réseau de navettes spéciales gratuites pour les détenteurs de billets (lignes SH1, SH2, SH3) reliant en boucle le centre-ville et les sites périphériques comme le château d'Ambras. Les lignes régulières de la zone centrale sont également incluses. Les parkings souterrains du Landestheater et du Congress accueillent les automobilistes.\n\n### Conseils\nAchetez vos billets à l'avance pour éviter l'attente aux caisses le soir même. Débutez votre visite par les sites extérieurs comme le château d'Ambras dès 18h00, puis terminez la soirée au cœur de la vieille ville piétonne. Les animaux de compagnie ne sont pas admis dans les espaces d'exposition.",
   "preis": 29,
   "dauer": "4–5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://langenacht.orf.at",
+    "https://www.innsbruck.info",
+    "https://www.tiroler-landesmuseen.at",
+    "https://www.tirol.at",
+    "https://www.ivb.at"
+  ]
 }

@@ -5,12 +5,12 @@
   "ort": "Fügen",
   "kategorie": "aussicht",
   "kurzbeschreibung": "La montagna dell'esperienza amica delle famiglie nel Zillertal con panorama mozzafiato , parco avventura , pista dei bigliardi e avventure di malga .",
-  "beschreibung": "<p>Das <strong>Spieljoch</strong> ist ein 2.236 Meter hoher Aussichtsberg oberhalb von Fügen im Zillertal. Die <strong>Spieljochbahn</strong> erschließt das Gebiet und endet auf 1.950 Metern. Vom Gipfelkreuz aus bietet sich ein Rundumblick auf das Zillertal, die angrenzenden Alpen und die Zillertaler Gletscherregion. Ein ausgeschilderter Panoramaweg führt um die Bergstation und informiert über die umliegende Bergwelt. Die <strong>Spieljochalm</strong> steht Besuchern als Einkehrmöglichkeit zur Verfügung. Das Areal eignet sich sowohl für Spaziergänger als auch für erfahrene Wanderer, die die umliegenden Gipfel anstreben.</p>",
+  "beschreibung": "<h2>Panoramica</h2><p>Il <strong>Spieljoch</strong> (1.865–1.920 m) è la montagna dei divertimenti per famiglie che domina Fügen nella bassa valle Zillertal. Raggiungibile in soli 10 minuti con la moderna cabinovia, offre un grande parco giochi acquatico in quota con zattera, un percorso sensoriale a piedi nudi, una teleferica Flying Fox e l'antica miniera visitabile dell'Öxltal.</p><h2>Percorso &amp; Requisiti</h2><p>Passeggiata pianeggiante attorno al lago artificiale e alla chiesetta alpina adatta a famiglie e passeggini (45 minuti, facile T1). Escursione all'antica miniera dell'Öxltal con elmetto e lampada frontale (45 min, T1/T2). Sentiero panoramico verso la malga Geolsalm (1 ora, T1/T2). Scarpe comode consigliate. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>In treno Zillertalbahn fino alla stazione di Fügen e bus navetta fino alla cabinovia. In auto dall'autostrada A12 (uscita Wiesing) lungo la B169 fino a Fügen. Ampio parcheggio gratuito alla partenza.</p><h2>Consigli</h2><p>Portate una giacca pesante per la visita guidata nelle gallerie sotterranee dell'Öxltal (temperatura costante di 6 °C) e gustate le specialità locali al ristorante panoramico Mountain Loft.</p>",
   "emoji": "🎡",
   "farbe": "#FF6B35",
   "hoehe": "1.950 m",
-  "dauer": "Halbtag",
-  "preis": "24 € (Bergbahn, Erwachsene)",
+  "dauer": "3–5 Stunden",
+  "preis": "Bergbahn Berg- und Talfahrt ca. 27 € (Schaubergwerk Führung ca. 10 €)",
   "tags": [
     "panorama",
     "famiglie",
@@ -19,12 +19,18 @@
     "bambini"
   ],
   "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt)",
-  "webseite": "https://www.spieljoch.at",
+  "webseite": "https://www.spieljochbahn.at",
   "status": "published",
   "koordinaten": {
     "lat": "47.3341667",
     "lng": "11.8400000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.spieljochbahn.at/",
+    "https://de.wikipedia.org/wiki/Spieljochbahn",
+    "https://www.zillertal.at/",
+    "https://www.vvt.at/"
+  ]
 }

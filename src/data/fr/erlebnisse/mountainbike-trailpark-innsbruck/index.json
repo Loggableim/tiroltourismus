@@ -6,22 +6,32 @@
   "kategorie": "abenteuer",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Der Bikepark Innsbruck auf der Muttereralm bietet Downhill-Strecken für jedes Können. Von flowigen Single Trails bis zu anspruchsvollen Freeride-Strecken mit Sprüngen und Northshore-Elementen ist alles dabei. Bike-Verleih und Schutzkleidung sind vor Ort erhältlich.",
-  "preis": 49,
-  "dauer": "3–4 Stunden",
+  "beschreibung": "Aperçu\nNiché sur les pentes de la Muttereralm et de Götzens aux portes d'Innsbruck, le Bikepark Innsbruck s'impose comme un haut lieu du VTT en Europe. Célèbre pour accueillir l'étape internationale du Crankworx World Tour, le domaine réunit athlètes d'élite et amateurs de descente dans un cadre grandiose face à la Nordkette et aux Kalkkögel. Avec près de vingt kilomètres de pistes soignées s'échelonnant du flow trail accessible aux tracés de coupe du monde, le park offre une variété exceptionnelle pour tous les niveaux de pratique.\n\nRoute & Exigences\nLa piste maîtresse pour débutants et familles est «The Chainless One» (Bleue / S1). Avec ses 8,5 kilomètres de long et 636 mètres de dénivelé négatif entre le sommet (1 597 m) et la gare aval de Mutters, c'est l'un des plus longs flow trails des Alpes, agrémenté de virages relevés sécurisants et de mouvements de terrain fluides. Les cyclistes confirmés se tournent vers «The First One» (Rouge / S2, 1,9 km, 270 m de dénivelé) avec ses racines et wallrides, ou s'élancent sur la jumpline de 16 bosses. Les descendeurs chevronnés défient la pente sur «The Straight One» (Noire / S3) ou la piste de compétition Crankworx «The Rough One / Götzens Trail» (Noire / S3, 500 m de dénivelé sur 2,2 km). Un Rookie Park avec coussin de réception BagJump est aménagé au sommet, tandis qu'un pumptrack et un dual slalom bordent le bas de station. Le port du casque est obligatoire (casque intégral vivement recommandé sur les pistes noires), tout comme les genouillères. Les chiens sont interdits sur les pistes VTT.\n\nAccès\nLa gare aval de la Muttereralmbahn se situe Nockhofweg 40 à 6162 Mutters. Elle est accessible depuis le centre d'Innsbruck via le tramway Stubaitalbahn (STB) jusqu'à l'arrêt Mutters Nockhofweg (puis 600 m de descente à vélo). En été, une navette gratuite circule le week-end depuis le Tiroler Landestheater. En voiture, sortie Innsbruck-Süd sur l'A13. Le stationnement payant (10 € par jour) est remboursé sur présentation du forfait remontées mécaniques.\n\nConseils\nLa télécabine fonctionne de fin mai à fin octobre de 09h00 à 17h00, avec nocturnes jusqu'à 20h00 le mercredi en juillet et août. Le pass journée démarre à 44 € en ligne (57 € aux caisses). Le domaine fait partie du réseau européen Gravity Card. Magasin de location de VTT, école de pilotage et station de lavage gratuite pour vélos sont disponibles sur place.",
+  "preis": 44,
+  "dauer": "Halbtags bis Ganztags (3 bis 6 Stunden)",
   "tags": [
     "mountainbike",
     "bikepark",
-    "downhill",
+    "crankworx",
     "innsbruck",
-    "trail"
+    "downhill",
+    "flowtrail",
+    "abenteuer",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.2563",
     "lng": "11.4020"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.muttereralm.at/bikepark",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Muttereralm",
+    "https://www.patscherkofelbahn.at",
+    "https://www.gravity-card.com",
+    "https://www.innsbruck.info",
+    "https://www.crankworx.com"
+  ]
 }

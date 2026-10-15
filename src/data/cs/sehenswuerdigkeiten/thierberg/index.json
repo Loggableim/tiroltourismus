@@ -1,10 +1,10 @@
 {
-  "name": "Thierberg",
+  "name": "Ruine Thierberg & Aussichtswarte",
   "slug": "thierberg",
   "region": "kufstein",
   "ort": "Kufstein",
   "kategorie": "aussicht",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Historische Burgruine (721 m) aus dem 13. Jahrhundert – begehbarer Bergfried mit 360°-Inntalblick und seit 300 Jahren bewohnte Einsiedelei.",
   "emoji": "🌄",
   "farbe": "#8B0000",
   "tags": [
@@ -13,10 +13,10 @@
     "burgruine",
     "natur"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz Gasthof Neuhaus ca. 3–5 €)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.kufstein.com/de/thierberg/",
+  "webseite": "https://www.kufstein.com/de/kufstein/kultur-ausflugsziele/ruine-thierberg.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,14 @@
     "lng": "12.1692"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Thierberg</strong> – Die Thierberg bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Der Thierberg mit seiner Burgruine und dem Aussichtsturm bietet einen fantastischen Blick über Kufstein und das Inntal Der Aufstieg lohnt sich: Oben angekommen, werden Besucher mit einem atemberaubenden Rundblick belohnt, der von den sanften Almen im Tal bis zu den schroffen Gipfeln der umliegenden Bergketten reicht. Infotafeln erklären die markantesten Punkte am Horizont. Nur wenige Kilometer von Kufstein entfernt, wartet mit der Thierberg ein Stück unberührte Natur darauf, entdeckt zu werden. Die Lage bietet zudem einen herrlichen Panoramablick auf die umliegenden Bergketten. Ein Besuch der Thierberg lohnt sich zu jeder Jahreszeit und bleibt garantiert in bester Erinnerung.</p>"
+  "beschreibung": "<h2>Přehled</h2><p>Zřícenina hradu <strong>Ruine Thierberg</strong> (721 m) se tyčí na zalesněném kopci severně od Kufsteinu. Původní hrad ze 13. století nabízí zrekonstruovanou hradní věž sloužící jako volně přístupná 360stupňová rozhledna nad údolím řeky Inn a pohořím Kaisergebirge, a také poustevnu obývanou nepřetržitě již více než 300 let.</p><h2>Trasa a náročnost</h2><p>Příjemný lesní výstup začíná u hostince Gasthof Neuhaus a trvá cca 35 minut (1,5 km, 200 m převýšení, snadná T1, ideální pro rodiny). Na vrchol věže vede bezpečné dřevěné schodiště (80 schodů). Lze propojit s okruhem kolem jezer Pfrillsee a Hechtsee (2,5 hodiny, T1). Pohodlná turistická obuv doporučena. Psi na vodítku vítáni.</p><h2>Příjezd a doprava</h2><p>Vlakem do Kufsteinu a odtud místním busem na zastávku Zell/Neuhaus. Autem po dálnici A12 (sjezd Kufstein-Nord) na parkoviště u hostince Neuhaus. Zřícenina i rozhledna jsou volně přístupné.</p><h2>Tipy</h2><p>Nahlédněte do poutní kaple obývané poustevny s celoročně vystaveným historickým vyřezávaným betlémem s více než 100 figurkami a po sestupu si dopřejte tradiční pečeni v hostinci Neuhaus.</p>",
+  "saison": "Ganzjährig frei zugänglich",
+  "familie": true,
+  "sources": [
+    "https://www.burgen-austria.com/archive.php?id=1214",
+    "https://de.wikipedia.org/wiki/Thierberg",
+    "https://www.kufstein.com/",
+    "https://www.hechtsee.at/",
+    "https://www.vvt.at/"
+  ]
 }

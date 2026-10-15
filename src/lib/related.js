@@ -266,6 +266,8 @@ function pickRotated(candidates, collection, slug, take) {
     slug: c.slug,
     href: c.href,
     name: c.name,
+    ort: c.ort,
+    region: c.region,
     kurzbeschreibung: c.kurzbeschreibung,
     emoji: c.emoji,
     dist_km: c.dist_km,

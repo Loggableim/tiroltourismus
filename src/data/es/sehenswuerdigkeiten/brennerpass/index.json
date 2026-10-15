@@ -5,13 +5,13 @@
   "region": "innsbruck-land",
   "ort": "Brenner",
   "kategorie": "natur",
-  "kurzbeschreibung": "El paso alpino más bajo a 1.374 m – frontera histórica entre Austria e Italia con el Brennerbahn, la Brennerautobahn y un carril bici hacia Bozen.",
-  "beschreibung": "<p>El <strong>Paso del Brennero</strong> conecta a 1.374 metros de altitud el Tirol austriaco con el Tirol del Sur y es el paso alpino más importante entre Austria e Italia. Durante siglos, viajeros y comerciantes han utilizado este paso más bajo de los Alpes Centrales como conexión norte-sur. Tras el final de la Primera Guerra Mundial constituye la frontera estatal entre ambos países. Hoy por el paso discurren la Brennerautobahn y el histórico Brennerbahn, que conectan Innsbruck con Sterzing, Brixen y Bozen. El carril bici Brenner–Bozen sigue a lo largo de unos 96 kilómetros el antiguo trazado ferroviario por el Eisacktal. La vista se extiende lejos hacia el Wipptal y hacia los mundos montañosos circundantes. El paso es transitable todo el año, aunque en invierno deben tenerse en cuenta las condiciones meteorológicas y de la carretera.</p>",
+  "kurzbeschreibung": "A 1.370 m, el Brennerpass une Austria con Italia: hist?rico paso alpino romano, la l?nea ferroviaria de Carl von Etzel y eje vital del transporte europeo.",
+  "beschreibung": "<h2>Visi?n general</h2><p>El <strong>Brennerpass</strong> (en italiano <em>Passo del Brennero</em>) marca a 1.370 metros de altitud la frontera estatal entre el estado federado austriaco de Tirol y la provincia aut?noma de Bozen-S?dtirol en Italia. Enclavado entre los Alpes de Stubai y Zillertal, el Brennero es el collado topogr?ficamente m?s bajo de toda la cordillera principal de los Alpes Centrales. Durante milenios, este puerto constituy? la v?a de transporte m?s importante entre Centroeuropa y el Mediterr?neo, y sigue siendo hoy en d?a el corredor de tr?nsito m?s concurrido de los Alpes.</p><h2>Historia y transporte</h2><p>Ya en la Edad de Piedra y de Bronce cazadores y mercaderes transitaban por este collado. Hacia el a?o 200 d.C., el emperador romano <strong>Septimius Severus</strong> mand? transformar el camino en la calzada militar transitable <em>Via Raetia</em>, que comunicaba Verona con Augsburgo. En la Edad Media, integrada en la <em>Via Imperii</em>, la mayor?a de los reyes y emperadores alemanes cruzaron el Brennero rumbo a Roma para ser coronados. Entre 1772 y 1777, la emperatriz <strong>Maria Theresia</strong> mand? acondicionar el sendero de herradura como la primera carretera moderna de los Alpes orientales. Un hito de la ingenier?a mundial fue alcanzado en 1867 por el ingeniero <strong>Carl von Etzel</strong> al culminar la <em>Brennerbahn</em>, el primer ferrocarril transalpino continuo sin t?nel de cumbre. Tras la Primera Guerra Mundial, el Tratado de Saint-Germain de 1919 estableci? en el paso la frontera estatal. Entre 1959 y 1974 se construy? la autopista Brennerautobahn A13 con el colosal puente Europabr?cke. Con el t?nel de base de 55 kil?metros <em>Brenner Basistunnel (BBT)</em> se est? forjando el proyecto ferroviario del siglo para el transporte multimodal.</p><h2>Visita y c?mo llegar</h2><p>El puerto y los ejes viarios permanecen abiertos las 24 horas del d?a, los 7 d?as de la semana durante todo el a?o. La carretera nacional B182 (Brennerstra?e) en territorio austriaco es de tr?nsito totalmente <strong>gratuito (sin peaje)</strong>. En la autopista A13 del Brennero rige un peaje especial de ASFINAG (trayecto sencillo en turismo aprox. 11,50 a 12,00 ?). En el lado de Tirol del Sur enlaza con la autopista de peaje A22. Justo al lado de la estaci?n fronteriza se encuentra el centro comercial <em>Designer Outlet Brenner (DOB)</em> con m?s de 70 tiendas, abierto a diario de 09:00 a 19:00 horas. En tren: el cercan?as S-Bahn Tirol (l?nea S3) opera cada media hora desde Innsbruck Hauptbahnhof directo a la estaci?n fronteriza de Brenner (tiempo de viaje unos 35 minutos); tambi?n efect?an parada trenes internacionales Eurocity. En coche se llega por la A13 (salida Brennersee) o por la panor?mica B182.</p><h2>Consejos</h2><p>La estaci?n modernizada de Brenner y el centro comercial Designer Outlet disponen de total accesibilidad con accesos a cota cero, amplios pasillos y ascensores adaptados. Justo en el puerto comienza la popular ruta ciclista <em>Eisacktal-Radweg</em>, que permite descender sobre una antigua v?a de tren a lo largo de 96 kil?metros en suave pendiente por Sterzing y Brixen hasta Bozen. No se pierda en el puerto la iglesia de <em>Maria am Wege</em>, construida en 1962 y con una simb?lica arquitectura fronteriza.</p>",
   "emoji": "🏔️",
   "farbe": "#78909C",
   "hoehe": "1.374 m",
   "dauer": "2–3 Stunden",
-  "preis": "Kostenlos (Passstraße mautfrei)",
+  "preis": "Passhöhe und B182 kostenlos (A13 Sondermaut ca. 12,00 €)",
   "tags": [
     "naturaleza",
     "historia",
@@ -20,10 +20,17 @@
     "ciclismo",
     "Valle del Wipptal"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.brennerpass.at",
+  "oeffnungszeiten": "Ganzjährig rund um die Uhr frei befahrbar",
+  "webseite": "https://www.wipptal.at",
   "koordinaten": {
     "lat": "47.0044",
     "lng": "11.5075"
-  }
+  },
+  "sources": [
+    "https://www.bbt-se.com",
+    "https://www.outletcenterbrenner.com",
+    "https://www.asfinag.at",
+    "https://www.wipptal.at",
+    "https://de.wikipedia.org/wiki/Brennerpass"
+  ]
 }

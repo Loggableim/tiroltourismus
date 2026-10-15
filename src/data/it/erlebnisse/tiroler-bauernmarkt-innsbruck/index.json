@@ -6,9 +6,10 @@
   "kategorie": "kulinarik",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Ogni sabato la Piazza del Mercato di Innsbruck si trasforma in un paradiso per i buongustai. I contadini e i produttori regionali offrono i loro tesori: Bergkäse speziato, Speck affumicato, pane fresco, miele e marmellate fatte in casa. Durante un tour guidato di degustazione, si ha modo di conoscere le storie dietro ai prodotti.",
+  "beschreibung": "### Panoramica\nIl mercato coperto Markthalle di Innsbruck, sullo Herzog-Siegmund-Ufer lungo il fiume Inn, è la vetrina gastronomica del Tirolo. Dal lunedì al sabato contadini, caseifici e piccole aziende familiari delle valli del Tirolo settentrionale e orientale portano le loro specialità artigianali direttamente nel capoluogo. Al mercato contadino si respira il profumo di pane appena sfornato, speck affumicato, formaggio alpino speziato e prodotti alle erbe, sullo sfondo del Nordkette.\n\n### Percorso e requisiti\nUna visita guidata del mercato con degustazione attraversa i padiglioni e i banchi esterni. Accompagnati da una guida gastronomica, i partecipanti scoprono storie e metodi di produzione dei prodotti regionali. Presso banchi selezionati si tengono degustazioni, ad esempio di Graukäse tirolese, formaggio di montagna stagionato, salsicce saporite, succo di mela torbido o grappa al pino cembro. Il percorso è completamente pianeggiante e in gran parte indipendente dal meteo; è facilmente accessibile a passeggini e carrozzine. Non sono richieste particolari doti atletiche. I cani ben educati sono ammessi al guinzaglio presso i banchi esterni, non all'interno del padiglione per motivi igienici.\n\n### Come arrivare\nIl mercato si trova in posizione centrale nel centro storico di Innsbruck, direttamente sulla passeggiata lungo l'Inn. Dalla stazione centrale di Innsbruck si raggiunge in circa dieci minuti a piedi attraverso Maria-Theresien-Straße o comodamente con le linee tranviarie e di autobus IVB. Gli automobilisti trovano parcheggi a pagamento nei garage intorno al centro; si consiglia l'arrivo con i mezzi pubblici.\n\n### Consigli\nArrivate con un leggero appetito, le porzioni di degustazione sono generose. Una borsa termica riutilizzabile o uno zaino aiutano a portare a casa fresche prelibatezze come burro alpino, miele di fattoria e speck. Dopo la visita merita una breve deviazione oltre il ponte sull'Inn verso il quartiere Mariahilf con le sue facciate colorate.",
   "preis": 35,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "gastronomia",
     "mercato",
@@ -16,12 +17,17 @@
     "innsbruck",
     "degustazione"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.markthalle-innsbruck.at/",
+    "https://www.tirol.at/aktivitaeten/kulinarik/bauernmaerkte",
+    "https://www.innsbruck.gv.at/",
+    "https://www.ivb.at/"
+  ]
 }

@@ -1,5 +1,9 @@
 /sitemap.xml /sitemap-index.xml 301
 
+# ── Ehemalige Demo-Startseite → Subdomain-Root (301; die echte Frontseite ist jetzt /) ──
+/demofrontneu / 301
+/demofrontneu/* / 301
+
 # ── Sprach-Prefixe → Subdomains ──
 /en/* https://en.tiroltourismus.com/:splat 301
 /fr/* https://fr.tiroltourismus.com/:splat 301

@@ -1,27 +1,34 @@
 {
-  "name": "Eisklettern im Kaunertal",
   "slug": "eisklettern-kaunertal",
   "emoji": "🧊",
   "farbe": "var(--light-blue)",
   "kategorie": "winter",
   "ort": "Kaunertal",
   "region": "kaunertal",
-  "beschreibung": "Der gefrorene Wasserfall im Kaunertal ist ein Hotspot für Eiskletterer. Unter Anleitung eines staatlich geprüften Bergführers schwingen Sie die Eispickel und steigen die glitzernde Eiswand empor. Einsteigerkurse vermitteln die grundlegende Technik – das Gefühl, den Gipfel des Wasserfalls zu erreichen, ist unbeschreiblich.",
-  "preis": 139,
+  "koordinaten": {
+    "lat": "46.9917",
+    "lng": "10.6239"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Escalade sur glace dans le Kaunertal",
+  "beschreibung": "### Aperçu\nLa vallée du Kaunertal, dans l'Oberland tyrolien, est réputée auprès des cascadeurs de glace comme l'un des domaines les plus sûrs et variés des Alpes orientales. Du site d'entraînement éclairé en fond de vallée aux cascades monumentales de plus de 200 mètres figées dans les combes d'altitude, la vallée compte plus de 20 voies glaciaires et mixtes répertoriées. Le point de ralliement des grimpeurs est le parc de glace Mühlbachfall à Feichten, à l'entrée des gorges de la Verpeilschlucht : arrosée et sécurisée par le secours en montagne local, cette cascade de 35 mètres propose des voies de cotation WI 3 à WI 6+, illuminées tous les soirs jusqu'à 22h30. Pour les alpinistes chevronnés, les cascades d'Anton-Renk, perchées à plus de 2 000 mètres d'altitude, forment un bouclier de glace mythique avec des lignes de renommée mondiale comme la « Klassischer Renkfall » (WI 4+) ou « The Wind Corner » (WI 6).\n\n### Itinéraire & Exigences\nLes secteurs s'adressent à deux niveaux d'expérience :\n1. Parc de glace Mühlbachfall (Feichten) : approche de cinq minutes depuis le centre Quellalpin. Idéal pour les cours d'initiation en moulinette, la pose de broches à glace et l'escalade nocturne.\n2. Cascades d'Anton-Renk (Ried/Fendels) : marche d'approche alpine d'environ deux heures (800 m de dénivelé) depuis la barrière de Stalanzer Alm, recommandée en skis de randonnée ou en raquettes. La descente s'effectue exclusivement en rappel sur lunules de glace (Abalakov), la descente à pied le long des pentes étant très exposée aux avalanches.\nL'activité requiert une excellente condition physique, de la résistance au froid et une parfaite aisance en montagne. Les stages d'initiation sont ouverts aux adolescents sportifs dès 14 ans. Le milieu est totalement inadapté aux jeunes enfants et aux chiens en raison des chutes de glaçons.\n\n### Accès\nEn voiture, emprunter l'autoroute A12 Inntal jusqu'à Landeck/Prutz puis la route départementale L18 jusqu'à Feichten. Un parking gratuit est situé au centre de loisirs Quellalpin. Plus haut dans la vallée commence la route panoramique à péage du Kaunertal menant au glacier du Weißseeferner à 2 750 mètres (péage inclus dans les forfaits de ski). En transports en commun, train jusqu'à Landeck-Zams puis bus de ligne 230, gratuit dans la vallée pour les détenteurs de la carte d'hôte.\n\n### Conseils\nLes cours encadrés par les guides de haute montagne du Kaunertal débutent autour de 95 € par personne (matériel technique fourni : crampons, piolets traction, baudrier et casque). Des chaussures d'alpinisme rigides à débords (catégorie D) et des vêtements d'hiver chauds sont indispensables. Les meilleures conditions de glace s'étendent de janvier à la mi-mars. Consigne vitale de sécurité alpine : consulter impérativement le bulletin d'avalanche du Tyrol (lawine.tirol) avant tout départ. Les approches traversant des couloirs d'avalanche, le port d'un casque et le triptyque DVA-pelle-sonde sont rigoureusement obligatoires.",
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertal.com/en/Your-Kaunertal/In-Winter/Ice-Climbing",
+    "https://www.kaunertaler-bergfuehrer.com",
+    "https://www.kaunertaler-gletscher.at/kaunertaler-gletscherstrasse.html",
+    "https://lawine.tirol"
+  ],
+  "bilder": [],
   "dauer": "5 Stunden",
+  "link": "#",
+  "preis": 139,
   "tags": [
     "escaladeglace",
     "hiver",
     "kaunertal",
     "sportdemontagne",
     "adrénaline"
-  ],
-  "koordinaten": {
-    "lat": "46.9917",
-    "lng": "10.6239"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

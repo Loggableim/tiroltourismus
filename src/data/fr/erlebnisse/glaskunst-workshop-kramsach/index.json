@@ -6,7 +6,7 @@
   "kategorie": "kultur",
   "ort": "Kramsach",
   "region": "alpbach",
-  "beschreibung": "In der Glashütte Kramsach, einer der ältesten Glasmanufakturen Tirols, dürfen Sie selbst zum Glasbläser werden. Unter Anleitung eines Meisters erschaffen Sie Ihr eigenes Unikat: eine bunte Vase, filigrane Christbaumkugel oder einen Trinkbecher. Ein Feuererlebnis der besonderen Art, das uraltes Handwerk lebendig macht.",
+  "beschreibung": "<p>La région de Kramsach et la cité médiévale voisine de Rattenberg forment le cœur de l'art du verre en Autriche, avec la prestigieuse <strong>école du verre HTL Kramsach</strong> et les ateliers vivants de Rattenberg.</p><p>L'atelier le plus populaire est le <strong>soufflage de verre pour visiteurs chez Kisslinger Kristall-Glas</strong> : chacun peut souffler sa propre boule décorative au four à 1 400 °C (5 min de pratique, env. <strong>18 €</strong>, de mai à octobre les lundis et vendredis après-midi). Les maîtres graveurs et polisseurs de <em>Glas Schwarz</em> et <em>Schlenz</em> proposent des démonstrations et des gravures personnalisées sur place. Entrée libre dans les ateliers de démonstration.</p><p>Rattenberg est piétonne (parkings payants P1 à P5 autour de la ville). Gare ÖBB de Rattenberg-Kramsach à 5 minutes à pied. Adapté aux enfants dès 3 ans avec aide.</p>",
   "preis": 89,
   "dauer": "2,5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.glas-schwarz.at",
+    "https://www.kisslinger-kristall.com",
+    "https://www.htl-kramsach.ac.at",
+    "https://www.alpbachtal.at/",
+    "https://www.kramsach.at/"
+  ]
 }

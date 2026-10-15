@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Matrei in Osttirol",
   "kategorie": "natur",
-  "kurzbeschreibung": "奥地利最大的国家公园，拥有冰川、瀑布以及独特的高山动植物世界。 *(Note: Since the original text lacks specific place names, I kept it generic. If you provide the full text with names like \"Tirol\" or \"Innsbruck,\" I’ll include them in German as requested.)*",
-  "beschreibung": "<p>Der <strong>Nationalpark Hohe Tauern</strong> umfasst ein Teilgebiet in der Gemeinde Matrei in Osttirol. Die Landschaft ist hochalpin geprägt und weist Gletscher, Wasserfälle sowie Almflächen auf. In Matrei befindet sich das <strong>Nationalparkhaus</strong>, das als Ausgangspunkt für Erkundungen dient und Ausstellungen bietet. Von dort führen markierte Wanderwege in verschiedene Höhenlagen. Typische Aktivitäten sind Naturbeobachtungen und geführte Touren. Die Region beherbergt unter anderem Steinböcke, Murmeltiere und Adler. Die Felbertauernstraße ermöglicht die Anreise mit dem Fahrzeug.</p>",
+  "kurzbeschreibung": "高地陶恩国家公园（Nationalpark Hohe Tauern）是阿尔卑斯山脉最大的自然保护区，在东蒂罗尔汇聚了大格洛克纳峰等万年冰川、险峻峡谷与丰饶的高山野生动植物。",
+  "beschreibung": "<h2>Überblick</h2>\n<p><strong>高地陶恩国家公园</strong>（Nationalpark Hohe Tauern）占地超过1800平方公里，是中欧最大的自然保护区，亦是奥地利阿尔卑斯山璀璨夺目的皇冠明珠。国家公园东蒂罗尔区域囊括了欧洲最为波澜壮阔的高山画卷：海拔3798米的大格洛克纳峰（Großglockner）作为奥地利最高峰巍然称雄，与海拔3657米的“古老陛下”大威悉峰（Großvenediger）交相辉映。咆哮奔腾的冰川溪流、原始落叶松林、飞珠溅玉的瀑布以及维尔根谷（Virgental）等幽深开阔的高山谷地，构筑了这片纯粹的原生荒野殿堂。这里栖息着包括阿尔卑斯羱羊、岩羚羊、土拨鼠及珍稀胡兀鹫在内的逾万种高山野生动物。</p>\n<h2>Route & Anforderungen</h2>\n<p>国家公园内的户外探索丰富多元，从老少咸宜的高山自然科普步道，到享誉全球的格洛克纳与威悉长途高山多日徒步路线应有尽有。深受悠闲漫步者喜爱的经典胜地包括维尔根谷内的乌姆巴尔瀑布群（Umbalfälle）——这里建有欧洲首条水主题观景科普步道，以及卡尔斯（Kals）附近大伯尔峡谷（Daberklamm）。谷底徒步仅需基础体能与舒适登山鞋，而挑战冰川高峰则必须具备深厚的高山探险经验、冰爪结绳操作技巧，或在国家注册高山向导的带领下进行。遍布山野的阿尔卑斯俱乐部木屋网络为登山者提供了坚实的避风补给港湾。</p>\n<h2>Besuch & Anreise</h2>\n<p>东蒂罗尔一侧的主要门户城镇为马特赖（Matrei in Osttirol）、大格洛克纳山麓卡尔斯（Kals）和普雷格拉滕（Prägraten）。游客可取道费尔伯陶恩高山公路或从利恩茨乘坐汽车与区域巴士便捷抵达。盛夏期间，专线登山巴士直接连通常规公交无法企及的偏远徒步起点。位于马特赖的国家公园中心（Nationalparkhaus）设有先进的互动展厅，全面展示冰川奥秘与高山生态。</p>\n<h2>Tipps</h2>\n<p>强烈建议参加由专业护林巡警（Ranger）带队的野外科考徒步，借助高倍单筒望远镜探寻胡兀鹫与羱羊的行踪。此外，位于卡尔斯上方的Glocknerblick观景台是不容错过的经典打卡点，在此可将大格洛克纳峰连绵雄伟的覆雪冰川全景尽收眼底。</p>",
   "emoji": "🌲",
   "farbe": "#2E7D32",
   "hoehe": "2.000–3.798 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Parkeintritt); Führungen ab 15 €",
+  "dauer": "半天至数日",
+  "preis": "免费开放（部分观光收费公路及游客中心需收费）",
   "tags": [
     "nationalpark",
     "natur",
@@ -20,12 +20,19 @@
     "tierschutz",
     "wasserfall"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich; Besucherzentrum: täglich 9:00–18:00",
+  "oeffnungszeiten": "全年开放；建议6月至10月进行高山探险",
   "webseite": "https://www.hohetauern.at",
   "koordinaten": {
     "lat": "47.0667",
     "lng": "12.4167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern",
+    "https://www.nationalpark-hohetauern.at/",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner"
+  ]
 }

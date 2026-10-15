@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Matrei in Osttirol",
   "kategorie": "natur",
-  "kurzbeschreibung": "Le plus grand parc national d’Autriche avec des glaciers, des chutes d’eau et une faune et une flore alpines uniques.",
-  "beschreibung": "<p>Der <strong>Nationalpark Hohe Tauern</strong> umfasst ein Teilgebiet in der Gemeinde Matrei in Osttirol. Die Landschaft ist hochalpin geprägt und weist Gletscher, Wasserfälle sowie Almflächen auf. In Matrei befindet sich das <strong>Nationalparkhaus</strong>, das als Ausgangspunkt für Erkundungen dient und Ausstellungen bietet. Von dort führen markierte Wanderwege in verschiedene Höhenlagen. Typische Aktivitäten sind Naturbeobachtungen und geführte Touren. Die Region beherbergt unter anderem Steinböcke, Murmeltiere und Adler. Die Felbertauernstraße ermöglicht die Anreise mit dem Fahrzeug.</p>",
+  "kurzbeschreibung": "Plus vaste réserve naturelle des Alpes, le Parc national des Hohe Tauern fascine en Osttirol par ses glaciers éternels, ses vallées sauvages et ses géants comme le Großglockner.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le <strong>Parc national des Hohe Tauern</strong> s'étend sur plus de 1 800 kilomètres carrés, ce qui en fait le plus vaste espace naturel protégé d'Europe centrale et le sanctuaire emblématique des Alpes autrichiennes. La partie située en Osttirol abrite les paysages de haute montagne les plus grandioses du pays : c'est ici que culmine le Großglockner, plus haut sommet d'Autriche avec ses 3 798 mètres, aux côtés de la majestueuse silhouette englacée du Großvenediger (3 657 m). Torrents impétueux, cascades vrombissantes, forêts préservées et hautes vallées lumineuses comme le Virgental forment un écrin d'une pureté exceptionnelle, abritant plus de 10 000 espèces animales dont le bouquetin des Alpes, la marmotte et le gypaète barbu.</p>\n<h2>Route & Anforderungen</h2>\n<p>Le parc national propose un éventail d'itinéraires exceptionnel, des sentiers thématiques accessibles à tous jusqu'aux traversées glaciaires de haute volée telles que le trek du Glockner ou du Venediger. Parmi les excursions familiales incontournables figurent les cascades de l'Umbal dans le Virgental, dotées du premier sentier d'observation aquatique d'Europe, ainsi que les gorges spectaculaires de la Daberklamm à Kals. Alors que les randonnées de vallée ne requièrent qu'une forme physique normale, les ascensions glaciaires réclament une grande expérience alpine, la maîtrise des techniques de cordée et de cramponnage, ou l'accompagnement d'un guide de haute montagne diplômé.</p>\n<h2>Besuch & Anreise</h2>\n<p>Les principales portes d'entrée en Osttirol sont Matrei in Osttirol, Kals am Großglockner et Prägraten am Großvenediger. On accède facilement à la région par la route panoramique du Felbertauern ou depuis Lienz en voiture et en autocar régional. En été, des navettes pour randonneurs desservent les points de départ des sentiers les plus reculés. La Maison du parc national à Matrei propose des expositions interactives captivantes sur la faune et la glaciologie.</p>\n<h2>Tipps</h2>\n<p>Participer à une excursion guidée avec un garde-moniteur du parc national est une expérience inoubliable pour observer les gypaètes barbus et les aigles royaux à la longue-vue. Ne manquez pas non plus la plateforme panoramique du Glocknerblick au-dessus de Kals, offrant un face-à-face saisissant avec les glaces étincelantes du Großglockner.</p>",
   "emoji": "🌲",
   "farbe": "#2E7D32",
   "hoehe": "2.000–3.798 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Parkeintritt); Führungen ab 15 €",
+  "dauer": "De la demi-journée à plusieurs jours",
+  "preis": "Accès libre et gratuit (centres d'accueil et routes panoramiques à péage payants)",
   "tags": [
     "parc national",
     "nature",
@@ -20,12 +20,19 @@
     "protection des animaux",
     "chute d'eau"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich; Besucherzentrum: täglich 9:00–18:00",
+  "oeffnungszeiten": "Accessible toute l'année; haute montagne recommandée de juin à octobre",
   "webseite": "https://www.hohetauern.at",
   "koordinaten": {
     "lat": "47.0667",
     "lng": "12.4167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern",
+    "https://www.nationalpark-hohetauern.at/",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner"
+  ]
 }

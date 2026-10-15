@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Lienz",
   "kategorie": "natur",
-  "kurzbeschreibung": "Caratteristica catena montuosa delle Dolomiten in Osttirol – un paradiso per escursionisti, arrampicatori e amanti della natura.",
-  "beschreibung": "<p>Die <strong>Lienzer Dolomiten</strong> sind ein Gebirgsstock in Osttirol, der sich südlich der Bezirkshauptstadt <strong>Lienz</strong> erhebt. Sie bilden den südlichen Abschluss des Lienzer Beckens und gehören geologisch zu den Gailtaler Alpen. Das Gebiet ist durch schroffe Felsformationen und tief eingeschnittene Täler geprägt, was es für <strong>Wanderer</strong> und <strong>Kletterer</strong> attraktiv macht. Markierte Routen wie der <strong>Dolomitensteig</strong> führen zu Aussichtspunkten wie der <strong>Laserz Alm</strong>. Geologisch bestehen die Gipfel vorwiegend aus <strong>dolomitischem Kalkstein</strong>. Besucher können im Sommer Wandertouren und im Winter Schneeschuhwanderungen unternehmen. Die Ausblicke von den Höhenzügen reichen über das Drautal bis zu den <strong>Hohen Tauern</strong>.</p>",
+  "kurzbeschreibung": "Le maestose guglie calcaree delle Lienzer Dolomiten dominano la conca di Lienz, costituendo un paradiso alpino straordinario per escursionisti, alpinisti e arrampicatori.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le <strong>Lienzer Dolomiten</strong> si innalzano a sud della soleggiata conca valliva di Lienz e rappresentano uno dei gruppi montuosi più affascinanti dell'Osttirol. Dal punto di vista geologico appartengono alle Alpi della Gail, ma le loro ardite torri calcaree e le pareti scoscese ricordano da vicino le celebri Dolomiti altoatesine. La vetta principale è la Große Sandspitze a 2.770 metri di quota, contornata da leggendarie cime quali la Laserzwand e lo Spitzkofel. Considerate la culla dell'arrampicata sportiva e classica nell'Osttirol, le Dolomiti di Lienz conquistano i visitatori con paesaggi incontaminati, limpidi laghetti glaciali e accoglienti rifugi alpini.</p>\n<h2>Route & Anforderungen</h2>\n<p>La rete di sentieri delle Lienzer Dolomiten offre opzioni per tutti i livelli, dalle piacevoli passeggiate panoramiche per famiglie alle vie ferrate tecniche e alle vie di arrampicata su più tiri. Uno dei punti di partenza più gettonati è la scenografica Dolomitenhütte, arroccata su uno sperone roccioso a 1.618 metri. Da qui un comodo sentiero escursionistico conduce in circa due ore al rifugio Karlsbader Hütte e all'incantevole lago Laserzsee a 2.260 metri. Mentre i percorsi di fondovalle richiedono calzature da trekking adeguate, le vette e le ferrate presuppongono passo sicuro, assenza di vertigini e set da ferrata completo con casco.</p>\n<h2>Besuch & Anreise</h2>\n<p>Si arriva facilmente passando dalla città di Lienz in Osttirol. Dalle località di Amlach o Tristach una strada panoramica a pedaggio sale fino al parcheggio della Dolomitenhütte. Durante i mesi estivi è attivo un comodo servizio di autobus navetta per escursionisti dalla stazione ferroviaria di Lienz. I rifugi alpini, tra cui la Dolomitenhütte e la Karlsbader Hütte, sono aperti da inizio giugno a metà ottobre e offrono servizio di pernottamento e saporiti piatti tipici tirolesi.</p>\n<h2>Tipps</h2>\n<p>Una sosta sulla terrazza della Karlsbader Hütte è d'obbligo per ammirare il riflesso delle imponenti pareti rocciose della Laserzwand nelle acque smeraldine del Laserzsee. Gli amanti del climbing troveranno falesie attrezzate a regola d'arte nelle immediate vicinanze del rifugio. Al mattino presto, la terrazza della Dolomitenhütte offre uno spettacolo naturale indimenticabile quando la prima luce tinge le vette di sfumature rosate.</p>",
   "emoji": "⛰️",
   "farbe": "#607D8B",
   "hoehe": "2.770 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Giornata intera (4-7 ore)",
+  "preis": "Accesso libero (strada a pedaggio per la Dolomitenhütte a pagamento)",
   "tags": [
     "trekking",
     "arrampicata",
@@ -19,12 +19,19 @@
     "alpinismo",
     "panorama"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Accessibile tutto l'anno; escursioni consigliate da giugno a ottobre",
   "webseite": "https://www.osttirol.com/lienzer-dolomiten",
   "koordinaten": {
     "lat": "46.7833",
     "lng": "12.8167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Lienzer_Dolomiten",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Lienz",
+    "https://www.alpenverein.at/"
+  ]
 }

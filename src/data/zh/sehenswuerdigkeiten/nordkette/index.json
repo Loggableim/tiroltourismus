@@ -4,19 +4,19 @@
   "region": "innsbruck",
   "ort": "Innsbruck",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "因斯布鲁克的家山 —— 乘坐Hungerburgbahn 仅需 20 分钟，从老城区直达 2,256 米 的高度。",
-  "beschreibung": "<p>Die Nordkette ist ein Gebirgszug im Karwendel, der sich nördlich von Innsbruck erstreckt. Dieser Teil der Alpen ist über die <strong>Hungerburgbahn</strong> erreichbar, die vom Stadtzentrum zur Hungerburg fährt. Von dort führen die <strong>Seegrubenbahn</strong> und die <strong>Hafelekarbahn</strong> auf die Höhen der Nordkette. Auf der Seegrube (rund 1900 Meter) und am Hafelekar (rund 2300 Meter) bieten sich Ausblicke auf die Stadt, das Inntal und die umliegenden Berge. Die Besucher erwarten mehrere Bergrestaurants und Gastronomiebetriebe, die während der Saison bewirtschaftet sind. Das Gebiet umfasst Wanderwege unterschiedlicher Schwierigkeitsgrade sowie im Winter Skimöglichkeiten. Ein besonderes Merkmal ist der Höhenunterschied von der Talstation bis zur Bergstation, der zu den größten in den Ostalpen zählt.</p>",
+  "kurzbeschreibung": "北链山（Nordkette）巍峨耸立在因斯布鲁克城市上方，搭乘全景索道即可登临哈费莱卡尔峰（Hafelekar），领略都会繁华与卡尔文德尔荒原交融的壮丽奇景。",
+  "beschreibung": "<h2>Überblick</h2>\n<p><strong>北链山</strong>（Nordkette，亦称因河谷山脉）是卡尔文德尔山脉的最南侧支脉，构成了因斯布鲁克市区北面享誉全球的壮丽天然岩壁巨幕。在全阿尔卑斯山地区，没有任何地方能像这里一样，将时尚繁华的城市文化与纯粹原始的高山荒原融合得如此天衣无缝：从市中心的帝国古迹出发，搭乘由传奇建筑大师扎哈·哈迪德设计的未来主义风格混合地面缆车站与高空索道，仅需短短二十分钟即可一跃登上被誉为“因斯布鲁克之巅”（Top of Innsbruck）的海拔2334米哈费莱卡尔峰（Hafelekar）。伫立于嶙峋的刃脊之上，南面俯瞰繁华铺展的因河谷都会全景，北面则将卡尔文德尔国家自然公园浩瀚无垠的灰岩峰海一览无余。</p>\n<h2>Route & Anforderungen</h2>\n<p>北链山拥有多元化的山地休闲体验。悠闲漫步者与亲子家庭可漫步于海拔1905米泽格鲁贝（Seegrube）的无障碍观景步道，或由哈费莱卡尔缆车上站沿着铺设规整的步道仅需15分钟即可登上峰顶十字架。对于资深阿尔卑斯铁索攀登者而言，著名的因斯布鲁克铁索攀登径（Innsbrucker Klettersteig）堪称巅峰打卡地，步道穿行于陡峭刃脊与奇岩悬壁之间，直达希特夫人山口（Frau-Hitt-Sattel），必须具备稳健步伐、无恐高心理以及佩戴攀登头盔的全套安全装备。到了冬季，泽格鲁贝盆地更蜕变为全球野雪自由滑雪爱好者向往的殿堂级极限粉雪沟槽。</p>\n<h2>Besuch & Anreise</h2>\n<p>登顶之旅始于因斯布鲁克市中心的国会大厦（Congress）缆车站。极富流线美感的Hungerburg缆车横跨因河、途经阿尔卑斯动物园直抵亨格堡（Hungerburg），在此可无缝换乘大容量全景高空索道通往Seegrube及Hafelekar。游客亦可自驾或搭乘市区J路公交车抵达Hungerburg中转站。缆车山谷站设有专属停车楼，购票乘索道可享停车费减免优惠。</p>\n<h2>Tipps</h2>\n<p>推荐在Seegrube高山全景餐厅露台上品尝传统蒂罗尔佳肴，近距离仰望滑翔伞与滑翔机在绝壁气流中翩然起舞。若选择黄昏时分登顶，极目俯瞰因斯布鲁克整座城市渐次点亮、化作万家灯火璀璨银河的盛景，将是一生难忘的浪漫体验。</p>",
   "emoji": "🏔️",
   "farbe": "#0051BA",
   "hoehe": "2.256 m",
-  "dauer": "Halbtag",
-  "preis": "39 € (Bergbahn)",
+  "dauer": "2-5小时",
+  "preis": "步道免费开放（北链山索道需另行购票）",
   "tags": [
     "aussicht",
     "wandern",
     "natur"
   ],
-  "oeffnungszeiten": "Täglich 8:00–19:00",
+  "oeffnungszeiten": "步道全年开放；缆车每天运行（春季/秋季有短期例行检修）",
   "webseite": "https://www.nordkette.com",
   "bilder": [],
   "hero_bild": null,
@@ -24,5 +24,12 @@
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.nordkette.com/",
+    "https://de.wikipedia.org/wiki/Hafelekarspitze",
+    "https://de.wikipedia.org/wiki/Inntalkette",
+    "https://www.innsbruck.gv.at/",
+    "https://www.tirol.at/"
+  ]
 }

@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Matrei in Osttirol",
   "kategorie": "natur",
-  "kurzbeschreibung": "The largest national park in Austria, featuring glaciers, waterfalls, and a unique alpine world of wildlife and flora. Hohe Tauern Nationalpark in Tirol and Kärnten offers breathtaking landscapes and rare ecosystems.",
-  "beschreibung": null,
+  "kurzbeschreibung": "Covering the highest peaks in Austria, Hohe Tauern National Park is the largest nature reserve in the Alps, captivating visitors with colossal glaciers, deep gorges, and primeval wildlife.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>The <strong>Hohe Tauern National Park</strong> encompasses over 1,800 square kilometres, making it the largest nature reserve in Central Europe and the crown jewel of the Austrian Alps. The East Tyrolean sector of this protected wonderland encompasses some of Europe's most monumental alpine terrain: crowned by the 3,798-metre Großglockner—Austria's highest peak—and the ice-cloaked Großvenediger (3,657 m). Roaring glacial torrents, pristine larch forests, dramatic waterfalls, and sweeping alpine valleys such as the Virgental and Kalser Tal define this untouched wilderness sanctuary. More than 10,000 animal species thrive here, including alpine ibex, chamois, golden eagles, and the majestic bearded vulture.</p>\n<h2>Route & Anforderungen</h2>\n<p>Adventures in Hohe Tauern range from accessible nature trails suitable for families to world-renowned long-distance treks such as the Glockner and Venediger high-altitude trails. Premier highlights for leisurely day hikers include the Umbal Waterfalls in Virgental—home to Europe's first themed water educational path—and the romantic Dorfertal valley in Kals featuring the impressive Daberklamm gorge. While lower valley walks require only moderate physical stamina and comfortable footwear, ascending glaciated giants demands extensive high-altitude experience, crampon and rope skills, or the guidance of a licensed mountain guide. An extensive network of alpine huts provides safe shelters across the high ranges.</p>\n<h2>Besuch & Anreise</h2>\n<p>Key gateways to the National Park in East Tirol are Matrei in Osttirol, Kals am Großglockner, Prägraten am Großvenediger, and the Defereggen Valley. The region is easily accessible via the Felbertauern highway or from Lienz by car and regional public bus connections. During summer, dedicated hikers' shuttle buses transport visitors to remote trailheads. Comprehensive visitor centres, notably the Nationalparkhaus in Matrei, provide interactive exhibits showcasing the park's ecosystems.</p>\n<h2>Tipps</h2>\n<p>Joining a ranger-led wildlife safari is highly recommended; certified park rangers possess unmatched knowledge for spotting bearded vultures and ibex in their natural habitats. For an iconic viewpoint, visit the Glocknerblick platform above Kals, which frames an unforgettable vista of the glistening glaciers of the Großglockner.</p>",
   "emoji": "🌲",
   "farbe": "#2E7D32",
   "hoehe": "2.000–3.798 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Parkeintritt); Führungen ab 15 €",
+  "dauer": "Half-day to multi-day",
+  "preis": "Free access (certain scenic toll roads and visitor centres charge fees)",
   "tags": [
     "national park",
     "nature",
@@ -20,12 +20,19 @@
     "wildlife conservation",
     "waterfall"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich; Besucherzentrum: täglich 9:00–18:00",
+  "oeffnungszeiten": "Accessible year-round; high alpine trekking recommended June to October",
   "webseite": "https://www.hohetauern.at",
   "koordinaten": {
     "lat": "47.0667",
     "lng": "12.4167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern",
+    "https://www.nationalpark-hohetauern.at/",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner"
+  ]
 }

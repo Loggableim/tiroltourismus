@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Matrei in Osttirol",
   "kategorie": "natur",
-  "kurzbeschreibung": "Il più grande parco nazionale dell'Austria, con ghiacciai, cascate e una fauna e flora alpine uniche.\n\n---\n*(HTML tags, place names, and culinary terms remain unchanged as per instructions.)*",
-  "beschreibung": "<p>Der <strong>Nationalpark Hohe Tauern</strong> umfasst ein Teilgebiet in der Gemeinde Matrei in Osttirol. Die Landschaft ist hochalpin geprägt und weist Gletscher, Wasserfälle sowie Almflächen auf. In Matrei befindet sich das <strong>Nationalparkhaus</strong>, das als Ausgangspunkt für Erkundungen dient und Ausstellungen bietet. Von dort führen markierte Wanderwege in verschiedene Höhenlagen. Typische Aktivitäten sind Naturbeobachtungen und geführte Touren. Die Region beherbergt unter anderem Steinböcke, Murmeltiere und Adler. Die Felbertauernstraße ermöglicht die Anreise mit dem Fahrzeug.</p>",
+  "kurzbeschreibung": "Il Parco Nazionale Alti Tauri è la più vasta area protetta delle Alpi e incanta nell'Osttirol con vette maestose come il Großglockner, torrenti impetuosi e una ricca fauna alpina.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Il <strong>Parco Nazionale Alti Tauri</strong> (Hohe Tauern) copre oltre 1.800 chilometri quadrati, rappresentando la riserva naturale protetta più estesa dell'Europa centrale e il cuore pulsante delle Alpi austriache. La porzione tirolese del parco racchiude alcuni degli scenari montani più maestosi del continente: qui svetta il Großglockner, che con i suoi 3.798 metri è la montagna più elevata dell'Austria, affiancato dall'imponente mole candida del Großvenediger (3.657 m). Cascate roboanti, torrenti glaciali spumeggianti, antiche foreste di larici e valli incontaminate come la Virgental e la Kalser Tal definiscono questo santuario alpino. Più di 10.000 specie animali, tra cui stambecchi, camosci, marmotte e il raro gipeto, vivono libere in questi territori protetti.</p>\n<h2>Route & Anforderungen</h2>\n<p>Le opportunità escursionistiche spaziano dai facili percorsi didattici adatti a famiglie con bambini fino ai celebri trekking di più giorni lungo le alte vie del Venediger e del Glockner. Mete imperdibili per gli amanti della natura sono le spettacolari cascate dell'Umbal nella Virgental, lungo le quali si snoda il primo percorso didattico sull'acqua d'Europa, e la suggestiva gola Daberklamm nella Dorfertal a Kals. Mentre le camminate di fondovalle richiedono scarponcini comodi e normale allenamento, le traversate sui ghiacciai necessitano di solida esperienza d'alta quota, attrezzatura alpinistica completa o l'accompagnamento di una guida alpina certificata.</p>\n<h2>Besuch & Anreise</h2>\n<p>I principali centri di accesso nell'Osttirol sono Matrei in Osttirol, Kals am Großglockner e Prägraten am Großvenediger. La zona è ottimamente collegata attraverso la strada del Felbertauern e da Lienz mediante linee di autobus regionali. Durante i mesi estivi navette dedicate collegano i paesi alle partenze dei sentieri montani. Il moderno centro visite Nationalparkhaus a Matrei offre percorsi multimediali affascinanti sull'ecosistema alpino.</p>\n<h2>Tipps</h2>\n<p>Si raccomanda vivamente di prendere parte a un'escursione guidata con i ranger del Parco Nazionale per ammirare da vicino stambecchi e grandi rapaci nel loro habitat naturale. Imperdibile è anche la terrazza panoramica Glocknerblick sopra Kals, da cui si gode una vista privilegiata sulla maestosa parete nord del Großglockner.</p>",
   "emoji": "🌲",
   "farbe": "#2E7D32",
   "hoehe": "2.000–3.798 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Parkeintritt); Führungen ab 15 €",
+  "dauer": "Da mezza giornata a più giorni",
+  "preis": "Accesso libero (alcune strade panoramiche e centri visite a pagamento)",
   "tags": [
     "parco nazionale",
     "natura",
@@ -20,12 +20,19 @@
     "protezione animale",
     "cascata"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich; Besucherzentrum: täglich 9:00–18:00",
+  "oeffnungszeiten": "Accessibile tutto l'anno; trekking d'alta quota consigliati da giugno a ottobre",
   "webseite": "https://www.hohetauern.at",
   "koordinaten": {
     "lat": "47.0667",
     "lng": "12.4167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern",
+    "https://www.nationalpark-hohetauern.at/",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner"
+  ]
 }

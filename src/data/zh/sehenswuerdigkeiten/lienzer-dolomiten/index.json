@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Lienz",
   "kategorie": "natur",
-  "kurzbeschreibung": "多洛米蒂山脉东蒂罗尔地区的典型山脉景观——徒步者、攀岩爱好者和自然爱好者的天堂。 *(HTML tags and place names remain unchanged as per instructions.)*",
-  "beschreibung": "<p>Die <strong>Lienzer Dolomiten</strong> sind ein Gebirgsstock in Osttirol, der sich südlich der Bezirkshauptstadt <strong>Lienz</strong> erhebt. Sie bilden den südlichen Abschluss des Lienzer Beckens und gehören geologisch zu den Gailtaler Alpen. Das Gebiet ist durch schroffe Felsformationen und tief eingeschnittene Täler geprägt, was es für <strong>Wanderer</strong> und <strong>Kletterer</strong> attraktiv macht. Markierte Routen wie der <strong>Dolomitensteig</strong> führen zu Aussichtspunkten wie der <strong>Laserz Alm</strong>. Geologisch bestehen die Gipfel vorwiegend aus <strong>dolomitischem Kalkstein</strong>. Besucher können im Sommer Wandertouren und im Winter Schneeschuhwanderungen unternehmen. Die Ausblicke von den Höhenzügen reichen über das Drautal bis zu den <strong>Hohen Tauern</strong>.</p>",
+  "kurzbeschreibung": "利恩茨多洛米蒂山脉（Lienzer Dolomiten）巍然耸立在利恩茨南侧，以壮观的白云岩峰丛、深邃峡谷和纯净高山湖泊成为登山与攀岩者的天堂。",
+  "beschreibung": "<h2>Überblick</h2>\n<p><strong>利恩茨多洛米蒂山脉</strong>（Lienzer Dolomiten）雄踞在东蒂罗尔州阳光普照的利恩茨盆地南面，是阿尔卑斯山东部最为巍峨壮观的山系之一。尽管在地质结构上属于盖尔塔尔阿尔卑斯山脉（Gailtal Alps），但其陡峭嶙峋的石灰岩尖峰和悬崖峭壁与南蒂罗尔的多洛米蒂山极其相似，因而享有这一美名。山脉最高峰为海拔2770米的大桑德峰（Große Sandspitze），四周环绕着Laserzwand和Spitzkofel等著名攀岩胜地。这里不仅是东蒂罗尔现代高山攀登运动的发源地，还以原始纯净的自然风光、落叶松林、高山湖泊和温馨的阿尔卑斯木屋吸引着全球户外爱好者。</p>\n<h2>Route & Anforderungen</h2>\n<p>利恩茨多洛米蒂山脉的步道网络既包括适合全家同乐的观景漫步路线，也涵盖高难度铁索攀岩（Via Ferrata）和多绳段专业攀登。绝佳的徒步起点是坐落在海拔1618米险峻岩岬之上的多洛米蒂山间木屋（Dolomitenhütte）。从这里出发，沿着标识清晰的山径跋涉约两小时，即可抵达坐落于海拔2260米拉泽尔茨湖（Laserzsee）旁的卡尔斯巴德木屋（Karlsbader Hütte）。前往木屋要求普通体能与专业徒步鞋，而攀登峰顶或挑战铁索攀岩道则必须具备稳健步伐、无恐高症以及包括攀登头盔在内的完整安全装备。</p>\n<h2>Besuch & Anreise</h2>\n<p>游客可取道东蒂罗尔首府利恩茨（Lienz）。从Amlach或Tristach村出发，沿着铺设完好的收费高山公路可驾车直达Dolomitenhütte停车场。夏季期间，利恩茨火车站设有直达徒步巴士，方便游客绿色环保出行。包括Dolomitenhütte和Karlsbader Hütte在内的阿尔卑斯俱乐部木屋通常在6月初至10月中旬营业，提供高山住宿和地道的蒂罗尔风味餐饮。</p>\n<h2>Tipps</h2>\n<p>在Karlsbader Hütte的全景露台上稍作休整十分惬意，在此可俯瞰清澈见底的Laserzsee湖水以及Laserzwand的磅礴北壁。木屋周边拥有完备且安全系数高的高山攀岩场地。日出时分，Dolomitenhütte观景台更是一处绝佳摄影机位，晨曦初照时石灰岩峰被镀上绚丽的金色与暖红。</p>",
   "emoji": "⛰️",
   "farbe": "#607D8B",
   "hoehe": "2.770 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "全天（4-7小时）",
+  "preis": "免费开放（通往Dolomitenhütte的收费公路需付费）",
   "tags": [
     "wandern",
     "klettern",
@@ -19,12 +19,19 @@
     "bergsteigen",
     "aussicht"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "全年开放；建议6月至10月进行高山远足",
   "webseite": "https://www.osttirol.com/lienzer-dolomiten",
   "koordinaten": {
     "lat": "46.7833",
     "lng": "12.8167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Lienzer_Dolomiten",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Lienz",
+    "https://www.alpenverein.at/"
+  ]
 }

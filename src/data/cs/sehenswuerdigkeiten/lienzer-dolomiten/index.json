@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Lienz",
   "kategorie": "natur",
-  "kurzbeschreibung": "Charakteristický pohoří Dolomiten v Osttirol – ráj pro turisty, horolezce a milovníky přírody.",
-  "beschreibung": "<p>Die <strong>Lienzer Dolomiten</strong> sind ein Gebirgsstock in Osttirol, der sich südlich der Bezirkshauptstadt <strong>Lienz</strong> erhebt. Sie bilden den südlichen Abschluss des Lienzer Beckens und gehören geologisch zu den Gailtaler Alpen. Das Gebiet ist durch schroffe Felsformationen und tief eingeschnittene Täler geprägt, was es für <strong>Wanderer</strong> und <strong>Kletterer</strong> attraktiv macht. Markierte Routen wie der <strong>Dolomitensteig</strong> führen zu Aussichtspunkten wie der <strong>Laserz Alm</strong>. Geologisch bestehen die Gipfel vorwiegend aus <strong>dolomitischem Kalkstein</strong>. Besucher können im Sommer Wandertouren und im Winter Schneeschuhwanderungen unternehmen. Die Ausblicke von den Höhenzügen reichen über das Drautal bis zu den <strong>Hohen Tauern</strong>.</p>",
+  "kurzbeschreibung": "Výrazné vápencové štíty pohoří Lienzer Dolomiten se tyčí jižně od Lienzu a představují velkolepý vysokohorský ráj pro turisty, horolezce a milovníky přírody.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Pohoří <strong>Lienzer Dolomiten</strong> se tyčí jižně od prosluněné kotliny města Lienz a patří k nejúchvatnějším horským masivům Východního Tyrolska. Ačkoli geologicky náleží ke Gailtalským Alpám, jejich strmé vápencové věže a rozeklané skalní stěny získaly historické pojmenování díky nápadné podobě s jihotyrolskými Dolomity. Nejvyšším vrcholem je Große Sandspitze dosahující výšky 2 770 metrů, obklopená slavnými lezeckými vrcholy jako Laserzwand a Spitzkofel. Pohoří je považováno za kolébku východotirolského horolezectví a láká návštěvníky nedotčenou alpskou přírodou, modřínovými lesy, průzračnými jezery a horskými chatami.</p>\n<h2>Route & Anforderungen</h2>\n<p>Síť stezek v Lienzer Dolomiten nabízí vše od pohodových panoramatických výletů po náročné zajištěné cesty via ferrata a vícedélkové lezecké výstupy. Skvělým výchozím bodem je ikonická chata Dolomitenhütte, situovaná na strmém skalním ostrohu ve výšce 1 618 metrů. Odtud vede dobře značená turistická trasa za zhruba dvě hodiny k chatě Karlsbader Hütte u malebného jezera Laserzsee ve výšce 2 260 metrů. Zatímco výstup k chatám vyžaduje běžnou kondici a pevnou obuv, vrcholy a ferraty vyžadují jistý krok, odolnost vůči závratím a kompletní ferratovou výstroj s přilbou.</p>\n<h2>Besuch & Anreise</h2>\n<p>Příjezd vede přes okresní město Lienz v Osttirolu. Z obcí Amlach nebo Tristach stoupá zpoplatněná horská silnice až k parkovišti u Dolomitenhütte. Během letní sezóny jezdí z nádraží v Lienzu pravidelné turistické autobusy umožňující ekologickou dopravu bez vlastního vozu. Tradiční horské chaty jako Dolomitenhütte a Karlsbader Hütte mívají otevřeno od začátku června do poloviny října a nabízejí ubytování i poctivou tyrolskou kuchyni.</p>\n<h2>Tipps</h2>\n<p>Určitě si dopřejte odpočinek na slunečné terase chaty Karlsbader Hütte s výhledem na křišťálové jezero Laserzsee a mohutnou severní stěnu Laserzwand. Lezci ocení skvěle odjištěné cvičné lezecké sektory v okolí chaty. Při východu slunce poskytuje vyhlídková plošina u Dolomitenhütte nezapomenutelnou podívanou, kdy ranní paprsky zbarvují vápencové skály do sytě zlatých a červených tónů.</p>",
   "emoji": "⛰️",
   "farbe": "#607D8B",
   "hoehe": "2.770 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Celý den (4-7 hodin)",
+  "preis": "Volný přístup (zpoplatněná mýtná silnice k chatě Dolomitenhütte)",
   "tags": [
     "wandern",
     "klettern",
@@ -19,12 +19,19 @@
     "bergsteigen",
     "aussicht"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Přístupné celoročně; horské túry doporučeny od června do října",
   "webseite": "https://www.osttirol.com/lienzer-dolomiten",
   "koordinaten": {
     "lat": "46.7833",
     "lng": "12.8167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Lienzer_Dolomiten",
+    "https://www.osttirol.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Lienz",
+    "https://www.alpenverein.at/"
+  ]
 }

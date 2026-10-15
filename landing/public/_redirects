@@ -4,6 +4,10 @@
 # GSC-freundlich: alte Sitemaps bleiben erreichbar, alle URLs 301en
 # ═══════════════════════════════════════════════════════════════
 
+# ── Demo-Startseite (noindex) liegt auf der DE-Subdomain ──
+/demofrontneu https://de.tiroltourismus.com/demofrontneu 302
+/demofrontneu/* https://de.tiroltourismus.com/demofrontneu/:splat 302
+
 # ── Sprach-Prefixe → Subdomains (alte /en/, /fr/, /cs/, /nl/, /de/, /it/, /es/, /zh/ URLs) ──
 /en/* https://en.tiroltourismus.com/:splat 301
 /fr/* https://fr.tiroltourismus.com/:splat 301

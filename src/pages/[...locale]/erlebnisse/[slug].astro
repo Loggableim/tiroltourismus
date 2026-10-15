@@ -1,13 +1,14 @@
 ---
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, autoLinkContent } from '../../../lib/content.js';
+import { localizeDuration } from '../../../lib/duration.js';
 import { generateMetaDescription, buildPageTitle } from '../../../lib/seo.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams, LANG_DOMAINS } from '../../../lib/languages.js';
 
 const LABELS = {
   de: { erlebnis: 'Erlebnis', ort: 'Ort', kategorie: 'Kategorie', dauer: 'Dauer', schwierigkeit: 'Schwierigkeit', preis: 'Preis', standort: 'Standort', aufDerKarte: 'Auf der Karte', weitereErlebnisse: 'Weitere Erlebnisse', alleErlebnisse: 'Alle Erlebnisse' },
   en: { erlebnis: 'Experience', ort: 'Location', kategorie: 'Category', dauer: 'Duration', schwierigkeit: 'Difficulty', preis: 'Price', standort: 'Location', aufDerKarte: 'On the Map', weitereErlebnisse: 'More Experiences', alleErlebnisse: 'All Experiences' },
-  fr: { erlebnis: 'Expérience', ort: 'Lieu', kategorie: 'Catégorie', durer: 'Durée', schwierigkeit: 'Difficulté', preis: 'Prix', standort: 'Emplacement', aufDerKarte: 'Sur la carte', weitereErlebnisse: 'Plus d\'expériences', alleErlebnisse: 'Toutes les expériences' },
+  fr: { erlebnis: 'Expérience', ort: 'Lieu', kategorie: 'Catégorie', dauer: 'Durée', schwierigkeit: 'Difficulté', preis: 'Prix', standort: 'Emplacement', aufDerKarte: 'Sur la carte', weitereErlebnisse: 'Plus d\'expériences', alleErlebnisse: 'Toutes les expériences' },
   it: { erlebnis: 'Esperienza', ort: 'Luogo', kategorie: 'Categoria', dauer: 'Durata', schwierigkeit: 'Difficoltà', preis: 'Prezzo', standort: 'Posizione', aufDerKarte: 'Sulla mappa', weitereErlebnisse: 'Altre esperienze', alleErlebnisse: 'Tutte le esperienze' },
   es: { erlebnis: 'Experiencia', ort: 'Lugar', kategorie: 'Categoría', dauer: 'Duración', schwierigkeit: 'Dificultad', preis: 'Precio', standort: 'Ubicación', aufDerKarte: 'En el mapa', weitereErlebnisse: 'Más experiencias', alleErlebnisse: 'Todas las experiencias' },
   zh: { erlebnis: '体验', ort: '地点', kategorie: '类别', dauer: '时长', schwierigkeit: '难度', preis: '价格', standort: '位置', aufDerKarte: '在地图上', weitereErlebnisse: '更多体验', alleErlebnisse: '所有体验' },
@@ -91,7 +92,7 @@ const erlebnisLD = {
     { type: 'details-grid', items: [
       { label: l.ort, value: entry.ort || undefined },
       { label: l.kategorie, value: entry.kategorie || undefined },
-      { label: l.dauer, value: entry.dauer || undefined },
+      { label: l.dauer, value: entry.dauer ? localizeDuration(entry.dauer, locale) : undefined },
       { label: l.schwierigkeit, value: entry.schwierigkeit || undefined },
       { label: l.preis, value: entry.preis || undefined, type: 'price' },
     ].filter(Boolean) },

@@ -215,6 +215,10 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
 </script>
 
 <style is:global>
+  /* Sticky one-page nav height (shared with content scroll-margins). */
+  :root { --demo-nav-h: 64px; }
+  @media (max-width: 640px) { :root { --demo-nav-h: 56px; } }
+
   .df-nav {
     position: fixed;
     top: 0;
@@ -265,7 +269,7 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     color: #fff;
     background: var(--tirol-pink);
   }
-  .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+  .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
 
   .df-lang { position: relative; }
   .df-lang-btn {
@@ -274,9 +278,9 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     gap: 6px;
     padding: 8px 12px;
     border-radius: 100px;
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(28, 28, 26, .28);
     background: var(--surface);
-    color: var(--text);
+    color: #1c1c1a;
     font: inherit;
     font-size: 12px;
     font-weight: 700;
@@ -323,16 +327,19 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     width: 42px;
     height: 42px;
     border-radius: 10px;
-    border: 1px solid var(--glass-border);
+    /* Fixed dark colour so the icon never inherits a light language theme token. */
+    color: #1c1c1a;
+    border: 1px solid rgba(28, 28, 26, .28);
     background: var(--surface);
     cursor: pointer;
     padding: 0 10px;
   }
+  .df-burger:hover { background: var(--surface-hover); }
   .df-burger span {
     display: block;
     width: 100%;
     height: 2px;
-    background: var(--text);
+    background: currentColor;
     border-radius: 2px;
   }
 
@@ -356,7 +363,8 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     border-radius: var(--radius-sm);
     font-size: 15px;
     font-weight: 600;
-    color: var(--text);
+    /* Explicit dark ink on the always-white panel, independent of theme tokens. */
+    color: #1c1c1a;
     text-decoration: none;
   }
   .df-mobile ul a:hover { background: var(--surface-hover); }
@@ -370,9 +378,9 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
   .df-mobile-lang-link {
     padding: 6px 12px;
     border-radius: 100px;
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(28, 28, 26, .28);
     font-size: 12px;
-    color: var(--text2);
+    color: rgba(28, 28, 26, .78);
     text-decoration: none;
   }
   .df-mobile-lang-link.active { color: var(--tirol-pink); border-color: var(--tirol-pink); background: rgba(255, 20, 147, .08); font-weight: 700; }

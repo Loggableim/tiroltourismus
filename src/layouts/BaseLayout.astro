@@ -20,6 +20,12 @@ export interface Props {
   jsonld?: Record<string, unknown>;
   noindex?: boolean;
   availableLanguages?: string[];
+  /**
+   * One-page front mode: suppress the site header chrome (theme toggle, mega
+   * nav, mobile menu, floating language globe) because the page ships its own
+   * sticky one-page nav. Keeps <head>, JSON-LD and the real site footer intact.
+   */
+  onePage?: boolean;
 }
 
 const {
@@ -34,6 +40,7 @@ const {
   jsonld,
   noindex,
   availableLanguages,
+  onePage = false,
 } = Astro.props;
 
 // Locale helpers — dynamisch für alle Sprachen
@@ -371,6 +378,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 <body>
 <div id="scrollProgress" transition:persist></div>
 <button class="btt" id="backToTop" aria-label="Nach oben" transition:persist>↑</button>
+  {!onePage && (
   <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten" transition:persist>
     <svg class="theme-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
@@ -379,8 +387,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   </button>
+  )}
 
   <!-- NAV -->
+  {!onePage && (
   <nav class="main-nav" id="mainNav" transition:persist>
     <div class="container">
 <a href={localePrefix || '/'} class="nav-logo" style="flex-shrink:0">
@@ -425,7 +435,9 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       </div>
     </div>
   </nav>
+  )}
 
+  {!onePage && (
   <div class="mobile-menu" id="mobileMenu" onclick="this.classList.remove('open')" transition:persist>
     <button class="mobile-close" id="mobileClose">&times;</button>
     <a href={`${localePrefix}/regionen/`}>{nav.regionen}</a>
@@ -442,10 +454,12 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
     <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
   </div>
+  )}
 
   <slot />
 
   <!-- ═══ FLOATING LANGUAGE GLOBE ═══ -->
+  {!onePage && (
   <div class="floating-lang" id="floatingLang">
     <button class="floating-lang-btn" onclick="document.getElementById('floatingLang').classList.toggle('open')" aria-label="Sprache ändern">
       🌐
@@ -467,6 +481,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       ))}
     </div>
   </div>
+  )}
 
   <!-- Weather Widget: planned for Phase 2 — currently removed to avoid empty container. -->
 

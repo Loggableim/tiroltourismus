@@ -2,8 +2,7 @@
 // tiroltourismus.com — Apex Sprach-Hub
 // Self-contained one-screen (#sprache) language picker. 8 tiles (4x2 desktop /
 // 2x4 mobile), "Recommended" badge from navigator.languages, localStorage
-// "Continue in" banner. No numbers are invented: the category chips are plain
-// links into the German front page (this project cannot read src/data).
+// "Continue in" banner. A small legal footer sits at the bottom edge.
 const TILES = [
   { code: 'de', htmlLang: 'de', name: 'Deutsch',    tagline: 'Tirol entdecken',    accent: 'var(--tirol-red)',       href: 'https://de.tiroltourismus.com/' },
   { code: 'en', htmlLang: 'en', name: 'English',    tagline: 'Discover Tirol',     accent: 'var(--ikea-blue)',       href: 'https://en.tiroltourismus.com/' },
@@ -13,17 +12,6 @@ const TILES = [
   { code: 'it', htmlLang: 'it', name: 'Italiano',   tagline: 'Scopri il Tirolo',   accent: 'var(--tirol-pink-dark)', href: 'https://it.tiroltourismus.com/' },
   { code: 'es', htmlLang: 'es', name: 'Español',    tagline: 'Descubre el Tirol',  accent: 'var(--gold)',            href: 'https://es.tiroltourismus.com/' },
   { code: 'zh', htmlLang: 'zh', name: '中文',        tagline: '探索蒂罗尔',         accent: 'var(--tirol-pink)',      href: 'https://cn.tiroltourismus.com/' },
-];
-
-// Category chips are links only (no counts — the landing cannot read src/data).
-const CHIPS = [
-  { label: 'Orte',                href: 'https://de.tiroltourismus.com/orte/' },
-  { label: 'Unterkünfte',         href: 'https://de.tiroltourismus.com/unterkuenfte/' },
-  { label: 'Sehenswürdigkeiten',  href: 'https://de.tiroltourismus.com/sehenswuerdigkeiten/' },
-  { label: 'Aktivitäten',         href: 'https://de.tiroltourismus.com/erlebnisse/' },
-  { label: 'Gastro',              href: 'https://de.tiroltourismus.com/gastro/' },
-  { label: 'Camping',             href: 'https://de.tiroltourismus.com/camping/' },
-  { label: 'Regionen',            href: 'https://de.tiroltourismus.com/regionen/' },
 ];
 ---
 <!DOCTYPE html>
@@ -149,7 +137,7 @@ const CHIPS = [
       flex-direction: column;
       justify-content: center;
       gap: clamp(12px, 2.2vh, 30px);
-      padding: clamp(16px, 3.6vh, 40px) clamp(16px, 5vw, 56px);
+      padding: clamp(16px, 3.6vh, 40px) clamp(16px, 5vw, 56px) clamp(32px, 5.2vh, 50px);
     }
 
     /* ─── "Continue in" banner ─── */
@@ -282,29 +270,28 @@ const CHIPS = [
     }
     .df-tile.recommended .df-rec { display: inline-flex; }
 
-    /* ─── Category chips: deliberately tiny/subtle ─── */
-    .df-cats {
-      flex: 0 0 auto;
+    /* ─── Legal footer: small, muted, pinned to the bottom edge ─── */
+    .df-foot {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(7px, 1.4vh, 14px);
+      transform: translateX(-50%);
+      z-index: 3;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: clamp(5px, .9vh, 8px);
-    }
-    .df-chip {
-      display: inline-flex;
       align-items: center;
-      padding: 3px 10px;
-      border-radius: 100px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.14);
-      color: rgba(255,255,255,.66);
-      font-size: clamp(9px, 1.2vh, 11px);
-      font-weight: 600;
-      letter-spacing: .3px;
-      white-space: nowrap;
-      transition: border-color .2s, color .2s, background .2s;
+      justify-content: center;
+      gap: 6px;
+      width: max-content;
+      max-width: calc(100% - 24px);
+      font-size: 12px;
+      line-height: 1.2;
+      color: rgba(255,255,255,.64);
+      text-align: center;
     }
-    .df-chip:hover { border-color: var(--tirol-pink); color: #fff; background: rgba(255,20,147,.12); }
+    .df-foot a { color: rgba(255,255,255,.64); transition: color .2s var(--ease); }
+    .df-foot a:hover { color: #fff; }
+    .df-sep { color: rgba(255,255,255,.34); }
 
     @media (max-width: 760px) {
       .df-langs {
@@ -314,12 +301,10 @@ const CHIPS = [
       .df-claim { font-size: clamp(46px, 9.4vh, 88px); }
     }
     /* Guarantee the one-screen fit on short / small devices. */
-    @media (max-height: 780px) { .df-cats { display: none; } }
-    @media (max-width: 520px) { .df-cats { display: none; } }
     @media (max-height: 620px) { .df-sub { display: none; } }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .df-tile, .df-chip, .df-tile::after { transition: none; }
+      .df-tile, .df-tile::after, .df-foot a { transition: none; }
     }
   </style>
 </head>
@@ -358,13 +343,15 @@ const CHIPS = [
           </a>
         ))}
       </main>
-
-      <nav class="df-cats" aria-label="Kategorien">
-        {CHIPS.map((c) => (
-          <a class="df-chip" href={c.href}>{c.label}</a>
-        ))}
-      </nav>
     </div>
+
+    <footer class="df-foot" aria-label="Rechtliches">
+      <a id="dfImprint" href="https://de.tiroltourismus.com/impressum/">Impressum</a>
+      <span class="df-sep" aria-hidden="true">·</span>
+      <a id="dfPrivacy" href="https://de.tiroltourismus.com/datenschutz/">Datenschutz</a>
+      <span class="df-sep" aria-hidden="true">·</span>
+      <span>© tiroltourismus</span>
+    </footer>
   </section>
 
   <script is:inline>
@@ -379,6 +366,17 @@ const CHIPS = [
         var nameEl = a.querySelector('.df-name');
         NAMES[code] = nameEl ? nameEl.textContent.trim() : code;
       });
+
+      var FOOTER = {
+        de: ['Impressum', 'Datenschutz'],
+        en: ['Legal notice', 'Privacy'],
+        fr: ['Mentions légales', 'Confidentialité'],
+        cs: ['Tiráž', 'Ochrana soukromí'],
+        nl: ['Colofon', 'Privacy'],
+        it: ['Note legali', 'Privacy'],
+        es: ['Aviso legal', 'Privacidad'],
+        zh: ['法律声明', '隐私']
+      };
 
       function normalize(tag) {
         tag = String(tag || '').toLowerCase();
@@ -395,6 +393,13 @@ const CHIPS = [
       if (match) {
         tiles[match].classList.add('recommended');
         tiles[match].setAttribute('aria-current', 'true');
+        var labels = FOOTER[match];
+        var imp = document.getElementById('dfImprint');
+        var priv = document.getElementById('dfPrivacy');
+        if (labels) {
+          if (imp) imp.textContent = labels[0];
+          if (priv) priv.textContent = labels[1];
+        }
       }
 
       // 2) Return visit → "Continue in <language> →"

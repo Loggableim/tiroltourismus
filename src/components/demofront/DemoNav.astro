@@ -215,6 +215,10 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
 </script>
 
 <style is:global>
+  /* Sticky one-page nav height (shared with content scroll-margins). */
+  :root { --demo-nav-h: 64px; }
+  @media (max-width: 640px) { :root { --demo-nav-h: 56px; } }
+
   .df-nav {
     position: fixed;
     top: 0;

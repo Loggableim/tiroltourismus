@@ -176,7 +176,35 @@ def translate_text(text, target_lang, provider="ollama"):
     if not text or not isinstance(text, str) or len(text.strip()) < 3:
         return text
     prompt = LANG_PROMPTS.get(target_lang, LANG_PROMPTS["en"])
-    return smart_call(prompt, text, provider=provider)
+    for _ in range(2):
+        out = smart_call(prompt, text, provider=provider)
+        why = leak_reason(out, text)
+        if not why:
+            return out
+        print(f"  [LEAK] verworfen ({why}), neuer Versuch", flush=True)
+    # Nie Denkspur/Meta-Text schreiben: deutsche Quelle als Fallback
+    print("  [LEAK] Fallback auf deutsche Quelle", flush=True)
+    return text
+
+# ── Leak-Guard (gleiche Muster wie scripts/lib/leak-detect.mjs) ──
+LEAK_RES = [re.compile(x, re.I | re.M) for x in [
+    r"\bwe need to\b", r"\btranslate (?:it |this |the text )?into\b", r"\bkeep (?:the )?html tags\b",
+    r"\bthe instruction\b", r"\bno explanations\b", r"^\s*translation\s*:", r"\bhere is the (?:translation|translated)\b",
+    r"</?think>", r"DerText\s*:", r"\bthe (?:given|german|original) text\b", r"\bwe (?:should|must|can) (?:output|produce|translate)\b",
+    r"\(Note:\s", r"<\|(?:start|channel|message|im_start|im_end)\|>", r"```", r"\blet'?s translate\b",
+    r"\bif you have more (?:text|context)\b", r"\bthe translation is\b", r"\bas an ai\b"]]
+
+def leak_reason(out, src=""):
+    if not isinstance(out, str) or not out.strip():
+        return "leer"
+    for r in LEAK_RES:
+        if r.search(out):
+            return r.pattern
+    if re.search(r"(\b\S+\b)(?:\s+\1\b){10,}", out):
+        return "Wiederholungsschleife"
+    if src and len(src) > 40 and len(out) > 300 and len(out) > 3 * len(src):
+        return ">3x länger als Quelle"
+    return None
 
 def translate_tags(tags, target_lang, provider="ollama"):
     if not tags:

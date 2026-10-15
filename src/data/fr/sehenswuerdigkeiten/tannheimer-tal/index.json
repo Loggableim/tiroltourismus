@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Tannheim",
   "kategorie": "natur",
-  "kurzbeschreibung": "Hautes vallon dans les Alpes de l'Allgäu – célèbre pour son Vilsalpsee en arrière-plan montagneux, ses kilomètres de sentiers de randonnée et ses fermes d’alpage traditionnelles.",
-  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Tannheimer Tal</strong> (1 100 m) est souvent désigné comme la « plus belle haute vallée d'Europe ». Située au nord-ouest du Tyrol à la frontière bavaroise, cette vallée préservée offre de superbes lacs de montagne (Vilsalpsee et Haldensee), de vastes prairies alpines et les spectaculaires sommets calcaires de la Rote Flüh et du Gimpel.</p><h2>Parcours &amp; Exigences</h2><p>Le tour du lac Haldensee est une promenade familiale entièrement plate et accessible (4,5 km, 1h30, T1). La télécabine du Neunerköpfle donne accès au « plus grand livre de sommet des Alpes » à 1 860 m (T1). Les alpinistes chevronnés s'attaquent à la via ferrata de la Lachenspitze (C/D) et aux arêtes de la Rote Flüh (T3/T4). Bonnes chaussures de montagne en altitude. Chiens admis en laisse.</p><h2>Accès</h2><p>Gare de Reutte ou de Sonthofen (Bavière) puis bus réguliers 120/121. En voiture, accès sans vignette ni péage depuis l'Allemagne via l'A7 et le col d'Oberjoch. Parkings aux remontées mécaniques.</p><h2>Conseils</h2><p>Profitez de la carte « Remontées incluses » offerte par de nombreux hébergements partenaires et dégustez le fromage d'alpage traditionnel dans les chalets d'altitude.</p>",
+  "kurzbeschreibung": "La vallée de Tannheimer Tal à 1 100 m dans les Alpes d'Allgäu est considérée comme la plus belle haute vallée d'Europe, avec ses lacs, téléphériques et falaises.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>La somptueuse <strong>Tannheimer Tal</strong> s'étire à 1 100 mètres d'altitude dans les Alpes d'Allgäu, au nord du Tyrol. Longue de 16 kilomètres, cette haute vallée glaciaire est réputée pour être l'une des plus charmantes d'Europe. Encadrée par les impressionnantes falaises calcaires de la Rote Flüh (2 108 m) et du Gimpel et par les alpages du Neunerköpfle, elle associe prairies verdoyantes et sommets escarpés. Elle abrite les eaux cristallines de la réserve naturelle du Vilsalpsee et le lac de baignade de Haldensee. En été, plus de 300 kilomètres de sentiers balisés accueillent marcheurs et vététistes, tandis que l'hiver y consacre un paradis mondial du ski de fond avec 140 kilomètres de pistes.</p>\n<h2>Route & Anforderungen</h2>\n<p>Le fond de vallée propose une balade facile et plate le long du torrent de la Vils reliant les villages de Nesselwängle à Schattwald (1 à 3 heures, praticable en poussette). Les alpinistes confirmés peuvent gravir la Rote Flüh ou le Gimpelhaus (3h30 de montée exigeante). Des baskets suffisent en bas; des chaussures de haute montagne sont indispensables sur les crêtes.</p>\n<h2>Besuch & Anreise</h2>\n<p>Accès routier par la B199 via le col du Gaichtpass depuis Reutte ou sans péage depuis la Bavière par l'Oberjoch. Parkings payants aux gares des remontées. En train, gares de Reutte ou de Sonthofen (Bavière) avec correspondances régulières en bus.</p>\n<h2>Tipps</h2>\n<p>Montez en télécabine au Neunerköpfle pour signer le « plus grand livre de sommet des Alpes » (haut de 3 mètres) avant de déguster des Kasspatzln traditionnels en terrasse d'alpage.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Halbtags bis Ganztags",
-  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
+  "dauer": "Demi-journée à journée complète",
+  "preis": "Sentiers de vallée et lacs gratuits; remontées env. 24-28 € l'aller-retour (inclus chez les hébergeurs partenaires)",
   "tags": [
     "randonnée",
     "randonnée pédestre",
@@ -20,7 +20,7 @@
     "nature",
     "famille"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Sentiers ouverts toute l'année; remontées en service de mai à octobre et de décembre à avril",
   "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
@@ -32,8 +32,9 @@
   "familie": true,
   "sources": [
     "https://www.tannheimertal.com/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Tannheimer_Tal",
-    "https://www.naturpark-tiroler-lech.at/",
+    "https://de.wikipedia.org/wiki/Tannheim_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

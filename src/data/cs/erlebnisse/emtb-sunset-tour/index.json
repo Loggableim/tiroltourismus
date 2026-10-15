@@ -1,27 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>Tato tůra je řízeným zážitkem na e-mountainbiku v Ötztalu, který spojuje tyrolský horský svět se západem slunce nad vrcholy. Díky elektrické podpoře je trasa podle popisu vhodná pro každou úroveň kondice; vede po malebných pastvinných cestách a vyhlídkových trailech k vyhlídkovému místu na západ slunce. Uvedena je doba trvání tři až čtyři hodiny a cena 89 eur.</p><p><strong>Ötztal</strong> patří k nejvýznamnějším cyklistickým regionům Alp: cyklostezka Ötztal vede na přibližně 50 kilometrech z Haimingu do Söldenu a v oblasti Längenfeld vede mnoho tras z údolního dna podél Ötztaler Ache až k horským pastvinám a chatám. Konkrétního poskytovatele této sunset tour nebylo možné z oficiálních zdrojů jednoznačně zjistit.</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "Západ slunce na eMTB v údolí Ötztal",
+  "beschreibung": "### Přehled\nVyhlídková vyjížďka na elektrokolech při západu slunce v údolí Ötztal spojuje moderní cyklistiku s kouzelnou večerní atmosférou třítisícových alpských štítů. Díky západní a jihozápadní orientaci svahů kolem Söldenu zde zlatavé večerní světlo vydrží obzvlášť dlouho, než ozáří zaledněné vrcholy Ötztalských Alp purpurovým svitem (Alpenglühen). K nejoblíbenějším cílům patří tradiční salaš Gampe Thaya ve výšce 2 000 metrů nad mořem na svahu Giggijochu (trasa 643): vyhlášená gurmánská horská chata s vlastní sýrárnou a čistě regionální kuchyní. Klidnější alternativou je trasa 652 na Brunnenbergalm (1 971 m) na tiché straně Söldenu, odkud se otevírá úchvatný čelní pohled na pyramidu hory Gaislachkogl ve večerním světle.\n\n### Trasa a náročnost\nOkruh obvykle začíná na dně údolí v Söldenu a vede po širokých lesních a šotolinových cestách v délce 12 až 15 kilometrů s převýšením 600 až 700 metrů. Na moderních celoodpružených elektrokolech je stoupání snadno zvládnutelné pro rekreační jezdce; čistá doba jízdy je 2 až 2,5 hodiny, celkem s posezením na chatě 3,5 až 4 hodiny. Sjezd po šotolině za šera vyžaduje spolehlivé ovládání kotoučových brzd. Mládež od 12 do 14 let se může zúčastnit v doprovodu dospělých. Pro psy a malé děti je vyjížďka zcela nevhodná z důvodu rychlosti a nočního sjezdu.\n\n### Příjezd a doprava\nSraz bývá v centru Söldenu (Freizeit Arena nebo lanovka Gaislachkoglbahn). Autem přijedete z dálnice A12 Inntal (sjezd Ötztal) po silnici B186 přímo do Söldenu. Parkování je možné v podzemní garáži Freizeit Areny nebo u lanovky. Veřejnou dopravou spojuje rychlíkovou stanici Ötztal se Söldenem autobus VVT linky 4194 s častými spoji. Tyto autobusy jsou vybaveny cyklovleky, které přepravují kola v údolí zdarma.\n\n### Praktické tipy\nCena túry s certifikovaným cykloprůvodcem se pohybuje kolem 65 až 85 eur (půjčení elektrokola zvlášť od cca 55 eur v místních půjčovnách). Vyrážejte výhradně s plně nabitou baterií (minimálně 625 Wh). Povinné vybavení pro noční sjezd: výkonné přední světlo na řídítkách s výkonem alespoň 1 000 lumenů a čelovka na helmě pro osvětlení zatáček. Protože teplota ve výšce 2 000 metrů po západu slunce rychle klesne o 10 až 15 °C, je nutné mít v batohu větruodolnou bundu, teplé celorukavicové rukavice a čelenku.",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "mountainbike",
     "e-bike",
     "sunset",
     "oetztal",
     "gefuehrte-tour"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  }
+  ]
 }

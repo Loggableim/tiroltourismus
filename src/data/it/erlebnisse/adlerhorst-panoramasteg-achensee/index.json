@@ -1,27 +1,32 @@
 {
-  "name": "Adlerhorst-Panoramasteg am Achensee",
   "slug": "adlerhorst-panoramasteg-achensee",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "wandern",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "La nuova passerella panoramica Adlerhorst si adagia a 80 metri di altezza sulla parete rocciosa verticale dell'Achensee. Sulla passerella protetta su tutti i lati camminerete letteralmente sopra l'acqua turchese del lago più profondo del Tirol. Una vista mozzafiato sulle catene montuose del Karwendel e del Rofan è garantita.",
-  "preis": 29,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Camminamento panoramico Adlerhorst sul lago di Achensee",
+  "beschreibung": "### Panoramica\nLa piattaforma panoramica Adlerhorst troneggia sui 2.039 metri della cima del Gschöllkopf nel massiccio del Rofan, alta sopra Maurach am Achensee. Progettata dal fabbro d'arte tirolese Manfred Hörl di Jenbach, la spettacolare struttura in acciaio riproduce la forma di un nido d'aquila monumentale. Circa 15 tonnellate di acciaio zincato intrecciato compongono un nido di otto metri di diametro proteso sulle pareti verticali del Rofan. Dalla piattaforma si gode di una visuale a 360 gradi: in basso risplende lo specchio turchese del lago Achensee, mentre all'orizzonte svettano le vette del Karwendel, le Alpi della Zillertal e di Tux, gli Alti Tauri e la valle dell'Inn. Situato lungo il sentiero a tappe Adlerweg, l'Adlerhorst unisce natura d'alta quota e architettura metallica.\n\n### Percorso & Requisiti\nIl punto di partenza è la stazione a monte della funivia Rofanseilbahn accanto al rifugio Erfurter Hütte a 1.840 metri di quota. Da qui, un sentiero escursionistico rosso ben segnalato attraversa i pascoli della malga Mauritzalm e sale tra pini mughi e gradoni di roccia verso la cresta sommitale del Gschöllkopf. Su una lunghezza complessiva di 2,6 chilometri si superano circa 200 metri di dislivello. La salita richiede tra 45 e 60 minuti, mentre la discesa impiega circa 40 minuti. Sono indispensabili scarponi da montagna alti alla caviglia con suola scolpita e passo sicuro. Il percorso è adatto a bambini abituati a camminare a partire dai cinque anni. La piattaforma è protetta da un robusto parapetto. Il fondo in grigliato metallico è inadatto ai cani per il rischio di ferite ai polpastrelli; è consigliabile farli attendere all'esterno.\n\n### Come arrivare\nLa stazione a valle della funivia Rofanseilbahn si trova in Achenseestraße 10 a Maurach. In auto si raggiunge Maurach dall'autostrada A12 Inntal (uscita Wiesing/Achensee) percorrendo la strada statale B181. I parcheggi P1 e P2 alla stazione a valle sono a pagamento, ma la tariffa viene interamente rimborsata all'acquisto del biglietto della funivia alla cassa. Con i mezzi pubblici si viaggia in treno fino alla stazione ferroviaria di Jenbach e si prosegue con l'autobus regionale VVT linea 4080 direttamente fino alla fermata Maurach Rofanseilbahn. In estate, la storica ferrovia a cremagliera a vapore Achenseebahn collega Jenbach a Maurach.\n\n### Consigli\nI possessori della tessera ospiti AchenseeCard beneficiano di sconti sulle tariffe della funivia. Poco sotto la cima parte l'AIRROFAN Skyglider, una teleferica a forma d'aquila che lancia i passeggeri a 80 km/h su 200 metri di dislivello (altezza minima 1,30 metri, età minima 10 anni). L'Adlerhorst è aperto solo durante la stagione estiva da maggio a inizio novembre; in inverno il tracciato innevato è chiuso. In caso di temporali imminenti o raffiche di vento, abbandonare tempestivamente la struttura metallica esposta.",
+  "sources": [
+    "https://www.rofanseilbahn.at",
+    "https://www.rofanseilbahn.at/adlerhorst/",
+    "https://www.rofanseilbahn.at/sommer/airrofan/"
+  ],
+  "bilder": [],
   "dauer": "1,5 Stunden",
+  "link": "#",
+  "preis": 29,
   "tags": [
     "escursionismo",
     "panorama",
     "Achensee",
     "piattaforma panoramica",
     "famiglia"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

@@ -1,27 +1,36 @@
 {
-  "name": "Bergwaldseilgarten Imst",
+  "name": "Kletter- und Hochseilgärten Region Imst",
   "slug": "seilgarten-imst",
   "emoji": "🌲",
   "farbe": "var(--green)",
   "kategorie": "familie",
-  "ort": "Imst",
+  "ort": "Imst / Haiming",
   "region": "imst",
-  "beschreibung": "Klettern, balancieren und schwingen im Hochseilgarten von Imst! In bis zu 12 Metern Höhe überwinden die Teilnehmer knifflige Hindernisse auf verschiedenen Schwierigkeitsstufen. Kinder finden eigene, sichere Parcours in Bodennähe. Ein Abenteuer, das Teamgeist und Geschicklichkeit fördert.",
-  "preis": 29,
-  "dauer": "3 Stunden",
+  "beschreibung": "### Überblick\nDie Outdoorregion Imst am Übergang vom Inntal zum Gurgltal gilt als ein führendes Kletter- und Abenteuerzentrum im Tiroler Oberland. Eingebettet zwischen den Lechtaler Alpen und den Ötztaler Alpen bietet die Region eine einzigartige Bandbreite vertikaler Sporterlebnisse: vom international renommierten Kletterzentrum Imst mit seinen weit über 1.000 Quadratmetern Kletterfläche über die familienfreundlichen Naturklettergärten in Hoch-Imst bis hin zum spektakulärsten Hochseilgarten Österreichs am Eingang des Ötztals bei der AREA 47. In bis zu 27 Metern Höhe balancieren Wagemutige direkt unter mächtigen Brückenpfeilern über reißenden Gebirgsfluten der Ötztaler Ache. Wer dagegen naturnahes Felsklettern im Wald sucht, findet in den Klettergärten Putzenwald, Reithle und am Sonnendeck in Imst bestens abgesicherte Routen für jeden Schwierigkeitsgrad.\n\n### Route & Anforderungen\nIm Hochseilgarten der AREA 47 bewältigen Teilnehmer über 140 abwechslungsreiche Übungselemente, darunter schwingende Holzstämme, Hängebrücken, Seilrutschen (Flying Fox) und Kletternetze. Durch modernste Smart-Belay-Sicherungssysteme mit kommunizierenden Karabinern ist ein versehentliches Aushängen technisch unmöglich. Die körperlichen Voraussetzungen verlangen Schwindelfreiheit, Trittsicherheit und eine Mindestkörpergröße von 120 cm (Mindestalter 12 Jahre). Für jüngere Kinder und Familien bieten die Naturklettergärten in Hoch-Imst (Putzenwald und Klettergarten Reithle) sanftere Alternativen mit kindgerechten Felsrouten im I. bis IV. Schwierigkeitsgrad sowie Kletterkurse der Bergschulen vor Ort. Festes Schuhwerk mit griffiger Profilsohle und wetterfeste Sportkleidung sind obligatorisch; Klettergurt, Helm und Sicherungssets werden gestellt.\n\n### Anreise\nDie Region Imst ist hervorragend über die Inntalautobahn A12 (Ausfahrt Imst bzw. Ötztal) sowie die B171 erreichbar. Bahnreisende steuern den Fernverkehrsbahnhof Imst-Pitztal an, an dem zahlreiche Regionalzüge und Railjets halten. Von dort verkehren die Stadtbusse Imst sowie Regionalbusse im dichten Takt nach Hoch-Imst (Talstation der Imster Bergbahnen) sowie talauswärts Richtung Haiming / AREA 47. An den Klettergebieten in Hoch-Imst sowie an der AREA 47 stehen großzügige, kostenfreie Parkplätze für Pkw und Busse zur Verfügung.\n\n### Tipps\nBuchen Sie Ihren Zeitslot für den Hochseilgarten während der Sommermonate Juli und August unbedingt einige Tage im Voraus online, um Wartezeiten zu vermeiden. Bei wechselhaftem Wetter lohnt sich ein Abstecher in das Kletterzentrum Imst, das mit seinen 22 Meter hohen Außenkletterwänden und großen Boulderbereichen auch bei Regen weltmeisterliche Trainingsbedingungen bietet. Kombinieren Sie den Ausflug in Hoch-Imst mit einer Fahrt auf dem Alpine Coaster Imst, der mit 3,5 Kilometern längsten Alpen-Achterbahn der Welt. Für Hunde ist der Zutritt zu den Hochseil-Parcours aus Sicherheitsgründen untersagt.",
+  "preis": "Ab 39,00 € bis 48,00 € (AREA 47 Hochseilgarten Erwachsene; Naturklettergärten Imst frei)",
+  "dauer": "ca. 2 bis 3 Stunden",
   "tags": [
-    "familie",
-    "seilgarten",
     "klettern",
+    "hochseilgarten",
     "imst",
-    "kinder"
+    "outdoor",
+    "area47",
+    "action",
+    "familie"
   ],
   "koordinaten": {
     "lat": "47.2382",
     "lng": "10.7419"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.imst.at",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at",
+    "https://www.climbers-paradise.com",
+    "https://area47.at/outdoor/hochseilgarten/",
+    "https://www.kletterzentrum-imst.at",
+    "https://www.tirol.at/aktivitaeten/sport/klettern"
+  ]
 }

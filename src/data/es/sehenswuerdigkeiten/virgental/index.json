@@ -1,10 +1,10 @@
 {
-  "name": "Virgental",
+  "name": "Virgental & Umbalfälle",
   "slug": "virgental",
   "region": "osttirol",
   "ort": "Prägraten am Großvenediger",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Ursprüngliches Hochgebirgstal im Nationalpark Hohe Tauern mit dem tosenden Wasserschaupfad Umbalfälle am Fuße des Großvenedigers.",
   "emoji": "🏞️",
   "farbe": "#2E8B57",
   "tags": [
@@ -14,10 +14,10 @@
     "umbalfälle",
     "bergsteigen"
   ],
-  "dauer": "Ganztag/Mehrtag",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Ströden ca. 7 € pro Tag; Kutschfahrt ca. 8–10 €)",
   "oeffnungszeiten": "Ganzjährig geöffnet",
-  "webseite": "https://www.virgental.at/",
+  "webseite": "https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/wasserfaelle/umbalfaelle/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,14 @@
     "lng": "12.4138"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Virgental</strong> – Mitten in der atemberaubenden Tiroler Bergwelt gelegen, bietet die Virgental ein unvergessliches Naturerlebnis. Das Virgental im Nationalpark Hohe Tauern ist ein Paradies für Bergsteiger und Naturliebhaber mit den berühmten Umbalfällen Besucher können hier die alpine Flora und Fauna hautnah erleben. Besonders im Frühsommer, wenn die Almwiesen in voller Blüte stehen, entfaltet die Landschaft ihren ganzen Zauber. Zahlreiche Rastplätze und Aussichtspunkte machen den Aufenthalt besonders angenehm. Eingebettet in die malerische Kulisse der Tiroler Alpen, präsentiert sich die Virgental als Ort der Ruhe und Erholung. Die gute Erreichbarkeit von Prägraten am Großvenediger aus macht sie zu einem lohnenden Tagesausflugsziel. Die Kombination aus beeindruckender Landschaft und herzlicher Gastfreundschaft macht den Besuch zu etwas ganz Besonderem.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El valle de <strong>Virgental</strong> es uno de los valles de alta montaña más puros y vírgenes del Tirol Oriental, enmarcado por los glaciares del macizo del Grossvenediger en el Parque Nacional Hohe Tauern. En la cabecera del valle rugen las majestuosas <strong>cascadas Umbalfälle</strong> sobre el río Isel, el último río glaciar no regulado de los Alpes.</p><h2>Ruta y Requisitos</h2><p>Excursión familiar muy agradable de 40 minutos desde el aparcamiento de Ströden hasta las majadas alpinas de Islitzeralm y Pebellalm (fácil T1, apto para carritos todoterreno). El sendero de las cascadas recorre miradores volados sobre el cañón y rápidos de agua glaciar (1 hora, 150 m de desnivel, T1/T2). Los montañeros pueden continuar hacia el refugio Clarahütte (2.038 m, T2). Calzado de trekking recomendado. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren hasta la estación de Lienz y luego autobús 951 hasta Prägraten y Ströden. En coche por la carretera B108 de Felbertauern hasta Matrei y luego por la L24 hasta el aparcamiento de Ströden.</p><h2>Consejos</h2><p>Asómese a la pasarela sobre la corriente para respirar la brisa fresca del glaciar y saboree unos deliciosos Schlipfkrapfen caseros con mantequilla fundida en la terraza de Islitzeralm.</p>",
+  "saison": "Mai bis Oktober (Wasserschaupfad im Winter schneebedeckt)",
+  "familie": true,
+  "sources": [
+    "https://www.nationalpark-hohetauern.at/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Umbalf%C3%A4lle",
+    "https://de.wikipedia.org/wiki/Virgental",
+    "https://www.vvt.at/"
+  ]
 }

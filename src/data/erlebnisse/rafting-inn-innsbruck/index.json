@@ -1,27 +1,38 @@
 {
-  "name": "Rafting auf dem Inn",
+  "name": "Rafting auf dem Inn (Imster Schlucht & Innsbruck)",
   "slug": "rafting-inn-innsbruck",
   "emoji": "🛶",
   "farbe": "var(--blue)",
   "kategorie": "abenteuer",
-  "ort": "Innsbruck",
+  "ort": "Imst / Haiming / Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Wildwasserspass direkt vor der Haustür der Landeshauptstadt! Die Rafting-Tour auf dem Inn führt durch die beeindruckende Inntalschlucht mit Wellen bis Klasse 3. Nach der Action wartet eine gemütliche Einkehr am Inn-Ufer. Ausrüstung und Shuttle inklusive.",
+  "beschreibung": "Überblick\nDer Inn ist die mächtigste alpine Lebensader Tirols und bildet zugleich die Kulisse für eine der renommiertesten Wildwasserstrecken ganz Europas: die Imster Schlucht. Zwischen Imst und Haiming im Tiroler Oberland schneidet sich der Gebirgsfluss durch steile Felswände und erzeugt anspruchsvolles Wuchtwasser mit wuchtigen Schwallpassagen und haushohen Brecherwellen. Für all jene, die spritziges Wildwasserabenteuer mit professionellen Guides suchen, ist dieser Abschnitt ein absolutes Muss. Ergänzt wird das Angebot durch entspanntes City- und Sightseeing-Rafting direkt im Stadtgebiet von Innsbruck, bei dem Gäste die Tiroler Landeshauptstadt und die Nordkette aus einer völlig neuen Wasserperspektive erleben.\n\nRoute & Anforderungen\nDas Rafting auf dem Inn gliedert sich in verschiedene Streckencharaktere:\n1. Imster Schlucht (Imst bis Haiming): Der Klassiker erstreckt sich über rund 14 Flusskilometer von der Einstiegsstelle Imst-Auwald bis zum Ausstieg in Haiming bzw. Roppen. Die Tour weist den Wildwasserschwierigkeitsgrad WW II bis III (bei der sommerlichen Gletscherschneeschmelze stellenweise WW III+ bis IV) auf. Zu den berühmt-berüchtigten Schlüsselstellen gehören der Rohrbrückenschwall, die Memminger Walze und der wuchtige Zusammenfluss mit der Ötztaler Ache. Die reine Fahrzeit auf dem Fluss beträgt etwa 1,5 bis 2 Stunden, die Gesamtdauer inklusive Vorbereitung und Shuttles rund 3,5 Stunden. Mindestalter: je nach Veranstalter 12 bis 14 Jahre (bei Einzeltouren ab 10 Jahren bei moderatem Pegel). Schwimmkenntnisse und gesunde körperliche Fitness sind zwingend erforderlich.\n2. Familienabschnitt (Haiming bis Stams): Eine gemäßigtere Wildwasserstrecke (WW I bis II+) über ca. 12 Kilometer, ideal für Familien mit Kindern ab 6 bis 8 Jahren.\n3. Innsbruck City Rafting: Entspanntes Flusswandern (WW I) von Völs bis zum Löwenhaus nahe der Innsbrucker Altstadt (ca. 6 km, 1 Stunde auf dem Wasser), komplett barrierefrei und ab 6 Jahren geeignet.\nAlle Teilnehmer werden vor Ort mit professioneller Schutzausrüstung ausgestattet (4–5 mm Neoprenanzug, Neoprenschuhe mit Gummisohle, geprüfte Wildwasserschwimmweste, Wildwasserhelm und Stechpaddel). Jedes Raft wird von einem staatlich geprüften Bootsführer gesteuert, der vor dem Start ein obligatorisches Sicherheitsbriefing durchführt. Hunde dürfen aus Sicherheitsgründen nicht an Bord.\n\nAnreise\nDie zentralen Outdoor-Basen (u. a. AREA 47, Faszinatour, Outdoorplanet, Wiggi Rafting) befinden sich in Haiming und Ötztal-Bahnhof, etwa 35 Autominuten westlich von Innsbruck über die Inntalautobahn A12 (Ausfahrt Haiming/Ötztal). Vor Ort stehen großzügige, kostenfreie Parkplätze zur Verfügung. Mit der ÖBB-Regionalbahn reist man bequem bis zum Bahnhof Ötztal. Sämtliche Transfers zwischen den Basen und den Ein- und Ausstiegsstellen am Fluss werden mit betriebseigenen Bussen durchgeführt und sind im Tourpreis inbegriffen.\n\nTipps\nDie offizielle Rafting-Saison läuft vom 1. Mai bis zum 15. Oktober. Die höchsten Wasserstände und spektakulärsten Wellen bietet der Frühsommer während der Schneeschmelze von Ende Mai bis Juli. Mitzubringen sind Badebekleidung, Handtuch und Duschsachen; für Brillenträger empfiehlt sich ein Brillenband. Bei Anbietern wie der AREA 47 ist der Eintritt in die 20.000 m² große Water AREA am Tourtag im Rafting-Ticket (ab ca. 69 Euro für Erwachsene) bereits kostenlos enthalten.",
   "preis": 69,
-  "dauer": "3 Stunden",
+  "dauer": "3 bis 3,5 Stunden (ca. 1,5–2 h auf dem Wasser)",
   "tags": [
     "rafting",
-    "inn",
     "wildwasser",
+    "inn",
+    "imster-schlucht",
+    "haiming",
     "innsbruck",
-    "abenteuer"
+    "abenteuer",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.tirol.at/reisefuehrer/sport/rafting",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.innsbruck.info",
+    "https://www.imst.at",
+    "https://www.area47.at",
+    "https://www.faszinatour-rafting.de",
+    "https://www.outdoorplanet.net"
+  ]
 }

@@ -1,17 +1,17 @@
 {
-  "name": "Zugspitze",
+  "name": "Tiroler Zugspitzbahn & Zugspitze",
   "slug": "zugspitze",
   "status": "published",
   "region": "ausserfern",
   "ort": "Ehrwald",
   "kategorie": "aussicht",
   "kurzbeschreibung": "德国最高峰（2,962米），拥有令人惊叹的360°全景，覆盖四个国家——可乘坐Tiroler Zugspitzbahn抵达。",
-  "beschreibung": "<p>Die <strong>Zugspitze</strong> ist mit 2.962 Metern der höchste Berg Deutschlands und liegt an der Grenze zu Tirol. Von <strong>Ehrwald</strong> aus führt die <strong>Tiroler Zugspitzbahn</strong> ganzjährig auf das Gipfelplateau. Oben erwartet Besucher eine großzügige <strong>Aussichtsplattform</strong>, die bei klarer Sicht einen weiten Rundumblick auf bis zu vier Länder ermöglicht. Auf dem Gipfel befinden sich zudem ein Restaurant und eine Wetterstation. Der Berg ist ein beliebtes Ziel für Wanderer und bietet mehrere Routen, wobei der Aufstieg auch über Klettersteige möglich ist. Die gesamte Anlage ist barrierefrei zugänglich und wird auch im Winter betrieben.</p>",
+  "beschreibung": "<h2>概览</h2><p>海拔2,962米的<strong>楚格峰</strong>（Zugspitze）高踞于韦特施泰因山脉（Wetterstein）之巅，是德奥边境最负盛名的阿尔卑斯地标。从蒂罗尔一侧出发，超现代化的<strong>蒂罗尔楚格峰索道</strong>（Tiroler Zugspitzbahn）仅需不到10分钟即可自埃尔瓦尔德（Ehrwald-Obermoos）直拔千米悬崖，跨越1,725米垂直落差登顶。峰顶全景露台展现举世无双的“四国全景”（奥地利、德国、瑞士、意大利逾400座阿尔卑斯雪峰）。山顶还建有互动式“楚格峰传奇”高山历史博物馆、雪花晶体展馆与悬挑凌空玻璃观景台。</p><h2>路线与体能要求</h2><p>搭乘索道登顶全程无障碍化，适合所有年龄段游客（极易T1级，支持轮椅与婴儿车）。若需登临金色的顶峰十字架，须在夏季无雪期沿装有保护铁索的狭窄岩刃攀登（T3级，需绝对无眩晕感与高山步法稳健）。高阶登山者可自埃尔瓦尔德出发经Gatterl山口徒步登顶（单程约5至6小时，爬升1,800米，T3级）。海拔近3,000米处即便盛夏亦常有冰雪，务必携带保暖防寒外套。宠物犬佩戴牵引绳与嘴套允许随行乘缆车。</p><h2>交通指南</h2><p>搭乘Außerfernbahn铁路列车抵Ehrwald火车站，换乘免费区域穿梭巴士直达Obermoos索道下站。自驾经Fernpass联邦公路B179或自加米施-帕滕基兴出发直抵缆车站大型免费停车场（配有充电桩）。索道全年运行（注意春秋季检修期），每日每20分钟一班。</p><h2>游览建议</h2><p>提前预约特色“日出晨光之旅”或“满月夜游”，在海拔近3,000米全景餐厅享用云海早餐，静赏朝霞点亮百里雪峰。务必站在凌空伸向北壁深渊的全透明玻璃底观景台体验心跳感觉。</p>",
   "emoji": "🗻",
   "farbe": "#9C27B0",
   "hoehe": "2.962 m",
-  "dauer": "Halbtag",
-  "preis": "56 € (Bergbahn Hin & Rück)",
+  "dauer": "2–4 Stunden",
+  "preis": "Tiroler Zugspitzbahn Berg- und Talfahrt ca. 65 € (inkl. Museum Faszination Zugspitze)",
   "tags": [
     "山峰",
     "全景",
@@ -26,5 +26,13 @@
     "lng": "10.9833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig (außer Revisionszeiten im Frühjahr und Spätherbst)",
+  "familie": true,
+  "sources": [
+    "https://www.zugspitze.at/",
+    "https://www.zugspitzarena.com/",
+    "https://de.wikipedia.org/wiki/Zugspitze",
+    "https://www.vvt.at/"
+  ]
 }

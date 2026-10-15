@@ -6,23 +6,33 @@
   "kategorie": "abenteuer",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "=== description ===\nThe **Bikepark Innsbruck** on the **Muttereralm** features downhill trails for every skill level. You’ll find smooth single trails as well as challenging freeride routes with jumps and Northshore elements. On-site bike rentals and protective gear are available.",
-  "preis": 49,
-  "dauer": "3–4 Stunden",
+  "beschreibung": "Overview\nPerched on the sunny slopes of the Muttereralm and Götzens directly outside Innsbruck, Bikepark Innsbruck stands as one of the premier mountain biking destinations in the Alps. Famously known as a host venue for the international Crankworx World Tour, the park attracts elite athletes from around the globe while catering equally well to hobbyists, families, and downhill purists. Offering nearly twenty kilometers of immaculately maintained trails that range from gentle flow lines and playful jump sections to unforgiving World Cup downhill tracks, the park pairs adrenaline-fueled descents with panoramic views of the Nordkette and Kalkkögel ranges.\n\nRoute & Requirements\nThe flagship route for beginners and cruisers is 'The Chainless One' (Blue / S1). Measuring 8.5 kilometers in length with a descent of 636 vertical meters from the mountain station at 1,597 meters down to Mutters valley terminal, it ranks among Europe's longest flow trails, packed with wide berms, mellow rollers, and wooden bridges rideable almost without pedaling. Intermediate riders progress to 'The First One' (Red / S2, 1.9 km, 270 vertical meters) with rooty singletrack and wallrides, or hit the adjacent 16-table jump line. Downhill experts tackle 'The Straight One' (Black / S3, 2.9 km, 341 vertical meters) or drop into the legendary Crankworx race venue 'The Rough One / Götzens Trail' (Black / S3, 2.2 km, 500 vertical meters). At the top station, kids and novices practice on the Rookie Park featuring a BagJump airbag, while pump tracks and dual slalom courses await at the base. Helmets are strictly mandatory (full-face helmets strongly advised on black tracks), along with knee pads. Dogs are not permitted on the bike trails.\n\nGetting There\nThe valley terminal of the Muttereralmbahn is located at Nockhofweg 40 in 6162 Mutters. From Innsbruck, the scenic Stubaitalbahn (STB tram) departs every 30 minutes to Mutters Nockhofweg stop (followed by a 600-meter downhill roll to the lift). On peak summer weekends, a complimentary bike shuttle operates from the Tiroler Landestheater in downtown Innsbruck. Drivers reach Mutters via the A13/A12 motorway (exit Innsbruck-Süd). The parking fee (€10/day) is refunded at the ticket counter upon purchasing a cable car lift pass.\n\nTips\nThe Muttereralmbahn runs daily from late May through late October between 09:00 and 17:00, with 'Long Wednesdays' extending lift operations until 20:00 in July and August for sunset riding. Regular day passes cost around €57 at the counter (discounted online from €44). The park is a full member of the European Gravity Card. A professional rental shop (Die Börse), certified bike school, and complimentary bike-wash station with pressure hoses are available on-site.",
+  "preis": 44,
+  "dauer": "Halbtags bis Ganztags (3 bis 6 Stunden)",
   "tags": [
     "mountainbike",
     "bikepark",
-    "downhill",
+    "crankworx",
     "innsbruck",
-    "trail"
+    "downhill",
+    "flowtrail",
+    "abenteuer",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.2563",
     "lng": "11.4020"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.muttereralm.at/bikepark",
   "bilder": [],
   "hero_bild": null,
-  "kurzbeschreibung": null
+  "kurzbeschreibung": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Muttereralm",
+    "https://www.patscherkofelbahn.at",
+    "https://www.gravity-card.com",
+    "https://www.innsbruck.info",
+    "https://www.crankworx.com"
+  ]
 }

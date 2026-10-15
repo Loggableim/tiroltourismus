@@ -1,12 +1,12 @@
 {
-  "name": "Schneeschuhwanderung Arlberg",
+  "name": "Guided Snowshoe Hike in the Arlberg",
   "slug": "schneeschuhwanderung-arlberg",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "winter",
   "ort": "St. Anton am Arlberg",
   "region": "st-anton",
-  "beschreibung": "=== description ===\nEnjoy the winter silence away from the ski runs: With snowshoes and an experienced mountain guide, you’ll wander through the deep powder snow of the **Arlberg**. Along the way, you’ll pass snow-covered huts and magical forests, eventually reaching a viewpoint with breathtaking panoramic views. The perfect finish is a hearty *Jause* (snack meal) in a cozy hut with mulled wine.",
+  "beschreibung": "### Overview\nGuided snowshoeing excursions in the cradle of alpine skiing unveil magical winter landscapes away from the busy pistes of Ski Arlberg. St. Anton am Arlberg, alongside neighbouring Pettneu and Flirsch, boasts over eighty kilometers of groomed winter trails alongside untouched powder terrain. The undisputed scenic highlight is the romantic Verwalltal valley: tracing the snow-clad Rosanna gorge past frozen waterfalls, across a dramatic suspension bridge, and through silent pine woodlands toward the ice-bound Verwallsee lake. Led by certified mountain guides and instructors from specialist academies like Arlberg Free Moving and Skischule Arlberg, hikers discover wildlife tracks in fresh snow and soak in absolute alpine tranquility.\n\n### Route & Requirements\nThe premier beginner-friendly route departs from Mooserkreuz in St. Anton, ascending gently into the Verwalltal to the rustic Wagner Hütte hut and looping around Verwallsee lake (approx. 10 km, 150 meters elevation gain, 2.5 to 3.5 hours). More demanding ascents depart from Pettneu climbing to the snowbound Nessleralm (approx. 400 meters elevation gain) or cross high-altitude panoramic ridges atop Galzig at over 2,000 meters. Deep snow travel demands reasonable physical stamina. For backcountry terrain off groomed trails, carrying an avalanche transceiver, probe, and shovel is compulsory, accompanied by checking daily avalanche bulletins.\n\n### Getting There\nSt. Anton am Arlberg hosts the highest Eurocity and Railjet railway station in the Alps right in the village center, providing premier international train access without a car. Free ski buses and the specialized Verwallbus (Line 6) ferry hikers directly from the station to trailheads. Motorists access the resort via the S16 Arlberg expressway, with paid parking available at Rendl and Nasserein cable car terminals (approx. €8.00 per day).\n\n### Tips\nModern snowshoes and trekking poles with large winter powder baskets can be rented at local sport outfitters (such as Sport Matt in Pettneu or Intersport Arlberg) for around €15 to €19 per day. Guided night snowshoe treks illuminated by headlamps offer an unforgettable adventure. Snowshoeing is best suited for children aged 8 to 10 and above, while younger kids can ride sledges along groomed valley trails. Dogs on leashes are permitted; applying protective paw balm prevents ice balling between pads on frozen crusts.",
   "preis": 69,
   "dauer": "4 Stunden",
   "tags": [
@@ -24,5 +24,14 @@
   "link": "#",
   "bilder": [],
   "hero_bild": null,
-  "kurzbeschreibung": null
+  "kurzbeschreibung": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/de/winter/winter-und-schneeschuhwandern",
+    "https://www.stantonamarlberg.com/de/die-region-st-anton-am-arlberg/anreise",
+    "https://www.arlbergerbergbahnen.com",
+    "https://www.skiarlberg.at",
+    "https://arlberg-free-moving.com",
+    "https://www.skischule-arlberg.com",
+    "https://lawinen.report"
+  ]
 }

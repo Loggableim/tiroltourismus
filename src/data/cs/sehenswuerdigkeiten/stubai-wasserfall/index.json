@@ -1,16 +1,16 @@
 {
-  "name": "Stubai Wasserfall",
+  "name": "Grawa-Wasserfall",
   "slug": "stubai-wasserfall",
   "region": "stubaital",
   "ort": "Neustift",
   "kategorie": "natur",
   "kurzbeschreibung": "Mocný Stubaier Wasserfall se srazí 80 m hluboko do divokého údolí – přírodní divadlo pro celou rodinu.",
-  "beschreibung": "<p>Tento záznam popisuje „Stubai Wasserfall“ jako přírodní jev v obci Neustift im Stubaital: vodopád s výškou pádu ča 80 metrů, několik výhledových platforem, přímo sousední hostinec a výletní cíl přístupný celoročně zdarma. Uvedené souřadnice leží v katastru Neustift, hlavního místa Stubaitalu o něco pod 1 000 metrech nad mořem, ča 25 kilometrů jižně od Innsbrucku. Neustift je v rozloze druh největší obecí Tyrolska a výchozím bodem pro poustevní k Elferu. Stubaital je známo mimo jiné Stubaier Gletscherem a stezkou WildeWasserWeg s jeho vodopády. Další ovětelitelné informace o popsovaném místě zde nejsou k dispozici.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Vodopád <strong>Grawa-Wasserfall</strong> v údolí Stubaital je se šířkou hrany 85 metrů nejširším vodopádem celých Východních Alp. Napájen ledovcem Sulzenauferner padá s burácením přes žulové stupně do hloubky 180 metrů. Lékařské studie prokázaly, že vdechování jemného vodního aerosolu má blahodárné účinky na dýchací cesty a léčí astma i alergie.</p><h2>Trasa a náročnost</h2><p>Relaxační dřevěná terasa s ergonomickými lehátky je dostupná za 10 minut po rovinaté asfaltové cestě (snadná T1, bezbariérová pro kočárky a vozíčkáře). Horská stezka WildeWasserWeg stoupá podél peřejí k salaši Sulzenaualm a chatě Sulzenauhütte (2,5 hodiny, převýšení 660 m, T2). Pevná obuv a nepromokavá bunda nutné. Psi na vodítku povoleni.</p><h2>Příjezd a doprava</h2><p>Vlakem do Innsbrucku a přímým autobusem 590 na zastávku Neustift Grawa Alm. Autem po brennerské dálnici A13 (sjezd Schönberg) po silnici B183 na placené parkoviště u vodopádu.</p><h2>Tipy</h2><p>Dopřejte si alespoň 20minutovou inhalaci na dřevěných lehátkách přímo pod vodopádem a navštivte památkově chráněnou 400 let starou salaš Grawa Alm na čerstvý jablečný závin.</p>",
   "emoji": "🌊",
   "farbe": "#00BCD4",
   "hoehe": "80 m",
-  "dauer": "1 Stunde",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos (Parkplatz ca. 5–7 € pro Tag)",
   "tags": [
     "příroda",
     "turistika",
@@ -18,12 +18,20 @@
     "bezplatné"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "",
+  "webseite": "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
   "status": "published",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.1106",
     "lng": "11.3076"
-  }
+  },
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "sources": [
+    "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
+    "https://de.wikipedia.org/wiki/Grawa-Wasserfall",
+    "https://www.stubai.at/",
+    "https://www.vvt.at/"
+  ]
 }

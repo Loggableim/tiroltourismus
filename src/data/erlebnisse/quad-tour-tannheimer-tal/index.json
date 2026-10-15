@@ -1,27 +1,37 @@
 {
-  "name": "Quad-Tour durchs Tannheimer Tal",
+  "name": "Geführte Quad-Touren im Allgäuer Grenzraum & Tannheimer Tal",
   "slug": "quad-tour-tannheimer-tal",
   "emoji": "🛵",
   "farbe": "var(--orange)",
   "kategorie": "abenteuer",
-  "ort": "Tannheimer Tal",
+  "ort": "Tannheim / Oberjoch / Krugzell",
   "region": "tannheimer-tal",
-  "beschreibung": "Erkunden Sie das Tannheimer Tal auf einem geländegängigen Quad. Die geführte Tour führt über Almwege und Forststrassen durch die atemberaubende Bergkulisse des Vilstals. Ein Spass für alle, die Motor und Natur gleichermassen lieben. Führerschein Klasse B erforderlich.",
-  "preis": 129,
-  "dauer": "3 Stunden",
+  "beschreibung": "### Überblick\nDas Tannheimer Tal gilt als eines der schönsten Hochtäler der Alpen und setzt konsequent auf naturverträglichen, sanften Tourismus. Wer im alpinen Grenzraum zwischen Tirol und dem bayerischen Allgäu ein motorisiertes Fahrerlebnis sucht, erlebt auf geführten Quad- und ATV-Touren eine spektakuläre Mischung aus Kurvenspaß und Hochgebirgspanorama. Aus strengen Umweltschutzgründen – darunter das Tiroler Naturschutzgesetz 2005 (§ 6) und das Österreichische Forstgesetz (§ 33) – sind touristische Offroad-Fahrten im freien Tiroler Gelände sowie im Naturschutzgebiet Vilsalpsee gesetzlich ausnahmslos verboten. Etablierte Outdoor-Veranstalter starten daher im unmittelbar benachbarten Allgäuer Voralpenland (z. B. Raum Krugzell / Kempten) und führen auf anspruchsvollen Panoramarouten über kurvenreiche, öffentliche Passstraßen wie den 1.200 Meter hohen Oberjochpass direkt an das Hochplateau des Tannheimer Tals heran.\n\n### Route & Anforderungen\nDie Touren dauern je nach gebuchtem Format zwischen drei Stunden und einem ganzen Tag. Vor der Abfahrt erfolgt eine obligatorische theoretische Sicherheitseinweisung sowie ein praktisches Fahrtraining auf abgesperrtem Gelände, um sich mit dem Fahrverhalten und dem Daumengas vertraut zu machen. Die Routen verlaufen über verkehrsarme Landstraßen, asphaltierte Wirtschaftswege und genehmigte Schotterpassagen. Reine Offroad-Abschnitte finden ausschließlich auf dafür zugelassenen Privatgeländen statt. Voraussetzung für Fahrer ist ein gültiger Pkw-Führerschein der Klasse B im Original sowie ein Mindestalter von 18 Jahren. Beifahrer sind je nach Anbieter ab 8 bis 12 Jahren zugelassen, müssen jedoch die Fußrasten sicher erreichen. Es gilt ausnahmslose Helmpflicht und eine strikte 0,0-Promille-Grenze.\n\n### Anreise\nDie Startplätze der geführten Touren im Allgäu (z. B. Krugzell / Altusried) liegen rund 40 bis 45 Autominuten vom Tannheimer Tal entfernt und sind bequem über die B308 / B310 via Oberjoch und die A7 erreichbar. Direkt an den Betriebsgeländen stehen kostenfreie Kundenparkplätze zur Verfügung. Wer das Tannheimer Tal selbst im Rahmen privater Panoramareisen mit dem Pkw oder Motorrad besucht, reist mautfrei aus Deutschland über Pfronten oder Füssen an; von Tiroler Seite führt der Weg über den Fernpass und das Außerfern. An den Talstationen Tannheim und Grän stehen gebührenpflichtige Großparkplätze zur Verfügung.\n\n### Tipps\nTragen Sie strapazierfähige Outdoor-Kleidung, feste knöchelhohe Schuhe und eine winddichte Jacke, da der Fahrtwind in den Pässen auch im Hochsommer spürbar kühlt. Leihhelme und Hygiene-Sturmhauben werden von den Veranstaltern gestellt, eigene Motorradhelme nach ECE-Norm können mitgebracht werden. Frühzeitige Buchung wird insbesondere für Wochenendtermine empfohlen. Für Familien mit Kleinkindern und Hundehalter ist das Quadfahren ungeeignet. Respektieren Sie stets die alpine Tier- und Pflanzenwelt: Das eigenmächtige Befahren von Almwiesen oder gesperrten Forstwegen zieht empfindliche Verwaltungsstrafen nach sich.",
+  "preis": "Ab 95,00 € bis 225,00 € (Beifahrer ab 35,00 € bis 70,00 €)",
+  "dauer": "3 bis 8 Stunden",
   "tags": [
+    "motorrad",
     "quad",
-    "offroad",
-    "abenteuer",
     "tannheimer-tal",
-    "tour"
+    "allgaeu",
+    "panorama",
+    "oberjoch",
+    "abenteuer"
   ],
   "koordinaten": {
     "lat": "47.5044",
     "lng": "10.5147"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.tannheimertal.com",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.ris.bka.gv.at",
+    "https://www.tannheim.gv.at",
+    "https://www.atv-quad-tour.de",
+    "https://www.spirits-of-nature.de",
+    "https://www.map-erlebnis.de"
+  ]
 }

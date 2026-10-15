@@ -5,19 +5,21 @@
   "region": "imst",
   "ort": "Imst",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Einzigartiges Kletter- und Kulturzentrum in Imst mit Kletterhalle, Boulderbereich, Museum und Veranstaltungsräumen.",
-  "beschreibung": "<p>Das <strong>Alpinarium</strong> in Imst ist ein begehbares Gesteinsdenkmal und Informationszentrum zur <strong>alpinen Geschichte der Region</strong>. Es liegt am Ortseingang von Imst und verbindet Architektur mit den angrenzenden Felsformationen. Das Haus dokumentiert die Entwicklung von Natur, Berglandwirtschaft und Tourismus im Gurgltal. Besucher erwarten eine <strong>multimediale Dauerausstellung</strong> zur Entstehung der Alpen und zum Leben im Gebirge. Ergänzt wird das Angebot durch Sonderausstellungen zu zeitgenössischen Themen aus Kultur und Wissenschaft. Das Gebäude selbst ist aus regionalen Materialien errichtet und fügt sich in die Felslandschaft ein.</p>",
+  "kurzbeschreibung": "Das Alpinarium Galtür verbindet eine monumentale Lawinenschutzmauer mit einem modernen Erlebnismuseum über den hochalpinen Lebensraum.",
+  "beschreibung": "<h2>Überblick</h2><p>Das <strong>Alpinarium Galtür</strong> im hinteren Paznauntal ist ein weltweit einzigartiges Dokumentationszentrum und Erlebnismuseum: Es ist direkt in die gewaltige, 345 Meter lange und bis zu 19 Meter hohe Lawinenschutzmauer von Galtür integriert. Das markante Bauwerk entstand als direkte bauliche und gesellschaftliche Antwort auf das verheerende Lawinenunglück vom 23. Februar 1999, bei dem 31 Menschen ihr Leben verloren. Auf einer Seehöhe von 1.584 Metern verbindet das Haus modern gestaltetes Gedenken mit einer faszinierenden Erlebnisausstellung über den alpinen Lebensraum, die Kultur der Walser Siedler und das Verhältnis von Mensch und Hochgebirgsnatur.</p><h2>Geschichte & Architektur</h2><p>Nach der Lawinenkatastrophe von 1999 beschloss die Gemeinde Galtür den Bau eines monumentalen Schutzwalls, um das Dorf künftig vor Lawinenabgängen aus den steilen Flanken der Sonnberg- und Grisköpfe zu bewahren. Das Tiroler Architekturbüro Falch konzipierte die Schutzmauer nicht als abweisenden Betonwall, sondern integrierte das Museumsgebäude harmonisch in die rückwärtige Mauerstruktur. Die Außenfassade wurde mit über 20.000 Tonnen regionalem Naturstein verkleidet und schmiegt sich wie eine moderne Festung an das Tal. Im Jahr 2003 feierlich eröffnet, wurde das Alpinarium mehrfach international ausgezeichnet, unter anderem mit einer Nominierung für den renommierten Europäischen Museumspreis und dem Österreichischen Museumsgütesiegel. Im Zentrum steht die Dauerausstellung „GANZ OBEN“, die mit multimedialen Rauminstallationen, Zeitzeugenberichten und wissenschaftlichen Stationen die Entstehung von Lawinen, das historische Überleben in alpinen Tälern sowie die Pionierleistungen des Alpinismus erlebbar macht.</p><h2>Besuch & Anreise</h2><p>Das Alpinarium ist sowohl in der Sommer- als auch in der Wintersaison geöffnet (Anfang Juni bis Mitte Oktober sowie Mitte Dezember bis nach Ostern, jeweils Dienstag bis Sonntag von 10:00 bis 18:00 Uhr, montags Ruhetag). Reguläre Eintrittspreise (Stand 2025/2026): Erwachsene 10,00 €, Senioren und Studenten 8,50 €, Kinder von 6 bis 15 Jahren 5,50 €, Kinder unter 6 Jahren frei. Inhaber der Gästekarte Silvretta Card Premium genießen kostenlosen bzw. ermäßigten Eintritt. Mit dem Auto erreicht man Galtür über die Inntalautobahn A12 bzw. Arlbergschnellstraße S16 bis Ausfahrt Pians, von dort über die B188 (Paznauntalstraße) durch Ischgl nach Galtür. Parkplätze stehen direkt am Haus zur Verfügung. Mit öffentlichen Verkehrsmitteln reist man per Bahn (ÖBB/Railjet) bis zum Bahnhof Landeck-Zams und steigt dort in die VVT-Buslinie 260 um, die regelmäßig direkt zur Haltestelle Galtür Dorfplatz verkehrt (ca. 5 Minuten Fußweg zum Alpinarium).</p><h2>Tipps</h2><p>Das gesamte Museumsgebäude ist barrierefrei und mit rollstuhlgerechten Aufzügen, breiten Durchgängen und behindertengerechten Sanitärräumen ausgestattet. Neben den Ausstellungsräumen beherbergt das Haus eine rund 70 m² große Indoor-Boulderwand im Café „Gefrorene Wasser“, das durch bodentiefe Panoramafenster einen spektakulären Blick auf die Dreitausender der Silvretta eröffnet. Planen Sie für die Besichtigung etwa 1,5 bis 2 Stunden Zeit ein.</p>",
   "emoji": "🧗",
   "farbe": "#FF9800",
   "hoehe": "827 m",
   "dauer": "2–3 Stunden",
   "preis": "14 € (Kletterhalle Erwachsene)",
   "tags": [
-    "klettern",
-    "sport",
     "museum",
     "kultur",
-    "events"
+    "lawine",
+    "paznaun",
+    "architektur",
+    "geschichte",
+    "ausstellung"
   ],
   "oeffnungszeiten": "Mo–Fr 10:00–22:00, Sa–So 9:00–21:00",
   "webseite": "https://www.alpinarium.at",
@@ -26,5 +28,10 @@
     "lng": "10.7333"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.alpinarium.at",
+    "https://de.wikipedia.org/wiki/Alpinarium_Galt%C3%BCr",
+    "https://de.wikipedia.org/wiki/Galt%C3%BCr"
+  ]
 }

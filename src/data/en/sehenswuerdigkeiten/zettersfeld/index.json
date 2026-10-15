@@ -1,9 +1,9 @@
 {
-  "name": "Zettersfeld",
+  "name": "Zettersfeld Sonnenbalkon Lienz",
   "slug": "zettersfeld",
   "region": "osttirol",
   "ort": "Lienz",
-  "kategorie": "sport",
+  "kategorie": "aussicht",
   "kurzbeschreibung": "The sunny Zettersfeld high plateau above Lienz offers an unmatched view of the Lienzer Dolomiten and is a paradise for hikers and winter sports enthusiasts.",
   "emoji": "⛰️",
   "farbe": "#5B8C5A",
@@ -14,10 +14,10 @@
     "panorama",
     "sports"
   ],
-  "dauer": "Halbtag bis Ganztag",
-  "preis": "Bergfahrt Erwachsene € 19,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Zettersfeld Berg- und Talfahrt ca. 24 €",
   "oeffnungszeiten": "Sommer- und Winterbetrieb",
-  "webseite": "https://www.zettersfeld.at/",
+  "webseite": "https://www.lienzer-bergbahnen.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,13 @@
     "lng": "12.7681"
   },
   "status": "published",
-  "beschreibung": null
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Zettersfeld</strong> spreads as an expansive, sun-bathed alpine terrace perched between 1,800 and 2,213 meters elevation high above the charming town of Lienz in East Tyrol. Acting as the sunny scenic counterpart to the jagged limestone towers of the neighboring Lienz Dolomites, Zettersfeld is widely celebrated as the sunniest viewing terrace in the region. Aboard the modern Zettersfeldbahn gondola and connecting Steinermandl quad chairlift, hikers and families ascend effortlessly from Gaimberg straight to the 2,213-meter Steinermandl crest. Arriving at the top reveals a magnificent 360-degree panorama: vistas sweep from the glaciated 3,000-meter giants of the Glockner and Venediger ranges in the north to the vertical towers of the Lienz Dolomites and Carnic Alps along the Italian border. Characterized by rolling alpine meadows, interactive marmot reserves, and barrier-free trails, Zettersfeld is a haven for mountain lovers of all generations.</p><h2>Route &amp; Requirements</h2><p>Trail offerings on Zettersfeld provide delightful excursions spanning gentle family strolls to rewarding ridge traverses. The signature family outing is the Family Theme Loop encircling the central mountain station: broad, well-maintained paths wander past fragrant stone pines, reflecting alpine ponds, and observation blinds for watching native alpine marmots (approx. 1 to 1.5 hours, easy grade T1, stroller accessible). Energetic mountain walkers favor the scenic circuit extending from Steinermandl toward the Goiselemandl peak (2,433 m) before descending to the rustic Naturfreundehütte or welcoming Faschingalm chalet (2.5 to 3 hours, 350 vertical meters gain/loss, moderate grade T2, requiring surefootedness on grassy trails). The mountain is also renowned for paragliding launches and high-altitude mountain biking. Sturdy walking shoes and sun hats are recommended on this open plateau. Leashed dogs are permitted on trails and inside gondola cabins.</p><h2>Visit &amp; Arrival</h2><p>Rail passengers travel via ÖBB mainline trains to Lienz central station, where local city and hiking buses link seamlessly with the lower Zettersfeldbahn gondola terminal in Gaimberg. Motorists reach Lienz via the Drautal highway B100 or Felbertauern highway B108. From Lienz town center, a five-minute drive climbs to the lift terminal in Gaimberg, where spacious free parking is provided for lift patrons. The cableway runs daily during the summer season from mid-June through early October between 9:00 AM and 4:45 PM.</p><h2>Tips</h2><p>Settle into one of the ergonomic wooden relaxation loungers at Steinermandl (2,213 m) to take in the breathtaking panorama of the Lienz Dolomites. Stop at the historic Faschingalm chalet or Meckis Panorama Lounge to enjoy freshly baked East Tyrolean farm pastries accompanied by cold alpine buttermilk.</p>",
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "sources": [
+    "https://www.lienzer-bergbahnen.at/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Zettersfeld",
+    "https://www.vvt.at/"
+  ]
 }

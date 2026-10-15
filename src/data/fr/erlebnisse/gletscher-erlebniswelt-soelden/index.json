@@ -6,7 +6,7 @@
   "kategorie": "natur",
   "ort": "Sölden",
   "region": "oetztal",
-  "beschreibung": "Die Gletscher Erlebniswelt auf dem Rettenbachferner verbindet Natur, Wissenschaft und Abenteuer. Der 007 ELEMENTS Bond-Erlebnisraum, die interaktive Gletscherausstellung und die Aussichtsplattform 'Big 3' auf über 3.000 Metern machen den Besuch zu einem unvergesslichen Erlebnis. James Bond Fans kommen hier auf ihre Kosten.",
+  "beschreibung": "<p>À plus de 3 000 m d'altitude, le <strong>monde des glaciers de Sölden</strong> (Rettenbach et Tiefenbachferner) déploie un décor grandiose avec les passerelles panoramiques des <strong>BIG 3</strong> face à la Wildspitze (3 774 m).</p><p>La passerelle suspendue du <strong>Tiefenbachkogl (3 250 m)</strong> s'avance de 20 m au-dessus du vide, tandis que la plate-forme de la <strong>Schwarze Schneid (3 340 m)</strong> offre un panorama à 360°. Pour les randonneurs, le sentier d'altitude descend jusqu'à Vent (10,5 km, -1 000 m, 4h30). Les deux glaciers sont reliés par le tunnel routier Rosi-Mittermeier (2 829 m, le plus haut d'Europe).</p><p>Route des glaciers ouverte de début juin à fin octobre (péage voiture env. 24 €). Accès en bus glacier régulier (ligne 70) depuis Sölden (gratuit avec la Summer Card). Vêtements chauds, lunettes catégorie 4 et prudence absolue sur la glace indispensables.</p>",
   "preis": 46,
   "dauer": "3 Stunden",
   "tags": [
@@ -23,5 +23,11 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.soelden.com",
+    "https://www.oetztal.com",
+    "https://www.oetztaler.at",
+    "https://www.oetztalergletscher.com"
+  ]
 }

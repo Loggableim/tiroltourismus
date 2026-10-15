@@ -15,15 +15,15 @@
   ],
   "hoehe": "3.774 m",
   "flaeche": "350 km²",
-  "einwohner": "27.000",
-  "beschreibung": null,
+  "einwohner": "25.000",
+  "beschreibung": "<p>Okres <strong>Imst</strong> leží v horním údolí Inntalu a zahrnuje město Imst i obce v přilehlých údolích. Město <strong>Imst</strong> je proslulé svým tradičním masopustem <strong>Imster Fasching</strong> s velkolepým průvodem masek Schellerlaufen, který se koná každé čtyři roky a je zapsán na seznamu UNESCO. Region je rájem pro horolezce a bikery díky vyhlášeným lezeckým terénům a síti tras pro horská kola. V zimě láká rodinný lyžařský areál <strong>Hoch-Imst</strong> se spolehlivou sněhovou pokrývkou. Okolí nabízí snadný přístup do divokých údolí <strong>Gurgltal</strong> a <strong>Pitztal</strong>.</p>",
   "tipps": [
-    "Der Imster Fasching findet nur alle 4 Jahre statt – nächstes Mal 2027!",
-    "Der Mountainbike-Trail „Imster Bergl“ ist einer der anspruchsvollsten Trails im Oberland.",
-    "Der Gurgltal-Mineralienwanderweg bei Tarrenz ist ein Geheimtipp für Familien."
+    "Tradiční masopust Schemenlaufen v Imstu se koná pouze jednou za 4 roky – příště v roce 2027!",
+    "Trasa pro horská kola „Imster Bergl“ patří k nejnáročnějším a nejkrásnějším v tyrolském Oberlandu.",
+    "Naučná stezka minerálů v údolí Gurgltal u Tarrenzu je tajným tipem pro rodinné výlety."
   ],
   "empfehlungen": "<p>Prozkoumejte historické <strong>Altstadt von Imst</strong> s jejími arkádovými zahradami a barokní kostelní věží. Poté jednotku lezení v <strong>Klettergarten Imst</strong> nebo túru na <strong>Muttekopfhütte</strong> (2.034 m).</p>",
-  "umgebung": null,
+  "umgebung": "<p>Region Imst se rozkládá v horním Inntalu mezi masivem Tschirgant na severu a Ötztalskými Alpami na jihu. Sousední regiony: Ötztal (jih), Pitztal (západ), Telfs (východ), Außerfern (sever přes průsmyk Fernpass). Nejbližší větší město: Innsbruck (50 km).</p>",
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -41,7 +41,7 @@
     ],
     [
       47.22,
-      11.0
+      11
     ],
     [
       47.18,
@@ -84,7 +84,7 @@
       10.6
     ],
     [
-      47.0,
+      47,
       10.5
     ],
     [
@@ -115,5 +115,11 @@
   "koordinaten": {
     "lat": 47.2333,
     "lng": 10.7333
-  }
+  },
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at/regionen/a-ferienregion-imst",
+    "https://www.tirol.gv.at/imst/",
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

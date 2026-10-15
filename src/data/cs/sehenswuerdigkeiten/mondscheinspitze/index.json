@@ -4,14 +4,14 @@
   "status": "published",
   "region": "achensee",
   "ort": "Achenkirch",
-  "kategorie": "natur",
-  "kurzbeschreibung": "Aussichtsberg (2.106 m) v Karwendelu s nádherným výhledem na Achensee, das Karwendelgebirge a až do Zillertaler Alpen.",
-  "beschreibung": "<h2>Přehled</h2><p><strong>Mondscheinspitze</strong> (2 106 m) je působivý vápencový pyramidový vrchol v pohoří Karwendel západně od jezera Achensee. Patří k nejvyhlášenějším vyhlídkovým vrcholům v Tyrolsku a nabízí fascinující 360stupňový panoramatický výhled na tyrkysové jezero, stěny masivu Rofan i zaledněné třítisícovky Zillertalských Alp.</p><h2>Trasa a náročnost</h2><p>Klasická túra začíná u horského hostince Gernalm (1 172 m) u Pertisau, stoupá k sedlu Plumsjoch a chatě Plumsjochhütte (1 630 m) a pokračuje po strmém západním hřebeni k vrcholu (převýšení 950 m, 5–6 hodin chůze, obtížnost T3+/T4). Skalní stupně jsou zajištěny ocelovými lany a vyžadují naprostou jistotu kroku a odolnost vůči závratím. Pevné pohorky nezbytné. Trasa není vhodná pro psy.</p><h2>Příjezd a doprava</h2><p>Vlakem ÖBB do Jenbachu a autobusem 4080 do Pertisau, v létě pak turistickým autobusem k hostinci Gernalm. Autem po A12 (sjezd Wiesing) po B181 do Pertisau a mýtnou silnicí k parkovišti Gernalm.</p><h2>Tipy</h2><p>V létě vyrazte brzy ráno kvůli jižní orientaci svahů a po sestupu si dopřejte domácí trhanec Kaiserschmarrn na slunečné terase chaty Plumsjochhütte.</p>",
+  "kategorie": "aussicht",
+  "kurzbeschreibung": "S nadmořskou výškou 2 106 metrů v pohoří Karwendel okouzluje impozantní Mondscheinspitze zkušené vysokohorské turisty dramatickými hřebeny a výhledy na jezero Achensee.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Hora <strong>Mondscheinspitze</strong> (2 106 m n. m.) představuje jeden z nejelegantnějších a nejvýraznějších vrcholů východní části pohoří Karwendel. Tyčí se západně od jezera Achensee a severně od údolí Gerntal a tvoří dominantní pilíř hřebene Montschein, proslulého strmými vápencovými srázy a divokými kary. Ze samotného vrcholu se otevírá úchvatné kruhové panorama: na východě září tyrkysová hladina jezera Achensee, na jihu a západě se vlní desítky rozeklaných štítů centrálního Karwendelu a na severu obzor lemují Bavorské předhůří. Pro zkušené horské turisty patří výstup na Mondscheinspitze k nejkrásnějším vysokohorským cílům v celém Tyrolsku.</p>\n<h2>Route & Anforderungen</h2>\n<p>Výstup na Mondscheinspitze je klasickou a fyzicky náročnou horskou túrou, která vyžaduje velmi dobrou kondici pro zdolání zhruba 1 100 výškových metrů nahoru i dolů. Nejoblíbenější trasa vychází od hostince Gernalm v malebném údolí Gerntal u Pertisau a zpočátku stoupá rozkvetlými loukami k sedlu Plumsjoch a chatě Plumsjochhütte (1 630 m). Dále stezka strmě stoupá skalnatým svahem do sedla Schafjöchl. Závěrečný výstup na vrchol vyžaduje stoprocentní jistotu kroku a odolnost vůči závratím: v lehkém skalním terénu (stupeň I UIAA) je nutné překonat krátké lezecké úseky částečně jištěné ocelovými lany. Za mokra jsou vápencové plotny nebezpečně kluzké.</p>\n<h2>Besuch & Anreise</h2>\n<p>Výchozím bodem je rekreační obec Pertisau na břehu jezera Achensee. Zpoplatněná horská silnice vede malebným údolím Gerntal až na parkoviště u horského hostince Gernalm. Alternativně lze zvolit výstup z údolí Rißtal přes chatu Plumsjochhütte. Veřejnou dopravou se snadno dostanete vlakem do stanice Jenbach a návazným autobusem do Pertisau, odkud v létě zajišťují dopravu do údolí turistické kyvadlové autobusy.</p>\n<h2>Tipps</h2>\n<p>Zastávka na tradiční chatě Plumsjochhütte potěší vynikajícími tyrolskými sýrovými knedlíky a krásnými výhledy do údolí Rißtal. Vyrazíte-li na túru časně zrána, máte na travnatých svazích pod vrcholem velkou šanci spatřit kamzíky a sviště. Pro zpáteční cestu se jako skvělá alternativa nabízí okružní varianta přes malebné sedlo Schleimsjoch.</p>",
   "emoji": "🔭",
   "farbe": "#795548",
   "hoehe": "2.106 m",
-  "dauer": "5–6 Stunden",
-  "preis": "Kostenlos (Mautstraße Gerntal ca. 5–7 € pro PKW)",
+  "dauer": "5-7 hodin (celodenní túra)",
+  "preis": "Volný přístup",
   "tags": [
     "gipfel",
     "wandern",
@@ -20,7 +20,7 @@
     "bergsteigen",
     "panorama"
   ],
-  "oeffnungszeiten": "Ganzjährig (beste Zeit: Juni–Okt)",
+  "oeffnungszeiten": "Přístupné celoročně; horské túry doporučeny od června do října",
   "webseite": "https://www.achensee.info/mondscheinspitze",
   "koordinaten": {
     "lat": "47.4833",
@@ -30,9 +30,9 @@
   "hero_bild": null,
   "sources": [
     "https://de.wikipedia.org/wiki/Mondscheinspitze",
-    "https://www.karwendel.org/",
-    "https://www.alpenvereinaktiv.com/de/tour/mondscheinspitze-aus-dem-gerntal/1376173/",
-    "https://www.bergsteigen.com/touren/bergsteigen/mondscheinspitze-karwendel/",
-    "https://www.vvt.at/"
+    "https://www.achensee.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Karwendel",
+    "https://www.alpenverein.at/"
   ]
 }

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { plainText } from '../../../lib/richtext.js';
 import Hero from '../../../components/Hero.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
@@ -263,8 +264,8 @@ const orteItemList = {
                   <FavHeart collection="orte" slug={o.slug} />
                 </div>
                 <div class="ort-card-body">
-                  <h3>{o.entry.name}</h3>
-                  {o.entry.kurzbeschreibung && <p>{o.entry.kurzbeschreibung}</p>}
+                  <h3>{plainText(o.entry.name)}</h3>
+                  {o.entry.kurzbeschreibung && <p>{plainText(o.entry.kurzbeschreibung)}</p>}
                   <span class="ort-link">{t.entdecken}</span>
                 </div>
               </a>

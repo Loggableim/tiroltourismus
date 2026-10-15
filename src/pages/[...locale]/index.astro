@@ -1,4 +1,5 @@
 ---
+import { plainText } from '../../lib/richtext.js';
 // src/pages/[...locale]/index.astro — REAL language front pages (subdomain roots).
 //
 // One-page layout per language: sticky DemoNav (scroll-spy, smooth scroll,
@@ -126,7 +127,7 @@ const events = allEvents.slice(0, 4);
 const camping = allCamping.slice(0, 3);
 const orte = allOrte.slice(0, 4);
 const regionNames = allRegionen
-  .map(r => ({ slug: r.slug, name: r.entry.titel || r.entry.name || r.slug }))
+  .map(r => ({ slug: r.slug, name: plainText(r.entry.titel || r.entry.name || r.slug) }))
   .sort((a, b) => a.name.localeCompare(b.name, locale === 'cs' ? 'cs' : 'de'));
 ---
 

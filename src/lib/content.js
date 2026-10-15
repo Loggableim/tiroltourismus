@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { linkDescriptionText } from './related.js';
+import { linkDescriptionText, linkifyHtml } from './related.js';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 const _collectionCache = new Map();
@@ -417,31 +417,14 @@ export function autoLinkContent(html, currentEntry = null, locale = 'de', maxLin
   const entityMap = _buildEntityMap(locale);
   const currentSlug = currentEntry?.slug;
   const currentName = (currentEntry?.name || currentEntry?.titel || '').toLowerCase();
-  let linked = 0;
-  let result = preparedHtml;
-  let textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
-
-  for (const entity of entityMap) {
-    if (linked >= maxLinks) break;
-    if (currentSlug && entity.slug === currentSlug) continue;
-    if (currentName && entity.name.toLowerCase() === currentName) continue;
-
-    const nameLower = entity.name.toLowerCase();
-    if (nameLower.length < 3 || !textProbe.includes(nameLower)) continue;
-
-    const escaped = entity.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(?<!<[^>]*)(?<!href="[^"]*)(?<![\\w\\d])(${escaped})(?![\\w\\d])`, 'gi');
-    const next = result.replace(regex, (match) => {
-      if (linked >= maxLinks) return match;
-      linked++;
-      return `<a href="${entity.href}" class="auto-link">${match}</a>`;
-    });
-    if (next !== result) {
-      result = next;
-      textProbe = result.replace(/<[^>]+>/g, ' ').toLowerCase();
-    }
-  }
-  return result;
+  // Nur Entitäten, deren Name im Text vorkommt (Performance + weniger Regexe).
+  const probe = preparedHtml.replace(/<[^>]+>/g, ' ').toLowerCase();
+  const entities = entityMap.filter((entity) => {
+    if (currentSlug && entity.slug === currentSlug) return false;
+    if (currentName && entity.name.toLowerCase() === currentName) return false;
+    return probe.includes(String(entity.name).toLowerCase());
+  });
+  return linkifyHtml(preparedHtml, entities, maxLinks);
 }
 
 /** Remove the standalone field heading accidentally included in legacy rich text. */

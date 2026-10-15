@@ -10,9 +10,24 @@ export async function getStaticPaths() {
 }
 
 const locale = Astro.params.locale || DEFAULT_LOCALE;
-const faqItems = readSingleton('faq', locale) || [];
-const t = { de:'Häufige Fragen', en:'FAQ', fr:'FAQ', it:'FAQ', es:'Preguntas Frecuentes', zh:'常见问题' };
-const categoryLabels = { de:{ allgemein:'Allgemein', anreise:'Anreise', unterkunft:'Unterkunft', wandern:'Wandern', ski:'Ski & Winter', familie:'Familie', gastro:'Kulinarik', regionen:'Regionen', wetter:'Wetter', events:'Events' }, en:{ allgemein:'General', anreise:'Arrival', unterkunft:'Accommodation', wandern:'Hiking', ski:'Ski & Winter', familie:'Family', gastro:'Food', regionen:'Regions', wetter:'Weather', events:'Events' } };
+// Fallback: wenn eine Sprache keine eigenen FAQ-Daten hat, DE-Inhalte rendern
+// (statt einer fast leeren Seite).
+const localeFaq = readSingleton('faq', locale);
+const faqItems = (Array.isArray(localeFaq) && localeFaq.length > 0)
+  ? localeFaq
+  : (readSingleton('faq', 'de') || []);
+const t = { de:'Häufige Fragen', en:'FAQ', fr:'FAQ', it:'FAQ', es:'Preguntas Frecuentes', zh:'常见问题', nl:'Veelgestelde vragen', cs:'Časté dotazy' };
+const categoryLabels = {
+  de:{ allgemein:'Allgemein', anreise:'Anreise', unterkunft:'Unterkunft', wandern:'Wandern', ski:'Ski & Winter', familie:'Familie', gastro:'Kulinarik', regionen:'Regionen', wetter:'Wetter', events:'Events' },
+  en:{ allgemein:'General', anreise:'Arrival', unterkunft:'Accommodation', wandern:'Hiking', ski:'Ski & Winter', familie:'Family', gastro:'Food', regionen:'Regions', wetter:'Weather', events:'Events' },
+  fr:{ allgemein:'Général', anreise:'Arrivée', unterkunft:'Hébergement', wandern:'Randonnée', ski:'Ski & hiver', familie:'Famille', gastro:'Gastronomie', regionen:'Régions', wetter:'Météo', events:'Événements' },
+  it:{ allgemein:'Generale', anreise:'Arrivo', unterkunft:'Alloggio', wandern:'Escursioni', ski:'Sci & inverno', familie:'Famiglia', gastro:'Gastronomia', regionen:'Regioni', wetter:'Meteo', events:'Eventi' },
+  es:{ allgemein:'General', anreise:'Llegada', unterkunft:'Alojamiento', wandern:'Senderismo', ski:'Esquí e invierno', familie:'Familia', gastro:'Gastronomía', regionen:'Regiones', wetter:'Tiempo', events:'Eventos' },
+  zh:{ allgemein:'通用', anreise:'抵达', unterkunft:'住宿', wandern:'徒步', ski:'滑雪与冬季', familie:'家庭', gastro:'美食', regionen:'地区', wetter:'天气', events:'活动' },
+  nl:{ algemeen:'Algemeen', anreise:'Aankomst', onderkunft:'Accommodatie', wandern:'Wandelen', ski:'Ski & winter', familie:'Familie', gastro:'Eten', regionen:'Regio’s', wetter:'Weer', events:'Evenementen' },
+  cs:{ allgemein:'Obecné', anreise:'Příjezd', unterkunft:'Ubytování', wandern:'Turistika', ski:'Lyžování a zima', familie:'Rodina', gastro:'Gastronomie', regionen:'Regiony', wetter:'Počasí', events:'Akce' },
+};
+const catLabels = categoryLabels[locale] || categoryLabels.de;
 const catOrder = ['allgemein','anreise','unterkunft','wandern','ski','familie','gastro','regionen','wetter','events'];
 const grouped = new Map();
 for (const c of catOrder) {
@@ -21,13 +36,13 @@ for (const c of catOrder) {
 }
 ---
 
-<BaseLayout title="{t[locale] || t.de} – Tirol" description="Antworten auf die häufigsten Fragen zu Tirol" locale={locale}>
+<BaseLayout title={`${t[locale] || t.de} – Tirol`} description="Antworten auf die häufigsten Fragen zu Tirol" locale={locale}>
   <main>
-    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" locale={locale} /></div>
-    <SectionHeader title="{t[locale] || t.de}" sub="Häufige Fragen zu Tirol" />
+    <div class="container"><Breadcrumbs items={[{ label: t[locale] || t.de }]} locale={locale} /></div>
+    <SectionHeader title={t[locale] || t.de} sub="Häufige Fragen zu Tirol" />
     {[...grouped.entries()].map(([cat, items]) => (
       <div class="faq-group">
-        <h2>{categoryLabels['de']?.[cat] || cat}</h2>
+        <h2>{catLabels[cat] || cat}</h2>
         {items.map(item => (<details class="faq-item"><summary>{item.frage || item.q}</summary><p>{item.antwort || item.a}</p></details>))}
       </div>
     ))}

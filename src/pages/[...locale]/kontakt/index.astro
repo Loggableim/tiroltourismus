@@ -9,16 +9,116 @@ export async function getStaticPaths() {
 }
 
 const locale = Astro.params.locale || DEFAULT_LOCALE;
-const t = { de:'Kontakt', en:'Contact', fr:'Contact', it:'Contatti', es:'Contacto', zh:'联系我们' };
+const T = {
+  de: {
+    title: 'Kontakt',
+    intro: 'Du hast eine Frage zu Tirol, zu einer Unterkunft, einem Erlebnis oder zu dieser Seite? Schreib uns – wir melden uns so schnell wie möglich zurück.',
+    emailLabel: 'E-Mail',
+    addressLabel: 'Adresse',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Österreich',
+    hoursLabel: 'Antwortzeit',
+    hours: 'In der Regel innerhalb von 1–2 Werktagen.',
+    note: 'Für konkrete Buchungen kontaktiere bitte direkt den Betrieb (Unterkunft, Campingplatz oder Gastronomiebetrieb).',
+  },
+  en: {
+    title: 'Contact',
+    intro: 'Do you have a question about Tyrol, an accommodation, an experience or this website? Write to us – we will get back to you as soon as possible.',
+    emailLabel: 'Email',
+    addressLabel: 'Address',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Austria',
+    hoursLabel: 'Response time',
+    hours: 'Usually within 1–2 business days.',
+    note: 'For specific bookings, please contact the business directly (accommodation, campsite or restaurant).',
+  },
+  fr: {
+    title: 'Contact',
+    intro: 'Une question sur le Tyrol, un hébergement, une expérience ou ce site ? Écrivez-nous – nous vous répondrons dans les plus brefs délais.',
+    emailLabel: 'E-mail',
+    addressLabel: 'Adresse',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Autriche',
+    hoursLabel: 'Délai de réponse',
+    hours: 'Généralement sous 1 à 2 jours ouvrables.',
+    note: 'Pour une réservation précise, contactez directement l’établissement (hébergement, camping ou restaurant).',
+  },
+  it: {
+    title: 'Contatti',
+    intro: 'Hai una domanda sul Tirolo, su un alloggio, un’esperienza o su questo sito? Scrivici – ti risponderemo il prima possibile.',
+    emailLabel: 'E-mail',
+    addressLabel: 'Indirizzo',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Austria',
+    hoursLabel: 'Tempo di risposta',
+    hours: 'Di norma entro 1–2 giorni lavorativi.',
+    note: 'Per prenotazioni specifiche contatta direttamente la struttura (alloggio, campeggio o ristorante).',
+  },
+  es: {
+    title: 'Contacto',
+    intro: '¿Tienes alguna pregunta sobre Tirol, un alojamiento, una experiencia o este sitio web? Escríbenos y te responderemos lo antes posible.',
+    emailLabel: 'Correo',
+    addressLabel: 'Dirección',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Austria',
+    hoursLabel: 'Tiempo de respuesta',
+    hours: 'Normalmente en 1–2 días laborables.',
+    note: 'Para reservas concretas, contacta directamente con el establecimiento (alojamiento, camping o restaurante).',
+  },
+  zh: {
+    title: '联系我们',
+    intro: '您对蒂罗尔、住宿、体验或本网站有任何疑问吗？欢迎联系我们，我们会尽快回复。',
+    emailLabel: '邮箱',
+    addressLabel: '地址',
+    address: 'Tirol Tourismus, 6020 因斯布鲁克, 奥地利',
+    hoursLabel: '回复时间',
+    hours: '通常为 1–2 个工作日。',
+    note: '如需具体预订，请直接联系相应的商家（住宿、露营地或餐饮）。',
+  },
+  nl: {
+    title: 'Contact',
+    intro: 'Heb je een vraag over Tirol, een accommodatie, een belevenis of deze website? Schrijf ons – we reageren zo snel mogelijk.',
+    emailLabel: 'E-mail',
+    addressLabel: 'Adres',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Oostenrijk',
+    hoursLabel: 'Reactietijd',
+    hours: 'Meestal binnen 1–2 werkdagen.',
+    note: 'Neem voor concrete boekingen direct contact op met de aanbieder (accommodatie, camping of restaurant).',
+  },
+  cs: {
+    title: 'Kontakt',
+    intro: 'Máte dotaz ohledně Tyrolska, ubytování, zážitku nebo tohoto webu? Napište nám – ozveme se co nejdříve.',
+    emailLabel: 'E-mail',
+    addressLabel: 'Adresa',
+    address: 'Tirol Tourismus, 6020 Innsbruck, Rakousko',
+    hoursLabel: 'Doba odpovědi',
+    hours: 'Obvykle do 1–2 pracovních dnů.',
+    note: 'Pro konkrétní rezervace kontaktujte přímo daný podnik (ubytování, kemp nebo restauraci).',
+  },
+};
+const c = T[locale] || T.de;
 ---
 
-<BaseLayout title="{t[locale] || t.de}" description="Kontaktiere das Tirol Tourismus Team." locale={locale}>
+<BaseLayout title={`${c.title} – Tirol`} description={c.intro} locale={locale}>
   <main>
-    <div class="container"><Breadcrumbs items="{[{ label: t[locale] || t.de }]}" locale={locale} /></div>
+    <div class="container"><Breadcrumbs items={[{ label: c.title }]} locale={locale} /></div>
     <section class="kontakt-section">
-      <h1>{t[locale] || t.de}</h1>
-      <p>office@tiroltourismus.com</p>
+      <h1>{c.title}</h1>
+      <p class="kontakt-intro">{c.intro}</p>
+      <dl class="kontakt-facts">
+        <div><dt>{c.emailLabel}</dt><dd><a href="mailto:office@tiroltourismus.com">office@tiroltourismus.com</a></dd></div>
+        <div><dt>{c.addressLabel}</dt><dd>{c.address}</dd></div>
+        <div><dt>{c.hoursLabel}</dt><dd>{c.hours}</dd></div>
+      </dl>
+      <p class="kontakt-note">{c.note}</p>
     </section>
     <ContactForm client:load />
   </main>
 </BaseLayout>
+
+<style>
+  .kontakt-section{max-width:720px;margin:0 auto;padding:32px 24px 0}
+  .kontakt-section h1{font-family:var(--font-display);font-size:clamp(36px,5vw,64px);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .kontakt-intro{color:var(--text2);line-height:1.7;margin-bottom:24px}
+  .kontakt-facts{display:grid;gap:14px;margin-bottom:24px}
+  .kontakt-facts div{background:var(--surface);border:1px solid var(--glass-border);border-radius:var(--radius);padding:14px 18px}
+  .kontakt-facts dt{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text3);margin-bottom:4px}
+  .kontakt-facts dd{font-size:15px;color:var(--text)}
+  .kontakt-facts a{color:var(--tirol-pink);font-weight:600}
+  .kontakt-note{font-size:13px;color:var(--text3);line-height:1.6;margin-bottom:32px}
+</style>

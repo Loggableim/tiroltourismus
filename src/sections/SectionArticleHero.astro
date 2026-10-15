@@ -1,4 +1,5 @@
 ---
+import { plainText, richText } from '../lib/richtext.js';
 export interface Props {
   emoji?: string;
   image?: string;
@@ -20,10 +21,13 @@ const {
   title,
   teaser,
 } = Astro.props;
+const safeTitle = plainText(title);
+const safeCategory = plainText(category);
+const safeTeaser = teaser ? richText(teaser) : '';
 ---
 
 <header class="sec-art-hero">
-  {image && <img src={image} alt={title} class="sec-art-bg" loading="eager" decoding="async" fetchpriority="high" width="1200" height="600" />}
+  {image && <img src={image} alt={safeTitle} class="sec-art-bg" loading="eager" decoding="async" fetchpriority="high" width="1200" height="600" />}
   <div class="container">
     {emoji && <div class="sec-art-emoji">{emoji}</div>}
     <div class="sec-art-meta">
@@ -32,14 +36,14 @@ const {
           class="sec-art-cat"
           style={categoryColor ? `background:${categoryColor}` : ''}
         >
-          {category}
+          {safeCategory}
         </span>
       )}
       {date && <span class="sec-art-date">{date}</span>}
       {author && <span class="sec-art-author">• {author}</span>}
     </div>
-    <h1>{title}</h1>
-    {teaser && <p class="sec-art-teaser">{teaser}</p>}
+    <h1>{safeTitle}</h1>
+    {safeTeaser && <div class="sec-art-teaser" set:html={safeTeaser}></div>}
   </div>
 </header>
 

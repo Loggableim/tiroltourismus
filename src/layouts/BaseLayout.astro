@@ -1,10 +1,11 @@
 ---
+import { plainText } from '../lib/richtext.js';
 // BaseLayout.astro — Hauptlayout mit Nav, Footer, Theme (Hell/Dunkel)
 // Locale-aware SEO: hreflang only for published locale entries; none when noindex.
 import { ViewTransitions } from 'astro:transitions';
 import { readSingleton } from '../lib/content.js';
 import { hreflangAlternates } from '../lib/hreflang.js';
-import { LANGUAGES, switchLangPath, LANG_DOMAINS, PUBLISHED_LANGS, SOON_LANGS, localePrefix as localePrefixFn } from '../lib/languages.js';
+import { LANGUAGES, LANG_DOMAINS, PUBLISHED_LANGS, SOON_LANGS, localePrefix as localePrefixFn } from '../lib/languages.js';
 import TirolLogo from '../components/TirolLogo.astro';
 
 export interface Props {
@@ -19,6 +20,8 @@ export interface Props {
   publishedTime?: string;
   jsonld?: Record<string, unknown>;
   noindex?: boolean;
+  /** When noindex, use "noindex, follow" (keep link equity) instead of "noindex, nofollow". */
+  noindexFollow?: boolean;
   availableLanguages?: string[];
   /**
    * One-page front mode: suppress the site header chrome (theme toggle, mega
@@ -39,6 +42,7 @@ const {
   publishedTime,
   jsonld,
   noindex,
+  noindexFollow,
   availableLanguages,
   onePage = false,
 } = Astro.props;
@@ -81,6 +85,13 @@ const { links: alternateLinks, xDefault: xDefaultURL } = hreflangAlternates({
   noindex: Boolean(noindex),
   availableLanguages,
 });
+// Sprachumschalter: nur Sprachen, in denen die Seite wirklich gebaut wird.
+// Gleiche Logik wie hreflang/getStaticPaths (alternateLinks liefert die Slugs
+// der Zielsprache). Fehlende Sprachen werden nicht verlinkt.
+const alternateHrefByCode = new Map(alternateLinks.map((link) => [link.code, link.href]));
+const safeTitle = plainText(title);
+const safeDescription = plainText(siteDesc);
+const SOCIAL_FALLBACK = 'https://tiroltourismus.com';
 const FALLBACK_OG = `${siteURL}/images/og-default.jpg`;
 const ogImageAbs = ogImage ? (ogImage.startsWith('http') ? ogImage : `${siteURL}${ogImage}`) : FALLBACK_OG;
 const preloadImageAbs = preloadImage ? (preloadImage.startsWith('http') ? preloadImage : preloadImage) : undefined;
@@ -143,13 +154,13 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
-  <meta name="description" content={siteDesc}>
+  <title>{safeTitle}</title>
+  <meta name="description" content={safeDescription}>
   <meta name="theme-color" content="#FF1493">
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/favicon.ico">
   <ViewTransitions />
-  {noindex && <meta name="robots" content="noindex, nofollow" />}
+  {noindex && <meta name="robots" content={noindexFollow ? 'noindex, follow' : 'noindex, nofollow'} />}
   {alternateLinks.map((link) => (
     <link rel="alternate" href={link.href} hreflang={link.hreflang} />
   ))}
@@ -169,8 +180,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <link rel="canonical" href={pageURL} />
 
   <!-- OpenGraph -->
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={siteDesc} />
+  <meta property="og:title" content={safeTitle} />
+  <meta property="og:description" content={safeDescription} />
   <meta property="og:type" content={type} />
   <meta property="og:url" content={pageURL} />
   <meta property="og:site_name" content={siteName} />
@@ -185,8 +196,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content={twitterCard} />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={siteDesc} />
+  <meta name="twitter:title" content={safeTitle} />
+  <meta name="twitter:description" content={safeDescription} />
   {ogImageAbs && <meta name="twitter:image" content={ogImageAbs} />}
   {preloadImageAbs && (
     <link rel="preload" as="image" href={preloadImageAbs} fetchpriority="high" imagesizes="100vw" />
@@ -309,6 +320,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .floating-lang-panel a:hover{background:var(--glass);color:var(--text)}
     .floating-lang-panel a.active{color:var(--tirol-pink);font-weight:600;background:rgba(255,20,147,.08)}
     .floating-lang-panel a.disabled{opacity:.4;pointer-events:none}
+    .floating-lang-panel .fl-disabled{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:8px;font-size:12px;color:var(--text3);opacity:.4}
     .fl-flag{font-size:18px;width:22px;text-align:center}
     .fl-name{flex:1}
     .fl-check{color:var(--tirol-pink);font-size:12px}
@@ -321,6 +333,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     .footer-lang a:hover{color:var(--text);border-color:var(--tirol-pink)}
     .footer-lang a.active{color:var(--tirol-pink);background:rgba(255,20,147,.08);border-color:rgba(255,20,147,.25)}
     .footer-lang a.disabled{opacity:.35;pointer-events:none}
+    .footer-lang .footer-lang-disabled{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:100px;font-size:11px;color:var(--text3);opacity:.4;background:var(--surface);border:1px solid var(--glass-border)}
 
     /* ═══ Above-the-Fold: Container, Hero, Stats, Buttons ─── */
     .container{width:100%;max-width:1160px;margin:0 auto;padding:0 24px}
@@ -376,6 +389,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   ))}
 </head>
 <body>
+<span id="top" aria-hidden="true"></span>
 <div id="scrollProgress" transition:persist></div>
 <button class="btt" id="backToTop" aria-label="Nach oben" transition:persist>↑</button>
   {!onePage && (
@@ -465,13 +479,21 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       🌐
     </button>
     <div class="floating-lang-panel">
-      {LANGUAGES.filter(l => PUBLISHED_LANGS.includes(l.code)).map(l => (
-        <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale }}>
-          <span class="fl-flag">{l.flag}</span>
-          <span class="fl-name">{l.name}</span>
-          {l.code === locale && <span class="fl-check">✓</span>}
-        </a>
-      ))}
+      {LANGUAGES.filter(l => PUBLISHED_LANGS.includes(l.code)).map(l => {
+        const href = alternateHrefByCode.get(l.code);
+        return href ? (
+          <a href={href} class:list={{ active: l.code === locale }}>
+            <span class="fl-flag">{l.flag}</span>
+            <span class="fl-name">{l.name}</span>
+            {l.code === locale && <span class="fl-check">✓</span>}
+          </a>
+        ) : (
+          <span class="fl-disabled" title={l.name} aria-disabled="true">
+            <span class="fl-flag">{l.flag}</span>
+            <span class="fl-name">{l.name}</span>
+          </span>
+        );
+      })}
       {LANGUAGES.filter(l => SOON_LANGS.includes(l.code)).map(l => (
         <a href={`https://tiroltourismus.com/#vote-${l.code}`} class="fl-soon" title="Coming soon — vote on the landing page">
           <span class="fl-flag">{l.flag}</span>
@@ -495,18 +517,25 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
           </a>
           <p>{nav.footer_p}</p>
           <div class="footer-social">
-            <a href={settings?.social?.instagram || '#'} aria-label="Instagram">📷</a>
-            <a href={settings?.social?.tiktok || '#'} aria-label="TikTok">🎵</a>
-            <a href={settings?.social?.facebook || '#'} aria-label="Facebook">👍</a>
-            <a href={settings?.social?.youtube || '#'} aria-label="YouTube">▶️</a>
+            <a href={settings?.social?.instagram || SOCIAL_FALLBACK} aria-label="Instagram">📷</a>
+            <a href={settings?.social?.tiktok || SOCIAL_FALLBACK} aria-label="TikTok">🎵</a>
+            <a href={settings?.social?.facebook || SOCIAL_FALLBACK} aria-label="Facebook">👍</a>
+            <a href={settings?.social?.youtube || SOCIAL_FALLBACK} aria-label="YouTube">▶️</a>
           </div>
           <!-- ═══ FOOTER LANGUAGE FLAGS ═══ -->
           <div class="footer-lang">
-            {LANGUAGES.filter(l => PUBLISHED_LANGS.includes(l.code)).map(l => (
-              <a href={switchLangPath(currentPath, locale, l.code)} class:list={{ active: l.code === locale }}>
-                {l.flag} {l.name}
-              </a>
-            ))}
+            {LANGUAGES.filter(l => PUBLISHED_LANGS.includes(l.code)).map(l => {
+              const href = alternateHrefByCode.get(l.code);
+              return href ? (
+                <a href={href} class:list={{ active: l.code === locale }}>
+                  {l.flag} {l.name}
+                </a>
+              ) : (
+                <span class="footer-lang-disabled" title={l.name} aria-disabled="true">
+                  {l.flag} {l.name}
+                </span>
+              );
+            })}
             {LANGUAGES.filter(l => SOON_LANGS.includes(l.code)).map(l => (
               <a href={`https://tiroltourismus.com/#vote-${l.code}`} class="footer-lang-soon" title="Coming soon — vote on the landing page">
                 {l.flag} {l.name} <small>soon</small>
@@ -516,13 +545,13 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
         </div>
         <div class="footer-col"><h4>{nav.footer_regionen}</h4><a href={`${localePrefix}/regionen/`}>{nav.footer_alle_regionen}</a><a href={`${localePrefix}/regionen/oetztal/`}>Ötztal</a></div>
         <div class="footer-col"><h4>{nav.footer_erlebnisse}</h4><a href={`${localePrefix}/erlebnisse/`}>{nav.footer_alle_erlebnisse}</a></div>
-        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/magazin/`}>{nav.magazin}</a><a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a><a href={`${localePrefix}/transparenz/`}>{nav.footer_transparenz}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
+        <div class="footer-col"><h4>{nav.footer_service}</h4><a href={`${localePrefix}/magazin/`}>{nav.magazin}</a><a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a><a href={`${localePrefix}/ueber-uns/`}>{nav.footer_ueber_uns}</a><a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href={`${localePrefix}/agb/`}>{nav.footer_agb}</a></div>
     </div>
 
     <div class="footer-small">
       <div class="footer-bottom">
         <span>© 2026 tiroltourismus.com</span>
-        <div><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href="#" class="footer-btt" id="footerBackToTop">{nav.footer_oben}</a></div>
+        <div><a href={`${localePrefix}/impressum/`}>{nav.footer_impressum}</a><a href={`${localePrefix}/datenschutz/`}>{nav.footer_datenschutz}</a><a href="#top" class="footer-btt" id="footerBackToTop">{nav.footer_oben}</a></div>
       </div>
     </div>
   </footer>

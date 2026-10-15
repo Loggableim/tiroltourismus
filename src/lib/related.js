@@ -288,9 +288,103 @@ export function getRelatedForEntry(collection, slug, locale = 'de') {
   };
 }
 
-function splitHtmlSegments(html) {
+const LINK_NAME_SEP = /[a-zA-Z0-9_]/;
+// Nicht verlinken, wenn der Treffer Teil einer URL/eines Slugs ist:
+// vorne blocken `/`, `.`, `:`, `@`, `-`, `\` — hinten `/`, `:`, `@`, `-`, `\`
+// (der Punkt hinten bleibt erlaubt, damit Namen am Satzende verlinkt werden).
+const LINK_EDGE_BEFORE = '[\\w./:@\\-\\\\]';
+const LINK_EDGE_AFTER = '[\\w/:@\\-\\\\]';
+
+/** Namen, die nie verlinkt werden dürfen (Roh-HTML/Markdown/etc.). */
+function isLinkableEntityName(name) {
+  if (typeof name !== 'string') return false;
+  const trimmed = name.trim();
+  if (trimmed.length < 3 || trimmed.length > 80) return false;
+  if (/[<>[\]*#|]/.test(trimmed)) return false;
+  return LINK_NAME_SEP.test(trimmed);
+}
+
+/**
+ * Verlinkt Vorkommen von `entities[].name` in Textknoten eines HTML-Strings.
+ *
+ * Wichtig: Es wird nur EIN Durchlauf über den Originaltext gemacht und alle
+ * Kandidaten werden anhand ihrer Positionen ermittelt. Dadurch kann ein bereits
+ * erzeugter Link nicht erneut durchsucht werden (verhindert verschachtelte,
+ * kaputte Anker wie href="/gastro/<a href="). Treffer innerhalb bestehender
+ * Anker oder innerhalb von URLs/Pfaden werden übersprungen.
+ *
+ * @param {string} html
+ * @param {Array<{name: string, href: string}>} entities
+ * @param {number} [maxLinks]
+ */
+export function linkifyHtml(html, entities, maxLinks = 5) {
+  if (!html || typeof html !== 'string') return html || '';
+  const candidates = (entities || [])
+    .filter((ent) => ent && isLinkableEntityName(ent.name) && ent.href)
+    .sort((a, b) => b.name.length - a.name.length);
+  if (!candidates.length || maxLinks <= 0) return html;
+
   const parts = html.split(/(<[^>]+>)/g);
-  return parts;
+  let linked = 0;
+  let anchorDepth = 0;
+  const out = [];
+
+  for (const seg of parts) {
+    if (seg.startsWith('<')) {
+      if (/^<a[\s>/]/i.test(seg)) anchorDepth++;
+      else if (/^<\/a[\s>]/i.test(seg)) anchorDepth = Math.max(0, anchorDepth - 1);
+      out.push(seg);
+      continue;
+    }
+    if (anchorDepth > 0 || linked >= maxLinks) {
+      out.push(seg);
+      continue;
+    }
+
+    const matches = [];
+    for (const ent of candidates) {
+      const escaped = ent.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      let re;
+      try {
+        re = new RegExp(`(?<!${LINK_EDGE_BEFORE})(${escaped})(?!${LINK_EDGE_AFTER})`, 'gi');
+      } catch {
+        continue;
+      }
+      let m;
+      while ((m = re.exec(seg)) !== null) {
+        const text = m[0];
+        matches.push({ start: m.index, end: m.index + text.length, text, href: ent.href });
+        if (m.index === re.lastIndex) re.lastIndex++;
+      }
+    }
+    if (!matches.length) {
+      out.push(seg);
+      continue;
+    }
+
+    matches.sort((a, b) => (b.end - b.start) - (a.end - a.start) || a.start - b.start);
+    const chosen = [];
+    const budget = maxLinks - linked;
+    for (const mt of matches) {
+      if (chosen.length >= budget) break;
+      if (chosen.some((c) => mt.start < c.end && mt.end > c.start)) continue;
+      chosen.push(mt);
+    }
+    chosen.sort((a, b) => a.start - b.start);
+
+    let cursor = 0;
+    let built = '';
+    for (const mt of chosen) {
+      built += seg.slice(cursor, mt.start);
+      built += `<a href="${mt.href}" class="auto-link">${mt.text}</a>`;
+      cursor = mt.end;
+    }
+    built += seg.slice(cursor);
+    linked += chosen.length;
+    out.push(built);
+  }
+
+  return out.join('');
 }
 
 export function linkDescriptionText(
@@ -317,39 +411,12 @@ export function linkDescriptionText(
   const htmlLower = html.replace(/<[^>]+>/g, ' ').toLowerCase();
   const linkableNames = store.names.filter((ent) => {
     if (ent.slug === selfSlug && ent.collection === collection) return false;
-    if (ent.name.length < 6) return false;
+    if (!isLinkableEntityName(ent.name)) return false;
     if (selfName && ent.name.toLowerCase() === selfName) return false;
     return htmlLower.includes(ent.name.toLowerCase());
   });
 
-  let linked = 0;
-  const segments = splitHtmlSegments(html);
-  const result = segments.map((seg) => {
-    if (linked >= maxLinks) return seg;
-    if (seg.startsWith('<')) return seg;
-    let text = seg;
-    const segLower = text.toLowerCase();
-    for (const ent of linkableNames) {
-      if (linked >= maxLinks) break;
-      const nameLower = ent.name.toLowerCase();
-      if (!segLower.includes(nameLower)) continue;
-      const escaped = ent.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      let re;
-      try {
-        re = new RegExp(`(?<!\\w)(${escaped})(?!\\w)`, 'i');
-      } catch {
-        continue;
-      }
-      if (!re.test(text)) continue;
-      text = text.replace(re, (match) => {
-        if (linked >= maxLinks) return match;
-        linked++;
-        return `<a href="${ent.href}" class="auto-link">${match}</a>`;
-      });
-    }
-    return text;
-  });
-  return result.join('');
+  return linkifyHtml(html, linkableNames, maxLinks);
 }
 
 export function getRelatedHeadings(locale) {

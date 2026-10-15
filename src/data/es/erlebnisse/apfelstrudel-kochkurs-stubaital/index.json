@@ -1,35 +1,32 @@
 {
-  "name": "Apfelstrudel-Kochkurs",
   "slug": "apfelstrudel-kochkurs-stubaital",
   "emoji": "🥟",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>El <strong>strudel de manzana</strong> es la reina de la repostería tirolesa, y pocos valles preservan esta tradición con tanto cuidado como el Stubaital. El secreto está en la masa estirada a mano, tan fina que se podría leer un periódico a través de ella. Los talleres de cocina permiten a los visitantes aprender este arte centenario.</p><h3>Cursos &amp; Ofertas</h3><p>La <strong>VHS Tirol</strong> organiza talleres de repostería en la cocina didáctica de la Mittelschule Fulpmes. Duración: unas <strong>3 horas</strong>. Precio: aprox. <strong>32 €</strong>. Reservas: vhs-tirol.at.</p><p>El curso <em>„Strudel aus eigener Hand“</em> del LFI Tirol (Innsbruck, ~20 min) es impartido por campesinas-instructoras tirolesas. Duración: 3–4 sesiones. Precio: <strong>85 €</strong>. Reservas: tirol.lfi.at.</p><h3>Cómo Llegar</h3><p>En <strong>tranvía (STB)</strong> desde Innsbruck hasta Fulpmes (aprox. 55 min, cada hora). En <strong>coche</strong> por la B183.</p><h3>Consejos</h3><ul><li><strong>Niños:</strong> Programa TVB BIG Family para niños desde 4 años.</li><li><strong>Mejor temporada:</strong> Otoño (septiembre–noviembre).</li></ul>",
-  "preis": 49,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Curso de strudel de manzana tirolesa en el Stubaital",
+  "beschreibung": "### Resumen\nEl auténtico strudel de manzana tirolés estirado a mano es la joya indiscutible de la repostería alpina. En el valle de Stubaital, este postre caliente ocupa el segundo lugar entre las delicias de refugio más populares según el patronato de turismo. En talleres de cocina, granjas y obradores tradicionales, los visitantes aprenden a elaborarlo siguiendo recetas centenarias como la tradicional fórmula de 1900 «à la Urli Maria». El secreto reside en la masa estirada a mano: harina fina, agua templada, un huevo, aceite y una pizca de sal se amasan intensamente hasta lograr una textura elástica y sedosa. Tras reposar bajo un cuenco caliente, la masa se estira sobre un paño de lino enharinado usando el dorso de las manos, con un grosor tan fino que permitiría leer un periódico a través de ella.\n\n### Ruta y Requisitos\nLos talleres se imparten en acogedoras cocinas rústicas o en el espacio gastronómico Genusswerk Tirol. Una vez estirada la masa, se prepara el relleno: manzanas ácidas de montaña (preferentemente Boskop) laminadas finas, mezcladas con pan rallado tostado en abundante mantequilla de granja, canela, azúcar, limón y pasas maceradas en ron. Con ayuda del paño de lino, el strudel se enrolla con mimo, se pinta con mantequilla derretida y se hornea a 190 °C hasta adquirir un tono dorado. El taller no requiere conocimientos culinarios previos y es ideal para familias con niños a partir de seis años. Por motivos de higiene alimentaria, los perros no pueden acceder a las zonas de cocina.\n\n### Cómo llegar\nA las localidades de Stubaital (Neustift, Fulpmes o Telfes) se llega desde Innsbruck en unos 25 minutos por la autopista A13 del Brennero (salida Schönberg/Stubaital) y la carretera B183. Hay aparcamientos en los centros urbanos. En transporte público, la línea 590 del autobús regional VVT sale cada 30 minutos desde la estación central de Innsbruck recorriendo todo el valle hasta Neustift. Asimismo, el ferrocarril panorámico Stubaitalbahn (STB) conecta Fulpmes con Innsbruck.\n\n### Consejos\nEl precio del taller (entre 45 y 85 €) incluye todos los ingredientes frescos, delantal de préstamo, recetario y la degustación del strudel recién horneado con salsa de vainilla o nata montada. Las porciones sobrantes pueden llevarse a casa. Al limitarse los grupos a 8 o 12 participantes, se recomienda reservar con antelación en la oficina de turismo o en el LFI Tirol. Consejo para sibaritas: refugios como Schlickeralm o el restaurante Kreuzjoch sirven a diario strudel recién hecho frente a espectaculares glaciares.",
+  "sources": [
+    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
+    "https://www.stubai.at/stubaital/essen-und-trinken/",
+    "https://tirol.lfi.at"
+  ],
+  "bilder": [],
   "dauer": "2,5 Stunden",
+  "link": "#",
+  "preis": 49,
   "tags": [
     "kulinarik",
     "strudel",
     "kochkurs",
     "stubaital",
     "backen"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
-    "https://www.vhs-tirol.at",
-    "https://tirol.lfi.at/",
-    "https://www.untersillerhof.com/",
-    "https://www.stubai.at",
-    "https://www.stubai.at/blog/"
   ]
 }

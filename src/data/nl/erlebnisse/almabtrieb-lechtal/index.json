@@ -1,34 +1,34 @@
 {
-  "name": "Almabtrieb mit Fest",
   "slug": "almabtrieb-lechtal",
   "emoji": "🐂",
   "farbe": "var(--green)",
   "kategorie": "tradition",
   "ort": "Lechtal",
   "region": "lechtal",
-  "beschreibung": "<p>Aan het einde van de zomer, als de bergweiden zijn gemaaid, dalen honderden koeien, kalveren, schapen en geiten af van de hoge alpen in het <strong>Lechtal</strong>. De <strong>Almabtrieb</strong> is een van de meest aangrijpende volksgebruiken in heel Tirol.</p><h3>Overzicht</h3><p>De Almabtrieb vindt gewoonlijk plaats in de <strong>tweede tot vierde week van september</strong>. De grootste Almabtrieb van het Tiroler Außerfern wordt georganiseerd in <strong>Steeg</strong>. Vergelijkbare feesten zijn er in <strong>Bach</strong>, <strong>Elbigenalp</strong>, <strong>Holzgau</strong> en <strong>Stanzach</strong>.</p><h3>Bereikbaarheid</h3><p>Via de <strong>B198</strong> vanuit Füssen/Reutte of via het Fernpass en de Hahntennjoch (geen aanhangwagens). Tijdens de optocht in Steeg (ca. 11:00–13:00) is de B198 volledig afgesloten. Met het <strong>openbaar vervoer</strong>: VVT-lijn 110 (Reutte–Warth–Lech).</p><h3>Tips</h3><ul><li><strong>Datum:</strong> Controleer op lechtal.at of almabtrieb-steeg.at.</li><li><strong>Gezinnen:</strong> Uitstekend geschikt.</li><li><strong>Honden:</strong> Alleen met korte riem; muilkorf verplicht in VVT-bussen.</li></ul>",
-  "preis": 0,
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Traditionele Almabtrieb in het Lechtal",
+  "beschreibung": "### Overzicht\nDe traditionele koeienafloop (Almabtrieb) in het Tiroolse Lechtal behoort tot de meest authentieke en kleurrijke oogstdankfeesten van de Alpen. Jaarlijks medio september, rond de naamdag van Sint-Rupert, keert het vee na circa honderd dagen op de hooggelegen alpenweiden terug naar het dal. Het middelpunt van de festiviteiten is de gemeente Steeg, waar de grootste Almabtrieb van het Tiroolse Außerfern plaatsvindt. Ongeveer 500 runderen uit zijdalen zoals de Krabachalpe, Pimigalpe en het Bockbachtal trekken feestelijk versierd het dorp binnen. Het feestelijke optuigen ('Aufkranzen') vindt alleen plaats wanneer de alpenzomer zonder dodelijke ongevallen is verlopen. De kudde wordt geleid door de 'Kranzkuh', getooid met een vlechtwerk van bergdennentakken, alpenbloemen, kleurrijke linten, een heilig kruis en een spiegel om boze geesten af te weren.\n\n### Route & Vereisten\nHet vee trekt in de late ochtend over de hoofdweg naar het feestterrein in het dorpscentrum van Steeg. Herders en drijvers begeleiden de dieren onder luid klokkengelui en het knallen van traditionele zwepen (Goaßlschnalzen). Het bijwonen van de feestelijkheden vergt geen bergwandelconditie. Voor gezinnen met kinderen is dit een indrukwekkend schouwspel; voor peuters wordt gehoorbescherming aangeraden wegens het oorverdovende kabaal van de zware bellen. Het evenement is ongeschikt voor honden: runderen zien honden instinctief als roofdieren en de menigte veroorzaakt extra onrust. Mocht een hond meekomen, houd deze dan kort aangelijnd op ruime afstand van de dieren.\n\n### Bereikbaarheid\nMet de auto vanuit Reutte via de provinciale weg B198 door het Lechtal naar Steeg. Let op: wegens de doortocht van het vee is de B198 in Steeg tussen circa 11:00 en 13:30 uur volledig afgesloten voor alle doorgaande verkeer. Bezoekers dienen vóór 10:30 uur aanwezig te zijn, aangezien parkeerplaatsen schaars zijn. Zeer comfortabel is de streekbus VVT lijn 110 (Lechtalbus) die elk uur tussen Reutte en Steeg rijdt. Voor vakantiegangers met de Lechtal Aktiv Card is het busvervoer in het dal gratis.\n\n### Tips\nDe toegang tot de dorpsoptocht en de boerenmarkt is gratis. In de verwarmde feesttent zorgt de plaatselijke blaaskapel voor traditionele muziek, terwijl marktkramen streekspecialiteiten serveren zoals Lechtaler bergkaas, verse Kiachl met vossenbessen en Krapfen. Hoogtepunt van de feestavond is de traditionele verloting van een echte, prachtig bewerkte alpenkoebel onder het publiek. Veiligheidsinstructie: koeien wegen tot 700 kilo; bewaar te allen tijde respectvolle afstand en raak nimmer horens aan.",
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.lechtal.at/de/veranstaltungen/veranstaltungen-im-lechtal.html",
+    "https://www.steeg.gv.at",
+    "https://www.tirol.at/aktivitaeten/events/almabtriebe",
+    "https://www.sichere-almen.at"
+  ],
+  "bilder": [],
   "dauer": "1 Tag",
+  "link": "#",
+  "preis": 0,
   "tags": [
     "traditie",
     "gewoonte",
     "almabtrieb",
     "lechtal",
     "feest"
-  ],
-  "koordinaten": {
-    "lat": "47.3442",
-    "lng": "10.5044"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.lechtal.at",
-    "https://www.steeg.gv.at",
-    "https://www.tirol.at",
-    "https://www.vvt.at",
-    "https://de.wikipedia.org/wiki/Almabtrieb"
   ]
 }

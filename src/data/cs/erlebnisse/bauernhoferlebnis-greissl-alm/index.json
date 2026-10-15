@@ -1,35 +1,32 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
   "region": "alpbach",
-  "beschreibung": "<p>V <strong>Alpbachtalu</strong> – často označovaném za „nejkrásnější vesnici Rakouska“ – vazba mezi lidmi, zvířaty a přírodou stále přetrvává autenticky.</p><h3>Zážitky na Almě a Statku</h3><p><strong>Steinbergalm</strong> v Inneralpbachu (1 712 m) umožňuje pozorovat tradiční výrobu sýra od roku 1558. Sezóna: začátek června – začátek října.</p><p><strong>Bischofer Käsalm</strong> nabízí sýrárnu a alpský talíř. Sezóna: cca květen–říjen.</p><p><strong>Bergbauernmuseum Vorder-Unterberg</strong> je živé muzeum z roku 1636. Vstupné: 3 € (dospělí), 1,50 € (děti). Otevřeno: Letnice–konec září, pondělí a čtvrtek 13:00–16:00.</p>",
-  "preis": 35,
+  "koordinaten": {
+    "lat": "47.3983",
+    "lng": "11.9452"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Zážitky na horském statku a alpě Greissl v Alpbachu",
+  "beschreibung": "### Přehled\nV Alpbachu, který je často oceňován jako nejkrásnější dřevěná vesnice v celém Rakousku, se horské zemědělství zachovalo v původní podobě po celá staletí. Důležité upozornění pro plánování: v tyrolském katastru ani v údolí Alpbachtal žádná oficiální salaš „Greißl-Alm“ neexistuje; název vycházel z dřívějšího fiktivního záznamu. Skutečné venkovské cíle v regionu však nabízejí přesně takové zážitky, jaké rodiny na horách vyhledávají. Srdcem tradic je horské selské muzeum „Vorder-Unterberg“ v Inneralpbachu. Usedlost byla postavena v letech 1636 až 1638 a byla obývána až do roku 1952. Jde o živé muzeum: zatímco v historické černé kuchyni („Rauchkuchl“) se dodnes udí tyrolský špek, v přilehlém hospodářském křídle a na pastvinách se stále pase dobytek. Nabídku doplňují salaše s výrobou sýrů jako Bischofer Käsalm a historické pastviny v údolí Greiter Graben.\n\n### Trasa a náročnost\nNejzajímavější selské trasy v Alpbachu:\n1. Muzeum Vorder-Unterberg (Inneralpbach): z parkoviště v Inneralpbachu vede zpevněná cesta, po které dorazíte k usedlosti za cca 15 minut (40 výškových metrů), trasa je plně sjízdná s kočárkem.\n2. Bischofer Käsalm (1 334 m): oblíbená salaš na slunné stráni pod vrcholem Gratlspitze s ukázkovým sklepem na zrání sýrů. Okružní trasa z centra Alpbachu měří 6,8 km s převýšením 367 metrů (cca 2,5 hodiny chůze; po lesní cestě sjízdná s kočárkem).\n3. Farmkehralm (1 521 m) v Greiter Grabenu: více než 400 let stará salaš na konci údolí pod masivem Großer Galtenberg. Z Inneralpbachu vede široká štěrková cesta, výstup trvá cca 1,5 hodiny (450 výškových metrů).\nTrasy vyžadují běžnou fyzickou kondici a pevnou turistickou obuv. Psi na vodítku jsou na stezkách vítáni, do vnitřních expozic muzea však nesmějí.\n\n### Příjezd a parkování\nAutem z dálnice A12 Inntal (sjezd Kramsach/Brixlegg) po zemské silnici L5 do Alpbachu a Inneralpbachu. Parkoviště jsou k dispozici v centru obce i na záchytných parkovištích v Inneralpbachu a na Hochbergu. Veřejnou dopravou přijedete vlakem do stanice Brixlegg a přestoupíte na regionální autobus VVT linky 4074 (jezdí každou hodinu) až na konečnou v Inneralpbachu. S ubytovací kartou Alpbachtal Card je autobusová doprava v regionu bezplatná.\n\n### Praktické tipy\nVstupné do muzea Vorder-Unterberg činí přibližně 3,00 eura pro dospělé (2,00 eura se slevovou kartou) a 1,50 eura pro děti. Během léta se v určené dny konají komentované prohlídky. Na salaších si nenechte ujít tradiční občerstvení s pravým tyrolským šedým sýrem Graukäse, čerstvým máslem a kváskovým chlebem. Na pastvinách v Greiter Grabenu se v létě pasou krávy s telaty; udržujte odstup nejméně 20 metrů a v případě nepředvídatelného chování dobytka psa okamžitě odepněte z vodítka.",
+  "sources": [
+    "https://www.alpbachtal.at",
+    "https://www.alpbachtal.at/de/aktivitaeten/top-ausflugsziele",
+    "https://www.schuleambauernhof.at"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 35,
   "tags": [
     "familie",
     "bauernhof",
     "alm",
     "alpbach",
     "tiere"
-  ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.alpbachtal.at/",
-    "https://www.alpbachtal.at/de",
-    "https://www.alpbachtal.at/de/sommer",
-    "https://www.bergbauernmuseum.at/",
-    "https://de.wikipedia.org/wiki/Alpbach",
-    "https://www.vvt.at"
   ]
 }

@@ -1,35 +1,32 @@
 {
-  "name": "Apfelstrudel-Kochkurs",
   "slug": "apfelstrudel-kochkurs-stubaital",
   "emoji": "🥟",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>Lo <strong>strudel di mele</strong> è la regina dei dolci tirolesi e poche valli ne preservano la tradizione con tanta cura quanto lo Stubaital. Il segreto è nella pasta tirata a mano, così sottile da poterci leggere un giornale attraverso. Workshop di cucina e pasticceria permettono agli ospiti di imparare questo artigianato secolare.</p><h3>Corsi &amp; Offerte</h3><p>La <strong>VHS Tirol</strong> organizza workshop di pasticceria presso la cucina didattica della Mittelschule Fulpmes. Durata: circa <strong>3 ore</strong>. Costo: ca. <strong>32 €</strong>. Prenotazione: vhs-tirol.at.</p><p>Il corso <em>„Strudel aus eigener Hand“</em> del LFI Tirol (Innsbruck, ~20 min) è tenuto da contadine-seminatrici tirolesi. Durata: 3–4 unità. Prezzo: <strong>85 €</strong>. Prenotazione: tirol.lfi.at.</p><h3>Come Arrivare</h3><p>Con il <strong>tram STB</strong> da Innsbruck a Fulpmes (ca. 55 min, ogni ora). In <strong>auto</strong> via B183.</p><h3>Consigli</h3><ul><li><strong>Bambini:</strong> Programma TVB BIG Family per bambini da 4 anni.</li><li><strong>Stagione migliore:</strong> Autunno (settembre–novembre).</li></ul>",
-  "preis": 49,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Corso di strudel di mele tirolese nello Stubaital",
+  "beschreibung": "### Panoramica\nLo strudel di mele tirolese tirato a mano è il simbolo indiscusso della pasticceria alpina. Nella valle dello Stubaital questo dolce caldo si colloca al secondo posto tra i classici di rifugio più amati secondo l'ente turistico locale. Negli atelier di cucina, nei masi storici e nelle cucine dimostrative, gli ospiti apprendono la lavorazione tradizionale secondo un'antica ricetta valligiana risalente al 1900 («à la Urli Maria»). Il segreto risiede nella pasta tirata a mano: farina di grano tenero, acqua tiepida, un uovo, olio vegetale e un pizzico di sale vengono lavorati energicamente fino a ottenere una pasta elastica e vellutata. Dopo il riposo sotto una ciotola calda, la sfoglia viene tirata sul dorso delle mani sopra un telo infarinato con tale sottigliezza da poter leggere un giornale in trasparenza.\n\n### Percorso & Requisiti\nI corsi si svolgono nelle accoglienti cucine delle locande di paese o presso la scuola di cucina Genusswerk Tirol. Dopo aver tirato la pasta, i partecipanti preparano il ripieno: mele tirolesi acidule (in particolare Boskop) tagliate a fettine sottili e unite a pangrattato tostato nel burro di malga, cannella, zucchero, succo di limone e uvetta sultanina ammollata nel rum. Con l'ausilio del canovaccio lo strudel viene arrotolato, spennellato di burro fuso e infornato a 190 °C fino a doratura. Il laboratorio non richiede esperienza pregressa ed è perfetto per famiglie con bambini dai sei anni in su. Per ragioni igienico-sanitarie i cani non sono ammessi negli ambienti dedicati alla preparazione dei cibi.\n\n### Come arrivare\nI corsi nello Stubaital (a Neustift, Fulpmes o Telfes) si raggiungono da Innsbruck in circa 25 minuti percorrendo l'autostrada A13 del Brennero (uscita Schönberg/Stubaital) e la strada statale B183. Sono disponibili parcheggi nei centri paese. Con i mezzi pubblici si viaggia comodamente a bordo dell'autobus regionale VVT linea 590, che parte ogni mezz'ora dalla stazione centrale di Innsbruck e attraversa l'intera vallata fino a Neustift. Da Fulpmes è attiva inoltre la storica ferrovia panoramica Stubaitalbahn (STB).\n\n### Consigli\nLa quota del corso (circa 45–85 euro) comprende ingredienti freschi, grembiule in uso, ricettario e la degustazione comune dello strudel appena sfornato con salsa alla vaniglia o panna montata. Le porzioni avanzate possono essere portate a casa. Essendo i posti limitati a 8–12 persone per gruppo, si consiglia la prenotazione anticipata tramite l'ufficio turistico o l'istituto LFI Tirol. Suggerimento goloso: rifugi alpini come la Schlickeralm e il ristorante Kreuzjoch sfornano strudel freschi ogni giorno davanti al panorama dei ghiacciai.",
+  "sources": [
+    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
+    "https://www.stubai.at/stubaital/essen-und-trinken/",
+    "https://tirol.lfi.at"
+  ],
+  "bilder": [],
   "dauer": "2,5 Stunden",
+  "link": "#",
+  "preis": 49,
   "tags": [
     "gastronomia",
     "strudel",
     "corso di cucina",
     "valle dello stubai",
     "pasticceria"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
-    "https://www.vhs-tirol.at",
-    "https://tirol.lfi.at/",
-    "https://www.untersillerhof.com/",
-    "https://www.stubai.at",
-    "https://www.stubai.at/blog/"
   ]
 }

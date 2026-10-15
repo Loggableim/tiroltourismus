@@ -1,34 +1,34 @@
 {
-  "name": "Almabtrieb mit Fest",
   "slug": "almabtrieb-lechtal",
   "emoji": "🐂",
   "farbe": "var(--green)",
   "kategorie": "tradition",
   "ort": "Lechtal",
   "region": "lechtal",
-  "beschreibung": "<p>Když léto končí a horské louky jsou posečeny, sestupují z alpských pastvin do <strong>Lechtalu</strong> stovky krav, telat, ovcí a koz. <strong>Almabtrieb</strong> – tradiční sestup dobytka z hor – patří k nejdojemnějším folklórním událostem celého Tyrolska.</p><h3>Přehled</h3><p>Almabtrieb se obvykle koná ve <strong>druhém až čtvrtém týdnu září</strong>. Největší Almabtrieb v celém Tiroler Außerfern se koná ve <strong>Stegu</strong>. Podobné slavnosti se konají v <strong>Bachu</strong>, <strong>Elbigenalpu</strong>, <strong>Holzgau</strong> a <strong>Stanzachu</strong>.</p><h3>Doprava</h3><p>Po silnici <strong>B198</strong> z Füssenu/Reutteho nebo přes Fernpass a Hahntennjoch (zákaz přívěsů). V průběhu průvodu ve Stegu (cca 11:00–13:00) je B198 uzavřena. <strong>MHD</strong>: linka VVT 110 (Reutte–Warth–Lech).</p><h3>Tipy</h3><ul><li><strong>Datum:</strong> Ověřte na lechtal.at nebo almabtrieb-steeg.at.</li><li><strong>Rodiny:</strong> Výborná aktivita.</li><li><strong>Psi:</strong> Pouze na krátkém vodítku; náhubek povinný v autobusech VVT.</li></ul>",
-  "preis": 0,
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Tradiční Almabtrieb v údolí Lechtal",
+  "beschreibung": "### Přehled\nTradiční svod dobytka (Almabtrieb) v tyrolském údolí Lechtal patří k nejbarevnějším lidovým slavnostem v celých Alpách. Každoročně v polovině září, kolem svátku svatého Ruperta, se stáda po zhruba sto dnech strávených na vysokohorských pastvinách vracejí do údolí. Centrem oslav je obec Steeg, kde se koná největší Almabtrieb v celém tyrolském Außerfernu. Přibližně 500 kusů dobytka schází z horských údolí jako Krabachalpe, Pimigalpe či Bockbachtal přímo do vsi. Slavnostní zdobení („Aufkranzen“) probíhá výhradně v případě, že léto na pastvinách proběhlo bez smrtelných úrazů lidí i zvířat. Stádo vede vůdčí kráva („Kranzkuh“) s honosnou korunou z větví kleče, horských květin, stuh, kříže a zrcátka, které mělo podle lidové víry odhánět zlé duchy.\n\n### Průběh a náročnost\nZvířata procházejí v dopoledních hodinách po hlavní silnici až do centra Steegu. Pastýři vedou stádo za hlasitého zvonění zvonců a práskání bičem (Goaßlschnalzen). Pobyt na slavnosti nevyžaduje žádnou fyzickou kondici. Pro rodiny s dětmi jde o úchvatný zážitek; kvůli hluku těžkých zvonců se však pro malé děti doporučují tlumicí sluchátka. Akce není vhodná pro psy: skot psy instinktivně vnímá jako šelmy a davy lidí zvyšují stres zvířat. Pokud psa vezmete s sebou, musí být na krátkém vodítku a v dostatečném odstupu od zvířat.\n\n### Příjezd a doprava\nAutem z Reutte pojedete po silnici B198 Lechtalstraße až do Steegu. Pozor: kvůli průchodu stád bývá silnice B198 v obci Steeg zcela uzavřena pro veškerou dopravu mezi cca 11:00 a 13:30. Návštěvníci by měli dorazit před 10:30, parkovací kapacity ve vsi jsou velmi omezené. Výrazně pohodlnější je cesta veřejným autobusem VVT linky 110 (Lechtalbus), který jezdí mezi Reutte a Steegem v hodinovém taktu. Pro ubytované hosty s kartou Lechtal Aktiv Card je jízda autobusem v údolí bezplatná.\n\n### Praktické tipy\nVstup na průvod v ulicích i na selský trh je zdarma. Ve vytápěném stanu hraje místní dechovka ze Steegu a stánky nabízejí lechtalský horský sýr, čerstvé placky Kiachl s brusinkami a sádlové koblihy Krapfen. Zlatým hřebem večera je tradiční tombola o pravý zdobený kravský zvonec. Bezpečnostní pokyn: krávy váží až 700 kilogramů; udržujte bezpečný odstup, nesahejte na rohy a nevstupujte zvířatům do cesty.",
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.lechtal.at/de/veranstaltungen/veranstaltungen-im-lechtal.html",
+    "https://www.steeg.gv.at",
+    "https://www.tirol.at/aktivitaeten/events/almabtriebe",
+    "https://www.sichere-almen.at"
+  ],
+  "bilder": [],
   "dauer": "1 Tag",
+  "link": "#",
+  "preis": 0,
   "tags": [
     "tradition",
     "brauchtum",
     "almabtrieb",
     "lechtal",
     "fest"
-  ],
-  "koordinaten": {
-    "lat": "47.3442",
-    "lng": "10.5044"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.lechtal.at",
-    "https://www.steeg.gv.at",
-    "https://www.tirol.at",
-    "https://www.vvt.at",
-    "https://de.wikipedia.org/wiki/Almabtrieb"
   ]
 }

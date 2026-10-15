@@ -1,35 +1,34 @@
 {
-  "name": "Eisklettern im Kaunertal",
   "slug": "eisklettern-kaunertal",
   "emoji": "🧊",
   "farbe": "var(--light-blue)",
   "kategorie": "winter",
   "ort": "Kaunertal",
   "region": "kaunertal",
-  "beschreibung": "<p><strong>考纳尔塔尔（Kaunertal）</strong>是阿尔卑斯山最著名的冰攀圣地之一。深邃的遮阴峡谷和高海拔位置确保12月至3月间冻结瀑布状态可靠、质量上乘。</p><p><strong>米尔巴赫瀑布冰攀公园（Mühlbachfall Ice Park）</strong>位于费希滕（Feichten）镇边（距奎拉尔平（Quellalpin）停车场约5分钟），配有泛光灯，是初学者理想选择。体验价：约<strong>65欧元</strong>/人，含全套租借装备（高山靴、冰爪、头盔、攀登带、冰镐）。时长：约2–2.5小时。旺季：11月底/12月至3月中下旬；最佳冰况：1–2月。</p><p>官方服务商：Kaunertaler Berg- &amp; Skiführer，费希滕112号，电话+43 664 472 1100，网址kaunertaler-bergfuehrer.com。</p><p><strong>安全提示：</strong>许多冰攀入口处存在雪崩风险，每日须查阅蒂罗尔雪崩公报（lawine.tirol.gv.at）。山地救援：140。</p>",
-  "preis": 139,
+  "koordinaten": {
+    "lat": "46.9917",
+    "lng": "10.6239"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "考讷塔尔冰瀑攀登",
+  "beschreibung": "### 概览\n蒂罗尔上因河谷地区的考纳谷（Kaunertal）被攀冰爱好者公认为东阿尔卑斯山区雪况最稳定、线路最丰富多样的攀冰圣地之一。从山谷底部的夜间照明训练场，到海拔两千米以上高山冰斗中高达200余米的壮观冰瀑，全谷拥有20余条成熟记录的冰壁及混合攀登路线。初学者与进阶爱好者的核心集结地是位于费希滕（Feichten）费佩尔峡谷口的米尔巴赫瀑布攀冰公园（Eispark Mühlbachfall）：该瀑布由当地山地救援队精心人工浇注维护，高约35米，难度涵盖WI 3至WI 6+，且每日人工投光照明至22:30。对资深高山攀登者而言，高踞于安东-伦克高山木屋（海拔2,000米以上）附近的伦克大冰瀑（Renkfälle）则是享誉欧洲的巨型天然冰壁，坐拥“经典伦克瀑”（WI 4+）与“风之角”（WI 6）等传奇硬线。\n\n### 流程与要求\n攀冰胜地按技术难度清晰划分：\n1. 米尔巴赫冰瀑公园（Feichten）：从Quellalpin休闲中心出发徒步仅需5分钟即可抵达壁底。非常适合基础绳索课程、顶绳保护训练、冰锥架设练习以及夜间攀登。\n2. 安东-伦克冰瀑群（Ried/Fendels）：从Stalanzer Alm路障处出发需进行约2小时（爬升800米）的高山重装徒步，强烈推荐使用越野滑雪板或雪鞋。下撤必须通过在冰壁打入阿巴拉科夫冰洞（Abalakov冰砂漏斗）完全依靠双绳索降，因徒步下山坡面极易遭遇雪崩。\n攀冰对耐寒力、高山体能与脚法平衡有极高要求。入门工作坊面向14岁以上体能良好的青年开放。因存在高空落冰砸伤风险，严禁幼童及宠物进入冰壁作业区。\n\n### 交通路线\n自驾车经因河谷A12高速公路驶向Landeck/Prutz，沿L18州道直抵Feichten。Quellalpin休闲中心配有大型免费停车场。沿山谷纵深方向延伸着长达26公里的全景观光考纳谷冰川公路（收费公路），直上海拔2,750米的白湖冰川（购买滑雪票免收公路通行费）。公共交通乘火车抵Landeck-Zams站，转乘230路邮政客运巴士，持山谷游客卡在当地全线免费乘车。\n\n### 实用贴士\n由考纳谷官方认证高山滑雪向导带队的课程起售价约为95欧元（包含全套技术器材：冰爪、技术级曲柄攀冰镐、安全带及头盔）。学员须自备全卡口硬底专业高山登山靴（D类靴）、保暖防风手套与多层防寒保暖服。最佳冰况出现在每年1月至3月中旬。极端重要的阿尔卑斯生命安全法则：出发前必须在官方平台（lawine.tirol）详查当日雪崩危险等级。多条进山通道暴露于雪崩槽口之下，必须强制随身携带雪崩救援三件套（信号发射器、探杆、雪铲）并全程佩戴攀登头盔。",
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertal.com/en/Your-Kaunertal/In-Winter/Ice-Climbing",
+    "https://www.kaunertaler-bergfuehrer.com",
+    "https://www.kaunertaler-gletscher.at/kaunertaler-gletscherstrasse.html",
+    "https://lawine.tirol"
+  ],
+  "bilder": [],
   "dauer": "5 Stunden",
+  "link": "#",
+  "preis": 139,
   "tags": [
     "eisklettern",
     "winter",
     "kaunertal",
     "bergsport",
     "adrenalin"
-  ],
-  "koordinaten": {
-    "lat": "46.9917",
-    "lng": "10.6239"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.kaunertal.com",
-    "https://www.kaunertaler-bergfuehrer.com",
-    "https://www.climbers-paradise.com",
-    "https://www.kaunertaler-gletscher.at",
-    "https://lawine.tirol.gv.at",
-    "https://www.vvt.at"
   ]
 }

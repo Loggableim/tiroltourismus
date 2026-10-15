@@ -1,34 +1,34 @@
 {
-  "name": "Almabtrieb mit Fest",
   "slug": "almabtrieb-lechtal",
   "emoji": "🐂",
   "farbe": "var(--green)",
   "kategorie": "tradition",
   "ort": "Lechtal",
   "region": "lechtal",
-  "beschreibung": "<p>Quando l'estate volge al termine e i prati di montagna sono stati falciati, centinaia di mucche, vitelli, pecore e capre scendono dagli alpeggi nel <strong>Lechtal</strong>. La <strong>desmontegada (Almabtrieb)</strong> è uno degli eventi folkloristici più commoventi di tutto il Tirolo. A metà autunno, le strade dei villaggi di questa valle si trasformano in un corteo festoso.</p><h3>Panoramica</h3><p>La desmontegada si svolge di solito tra la <strong>seconda e la quarta settimana di settembre</strong>. Il più grande Almabtrieb del Tiroler Außerfern si tiene a <strong>Steeg</strong>. Analoghe feste si svolgono a <strong>Bach</strong>, <strong>Elbigenalp</strong>, <strong>Holzgau</strong> e <strong>Stanzach</strong>.</p><p>Il momento culminante è l'<strong>„Aufkranzen“</strong>: le vacche vengono ornate con spettacolari copricapi di rami di pino mugo, rododendri, dalie e nastri colorati. Il corteo si svolge al suono delle campane e delle bande paesane.</p><h3>Come Arrivare</h3><p>Seguire la <strong>B198</strong> da Füssen/Reutte o tramite il Fernpass e lo Hahntennjoch (vietato ai rimorchi). Durante il corteo a Steeg (ca. 11:00–13:00) la B198 è chiusa. Con i <strong>mezzi pubblici</strong>: linea VVT 110 (Reutte–Warth–Lech).</p><h3>Consigli</h3><ul><li><strong>Data:</strong> Verificare su lechtal.at o almabtrieb-steeg.at.</li><li><strong>Famiglie:</strong> Eccellente attività.</li><li><strong>Cani:</strong> Solo al guinzaglio corto; museruola obbligatoria sui bus VVT.</li></ul>",
-  "preis": 0,
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Almabtrieb tradizionale nella valle del Lech",
+  "beschreibung": "### Panoramica\nLa transumanza autunnale (Almabtrieb) nella valle tirolese della Lechtal è una delle celebrazioni di ringraziamento più autentiche e spettacolari delle Alpi. Ogni anno a metà settembre, intorno alla festa di San Ruperto, il bestiame fa ritorno a valle dopo un centinaio di giorni trascorsi sui pascoli d'alta quota. Il centro principale della festa è Steeg, che ospita la più grande transumanza dell'Außerfern tirolese. Circa 500 capi di bestiame scendono dalle valli laterali come Krabachalpe, Pimigalpe e Bockbachtal per sfilare nel paese. Il bestiame viene ornato a festa («Aufkranzen») solo se l'estate si è conclusa senza incidenti mortali per pastori e animali. La mandria è guidata dalla vacca capofila («Kranzkuh»), che sfoggia una maestosa corona di rami di pino mugo, fiori di montagna, nastri colorati, una croce e uno specchio per scacciare gli spiriti maligni.\n\n### Percorso & Requisiti\nIl corteo degli animali percorre a metà mattina la strada principale fino all'area festiva nel centro di Steeg. Pastori e mandriani guidano gli animali tra il rintocco delle pesanti campane e i colpi di frusta rituali (Goaßlschnalzen). La visita del villaggio non richiede preparazione escursionistica. Per le famiglie con bambini rappresenta una straordinaria testimonianza culturale; per i più piccoli è consigliabile una cuffia antirumore per via dell'alto volume dei campanacci. La manifestazione è sconsigliata ai cani: i bovini li percepiscono istintivamente come predatori e la calca aumenta lo stress del bestiame. In caso di presenza di un cane, mantenerlo rigorosamente al guinzaglio corto e a debita distanza dal percorso degli animali.\n\n### Come arrivare\nIn auto da Reutte si percorre la strada federale B198 della Lechtal fino a Steeg. Attenzione: a causa della sfilata degli animali, la B198 nel comune di Steeg viene completamente chiusa al traffico di transito tra le 11:00 e le 13:30 circa. Si raccomanda di arrivare prima delle 10:30, poiché i parcheggi in paese si esauriscono rapidamente. Molto comodo è l'arrivo con i mezzi pubblici con l'autobus regionale VVT linea 110 (Lechtalbus) che collega Reutte a Steeg a cadenza oraria. Per i turisti in possesso della tessera Lechtal Aktiv Card i viaggi in autobus nella valle sono gratuiti.\n\n### Consigli\nL'accesso alla sfilata per le strade e al mercato contadino è gratuito. Nel tendone riscaldato, la banda musicale di Steeg intrattiene gli ospiti con musica tradizionale, mentre gli stand servono formaggio d'alpeggio della Lechtal, frittelle Kiachl con mirtilli rossi e Krapfen caldi. Il momento culminante della serata è la tradizionale estrazione a sorte di un autentico campanaccio d'alpeggio decorato. Avvertenza di sicurezza: le mucche possono pesare fino a 700 chili; mantenete sempre una distanza prudente e non toccate le corna.",
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.lechtal.at/de/veranstaltungen/veranstaltungen-im-lechtal.html",
+    "https://www.steeg.gv.at",
+    "https://www.tirol.at/aktivitaeten/events/almabtriebe",
+    "https://www.sichere-almen.at"
+  ],
+  "bilder": [],
   "dauer": "1 Tag",
+  "link": "#",
+  "preis": 0,
   "tags": [
     "tradizione",
     "usanze",
     "transumanza",
     "Valle del Lech",
     "festa"
-  ],
-  "koordinaten": {
-    "lat": "47.3442",
-    "lng": "10.5044"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.lechtal.at",
-    "https://www.steeg.gv.at",
-    "https://www.tirol.at",
-    "https://www.vvt.at",
-    "https://de.wikipedia.org/wiki/Almabtrieb"
   ]
 }

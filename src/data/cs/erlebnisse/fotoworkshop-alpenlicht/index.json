@@ -1,35 +1,34 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Pitztal",
   "region": "pitztal",
-  "beschreibung": "<p>Údolí <strong>Pitztal</strong> nabízí jedny z nejpůsobivějších horských scenérií v Alpách. Vedený <strong>fotografický workshop</strong> v alpské krajině učí ovládat extrémní vysokohorské světlo, expozice u vodopádů i práci s filtry.</p><h3>Obsah &amp; Ceny</h3><p>Témata zahrnují zlatou a modrou hodinku, dlouhé expozice s ND a polarizačními filtry na horských potocích a postprodukci RAW souborů. Jednodenní skupinový kurz (7–8 hod.): cca <strong>220–250 €</strong>/os. Víkendový workshop (2 dny): cca <strong>349–390 €</strong>. Individuální kurz: od 280 € půlden.</p><p><strong>Sezóna:</strong> Konec června až polovina září (léto), polovina září až konec října (zlatý podzim) nebo zima na ledovci.</p><h3>Doprava</h3><p><strong>Autem</strong> po dálnici A12 výjezd Imst/Pitztal, pak po L16. <strong>MHD</strong>: vlakem do Imst-Pitztal, poté autobusem VVT linky 210 do Mandarfenu/Mittelbergu.</p>",
-  "preis": 79,
+  "koordinaten": {
+    "lat": "46.9792",
+    "lng": "10.8725"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Fotografický workshop Alpenlicht",
+  "beschreibung": "### Přehled\nFotografický workshop horského světla v údolích Pitztal a Kaunertal zavede nadšené fotografy do nejkrásnějších světelných scenérií tyrolských Alp. Uprostřed skalních hřebenů, ledovců a tyrkysových ples se účastníci učí zachytit horskou krajinu během zlaté a modré hodinky a zaznamenat magické alpenhlühen na třítisícových štítech. K předním fotolokacím patří jezero Rifflsee ve výšce 2 232 metrů – nejvýše položené horské jezero v Rakousku zrcadlí na klidné hladině štíty masivu Kaunergrat. Ještě velkolepější kulisu nabízí Café 3440 na Pitztalském ledovci: visutá vyhlídková terasa na vrcholu Hinterer Brunnenkogel, nejvyšší vyhlídka v Rakousku, skýtá kruhový výhled na více než 50 třítisícovek včetně mohutné Wildspitze (3 768 m). Program doplňuje astrofotografie v závěru údolí Kaunertal, které patří díky minimálnímu světelnému znečištění k nejtemnějším místům v Alpách.\n\n### Průběh a náročnost\nWorkshopy propojují teorii nastavení fotoaparátu s praktickým fotografováním v terénu. Mezi typická stanoviště patří okruh kolem jezera Rifflsee (cca 1 hodina chůze, 50 výškových metrů), horní stanice lanovky Wildspitzbahn ve výšce 3 440 metrů a vyhlídka „Gacher Blick“ u Domu přírodního parku Kaunergrat (1 560 m). Túry vyžadují pevnou turistickou obuv a jistý krok, nikoli však horolezecké zkušenosti. Účastníci potřebují digitální bezzrcadlovku nebo zrcadlovku s manuálním režimem, stabilní stativ, širokoúhlý i teleobjektiv a polarizační a ND filtry. Vzhledem k dlouhému čekání na záběr v chladu je akce nevhodná pro děti a psy.\n\n### Příjezd a doprava\nHlavní základnou v Pitztalu je Mandarfen u lanovky Rifflseebahn nebo Mittelberg u ledovce. Autem sjedete z dálnice A12 Inntal u Imstu/Pitztalu a pokračujete po silnici L16 až na konec údolí. U obou stanic jsou velká bezplatná parkoviště. Veřejnou dopravou vlakem do stanice Imst-Pitztal a přímým autobusem VVT linky 4204 (s kartou Pitztal Sommer Card zdarma).\n\n### Praktické tipy\nCena workshopu se pohybuje od 85 do 190 eur dle délky kurzu (lanovky se hradí zvlášť; Rifflseebahn je zdarma s kartou Pitztal Sommer Card). K vrcholným zážitkům patří ranní výjezdy na východ slunce do Café 3440 spojené se snídaní. Oblečení: ve výškách 2 200 až 3 440 metrů klesají večerní teploty i v létě k bodu mrazu. Oblékněte se vrstveně včetně péřové bundy, čepice a fotomikrorukavic s odklápěcími konečky prstů. Nezapomeňte náhradní baterie, mráz zkracuje jejich kapacitu.",
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 79,
   "tags": [
     "fotografie",
     "workshop",
     "alpen",
     "pitztal",
     "landschaft"
-  ],
-  "koordinaten": {
-    "lat": "46.9792",
-    "lng": "10.8725"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.pitztal.com/",
-    "https://www.pitztal.com/de",
-    "https://www.pitztaler-gletscher.at/",
-    "https://www.alpenverein-akademie.at/",
-    "https://de.wikipedia.org/wiki/Pitztal",
-    "https://www.vvt.at"
   ]
 }

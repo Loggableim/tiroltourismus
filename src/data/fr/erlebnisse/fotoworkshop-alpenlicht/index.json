@@ -1,35 +1,34 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Pitztal",
   "region": "pitztal",
-  "beschreibung": "<p>La haute vallée du <strong>Pitztal</strong> offre certains des décors alpins les plus saisissants d'Autriche. Un <strong>stage photo en montagne</strong> permet d'apprendre à capturer la lumière alpine extrême, les lacs d'altitude et les glaciers.</p><h3>Contenu &amp; Tarifs</h3><p>Encadrés par des photographes de montagne reconnus, les ateliers couvrent l'heure dorée et bleue, la pose longue sur torrents à l'aide de filtres ND et polarisants, ainsi que le développement RAW sur Lightroom. Journée collective (7–8 h) : env. <strong>220 à 250 €</strong>/pers. Week-end intensif (2 jours) : env. <strong>349 à 390 €</strong>. Coaching privé : dès 280 € la demi-journée.</p><p><strong>Saison :</strong> Fin juin à mi-septembre (été et lacs glaciaires), mi-septembre à fin octobre (automne doré et mélèzes flamboyants) ou hiver sur glacier.</p><h3>Accès &amp; Conseils</h3><p>En <strong>voiture</strong> via l'A12 sortie Imst/Pitztal puis la L16. En <strong>transports en commun</strong> : gare d'Imst-Pitztal, puis bus VVT 210 jusqu'à Mandarfen/Mittelberg. Trépied stable et filtres indispensables.</p>",
-  "preis": 79,
+  "koordinaten": {
+    "lat": "46.9792",
+    "lng": "10.8725"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Atelier photo Alpenlicht",
+  "beschreibung": "### Aperçu\nUn atelier photographique dédié aux lumières alpines dans les vallées du Pitztal et du Kaunertal initie les photographes passionnés aux contrastes lumineux les plus saisissants des Alpes tyroliennes. Entre arêtes rocheuses, glaciers immaculés et lacs d'altitude émeraude, les participants apprennent à maîtriser la photographie de paysage durant les Heures Dorée et Bleue, ainsi qu'à immortaliser le rougeoiement spectaculaire de l'Alpenglühen. Parmi les sites majeurs figure le lac Rifflsee à 2 232 mètres d'altitude : le plus haut lac de montagne d'Autriche reflète dans ses eaux calmes les crêtes effilées du Kaunergrat. Plus haut encore culmine le Café 3440 sur le glacier du Pitztal : sa terrasse suspendue au Hinterer Brunnenkogel offre un panorama à 360 degrés sur plus de 50 sommets de 3 000 mètres et sur la célèbre Wildspitze (3 768 m). En soirée, le fond du Kaunertal offre un ciel d'une pureté exceptionnelle pour l'astrophotographie.\n\n### Itinéraire & Exigences\nLes ateliers associent théorie et prises de vue sur le terrain. Les séances types comprennent le sentier faisant le tour du Rifflsee (1 heure de marche, 50 mètres de dénivelé), la gare sommitale de la Wildspitzbahn à 3 440 mètres et la passerelle panoramique du Gacher Blick à la maison du parc du Kaunergrat (1 560 m). Les sorties exigent des chaussures de randonnée montantes et le pied sûr mais aucune compétence d'alpinisme engagé. Les participants doivent disposer d'un boîtier numérique débrayable en manuel, d'un trépied robuste, d'optiques grand-angle et téléobjectifs, ainsi que de filtres polarisants et gris neutre (ND). En raison de l'attente statique prolongée dans le froid, l'atelier est inadapté aux enfants et aux chiens.\n\n### Accès\nLe camp de base se situe à Mandarfen, au départ de la télécabine du Rifflsee ou à Mittelberg pour le glacier. En voiture, quitter l'A12 Inntal à Imst/Pitztal et suivre la route départementale L16 jusqu'au fond de la vallée. Grands parkings gratuits aux deux gares de départ. En transports publics, train jusqu'à la gare d'Imst-Pitztal puis bus régional VVT ligne 4204 (gratuit pour les résidents munis de la Pitztal Sommer Card).\n\n### Conseils\nLe tarif de l'atelier varie entre 85 et 190 € selon la durée (remontées mécaniques en sus ; la télécabine du Rifflsee est gratuite avec la Pitztal Sommer Card). Les montées spéciales à l'aube vers le Café 3440 avec petit-déjeuner au sommet constituent une expérience inoubliable. Conseil vestimentaire : entre 2 200 et 3 440 mètres, le thermomètre chute souvent sous zéro dès le crépuscule en été. Prévoyez veste en duvet chaude, bonnet et mitaines photo à doigts rabattables. Emportez plusieurs batteries de rechange, le froid réduisant drastiquement leur autonomie.",
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 79,
   "tags": [
     "fotografie",
     "workshop",
     "alpen",
     "pitztal",
     "landschaft"
-  ],
-  "koordinaten": {
-    "lat": "46.9792",
-    "lng": "10.8725"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.pitztal.com/",
-    "https://www.pitztal.com/de",
-    "https://www.pitztaler-gletscher.at/",
-    "https://www.alpenverein-akademie.at/",
-    "https://de.wikipedia.org/wiki/Pitztal",
-    "https://www.vvt.at"
   ]
 }

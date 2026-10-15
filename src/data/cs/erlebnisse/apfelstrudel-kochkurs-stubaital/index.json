@@ -1,27 +1,32 @@
 {
-  "name": "Apfelstrudel-Kochkurs",
   "slug": "apfelstrudel-kochkurs-stubaital",
   "emoji": "🥟",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "Der perfekte Apfelstrudel will gelernt sein! In diesem Kurs zeigen Ihnen die Bäuerinnen des Stubaitals alle Tricks für den perfekten Strudelteig, die feine Apfelfülle und das richtige Rollen. Natürlich wird der selbstgemachte Strudel anschliessend mit Vanillesauce oder Schlagobers genüsslich verkostet.",
-  "preis": 49,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Tirolský kurz pečení jablečného štrúdlu ve Stubaitalu",
+  "beschreibung": "### Přehled\nTradiční ručně tažený tyrolský jablečný závin (Apfelstrudel) je chloubou alpského cukrářství. V údolí Stubaital se tento teplý moučník řadí podle místního svazu cestovního ruchu na druhé místo nejoblíbenějších jídel na horských chatách. V ukázkových pekárnách, na selských statcích a v kuchařských dílnách se návštěvníci učí jeho přípravu podle více než sto let starého údolního receptu „à la Urli Maria z roku 1900“. Základem úspěchu je správně tažené těsto: hladká mouka, vlažná voda, vejce, olej a špetka soli se důkladně hnětou do sametově pružné koule. Po odpočinutí pod teplou mísou se těsto na pomoučeném plátně vytahuje přes hřbety rukou tak natenko, že by přes něj bylo možné číst noviny.\n\n### Průběh a náročnost\nWorkshopy se konají v útulných světnicích horských hostinců nebo ve vzdělávacím studiu Genusswerk Tirol. Po vytažení těsta účastníci připraví náplň: nakyslá tyrolská jablka (nejlépe odrůda Boskoop) se nakrájejí na tenké plátky a smíchají se strouhankou osmaženou na másle, skořicí, cukrem, citronem a rozinkami naloženými v rumu. Pomocí utěrky se závin zroluje, potře rozpuštěným máslem a peče při 190 °C dozlatova. Kurz nevyžaduje předchozí kuchařské zkušenosti a je ideální pro rodiny s dětmi od šesti let. Z hygienických důvodů je vstup se psy do kuchyňských prostor zakázán.\n\n### Příjezd a doprava\nDo obcí ve Stubaitalském údolí (Neustift, Fulpmes, Telfes) dorazíte z Innsbrucku za zhruba 25 minut po dálnici A13 Brennerautobahn (sjezd Schönberg/Stubaital) a po silnici B183. Parkoviště jsou k dispozici v centrech obcí. Veřejnou dopravou se sem dostanete pohodlně: regionální autobus VVT linky 590 jezdí z hlavního nádraží v Innsbrucku každou půlhodinu až do Neustiftu. Z Fulpmesu navíc jezdí do Innsbrucku vyhlídková tramvajová dráha Stubaitalbahn (STB).\n\n### Praktické tipy\nCena kurzu (cca 45 až 85 eur) zahrnuje veškeré suroviny, zapůjčení zástěry, recepty a ochutnávku čerstvě upečeného závinu s vanilkovou omáčkou nebo šlehačkou. Zbylé kousky si můžete odnést s sebou. Vzhledem k omezené kapacitě na 8 až 12 osob se doporučuje včasná rezervace přes turistický svaz nebo institut LFI Tirol. Tip pro labužníky: na horských chatách Schlickeralm a Panoramarestaurant Kreuzjoch můžete ochutnat čerstvý štrúdl s výhledem na stubaiské ledovce.",
+  "sources": [
+    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
+    "https://www.stubai.at/stubaital/essen-und-trinken/",
+    "https://tirol.lfi.at"
+  ],
+  "bilder": [],
   "dauer": "2,5 Stunden",
+  "link": "#",
+  "preis": 49,
   "tags": [
     "kulinarik",
     "strudel",
     "kochkurs",
     "stubaital",
     "backen"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

@@ -1,29 +1,36 @@
 {
-  "titel": "Osttirol",
+  "titel": "Východní Tyrolsko",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Východní Tyrolsko je sluncem zalitý alpský ráj mezi majestátními Vysokými Taurami s Grossglocknerem a rozeklanými Lienzkými Dolomitami.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#E67E22",
   "tags": [
-    "wandern",
-    "natur",
-    "bergsteigen",
-    "kultur",
-    "ruhe"
+    "turistika",
+    "priroda",
+    "horolezectvi",
+    "kultura",
+    "klid"
   ],
   "hoehe": "3.798 m",
-  "flaeche": "2.019 km²",
+  "flaeche": "2.020 km²",
   "einwohner": "49.000",
-  "beschreibung": "<p><strong>Osttirol</strong> je nejslunečnější okres Rakouska a ráj pro milovníky hor. Okres Lienz je obklopen mocnými vrcholy <strong>Nationalparks Hohe Tauern</strong> na severu a výraznými <strong>Lienzer Dolomiten</strong> na jihu. Hlavní město okresu <strong>Lienz</strong> se pyšní středověkým historickým centrem a zámkem Bruck. <strong>Matrei in Osttirol</strong> je bránou do národního parku a výchozím bodem pro túry na <strong>Großglockner</strong> (3.798 m), nejvyšší horu Rakouska. <strong>Kals am Großglockner</strong> je nejdůležitější středisko pro výstupy na Glockner s známou Kalser Höhenweg.</p>",
+  "beschreibung": "<p><strong>Východní Tyrolsko</strong> (Osttirol, okres Lienz) představuje nejslunečnější kout Tyrolska a opravdový ráj pro milovníky hor. Region obklopuje na 266 třítisícových vrcholů a sahá od rozlehlého <strong>Národního parku Vysoké Taury</strong> na severu s nejvyšší horou Rakouska <strong>Grossglocknerem (3 798 m)</strong> až po dramatické vápencové věže <strong>Lienzských Dolomit</strong> a Karnských Alp na jihu. Okresní město <strong>Lienz</strong> okouzluje jižanskou atmosférou, palmami na náměstí a středověkým hradem Bruck. Původní údolí jako Defereggental, Virgental a Villgratental nabízejí klid a zachovalou lidovou architekturu daleko od masového turismu.</p>",
   "tipps": [
-    "Der Kalser Höhenweg ist eine anspruchsvolle Mehrtagestour – Trittsicherheit unbedingt erforderlich.",
-    "Der Nationalpark Hohe Tauern bietet kostenlose geführte Rangertouren an.",
-    "Die Großglockner-Hochalpenstraße führt direkt zum Fuscher Törl – ein unvergessliches Panorama."
+    "Navštivte vodopády Umbalfälle ve Virgentalu – první naučnou vodní stezku v Evropě podél divoké řeky Isel.",
+    "Ochutnejte tradiční taštičky Osttiroler Schlipfkrapfen a chráněnou pálenku Pregler v místních hostincích.",
+    "Vysokohorská trasa Kalser Höhenweg nabízí velkolepé výhledy na stěnu Grossglockneru."
   ],
-  "empfehlungen": null,
-  "umgebung": null,
+  "empfehlungen": "<p>Vydejte se do <strong>Národního parku Vysoké Taury</strong> na túru s rangerem za pozorováním orlů a kozorožců. Poté si vychutnejte domácí speciality na dechberoucí <strong>Dolomitenhütte</strong> stojící na skalním ostrohu nebo v chatě <strong>Lucknerhaus</strong> v Kalsu.</p>",
+  "umgebung": "<p>Východní Tyrolsko je spojeno se Severním Tyrolskem tunelem Felbertauern. Na severu sousedí se Salcburskem, na východě s Korutany a na jihu a západě s Itálií (Jižní Tyrolsko a Benátsko). Hlavními údolími jsou Iseltal, Drautal, Virgental, Defereggental a Villgratental.</p>",
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.nationalpark-hohetauern.at",
+    "https://www.tirol.gv.at/lienz/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -111,5 +118,10 @@
       46.95,
       12.25
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 46.8297,
+    "lng": 12.7686
+  },
+  "slug": "osttirol"
 }

@@ -1,8 +1,8 @@
 {
-  "titel": "Osttirol",
+  "titel": "Oost-Tirol",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Oosttirol is het zonovergoten hoogtal tussen de ruige pieken van de Hoge Tauern en de Lienzer Dolomiten.",
+  "kurzbeschreibung": "Oost-Tirol is een zonovergoten alpenparadijs ingebed tussen de machtige Hohe Tauern met de Großglockner en de grillige Lienzer Dolomieten.",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#E67E22",
@@ -14,16 +14,23 @@
     "rust"
   ],
   "hoehe": "3.798 m",
-  "flaeche": "2.019 km²",
+  "flaeche": "2.020 km²",
   "einwohner": "49.000",
-  "beschreibung": "<p><strong>Oosttirol</strong> is de zonovergotste regio van Oostenrijk en een paradijs voor bergliefhebbers. De regio Lienz is omgeven door de machtige toppen van het <strong>Nationalpark Hohe Tauern</strong> in het noorden en de opvallende <strong>Lienzer Dolomiten</strong> in het zuiden. De regiocentrum <strong>Lienz</strong> valt op door zijn middeleeuwse oude stad en het kasteel Bruck. <strong>Matrei in Osttirol</strong> is de poort naar het nationaal park en het startpunt voor tochten naar de <strong>Großglockner</strong> (3.798 m), de hoogste berg van Oostenrijk. <strong>Kals am Großglockner</strong> is de belangrijkste uitvalsbasis voor beklimmingen van de Glockner met de bekende Kalser Höhenweg.</p>",
+  "beschreibung": "<p><strong>Oost-Tirol</strong> (district Lienz) is de zonnigste regio van Tirol en een toevluchtsoord voor rustzoekers en bergwandelaars. Omringd door maar liefst 266 drieduizenders strekt het gebied zich uit van het uitgestrekte <strong>Nationaal Park Hohe Tauern</strong> met Oostenrijks hoogste piek, de <strong>Großglockner (3.798 m)</strong>, tot de steile kalkrotsen van de <strong>Lienzer Dolomieten</strong> en Karnische Alpen in het zuiden. De sfeervolle hoofdstad <strong>Lienz</strong> verrast met een mediterrane sfeer, palmbomen op het plein en kasteel Schloss Bruck. Authentieke bergdalen zoals het Defereggental, Virgental en Villgratental bieden pure natuurbeleving zonder massatoerisme.</p>",
   "tipps": [
-    "Der Kalser Höhenweg ist eine anspruchsvolle Mehrtagestour – Trittsicherheit unbedingt erforderlich.",
-    "Der Nationalpark Hohe Tauern bietet kostenlose geführte Rangertouren an.",
-    "Die Großglockner-Hochalpenstraße führt direkt zum Fuscher Törl – ein unvergessliches Panorama."
+    "Bezoek de Umbal-watervallen in het Virgental – het eerste waterleerpad van Europa langs de wilde gletsjerrivier Isel.",
+    "Proef echte Osttiroler Schlipfkrapfen en de beschermde streekjenever Pregler in traditionele berghutten.",
+    "De Kalser Höhenweg biedt adembenemende panorama's op de Großglockner; tredzekerheid vereist."
   ],
-  "empfehlungen": "<p>Bezoek de <strong>Nationalpark Hohe Tauern</strong> en wandel op de <strong>Kalser Höhenweg</strong> langs de Glocknerwand. Daarna een stop bij het <strong>Lucknerhaus</strong> in Kals voor originele Osttiroler Kasnocken.</p>",
-  "umgebung": "<p>Osttirol is via de Felbertauerntunnel van Nordtirol bereikbaar en grenst in het zuiden aan Südtirol (Italië) en in het oosten aan Kärnten. De Hohen Tauern in het noorden scheiden Osttirol van Salzburg. Aangrenzende regio's: Defereggental (westen), Virgental (zuiden), Iseltal (oosten).</p>",
+  "empfehlungen": "<p>Verken het <strong>Nationaal Park Hohe Tauern</strong> tijdens een tocht met een parkranger op zoek naar steenbokken en steenarenden. Sluit de dag af bij de spectaculair op een rotskam gelegen <strong>Dolomitenhütte</strong> of bij het <strong>Lucknerhaus</strong> in Kals.</p>",
+  "umgebung": "<p>Oost-Tirol is via de Felbertauernstrasse verbonden met Noord-Tirol. Het grenst in het noorden aan Salzburg, in het oosten aan Karinthië en in het zuiden en westen aan Italië (Zuid-Tirol en Veneto). Belangrijke dalen zijn het Iseltal, Drautal, Virgental, Defereggental en Villgratental.</p>",
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.nationalpark-hohetauern.at",
+    "https://www.tirol.gv.at/lienz/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -111,5 +118,10 @@
       46.95,
       12.25
     ]
-  ]
+  ],
+  "koordinaten": {
+    "lat": 46.8297,
+    "lng": 12.7686
+  },
+  "slug": "osttirol"
 }

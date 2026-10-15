@@ -5,8 +5,8 @@
   "region": "achensee",
   "ort": "Pertisau",
   "kategorie": "natur",
-  "kurzbeschreibung": "The largest lake in Tirol, with crystal-clear waters, surrounded by the steep cliffs of the Karwendel – a paradise for watersports and hiking.",
-  "beschreibung": null,
+  "kurzbeschreibung": "Tyrol's largest lake with crystal-clear water, surrounded by the steep cliffs of the Karwendel – a paradise for water sports and hiking.",
+  "beschreibung": "<h2>Overview</h2><p>Covering an area of 6.8 km², with a length of 9.4 km and a maximum depth of 133 meters, <strong>Achensee</strong> is the largest natural lake in Tyrol and one of the cleanest alpine lakes in Austria. Situated at an altitude of 929 meters between the Karwendel mountains to the west and the Rofan mountains to the east, it is popularly known as the \"Tyrolean Sea\".</p><h2>History</h2><p>Achensee was formed around 20,000 years ago at the end of the Würm glaciation: the Achental glacier carved out a tectonic trench between Karwendel and Rofan. During the glacial retreat, the Inn and Zillertal glaciers piled up a roughly 150-meter-high moraine gravel barrier at the southern entrance to the valley, known as the Achenseedamm. This dams the lake's waters and separates the Achental from the Inntal, which lies about 380 meters lower. Naturally, the lake drained via the Seeache and the Isar toward the Danube; since the construction of the TIWAG Achenseekraftwerk in 1927, most of the lake water has been diverted into the Inntal to generate electricity.</p><h2>Visit & Arrival</h2><p>In midsummer, the water surface reaches 18–20 °C, and in shallow shore areas such as Strandbad Maurach up to 22 °C. Ideal conditions for sailing, windsurfing, and kitesurfing are guaranteed by reliable thermal winds (light southerly wind in the morning, northerly wind with 3–5 Bft in the afternoon). In addition, stand-up paddling, diving with visibility up to 15 meters, and rowing and electric boats are available. Since 1887, the Achensee-Schifffahrt has connected the piers of Pertisau, Seespitz, Buchau, Gaisalm, Seehofkapelle, and Scholastika. By car: Inntalautobahn A12, exit Wiesing/Achensee/Zillertal, then B181 for about 10 km to Maurach, Pertisau, or Achenkirch. By public transport: ÖBB to Jenbach station, then VVT regional bus line 4080 to Achensee; in the summer season also via the historic Achenseebahn.</p><h2>Tips</h2><p>The paved lakeside promenades in Pertisau and Maurach are flat and barrier-free. For those arriving from Germany: via Holzkirchen – Tegernsee – Achenpass (B307/B181), you can reach Achensee toll-free and vignette-free. Day trippers are recommended to take a combined trip with the steam-powered Achenseebahn from Jenbach and a scenic boat cruise on the lake.</p>",
   "emoji": "🏞️",
   "farbe": "#2196F3",
   "hoehe": "929 m",
@@ -21,11 +21,15 @@
     "nature"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich; Schifffahrt: Mai–Okt",
-  "webseite": "https://www.achensee.info",
+  "webseite": "https://www.achensee.com",
   "koordinaten": {
     "lat": "47.4500",
     "lng": "11.7167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.achensee.com",
+    "https://de.wikipedia.org/wiki/Achensee"
+  ]
 }

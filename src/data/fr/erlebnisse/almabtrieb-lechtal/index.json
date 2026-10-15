@@ -1,27 +1,34 @@
 {
-  "name": "Almabtrieb mit Fest",
   "slug": "almabtrieb-lechtal",
   "emoji": "🐂",
   "farbe": "var(--green)",
   "kategorie": "tradition",
   "ort": "Lechtal",
   "region": "lechtal",
-  "beschreibung": "Der traditionelle Almabtrieb im Lechtal ist ein farbenfrohes Spektakel. Die prächtig geschmückten Kühe werden mit Almabtriebskronen und Blumen geschmückt von der Alm ins Tal getrieben. Musikkapellen, Trachtengruppen und ein grosser Bauernmarkt begleiten das Fest. Ein Höhepunkt des Tiroler Brauchtumsjahres.",
-  "preis": 0,
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Almabtrieb traditionnel dans le Lechtal",
+  "beschreibung": "### Aperçu\nLa transhumance inversée (Almabtrieb) dans la vallée tyrolienne du Lechtal compte parmi les fêtes traditionnelles les plus pittoresques des Alpes. Chaque année à la mi-septembre, autour de la Saint-Rupert, les troupeaux regagnent la vallée après une centaine de jours d'estive. Le village de Steeg constitue le cœur battant de l'événement en accueillant la plus grande transhumance de la région de l'Außerfern. Environ 500 bovins descendent des alpages de Krabachalpe, Pimigalpe et Bockbachtal pour défiler au village. Les bêtes ne sont parées de couronnes de fête (« Aufkranzen ») que si la saison s'est écoulée sans accident mortel. Le défilé est ouvert par la vache de tête (« Kranzkuh »), ornée d'une coiffe de pins nains, fleurs alpines, rubans multicolores, d'une croix chrétienne et d'un miroir censé repousser les mauvais esprits.\n\n### Itinéraire & Exigences\nLes troupeaux cheminent en fin de matinée le long de la rue principale jusqu'au champ de foire au centre de Steeg. Bergers et vachers encadrent le bétail au son des cloches et des claquements de fouet traditionnels (Goaßlschnalzen). L'accès aux festivités dans le village est aisé et ne demande aucun effort physique. Pour les familles, cette tradition vivante est un spectacle fascinant ; un casque antibruit est toutefois conseillé pour les jeunes enfants en raison du tintement assourdissant des sonnailles. L'événement est déconseillé aux chiens : les vaches les considèrent instinctivement comme des prédateurs, et la foule accentue le stress des animaux. Si un chien vous accompagne, tenez-le en laisse très courte et à distance respectable du cortège.\n\n### Accès\nEn voiture depuis Reutte, emprunter la route B198 du Lechtal jusqu'à Steeg. Attention : en raison du passage des troupeaux, la B198 est totalement coupée à la circulation à Steeg entre environ 11h00 et 13h30. Il est indispensable d'arriver avant 10h30, les places de stationnement étant très restreintes. L'accès en transports publics via la ligne 110 du bus régional VVT (Lechtalbus) reliant Reutte à Steeg toutes les heures est idéal. Pour les vacanciers munis de la carte d'hôte Lechtal Aktiv Card, les trajets en bus dans la vallée sont entièrement gratuits.\n\n### Conseils\nL'accès au défilé dans les rues et au marché fermier est gratuit. Sous le chapiteau chauffé, la fanfare locale anime la fête au son de mélodies tyroliennes, tandis que les stands proposent des spécialités telles que le fromage d'alpage du Lechtal, les beignets Kiachl aux airelles et les Krapfen traditionnels. Le tirage au sort d'une véritable sonnaille alpine richement ouvragée clôture la journée. Consigne de sécurité : un bovin peut peser jusqu'à 700 kg ; gardez une distance de sécurité constante et ne vous tenez jamais sur la trajectoire des animaux.",
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.lechtal.at/de/veranstaltungen/veranstaltungen-im-lechtal.html",
+    "https://www.steeg.gv.at",
+    "https://www.tirol.at/aktivitaeten/events/almabtriebe",
+    "https://www.sichere-almen.at"
+  ],
+  "bilder": [],
   "dauer": "1 Tag",
+  "link": "#",
+  "preis": 0,
   "tags": [
     "tradition",
     "coutume",
     "descente des vaches",
     "Lechtal",
     "fête"
-  ],
-  "koordinaten": {
-    "lat": "47.3442",
-    "lng": "10.5044"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

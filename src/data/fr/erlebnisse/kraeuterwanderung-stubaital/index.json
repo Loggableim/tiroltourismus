@@ -6,16 +6,20 @@
   "kategorie": "wandern",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>Le Stubaital est une vallée latérale de l'Inntal au Tyrol, longue d'environ 35 kilomètres, au sud d'Innsbruck, avec les cinq localités principales Neustift, Fulpmes, Telfes, Mieders et Schönberg. Les coordonnées de l'entrée se situent dans le Stubaital antérieur près de Telfes. En été, environ 850 kilomètres de sentiers de randonnée traversent la région ; parmi eux se trouve le sentier de plaisir « Stubaier Almkräuter » de Milders à l'Auffangalm et à la Brandstattalm.</p><p>L'entrée décrit une randonnée guidée aux herbes avec une éducatrice en herbes et dégustation de produits régionaux, durée environ quatre heures, prix 55 euros. Une attribution à un prestataire nommé et réservable n'a pas été possible sur la base de sources officielles accessibles au public.</p>",
-  "preis": 55,
-  "dauer": "4 Stunden",
-  "link": "#",
+  "beschreibung": "Aperçu\nLongue de 35 kilomètres au sud d'Innsbruck, la vallée du Stubaital offre une exceptionnelle diversité végétale en raison de ses étages altitudinaux étirés de 1 000 à plus de 3 000 mètres. Les sols cristallins et les tourbières d'altitude abritent plus de trois cents espèces d'herbes médicinales et aromatiques. Sur des itinéraires aménagés comme le sentier gourmand des herbes d'alpage («Stubaier Almkräuter») à Neustift ou lors de randonnées guidées en tourbière aux Serlesbahnen à Mieders, les passionnés découvrent la phytothérapie montagnarde. Encadrés par des herboristes diplômées, les marcheurs apprennent comment l'arnica, le serpolet, l'euphraise et l'alchémille soignent et parfument la gastronomie alpine.\n\nRoute & Exigences\nLe Stubaital propose plusieurs superbes itinéraires botaniques:\n1. Sentier des herbes d'alpage (Neustift-Milders): boucle officielle de 9,5 kilomètres et 650 mètres de dénivelé reliant Milders (1 026 m) aux alpages d'Auffangalm (1 620 m) et Brandstattalm. On y admire l'arnica des montagnes, le thym sauvage et le plantain lancéolé. Randonnée de moyenne montagne de 4h à 4h30 sur pistes forestières et sentiers (pistes praticables en poussette tout-terrain depuis le parking Josef).\n2. Randonnée guidée des tourbières (Mieders): sortie hebdomadaire chaque lundi depuis le sommet de la télécabine de Koppeneck (1 605 m) vers le sanctuaire de Maria Waldrast et les tourbières du mont Miederer Berg (9 km, 300 m de dénivelé, 4 heures).\n3. Les prés Telfer Wiesen (Telfes): agréable boucle de 6 à 8 km au milieu de mélèzes clairsemés et d'orchidées sauvages.\n4. Ateliers de cueillette: stages pratiques à Neustift pour fabriquer baumes et sels aux herbes.\nIdéal pour les familles. Chiens admis tenus en laisse (muselière requise dans les télécabines et bus).\n\nAccès\nDepuis Innsbruck via l'A13 (sortie Schönberg) et la B183. Le bus régional VVT 590 dessert toute la vallée depuis la gare centrale d'Innsbruck. Le tramway panoramique Stubaitalbahn (STB) relie également Telfes et Fulpmes. Parkings aux Serlesbahnen et au fond de la vallée d'Oberbergtal.\n\nConseils\nLa carte d'hôte «Stubai Super Card» incluse dès une nuitée donne accès gratuit aux bus 590, au tramway et aux remontées mécaniques, ainsi qu'aux randonnées guidées de l'office de tourisme. Bonnes chaussures de marche indispensables. Respectez la réglementation: interdiction absolue de cueillir des plantes protégées dans les réserves naturelles et tourbières.",
+  "preis": 0,
+  "dauer": "3 bis 4,5 Stunden",
+  "link": "https://www.stubai.at/aktivitaeten/wandern/",
   "tags": [
-    "randonnée",
-    "plantes aromatiques",
-    "nature",
-    "valée de Stubai",
-    "événement"
+    "wandern",
+    "kraeuter",
+    "stubaital",
+    "neustift",
+    "mieders",
+    "serles",
+    "hochmoor",
+    "alpenflora",
+    "tirol"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +27,11 @@
   "koordinaten": {
     "lat": "47.1549",
     "lng": "11.3509"
-  }
+  },
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubai.at/aktivitaeten/wandern",
+    "https://www.stubai.at/unterkuenfte/stubai-super-card",
+    "https://www.stubai.at/skigebiete/serlesbahnen"
+  ]
 }

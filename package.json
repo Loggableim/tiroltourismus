@@ -10,8 +10,10 @@
     "build": "npm run build:search-index && npm run build:astro",
     "build:ci": "npm run build",
     "preview": "astro preview",
+    "test:content": "node --test src/lib/content.test.js",
     "check:chrono-contrast": "node scripts/check-chronochrom-contrast.mjs",
-    "check:chrono-live": "node scripts/check-chronochrom-live.mjs"
+    "check:chrono-live": "node scripts/check-chronochrom-live.mjs",
+    "check:content": "node scripts/check-content-gate.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -25,6 +27,7 @@
     "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@types/leaflet": "^1.9.21"
+    "@types/leaflet": "^1.9.21",
+    "sharp": "^0.34.5"
   }
 }

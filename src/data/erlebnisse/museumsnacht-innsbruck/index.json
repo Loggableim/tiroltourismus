@@ -1,27 +1,36 @@
 {
-  "name": "Museumsnacht Innsbruck",
+  "name": "ORF Lange Nacht der Museen Innsbruck",
   "slug": "museumsnacht-innsbruck",
   "emoji": "🏛️",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Einmal im Jahr öffnen die Innsbrucker Museen ihre Türen für eine lange Nacht voller Kunst, Geschichte und Kultur. Mit einem Armband besuchen Sie alle teilnehmenden Häuser – vom Alpenvereinsmuseum über das Zeughaus bis zur Hofkirche. Überall gibt es Spezialführungen, Workshops und Live-Musik.",
-  "preis": 29,
-  "dauer": "4–5 Stunden",
+  "beschreibung": "### Überblick\nDie ORF Lange Nacht der Museen verwandelt die Tiroler Landeshauptstadt Innsbruck alljährlich am ersten Samstag im Oktober in eine pulsierende Kulturmeile unter dem herbstlichen Sternenhimmel. Von 18:00 Uhr abends bis 01:00 Uhr früh öffnen über zwanzig renommierte Museen, Galerien und historische Kulturstätten ihre Tore für Nachtschwärmer. Mit einem einzigen Sammelticket erhalten Besucher Zugang zu weltberühmten Sehenswürdigkeiten wie der Kaiserlichen Hofburg, Schloss Ambras mit seiner Renaissance-Kunstkammer, dem Tiroler Volkskunstmuseum, dem Zeughaus Kaiser Maximilians I. und dem interaktiven Hör-Erlebnismuseum Audioversum. Da das Hauptgebäude des Tiroler Landesmuseums Ferdinandeum bis voraussichtlich 2028 generalsaniert wird, bereichern exklusive Sonderprogramme und Außenstandorte das nächtliche Erlebnis mit Kuratorenführungen, Live-Musik, Lichtinstallationen und kreativen Workshops.\n\n### Route & Anforderungen\nBesucher können ihre Route völlig frei und nach persönlichen Interessen zusammenstellen. Das dichte Museumsnetzwerk erstreckt sich von der historischen Innsbrucker Altstadt über das Zeughaus im Stadtteil Dreiheiligen bis hinauf zum renaissancezeitlichen Schloss Ambras am südöstlichen Stadtrand. Für die Erkundung sind bequeme Schuhe ratsam, da innerhalb der historischen Gebäude und Ausstellungsräume etliche Gehminuten und Treppenstufen absolviert werden. Die meisten großen Kulturinstitutionen wie die Hofburg und das Audioversum sind barrierefrei zugänglich. Familien schätzen die eigens konzipierten Kinderprogramme, die zumeist im Zeitraum zwischen 18:00 und 21:00 Uhr stattfinden.\n\n### Anreise\nDer zentrale Ausgangspunkt für die Museumsnacht ist der Innsbrucker Hauptbahnhof sowie der Museumstreffpunkt am Haus der Musik / Rennweg direkt gegenüber der Hofburg. Für Ticketinhaber richten die Innsbrucker Verkehrsbetriebe (IVB) ein maßgeschneidertes, im Eintrittspreis inkludiertes Sonderliniennetz ein: Spezielle Shuttlebusse (Linien SH1, SH2, SH3) verkehren im dichten Takt und verbinden die Innenstadtmuseen im Minutentakt mit Außenstellen wie Schloss Ambras oder dem Glockenmuseum Grassmayr. Auch die regulären IVB-Linien in der Kernzone Innsbruck können am Veranstaltungsabend mit dem Museumsticket kostenfrei genutzt werden. Autofahrer nutzen die Tiefgaragen am Landestheater, Congress oder Hauptbahnhof.\n\n### Tipps\nKaufen Sie Ihr Ticket bereits im Vorverkauf in einem der teilnehmenden Museen oder online, um die Warteschlangen am Veranstaltungsabend zu umgehen. Starten Sie beliebte Außenstationen wie Schloss Ambras gleich zu Beginn um 18:00 Uhr, wenn die Shuttlebusse noch wenig ausgelastet sind, und verlegen Sie den Besuch der Altstadtmuseen in die späteren Nachtstunden. Für Familien mit Kindern lohnt sich die Mitnahme des speziellen Kinder-Sammelpasses mit Rätselstationen. Hunde sind in Ausstellungsräumen aus denkmalpflegerischen und Sicherheitsgründen nicht gestattet.",
+  "preis": "19,00 € regulär (16,00 € ermäßigt, Kinder bis 12 Jahre frei)",
+  "dauer": "18:00 bis 01:00 Uhr (7 Stunden)",
   "tags": [
     "kultur",
     "museum",
     "innsbruck",
+    "event",
     "kunst",
-    "nacht"
+    "familie",
+    "nachtleben"
   ],
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://langenacht.orf.at",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://langenacht.orf.at",
+    "https://www.innsbruck.info",
+    "https://www.tiroler-landesmuseen.at",
+    "https://www.tirol.at",
+    "https://www.ivb.at"
+  ]
 }

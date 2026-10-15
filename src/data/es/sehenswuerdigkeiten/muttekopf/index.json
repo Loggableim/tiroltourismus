@@ -4,14 +4,14 @@
   "status": "published",
   "region": "imst",
   "ort": "Imst",
-  "kategorie": "aussicht",
-  "kurzbeschreibung": null,
-  "beschreibung": "Der <strong>Muttekopf</strong> ist mit 2.774 m der imposante Hausberg der Stadt Imst und zählt zu den markantesten Gipfeln der Lechtaler Alpen. Der Aufstieg ist eine anspruchsvolle, aber lohnende Bergtour – oder wahlweise ein spektakulärer <strong>Klettersteig</strong> für geübte Bergsteiger. Der <strong>Muttekopf-Klettersteig</strong> zählt zu den schönsten in Tirol und führt teils exponierte Passagen mit Drahtseilversicherungen. Der Gipfel belohnt mit einem atemberaubenden 360°-Panorama auf die Lechtaler Alpen, die Ötztaler Alpen, die Stubaier Alpen und bis zum Inntal. Die <strong>Muttekopfhütte</strong> auf 2.020 m (D.A.V.-Hütte) ist ein beliebter Stützpunkt für Gipfeltouren.",
+  "kategorie": "natur",
+  "kurzbeschreibung": "Der markante Hausberg von Imst (2.774 m) in den Lechtaler Alpen – anspruchsvolle Bergtouren, Klettersteige und 360-Grad-Alpenpanorama.",
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Muttekopf</strong> (2.774 m) es la majestuosa montaña que domina la ciudad tirolesa de Imst en los Alpes de Lechtal. Con sus afiladas crestas de caliza y su entorno alpino salvaje, ofrece una panorámica de 360 grados inigualable sobre el Tirol occidental y alberga el tradicional refugio Muttekopfhütte a 1.934 m.</p><h2>Ruta y Requisitos</h2><p>La ruta clásica comienza en la estación superior de Alpjoch (2.050 m) descendiendo por el sendero excavado Drischlsteig hasta el refugio. Desde allí asciende por canchales y la arista cimera (750 m de desnivel, 2,5 a 3 horas de subida, nivel T3+/T4). Los escaladores pueden ascender por la ferrata de Imst (C/D). Botas de montaña de caña alta imprescindibles. Cima no apta para perros.</p><h2>Cómo llegar</h2><p>En tren ÖBB hasta la estación Imst-Pitztal y autobús local a Hoch-Imst. En coche por la A12 (salida Imst) hasta el aparcamiento gratuito del teleférico en Hoch-Imst.</p><h2>Consejos</h2><p>Complete la excursión bajando en el Alpine Coaster de Imst, la montaña rusa alpina más larga del mundo, y deguste los típicos Kaspressknödel en la terraza del refugio Muttekopfhütte.</p>",
   "emoji": "🏔️",
   "farbe": "#6D4C41",
   "hoehe": "2.774 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Bergtour); Hüttenübernachtung ab 50 €",
+  "dauer": "5–6 Stunden",
+  "preis": "Kostenlos (Bergbahn Hoch-Imst Berg- und Talfahrt ca. 24 €)",
   "tags": [
     "vistas panorámicas",
     "senderismo",
@@ -25,5 +25,12 @@
   "koordinaten": {
     "lat": "47.2833",
     "lng": "10.6917"
-  }
+  },
+  "sources": [
+    "https://de.wikipedia.org/wiki/Muttekopf",
+    "https://de.wikipedia.org/wiki/Muttekopfh%C3%BCtte",
+    "https://www.alpenvereinaktiv.com/de/tour/muttekopf-vom-alpjoch/1381387/",
+    "https://www.bergsteigen.com/touren/klettersteig/imster-klettersteig-muttekopf/",
+    "https://www.vvt.at/"
+  ]
 }

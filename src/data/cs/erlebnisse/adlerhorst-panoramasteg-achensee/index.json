@@ -1,27 +1,32 @@
 {
-  "name": "Adlerhorst-Panoramasteg am Achensee",
   "slug": "adlerhorst-panoramasteg-achensee",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "wandern",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "Der neu errichtete Adlerhorst-Panoramasteg schmiegt sich in 80 Metern Höhe an die senkrechte Felswand des Achensees. Auf dem rundum gesicherten Steg wandeln Sie buchstäblich über dem türkisblauen Wasser des tiefsten Sees Tirols. Ein atemberaubender Ausblick auf die Karwendel- und Rofangebirgskette ist garantiert.",
-  "preis": 29,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Vyhlídková plošina Adlerhorst u Achensee",
+  "beschreibung": "### Přehled\nVyhlídková plošina Adlerhorst se tyčí na 2 039 metrů vysokém vrcholu Gschöllkopf v pohoří Rofan vysoko nad obcí Maurach am Achensee. Tuto velkolepou ocelovou konstrukci navrhl tyrolský umělecký kovář Manfred Hörl z Jenbachu v podobě monumentálního orlího hnízda. Přibližně 15 tun umělecky propletené pozinkované oceli tvoří hnízdo o průměru osmi metrů, které směle ční nad strmé skalní srázy masivu Rofan. Z plošiny se otevírá kruhový 360stupňový výhled: v hloubce se třpytí tyrkysová hladina jezera Achensee, orámovaná masivy Karwendelu, Zillertalských a Tuxských Alp, Vysokých Taur a údolím řeky Inn. Adlerhorst leží přímo na dálkové trase Adlerweg a spojuje vysokohorskou přírodu s kovářským uměním.\n\n### Trasa a náročnost\nVýchodiskem túry je horní stanice lanovky Rofanseilbahn u chaty Erfurter Hütte v nadmořské výšce 1 840 metrů. Odtud vede červená horská stezka přes alpské louky kolem salaše Mauritzalm a stoupá mezi klečí a skalními stupni k vrcholovému hřebeni Gschöllkopfu. Na trase dlouhé 2,6 kilometru překonáte přibližně 200 výškových metrů. Samotný výstup trvá 45 až 60 minut, sestup zhruba 40 minut. Nezbytná je pevná kotníková obuv s profilovanou podrážkou a jistý krok. Trasa je vhodná pro děti od pěti let zvyklé na horskou chůzi. Na samotné plošině zajišťuje bezpečnost masivní zábradlí. Roštová podlaha je nevhodná pro psy, hrozí poranění tlapek; doporučuje se nechat psa čekat před vstupem.\n\n### Příjezd a parkování\nÚdolní stanice lanovky Rofanseilbahn leží na adrese Achenseestraße 10 v Maurachu. Autem přijedete z dálnice A12 Inntal (sjezd Wiesing/Achensee) po silnici B181. Parkoviště P1 a P2 u lanovky jsou zpoplatněna, poplatek se však při nákupu jízdenky na lanovku u pokladny v plné výši vrací. Veřejnou dopravou dojedete vlakem do rychlíkové stanice Jenbach a přesednete na regionální autobus VVT linky 4080 k zastávce Maurach Rofanseilbahn. V letní sezóně spojuje Jenbach s Maurachem také historická parní ozubnicová železnice Achenseebahn.\n\n### Praktické tipy\nDržitelé regionální karty AchenseeCard získávají slevy na jízdné lanovkou. Kousek pod vrcholem začíná AIRROFAN Skyglider: atrakce ve tvaru orla, která odvážlivce sveze rychlostí až 80 km/h přes 200 výškových metrů (minimální výška 1,30 metru, věk 10 let). Adlerhorst je přístupný pouze v letní sezóně od května do začátku listopadu; v zimě je stezka zasněžená a uzavřená. Při bouřce nebo silném větru je nutné exponovaný kovový vrchol neprodleně opustit.",
+  "sources": [
+    "https://www.rofanseilbahn.at",
+    "https://www.rofanseilbahn.at/adlerhorst/",
+    "https://www.rofanseilbahn.at/sommer/airrofan/"
+  ],
+  "bilder": [],
   "dauer": "1,5 Stunden",
+  "link": "#",
+  "preis": 29,
   "tags": [
     "turistika",
     "panorama",
     "Achensee",
     "vyhlídková plošina",
     "rodina"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Lechaschau",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Der <strong>Lechweg Wanderweg</strong> in Lechaschau ist ein Abschnitt des 125 Kilometer langen Fernwanderwegs entlang des Lechs. Die Route führt durch die flache Flusslandschaft des <strong>Lechtals</strong> mit Auwäldern und Schotterbänken. Der Weg ist durchgängig markiert und Teil des europäischen Fernwanderwegs <strong>E5</strong>. Auf dem Abschnitt zwischen Weißenbach und Reutte durchquert der Weg Lechaschau und bietet Ausblicke auf die <strong>Allgäuer Alpen</strong>. Mehrere Rastplätze und Schautafeln informieren über Flora und Fauna der Region. Der Wanderweg ist für Tagesausflüge sowie als Teil einer längeren Etappe nutzbar. Die Wege sind überwiegend flach und auf Schotter- sowie Waldwegen geführt.</p>",
+  "kurzbeschreibung": "蒂罗尔Außerfern地区的Lechweg：穿越Naturpark Tiroler Lech自然公园的徒步探险，拥有200米长的Holzgau高空悬索桥与野性河流画卷。",
+  "beschreibung": "<h2>概览</h2><p><strong>蒂罗尔Außerfern地区的Lechweg赛段</strong>是这条全长125公里的欧洲长途步道最核心的精华段落。从福拉尔贝格州界旁的Steeg出发，途经Holzgau、Elbigenalp、Weißenbach直至Lechaschau/Reutte，这条荣获<em>Leading Quality Trail</em>认证的卓越步道穿越了中欧仅存的未受人工驯服的野性河流生态廊道之一。作为一条难度适中的长途徒步道，路线沿着日益开阔的Lech河顺流而下，为自然爱好者呈现出令人惊叹的悬索桥、生机勃勃的河漫滩林以及绿宝石般高山活水无与伦比的奔腾回响。</p><h2>Naturpark Tiroler Lech自然公园与悬索桥胜景</h2><p>徒步路线有许多公里直接穿越<strong>Naturpark Tiroler Lech</strong>自然公园腹地：这里的河流依然拥有充足的空间，在每次山洪过境后自由重塑其沙石河床。广袤的砾石滩与动态沙洲为极度濒危的高山动植物提供了受保护的庇护所，例如金眶鸻、矶鹬以及濒临灭绝的<em>Deutsche Tamariske</em>（德国水柏枝）。旅程中最激动人心的亮点莫过于壮观的高空横跨：在Holzgau，徒步者踏上<strong>Hängebrücke Holzgau</strong>悬索桥，在距离谷底110米的眩晕高度上横穿陡峭的Höhenbachtalschlucht峡谷——其全长达200.5米，是奥地利最长的步行悬索吊桥之一。再往下游，一座长75米的悬索桥在Forchach附近飞架于Lech河汹涌的波涛之上。在Weißenbach和Lechaschau/Reutte附近，河谷逐渐展现为宽阔的湿地平原，随后步道途经Pflach观鸟塔与静谧神秘的Alpsee湖，一路引向Füssen旁的终点Lechfall瀑布。</p><h2>参观与交通</h2><p>Außerfern地区的主要徒步季从5月中旬持续至10月下旬。整条Lechweg步道完全免费<strong>对外开放</strong>（各处悬索桥亦不收取任何过桥费）。全长125公里的路程通常分为6至8个日行程完成，每天步行12至18公里。一大显著优势是：贯穿整座山谷的<em>Lechbus</em>区域巴士（VVT 110路）在各村落间高频开行，为徒步者在住宿地与各赛段起点之间提供灵活便捷的摆渡接驳（凭Lechtal游客卡可免费乘坐）。自驾路线：从Reutte经B198（Lechtalstraße）行驶，或经Fernpass山口（B179）前往。公共交通：搭乘火车至Bahnhof Reutte in Tirol火车站，出站后无缝换乘Lechtalbus山谷巴士。</p><h2>贴士</h2><p>Lechweg绝大部分路段行进在坡度平缓的山腰步道与平坦的滨水小径上，没有险峻暴露的攀爬岩路，因此极度适合长途徒步初学者和家庭徒步。如需避开Holzgau高空悬索桥，可选择穿过Höhenbachtal峡谷谷底的舒适休闲小径绕行。建议使用当地运营商提供的行李行李托运服务，以便仅背负日用小包轻装上阵。</p>",
   "emoji": "🥾",
   "farbe": "#2196F3",
   "hoehe": "850–1.800 m",
   "dauer": "5–7 Tage (Gesamtstrecke)",
-  "preis": "Kostenlos",
+  "preis": "Wanderweg und Hängebrücken kostenlos; Gepäcktransfer buchbar",
   "tags": [
     "wandern",
     "flusslandschaft",
@@ -19,12 +19,18 @@
     "natur",
     "lech"
   ],
-  "oeffnungszeiten": "Ganzjährig begehbar (beste Zeit: Mai–Okt)",
-  "webseite": "https://www.lechweg.at",
+  "oeffnungszeiten": "Mitte Mai bis Ende Okt frei begehbar (Etappen flexibel wählbar)",
+  "webseite": "https://www.lechweg.com",
   "koordinaten": {
     "lat": "47.4667",
     "lng": "10.7000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechweg.com",
+    "https://www.naturpark-tiroler-lech.at",
+    "https://www.lechtal.at",
+    "https://www.reutte.com"
+  ]
 }

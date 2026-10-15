@@ -2,9 +2,9 @@
   "name": "Engalm",
   "slug": "engalm",
   "region": "zillertal",
-  "ort": "Finkenberg",
+  "ort": "Vomp",
   "kategorie": "natur",
-  "kurzbeschreibung": "L’Engalm est un alpage idyllique dans la vallée de Tux, avec une chaumière chaleureuse, un panorama montagneux enchanteur et une cuisine Tirol savoureuse.",
+  "kurzbeschreibung": "L'Engalm dans le Großer Ahornboden : le plus ancien village d'alpage du Tyrol avec plus de 1 000 ans de tradition pastorale, une fromagerie de démonstration et 2 200 érables sycomores séculaires.",
   "emoji": "🌲",
   "farbe": "#228B22",
   "tags": [
@@ -14,13 +14,21 @@
     "auberge"
   ],
   "dauer": "Wanderung ca. 1 Stunde",
-  "preis": "Kostenlos (Einkehr optional)",
-  "oeffnungszeiten": "Juni bis September (Hütte)",
-  "webseite": "https://www.tux.at/engalm",
+  "preis": "Almdorf kostenlos (Mautstraße Hinterriß–Eng PKW ca. 7,00 €)",
+  "oeffnungszeiten": "Mitte Mai bis Ende Oktober täglich 08:30–18:00 Uhr",
+  "webseite": "https://www.engalm.at/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.1524",
     "lng": "11.8213"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le village traditionnel d'<strong>Almdorf Eng</strong> (souvent simplement appelé <em>Engalm</em>) se niche à 1 250 mètres d'altitude au fond de la pittoresque vallée du Rißtal, au cœur du Naturpark Karwendel. Rattaché administrativement à la commune tyrolienne de Vomp, cet ensemble constitue le plus ancien village d'alpage documenté du Tyrol, fort d'une tradition pastorale ininterrompue de plus d'un millénaire. Nichée au cœur du monument naturel du <strong>Großer Ahornboden</strong>, où plus de 2 200 érables sycomores noueux et vieux de parfois 600 ans prennent racine au pied des parois calcaires verticales de la chaîne Karwendel-Nordkette, l'Eng s'impose comme l'un des paysages naturels et culturels les plus spectaculaires de l'arc alpin.</p><h2>Histoire et tradition fromagère</h2><p>Dès le haut Moyen Âge, des familles paysannes de la vallée de l'Inntal exploitaient ces pâturages fertiles au pied de la Spritzkarspitze ; l'Eng a été mentionnée pour la première fois dans des actes officiels en 1523 en tant qu'alpage communautaire. Aujourd'hui encore, l'alpage est géré par la coopérative agricole <em>Agrargemeinschaft Eng</em>. Le village classé monument historique comprend une trentaine de chalets en bois traditionnels, des étables, une chapelle et une auberge d'alpage historique. Durant l'été pastoral de juin à septembre, environ 500 vaches laitières y paissent. Le lait de foin frais est transformé directement sur place au chaudron en cuivre selon des recettes ancestrales dans la <strong>Schaukäserei Eng</strong> vitrée. Le célèbre <em>Enger Bergkäse</em> a été récompensé à plusieurs reprises par des médailles d'or lors des olympiades internationales du fromage. En raison des parois rocheuses abruptes ceinturant le Rißtal, la vallée présente une particularité géographique : en voiture, l'Eng est uniquement accessible en traversant le territoire allemand (la Bavière via Lenggries ou Wallgau).</p><h2>Visite et accès</h2><p>Le village d'alpage, la boutique paysanne et la fromagerie de démonstration sont ouverts tous les jours de la mi-mai à la fin octobre (Toussaint) de 08h30 à 18h00. <strong>L'accès à l'ensemble du village d'alpage, à la fromagerie et au musée de l'alpage est gratuit</strong>. Un péage modéré s'applique sur les 14 kilomètres de la route panoramique Hinterriß–Eng (voitures env. 7,00 €, motos 5,00 €, vélos gratuit). En voiture : depuis Munich/Bad Tölz via Lenggries, le réservoir du Sylvensteinspeicher et Vorderriß jusqu'à Hinterriß ; depuis le Tyrol via l'Achenpass ou via Seefeld/Mittenwald jusqu'à Vorderriß. Le grand parking P10 est disponible au fond de la vallée. En transports en commun : depuis Munich avec la Bayerische Regiobahn (BRB) jusqu'à la gare de Lenggries, puis avec le bus montagnard <em>RVO-Bergsteigerbus Linie 9569</em> plusieurs fois par jour directement vers l'Eng en été.</p><h2>Conseils</h2><p>Depuis le grand parking P10, un chemin large, stabilisé et goudronné (env. 600 mètres, environ 10 minutes de marche) mène presque à plat au village d'alpage – le site est parfaitement adapté aux fauteuils roulants et poussettes, avec des sanitaires accessibles. Les couleurs d'automne mondialement célèbres du Großer Ahornboden atteignent leur apogée dorée entre fin septembre et mi-octobre. Dégustez du babeurre frais dans l'une des haltes et emportez un morceau d'authentique Enger Bergkäse en souvenir gourmand.</p>",
+  "sources": [
+    "https://www.engalm.at/",
+    "https://www.mautstrasse-hinterriss-eng.at/",
+    "https://www.karwendel.org/",
+    "https://silberregion-karwendel.com/",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fer_Ahornboden"
+  ]
 }

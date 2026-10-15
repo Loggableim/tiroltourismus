@@ -14,8 +14,8 @@
     "natur"
   ],
   "hoehe": "2.811 m",
-  "flaeche": "320 km²",
-  "einwohner": "10.500",
+  "flaeche": "330 km²",
+  "einwohner": "6.100",
   "beschreibung": "<p>Die <strong>Arlberg-Region</strong> ist das größte zusammenhängende Skigebiet Österreichs und erstreckt sich rund um den Arlbergpass zwischen Tirol und Vorarlberg. Mit <strong>305 Pistenkilometern</strong>, tiefem Powder und anspruchsvollen Abfahrten gilt sie als einer der besten Skiorte der Welt. <strong>St. Anton</strong> ist das pulsierende Herz der Region mit legendärem Après-Ski, während <strong>Ischgl</strong> und <strong>Serfaus</strong> mit Luxus-Resorts und erstklassiger Gastronomie punkten. Im Sommer locken 400 km Wanderwege und Klettersteige durch die imposante Berglandschaft.</p>",
   "tipps": [
     "Der Arlberg-Pass ist im Winter oft schneebedeckt – Schneeketten oder öffentliche Anreise empfohlen.",
@@ -91,5 +91,11 @@
   "koordinaten": {
     "lat": 47.1333,
     "lng": 10.2167
-  }
+  },
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.skiarlberg.at",
+    "https://www.tirol.at/regionen/a-st-anton-am-arlberg",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg"
+  ]
 }

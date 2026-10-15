@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 import { localePrefix as localePrefixFn } from '../lib/languages.js';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
@@ -22,7 +23,7 @@ const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
 ---
 <a href={`${localePrefixFn(locale)}/camping/${slug}/`} class="cp-card" data-tier={dataTier || tier || 'basic'} data-collection="camping" data-slug={slug}>
   <div class="cp-img" style="position:relative">
-    <span class="cp-placeholder">🏕️</span>
+    <CategoryPlaceholder collection="camping" locale={locale} />
     <FavHeart collection="camping" slug={slug} />
   </div>
   <div class="cp-body">

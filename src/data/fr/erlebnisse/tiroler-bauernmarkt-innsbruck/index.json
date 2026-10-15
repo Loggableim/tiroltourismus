@@ -6,9 +6,10 @@
   "kategorie": "kulinarik",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Jeden Samstag verwandelt sich der Innsbrucker Marktplatz in ein Paradies für Feinschmecker. Regionale Bauern und Produzenten bieten ihre Schätze an: würzigen Bergkäse, geräucherten Speck, frisches Brot, Honig und hausgemachte Marmeladen. Bei einer geführten Verkostungstour lernen Sie die Geschichten hinter den Produkten kennen.",
+  "beschreibung": "### Aperçu\nLa halle du marché Markthalle d'Innsbruck, sur le Herzog-Siegmund-Ufer au bord de l'Inn, est la vitrine gastronomique du Tyrol. Du lundi au samedi, des paysans, des fromageries et de petites entreprises familiales des vallées du Tyrol du Nord et de l'Est apportent leurs spécialités artisanales directement dans la capitale. Au marché paysan, les effluves de pain fraîchement cuit, de speck fumé, de fromage alpin épicé et de produits aux herbes flottent devant la Nordkette.\n\n### Itinéraire et exigences\nUne visite guidée du marché avec dégustation traverse les halles et les étals extérieurs. Accompagnés d'un guide gastronomique, les participants découvrent l'histoire et les méthodes de fabrication des produits régionaux. Certains étals proposent des dégustations, par exemple de Graukäse tyrolien, de fromage de montagne affiné, de charcuteries savoureuses, de jus de pomme trouble ou d'eau-de-vie de pin cembro. Le parcours est entièrement de plain-pied et en grande partie à l'abri du temps ; il est facilement accessible aux poussettes et aux fauteuils roulants. Aucune condition physique particulière n'est requise. Les chiens bien élevés sont admis en laisse aux étals extérieurs, mais pas à l'intérieur de la halle pour des raisons d'hygiène.\n\n### Accès\nLa halle se situe au cœur du centre-ville d'Innsbruck, directement sur la promenade de l'Inn. Depuis la gare centrale d'Innsbruck, comptez environ dix minutes à pied par la Maria-Theresien-Straße, ou un accès facile par les lignes de tramway et de bus IVB. Les automobilistes trouveront des parkings payants dans les garages du centre-ville ; privilégiez les transports publics.\n\n### Conseils\nVenez avec un léger appétit, les portions de dégustation sont généreuses. Un sac isotherme réutilisable ou un sac à dos vous aidera à rapporter chez vous des produits frais comme le beurre d'alpage, le miel fermier et le speck. Après la visite, une courte escapade par le pont sur l'Inn jusqu'au quartier de Mariahilf et ses façades colorées vaut le détour.",
   "preis": 35,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "culinaire",
     "marché",
@@ -16,12 +17,17 @@
     "Innsbruck",
     "dégustation"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.markthalle-innsbruck.at/",
+    "https://www.tirol.at/aktivitaeten/kulinarik/bauernmaerkte",
+    "https://www.innsbruck.gv.at/",
+    "https://www.ivb.at/"
+  ]
 }

@@ -6,9 +6,10 @@
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "L'Osservatorio Innsbruck apre in esclusiva le sue porte ai visitatori. Vivete un affascinante viaggio attraverso l'universo – dal planetario con proiezione a 360 gradi all'osservazione di stelle e pianeti attraverso il grande telescopio. Una serata per tutti coloro che desiderano scoprire il cielo sopra le Alpen.",
+  "beschreibung": "### Panoramica\nL'Osservatorio storico dell'Università di Innsbruck si trova nella parte nord-orientale dell'Orto Botanico, nel quartiere di Hötting. Fu costruito nel 1904 dall'astronomo Egon von Oppolzer secondo i propri progetti e con mezzi privati e nel 1909 fu aggregato all'Università. Oggi il complesso ben conservato, con i suoi strumenti originali – tra cui un telescopio riflettore Zeiss da 40 cm – è un importante monumento della storia scientifica austriaca. Dal 2014 è aperto ai visitatori come Museum Historische Sternwarte; parte della collezione è visitabile anche tramite un tour multimediale a 360 gradi.\n\n### Percorso e requisiti\nL'osservatorio è visitabile con visite guidate; il museo è regolarmente aperto il giovedì dalle 15.30 alle 17.30. Il percorso attraversa gli ambienti storici e la cupola di osservazione con gli strumenti originali. Non sono richieste conoscenze pregresse né particolari capacità fisiche. Adatto a bambini e adulti. Poiché il sito comprende aree all'aperto e locali storici non riscaldati, si consigliano abiti adatti alle intemperie.\n\n### Come arrivare\nL'osservatorio si trova in Sternwartestraße 13 e si raggiunge anche dall'ingresso principale dell'Orto Botanico in Botanikerstraße 10. Dalla stazione centrale di Innsbruck i mezzi pubblici IVB portano nella zona di Hötting/Orto Botanico. In auto si arriva a Innsbruck dall'autostrada A12 (uscita Innsbruck West) seguendo le indicazioni per Hötting. Parcheggio nelle strade circostanti; si consiglia l'arrivo con i mezzi pubblici.\n\n### Consigli\nSe possibile, visitate l'osservatorio un giovedì pomeriggio e unite la visita a una passeggiata nell'Orto Botanico con le sue collezioni alpine e le serre. Chi non può essere presente di persona può utilizzare il tour multimediale a 360 gradi dell'Università. Per osservare il cielo notturno al telescopio, l'Istituto di Astro- e Fisica delle Particelle offre inoltre, nel semestre invernale, l'Astronacht (notte astronomica) con iscrizione anticipata.",
   "preis": 19,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "cultura",
     "stelle",
@@ -16,12 +17,17 @@
     "innsbruck",
     "scienza"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.uibk.ac.at/de/historische-sternwarte/",
+    "https://www.uibk.ac.at/de/astro/observatory/",
+    "https://www.uibk.ac.at/botany/botanical-garden/",
+    "https://www.ivb.at/"
+  ]
 }

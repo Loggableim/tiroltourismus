@@ -1,36 +1,33 @@
 {
-  "name": "Apfelstrudel-Kochkurs",
   "slug": "apfelstrudel-kochkurs-stubaital",
   "emoji": "🥟",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>The <strong>apple strudel</strong> is the queen of Tyrolean pastry – and few valleys preserve this tradition as lovingly as the Stubaital. The secret lies in the paper-thin, hand-stretched dough, so transparent you could read a newspaper through it. Cooking and baking workshops let guests learn this centuries-old craft from real Stubaital farmers and kitchen professionals.</p><h3>Courses &amp; Offers</h3><p>The <strong>Tyrolean Adult Education Centre (VHS Tirol)</strong> runs regular baking workshops at the teaching kitchen in Mittelschule Fulpmes (Tanglplatz 4, 6166 Fulpmes). Typical content: strudel dough, Tyrolean Krapfen and other classic pastries. Duration: around <strong>3 hours</strong>, usually on Saturdays. Fee: approx. <strong>€32</strong> plus a small ingredient contribution. Booking: vhs-tirol.at.</p><p>For the classic hand-stretched strudel, the LFI Tirol course <em>„Strudel aus eigener Hand“</em> (Innsbruck, ~20 min from Stubaital) offers expert tuition by Tyrolean farm women. Duration: 3–4 sessions. Price: <strong>€85</strong>. Booking: tirol.lfi.at.</p><p>At the <strong>Untersillerhof</strong> in Neustift/Milders, certified farm instructor Anita Siller offers group culinary workshops in her professional kitchen <em>„Die Streberei“</em>. Available on request, especially in autumn.</p><p>The Stubai Tourist Board's <strong>BIG Family autumn programme</strong> includes a supervised farm afternoon where children knead and bake their own bread on a real Stubai farm – free for guests in partner properties.</p><h3>Getting There</h3><p>The Stubaital is easily reached from Innsbruck. Take the <strong>Stubaitalbahn (STB)</strong> from Innsbruck main station to Fulpmes (approx. 55 minutes, hourly). By <strong>car</strong>: via the B183 Stubaital road; parking in Fulpmes and Neustift. Also reachable by <strong>Regiobus 590</strong>.</p><h3>Tips</h3><ul><li><strong>Children:</strong> The TVB farm baking programme is designed for children from age 4. VHS and LFI courses are for adults and teenagers.</li><li><strong>Best season:</strong> Autumn (September–November) offers the best apple varieties and the most course dates.</li><li><strong>Tip:</strong> The original recipe <em>„Apfelstrudel à la Urli Maria“</em> (5th generation since 1900) is published on stubai.at/blog.</li></ul>",
-  "preis": 49,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Tyrolean Apple Strudel Baking Class in the Stubaital",
+  "beschreibung": "### Overview\nTraditional hand-pulled Tyrolean apple strudel is the crown jewel of Austrian alpine pastry culture. In the Stubaital Valley, the warm delicacy ranks as the second most popular mountain hut classic according to the tourism board. In regional baking workshops, traditional farmhouses, and cookery schools, guests learn the authentic art of strudel making based on century-old heritage—such as the valley's historic recipe 'à la Urli Maria from 1900'. The secret lies in the hand-stretched dough: fine flour, lukewarm water, an egg, oil, and a pinch of salt are kneaded vigorously until velvety and pliable. After resting under a warm bowl, the dough is stretched over the backs of floured hands on a linen cloth until it is paper-thin—tradition dictating that one should be able to read a newspaper through it.\n\n### Route & Requirements\nWorkshops take place in traditional inn kitchens, alpine dairy classrooms, or the Genusswerk cookery studio. Following the delicate dough pulling, participants prepare the filling: tart local apples (traditionally Boskop) are thinly sliced and tossed with breadcrumbs toasted golden-brown in farm butter, cinnamon, sugar, fresh lemon juice, and rum-soaked raisins. Rolled gently using the linen cloth, brushed with melted butter, the strudel bakes at 190 °C until golden. The workshop requires no prior culinary experience and is wonderfully suited for families with children aged six and up who enjoy kneading dough and prepping apples. For food hygiene reasons, dogs are strictly prohibited inside cooking areas.\n\n### Arrival\nVenues throughout Stubaital (such as Neustift, Fulpmes, or Telfes) lie roughly 25 minutes from Innsbruck via the A13 Brenner Autobahn (Schönberg/Stubaital exit) and the B183 Stubaital federal road. Parking is available at village centres and participating inns. Public transport access is seamless: the VVT regional bus line 590 departs Innsbruck main station every 30 minutes, travelling directly through the valley to Neustift. In addition, the scenic Stubaitalbahn (STB) tramway connects Fulpmes directly to central Innsbruck.\n\n### Tips\nCourse fees (typically 45 to 85 euros) include all fresh ingredients, recipe booklets, an apron on loan, and a communal tasting of fresh, oven-warm apple strudel accompanied by vanilla sauce or whipped cream. Leftover slices can be packed to take home. Because workshop sizes are strictly capped at 8 to 12 participants, advance booking via the local tourism board or LFI Tirol is strongly advised. A treat for gourmets: alpine huts such as Schlickeralm and Panoramarestaurant Kreuzjoch serve fresh strudel daily against magnificent glacier backdrops.",
+  "sources": [
+    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
+    "https://www.stubai.at/stubaital/essen-und-trinken/",
+    "https://tirol.lfi.at"
+  ],
+  "bilder": [],
   "dauer": "2,5 Stunden",
+  "link": "#",
+  "preis": 49,
   "tags": [
     "kulinarik",
     "strudel",
     "kochkurs",
     "stubaital",
     "backen"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null,
-  "sources": [
-    "https://www.stubai.at/blog/suesse-huettenklassiker-2-apfelstrudel/",
-    "https://www.vhs-tirol.at",
-    "https://tirol.lfi.at/",
-    "https://www.untersillerhof.com/",
-    "https://www.stubai.at",
-    "https://www.stubai.at/blog/"
   ]
 }

@@ -1,36 +1,35 @@
 {
-  "name": "Eisklettern im Kaunertal",
   "slug": "eisklettern-kaunertal",
   "emoji": "🧊",
   "farbe": "var(--light-blue)",
   "kategorie": "winter",
   "ort": "Kaunertal",
   "region": "kaunertal",
-  "beschreibung": "<p>The <strong>Kaunertal</strong> is one of the Alps' most renowned ice climbing destinations. Deep, shaded gorges and a high-altitude setting ensure frozen waterfalls are reliably climbable from December to March in prime condition.</p><h3>Sectors &amp; Routes</h3><p>The <strong>Mühlbachfall Ice Park</strong> in Feichten (approx. 5 min from the Quellalpin car park) is perfect for beginners, with floodlit evening sessions. Advanced climbers head to the <strong>Renkfälle</strong> (near Fendels, up to 200 m, 15 routes), the <strong>Eisgarten</strong> at Platz (60 m, WI 4–5+) and routes along the Kaunertal Glacier Road: <em>Angst vor Lust</em> (130 m, WI 3–6), <em>Der Gelbe Fluss</em> (WI 5), <em>Der Zwirn</em> (160 m, WI 6) and Bodenbachfall (160 m, WI 5).</p><p><strong>Taster ice climbing</strong> at Mühlbachfall: Price approx. <strong>€65</strong> per person incl. full rental equipment (boots, crampons, helmet, harness, ice tools). Duration: 2–2.5 hours. Season: late November/December to mid/late March; best conditions January–February.</p><h3>Getting There</h3><p>By train to Landeck-Zams, then <strong>VVT ski bus 230</strong> to Feichten. By car: A12 motorway to Landeck, then the Kaunertal road. Parking at the Quellalpin cultural centre.</p><h3>Tips</h3><ul><li><strong>Minimum age:</strong> Top-rope taster from approx. 12–14 years.</li><li><strong>Safety:</strong> Avalanche risk at many ice fall approaches – check the daily Tyrol avalanche bulletin (lawine.tirol.gv.at). Mountain rescue: 140.</li><li><strong>Provider:</strong> Kaunertaler Berg- &amp; Skiführer, Tel. +43 664 472 1100, kaunertaler-bergfuehrer.com.</li></ul>",
-  "preis": 139,
+  "koordinaten": {
+    "lat": "46.9917",
+    "lng": "10.6239"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Ice Climbing in the Kaunertal",
+  "beschreibung": "### Overview\nThe Kaunertal Valley in the Tyrolean Oberland is celebrated among ice climbers as one of the most reliable and varied frozen sanctuaries in the Eastern Alps. Ranging from an illuminated training fall on the valley floor to towering 200-metre ice cataracts in high-alpine cirques, the valley boasts more than 20 documented ice and mixed climbs. The primary hub for courses and evening training is Eispark Mühlbachfall in Feichten at the entrance of Verpeilschlucht gorge. Maintained and sprayed by the local mountain rescue service, this 35-metre waterfall features routes graded WI 3 to WI 6+ and is floodlit daily until 22:30. For experienced alpinists, the legendary Renkfälle waterfalls near Anton-Renk-Hütte at over 2,000 metres elevation present a world-class ice shield, home to classic lines such as 'Klassischer Renkfall' (WI 4+) and 'The Wind Corner' (WI 6).\n\n### Route & Requirements\nIce climbing destinations cater to two distinct skill sets:\n1. Eispark Mühlbachfall (Feichten): Approaches in just five minutes from the Quellalpin leisure centre. Ideal for beginner toprope clinics, ice screw placement, and night climbing under lights.\n2. Anton-Renk-Eisfälle (Ried/Fendels): A rugged high-alpine approach of approximately two hours (800 vertical metres) from the Stalanzer Alm barrier, best tackled on touring skis or snowshoes. Descent is carried out exclusively by rappelling via V-threads (Abalakov anchors), as foot descents along the slopes are notoriously avalanche-prone.\nIce climbing demands robust physical stamina, cold resistance, and surefootedness. Introductory clinics welcome sporty teenagers from age 14. Due to falling ice and alpine hazards, the terrain is completely unsuitable for small children and pets.\n\n### Arrival\nDrivers travel via the A12 Inntal Autobahn to Landeck/Prutz and continue on the L18 provincial road to Feichten. Free parking is available at the Quellalpin centre. Further up the valley, the 26-kilometre toll-road Kaunertaler Gletscherstraße ascends to Weißseeferner glacier at 2,750 metres (road toll included with lift passes). By public transport, take the train to Landeck-Zams station and connect to Postbus line 230, free within the valley for regional guest card holders.\n\n### Tips\nGuided group sessions with certified Kaunertal Mountain and Ski Guides start around €95 per person, including technical equipment (crampons, technical ice axes, harness, and helmet). Rigid crampon-compatible mountaineering boots (Category D), warm gloves, and layered mountain wear are required. Peak ice conditions prevail from January through mid-March. Vital alpine safety: always consult the official avalanche bulletin (lawine.tirol) prior to departing. Approaching ice falls exposes climbers to avalanche chutes; carrying a full avalanche rescue kit (beacon, shovel, probe) and wearing a climbing helmet are mandatory.",
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertal.com/en/Your-Kaunertal/In-Winter/Ice-Climbing",
+    "https://www.kaunertaler-bergfuehrer.com",
+    "https://www.kaunertaler-gletscher.at/kaunertaler-gletscherstrasse.html",
+    "https://lawine.tirol"
+  ],
+  "bilder": [],
   "dauer": "5 Stunden",
+  "link": "#",
+  "preis": 139,
   "tags": [
     "eisklettern",
     "winter",
     "kaunertal",
     "bergsport",
     "adrenalin"
-  ],
-  "koordinaten": {
-    "lat": "46.9917",
-    "lng": "10.6239"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null,
-  "sources": [
-    "https://www.kaunertal.com",
-    "https://www.kaunertaler-bergfuehrer.com",
-    "https://www.climbers-paradise.com",
-    "https://www.kaunertaler-gletscher.at",
-    "https://lawine.tirol.gv.at",
-    "https://www.vvt.at"
   ]
 }

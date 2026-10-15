@@ -1,35 +1,33 @@
 {
-  "name": "Fuchsbau-Rodeln in Serfaus",
   "slug": "fuchsbau-rodelbahn-serfaus",
   "emoji": "🛷",
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
   "region": "serfaus-fiss-ladis",
-  "beschreibung": "<p>Na náhorní plošině nad údolím Innu nabízí <strong>přírodní sáňkařská dráha Serfaus</strong> (Komperdell–Serfaus) přes čtyři kilometry upravené trasy s večerním osvětlením každou středu.</p><h3>Trasa &amp; Ceny</h3><p>Start ve výšce 1 980 m u stanice Komperdell, cíl v 1 440 m: <strong>550 výškových metrů</strong> a délka <strong>4,0 km</strong>. Doba jízdy: 20–35 minut. Provoz lanovky 08:15–16:20; večerní sáňkování ve středu do 23:30. Jednosměrná jízda dospělý: 18,50 € (dítě 11,50 €). Večerní jízdenka: 20,00 €. Půjčovna sání ve sportovních obchodech.</p><h3>Doprava</h3><p>Serfaus je zóna bez aut. Parkoviště na okraji obce a bezplatné podzemní metro <strong>Dorfbahn Serfaus</strong> přímo k lanovkám. MHD: vlakem do Landeck-Zams, poté autobusem VVT linky 220.</p>",
-  "preis": 19,
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Rodinné sáňkařské dráhy Serfaus-Fiss-Ladis",
+  "beschreibung": "### Přehled\nSluncem zalitá náhorní plošina Serfaus-Fiss-Ladis patří k nejvyhlášenějším rodinným zimním střediskům v celých Alpách a pyšní se špičkově upravovanými sáňkařskými dráhami. Důležité upřesnění: sáňkařská dráha s názvem „Fuchsbau“ v regionu neexistuje; název vycházel z dětského lyžařského tunelu „Bertas Fuchsbau“ v dětském parku ve Fissu. Skutečné sáňkařské dráhy střediska však nabízejí prvotřídní zábavu: přírodní dráha v Serfausu vede v délce 4,0 kilometru z horní stanice Komperdell (1 980 m) přes pastviny a lesní pasáže až do údolí (převýšení 550 metrů). Ve Fissu láká rodiny mírná Hexen-Rodelbahn (průměrný sklon 12,5 %) dlouhá rovněž 4,0 km ze stanice Steinegg (1 920 m). Nabídku doplňuje celoroční bobová dráha Schneisenfeger u jezera Högsee, která nabízí jízdu po kolejích rychlostí až 40 km/h.\n\n### Trasa a náročnost\nObě hlavní sáňkařské dráhy jsou obsluhovány moderními lanovkami:\n1. Sáňkařská dráha Serfaus: výjezd lanovkou Komperdellbahn do 1 980 metrů. Středně náročná přírodní dráha o délce 4,0 km s možností občerstvení u jezera Högsee.\n2. Hexen-Rodelbahn Fiss: výjezd lanovkou Schönjochbahn I do stanice Steinegg. Široká 3 metry a dlouhá 4,0 km, je ideální pro začátečníky a děti od 5 let.\nPěší výstup není nutný. Doporučuje se teplé zimní oblečení, pevná zimní obuv s profilovanou podrážkou (lyžařské boty jsou přísně zakázány!) a lyžařská přilba. Z bezpečnostních důvodů je na sáňkařské dráhy přísný zákaz vstupu se psy.\n\n### Příjezd a doprava\nAutem po dálnici A12 Inntal (sjezd Oberinntal/Reschenpass) a silnici B180 do Riedu, odkud stoupá silnice L19 na náhorní plošinu. V Serfausu platí v zimě přísný zákaz vjezdu aut; návštěvníci parkují na záchytném parkovišti u vjezdu do vsi. Odtud jezdí unikátní podzemní dráha na vzduchovém polštáři Dorfbahn Serfaus se čtyřmi stanicemi zcela zdarma přímo k lanovkám. Ve Fissu a Ladisu jsou parkoviště u lanovek. Vlakem dorazíte do Landecku-Zamsu a přestoupíte na pravidelný autobus.\n\n### Praktické tipy\nPřes den je sáňkování zahrnuto v platném skipasu nebo pěší jízdence na lanovku; půjčení saní stojí v obchodech u lanovek cca 10 až 15 eur na den. Nezapomenutelný zážitek představuje noční sáňkování: každou středu je dráha v Serfausu osvětlena až do 23:00 během show Adventure Night, ve Fissu se noční sáňkování s fondue koná každý čtvrtek. Bezpečnostní pravidlo: přizpůsobte rychlost sněhovým podmínkám, nikdy nezastavujte v nepřehledných zatáčkách a šňůru saní mějte omotanou kolem zápěstí.",
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/rodeln",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/attraktionen",
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/U-Bahn-Serfaus"
+  ],
+  "bilder": [],
   "dauer": "1–2 Stunden",
+  "link": "#",
+  "preis": 19,
   "tags": [
     "sánkování",
     "Serfaus",
     "zima",
     "rodina",
     "sánková dráha"
-  ],
-  "koordinaten": {
-    "lat": "47.0386",
-    "lng": "10.5739"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.serfaus-fiss-ladis.at/",
-    "https://www.serfaus-fiss-ladis.at/de",
-    "https://www.serfaus-fiss-ladis.at/de/Winterurlaub",
-    "https://www.serfaus-fiss-ladis.at/winter",
-    "https://de.wikipedia.org/wiki/Serfaus-Fiss-Ladis",
-    "https://www.bergfex.at/serfaus-fiss-ladis/"
   ]
 }

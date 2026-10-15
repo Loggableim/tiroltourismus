@@ -1,86 +1,18 @@
 ---
-// tiroltourismus.com — Landing/Hub
-// Design: Warhol × Jobs × Tourismus
-// Jede Sprach-Karte nennt ihr Künstlerpaar + Link zur Sprachseite.
-// 7 soon-Sprachen mit Vote (KV-backed, anti-collusion).
-import fs from 'node:fs';
-import path from 'node:path';
-
-// ── Echte Daten aus dem Repo lesen (Build-Zeit) ──
-const DATA = path.resolve(process.cwd(), '..', 'src', 'data');
-function count(coll) {
-  try {
-    return fs.readdirSync(path.join(DATA, coll), { withFileTypes: true })
-      .filter(d => d.isDirectory() && fs.existsSync(path.join(DATA, coll, d.name, 'index.json')))
-      .length;
-  } catch { return 0; }
-}
-function regions() {
-  try {
-    return fs.readdirSync(path.join(DATA, 'regionen'), { withFileTypes: true })
-      .filter(d => d.isDirectory())
-      .map(d => {
-        try {
-          const j = JSON.parse(fs.readFileSync(path.join(DATA, 'regionen', d.name, 'index.json'), 'utf-8'));
-          return { slug: d.name, name: j.titel || j.name || d.name };
-        } catch { return { slug: d.name, name: d.name }; }
-      })
-      .sort((a, b) => a.name.localeCompare(b.name, 'de'));
-  } catch { return []; }
-}
-
-const REGIONS = regions();
-const COUNTS = {
-  gastro: count('gastro'),
-  unterkuenfte: count('unterkuenfte'),
-  orte: count('orte'),
-  sehenswuerdigkeiten: count('sehenswuerdigkeiten'),
-  camping: count('camping'),
-  magazin: count('magazin'),
-};
-const TOTAL = Object.values(COUNTS).reduce((a, b) => a + b, 0);
-
-// ── Sprachen mit Künstlerpaar + Design-Info ──
-const LANGS = [
-  { code: 'de', flag: '🇩🇪', native: 'Deutsch',    url: 'https://de.tiroltourismus.com', color: '#FF1493',
-    artists: 'Otto Grünmandl & Paul Flora', style: 'Minimalistische Linienzeichnung trifft satirischen Humor' },
-  { code: 'en', flag: '🇬🇧', native: 'English',    url: 'https://en.tiroltourismus.com', color: '#FFD700',
-    artists: 'Albin Egger-Lienz & Alfons Walde', style: 'Monumentale Bergsilhouetten, erdig & winterlich' },
-  { code: 'fr', flag: '🇫🇷', native: 'Français',   url: 'https://fr.tiroltourismus.com', color: '#00E5FF',
-    artists: 'Max Weiler & Paul Flora', style: 'Poetische organische Formen, Serif-Eleganz' },
-  { code: 'cs', flag: '🇨🇿', native: 'Čeština',    url: 'https://cs.tiroltourismus.com', color: '#FF6B35',
-    artists: 'Franz von Defregger & Albin Egger-Lienz', style: 'Historische Figurenmalerei, Rauten-Ornament' },
-  { code: 'nl', flag: '🇳🇱', native: 'Nederlands', url: 'https://nl.tiroltourismus.com', color: '#8B5CF6',
-    artists: 'Paul Flora & Salvador Dalí', style: 'Surreale schwebende Objekte, Outline-Typo' },
-  { code: 'it', flag: '🇮🇹', native: 'Italiano',   url: 'https://it.tiroltourismus.com', color: '#00C853',
-    artists: 'Alfons Walde & Gustav Klimt', style: 'Luxuriöse Goldornamentik, Schneeweiß & Navy' },
-  { code: 'es', flag: '🇪🇸', native: 'Español',    url: 'https://es.tiroltourismus.com', color: '#FF1493',
-    artists: 'Max Weiler & Wassily Kandinsky', style: 'Abstrakte Natur trifft Geometrie' },
-  { code: 'zh', flag: '🇨🇳', native: '中文',        url: 'https://cn.tiroltourismus.com', color: '#FFD700',
-    artists: 'Michael Pacher & Albin Egger-Lienz', style: 'Sakral, symmetrisch, dramatisches Licht' },
+// tiroltourismus.com — Apex Sprach-Hub
+// Self-contained one-screen (#sprache) language picker. 8 tiles (4x2 desktop /
+// 2x4 mobile), "Recommended" badge from navigator.languages, localStorage
+// "Continue in" banner. A small legal footer sits at the bottom edge.
+const TILES = [
+  { code: 'de', htmlLang: 'de', name: 'Deutsch',    tagline: 'Tirol entdecken',    accent: 'var(--tirol-red)',       href: 'https://de.tiroltourismus.com/' },
+  { code: 'en', htmlLang: 'en', name: 'English',    tagline: 'Discover Tirol',     accent: 'var(--ikea-blue)',       href: 'https://en.tiroltourismus.com/' },
+  { code: 'fr', htmlLang: 'fr', name: 'Français',   tagline: 'Découvrir le Tyrol', accent: 'var(--pop-purple)',      href: 'https://fr.tiroltourismus.com/' },
+  { code: 'cs', htmlLang: 'cs', name: 'Čeština',    tagline: 'Objevte Tyrolsko',   accent: 'var(--pop-green)',       href: 'https://cs.tiroltourismus.com/' },
+  { code: 'nl', htmlLang: 'nl', name: 'Nederlands', tagline: 'Ontdek Tirol',       accent: 'var(--pop-orange)',      href: 'https://nl.tiroltourismus.com/' },
+  { code: 'it', htmlLang: 'it', name: 'Italiano',   tagline: 'Scopri il Tirolo',   accent: 'var(--tirol-pink-dark)', href: 'https://it.tiroltourismus.com/' },
+  { code: 'es', htmlLang: 'es', name: 'Español',    tagline: 'Descubre el Tirol',  accent: 'var(--gold)',            href: 'https://es.tiroltourismus.com/' },
+  { code: 'zh', htmlLang: 'zh', name: '中文',        tagline: '探索蒂罗尔',         accent: 'var(--tirol-pink)',      href: 'https://cn.tiroltourismus.com/' },
 ];
-
-// ── Soon-Sprachen (7 für Vote) ──
-const SOON = [
-  { code: 'pl', flag: '🇵🇱', native: 'Polski',     color: '#00E5FF' },
-  { code: 'hu', flag: '🇭🇺', native: 'Magyar',     color: '#FF6B35' },
-  { code: 'sk', flag: '🇸🇰', native: 'Slovenčina', color: '#8B5CF6' },
-  { code: 'ru', flag: '🇷🇺', native: 'Русский',    color: '#FF1493' },
-  { code: 'ja', flag: '🇯🇵', native: '日本語',      color: '#FFD700' },
-  { code: 'sl', flag: '🇸🇮', native: 'Slovenščina', color: '#00C853' },
-  { code: 'hr', flag: '🇭🇷', native: 'Hrvatski',   color: '#FF6B35' },
-];
-
-const CATS = [
-  { icon: '🍽️', label: 'Gastronomie', count: COUNTS.gastro, color: '#FF1493' },
-  { icon: '🏡', label: 'Unterkünfte', count: COUNTS.unterkuenfte, color: '#FFD700' },
-  { icon: '🏘️', label: 'Orte', count: COUNTS.orte, color: '#00E5FF' },
-  { icon: '🏛️', label: 'Sehenswürdigkeiten', count: COUNTS.sehenswuerdigkeiten, color: '#FF6B35' },
-  { icon: '🏕️', label: 'Camping', count: COUNTS.camping, color: '#8B5CF6' },
-  { icon: '📰', label: 'Magazin', count: COUNTS.magazin, color: '#00C853' },
-];
-
-const fmt = (n) => n.toLocaleString('de-AT');
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -138,320 +70,355 @@ const fmt = (n) => n.toLocaleString('de-AT');
     ]
   }
   </script>
-  <style>
+  <style is:global>
     :root {
-      --black: #000;
-      --white: #fff;
-      --pink: #FF1493;
-      --gold: #FFD700;
-      --cyan: #00E5FF;
-      --orange: #FF6B35;
-      --purple: #8B5CF6;
-      --green: #00C853;
-      --grey: #111;
-      --grey2: #1a1a1a;
-      --font-display: 'Bebas Neue', Impact, sans-serif;
+      --bg: #0B0F14; --bg2: #131A22;
+      --surface: rgba(255,255,255,.06); --surface-hover: rgba(255,255,255,.12);
+      --text: #F5F3F0; --text2: rgba(255,255,255,.78); --text3: rgba(255,255,255,.5);
+      --tirol-red: #C8102E;
+      --tirol-pink: #FF1493; --tirol-pink-dark: #C0006E; --tirol-pink-glow: rgba(255,20,147,.35);
+      --ikea-blue: #4A90E2;
+      --pop-green: #00C853; --pop-orange: #FF6B35; --pop-purple: #8B5CF6;
+      --gold: #E0B72C; --gold-soft: rgba(224,183,44,.16);
+      --glass-border: rgba(255,255,255,.16);
+      --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
       --font-body: 'Montserrat', system-ui, sans-serif;
+      --ease: cubic-bezier(.16,1,.3,1);
+      --radius: 14px;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:var(--font-body);background:var(--black);color:var(--white);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}
-    .wrap{max-width:1280px;margin:0 auto;padding:0 24px}
-
-    /* ═══ HERO ═══ */
-    .hero{padding:clamp(72px,12vh,140px) 0 clamp(40px,6vh,72px);position:relative}
-    .hero-kicker{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
-    .hero-title{font-family:var(--font-display);font-size:clamp(88px,19vw,260px);line-height:.82;letter-spacing:.02em;text-transform:uppercase}
-    .hero-title .row{display:block}
-    .hero-title .c{display:inline-block;transition:transform .3s cubic-bezier(.16,1,.3,1)}
-    .hero-title .c:hover{transform:translateY(-8px)}
-    .c-pink{color:var(--pink)}.c-gold{color:var(--gold)}.c-cyan{color:var(--cyan)}
-    .c-orange{color:var(--orange)}.c-purple{color:var(--purple)}.c-green{color:var(--green)}
-    .hero-sub{margin-top:28px;max-width:560px;font-size:clamp(15px,1.6vw,19px);color:rgba(255,255,255,.55);line-height:1.7}
-    .hero-sub strong{color:var(--white);font-weight:600}
-    .strip{display:grid;grid-template-columns:repeat(6,1fr);height:14px;margin-top:clamp(40px,7vh,80px)}
-    .strip span{display:block}
-
-    /* ═══ SECTIONS ═══ */
-    .section{padding:clamp(64px,10vh,120px) 0}
-    .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:clamp(32px,5vh,56px);flex-wrap:wrap}
-    .sec-title{font-family:var(--font-display);font-size:clamp(40px,6vw,84px);line-height:.9;letter-spacing:.02em;text-transform:uppercase}
-    .sec-note{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35)}
-
-    /* ═══ SPRACH-KARTEN (mit Künstler) ═══ */
-    .lang-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:3px}
-    .lang-tile{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px 26px;background:var(--grey);transition:transform .25s cubic-bezier(.16,1,.3,1),background .25s;overflow:hidden;min-height:200px}
-    .lang-tile:hover{transform:scale(1.01);z-index:2;background:var(--grey2)}
-    .lang-tile .bar{position:absolute;left:0;top:0;bottom:0;width:5px;transition:width .3s cubic-bezier(.16,1,.3,1),opacity .3s}
-    .lang-tile:hover .bar{width:100%;opacity:.1}
-    .lang-top{display:flex;align-items:center;gap:14px}
-    .lang-flag{font-size:clamp(32px,4vw,48px);line-height:1}
-    .lang-native{font-family:var(--font-display);font-size:clamp(24px,3vw,38px);letter-spacing:.04em;text-transform:uppercase;line-height:1}
-    .lang-artists{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
-    .lang-style{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.5}
-    .lang-go{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:all .25s;margin-top:auto}
-    .lang-tile:hover .lang-go{opacity:1;transform:translateY(0)}
-
-    /* ═══ ZAHLEN ═══ */
-    .numbers{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
-    .num-block{padding:clamp(28px,4vw,48px) 24px;background:var(--grey)}
-    .num-val{font-family:var(--font-display);font-size:clamp(48px,7vw,96px);line-height:.9;letter-spacing:.01em}
-    .num-label{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:10px}
-
-    /* ═══ KATEGORIEN ═══ */
-    .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-    .cat-tile{display:flex;align-items:center;gap:18px;padding:24px;background:var(--grey);transition:background .25s}
-    .cat-tile:hover{background:var(--grey2)}
-    .cat-icon{font-size:32px;line-height:1}
-    .cat-info{flex:1;min-width:0}
-    .cat-label{font-family:var(--font-display);font-size:clamp(20px,2.2vw,28px);letter-spacing:.04em;text-transform:uppercase;line-height:1.1}
-    .cat-count{font-size:12px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,.4);margin-top:4px}
-    .cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-
-    /* ═══ REGIONEN ═══ */
-    .region-row{display:flex;flex-wrap:wrap;gap:3px}
-    .region-chip{font-family:var(--font-display);font-size:clamp(18px,2vw,26px);letter-spacing:.05em;text-transform:uppercase;padding:14px 22px;background:var(--grey);transition:all .25s cubic-bezier(.16,1,.3,1)}
-    .region-chip:hover{background:var(--white);color:var(--black);transform:translateY(-3px)}
-
-    /* ═══ SOON + VOTE ═══ */
-    .soon-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:3px}
-    .soon-tile{padding:28px 24px;background:var(--grey);display:flex;flex-direction:column;gap:16px;border:1px dashed rgba(255,255,255,.14)}
-    .soon-top{display:flex;align-items:center;gap:14px}
-    .soon-flag{font-size:32px}
-    .soon-name{font-family:var(--font-display);font-size:clamp(22px,2.4vw,30px);letter-spacing:.04em;text-transform:uppercase;line-height:1}
-    .soon-badge{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5);width:fit-content}
-    .vote-btn{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--white);font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .25s}
-    .vote-btn:hover{background:var(--white);color:var(--black);border-color:var(--white)}
-    .vote-btn.voted{background:var(--green);border-color:var(--green);color:var(--black);cursor:default}
-    .vote-btn:disabled{opacity:.5;cursor:wait}
-    .vote-count{font-family:var(--font-display);font-size:22px;letter-spacing:.05em}
-
-    /* ═══ FOOTER ═══ */
-    .footer{padding:56px 0 40px;border-top:1px solid rgba(255,255,255,.08)}
-    .footer-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-    .footer-brand{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);letter-spacing:.03em;text-transform:uppercase;line-height:1}
-    .footer-links{display:flex;gap:20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-    .footer-links a:hover{color:var(--white)}
-
-    @media(max-width:900px){
-      .lang-grid{grid-template-columns:1fr}
-      .numbers{grid-template-columns:repeat(2,1fr)}
-      .cat-grid{grid-template-columns:1fr}
-      .soon-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
     }
-    @media(max-width:520px){
-      .numbers{grid-template-columns:1fr}
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--tirol-pink); outline-offset: 3px; }
+
+    /* ─── Full-viewport hero ─── */
+    .df-picker {
+      position: relative;
+      height: 100dvh;
+      min-height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      isolation: isolate;
+    }
+    .df-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      z-index: 0;
+    }
+    .df-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(7,10,15,.74) 0%, rgba(7,10,15,.46) 40%, rgba(7,10,15,.86) 100%),
+        radial-gradient(90% 70% at 50% 8%, rgba(7,10,15,.15), rgba(7,10,15,.72) 100%);
+    }
+    .df-content {
+      position: relative;
+      z-index: 2;
+      width: min(1140px, 100%);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(12px, 2.2vh, 30px);
+      padding: clamp(16px, 3.6vh, 40px) clamp(16px, 5vw, 56px) clamp(32px, 5.2vh, 50px);
+    }
+
+    /* ─── "Continue in" banner ─── */
+    .df-banner {
+      position: absolute;
+      top: clamp(12px, 2.6vh, 26px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: clamp(5px, 1vh, 9px) clamp(12px, 2vw, 20px);
+      border-radius: 100px;
+      background: var(--tirol-pink-dark);
+      color: #fff;
+      font-size: clamp(11px, 1.5vh, 13px);
+      font-weight: 700;
+      letter-spacing: .3px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    }
+    .df-banner[hidden] { display: none; }
+    .df-banner:hover { filter: brightness(1.08); }
+
+    /* ─── Header ─── */
+    .df-head {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: clamp(4px, 1vh, 12px);
+      text-align: center;
+    }
+    .df-brand { display: inline-flex; line-height: 0; }
+    .df-brand svg { width: clamp(118px, 15vw, 168px); height: auto; filter: drop-shadow(0 4px 18px rgba(0,0,0,.55)); }
+    .df-brand svg text, .df-brand svg circle { fill: #fff; }
+    .df-claim {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(50px, 10.4vh, 118px);
+      line-height: .9;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      text-shadow: 0 8px 44px rgba(0,0,0,.55);
+    }
+    .df-claim em { font-style: normal; color: var(--gold); }
+    .df-sub {
+      font-size: clamp(11px, 1.7vh, 15px);
+      color: var(--text2);
+      max-width: 56ch;
+      text-wrap: balance;
+    }
+
+    /* ─── Language tiles: slim, compact ─── */
+    .df-langs {
+      flex: 0 1 auto;
+      min-height: 0;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(8px, 1.1vw, 14px);
+      margin: 0;
+    }
+    .df-tile {
+      position: relative;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1px;
+      padding: clamp(9px, 1.6vh, 15px) clamp(30px, 3vw, 40px) clamp(9px, 1.6vh, 15px) clamp(15px, 1.7vw, 20px);
+      border: 1px solid var(--glass-border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(12,16,22,.42);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      color: #fff;
+      overflow: hidden;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease), background .25s var(--ease);
+    }
+    .df-tile::after {
+      content: '→';
+      position: absolute;
+      right: clamp(11px, 1.4vw, 16px);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: clamp(12px, 1.6vh, 16px);
+      color: rgba(255,255,255,.5);
+      transition: transform .25s var(--ease), color .25s var(--ease);
+    }
+    .df-tile:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+      background: rgba(18,24,32,.6);
+      box-shadow: 0 16px 40px rgba(0,0,0,.42);
+    }
+    .df-tile:hover::after { transform: translate(3px, -50%); color: #fff; }
+    .df-name {
+      font-family: var(--font-display);
+      font-size: clamp(18px, 2.5vh, 27px);
+      line-height: 1.02;
+      letter-spacing: .6px;
+    }
+    .df-tile[lang="zh"] .df-name { letter-spacing: 4px; }
+    .df-tagline {
+      font-size: clamp(9.5px, 1.35vh, 12px);
+      line-height: 1.2;
+      color: rgba(255,255,255,.72);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .df-tile.recommended {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold), 0 12px 34px rgba(0,0,0,.4);
+    }
+    .df-rec {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: none;
+      align-items: center;
+      padding: 2px 8px 3px;
+      border-bottom-left-radius: 8px;
+      background: var(--gold);
+      color: #1A1A1A;
+      font-size: clamp(7.5px, 1vh, 9.5px);
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+    .df-tile.recommended .df-rec { display: inline-flex; }
+
+    /* ─── Legal footer: small, muted, pinned to the bottom edge ─── */
+    .df-foot {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(7px, 1.4vh, 14px);
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: max-content;
+      max-width: calc(100% - 24px);
+      font-size: 12px;
+      line-height: 1.2;
+      color: rgba(255,255,255,.64);
+      text-align: center;
+    }
+    .df-foot a { color: rgba(255,255,255,.64); transition: color .2s var(--ease); }
+    .df-foot a:hover { color: #fff; }
+    .df-sep { color: rgba(255,255,255,.34); }
+
+    @media (max-width: 760px) {
+      .df-langs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: clamp(8px, 2.2vw, 12px);
+      }
+      .df-claim { font-size: clamp(46px, 9.4vh, 88px); }
+    }
+    /* Guarantee the one-screen fit on short / small devices. */
+    @media (max-height: 620px) { .df-sub { display: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .df-tile, .df-tile::after, .df-foot a { transition: none; }
     }
   </style>
 </head>
 <body>
+  <section id="sprache" class="df-picker" aria-label="Sprachauswahl">
+    <img class="df-bg" src="/hero-tirol.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+    <div class="df-scrim" aria-hidden="true"></div>
 
-  <!-- ═══ HERO ═══ -->
-  <header class="hero">
-    <div class="wrap">
-      <div class="hero-kicker">Ein Land · Acht Sprachen · Alles drin</div>
-      <h1 class="hero-title">
-        <span class="row"><span class="c c-pink">T</span><span class="c c-gold">I</span><span class="c c-cyan">R</span><span class="c c-orange">O</span><span class="c c-purple">L</span></span>
-      </h1>
-      <p class="hero-sub">
-        <strong>{fmt(TOTAL)} Einträge.</strong> {REGIONS.length} Regionen. {LANGS.length} Sprachen.
-        Der smarte Guide für Reiseplanung, Unterkünfte, Gastronomie und Erlebnisse —
-        von der urbanen Alpenstadt Innsbruck bis zu den Gletscherwelten des Kaunertals.
-      </p>
-    </div>
-    <div class="strip" aria-hidden="true">
-      <span style="background:var(--pink)"></span>
-      <span style="background:var(--gold)"></span>
-      <span style="background:var(--cyan)"></span>
-      <span style="background:var(--orange)"></span>
-      <span style="background:var(--purple)"></span>
-      <span style="background:var(--green)"></span>
-    </div>
-  </header>
+    <a class="df-banner" id="dfContinueBanner" href="https://de.tiroltourismus.com/" hidden>
+      <span>Weiter auf</span> <span id="dfContinueLang"></span> <span aria-hidden="true">→</span>
+    </a>
 
-  <!-- ═══ SPRACHEN (mit Künstler-Erwähnung) ═══ -->
-  <section class="section" aria-labelledby="langs-title" id="sprachen">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sec-title" id="langs-title">Sprache wählen</h2>
-        <span class="sec-note">{LANGS.length} vollständige Versionen · jede mit eigener künstlerischer Handschrift</span>
-      </div>
-      <div class="lang-grid">
-        {LANGS.map(l => (
-          <a href={l.url} class="lang-tile" hreflang={l.code} aria-label={`Tirol Tourismus auf ${l.native}`}>
-            <span class="bar" style={`background:${l.color}`}></span>
-            <span class="lang-top">
-              <span class="lang-flag">{l.flag}</span>
-              <span class="lang-native">{l.native}</span>
-            </span>
-            <span class="lang-artists" style={`color:${l.color}`}>🎨 {l.artists}</span>
-            <span class="lang-style">{l.style}</span>
-            <span class="lang-go" style={`color:${l.color}`}>Öffnen →</span>
+    <div class="df-content">
+      <header class="df-head">
+        <a class="df-brand" href="https://tiroltourismus.com/" aria-label="Tirol Tourismus">
+          <svg viewBox="0 2 375 46" role="img" aria-label="Tirol Tourismus">
+            <text x="14" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">T</text>
+            <text x="46" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">I</text>
+            <text x="72" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">R</text>
+            <text x="104" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">O</text>
+            <text x="138" y="38" font-family="'Bebas Neue','Impact',sans-serif" font-size="36" font-weight="bold">L</text>
+            <circle cx="178" cy="30" r="2.5" style="fill:rgba(255,255,255,.35)"/>
+            <text x="192" y="38" font-family="'Montserrat',sans-serif" font-size="28" font-weight="300" letter-spacing="0.8">tourismus</text>
+          </svg>
+        </a>
+        <h1 class="df-claim">Tirol<em>.</em></h1>
+        <p class="df-sub">Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite.</p>
+      </header>
+
+      <main class="df-langs" aria-label="Sprachauswahl">
+        {TILES.map((t) => (
+          <a class="df-tile" href={t.href} lang={t.htmlLang} data-lang={t.code} style={`--accent:${t.accent}`}>
+            <span class="df-rec" aria-hidden="true">Empfohlen</span>
+            <span class="df-name">{t.name}</span>
+            <span class="df-tagline">{t.tagline}</span>
           </a>
         ))}
-      </div>
+      </main>
     </div>
+
+    <footer class="df-foot" aria-label="Rechtliches">
+      <a id="dfImprint" href="https://de.tiroltourismus.com/impressum/">Impressum</a>
+      <span class="df-sep" aria-hidden="true">·</span>
+      <a id="dfPrivacy" href="https://de.tiroltourismus.com/datenschutz/">Datenschutz</a>
+      <span class="df-sep" aria-hidden="true">·</span>
+      <span>© tiroltourismus</span>
+    </footer>
   </section>
 
-  <!-- ═══ ZAHLEN ═══ -->
-  <section class="section" aria-labelledby="numbers-title" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sec-title" id="numbers-title">Was drin ist</h2>
-        <span class="sec-note">Stand: {new Date().toLocaleDateString('de-AT', { month: 'long', year: 'numeric' })}</span>
-      </div>
-      <div class="numbers">
-        <div class="num-block">
-          <div class="num-val c-pink">{fmt(COUNTS.gastro)}</div>
-          <div class="num-label">Gastro-Adressen</div>
-        </div>
-        <div class="num-block">
-          <div class="num-val c-gold">{fmt(COUNTS.unterkuenfte)}</div>
-          <div class="num-label">Unterkünfte</div>
-        </div>
-        <div class="num-block">
-          <div class="num-val c-cyan">{fmt(COUNTS.orte)}</div>
-          <div class="num-label">Orte</div>
-        </div>
-        <div class="num-block">
-          <div class="num-val c-orange">{fmt(COUNTS.sehenswuerdigkeiten + COUNTS.camping)}</div>
-          <div class="num-label">Sights & Camping</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ KATEGORIEN ═══ -->
-  <section class="section" aria-labelledby="cats-title" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sec-title" id="cats-title">Sechs Welten</h2>
-        <span class="sec-note">Alles kuratiert & gepflegt</span>
-      </div>
-      <div class="cat-grid">
-        {CATS.map(c => (
-          <div class="cat-tile">
-            <span class="cat-icon">{c.icon}</span>
-            <span class="cat-info">
-              <span class="cat-label">{c.label}</span>
-              <span class="cat-count" style="display:block">{fmt(c.count)} Einträge</span>
-            </span>
-            <span class="cat-dot" style={`background:${c.color}`}></span>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ REGIONEN ═══ -->
-  <section class="section" aria-labelledby="regions-title" style="padding-top:0">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sec-title" id="regions-title">Vierzehn Gesichter</h2>
-        <span class="sec-note">Von Arlberg bis Zillertal</span>
-      </div>
-      <div class="region-row">
-        {REGIONS.map(r => (
-          <a href={`https://de.tiroltourismus.com/regionen/${r.slug}/`} class="region-chip">{r.name}</a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ SOON + VOTE (7 Sprachen) ═══ -->
-  <section class="section" aria-labelledby="soon-title" style="padding-top:0" id="voting">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2 class="sec-title" id="soon-title">Als Nächstes</h2>
-        <span class="sec-note">{SOON.length} Sprachen in Vorbereitung — stimme ab</span>
-      </div>
-      <div class="soon-grid">
-        {SOON.map(l => (
-          <div class="soon-tile" id={`vote-${l.code}`}>
-            <div class="soon-top">
-              <span class="soon-flag">{l.flag}</span>
-              <span class="soon-name">{l.native}</span>
-            </div>
-            <span class="soon-badge">In Vorbereitung</span>
-            <button class="vote-btn" data-lang={l.code} type="button" aria-label={`Für ${l.native} stimmen`}>
-              <span>+1 Stimme</span>
-              <span class="vote-count" data-count-for={l.code}>–</span>
-            </button>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <div class="footer-brand">Tirol<span class="c-pink">.</span>Tourismus</div>
-      <div class="footer-links">
-        <a href="https://de.tiroltourismus.com/impressum/">Impressum</a>
-        <a href="https://de.tiroltourismus.com/datenschutz/">Datenschutz</a>
-        <a href="https://de.tiroltourismus.com/transparenz/">Transparenz</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // ── Vote-System (KV-backed via /api/vote, anti-collusion: IP-Hash serverseitig) ──
+  <script is:inline>
     (function () {
       'use strict';
-      var VOTED_KEY = 'tt_lang_votes';
-      var voted = {};
-      try { voted = JSON.parse(localStorage.getItem(VOTED_KEY) || '{}'); } catch (e) { voted = {}; }
+      var STORE = 'tirol-demo-lang';
+      var tiles = {};
+      var NAMES = {};
+      document.querySelectorAll('.df-tile[data-lang]').forEach(function (a) {
+        var code = a.getAttribute('data-lang');
+        tiles[code] = a;
+        var nameEl = a.querySelector('.df-name');
+        NAMES[code] = nameEl ? nameEl.textContent.trim() : code;
+      });
 
-      function setVoted(code) {
-        voted[code] = Date.now();
-        try { localStorage.setItem(VOTED_KEY, JSON.stringify(voted)); } catch (e) {}
+      var FOOTER = {
+        de: ['Impressum', 'Datenschutz'],
+        en: ['Legal notice', 'Privacy'],
+        fr: ['Mentions légales', 'Confidentialité'],
+        cs: ['Tiráž', 'Ochrana soukromí'],
+        nl: ['Colofon', 'Privacy'],
+        it: ['Note legali', 'Privacy'],
+        es: ['Aviso legal', 'Privacidad'],
+        zh: ['法律声明', '隐私']
+      };
+
+      function normalize(tag) {
+        tag = String(tag || '').toLowerCase();
+        if (!tag) return null;
+        var base = tag.split('-')[0];
+        return tiles[base] ? base : null;
       }
 
-      fetch('/api/votes', { credentials: 'omit' })
-        .then(function (r) { return r.ok ? r.json() : null; })
-        .then(function (data) {
-          if (!data || !data.counts) return;
-          Object.keys(data.counts).forEach(function (code) {
-            var el = document.querySelector('[data-count-for="' + code + '"]');
-            if (el) el.textContent = data.counts[code];
-          });
-        })
-        .catch(function () {});
-
-      document.querySelectorAll('.vote-btn').forEach(function (btn) {
-        var code = btn.dataset.lang;
-        if (voted[code]) {
-          btn.classList.add('voted');
-          btn.querySelector('span').textContent = 'Danke!';
+      // 1) Recommend the browser language (no auto redirect)
+      var langs = [];
+      try { langs = navigator.languages || [navigator.language]; } catch (e) {}
+      var match = null;
+      for (var i = 0; i < langs.length && !match; i++) match = normalize(langs[i]);
+      if (match) {
+        tiles[match].classList.add('recommended');
+        tiles[match].setAttribute('aria-current', 'true');
+        var labels = FOOTER[match];
+        var imp = document.getElementById('dfImprint');
+        var priv = document.getElementById('dfPrivacy');
+        if (labels) {
+          if (imp) imp.textContent = labels[0];
+          if (priv) priv.textContent = labels[1];
         }
-        btn.addEventListener('click', function () {
-          if (btn.classList.contains('voted') || btn.disabled) return;
-          btn.disabled = true;
-          fetch('/api/vote', {
-            method: 'POST',
-            credentials: 'omit',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ lang: code })
-          })
-            .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
-            .then(function (res) {
-              if (res.ok && res.data && res.data.success) {
-                setVoted(code);
-                btn.classList.add('voted');
-                btn.querySelector('span').textContent = 'Danke!';
-                var el = document.querySelector('[data-count-for="' + code + '"]');
-                if (el && typeof res.data.count === 'number') el.textContent = res.data.count;
-              } else if (res.data && res.data.error === 'already_voted') {
-                setVoted(code);
-                btn.classList.add('voted');
-                btn.querySelector('span').textContent = 'Danke!';
-              } else {
-                btn.disabled = false;
-              }
-            })
-            .catch(function () { btn.disabled = false; });
+      }
+
+      // 2) Return visit → "Continue in <language> →"
+      var saved = null;
+      try { saved = localStorage.getItem(STORE); } catch (e) {}
+      if (saved && tiles[saved]) {
+        var banner = document.getElementById('dfContinueBanner');
+        var label = document.getElementById('dfContinueLang');
+        if (banner && label) {
+          label.textContent = NAMES[saved] || saved;
+          banner.setAttribute('href', tiles[saved].getAttribute('href'));
+          banner.hidden = false;
+        }
+      }
+
+      // 3) Save the chosen language on click
+      Object.keys(tiles).forEach(function (code) {
+        tiles[code].addEventListener('click', function () {
+          try { localStorage.setItem(STORE, code); } catch (e) {}
         });
       });
     })();

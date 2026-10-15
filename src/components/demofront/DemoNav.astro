@@ -1,0 +1,493 @@
+---
+// DemoNav.astro — Sticky one-page navigation for the demo front page.
+// Section anchors + scroll-spy (IntersectionObserver) + smooth scroll,
+// burger menu on mobile (accessible button with aria-expanded) and a
+// language switch that stays inside the /demofrontneu/<lang> routes.
+import TirolLogo from '../TirolLogo.astro';
+
+export interface NavItem {
+  id: string;
+  label: string;
+}
+export interface LangLink {
+  code: string;
+  name: string;
+  flag: string;
+  href: string;
+  active: boolean;
+}
+export interface NavLabels {
+  aria: string;
+  menu: string;
+  language: string;
+  languageAria: string;
+  sectionsAria: string;
+}
+
+export interface Props {
+  locale: string;
+  brandHref: string;
+  items: NavItem[];
+  langLinks: LangLink[];
+  labels: NavLabels;
+}
+
+const { locale, brandHref, items, langLinks, labels } = Astro.props;
+---
+
+<nav class:list={['df-nav', `df-${locale}`]} aria-label={labels.aria}>
+  <div class="df-nav-inner">
+    <a class="df-nav-brand" href={brandHref} aria-label="Tirol Tourismus">
+      <TirolLogo width={112} idSuffix={`dfnav-${locale}`} locale={locale} inverted={locale === 'en' || locale === 'zh'} />
+    </a>
+
+    <ul class="df-nav-links" aria-label={labels.sectionsAria}>
+      {items.map((item) => (
+        <li>
+          <a href={`#${item.id}`} data-spy={item.id}>{item.label}</a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="df-nav-r">
+      <div class="df-lang">
+        <button
+          type="button"
+          id="dfLangBtn"
+          class="df-lang-btn"
+          aria-expanded="false"
+          aria-controls="dfLangPanel"
+          aria-haspopup="true"
+          aria-label={labels.languageAria}
+        >
+          <span aria-hidden="true">🌐</span>
+          <span class="df-lang-code">{locale.toUpperCase()}</span>
+        </button>
+        <div class="df-lang-panel" id="dfLangPanel" role="menu" aria-label={labels.language}>
+          {langLinks.map((l) => (
+            <a
+              href={l.href}
+              role="menuitem"
+              lang={l.code}
+              class:list={['df-lang-link', { active: l.active }]}
+              aria-current={l.active ? 'true' : undefined}
+            >
+              <span class="df-lang-flag" aria-hidden="true">{l.flag}</span>
+              <span>{l.name}</span>
+              {l.active && <span class="df-lang-check" aria-hidden="true">✓</span>}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="dfBurger"
+        class="df-burger"
+        aria-expanded="false"
+        aria-controls="dfMobileMenu"
+        aria-label={labels.menu}
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="df-mobile" id="dfMobileMenu" hidden>
+    <ul aria-label={labels.sectionsAria}>
+      {items.map((item) => (
+        <li><a href={`#${item.id}`} data-spy={item.id}>{item.label}</a></li>
+      ))}
+    </ul>
+    <div class="df-mobile-lang" aria-label={labels.language}>
+      {langLinks.map((l) => (
+        <a href={l.href} lang={l.code} class:list={['df-mobile-lang-link', { active: l.active }]} aria-current={l.active ? 'true' : undefined}>
+          {l.flag} {l.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  (function () {
+    'use strict';
+
+    function closeMobile() {
+      var mobile = document.getElementById('dfMobileMenu');
+      var burger = document.getElementById('dfBurger');
+      if (!mobile || !burger) return;
+      mobile.classList.remove('open');
+      mobile.hidden = true;
+      burger.setAttribute('aria-expanded', 'false');
+    }
+    function closeLang() {
+      var langBtn = document.getElementById('dfLangBtn');
+      var langPanel = document.getElementById('dfLangPanel');
+      if (!langBtn || !langPanel) return;
+      langPanel.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    // Document-level listeners are bound once; view transitions keep the document.
+    if (!window.__dfNavDocBound) {
+      window.__dfNavDocBound = true;
+      document.addEventListener('click', function (e) {
+        var langPanel = document.getElementById('dfLangPanel');
+        var langBtn = document.getElementById('dfLangBtn');
+        var mobile = document.getElementById('dfMobileMenu');
+        var nav = document.querySelector('.df-nav');
+        if (langPanel && langPanel.classList.contains('open') && !langPanel.contains(e.target) && e.target !== langBtn) {
+          closeLang();
+        }
+        if (mobile && mobile.classList.contains('open') && nav && !nav.contains(e.target)) {
+          closeMobile();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeLang(); closeMobile(); }
+      });
+    }
+
+    function bindMenuControls() {
+      var burger = document.getElementById('dfBurger');
+      var mobile = document.getElementById('dfMobileMenu');
+      var langBtn = document.getElementById('dfLangBtn');
+      var langPanel = document.getElementById('dfLangPanel');
+
+      if (burger && mobile && !burger.__dfBound) {
+        burger.__dfBound = true;
+        burger.addEventListener('click', function () {
+          var open = burger.getAttribute('aria-expanded') === 'true';
+          if (open) { closeMobile(); }
+          else {
+            mobile.hidden = false;
+            mobile.classList.add('open');
+            burger.setAttribute('aria-expanded', 'true');
+            closeLang();
+          }
+        });
+      }
+
+      if (langBtn && langPanel && !langBtn.__dfBound) {
+        langBtn.__dfBound = true;
+        langBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = langBtn.getAttribute('aria-expanded') === 'true';
+          langPanel.classList.toggle('open', !open);
+          langBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        });
+      }
+
+      if (mobile && !mobile.__dfBound) {
+        mobile.__dfBound = true;
+        mobile.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') closeMobile();
+        });
+      }
+    }
+
+    // ── Scroll-Spy: last section whose top passed nav height + 40% viewport ──
+    function initScrollSpy() {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.df-nav-links a[data-spy], .df-mobile ul a[data-spy]'));
+      if (!links.length) return;
+
+      var byId = {};
+      links.forEach(function (a) {
+        var id = a.getAttribute('data-spy');
+        (byId[id] = byId[id] || []).push(a);
+      });
+
+      var sections = Object.keys(byId)
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean)
+        .sort(function (a, b) {
+          return (a.getBoundingClientRect().top + window.pageYOffset) -
+                 (b.getBoundingClientRect().top + window.pageYOffset);
+        });
+      if (!sections.length) return;
+
+      function setActive(id) {
+        links.forEach(function (a) {
+          var on = a.getAttribute('data-spy') === id;
+          a.classList.toggle('active', on);
+          if (on) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+
+      function onScroll() {
+        var nav = document.querySelector('.df-nav');
+        var navH = nav ? nav.getBoundingClientRect().height : 64;
+        var line = navH + window.innerHeight * 0.4;
+        var current = sections[0].id;
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].getBoundingClientRect().top <= line) current = sections[i].id;
+          else break;
+        }
+        var root = document.documentElement;
+        if (window.innerHeight + window.pageYOffset >= root.scrollHeight - 4) {
+          current = sections[sections.length - 1].id;
+        }
+        setActive(current);
+      }
+
+      var ticking = false;
+      function requestTick() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () { ticking = false; onScroll(); });
+      }
+
+      if (window.__dfSpyTick) {
+        window.removeEventListener('scroll', window.__dfSpyTick);
+        window.removeEventListener('resize', window.__dfSpyTick);
+      }
+      window.__dfSpyTick = requestTick;
+      window.addEventListener('scroll', requestTick, { passive: true });
+      window.addEventListener('resize', requestTick);
+
+      onScroll();
+      if (location.hash) {
+        var hashId = location.hash.slice(1);
+        if (byId[hashId]) setActive(hashId);
+      }
+    }
+
+    function boot() {
+      bindMenuControls();
+      initScrollSpy();
+    }
+
+    // The inline script is parsed before the sections exist, so wait for the DOM
+    // (and re-run on view-transition page loads).
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', boot, { once: true });
+    } else {
+      boot();
+    }
+    document.addEventListener('astro:page-load', boot);
+  })();
+</script>
+
+<style is:global>
+  /* Sticky one-page nav height (shared with content scroll-margins). */
+  :root { --demo-nav-h: 64px; }
+  @media (max-width: 640px) { :root { --demo-nav-h: 56px; } }
+
+  /* ── Solid, theme-aware nav surface ──────────────────────────────
+     The nav sits OUTSIDE .art-root, so it cannot inherit the per-language
+     theme tokens. Each language class supplies solid background + AA
+     text colours so the sticky bar stays readable over dark/image content. */
+  .df-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    height: var(--demo-nav-h, 64px);
+    /* DE defaults (overridden per language below). */
+    --df-bg: #faf9f6;
+    --df-bg2: #f2f0ea;
+    --df-text: #1c1c1a;
+    --df-text2: rgba(28, 28, 26, .72);
+    --df-border: rgba(28, 28, 26, .16);
+    --df-accent: #c44536;
+    --df-accent-ink: #ffffff;
+    --df-surface: rgba(28, 28, 26, .04);
+    --df-surface-hover: rgba(28, 28, 26, .08);
+    background: var(--df-bg);
+    border-bottom: 1px solid var(--df-border);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .02), 0 8px 24px rgba(0, 0, 0, .07);
+  }
+  .df-nav.df-de { --df-bg: #faf9f6; --df-bg2: #f2f0ea; --df-text: #1c1c1a; --df-text2: rgba(28, 28, 26, .72); --df-border: rgba(28, 28, 26, .16); --df-accent: #c44536; --df-accent-ink: #fff; --df-surface: rgba(28, 28, 26, .04); --df-surface-hover: rgba(28, 28, 26, .08); }
+  .df-nav.df-en { --df-bg: #241b15; --df-bg2: #2f2620; --df-text: #f5f0e8; --df-text2: rgba(245, 240, 232, .74); --df-border: rgba(245, 240, 232, .18); --df-accent: #c9a227; --df-accent-ink: #241b15; --df-surface: rgba(245, 240, 232, .07); --df-surface-hover: rgba(245, 240, 232, .13); }
+  .df-nav.df-fr { --df-bg: #f4f1ea; --df-bg2: #ece8de; --df-text: #3a3a35; --df-text2: rgba(58, 58, 53, .74); --df-border: rgba(58, 58, 53, .16); --df-accent: #5f6e56; --df-accent-ink: #fff; --df-surface: rgba(58, 58, 53, .035); --df-surface-hover: rgba(58, 58, 53, .08); }
+  .df-nav.df-cs { --df-bg: #ede4d3; --df-bg2: #e3d8c2; --df-text: #2e1f14; --df-text2: rgba(46, 31, 20, .76); --df-border: rgba(46, 31, 20, .24); --df-accent: #7a2e2e; --df-accent-ink: #fff; --df-surface: rgba(46, 31, 20, .05); --df-surface-hover: rgba(46, 31, 20, .1); }
+  .df-nav.df-it { --df-bg: #faf8f5; --df-bg2: #f1ede6; --df-text: #1a2a4a; --df-text2: rgba(26, 42, 74, .74); --df-border: rgba(184, 145, 46, .42); --df-accent: #6e5510; --df-accent-ink: #fff; --df-surface: rgba(26, 42, 74, .035); --df-surface-hover: rgba(26, 42, 74, .075); }
+  .df-nav.df-nl { --df-bg: #f7f7f5; --df-bg2: #efefec; --df-text: #111; --df-text2: rgba(17, 17, 17, .72); --df-border: rgba(17, 17, 17, .22); --df-accent: #3232d6; --df-accent-ink: #fff; --df-surface: rgba(17, 17, 17, .03); --df-surface-hover: rgba(17, 17, 17, .075); }
+  .df-nav.df-es { --df-bg: #f2efe9; --df-bg2: #e9e5dc; --df-text: #2a2a2a; --df-text2: rgba(42, 42, 42, .74); --df-border: rgba(42, 42, 42, .18); --df-accent: #b23535; --df-accent-ink: #fff; --df-surface: rgba(42, 42, 42, .035); --df-surface-hover: rgba(42, 42, 42, .075); }
+  .df-nav.df-zh { --df-bg: #1a1520; --df-bg2: #251d2f; --df-text: #e8dcc8; --df-text2: rgba(232, 220, 200, .74); --df-border: rgba(201, 162, 39, .32); --df-accent: #c9a227; --df-accent-ink: #1a1520; --df-surface: rgba(232, 220, 200, .06); --df-surface-hover: rgba(232, 220, 200, .12); }
+  .df-nav-inner {
+    height: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 3vw, 28px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .df-nav-brand { display: inline-flex; line-height: 0; flex: 0 0 auto; }
+  .df-nav-links {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .df-nav-links a {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: var(--df-text2);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .2s, background .2s, box-shadow .2s;
+  }
+  .df-nav-links a:hover { color: var(--df-text); background: var(--df-surface-hover); }
+  /* Active: accent-coloured text + 2px accent underline + soft accent pill.
+     Accent-on-nav contrast is >= 4.69 in every language theme (AA). */
+  .df-nav-links a.active {
+    color: var(--df-accent);
+    background: var(--df-surface-hover);
+    box-shadow: inset 0 -2px 0 0 var(--df-accent);
+    font-weight: 700;
+  }
+  @supports (background: color-mix(in srgb, red 10%, transparent)) {
+    .df-nav-links a.active {
+      background: color-mix(in srgb, var(--df-accent) 16%, transparent);
+    }
+  }
+  .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
+
+  .df-lang { position: relative; }
+  .df-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--df-border);
+    background: var(--df-surface);
+    color: var(--df-text);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+  }
+  .df-lang-btn:hover { border-color: var(--df-accent); color: var(--df-text); }
+  .df-lang-code { font-size: 11px; }
+  .df-lang-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 190px;
+    padding: 6px;
+    border-radius: var(--radius);
+    background: var(--df-bg2);
+    border: 1px solid var(--df-border);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, .28);
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .df-lang-panel.open { display: flex; }
+  .df-lang-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--df-text2);
+    text-decoration: none;
+  }
+  .df-lang-link:hover { background: var(--df-surface-hover); color: var(--df-text); }
+  .df-lang-link.active { color: var(--df-text); font-weight: 700; background: var(--df-surface-hover); box-shadow: inset 0 0 0 1px var(--df-accent); }
+  .df-lang-flag { font-size: 16px; }
+  .df-lang-check { margin-left: auto; color: var(--df-accent); }
+
+  .df-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    color: var(--df-text);
+    border: 1px solid var(--df-border);
+    background: var(--df-surface);
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  .df-burger:hover { background: var(--df-surface-hover); }
+  .df-burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+
+  .df-mobile {
+    position: fixed;
+    top: var(--demo-nav-h, 64px);
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - var(--demo-nav-h, 64px));
+    overflow-y: auto;
+    background: var(--df-bg);
+    border-bottom: 1px solid var(--df-border);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, .28);
+    padding: 10px 16px 20px;
+  }
+  .df-mobile[hidden] { display: none; }
+  .df-mobile ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 2px; }
+  .df-mobile ul a {
+    display: block;
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--df-text);
+    text-decoration: none;
+  }
+  .df-mobile ul a:hover { background: var(--df-surface-hover); }
+  .df-mobile ul a.active {
+    color: var(--df-accent);
+    background: var(--df-surface-hover);
+    box-shadow: inset 3px 0 0 0 var(--df-accent);
+    font-weight: 700;
+  }
+  .df-mobile-lang {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--df-border);
+  }
+  .df-mobile-lang-link {
+    padding: 6px 12px;
+    border-radius: 100px;
+    border: 1px solid var(--df-border);
+    font-size: 12px;
+    color: var(--df-text2);
+    text-decoration: none;
+  }
+  .df-mobile-lang-link.active { color: var(--df-accent-ink); background: var(--df-accent); border-color: var(--df-accent); font-weight: 700; }
+
+  @media (max-width: 1100px) {
+    .df-nav-links { display: none; }
+    .df-burger { display: flex; }
+  }
+  @media (min-width: 1101px) {
+    .df-mobile { display: none !important; }
+  }
+  .df-nav a:focus-visible,
+  .df-lang-btn:focus-visible,
+  .df-burger:focus-visible {
+    outline: 3px solid var(--tirol-pink);
+    outline-offset: 2px;
+  }
+</style>

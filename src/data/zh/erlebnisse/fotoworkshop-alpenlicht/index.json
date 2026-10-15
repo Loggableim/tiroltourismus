@@ -1,35 +1,34 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Pitztal",
   "region": "pitztal",
-  "beschreibung": "<p>高山深谷的<strong>皮茨塔尔（Pitztal）</strong>拥有三千米高峰、奔腾冰川溪流以及著名的里夫尔湖（Rifflsee），是阿尔卑斯山最震撼的摄影胜地之一。专业<strong>高山风光摄影工作坊</strong>带领摄影爱好者系统掌握高山光线捕捉、慢门曝光与滤镜运用。</p><h3>课程内容与费用</h3><p>核心内容涵盖黄金时刻与蓝色时刻的测光、高对比雪山与岩石光比控制、使用偏振镜与ND中灰滤镜（如ND64或ND1000）拍摄丝绢流水瀑布，以及晚间的Lightroom RAW格式后期处理。单日团体课程（7–8小时）：约<strong>220至250欧元</strong>/人；双日周末强化班：约<strong>349至390欧元</strong>；一对一私人订制：半日约280欧元起、全天约490欧元。</p><p><strong>拍摄季节：</strong>6月下旬至9月中旬为夏季高山湖泊黄金期；9月中旬至10月下旬为金色秋季（落叶松盛金期）；冬季可前往皮茨塔尔冰川进行冰雪专题拍摄。</p><h3>交通指南</h3><p>自驾沿A12高速公路至Imst/Pitztal出口，沿L16公路进谷。公共交通：乘坐ÖBB火车至Imst-Pitztal站，转乘<strong>VVT 210路公交车</strong>直达Mandarfen/Mittelberg。持有<em>Pitztal Sommer Card</em>的住客通常可免费乘车。</p>",
-  "preis": 79,
+  "koordinaten": {
+    "lat": "46.9792",
+    "lng": "10.8725"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "阿尔卑斯之光摄影工作坊",
+  "beschreibung": "### 概览\n皮茨谷（Pitztal）与考纳谷（Kaunertal）的高山摄影工作坊将摄影爱好者带入蒂罗尔高山最摄人心魄的光影殿堂。置身于嶙峋山脊、纯净冰川与翡翠高山湖泊之间，学员在资深高山摄影导师指导下，学习掌握在黄金时刻（Golden Hour）与蓝调时刻（Blue Hour）捕捉高山地貌，以及定格落日时分山峦映雪的标志性阿尔卑斯晚霞（Alpenglühen）。核心拍摄机位首推海拔2,232米的里夫尔湖（Rifflsee）——这是奥地利海拔最高的高山湖泊，在清晨与黄昏风平浪静的镜面湖水中倒映着考纳格拉特峰群。另一处登峰造极的机位是皮茨谷冰川上的3440咖啡馆（Café 3440）：悬空伸出后布伦嫩峰峭壁的全景露台作为奥地利海拔最高观景点，享有逾50座三千米级雪峰与北蒂罗尔最高峰维尔德峰（Wildspitze，3,768米）的360度全景观景画卷。后半程还深入暗夜无光害的考纳谷腹地开展银河星空深空摄影。\n\n### 流程与要求\n摄影工作坊将室内曝光合成理论与高海拔实地创作紧密结合。实拍路线包括里夫尔湖平缓环湖步道（步行1小时，爬升50米）、海拔3,440米的维尔德峰索道山顶站，以及考纳格拉特自然公园之家（海拔1,560米）的“悬空眺台”（Gacher Blick）。拍摄行程需要穿着专业护踝防滑登山鞋并具备良好碎石路平衡能力，但无攀岩技术要求。学员需自带具备M全手动模式的数码微单或单反相机、稳固防风三脚架、超广角与长焦镜头、CPL偏振镜及ND减光镜。鉴于需在严寒户外长时间定点曝光等待，活动不适合幼童及宠物犬随行。\n\n### 交通路线\n皮茨谷的主要大本营设在里夫尔索道山谷站所在的曼达芬（Mandarfen）或冰川列车站米特尔贝格（Mittelberg）。自驾车自A12高速公路（Imst/Pitztal出口）驶入L16州道直抵谷底。两处索道站均配有大型免费停车场。公共交通方面，搭乘火车至Imst-Pitztal站换乘VVT区域客运巴士4204线直达索道站（持夏季皮茨谷游客卡免费乘车）。\n\n### 实用贴士\n工作坊学费约为85至190欧元（索道票另计；持皮茨谷夏日卡可每日免费乘坐里夫尔湖索道）。尤其不可错过的是清晨特开的3440咖啡馆日出索道早茶专列。着装特别指南：在海拔2,200至3,440米的高山，即使盛夏日落后气温也会骤降至零度以下。必须遵循洋葱式多层穿衣法，备妥加厚羽绒服、保暖毛线帽及指尖可翻折的专业摄影防寒手套。务必随身携带充足备用充满电的相机电池，严寒会大幅缩减锂电池续航。",
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 79,
   "tags": [
     "fotografie",
     "workshop",
     "alpen",
     "pitztal",
     "landschaft"
-  ],
-  "koordinaten": {
-    "lat": "46.9792",
-    "lng": "10.8725"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.pitztal.com/",
-    "https://www.pitztal.com/de",
-    "https://www.pitztaler-gletscher.at/",
-    "https://www.alpenverein-akademie.at/",
-    "https://de.wikipedia.org/wiki/Pitztal",
-    "https://www.vvt.at"
   ]
 }

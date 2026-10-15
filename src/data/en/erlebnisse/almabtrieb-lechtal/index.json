@@ -1,35 +1,35 @@
 {
-  "name": "Almabtrieb mit Fest",
   "slug": "almabtrieb-lechtal",
   "emoji": "🐂",
   "farbe": "var(--green)",
   "kategorie": "tradition",
   "ort": "Lechtal",
   "region": "lechtal",
-  "beschreibung": "<p>As summer draws to a close and the mountain meadows have been harvested, hundreds of cows, calves, sheep and goats make their way down from the high alpine pastures in the <strong>Lechtal</strong>. The <strong>Almabtrieb</strong> – the traditional cattle drive – is one of the most moving folk events in all of Tyrol. In mid-autumn, the village streets of the deeply carved Lechtal valley are transformed into a vibrant procession in which centuries-old tradition and farmer's gratitude are palpably felt.</p><h3>Overview</h3><p>The Almabtrieb usually takes place in the <strong>second to fourth week of September</strong>, with the exact date depending on weather, fodder and snowfall at altitude – often confirmed only at short notice. The <strong>largest Almabtrieb in the entire Tyrolean Außerfern</strong> is held by the local young farmers in <strong>Steeg</strong>, where cattle return from several high pastures including the Pimigalpe, Krabachalpe and Stieralpe. Events also take place in <strong>Bach</strong>, <strong>Elbigenalp</strong> (the „Duarfer Almabtrieb“), <strong>Holzgau</strong> and <strong>Stanzach</strong>.</p><p>The highlight is the <strong>“Aufkranzen”</strong> – decorating the lead cow and herd with spectacular headdresses of mountain pine boughs, alpine roses, dahlias and colourful ribbons, provided the summer passed without accident or loss. The cattle then parade through festively decorated village streets to the sound of cowbells and village brass bands. A farm market with regional products, wood carvings from Elbigenalp and Tyrolean specialities – Kiachla, Kasspatzln, Lechtal mountain cheese – await visitors in the festival tent.</p><h3>Getting There</h3><p>The Lechtal follows the <strong>B198 Lechtal road</strong>, reachable from Germany/north via Füssen/Reutte, from the Tyrolean Inn Valley via the Fernpass (B179) or the <strong>Hahntennjoch (L72)</strong> from Imst (no trailers allowed on the pass). During the main procession in Steeg (approx. 11:00–13:00), the B198 is fully closed. Arrive by 10:30 at the latest. By <strong>public transport</strong>: VVT line 110 (Reutte–Warth–Lech); rail travellers change at Reutte in Tirol.</p><h3>Tips</h3><ul><li><strong>Date:</strong> Check the exact date with the Lechtal Tourist Board (lechtal.at) or almabtrieb-steeg.at.</li><li><strong>Families:</strong> Excellent – an unforgettable experience for children. Keep children away from the herd without adult supervision.</li><li><strong>Dogs:</strong> Short lead only; the loud bells and crowds cause stress. Muzzle required on VVT buses.</li><li><strong>Clothing:</strong> Sturdy footwear and weatherproof layers – the valley cools quickly in September.</li></ul>",
-  "preis": 0,
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Traditional Almabtrieb in the Lechtal",
+  "beschreibung": "### Overview\nThe Almabtrieb cattle drive in Tyrol's Lechtal Valley is one of the most colourful and authentic harvest celebrations across the Alps. Every year in mid-September, around Saint Rupert's Day, cattle return to valley pastures after approximately one hundred days grazing in high-alpine meadows. The epicentre of the festivities is Steeg, which hosts the largest Almabtrieb in the Tyrolean Außerfern region. Around 500 cattle descend from side valleys such as Krabachalpe, Pimigalpe, and Bockbachtal into the village. The elaborate floral decoration ('Aufkranzen') takes place only when the summer on the pastures passed without fatal accidents for humans or livestock. The herd is led by the 'Kranzkuh' (lead cow), sporting a magnificent headpiece crafted from dwarf pine, alpine blossoms, colourful ribbons, a sacred cross, and a small mirror meant to ward off evil mountain spirits.\n\n### Route & Requirements\nThe cattle march along the valley's main road directly into the village festival grounds in central Steeg during late morning. Herdsmen guide the livestock amid resounding cattle bells and alpine whip-cracking (Goaßlschnalzen). Navigating the village grounds is accessible and requires no mountain hiking fitness. Families find it an unforgettable cultural display; however, earmuffs are recommended for small children due to the loud ringing of heavy brass bells. The event is unsuitable for dogs: cattle instinctively perceive dogs as predators, and dense spectator crowds heighten animal agitation. If dogs must attend, keep them on a short leash well clear of cattle paths.\n\n### Arrival\nDrivers arrive from Reutte via the B198 Lechtal federal road to Steeg. Note: Due to the cattle drive, the B198 through Steeg is completely closed to all transit traffic between approximately 11:00 and 13:30. Visitors should arrive before 10:30, as village parking spaces fill up rapidly. Arriving by public transport aboard the VVT regional bus line 110 (Lechtalbus) from Reutte to Steeg is stress-free. For holidaymakers holding the Lechtal Aktiv Card guest card, bus travel within the valley is free of charge.\n\n### Tips\nAdmission to the street procession and village farmers' market is free. Inside the heated festival marquee, local brass bands provide traditional folk music while market stalls serve local delicacies such as Lechtal alpine cheese, freshly fried Kiachl with lingonberry jam, and sweet Krapfen. The evening highlight is the raffle of a genuine, ornate alpine cowbell among guests. Safety note: Dairy cows weigh up to 700 kilograms; maintain respectful distance, never touch animal horns, and never obstruct approaching cattle.",
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.lechtal.at/de/veranstaltungen/veranstaltungen-im-lechtal.html",
+    "https://www.steeg.gv.at",
+    "https://www.tirol.at/aktivitaeten/events/almabtriebe",
+    "https://www.sichere-almen.at"
+  ],
+  "bilder": [],
   "dauer": "1 Tag",
+  "link": "#",
+  "preis": 0,
   "tags": [
     "tradition",
     "brauchtum",
     "almabtrieb",
     "lechtal",
     "fest"
-  ],
-  "koordinaten": {
-    "lat": "47.3442",
-    "lng": "10.5044"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null,
-  "sources": [
-    "https://www.lechtal.at",
-    "https://www.steeg.gv.at",
-    "https://www.tirol.at",
-    "https://www.vvt.at",
-    "https://de.wikipedia.org/wiki/Almabtrieb"
   ]
 }

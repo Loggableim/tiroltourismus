@@ -1,34 +1,33 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "<p><strong>Achensee</strong> je největší a nejhlubší jezero Tyrolska. <strong>Achenseeschifffahrt GmbH</strong> provozuje pravidelné linky od roku 1887.</p><h3>Přehled &amp; Trasy</h3><p>Tři moderní osobní lodě – <strong>MS Stadt Innsbruck</strong> (2007), <strong>MS Tirol</strong> (1995) a <strong>MS Achensee</strong> (2016) – obsluhují <strong>6 přístavišť</strong>: Pertisau, Buchau, Seespitz, Gaisalm, Seehofkapelle/Lido a Scholastika.</p><p>Celodenní jízdenka Hop-on/Hop-off: dospělí 32–34 € | děti 7–15 let: 16–17 € (ceník 2025). Děti do 6 let zdarma. Rodinná jízdenka: cca 64–68 €. Okružní plavba Sever: cca 75 min, dospělí 30 €. Okružní plavba Jih: cca 45 min, dospělí 21 €. Sezóna: začátek května – začátek listopadu.</p>",
-  "preis": 22,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Plavba lodí po Achensee – velká okružní jízda",
+  "beschreibung": "### Přehled\nLodní doprava na jezeře Achensee (Achenseeschifffahrt), založená v roce 1887 opatem Albertem Wildauerem z kláštera Fiecht, spojuje historickou plavební tradici s moderním vyhlídkovým zážitkem. Na největším tyrolském jezeře, sevřeném mezi strmým masivem Karwendelu a pohořím Rofan, dnes křižují tři moderní osobní lodě: vlajková loď MS Tirol s kapacitou až 600 cestujících a slunečními palubami, bezbariérová MS Stadt Innsbruck (470 osob) s palubní restaurací a elegantní společenská loď MS Achensee (500 osob). Na hladině hluboké až 133 metrů, připomínající norský fjord, nabízí plavba úchvatné pohledy na okolní hory. Unikátem je zastávka u horské salaše Gaisalm na západním břehu: jde o jedinou hospodářskou pastvinu v celém Tyrolsku, kam nevede žádná silnice a dostanete se k ní výhradně pěšky po skalní stezce nebo lodí.\n\n### Trasa a náročnost\nLodě obsluhují celkem šest přístavišť: Pertisau (domovský přístav), Seespitz na jižním břehu, Buchau, samotu Gaisalm, Seehofkapelle a Scholastika na severním břehu v Achenkirchu. Velká okružní plavba (celodenní jízdenka Hop-on Hop-off) trvá bez vystupování přibližně 2 hodiny a 10 minut. K dispozici jsou i kratší okruhy: Severní okruh (cca 75 minut) a Jižní okruh (cca 45 minut). Lodě jsou plně bezbariérové, vybavené bezprahovými můstky, toaletami pro vozíčkáře a krytými salony. Plavba nevyžaduje žádnou fyzickou námahu a je ideální pro rodiny s kočárky. Psi jsou na palubě vítáni (zvláštní jízdenka cca 4,00 eura); podle rakouských přepravních řádů však platí přísná povinnost vodítka a náhubku.\n\n### Příjezd a doprava\nHlavní přístaviště leží v Pertisau na pobřežní promenádě. Autem přijedete z dálnice A12 Inntal (sjezd Wiesing/Achensee) po silnici B181. Placená parkoviště se nacházejí v Pertisau, u pláže Buchau a u přístaviště Scholastika v Achenkirchu. Romantickou variantou je cesta vlakem do Jenbachu s přestupem na historickou parní ozubnicovou železnici Achenseebahn (z roku 1889): konečná stanice Seespitz leží přímo u přístavního mola, kde přestoupíte přímo na loď. Z Jenbachu jezdí také regionální autobus VVT linky 4080.\n\n### Praktické tipy\nCelodenní jízdenka Hop-on Hop-off stojí 34,00 eur pro dospělé (děti 7–15 let 17,00 eur; rodinná jízdenka 68,00 eur; děti do 6 let zdarma). Držitelé karty AchenseeCard mají 10% slevu. Velmi výhodná je kombinovaná jízdenka na loď a parní železnici Achenseebahn (72,00 eur pro dospělého). Oblíbený výlet: plavba z Pertisau na Gaisalm, oběd u jezera a pěší návrat po pobřežní stezce Gaisalmsteig zpět do Pertisau za cca 1,5 hodiny (nutná jistá chůze). Hlavní sezóna trvá od května do konce října; v prosinci se konají adventní plavby.",
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ],
+  "bilder": [],
   "dauer": "2 Stunden",
+  "link": "#",
+  "preis": 22,
   "tags": [
     "boot",
     "achensee",
     "schifffahrt",
     "natur",
     "panorama"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://achenseeschifffahrt.at",
-    "https://shop.achenseeschifffahrt.at",
-    "https://www.achenseebahn.at",
-    "https://de.wikipedia.org/wiki/Achensee",
-    "https://www.achensee.com/achensee/"
   ]
 }

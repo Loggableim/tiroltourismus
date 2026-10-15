@@ -3,15 +3,15 @@
   "slug": "karwendelbahn",
   "status": "published",
   "region": "achensee",
-  "ort": "Maurach",
+  "ort": "Pertisau",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Spektakuläre Luftseilbahn vom Achensee auf den 1.844 m hohen Bärenkopf mit grandiosem Rundblick auf das Karwendelgebirge.",
-  "beschreibung": "<p>Die <strong>Karwendelbahn</strong> in Maurach ist eine Standseilbahn, die vom Achensee auf die Erfurter Hütte führt. Sie überwindet auf einer Länge von rund 3,6 Kilometern einen Höhenunterschied von etwa 1000 Metern. Die Talstation liegt auf 800 Metern Seehöhe, die Bergstation auf 1800 Metern. Im Sommer dient die Bahn vorrangig als Aufstiegshilfe für Wanderer und Ausgangspunkt für Touren im Karwendelgebirge. Im Winter erschließt sie das Skigebiet Achenkirch und verbindet die Abfahrten mit dem Tal. Die Fahrt bietet einen Blick auf den gesamten Achensee und die umliegenden Bergketten. Die Bahn ist familientauglich und ermöglicht einen Zugang zur Hochgebirgslandschaft ohne große eigene Anstrengung.</p>",
+  "kurzbeschreibung": "Die Karwendel-Bergbahn in Pertisau bringt Gäste auf den 1.491 m hohen Zwölferkopf: Panoramablick auf den Achensee, Paragleiter-Mekka und Wanderwege.",
+  "beschreibung": "<h2>Überblick</h2><p>Die traditionsreiche <strong>Karwendel-Bergbahn</strong> (oft als <em>Karwendelbahn am Achensee</em> bezeichnet) startet direkt im idyllischen Ortszentrum von Pertisau auf 963 Metern Seehöhe am Westufer des Achensees. Die moderne Gruppenumlaufbahn erschließt den 1.491 Meter hohen <strong>Zwölferkopf</strong>, einen sonnigen Aussichts- und Erlebnisberg an der Schwelle zum <em>Naturpark Karwendel</em>. Während der kurzen Bergfahrt und von der Bergstation eröffnet sich ein spektakulärer Panoramablick über das smaragdgrüne „Tiroler Meer“, das Rofangebirge und die schroffen Felsgipfel der Karwendelkette.</p><h2>Sport, Wandern & Naturerlebnis</h2><p>Die touristische Erschließung des Zwölferkopfs begann im Jahr 1959 mit dem Bau der ursprünglichen Seilbahn; seither wurde die Anlage kontinuierlich modernisiert. Am Bergplateau schätzen Wanderer und Naturbegeisterte ein weitverzweigtes Wegenetz: Beliebte Routen führen auf befestigten Wegen zur urigen <em>Bärenbadalm</em>, auf den markanten Gipfel des Bärenkopfs (1.991 m) oder über das Tristenau-Rundwandergebiet. Für Kinder gibt es einen liebevoll gestalteten alpinen Erlebnisweg mit Spielstationen rund um die Bergstation. International berühmt ist der Zwölferkopf als Hotspot für den Flugsport: Dank hervorragender thermischer Aufwinde gilt der Berg als eines der beliebtesten Areale für Paragleiter und Tandem-Gleitschirmflieger in ganz Westösterreich; Start- und Landeplätze sind direkt an Berg- und Talstation eingerichtet. Im Winter verwandelt sich das Areal in ein familiäres Naturschneeskigebiet mit anspruchsvollen Talabfahrten und Winterwanderwegen.</p><h2>Besuch & Anreise</h2><p>Die Karwendel-Bergbahn ist in der Sommersaison von Anfang Mai bis Ende Oktober täglich von 08:30 bis 17:00 Uhr in Betrieb (im Winter je nach Schneelage von Mitte Dezember bis Ende März). Fahrpreise Sommer 2025/2026 (Berg- und Talfahrt): Erwachsene 27,50 €, Senioren ca. 25,50 €, Kinder (Jahrgänge 2010–2018) 15,50 €, Kleinkinder fahren kostenlos. Inhaber der regionalen <em>Achensee Erlebniscard</em> nutzen die Seilbahn unbegrenzt gratis. Anreise mit dem Auto: Über die Inntalautobahn A12, Ausfahrt Wiesing/Achensee, auf der Achenseebundesstraße B181 bis Maurach und weiter nach Pertisau zur Talstation (Naturparkstraße 1; kostenpflichtiger Parkplatz, für Seilbahngäste ermäßigt). Mit öffentlichen Verkehrsmitteln: Mit der Bahn bis Bahnhof Jenbach, von dort mit dem VVT-Regiobus Linie 4080 direkt zur Haltestelle <em>Pertisau Karwendellift</em>.</p><h2>Tipps</h2><p>Die Gondeln der Seilbahn und die Sonnenterrasse des Alpengasthauses Karwendel an der Bergstation sind stufenlos und barrierefrei für Rollstuhlfahrer und Kinderwagen zugänglich. Genießen Sie den Sonnenuntergang auf der Aussichtsplattform und beobachten Sie die bunten Schirme der Gleitschirmflieger beim Start direkt vor der Bergstation.</p>",
   "emoji": "🚡",
   "farbe": "#FF5722",
   "hoehe": "1.844 m",
   "dauer": "Halbtag",
-  "preis": "32 € (Erwachsene, Hin & Rück)",
+  "preis": "Berg- und Talfahrt Erwachsene 27,50 €, Kinder 15,50 €",
   "tags": [
     "seilbahn",
     "panorama",
@@ -19,12 +19,18 @@
     "wandern",
     "familie"
   ],
-  "oeffnungszeiten": "Mai–Okt: täglich 9:00–17:00",
-  "webseite": "https://www.karwendelbahn.at",
+  "oeffnungszeiten": "Anfang Mai bis Ende Okt täglich 08:30–17:00 Uhr (Winter Dez–März)",
+  "webseite": "https://www.karwendel-bergbahn.at",
   "koordinaten": {
     "lat": "47.4333",
     "lng": "11.7500"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.karwendel-bergbahn.at",
+    "https://www.achensee.com",
+    "https://de.wikipedia.org/wiki/Zw%C3%B6lferkopf_(Karwendel)",
+    "https://www.tirol.at/aktivitaeten/sport/wandern/bergbahnen/karwendelseilbahn"
+  ]
 }

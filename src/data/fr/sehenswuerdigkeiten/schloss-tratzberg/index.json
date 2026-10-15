@@ -4,17 +4,19 @@
   "region": "innsbruck",
   "ort": "Jenbach",
   "kategorie": "burg",
-  "kurzbeschreibung": "Ce Renaissance-Schloss superbement conservé, situé au-dessus de la vallée de l’Inn, vous fait découvrir des appartements princiers aménagés dans leur état d’origine ainsi que la Rüstkammer.",
+  "kurzbeschreibung": "Château Renaissance perché au-dessus de l'Inn avec ses salons d'époque remarquablement préservés et ses audioguides scénarisés captivants.",
   "emoji": "🏰",
   "farbe": "#A0522D",
   "tags": [
-    "château",
-    "renaissance",
-    "musée",
-    "histoire"
+    "Kultur",
+    "Schloss",
+    "Geschichte",
+    "Familie",
+    "Silberregion Karwendel",
+    "Jenbach"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 14,00, Kinder € 7,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 15,00 €, Kinder ca. 9,00 €, inklusive Hörspielführung",
   "oeffnungszeiten": "Mitte April-Okt: Di-So 9:00-17:00",
   "webseite": "https://www.schloss-tratzberg.at/",
   "bilder": [],
@@ -22,5 +24,15 @@
   "koordinaten": {
     "lat": "47.3915",
     "lng": "11.7717"
-  }
+  },
+  "beschreibung": "<h2>Überblick</h2>\n<p>Perché sur un éperon rocheux boisé entre Jenbach et Stans, le <strong>Schloss Tratzberg</strong> veille sur la vallée de l'Inn depuis le XIIIe siècle. Reconstruit après un incendie à la fin du XVe siècle par les frères Tänzl, riches exploitants des mines de Schwaz, le château est un chef-d'œuvre du gothique tardif et de la Renaissance. Propriété des comtes d'Enzenberg depuis 1848, il conserve son mobilier d'origine et ses magnifiques plafonds sculptés.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>Pour accéder au château depuis le parking dans la vallée, on peut emprunter le petit train touristique Tratzberg-Express ou gravir un agréable sentier forestier en une vingtaine de minutes. La visite d'une heure se fait avec un audioguide sans fil théâtralisé : l'empereur Maximilien Ier et ses contemporains racontent l'histoire de la cour à arcades, de la salle des Habsbourg et de sa fresque généalogique longue de 46 mètres, et de la salle d'armes. Un parcours conté avec le fantôme Tratzi est conçu pour les enfants.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Ouvert tous les jours de début avril à début novembre, de 10h00 à 16h00. Tarif adulte environ 15,00 € avec audioguide, enfants 9,00 €. En voiture par l'autoroute A12 sortie Jenbach. En train jusqu'à la gare de Jenbach puis 25 minutes de marche ou bus régional.</p>\n\n<h2>Tipps</h2>\n<p>Faites une pause gourmande à l'auberge Schlosswirt au pied du château. Combinez cette visite avec la randonnée des spectaculaires gorges de Wolfsklamm à Stans menant au sanctuaire de St. Georgenberg.</p>",
+  "sources": [
+    "https://www.schloss-tratzberg.com/",
+    "https://www.silberregion-karwendel.com/de/schloss-tratzberg",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-schloss-tratzberg",
+    "https://de.wikipedia.org/wiki/Schloss_Tratzberg",
+    "https://de.wikipedia.org/wiki/Jenbach"
+  ],
+  "saison": "Anfang April bis Anfang November",
+  "familie": true
 }

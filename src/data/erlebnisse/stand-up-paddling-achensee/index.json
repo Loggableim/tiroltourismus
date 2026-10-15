@@ -5,7 +5,7 @@
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Pertisau / Maurach",
-  "region": "Achensee",
+  "region": "achensee",
   "beschreibung": "### Überblick\nStand-Up-Paddling (SUP) auf dem Achensee, dem größten See Tirols, bietet eine faszinierende Verbindung aus sportlicher Aktivität und alpiner Naturerfahrung. Das auch als „Tiroler Fjord“ bezeichnete Gewässer besticht durch seine kristallklare Wasserqualität, leuchtende Türkistöne und die dramatisch aufragenden Felswände des Karwendelgebirges im Westen und des Rofans im Osten. Gleiten Sie stehend über die spiegelglatte Wasseroberfläche, während die morgendliche Bergsonne die umliegenden Gipfel erleuchtet. Mit Verleihstationen an den Ufern von Pertisau, Maurach und Buchau ist der See sowohl für Anfänger als auch für ausdauernde Langstrecken-Paddler hervorragend erschlossen.\n\n### Route & Anforderungen\nBeliebte Einstiegspunkte sind das Strandbad Pertisau, das See-Bad des Freizeitzentrums Atoll in Maurach sowie das flach abfallende Südufer in Buchau. Eine klassische Genussrunde startet im Strandbad Pertisau und führt entlang des bewaldeten Karwendelufers in Richtung Seehof oder zur Gaisalm, der einzigen nur zu Fuß oder per Boot erreichbaren Alm Tirols. Die reine Paddelzeit beträgt je nach Kondition und Windverhältnissen ein bis zwei Stunden bei einer Strecke von etwa drei bis sechs Kilometern. SUP erfordert keine Vorkenntnisse; ein gesunder Gleichgewichtssinn und sichere Schwimmkenntnisse sind jedoch Voraussetzung. Ein Board, Paddel und eine Schwimmweste (Leash zwingend empfohlen) werden vor Ort gemietet. Das Tragen von Badebekleidung oder eines kurzen Neoprenanzugs empfiehlt sich, da der Gebirgssee selbst im Sommer Wassertemperaturen um 18 bis 21 Grad Celsius aufweist. Hunde dürfen auf speziellen breiten SUP-Boards mitgenommen werden (Hundeschwimmweste ratsam).\n\n### Anreise\nAus Richtung Innsbruck oder Salzburg reist man über die Inntalautobahn A12 bis zur Ausfahrt Wiesing/Achensee und folgt der Achensee-Bundesstraße B181 nach Maurach oder Pertisau. Gebührenpflichtige Parkplätze stehen direkt an den Uferpromenaden in Pertisau sowie am Atoll Achensee in Maurach zur Verfügung. Mit öffentlichen Verkehrsmitteln reist man per Bahn zum Bahnhof Jenbach und fährt mit der Regionalbuslinie 4080 des VVT direkt bis zur Haltestelle „Pertisau Karwendellift“ oder „Maurach Atoll“.\n\n### Tipps\nDie besten Bedingungen mit spiegelglattem Wasser finden Sie in den frühen Vormittagsstunden vor 10:30 Uhr vor. Ab dem frühen Nachmittag setzt am Achensee häufig der thermische Nordwind ein, der für Windsurfer und Segler ideal ist, Einsteigern auf dem SUP jedoch kraftvollen Gegenwind bescheren kann. An den automatisierten kolula-SUP-Stationen in Pertisau und Buchau können Boards unkompliziert per Smartphone gebucht werden. Nach dem Paddeln lohnt sich eine Einkehr an der Beach-Bar des Atoll Achensee mit Blick über das glitzernde Wasser.",
   "preis": 35,
   "dauer": "2 Stunden",
@@ -20,10 +20,10 @@
     "wassersport",
     "see"
   ],
-  "koordinaten": [
-    47.4419,
-    11.6989
-  ],
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
   "status": "published",
   "link": "https://www.achensee.com/",
   "bilder": [],
@@ -31,7 +31,6 @@
   "titel": "Stand-Up-Paddling am Achensee: Pertisau, Maurach & Buchau",
   "saison": "Juni bis September (Badesaison)",
   "familie": true,
-  "hunde": true,
   "sources": [
     "https://www.achensee.com/erleben/sommer/wassersport/stand-up-paddling/",
     "https://www.achenseeschifffahrt.at/bootsverleih/",

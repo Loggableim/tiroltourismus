@@ -5,7 +5,7 @@
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
-  "region": "Serfaus-Fiss-Ladis",
+  "region": "serfaus-fiss-ladis",
   "beschreibung": "### Überblick\nDie Rodelbahn Serfaus am Komperdell zählt zu den beliebtesten und bestpräparierten Winterrodelbahnen der Alpen. Auf einer Strecke von 4,0 Kilometern überwindet der gesicherte Rodelweg einen Höhenunterschied von 570 Metern zwischen der Bergstation der Komperdellbahn (1.980 m) und der Talstation in Serfaus (1.427 m). Das Rodelareal auf dem sonnenverwöhnten Hochplateau über dem Oberinntal bietet puren Fahrspaß mit einer gelungenen Mischung aus rasanten Kurven, gleitenden Waldpassagen und Panoramablicken auf die schneebedeckten Gipfel der Samnaungruppe. Neben dem täglichen Tagbetrieb ist die Strecke jeden Mittwochabend anlässlich der renommierten „Adventure Night“ beleuchtet, was Rodelfans ein einmaliges Nachterlebnis unter dem Tiroler Sternenhimmel ermöglicht.\n\n### Route & Anforderungen\nDie Auffahrt erfolgt komfortabel mit der Komperdellbahn direkt aus dem Dorfzentrum von Serfaus. Der Startpunkt der Naturrodelbahn befindet sich unmittelbar neben der Bergstation der Komperdellbahn. Von dort schlängelt sich die Piste mit gleichmäßigem Gefälle und breiten Kurven zunächst über offenes Almgelände, bevor sie in geschützte Waldabfahrten übergeht. Die Bahn ist als mittelschwer (rote Rodelbahn) eingestuft; sie wird täglich frisch maschinell präpariert und an kritischen Stellen mit Sicherheitsnetzen und Holzbanden gesichert. Feste Winterstiefel mit gutem Profil, Skibrille, warme Handschuhe und ein Helm (für Kinder bis 15 Jahre in Tirol gesetzlich vorgeschrieben) sind unverzichtbar. Kinder ab etwa sechs Jahren können mit den Eltern auf einem Doppelrodel mitfahren. Aus Sicherheitsgründen dürfen Hunde auf der Rodelbahn nicht mitgenommen werden.\n\n### Anreise\nSerfaus ist autofrei konzipiert: Autofahrer reisen über die Inntalautobahn A12 (Knoten Oberinntal) und die Reschenbundesstraße B180 bis nach Ried im Oberinntal an, von wo aus die Serfauser Landesstraße L19 auf das Sonnenplateau führt. Am Ortseingang von Serfaus befinden sich großzügige Tagesparkplätze. Vom Parkplatz bringt die lautlose, unterirdische Luftkissenschwebebahn „Dorfbahn Serfaus“ Gäste kostenlos und direkt zur Talstation der Seilbahnen. Öffi-Reisende fahren mit der ÖBB bis zum Bahnhof Landeck-Zams und steigen dort in die direkte Postbuslinie 220 nach Serfaus um.\n\n### Tipps\nLeihrodel sollten vorab in den Sportgeschäften im Tal oder direkt an den Talstationen der Bergbahnen angemietet werden, da an der Bergstation kein regulärer Verleih betrieben wird. Für Familien lohnt sich mittwochs der Besuch der spektakulären „Adventure Night“ am Komperdell, bei der Musik, Lichtshows und Kunstakrobatik mit dem anschließenden Nachtrodeln auf der beleuchteten Piste kombiniert werden. Nach der Abfahrt lädt die Talstation zu heißem Tee, Glühwein oder traditionellen Tiroler Kaspressknödeln ein.",
   "preis": 19,
   "dauer": "1.5–2 Stunden",
@@ -21,10 +21,10 @@
     "serfaus-fiss-ladis",
     "nachtrodeln"
   ],
-  "koordinaten": [
-    47.0378,
-    10.6053
-  ],
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
   "status": "published",
   "link": "https://www.serfaus-fiss-ladis.at/",
   "bilder": [],
@@ -32,7 +32,6 @@
   "titel": "Rodelbahn Serfaus am Komperdell – Winterrodeln & Nachtabfahrt",
   "saison": "Dezember bis April (Wintersaison)",
   "familie": true,
-  "hunde": false,
   "sources": [
     "https://www.serfaus-fiss-ladis.at/de/Winterurlaub/Winteraktivitaeten/Rodeln",
     "https://www.serfaus-fiss-ladis.at/de/Winterurlaub/Bergbahnen/Tickets-Preise",

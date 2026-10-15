@@ -5,7 +5,7 @@
   "farbe": "var(--blue)",
   "kategorie": "winter",
   "ort": "St. Anton am Arlberg",
-  "region": "Arlberg",
+  "region": "st-anton",
   "beschreibung": "### Überblick\nEine geführte Schneeschuhwanderung in St. Anton am Arlberg eröffnet einen meditativen, unberührten Zugang zur tief verschneiten Bergwelt der Wiege des alpinen Skilaufs. Weitab der stark frequentierten Lifttrassen führt diese Winterexkursion in das naturgeschützte Verwalltal, eines der landschaftlich reizvollsten Täler der Nördlichen Kalkalpen. Ausgerüstet mit modernen Leichtmetall-Schneeschuhen und Teleskopstöcken stapfen Naturliebhaber durch knirschenden Pulverschnee, lichte Bergfichtenwälder und glitzernde Almwiesen entlang der gefrorenen Rosanna. Neben dem intensiven Naturerlebnis und der Stille des Hochgebirges vermitteln die staatlich geprüften Berg- und Skiführer Wissenswertes über die alpine Tierwelt, Lawinenkunde und das Überleben der Pflanzen unter der dicken Schneedecke.\n\n### Route & Anforderungen\nAusgangspunkt der geführten Tour ist das Tourismusverband-Büro oder der Einstieg zum Verwalltal am westlichen Ortsrand von St. Anton am Arlberg (1.304 m). Die Route verläuft sanft ansteigend durch das romantische Rosannatal bis hin zum malerischen Verwallsee und der gemütlichen Wagner Hütte auf rund 1.450 Metern Seehöhe. Die Wegstrecke beträgt insgesamt etwa 7 bis 8 Kilometer bei circa 180 Höhenmetern Auf- und Abstieg. Die reine Gehzeit liegt bei 2,5 bis 3 Stunden, mit Raststopps rund 3,5 bis 4 Stunden. Eine normale körperliche Grundkondition reicht vollkommen aus; Vorkenntnisse im Schneeschuhgehen sind nicht nötig. Erforderlich sind feste, knöchelhohe und wasserfeste Bergschuhe, atmungsaktive Wintersportbekleidung (Zwiebelprinzip), Mütze, Handschuhe und Sonnenschutz. Aus Sicherheitsgründen (Wildschutzgebiet) sind Hunde bei geführten Gruppen nicht gestattet.\n\n### Anreise\nSt. Anton am Arlberg ist ein weltbekannter Eisenbahn-Knotenpunkt mit eigenem EuroCity- und Railjet-Bahnhof mitten im Ort, wodurch eine Anreise mit der Bahn aus ganz Österreich, Deutschland und der Schweiz unkompliziert möglich ist. Vom Bahnhof St. Anton sind es nur wenige Gehminuten zum Treffpunkt. Autofahrer erreichen St. Anton über die Arlbergschnellstraße S16 (Maut/Vignette) und die Ausfahrt St. Anton am Arlberg. Parkplätze stehen an den Talstationen der Bergbahnen (z. B. Galzig-/Gampenbahn) oder am Terminal West zur Verfügung.\n\n### Tipps\nDie komplette Sicherheitsausrüstung samt Schneeschuhen und Stöcken kann direkt bei den Skischulen oder Sportgeschäften im Ort ausgeliehen werden. Auf halber Strecke bietet die urige Wagner Hütte im Verwalltal die ideale Einkehrmöglichkeit für eine heiße Tasse Jagatee, kräftige Rindssuppe oder Tiroler Schlipfkrapfen am Kaminfeuer. Achten Sie auf sonnigen Tourentagen auf ausreichenden UV-Schutz und eine gute Skibrille, da die weiße Schneefläche das Sonnenlicht extrem reflektiert.",
   "preis": 69,
   "dauer": "3,5–4 Stunden",
@@ -19,10 +19,10 @@
     "alpinsport",
     "outdoor"
   ],
-  "koordinaten": [
-    47.1297,
-    10.2689
-  ],
+  "koordinaten": {
+    "lat": "47.1285",
+    "lng": "10.2665"
+  },
   "status": "published",
   "link": "https://www.stantonamarlberg.com/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Geführte Schneeschuhwanderung in St. Anton am Arlberg – Verwalltal",
   "saison": "Dezember bis April (Wintersaison)",
   "familie": true,
-  "hunde": false,
   "sources": [
     "https://www.stantonamarlberg.com/de/winter/abseits-der-piste/schneeschuhwandern",
     "https://www.tirol.at/orte/a-st-anton-am-arlberg",

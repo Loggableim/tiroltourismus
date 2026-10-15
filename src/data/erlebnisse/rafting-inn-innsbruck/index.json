@@ -5,7 +5,7 @@
   "farbe": "var(--blue)",
   "kategorie": "abenteuer",
   "ort": "Haiming / Imst",
-  "region": "Innsbruck und Umgebung / Tiroler Oberland",
+  "region": "innsbruck",
   "beschreibung": "### Überblick\nDie Imster Schlucht auf dem Tiroler Inn gilt unbestritten als die beliebteste und traditionsreichste Rafting-Strecke Europas. Rund 45 Kilometer westlich von Innsbruck schneidet sich der Inn mit wuchtiger Strömung durch eine faszinierende Kalksteinschlucht zwischen Imst und Haiming. Auf einer Flusslänge von rund 14 Kilometern bietet der Fluss spritzige Wildwasser-Action der Wildwasserstufe III. Eindrucksvolle Stromschnellen mit klingenden Namen wie der „Rohrbrückenschwall“, der „Ötzschlag“, das „Chaos“ und die wuchtige „Prallwand“ sorgen für hohe Wellen, Adrenalinkicks und ein mitreißendes Teamsport-Erlebnis vor der hochalpinen Kulisse der Lechtaler Alpen und des Tschirgant.\n\n### Route & Anforderungen\nDie Bootstour beginnt an der Einstiegsstelle unterhalb von Imst und endet nach rund 14 Kilometern an der Ausstiegsstelle in Haiming bzw. beim Gelände der AREA 47. Die reine Fahrzeit auf dem Wasser beträgt etwa 90 Minuten, das Gesamterlebnis inklusive Sicherheitseinweisung und Umkleiden nimmt circa drei Stunden in Anspruch. Alle Boote werden von staatlich geprüften, erfahrenen Raftguides gesteuert. Schwimmkenntnisse sind zwingende Voraussetzung. Die Imster Schlucht eignet sich für abenteuerlustige Einsteiger, Firmen- und Vereinsgruppen sowie für Familien mit sportlichen Kindern ab zehn bis zwölf Jahren. Neoprenanzug, Neoprenschuhe, Schwimmweste und Wildwasserhelm werden von den Outdoor-Basen gestellt. Mitzubringen sind Badebekleidung, Handtuch und festes Schuhwerk für vor/nach der Tour. Hunde sind auf dem Raft nicht gestattet.\n\n### Anreise\nDie Outdoor-Stützpunkte und Startpunkte in Haiming oder Imst sind verkehrstechnisch optimal angebunden. Mit dem Pkw fährt man von Innsbruck über die Inntalautobahn A12 nach Westen bis zur Ausfahrt Haiming/Ötztal (Fahrzeit ca. 35 Minuten). Parkplätze stehen an den Outdoor-Zentren (z. B. AREA 47 oder Raftingbasen) kostenfrei zur Verfügung. Bahnreisende nutzen die ÖBB-Züge von Innsbruck Hauptbahnhof direkt zum Bahnhof Ötztal-Bahnhof oder Bahnhof Imst-Pitztal, wo viele Veranstalter nach Absprache einen Shuttleservice anbieten.\n\n### Tipps\nDie beste Zeit für maximalen Wasserstand und höchste Wellen sind die Monate Juni und Juli, bedingt durch die sommerliche Gletscherschmelze in den Seitentälern des Inns. Im August und September ist das Wasser oft klarer und ruhiger, was die Tour noch familienfreundlicher macht. Brillenträger sollten ihre Sehhilfe mit einem elastischen Brillenband sichern. Nach dem Raftingtrip lohnt sich die Einkehr in den Sonnenterrassen von Haiming oder eine Kombination mit der Water AREA der nahegelegenen AREA 47.",
   "preis": 69,
   "dauer": "3 Stunden (Gesamtaufwand)",
@@ -19,10 +19,10 @@
     "innsbruck",
     "outdoor"
   ],
-  "koordinaten": [
-    47.2472,
-    10.7431
-  ],
+  "koordinaten": {
+    "lat": "47.2654",
+    "lng": "11.3928"
+  },
   "status": "published",
   "link": "https://www.imst.at/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Wildwasser-Rafting Imster Schlucht auf dem Inn bei Innsbruck",
   "saison": "Mai bis Mitte Oktober",
   "familie": true,
-  "hunde": false,
   "sources": [
     "https://www.imst.at/erlebnisse/sommer/outdoor-action/rafting",
     "https://www.tirol.at/reisefuehrer/sport/wassersport/rafting/a-rafting-imster-schlucht",

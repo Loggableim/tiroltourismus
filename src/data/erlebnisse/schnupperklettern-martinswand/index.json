@@ -5,7 +5,7 @@
   "farbe": "var(--brown)",
   "kategorie": "abenteuer",
   "ort": "Zirl / Innsbruck",
-  "region": "Region Innsbruck",
+  "region": "innsbruck",
   "beschreibung": "### Überblick\nDer ÖAV-Klettergarten an der imposanten Martinswand zwischen Zirl und Innsbruck ist eines der traditionsreichsten und populärsten Felsklettergebiete Westösterreichs. Die markante, senkrecht bis zu 400 Meter ins Inntal abfallende Kalksteinwand blickt auf eine lange alpine Historie zurück – bereits Kaiser Maximilian I. soll hier der Legende nach der Felswand entstiegen sein. Der direkt am Wandfuß gelegene, vom Österreichischen Alpenverein (ÖAV) liebevoll gewartete Klettergarten bietet mit seinen sonnigen Kalkplatten und festen Griffen die perfekte Arena für Schnupperkletterkurse am echten Naturfels. Unter Anleitung staatlich geprüfter Berg- und Kletterführer erlernen Einsteiger die elementaren Grundbegriffe der Seiltechnik, das Einbinden mit dem Achterknoten, Toprope-Sicherungsformen sowie effiziente Tritt- und Greiftechniken.\n\n### Route & Anforderungen\nDer Schnupperkurs findet in den gut abgesicherten Anfängersektoren im unteren Wandbereich (Schleicherplatte und Vorbau) statt, wo griffige Routen in den Schwierigkeitsgraden 3 bis 5 (UIAA-Skala) beste Lernerfolge garantieren. Nach einer gründlichen Sicherheitseinweisung am Boden steigen die Teilnehmer gesichert im Nachstieg (Toprope) über kompakte Kalkplatten empor. Die reine Kursdauer am Fels beträgt circa drei Stunden. Es sind keinerlei Vorkenntnisse im Klettern erforderlich; eine normale Grundfitness und Schwindelfreiheit genügen. Ausrüstung wie Klettergurt, Helm, Sicherungsgeräte und Seile wird gestellt; Kletterschuhe können vorab geliehen werden. Feste Sportschuhe für den Zustieg sind obligatorisch. Kinder ab circa acht Jahren können in Begleitung teilnehmen. Hunde können am Wandfuß angeleint warten (Helm für Begleitpersonen am Wandfuß wegen gelegentlichen Steinschlags empfohlen).\n\n### Anreise\nVom Innsbrucker Stadtzentrum erreicht man die Martinswand über die Bundesstraße B171 in Richtung Zirl in circa zehn Fahrminuten. Direkt an der B171 unterhalb der Martinswand (nahe dem Gasthof Martinsbühel / Abzweigung Zirl Ost) befinden sich Parkbuchten für Kletterer. Mit den öffentlichen Verkehrsmitteln nutzt man die S-Bahn-Linie S4 oder S5 von Innsbruck Hauptbahnhof bis zum Bahnhof Zirl (Fahrzeit 12 Minuten) oder den Regionalbus 4123 des VVT bis zur Haltestelle „Zirl Martinsbühel“. Vom Parkplatz führt ein ausgeschilderter Pfad in nur 5 bis 10 Minuten direkt zum Wandfuß.\n\n### Tipps\nAufgrund der sonnigen Südlage wärmt sich der Fels selbst an milden Frühjahrs- und Herbsttagen schnell auf. An heißen Hochsommertagen empfiehlt sich jedoch ein Kursstart in den kühlen Morgenstunden oder am späten Nachmittag. Bringen Sie ausreichend Trinkwasser und Sonnenschutz mit, da an der Felswand kaum Schatten vorhanden ist. Nach dem Kletterkurs locken das nahegelegene Zirler Ortszentrum mit gemütlichen Gasthöfen oder ein Abstecher zum Kletterzentrum Innsbruck (KI) für wetterunabhängiges Hallentraining.",
   "preis": 59,
   "dauer": "3 Stunden",
@@ -19,10 +19,10 @@
     "alpenverein",
     "abenteuer"
   ],
-  "koordinaten": [
-    47.2714,
-    11.2678
-  ],
+  "koordinaten": {
+    "lat": "47.2572",
+    "lng": "11.3323"
+  },
   "status": "published",
   "link": "https://www.innsbruck.info/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Schnupperklettern am ÖAV-Klettergarten Martinswand bei Zirl / Innsbruck",
   "saison": "April bis Oktober (trockene Witterung)",
   "familie": true,
-  "hunde": true,
   "sources": [
     "https://www.innsbruck.info/sport/sommer/klettern/klettergaerten/detail/infrastruktur/klettergarten-martinswand-zirl.html",
     "https://www.alpenverein.at/innsbruck/bergsport/klettern/",

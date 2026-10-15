@@ -5,7 +5,7 @@
   "farbe": "var(--brown)",
   "kategorie": "winter",
   "ort": "Längenfeld",
-  "region": "Ötztal",
+  "region": "oetztal",
   "beschreibung": "### Überblick\nEine traditionelle Pferdeschlittenfahrt durch die tief verschneite Winterlandschaft des Ötztals gehört zu den stimmungsvollsten Naturerlebnissen abseits des Pistentrubels. Eingehüllt in dicke Wolldecken und Schaffelle gleiten Gäste im ruhigen Schritttempo der kräftigen Tiroler Haflinger oder Noriker durch das weite Talbecken von Längenfeld oder über das sonnige Hochplateau von Niederthai. Das gleichmäßige Läuten der Schlittenglocken und das Knirschen der Kufen im frischen Pulverschnee schaffen eine unvergleichliche Atmosphäre der Entschleunigung. Entlang glitzernder Wiesen, vereister Bergwehre und historischer Ötztaler Holzhäuser eröffnet sich ein freier Blick auf die schneebedeckten Dreitausender der Stubaier und Ötztaler Alpen.\n\n### Route & Anforderungen\nDie klassischen Fahrten starten an ausgewählten Treffpunkten im Talboden von Längenfeld (beispielsweise beim Fischbach oder nahe dem Reitstall) bzw. im romantischen Bergdorf Niederthai auf 1.550 Metern Seehöhe. Die Rundkurse führen über eigens präparierte Winterwander- und Feldwege entlang der Ötztaler Ache oder durch das verschneite Horlachtal. Die Fahrdauer beträgt je nach gewählter Route zwischen einer Stunde und 90 Minuten. Die Aktivität erfordert keinerlei sportliche Voraussetzungen und ist für alle Altersstufen – vom Kleinkind bis zu Senioren – uneingeschränkt geeignet. Warme Winterkleidung, Handschuhe, Mütze und festes Schuhwerk sind jedoch unverzichtbar, da man bei frostigen Temperaturen still sitzt. Hunde können aus Rücksicht auf die Zugpferde und die Sicherheit der Passagiere nicht auf dem Schlitten mitfahren.\n\n### Anreise\nDie Anreise mit dem Pkw erfolgt über die Inntalautobahn A12 bis zur Ausfahrt Ötztal und weiter auf der Ötztalstraße B186 bis nach Längenfeld (ca. 25 km). Wer nach Niederthai möchte, biegt bei Umhausen auf die Niederthaier Landesstraße ab. Öffentliche Parkplätze stehen im Ortszentrum von Längenfeld sowie am Sportzentrum zur Verfügung. Mit öffentlichen Verkehrsmitteln fährt man per ÖBB bis zum Bahnhof Ötztal-Bahnhof und steigt dort in den im Halbstundentakt verkehrenden Linienbus 4194 (Ötztaler Verkehrsgesellschaft) direkt bis zur Haltestelle „Längenfeld Kirche“ um.\n\n### Tipps\nAufgrund der begrenzten Anzahl an Schlitten und der hohen Nachfrage in den Wintermonaten (insbesondere rund um Weihnachten, Neujahr und die Semesterferien) ist eine telefonische Vorabreservierung beim jeweiligen Kutscher oder über das Infobüro von Ötztal Tourismus zwingend erforderlich. Ein besonderes Highlight sind abendliche Dämmerungsfahrten mit Fackeln oder Laternen, die sich ideal mit einem Besuch der nahegelegenen Therme Aqua Dome in Längenfeld oder einem traditionellen Fondue-Abend in einem Ötztaler Gasthof verbinden lassen.",
   "preis": 55,
   "dauer": "1,5 Stunden",
@@ -19,10 +19,10 @@
     "romantik",
     "haflinger"
   ],
-  "koordinaten": [
-    47.0708,
-    10.9708
-  ],
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
   "status": "published",
   "link": "https://www.oetztal.com/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Romantische Pferdeschlittenfahrt im Ötztal – Längenfeld & Niederthai",
   "saison": "Dezember bis März (bei entsprechender Schneelage)",
   "familie": true,
-  "hunde": false,
   "sources": [
     "https://www.oetztal.com/de/winter/abseits-der-pisten/pferdeschlittenfahrten.html",
     "https://www.oetztal.com/de/orte/laengenfeld.html",

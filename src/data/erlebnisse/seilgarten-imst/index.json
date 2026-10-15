@@ -5,7 +5,7 @@
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Imst",
-  "region": "Outdoorregion Imst",
+  "region": "imst",
   "beschreibung": "### Überblick\nDie Outdoorregion Imst am Zusammenfluss von Inn und Gurglbach ist als europäisches Kletter- und Outdoor-Mekka weit über die Grenzen Österreichs hinaus bekannt. Neben dem weltberühmten Kletterzentrum Imst mit seiner spektakulären Outdoor-Kletterwand „Sonnendeck“ und den alpinen Klettergärten in Hoch-Imst am Fuße des mächtigen Muttekopfs bietet die Region erstklassige Seil- und Kletterparcours für Abenteurer jeden Alters. Balancieren über schwankende Hängebrücken, rasante Seilrutschen (Flying Fox) durch duftende Zirben- und Bergfichtenkronen und das Überwinden wackeliger Holzbalken fordern Geschicklichkeit, Koordination, Kraft und Schwindelfreiheit. Die Parcours und Klettersteig-Übungsbereiche sind harmonisch in die alpine Wald- und Felslandschaft des Tiroler Oberlands integriert und bieten sowohl für neugierige Einsteiger und Familien mit Kindern als auch für erfahrene Klettersportler spannende Herausforderungen in sicherer Höhe unter freiem Himmel.\n\n### Route & Anforderungen\nDas Klettererlebnis umfasst abwechslungsreiche Parcours mit unterschiedlichen Schwierigkeitsgraden von leicht und spielerisch bis hin zu sportlich anspruchsvoll. Für die kleinsten Besucher (ab etwa vier bis sechs Jahren) stehen bodennahe Kinderparcours zur Verfügung, während fortgeschrittene Jugendliche und Erwachsene in Höhen von 6 bis über 12 Metern zwischen hölzernen Plattformen balancieren. Das durchgängige Sicherungssystem garantiert lückenlose Sicherheit; ein unbeabsichtigtes Aushängen ist technisch vollständig ausgeschlossen. Vor dem Start erfolgt eine obligatorische Sicherheitseinweisung und Gurtanpassung durch zertifizierte Trainer. Mitzubringen sind bequeme sportliche Kleidung, feste Sportschuhe oder Trekkingschuhe mit griffiger Profilsohle sowie Fahrrad- oder Kletterhandschuhe für zusätzlichen Griffkomfort am Stahlseil. Die Aktivitätsdauer liegt bei rund zweieinhalb bis drei Stunden. Hunde dürfen auf den Spazierwegen des Außengeländes angeleint mitgeführt werden, jedoch aus Sicherheitsgründen nicht auf die Kletterelemente.\n\n### Anreise\nImst liegt verkehrsgünstig direkt an der Inntalautobahn A12. Autofahrer nehmen die Autobahnausfahrt Imst und folgen der gut beschilderten Route in Richtung Kletterzentrum Imst bzw. hinauf nach Hoch-Imst zu den Imster Bergbahnen. An den Talstationen und Sportzentren stehen ausreichend kostenfreie Pkw-Parkplätze zur Verfügung. Mit öffentlichen Verkehrsmitteln reisen Sie bequem per ÖBB-Fernverkehrszug bis zum Bahnhof Imst-Pitztal. Von dort verkehrt der regionale Stadtbus regelmäßig direkt ins Stadtzentrum sowie zur Haltestelle „Imster Bergbahnen“ in Hoch-Imst.\n\n### Tipps\nVerbinden Sie den Seilgarten- und Kletterausflug in Hoch-Imst mit einer rasanten Fahrt auf dem spektakulären Alpine Coaster, der mit über 3,5 Kilometern Länge und 500 Höhenmetern als längste Alpen-Achterbahn der Welt gilt. Für Familien empfiehlt sich außerdem eine Wanderung durch die wildromantische Rosengartenschlucht, die direkt im historischen Stadtzentrum von Imst beginnt und über gesicherte Stege und Felstreppen hinauf nach Hoch-Imst führt. Bei wechselhaftem Wetter bietet das Kletterzentrum Imst wetterunabhängigen Kletterspaß auf weltmeisterlichem Niveau in der Halle.",
   "preis": 29,
   "dauer": "3 Stunden",
@@ -19,10 +19,10 @@
     "outdoor",
     "abenteuer"
   ],
-  "koordinaten": [
-    47.2411,
-    10.7422
-  ],
+  "koordinaten": {
+    "lat": "47.2382",
+    "lng": "10.7419"
+  },
   "status": "published",
   "link": "https://www.imst.at/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Kletter- und Hochseilgarten-Erlebnis Region Imst & Hoch-Imst",
   "saison": "Mai bis Oktober",
   "familie": true,
-  "hunde": true,
   "sources": [
     "https://www.imst.at/erlebnisse/sommer/klettern",
     "https://www.imster-bergbahnen.at/de/sommer/klettern/",

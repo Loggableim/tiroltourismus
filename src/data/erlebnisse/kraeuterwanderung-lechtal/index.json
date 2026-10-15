@@ -5,7 +5,7 @@
   "farbe": "var(--green)",
   "kategorie": "natur",
   "ort": "Elbigenalp",
-  "region": "Naturpark Tiroler Lech",
+  "region": "lechtal",
   "beschreibung": "### Überblick\nDie geführte Kräuterwanderung im Naturpark Tiroler Lech entführt Naturliebhaber in eine der artenreichsten Fluss- und Auenlandschaften ganz Mitteleuropas. Der Tiroler Lech ist der letzte unregulierte Wildfluss der Nordalpen, dessen weitläufige Schotterbänke, Auwälder und sonnenexponierte Hänge einen einzigartigen Lebensraum für über 1.100 Blütenpflanzenarten bilden. Unter der fachkundigen Leitung der zertifizierten „Lechtaler Kräuterhexen“ entdecken Teilnehmer auf sanften Spazierwegen heimische Heil- und Wildkräuter wie Arnika, Johanniskraut, Schafgarbe, Thymian, Blutwurz und Frauenmantel. Das traditionelle Kräuterwissen des Lechtals, das eng mit der alpinen Volksheilkunde und dem jahrhundertealten Naturverständnis der Bergbauern verwurzelt ist, wird hier lebendig vermittelt. Die Exkursion verbindet botanische Erkundung mit praktischen Bestimmungsmerkmalen und zeigt, wie man die gesammelten Pflanzen nachhaltig zu Tees, Tinkturen, Heilsalben oder aromatischen Aufstrichen verarbeitet.\n\n### Route & Anforderungen\nZentraler Ausgangspunkt der Kräuterwanderung ist Elbigenalp, der historische Hauptort des Lechtals und Wiege der traditionellen Schnitzkunst. Von dort führt die Route entlang des liebevoll gestalteten Kräuterrundwegs am Ölberg oder über naturnahe Aupfade direkt am Ufer des Lechs. Die Wegstrecke beträgt rund 3,5 bis 4,5 Kilometer bei einem geringen Höhenunterschied von maximal 100 Höhenmetern. Die reine Gehzeit liegt bei etwa 1,5 Stunden, unterbrochen von regelmäßigen Schau-, Riech- und Verkostungsstopps, sodass die Gesamtdauer rund drei Stunden beträgt. Die Wege sind leicht begehbar (blauer Wanderweg) und eignen sich hervorragend für Familien mit Kindern sowie für rüstige Senioren. Festes, bequemes Schuhwerk, wetterangepasste Kleidung und eine wiederbefüllbare Trinkflasche werden empfohlen. Angeleinte Hunde sind bei den Freilandführungen im Naturpark willkommen.\n\n### Anreise\nMit den öffentlichen Verkehrsmitteln reisen Sie per Bahn bis zum Bahnhof Reutte in Tirol oder zum Grenzbahnhof Füssen im Allgäu. Von dort verkehrt die regionale Postbuslinie 110 des VVT regelmäßig im Takt durch das gesamte Lechtal bis zur Haltestelle „Elbigenalp Gemeindeamt“. Mit dem Pkw erfolgt die Anreise von Norden über Reutte auf der Lechtalstraße B198 oder von Westen über den Arlbergpass und Warth (während der Sommermonate). In Elbigenalp stehen im Dorfzentrum sowie an den Bergbahnen öffentliche Parkmöglichkeiten zur Verfügung.\n\n### Tipps\nInhaber der Lechtal Aktiv Card profitieren von kostenlosen oder stark ermäßigten Teilnahmetarifen bei den vom Naturpark angebotenen Naturführungen. Nach der Wanderung lohnt sich ein Besuch des kleinen Schaugartens unterhalb der Ölbergkapelle sowie die Einkehr in einem der traditionsreichen Gasthöfe in Elbigenalp, wo saisonale Spezialitäten mit frischen Lech-Kräutern auf der Speisekarte stehen. In der örtlichen Kräuterwerkstatt können handgemachte Kräutersalze, Tees und Naturkosmetik als authentische Souvenirs erworben werden. Für die Teilnahme an den geführten Gruppen ist eine Voranmeldung beim Tourismusverband Lechtal bis zum Vortag erforderlich.",
   "preis": 45,
   "dauer": "3 Stunden",
@@ -19,10 +19,10 @@
     "tiroler-lech",
     "wildkraeuter"
   ],
-  "koordinaten": [
-    47.2917,
-    10.4394
-  ],
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
   "status": "published",
   "link": "https://www.lechtal.at/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Geführte Kräuterwanderung im Naturpark Tiroler Lech",
   "saison": "Mai bis Oktober (Vegetationszeit)",
   "familie": true,
-  "hunde": true,
   "sources": [
     "https://www.lechtal.at/entdecken-erleben/kultur-tradition/die-lechtaler-kraeuterhexen/",
     "https://www.lechtal.at/entdecken-erleben/sommer/kraeuterlehrpfad-oelberg/",

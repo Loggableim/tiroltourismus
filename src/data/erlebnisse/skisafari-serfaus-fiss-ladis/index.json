@@ -5,7 +5,7 @@
   "farbe": "var(--tirol-red)",
   "kategorie": "winter",
   "ort": "Serfaus-Fiss-Ladis",
-  "region": "Serfaus-Fiss-Ladis",
+  "region": "serfaus-fiss-ladis",
   "beschreibung": "### Überblick\nDas Skigebiet Serfaus-Fiss-Ladis auf dem Tiroler Sonnenplateau zählt mit 214 zusammenhängenden Pistenkilometern und 68 modernen Liftanlagen zu den vielfach prämierten Spitzen-Skidestinationen der Welt. Die „Skisafari Serfaus-Fiss-Ladis XXL“ beschreibt die ultimative tagesfüllende Skirunde, die Skibegeisterte von den hochalpinen Pulverschneehängen des Masnergebiets am westlichen Ende bis hinunter zu den sonnigen Talabfahrten nach Fiss und Ladis im Osten führt. Die Rundtour überwindet tausende Höhenmeter auf schneesicheren Hängen zwischen 1.200 und 2.828 Metern Seehöhe. Weite Carvingautobahnen, fordernde Steilhänge wie die legendäre Direttissima mit bis zu 70 Prozent Gefälle und Genussabfahrten durch lichte Zirbenwälder machen diese Safari zu einem unvergesslichen Wintersporttag.\n\n### Route & Anforderungen\nDie Tour startet idealerweise frühmorgens an der Komperdellbahn in Serfaus. Über Alpkopf, Lazid (2.346 m) und die Pezidbahn (2.770 m) geht es zügig hinauf ins hochalpine Masnergebiet. Nach weiten Schwüngen am Mindersjoch (2.684 m) und der roten Masnerabfahrt führt die Route über den Arrezjoch-Sattel zurück in Richtung Fiss. Über die Schöngampbahn und das Schönjoch (2.436 m) gelangt man zur weltberühmten Frommesabfahrt (Piste Nr. 7), die auf zehn Kilometern Länge und über 1.000 Höhenmetern bis zur Talstation in Fiss hinabgleitet. Die Safari richtet sich an geübte Skifahrer mit solider Kondition für einen sechsstündigen Skitag auf roten und optional schwarzen Pisten. Komplette alpine Skiausrüstung, wetterfeste Skibekleidung und Skihelm sind erforderlich. Hunde dürfen aus Sicherheitsgründen auf Pisten und Sesselbahnen nicht mitgenommen werden.\n\n### Anreise\nSerfaus-Fiss-Ladis ist über die Inntalautobahn A12 (Ausfahrt Reschenpass/Knoten Oberinntal) und die Bundesstraße B180 bis Ried im Oberinntal erreichbar, wo die Landesstraße L19 auf das Plateau nach Ladis, Fiss und Serfaus abzweigt. In Fiss (Waldbahn-Parkplatz) und Ladis (Sonnenbahn) stehen großzügige Tagesparkplätze direkt an den Seilbahnen zur Verfügung. Bahnreisende fahren mit der ÖBB bis zum Fernverkehrsbahnhof Landeck-Zams und nutzen die regelmäßig verkehrende Postbuslinie 220, die alle drei Dörfer des Plateaus direkt anbindet.\n\n### Tipps\nBeginnen Sie Ihre Skisafari pünktlich um 08:30 Uhr bei Liftöffnung am Masner, um die besten Bedingungen auf den frisch präparierten Pisten zu nutzen. Für die Mittagsrast empfiehlt sich die Frommes Alp an der Frommesabfahrt, berühmt für ihren ofenfrischen Kaiserschmarrn und die Zirbenstube. Über das Online-System Skiline können Sie abends mit der Skipassnummer Ihre absolvierten Höhenmeter, Liftfahrten und Pistenkilometer kostenlos grafisch auswerten und mit Freunden teilen.",
   "preis": 89,
   "dauer": "6 Stunden (Tagestour)",
@@ -19,10 +19,10 @@
     "masner",
     "frommes"
   ],
-  "koordinaten": [
-    47.0567,
-    10.6083
-  ],
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
   "status": "published",
   "link": "https://www.serfaus-fiss-ladis.at/",
   "bilder": [],
@@ -30,7 +30,6 @@
   "titel": "Tagessafari Serfaus-Fiss-Ladis: Vom Masner bis zur Frommesabfahrt",
   "saison": "Dezember bis April (Winterbetrieb der Bergbahnen)",
   "familie": true,
-  "hunde": false,
   "sources": [
     "https://www.serfaus-fiss-ladis.at/de/Winterurlaub/Skigebiet",
     "https://www.serfaus-fiss-ladis.at/de/Winterurlaub/Bergbahnen/Tickets-Preise",

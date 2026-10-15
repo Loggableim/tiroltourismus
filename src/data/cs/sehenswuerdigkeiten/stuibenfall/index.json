@@ -1,17 +1,17 @@
 {
-  "name": "Stuibenfall",
+  "name": "Stuibenfall Umhausen",
   "slug": "stuibenfall",
   "status": "published",
   "region": "imst",
   "ort": "Umhausen",
   "kategorie": "natur",
   "kurzbeschreibung": "Nejvyšší vodopád Tirols (159 m) v Ötztal – dunící přírodní show s Aussichtsplattform a Klettersteig.",
-  "beschreibung": "<p>Der <strong>Stuibenfall</strong> liegt in der Gemeinde Umhausen im Ötztal und zählt mit einer Fallhöhe von rund 159 Metern zu den höchsten Wasserfällen Tirols. Seine Entstehung verdankt er einem historischen Felssturz, der den Stuibenbach aufstaute. Ein gut ausgebauter Wanderweg, der <strong>Stuibenfallweg</strong>, führt entlang des Wasserfalls und ermöglicht an mehreren Aussichtspunkten Blicke auf die fallenden Wassermassen. Eine über die Schlucht führende <strong>Hängebrücke</strong> bietet eine besondere Perspektive auf den Wasserfall und die umliegende Landschaft. Darüber hinaus führt der Stuibenfall-Klettersteig direkt neben dem Fall entlang und ist für geübte Kletterer zugänglich. Der Wasserfall ist ganzjährig erreichbar, wobei der Wanderweg im Winter teils gesperrt sein kann.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Vodopád <strong>Stuibenfall Umhausen</strong> v údolí Ötztal je s výškou 159 metrů nejvyšším a nejmohutnějším vodopádem v Tyrolsku. Voda burácí přes dva skalní stupně do hloubky. Návštěvníci mohou vystoupat podél vodní stěny po unikátní visuté ocelové konstrukci čítající 700 schodů a přejít 80 metrů dlouhý visutý most přímo nad propastí.</p><h2>Trasa a náročnost</h2><p>Výchozím bodem je parkoviště u archeoskanzenu Ötzi-Dorf v Umhausenu. Nenáročná chůze k patě vodopádu (30 minut, T1) a následný výstup po visutých schodech do Niederthai (převýšení 350 m, 1,5 až 2 hodiny chůze, obtížnost T2). Podél vodopádu vede oblíbená ferrata (obtížnost C). Pevná obuv nutná. Roštové schody nejsou vhodné pro psy (k dispozici kotce u vstupu).</p><h2>Příjezd a doprava</h2><p>Vlakem do stanice Ötztal a autobusem 320 do Umhausenu. Autem po dálnici A12 (sjezd Ötztal) po B186 na parkoviště u Ötzi-Dorfu.</p><h2>Tipy</h2><p>Zažijte kouzelné noční osvětlení vodopádu každou středu v létě až do půlnoci a navštivte pravěkou vesničku Ötzi-Dorf a dravé ptáky v přilehlém parku dravců.</p>",
   "emoji": "💦",
   "farbe": "#2196F3",
   "hoehe": "1.400 m",
-  "dauer": "1–2 Stunden",
-  "preis": "Kostenlos; Klettersteig-Ausrüstung ab 15 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Bischoffsplatz ca. 5–7 € pro Tag)",
   "tags": [
     "wasserfall",
     "natur",
@@ -20,11 +20,20 @@
     "aussicht"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.stuibenfall.info",
+  "webseite": "https://www.oetztal.com/stuibenfall",
   "koordinaten": {
     "lat": "47.1500",
     "lng": "10.9167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Mai bis Oktober (während der Wintermonate Treppenanlage gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://www.oetztal.com/stuibenfall",
+    "https://de.wikipedia.org/wiki/Stuibenfall",
+    "https://www.umhausen.com/",
+    "https://www.oetztal.com/",
+    "https://www.vvt.at/"
+  ]
 }

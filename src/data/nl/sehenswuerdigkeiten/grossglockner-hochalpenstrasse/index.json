@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Heiligenblut",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Een van de mooiste Alpenwegen van Europa met 36 bochten en adembenemende panoramische uitzichten op de hoogste berg van Oostenrijk.",
-  "beschreibung": "<p>Die <strong>Großglockner Hochalpenstraße</strong> liegt in der Gemeinde <strong>Heiligenblut</strong> in <strong>Tirol</strong>. Sie verbindet das Bundesland Salzburg mit Osttirol und quert den <strong>Nationalpark Hohe Tauern</strong>. Der höchste Punkt der Strecke ist das <strong>Hochtor</strong> auf 2.504 Metern. Entlang der Straße bieten Aussichtsplattformen den Blick auf den <strong>Großglockner</strong> und die <strong>Pasterze</strong>. Ein zentraler Aussichtspunkt ist die <strong>Kaiser-Franz-Josefs-Höhe</strong> mit Ausstellungen zur Nationalparkregion. Die Mautstraße ist in der Regel von Mai bis Oktober geöffnet. Besucher erwartet eine hochalpine Gebirgslandschaft.</p>",
+  "kurzbeschreibung": "De Großglockner Hochalpenstraße leidt naar 2.504 m hoogte: Oostenrijks hoogste berg (3.798 m), Kaiser-Franz-Josefs-Höhe, Pasterze en alpien ingenieursmeesterschap.",
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Großglockner Hochalpenstraße</strong> is het beroemdste alpiene wegmonument van Oostenrijk en behoort tot de meest spectaculaire panoramawegen ter wereld. Ze doorkruist de hoofdkam van de Hohe Tauern en verbindt de deelstaat Salzburg met Osttirol en Karinthië via het Hochtor op 2.504 meter hoogte. Ingebed in het <em>Nationalpark Hohe Tauern</em> leidt het 48 kilometer lange traject rechtstreeks naar het hart van de Glocknergroep aan de voet van de <strong>Großglockner</strong> (3.798 m), de hoogste top van de Republiek Oostenrijk. Jaarlijks betovert dit beschermde meesterwerk honderdduizenden bezoekers.</p><h2>Geschiedenis & ingenieurskunst</h2><p>Het tracé volgt oeroude paden: al in de bronstijd en de Romeinse tijd maakten handelaren gebruik van het muilezelpad over het Hochtor, zoals archeologische vondsten van een Romeins Herculesbeeldje bewijzen. In de crisisjaren van de jaren 1930 besloot de Oostenrijkse bondsregering tot de aanleg van een moderne panoramaweg voor werkverschaffing en ter bevordering van het toerisme. Onder leiding van de begaafde civiel ingenieur <strong>Franz Wallack</strong> hakten tussen 1930 en 1935 meer dan 3.000 arbeiders de weg uit het steile rotslandschap. Op 3 augustus 1935 werd de hoogalpiene weg feestelijk geopend. Wallack ontwierp het traject met 36 haarspeldbochten harmonieus in het hooggebergtelandschap. Het absolute hoogtepunt aan de aftakking is de <strong>Kaiser-Franz-Josefs-Höhe</strong> op 2.369 meter boven zeeniveau: vernoemd naar het keizerlijke bezoek van Frans Jozef I in 1856, biedt het vier verdiepingen tellende bezoekerscentrum tentoonstellingen over glaciologie, de Glockner-bioscoop, de Wilhelm-Swarovski-Beobachtungswarte en een adembenemend uitzicht omlaag op de <em>Pasterze</em>, met circa acht kilometer de langste gletsjer van Oostenrijk.</p><h2>Bezoek & bereikbaarheid</h2><p>De Großglockner Hochalpenstraße is seizoensgebonden dagelijks berijdbaar van begin mei tot begin november ('s nachts geldt een officieel rijverbod). Openingstijden kassa's: juni tot augustus dagelijks 05:30 tot 21:00 uur (laatste toegang 20:15 uur); mei en vanaf september dagelijks van 06:00 tot 19:30/20:00 uur. Toltarieven dagkaart (stand seizoen 2025/2026): personenauto € 46,50 (elektrische auto met korting € 40,00), motorfiets € 36,50 (elektrische motorfiets € 32,50). Bereikbaarheid per auto: vanuit het noorden via Zell am See/Bruck over de B107 via Ferleiten; vanuit het zuiden via Lienz in Osttirol en Heiligenblut. Met het openbaar vervoer: in de zomermaanden rijden er excursiebussen (Glocknerbus) vanaf Lienz en Zell am See rechtstreeks naar de Kaiser-Franz-Josefs-Höhe.</p><h2>Tips</h2><p>Het moderne bezoekerscentrum op de Kaiser-Franz-Josefs-Höhe en de parkeergarage zijn drempelvrij uitgerust met liften; de uitzichtterrassen zijn toegankelijk voor rolstoelen en kinderwagens. Bekijk vanaf de uitkijkplatforms de tamme alpenmarmotten en steenbokken. Neem ook in het hoogseizoen wind- en weerbestendige kleding mee, aangezien op hoogtes boven 2.300 meter snelle weersomslagen kunnen optreden.</p>",
   "emoji": "🏔️",
   "farbe": "#4CAF50",
   "hoehe": "2.576 m (Hochtor)",
   "dauer": "Halbtag",
-  "preis": "43 € pro Fahrzeug",
+  "preis": "PKW Tageskarte 46,50 € (E-PKW 40,00 €), Motorrad 36,50 €",
   "tags": [
     "panoramaweg",
     "uitzicht",
@@ -19,12 +19,18 @@
     "grootglockner",
     "natuur"
   ],
-  "oeffnungszeiten": "Anfang Mai bis Ende Oktober, täglich 6:00–20:00",
+  "oeffnungszeiten": "Mai–Nov täglich ab 05:30/06:00 Uhr (letzte Einfahrt ca. 45 Min vor Nachtsperre)",
   "webseite": "https://www.grossglockner.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "12.8333"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.grossglockner.at",
+    "https://www.nationalpark.at",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner-Hochalpenstra%C3%9Fe",
+    "https://de.wikipedia.org/wiki/Pasterze"
+  ]
 }

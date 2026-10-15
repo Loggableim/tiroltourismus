@@ -5,8 +5,8 @@
   "region": "achensee",
   "ort": "Pertisau",
   "kategorie": "natur",
-  "kurzbeschreibung": "Největší jezero Tirols s křišťálově čistou vodou, obklopené strmými skalními stěnami Karwendels – ráj pro vodní sporty a turistiku.",
-  "beschreibung": "Der Achensee ist mit einer Fläche von 6,8 km² und einer Tiefe von 133 m der größte und einer der saubersten Seen Tirols. Sein smaragdgrünes, klares Wasser erreicht im Sommer angenehme Badetemperaturen. Der See ist umgeben von der imposanten Karwendel-Bergkulisse und bietet ideale Bedingungen für Segeln, Surfen, Tauchen und Stand-up-Paddling. Die <strong>Achensee-Schifffahrt</strong> verbindet die Orte Pertisau, Maurach und Seespitz. Ein Uferweg lädt zu ausgedehnten Spaziergängen mit herrlichen Panoramablicken ein.",
+  "kurzbeschreibung": "Největší jezero v Tyrolsku s křišťálově čistou vodou, obklopené strmými skalními stěnami pohoří Karwendel – ráj pro vodní sporty a pěší turistiku.",
+  "beschreibung": "<h2>Přehled</h2><p><strong>Achensee</strong> je s rozlohou 6,8 km², délkou 9,4 km a maximální hloubkou 133 metrů největším přírodním jezerem v Tyrolsku a jedním z nejčistších alpských jezer v Rakousku. Leží v nadmořské výšce 929 metrů mezi pohořím Karwendel na západě a pohořím Rofan na východě a lidově se mu často přezdívá „Tyrolské moře“.</p><h2>Historie</h2><p>Achensee vzniklo přibližně před 20 000 lety na konci würmského zalednění: ledovec Achentalgletscher vyhloubil tektonický příkop mezi pohořími Karwendel a Rofan. Při ústupu ledovců nahrnuly ledovce v údolích Inn a Zillertal u jižního vstupu do údolí zhruba 150 metrů vysokou morénovou štěrkovou hráz, takzvaný Achenseedamm. Ta zadržuje vodu jezera a odděluje údolí Achental od údolí Inntal ležícího o 380 metrů níže. Původně jezero přirozeně odtékalo přes řeky Seeache a Isar směrem k Dunaji; od výstavby vodní elektrárny TIWAG-Achenseekraftwerk v roce 1927 je většina vody odváděna do údolí Inntal za účelem výroby elektřiny.</p><h2>Návštěva a doprava</h2><p>V vrcholném létě dosahuje povrchová teplota vody 18–20 °C, v mělkých břehových oblastech jako Strandbad Maurach až 22 °C. Ideální podmínky pro plachtění, windsurfing a kitesurfing zaručují spolehlivé termické větry (ráno mírný jižní vítr, odpoledne severní vítr o síle 3–5 Bft). Kromě toho je možné provozovat paddleboarding, potápění s viditelností až 15 metrů i jízdu na veslicích a elektročlunech. Od roku 1887 spojuje lodní doprava Achensee-Schifffahrt přístaviště Pertisau, Seespitz, Buchau, Gaisalm, Seehofkapelle a Scholastika. Autem: dálnice Inntalautobahn A12, sjezd Wiesing/Achensee/Zillertal, poté po silnici B181 zhruba 10 km do Maurach, Pertisau nebo Achenkirch. Veřejnou dopravou: vlaky ÖBB do stanice Jenbach, dále regionálním autobusem VVT linky 4080 k jezeru Achensee; v letní sezóně také historickou ozubnicovou železnicí Achenseebahn.</p><h2>Tipy</h2><p>Asfaltové pobřežní promenády v Pertisau a Maurach jsou rovinaté a bezbariérově přístupné. Pro příjezd z Německa: přes Holzkirchen – Tegernsee – Achenpass (B307/B181) se k jezeru Achensee dostanete bez dálniční známky a bez mýtného. Pro celodenní výletníky doporučujeme kombinovanou jízdenku parní železnicí Achenseebahn z Jenbachu s okružní plavbou po jezeře.</p>",
   "emoji": "🏞️",
   "farbe": "#2196F3",
   "hoehe": "929 m",
@@ -21,11 +21,15 @@
     "natur"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich; Schifffahrt: Mai–Okt",
-  "webseite": "https://www.achensee.info",
+  "webseite": "https://www.achensee.com",
   "koordinaten": {
     "lat": "47.4500",
     "lng": "11.7167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.achensee.com",
+    "https://de.wikipedia.org/wiki/Achensee"
+  ]
 }

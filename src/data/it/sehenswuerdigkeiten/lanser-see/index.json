@@ -5,13 +5,13 @@
   "region": "innsbruck",
   "ort": "Lans",
   "kategorie": "natur",
-  "kurzbeschreibung": "Lago da bagno idilliaco ai piedi del Patscherkofel, con acque cristalline, prato per sdraiarsi e uno splendido panorama montano.",
-  "beschreibung": "Der <strong>Lanser See</strong> liegt auf 992 m Höhe in der Gemeinde Lans, nur wenige Kilometer südöstlich von Innsbruck. Der natürliche Moorsee besticht durch sein kristallklares, türkisgrünes Wasser und die idyllische Lage am Fuße des Patscherkofels. Im Sommer lädt die große Liegewiese zum Sonnenbaden und Picknicken ein, während das warme Wasser zum Schwimmen und Plantschen einlädt. Ein Rundwanderweg führt um den gesamten See – ideal für einen entspannten Spaziergang. Das <strong>Seehof-Restaurant</strong> direkt am Ufer serviert Tiroler Spezialitäten und erfrischende Getränke mit Seeblick.",
+  "kurzbeschreibung": "Il Lanser See a 840 m ai piedi del Patscherkofel: idilliaco lago balneabile di torbiera vicino a Innsbruck con acque curative, prato solarium e Waldstraßenbahn.",
+  "beschreibung": "<h2>Panoramica</h2><p>Ricco di tradizione, il <strong>Lanser See</strong> è un pittoresco lago naturale di torbiera adagiato sul soleggiato altopiano a sud di Innsbruck, a soli sei chilometri dal capoluogo tirolese. Situato nel comune di Lans a un'altitudine di 840 metri ai piedi dell'imponente <strong>Patscherkofel</strong> (2.246 m), questo specchio d'acqua protetto copre una superficie di circa 12.000 m² (1,2 ettari) e raggiunge una profondità massima di circa 12 metri. Essendo il più antico e amato lago balneabile naturale della regione di Innsbruck, incanta con la sua eccellente qualità dell'acqua, la cornice boschiva idilliaca e una splendida vista sulle aspre pareti calcaree della Nordkette.</p><h2>Acque di torbiera, balneazione & natura</h2><p>Il Lanser See si è formato al termine dell'ultima era glaciale circa 15.000 anni fa come bacino di ghiaccio fossile rimasto intrappolato nel terreno dopo il ritiro dei ghiacciai della Inntal. Alimentato da sorgenti sotterranee, deve la sua tonalità scura dai riflessi verde smeraldo al fondale torboso. Quest'acqua ricca di ossigeno e leggermente torbosa si riscalda rapidamente nei mesi estivi fino a piacevoli temperature di 22-25 °C ed è considerata nella medicina naturale particolarmente benefica e rigenerante per la pelle. Già nella seconda metà del XIX secolo il lago divenne la meta di villeggiatura estiva prediletta della borghesia di Innsbruck. Il tradizionale stabilimento <strong>Strandbad Lanser See</strong> offre un ampio e curato prato prendisole ombreggiato da alberi secolari, pontili in legno, vasca per bambini, trampolino, noleggio di pedalò e stand-up paddle, nonché un'area naturista riservata sulla riva sud. Il ristorante con terrazza sul lago delizia gli ospiti con specialità regionali e rinfreschi.</p><h2>Visita & Come arrivare</h2><p>Lo Strandbad Lanser See è aperto tutti i giorni durante la stagione balneare, da metà maggio a inizio settembre, dalle 09:00 alle 19:00 (in piena estate con bel tempo fino alle 20:00); al di fuori della stagione balneare l'area del lago è liberamente accessibile per passeggiate e relax. Tariffe d'ingresso (stagione 2025/2026): biglietto giornaliero adulti 6,50 € (dalle 14:00 5,00 €, dalle 17:00 3,50 €), ragazzi e studenti 5,00 €, bambini (6–15 anni) 3,50 €, bambini sotto i 6 anni gratis. Un fascino nostalgico accompagna l'arrivo con i mezzi pubblici: la storica linea tranviaria <strong>Straßenbahnlinie 6</strong> (la celebre e romantica „Waldstraßenbahn“ o Igler) sale da Innsbruck Bergisel tra fitti boschi di abeti rossi direttamente alla fermata <em>Lanser See</em>; in alternativa, la linea bus regionale VVT 540 parte da Innsbruck Hauptbahnhof. In auto: da Innsbruck via Aldrans o Igls fino a Lans; parcheggi a pagamento sono disponibili a ridosso del lago.</p><h2>Consigli</h2><p>Il lungolago, il ristorante e l'accesso principale al prato sono pianeggianti e completamente privi di barriere architettoniche per passeggini e sedie a rotelle. Concedetevi una passeggiata attorno alla vicina torbiera Lanser Moor (monumento naturale protetto) o abbinate la giornata di lago a una salita in funivia sul Patscherkofel.</p>",
   "emoji": "🏞️",
   "farbe": "#00BCD4",
   "hoehe": "992 m",
   "dauer": "Halbtag",
-  "preis": "Kostenlos (Naturbadestelle)",
+  "preis": "Tageskarte Strandbad Erwachsene 6,50 €, Kinder 3,50 €",
   "tags": [
     "natura",
     "lago",
@@ -20,12 +20,18 @@
     "famiglia",
     "escursione"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich (Badesaison: Mai–Sep)",
-  "webseite": "https://www.lans.at",
+  "oeffnungszeiten": "Mitte Mai bis Anfang Sep täglich 09:00–19:00/20:00 Uhr; außerhalb frei zugänglich",
+  "webseite": "https://www.lansersee.at",
   "koordinaten": {
     "lat": "47.2375",
     "lng": "11.4331"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lansersee.at",
+    "https://www.innsbruck.info/sehenswuerdigkeiten/sightseeing/seen-und-wasserwelten/detail/infrastruktur/lanser-see-lans.html",
+    "https://de.wikipedia.org/wiki/Lanser_See",
+    "https://www.tirol.at/aktivitaeten/sport/baden/bademoeglichkeiten/lanser-see"
+  ]
 }

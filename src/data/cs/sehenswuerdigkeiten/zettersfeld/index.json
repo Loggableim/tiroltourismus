@@ -1,9 +1,9 @@
 {
-  "name": "Zettersfeld",
+  "name": "Zettersfeld Sonnenbalkon Lienz",
   "slug": "zettersfeld",
   "region": "osttirol",
   "ort": "Lienz",
-  "kategorie": "sport",
+  "kategorie": "aussicht",
   "kurzbeschreibung": "Slunečné vysokohorské plateau Zettersfeld nad Lienz nabízí neporovnatelný panoramatický výhled na Lienzer Dolomiten a je rájem pro turisty i zimní sportovce.",
   "emoji": "⛰️",
   "farbe": "#5B8C5A",
@@ -14,10 +14,10 @@
     "panorama",
     "sport"
   ],
-  "dauer": "Halbtag bis Ganztag",
-  "preis": "Bergfahrt Erwachsene € 19,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Zettersfeld Berg- und Talfahrt ca. 24 €",
   "oeffnungszeiten": "Sommer- und Winterbetrieb",
-  "webseite": "https://www.zettersfeld.at/",
+  "webseite": "https://www.lienzer-bergbahnen.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,13 @@
     "lng": "12.7681"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zettersfeld</strong> – Die Zettersfeld ist eine der Top-Adressen für Action und Abenteuer in Tirol. Das sonnige Hochplateau Zettersfeld oberhalb von Lienz bietet ein unvergleichliches Panorama auf die Lienzer Dolomiten und ist ein Paradies für Wanderer und Wintersportler Das abwechslungsreiche Angebot reicht von actiongeladenen Outdoor-Aktivitäten bis zu entspannten Wellness-Stunden. Professionelle Guides und modernste Ausrüstung sorgen für Sicherheit und maximalen Spaß. Auch für das leibliche Wohl ist mit Restaurants und Snackbars bestens gesorgt. Eingebettet in die beeindruckende Berglandschaft der Region Osttirol, bietet die Zettersfeld nicht nur sportliche Herausforderungen, sondern auch eine grandiose Aussicht. Planen Sie ausreichend Zeit ein – die Zettersfeld wird Sie mit ihrer Schönheit und Vielfalt begeistern.</p>"
+  "beschreibung": "<h2>Přehled</h2><p>Hora <strong>Zettersfeld</strong> (2 213 m na Steinermandlu) je prosluněným vyhlídkovým balkonem tyčícím se nad městem Lienz ve Východním Tyrolsku. Lanovkou snadno dostupný vrchol nabízí úchvatné 360stupňové panorama Lienzkých Dolomit i skupiny Grossglockneru a naučnou stezku za svišti.</p><h2>Trasa a náročnost</h2><p>Pohodová rodinná trasa po náhorní plošině s pozorovací stanicí svišťů a horskými jezírky (1,5 hodiny chůze, snadná T1, pro kočárky). Horský okruh přes vrchol Goiselemandl (2 433 m) k chatě Naturfreundehütte (3 hodiny, 350 m převýšení, T2). Pohodlná turistická obuv nutná. Psi v lanovce povoleni na vodítku.</p><h2>Příjezd a doprava</h2><p>Vlakem do Lienzu a odtud městským busem k dolní stanici lanovky v Gaimbergu. Autem po silnici B100 na bezplatné parkoviště u lanovky.</p><h2>Tipy</h2><p>Užijte si výhled z dřevěných panoramatických lehátek na Steinermandlu a ochutnejte tradiční východotyrolské pečivo na horské chatě Faschingalm.</p>",
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "sources": [
+    "https://www.lienzer-bergbahnen.at/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Zettersfeld",
+    "https://www.vvt.at/"
+  ]
 }

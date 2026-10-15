@@ -6,12 +6,12 @@
   "ort": "Lienz",
   "kategorie": "natur",
   "kurzbeschreibung": "多洛米蒂山脉东蒂罗尔地区的典型山脉景观——徒步者、攀岩爱好者和自然爱好者的天堂。 *(HTML tags and place names remain unchanged as per instructions.)*",
-  "beschreibung": "<p>Die <strong>Lienzer Dolomiten</strong> sind ein Gebirgsstock in Osttirol, der sich südlich der Bezirkshauptstadt <strong>Lienz</strong> erhebt. Sie bilden den südlichen Abschluss des Lienzer Beckens und gehören geologisch zu den Gailtaler Alpen. Das Gebiet ist durch schroffe Felsformationen und tief eingeschnittene Täler geprägt, was es für <strong>Wanderer</strong> und <strong>Kletterer</strong> attraktiv macht. Markierte Routen wie der <strong>Dolomitensteig</strong> führen zu Aussichtspunkten wie der <strong>Laserz Alm</strong>. Geologisch bestehen die Gipfel vorwiegend aus <strong>dolomitischem Kalkstein</strong>. Besucher können im Sommer Wandertouren und im Winter Schneeschuhwanderungen unternehmen. Die Ausblicke von den Höhenzügen reichen über das Drautal bis zu den <strong>Hohen Tauern</strong>.</p>",
+  "beschreibung": "<h2>概览</h2><p><strong>利恩茨多洛米蒂山脉</strong>（Lienzer Dolomiten）是一座耸立在奥地利东蒂罗尔利恩茨盆地南侧的壮丽石灰岩山系。巍峨险峻的白色白云岩峰峦拔地而起，最高峰大沙尖峰（Große Sandspitze）海拔达2,770米。山谷深处的拉泽茨冰斗（Laserzkessel）与清澈碧蓝的拉泽茨高山湖（Laserzsee）交相辉映，是阿尔卑斯登山、攀岩与铁道攀登（Via Ferrata）的历史名所与徒步胜地。</p><h2>路线与体能要求</h2><p>最经典的登山路线始于悬挂在岩壁之上的多洛米蒂山庄（Dolomitenhütte，海拔1,616米），沿着高山步道穿越拉泽茨山谷攀升至卡尔斯巴德山庄（Karlsbader Hütte，海拔2,260米）与湖畔，垂直落差650米，单程徒步约2至2.5小时。资深登山者可挑战多洛米蒂险径（Dolomitensteig）或著名的泽科费尔铁道攀登（Seekofel-Klettersteig，C级）。必须穿着专业高帮登山鞋；攀岩铁道必须佩戴头盔、安全带与防坠缓冲套件。宠物犬可在主步道系绳随行。</p><h2>交通指南</h2><p>搭乘奥地利联邦铁路ÖBB至东蒂罗尔Lienz主火车站，夏季转乘区域徒步接驳专线直达Dolomitenhütte。自驾沿B100/B108公路至利恩茨，经Tristach沿多洛米蒂全景收费公路（5月至10月开放）盘山直抵山庄停车场。</p><h2>游览建议</h2><p>务必在卡尔斯巴德高山小屋的湖畔露台品尝正宗东蒂罗尔手工夹心饺子（Schlipfkrapfen），清晨在Dolomitenhütte露台观赏晨曦点亮白色巨岩绝壁的震撼日出盛景。</p>",
   "emoji": "⛰️",
   "farbe": "#607D8B",
   "hoehe": "2.770 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "4–6 Stunden",
+  "preis": "Kostenlos (Mautstraße ca. 9 € pro PKW)",
   "tags": [
     "wandern",
     "klettern",
@@ -26,5 +26,12 @@
     "lng": "12.8167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Lienzer_Dolomiten",
+    "https://www.alpenvereinaktiv.com/de/tour/auf-die-karlsbader-huette/1393663/",
+    "https://www.dolomitenhuette.at/",
+    "https://www.bergsteigen.com/touren/klettersteig/seekofel-klettersteig/",
+    "https://www.vvt.at/"
+  ]
 }

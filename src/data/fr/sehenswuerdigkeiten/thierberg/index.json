@@ -1,5 +1,5 @@
 {
-  "name": "Thierberg",
+  "name": "Ruine Thierberg & Aussichtswarte",
   "slug": "thierberg",
   "region": "kufstein",
   "ort": "Kufstein",
@@ -13,14 +13,24 @@
     "ruine de château",
     "nature"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz Gasthof Neuhaus ca. 3–5 €)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.kufstein.com/de/thierberg/",
+  "webseite": "https://www.kufstein.com/de/kufstein/kultur-ausflugsziele/ruine-thierberg.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.5830",
     "lng": "12.1692"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>ruine de Thierberg</strong> (721 m) est un château fort du XIIIe siècle perché sur une colline boisée dominant Kufstein. Il abrite un donjon médiéval transformé en tour panoramique offrant une vue splendide à 360° sur la vallée de l'Inn et le massif du Kaisergebirge, ainsi qu'un ermitage historique habité sans interruption depuis plus de 300 ans.</p><h2>Parcours &amp; Exigences</h2><p>Courte montée agréable en sous-bois depuis l'auberge Gasthof Neuhaus (35 min, 1,5 km, dénivelé 200 m, T1, adapté aux familles). L'ascension du donjon se fait par un escalier en bois sécurisé (80 marches). Randonnée facilement combinable avec les lacs voisins Pfrillsee et Hechtsee (2h30, T1). Chaussures de marche recommandées. Chiens admis en laisse.</p><h2>Accès</h2><p>Gare de Kufstein puis bus local jusqu'à l'arrêt Zell/Neuhaus. En voiture par l'A12 sortie Kufstein-Nord jusqu'au parking du Gasthof Neuhaus. Tour et ruines accessibles gratuitement.</p><h2>Conseils</h2><p>Visitez la chapelle de l'ermitage pour admirer la célèbre crèche tyrolienne historique sculptée de plus de 100 santons et faites une pause gourmande dans le jardin ombragé du Gasthof Neuhaus.</p>",
+  "saison": "Ganzjährig frei zugänglich",
+  "familie": true,
+  "sources": [
+    "https://www.burgen-austria.com/archive.php?id=1214",
+    "https://de.wikipedia.org/wiki/Thierberg",
+    "https://www.kufstein.com/",
+    "https://www.hechtsee.at/",
+    "https://www.vvt.at/"
+  ]
 }

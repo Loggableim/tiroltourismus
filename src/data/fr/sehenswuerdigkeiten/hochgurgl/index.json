@@ -2,9 +2,9 @@
   "name": "Hochgurgl",
   "slug": "hochgurgl",
   "region": "oetztal",
-  "ort": "Sölden",
+  "ort": "Hochgurgl",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Hochgurgl , à 2.150 m d’altitude, est l’un des plus hauts domaines skiables d’Autriche, offrant une vue sur les glaciers et des descentes exigeantes.",
+  "kurzbeschreibung": "Hochgurgl à 2 150 m d'altitude dans l'Ötztal : Top Mountain Crosspoint avec le plus haut musée de la moto d'Europe et péage du Timmelsjoch.",
   "emoji": "🎿",
   "farbe": "#9E9E9E",
   "tags": [
@@ -14,13 +14,21 @@
     "sport"
   ],
   "dauer": "Ganztägig",
-  "preis": "Tageskarte Erwachsene ab € 59,00",
-  "oeffnungszeiten": "Ski Nov-Mai, Sommer Juni-Okt",
-  "webseite": "https://www.soelden.com/hochgurgl",
+  "preis": "Erwachsene 15,00 €, Kinder 8,00 € (mit Ötztal Summer Card kostenlos)",
+  "oeffnungszeiten": "Museum täglich 10:00–17:00 Uhr (Sommer Mai–Nov, Winter Dez–Apr)",
+  "webseite": "https://www.crosspoint.tirol",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "46.9666",
     "lng": "11.0073"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Le village hôtelier et de ski de haute montagne <strong>Hochgurgl</strong> est perché à 2 150 mètres d'altitude sur une terrasse ensoleillée au fond de l'Ötztal. Avec la localité voisine d'Obergurgl, il forme le prestigieux espace touristique de <em>Gurgl</em> – surnommé le « diamant des Alpes ». Entouré de 21 sommets de plus de 3 000 mètres recouverts de glaciers dans les Alpes de l'Ötztal et de Stubai, Hochgurgl est non seulement l'une des destinations de sports d'hiver les plus élevées de l'ensemble de l'arc alpin, mais aussi la porte d'entrée spectaculaire de la célèbre <strong>Timmelsjoch Hochalpenstraße</strong>, qui relie le Tyrol du Nord à la vallée du Passeiertal dans le Tyrol du Sud via le col culminant à 2 509 mètres.</p><h2>Top Mountain Crosspoint & Musée de la moto</h2><p>Le cœur architectural et culturel est le <strong>Top Mountain Crosspoint</strong> à 2 175 mètres d'altitude, inauguré en 2016 et reconstruit après un incendie en 2021. Conçu par l'architecte Michael Brötz, ce bâtiment multifonctionnel futuriste aux façades en bois courbées réunit quatre fonctions sous un même toit : la gare de départ de la télécabine 10 places <em>Kirchenkarbahn</em>, le poste de péage de la route du Timmelsjoch, un restaurant panoramique haut de gamme et le musée de la moto le plus haut d'Europe. Le <strong>Top Mountain Motorcycle Museum</strong> émerveille les passionnés de sports mécaniques du monde entier sur plus de 4 500 m² d'exposition. Fondé par les frères et collectionneurs passionnés Alban und Attila Scheiber, le musée expose plus de 500 motos historiques et modèles de course rares de plus de 100 constructeurs de légende – dont des pièces exceptionnelles signées Brough Superior, Vincent, Ducati, Indian, BMW et Harley-Davidson, ainsi que des voitures de sport d'époque. L'exposition est enrichie par le cinéma <em>Motor-Experience</em> et des ateliers techniques interactifs.</p><h2>Visite & Accès</h2><p>Le Top Mountain Motorcycle Museum et le restaurant panoramique sont ouverts tous les jours de 10h00 à 17h00 en été (de mi-mai à début novembre) ainsi qu'en hiver (de décembre à avril) (restaurant dès 09h00 ; dernière admission au musée à 16h30). Tarifs du musée (saison 2025/2026) : adultes 15,00 €, enfants 8,00 € ; avec la carte régionale <em>Ötztal Summer Card</em> ou un forfait de ski 6 jours en cours de validité, l'entrée au musée est <strong>gratuite</strong> ! Le stationnement au Crosspoint est gratuit pour les visiteurs. En voiture : depuis le nord par l'autoroute de l'Inntal A12, sortie Ötztal, puis la B186 sur environ 50 km vers le fond de la vallée via Sölden jusqu'à Hochgurgl ; en été, il est possible de poursuivre la traversée du col à péage du Timmelsjoch en direction de Merano. En transports en commun : train ÖBB jusqu'à la gare d'Ötztal-Bahnhof, puis ligne de bus VVT 4194 (Ötztaler Linienbus) directement jusqu'à l'arrêt <em>Hochgurgl Top Mountain Crosspoint</em>.</p><h2>Conseils</h2><p>L'ensemble du bâtiment du Top Mountain Crosspoint est exemplaire en matière d'accessibilité, équipé d'ascenseurs modernes et de rampes adaptées aux fauteuils roulants. Prenez place sur la terrasse panoramique ensoleillée et savourez une pizza au feu de bois ou des spécialités de gibier local face aux sommets du Königskogel. En été, poursuivre son trajet sur la Timmelsjoch Hochalpenstraße jalonnée de stations architecturales sculpturales vaut absolument le détour.</p>",
+  "sources": [
+    "https://www.crosspoint.tirol",
+    "https://www.gurgl.com/de/sommer/ausflugsziele/top-mountain-motorcycle-museum.html",
+    "https://www.timmelsjoch.com",
+    "https://de.wikipedia.org/wiki/Top_Mountain_Motorcycle_Museum",
+    "https://de.wikipedia.org/wiki/Obergurgl"
+  ]
 }

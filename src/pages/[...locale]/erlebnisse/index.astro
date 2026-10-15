@@ -1,12 +1,14 @@
 ---
-import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { plainText } from '../../../lib/richtext.js';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Hero from '../../../components/Hero.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import SectionHeader from '../../../components/SectionHeader.astro';
 import SectionMap from '../../../sections/SectionMap.astro';
 import FilterBar from '../../../components/FilterBar.astro';
+import CategoryPlaceholder from '../../../components/CategoryPlaceholder.astro';
 import { readCollection, isPublished } from '../../../lib/content.js';
+import { localizeDuration } from '../../../lib/duration.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams } from '../../../lib/languages.js';
 
 export async function getStaticPaths() {
@@ -36,6 +38,8 @@ const kategorieMeta = {
   bike: { emoji: '🚵', color: 'var(--orange)' }, wellness: { emoji: '♨️', color: 'var(--tirol-pink)' },
   familie: { emoji: '👨‍👩‍👧‍👦', color: 'var(--yellow)' }, kulinarik: { emoji: '🍷', color: 'var(--purple)' },
   kultur: { emoji: '🎭', color: 'var(--orange)' }, abenteuer: { emoji: '🧗', color: 'var(--tirol-red)' },
+  natur: { emoji: '🌲', color: 'var(--green)' }, tradition: { emoji: '🐂', color: 'var(--orange)' },
+  winter: { emoji: '❄️', color: 'var(--ikea-blue)' },
 };
 
 const kategorieLabel = {
@@ -47,7 +51,39 @@ const kategorieLabel = {
   kulinarik: { de: 'Kulinarik', en: 'Culinary', fr: 'Gastronomie', it: 'Enogastronomia', es: 'Gastronomía', zh: '美食', nl: 'Culinaire', cs: 'Gastronomie' },
   kultur: { de: 'Kultur', en: 'Culture', fr: 'Culture', it: 'Cultura', es: 'Cultura', zh: '文化', nl: 'Cultuur', cs: 'Kultura' },
   abenteuer: { de: 'Abenteuer', en: 'Adventure', fr: 'Aventure', it: 'Avventura', es: 'Aventura', zh: '冒险', nl: 'Avontuur', cs: 'Dobrodružství' },
+  natur: { de: 'Natur', en: 'Nature', fr: 'Nature', it: 'Natura', es: 'Naturaleza', zh: '自然', nl: 'Natuur', cs: 'Příroda' },
+  tradition: { de: 'Tradition', en: 'Tradition', fr: 'Tradition', it: 'Tradizione', es: 'Tradición', zh: '传统', nl: 'Traditie', cs: 'Tradice' },
+  winter: { de: 'Winter', en: 'Winter', fr: 'Hiver', it: 'Inverno', es: 'Invierno', zh: '冬季', nl: 'Winter', cs: 'Zima' },
 };
+
+const FROM_WORD = { de: 'ab', en: 'from', fr: 'dès', it: 'da', es: 'desde', zh: '', nl: 'vanaf', cs: 'od' };
+
+const cleanText = (value) => String(value || '')
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/^#{1,6}\s.*$/gm, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const excerpt = (entry, max = 130) => {
+  const text = cleanText(entry.kurzbeschreibung || entry.beschreibung || '');
+  if (text.length <= max) return text;
+  return text.slice(0, max).replace(/\s+\S*$/, '') + '…';
+};
+
+const priceText = (entry) => {
+  const value = entry.preis;
+  if (typeof value === 'number') {
+    if (!(value > 0)) return '';
+    const number = Number.isInteger(value) ? String(value) : value.toFixed(2).replace('.', ',');
+    const from = FROM_WORD[locale] !== undefined ? FROM_WORD[locale] : 'ab';
+    return `${from ? `${from} ` : ''}€${number}`;
+  }
+  if (typeof value === 'string' && value.trim()) return value.trim();
+  return '';
+};
+
+const heroSrc = (entry) => entry.hero_bild || entry.bilder?.[0]?.url || '';
+const kategorieText = (entry) => t(kategorieLabel[entry.kategorie]) || entry.kategorie || '';
 
 const erlebnisse = readCollection('erlebnisse', locale).filter(e => isPublished(e.entry));
 const erlebnisseFilterKeys = Object.keys(kategorieLabel).sort((a, b) => t(kategorieLabel[a]).localeCompare(t(kategorieLabel[b])));
@@ -81,7 +117,7 @@ const erlebnisItemList = {
     <Hero title={t(labels.title)} subtitle={t(labels.heroSub)} emoji="🏔️" size="md">
       <div slot="actions" class="hero-actions">
         <a href="#erlebnis-grid" class="btn btn-pink">{t(labels.sectionLabel)} →</a>
-        <span class="hero-urgency">🔥 {erlebnisse.length} {t(labels.countLabel)}</span>
+        <span class="hero-urgency">{erlebnisse.length} {t(labels.countLabel)}</span>
       </div>
     </Hero>
 
@@ -91,20 +127,53 @@ const erlebnisItemList = {
       <section class="section">
         <div class="container">
           <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.sectionSub)} />
-          <FilterBar keyName="cat" ariaLabel={t(labels.filterAria)} options={erlebnisseFilterKeys.map((k) => ({ value: k, label: t(kategorieLabel[k]) }))} />
+          <FilterBar keyName="cat" locale={locale} ariaLabel={t(labels.filterAria)} options={erlebnisseFilterKeys.map((k) => ({ value: k, label: t(kategorieLabel[k]) }))} />
           <div class="erlebnisse-grid" id="erlebnis-grid">
             {erlebnisse.map((e) => {
               const entry = e.entry;
-              const meta = kategorieMeta[entry.kategorie] || { emoji: '🏔️', color: 'var(--tirol-pink)' };
+              const meta = kategorieMeta[entry.kategorie] || { color: 'var(--tirol-pink)' };
+              const image = heroSrc(entry);
+              const price = priceText(entry);
+              const description = excerpt(entry);
+              const category = kategorieText(entry);
               return (
-                <div class="erlebnis-card" data-filter-card data-filter-cat={entry.kategorie}>
-                  <span class="erlebnis-icon">{meta.emoji}</span>
-                  <h3 class="erlebnis-title">{plainText(entry.titel)}</h3>
-                  <p class="erlebnis-desc">{plainText(entry.kurzbeschreibung)}</p>
-                  {entry.dauer && <div class="erlebnis-meta">⏱ {entry.dauer}</div>}
-                  {entry.schwierigkeit && <div class="erlebnis-meta">📊 {entry.schwierigkeit}</div>}
-                  {entry.preis && <div class="erlebnis-price">{entry.preis}</div>}
-                </div>
+                <a
+                  href={`${pref}/erlebnisse/${e.slug}/`}
+                  class="erlebnis-card"
+                  data-filter-card
+                  data-filter-cat={entry.kategorie}
+                  style={`--accent:${meta.color || 'var(--tirol-pink)'}`}
+                >
+                  <div class="erlebnis-media">
+                    {image ? (
+                      <img src={image} alt={entry.name || ''} loading="lazy" decoding="async" />
+                    ) : (
+                      <CategoryPlaceholder collection="erlebnisse" locale={locale} />
+                    )}
+                  </div>
+                  <div class="erlebnis-body">
+                    {category && <span class="erlebnis-kat">{category}</span>}
+                    <h3 class="erlebnis-title">{plainText(entry.name)}</h3>
+                    {description && <p class="erlebnis-desc">{description}</p>}
+                    <div class="erlebnis-foot">
+                      <div class="erlebnis-meta">
+                        {entry.dauer && (
+                          <span class="erlebnis-meta-item">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+                            <span>{localizeDuration(entry.dauer, locale)}</span>
+                          </span>
+                        )}
+                        {entry.ort && (
+                          <span class="erlebnis-meta-item">
+                            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                            <span>{entry.ort}</span>
+                          </span>
+                        )}
+                      </div>
+                      {price && <div class="erlebnis-price">{price}</div>}
+                    </div>
+                  </div>
+                </a>
               );
             })}
           </div>
@@ -113,7 +182,12 @@ const erlebnisItemList = {
     ) : (
       <section class="section">
         <div class="container" style="text-align:center;padding:60px 0">
-          <div style="font-size:64px;margin-bottom:16px">🥾</div>
+          <svg class="erlebnis-empty-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 74 L46 32 L60 52 L68 40 L84 74 Z"></path>
+              <circle cx="50" cy="22" r="4" fill="currentColor" stroke="none"></circle>
+            </g>
+          </svg>
           <h2 style="font-family:var(--font-display);font-size:32px;margin-bottom:12px;letter-spacing:1px;text-transform:uppercase">{t(labels.emptyTitle)}</h2>
           <p style="color:var(--text2);max-width:400px;margin:0 auto;line-height:1.6">{t(labels.emptyText)}</p>
         </div>
@@ -130,16 +204,26 @@ const erlebnisItemList = {
 </BaseLayout>
 
 <style is:global>
-  .erlebnisse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 0 80px}
+  .erlebnisse-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:0 0 80px;align-items:stretch}
   @media(max-width:968px){.erlebnisse-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:600px){.erlebnisse-grid{grid-template-columns:1fr}}
-  .erlebnis-card{background:var(--bg2);border:1px solid var(--glass-border);border-radius:var(--radius-lg);padding:32px 24px 24px;text-align:center;transition:all .4s var(--ease);display:flex;flex-direction:column}
-  .erlebnis-card:hover{transform:translateY(-6px);border-color:var(--tirol-pink);box-shadow:0 16px 48px rgba(0,0,0,.08)}
-  .erlebnis-icon{font-size:52px;margin-bottom:12px;display:block;line-height:1}
-  .erlebnis-title{font-family:var(--font-display);font-size:26px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
-  .erlebnis-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:12px;flex:1}
-  .erlebnis-meta{font-size:12px;color:var(--text3);margin-bottom:6px}
-  .erlebnis-price{font-size:14px;color:var(--tirol-pink);font-weight:700;margin-bottom:14px}
+  .erlebnis-card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--glass-border);border-radius:var(--radius-lg);overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 12px 30px rgba(0,0,0,.06);transition:transform .35s var(--ease),border-color .35s var(--ease),box-shadow .35s var(--ease);content-visibility:auto;contain-intrinsic-size:300px 380px}
+  .erlebnis-card:hover{transform:translateY(-6px);border-color:var(--tirol-pink);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+  .erlebnis-card:focus-visible{outline:2px solid var(--tirol-pink);outline-offset:2px}
+  .erlebnis-media{position:relative;height:140px;flex:0 0 auto;overflow:hidden;border-bottom:1px solid var(--glass-border);background:linear-gradient(135deg,var(--surface),var(--surface-hover))}
+  .erlebnis-media::after{content:'';position:absolute;inset:0;background:var(--accent,transparent);opacity:.08;pointer-events:none}
+  .erlebnis-media img{width:100%;height:100%;object-fit:cover;display:block}
+  .erlebnis-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+  .erlebnis-kat{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--accent,var(--tirol-pink));margin-bottom:6px}
+  .erlebnis-title{font-family:var(--font-display);font-size:22px;line-height:1.06;letter-spacing:.5px;text-transform:uppercase;color:var(--text);margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .erlebnis-desc{font-size:13px;color:var(--text2);line-height:1.55;margin-bottom:14px;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .erlebnis-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;margin-top:auto;padding-top:12px;border-top:1px solid var(--glass-border)}
+  .erlebnis-meta{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .erlebnis-meta-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text3);min-width:0}
+  .erlebnis-meta-item svg{flex:0 0 auto;color:var(--accent,var(--tirol-pink))}
+  .erlebnis-meta-item>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .erlebnis-price{flex:0 0 auto;font-size:14px;font-weight:700;color:var(--tirol-pink);white-space:nowrap}
+  .erlebnis-empty-icon{width:72px;height:72px;margin:0 auto 16px;display:block;color:var(--tirol-pink);opacity:.85}
   .quote-section{background:var(--bg2);border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);padding:64px 0;text-align:center}
   .quote-section blockquote{font-size:clamp(18px,2.5vw,28px);font-weight:600;line-height:1.5;max-width:700px;margin:0 auto;color:var(--text);font-style:italic}
   .quote-section cite{display:block;margin-top:16px;font-size:13px;color:var(--text2);font-style:normal;font-weight:500}

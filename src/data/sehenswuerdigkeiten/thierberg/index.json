@@ -1,22 +1,26 @@
 {
-  "name": "Thierberg",
+  "name": "Ruine Thierberg & Aussichtswarte",
   "slug": "thierberg",
   "region": "kufstein",
   "ort": "Kufstein",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Der Thierberg mit seiner Burgruine und dem Aussichtsturm bietet einen fantastischen Blick über Kufstein und das Inntal.",
+  "kurzbeschreibung": "Historische Burgruine (721 m) aus dem 13. Jahrhundert – begehbarer Bergfried mit 360°-Inntalblick und seit 300 Jahren bewohnte Einsiedelei.",
   "emoji": "🌄",
   "farbe": "#8B0000",
   "tags": [
-    "aussicht",
-    "wanderung",
+    "thierberg",
+    "kufstein",
     "burgruine",
-    "natur"
+    "aussichtsturm",
+    "einsiedelei",
+    "geschichte",
+    "wandern",
+    "familie"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz Gasthof Neuhaus ca. 3–5 €)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.kufstein.com/de/thierberg/",
+  "webseite": "https://www.kufstein.com/de/kufstein/kultur-ausflugsziele/ruine-thierberg.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +28,14 @@
     "lng": "12.1692"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Thierberg</strong> – Die Thierberg bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Der Thierberg mit seiner Burgruine und dem Aussichtsturm bietet einen fantastischen Blick über Kufstein und das Inntal Der Aufstieg lohnt sich: Oben angekommen, werden Besucher mit einem atemberaubenden Rundblick belohnt, der von den sanften Almen im Tal bis zu den schroffen Gipfeln der umliegenden Bergketten reicht. Infotafeln erklären die markantesten Punkte am Horizont. Nur wenige Kilometer von Kufstein entfernt, wartet mit der Thierberg ein Stück unberührte Natur darauf, entdeckt zu werden. Die Lage bietet zudem einen herrlichen Panoramablick auf die umliegenden Bergketten. Ein Besuch der Thierberg lohnt sich zu jeder Jahreszeit und bleibt garantiert in bester Erinnerung.</p>"
+  "beschreibung": "<h2>Überblick</h2><p>Die <strong>Ruine Thierberg</strong> thront auf einem markanten, dicht bewaldeten Hügel auf 721 Metern Seehöhe nördlich der Festungsstadt Kufstein im Tiroler Unterland. Im späten 13. Jahrhundert als strategische Höhenburg der bayerischen Grafen von Freundsberg errichtet, blickt die historische Wehranlage auf eine bewegte Grenzlandgeschichte zwischen Tirol und Bayern zurück. Nach einem verheerenden Brand im 15. Jahrhundert verfiel die Festung zur Ruine, erhielt jedoch im 17. Jahrhundert eine neue, spirituelle Bestimmung: In der erhaltenen Burgkapelle richtete man eine Wallfahrtsstätte ein, an die eine Klause angeschlossen wurde. Diese <strong>Einsiedelei Thierberg</strong> wird seit über 300 Jahren bis zum heutigen Tag kontinuierlich von einem Eremiten bewohnt – ein seltenes lebendiges Kultur- und Geschichtszeugnis in Mitteleuropa. Das architektonische Highlight für Ausflügler bildet der vollständig restaurierte, mächtige Bergfried: Er dient als öffentlich zugänglicher Aussichtsturm und eröffnet ein spektakuläres 360-Grad-Panorama über das Inntal, die Festung Kufstein, den Pendling und die Zacken des Kaisergebirges.</p><h2>Route &amp; Anforderungen</h2><p>Der Besuch der Ruine Thierberg ist eine ideale kurze Wanderung für Geschichtsinteressierte, Ruhesuchende und Familien. Vom Wanderparkplatz beim Gasthof Neuhaus am Fuße des Burgbergs führt ein gut markierter, schattiger Waldweg in rund 30 bis 40 Minuten gemächlich bergan zur Burgruine (Streckenlänge ca. 1,5 Kilometer, 200 Höhenmeter Aufstieg, Schwierigkeit T1, für trittsichere Kinder hervorragend geeignet; für Kinderwagen wegen Steilstufen im oberen Burgbereich nicht passierbar). Am Burgplateau angekommen, gelangen Besucher über eine gesicherte Holztreppe im Inneren des Bergfrieds hinauf zur windgeschützten Aussichtsplattform (ca. 80 Stufen). Für ambitioniertere Wanderer lässt sich der Thierberg perfekt mit einer Umrundung des nahegelegenen Hechtsees oder Pfrillsees zu einer abwechslungsreichen Halbtagestour ausbauen (ca. 2 bis 3 Stunden Gehzeit, Schwierigkeit T1/T2). Bequeme Wanderschuhe oder Sportschuhe mit Profil werden empfohlen. Hunde dürfen an der Leine auf allen Wegen mitgeführt werden.</p><h2>Besuch &amp; Anreise</h2><p>Mit den Fernzügen der ÖBB oder BRB reisen Besucher bis zum Bahnhof Kufstein. Von dort fahren Stadt- und Regionalbusse der VVT bis zur Haltestelle „Kufstein Zell / Neuhaus“ direkt an den Fuß des Burgbergs. Autofahrer erreichen den Ausgangspunkt über die Inntalautobahn A12 (Ausfahrt Kufstein-Nord) und biegen auf die B171 bzw. die Thierseestraße ab. Beim traditionsreichen Gasthof Neuhaus steht ein gebührenpflichtiger Wanderparkplatz bereit. Der Burgturm und das Ruinengelände sind ganzjährig tagsüber kostenfrei geöffnet.</p><h2>Tipps</h2><p>Werfen Sie einen andächtigen Blick in die malerische Wallfahrtskapelle der bewohnten Einsiedelei: Hier wird das ganze Jahr über eine kunstvoll geschnitzte, historische Tiroler Weihnachtskrippe mit über 100 Figuren ausgestellt. Kehren Sie nach dem Abstieg im Gasthof Neuhaus ein und genießen Sie einen traditionellen Tiroler Schweinsbraten mit Knödel und Krautsalat im schattigen Kastaniengarten.</p>",
+  "saison": "Ganzjährig frei zugänglich",
+  "familie": true,
+  "sources": [
+    "https://www.burgen-austria.com/archive.php?id=1214",
+    "https://de.wikipedia.org/wiki/Thierberg",
+    "https://www.kufstein.com/",
+    "https://www.hechtsee.at/",
+    "https://www.vvt.at/"
+  ]
 }

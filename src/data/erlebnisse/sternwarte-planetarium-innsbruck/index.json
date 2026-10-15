@@ -6,9 +6,10 @@
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Die Sternwarte Innsbruck öffnet exklusiv für Besucher ihre Pforten. Erleben Sie eine faszinierende Reise durch das Universum – vom Planetarium mit 360-Grad-Projektion bis zur Beobachtung von Sternen und Planeten durch das grosse Teleskop. Ein Abend für alle, die den Himmel über den Alpen entdecken möchten.",
+  "beschreibung": "### Überblick\nDie Historische Sternwarte der Universität Innsbruck liegt im Nordosten des Botanischen Gartens im Ortsteil Hötting. Sie wurde 1904 vom Astronomen Egon von Oppolzer nach eigenen Plänen und mit privaten Mitteln errichtet und 1909 als Universitäts-Sternwarte der Universität angegliedert. Heute ist die gut erhaltene Anlage mit ihren Originalinstrumenten – darunter ein 40 cm großes Zeiss-Spiegelteleskop – ein bedeutendes Denkmal der österreichischen Wissenschaftsgeschichte. Seit 2014 ist sie als Museum Historische Sternwarte für Besucher geöffnet; ein Teil der Sammlung lässt sich auch über eine 360-Grad-Multimedia-Tour entdecken.\n\n### Route & Anforderungen\nDie Sternwarte ist im Rahmen von Führungen zugänglich; das Museum ist regulär donnerstags von 15.30 bis 17.30 Uhr geöffnet. Ein Rundgang führt durch die historischen Räume und die Beobachtungskuppel mit den original erhaltenen Instrumenten. Vorkenntnisse sind nicht nötig, besondere körperliche Anforderungen bestehen nicht. Geeignet für Kinder und Erwachsene. Da die Anlage Aussenbereiche und ungeheizte historische Räume umfasst, ist wetterfeste Kleidung empfehlenswert.\n\n### Anreise\nDie Sternwarte liegt in der Sternwartestraße 13 und ist auch über den Haupteingang des Botanischen Gartens in der Botanikerstraße 10 erreichbar. Vom Innsbrucker Hauptbahnhof gelangt man mit den öffentlichen Verkehrsmitteln der IVB in den Bereich Hötting/Botanischer Garten. Autofahrer erreichen Innsbruck über die Inntalautobahn A12 (Ausfahrt Innsbruck West) und folgen der Beschilderung Richtung Hötting. Parkmöglichkeiten bestehen in den umliegenden Straßen; die Anreise mit öffentlichen Verkehrsmitteln ist empfehlenswert.\n\n### Tipps\nBesuchen Sie die Sternwarte nach Möglichkeit an einem Donnerstagnachmittag und verbinden Sie den Besuch mit einem Spaziergang durch den Botanischen Garten mit seinen Alpin- und Schaugewächshäusern. Wer nicht vor Ort sein kann, nutzt die 360-Grad-Multimedia-Tour der Universität. Für die Beobachtung des Nachthimmels durch ein Teleskop bietet das Institut für Astro- und Teilchenphysik im Wintersemester zusätzlich die Astronacht mit Voranmeldung an.",
   "preis": 19,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "kultur",
     "sterne",
@@ -16,12 +17,17 @@
     "innsbruck",
     "wissenschaft"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.uibk.ac.at/de/historische-sternwarte/",
+    "https://www.uibk.ac.at/de/astro/observatory/",
+    "https://www.uibk.ac.at/botany/botanical-garden/",
+    "https://www.ivb.at/"
+  ]
 }

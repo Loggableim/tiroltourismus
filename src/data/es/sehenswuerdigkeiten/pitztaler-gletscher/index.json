@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "St. Leonhard im Pitztal",
   "kategorie": "sport",
-  "kurzbeschreibung": "Tirols höchster Gletscher (3.440 m) – futuristische Wildspitzbahn, spektakuläres Café 3.440 und Blick auf die majestätische Wildspitze.",
-  "beschreibung": "<h2>Visión general</h2><p>El <strong>Glaciar de Pitztal</strong> (Pitztaler Gletscher) es el \"Techo del Tirol\" y la estación alpina más alta de Austria, alcanzando los 3.440 metros. Gracias al funicular subterráneo Gletscherexpress y la vanguardista telecabina Wildspitzbahn, alberga el espectacular Café 3.440 con su terraza suspendida sobre el vacío frente al imponente pico Wildspitze (3.774 m).</p><h2>Ruta y Requisitos</h2><p>El mirador del Café 3.440 es accesible para toda la familia sin esfuerzo (T1, accesible para sillas de ruedas). En verano parten senderos hacia el refugio Braunschweiger Hütte (2.759 m, 2 horas, T3). La ascensión a la Wildspitze requiere crampones, piolet y guía de alta montaña. Ropa de abrigo y gafas de sol de alta protección obligatorias incluso en verano. Perros admitidos con bozal en los remontes.</p><h2>Cómo llegar</h2><p>En tren a la estación de Imst-Pitztal y autobús 4204 directo a Mittelberg. En coche por la A12 (salida Imst) y carretera L16 durante 35 km hasta el aparcamiento gratuito de Mittelberg.</p><h2>Consejos</h2><p>Deguste una tarta de pino cembro en el Café 3.440 contemplando más de 50 tresmiles y visite la Capilla de la Luz Blanca construida en granito en la estación base.</p>",
+  "kurzbeschreibung": "El glaciar de Pitztal, conocido como el «Techo del Tirol», es el dominio glaciar más alto de Austria: alberga el vanguardista Café 3.440 y vistas directas a la Wildspitze.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>El <strong>glaciar de Pitztal</strong> (Pitztaler Gletscher), conocido como el «Techo del Tirol», corona el final del valle de Pitztal como el destino de alta montaña y esquí glaciar más elevado de Austria. Alcanzando los 3.440 metros de altitud en la cima del Hinterer Brunnenkogel, este sobrecogedor escenario blanco está modelado por el inmenso Mittelbergferner y los campos de hielo de los Alpes de Ötztal. Una joya arquitectónica internacional es el futurista Café 3.440, cuya terraza suspendida sobre el abismo ofrece la cafetería más alta de Austria y una vista panorámica de 360 grados de más de cincuenta tresmiles, presididos por la cara norte de la Wildspitze (3.774 m), la montaña más alta del Tirol. En verano, el glaciar constituye un refugio de aire puro polar y serenidad alpina.</p>\n<h2>Route & Anforderungen</h2>\n<p>El viaje a los hielos perpetuos se inicia en el funicular subterráneo Pitzexpress, que en ocho minutos traslada a los visitantes desde Mittelberg (1.730 m) hasta los 2.840 metros. Desde allí, el ultramoderno telecabina Wildspitzbahn asciende con suavidad hasta la cota de 3.440 metros. El mirador y la cafetería están adaptados y son accesibles sin obstáculos. Para los alpinistas experimentados, el glaciar es el punto de partida hacia ascensiones exigentes a la Wildspitze, lo que requiere crampones, piolet, arnés y guía de montaña. Para una visita convencional es imprescindible calzado de montaña abrigado, chaqueta cortavientos y gafas de sol con protección UV alta.</p>\n<h2>Besuch & Anreise</h2>\n<p>Por carretera se toma la autovía A12 (salida Imst/Pitztal) siguiendo la L16 por Wenns y St. Leonhard hasta la estación de Mittelberg al fondo del valle. Los autobuses regionales unen la estación de tren de Imst-Pitztal directamente con la base del teleférico. Junto a la estación de salida hay amplios aparcamientos gratuitos.</p>\n<h2>Tipps</h2>\n<p>Tómese un café con un dulce tradicional en el Café 3.440 junto a las cristaleras panorámicas contemplando los seracs helados de la Wildspitze. En los meses estivales se organizan visitas guiadas para explorar grietas glaciares seguras y aprender sobre el cambio climático.</p>",
   "emoji": "🏔️",
   "farbe": "#00ACC1",
   "hoehe": "3.440 m",
-  "dauer": "3–5 Stunden",
-  "preis": "Bergbahn Berg- und Talfahrt (Gletscherexpress + Wildspitzbahn) ca. 45–48 €",
+  "dauer": "3-6 horas",
+  "preis": "Remontes mecánicos de pago (incluido gratis con la tarjeta Pitztal Sommercard)",
   "tags": [
     "ski",
     "gletscher",
@@ -20,17 +20,17 @@
     "natur",
     "wandern"
   ],
-  "oeffnungszeiten": "Täglich 8:00–16:30 (Okt–Mai Skibetrieb, Jun–Sep Gletscherwanderungen)",
+  "oeffnungszeiten": "Visitas de verano/otoño de julio a octubre; temporada de esquí de octubre a mayo",
   "webseite": "https://www.pitztaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9436",
     "lng": "10.8514"
   },
   "sources": [
+    "https://de.wikipedia.org/wiki/Pitztal",
     "https://www.pitztaler-gletscher.at/",
     "https://www.pitztal.com/",
-    "https://de.wikipedia.org/wiki/Mittelbergferner",
-    "https://www.alpenvereinaktiv.com/de/tour/zur-braunschweiger-huette-vom-pitztaler-gletscher/1381402/",
-    "https://www.vvt.at/"
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Wildspitze"
   ]
 }

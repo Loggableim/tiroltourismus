@@ -1,12 +1,12 @@
 {
-  "name": "Museumsnacht Innsbruck",
+  "name": "Lunga Notte dei Musei di Innsbruck (ORF)",
   "slug": "museumsnacht-innsbruck",
   "emoji": "🏛️",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Una volta all'anno i musei di Innsbruck aprono le loro porte per una lunga notte all'insegna di arte, storia e cultura. Con un bracciale si possono visitare tutte le sedi partecipanti – dall'Alpenvereinsmuseum allo Zeughaus fino alla Hofkirche. Ovunque ci sono visite guidate speciali, laboratori e musica dal vivo.",
+  "beschreibung": "### Panoramica\nLa Lunga Notte dei Musei ORF trasforma il capoluogo tirolese Innsbruck in un vivace palcoscenico culturale ogni primo sabato di ottobre. Dalle 18:00 all'01:00 di notte oltre venti musei, gallerie d'arte ed edifici storici accolgono i visitatori. Con un unico biglietto cumulativo si accede a tesori celebri come il palazzo imperiale Hofburg, il castello di Ambras con la Camera dell'Arte e delle Meraviglie, il Museo dell'Arte Popolare Tirolese, l'arsenale Zeughaus e il centro interattivo Audioversum. In attesa del completamento dei restauri del Ferdinandeum previsto per il 2028, eventi speciali, concerti e visite guidate arricchiscono l'atmosfera serale.\n\n### Percorso e requisiti\nL'itinerario è completamente personalizzabile, estendendosi dal centro storico di Innsbruck fino al castello rinascimentale di Ambras. Si consigliano calzature comode per percorrere le sale storiche e i cortili. Le sedi principali sono accessibili a persone con disabilità motoria. I laboratori per famiglie e bambini si concentrano tra le 18:00 e le 21:00.\n\n### Come arrivare\nIl punto di ritrovo principale si trova davanti alla Hofburg presso la Haus der Musik e alla stazione ferroviaria di Innsbruck. La rete di trasporti IVB attiva apposite navette speciali gratuite per i possessori di biglietto (linee SH1, SH2, SH3) che collegano rapidamente il centro alle attrazioni collinari come il castello di Ambras e la fonderia di campane Grassmayr. I parcheggi sotterranei Landestheater e Congress offrono posti auto coperti.\n\n### Consigli\nAcquistate il biglietto in prevendita per evitare code serali. Iniziate la serata alle 18:00 dalle sedi più lontane come il castello di Ambras per poi passeggiare a piedi tra i musei del centro storico fino a notte fonda. I cani non sono ammessi nelle sale espositive.",
   "preis": 29,
   "dauer": "4–5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://langenacht.orf.at",
+    "https://www.innsbruck.info",
+    "https://www.tiroler-landesmuseen.at",
+    "https://www.tirol.at",
+    "https://www.ivb.at"
+  ]
 }

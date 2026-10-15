@@ -2,28 +2,36 @@
   "titel": "Zillertal",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "Zillertal je největší vedlejší údolí v Tirolu – ráj pro lyžaře, turisty a rodiny s slavnou Zillertaler Arena.",
+  "kurzbeschreibung": "Zillertal je světoznámé 'údolí hudby' a prvotřídní alpská destinace s celoročním ledovcem Hintertux a 548 kilometry sjezdovek.",
   "emoji": "🏞️",
   "bewertung": 5,
   "farbe": "#E30613",
   "tags": [
     "turistika",
-    "lyžování",
+    "lyzovani",
     "rodina",
-    "příroda",
+    "priroda",
     "gastronomie"
   ],
   "hoehe": "3.509 m",
-  "flaeche": "1.044 km²",
-  "einwohner": "36.000",
-  "beschreibung": "<p>Zillertal se rozprostírá na 40 kilometrech od Strass v Zillertalu až po Tuxer Fernerhaus. S sedmi vedlejšími údolími představuje jednu z nejrozmanitějších dovolených krajiny Tirolu. V zimě lákají lyžařské oblasti Zillertal Arena, Ski & Gletscherwelt Zillertal 3000 a Spieljoch-Fügen s více než 500 kilometry sjezdovek. V létě láká jedno z největších souvislých turistických oblastí Alp s Berliner Höhenweg a Wildwasser-Kajak na Zilleru.</p>",
+  "flaeche": "1.098 km²",
+  "einwohner": "38.000",
+  "beschreibung": "<p><strong>Zillertal</strong> v okrese Schwaz je nejširší a nejznámější jižní údolí tyrolského Inntalu. Táhne se v délce přes 40 kilometrů od Strassu přes Fügen, Kaltenbach, Zell am Ziller a Mayrhofen až po vysokohorský závěr v Hintertuxu. S <strong>ledovcem Hintertux</strong> se pyšní jediným celoročním lyžařským střediskem v Rakousku otevřeným 365 dní v roce. Společně s areály Zillertal Arena, Mayrhofen (s proslulou sjezdovkou 'Harakiri' se sklonem 78 %) a Hochzillertal nabízí 548 km tratí. V létě láká <strong>Vysokohorský přírodní park Zillertalské Alpy</strong> s tyrkysovou přehradou Schlegeis, dálkovou trasou Berliner Höhenweg a vrcholy jako <strong>Hochfeiler (3 509 m)</strong> a Olperer (3 476 m).</p>",
   "tipps": [
-    "Die Zillertaler Museumsbahn fährt im Sommer mit Dampflokomotive durchs Tal.",
-    "Der Wildwasserkanal in Fügen ist Europas größte künstliche Wildwasseranlage.",
-    "Die Schlegeis-Alm-Straße ist mautpflichtig, aber die Aussicht lohnt sich."
+    "Vydejte se k chatě Olpererhütte u přehrady Schlegeis na světoznámý fotogenický visutý most nad tyrkysovou hladinou.",
+    "Navštivte Přírodní ledový palác (Natur Eis Palast) uvnitř ledovce Hintertux s podzemním ledovcovým jezerem.",
+    "Ochutnejte tradiční smažené taštičky Zillertaler Krapfen a pikantní sýr Graukäse v místních sýrárnách."
   ],
-  "empfehlungen": null,
-  "umgebung": "<p>Zillertal se na severu sousedí s Inntal, na jihu s Alpenhauptkamm (Italien). Sousední oblasti: Tuxertal (Zillertaler Seitental), Gerlos, Krimml (Salzburg). Die Zillertaler Alpen jsou částí centrálních východních Alp.</p>",
+  "empfehlungen": "<p>Zažijte nostalgickou jízdu parním vlakem <strong>Zillertalbahn</strong> z Jenbachu do Mayrhofenu. Poté vyjeďte k impozantní přehradě <strong>Schlegeisspeicher</strong> nebo vystoupejte do výšky 3 250 m na ledovec Hintertux s posezením v prémiové horské chatě <strong>Kristallhütte</strong> či <strong>Wedelhütte</strong>.</p>",
+  "umgebung": "<p>Zillertal odbočuje u Strassu z údolí Inntal. Na severu sousedí s Inntalem a Rofanem, na západě s Tuxskými Alpami a Wipptalem, na východě přes průsmyk Gerlospass se Salcburskem a Kitzbühelskými Alpami a na jihu po hlavním alpském hřebeni s Jižním Tyrolskem (Itálie).</p>",
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.best-of-zillertal.at",
+    "https://www.zillertalarena.com",
+    "https://www.hintertuxergletscher.at",
+    "https://www.tirol.at/regionen/a-zillertal",
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ],
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -45,7 +53,7 @@
     ],
     [
       47.3,
-      12.0
+      12
     ],
     [
       47.25,
@@ -53,7 +61,7 @@
     ],
     [
       47.2,
-      12.0
+      12
     ],
     [
       47.15,
@@ -107,5 +115,6 @@
   "koordinaten": {
     "lat": 47.2667,
     "lng": 11.8833
-  }
+  },
+  "slug": "zillertal"
 }

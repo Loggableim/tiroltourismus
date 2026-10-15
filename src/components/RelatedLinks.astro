@@ -1,5 +1,6 @@
 ---
 import { getRelatedForEntry } from '../lib/related.js';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 
 export interface Props {
   collection: string;
@@ -11,49 +12,78 @@ const { collection, slug, locale = 'de' } = Astro.props;
 const { sameCategory, crossCategory, headings } = getRelatedForEntry(collection, slug, locale);
 
 const hasAny = sameCategory.length > 0 || crossCategory.length > 0;
+
+const CATEGORY_LABELS = {
+  de: { unterkuenfte: 'Unterkunft', camping: 'Camping', gastro: 'Gastro', sehenswuerdigkeiten: 'Sehenswertes', erlebnisse: 'Erlebnis', events: 'Event', orte: 'Ort', regionen: 'Region', magazin: 'Magazin' },
+  en: { unterkuenfte: 'Accommodation', camping: 'Camping', gastro: 'Dining', sehenswuerdigkeiten: 'Sight', erlebnisse: 'Experience', events: 'Event', orte: 'Place', regionen: 'Region', magazin: 'Magazine' },
+  fr: { unterkuenfte: 'Hébergement', camping: 'Camping', gastro: 'Gastronomie', sehenswuerdigkeiten: 'Sites touristiques', erlebnisse: 'Expérience', events: 'Événement', orte: 'Village', regionen: 'Région', magazin: 'Magazine' },
+  it: { unterkuenfte: 'Alloggio', camping: 'Campeggio', gastro: 'Gastronomia', sehenswuerdigkeiten: 'Attrazione', erlebnisse: 'Esperienza', events: 'Evento', orte: 'Paese', regionen: 'Regione', magazin: 'Magazine' },
+  es: { unterkuenfte: 'Alojamiento', camping: 'Camping', gastro: 'Gastronomía', sehenswuerdigkeiten: 'Atracción', erlebnisse: 'Experiencia', events: 'Evento', orte: 'Pueblo', regionen: 'Región', magazin: 'Revista' },
+  zh: { unterkuenfte: '住宿', camping: '露营', gastro: '美食', sehenswuerdigkeiten: '景点', erlebnisse: '体验', events: '活动', orte: '村镇', regionen: '地区', magazin: '杂志' },
+  nl: { unterkuenfte: 'Accommodatie', camping: 'Camping', gastro: 'Eten & Drinken', sehenswuerdigkeiten: 'Bezienswaardigheid', erlebnisse: 'Belevenis', events: 'Evenement', orte: 'Plaats', regionen: 'Regio', magazin: 'Magazine' },
+  cs: { unterkuenfte: 'Ubytování', camping: 'Kemp', gastro: 'Gastronomie', sehenswuerdigkeiten: 'Pamětihodnost', erlebnisse: 'Zážitek', events: 'Akce', orte: 'Místo', regionen: 'Region', magazin: 'Časopis' },
+};
+const catMap = CATEGORY_LABELS[locale] || CATEGORY_LABELS.de;
 ---
 
 {hasAny && (
-  <section class="related-links section" aria-label={headings.same}>
-    <div class="container" style="max-width:800px">
+  <section class={`related-links section related-links-${locale}`} aria-label={headings.same}>
+    <div class="container" style="max-width:860px">
       {sameCategory.length > 0 && (
         <div class="related-links-group">
-          <h3 class="related-links-subtitle">{headings.same}</h3>
-          <ul class="related-links-list">
+          <div class="related-links-header">
+            <span class="related-links-badge">{catMap[collection] || collection}</span>
+            <h3 class="related-links-subtitle">{headings.same}</h3>
+          </div>
+          <div class="related-links-grid">
             {sameCategory.map((item) => (
-              <li>
-                <a href={item.href} class="related-links-card">
-                  <span class="related-links-emoji" aria-hidden="true">{item.emoji}</span>
-                  <span class="related-links-text">
-                    <span class="related-links-name">{item.name}</span>
-                    {item.kurzbeschreibung && (
-                      <span class="related-links-desc">{item.kurzbeschreibung}</span>
-                    )}
-                  </span>
-                </a>
-              </li>
+              <a href={item.href} class="related-card">
+                <div class="related-card-media">
+                  <CategoryPlaceholder collection={item.collection} locale={locale} />
+                  <span class="related-card-icon" aria-hidden="true">{item.emoji}</span>
+                </div>
+                <div class="related-card-content">
+                  <div class="related-card-meta">
+                    <span class="related-card-cat">{catMap[item.collection] || item.collection}</span>
+                    {item.ort && <span class="related-card-loc">📍 {item.ort}</span>}
+                  </div>
+                  <h4 class="related-card-name">{item.name}</h4>
+                  {item.kurzbeschreibung && (
+                    <p class="related-card-desc">{item.kurzbeschreibung}</p>
+                  )}
+                </div>
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       )}
+
       {crossCategory.length > 0 && (
         <div class="related-links-group">
-          <h3 class="related-links-subtitle">{headings.cross}</h3>
-          <ul class="related-links-list">
+          <div class="related-links-header">
+            <span class="related-links-badge">Tirol</span>
+            <h3 class="related-links-subtitle">{headings.cross}</h3>
+          </div>
+          <div class="related-links-grid">
             {crossCategory.map((item) => (
-              <li>
-                <a href={item.href} class="related-links-card">
-                  <span class="related-links-emoji" aria-hidden="true">{item.emoji}</span>
-                  <span class="related-links-text">
-                    <span class="related-links-name">{item.name}</span>
-                    {item.kurzbeschreibung && (
-                      <span class="related-links-desc">{item.kurzbeschreibung}</span>
-                    )}
-                  </span>
-                </a>
-              </li>
+              <a href={item.href} class="related-card">
+                <div class="related-card-media">
+                  <CategoryPlaceholder collection={item.collection} locale={locale} />
+                  <span class="related-card-icon" aria-hidden="true">{item.emoji}</span>
+                </div>
+                <div class="related-card-content">
+                  <div class="related-card-meta">
+                    <span class="related-card-cat">{catMap[item.collection] || item.collection}</span>
+                    {item.ort && <span class="related-card-loc">📍 {item.ort}</span>}
+                  </div>
+                  <h4 class="related-card-name">{item.name}</h4>
+                  {item.kurzbeschreibung && (
+                    <p class="related-card-desc">{item.kurzbeschreibung}</p>
+                  )}
+                </div>
+              </a>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>
@@ -62,60 +92,129 @@ const hasAny = sameCategory.length > 0 || crossCategory.length > 0;
 
 <style>
   .related-links {
-    padding: 32px 0 8px;
+    padding: 44px 0 24px;
     border-top: 1px solid var(--glass-border);
+  }
+  .related-links-header {
+    margin-bottom: 20px;
+  }
+  .related-links-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    background: var(--surface-hover);
+    color: var(--text3);
+    margin-bottom: 6px;
   }
   .related-links-subtitle {
     font-family: var(--font-display);
-    font-size: clamp(20px, 3vw, 28px);
+    font-size: clamp(22px, 3.5vw, 30px);
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 0 0 16px;
+    margin: 0;
     color: var(--text);
   }
   .related-links-group + .related-links-group {
-    margin-top: 28px;
+    margin-top: 40px;
   }
-  .related-links-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .related-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 16px;
   }
-  .related-links-card {
+  .related-card {
     display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    padding: 14px 16px;
+    gap: 16px;
+    padding: 14px;
     border: 1px solid var(--glass-border);
-    border-radius: var(--radius);
-    background: var(--bg2);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
     text-decoration: none;
     color: inherit;
-    transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    align-items: center;
   }
-  .related-links-card:hover {
+  .related-card:hover {
     border-color: var(--tirol-pink);
-    transform: translateY(-1px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
   }
-  .related-links-emoji {
-    font-size: 24px;
-    line-height: 1;
+  .related-card-media {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius);
+    overflow: hidden;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
   }
-  .related-links-name {
-    display: block;
-    font-weight: 600;
+  .related-card-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 26px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,.2));
+  }
+  .related-card-content {
+    flex: 1;
+    min-width: 0;
+  }
+  .related-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .related-card-cat {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--tirol-pink);
+  }
+  .related-card-loc {
+    font-size: 11px;
+    color: var(--text3);
+    text-transform: capitalize;
+  }
+  .related-card-name {
     font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
     color: var(--text);
+    margin: 0 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .related-links-desc {
-    display: block;
-    font-size: 13px;
+  .related-card-desc {
+    font-size: 12px;
     color: var(--text2);
-    margin-top: 4px;
-    line-height: 1.4;
+    line-height: 1.45;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @media (max-width: 600px) {
+    .related-links-grid {
+      grid-template-columns: 1fr;
+    }
+    .related-card {
+      padding: 12px;
+      gap: 12px;
+    }
+    .related-card-media {
+      width: 70px;
+      height: 70px;
+    }
   }
 </style>

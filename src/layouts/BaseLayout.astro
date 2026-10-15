@@ -20,6 +20,12 @@ export interface Props {
   jsonld?: Record<string, unknown>;
   noindex?: boolean;
   availableLanguages?: string[];
+  /**
+   * One-page front mode: suppress the site header chrome (theme toggle, mega
+   * nav, mobile menu, floating language globe) because the page ships its own
+   * sticky one-page nav. Keeps <head>, JSON-LD and the real site footer intact.
+   */
+  onePage?: boolean;
 }
 
 const {
@@ -34,6 +40,7 @@ const {
   jsonld,
   noindex,
   availableLanguages,
+  onePage = false,
 } = Astro.props;
 
 // Locale helpers — dynamisch für alle Sprachen
@@ -83,7 +90,7 @@ const twitterCard = 'summary_large_image';
 const NAV_LABELS = {
   de: { entdecken:'Entdecken', uebernachten:'Übernachten', aktivitaeten:'Aktivitäten', magazin:'Magazin', preise:'Preise', fuerBetriebe:'Für Betriebe', bezirke:'Bezirke', merkliste:'♥ Merkliste', anmelden:'Anmelden', konto:'Mein Konto', kontakt:'Kontakt', regionen:'Regionen', camping:'Campingplätze', unterkuenfte:'Unterkünfte', orte:'Orte', sehenswertes:'Sehenswertes', gastro:'Gastro', erlebnisse:'Erlebnisse', events:'Events', suche:'Suche', footer_p:'Der smarte Tirol-Guide für Reiseplanung, Unterkünfte und Erlebnisse.', footer_regionen:'Regionen', footer_alle_regionen:'Alle Regionen', footer_erlebnisse:'Erlebnisse', footer_alle_erlebnisse:'Alle Erlebnisse', footer_service:'Service', footer_ueber_uns:'Über uns', footer_fuer_betriebe:'Für Betriebe', footer_kontakt:'Kontakt', footer_impressum:'Impressum', footer_datenschutz:'Datenschutz', footer_agb:'AGB', footer_transparenz:'Transparenz', footer_oben:'↑ Zum Seitenanfang' },
   en: { entdecken:'Discover', uebernachten:'Stay', aktivitaeten:'Activities', magazin:'Magazine', preise:'Pricing', fuerBetriebe:'For Businesses', bezirke:'Districts', merkliste:'♥ Wishlist', anmelden:'Login', konto:'My Account', kontakt:'Contact', regionen:'Regions', camping:'Camping', unterkuenfte:'Accommodations', orte:'Places', sehenswertes:'Sights', gastro:'Food & Drink', erlebnisse:'Experiences', events:'Events', suche:'Search', footer_p:'The smart Tyrol guide for trip planning, accommodations and experiences.', footer_regionen:'Regions', footer_alle_regionen:'All Regions', footer_erlebnisse:'Experiences', footer_alle_erlebnisse:'All Experiences', footer_service:'Service', footer_ueber_uns:'About Us', footer_fuer_betriebe:'For Businesses', footer_kontakt:'Contact', footer_impressum:'Imprint', footer_datenschutz:'Privacy', footer_agb:'Terms', footer_transparenz:'Transparency', footer_oben:'↑ Back to top' },
-  fr: { entdecken:'Découvrir', uebernachten:'Dormir', aktivitaeten:'Activités', magazin:'Magazine', preise:'Tarifs', fuerBetriebe:'Pour les Pros', bezirke:'Districts', merkliste:'♥ Favoris', anmelden:'Connexion', konto:'Mon Compte', kontakt:'Contact', regionen:'Régions', camping:'Camping', unterkuenfte:'Hébergements', orte:'Villages', sehenswertes:'Sites', gastro:'Gastronomie', erlebnisse:'Expériences', events:'Événements', suche:'Recherche', footer_p:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', footer_regionen:'Régions', footer_alle_regionen:'Toutes les Régions', footer_erlebnisse:'Expériences', footer_alle_erlebnisse:'Toutes les Expériences', footer_service:'Service', footer_ueber_uns:'À Propos', footer_fuer_betriebe:'Pour les Pros', footer_kontakt:'Contact', footer_impressum:'Mentions Légales', footer_datenschutz:'Confidentialité', footer_agb:'CGV', footer_transparenz:'Transparence', footer_oben:'↑ Haut de page' },
+  fr: { entdecken:'Découvrir', uebernachten:'Dormir', aktivitaeten:'Activités', magazin:'Magazine', preise:'Tarifs', fuerBetriebe:'Pour les Pros', bezirke:'Districts', merkliste:'♥ Favoris', anmelden:'Connexion', konto:'Mon Compte', kontakt:'Contact', regionen:'Régions', camping:'Camping', unterkuenfte:'Hébergements', orte:'Villages', sehenswertes:'Sites touristiques', gastro:'Gastronomie', erlebnisse:'Expériences', events:'Événements', suche:'Recherche', footer_p:'Le guide intelligent du Tyrol pour planifier vos voyages, hébergements et expériences.', footer_regionen:'Régions', footer_alle_regionen:'Toutes les Régions', footer_erlebnisse:'Expériences', footer_alle_erlebnisse:'Toutes les Expériences', footer_service:'Service', footer_ueber_uns:'À Propos', footer_fuer_betriebe:'Pour les Pros', footer_kontakt:'Contact', footer_impressum:'Mentions Légales', footer_datenschutz:'Confidentialité', footer_agb:'CGV', footer_transparenz:'Transparence', footer_oben:'↑ Haut de page' },
   it: { entdecken:'Scopri', uebernachten:'Dormire', aktivitaeten:'Attività', magazin:'Magazine', preise:'Prezzi', fuerBetriebe:'Per Aziende', bezirke:'Distretti', merkliste:'♥ Preferiti', anmelden:'Accedi', konto:'Mio Account', kontakt:'Contatti', regionen:'Regioni', camping:'Campeggio', unterkuenfte:'Alloggi', orte:'Paesi', sehenswertes:'Attrazioni', gastro:'Gastronomia', erlebnisse:'Esperienze', events:'Eventi', suche:'Cerca', footer_p:'La guida intelligente del Tirolo per pianificare viaggi, alloggi ed esperienze.', footer_regionen:'Regioni', footer_alle_regionen:'Tutte le Regioni', footer_erlebnisse:'Esperienze', footer_alle_erlebnisse:'Tutte le Esperienze', footer_service:'Servizio', footer_ueber_uns:'Chi Siamo', footer_fuer_betriebe:'Per Aziende', footer_kontakt:'Contatti', footer_impressum:'Impressum', footer_datenschutz:'Privacy', footer_agb:'Termini', footer_transparenz:'Trasparenza', footer_oben:'↑ Torna su' },
   es: { entdecken:'Descubrir', uebernachten:'Alojarse', aktivitaeten:'Actividades', magazin:'Revista', preise:'Precios', fuerBetriebe:'Para Empresas', bezirke:'Distritos', merkliste:'♥ Favoritos', anmelden:'Iniciar Sesión', konto:'Mi Cuenta', kontakt:'Contacto', regionen:'Regiones', camping:'Camping', unterkuenfte:'Alojamientos', orte:'Pueblos', sehenswertes:'Atracciones', gastro:'Gastronomía', erlebnisse:'Experiencias', events:'Eventos', suche:'Buscar', footer_p:'La guía inteligente de Tirol para planificar viajes, alojamientos y experiencias.', footer_regionen:'Regiones', footer_alle_regionen:'Todas las Regiones', footer_erlebnisse:'Experiencias', footer_alle_erlebnisse:'Todas las Experiencias', footer_service:'Servicio', footer_ueber_uns:'Sobre Nosotros', footer_fuer_betriebe:'Para Empresas', footer_kontakt:'Contacto', footer_impressum:'Aviso Legal', footer_datenschutz:'Privacidad', footer_agb:'Términos', footer_transparenz:'Transparencia', footer_oben:'↑ Volver arriba' },
   zh: { entdecken:'探索', uebernachten:'住宿', aktivitaeten:'活动', magazin:'杂志', preise:'价格', fuerBetriebe:'企业服务', bezirke:'行政区', merkliste:'♥ 收藏夹', anmelden:'登录', konto:'我的账户', kontakt:'联系我们', regionen:'地区', camping:'露营', unterkuenfte:'住宿', orte:'村镇', sehenswertes:'景点', gastro:'美食', erlebnisse:'体验', events:'活动', suche:'搜索', footer_p:'智能蒂罗尔指南，用于旅行计划、住宿和体验。', footer_regionen:'地区', footer_alle_regionen:'所有地区', footer_erlebnisse:'体验', footer_alle_erlebnisse:'所有体验', footer_service:'服务', footer_ueber_uns:'关于我们', footer_fuer_betriebe:'企业服务', footer_kontakt:'联系我们', footer_impressum:'法律声明', footer_datenschutz:'隐私政策', footer_agb:'使用条款', footer_transparenz:'透明度', footer_oben:'↑ 返回顶部' },
@@ -371,6 +378,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
 <body>
 <div id="scrollProgress" transition:persist></div>
 <button class="btt" id="backToTop" aria-label="Nach oben" transition:persist>↑</button>
+  {!onePage && (
   <button class="theme-toggle" id="themeToggle" aria-label="Tag/Nacht umschalten" transition:persist>
     <svg class="theme-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
@@ -379,8 +387,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
     </svg>
   </button>
+  )}
 
   <!-- NAV -->
+  {!onePage && (
   <nav class="main-nav" id="mainNav" transition:persist>
     <div class="container">
 <a href={localePrefix || '/'} class="nav-logo" style="flex-shrink:0">
@@ -425,7 +435,9 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       </div>
     </div>
   </nav>
+  )}
 
+  {!onePage && (
   <div class="mobile-menu" id="mobileMenu" onclick="this.classList.remove('open')" transition:persist>
     <button class="mobile-close" id="mobileClose">&times;</button>
     <a href={`${localePrefix}/regionen/`}>{nav.regionen}</a>
@@ -442,10 +454,12 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     <a href={`${localePrefix}/merkliste/`}>{nav.merkliste}</a>
     <a href={`${localePrefix}/kontakt/`}>{nav.kontakt}</a>
   </div>
+  )}
 
   <slot />
 
   <!-- ═══ FLOATING LANGUAGE GLOBE ═══ -->
+  {!onePage && (
   <div class="floating-lang" id="floatingLang">
     <button class="floating-lang-btn" onclick="document.getElementById('floatingLang').classList.toggle('open')" aria-label="Sprache ändern">
       🌐
@@ -467,6 +481,7 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
       ))}
     </div>
   </div>
+  )}
 
   <!-- Weather Widget: planned for Phase 2 — currently removed to avoid empty container. -->
 

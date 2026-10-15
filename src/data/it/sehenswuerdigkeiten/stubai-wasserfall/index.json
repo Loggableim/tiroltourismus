@@ -1,16 +1,16 @@
 {
-  "name": "Stubai Wasserfall",
+  "name": "Grawa-Wasserfall",
   "slug": "stubai-wasserfall",
   "region": "stubaital",
   "ort": "Neustift",
   "kategorie": "natur",
   "kurzbeschreibung": "Il maestoso Stubaier Wasserfall precipita per 80 metri in un profondo baratro selvaggio – uno spettacolo naturale per tutta la famiglia.",
-  "beschreibung": "<p>Questa scheda descrive lo ‘Stubai Wasserfall’ come spettacolo naturale nel comune di Neustift im Stubaital: una cascata con un salto di circa 80 metri, diverse piattaforme panoramiche, una locanda direttamente adiacente e una meta per escursioni accessibile gratuitamente tutto l’anno. Le coordinate indicate si trovano nel territorio comunale di Neustift, capoluogo della Stubaital a poco meno di 1.000 metri di quota, a circa 25 chilometri a sud di Innsbruck. Neustift è per superficie il secondo comune più grande del Tirolo e punto di partenza per escursioni all’Elfer. La Stubaital è nota tra l’altro per il ghiacciaio Stubaier Gletscher e il sentiero WildeWasserWeg con le sue cascate. Non sono disponibili ulteriori informazioni verificabili sul luogo descritto.</p>",
+  "beschreibung": "<h2>Panoramica</h2><p>La <strong>Cascata di Grawa</strong> (Grawa-Wasserfall) nella valle Stubaital è la cascata più larga delle Alpi orientali con i suoi 85 metri di fronte. Alimentata dai ghiacciai dello Stubai, precipita fragorosamente per 180 metri sulle rocce granitiche. Le sue minuscole goccioline d'acqua nebulizzata hanno un comprovato effetto benefico per l'apparato respiratorio e le allergie.</p><h2>Percorso &amp; Requisiti</h2><p>Piattaforma relax con lettini ergonomici in legno accessibile in soli 10 minuti su sentiero pianeggiante asfaltato (facile T1, accessibile a carrozzine e passeggini). Il sentiero alpinistico WildeWasserWeg risale a tornanti lungo la cascata fino alla malga Sulzenaualm e al rifugio Sulzenauhütte (2h30, dislivello 660 m, T2). Scarponcini da trekking e giacca impermeabile consigliati. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>In treno fino alla stazione centrale di Innsbruck e autobus diretto VVT 590 fino alla fermata Grawa Alm. In auto dall'autostrada A13 del Brennero (uscita Schönberg) lungo la B183 per 30 km fino al parcheggio della cascata.</p><h2>Consigli</h2><p>Rilassatevi sui lettini della piattaforma panoramica respirando profondamente l'aria purificata dalla cascata e gustate lo strudel di mele appena sfornato nella storica malga Grawa Alm risalente a oltre 400 anni fa.</p>",
   "emoji": "🌊",
   "farbe": "#00BCD4",
   "hoehe": "80 m",
-  "dauer": "1 Stunde",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos (Parkplatz ca. 5–7 € pro Tag)",
   "tags": [
     "natura",
     "escursioni",
@@ -18,12 +18,20 @@
     "gratis"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "",
+  "webseite": "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
   "status": "published",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.1106",
     "lng": "11.3076"
-  }
+  },
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "sources": [
+    "https://www.stubai.at/aktivitaeten/wandern/wildewasserweg/",
+    "https://de.wikipedia.org/wiki/Grawa-Wasserfall",
+    "https://www.stubai.at/",
+    "https://www.vvt.at/"
+  ]
 }

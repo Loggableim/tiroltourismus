@@ -1,28 +1,35 @@
 {
-  "name": "Almabtrieb mit Fest",
   "slug": "almabtrieb-lechtal",
   "emoji": "🐂",
   "farbe": "var(--green)",
   "kategorie": "tradition",
   "ort": "Lechtal",
   "region": "lechtal",
-  "beschreibung": "=== description ===\nThe traditional **Almabtrieb** in the **Lechtal** is a vibrant spectacle. The beautifully adorned cows are decorated with **Almabtriebskronen** and flowers as they are driven down from the alpine pastures. Local music bands, folk dance groups, and a bustling farmers' market accompany the celebration, making it a highlight of **Tirol’s cultural year**.",
-  "preis": 0,
+  "koordinaten": {
+    "lat": "47.3442",
+    "lng": "10.5044"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Traditional Almabtrieb in the Lechtal",
+  "beschreibung": "### Overview\nThe Almabtrieb cattle drive in Tyrol's Lechtal Valley is one of the most colourful and authentic harvest celebrations across the Alps. Every year in mid-September, around Saint Rupert's Day, cattle return to valley pastures after approximately one hundred days grazing in high-alpine meadows. The epicentre of the festivities is Steeg, which hosts the largest Almabtrieb in the Tyrolean Außerfern region. Around 500 cattle descend from side valleys such as Krabachalpe, Pimigalpe, and Bockbachtal into the village. The elaborate floral decoration ('Aufkranzen') takes place only when the summer on the pastures passed without fatal accidents for humans or livestock. The herd is led by the 'Kranzkuh' (lead cow), sporting a magnificent headpiece crafted from dwarf pine, alpine blossoms, colourful ribbons, a sacred cross, and a small mirror meant to ward off evil mountain spirits.\n\n### Route & Requirements\nThe cattle march along the valley's main road directly into the village festival grounds in central Steeg during late morning. Herdsmen guide the livestock amid resounding cattle bells and alpine whip-cracking (Goaßlschnalzen). Navigating the village grounds is accessible and requires no mountain hiking fitness. Families find it an unforgettable cultural display; however, earmuffs are recommended for small children due to the loud ringing of heavy brass bells. The event is unsuitable for dogs: cattle instinctively perceive dogs as predators, and dense spectator crowds heighten animal agitation. If dogs must attend, keep them on a short leash well clear of cattle paths.\n\n### Arrival\nDrivers arrive from Reutte via the B198 Lechtal federal road to Steeg. Note: Due to the cattle drive, the B198 through Steeg is completely closed to all transit traffic between approximately 11:00 and 13:30. Visitors should arrive before 10:30, as village parking spaces fill up rapidly. Arriving by public transport aboard the VVT regional bus line 110 (Lechtalbus) from Reutte to Steeg is stress-free. For holidaymakers holding the Lechtal Aktiv Card guest card, bus travel within the valley is free of charge.\n\n### Tips\nAdmission to the street procession and village farmers' market is free. Inside the heated festival marquee, local brass bands provide traditional folk music while market stalls serve local delicacies such as Lechtal alpine cheese, freshly fried Kiachl with lingonberry jam, and sweet Krapfen. The evening highlight is the raffle of a genuine, ornate alpine cowbell among guests. Safety note: Dairy cows weigh up to 700 kilograms; maintain respectful distance, never touch animal horns, and never obstruct approaching cattle.",
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.lechtal.at/de/veranstaltungen/veranstaltungen-im-lechtal.html",
+    "https://www.steeg.gv.at",
+    "https://www.tirol.at/aktivitaeten/events/almabtriebe",
+    "https://www.sichere-almen.at"
+  ],
+  "bilder": [],
   "dauer": "1 Tag",
+  "link": "#",
+  "preis": 0,
   "tags": [
     "tradition",
     "brauchtum",
     "almabtrieb",
     "lechtal",
     "fest"
-  ],
-  "koordinaten": {
-    "lat": "47.3442",
-    "lng": "10.5044"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

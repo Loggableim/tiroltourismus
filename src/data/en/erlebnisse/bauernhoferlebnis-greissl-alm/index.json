@@ -1,28 +1,33 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
   "region": "alpbach",
-  "beschreibung": "=== description ===\nA day at the **Greissl Alm** lets families experience authentic Tyrolean farm life. Kids can pet cows, feed goats, and watch cheese-making in action. The farm owner shares fascinating tales from daily alpine life, while adults enjoy a hearty *Brettljasn* (a traditional Tyrolean spread) and homemade cider.",
-  "preis": 35,
+  "koordinaten": {
+    "lat": "47.3983",
+    "lng": "11.9452"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Farm & Alpine Pasture Experience at Greissl Alm in Alpbach",
+  "beschreibung": "### Overview\nIn Alpbach, the picturesque timber village frequently honoured as 'Austria's Most Beautiful Village', alpine farming heritage has been genuinely preserved for centuries. Important for trip planning: an official pasture named 'Greißl-Alm' does not exist in the Tyrolean land register; the slug stems from a fictional mockup label. However, the authentic farm attractions across the Alpbachtal Valley deliver precisely the experiences travellers seek. The regional highlight is the Vorder-Unterberg Mountain Farm Museum in Inneralpbach. Constructed between 1636 and 1638, the historic farmhouse was inhabited until 1952. Operating as a living museum, it combines historic chambers with active farming: while Tyrolean bacon is still cured in the soot-blackened open kitchen (Rauchkuchl), cows and farm livestock graze in the active barn and adjacent meadows. Further authentic spots include Bischofer Käsalm with its show cheese cellar and historic high pastures in Greiter Graben.\n\n### Route & Requirements\nThe top farm-life excursions in Alpbach include:\n1. Vorder-Unterberg Farm Museum (Inneralpbach): From the Inneralpbach car park, a paved lane leads up in about 15 minutes (40 metres elevation gain), fully stroller-accessible.\n2. Bischofer Käsalm (1,334 m): A renowned alpine tavern on the sunny slopes beneath Gratlspitze featuring artisanal cheesemaking. The loop trail from Alpbach village centre covers 6.8 kilometres and 367 vertical metres (walking time approx. 2.5 hours; stroller-friendly via the forestry road).\n3. Farmkehralm (1,521 m) in Greiter Graben: A 400-year-old alpine dairy pasture tucked beneath Großer Galtenberg. From the Inneralpbach trailhead, a wide gravel path ascends in about 1.5 hours (450 vertical metres).\nAll trails demand standard hiking fitness and sturdy footwear. Dogs on leashes are welcome on outdoor trails; pets are not permitted inside museum buildings.\n\n### Arrival\nBy car, take the A12 Inntal Autobahn (Kramsach/Brixlegg exit) and follow the L5 provincial road into Alpbach and onward to Inneralpbach. Parking is available in central Alpbach and at dedicated hiking lots in Inneralpbach and Hochberg. Public transit users arrive by train at Brixlegg station and transfer to the VVT regional bus line 4074, which runs hourly directly to Inneralpbach. All local buses are free with the regional Alpbachtal Card (included from one overnight stay).\n\n### Tips\nAdmission to the Vorder-Unterberg Museum costs around €3.00 for adults (discounted to €2.00 with guest card) and €1.50 for children. Guided tours run on selected afternoons during summer. Alpine huts throughout the valley serve authentic platters with regional Graukäse (Tyrolean sour cheese), fresh farm butter, and crusty sourdough bread. In high summer, suckler cow herds graze open pastures along Greiter Graben; keep a respectful 20-metre distance and unleash dogs immediately if cattle display defensive behaviour.",
+  "sources": [
+    "https://www.alpbachtal.at",
+    "https://www.alpbachtal.at/de/aktivitaeten/top-ausflugsziele",
+    "https://www.schuleambauernhof.at"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 35,
   "tags": [
     "familie",
     "bauernhof",
     "alm",
     "alpbach",
     "tiere"
-  ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

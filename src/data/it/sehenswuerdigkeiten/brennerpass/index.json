@@ -5,13 +5,13 @@
   "region": "innsbruck-land",
   "ort": "Brenner",
   "kategorie": "natur",
-  "kurzbeschreibung": "Il passo alpino più basso a 1.374 m – confine storico tra Austria e Italia con la Brennerbahn, la Brennerautobahn e la pista ciclabile verso Bozen.",
-  "beschreibung": "<p>Il <strong>Passo del Brennero</strong> collega a 1.374 metri di altitudine il Tirolo austriaco con l'Alto Adige ed è il più importante valico alpino tra Austria e Italia. Da secoli viaggiatori e commercianti utilizzano questo passo più basso delle Alpi Centrali come collegamento nord-sud. Dopo la fine della Prima guerra mondiale costituisce il confine di Stato tra i due paesi. Oggi sul passo transitano la Brennerautobahn e la storica Brennerbahn, che collegano Innsbruck con Sterzing, Brixen e Bozen. La pista ciclabile Brenner–Bozen segue per circa 96 chilometri il vecchio tracciato ferroviario attraverso l'Eisacktal. Lo sguardo spazia lontano nella Wipptal e verso i mondi montani circostanti. Il passo è percorribile tutto l'anno, ma in inverno occorre tenere conto delle condizioni meteorologiche e stradali.</p>",
+  "kurzbeschreibung": "A 1.370 m, il Brennerpass collega l'Austria all'Italia: valico alpino romano, la ferrovia di Carl von Etzel e fondamentale asse di trasporto europeo.",
+  "beschreibung": "<h2>Panoramica</h2><p>Il <strong>Brennerpass</strong> (in italiano <em>Passo del Brennero</em>) segna, a un'altitudine di 1.370 metri sul livello del mare, il confine di Stato tra il Land austriaco del Tirolo e la provincia autonoma di Bozen-S?dtirol in Italia. Situato tra le Alpi dello Stubai e le Alpi della Zillertal, il Brennero ? il valico topograficamente pi? basso dell'intera catena principale delle Alpi Centrali. Per millenni questo passo ha rappresentato la principale via di comunicazione tra l'Europa centrale e il bacino del Mediterraneo, rimanendo tuttora l'arteria di transito pi? trafficata dell'arco alpino.</p><h2>Storia e trasporti</h2><p>Gi? nell'et? della pietra e del bronzo cacciatori e mercanti attraversavano questa sella montuosa. Intorno al 200 d.C., l'imperatore romano <strong>Septimius Severus</strong> fece ampliare il tracciato trasformandolo nella via militare carrozzabile <em>Via Raetia</em>, che collegava Verona ad Augusta. Nel Medioevo, lungo la <em>Via Imperii</em>, la maggior parte dei re e imperatori tedeschi valic? il Brennero diretta a Roma per la cerimonia d'incoronazione. Tra il 1772 e il 1777 l'imperatrice <strong>Maria Theresia</strong> promosse la trasformazione della mulattiera nella prima strada carrozzabile moderna delle Alpi orientali. Un'impresa ingegneristica di rilievo mondiale fu compiuta nel 1867 dall'ingegnere <strong>Carl von Etzel</strong> con il completamento della <em>Brennerbahn</em>, la prima ferrovia transalpina continua priva di galleria di valico sommitale. Nel 1919, in seguito al Trattato di Saint-Germain, il passo divenne confine di Stato. Tra il 1959 e il 1974 fu realizzata l'autostrada A13 del Brennero con il maestoso Europabr?cke. Attualmente, con la costruzione della galleria di base del Brennero (<em>Brenner Basistunnel (BBT)</em>) di 55 km, prende forma l'opera ferroviaria del secolo per il trasferimento su rotaia delle merci.</p><h2>Visita e come arrivare</h2><p>Il valico e i collegamenti stradali sono aperti tutto l'anno 24 ore su 24 e 7 giorni su 7. La strada statale B182 (Brennerstra?e) sul versante austriaco ? completamente <strong>senza pedaggio</strong>. Per l'autostrada del Brennero A13 si applica un pedaggio speciale ASFINAG (corsa singola auto ca. 11,50 - 12,00 ?). Sul versante altoatesino subentra l'autostrada a pedaggio A22. Presso la stazione di confine si trova il centro commerciale <em>Designer Outlet Brenner (DOB)</em> con oltre 70 negozi, aperto tutti i giorni dalle 09:00 alle 19:00. In treno: la linea S-Bahn S3 parte ogni mezz'ora dalla stazione centrale di Innsbruck per la stazione di Brennero (tempo di percorrenza circa 35 minuti); vi effettuano fermata regolare anche i treni Eurocity. In auto si arriva tramite l'autostrada A13 (uscita Brennersee) o percorrendo la panoramica statale B182.</p><h2>Consigli</h2><p>La moderna stazione di Brennero e il Designer Outlet sono completamente privi di barriere architettoniche con accessi a raso, ampi corridoi e ascensori dedicati. Dal passo prende avvio la celebre pista ciclabile <em>Eisacktal-Radweg</em>, che su un tracciato ferroviario dismesso consente di pedalare per 96 km quasi interamente in discesa attraverso Vipiteno (Sterzing) e Bressanone (Brixen) fino a Bolzano (Bozen). Sul valico merita una visita la chiesa di <em>Maria am Wege</em>, eretta nel 1962 ed emblematica per la sua suggestiva architettura di frontiera.</p>",
   "emoji": "🏔️",
   "farbe": "#78909C",
   "hoehe": "1.374 m",
   "dauer": "2–3 Stunden",
-  "preis": "Kostenlos (Passstraße mautfrei)",
+  "preis": "Passhöhe und B182 kostenlos (A13 Sondermaut ca. 12,00 €)",
   "tags": [
     "natura",
     "storia",
@@ -20,10 +20,17 @@
     "ciclismo",
     "valle di Pieve di Cadore"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.brennerpass.at",
+  "oeffnungszeiten": "Ganzjährig rund um die Uhr frei befahrbar",
+  "webseite": "https://www.wipptal.at",
   "koordinaten": {
     "lat": "47.0044",
     "lng": "11.5075"
-  }
+  },
+  "sources": [
+    "https://www.bbt-se.com",
+    "https://www.outletcenterbrenner.com",
+    "https://www.asfinag.at",
+    "https://www.wipptal.at",
+    "https://de.wikipedia.org/wiki/Brennerpass"
+  ]
 }

@@ -1,10 +1,10 @@
 {
-  "name": "Pfrillsee",
+  "name": "Pfrillsee Kufstein",
   "slug": "pfrillsee",
   "region": "kufstein",
   "ort": "Kufstein",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Der idyllische, wärmste Wald- und Moorsee Kufsteins – verborgen im Naturschutzwald unterhalb des Thierbergs, Rundwanderweg und Seerosen.",
   "emoji": "🏞️",
   "farbe": "#00CED1",
   "tags": [
@@ -13,10 +13,10 @@
     "baden",
     "ruhe"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "1–2 Stunden",
+  "preis": "Kostenlos frei zugänglich (Parkplatz Hechtsee ca. 3–5 € pro Tag)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.kufstein.com/de/pfrillsee/",
+  "webseite": "https://www.kufstein.com/de/kufstein/kultur-ausflugsziele/pfrillsee.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,13 @@
     "lng": "12.1692"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Pfrillsee</strong> – Die Pfrillsee begeistert Besucher mit ihrer ursprünglichen Schönheit und lädt zum Entdecken und Verweilen ein. Der ruhig gelegene Pfrillsee zwischen Kufstein und Thiersee ist ein Geheimtipp für Naturliebhaber Ob gemütlicher Spaziergang oder anspruchsvolle Bergtour – die Pfrillsee hat für jedes Niveau das passende Angebot. Familien mit Kindern schätzen die gut erschlossenen Wege, während erfahrene Bergsteiger die anspruchsvolleren Routen in der Umgebung erkunden können. Eingebettet in die malerische Kulisse der Tiroler Alpen, präsentiert sich die Pfrillsee als Ort der Ruhe und Erholung. Die gute Erreichbarkeit von Kufstein aus macht sie zu einem lohnenden Tagesausflugsziel. Die Pfrillsee ist ein Muss für jeden Tirol-Besucher und verspricht unvergessliche Eindrücke.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Pfrillsee</strong> (615 m) es el más pequeño, elevado y cálido de los cuatro lagos forestales de Kufstein. Escondido en una cuenca boscosa al pie del monte Thierberg, este lago natural de turbera de 1,7 hectáreas es un paraíso de tranquilidad rodeado de nenúfares y densos bosques mixtos, perfecto para un baño natural.</p><h2>Ruta y Requisitos</h2><p>Paseo circular por senderos arbolados alrededor del lago (30 min, 1,2 km, fácil T1, para familias). Conectado con el lago Hechtsee por la ruta senderista de los Cuatro Lagos (1,5 horas, 120 m de desnivel, T1). Calzado cómodo recomendado. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a la estación de Kufstein y autobús local o paseo de 45 minutos desde el centro. En coche por la autopista A12 (salida Kufstein-Nord) hasta el aparcamiento de Hechtsee. Acceso público y gratuito.</p><h2>Consejos</h2><p>Acérquese a primera hora de la mañana para fotografiar la niebla sobre las aguas oscuras y tranquilas, y complete la excursión subiendo a la cercana torre del castillo de Thierberg.</p>",
+  "saison": "Ganzjährig frei zugänglich (Badesaison Juni bis September)",
+  "familie": true,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pfrillsee",
+    "https://www.kufstein.com/",
+    "https://www.hechtsee.at/",
+    "https://www.vvt.at/"
+  ]
 }

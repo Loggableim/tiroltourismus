@@ -118,7 +118,7 @@ function buildDoc({ collection, locale, slug, entry, type, emoji }) {
     name,
     emoji: entry.emoji || emoji,
     ort: entry.ort || '',
-    region: entry.region || '',
+    region: entry.region || (type === 'region' ? slug : ''),
     kategorie: entry.kategorie || kategorien || '',
     tier: entry.tier || '',
     sterne: entry.sterne || '',

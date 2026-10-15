@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Heiligenblut",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "L’une des plus belles routes alpines d’Europe , avec ses 36 virages en épingle et des vues à couper le souffle sur le plus haut sommet d’Autriche.",
-  "beschreibung": "<p>Die <strong>Großglockner Hochalpenstraße</strong> liegt in der Gemeinde <strong>Heiligenblut</strong> in <strong>Tirol</strong>. Sie verbindet das Bundesland Salzburg mit Osttirol und quert den <strong>Nationalpark Hohe Tauern</strong>. Der höchste Punkt der Strecke ist das <strong>Hochtor</strong> auf 2.504 Metern. Entlang der Straße bieten Aussichtsplattformen den Blick auf den <strong>Großglockner</strong> und die <strong>Pasterze</strong>. Ein zentraler Aussichtspunkt ist die <strong>Kaiser-Franz-Josefs-Höhe</strong> mit Ausstellungen zur Nationalparkregion. Die Mautstraße ist in der Regel von Mai bis Oktober geöffnet. Besucher erwartet eine hochalpine Gebirgslandschaft.</p>",
+  "kurzbeschreibung": "La Großglockner Hochalpenstraße culmine à 2 504 m d'altitude : la plus haute montagne d'Autriche (3 798 m), Kaiser-Franz-Josefs-Höhe, Pasterze et chef-d'œuvre du génie alpin.",
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>Großglockner Hochalpenstraße</strong> est le plus célèbre monument routier alpin d'Autriche et compte parmi les routes panoramiques les plus spectaculaires au monde. Franchissant la crête principale des Hohe Tauern, elle relie le Land de Salzbourg à l'Osttirol et à la Carinthie par le Hochtor à 2 504 mètres d'altitude. Niché au cœur du <em>Nationalpark Hohe Tauern</em>, le tracé de 48 kilomètres conduit directement au cœur du massif du Glockner, au pied du <strong>Großglockner</strong> (3 798 m), le plus haut sommet de la République d'Autriche. Chaque année, ce chef-d'œuvre classé monument historique fascine des centaines de milliers de visiteurs.</p><h2>Histoire & Ingénierie</h2><p>Le tracé suit des chemins ancestraux : dès l'âge du bronze et l'époque romaine, les marchands empruntaient le sentier muletier passant par le Hochtor, comme l'attestent les découvertes archéologiques d'une statuette romaine d'Hercule. Durant les années de crise de 1930, le gouvernement fédéral autrichien décida la construction d'une route panoramique moderne pour créer des emplois et encourager le tourisme. Sous la direction du talentueux ingénieur civil <strong>Franz Wallack</strong>, plus de 3 000 ouvriers taillèrent la route dans la roche abrupte entre 1930 et 1935. Le 3 août 1935, la route de haute montagne fut inaugurée solennellement. Wallack conçut le tracé avec 36 virages en lacet s'intégrant harmonieusement dans le paysage de haute montagne. Le point d'orgue absolu de l'antenne routière est la <strong>Kaiser-Franz-Josefs-Höhe</strong> à 2 369 mètres d'altitude : nommée d'après la visite impériale de François-Joseph Ier en 1856, le centre des visiteurs de quatre étages y propose des expositions sur la glaciologie, le cinéma Glockner, la Wilhelm-Swarovski-Beobachtungswarte ainsi qu'une vue plongeante spectaculaire sur la <em>Pasterze</em>, le plus long glacier d'Autriche avec environ huit kilomètres.</p><h2>Visite et accès</h2><p>La Großglockner Hochalpenstraße est accessible selon les saisons de début mai à début novembre tous les jours (la nuit s'applique une interdiction officielle de circuler). Horaires d'ouverture des postes de péage : de juin à août tous les jours de 05h30 à 21h00 (dernier accès à 20h15) ; mai et à partir de septembre tous les jours de 06h00 à 19h30/20h00. Tarifs du péage journalier (saison 2025/2026) : voiture 46,50 € (voiture électrique à tarif réduit 40,00 €), moto 36,50 € (moto électrique 32,50 €). Accès en voiture : depuis le nord via Zell am See/Bruck sur la B107 via Ferleiten ; depuis le sud via Lienz en Osttirol et Heiligenblut. En transports publics : durant les mois d'été, des bus d'excursion (Glocknerbus) circulent au départ de Lienz et Zell am See directement jusqu'à la Kaiser-Franz-Josefs-Höhe.</p><h2>Conseils</h2><p>Le centre des visiteurs moderne de la Kaiser-Franz-Josefs-Höhe ainsi que le parking couvert sont accessibles aux personnes à mobilité réduite et équipés d'ascenseurs ; les terrasses panoramiques sont adaptées aux fauteuils roulants et aux poussettes. Observez depuis les plates-formes panoramiques les marmottes alpines peu farouches et les bouquetins. Prévoyez des vêtements chauds et imperméables même en plein été, car des changements météorologiques rapides peuvent survenir à plus de 2 300 mètres d'altitude.</p>",
   "emoji": "🏔️",
   "farbe": "#4CAF50",
   "hoehe": "2.576 m (Hochtor)",
   "dauer": "Halbtag",
-  "preis": "43 € pro Fahrzeug",
+  "preis": "PKW Tageskarte 46,50 € (E-PKW 40,00 €), Motorrad 36,50 €",
   "tags": [
     "rue panoramique",
     "vue panoramique",
@@ -19,12 +19,18 @@
     "Grossglockner",
     "nature"
   ],
-  "oeffnungszeiten": "Anfang Mai bis Ende Oktober, täglich 6:00–20:00",
+  "oeffnungszeiten": "Mai–Nov täglich ab 05:30/06:00 Uhr (letzte Einfahrt ca. 45 Min vor Nachtsperre)",
   "webseite": "https://www.grossglockner.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "12.8333"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.grossglockner.at",
+    "https://www.nationalpark.at",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner-Hochalpenstra%C3%9Fe",
+    "https://de.wikipedia.org/wiki/Pasterze"
+  ]
 }

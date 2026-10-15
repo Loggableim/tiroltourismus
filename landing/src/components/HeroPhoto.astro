@@ -1,0 +1,82 @@
+---
+import photos from '../data/hero-photos.json';
+
+export interface Props {
+  /** Klasse des Hero-Bildes; bekommt im Browser das <picture>-Element mit dieser Klasse am img. */
+  imgClass?: string;
+  /** ID des Footer-Elements, das den Fotonachweis aufnimmt. */
+  creditId?: string;
+}
+
+const { imgClass = 'df-bg', creditId = 'dfPhoto' } = Astro.props;
+---
+
+<div class={imgClass} data-hero-slot aria-hidden="true"></div>
+
+<script is:inline define:vars={{ photos, imgClass, creditId }}>
+  (function () {
+    var LABELS = {
+      de: ['Foto', 'bearbeitet', 'gleiche Lizenz'],
+      en: ['Photo', 'edited', 'same license'],
+      fr: ['Photo', 'modifiée', 'même licence'],
+      cs: ['Foto', 'upraveno', 'stejná licence'],
+      nl: ['Foto', 'bewerkt', 'zelfde licentie'],
+      it: ['Foto', 'modificata', 'stessa licenza'],
+      es: ['Foto', 'editada', 'misma licencia'],
+      zh: ['照片', '已编辑', '同许可']
+    };
+
+    var langs = [];
+    try { langs = navigator.languages || [navigator.language]; } catch (e) {}
+    var lang = 'de';
+    for (var k = 0; k < langs.length; k++) {
+      var base = String(langs[k] || '').toLowerCase().split('-')[0];
+      if (LABELS[base]) { lang = base; break; }
+    }
+
+    var photo = photos[Math.floor(Math.random() * photos.length)];
+    var stem = '/hero/' + photo.id + '-2560.';
+
+    var pre = document.createElement('link');
+    pre.rel = 'preload';
+    pre.as = 'image';
+    pre.type = 'image/avif';
+    pre.href = stem + 'avif';
+    pre.setAttribute('fetchpriority', 'high');
+    document.head.appendChild(pre);
+
+    var slot = document.querySelector('[data-hero-slot]');
+    if (slot) {
+      var pic = document.createElement('picture');
+      [['image/jxl', 'jxl'], ['image/avif', 'avif'], ['image/webp', 'webp']].forEach(function (f) {
+        var s = document.createElement('source');
+        s.type = f[0];
+        s.srcset = stem + f[1];
+        pic.appendChild(s);
+      });
+      var img = document.createElement('img');
+      img.className = imgClass;
+      img.src = stem + 'jpg';
+      img.alt = '';
+      img.setAttribute('aria-hidden', 'true');
+      img.setAttribute('fetchpriority', 'high');
+      img.decoding = 'async';
+      pic.appendChild(img);
+      slot.parentNode.replaceChild(pic, slot);
+    }
+
+    function fillCredit() {
+      var credit = document.getElementById(creditId);
+      if (!credit) return;
+      var L = LABELS[lang];
+      credit.textContent = L[0] + ': ' + photo.author + ', ' + photo.license + ' (' + L[1] + (photo.sa ? ', ' + L[2] : '') + ')';
+      credit.setAttribute('href', photo.page);
+      credit.hidden = false;
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', fillCredit);
+    } else {
+      fillCredit();
+    }
+  })();
+</script>

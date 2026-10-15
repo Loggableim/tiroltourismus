@@ -10,6 +10,7 @@ import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { detectLeak, walkStrings } from './lib/leak-detect.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = 'src/data';
@@ -133,6 +134,30 @@ async function main() {
   const findings = [];
   const addFinding = (file, entry, check, level, detail) =>
     findings.push({ file, entry, check, level, detail });
+
+  // 0 Leak-Gate: IMMER über ALLE Inhalte (alle Sprachen), nicht nur geänderte Dateien.
+  // Meldet Denkspuren/Meta-Text von Übersetzungsmodellen und Wiederholungsschleifen als Fehler.
+  const leakWalk = (dir) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const f = path.join(dir, e.name);
+      if (e.isDirectory()) { leakWalk(f); continue; }
+      if (!e.name.endsWith('.json')) continue;
+      let j; try { j = JSON.parse(fs.readFileSync(f, 'utf8')); } catch { continue; }
+      for (const [p, v] of walkStrings(j)) {
+        const why = detectLeak(v);
+        if (why) {
+          const rel = path.relative(ROOT, f);
+          addFinding(rel, entryName(splitLocale(rel).rest), '0 Kein LLM-Leak', 'error', `${p}: ${why}`);
+        }
+      }
+    }
+  };
+  leakWalk(path.join(ROOT, DATA));
+  if (findings.length) {
+    for (const f of findings) console.log(`| ${cell(f.file)} | ${cell(f.entry)} | ${f.check} | ${f.level} | ${cell(f.detail)} |`);
+    console.error(`Leak-Gate: ${findings.length} Fehler`);
+    process.exit(1);
+  }
 
   if (files.length === 0) {
     console.log(`Keine geänderten Dateien unter ${DATA} gegenüber ${BASE}.`);

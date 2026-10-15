@@ -124,6 +124,10 @@ button:focus-visible {
   isolation: isolate;
 }
 
+.tt-stage > picture {
+  display: contents;
+}
+
 .tt-hero {
   position: absolute;
   inset: 0;
@@ -582,3 +586,6 @@ button:focus-visible {
     border-left-width: 5px;
   }
 }
+
+.tt-photo[hidden] { display: none; }
+.tt-photo::before { content: '· '; opacity: .6; }

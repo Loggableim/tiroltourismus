@@ -4,14 +4,14 @@
   "typ": "camping",
   "sterne": null,
   "preis_ab": null,
-  "ort": "",
+  "ort": "Krimml",
   "region": "zillertal",
-  "plz": "",
-  "adresse": "",
-  "telefon": null,
-  "email": null,
+  "plz": "5743",
+  "adresse": "Wasserfallstraße 42, Oberkrimml",
+  "telefon": "+43 6564 7203",
+  "email": "info@krimmlerfaelle.at",
   "webseite": "https://www.krimmlerfaelle.at/caravan-camping",
-  "beschreibung": "<p>Der <strong>Camping- und Wohnmobilstellplatz Hotel Krimmlerfälle</strong> liegt in Tirol, unweit der berühmten Krimmler Wasserfälle. Der Platz bietet befestigte Stellplätze für Wohnmobile und Zelte mit Stromanschluss. Gäste können die Sanitäranlagen und die hauseigene Gastronomie nutzen. Von hier starten direkte Wanderwege zu den höchsten Wasserfällen Europas. Der Platz dient als Basislager für Ausflüge im Nationalpark Hohe Tauern. Eine Rezeption und ein kleiner Shop sind vorhanden.</p>",
+  "beschreibung": "<h2>Aperçu</h2><p>L'<strong>aire de camping et de camping-cars Hotel Krimmlerfälle</strong> se situe à Oberkrimml, dans la commune de <strong>Krimml</strong> au Land de Salzbourg, juste à la lisière du <strong>parc national des Hohe Tauern</strong> et avec vue sur les <strong>chutes de Krimml</strong>. L'aire est exploitée par la famille Herbert Schöppl, à laquelle appartient également l'<strong>hôtel Krimmlerfälle</strong> attenant. Camping-cars, vans, voitures avec tente de toit et tentes classiques peuvent y passer la nuit. Selon les portails d'aires de stationnement, environ 20 emplacements sont disponibles ; le sol est en partie gravillonné, en partie herbeux, et partiellement inégal ainsi que partiellement ombragé. L'aire dispose d'un restaurant, d'une brasserie en plein air et d'une douche, et les chiens sont autorisés. L'enregistrement se fait à la réception de l'hôtel et le paiement se fait exclusivement en espèces.</p><p>Important pour la classification : Krimml appartient au Land de Salzbourg et ne se trouve pas dans le Tyrol. L'attribution à une région tyrolienne suggérée par la fiche est donc erronée ; selon promobil, la <strong>Zillertal Arena</strong> tyrolienne, sur la Gerlosplatte, n'est qu'un but d'excursion à proximité.</p><h2>Histoire/Contexte</h2><p>L'aire fait partie de l'exploitation hôtelière <strong>Krimmlerfälle</strong> située à Oberkrimml 42 (Wasserfallstraße 42), 5743 Krimml. La maison est gérée par la famille Herbert Schöppl, joignable par téléphone au +43 6564 7203. Une histoire documentée de la fondation ou de la construction du camping au-delà de cela n'est pas attestée dans les sources disponibles, c'est pourquoi aucune spéculation n'est faite à ce sujet.</p><h2>Accès</h2><p>L'adresse est Oberkrimml 42, 5743 Krimml. L'aire se trouve à l'intérieur de la localité, près d'un restaurant ; le centre du village est accessible à pied selon promobil. Le site se trouve non loin de la route de passage, ce qui, selon les avis promobil, peut entraîner du bruit. La page officielle de l'exploitant indique la situation avec les coordonnées 47,21912 de latitude nord et 12,17468 de longitude est. Une desserte par les transports publics n'est pas indiquée dans les sources.</p><h2>Conseils</h2><p>L'enregistrement se fait à la réception de l'hôtel et le paiement ne peut se faire qu'en espèces. Le prix spécial de 45,00 euros pour un emplacement avec une à deux personnes comprend une carte de randonnée, l'entrée quotidienne aux chutes de Krimml, l'électricité et l'eau ainsi que la taxe de séjour. En outre, les adultes à partir de 15 ans paient 12,00 euros, les enfants de 0 à 14 ans 6,00 euros et les animaux de compagnie 5,00 euros par jour ; la douche à l'hôtel coûte 3,50 euros par personne, l'espace bien-être 22,00 euros par personne et par jour. Une offre de petit-déjeuner est également proposée à l'hôtel.</p><h2>Meilleure période de voyage</h2><p>Selon son propre site web, l'établissement s'adresse aux clients en vacances d'été comme d'hiver. La saison chaude est marquée par la visite des chutes de Krimml et des randonnées dans le parc national des Hohe Tauern ; en automne, promobil mentionne la descente des troupeaux des alpages ; en hiver, le ski est possible sur la Gerlosplatte dans la Zillertal Arena. Une indication précise de la saison avec les horaires d'ouverture n'est pas mentionnée sur la page officielle de l'établissement.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.218186",
     "lng": "12.174735"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.krimmlerfaelle.at/en/holiday-world/caravan-camping",
+    "https://stellplatz.info/wohnmobilstellplatz/hotel-camping-krimmlerfalle"
+  ]
 }

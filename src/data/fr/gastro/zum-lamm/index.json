@@ -3,15 +3,15 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "À l’Agneau en Tirol Découvrez l’authenticité culinaire et les paysages à couper le souffle de la Tirol dans ce restaurant emblématique, Zum Lamm.",
-  "beschreibung": "<p>Le <strong>Zum Lamm</strong> au cœur d’Innsbruck vous invite à découvrir la diversité de la gastronomie tiroloise. Plats typiques de la région et classiques internationaux dans une ambiance chaleureuse. L’équipe vous offre un menu soigneusement préparé où la qualité et le plaisir sont mis en avant. Que ce soit pour un déjeuner ou un dîner romantique, vous êtes bien placé ici.</p>",
-  "ort": "",
+  "kurzbeschreibung": "Hôtel-restaurant familial Zum Lamm à Tarrenz près d'Imst : cuisine tyrolienne et internationale, point de départ pour randonneurs, motards et voyages en autocar.",
+  "beschreibung": "<h2>Aperçu</h2><p>L'<strong>hôtel-restaurant Zum Lamm</strong> se situe au Hauptstraße 5 à <strong>Tarrenz</strong> (code postal 6464), dans le Gurgltal tyrolien, à quelques kilomètres seulement du chef-lieu de district Imst. La maison familiale de style tyrolien est exploitée comme un hôtel trois étoiles confortable et réunit hébergement et restauration sous un même toit. Située dans la région de vacances Imst-Gurgltal, elle est un lieu de rendez-vous apprécié tant des vacanciers que des voyageurs de passage. Le restaurant de l'hôtel sert une cuisine tyrolienne et internationale ; les clients de l'hôtel et les clients de passage s'installent dans la salle à manger, dans les petits salons ou, par beau temps, sur la terrasse avec vue sur les Alpes. L'offre comprend un copieux buffet de petit-déjeuner ainsi qu'une demi-pension avec dîner de quatre plats. Un bar d'hôtel et un bar de cave complètent le séjour.</p><h2>Histoire/Contexte</h2><p>La maison s'appuie sur une longue tradition d'établissement de halte sur la route du Fernpass. Au fil des années, elle s'est imposée dans la région de vacances Imst-Gurgltal comme hôtel pour voyages en autocar et motards. L'hôte est nommé Ralf Rauchberger, qui positionne la maison comme hôtel pour motards. À partir de l'hiver 2026, l'hôtel Zum Lamm sera poursuivi par le nouvel exploitant keyone sous le nom de „keyone rooms Tarrenz“ ; depuis, les réservations et demandes passent par la nouvelle société d'exploitation.</p><h2>Accès</h2><p>En voiture, la maison est accessible par l'autoroute de la vallée de l'Inn A12 (sortie Imst-Pitztal) et par la route du Fernpass B179 ; en suivant la signalisation en direction de Tarrenz, l'établissement se trouve au centre, sur la rue principale. Une place de parking gratuite est disponible directement devant la maison. Pour les voyageurs en train, la gare d'Imst-Pitztal est le point d'arrivée le plus proche ; des bus y circulent. L'arrêt le plus proche „Tarrenz Gemeindeamt“ se trouve à seulement environ 100 mètres ; de là, des bus partent vers Nassereith et vers la gare routière d'Imst. Innsbruck est accessible en voiture en environ 42 minutes.</p><h2>Conseils</h2><p>Les motards apprécient la maison comme point de départ pour des excursions près du Hahntennjoch et du Fernpass ; un abri, un garage et un local de séchage sont disponibles. Les randonneurs, cyclistes et grimpeurs trouvent dans les environs un réseau dense de sentiers et de nombreux alpages et refuges. Pour la détente, un espace bien-être avec sauna, bain de vapeur et cabine infrarouge est à disposition. Les animaux de compagnie sont les bienvenus moyennant un supplément. Les clients bénéficient en outre de l'ImstCard avec des réductions sur les remontées mécaniques, les excursions et les bus dans la région outdoor d'Imst.</p><h2>Meilleure période de voyage</h2><p>Tarrenz et le Gurgltal sont accessibles toute l'année. Les mois les plus chauds conviennent à la randonnée, au cyclisme et aux balades à moto, lorsque le Hahntennjoch et le Fernpass sont praticables. En hiver, la région se trouve à portée de plusieurs domaines skiables du Haut-Pays tyrolien ; pour les amateurs de sports d'hiver, un local à skis et un chauffe-chaussures de ski sont disponibles dans la maison. Ceux qui recherchent le calme et le paysage de montagne en dehors de la haute saison choisissent le printemps ou l'automne.</p>",
+  "ort": "Tarrenz",
   "region": "innsbruck",
-  "plz": "",
-  "adresse": "",
-  "telefon": "",
-  "email": "",
-  "webseite": "",
+  "plz": "6464",
+  "adresse": "Hauptstraße 5",
+  "telefon": "+43 5412 66023",
+  "email": "lamm@hotel-lamm.at",
+  "webseite": "https://www.hotel-lamm.at",
   "preis": "€€",
   "tags": [
     "gastronomie"
@@ -20,5 +20,8 @@
     "lat": 47.4922953,
     "lng": 11.085246
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.hotel-lamm.at"
+  ]
 }

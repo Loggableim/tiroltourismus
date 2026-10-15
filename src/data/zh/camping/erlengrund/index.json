@@ -4,14 +4,14 @@
   "typ": "camping",
   "sterne": null,
   "preis_ab": null,
-  "ort": "",
+  "ort": "Igls",
   "region": "",
-  "plz": "",
-  "adresse": "",
+  "plz": "6080",
+  "adresse": "Alte Bobbahn, 6080 Innsbruck-Igls",
   "telefon": null,
-  "email": null,
+  "email": "tpz-buchung@pfadis.tirol",
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz <strong>Erlengrund</strong> liegt im Bundesland <strong>Tirol</strong> in Österreich. Die <strong>Lage</strong> ist von <strong>Bergen</strong> und Wäldern umgeben, was eine ruhige <strong>Atmosphäre</strong> erzeugt. In der Umgebung sind mehrere <strong>Wanderwege</strong> zugänglich, und im Winter erreichen Gäste nahegelegene <strong>Skigebiete</strong>. Die <strong>Ausstattung</strong> umfasst Sanitärgebäude und Stromanschlüsse für Wohnmobile. Gäste können mit Wohnwagen, Wohnmobil oder Zelt anreisen. Der Platz bietet die grundlegende Infrastruktur für einen Aufenthalt in der Natur.</p>",
+  "beschreibung": "<p><strong>Erlengrund</strong> 是<strong>Tiroler Pfadfinderzentrum (TPZ) Igls</strong>的十片露营草地之一，该中心由蒂罗尔童军及女童军州协会运营。它位于因斯布鲁克以南的Igls，地处旧奥运雪车赛道区域。场地上为团体提供露营和营地场地；主要接待童军和青少年团体、协会及活动。户外卫生设施包括12个用于洗碗碟的洗手池、8个淋浴间和4个独立的盥洗室。可租用可上锁的冰箱、啤酒桌椅套装、火盆和建筑木材；在两片草地上，经协商可提供一处火塘。在营地过夜的费用为每人每晚7欧元，包含卫生设施、建筑木材、烧烤桶和垃圾桶架。预订通过TPZ的预订表格进行。</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,8 @@
     "lat": "47.222416",
     "lng": "11.4323188"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.pfadfinder-tirol.at/tpz/"
+  ]
 }

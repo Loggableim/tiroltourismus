@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Zum Geigerer v Grainau",
-  "beschreibung": null,
+  "beschreibung": "<h2>Přehled</h2><p>Záznam <strong>Zum Geigerer</strong> je veden v turistickém portálu Tyrolska v kategorii Gastro a popisuje gastronomický podnik, který se podle záznamu nachází na adrese Waxensteinstraße 1 v Grainau s poštovním směrovacím číslem 82491. Kontrola však ukazuje, že toto místo se nenachází v Tyrolsku (Rakousko): Grainau je obec v bavorském okrese Garmisch-Partenkirchen na úpatí Zugspitze a patří k německé oblasti Zugspitze. Ačkoli záznam odkazuje na tyrolské souvislosti regionem „Außerfern“ a okresem Reutte, geograficky leží Grainau na německé straně hranice, nedaleko Garmisch-Partenkirchen a jezera Eibsee. Protože se podnik nachází mimo Tyrolsko, je pro tento portál veden jako neověřitelný jako tyrolské místo.</p><h2>Historie/Pozadí</h2><p>K historii podniku nejsou pro Tyrolsko k dispozici žádné spolehlivé údaje. Záznam popisuje klasickou rakouskou a mezinárodní kuchyni, s láskou připravované pokrmy a nabídku, u níž mají být v popředí kvalita a požitek. Protože se místo nenachází v Tyrolsku, nelze tyto údaje potvrdit prostřednictvím oficiálních tyrolských zdrojů. Obecně je Grainau tradiční turistické letovisko na úpatí Zugspitze, které je po desetiletí formováno horským turismem a polohou u jezera Eibsee.</p><h2>Doprava</h2><p>Grainau leží jižně od Garmisch-Partenkirchen a je dostupné po německé silnici B23; obec se nachází ve spádové oblasti železniční trati, která spojuje bavorskou oblast Werdenfelser Land s tyrolským Außerfern a Reutte. Pro hosty z Tyrolska vede cesta zpravidla přes Reutte a Fernpass, případně přes Garmisch-Partenkirchen. Příjezd výhradně v rámci Tyrolska není možný, protože obec leží za státní hranicí. Konkrétní údaje o parkování nebo veřejné dopravě k samotnému podniku nelze kvůli chybějícím oficiálním zdrojům potvrdit.</p><h2>Tipy</h2><p>Kdo navštíví oblast Zugspitze, najde v Grainau a okolí řadu výletních cílů, jako je Eibsee, Höllentalklamm nebo Zugspitze. Pro plánování je vhodné ověřit si vlastní cestu prostřednictvím německých dopravních a turistických systémů. Protože záznam nebylo možné v Tyrolsku ověřit, měly by být údaje o adrese, kontaktu a otevírací době před návštěvou vždy ověřeny prostřednictvím oficiálních, aktuálních zdrojů.</p><h2>Nejlepší doba k cestě</h2><p>Oblast kolem Grainau a Zugspitze je přístupná po celý rok. Letní měsíce se hodí pro túry a výlety k jezeru Eibsee, zimní měsíce pro zimní sporty a alpské panorama. Pro gastronomickou návštěvu jsou nejpříjemnější obvykle jaro, léto a podzim, protože tehdy jsou otevřené i terasy a venkovní prostory. Závazné údaje o nejlepší době k cestě pro konkrétní podnik nelze z dostupných zdrojů vyvodit.</p>",
   "ort": "Grainau",
   "region": "ausserfern",
   "plz": "82491",
@@ -20,5 +20,8 @@
     "lat": 47.4770379,
     "lng": 11.0234233
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://strassen.openalfa.de/strasse/an-der-arch-untergrainau"
+  ]
 }

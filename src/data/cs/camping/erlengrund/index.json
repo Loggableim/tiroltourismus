@@ -4,14 +4,14 @@
   "typ": "camping",
   "sterne": null,
   "preis_ab": null,
-  "ort": "",
+  "ort": "Igls",
   "region": "",
-  "plz": "",
-  "adresse": "",
+  "plz": "6080",
+  "adresse": "Alte Bobbahn, 6080 Innsbruck-Igls",
   "telefon": null,
-  "email": null,
+  "email": "tpz-buchung@pfadis.tirol",
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz <strong>Erlengrund</strong> liegt im Bundesland <strong>Tirol</strong> in Österreich. Die <strong>Lage</strong> ist von <strong>Bergen</strong> und Wäldern umgeben, was eine ruhige <strong>Atmosphäre</strong> erzeugt. In der Umgebung sind mehrere <strong>Wanderwege</strong> zugänglich, und im Winter erreichen Gäste nahegelegene <strong>Skigebiete</strong>. Die <strong>Ausstattung</strong> umfasst Sanitärgebäude und Stromanschlüsse für Wohnmobile. Gäste können mit Wohnwagen, Wohnmobil oder Zelt anreisen. Der Platz bietet die grundlegende Infrastruktur für einen Aufenthalt in der Natur.</p>",
+  "beschreibung": "<p><strong>Erlengrund</strong> je jednou z deseti tábořištních luk <strong>Tyrolského skautského centra (TPZ) Igls</strong>, které provozuje zemský svaz tyrolských skautů a skautek. Nachází se v Iglsu jižně od Innsbrucku, v oblasti staré olympijské bobové dráhy. Na pozemku jsou skupinám k dispozici kempinková a tábořištní místa; ubytováváni jsou především skautské a mládežnické skupiny, spolky a akce. Venkovní sanitární zařízení zahrnují 12 umyvadel na mytí nádobí, 8 sprch a 4 samostatné umývárny. Uzamykatelné ledničky, pivní sety, ohnivé mísy a stavební dřevo lze pronajmout; na dvou loukách je po domluvě k dispozici ohniště. Nocleh na tábořišti stojí 7 eur na osobu a noc včetně sanitárního zařízení, stavebního dřeva, grilovacího sudu a stojanu na odpad. Rezervace probíhají prostřednictvím rezervačního formuláře TPZ.</p>",
   "ausstattung": [],
   "tags": [
     "kemping",
@@ -23,5 +23,8 @@
     "lat": "47.222416",
     "lng": "11.4323188"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.pfadfinder-tirol.at/tpz/"
+  ]
 }

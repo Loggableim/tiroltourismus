@@ -4,14 +4,14 @@
   "typ": "camping",
   "sterne": null,
   "preis_ab": null,
-  "ort": "",
+  "ort": "Igls",
   "region": "",
-  "plz": "",
-  "adresse": "",
+  "plz": "6080",
+  "adresse": "Alte Bobbahn, 6080 Innsbruck-Igls",
   "telefon": null,
-  "email": null,
+  "email": "tpz-buchung@pfadis.tirol",
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz <strong>Erlengrund</strong> liegt im Bundesland <strong>Tirol</strong> in Österreich. Die <strong>Lage</strong> ist von <strong>Bergen</strong> und Wäldern umgeben, was eine ruhige <strong>Atmosphäre</strong> erzeugt. In der Umgebung sind mehrere <strong>Wanderwege</strong> zugänglich, und im Winter erreichen Gäste nahegelegene <strong>Skigebiete</strong>. Die <strong>Ausstattung</strong> umfasst Sanitärgebäude und Stromanschlüsse für Wohnmobile. Gäste können mit Wohnwagen, Wohnmobil oder Zelt anreisen. Der Platz bietet die grundlegende Infrastruktur für einen Aufenthalt in der Natur.</p>",
+  "beschreibung": "<p><strong>Erlengrund</strong> ist eine der zehn Lagerwiesen des <strong>Tiroler Pfadfinderzentrums (TPZ) Igls</strong>, das vom Landesverband der Tiroler Pfadfinder und Pfadfinderinnen betrieben wird. Es liegt in Igls südlich von Innsbruck, im Bereich der alten Olympia-Bobbahn. Auf dem Gelände stehen Gruppen Camping- und Lagerplätze zur Verfügung; in erster Linie werden Pfadfinder- und Jugendgruppen, Vereine und Veranstaltungen beherbergt. Die Sanitäranlagen im Freien umfassen 12 Waschbecken zum Geschirrabwaschen, 8 Duschen und 4 separate Waschräume. Verschließbare Kühlschränke, Biergarnituren, Feuerschalen und Bauholz können gemietet werden, auf zwei Wiesen gibt es eine Feuerstelle nach Absprache. Die Nächtigung am Lagerplatz kostet 7 Euro pro Person und Nacht inklusive Sanitäranlage, Bauholz, Grilltonne und Müllständer. Reservierungen erfolgen über das Buchungsformular des TPZ.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,8 @@
     "lat": "47.222416",
     "lng": "11.4323188"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.pfadfinder-tirol.at/tpz/"
+  ]
 }

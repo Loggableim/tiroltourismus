@@ -4,14 +4,14 @@
   "typ": "camping",
   "sterne": null,
   "preis_ab": null,
-  "ort": "",
+  "ort": "Innsbruck",
   "region": "",
-  "plz": "",
-  "adresse": "",
+  "plz": "6080",
+  "adresse": "Heiligwasserwiese 5",
   "telefon": null,
-  "email": null,
+  "email": "tpz-buchung@pfadis.tirol",
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz <strong>Staffhaus-Wiese</strong> liegt in der Nähe von <strong>Tirol</strong> in einer ruhigen Almwiesenlandschaft auf etwa 1.200 Metern Höhe. Die naturnahe Anlage bietet Stellplätze für Zelte und Wohnmobile sowie mehrere rustikale Hütten zur Selbstversorgung. Gäste erwartet eine einfache, naturnahe Infrastruktur mit Sanitärgebäude, Grillplatz und direktem Zugang zu Wanderwegen. Die <strong>Atmosphäre</strong> ist familiär und auf Bergsportler sowie Naturliebhaber ausgerichtet.</p>",
+  "beschreibung": "<h2>Aperçu</h2><p>La <strong>Staffhaus-Wiese</strong> fait partie des dix terrains de campement du <strong>Tiroler Pfadfinderzentrum Igls</strong> (TPZ), le centre propre de l'association régionale des scouts du Tyrol. Le site se situe dans le quartier d'Innsbruck <strong>Igls</strong>, à l'adresse Heiligwasserwiese 5 (code postal 6080). Il est géré par l'association régionale, qui fait partie des Pfadfinder und Pfadfinderinnen Österreichs (PPÖ).</p><p>Le centre accueille en premier lieu des groupes scouts, mais il est également ouvert aux autres groupes de jeunes, associations et événements d'Autriche et de l'étranger. Les différentes prairies sont de tailles variables et conviennent à différentes tailles de groupes ; la Staffhaus-Wiese se trouve près du Staffhaus qui lui donne son nom. Pour les campeurs, des installations sanitaires extérieures sont disponibles : douze lavabos pour laver la vaisselle, huit douches ainsi que quatre salles d'eau fermables séparément avec deux à trois toilettes et une douche verrouillable chacune. Huit réfrigérateurs fermables peuvent être loués.</p><p>Le centre comprend également la maison principale pouvant accueillir 74 personnes – 43 lits dans sept chambres au premier étage et 31 lits dans six chambres au deuxième étage. Chaque étage dispose de deux salles de lavage et de douche ainsi que de deux toilettes séparées ; au premier étage se trouve en outre une salle de séminaire pour environ 30 personnes. Au rez-de-chaussée se trouvent la salle à manger et la cuisine de restauration, au sous-sol une grande salle polyvalente, une salle de gymnastique et de bloc et une pièce avec baby-foot. Pour les camps, on peut notamment emprunter des braseros, une grille et des briques, des ensembles de tables et bancs de brasserie ainsi que du matériel de construction pour les constructions de camp.</p><h2>Histoire/Contexte</h2><p>Le mouvement scout tyrolien a plus de cent ans d'histoire : en 1914, Emmerich Teuber, un vétéran des Tiroler Kaiserjäger, donna le 13 janvier une conférence très remarquée à Innsbruck, à la suite de laquelle quatre groupes scouts se formèrent en mai 1914 à l'académie de commerce. L'association régionale a fêté son 111e anniversaire en 2025 (1914–2025) et fait partie des Pfadfinder und Pfadfinderinnen Österreichs. Selon le site officiel, le <strong>Staffhaus</strong> du centre n'est actuellement pas disponible en raison d'importants travaux de rénovation ; il doit notamment être rendu accessible sans barrières.</p><h2>Accès</h2><p>Le Tiroler Pfadfinderzentrum Igls se trouve à l'adresse Heiligwasserwiese 5, 6080 Innsbruck/Igls, donc au sud d'Innsbruck. Selon l'annonce officielle, le voyage des groupes doit en principe être organisé de manière autonome. Des informations fiables sur les transports publics ou les possibilités de stationnement ne sont pas publiées sur le site du centre ; il est donc préférable de clarifier les itinéraires concrets directement lors de la réservation. La réservation se fait via le formulaire de réservation du site, relié au portail scoutbooking ; pour toute question, l'équipe est joignable à tpz-buchung@pfadis.tirol.</p><h2>Conseils</h2><p>Certaines choses doivent être apportées soi-même : selon le centre, le papier toilette, le savon pour les mains, le liquide vaisselle, les éponges et les torchons ne sont pas fournis. Dans la maison principale, le linge de lit doit être apporté soi-même ou loué contre paiement ; un drap-housse doit être tiré sur les housses hygiéniques des matelas. Les chaussons sont obligatoires dans la maison (pas de chaussures à l'intérieur), il est interdit de fumer en dehors de la zone prévue sur la terrasse, et le tri des déchets est expressément souhaité. Pour le terrain de campement, du bois de construction, un tonneau de grill, des supports à déchets et des installations sanitaires peuvent être utilisés ; les ensembles de bancs de brasserie et les réfrigérateurs sont louables moyennant un supplément. Il faut également noter que les installations sanitaires ne sont accessibles que par un chemin en pente et ne sont pas accessibles sans barrières.</p><h2>Meilleure période de voyage</h2><p>Le centre n'indique pas de saison fixe officiellement publiée ; l'utilisation et la disponibilité dépendent des réservations des groupes et des conditions météorologiques. Selon le site, la maison principale peut aussi être utilisée en hiver et offre alors des possibilités de rangement pour les skis et les chaussures de ski, tandis que le camping sur les prairies dépend de la météo. Si vous souhaitez camper pendant les mois chauds, il convient de clarifier la date et les conditions auprès de l'administration suffisamment tôt.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,8 @@
     "lat": "47.2221687",
     "lng": "11.4299041"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.pfadfinder-tirol.at/tpz/"
+  ]
 }

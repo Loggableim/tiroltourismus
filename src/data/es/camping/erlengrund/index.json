@@ -4,14 +4,14 @@
   "typ": "camping",
   "sterne": null,
   "preis_ab": null,
-  "ort": "",
+  "ort": "Igls",
   "region": "",
-  "plz": "",
-  "adresse": "",
+  "plz": "6080",
+  "adresse": "Alte Bobbahn, 6080 Innsbruck-Igls",
   "telefon": null,
-  "email": null,
+  "email": "tpz-buchung@pfadis.tirol",
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz <strong>Erlengrund</strong> liegt im Bundesland <strong>Tirol</strong> in Österreich. Die <strong>Lage</strong> ist von <strong>Bergen</strong> und Wäldern umgeben, was eine ruhige <strong>Atmosphäre</strong> erzeugt. In der Umgebung sind mehrere <strong>Wanderwege</strong> zugänglich, und im Winter erreichen Gäste nahegelegene <strong>Skigebiete</strong>. Die <strong>Ausstattung</strong> umfasst Sanitärgebäude und Stromanschlüsse für Wohnmobile. Gäste können mit Wohnwagen, Wohnmobil oder Zelt anreisen. Der Platz bietet die grundlegende Infrastruktur für einen Aufenthalt in der Natur.</p>",
+  "beschreibung": "<p><strong>Erlengrund</strong> es una de las diez praderas de acampada del <strong>Tiroler Pfadfinderzentrum (TPZ) Igls</strong>, gestionado por la federación regional de los scouts y las guías del Tirol. Se encuentra en Igls, al sur de Innsbruck, en la zona de la antigua pista olímpica de bobsleigh. En el recinto hay zonas de camping y acampada a disposición de los grupos; se alojan principalmente grupos scouts y juveniles, asociaciones y eventos. Las instalaciones sanitarias al aire libre incluyen 12 lavabos para lavar los platos, 8 duchas y 4 salas de lavado independientes. Se pueden alquilar neveras con cerradura, mesas de cerveza, braseros y madera de construcción; en dos praderas hay un fogón previa consulta. La pernoctación en la zona de acampada cuesta 7 euros por persona y noche, incluidos los servicios sanitarios, la madera de construcción, el bidón de barbacoa y el soporte para residuos. Las reservas se realizan a través del formulario de reserva del TPZ.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,8 @@
     "lat": "47.222416",
     "lng": "11.4323188"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.pfadfinder-tirol.at/tpz/"
+  ]
 }

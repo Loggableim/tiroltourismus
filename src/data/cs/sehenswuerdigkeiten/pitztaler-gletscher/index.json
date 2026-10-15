@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "St. Leonhard im Pitztal",
   "kategorie": "sport",
-  "kurzbeschreibung": "Nejvyšší horské lyžařské středisko v Tirol s celoročním provozem lyžování, úchvatným panoramatem a slavnou Gletscherexpress-Bahn.",
-  "beschreibung": "Der <strong>Pitztaler Gletscher</strong> ist eines der höchstgelegenen Skigebiete Österreichs mit Schneesicherheit von Oktober bis Mai. Die 3,8 km lange <strong>Pitztaler Gletscherexpress</strong>, eine der steilsten Standseilbahnen der Welt, überwindet auf nur 7 Minuten Fahrtzeit 1.100 Höhenmeter und bringt Besucher auf 3.440 m. Oben erwarten Sie einzigartige Tiefblicke auf die umliegenden Dreitausender – darunter die Wildspitze (3.768 m), der höchste Berg Tirols. Im Sommer locken der <strong>Gletscherlehrweg</strong> und geführte Gletscherwanderungen. Das Restaurant <strong>Brontalow</strong> ist das höchstgelegene À-la-carte-Restaurant Österreichs auf 3.200 m.",
+  "kurzbeschreibung": "Pitztalský ledovec jako „střecha Tyrolska“ je nejvýše položeným ledovcovým střediskem v Rakousku s futuristickou kavárnou Café 3.440 a výhledem na Wildspitze.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Ledovec <strong>Pitztaler Gletscher</strong>, pyšnící se přízviskem „střecha Tyrolska“, leží v samotném závěru divokého údolí Pitztal a je nejvýše položeným ledovcovým areálem i vyhlídkovým vrcholem v Rakousku. Vysokohorské království sahá až do výšky 3 440 metrů nad mořem na vrcholu Hinterer Brunnenkogel, jemuž dominuje mohutný ledovec Mittelbergferner a firnová pole Ötztalských Alp. Architektonickým klenotem je odvážně vysutá kavárna Café 3.440, nejvýše položená kavárna v Rakousku s panoramatickou terasou, která nabízí dechberoucí 360stupňový výhled na více než padesát zaledněných třítisícovek v čele s majestátní Wildspitze (3 774 m), nejvyšší horou Tyrolska. V létě je ledovec vyhledávanou oázou čistého horského vzduchu a arktické přírody.</p>\n<h2>Route & Anforderungen</h2>\n<p>Cesta do věčného ledu začíná podzemní pozemní lanovkou Pitzexpress, která vyveze návštěvníky z Mittelbergu (1 730 m) k mezistanici ve výšce 2 840 metrů za pouhých osm minut. Odtud stoupá supermoderní kabinková lanovka Wildspitzbahn až na vrchol do výšky 3 440 metrů. Vyhlídková plošina i kavárna jsou bezbariérové a bezpečně přístupné pro každého. Pro zkušené horolezce slouží ledovec jako základna k náročným výstupům na Wildspitze přes ledovcové trhliny, což bezpodmínečně vyžaduje mačky, lano a horského vůdce. Pro běžné návštěvníky je nutností teplá horská obuv, větruodolné oblečení a kvalitní sluneční brýle chránící před ostrým ledovcovým sluncem.</p>\n<h2>Besuch & Anreise</h2>\n<p>Autem sjedete z dálnice A12 na sjezdu Imst/Pitztal a pokračujete po silnici L16 přes Wenns a St. Leonhard až na konec údolí do Mittelbergu. Regionální autobusy jezdí pravidelně z nádraží Imst-Pitztal přímo k dolní stanici lanovky. U stanice jsou k dispozici rozsáhlá bezplatná parkoviště.</p>\n<h2>Tipps</h2>\n<p>Vychutnejte si kávu a čerstvý dort v Café 3.440 u velkoformátových prosklených oken s přímým pohledem na visuté ledovce Wildspitze. V letních měsících stojí za to navštívit ukázkovou ledovcovou trhlinu a naučné stezky o klimatu.</p>",
   "emoji": "🏔️",
   "farbe": "#00ACC1",
   "hoehe": "3.440 m",
-  "dauer": "Ganztag",
-  "preis": "Bergbahn: 58 € (Erwachsene, Tagesticket)",
+  "dauer": "3-6 hodin",
+  "preis": "Lanovka zpoplatněna (zdarma s letní kartou Pitztal Sommercard)",
   "tags": [
     "ski",
     "gletscher",
@@ -20,10 +20,17 @@
     "natur",
     "wandern"
   ],
-  "oeffnungszeiten": "Täglich 8:00–16:30 (Okt–Mai Skibetrieb, Jun–Sep Gletscherwanderungen)",
+  "oeffnungszeiten": "Letní/podzimní vyhlídkový provoz červenec až říjen; zimní lyžařská sezona říjen až květen",
   "webseite": "https://www.pitztaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9436",
     "lng": "10.8514"
-  }
+  },
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pitztal",
+    "https://www.pitztaler-gletscher.at/",
+    "https://www.pitztal.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Wildspitze"
+  ]
 }

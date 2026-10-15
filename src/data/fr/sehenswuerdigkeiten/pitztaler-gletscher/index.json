@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "St. Leonhard im Pitztal",
   "kategorie": "sport",
-  "kurzbeschreibung": "Le domaine skiable glaciaire le plus haut en altitude du Tirol, avec un ski toute l'année, des paysages à couper le souffle et la célèbre Gletscherexpress-Bahn.",
-  "beschreibung": "Der <strong>Pitztaler Gletscher</strong> ist eines der höchstgelegenen Skigebiete Österreichs mit Schneesicherheit von Oktober bis Mai. Die 3,8 km lange <strong>Pitztaler Gletscherexpress</strong>, eine der steilsten Standseilbahnen der Welt, überwindet auf nur 7 Minuten Fahrtzeit 1.100 Höhenmeter und bringt Besucher auf 3.440 m. Oben erwarten Sie einzigartige Tiefblicke auf die umliegenden Dreitausender – darunter die Wildspitze (3.768 m), der höchste Berg Tirols. Im Sommer locken der <strong>Gletscherlehrweg</strong> und geführte Gletscherwanderungen. Das Restaurant <strong>Brontalow</strong> ist das höchstgelegene À-la-carte-Restaurant Österreichs auf 3.200 m.",
+  "kurzbeschreibung": "Le glacier du Pitztal, surnommé le « Toit du Tyrol », est le domaine glaciaire le plus élevé d'Autriche, abritant le Café 3.440 face à la majestueuse Wildspitze.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le <strong>glacier du Pitztal</strong> (Pitztaler Gletscher), véritable « Toit du Tyrol », s'élève au fond de la vallée sauvage du Pitztal comme le domaine skiable et panoramique le plus haut d'Autriche. Culminant à 3 440 mètres d'altitude sur le Hinterer Brunnenkogel, cet univers de haute montagne est dominé par l'immense glacier du Mittelbergferner et les neiges éternelles des Alpes de l'Ötztal. Chef-d'œuvre architectural contemporain, le Café 3.440 dispose d'une terrasse suspendue vertigineuse qui offre une vue à couper le souffle sur plus de cinquante sommets de plus de 3 000 mètres, au premier rang desquels trône la Wildspitze (3 774 m), point culminant du Tyrol. Très prisé des skieurs à l'automne, le glacier offre en été une bouffée d'air pur vivifiante dans un décor polaire spectaculaire.</p>\n<h2>Route & Anforderungen</h2>\n<p>L'ascension vers les glaces éternelles débute par le funiculaire souterrain Pitzexpress, reliant Mittelberg (1 730 m) à la gare d'altitude à 2 840 mètres en huit minutes. De là, la télécabine ultra-moderne de la Wildspitzbahn monte jusqu'au sommet du Hinterer Brunnenkogel à 3 440 mètres. Le belvédère et le café sont entièrement accessibles sans difficulté technique. Pour les alpinistes chevronnés, le glacier est le point de départ idéal pour l'ascension glaciaire de la Wildspitze, qui exige crampons, piolet, corde et l'accompagnement d'un guide de haute montagne. Pour une visite touristique, de bonnes chaussures de marche chaudes, une veste coupe-vent et des lunettes de soleil à haute protection sont indispensables.</p>\n<h2>Besuch & Anreise</h2>\n<p>En voiture, on quitte l'autoroute A12 à Imst/Pitztal pour suivre la route L16 à travers Wenns et St. Leonhard jusqu'au bout de la vallée à Mittelberg. Des bus régionaux relient régulièrement la gare d'Imst-Pitztal au départ des remontées mécaniques. De grands parkings gratuits sont aménagés au pied de la station aval.</p>\n<h2>Tipps</h2>\n<p>Savourez un chocolat chaud et une pâtisserie maison au Café 3.440 en contemplant les séracs étincelants de la Wildspitze. En plein été, participez aux visites commentées pour observer de près une crevasse de glacier et comprendre l'évolution du pergélisol alpin.</p>",
   "emoji": "🏔️",
   "farbe": "#00ACC1",
   "hoehe": "3.440 m",
-  "dauer": "Ganztag",
-  "preis": "Bergbahn: 58 € (Erwachsene, Tagesticket)",
+  "dauer": "3-6 heures",
+  "preis": "Remontées mécaniques payantes (accès inclus avec la carte Pitztal Sommercard)",
   "tags": [
     "ski",
     "glacier",
@@ -20,10 +20,17 @@
     "nature",
     "randonnée"
   ],
-  "oeffnungszeiten": "Täglich 8:00–16:30 (Okt–Mai Skibetrieb, Jun–Sep Gletscherwanderungen)",
+  "oeffnungszeiten": "Exploitation estivale/automnale de juillet à octobre; saison de ski d'octobre à mai",
   "webseite": "https://www.pitztaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9436",
     "lng": "10.8514"
-  }
+  },
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pitztal",
+    "https://www.pitztaler-gletscher.at/",
+    "https://www.pitztal.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Wildspitze"
+  ]
 }

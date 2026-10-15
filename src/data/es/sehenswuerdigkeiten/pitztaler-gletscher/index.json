@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "St. Leonhard im Pitztal",
   "kategorie": "sport",
-  "kurzbeschreibung": null,
-  "beschreibung": "Der <strong>Pitztaler Gletscher</strong> ist eines der höchstgelegenen Skigebiete Österreichs mit Schneesicherheit von Oktober bis Mai. Die 3,8 km lange <strong>Pitztaler Gletscherexpress</strong>, eine der steilsten Standseilbahnen der Welt, überwindet auf nur 7 Minuten Fahrtzeit 1.100 Höhenmeter und bringt Besucher auf 3.440 m. Oben erwarten Sie einzigartige Tiefblicke auf die umliegenden Dreitausender – darunter die Wildspitze (3.768 m), der höchste Berg Tirols. Im Sommer locken der <strong>Gletscherlehrweg</strong> und geführte Gletscherwanderungen. Das Restaurant <strong>Brontalow</strong> ist das höchstgelegene À-la-carte-Restaurant Österreichs auf 3.200 m.",
+  "kurzbeschreibung": "El glaciar de Pitztal, conocido como el «Techo del Tirol», es el dominio glaciar más alto de Austria: alberga el vanguardista Café 3.440 y vistas directas a la Wildspitze.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>El <strong>glaciar de Pitztal</strong> (Pitztaler Gletscher), conocido como el «Techo del Tirol», corona el final del valle de Pitztal como el destino de alta montaña y esquí glaciar más elevado de Austria. Alcanzando los 3.440 metros de altitud en la cima del Hinterer Brunnenkogel, este sobrecogedor escenario blanco está modelado por el inmenso Mittelbergferner y los campos de hielo de los Alpes de Ötztal. Una joya arquitectónica internacional es el futurista Café 3.440, cuya terraza suspendida sobre el abismo ofrece la cafetería más alta de Austria y una vista panorámica de 360 grados de más de cincuenta tresmiles, presididos por la cara norte de la Wildspitze (3.774 m), la montaña más alta del Tirol. En verano, el glaciar constituye un refugio de aire puro polar y serenidad alpina.</p>\n<h2>Route & Anforderungen</h2>\n<p>El viaje a los hielos perpetuos se inicia en el funicular subterráneo Pitzexpress, que en ocho minutos traslada a los visitantes desde Mittelberg (1.730 m) hasta los 2.840 metros. Desde allí, el ultramoderno telecabina Wildspitzbahn asciende con suavidad hasta la cota de 3.440 metros. El mirador y la cafetería están adaptados y son accesibles sin obstáculos. Para los alpinistas experimentados, el glaciar es el punto de partida hacia ascensiones exigentes a la Wildspitze, lo que requiere crampones, piolet, arnés y guía de montaña. Para una visita convencional es imprescindible calzado de montaña abrigado, chaqueta cortavientos y gafas de sol con protección UV alta.</p>\n<h2>Besuch & Anreise</h2>\n<p>Por carretera se toma la autovía A12 (salida Imst/Pitztal) siguiendo la L16 por Wenns y St. Leonhard hasta la estación de Mittelberg al fondo del valle. Los autobuses regionales unen la estación de tren de Imst-Pitztal directamente con la base del teleférico. Junto a la estación de salida hay amplios aparcamientos gratuitos.</p>\n<h2>Tipps</h2>\n<p>Tómese un café con un dulce tradicional en el Café 3.440 junto a las cristaleras panorámicas contemplando los seracs helados de la Wildspitze. En los meses estivales se organizan visitas guiadas para explorar grietas glaciares seguras y aprender sobre el cambio climático.</p>",
   "emoji": "🏔️",
   "farbe": "#00ACC1",
   "hoehe": "3.440 m",
-  "dauer": "Ganztag",
-  "preis": "Bergbahn: 58 € (Erwachsene, Tagesticket)",
+  "dauer": "3-6 horas",
+  "preis": "Remontes mecánicos de pago (incluido gratis con la tarjeta Pitztal Sommercard)",
   "tags": [
     "ski",
     "gletscher",
@@ -20,10 +20,17 @@
     "natur",
     "wandern"
   ],
-  "oeffnungszeiten": "Täglich 8:00–16:30 (Okt–Mai Skibetrieb, Jun–Sep Gletscherwanderungen)",
+  "oeffnungszeiten": "Visitas de verano/otoño de julio a octubre; temporada de esquí de octubre a mayo",
   "webseite": "https://www.pitztaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9436",
     "lng": "10.8514"
-  }
+  },
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pitztal",
+    "https://www.pitztaler-gletscher.at/",
+    "https://www.pitztal.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Wildspitze"
+  ]
 }

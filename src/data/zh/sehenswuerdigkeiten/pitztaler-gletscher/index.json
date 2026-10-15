@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "St. Leonhard im Pitztal",
   "kategorie": "sport",
-  "kurzbeschreibung": null,
-  "beschreibung": "Der <strong>Pitztaler Gletscher</strong> ist eines der höchstgelegenen Skigebiete Österreichs mit Schneesicherheit von Oktober bis Mai. Die 3,8 km lange <strong>Pitztaler Gletscherexpress</strong>, eine der steilsten Standseilbahnen der Welt, überwindet auf nur 7 Minuten Fahrtzeit 1.100 Höhenmeter und bringt Besucher auf 3.440 m. Oben erwarten Sie einzigartige Tiefblicke auf die umliegenden Dreitausender – darunter die Wildspitze (3.768 m), der höchste Berg Tirols. Im Sommer locken der <strong>Gletscherlehrweg</strong> und geführte Gletscherwanderungen. Das Restaurant <strong>Brontalow</strong> ist das höchstgelegene À-la-carte-Restaurant Österreichs auf 3.200 m.",
+  "kurzbeschreibung": "被誉为“蒂罗尔屋脊”的皮茨塔尔冰川（Pitztaler Gletscher）是奥地利海拔最高的冰川景区，拥有悬空全景咖啡馆Café 3.440及远眺维尔德峰的壮美视角。",
+  "beschreibung": "<h2>Überblick</h2>\n<p>被称为“蒂罗尔屋脊”的<strong>皮茨塔尔冰川</strong>（Pitztaler Gletscher）雄踞于皮茨谷地（Pitztal）尽头，是全奥地利海拔最高的冰川胜地。景区在欣特勒·布伦嫩科格尔峰（Hinterer Brunnenkogel）终年积雪的海拔3440米之巅铺展，环绕着辽阔的米特尔贝格冰川（Mittelbergferner）与厄茨塔尔阿尔卑斯山群的壮阔雪原。这里的世界级建筑杰作是传奇的“Café 3.440”高山悬空咖啡馆：在挑空于深渊之上的全景观景平台上，游客可一边品尝奥地利最高咖啡馆的现烤糕点，一边尽收四周五十余座三千米级冰川巨峰组成的360度全景，蒂罗尔第一高峰维尔德峰（Wildspitze，海拔3774米）近在咫尺。夏季这里是逃离暑气、感受纯净雪原的清凉胜境。</p>\n<h2>Route & Anforderungen</h2>\n<p>登顶冰川之旅始于全封闭地下高速齿轨登山列车Pitzexpress，仅需八分钟即可将游客由米特尔贝格（海拔1730米）送达海拔2840米的中心站。随后换乘极富流线美感的超现代Wildspitzbahn缆车，平稳滑行至海拔3440米的峰顶平台。观景台与咖啡馆均实现无障碍化，安全舒适。对于专业阿尔卑斯登山家而言，冰川是穿越冰裂缝攀登维尔德峰的经典大本营，必须配备冰爪、绳索并在高山向导带领下前行。普通观光游客则需穿戴保暖防风登山鞋、防风冬衣以及高防护级别防紫外线太阳镜。</p>\n<h2>Besuch & Anreise</h2>\n<p>自驾游客从因河谷A12高速公路（Imst/Pitztal出口）转入L16联邦公路，经由温斯（Wenns）与圣莱昂哈德一路向南行驶至谷底终点米特尔贝格。公共交通出行亦十分方便，从Imst-Pitztal火车站有直达冰川缆车站的定时区域巴士。缆车山谷站建有大型免费停车场。</p>\n<h2>Tipps</h2>\n<p>务必在Café 3.440临窗而坐，品尝香浓咖啡与萨赫蛋糕，凝望维尔德峰冰挂悬冰川的纯净肌理。盛夏期间，不妨参与冰川科学探索线路，近距离观察冰裂缝与高山冻土生态。</p>",
   "emoji": "🏔️",
   "farbe": "#00ACC1",
   "hoehe": "3.440 m",
-  "dauer": "Ganztag",
-  "preis": "Bergbahn: 58 € (Erwachsene, Tagesticket)",
+  "dauer": "3-6小时",
+  "preis": "缆车需购票（持Pitztal Sommercard夏季卡免费搭乘）",
   "tags": [
     "ski",
     "gletscher",
@@ -20,10 +20,17 @@
     "natur",
     "wandern"
   ],
-  "oeffnungszeiten": "Täglich 8:00–16:30 (Okt–Mai Skibetrieb, Jun–Sep Gletscherwanderungen)",
+  "oeffnungszeiten": "夏季/秋季观光期7月至10月；滑雪期10月至次年5月",
   "webseite": "https://www.pitztaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9436",
     "lng": "10.8514"
-  }
+  },
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pitztal",
+    "https://www.pitztaler-gletscher.at/",
+    "https://www.pitztal.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Wildspitze"
+  ]
 }

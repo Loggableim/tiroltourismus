@@ -1,17 +1,17 @@
 {
-  "name": "Venetbahn & Venet",
+  "name": "Venet & Venetbahn",
   "slug": "venet",
   "status": "published",
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Landeck 的家山——拥有全景铁路、蒂罗尔最长的滑索以及对奥伯因特尔的难忘全景。",
-  "beschreibung": "<p>Der <strong>Venet</strong> ist mit 2.508 m der markante Hausberg der Region Landeck-Zams.. Die <strong>Venetbahn</strong>, eine moderne Panorama-Seilbahn, bringt Besucher in nur 10 Minuten von Zams auf 2.185 m Höhe.. Oben angekommen erwartet Sie eines der schönsten Panoramen Tirols mit Blick auf das Inntal, die Ötztaler Alpen und die Silvretta-Gruppe.. Der <strong>Venet Zipflyer</strong> ist mit 1.500 m Länge und 200 Höhenmetern die längste Zipline Tirols und ein Adrenalinkick der Extraklasse.. Zahlreiche Wanderwege führen vom Bergrestaurant aus zu den umliegenden Gipfeln.</p>",
+  "beschreibung": "<h2>概览</h2><p>屹立于蒂罗尔高地兰德克（Landeck）与查姆斯（Zams）上空的<strong>维内特峰</strong>（Venet，缆车顶站海拔2,208米，最高峰海拔2,512米）被誉为阿尔卑斯东段最宏伟的天然360度全景瞭望台。搭乘现代化大容量Venetbahn索道仅需8分钟即可直达海拔2,208米的克拉赫贝格峰顶。极目远眺，天气晴好时可饱览82座海拔逾3,000米的冰川巨峰（楚格峰、维尔德峰、考纳格拉特角峰及意大利境内的奥特莱斯冰峰）。峰顶还建有建筑典雅的维内特高山木屋及蒂罗尔州海拔最高的高山天文台。</p><h2>路线与体能要求</h2><p>维内特峰步道设计丰富多样。首推无障碍全景环行步道（Krahberg-Panoramaweg）：平缓宽阔碎石路绕峰一周，沿途设有地质科普解说牌与人体工学观景躺椅（耗时约45分钟，简易T1级，支持婴儿车通行）。经典徒步路线是沿全景山脊漫步至古朴的Goglesalm高山牧场（约1.5至2小时，缓降250米，T1/T2级）。高阶登山者可挑战登顶最高点格兰德峰（Glanderspitze，2,512米，T2/T3级）。宽阔的山脊还是国际著名的滑翔伞起飞圣地。建议穿着防滑徒步鞋并携带防风衣物。宠物犬全程系牵引绳允许乘缆车与漫步。</p><h2>交通指南</h2><p>搭乘ÖBB干线火车至Landeck-Zams火车站，出站步行仅需10分钟（或乘公交2分钟）即可抵达查姆斯的缆车下站。自驾沿A12高速公路（Zams出口）直抵缆车站大型免费停车场。索道每年5月底至10月中旬运营。</p><h2>游览建议</h2><p>报名参加峰顶天文台夜间观星导览，透过高倍专业天文望远镜仰望毫无光污染的深邃银河星云。在海拔2,208米的全景餐厅露台享用热腾腾的手工菠菜奶酪饺子，俯瞰脚下如缎带般的因河秀色。</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "Halbtag",
-  "preis": "Bergbahn: 34 € (Erwachsene); Zipflyer: 49 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
   "tags": [
     "观景",
     "徒步",
@@ -25,5 +25,13 @@
   "koordinaten": {
     "lat": "47.1528",
     "lng": "10.5861"
-  }
+  },
+  "saison": "Ende Mai bis Mitte Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "sources": [
+    "https://www.venet.at/",
+    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
+    "https://de.wikipedia.org/wiki/Venet",
+    "https://www.vvt.at/"
+  ]
 }

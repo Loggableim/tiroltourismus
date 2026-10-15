@@ -1,21 +1,24 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
+  "name": "E-Mountainbike Sunset Tour Ötztal",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
-  "ort": "Ötztal",
+  "ort": "Sölden im Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>Bei dieser Tour handelt es sich um ein geführtes E-Mountainbike-Erlebnis im Ötztal, das die Tiroler Bergwelt mit einem Sonnenuntergang über den Gipfeln verbindet. Dank elektrischer Unterstützung eignet sich die Route laut Beschreibung für jedes Fitness-Level; sie führt über malerische Almwege und aussichtsreiche Trails zu einem Aussichtspunkt für den Sonnenuntergang. Angegeben sind eine Dauer von drei bis vier Stunden und ein Preis von 89 Euro.</p><p>Das <strong>Ötztal</strong> zählt zu den bedeutendsten Bike-Regionen der Alpen: Der Ötztal-Radweg führt auf rund 50 Kilometern von Haiming bis nach Sölden, und in der Region Längenfeld verlaufen zahlreiche Touren von der Talsohle entlang der Ötztaler Ache bis zu Almen und Hütten. Ein konkreter Anbieter dieser Sunset-Tour ließ sich über offizielle Quellen nicht eindeutig ermitteln.</p>",
-  "preis": 89,
-  "dauer": "3–4 Stunden",
-  "link": "#",
+  "beschreibung": "### Überblick\nEine geführte E-Mountainbike Sunset Tour im Ötztal verbindet anspruchsvolles Radeln mit der magischen Abendstimmung hochalpiner Dreitausender. Dank der offenen West- und Südwesthänge rund um Sölden bleibt das goldene Licht der Abendsonne hier besonders lange erhalten, bevor es als Alpenglühen an den schneebedeckten Gletscherspitzen der Ötztaler Alpen verglimmt. Zu den schönsten Zielen einer Sonnenuntergangstour gehört die traditionsreiche Gampe Thaya auf 2.000 Metern Seehöhe am Giggijoch-Hang (Route 643): Die urige Hütte ist eine prämierte Genuss-Alm, die mit eigener Schaukäserei und 100 Prozent regionalen Produkten begeistert. Als ruhige Alternative führt die Route 652 hinauf zur Brunnenbergalm (1.971 m) auf Söldens „Stiller Seite“, die einen spektakulären frontalen Blick auf die pyramidenförmige Silhouette des Gaislachkogls im Abendlicht freigibt.\n\n### Route & Anforderungen\nDie typische Tour startet im Talboden von Sölden und überwindet auf breiten Forst- und Schotterwegen rund 12 bis 15 Kilometer Strecke sowie 600 bis 700 Höhenmeter. Mit modernen E-Mountainbikes ist der stetige Anstieg für fitte Freizeitradler gut zu bewältigen; reine Fahrzeit ca. 2 bis 2,5 Stunden, Gesamtdauer inklusive Almeinkehr rund 3,5 bis 4 Stunden. Fahrtechnisch erfordert die Schotterabfahrt sichere Dosierung der Scheibenbremsen und Grundbeherrschung des E-Bikes auf losem Schotter. Jugendliche ab 12 bis 14 Jahren können in Begleitung teilnehmen. Für Hunde und Kleinkinder ist die Tour aufgrund der Geschwindigkeit und des nächtlichen Gefälles ungeeignet.\n\n### Anreise\nTreffpunkt ist meist das Zentrum von Sölden (z. B. Freizeit Arena oder Gaislachkoglbahn). Autofahrer reisen über die A12 Inntalautobahn (Ausfahrt Ötztal) und die B186 bis Sölden an. Parkmöglichkeiten stehen in der Tiefgarage der Freizeit Arena und an der Gaislachkoglbahn zur Verfügung. Öffentlich verbindet der VVT-Regiobus Linie 4194 den Bahnhof Ötztal im dichten Takt mit Sölden. Der Bus verfügt über spezielle Radanhänger (Bike Shuttle), mit denen der E-Bike-Transport im Tal kostenlos möglich ist.\n\n### Tipps\nGeführte Touren über Bikeschulen kosten ca. 65 bis 85 Euro (Leih-E-Bike separat ab ca. 55 Euro in den Sportshops wie Intersport Glanzer oder Sport4You). Starten Sie ausschließlich mit voll geladenem Akku (mindestens 625 Wh), da Kälte am Berg die Kapazität mindert. Unverzichtbare Pflichtausrüstung für den nächtlichen Rückweg: Eine leistungsstarke Frontleuchte mit mindestens 1.000 Lumen am Lenker sowie eine Helmstirnlampe zur Ausleuchtung enger Serpentinen. Da die Temperaturen nach Sonnenuntergang auf 2.000 Metern rasch um 10 bis 15 Grad sinken, gehören eine winddichte Hardshell-Jacke, warme Langfinger-Handschuhe und ein Stirnband zwingend in den Bike-Rucksack.",
+  "preis": 65,
+  "dauer": "3 bis 4 Stunden",
+  "link": "https://www.oetztal.com/sommer/radfahren-mountainbiken.html",
   "tags": [
+    "ebike",
     "mountainbike",
-    "e-bike",
     "sunset",
+    "soelden",
     "oetztal",
-    "gefuehrte-tour"
+    "almen",
+    "panorama",
+    "tirol"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +26,12 @@
   "koordinaten": {
     "lat": "47.1003",
     "lng": "10.9511"
-  }
+  },
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ]
 }

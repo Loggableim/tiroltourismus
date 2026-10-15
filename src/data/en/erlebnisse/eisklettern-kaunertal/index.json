@@ -1,28 +1,35 @@
 {
-  "name": "Eisklettern im Kaunertal",
   "slug": "eisklettern-kaunertal",
   "emoji": "🧊",
   "farbe": "var(--light-blue)",
   "kategorie": "winter",
   "ort": "Kaunertal",
   "region": "kaunertal",
-  "beschreibung": "=== description ===\nThe frozen waterfall in the **Kaunertal** is a must-visit for ice climbers. Under the guidance of a state-certified mountain guide, you’ll swing your ice axes and ascend the shimmering ice face. Beginner courses teach the essential techniques, and the thrill of reaching the summit of the waterfall is unforgettable.",
-  "preis": 139,
+  "koordinaten": {
+    "lat": "46.9917",
+    "lng": "10.6239"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Ice Climbing in the Kaunertal",
+  "beschreibung": "### Overview\nThe Kaunertal Valley in the Tyrolean Oberland is celebrated among ice climbers as one of the most reliable and varied frozen sanctuaries in the Eastern Alps. Ranging from an illuminated training fall on the valley floor to towering 200-metre ice cataracts in high-alpine cirques, the valley boasts more than 20 documented ice and mixed climbs. The primary hub for courses and evening training is Eispark Mühlbachfall in Feichten at the entrance of Verpeilschlucht gorge. Maintained and sprayed by the local mountain rescue service, this 35-metre waterfall features routes graded WI 3 to WI 6+ and is floodlit daily until 22:30. For experienced alpinists, the legendary Renkfälle waterfalls near Anton-Renk-Hütte at over 2,000 metres elevation present a world-class ice shield, home to classic lines such as 'Klassischer Renkfall' (WI 4+) and 'The Wind Corner' (WI 6).\n\n### Route & Requirements\nIce climbing destinations cater to two distinct skill sets:\n1. Eispark Mühlbachfall (Feichten): Approaches in just five minutes from the Quellalpin leisure centre. Ideal for beginner toprope clinics, ice screw placement, and night climbing under lights.\n2. Anton-Renk-Eisfälle (Ried/Fendels): A rugged high-alpine approach of approximately two hours (800 vertical metres) from the Stalanzer Alm barrier, best tackled on touring skis or snowshoes. Descent is carried out exclusively by rappelling via V-threads (Abalakov anchors), as foot descents along the slopes are notoriously avalanche-prone.\nIce climbing demands robust physical stamina, cold resistance, and surefootedness. Introductory clinics welcome sporty teenagers from age 14. Due to falling ice and alpine hazards, the terrain is completely unsuitable for small children and pets.\n\n### Arrival\nDrivers travel via the A12 Inntal Autobahn to Landeck/Prutz and continue on the L18 provincial road to Feichten. Free parking is available at the Quellalpin centre. Further up the valley, the 26-kilometre toll-road Kaunertaler Gletscherstraße ascends to Weißseeferner glacier at 2,750 metres (road toll included with lift passes). By public transport, take the train to Landeck-Zams station and connect to Postbus line 230, free within the valley for regional guest card holders.\n\n### Tips\nGuided group sessions with certified Kaunertal Mountain and Ski Guides start around €95 per person, including technical equipment (crampons, technical ice axes, harness, and helmet). Rigid crampon-compatible mountaineering boots (Category D), warm gloves, and layered mountain wear are required. Peak ice conditions prevail from January through mid-March. Vital alpine safety: always consult the official avalanche bulletin (lawine.tirol) prior to departing. Approaching ice falls exposes climbers to avalanche chutes; carrying a full avalanche rescue kit (beacon, shovel, probe) and wearing a climbing helmet are mandatory.",
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertal.com/en/Your-Kaunertal/In-Winter/Ice-Climbing",
+    "https://www.kaunertaler-bergfuehrer.com",
+    "https://www.kaunertaler-gletscher.at/kaunertaler-gletscherstrasse.html",
+    "https://lawine.tirol"
+  ],
+  "bilder": [],
   "dauer": "5 Stunden",
+  "link": "#",
+  "preis": 139,
   "tags": [
     "eisklettern",
     "winter",
     "kaunertal",
     "bergsport",
     "adrenalin"
-  ],
-  "koordinaten": {
-    "lat": "46.9917",
-    "lng": "10.6239"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

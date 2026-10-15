@@ -1,9 +1,9 @@
 {
-  "name": "Zettersfeld",
+  "name": "Zettersfeld Sonnenbalkon Lienz",
   "slug": "zettersfeld",
   "region": "osttirol",
   "ort": "Lienz",
-  "kategorie": "sport",
+  "kategorie": "aussicht",
   "kurzbeschreibung": "阳光明媚的高原Zettersfeld位于Lienz之上，提供无与伦比的Lienzer Dolomiten全景，是徒步旅行者和冬季运动爱好者的天堂。",
   "emoji": "⛰️",
   "farbe": "#5B8C5A",
@@ -14,10 +14,10 @@
     "全景",
     "运动"
   ],
-  "dauer": "Halbtag bis Ganztag",
-  "preis": "Bergfahrt Erwachsene € 19,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Zettersfeld Berg- und Talfahrt ca. 24 €",
   "oeffnungszeiten": "Sommer- und Winterbetrieb",
-  "webseite": "https://www.zettersfeld.at/",
+  "webseite": "https://www.lienzer-bergbahnen.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,13 @@
     "lng": "12.7681"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zettersfeld</strong> – Die Zettersfeld ist eine der Top-Adressen für Action und Abenteuer in Tirol. Das sonnige Hochplateau Zettersfeld oberhalb von Lienz bietet ein unvergleichliches Panorama auf die Lienzer Dolomiten und ist ein Paradies für Wanderer und Wintersportler Das abwechslungsreiche Angebot reicht von actiongeladenen Outdoor-Aktivitäten bis zu entspannten Wellness-Stunden. Professionelle Guides und modernste Ausrüstung sorgen für Sicherheit und maximalen Spaß. Auch für das leibliche Wohl ist mit Restaurants und Snackbars bestens gesorgt. Eingebettet in die beeindruckende Berglandschaft der Region Osttirol, bietet die Zettersfeld nicht nur sportliche Herausforderungen, sondern auch eine grandiose Aussicht. Planen Sie ausreichend Zeit ein – die Zettersfeld wird Sie mit ihrer Schönheit und Vielfalt begeistern.</p>"
+  "beschreibung": "<h2>概览</h2><p>位于东蒂罗尔首府利恩茨上空的<strong>泽特斯费尔德山</strong>（Zettersfeld，缆车站海拔1,812米，顶峰施泰纳曼德尔峰海拔2,213米）被誉为整个白云石山脉区日照最充足的天然阳光全景露台。搭乘现代化缆车仅需几分钟即可自盖姆贝格直达高山草甸。极目远眺，360度视野纵览南北两界：北望大本钟般耸立的大格洛克纳冰峰巨擘，南眺直插云霄的利恩茨白云石嶙峋尖峰。这里拥有平缓舒展的高山牧草坡与土拨鼠观察保护区，是全家尽享阿尔卑斯纯净自然的绝美圣地。</p><h2>路线与体能要求</h2><p>步道网络主打轻户外与亲子科普。最受欢迎的家庭环形步道环绕山顶核心站铺展：沿平整林间步道穿行，近距离观察高山土拨鼠在草洞嬉戏（耗时约1至1.5小时，极易T1级，支持全地形婴儿车）。中阶登山者可沿全景山脊登上Goiselemandl峰（2,433米）后回转至自然之友木屋或法兴阿尔姆高山客栈（约2.5至3小时，爬升350米，T2级）。建议穿着防滑徒步鞋并备遮阳帽。宠物犬全程系牵引绳允许随行及搭乘缆车。</p><h2>交通指南</h2><p>搭乘奥铁ÖBB火车至利恩茨中央火车站，出站换乘城市巴士直达盖姆贝格缆车下站。自驾经B100或B108公路仅需5分钟即达缆车站大型免费停车场。缆车每年6月中旬至10月初每日9:00至16:45运行。</p><h2>游览建议</h2><p>躺在海拔2,213米施泰纳曼德尔峰特设的人体工学木质观景躺椅上，静赏对岸利恩茨白云石山峰的雄奇岩壁。午后在Faschingalm高山客栈品尝现烤传统苹果糕点与浓醇高山冰牛奶。</p>",
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "sources": [
+    "https://www.lienzer-bergbahnen.at/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Zettersfeld",
+    "https://www.vvt.at/"
+  ]
 }

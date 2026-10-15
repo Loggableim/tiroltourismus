@@ -1,28 +1,33 @@
 {
-  "name": "Adlerhorst-Panoramasteg am Achensee",
   "slug": "adlerhorst-panoramasteg-achensee",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "wandern",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "=== description ===\nThe newly built Adlerhorst Panorama Bridge seamlessly blends into the vertical cliff face of the Achensee at 80 meters high. On this fully secured, circular walkway, you literally stroll above the deep turquoise waters of Tirol’s deepest lake. A breathtaking view of the Karwendel and Rofangebirg mountain ranges is assured.",
-  "preis": 29,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Adlerhorst Panoramic Walkway on Lake Achensee",
+  "beschreibung": "### Overview\nThe Adlerhorst viewing platform perches prominently atop the 2,039-metre summit of Gschöllkopf in the Rofan Mountains high above Maurach am Achensee. Designed by Tyrolean master blacksmith Manfred Hörl from Jenbach, the spectacular steel structure mimics a monumental eagle's nest. Around 15 tonnes of artfully interwoven galvanized steel form an eight-metre-wide nest thrusting boldly over the sheer rock faces of the Rofan massif. The platform affords an unobstructed 360-degree panoramic vista: deep below sparkles the turquoise water of Lake Achensee, framed on the horizon by the Karwendel Mountains, Zillertal and Tux Alps, High Tauern, and Lower Inn Valley. Located right along the renowned Adlerweg long-distance trail, Adlerhorst seamlessly blends high-alpine terrain with Tyrolean artisan metalwork.\n\n### Route & Requirements\nThe hike begins at the mountain station of the Rofanseilbahn next to Erfurter Hütte at 1,840 metres above sea level. From there, a well-marked red mountain trail leads through alpine pastures past Mauritzalm, ascending gently across dwarf pine slopes and rocky steps to the summit knoll of Gschöllkopf. Covering 2.6 kilometres in total, the hike gains around 200 metres of elevation. Pure walking time to the summit is 45 to 60 minutes, with the return taking 35 to 45 minutes. Sturdy ankle-high hiking boots with lugged soles and surefootedness are essential. The trail is well-suited for surefooted children aged five and older. On the platform itself, robust railings provide fall protection. The open grating floor is unsuitable for dogs due to paw injury hazards; canine companions should wait outside the nest.\n\n### Arrival\nThe valley station of Rofanseilbahn is situated at Achenseestraße 10 in Maurach. Motorists reach Maurach toll-free from the A12 Inntal Autobahn (Wiesing/Achensee exit) via the B181 federal highway. Paid parking is available at lots P1 and P2 at the cable car station, with parking fees fully refunded upon purchasing a lift ticket at the ticket counter. Public transit travellers take the train to Jenbach main station and board the regional VVT bus line 4080 directly to the Maurach Rofanseilbahn stop. During summer, the historic steam-operated Achenseebahn cog railway also connects Jenbach to Maurach.\n\n### Tips\nHolders of the regional AchenseeCard receive discounts on cable car tickets. Right next to the summit, thrill-seekers can board the AIRROFAN Skyglider, an eagle-shaped flight apparatus speeding riders down 200 vertical metres at up to 80 km/h (minimum height 1.30 metres, minimum age 10 years). Adlerhorst is accessible exclusively during the summer operating season from May to early November; in winter the path is snow-covered and closed. The exposed metal platform must be vacated immediately whenever storms or thunderstorms threaten.",
+  "sources": [
+    "https://www.rofanseilbahn.at",
+    "https://www.rofanseilbahn.at/adlerhorst/",
+    "https://www.rofanseilbahn.at/sommer/airrofan/"
+  ],
+  "bilder": [],
   "dauer": "1,5 Stunden",
+  "link": "#",
+  "preis": 29,
   "tags": [
     "wandern",
     "panorama",
     "achensee",
     "aussichtsplattform",
     "familie"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

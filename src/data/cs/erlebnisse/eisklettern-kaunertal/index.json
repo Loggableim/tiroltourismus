@@ -1,27 +1,34 @@
 {
-  "name": "Eisklettern im Kaunertal",
   "slug": "eisklettern-kaunertal",
   "emoji": "🧊",
   "farbe": "var(--light-blue)",
   "kategorie": "winter",
   "ort": "Kaunertal",
   "region": "kaunertal",
-  "beschreibung": "Der gefrorene Wasserfall im Kaunertal ist ein Hotspot für Eiskletterer. Unter Anleitung eines staatlich geprüften Bergführers schwingen Sie die Eispickel und steigen die glitzernde Eiswand empor. Einsteigerkurse vermitteln die grundlegende Technik – das Gefühl, den Gipfel des Wasserfalls zu erreichen, ist unbeschreiblich.",
-  "preis": 139,
+  "koordinaten": {
+    "lat": "46.9917",
+    "lng": "10.6239"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Ledovcové lezení v Kaunertalu",
+  "beschreibung": "### Přehled\nÚdolí Kaunertal v tyrolském Oberlandu je mezi vyznavači lezení v ledu považováno za jednu z nejjistějších a nejrozmanitějších oblastí Východních Alp. Od osvětleného tréninkového ledu na dně údolí až po monumentální ledopády přesahující výšku 200 metrů ve vysokohorských karech nabízí údolí přes 20 popsaných ledových a mixových cest. Centrálním místem pro výcvik a večerní lezení je ledový park Mühlbachfall ve Feichten u vstupu do soutěsky Verpeil: uměle zaledňovaný místní horskou službou nabízí tento 35 metrů vysoký ledopád obtížnosti WI 3 až WI 6+ a každý večer je až do 22:30 osvětlen reflektory. Pro zkušené horolezce se nad údolím u chaty Anton-Renk-Hütte ve výšce přes 2 000 metrů tyčí legendární Renkfälle – gigantický ledový štít s cestami světového formátu jako „Klassischer Renkfall“ (WI 4+) nebo „The Wind Corner“ (WI 6).\n\n### Trasa a náročnost\nOblasti se dělí podle lezecké úrovně:\n1. Eispark Mühlbachfall (Feichten): nástup pouhých pět minut od centra Quellalpin. Skvělé pro začátečnické kurzy s horním jištěním, nácvik vrtání ledovcových šroubů a večerní lezení.\n2. Ledopády Anton-Renk (Ried/Fendels): vysokohorský nástup trvá přibližně dvě hodiny (800 výškových metrů) od závory u Stalanzer Alm, ideální na skialpech či sněžnicích. Sestup probíhá výhradně slaněním z ledových hodin (Abalakov), pěší sestup po svahu u chaty je extrémně lavinový.\nLezení v ledu vyžaduje výbornou fyzickou kondici, odolnost vůči mrazu a jistý pohyb v terénu. Základní kurzy jsou přístupné zdatným zájemcům od 14 let. Terén je nevhodný pro malé děti a psy kvůli padajícímu ledu.\n\n### Příjezd a doprava\nAutem po dálnici A12 Inntal do Landecku/Prutzu a po zemské silnici L18 do Feichten. Bezplatné parkování u centra Quellalpin. Dále údolím stoupá 26 km dlouhá zpoplatněná vysokohorská silnice Kaunertaler Gletscherstraße až k ledovci Weißseeferner do výšky 2 750 metrů (mýtné je zahrnuto v ceně skipasu). Veřejnou dopravou vlakem do stanice Landeck-Zams a autobusem linky 230, který je pro držitele karty hosta v údolí bezplatný.\n\n### Praktické tipy\nKurzy s certifikovanými horskými vůdci z Kaunertalu začínají na cca 95 eurech na osobu (včetně zapůjčení maček, lezeckých zbraní, úvazku a helmy). Nutné jsou vlastní pevné celoroční boty na mačky (kategorie D) a teplé vrstvené oblečení. Nejlepší podmínky panují od ledna do poloviny března. Zásadní bezpečnostní pravidlo: před každou túrou bezpodmínečně zkontrolujte lavinovou předpověď (lawine.tirol). Nástupy vedou lavinovými dráhami; lavinová výbava (vyhledávač, sonda, lopata) a horolezecká přilba jsou nezbytné.",
+  "sources": [
+    "https://www.kaunertal.com",
+    "https://www.kaunertal.com/en/Your-Kaunertal/In-Winter/Ice-Climbing",
+    "https://www.kaunertaler-bergfuehrer.com",
+    "https://www.kaunertaler-gletscher.at/kaunertaler-gletscherstrasse.html",
+    "https://lawine.tirol"
+  ],
+  "bilder": [],
   "dauer": "5 Stunden",
+  "link": "#",
+  "preis": 139,
   "tags": [
     "eisklettern",
     "winter",
     "kaunertal",
     "bergsport",
     "adrenalin"
-  ],
-  "koordinaten": {
-    "lat": "46.9917",
-    "lng": "10.6239"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

@@ -1,0 +1,13 @@
+---
+// src/pages/demofrontneu/[lang].astro — Demo one-page front for the 7 non-default
+// languages (noindex, no sitemap). German lives at /demofrontneu.
+import DemoPage from '../../components/demofront/DemoPage.astro';
+
+export function getStaticPaths() {
+  return ['en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'].map((lang) => ({ params: { lang } }));
+}
+
+const locale = Astro.params.lang ?? 'en';
+---
+
+<DemoPage locale={locale} />

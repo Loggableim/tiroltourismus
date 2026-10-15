@@ -1,12 +1,12 @@
 {
-  "name": "Museumsnacht Innsbruck",
+  "name": "ORF Dlouhá noc muzeí v Innsbrucku",
   "slug": "museumsnacht-innsbruck",
   "emoji": "🏛️",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Einmal im Jahr öffnen die Innsbrucker Museen ihre Türen für eine lange Nacht voller Kunst, Geschichte und Kultur. Mit einem Armband besuchen Sie alle teilnehmenden Häuser – vom Alpenvereinsmuseum über das Zeughaus bis zur Hofkirche. Überall gibt es Spezialführungen, Workshops und Live-Musik.",
+  "beschreibung": "### Přehled\nDlouhá noc muzeí ORF promění tyrolské hlavní město Innsbruck každou první říjnovou sobotu v pulzující kulturní promenádu. Od 18:00 do 01:00 hodiny ranní otevírá své brány více než dvacet předních muzeí, galerií a historických památek. Jediná společná vstupenka umožňuje vstup do císařského paláce Hofburg, na renesanční zámek Ambras s komnatou umění a kuriozit, do Tyrolského muzea lidového umění, zbrojnice Zeughaus i do interaktivního vědeckého centra Audioversum. Zatímco hlavní budova muzea Ferdinandeum prochází generální rekonstrukcí do roku 2028, noční program obohacují kurátorské prohlídky a světelné instalace.\n\n### Trasa a náročnost\nTrasu si každý návštěvník sestavuje zcela individuálně. Muzejní síť sahá od starobylého centra města až po jihovýchodní návrší se zámkem Ambras. Doporučuje se pohodlná obuv, protože prohlídka historických sálů vyžaduje poměrně dost chůze. Většina velkých institucí je bezbariérově přístupná. Programy pro rodiny s dětmi se konají především v čase mezi 18:00 a 21:00.\n\n### Doprava\nHlavními dopravními uzly jsou nádraží Innsbruck Hauptbahnhof a prostranství před Hofburgem u Haus der Musik. Pro držitele vstupenek zajišťuje dopravní podnik IVB bezplatné kyvadlové autobusy (linky SH1, SH2, SH3), které v krátkých intervalech spojují centrum s památkami na okraji města, jako je zámek Ambras či zvonařské muzeum Grassmayr. Využít lze i běžné městské linky.\n\n### Tipy\nKupte si vstupenku v předprodeji, abyste se vyhnuli večerním frontám u pokladen. Začněte v 18:00 vzdálenějšími cíli, jako je zámek Ambras, a historické centrum si nechte na pozdní noční hodiny. Vstup se psy do výstavních prostor není z památkových a bezpečnostních důvodů povolen.",
   "preis": 29,
   "dauer": "4–5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://langenacht.orf.at",
+    "https://www.innsbruck.info",
+    "https://www.tiroler-landesmuseen.at",
+    "https://www.tirol.at",
+    "https://www.ivb.at"
+  ]
 }

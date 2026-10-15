@@ -1,5 +1,6 @@
 ---
 import FavHeart from './FavHeart.astro';
+import CategoryPlaceholder from './CategoryPlaceholder.astro';
 export interface Props {
   /** Optional locale prefix for multilang links (e.g. "fr"). */
   locale?: string;
@@ -22,8 +23,8 @@ const FALLBACK_LABEL = { de: 'Sehenswürdigkeit', en: 'Sight', fr: 'Site', cs: '
 const fallbackLabel = FALLBACK_LABEL[locale] || FALLBACK_LABEL.de;
 ---
 <a href={`${linkPrefix}${slug}/`} class="sight-card" data-collection="sehenswuerdigkeiten" data-slug={slug} data-filter-card data-filter-cat={kategorie || 'all'}>
-  <div class="sight-card-img" style={`position:relative;background:${farbe}18`}>
-    <span class="sight-emoji">{emoji}</span>
+  <div class="sight-card-img" style="position:relative">
+    <CategoryPlaceholder collection="sehenswuerdigkeiten" locale={locale} />
     <FavHeart collection="sehenswuerdigkeiten" slug={slug} />
   </div>
   <div class="sight-body">

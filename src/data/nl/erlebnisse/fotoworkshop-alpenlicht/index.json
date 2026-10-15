@@ -1,27 +1,34 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Pitztal",
   "region": "pitztal",
-  "beschreibung": "Die goldene Morgenstunde im Pitztal – ein professioneller Fotograf zeigt Ihnen, wie Sie die einzigartige Berglandschaft perfekt in Szene setzen. Der Workshop behandelt Lichtstimmung, Komposition Langzeitbelichtung und Nachbearbeitung. Kamera und Stativ können ausgeliehen werden.",
-  "preis": 79,
+  "koordinaten": {
+    "lat": "46.9792",
+    "lng": "10.8725"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Fotoworkshop Alpenlicht",
+  "beschreibung": "### Overzicht\nEen fotografieworkshop 'Alpenlicht' in het Pitztal en Kaunertal introduceert enthousiaste fotografen in de meest dramatische lichtcontrasten van de Tiroolse Hoogalpen. Tussen ruige bergkammen, gletsjers en diepblauwe bergmeren leren deelnemers berglandschappen vast te leggen tijdens het gouden en blauwe uur, inclusief de roodgloeiende alpengloed (Alpenglühen). Een van de absolute toplocaties is de Rifflsee op 2.232 meter hoogte: het hoogstgelegen bergmeer van Oostenrijk weerspiegelt bij windstil weer de spitse toppen van de Kaunergrat. Nog spectaculairder is Café 3440 op de Pitztaler gletsjer: vanaf het zwevende panoramaterras op de Hinterer Brunnenkogel, het hoogste uitkijkpunt van Oostenrijk, opent zich een 360-graden uitzicht op meer dan 50 drieduizenders en de markante Wildspitze (3.768 m). Nachtmodules in het achterste Kaunertal benutten de minimale lichtvervuiling voor kristalheldere astrofotografie.\n\n### Route & Vereisten\nDe workshops combineren fotografische theorie met praktijksessies in het veld. Vaste locaties zijn de wandelroute rond de Rifflsee (1 uur wandelen, 50 hoogtemeters), het bergstation van de Wildspitzbahn op 3.440 meter en het uitkijkplatform 'Gacher Blick' bij het natuurparkhuis Kaunergrat (1.560 m). De tochten vergen tredzekerheid en stevige bergschoenen, maar geen zware klimervaring. Deelnemers dienen te beschikken over een spiegelreflex- of systeemcamera met handmatige bediening, een stabiel statief, groothoek- en telelenzen, en polarisatie- en ND-filters. Onveilig en ongeschikt voor jonge kinderen en honden wegens langdurig stilstaan in vrieskou.\n\n### Bereikbaarheid\nDe centrale uitvalsbasis in het Pitztal is Mandarfen bij het dalstation van de Rifflseebahn of Mittelberg bij de gletsjerbaan. Met de auto vanaf de A12 Inntal-snelweg (afrit Imst/Pitztal) via de L16 naar het dalhoofd. Gratis parkeren bij beide dalstations. Met het openbaar vervoer per trein naar station Imst-Pitztal en verder met de VVT-streekbus lijn 4204 (gratis met de Pitztal Sommer Card).\n\n### Tips\nDe workshopprijs varieert van circa € 85 tot € 190 afhankelijk van duur en omvang (kabelbaantickets apart; de Rifflseebahn is dagelijks inbegrepen bij de Pitztal Sommer Card). Een absoluut hoogtepunt zijn de speciale zonsopgangsritten naar Café 3440 met bergontbijt. Kledingadvies: op 2.200 tot 3.440 meter hoogte daalt de temperatuur na zonsondergang ook 's zomers snel tot rond het vriespunt. Kleed u in laagjes met een warm donsjack, muts en speciale fotohandschoenen met wegklapbare vingertoppen. Neem voldoende opgeladen reserveaccu's mee, want kou vreet batterijcapaciteit.",
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 79,
   "tags": [
     "fotografie",
     "workshop",
     "alpen",
     "pitztal",
     "landschap"
-  ],
-  "koordinaten": {
-    "lat": "46.9792",
-    "lng": "10.8725"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

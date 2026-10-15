@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "Zams",
   "kategorie": "burg",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Die <strong>Burg Kronburg</strong> thront auf einem steilen Felskopf oberhalb der Gemeinde Zams bei Landeck.. Die im 13.. Jahrhundert erbaute Höhenburg diente einst als Sitz der Herren von Kronburg.. Heute ist sie eine malerische Ruine, deren mächtiger <strong>Bergfried</strong> noch fast vollständig erhalten ist und bestiegen werden kann.. Der Aufstieg durch den Wald ist ein kurzer, lohnender Spaziergang.</p>",
+  "kurzbeschreibung": "Las ruinas de Burg Kronburg se alzan sobre Zams: fortaleza rocosa medieval de 1380, iglesia de peregrinaci?n Maria Hilf y hospeder?a mon?stica.",
+  "beschreibung": "<h2>Descripci?n general</h2><p>El hist?rico <strong>Burg Kronburg</strong> (tambi?n conocido como <em>Ruine Kronburg</em>) se alza sobre un llamativo y escarpado cono rocoso a 1.066 metros de altitud, dominando el valle del Inn entre los municipios de Zams y Sch?nwies en la regi?n tur?stica TirolWest. Enmarcado por densos bosques alpinos y pronunciados cortados rocosos, la majestuosa ruina conforma, junto con el santuario de Maria Hilf situado a sus pies, la posada hist?rica y la finca conventual de Klostergut Kronburg, un conjunto espiritual e hist?rico-cultural ?nico en el Tiroler Oberland.</p><h2>Historia y peregrinaci?n</h2><p>Los hallazgos arqueol?gicos revelan que la colina ya se empleaba como refugio en la prehistoria. La fortificaci?n militar propiamente dicha fue erigida hacia 1380 por el noble <strong>Johann von Starkenberg</strong> con el fin de controlar estrat?gicamente el valle del Inn. Tras el fracaso de la contienda de los Starkenberg contra el soberano tirol?s <strong>Friedrich IV. mit der leeren Tasche</strong>, la fortaleza fue sitiada en 1423 y pas? a manos principescas. En 1504, el emperador <strong>Maximilian I.</strong> entreg? el Kronburg a la influyente familia noble Fieger, quienes lo remodelaron como residencia se?orial. Al quedar deshabitado a partir de la segunda mitad del siglo XVIII y extinguirse el linaje en 1802, la edificaci?n acab? en ruinas. En 1985, la asociaci?n ?Rettet die Kronburg? rescat? los muros mediante una amplia restauraci?n. En el collado inferior, a partir de 1673 surgi? el centro de peregrinaci?n <em>Maria Hilf</em> tras registrarse curaciones milagrosas; el templo barroco se ampli? entre 1714 y 1717. En la actualidad, el monasterio est? encomendado al cuidado de las Barmherzige Schwestern von Zams.</p><h2>Visita y c?mo llegar</h2><p>La ruina de Burg Kronburg est? abierta durante el d?a todo el a?o con <strong>acceso libre y gratuito</strong> (la visita se realiza bajo la propia responsabilidad). El santuario de Maria Hilf tambi?n permanece abierto durante el d?a para la oraci?n y visitas; la contigua posada Gasthof Kronburg abre seg?n sus horarios de temporada. Acceso en transporte p?blico: tren hasta la estaci?n de Landeck-Zams, y luego autobuses regionales hacia Zams o Sch?nwies. Desde el valle parten rutas bien se?alizadas (como el Starkenberger Panoramaweg) que ascienden en unos 45 a 60 minutos hasta el monasterio. En coche: por la autopista Inntalautobahn A12 o la B171 a la altura de Zams, seguir las indicaciones hacia Kronburg; una carretera de monta?a asfaltada conduce al aparcamiento junto a Klostergut Kronburg. Desde all?, un sendero empinado por el bosque lleva a las ruinas en unos 15 minutos.</p><h2>Consejos</h2><p>La subida desde el convento a la fortaleza por la senda de roca requiere buen calzado de monta?a y pisada firme; no es apta para carritos de beb? ni sillas de ruedas. Por el contrario, la finca conventual con la iglesia y la posada es llana y accesible. Kronburg es una parada destacada del Camino de Santiago tirol?s (Tiroler Jakobsweg): disfrute de la serena paz del lugar de devoci?n y de las magn?ficas vistas sobre la hondonada de Landeck.</p>",
   "emoji": "🏰",
   "farbe": "#8D6E63",
   "hoehe": "1.050 m",
   "dauer": "1–2 Stunden",
-  "preis": "Kostenlos",
+  "preis": "Eintritt frei",
   "tags": [
     "castillo",
     "historia",
@@ -19,10 +19,16 @@
     "senderismo",
     "familia"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.zams.at",
+  "oeffnungszeiten": "Burgruine ganzjährig tagsüber frei zugänglich",
+  "webseite": "https://www.klostergut-kronburg.at",
   "koordinaten": {
     "lat": "47.1600",
     "lng": "10.6000"
-  }
+  },
+  "sources": [
+    "https://www.klostergut-kronburg.at",
+    "https://www.tirolwest.at",
+    "https://www.starkenberger-panoramaweg.at",
+    "https://de.wikipedia.org/wiki/Burg_Kronburg"
+  ]
 }

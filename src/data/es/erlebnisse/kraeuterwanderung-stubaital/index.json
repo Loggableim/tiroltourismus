@@ -6,16 +6,20 @@
   "kategorie": "wandern",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>El Stubaital es un valle lateral del Inntal en el Tirol, de unos 35 kilómetros de longitud, al sur de Innsbruck, con las cinco localidades principales Neustift, Fulpmes, Telfes, Mieders y Schönberg. Las coordenadas de la entrada se encuentran en el Stubaital anterior cerca de Telfes. En verano, unos 850 kilómetros de senderos recorren la región; entre ellos está el sendero del placer „Stubaier Almkräuter“ de Milders a la Auffangalm y la Brandstattalm.</p><p>La entrada describe un senderismo guiado de hierbas con una educadora de hierbas y cata de productos regionales, duración unas cuatro horas, precio 55 euros. Una asignación a un proveedor nombrado y reservable no fue posible basándose en fuentes oficiales accesibles al público.</p>",
-  "preis": 55,
-  "dauer": "4 Stunden",
-  "link": "#",
+  "beschreibung": "Resumen\nCon unos 35 kilómetros de longitud al sur de Innsbruck, el valle Stubaital exhibe una rica biodiversidad gracias a su desnivel comprendido entre los pinares a 1.000 metros y los glaciares por encima de los 3.000 metros. El sustrato silíceo y las turberas de montaña albergan más de trescientas especies de plantas medicinales y aromáticas. En itinerarios oficiales como la ruta de hierbas alpinas («Stubaier Almkräuter») en Neustift o en paseos guiados por los humedales del telecabina Serlesbahnen en Mieders, los aficionados a la naturaleza se sumergen en la etnobotánica alpina. Guiados por educadoras locales, se aprende a identificar árnica, serpol, eufrasia y pie de león para la elaboración de pomadas y recetas gastronómicas tradicionales.\n\nRuta & Requisitos\nEl valle dispone de atractivas rutas interpretativas:\n1. Ruta «Stubaier Almkräuter» (Neustift-Milders): trazado oficial de 9,5 km y 650 metros de desnivel desde Milders (1.026 m) hasta los pastos de Auffangalm (1.620 m) y Brandstattalm. Durante el trayecto abunda el árnica silvestre, el tomillo de montaña y el llantén. Duración de 4 a 4,5 horas por pistas y senderos de montaña (tramo desde el aparcamiento Josef accesible para carritos de bebé todoterreno).\n2. Excursión guiada por las turberas de Serles (Mieders): cada lunes desde la estación superior de Koppeneck (1.605 m) pasando por el monasterio de Maria Waldrast y los humedales protegidos (9 km, 300 m de desnivel, 4 horas).\n3. Prados Telfer Wiesen (Telfes): circuito accesible de 6 a 8 km entre alerces y orquídeas alpinas.\n4. Talleres botánicos: en Neustift se imparten cursos de cosmética natural y sales aromáticas.\nIdóneo para familias. Se admiten perros con correa (bozal obligatorio en teleféricos y transporte público).\n\nCómo llegar\nDesde Innsbruck por la autopista A13 (salida Schönberg) y la carretera B183. El autobús VVT 590 conecta directamente la estación central de Innsbruck con todas las localidades del valle. El tren panorámico Stubaitalbahn (STB) llega hasta Telfes y Fulpmes. Aparcamiento en Serlesbahnen y en el valle de Oberbergtal.\n\nConsejos\nCon la tarjeta «Stubai Super Card» (gratuita al alojarse en establecimientos asociados), el transporte público en autobús y tren, los telecabinas y las rutas botánicas guiadas están incluidos. Imprescindible calzado de montaña. En humedales y reservas naturales está estrictamente prohibido arrancar plantas protegidas.",
+  "preis": 0,
+  "dauer": "3 bis 4,5 Stunden",
+  "link": "https://www.stubai.at/aktivitaeten/wandern/",
   "tags": [
-    "senderismo",
-    "hierbas medicinales",
-    "naturaleza",
-    "Valle de Stubai",
-    "evento"
+    "wandern",
+    "kraeuter",
+    "stubaital",
+    "neustift",
+    "mieders",
+    "serles",
+    "hochmoor",
+    "alpenflora",
+    "tirol"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +27,11 @@
   "koordinaten": {
     "lat": "47.1549",
     "lng": "11.3509"
-  }
+  },
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubai.at/aktivitaeten/wandern",
+    "https://www.stubai.at/unterkuenfte/stubai-super-card",
+    "https://www.stubai.at/skigebiete/serlesbahnen"
+  ]
 }

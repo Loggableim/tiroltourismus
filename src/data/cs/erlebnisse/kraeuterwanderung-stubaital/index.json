@@ -6,16 +6,20 @@
   "kategorie": "wandern",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>Stubaital je přibližně 35 kilometrů dlouhá boční údolí Inntalu v Tyrolsku jižně od Innsbrucku s pěti hlavními místy Neustift, Fulpmes, Telfes, Mieders a Schönberg. Souřadnice položky leží ve předním Stubaitalu blízko Telfes. V létě vede přes oblast asi 850 kilometrů turistických stezek; mezi nimi je cesta pro užití „Stubaier Almkräuter“ z Milders na Auffangalm a Brandstattalm.</p><p>Položka popisuje voděnou bylinkovou pouť s bylinkovou pedagoginkou a degustací regionálních produktů, trvání zhruba čtyři hodiny, cena 55 eur. Přiřazení k pojmenovanému, rezervovatelnému poskytovateli nebylo možné na základě veřejně přístupných oficiálních zdrojů.</p>",
-  "preis": 55,
-  "dauer": "4 Stunden",
-  "link": "#",
+  "beschreibung": "Přehled\nÚdolí Stubaital jižně od Innsbrucku se vyznačuje mimořádnou botanickou pestrostí díky převýšení od modřínových luk v 1 000 m až po ledovce přesahující 3 000 metrů. Prvotní krystalické horniny, vysokohorská rašeliniště a tradiční pastva vytvářejí domov pro více než tři sta druhů horských bylin. Podél tématických tras, jako je oficiální zážitková stezka „Stubaier Almkräuter“ v Neustiftu, nebo při pondělních komentovaných túrách u lanovek Serlesbahnen v Miedersu, poznávají návštěvníci alpské lidové léčitelství. Pod vedením certifikovaných bylinkářek se učí rozpoznávat prhu arniku, mateřídoušku, světlík i kontryhel.\n\nTrasa a požadavky\nÚdolí nabízí několik populárních bylinkových okruhů:\n1. Stezka horských bylin „Stubaier Almkräuter“ (Neustift-Milders): oficiální trasa turistického svazu měří 9,5 km s převýšením 650 m a vede z Mildersu (1 026 m n. m.) na horské pastviny Auffangalm (1 620 m) a Brandstattalm. Na loukách roste arnika, tymián i jitrocel. Doba chůze je 4 až 4,5 hodiny po lesních a horských cestách (úsek od parkoviště Josef je sjízdný s terénním kočárkem).\n2. Túra po rašeliništích Serles (Mieders): každé pondělí od horní stanice Koppeneck (1 605 m) kolem kláštera Maria Waldrast k chráněným rašeliništím na Miederer Berg (9 km, 300 m převýšení, 4 hodiny).\n3. Louky Telfer Wiesen (Telfes): nenáročný okruh v délce 6–8 km světlými modřínovými lesy s kvetoucími orchidejemi.\n4. Bylinkové workshopy: v Neustiftu se konají kurzy výroby bylinných mastí, tinktur a kulinářských specialit.\nVhodné pro rodiny s dětmi. Psi na vodítku jsou vítáni (v lanovkách a autobusech platí povinnost náhubku).\n\nPříjezd\nZ Innsbrucku po dálnici A13 (sjezd Schönberg) a silnici B183. Pravidelná autobusová linka VVT 590 jezdí přímo z hlavního nádraží v Innsbrucku do celého údolí. Panoramatická tramvaj Stubaitalbahn (STB) spojuje Innsbruck s Telfesem a Fulpmesem. Parkoviště jsou u lanovky v Miedersu i v údolí Oberbergtal.\n\nTipy\nS kartou „Stubai Super Card“ (v ceně pobytu u partnerských ubytovatelů) jsou autobusy, tramvaj, lanovky i komentované túry zdarma. Pevná turistická obuv je nezbytná. V rašeliništích a chráněných územích platí přísný zákaz trhání chráněných rostlin.",
+  "preis": 0,
+  "dauer": "3 bis 4,5 Stunden",
+  "link": "https://www.stubai.at/aktivitaeten/wandern/",
   "tags": [
     "wandern",
     "kraeuter",
-    "natur",
     "stubaital",
-    "veranstaltung"
+    "neustift",
+    "mieders",
+    "serles",
+    "hochmoor",
+    "alpenflora",
+    "tirol"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +27,11 @@
   "koordinaten": {
     "lat": "47.1549",
     "lng": "11.3509"
-  }
+  },
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubai.at/aktivitaeten/wandern",
+    "https://www.stubai.at/unterkuenfte/stubai-super-card",
+    "https://www.stubai.at/skigebiete/serlesbahnen"
+  ]
 }

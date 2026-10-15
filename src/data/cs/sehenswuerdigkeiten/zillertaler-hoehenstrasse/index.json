@@ -2,9 +2,9 @@
   "name": "Zillertaler Höhenstraße",
   "slug": "zillertaler-hoehenstrasse",
   "region": "zillertal",
-  "ort": "Mayrhofen",
+  "ort": "Kaltenbach",
   "kategorie": "aussicht",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Eine der spektakulärsten Panoramastraßen Österreichs bis auf 2.020 m Seehöhe – atemberaubender Tiefblick ins Zillertal und Murmelland.",
   "emoji": "🚗",
   "farbe": "#2E8B57",
   "tags": [
@@ -13,10 +13,10 @@
     "natur",
     "auto"
   ],
-  "dauer": "Halber Tag",
-  "preis": "Maut: € 15,00 pro Fahrzeug",
+  "dauer": "2–5 Stunden",
+  "preis": "Mautgebühr ca. 8–10 € pro PKW / Motorrad",
   "oeffnungszeiten": "Mai bis Oktober, wetterabhängig",
-  "webseite": "https://www.zillertal.at/hoehenstrasse",
+  "webseite": "https://www.zillertaler-hoehenstrasse.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,14 @@
     "lng": "11.8639"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zillertaler Höhenstraße</strong> – Die Zillertaler Höhenstraße bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Die Zillertaler Höhenstraße ist eine 42 km lange Panoramastraße mit atemberaubenden Ausblicken auf die Zillertaler Alpen und ihre Gletscher Vom Gipfel aus eröffnet sich ein 360-Grad-Panorama, das bei klarer Sicht bis zu den Gletschern der Hohen Tauern reicht. Die bequeme Bergbahn bringt Besucher mühelos auf die Höhe, wo mehrere Panoramaterrassen und ein Bergrestaurant zum Genießen einladen. Die Zillertaler Höhenstraße liegt in der Region Zillertal und ist von Mayrhofen aus in kurzer Zeit zu erreichen. Die Anfahrt führt durch eine reizvolle Landschaft, die bereits auf dem Weg dorthin beeindruckt. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Přehled</h2><p>Vysokohorská silnice <strong>Zillertaler Höhenstraße</strong> patří k nejúchvatnějším vyhlídkovým trasám Rakouska, stoupající v serpentinách až do nadmořské výšky 2 020 metrů. Téměř 50 km dlouhá silnice nabízí dechberoucí pohledy do hloubky údolí Zillertal i na zaledněné třítisícovky Zillertalských Alp.</p><h2>Trasa a náročnost</h2><p>Asfaltová mýtná silnice (cca 8–10 € za vozidlo) má 5 výjezdových tras (Ried, Kaltenbach, Zellberg, Hippach). Úzká horská vozovka s výhybnami. Na nejvyšším bodě (Hirschbichlalm, 2 020 m) leží zážitkový park se svišti Murmelland (snadná T1) i turistické trasy na štít Gedrechter (2 217 m, T2). Nutná opatrná jízda na horské silnici. Psi na vodítku vítáni.</p><h2>Příjezd a doprava</h2><p>Vlakem Zillertalbahn do Kaltenbachu či Riedu a odtud letním vyhlídkovým autobusem. Autem po silnici B169 k mýtným branám. Otevřeno od poloviny května do konce října dle počasí.</p><h2>Tipy</h2><p>Udělejte si fotografickou zastávku u osamocené kapličky Hubertuskapelle s ledovci v pozadí a ochutnejte tradiční tyrolské koblihy Krapfen na terase salaše Hirschbichlalm.</p>",
+  "saison": "Mitte Mai bis Ende Oktober (im Winter komplett schneebedingt gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertaler_H%C3%B6henstra%C3%9Fe",
+    "https://www.zillertal.at/",
+    "https://www.mayrhofen.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/zillertaler-hoehenstrasse-rundtour/1381505/",
+    "https://www.vvt.at/"
+  ]
 }

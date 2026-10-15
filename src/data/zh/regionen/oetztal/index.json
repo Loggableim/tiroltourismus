@@ -2,7 +2,7 @@
   "titel": "Ötztal",
   "status": "published",
   "featured": true,
-  "kurzbeschreibung": "冰川、行动与古老传统。Ötztal 是 Tirol 的极端山谷。",
+  "kurzbeschreibung": "厄茨山谷（Ötztal）是蒂罗尔最长的侧谷——拥有壮丽冰川、高达3768米的野峰（Wildspitze）、世界杯滑雪胜地索尔登（Sölden）与Aqua Dome高山温泉。",
   "emoji": "🏔️",
   "bewertung": 5,
   "farbe": "#0051BA",
@@ -12,9 +12,9 @@
     "自然",
     "文化"
   ],
-  "hoehe": "3.774 m",
-  "flaeche": "530 km²",
-  "einwohner": "17.000",
+  "hoehe": "3,768 米",
+  "flaeche": "880 平方公里",
+  "einwohner": "17,000",
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -102,5 +102,25 @@
       47.28,
       10.88
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.soelden.com",
+    "https://www.gurgl.com",
+    "https://www.aqua-dome.at/de/",
+    "https://www.tirol.at/regionen/a-oetztal",
+    "https://de.wikipedia.org/wiki/%C3%96tztal"
+  ],
+  "beschreibung": "<p><strong>厄茨山谷</strong>（Ötztal）绵延65公里，是因河谷最长的侧山谷，也是阿尔卑斯山脉最震撼的高山度假胜地之一。周围环绕着250座海拔超过3000米的高峰，其中北蒂罗尔最高峰<strong>野峰</strong>（Wildspitze，3768米）傲然挺立。从阳光明媚的山谷入口<strong>厄茨</strong>（Oetz）和皮堡湖出发，途经拥有蒂罗尔最大瀑布施图伊本瀑布（Stuibenfall）的<strong>乌姆豪森</strong>（Umhausen），以及拥有现代温泉水疗的<strong>朗根费尔德</strong>（Längenfeld），一直延伸至举世闻名的滑雪胜地<strong>索尔登</strong>（Sölden）和<strong>古尔格尔</strong>（Gurgl）。冬季，雷滕巴赫与蒂芬巴赫双冰川滑雪场以及超过3000米高的BIG 3观景台吸引着全世界的滑雪爱好者。乌姆豪森的冰人文化村（<em>Ötzi-Dorf</em>）则生动展示了著名的冰人奥茨的历史传奇。</p>",
+  "tipps": [
+    "乌姆豪森附近的斯图伊本瀑布（Stuibenfall）落差达 159 米，是蒂罗尔最高瀑布，可通过吊桥和 700 级观景台阶近距离感受震撼水势。",
+    "伦根费尔德的水穹顶水疗中心（Aqua Dome）展现未来主义建筑风格，拥有源自地下 1,865 米温泉水的漂浮碗状泡池。",
+    "索尔登盖斯拉赫峰（Gaislachkogl，海拔 3,048 米）的 007 ELEMENTS 詹姆斯·邦德体验馆带您深入《幽灵党》取景地山体内部。"
+  ],
+  "empfehlungen": "<p>绝不可错过的亮点：驱车沿着厄茨山谷冰川公路登上<strong>雷滕巴赫与蒂芬巴赫冰川</strong>，或搭乘缆车登上<strong>盖斯拉赫科格尔峰</strong>体验<strong>007 ELEMENTS</strong>。之后前往朗根费尔德的<strong>Aqua Dome温泉</strong>放松身心，饱览阿尔卑斯雪山全景。</p>",
+  "umgebung": "<p>厄茨山谷在海明（Haiming）向南从因河谷分出，一直延伸到奥地利与意大利南蒂罗尔接壤的阿尔卑斯主山脊。周边相邻区域：北部为伊姆斯特，西部为皮茨山谷，东部为斯图拜山谷，南部通过蒂梅尔斯山口（Timmelsjoch，2474米）连接意大利。</p>",
+  "koordinaten": {
+    "lat": 46.9833,
+    "lng": 10.95
+  }
 }

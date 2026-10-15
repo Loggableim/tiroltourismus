@@ -1,17 +1,17 @@
 {
-  "name": "Zugspitze",
+  "name": "Tiroler Zugspitzbahn & Zugspitze",
   "slug": "zugspitze",
   "status": "published",
   "region": "ausserfern",
   "ort": "Ehrwald",
   "kategorie": "aussicht",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Die <strong>Zugspitze</strong> ist mit 2.962 Metern der höchste Berg Deutschlands und liegt an der Grenze zu Tirol. Von <strong>Ehrwald</strong> aus führt die <strong>Tiroler Zugspitzbahn</strong> ganzjährig auf das Gipfelplateau. Oben erwartet Besucher eine großzügige <strong>Aussichtsplattform</strong>, die bei klarer Sicht einen weiten Rundumblick auf bis zu vier Länder ermöglicht. Auf dem Gipfel befinden sich zudem ein Restaurant und eine Wetterstation. Der Berg ist ein beliebtes Ziel für Wanderer und bietet mehrere Routen, wobei der Aufstieg auch über Klettersteige möglich ist. Die gesamte Anlage ist barrierefrei zugänglich und wird auch im Winter betrieben.</p>",
+  "kurzbeschreibung": "Der höchste Berggipfel (2.962 m) des Wettersteingebirges – moderne Seilbahn, 4-Länder-Panoramablick auf 400 Alpengipfel und Erlebniswelt.",
+  "beschreibung": "<h2>Visión general</h2><p>La <strong>Zugspitze</strong> (2.962 m) es el pico más alto de los montes Wetterstein en la frontera entre el Tirol y Baviera. Desde el lado tirolés, el moderno teleférico Tiroler Zugspitzbahn asciende 1.725 metros de desnivel en 10 minutos desde Ehrwald. La cumbre brinda una panorámica única sobre más de 400 picos de 4 países (Austria, Alemania, Suiza e Italia).</p><h2>Ruta y Requisitos</h2><p>Instalaciones plenamente accesibles con terrazas panorámicas, ascensor y el museo interactivo \"Fascinación Zugspitze\" (T1, apto para sillas de ruedas y carritos). La cruz dorada de la cima se alcanza por una arista rocosa con cables (T3, experiencia alpina). Ascensión a pie para montañeros desde Ehrwald por el Gatterl (6 horas, 1.800 m de desnivel, T3). Ropa de abrigo necesaria todo el año. Perros con bozal permitidos.</p><h2>Cómo llegar</h2><p>En tren a la estación de Ehrwald y autobús gratuito a la estación inferior en Ehrwald-Obermoos. En coche por el Fernpass o desde Garmisch. Gran aparcamiento gratuito en la base.</p><h2>Consejos</h2><p>Reserve un billete especial al amanecer para contemplar el mar de nubes desde el restaurante panorámico de la cumbre y pise la plataforma de cristal sobre el abismo.</p>",
   "emoji": "🗻",
   "farbe": "#9C27B0",
   "hoehe": "2.962 m",
-  "dauer": "Halbtag",
-  "preis": "56 € (Bergbahn Hin & Rück)",
+  "dauer": "2–4 Stunden",
+  "preis": "Tiroler Zugspitzbahn Berg- und Talfahrt ca. 65 € (inkl. Museum Faszination Zugspitze)",
   "tags": [
     "cima",
     "panorama",
@@ -26,5 +26,13 @@
     "lng": "10.9833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig (außer Revisionszeiten im Frühjahr und Spätherbst)",
+  "familie": true,
+  "sources": [
+    "https://www.zugspitze.at/",
+    "https://www.zugspitzarena.com/",
+    "https://de.wikipedia.org/wiki/Zugspitze",
+    "https://www.vvt.at/"
+  ]
 }

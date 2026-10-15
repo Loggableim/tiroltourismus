@@ -6,12 +6,12 @@
   "ort": "Tannheim",
   "kategorie": "natur",
   "kurzbeschreibung": "Hochtal in de Allgäuer Alpen – bekend om zijn Vilsalpsee berglandschap, kilometerlange wandelpaden en traditionele alpenboerderij.",
-  "beschreibung": "<p>Das Tannheimer Tal liegt im österreichischen Bundesland Tirol, an der Grenze zu Bayern. Die Landschaft ist von Almflächen, Bergseen und bewaldeten Hängen geprägt. Der Vilsalpsee im südlichen Teil des Tals ist Teil eines Naturschutzgebiets. Das Tal bietet ein Wegenetz für <strong>Wanderungen</strong> und <strong>Radtouren</strong> im Sommer sowie präparierte Pisten und Loipen für den Wintersport. Die umliegenden Gipfel der Allgäuer Alpen, darunter der Einstein und das Gaishorn, rahmen die Region ein. Die touristische Infrastruktur ist auf Aktivitäten in der Natur ausgerichtet. Die Ortschaft Tannheim dient als zentraler Ort für Unterkünfte und Versorgung.</p>",
+  "beschreibung": "<h2>Overzicht</h2><p>Het <strong>Tannheimer Tal</strong> (1.100 m) staat bekend als het \"mooiste hoogdal van Europa\". Gelegen in het noordwesten van Tirol aan de grens met Beieren, biedt het een combinatie van kristalheldere bergmeren (Vilsalpsee en Haldensee), vriendelijke alpenweiden en de imposante kalktoppen van de Rote Flüh en het Neunerköpfle.</p><h2>Route &amp; Vereisten</h2><p>De vlakke wandeling rondom de Haldensee is volledig rolstoel- en kinderwagentoegankelijk (4,5 km, 1,5 uur, T1). De kabelbaan naar het Neunerköpfle ontsluit het \"Grootste bergtoppenboek van de Alpen\" op 1.860 m (T1). Klimmers kiezen voor de klettersteig op de Lachenspitze (C/D). Stevige bergschoenen verplicht in het hooggebergte. Honden aangelijnd toegestaan.</p><h2>Bereikbaarheid</h2><p>Met de trein naar Reutte of Sonthofen (Duitsland) en bus 120/121. Met de auto tolvrij bereikbaar vanuit Duitsland via de A7 en de Oberjochpas. Grote parkeerplaatsen bij de kabelbanen.</p><h2>Tips</h2><p>Profiteer van de gratis kabelbaankaart van deelnemende hotels en proef traditionele ambachtelijke bergkaas op het terras van berghut Vilsalpe.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Halbtags bis Ganztags",
+  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
   "tags": [
     "tal",
     "wandern",
@@ -21,11 +21,19 @@
     "family"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.tannheimer-tal.at",
+  "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
     "lng": "10.5167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "sources": [
+    "https://www.tannheimertal.com/",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal",
+    "https://www.naturpark-tiroler-lech.at/",
+    "https://www.vvt.at/"
+  ]
 }

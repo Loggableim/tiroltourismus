@@ -4,12 +4,12 @@
   "region": "zillertal",
   "ort": "Strass im Zillertal",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Die historische Dampfeisenbahn dampft seit 1902 durchs Zillertal – eine nostalgische Zeitreise zwischen Strass und Mayrhofen.",
-  "beschreibung": "Die Zillertaler Museumsbahn ist eine der ältesten erhaltenen Schmalspurbahnen Österreichs. Auf der 32 km langen Strecke zwischen Strass im Zillertal und Mayrhofen verkehren historische Dampf- und Dieselloks mit Originalwagen aus der Kaiserzeit. Im Sommer finden regelmäßig Dampfzugfahrten statt, bei denen Passagiere in die Nostalgie vergangener Tage eintauchen können. Der Verein 'Zillertaler Museumsbahn' hat die historischen Fahrzeuge liebevoll restauriert. Ein Besuch im Bahnhof Jenbach mit dem angeschlossenen Heizhausmuseum rundet das Erlebnis ab.",
+  "kurzbeschreibung": "Die historische Zillertaler Museumsbahn verbindet Jenbach und Mayrhofen seit 1902 mit nostalgischen Dampfzügen, Aussichtswagen und Swarovski-Kristallwaggon.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Die traditionsreiche <strong>Zillertaler Museumsbahn</strong> – der legendäre Nostalgie-Dampfzug der Zillertalbahn – zählt zu den charmantesten eisenbahnhistorischen Attraktionen Österreichs. Seit der feierlichen Eröffnung im Jahr 1902 verbindet die Schmalspurbahn auf einer Spurweite von 760 Millimetern (der sogenannten Bosnischen Spurweite) das Inntal bei Jenbach mit den traditionsreichen Gemeinden des Zillertals bis nach Mayrhofen. Wenn die mächtige, über 120 Jahre alte Dampflokomotive unter lautem Pfeifen, Zischen und rhythmischem Stampfen anfährt, tauchen Fahrgäste in die Romantik der Belle Époque ein. Auf einer 32 Kilometer langen Strecke schlängelt sich der Zug gemächlich durch das weite Tal, vorbei an saftigen Almwiesen, historischen Bauernhöfen und eingerahmt von den majestätischen Gipfeln der Tuxer und Zillertaler Alpen.</p>\n<h2>Route &amp; Anforderungen</h2>\n<p>Die nostalgische Bahnreise führt von Jenbach über Fügen, Kaltenbach und Zell am Ziller bis zum Endbahnhof Mayrhofen und dauert für die Gesamtstrecke rund 90 entspannte Minuten. Fahrgäste können an allen Hauptbahnhöfen nach Belieben ein- und aussteigen oder Teilstrecken befahren. Die Waggongarnitur ist eine rollende Sehenswürdigkeit für sich: Neben den klassischen Holzbänken der zweiachsigen Personenwagen gibt es einen offenen Aussichtswagen („Cabrio“), einen urigen Buffet- und Fasslwagen für Erfrischungen sowie den weltberühmten Kristallwaggon, der mit 62.000 funkelnden Swarovski-Kristallen veredelt wurde. Die Fahrt ist für Familien, Senioren und Eisenbahnbegeisterte jeden Alters vollkommen barrierefrei und unbeschwerlich. Im Packwagen können Fahrräder kostenlos mitgeführt werden, was sich perfekt mit einer Radtour auf dem flachen Zillertalradweg kombinieren lässt.</p>\n<h2>Besuch &amp; Anreise</h2>\n<p>Die Dampfzüge verkehren in den Sommermonaten von Anfang Juni bis Anfang Oktober nach einem festen Saisonfahrplan (in der Regel von Mittwoch bis Sonntag mit jeweils ein bis zwei Zugpaaren täglich). Fahrscheine für die einfache Strecke oder Hin- und Rückfahrt sind direkt an den Bahnhöfen erhältlich (Erwachsene ca. 26,00 Euro hin und zurück; Kinder reisen ermäßigt). Der Startbahnhof Jenbach ist ein bedeutender Eisenbahnknotenpunkt der ÖBB-Hauptstrecke und mit Railjet-Zügen von Innsbruck, Salzburg und München direkt erreichbar. Autofahrer erreichen Jenbach über die Inntalautobahn A12 (Ausfahrt Wiesing/Zillertal) und parken am Bahnhofsgelände.</p>\n<h2>Tipps</h2>\n<p>Sichern Sie sich bei schönem Wetter rechtzeitig einen Platz im offenen Aussichtswagen und genießen Sie die frische Bergluft und den Geruch von Steinkohle und Dampf aus nächster Nähe. Verbinden Sie die Hinfahrt per Dampfzug mit einer gemütlichen Radtour talauswärts entlang des Zillers.</p>",
   "emoji": "🚂",
   "farbe": "#8B4513",
-  "dauer": "2-3 Stunden",
-  "preis": "26 € (Hin- und Rückfahrt, Erwachsene)",
+  "dauer": "2–3 Stunden",
+  "preis": "Gesamtstrecke Hin- und Rückfahrt Erwachsene ca. 26,00 €, Teilstrecken und Kinderpreise verfügbar; Zillertal Activcard Ermäßigung",
   "tags": [
     "kultur",
     "geschichte",
@@ -17,7 +17,7 @@
     "familie",
     "museum"
   ],
-  "oeffnungszeiten": "Fahrplan saisonal: Jun–Sep (Dampfzüge Sa, So & Feiertag)",
+  "oeffnungszeiten": "Sommersaison Juni bis Anfang Oktober nach Dampfzug-Fahrplan (meist Mittwoch bis Sonntag)",
   "webseite": "https://www.zillertaler-museumsbahn.at",
   "status": "published",
   "koordinaten": {
@@ -25,5 +25,13 @@
     "lng": "11.8222222"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertalbahn.at/",
+    "https://www.zillertal.at/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Zillertalbahn",
+    "https://de.wikipedia.org/wiki/Jenbach",
+    "https://www.vvt.at/"
+  ]
 }

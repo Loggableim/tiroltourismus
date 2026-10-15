@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "The Hausberg of Landeck – with a Panoramabahn, Tirol’s longest Zipline, and an unforgettable view over the Oberinntal.",
-  "beschreibung": "<h2>Overview</h2><p>Mount <strong>Venet</strong> (2,208 m at Krahberg rising to 2,512 m at Glanderspitze) presides as a monumental, sun-drenched panoramic adventure mountain overlooking the valley basin of Landeck, Zams, and Fließ in the Tyrolean Oberland. Aboard the modern large-cabin Venetbahn aerial tramway, passengers ascend in less than eight minutes from the valley station in Zams directly to the 2,208-meter Krahberg crest. Arriving at the summit reveals an internationally acclaimed 360-degree alpine panorama widely praised as one of the grandest natural observation balconies in the Eastern Alps: on clear days, visitors gaze across more than 82 glaciated 3,000-meter peaks—stretching from the Zugspitze in the north to the Wildspitze, Kaunergrat ridge, Piz Buin in the Silvretta, and Italy's Ortler massif. Perched upon the summit plateau is the modern Venet Summit Lodge, home to the highest astronomical public observatory in Tyrol.</p><h2>Route &amp; Requirements</h2><p>Venet caters seamlessly to casual sightseers, families, and endurance ridge walkers. The essential gentle outing is the barrier-free Krahberg Panorama Loop: a level gravel trail encircles the sub-summit in roughly 45 minutes, equipped with geologic interpretive markers and ergonomic relaxation loungers (easy grade T1, stroller accessible). A beloved hiking classic follows the scenic Venet Ridge down to rustic Goglesalm (2,017 m) or Galflunalm: crossing fragrant alpine rose meadows and open pastures, walkers enjoy breathtaking vistas along the rolling crest (1.5 to 2 hours walking time, 250 m descent, easy grade T1/T2). Ambitious mountaineers conquer the highest summit, the Glanderspitze (2,512 m), or complete the full ridge traverse down into Wenns in the Pitztal valley (4 to 5 hours, grade T2/T3). The wide grassy slopes also provide world-class launch grounds for tandem paragliders. Sturdy walking shoes and windproof shells are recommended. Leashed dogs are permitted on all trails and inside the cable car.</p><h2>Visit &amp; Arrival</h2><p>Public transit arrives via mainline ÖBB trains at Landeck-Zams railway station. From the station forecourt, it is a brief 10-minute walk or a two-minute bus ride to the lower Venetbahn terminal in Zams. Motorists arrive from the Inntal autobahn A12 (exit Zams/Landeck) or toll-free across the Fernpass highway. Ample free parking is situated directly at the base lift terminal. The cableway operates daily from late May through mid-October between 8:30 AM and 5:00 PM.</p><h2>Tips</h2><p>Book an evening tour at the Venet Observatory to view distant galaxies and star clusters through high-powered telescopes in pure high-altitude darkness. Dine on the 360-degree sun terrace of the Venet Summit Lodge, sampling artisanal alpine cheese dumplings while gazing across the ribbon of the Inn River far below.</p>",
+  "kurzbeschreibung": "Mount Venet (2,208 m Krahberg) above Landeck/Zams offers 360-degree panoramas of over 80 alpine peaks, Tyrol’s highest observatory, and Tobi’s adventure trail.",
+  "beschreibung": "<h2>Overview</h2>\n<p><strong>Venet</strong> (2,208 m at the Krahberg peak) is the prominent local mountain presiding over the Landeck-Zams-Fließ valley basin, revered by alpine enthusiasts as one of the finest panoramic summits in the Central Alps. From the expansive crest of the Krahberg, visitors are greeted by an astounding 360-degree view taking in over 80 alpine giants, including the glaciated Wildspitze, King Ortler, the Swiss Silvretta, and Germany's Zugspitze. On clear days, the extraordinary vista extends far across national borders. Thanks to its sun-drenched and exposed position, the summit hosts Tyrol's highest astronomical observatory, complete with a modern solar telescope. In summer, the massif is a versatile playground for hiking, paragliding, and mountain biking, whilst in winter it transforms into a sunny, family-friendly ski area with delightful alpine huts.</p>\n<h2>Route &amp; Requirements</h2>\n<p>The modern Venet cable car whisks guests from Zams straight up to the mountain station at 2,208 metres in just a few minutes. Encircling the top station is a gentle, barrier-free panorama path leading to the viewing deck and the observatory (around 20 minutes' walk), ideally suited for pushchairs and seniors. Younger guests adore \"Tobi’s Erlebnisweg\", filled with interactive activity points and balance challenges, while cosy sun loungers along the trail invite relaxation with mountain views. Ambitious hikers can undertake the challenging Venet ridge traverse across Glanderspitz (2,512 m), which requires sure-footedness, freedom from vertigo, and alpine equipment. Mountain bikers will find signposted singletrails down to the valley. Normal walking shoes suffice around the summit, whereas high-ankle mountain boots are essential for ridge excursions.</p>\n<h2>Visit &amp; Arrival</h2>\n<p>The Venet cable car operates in summer from late May to mid-October daily between 08:30 and 17:00 (winter operations from December to March). Round-trip tickets are around €25.00 for adults, with attractive savings for TirolWest Card holders. The valley station is located directly in Zams, providing a large complimentary car and coach park. Rail travellers arrive conveniently at the Landeck-Zams long-distance railway station, reaching the cable car in a 10-minute walk or via local shuttle bus.</p>\n<h2>Tips</h2>\n<p>Book an evening stargazing tour at the Venet Observatory on clear nights to gaze upon distant nebulae and planets through high-powered telescope lenses. Afterwards, sample traditional Tyrolean Kaspressknödel cheese dumplings on the sun-drenched terrace of the panorama summit restaurant.</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "2–4 Stunden",
-  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
+  "dauer": "2–4 hours",
+  "preis": "Cable car round trip adults approx. €25.00; discounts with TirolWest Card",
   "tags": [
     "scenic views",
     "hiking",
@@ -20,7 +20,7 @@
     "sports",
     "family-friendly"
   ],
-  "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt); Winter: Di–So 9:00–16:00",
+  "oeffnungszeiten": "Summer season late May to mid-October daily 08:30–17:00; winter operations December to March",
   "webseite": "https://www.venet.at",
   "koordinaten": {
     "lat": "47.1528",
@@ -30,8 +30,10 @@
   "familie": true,
   "sources": [
     "https://www.venet.at/",
-    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
-    "https://de.wikipedia.org/wiki/Venet",
+    "https://www.tirolwest.at/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Venet_(Berg)",
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

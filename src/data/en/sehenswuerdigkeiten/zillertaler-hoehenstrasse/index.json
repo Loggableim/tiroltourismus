@@ -2,7 +2,7 @@
   "name": "Zillertaler Höhenstraße",
   "slug": "zillertaler-hoehenstrasse",
   "region": "zillertal",
-  "ort": "Mayrhofen",
+  "ort": "Kaltenbach",
   "kategorie": "aussicht",
   "kurzbeschreibung": "The Zillertaler Höhenstraße is a 42 km scenic drive offering breathtaking views of the Zillertaler Alpen and their glaciers.",
   "emoji": "🚗",
@@ -13,10 +13,10 @@
     "nature",
     "car"
   ],
-  "dauer": "Halber Tag",
-  "preis": "Maut: € 15,00 pro Fahrzeug",
+  "dauer": "2–5 Stunden",
+  "preis": "Mautgebühr ca. 8–10 € pro PKW / Motorrad",
   "oeffnungszeiten": "Mai bis Oktober, wetterabhängig",
-  "webseite": "https://www.zillertal.at/hoehenstrasse",
+  "webseite": "https://www.zillertaler-hoehenstrasse.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,14 @@
     "lng": "11.8639"
   },
   "status": "published",
-  "beschreibung": null
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Zillertaler Höhenstraße</strong> ranks among the grandest and most breathtaking high-alpine scenic routes in the European Alps. Originally engineered during the 1960s to facilitate torrent control and provide vital access to remote high-altitude farms, this nearly 50-kilometer panoramic ribbon road today enchants motorists, cyclists, and trekkers from across the globe. Climbing in dramatic switchbacks and scenic traverses along the slopes of the Tux Prealps, the road attains a maximum elevation of 2,020 meters. From numerous scenic belvederes, travelers behold dizzying aerial views plunging toward the emerald valley floor of the Zillertal, framed by the soaring glaciated peaks and ice pyramids of the Zillertal Alps. Along the route, historic mountain inns, rustic alpine dairies, the solitary Hubertus Chapel, and the interactive Murmelland marmot park provide unforgettable mountain pauses.</p><h2>Route &amp; Requirements</h2><p>The Zillertaler Höhenstraße can be accessed from five valley municipalities: Ried, Kaltenbach, Aschau, Zellberg, and Hippach. The winding, paved road is largely single-lane with frequent engineered passing bays (toll fee approx. €8 to €10 per vehicle). At its high-alpine zenith between the Kaltenbacher Skihütte (1,800 m) and the Hirschbichlalm (2,020 m), visitors attain the route's highest crest. From these trailheads, varied walks branch into the mountains: families delight in the vast Murmelland marmot enclosure at Kaltenbacher Skihütte, offering close encounters with native alpine marmots (easy grade T1, stroller accessible). Mountain hikers conquer the prominent summit of the Gedrechter (2,217 m) or follow alpine crests to the Arbiskopf (2 to 3 hours, 350 vertical meters gain, moderate grade T2, requiring surefootedness over granite blocks). Confident mountain driving skills and sound brakes are mandatory for vehicle operators. Leashed dogs are welcome on all walking routes.</p><h2>Visit &amp; Arrival</h2><p>Rail transit follows the scenic narrow-gauge Zillertalbahn to Kaltenbach, Ried im Zillertal, or Zell am Ziller stations. During summer, seasonal panoramic buses depart Ried and Zell directly ascending the Höhenstraße. Drivers and motorcyclists take the Inntal autobahn A12 (exit Wiesing/Zillertal), continuing along valley highway B169 to any of the clearly signposted toll access roads (recommended: ascend via Ried or Kaltenbach, descend via Hippach). The panoramic road is open seasonally from mid-May through late October, weather permitting.</p><h2>Tips</h2><p>Schedule a photo stop at the picturesque, solitary Hubertus Chapel perched upon an open high-altitude shoulder, offering an iconic frame overlooking snowcapped peaks. Stop at the Hirschbichlalm to savor traditional Zillertal grey-cheese soup and piping-hot krapfen pastries on the panoramic sun terrace.</p>",
+  "saison": "Mitte Mai bis Ende Oktober (im Winter komplett schneebedingt gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertaler_H%C3%B6henstra%C3%9Fe",
+    "https://www.zillertal.at/",
+    "https://www.mayrhofen.at/",
+    "https://www.alpenvereinaktiv.com/de/tour/zillertaler-hoehenstrasse-rundtour/1381505/",
+    "https://www.vvt.at/"
+  ]
 }

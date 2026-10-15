@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Tannheim",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Das Tannheimer Tal liegt im österreichischen Bundesland Tirol, an der Grenze zu Bayern. Die Landschaft ist von Almflächen, Bergseen und bewaldeten Hängen geprägt. Der Vilsalpsee im südlichen Teil des Tals ist Teil eines Naturschutzgebiets. Das Tal bietet ein Wegenetz für <strong>Wanderungen</strong> und <strong>Radtouren</strong> im Sommer sowie präparierte Pisten und Loipen für den Wintersport. Die umliegenden Gipfel der Allgäuer Alpen, darunter der Einstein und das Gaishorn, rahmen die Region ein. Die touristische Infrastruktur ist auf Aktivitäten in der Natur ausgerichtet. Die Ortschaft Tannheim dient als zentraler Ort für Unterkünfte und Versorgung.</p>",
+  "kurzbeschreibung": "Das 'schönste Hochtal Europas' (1.100 m) im Außerfern – verträumte Badeseen, schroffe Kletterberge, Familienwanderwege und Almidylle.",
+  "beschreibung": "<h2>Visión general</h2><p>El valle de <strong>Tannheimer Tal</strong> (1.100 m) está reconocido como uno de los valles de montaña más bellos de Europa. Situado al noroeste del Tirol junto a Baviera, combina lagos cristalinos protegidos (Vilsalpsee y Haldensee), verdes praderas alpinas y las impresionantes paredes rocosas de la Rote Flüh y el Neunerköpfle.</p><h2>Ruta y Requisitos</h2><p>El paseo circular alrededor del lago Haldensee es llano y adaptado para carritos (4,5 km, 1,5 horas, T1). El telecabina del Neunerköpfle da acceso al sendero familiar y al \"Libro de cumbre más grande de los Alpes\" a 1.860 m (T1). Para montañeros expertos destaca la ferrata de Lachenspitze (C/D). Calzado de montaña imprescindible en altura. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a Reutte o Sonthofen (Alemania) y autobuses 120/121. En coche sin peaje desde Alemania por la autopista A7 y el puerto de Oberjoch. Aparcamientos en las estaciones de remontes.</p><h2>Consejos</h2><p>Aproveche la tarjeta de remontes incluidos que ofrecen los alojamientos locales y saboree el queso artesano de montaña en la terraza de la cabaña Vilsalpe.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Halbtags bis Ganztags",
+  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
   "tags": [
     "senderismo",
     "senderismo",
@@ -21,11 +21,19 @@
     "familia"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.tannheimer-tal.at",
+  "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
     "lng": "10.5167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "sources": [
+    "https://www.tannheimertal.com/",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal",
+    "https://www.naturpark-tiroler-lech.at/",
+    "https://www.vvt.at/"
+  ]
 }

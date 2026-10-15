@@ -1,5 +1,5 @@
 {
-  "name": "Untere Isar",
+  "name": "Untere Isar & Karwendelschlucht",
   "slug": "untere-isar-klamm",
   "region": "achensee",
   "ort": "Vomp",
@@ -13,10 +13,10 @@
     "escursione",
     "cascata"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene: € 4,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Karwendeltäler ca. 6–8 € pro Tag)",
   "oeffnungszeiten": "Mai-Okt 9:00-17:00",
-  "webseite": "https://www.vomp.at/untere-isar-klamm",
+  "webseite": "https://www.karwendel.org/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,14 @@
     "lng": "11.6833"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Untere Isar</strong> – Die Untere Isar zählt zu den schönsten Natursehenswürdigkeiten der Region Achensee. Die Untere Isar-Klamm ist eine beeindruckende Felsschlucht mit tosendem Wasser und abenteuerlichen Stegen entlang der Isar Rund um die Untere Isar führen gut markierte Wanderwege durch abwechslungsreiche Landschaften. Im Sommer bieten sich hier ideale Bedingungen für ausgedehnte Touren, während im Winter oft Schneeschuh- und Skitouren möglich sind. Die Ruhe und die klare Bergluft machen jeden Besuch zu einem erholsamen Erlebnis. Nur wenige Kilometer von Vomp entfernt, wartet mit der Untere Isar ein Stück unberührte Natur darauf, entdeckt zu werden. Die Lage bietet zudem einen herrlichen Panoramablick auf die umliegenden Bergketten. Ob Sommer oder Winter: Die Untere Isar ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Panoramica</h2><p>La forra dell'<strong>Isar Inferiore</strong> (Untere Isar) nel Parco Naturale del Karwendel è uno degli ultimi grandi fiumi selvaggi e incontaminati dell'arco alpino. Scaturendo da sorgenti purissime tra le valli Hinterautal e Rißtal, la giovane Isar scorre turchese tra ampi greti di ciottoli bianchi, gole calcaree e boschi golenali protetti di rara bellezza.</p><h2>Percorso &amp; Requisiti</h2><p>Itinerario facile e pianeggiante di 6-8 km lungo il corso del fiume partendo da Scharnitz (2h-2h30, facile T1/T2, per passeggini da trekking). Sentiero didattico naturalistico con passerelle e piattaforme panoramiche sopra le rapide dell'Isar. Escursione prolungabile nelle suggestive forre della Gleirschklamm (T2). Scarpe comode e binocolo consigliati. Cani benvenuti al guinzaglio.</p><h2>Come arrivare</h2><p>In treno ÖBB fino alla stazione di Scharnitz e 10 minuti a piedi fino ai sentieri del parco. In auto lungo la statale B177 fino agli ampi parcheggi a pagamento all'ingresso delle valli del Karwendel.</p><h2>Consigli</h2><p>Concedetevi un rigenerante idromassaggio naturale immergendo i piedi nelle fresche acque trasparenti sui greti di ghiaia bianca e visitate il moderno centro visite del parco a Scharnitz.</p>",
+  "saison": "Mai bis Oktober (Winterwanderung bei geräumtem Weg möglich)",
+  "familie": true,
+  "sources": [
+    "https://www.karwendel.org/",
+    "https://www.seefeld.com/",
+    "https://de.wikipedia.org/wiki/Karwendel",
+    "https://de.wikipedia.org/wiki/Isar",
+    "https://www.vvt.at/"
+  ]
 }

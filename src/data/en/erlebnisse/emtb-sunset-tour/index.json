@@ -6,7 +6,7 @@
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>This tour is a guided e-mountain bike experience in the Ötztal that combines the Tyrolean mountain world with a sunset over the peaks. Thanks to electric assistance, according to the description the route is suitable for every fitness level; it leads along picturesque alpine pasture paths and scenic trails to a viewpoint for the sunset. A duration of three to four hours and a price of 89 euros are specified.</p><p>The <strong>Ötztal</strong> is one of the most important bike regions in the Alps: the Ötztal cycle path runs for around 50 kilometres from Haiming to Sölden, and in the Längenfeld region numerous tours run from the valley floor along the Ötztaler Ache up to alpine pastures and huts. A specific provider of this sunset tour could not be clearly determined through official sources.</p>",
+  "beschreibung": "<p>The <strong>Ötztal</strong> is one of the Alps' premier bike destinations – and e-mountain bike tours let you enjoy the valley's dramatic elevation and scenic alpine trails without professional-level fitness. Guided <strong>sunset tours</strong> are especially popular, with the setting sun bathing the 3,000 m peaks in golden light.</p><h3>Sunset Rides</h3><p><strong>Bike Republic Sölden</strong> extends Gaislachkoglbahn I operations every <strong>Friday in July and August</strong> until 19:15 (last uphill), with trails open until 20:00 for official sunset rides. Providers such as <em>E-Bike Guide Ötztal by Lohmann</em>, <em>RIDE ON Sölden</em> and <em>Feelfree Bike Center</em> offer tailor-made private sunset tours. Typical: start ~16:30–17:00, ride up to scenic alms (e.g. Kleblealm 1,983 m), watch the sunset, descend in fading light. Duration: ~3–4 hours. Private guiding from ~€99 per person (guide only, bike extra).</p><h3>Regular Guided Tours</h3><p><strong>AREA 47</strong> (Haiming): „E-MTB All Ride“ (20 km / 500 m ascent, ~3.5 hrs, ~€83 incl. rental e-MTB). Bikeschule Ötztal: guided tours <strong>Tue &amp; Thu</strong> (mid-June–mid-Sept), 13:30–16:30, ~3 hrs, ~€109 incl. e-bike rental. E-Bike Guide Ötztal: weekly „Ebike meets Trail“ (Wed), 4–5 hrs, €39 guiding fee (without bike).</p><h3>Getting There</h3><p><strong>Ötztal Bike Bus</strong>: all line buses Haiming–Obergurgl run half-hourly with bike trailers (up to 16 bikes, incl. e-bikes). Free with <strong>Ötztal Inside Summer Card</strong>. ÖBB station: Ötztal-Bahnhof/Haiming.</p>",
   "preis": 89,
   "dauer": "3–4 Stunden",
   "link": "#",
@@ -23,5 +23,14 @@
   "koordinaten": {
     "lat": "47.1003",
     "lng": "10.9511"
-  }
+  },
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.soelden.com",
+    "https://www.area47.at",
+    "https://www.bike-oetztal.at",
+    "https://www.rideon-soelden.com",
+    "https://www.feelfree-bike.at",
+    "https://www.oetztaler.at"
+  ]
 }

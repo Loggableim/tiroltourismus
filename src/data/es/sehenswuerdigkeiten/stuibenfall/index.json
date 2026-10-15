@@ -1,17 +1,17 @@
 {
-  "name": "Stuibenfall",
+  "name": "Stuibenfall Umhausen",
   "slug": "stuibenfall",
   "status": "published",
   "region": "imst",
   "ort": "Umhausen",
   "kategorie": "natur",
   "kurzbeschreibung": "La cascada más alta de Tirol (159 m) en el valle de Ötztal – un espectáculo natural ensordecedor con plataforma de observación y vía ferrata.",
-  "beschreibung": "<p>Der <strong>Stuibenfall</strong> liegt in der Gemeinde Umhausen im Ötztal und zählt mit einer Fallhöhe von rund 159 Metern zu den höchsten Wasserfällen Tirols. Seine Entstehung verdankt er einem historischen Felssturz, der den Stuibenbach aufstaute. Ein gut ausgebauter Wanderweg, der <strong>Stuibenfallweg</strong>, führt entlang des Wasserfalls und ermöglicht an mehreren Aussichtspunkten Blicke auf die fallenden Wassermassen. Eine über die Schlucht führende <strong>Hängebrücke</strong> bietet eine besondere Perspektive auf den Wasserfall und die umliegende Landschaft. Darüber hinaus führt der Stuibenfall-Klettersteig direkt neben dem Fall entlang und ist für geübte Kletterer zugänglich. Der Wasserfall ist ganzjährig erreichbar, wobei der Wanderweg im Winter teils gesperrt sein kann.</p>",
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Stuibenfall</strong> en Umhausen (valle de Ötztal) es la cascada más alta y caudalosa del Tirol con una caída vertical de 159 metros en dos escalones colosales. Despeñando hasta 2.000 litros de agua por segundo, cuenta con una impresionante pasarela colgante de 80 m y 700 escalones volados sobre el abismo, además de una célebre vía ferrata.</p><h2>Ruta y Requisitos</h2><p>Inicio en el aparcamiento de Ötzi-Dorf en Umhausen. Paseo llano hasta la base (30 min, T1) y ascenso por las escaleras suspendidas hasta Niederthai (350 m de desnivel, 1,5 a 2 horas, T2). Vía ferrata familiar de grado C junto a la caída del agua. Calzado de montaña obligatorio. Rejillas metálicas no aptas para perros (perreras a la entrada o sendero alternativo).</p><h2>Cómo llegar</h2><p>En tren a Ötztal Bahnhof y autobús 320 directo a Umhausen. En coche por la A12 (salida Ötztal) y B186 durante 20 minutos hasta el aparcamiento de Ötzi-Dorf.</p><h2>Consejos</h2><p>Disfrute de la iluminación nocturna de la cascada todos los miércoles por la noche en verano y visite el poblado prehistórico Ötzi-Dorf y el parque de aves rapaces junto al aparcamiento.</p>",
   "emoji": "💦",
   "farbe": "#2196F3",
   "hoehe": "1.400 m",
-  "dauer": "1–2 Stunden",
-  "preis": "Kostenlos; Klettersteig-Ausrüstung ab 15 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Bischoffsplatz ca. 5–7 € pro Tag)",
   "tags": [
     "cascada",
     "naturaleza",
@@ -20,11 +20,20 @@
     "mirador"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.stuibenfall.info",
+  "webseite": "https://www.oetztal.com/stuibenfall",
   "koordinaten": {
     "lat": "47.1500",
     "lng": "10.9167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Mai bis Oktober (während der Wintermonate Treppenanlage gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://www.oetztal.com/stuibenfall",
+    "https://de.wikipedia.org/wiki/Stuibenfall",
+    "https://www.umhausen.com/",
+    "https://www.oetztal.com/",
+    "https://www.vvt.at/"
+  ]
 }

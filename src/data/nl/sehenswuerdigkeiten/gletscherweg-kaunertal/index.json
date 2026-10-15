@@ -4,13 +4,13 @@
   "region": "kaunertal",
   "ort": "Kaunertal",
   "kategorie": "natur",
-  "kurzbeschreibung": "Een lichte bergweg op de Kaunertaler Gletscher met informatieborden over de gletscherwereld en een grandioos panorama.",
-  "beschreibung": "<p>Der <strong>Gletscherweg Kaunertal</strong> liegt auf dem Gletscher des Kaunertals in Tirol auf einer Höhe zwischen etwa 2.800 und 3.100 Metern. Er ist als präparierter <strong>Themenweg</strong> angelegt, der die Dynamik und Geologie des Gletschers veranschaulicht. Entlang des Weges informieren Tafeln über die Bewegung des Eises, Klimaeinflüsse und die Entstehung der Gletscherlandschaft. Die Route erfordert aufgrund der hochalpinen Bedingungen Trittsicherheit und eine entsprechende Ausrüstung. Der Weg ist in der Regel während der Sommermonate zugänglich, jedoch abhängig von den aktuellen Schneeverhältnissen. Besucher erhalten hier einen direkten Einblick in die natürlichen Prozesse eines Gletschers und die Veränderungen durch Klimawandel. Ein Besuch sollte daher sorgfältig geplant werden, mit festem Schuhwerk und wetterfester Kleidung.</p>",
+  "kurzbeschreibung": "De Gletscherweg Kaunertal leidt naar het gletsjervoorland van de Gepatschferner op ruim 2.000 m: gletsjerslijpsels, morenen en klimaatgeschiedenis.",
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Gletscherweg Kaunertal</strong> is een fascinerend alpien-glaciologisch leerpad in het achterste Kaunertal in het Tiroler Oberland. De route ontsluit het indrukwekkende gletsjervoorland van de Gepatschferner – met circa 16 vierkante kilometer ijsoppervlakte de op één na grootste gletsjer van Oostenrijk en de grootste individuele gletsjer van de Oostelijke Alpen. Ingebed in het hoogalpiene oerlandschap van de Ötztaler Alpen onder de vergletsjerde Weißseespitze (3.518 m), toont het pad op een hoogte tussen 1.900 en 2.200 meter de landschapsvormende oerkracht van het ijs en de zichtbare gevolgen van klimaatverandering.</p><h2>Natuurverschijnselen & etappes</h2><p>De themaroute werd ontworpen in samenwerking met glaciologen van de universiteit van Innsbruck. Vertrekkend vanaf het historische Gepatschhaus (1.928 m) of de parkeerplaats Fernergries loopt de rondwandeling door het door de terugtrekkende gletsjer gevormde dal. Langs het pad documenteren genummerde informatieborden de historische gletsjerstanden sinds het hoogtepunt van de zogeheten Kleine IJstijd in 1856. Wandelaars doorkruisen verschillende vegetatie- en erosiezones: van oude alpenarven- en lorkenbestanden via kleurrijke alpenrozenvelden tot schaarse pioniersvegetatie op verse morenewallen. Een geologisch hoogtepunt zijn de <strong>Roten Felsen</strong> – reusachtige, door het stromende gletsjerijs gladgepolijste rotsbulten van roodkleurig gneis met duidelijke krassen en gletsjerslijpsels. Verder omhoog opent zich het uitzicht op kolkende smeltwaterbeken, gletsjermolens en de imposante tong van de Gepatschferner. De rondwandeling beslaat zo'n zes kilometer bij circa 250 hoogtemeters en vergt een zuivere wandeltijd van circa tweeënhalf tot drie uur.</p><h2>Bezoek & bereikbaarheid</h2><p>De Gletscherweg Kaunertal is in de sneeuwvrije zomermaanden van half juni tot half oktober vrij en kosteloos toegankelijk (let op weersafhankelijke beperkingen bij verse sneeuw of gevaar voor steenslag). De route ernaartoe voert over de tolweg <strong>Kaunertaler Gletscherstraße</strong> (dagtol voor personenauto's ca. € 32,00; tol is met korting of inbegrepen voor houders van de regionale gastenkaart <em>Summercard GOLD</em> of bij aankoop van een bergbanticket). Met de auto: Inntalautobahn A12 tot afrit Oberinntal/Prutz, door het Kaunertal via Feichten en verder over de tolweg tot parkeerplaats Fernergries of het Gepatschhaus. Met het openbaar vervoer: ÖBB-trein naar station Landeck-Zams, vandaar met buslijn 230 via Prutz en Feichten rechtstreeks naar halte <em>Gepatschhaus</em> of <em>Fernergries</em>.</p><h2>Tips</h2><p>Wegens het hoogalpiene terrein met stenige morenenpaden, rotsblokken en houten loopbruggen is de wandelroute niet barrièrevrij en ongeschikt voor gewone kinderwagens; bergschoenen tot over de enkels met profielzool en weerbestendige kleding zijn absoluut noodzakelijk. Na de tocht is een pauze in het monumentale <em>Gepatschhaus</em> – de oudste berghut van de Oostenrijkse Alpenvereniging, gebouwd in 1873 – de moeite waard voor traditionele Tiroolse huttenkost. Bij mooi weer is een doorrit over de gletsjerweg naar de Weißseeferner op 2.750 meter hoogte een aanrader.</p>",
   "emoji": "🏔️",
   "farbe": "#0099CC",
   "hoehe": "2.750 m",
   "dauer": "1-2 Stunden",
-  "preis": "Inkl. Gletscherbahn-Ticket",
+  "preis": "Weg kostenlos; Kaunertaler Gletscherstraße Maut ca. 32,00 € / PKW",
   "tags": [
     "natuur",
     "gletsjer",
@@ -18,13 +18,19 @@
     "familie",
     "kennis"
   ],
-  "oeffnungszeiten": "Täglich 8:30–17:00 (Jun–Okt)",
-  "webseite": "https://www.kaunertaler-gletscher.at",
+  "oeffnungszeiten": "Mitte Juni bis Mitte Oktober frei zugänglich (witterungsabhängig)",
+  "webseite": "https://www.kaunertal.com",
   "status": "published",
   "koordinaten": {
     "lat": "46.9963736",
     "lng": "10.6942103"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tiroler-oberland.com/de/Service/Contact/Gletscherlehrpfad-Gepatschferner_t-18168",
+    "https://www.kaunertaler-gletscher.at",
+    "https://de.wikipedia.org/wiki/Gepatschferner",
+    "https://de.wikipedia.org/wiki/Gepatschhaus"
+  ]
 }

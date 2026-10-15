@@ -48,7 +48,7 @@ const resolvedAriaLabel = ariaLabel || `${keyName} ${FILTER_LABEL[locale] || FIL
   ))}
 </div>
 
-<style>
+<style is:global>
   .filter-bar {
     display: flex;
     flex-wrap: wrap;
@@ -61,47 +61,54 @@ const resolvedAriaLabel = ariaLabel || `${keyName} ${FILTER_LABEL[locale] || FIL
     -webkit-appearance: none;
     display: inline-flex;
     align-items: center;
-    padding: 9px 18px;
-    border: 1px solid var(--glass-border);
-    border-radius: 100px;
-    background: var(--surface);
-    color: var(--text2);
+    justify-content: center;
+    padding: 8px 14px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 999px;
+    background: var(--surface, rgba(0, 0, 0, .04));
+    color: var(--text, #1a1a1a);
     font: inherit;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: .5px;
-    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: none;
     white-space: nowrap;
     cursor: pointer;
-    transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+    transition: background .2s var(--ease, ease), color .2s var(--ease, ease), border-color .2s var(--ease, ease), box-shadow .2s var(--ease, ease);
+  }
+  @supports (border-color: color-mix(in srgb, red 30%, transparent)) {
+    .filter-pill {
+      border-color: color-mix(in srgb, currentColor 30%, transparent);
+    }
   }
   .filter-bar--compact .filter-pill {
-    padding: 6px 14px;
-    font-size: 11px;
+    padding: 6px 12px;
+    font-size: 13px;
   }
   .filter-pill:hover {
-    background: var(--surface-hover);
-    border-color: var(--tirol-pink);
-    color: var(--text);
+    background: var(--surface-hover, rgba(0, 0, 0, .06));
+    color: var(--text, #1a1a1a);
+    border-color: color-mix(in srgb, currentColor 55%, transparent);
   }
   .filter-pill:focus-visible {
-    outline: 2px solid var(--tirol-pink);
+    outline: 2px solid var(--tirol-pink-dark, #c0006e);
     outline-offset: 2px;
   }
   .filter-pill.active {
-    background: var(--tirol-pink);
-    border-color: var(--tirol-pink);
+    background: var(--tirol-pink-dark, #c0006e);
+    border-color: var(--tirol-pink-dark, #c0006e);
     color: #fff;
+    font-weight: 700;
   }
   .filter-pill.active:hover {
-    background: var(--tirol-pink-dark);
-    border-color: var(--tirol-pink-dark);
+    background: var(--tirol-pink-dark, #c0006e);
+    border-color: var(--tirol-pink-dark, #c0006e);
     color: #fff;
   }
   @media (max-width: 600px) {
-    .filter-bar { gap: 6px; }
-    .filter-pill { padding: 8px 14px; font-size: 11px; }
+    .filter-bar { gap: 8px; }
+    .filter-pill { padding: 8px 12px; font-size: 13px; }
   }
 </style>
 

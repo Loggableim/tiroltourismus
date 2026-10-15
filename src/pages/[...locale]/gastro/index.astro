@@ -267,6 +267,7 @@ const gastroItemList = {
           {kategorien.length > 1 && (
             <FilterBar
               keyName="cat"
+              locale={locale}
               ariaLabel={t(labels.filterAria)}
               options={kategorien.map((k) => ({ value: k, label: getCategoryLabel(k) }))}
             />

@@ -7,6 +7,7 @@ import SectionMap from '../../../sections/SectionMap.astro';
 import FilterBar from '../../../components/FilterBar.astro';
 import CategoryPlaceholder from '../../../components/CategoryPlaceholder.astro';
 import { readCollection, isPublished } from '../../../lib/content.js';
+import { localizeDuration } from '../../../lib/duration.js';
 import { LANGUAGES_READY, DEFAULT_LOCALE, localePrefix, localeParams } from '../../../lib/languages.js';
 
 export async function getStaticPaths() {
@@ -125,7 +126,7 @@ const erlebnisItemList = {
       <section class="section">
         <div class="container">
           <SectionHeader label={t(labels.sectionLabel)} title={t(labels.sectionTitle)} sub={t(labels.sectionSub)} />
-          <FilterBar keyName="cat" ariaLabel={t(labels.filterAria)} options={erlebnisseFilterKeys.map((k) => ({ value: k, label: t(kategorieLabel[k]) }))} />
+          <FilterBar keyName="cat" locale={locale} ariaLabel={t(labels.filterAria)} options={erlebnisseFilterKeys.map((k) => ({ value: k, label: t(kategorieLabel[k]) }))} />
           <div class="erlebnisse-grid" id="erlebnis-grid">
             {erlebnisse.map((e) => {
               const entry = e.entry;
@@ -158,7 +159,7 @@ const erlebnisItemList = {
                         {entry.dauer && (
                           <span class="erlebnis-meta-item">
                             <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-                            <span>{entry.dauer}</span>
+                            <span>{localizeDuration(entry.dauer, locale)}</span>
                           </span>
                         )}
                         {entry.ort && (

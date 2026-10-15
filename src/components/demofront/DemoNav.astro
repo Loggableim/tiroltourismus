@@ -114,106 +114,161 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
 <script is:inline>
   (function () {
     'use strict';
-    var nav = document.querySelector('.df-nav');
-    var burger = document.getElementById('dfBurger');
-    var mobile = document.getElementById('dfMobileMenu');
-    var langBtn = document.getElementById('dfLangBtn');
-    var langPanel = document.getElementById('dfLangPanel');
 
     function closeMobile() {
+      var mobile = document.getElementById('dfMobileMenu');
+      var burger = document.getElementById('dfBurger');
       if (!mobile || !burger) return;
       mobile.classList.remove('open');
       mobile.hidden = true;
       burger.setAttribute('aria-expanded', 'false');
     }
     function closeLang() {
+      var langBtn = document.getElementById('dfLangBtn');
+      var langPanel = document.getElementById('dfLangPanel');
       if (!langBtn || !langPanel) return;
       langPanel.classList.remove('open');
       langBtn.setAttribute('aria-expanded', 'false');
     }
 
-    if (burger && mobile) {
-      burger.addEventListener('click', function () {
-        var open = burger.getAttribute('aria-expanded') === 'true';
-        if (open) { closeMobile(); }
-        else {
-          mobile.hidden = false;
-          mobile.classList.add('open');
-          burger.setAttribute('aria-expanded', 'true');
+    // Document-level listeners are bound once; view transitions keep the document.
+    if (!window.__dfNavDocBound) {
+      window.__dfNavDocBound = true;
+      document.addEventListener('click', function (e) {
+        var langPanel = document.getElementById('dfLangPanel');
+        var langBtn = document.getElementById('dfLangBtn');
+        var mobile = document.getElementById('dfMobileMenu');
+        var nav = document.querySelector('.df-nav');
+        if (langPanel && langPanel.classList.contains('open') && !langPanel.contains(e.target) && e.target !== langBtn) {
           closeLang();
         }
+        if (mobile && mobile.classList.contains('open') && nav && !nav.contains(e.target)) {
+          closeMobile();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeLang(); closeMobile(); }
       });
     }
 
-    if (langBtn && langPanel) {
-      langBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var open = langBtn.getAttribute('aria-expanded') === 'true';
-        langPanel.classList.toggle('open', !open);
-        langBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-      });
-    }
+    function bindMenuControls() {
+      var burger = document.getElementById('dfBurger');
+      var mobile = document.getElementById('dfMobileMenu');
+      var langBtn = document.getElementById('dfLangBtn');
+      var langPanel = document.getElementById('dfLangPanel');
 
-    document.addEventListener('click', function (e) {
-      if (langPanel && langPanel.classList.contains('open') && !langPanel.contains(e.target) && e.target !== langBtn) {
-        closeLang();
+      if (burger && mobile && !burger.__dfBound) {
+        burger.__dfBound = true;
+        burger.addEventListener('click', function () {
+          var open = burger.getAttribute('aria-expanded') === 'true';
+          if (open) { closeMobile(); }
+          else {
+            mobile.hidden = false;
+            mobile.classList.add('open');
+            burger.setAttribute('aria-expanded', 'true');
+            closeLang();
+          }
+        });
       }
-      if (mobile && mobile.classList.contains('open') && nav && !nav.contains(e.target)) {
-        closeMobile();
+
+      if (langBtn && langPanel && !langBtn.__dfBound) {
+        langBtn.__dfBound = true;
+        langBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = langBtn.getAttribute('aria-expanded') === 'true';
+          langPanel.classList.toggle('open', !open);
+          langBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        });
       }
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') { closeLang(); closeMobile(); }
-    });
-    if (mobile) {
-      mobile.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') closeMobile();
-      });
+
+      if (mobile && !mobile.__dfBound) {
+        mobile.__dfBound = true;
+        mobile.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') closeMobile();
+        });
+      }
     }
 
-    // ── Scroll-Spy (IntersectionObserver) ──
-    var links = Array.prototype.slice.call(document.querySelectorAll('.df-nav-links a[data-spy], .df-mobile ul a[data-spy]'));
-    var byId = {};
-    links.forEach(function (a) {
-      var id = a.getAttribute('data-spy');
-      (byId[id] = byId[id] || []).push(a);
-    });
-    var sections = Object.keys(byId)
-      .map(function (id) { return document.getElementById(id); })
-      .filter(Boolean);
+    // ── Scroll-Spy: last section whose top passed nav height + 40% viewport ──
+    function initScrollSpy() {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.df-nav-links a[data-spy], .df-mobile ul a[data-spy]'));
+      if (!links.length) return;
 
-    function setActive(id) {
+      var byId = {};
       links.forEach(function (a) {
-        var on = a.getAttribute('data-spy') === id;
-        a.classList.toggle('active', on);
-        if (on) a.setAttribute('aria-current', 'true');
-        else a.removeAttribute('aria-current');
+        var id = a.getAttribute('data-spy');
+        (byId[id] = byId[id] || []).push(a);
       });
-    }
 
-    if (sections.length && 'IntersectionObserver' in window) {
-      var visible = {};
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0;
+      var sections = Object.keys(byId)
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean)
+        .sort(function (a, b) {
+          return (a.getBoundingClientRect().top + window.pageYOffset) -
+                 (b.getBoundingClientRect().top + window.pageYOffset);
         });
-        var best = null, bestRatio = 0;
-        Object.keys(visible).forEach(function (id) {
-          if (visible[id] > bestRatio) { bestRatio = visible[id]; best = id; }
-        });
-        if (best) setActive(best);
-      }, {
-        rootMargin: '-30% 0px -55% 0px',
-        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
-      });
-      sections.forEach(function (s) { io.observe(s); });
+      if (!sections.length) return;
 
-      // Reflect hash on load
+      function setActive(id) {
+        links.forEach(function (a) {
+          var on = a.getAttribute('data-spy') === id;
+          a.classList.toggle('active', on);
+          if (on) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+
+      function onScroll() {
+        var nav = document.querySelector('.df-nav');
+        var navH = nav ? nav.getBoundingClientRect().height : 64;
+        var line = navH + window.innerHeight * 0.4;
+        var current = sections[0].id;
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].getBoundingClientRect().top <= line) current = sections[i].id;
+          else break;
+        }
+        var root = document.documentElement;
+        if (window.innerHeight + window.pageYOffset >= root.scrollHeight - 4) {
+          current = sections[sections.length - 1].id;
+        }
+        setActive(current);
+      }
+
+      var ticking = false;
+      function requestTick() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () { ticking = false; onScroll(); });
+      }
+
+      if (window.__dfSpyTick) {
+        window.removeEventListener('scroll', window.__dfSpyTick);
+        window.removeEventListener('resize', window.__dfSpyTick);
+      }
+      window.__dfSpyTick = requestTick;
+      window.addEventListener('scroll', requestTick, { passive: true });
+      window.addEventListener('resize', requestTick);
+
+      onScroll();
       if (location.hash) {
-        var id = location.hash.slice(1);
-        if (byId[id]) setActive(id);
+        var hashId = location.hash.slice(1);
+        if (byId[hashId]) setActive(hashId);
       }
     }
+
+    function boot() {
+      bindMenuControls();
+      initScrollSpy();
+    }
+
+    // The inline script is parsed before the sections exist, so wait for the DOM
+    // (and re-run on view-transition page loads).
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', boot, { once: true });
+    } else {
+      boot();
+    }
+    document.addEventListener('astro:page-load', boot);
   })();
 </script>
 
@@ -289,10 +344,18 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     transition: color .2s, background .2s, box-shadow .2s;
   }
   .df-nav-links a:hover { color: var(--df-text); background: var(--df-surface-hover); }
+  /* Active: accent-coloured text + 2px accent underline + soft accent pill.
+     Accent-on-nav contrast is >= 4.69 in every language theme (AA). */
   .df-nav-links a.active {
-    color: var(--df-accent-ink);
-    background: var(--df-accent);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, .18);
+    color: var(--df-accent);
+    background: var(--df-surface-hover);
+    box-shadow: inset 0 -2px 0 0 var(--df-accent);
+    font-weight: 700;
+  }
+  @supports (background: color-mix(in srgb, red 10%, transparent)) {
+    .df-nav-links a.active {
+      background: color-mix(in srgb, var(--df-accent) 16%, transparent);
+    }
   }
   .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
 
@@ -391,7 +454,12 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     text-decoration: none;
   }
   .df-mobile ul a:hover { background: var(--df-surface-hover); }
-  .df-mobile ul a.active { color: var(--df-accent-ink); background: var(--df-accent); }
+  .df-mobile ul a.active {
+    color: var(--df-accent);
+    background: var(--df-surface-hover);
+    box-shadow: inset 3px 0 0 0 var(--df-accent);
+    font-weight: 700;
+  }
   .df-mobile-lang {
     display: flex;
     flex-wrap: wrap;

@@ -1,28 +1,35 @@
 {
-  "name": "Canyoning in der Wolfsschlucht",
   "slug": "canyoning-wolfsschlucht",
   "emoji": "🧗",
   "farbe": "var(--tirol-red)",
   "kategorie": "abenteuer",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "=== description ===\n<b>Canyoning, jumping, and sliding through the wild Wolfschlucht in the Stubaital.</b> Equipped with a neoprene suit, helmet, and harness, you’ll navigate through crystal-clear water, smooth rock surfaces, and descend into vibrant turquoise pools. An unforgettable nature adventure for thrill-seekers who love water and adrenaline.\n\n<p>Experience the thrill of free-falling, rappelling, and splashing your way through lush, untamed landscapes, blending adventure with stunning alpine scenery.</p>",
-  "preis": 119,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Canyoning in the Wolfsschlucht Gorge",
+  "beschreibung": "### Overview\nCanyoning in Tyrol delivers adrenaline-charged whitewater action inside dramatic alpine gorges. Essential for trip planning: searches for 'Wolfsschlucht' often stem from confusion with the Wolfsklamm gorge in Stans, where canyoning is strictly prohibited and reserved exclusively for wooden boardwalk hikers. The world-famous Tyrolean canyoning route associated with this name is the Auerklamm starting at Wolfsbrücke bridge in the lower Ötztal Valley (Nederbach creek near Oetz). Auerklamm is revered by outdoor professionals as the absolute benchmark and most spectacular canyoning descent in the Eastern Alps (graded v4 a5 IV). Carved deeply into Tyrolean granite, the canyon offers an intense progression of roaring waterfalls, emerald plunge pools, natural stone slides, and massive abseiling pitches directly in the riverbed.\n\n### Route & Requirements\nThe standard route enters at historic Wolfsbrücke bridge, descending the gorge's aquatic core. Highlights include jumps of up to 10 to 14 metres into crystal-clear pools, natural waterslides carved into slick granite reaching up to 18 metres in length (such as the infamous 'Devil's Hole'), and waterfall rappels up to 40 metres high. On professionally guided excursions, the rule 'Jump or Rope' applies: high jumps are always optional and can be abseiled or bypassed. Given the cold mountain water and powerful hydraulics, Auerklamm demands solid physical fitness, head for heights, proficient swimming skills, and a minimum age of 14 to 16 years. It is completely unsuitable for small children and dogs (family-friendly novice trips from age 8 run instead in Alpenrosenklamm or Rosengartenschlucht).\n\n### Arrival\nThe staging bases of certified Tyrolean canyoning guides are located in the Inn Valley and Ötztal entrance area around Haiming, Sautens, and Ötztal-Bahnhof (including AREA 47). Motorists arrive via the A12 Inntal Autobahn (exit 123 Ötztal) and B186 Ötztal road. Free parking is available at all outdoor operator bases, with guides transporting groups to Wolfsbrücke in private shuttles. Rail travellers arrive at Ötztal-Bahnhof station, located within walking distance or brief shuttle transfer from most outfitters.\n\n### Tips\nGuided trips cost approximately €90 to €130 per person. Full professional gear—including a 5–7 mm reinforced canyoning wetsuit, neoprene booties, whitewater helmet, high-friction canyoning boots, and harness with protective seat pad—is provided by the operator. Guests only need swimwear and a towel. The season spans from late May to early October, with spring snowmelt heavily dictating water volume. Vital safety rule: under the Tyrolean Mountain Guide Act, commercial canyoning may only be conducted by certified Tyrolean canyoning guides; during high water or thunderstorm risk, entering the gorge is strictly illegal.",
+  "sources": [
+    "https://area47.at/outdoor/canyoning/",
+    "https://www.wolfsklamm.tirol",
+    "https://www.tirol.at",
+    "https://www.bergsportfuehrer-tirol.at",
+    "https://alpinesicherheit.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 119,
   "tags": [
     "canyoning",
     "wasser",
     "abenteuer",
     "stubaital",
     "action"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

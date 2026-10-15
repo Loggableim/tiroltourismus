@@ -1,12 +1,12 @@
 {
-  "name": "Kulinarischer Almabtrieb im Ötztal",
+  "name": "Kulinarický almabtrieb v údolí Ötztal",
   "slug": "kulinarischer-almabtrieb-oetztal",
   "emoji": "🍽️",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "Der Almabtrieb im Ötztal wird zum grossen kulinarischen Fest. Neben dem traditionellen Umzug der geschmückten Kühe erwarten die Besucher Stände mit regionalen Köstlichkeiten: Almkäse, Geräuchertes, frische Bauernbrote und natürlich der berühmte Ötztaler Grauvogel-Braten. Ein Fest für die Sinne!",
+  "beschreibung": "### Přehled\nSvěcení a shánění dobytka z horských pastvin v údolí Ötztal oslavuje závěr alpského léta spojením staletých tradic s poctivou tyrolskou kuchyní. V polovině září sestupují slavnostně vyzdobená stáda krav z vysokohorských pastvin do údolních obcí Längenfeld, Umhausen a Sölden. Světovým unikátem je také přechod ovcí ve Ventu: více než pět tisíc ovcí překonává ledovcová sedla přes 3 000 metrů nad mořem z jihotyrolského údolí Schnalstal zpět do Ötztalu, což je tradice zapsaná na seznamu nehmotného dědictví UNESCO. Za zvuku těžkých zvonců ožívají návesní prostory farmářskými trhy a hudbou.\n\n### Trasa a náročnost\nSlavnosti probíhají během vybraných zářijových víkendů. V Längenfeldu prochází dobytek přímo centrem obce. Ve Ventu jsou ovce sváděny do ohrad, kde probíhá jejich tradiční rozdělování majitelům. Návštěvníci nepotřebují sportovní výbavu, ale měli by počítat s delším stáním venku. Je zásadní udržovat bezpečný odstup od zvířat a neblokovat jim průchod.\n\n### Doprava\nVlakem na nádraží Ötztal Bahnhof na trati Arlbergbahn, odtud spojem Ötztalbus linky 320 v půlhodinovém taktu přes Längenfeld do Söldenu. Do Ventu navazuje linka 330 ze Zwieselsteinu. Autem po dálnici A12 a silnici B186. Kvůli krátkodobým uzavírkám silnic během průvodu zvířat se důrazně doporučuje veřejná doprava.\n\n### Tipy\nGurmánským vrcholem jsou sladké taštičky Ötztaler Kirchtagskrapfen plněné sušenými hruškami, mákem a rumem, smažené na přepuštěném másle. Ochutnejte i pečeni z hovězího masa Tyrolean Grey a vyzrálý horský sýr. Akce je skvělá pro rodiny, psi by však kvůli bezpečnosti stád měli zůstat doma.",
   "preis": 0,
   "dauer": "1 Tag",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at",
+    "https://www.unesco.at/kultur/immaterielles-kulturerbe/oesterreichisches-verzeichnis/detail/article/transhumanz-schafwandertriebe-in-den-oetztaler-alpen",
+    "https://www.oetztaler.at",
+    "https://www.naturpark-oetztal.at"
+  ]
 }

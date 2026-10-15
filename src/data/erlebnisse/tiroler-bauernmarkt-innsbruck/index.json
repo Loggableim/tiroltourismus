@@ -6,9 +6,10 @@
   "kategorie": "kulinarik",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Jeden Samstag verwandelt sich der Innsbrucker Marktplatz in ein Paradies für Feinschmecker. Regionale Bauern und Produzenten bieten ihre Schätze an: würzigen Bergkäse, geräucherten Speck, frisches Brot, Honig und hausgemachte Marmeladen. Bei einer geführten Verkostungstour lernen Sie die Geschichten hinter den Produkten kennen.",
+  "beschreibung": "### Überblick\nDie Markthalle Innsbruck am Herzog-Siegmund-Ufer am Ufer des Inn ist das kulinarische Schaufenster des Landes Tirol. Von Montag bis Samstag bringen Bauern, Sennereien und kleine Familienbetriebe aus den Talschaften Nord- und Osttirols ihre handwerklich erzeugten Spezialitäten direkt in die Landeshauptstadt. Beim Bauernmarkt duftet es nach frisch gebackenem Bauernbrot, geräuchertem Speck, würzigem Almkäse und Kräuterprodukten – vor der Kulisse der Nordkette.\n\n### Route & Anforderungen\nEin geführter Marktrundgang mit Verkostung führt durch die Hallengänge und Aussenstände der Markthalle. Unter der Leitung eines Kulinarik-Guides lernen die Teilnehmer die Geschichten und Herstellungsweisen hinter den regionalen Produkten kennen. An ausgewählten Ständen finden Degustationen statt, etwa mit Tiroler Graukäse, gereiftem Bergkäse, herzhaften Würsten, naturtrübem Apfelsaft oder Zirbenschnaps. Der Rundgang ist vollkommen ebenerdig und weitgehend wetterunabhängig; für Kinderwagen und Rollstuhlfahrer ist er gut zugänglich. Besondere Anforderungen an die Kondition bestehen nicht. Gut erzogene Hunde sind an den Aussenständen an der Leine erlaubt, im Innenbereich sind Tiere aus hygienischen Gründen nicht gestattet.\n\n### Anreise\nDie Markthalle liegt zentral in der Innsbrucker Innenstadt direkt an der Innpromenade. Vom Hauptbahnhof Innsbruck erreicht man sie in rund zehn Gehminuten durch die Maria-Theresien-Straße oder bequem mit den Straßenbahn- und Buslinien der IVB. Autofahrer finden in den Parkhäusern rund um die Innenstadt gebührenpflichtige Parkplätze; die Anreise mit öffentlichen Verkehrsmitteln ist empfehlenswert.\n\n### Tipps\nKommen Sie mit leichtem Hunger, da die Verkostungsportionen großzügig bemessen sind. Eine wiederverwendbare Kühltasche oder ein Rucksack hilft, die erlesenen Köstlichkeiten wie Almbutter, Bergbauernhonig und Speck frisch einzukaufen. Nach der Tour lohnt ein kurzer Abstecher über die Innbrücke zum Stadtteil Mariahilf mit seinen bunten Häuserfassaden.",
   "preis": 35,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "kulinarik",
     "markt",
@@ -16,12 +17,17 @@
     "innsbruck",
     "verkostung"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.markthalle-innsbruck.at/",
+    "https://www.tirol.at/aktivitaeten/kulinarik/bauernmaerkte",
+    "https://www.innsbruck.gv.at/",
+    "https://www.ivb.at/"
+  ]
 }

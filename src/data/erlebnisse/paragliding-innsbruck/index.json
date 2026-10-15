@@ -1,21 +1,24 @@
 {
-  "name": "Paragliding über Innsbruck",
+  "name": "Tandem-Paragliding über Innsbruck (Nordkette & Seegrube)",
   "slug": "paragliding-innsbruck",
   "emoji": "🪂",
   "farbe": "var(--tirol-red)",
   "kategorie": "abenteuer",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "<p>Gemeint ist ein Tandem-Paragliding-Flug über Innsbruck, bei dem Gast und Tandempilot gemeinsam in die Luft gehen. Innsbruck ist die Landeshauptstadt Tirols und liegt im Inntal; nördlich der Stadt erhebt sich die Nordkette, die mit den Nordkettenbahnen erschlossen ist. Gleitschirmflüge über die Stadt starten je nach Bedingungen von der Seegrube auf 1.905 m und sind laut Nordkette ganzjährig möglich; gelandet wird meist im Tal, oft im Stadtteil Arzl. Das Erlebnis ist wetterabhängig.</p><p>In und um Innsbruck betreiben verschiedene Anbieter Tandem-Paragliding; ein einzelnes Unternehmen lässt sich aus diesem Eintrag nicht eindeutig ableiten.</p>",
+  "beschreibung": "Überblick\nWie ein Adler lautlos über den Dächern der historischen Altstadt von Innsbruck kreisen, während unter einem das goldene Dach glänzt und rundherum die schroffen Felszacken des Karwendels und der Stubaier Gletscher emporragen: Tandem-Gleitschirmfliegen von der Nordkette gehört zu den spektakulärsten alpinen Flugerlebnissen weltweit. Der Startplatz an der Seegrube auf 1.905 Metern Seehöhe bietet die einzigartige Symbiose aus hochalpinem Gelände und unmittelbarer Nähe zur Großstadt. Begleitet von staatlich geprüften Tandempiloten können selbst absolute Laien ohne jede Vorkenntnis das unvergleichliche Gefühl des freien Schwebens erleben. Mit rund 1.300 Höhenmetern Differenz bis zum Talboden zählt der Flug von der Seegrube zu den abfahrts- und höhenreichsten Tandemflügen der Ostalpen.\n\nRoute & Anforderungen\nDas Flugerlebnis beginnt mit einer kurzen Sicherheitseinweisung am Startplatz Seegrube (1.905 m; bei passender Thermik und erweiterten Touren auch vom Hafelekar auf 2.256 m). Nach dem Auslegen des Tandemschirms und dem Einhängen ins Gurtzeug genügt auf das Kommando des Piloten ein zügiger Anlauf über zehn bis fünfzehn Schritte den sanft geneigten Wiesenhang hinab – schon hebt die Tragfläche ab und trägt Pilot und Passagier in den Aufwind. Ein Standard-Gleitflug dauert rund 15 bis 25 Minuten reine Flugzeit, bei sonniger Thermik kann der Flug auf 30 bis 45 Minuten ausgedehnt werden. Die Landung erfolgt sanft auf den zugelassenen Landewiesen im Talboden bei Arzl/Rum auf ca. 620 Metern Seehöhe. Vorkenntnisse sind nicht erforderlich. Passagiere sollten ein Körpergewicht zwischen ca. 25 und 110 Kilogramm aufweisen; Kinder können ab etwa 5 bis 6 Jahren mit schriftlicher Zustimmung der Eltern mitfliegen. Herz-Kreislauf-Erkrankungen oder Schwangerschaft schließen eine Teilnahme aus. Knöchelhohe, feste Wanderschuhe mit griffiger Profilsohle sowie winddichte Kleidung sind zwingend vorgeschrieben; ein Helm wird vom Veranstalter gestellt. Aufgrund strenger luftfahrtrechtlicher Bestimmungen im Nahbereich des Flughafens Innsbruck (CTR Innsbruck) wird die Flugroute exakt im freigegebenen Segelflugsektor TRA Nordpark gesteuert. Bei starkem Föhn oder Sturm herrscht ausnahmsloses Flugverbot. Hunde dürfen selbstverständlich nicht mitfliegen.\n\nAnreise\nDer Zugang zum Startplatz ist denkbar komfortabel: Direkt aus der Innsbrucker Innenstadt fährt die von Zaha Hadid entworfene Hungerburgbahn ab der Station Congress zur Hungerburg. Von dort geht es mit der Panorama-Seegrubenbahn in wenigen Minuten hinauf zur Seegrube (Gesamtfahrzeit ca. 20 Minuten). Autofahrer parken in der City-Garage Congress oder am Parkplatz Hungerburg. Öffentlich erreicht man die Hungerburgbahn zudem mit der IVB-Buslinie J.\n\nTipps\nEin Tandemflug ist ganzjährig möglich – im Sommer über grünen Almen ebenso wie im Winter über verschneiten Pisten. Flüge kosten je nach Dauer ca. 115 bis 149 Euro für einen Standard-Panoramaflug (Thermikflüge ab ca. 165 Euro); die Bergbahnkarte ist separat zu lösen (mit Freizeitticket Tirol oder Innsbruck Card frei). Fast alle Flugschulen bieten vor Ort professionelle Foto- und Videoaufnahmen per Teleskopstange an (ca. 25 bis 35 Euro Aufpreis). Eine Vorabreservierung über etablierte Anbieter wie Fly Innsbruck, Falken Air oder das Tandem Paragliding Center wird dringend empfohlen, da Termine stark vom lokalen Flugwetter abhängen.",
   "preis": 129,
-  "dauer": "2–3 Stunden",
-  "link": "#",
+  "dauer": "1,5 bis 2 Stunden (ca. 15–25 Min. Flugzeit)",
+  "link": "https://nordkette.com/de/sommer/sommer-aktivitaeten/gleitschirm",
   "tags": [
     "paragliding",
-    "luftsport",
-    "adrenalin",
+    "gleitschirm",
+    "tandemflug",
     "innsbruck",
-    "tandemflug"
+    "nordkette",
+    "seegrube",
+    "abenteuer",
+    "tirol"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +26,11 @@
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
-  }
+  },
+  "sources": [
+    "https://nordkette.com",
+    "https://www.innsbruck.info",
+    "https://www.fly-innsbruck.at",
+    "https://www.falkenair.com"
+  ]
 }

@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Lechaschau",
   "kategorie": "natur",
-  "kurzbeschreibung": "Le sentier de randonnée de longue distance de 125 km le long du Lech, de la source jusqu’à la chute du Lech – un paysage naturel et fluvial unique.",
-  "beschreibung": "<p>Der <strong>Lechweg Wanderweg</strong> in Lechaschau ist ein Abschnitt des 125 Kilometer langen Fernwanderwegs entlang des Lechs. Die Route führt durch die flache Flusslandschaft des <strong>Lechtals</strong> mit Auwäldern und Schotterbänken. Der Weg ist durchgängig markiert und Teil des europäischen Fernwanderwegs <strong>E5</strong>. Auf dem Abschnitt zwischen Weißenbach und Reutte durchquert der Weg Lechaschau und bietet Ausblicke auf die <strong>Allgäuer Alpen</strong>. Mehrere Rastplätze und Schautafeln informieren über Flora und Fauna der Region. Der Wanderweg ist für Tagesausflüge sowie als Teil einer längeren Etappe nutzbar. Die Wege sind überwiegend flach und auf Schotter- sowie Waldwegen geführt.</p>",
+  "kurzbeschreibung": "Le Lechweg dans l'Außerfern tyrolien : grande randonnée dans le Naturpark Tiroler Lech avec le pont suspendu de 200 m de Holzgau et ses berges sauvages.",
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>tronçon du Lechweg dans l'Außerfern tyrolien</strong> constitue le cœur même de ce sentier de grande randonnée européen de 125 kilomètres. De Steeg, à la frontière du Vorarlberg, jusqu'à Lechaschau/Reutte en passant par Holzgau, Elbigenalp et Weißenbach, ce tracé labellisé <em>Leading Quality Trail</em> traverse l'un des derniers écosystèmes fluviaux sauvages préservés d'Europe centrale. Conçu comme une grande randonnée d'un niveau modéré, l'itinéraire longe le Lech qui s'élargit progressivement vers l'aval, offrant aux amoureux de la nature des passerelles suspendues spectaculaires, de riches forêts alluviales et le murmure étourdissant de flots vert émeraude.</p><h2>Naturpark Tiroler Lech & ponts suspendus spectaculaires</h2><p>Sur de nombreux kilomètres, la randonnée traverse directement le <strong>Naturpark Tiroler Lech</strong> : le fleuve y dispose encore de tout l'espace nécessaire pour remodeler librement son lit de graviers après chaque crue. Ces vastes bancs d'alluvions et ces îles dynamiques abritent des espèces végétales et animales d'une grande rareté, telles que le petit gravelot, le chevalier guignette ou la <em>Deutsche Tamariske</em> menacée de disparition. Les franchissements de gorges constituent des temps forts inoubliables : à Holzgau, la <strong>Hängebrücke Holzgau</strong> enjambe la gorge encaissée du Höhenbachtal à la hauteur vertigineuse de 110 mètres – avec ses 200,5 mètres de long, elle figure parmi les plus longues passerelles suspendues piétonnes d'Autriche. Plus en aval, près de Forchach, une passerelle suspendue de 75 mètres oscille au-dessus des eaux tumultueuses du Lech. Vers Weißenbach et Lechaschau/Reutte, le fond de la vallée s'ouvre sur de vastes plaines alluviales avant de mener, via la tour d'observation ornithologique de Pflach et le mystique Alpsee, au point d'orgue du Lechfall près de Füssen.</p><h2>Visite & Accès</h2><p>La saison principale de randonnée dans l'Außerfern s'étend de mi-mai à fin octobre. L'ensemble du Lechweg est <strong>accessible gratuitement</strong> (l'accès aux passerelles suspendues est également sans frais). Les 125 km sont généralement parcourus en six à huit étapes quotidiennes de 12 à 18 kilomètres. Un atout majeur : la ligne de bus régionale <em>Lechbus</em> (VVT 110) dessert toute la vallée et permet aux randonneurs de se déplacer facilement entre leurs hébergements et le départ des étapes (gratuit avec la carte d'hôte Lechtal). En voiture : via la B198 (Lechtalstraße) depuis Reutte ou par le col du Fernpass (B179). En transports en commun : en train jusqu'à la gare de Bahnhof Reutte in Tirol, puis correspondance directe avec le bus de la vallée du Lechtal.</p><h2>Conseils</h2><p>Le Lechweg chemine principalement sur des sentiers de moyenne altitude faciles et de douces pistes riveraines sans passages d'escalade vertigineux, convenant parfaitement aux débutants en grande randonnée et aux familles. Si vous préférez éviter le pont suspendu de Holzgau, un sentier alternatif de promenade contourne la gorge en traversant tranquillement le Höhenbachtal. Profitez des formules de transport de bagages proposées par les prestataires locaux pour marcher le dos léger avec un simple sac à dos de journée.</p>",
   "emoji": "🥾",
   "farbe": "#2196F3",
   "hoehe": "850–1.800 m",
   "dauer": "5–7 Tage (Gesamtstrecke)",
-  "preis": "Kostenlos",
+  "preis": "Wanderweg und Hängebrücken kostenlos; Gepäcktransfer buchbar",
   "tags": [
     "randonnée",
     "paysage fluvial",
@@ -19,12 +19,18 @@
     "nature",
     "Lech"
   ],
-  "oeffnungszeiten": "Ganzjährig begehbar (beste Zeit: Mai–Okt)",
-  "webseite": "https://www.lechweg.at",
+  "oeffnungszeiten": "Mitte Mai bis Ende Okt frei begehbar (Etappen flexibel wählbar)",
+  "webseite": "https://www.lechweg.com",
   "koordinaten": {
     "lat": "47.4667",
     "lng": "10.7000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechweg.com",
+    "https://www.naturpark-tiroler-lech.at",
+    "https://www.lechtal.at",
+    "https://www.reutte.com"
+  ]
 }

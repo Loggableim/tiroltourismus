@@ -1,27 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>Cette visite est une expérience guidée en e-mountain bike dans l'Ötztal, qui associe le monde montagneux tyrolien à un coucher de soleil au-dessus des sommets. Grâce à l'assistance électrique, selon la description le parcours convient à tous les niveaux de condition physique ; il mène par des chemins d'alpage pittoresques et des sentiers panoramiques jusqu'à un point de vue pour le coucher de soleil. Une durée de trois à quatre heures et un prix de 89 euros sont indiqués.</p><p>L'<strong>Ötztal</strong> compte parmi les régions cyclables les plus importantes des Alpes : la piste cyclable de l'Ötztal s'étend sur environ 50 kilomètres de Haiming à Sölden, et dans la région de Längenfeld, de nombreux circuits partent du fond de la vallée le long de l'Ötztaler Ache jusqu'aux alpages et aux refuges. Un prestataire précis de cette sunset tour n'a pas pu être déterminé clairement au moyen de sources officielles.</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "Tour e-VTT au coucher du soleil dans l'Ötztal",
+  "beschreibung": "### Aperçu\nUne sortie guidée en VTT électrique au coucher du soleil dans l'Ötztal marie le plaisir du cyclisme tout-terrain à la féerie des crêtes alpines flirtant avec les 3 000 mètres d'altitude. Grâce à l'exposition ouest et sud-ouest des versants de Sölden, la lumière dorée du crépuscule s'attarde longuement avant d'embraser les cimes glaciaires des Alpes de l'Ötztal dans un somptueux Alpenglühen. Parmi les fleurons d'une randonnée crépusculaire figure l'alpage séculaire de Gampe Thaya à 2 000 mètres d'altitude (itinéraire 643) : ce chalet authentique est une adresse gastronomique primée abritant sa propre fromagerie d'alpage. Pour une ambiance plus intimiste, l'itinéraire 652 grimpe vers la Brunnenbergalm (1 971 m) sur le versant sauvage de Sölden, offrant une vue frontale saisissante sur la pyramide du Gaislachkogl nimbée de teintes pourpres.\n\n### Itinéraire & Exigences\nLe circuit classique part du fond de vallée à Sölden et emprunte de larges pistes forestières sur 12 à 15 kilomètres pour 600 à 700 mètres de dénivelé positif. Grâce à l'assistance électrique des VTTAE, l'ascension s'effectue sans difficulté pour tout cycliste régulier ; compter 2h à 2h30 de pédalage pour une durée totale de 3h30 à 4h avec la halte gourmande. La descente sur gravier requiert une bonne maîtrise du freinage à disque. Les adolescents dès 12 à 14 ans peuvent participer s'ils sont accompagnés. La sortie est totalement inadaptée aux chiens et aux jeunes enfants en raison de la vitesse et de la descente nocturne.\n\n### Accès\nLe point de rendez-vous se situe généralement au centre de Sölden (Freizeit Arena ou télécabine Gaislachkoglbahn). En voiture, quitter l'A12 Inntal à la sortie Ötztal puis remonter la route B186 jusqu'à Sölden. Parkings couverts disponibles à la Freizeit Arena et à la gare de la Gaislachkoglbahn. En transports publics, le bus régional VVT ligne 4194 assure des liaisons très fréquentes depuis la gare ferroviaire d'Ötztal. Les bus disposent de remorques spéciales pour transporter gratuitement les vélos des passagers.\n\n### Conseils\nLes sorties accompagnées par une école de VTT coûtent environ 65 à 85 € par personne (location du VTTAE en sus à partir de 55 € dans les magasins de sport locaux). Partez impérativement avec une batterie chargée à 100 % (minimum 625 Wh). Équipement obligatoire pour la descente nocturne : un éclairage avant puissant d'au moins 1 000 lumens fixé au guidon, doublé d'une lampe frontale fixée au casque pour balayer les virages en épingle. Les températures chutant de 10 à 15 °C dès le coucher du soleil à 2 000 mètres, emportez impérativement veste coupe-vent, gants longs et bandeau thermique.",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "vélo de montagne",
     "vélo électrique (e-bike)",
     "coup de soleil (couchers de soleil)",
     "Ötztal",
     "visite guidée"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  }
+  ]
 }

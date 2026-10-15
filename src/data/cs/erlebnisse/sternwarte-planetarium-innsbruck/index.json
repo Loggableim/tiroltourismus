@@ -6,9 +6,10 @@
   "kategorie": "kultur",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Die Sternwarte Innsbruck öffnet exklusiv für Besucher ihre Pforten. Erleben Sie eine faszinierende Reise durch das Universum – vom Planetarium mit 360-Grad-Projektion bis zur Beobachtung von Sternen und Planeten durch das grosse Teleskop. Ein Abend für alle, die den Himmel über den Alpen entdecken möchten.",
+  "beschreibung": "### Přehled\nHistorická hvězdárna Univerzity v Innsbrucku leží v severovýchodní části botanické zahrady ve čtvrti Hötting. Postavil ji v roce 1904 astronom Egon von Oppolzer podle vlastních plánů a z vlastních prostředků; v roce 1909 byla připojena k univerzitě. Dnes je dobře zachovaný areál s původními přístroji – mimo jiné 40cm zrcadlovým dalekohledem Zeiss – významnou památkou rakouských dějin vědy. Od roku 2014 je jako Museum Historische Sternwarte přístupný veřejnosti; část sbírky lze prohlédnout i prostřednictvím 360stupňové multimediální prohlídky.\n\n### Trasa a náročnost\nHvězdárnu lze navštívit v rámci komentovaných prohlídek; muzeum je pravidelně otevřeno ve čtvrtek od 15.30 do 17.30 hodin. Prohlídka vede historickými prostorami a pozorovací kopulí s původními přístroji. Nejsou potřeba žádné předchozí znalosti ani zvláštní fyzická zdatnost. Vhodné pro děti i dospělé. Protože areál zahrnuje venkovní prostory a nevytápěné historické místnosti, doporučujeme oblečení odolné proti povětrnosti.\n\n### Doprava\nHvězdárna se nachází ve Sternwartestraße 13, případně je přístupná hlavním vchodem botanické zahrady v Botanikerstraße 10. Z hlavního nádraží v Innsbrucku se do oblasti Hötting/botanická zahrada dostanete veřejnou dopravou IVB. Autem přijedete po dálnici A12 (sjezd Innsbruck West) a pokračujete podle značení směrem na Hötting. Parkovat lze v okolních ulicích; doporučujeme cestovat veřejnou dopravou.\n\n### Tipy\nPokud je to možné, navštivte hvězdárnu ve čtvrtek odpoledne a spojte prohlídku s procházkou botanickou zahradou s jejími alpinem a skleníky. Kdo se nemůže dostavit osobně, může využít 360stupňovou multimediální prohlídku univerzity. Pro pozorování noční oblohy dalekohledem nabízí Institut pro astro- a částicovou fyziku v zimním semestru navíc Astronacht (astronomickou noc) s předchozí registrací.",
   "preis": 19,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "kultur",
     "sterne",
@@ -16,12 +17,17 @@
     "innsbruck",
     "wissenschaft"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.uibk.ac.at/de/historische-sternwarte/",
+    "https://www.uibk.ac.at/de/astro/observatory/",
+    "https://www.uibk.ac.at/botany/botanical-garden/",
+    "https://www.ivb.at/"
+  ]
 }

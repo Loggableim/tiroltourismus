@@ -1,28 +1,34 @@
 {
-  "name": "Fuchsbau-Rodeln in Serfaus",
   "slug": "fuchsbau-rodelbahn-serfaus",
   "emoji": "🛷",
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
   "region": "serfaus-fiss-ladis",
-  "beschreibung": "=== description ===\nThe Fuchsbau Sled Run in Serfaus is one of the longest family sled runs in Tyrol. Over a 6.5-kilometer winding trail, it descends from the middle station all the way down to Serfaus. In the evenings, enchanting lighting illuminates the run—sledding under the starry sky is an unforgettable winter experience.",
-  "preis": 19,
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Family Toboggan Runs in Serfaus-Fiss-Ladis",
+  "beschreibung": "### Overview\nThe sun-drenched high plateau of Serfaus-Fiss-Ladis is celebrated as one of the premier family winter sports destinations in the Alps, featuring meticulously groomed sledging runs. Key clarification for visitors: an official toboggan run named 'Fuchsbau' does not exist in the region; the label traces back to 'Berta's Fuchsbau', a playful beginner ski snow tunnel inside Berta's Kinderland in Fiss. However, the authentic toboggan runs of Serfaus-Fiss-Ladis provide world-class sledging: the 4.0-kilometre natural toboggan run in Serfaus sweeps from the Komperdell top station (1,980 m) down across pastures, forest glades, and underpasses to the valley floor (550 metres elevation drop). In Fiss, the equally long and gentle Hexen-Rodelbahn (averaging a family-friendly 12.5% gradient) descends 4.0 km from Steinegg (1,920 m). The offering is completed by the Schneisenfeger Alpine Coaster at Hög, hurtling along rail tracks at up to 40 km/h with 360-degree loops.\n\n### Route & Requirements\nBoth primary toboggan runs are fully lift-served and expertly groomed:\n1. Serfaus Toboggan Run: ascend with the Komperdellbahn to 1,980 metres. This 4.0-kilometre intermediate run descends smoothly to Serfaus village, with dining stops at Seealm Hög.\n2. Hexen-Rodelbahn Fiss: accessed via Schönjochbahn I to Steinegg. Spanning 4.0 km and 3 metres wide, this gentle slope is ideal for novices and children aged five and up.\nNo uphill walking is required. Warm winter apparel, sturdy ankle-high boots with deep rubber treads (ski boots are strictly prohibited!), and protective winter sports helmets are strongly recommended. Dogs are strictly barred from all sledging tracks.\n\n### Arrival\nMotorists travel via the A12 Inntal Autobahn (Oberinntal/Reschenpass exit) and federal road B180 to Ried im Oberinntal, continuing along the L19 up to the plateau. In winter, Serfaus enforces a strict vehicle ban; day visitors park at the large entrance parking lot. From there, the world's highest and unique hovercraft underground railway, the Dorfbahn Serfaus, shuttles guests across four underground stations directly to the ski lifts free of charge. Parking in Fiss and Ladis is located at the cable car bases. Public transit passengers take the train to Landeck-Zams and transfer to regular regional buses.\n\n### Tips\nDaytime sledging on the tracks is included with any valid ski pass or pedestrian lift ticket; sledges can be rented at valley sports shops for roughly €10 to €15 per day. A top highlight is night sledging: every Wednesday evening, the Serfaus run is brightly illuminated until 23:00 alongside the legendary 'Adventure Night' show, while Fiss hosts illuminated tobogganing and fondue evenings every Thursday. Safety reminder: modulate speed according to trail conditions, never stop inside blind curves, and attach the sled leash securely to your wrist.",
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/rodeln",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/attraktionen",
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/U-Bahn-Serfaus"
+  ],
+  "bilder": [],
   "dauer": "1–2 Stunden",
+  "link": "#",
+  "preis": 19,
   "tags": [
     "rodeln",
     "serfaus",
     "winter",
     "familie",
     "rodelbahn"
-  ],
-  "koordinaten": {
-    "lat": "47.0386",
-    "lng": "10.5739"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

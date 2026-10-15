@@ -1,0 +1,401 @@
+---
+// DemoNav.astro — Sticky one-page navigation for the demo front page.
+// Section anchors + scroll-spy (IntersectionObserver) + smooth scroll,
+// burger menu on mobile (accessible button with aria-expanded) and a
+// language switch that stays inside the /demofrontneu/<lang> routes.
+import TirolLogo from '../TirolLogo.astro';
+
+export interface NavItem {
+  id: string;
+  label: string;
+}
+export interface LangLink {
+  code: string;
+  name: string;
+  flag: string;
+  href: string;
+  active: boolean;
+}
+export interface NavLabels {
+  aria: string;
+  menu: string;
+  language: string;
+  languageAria: string;
+  sectionsAria: string;
+}
+
+export interface Props {
+  locale: string;
+  brandHref: string;
+  items: NavItem[];
+  langLinks: LangLink[];
+  labels: NavLabels;
+}
+
+const { locale, brandHref, items, langLinks, labels } = Astro.props;
+---
+
+<nav class="df-nav" aria-label={labels.aria}>
+  <div class="df-nav-inner">
+    <a class="df-nav-brand" href={brandHref} aria-label="Tirol Tourismus">
+      <TirolLogo width={112} idSuffix={`dfnav-${locale}`} locale={locale} />
+    </a>
+
+    <ul class="df-nav-links" aria-label={labels.sectionsAria}>
+      {items.map((item) => (
+        <li>
+          <a href={`#${item.id}`} data-spy={item.id}>{item.label}</a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="df-nav-r">
+      <div class="df-lang">
+        <button
+          type="button"
+          id="dfLangBtn"
+          class="df-lang-btn"
+          aria-expanded="false"
+          aria-controls="dfLangPanel"
+          aria-haspopup="true"
+          aria-label={labels.languageAria}
+        >
+          <span aria-hidden="true">🌐</span>
+          <span class="df-lang-code">{locale.toUpperCase()}</span>
+        </button>
+        <div class="df-lang-panel" id="dfLangPanel" role="menu" aria-label={labels.language}>
+          {langLinks.map((l) => (
+            <a
+              href={l.href}
+              role="menuitem"
+              lang={l.code}
+              class:list={['df-lang-link', { active: l.active }]}
+              aria-current={l.active ? 'true' : undefined}
+            >
+              <span class="df-lang-flag" aria-hidden="true">{l.flag}</span>
+              <span>{l.name}</span>
+              {l.active && <span class="df-lang-check" aria-hidden="true">✓</span>}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="dfBurger"
+        class="df-burger"
+        aria-expanded="false"
+        aria-controls="dfMobileMenu"
+        aria-label={labels.menu}
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="df-mobile" id="dfMobileMenu" hidden>
+    <ul aria-label={labels.sectionsAria}>
+      {items.map((item) => (
+        <li><a href={`#${item.id}`} data-spy={item.id}>{item.label}</a></li>
+      ))}
+    </ul>
+    <div class="df-mobile-lang" aria-label={labels.language}>
+      {langLinks.map((l) => (
+        <a href={l.href} lang={l.code} class:list={['df-mobile-lang-link', { active: l.active }]} aria-current={l.active ? 'true' : undefined}>
+          {l.flag} {l.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  (function () {
+    'use strict';
+    var nav = document.querySelector('.df-nav');
+    var burger = document.getElementById('dfBurger');
+    var mobile = document.getElementById('dfMobileMenu');
+    var langBtn = document.getElementById('dfLangBtn');
+    var langPanel = document.getElementById('dfLangPanel');
+
+    function closeMobile() {
+      if (!mobile || !burger) return;
+      mobile.classList.remove('open');
+      mobile.hidden = true;
+      burger.setAttribute('aria-expanded', 'false');
+    }
+    function closeLang() {
+      if (!langBtn || !langPanel) return;
+      langPanel.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    if (burger && mobile) {
+      burger.addEventListener('click', function () {
+        var open = burger.getAttribute('aria-expanded') === 'true';
+        if (open) { closeMobile(); }
+        else {
+          mobile.hidden = false;
+          mobile.classList.add('open');
+          burger.setAttribute('aria-expanded', 'true');
+          closeLang();
+        }
+      });
+    }
+
+    if (langBtn && langPanel) {
+      langBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = langBtn.getAttribute('aria-expanded') === 'true';
+        langPanel.classList.toggle('open', !open);
+        langBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      if (langPanel && langPanel.classList.contains('open') && !langPanel.contains(e.target) && e.target !== langBtn) {
+        closeLang();
+      }
+      if (mobile && mobile.classList.contains('open') && nav && !nav.contains(e.target)) {
+        closeMobile();
+      }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { closeLang(); closeMobile(); }
+    });
+    if (mobile) {
+      mobile.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') closeMobile();
+      });
+    }
+
+    // ── Scroll-Spy (IntersectionObserver) ──
+    var links = Array.prototype.slice.call(document.querySelectorAll('.df-nav-links a[data-spy]'));
+    var byId = {};
+    links.forEach(function (a) { byId[a.getAttribute('data-spy')] = a; });
+    var sections = Object.keys(byId)
+      .map(function (id) { return document.getElementById(id); })
+      .filter(Boolean);
+
+    function setActive(id) {
+      links.forEach(function (a) {
+        var on = a.getAttribute('data-spy') === id;
+        a.classList.toggle('active', on);
+        if (on) a.setAttribute('aria-current', 'true');
+        else a.removeAttribute('aria-current');
+      });
+    }
+
+    if (sections.length && 'IntersectionObserver' in window) {
+      var visible = {};
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0;
+        });
+        var best = null, bestRatio = 0;
+        Object.keys(visible).forEach(function (id) {
+          if (visible[id] > bestRatio) { bestRatio = visible[id]; best = id; }
+        });
+        if (best) setActive(best);
+      }, {
+        rootMargin: '-30% 0px -55% 0px',
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      });
+      sections.forEach(function (s) { io.observe(s); });
+
+      // Reflect hash on load
+      if (location.hash) {
+        var id = location.hash.slice(1);
+        if (byId[id]) setActive(id);
+      }
+    }
+  })();
+</script>
+
+<style is:global>
+  /* Sticky one-page nav height (shared with content scroll-margins). */
+  :root { --demo-nav-h: 64px; }
+  @media (max-width: 640px) { :root { --demo-nav-h: 56px; } }
+
+  .df-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    height: var(--demo-nav-h, 64px);
+    background: rgba(245, 243, 240, .88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .df-nav-inner {
+    height: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 clamp(12px, 3vw, 28px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .df-nav-brand { display: inline-flex; line-height: 0; flex: 0 0 auto; }
+  .df-nav-links {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .df-nav-links a {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: var(--text2);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color .2s, background .2s;
+  }
+  .df-nav-links a:hover { color: var(--text); background: var(--surface-hover); }
+  .df-nav-links a.active {
+    color: #fff;
+    background: var(--tirol-pink);
+  }
+  .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
+
+  .df-lang { position: relative; }
+  .df-lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(28, 28, 26, .28);
+    background: var(--surface);
+    color: #1c1c1a;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    cursor: pointer;
+  }
+  .df-lang-btn:hover { border-color: var(--tirol-pink); }
+  .df-lang-code { font-size: 11px; }
+  .df-lang-panel {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 190px;
+    padding: 6px;
+    border-radius: var(--radius);
+    background: #fff;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, .16);
+    display: none;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .df-lang-panel.open { display: flex; }
+  .df-lang-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--text2);
+    text-decoration: none;
+  }
+  .df-lang-link:hover { background: var(--surface-hover); color: var(--text); }
+  .df-lang-link.active { color: var(--tirol-pink); font-weight: 700; background: rgba(255, 20, 147, .08); }
+  .df-lang-flag { font-size: 16px; }
+  .df-lang-check { margin-left: auto; color: var(--tirol-pink); }
+
+  .df-burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    /* Fixed dark colour so the icon never inherits a light language theme token. */
+    color: #1c1c1a;
+    border: 1px solid rgba(28, 28, 26, .28);
+    background: var(--surface);
+    cursor: pointer;
+    padding: 0 10px;
+  }
+  .df-burger:hover { background: var(--surface-hover); }
+  .df-burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+
+  .df-mobile {
+    position: fixed;
+    top: var(--demo-nav-h, 64px);
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - var(--demo-nav-h, 64px));
+    overflow-y: auto;
+    background: #fff;
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, .18);
+    padding: 10px 16px 20px;
+  }
+  .df-mobile[hidden] { display: none; }
+  .df-mobile ul { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 2px; }
+  .df-mobile ul a {
+    display: block;
+    padding: 11px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 600;
+    /* Explicit dark ink on the always-white panel, independent of theme tokens. */
+    color: #1c1c1a;
+    text-decoration: none;
+  }
+  .df-mobile ul a:hover { background: var(--surface-hover); }
+  .df-mobile-lang {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding-top: 12px;
+    border-top: 1px solid var(--glass-border);
+  }
+  .df-mobile-lang-link {
+    padding: 6px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(28, 28, 26, .28);
+    font-size: 12px;
+    color: rgba(28, 28, 26, .78);
+    text-decoration: none;
+  }
+  .df-mobile-lang-link.active { color: var(--tirol-pink); border-color: var(--tirol-pink); background: rgba(255, 20, 147, .08); font-weight: 700; }
+
+  @media (max-width: 1100px) {
+    .df-nav-links { display: none; }
+    .df-burger { display: flex; }
+  }
+  @media (min-width: 1101px) {
+    .df-mobile { display: none !important; }
+  }
+  .df-nav a:focus-visible,
+  .df-lang-btn:focus-visible,
+  .df-burger:focus-visible {
+    outline: 3px solid var(--tirol-pink);
+    outline-offset: 2px;
+  }
+</style>

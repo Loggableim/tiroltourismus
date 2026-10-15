@@ -1,27 +1,32 @@
 {
-  "name": "Adlerhorst-Panoramasteg am Achensee",
   "slug": "adlerhorst-panoramasteg-achensee",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "wandern",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "Der neu errichtete Adlerhorst-Panoramasteg schmiegt sich in 80 Metern Höhe an die senkrechte Felswand des Achensees. Auf dem rundum gesicherten Steg wandeln Sie buchstäblich über dem türkisblauen Wasser des tiefsten Sees Tirols. Ein atemberaubender Ausblick auf die Karwendel- und Rofangebirgskette ist garantiert.",
-  "preis": 29,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Adlerhorst panoramapad aan de Achensee",
+  "beschreibung": "### Overzicht\nHet uitkijkplatform Adlerhorst torent hoog op de 2.039 meter hoge top van de Gschöllkopf in het Rofangebergte boven Maurach am Achensee. De spectaculaire staalconstructie is ontworpen door de Tiroolse siersmid Manfred Hörl uit Jenbach en heeft de vorm van een monumentaal adelaarsnest. Circa 15 ton kunstig gevlochten verzinkt staal vormt een nest van acht meter doorsnee dat boven de steile rotswanden van het Rofanmassief uitsteekt. Vanaf het platform geniet men van een 360-graden panorama: diep beneden fonkelt het turquoise water van de Achensee, omringd door het Karwendelgebergte, de Zillertaler en Tuxer Alpen, de Hohe Tauern en het Inntal. Gelegen aan de befaamde Adlerweg-wandelroute verbindt de Adlerhorst alpiene bergnatuur met ambachtelijke smeedkunst.\n\n### Route & Vereisten\nHet vertrekpunt is het bergstation van de kabelbaan Rofanseilbahn bij de Erfurter Hütte op 1.840 meter hoogte. Vandaar voert een gemarkeerd rood bergpad over almweiden langs de Mauritzalm en stijgt tussen bergdennen en rotsbanden naar de top van de Gschöllkopf. Over de route van 2,6 kilometer overbrugt men circa 200 hoogtemeters. De klim vergt 45 tot 60 minuten, de afdaling circa 40 minuten. Stevige enkelhoge bergschoenen met profielzool en tredzekerheid zijn vereist. De tocht is geschikt voor tredzekere kinderen vanaf vijf jaar. Op het platform biedt een massieve borstwering valbeveiliging. De open stalen roosterbodem is ongeschikt voor honden wegens risico op pootblessures; laat viervoeters buiten het nest wachten.\n\n### Bereikbaarheid\nHet dalstation van de Rofanseilbahn bevindt zich aan de Achenseestraße 10 in Maurach. Met de auto bereikbaar vanaf de Inntal-snelweg A12 (afrit Wiesing/Achensee) via de provinciale weg B181. De parkeerterreinen P1 en P2 bij de lift zijn betaald, maar het parkeergeld wordt bij aankoop van een liftkaart aan de kassa volledig vergoed. Met het openbaar vervoer reist men per trein naar station Jenbach en neemt men de VVT-streekbus lijn 4080 naar halte Maurach Rofanseilbahn. 's Zomers rijdt ook de historische stoomtandradbaan Achenseebahn vanuit Jenbach naar Maurach.\n\n### Tips\nMet de regionale gastenkaart AchenseeCard geldt korting op kabelbaankaartjes. Vlak onder de top start de AIRROFAN Skyglider: een vluchttoestel in adelaarsvorm dat passagiers met 80 km/u over 200 hoogtemeters omlaag voert (minimumlengte 1,30 meter, minimumleeftijd 10 jaar). De Adlerhorst is uitsluitend toegankelijk tijdens het zomerbedrijf van mei tot begin november; in de winter is het pad besneeuwd en gesloten. Bij naderend onweer of storm dient men de blootgestelde metalen top direct te verlaten.",
+  "sources": [
+    "https://www.rofanseilbahn.at",
+    "https://www.rofanseilbahn.at/adlerhorst/",
+    "https://www.rofanseilbahn.at/sommer/airrofan/"
+  ],
+  "bilder": [],
   "dauer": "1,5 Stunden",
+  "link": "#",
+  "preis": 29,
   "tags": [
     "wandelen",
     "panorama",
     "Achensee",
     "uitkijkplatform",
     "familie"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

@@ -13,17 +13,17 @@
     "cultura",
     "alpinismo"
   ],
-  "hoehe": "3.000 m",
+  "hoehe": "3.399 m",
   "flaeche": "750 km²",
   "einwohner": "25.000",
-  "beschreibung": "<p>El distrito de **Landeck** abarca el valle del Alto **Inn** alrededor de la ciudad de distrito **Landeck**, así como el profundo valle de **Paznauntal**. **Landeck** en sí es una ciudad histórica comercial con el símbolo **Schloss Landeck**, un castillo del siglo XIII. El valle de **Paznauntal** es una de las regiones turísticas más importantes de **Tirol**, con los famosos destinos de esquí **Ischgl** y **See**. **Serfaus** y **Fiss** forman, junto con Ladis, el exclusivo dominio esquiable **Serfaus-Fiss-Ladis**, con instalaciones de última generación y gastronomía de primer nivel. **Nauders** se encuentra en el soleado altiplano fronterizo con Italia y Suiza, siendo el punto más meridional de **Tirol** con más de 300 días de sol al año.</p>",
+  "beschreibung": "<p>El distrito de <strong>Landeck</strong> abarca el valle del Alto <strong>Inn</strong> alrededor de la ciudad de distrito <strong>Landeck</strong>, así como el profundo valle de <strong>Paznauntal</strong>. <strong>Landeck</strong> en sí es una ciudad histórica comercial con el símbolo <strong>Schloss Landeck</strong>, un castillo del siglo XIII. El valle de <strong>Paznauntal</strong> es una de las regiones turísticas más importantes de <strong>Tirol</strong>, con los famosos destinos de esquí <strong>Ischgl</strong> y <strong>See</strong>. <strong>Serfaus</strong> y <strong>Fiss</strong> forman, junto con Ladis, el exclusivo dominio esquiable <strong>Serfaus-Fiss-Ladis</strong>, con instalaciones de última generación y gastronomía de primer nivel. <strong>Nauders</strong> se encuentra en el soleado altiplano fronterizo con Italia y Suiza, siendo el punto más meridional de <strong>Tirol</strong> con más de 300 días de sol al año.</p>",
   "tipps": [
-    "Die Bergbahnen Serfaus-Fiss-Ladis gehören zu den modernsten der Alpen – die U-Bahn von Serfaus ist einzigartig.",
-    "Schloss Landeck beherbergt das Museum der Bezirksgeschichte mit einer beeindruckenden Waffensammlung.",
-    "Der Nauderer Höhenweg ist eine genussvolle Familienwanderung mit Panoramablick auf Dreiländereck."
+    "Los remontes de Serfaus-Fiss-Ladis están entre los más modernos de los Alpes; el metro subterráneo de Serfaus es único en el mundo.",
+    "El castillo de Landeck alberga el museo de historia comarcal con una destacada colección de armas históricas.",
+    "El sendero de altura de Nauders es una excursión panorámica perfecta para familias con vistas al trifinio alpino."
   ],
-  "empfehlungen": "<p>Visite el casco antiguo de **Landeck** con el **Schloss Landeck** y disfrute de la vista sobre el valle del **Inn**. Luego, diríjase al **Paznauntal** hacia **Ischgl** para disfrutar de una exquisita gastronomía y el ambiente de Après-Ski.</p>",
-  "umgebung": "<p>La región de **Landeck** limita al norte con los Alpes de **Lechtal**, al sur, a través de la cordillera principal alpina, con **Tirol del Sur** (Italia), y al oeste con la región del **Arlberg**. Regiones vecinas: **Arlberg** (oeste), **Imst** (este), **Kaunertal** (sur), **Paznauntal** (suroeste). El paso del **Reschenpass** lleva a Italia.</p>",
+  "empfehlungen": "<p>Visite el casco antiguo de <strong>Landeck</strong> con el <strong>Schloss Landeck</strong> y disfrute de la vista sobre el valle del <strong>Inn</strong>. Luego, diríjase al <strong>Paznauntal</strong> hacia <strong>Ischgl</strong> para disfrutar de una exquisita gastronomía y el ambiente de Après-Ski.</p>",
+  "umgebung": "<p>La región de <strong>Landeck</strong> limita al norte con los Alpes de <strong>Lechtal</strong>, al sur, a través de la cordillera principal alpina, con <strong>Tirol del Sur</strong> (Italia), y al oeste con la región del <strong>Arlberg</strong>. Regiones vecinas: <strong>Arlberg</strong> (oeste), <strong>Imst</strong> (este), <strong>Kaunertal</strong> (sur), <strong>Paznauntal</strong> (suroeste). El paso del <strong>Reschenpass</strong> lleva a Italia.</p>",
   "bilder": [],
   "hero_bild": null,
   "grenzen": [
@@ -52,7 +52,7 @@
       10.68
     ],
     [
-      47.0,
+      47,
       10.68
     ],
     [
@@ -80,7 +80,7 @@
       10.22
     ],
     [
-      47.0,
+      47,
       10.18
     ],
     [
@@ -103,5 +103,16 @@
       47.18,
       10.38
     ]
-  ]
+  ],
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.paznaun-ischgl.com",
+    "https://www.tirolwest.at/",
+    "https://www.tirol.gv.at/landeck/",
+    "https://de.wikipedia.org/wiki/Paznaun"
+  ],
+  "koordinaten": {
+    "lat": 47.1333,
+    "lng": 10.5667
+  }
 }

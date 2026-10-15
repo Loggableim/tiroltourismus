@@ -1,27 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>Este tour es una experiencia guiada en e-mountain bike en el Ötztal que combina el mundo montañoso tiroles con una puesta de sol sobre las cumbres. Gracias a la asistencia eléctrica, según la descripción la ruta es adecuada para cualquier nivel de forma física; discurre por pintorescos caminos de alpe y senderos con vistas hasta un mirador para la puesta de sol. Se indican una duración de tres a cuatro horas y un precio de 89 euros.</p><p>El <strong>Ötztal</strong> es una de las regiones de bicicleta más importantes de los Alpes: la vía ciclista del Ötztal recorre unos 50 kilómetros desde Haiming hasta Sölden, y en la región de Längenfeld numerosos recorridos parten del fondo del valle a lo largo del Ötztaler Ache hasta los pastos alpinos y los refugios. Un proveedor concreto de este sunset tour no pudo determinarse con claridad a través de fuentes oficiales.</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "Tour al atardecer en eMTB por el Ötztal",
+  "beschreibung": "### Resumen\nUna excursión guiada en e-mountain bike al atardecer en el valle de Ötztal combina el dinamismo de la bicicleta eléctrica con la mágica atmósfera dorada sobre picos de tres mil metros. Gracias a la orientación oeste y suroeste de las laderas de Sölden, la luz crepuscular se prolonga antes de encender las crestas glaciares con el resplandor alpino (Alpenglühen). Uno de los destinos estrella es la cabaña tradicional Gampe Thaya a 2.000 metros de altitud en la ladera del Giggijoch (ruta 643): una majada gastronómica distinguida por su quesería artesanal y productos 100 % autóctonos. Una opción más apacible es la ruta 652 a Brunnenbergalm (1.971 m) en la vertiente virgen de Sölden, con una panorámica frontal inigualable de la silueta piramidal del Gaislachkogl al atardecer.\n\n### Ruta y Requisitos\nLa ruta parte de Sölden y remonta pistas forestales anchas a lo largo de 12 a 15 kilómetros salvando entre 600 y 700 metros de desnivel. Con e-bikes modernas la subida constante resulta asequible para cualquier ciclista aficionado; el pedaleo efectivo ronda las 2 a 2,5 horas, sumando unas 3,5 a 4 horas en total con la cena alpina. El descenso al anochecer por pista de grava requiere buen tacto de frenada. Pueden participar jóvenes de 12 a 14 años acompañados. No es apto para perros ni niños pequeños debido a la velocidad de bajada y la oscuridad.\n\n### Cómo llegar\nEl punto de encuentro suele fijarse en el centro de Sölden (Freizeit Arena o teleférico Gaislachkoglbahn). En coche se llega por la autopista A12 Inntal (salida Ötztal) y la carretera B186 hasta Sölden. Hay aparcamiento en el garaje subterráneo de la Freizeit Arena y junto al teleférico. En transporte público, el autobús regional VVT línea 4194 conecta con frecuencia la estación ferroviaria de Ötztal con Sölden. Los autobuses disponen de remolques portabicicletas con transporte gratuito incluido.\n\n### Consejos\nLas salidas guiadas con escuelas de ciclismo rondan los 65 a 85 € (alquiler de e-MTB aparte desde 55 € en tiendas locales). Comience siempre con la batería al 100 % (mínimo 625 Wh). Equipo obligatorio imprescindible para el descenso nocturno: foco delantero potente de al menos 1.000 lúmenes en el manillar y linterna frontal en el casco para anticipar las curvas cerradas. Como la temperatura a 2.000 metros desciende entre 10 y 15 °C nada más ponerse el sol, lleve siempre chaqueta cortavientos, guantes largos y cinta térmica.",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "mountain bike",
     "bicicleta eléctrica",
     "atardecer",
     "Ötztal",
     "tour guiada"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  }
+  ]
 }

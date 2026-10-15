@@ -1,5 +1,5 @@
 {
-  "name": "Virgental",
+  "name": "Virgental & Umbalfälle",
   "slug": "virgental",
   "region": "osttirol",
   "ort": "Prägraten am Großvenediger",
@@ -14,10 +14,10 @@
     "valle_dell'Umbla",
     "alpinismo"
   ],
-  "dauer": "Ganztag/Mehrtag",
-  "preis": "Kostenlos",
+  "dauer": "2–4 Stunden",
+  "preis": "Kostenlos (Parkplatz Ströden ca. 7 € pro Tag; Kutschfahrt ca. 8–10 €)",
   "oeffnungszeiten": "Ganzjährig geöffnet",
-  "webseite": "https://www.virgental.at/",
+  "webseite": "https://www.osttirol.com/entdecken-und-erleben/sommer/wandern/wasserfaelle/umbalfaelle/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,14 @@
     "lng": "12.4138"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Virgental</strong> – Mitten in der atemberaubenden Tiroler Bergwelt gelegen, bietet die Virgental ein unvergessliches Naturerlebnis. Das Virgental im Nationalpark Hohe Tauern ist ein Paradies für Bergsteiger und Naturliebhaber mit den berühmten Umbalfällen Besucher können hier die alpine Flora und Fauna hautnah erleben. Besonders im Frühsommer, wenn die Almwiesen in voller Blüte stehen, entfaltet die Landschaft ihren ganzen Zauber. Zahlreiche Rastplätze und Aussichtspunkte machen den Aufenthalt besonders angenehm. Eingebettet in die malerische Kulisse der Tiroler Alpen, präsentiert sich die Virgental als Ort der Ruhe und Erholung. Die gute Erreichbarkeit von Prägraten am Großvenediger aus macht sie zu einem lohnenden Tagesausflugsziel. Die Kombination aus beeindruckender Landschaft und herzlicher Gastfreundschaft macht den Besuch zu etwas ganz Besonderem.</p>"
+  "beschreibung": "<h2>Panoramica</h2><p>La <strong>Virgental</strong> è una delle valli alpine più incontaminate e spettacolari del Tirolo Orientale, custodita nel Parco Nazionale Alti Tauri ai piedi del massiccio del Grossvenediger. All'estremità della valle ruggiscono le magnifiche <strong>cascate Umbalfälle</strong>, modellate dal fiume glaciale Isel lungo il primo sentiero naturalistico dell'acqua d'Europa.</p><h2>Percorso &amp; Requisiti</h2><p>Passeggiata rilassante per famiglie di 40 minuti dal parcheggio di Ströden fino alle storiche malghe Islitzeralm e Pebellalm (facile T1, per passeggini). Da qui il sentiero ad anello risale il canyon delle cascate con spettacolari balconi panoramici in acciaio sospesi sopra le gole impetuose (1 ora, dislivello 150 m, T1/T2). Proseguimento possibile per escursionisti fino al rifugio Clarahütte (2.038 m, T2). Scarpe da trekking consigliate. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>In treno fino a Lienz e poi con il bus 951 via Matrei fino al capolinea di Ströden a Prägraten. In auto lungo la statale B108 del Felbertauern fino a Matrei e poi sulla L24 fino al parcheggio di Ströden.</p><h2>Consigli</h2><p>Fermatevi sulla piattaforma sospesa per godere dell'aria purissima nebulizzata dalle cascate e gustate i celebri Schlipfkrapfen fatti a mano sulla terrazza panoramica della malga Islitzeralm.</p>",
+  "saison": "Mai bis Oktober (Wasserschaupfad im Winter schneebedeckt)",
+  "familie": true,
+  "sources": [
+    "https://www.nationalpark-hohetauern.at/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Umbalf%C3%A4lle",
+    "https://de.wikipedia.org/wiki/Virgental",
+    "https://www.vvt.at/"
+  ]
 }

@@ -1,9 +1,9 @@
 {
-  "name": "Zettersfeld",
+  "name": "Zettersfeld Sonnenbalkon Lienz",
   "slug": "zettersfeld",
   "region": "osttirol",
   "ort": "Lienz",
-  "kategorie": "sport",
+  "kategorie": "aussicht",
   "kurzbeschreibung": "Het zonnige hoogplateau Zettersfeld boven Lienz biedt een onvergelijkbaar panorama over de Lienzer Dolomiten en is een paradijs voor wandelaars en wintersporters.",
   "emoji": "⛰️",
   "farbe": "#5B8C5A",
@@ -14,10 +14,10 @@
     "panorama",
     "sport"
   ],
-  "dauer": "Halbtag bis Ganztag",
-  "preis": "Bergfahrt Erwachsene € 19,00",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Zettersfeld Berg- und Talfahrt ca. 24 €",
   "oeffnungszeiten": "Sommer- und Winterbetrieb",
-  "webseite": "https://www.zettersfeld.at/",
+  "webseite": "https://www.lienzer-bergbahnen.at",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -25,5 +25,13 @@
     "lng": "12.7681"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zettersfeld</strong> – Die Zettersfeld ist eine der Top-Adressen für Action und Abenteuer in Tirol. Das sonnige Hochplateau Zettersfeld oberhalb von Lienz bietet ein unvergleichliches Panorama auf die Lienzer Dolomiten und ist ein Paradies für Wanderer und Wintersportler Das abwechslungsreiche Angebot reicht von actiongeladenen Outdoor-Aktivitäten bis zu entspannten Wellness-Stunden. Professionelle Guides und modernste Ausrüstung sorgen für Sicherheit und maximalen Spaß. Auch für das leibliche Wohl ist mit Restaurants und Snackbars bestens gesorgt. Eingebettet in die beeindruckende Berglandschaft der Region Osttirol, bietet die Zettersfeld nicht nur sportliche Herausforderungen, sondern auch eine grandiose Aussicht. Planen Sie ausreichend Zeit ein – die Zettersfeld wird Sie mit ihrer Schönheit und Vielfalt begeistern.</p>"
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Zettersfeld</strong> (2.213 m bij Steinermandl) is het zonovergoten panoramaterras boven de stad Lienz in Oost-Tirol. Bereikbaar met de Zettersfeldbahn-gondel biedt het een weergaloos 360-graden uitzicht op de Lienzer Dolomieten en de Hohe Tauern, evenals een geliefde marmottenobservatiepost.</p><h2>Route &amp; Vereisten</h2><p>Eenvoudige gezinswandeling over het hoogplateau langs alpenmeertjes en de marmottenkolonie (1,5 uur, T1, kinderwagentoegankelijk). Uitbreidbare bergtocht naar de Goiselemandl (2.433 m) en de Faschingalm (3 uur, 350 m hoogteverschil, T2). Stevige schoenen aanbevolen. Honden aangelijnd toegestaan in de lift.</p><h2>Bereikbaarheid</h2><p>Met de trein naar Lienz en per stadsbus naar het dalstation in Gaimberg. Met de auto via de B100 naar de gratis parkeerplaats bij de gondelbaan.</p><h2>Tips</h2><p>Neem plaats op de houten ligbanken op het Steinermandl voor een prachtig uitzicht over de Dolomietentoppen en geniet van verse streekgerechten bij de Faschingalm.</p>",
+  "saison": "Mitte Juni bis Anfang Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "sources": [
+    "https://www.lienzer-bergbahnen.at/",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Zettersfeld",
+    "https://www.vvt.at/"
+  ]
 }

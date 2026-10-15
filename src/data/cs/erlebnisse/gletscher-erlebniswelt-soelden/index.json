@@ -6,7 +6,7 @@
   "kategorie": "natur",
   "ort": "Sölden",
   "region": "oetztal",
-  "beschreibung": "Die Gletscher Erlebniswelt auf dem Rettenbachferner verbindet Natur, Wissenschaft und Abenteuer. Der 007 ELEMENTS Bond-Erlebnisraum, die interaktive Gletscherausstellung und die Aussichtsplattform 'Big 3' auf über 3.000 Metern machen den Besuch zu einem unvergesslichen Erlebnis. James Bond Fans kommen hier auf ihre Kosten.",
+  "beschreibung": "<p>Ve výšce přes 3 000 m n. m. nabízí <strong>ledovcový svět Sölden</strong> na ledovcích Rettenbach a Tiefenbach vyhlídkové plošiny <strong>BIG 3</strong> s výhledem na nejvyšší vrchol Severního Tyrolska Wildspitze (3 774 m).</p><p>K největším lákadlům patří visutá vyhlídková lávka na <strong>Tiefenbachkoglu (3 250 m)</strong> vystupující 20 metrů nad propast i kruhová plošina na <strong>Schwarze Schneid (3 340 m)</strong>. Značená vysokohorská stezka vede do Ventu (10,5 km, 4,5 h). Ledovce spojuje nejvýše položený silniční tunel Evropy Rosi-Mittermeier-Tunnel (2 829 m).</p><p>Mýtná silnice otevřena od začátku června do konce října. Pravidelné spojení ledovcovým autobusem linky 70 ze Söldenu. Teplé oblečení a sluneční brýle kategorie 3–4 jsou nezbytné.</p>",
   "preis": 46,
   "dauer": "3 Stunden",
   "tags": [
@@ -23,5 +23,11 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.soelden.com",
+    "https://www.oetztal.com",
+    "https://www.oetztaler.at",
+    "https://www.oetztalergletscher.com"
+  ]
 }

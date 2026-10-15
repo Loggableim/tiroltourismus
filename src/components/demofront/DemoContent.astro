@@ -47,9 +47,14 @@ export interface Props {
   bezirke?: any[];
   /** Optional: Orte für die Onepage (#orte) */
   orte?: any[];
+  /**
+   * Render the design-credit footer (demo). On the real front page the
+   * BaseLayout site footer is kept instead, so this defaults to false.
+   */
+  showFooter?: boolean;
 }
 
-const { locale, localePrefix, page, regions, stays, sights, gastro, magazin, counts, regionNames, erlebnisse = [], events = [], camping = [], bezirke = [], orte = [] } = Astro.props;
+const { locale, localePrefix, page, regions, stays, sights, gastro, magazin, counts, regionNames, erlebnisse = [], events = [], camping = [], bezirke = [], orte = [], showFooter = false } = Astro.props;
 
 // ── Design-Credit + Kicker + Font pro Sprache ──
 const THEMES: Record<string, { credit: string; kicker: string; font: string; fontUrl: string }> = {
@@ -301,9 +306,9 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
 
     <div class="art-wrap">
       <div class="art-kicker">{theme.kicker}</div>
-      <h2 class="art-title">
+      <h1 class="art-title">
         {titleLines.map((line: string) => <span class="art-title-line">{line}</span>)}
-      </h2>
+      </h1>
       <p class="art-sub" set:html={page.hero?.subtitle}></p>
       <div class="art-actions">
         <a href={page.hero?.ctaPrimary?.href || '#regionen'} class="art-btn art-btn-primary">{page.hero?.ctaPrimary?.text || t.discover}</a>
@@ -486,6 +491,7 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
   )}
 
   <!-- ═══ REGIONEN ═══ -->
+  {regionNames.length > 0 && (
   <section class="art-section" style="padding-top:0" aria-labelledby="art-regions">
     <div class="art-wrap">
       <div class="art-head">
@@ -499,8 +505,10 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+  )}
 
   <!-- ═══ TOP REGIONEN ═══ -->
+  {regions.length > 0 && (
   <section class="art-section" id="regionen" style="padding-top:0">
     <div class="art-wrap">
       <div class="art-head">
@@ -514,8 +522,10 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+  )}
 
   <!-- ═══ UNTERKÜNFTE ═══ -->
+  {stays.length > 0 && (
   <section class="art-section" id="unterkuenfte" style="padding-top:0">
     <div class="art-wrap">
       <div class="art-head">
@@ -529,8 +539,10 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+  )}
 
   <!-- ═══ SEHENSWÜRDIGKEITEN ═══ -->
+  {sights.length > 0 && (
   <section class="art-section" id="sehenswuerdigkeiten" style="padding-top:0">
     <div class="art-wrap">
       <div class="art-head">
@@ -544,8 +556,10 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+  )}
 
   <!-- ═══ GASTRO ═══ -->
+  {gastro.length > 0 && (
   <section class="art-section" id="gastro" style="padding-top:0">
     <div class="art-wrap">
       <div class="art-head">
@@ -559,8 +573,10 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+  )}
 
   <!-- ═══ MAGAZIN ═══ -->
+  {magazin.length > 0 && (
   <section class="art-section" id="magazin" style="padding-top:0">
     <div class="art-wrap">
       <div class="art-head">
@@ -574,6 +590,7 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       </div>
     </div>
   </section>
+  )}
 
   <!-- ═══ DESIGN-INSPIRATION ═══ -->
   <section class="art-section art-design-section" aria-labelledby="art-design">
@@ -597,7 +614,8 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
     </div>
   </section>
 
-  <!-- ═══ DESIGN-CREDIT + LANDING-LINK ═══ -->
+  <!-- ═══ DESIGN-CREDIT + LANDING-LINK (Demo) ═══ -->
+  {showFooter && (
   <footer class="art-footer">
     <div class="art-wrap art-footer-inner">
       <div class="art-credit">
@@ -607,6 +625,7 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
       <a href="https://tiroltourismus.com/" class="art-landing-link">🌐 {t.landing}</a>
     </div>
   </footer>
+  )}
 </div>
 
 <style is:global>
@@ -926,6 +945,4 @@ const titleLines = page.hero?.title || ['TIROL', 'TOURISMUS'];
     .art-num-block{padding:20px 14px;min-width:0;overflow-wrap:anywhere}
     .art-num-val{font-size:clamp(28px,9vw,44px)}
   }
-
-  .art-root .cp-card, .art-root .uk-card, .art-root .sight-card, .art-root .gastro-card, .art-root .article-card{content-visibility:visible !important;contain-intrinsic-size:auto !important}
 </style>

@@ -47,3 +47,100 @@ const resolvedAriaLabel = ariaLabel || `${keyName} ${FILTER_LABEL[locale] || FIL
     </button>
   ))}
 </div>
+
+<style>
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 28px;
+  }
+  .filter-pill {
+    appearance: none;
+    -webkit-appearance: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 18px;
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    background: var(--surface);
+    color: var(--text2);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+  }
+  .filter-bar--compact .filter-pill {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+  .filter-pill:hover {
+    background: var(--surface-hover);
+    border-color: var(--tirol-pink);
+    color: var(--text);
+  }
+  .filter-pill:focus-visible {
+    outline: 2px solid var(--tirol-pink);
+    outline-offset: 2px;
+  }
+  .filter-pill.active {
+    background: var(--tirol-pink);
+    border-color: var(--tirol-pink);
+    color: #fff;
+  }
+  .filter-pill.active:hover {
+    background: var(--tirol-pink-dark);
+    border-color: var(--tirol-pink-dark);
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+    .filter-bar { gap: 6px; }
+    .filter-pill { padding: 8px 14px; font-size: 11px; }
+  }
+</style>
+
+<script>
+  {
+    function applyFilters() {
+      var selected = {};
+      document.querySelectorAll('[data-filter-bar]').forEach(function (bar) {
+        var key = bar.getAttribute('data-filter-key');
+        if (!key) return;
+        var all = bar.getAttribute('data-filter-all') || 'all';
+        var active = bar.querySelector('.filter-pill.active');
+        selected[key] = {
+          value: (active && active.getAttribute('data-filter-value')) || all,
+          all: all,
+        };
+      });
+      document.querySelectorAll('[data-filter-card]').forEach(function (card) {
+        var visible = true;
+        Object.keys(selected).forEach(function (key) {
+          if (!visible) return;
+          var state = selected[key];
+          if (!state.value || state.value === state.all) return;
+          if ((card.getAttribute('data-filter-' + key) || '') !== state.value) visible = false;
+        });
+        card.style.display = visible ? '' : 'none';
+      });
+    }
+
+    document.addEventListener('click', function (event) {
+      var target = event.target;
+      var pill = target && target.closest ? target.closest('.filter-pill') : null;
+      if (!pill) return;
+      var bar = pill.closest('[data-filter-bar]');
+      if (!bar) return;
+      bar.querySelectorAll('.filter-pill').forEach(function (p) {
+        p.classList.toggle('active', p === pill);
+      });
+      applyFilters();
+    });
+  }
+</script>

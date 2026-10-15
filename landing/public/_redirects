@@ -4,6 +4,10 @@
 # GSC-freundlich: alte Sitemaps bleiben erreichbar, alle URLs 301en
 # ═══════════════════════════════════════════════════════════════
 
+# ── Ehemalige Demo-Startseite → Apex-Landing (301) ──
+/demofrontneu https://tiroltourismus.com/ 301
+/demofrontneu/* https://tiroltourismus.com/ 301
+
 # ── Sprach-Prefixe → Subdomains (alte /en/, /fr/, /cs/, /nl/, /de/, /it/, /es/, /zh/ URLs) ──
 /en/* https://en.tiroltourismus.com/:splat 301
 /fr/* https://fr.tiroltourismus.com/:splat 301

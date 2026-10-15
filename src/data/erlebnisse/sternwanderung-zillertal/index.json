@@ -1,21 +1,24 @@
 {
-  "name": "Geführte Sternenwanderung",
+  "name": "Geführte Sternenwanderung Zillertal Arena & Königsleiten",
   "slug": "sternwanderung-zillertal",
   "emoji": "🌙",
   "farbe": "var(--blue)",
   "kategorie": "wandern",
-  "ort": "Zillertal",
+  "ort": "Königsleiten / Gerlos",
   "region": "zillertal",
-  "beschreibung": "<p>Der Eintrag beschreibt eine geführte Sternenwanderung im <strong>Zillertal</strong>. Laut Eintrag lernen Teilnehmer bei einer Nachtwanderung mit zertifizierten Guides den Sternenhimmel über den Alpen kennen. Im Mittelpunkt stehen die Beobachtung von Sternschnuppen, Planeten und der Milchstraße fernab der Lichtverschmutzung. Die Tour ist mit einer Dauer von 2–3 Stunden und einem Preis von 45 Euro angegeben und soll auch für Familien mit Kindern ab 10 Jahren geeignet sein.</p><p>Das Zillertal ist eines der bekanntesten Seitentäler des Inntals in Tirol und reicht von Jenbach im Norden bis zu den vergletscherten Bergen der Zillertaler Alpen im Süden. Orte wie Mayrhofen, Fügen-Kaltenbach, Stumm und Zell am Ziller liegen im Tal. Große Bereiche gehören zum Hochgebirgs-Naturpark Zillertaler Alpen. Die Region gilt als vergleichsweise dunkel und lichtarm und damit als gut für die Sternenbeobachtung geeignet.</p>",
+  "beschreibung": "### Überblick\nDie geführte Sternenwanderung in der Zillertal Arena rund um das Almdorf Königsleiten auf dem Gerlospass ist ein außergewöhnliches Nachterlebnis für die gesamte Familie. Auf über 1.600 Metern Seehöhe, weit abseits störender künstlicher Lichtquellen der großen Ballungsräume, bietet das Zillertal einen der dunkelsten und klarsten Nachthimmel der Alpen. In Königsleiten befindet sich eine Sternwarte mit angeschlossenem Zeiss-Planetarium. Wenn sich die Dämmerung über die Berggipfel der Hohen Tauern und der Zillertaler Alpen senkt, erstrahlt das Himmelszelt in ungezählten Sternen. Begleitet von fachkundigen Natur- und Astronomie-Guides lernen Teilnehmer, die Milchstraße mit bloßem Auge zu erfassen, markante Sternbilder wie den Großen Bären, Kassiopeia und das Sommerdreieck zu orten und die Geheimnisse des Kosmos in alpiner Stille zu ergründen.\n\n### Route & Anforderungen\nDie Tour beginnt am Planetarium Königsleiten und führt entlang des astronomischen Planetenlehrwegs und über naturnahe Almwege rund um das Hochplateau von Königsleiten. Der Planetenweg veranschaulicht maßstabsgetreu die Dimensionen und Entfernungen unseres Sonnensystems von der Sonne bis zum Pluto. Die Wanderstrecke beträgt rund 3,5 bis 4,5 Kilometer bei einem geringen Höhenunterschied von etwa 100 Höhenmetern. Die reine Gehzeit liegt bei 1,5 Stunden, mit Beobachtungsstopps und Teleskoperklärungen circa 2,5 bis 3 Stunden. Die Route verläuft auf befestigten Schotter- und Wanderwegen und erfordert lediglich Trittsicherheit im Schein der Stirnlampe sowie eine normale Grundfitness. Die Tour eignet sich ideal für Familien mit Kindern ab circa sechs Jahren. Notwendig sind feste Schuhe mit Profil, warme Kleidung (auch im Hochsommer kühlt es auf 1.600 m nachts empfindlich ab) und eine Taschen- oder Stirnlampe (idealerweise mit Rotlichtfunktion zum Erhalt der Nachtsicht). Hunde dürfen an der kurzen Leine mitgeführt werden.\n\n### Anreise\nAutofahrer erreichen Königsleiten über die Inntalautobahn A12 (Ausfahrt Zillertal), die Zillertalstraße B169 bis Zell am Ziller und weiter über die Gerlosbundesstraße B165 über Gerlos hinauf zum Gerlospass (Fahrzeit ab Innsbruck ca. 1 Stunde 15 Minuten). Kostenfreie Parkplätze stehen direkt an der Sternwarte Königsleiten sowie an den Talstationen der Bergbahnen zur Verfügung. Mit öffentlichen Verkehrsmitteln fährt man per Zillertalbahn von Jenbach bis Zell am Ziller und steigt dort in die Regionalbuslinie 4094 bis zur Haltestelle „Königsleiten Dorf“ um.\n\n### Tipps\nKombinieren Sie die Sternenwanderung mit einer vorangehenden Vorführung im hochmodernen Zeiss-Planetarium Königsleiten, wo faszinierende 360-Grad-Ganzkuppelprojektionen die Entstehung von Sternen und Galaxien veranschaulichen. Wählen Sie nach Möglichkeit Termine rund um die Neumondphase, da bei mondlosem Himmel die Milchstraße und Deep-Sky-Objekte besonders plastisch zur Geltung kommen. Für Romantiker empfiehlt sich ein Ausflug im August zur Zeit der Perseiden-Sternschnuppenströme.",
   "preis": 45,
-  "dauer": "2–3 Stunden",
-  "link": "#",
+  "dauer": "2,5–3 Stunden",
+  "link": "https://www.zillertalarena.com/",
   "tags": [
-    "wandern",
-    "sterne",
-    "nacht",
+    "sternenwanderung",
     "zillertal",
-    "familie"
+    "koenigsleiten",
+    "gerlos",
+    "sternwarte",
+    "nachtwanderung",
+    "planetarium",
+    "astronomie"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +26,12 @@
   "koordinaten": {
     "lat": "47.2817",
     "lng": "11.8821"
-  }
+  },
+  "sources": [
+    "https://www.zillertalarena.com/",
+    "https://www.sterngucker-koenigsleiten.com/sommer/wandern-in-koenigsleiten/",
+    "https://www.tirol.de/reisefuehrer/s/sommersport-in-tirol/zillertal-arena/planetarium-sternenwarte-koenigsleiten-und-planetarium-schwaz.html",
+    "https://de.wikipedia.org/wiki/Zillertal_Arena",
+    "https://www.gerlos.at/"
+  ]
 }

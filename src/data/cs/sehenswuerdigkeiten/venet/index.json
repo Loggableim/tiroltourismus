@@ -1,17 +1,17 @@
 {
-  "name": "Venetbahn & Venet",
+  "name": "Venet & Venetbahn",
   "slug": "venet",
   "status": "published",
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Domácí hora Landeck – s panoramatickou kolejí, nejdelší Zipline Tirol a nezapomenutelným výhledem na Oberinntal.",
-  "beschreibung": "<p>Der <strong>Venet</strong> ist mit 2.508 m der markante Hausberg der Region Landeck-Zams.. Die <strong>Venetbahn</strong>, eine moderne Panorama-Seilbahn, bringt Besucher in nur 10 Minuten von Zams auf 2.185 m Höhe.. Oben angekommen erwartet Sie eines der schönsten Panoramen Tirols mit Blick auf das Inntal, die Ötztaler Alpen und die Silvretta-Gruppe.. Der <strong>Venet Zipflyer</strong> ist mit 1.500 m Länge und 200 Höhenmetern die längste Zipline Tirols und ein Adrenalinkick der Extraklasse.. Zahlreiche Wanderwege führen vom Bergrestaurant aus zu den umliegenden Gipfeln.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Hora <strong>Venet</strong> (2 208 m na Krahbergu) je výjimečnou vyhlídkovou horou tyčící se nad městy Landeck a Zams. Lanovka Venetbahn vás za 8 minut vyveze na vrcholový hřeben s 360stupňovým panoramatem zahrnujícím 82 alpských třítisícovek (včetně Wildspitze a Zugspitze) a s nejvýše položenou hvězdárnou v celém Tyrolsku.</p><h2>Trasa a náročnost</h2><p>Rovinatý vyhlídkový okruh Krahberg-Panoramaweg (45 minut, T1, pro kočárky). Pohodová hřebenová túra k salaši Goglesalm (1,5 hodiny, T1/T2). Výstup pro horské turisty na štít Glanderspitze (2 512 m, T2/T3). Významné centrum paraglidingu. Turistická obuv nutná. Psi v lanovce povoleni s náhubkem.</p><h2>Příjezd a doprava</h2><p>Vlakem do stanice Landeck-Zams a 10 minut pěšky k dolní stanici lanovky v Zamsu. Autem po dálnici A12 (sjezd Zams) na bezplatné parkoviště u lanovky.</p><h2>Tipy</h2><p>Navštivte večerní pozorování hvězd v observatoři na vrcholu Venetu a ochutnejte tyrolské sýrové speciality na panoramatické terase vrcholové chaty.</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "Halbtag",
-  "preis": "Bergbahn: 34 € (Erwachsene); Zipflyer: 49 €",
+  "dauer": "2–4 Stunden",
+  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
   "tags": [
     "aussicht",
     "wandern",
@@ -25,5 +25,13 @@
   "koordinaten": {
     "lat": "47.1528",
     "lng": "10.5861"
-  }
+  },
+  "saison": "Ende Mai bis Mitte Oktober (Winterbetrieb Dezember bis April)",
+  "familie": true,
+  "sources": [
+    "https://www.venet.at/",
+    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
+    "https://de.wikipedia.org/wiki/Venet",
+    "https://www.vvt.at/"
+  ]
 }

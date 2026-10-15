@@ -1,27 +1,33 @@
 {
-  "name": "Fuchsbau-Rodeln in Serfaus",
   "slug": "fuchsbau-rodelbahn-serfaus",
   "emoji": "🛷",
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
   "region": "serfaus-fiss-ladis",
-  "beschreibung": "Die Fuchsbau-Rodelbahn in Serfaus ist eine der längsten Familienrodelbahnen Tirols. Auf 6,5 Kilometern kurviger Piste geht es von der Mittelstation bis hinab nach Serfaus. Abends erleuchtet stimmungsvolles Licht die Bahn – Rodeln unter dem Sternenhimmel ist ein unvergessliches Wintererlebnis.",
-  "preis": 19,
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Pistes de luge familiales à Serfaus-Fiss-Ladis",
+  "beschreibung": "### Aperçu\nLe haut plateau ensoleillé de Serfaus-Fiss-Ladis compte parmi les domaines de sports d'hiver familiaux les plus primés des Alpes, proposant des pistes de luge entretenues à la perfection. Mise au point essentielle : il n'existe aucune piste de luge officielle nommée « Fuchsbau » à Serfaus-Fiss-Ladis ; cette appellation provient de « Bertas Fuchsbau », un module ludique d'initiation au ski situé dans le jardin des neiges de Fiss. En revanche, les véritables pistes de luge de la région garantissent des sensations exceptionnelles : la piste naturelle de Serfaus descend sur 4,0 kilomètres depuis la gare amont de Komperdell (1 980 m) jusqu'au village (550 m de dénivelé). À Fiss, la célèbre piste Hexen-Rodelbahn (pente douce moyenne de 12,5 %) offre 4,0 km de glisse fluide depuis Steinegg (1 920 m). Le domaine compte également la luge sur rails Schneisenfeger au parc Hög, qui file jusqu'à 40 km/h avec virages relevés et spirales à 360 degrés.\n\n### Itinéraire & Exigences\nLes deux pistes principales sont damées quotidiennement et desservies par les remontées mécaniques :\n1. Piste de luge de Serfaus : montée en télécabine Komperdellbahn à 1 980 mètres. Piste naturelle de 4,0 km de niveau intermédiaire, jalonnée de passages en sous-bois et d'étapes gourmandes au lac Högsee.\n2. Hexen-Rodelbahn de Fiss : montée avec la télécabine Schönjochbahn I jusqu'à Steinegg. Large de 3 mètres, cette piste de 4,0 km convient idéalement aux familles avec enfants dès 5 ans.\nAucune marche d'approche n'est nécessaire. Des vêtements d'hiver chauds, de solides bottes de neige à semelle profilée (chaussures de ski strictement interdites !) et le port d'un casque de ski sont indispensables. Les chiens sont formellement interdits sur les pistes de luge pour des raisons de sécurité.\n\n### Accès\nEn voiture, emprunter l'autoroute A12 Inntal (sortie Oberinntal/Reschenpass) puis la route B180 jusqu'à Ried im Oberinntal, d'où la L19 grimpe vers le plateau. En hiver, Serfaus applique un concept d'apaisement du trafic sans voitures ; les visiteurs à la journée stationnent au grand parking à l'entrée du village. De là, le métro sur coussins d'air souterrain Dorfbahn Serfaus transporte gratuitement les passagers à travers quatre stations jusqu'aux télécabines. À Fiss et Ladis, des parkings sont aménagés aux gares de départ. En train, descendre en gare de Landeck-Zams puis prendre le car postal.\n\n### Conseils\nEn journée, l'accès aux pistes est compris dans les forfaits de ski ou les tickets piétons ; la location d'une luge coûte environ 10 à 15 € par jour dans les magasins de sport. Grand temps fort : les soirées de luge nocturne ! Chaque mercredi soir, la piste de Serfaus est illuminée jusqu'à 23h00 lors de la grande féerie Adventure Night, tandis que Fiss propose sa soirée luge et fondue chaque jeudi. Consigne de sécurité : adaptez votre vitesse, ne stationnez jamais dans les virages sans visibilité et gardez la dragonne de la luge attachée au poignet.",
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/rodeln",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/attraktionen",
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/U-Bahn-Serfaus"
+  ],
+  "bilder": [],
   "dauer": "1–2 Stunden",
+  "link": "#",
+  "preis": 19,
   "tags": [
     "rodeln",
     "serfaus",
     "winter",
     "familie",
     "rodelbahn"
-  ],
-  "koordinaten": {
-    "lat": "47.0386",
-    "lng": "10.5739"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

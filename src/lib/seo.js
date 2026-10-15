@@ -106,7 +106,7 @@ export const COLLECTION_CATEGORY_TITLES = {
     regionen: 'Régions',
     orte: 'Villages',
     gastro: 'Gastronomie',
-    sehenswuerdigkeiten: 'Sites',
+    sehenswuerdigkeiten: 'Sites touristiques',
     erlebnisse: 'Expériences',
     events: 'Événements',
     magazin: 'Magazine',

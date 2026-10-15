@@ -199,7 +199,7 @@ const sightItemList = {
   jsonld={sightItemList}
   locale={locale}
 >
-  <main>
+  <main class={locale === 'fr' ? 'fr-sights-page' : undefined}>
     <div class="container">
       <Breadcrumbs items={[{ label: t(labels.breadcrumb) }]} locale={locale} />
     </div>
@@ -286,6 +286,10 @@ const sightItemList = {
 </BaseLayout>
 
 <style>
+  :global(html:not([data-theme="alpenpeak"]) .fr-sights-page .hero-md p.hero-sub) {
+    color: #62564A;
+  }
+
   .sight-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

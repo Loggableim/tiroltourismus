@@ -1,27 +1,37 @@
 {
-  "name": "Wildtierbeobachtung im Karwendel",
+  "name": "Geführte Wildtierbeobachtung im Naturpark Karwendel",
   "slug": "wildtierbeobachtung-karwendel",
   "emoji": "🦌",
   "farbe": "var(--brown)",
   "kategorie": "natur",
-  "ort": "Karwendel",
+  "ort": "Scharnitz / Hinterhornalm",
   "region": "innsbruck",
-  "beschreibung": "Der Naturpark Karwendel ist eines der grössten Schutzgebiete der Alpen. Bei einer Pirsch mit einem Wildbiologen beobachten Sie Steinböcke, Gämsen, Murmeltiere und mit etwas Glück auch einen Steinadler. Tarnkleidung empfohlen. Ferngläser und Spektive sind im Preis inbegriffen.",
+  "beschreibung": "### Überblick\nDie geführte Wildtierbeobachtung im Naturpark Karwendel – dem mit über 700 Quadratkilometern größten Naturpark Österreichs – ermöglicht unvergessliche Einblicke in das Leben der alpinen Tierwelt. Die schroffen Kalksteinwände, tiefen Urwälder und einsamen Hochkare des Karwendels bilden ein europaweit bedeutendes Rückzugsgebiet für die „Könige der Felsen“. Angeführt von zertifizierten Naturpark-Rangern begeben sich kleine Gruppen auf achtsame Spurensuche nach Alpensteinböcken, flinken Gämsen, Murmeltieren und den am Himmel kreisenden Steinadlern. Im Rahmen des innovativen „Nature Watch“-Konzepts sind alle Teilnehmer mit hochpräzisen Ferngläsern und Spektiven von Swarovski Optik ausgestattet, wodurch faszinierende Nahbeobachtungen der Wildtiere gelingen, ohne diese in ihrem natürlichen Lebensraum zu stören oder aufzuschrecken.\n\n### Route & Anforderungen\nAusgangspunkt der geführten Exkursion ist das Naturpark-Infozentrum in Scharnitz (das „Tor zum Karwendel“) oder der Aussichtspunkt Hinterhornalm oberhalb von Gnadenwald im Inntal. Die Wanderung führt über gut ausgebaute Forststraßen und Bergpfade hinauf zu exponierten Kanzeln und stillen Hochtälern wie dem Karwendeltal oder Gleirschtal. Die Wegstrecke beträgt rund 6 bis 8 Kilometer bei circa 300 bis 400 Höhenmetern Auf- und Abstieg. Die reine Gehzeit liegt bei etwa zwei Stunden; durch ausführliche Beobachtungsstopps mit Stativspektiven und fachkundige Ranger-Erläuterungen beträgt die Gesamtdauer rund vier Stunden. Die Tour erfordert eine normale Grundkondition und Trittsicherheit auf alpinen Schotterwegen. Ideal geeignet für naturbegeisterte Erwachsene sowie Kinder ab etwa acht Jahren. Notwendig sind feste knöchelhohe Wanderschuhe, dezente, wetterfeste Kleidung (keine grellen Signalfarben, um Tiere nicht zu beunruhigen), Windschutz und eine Trinkflasche. Aus Rücksicht auf die Wildtiere und das strenge Naturschutzreglement sind Hunde bei diesen Führungen grundsätzlich nicht gestattet.\n\n### Anreise\nMit dem Pkw reist man von Innsbruck über den Zirler Berg (B177) oder von München/Garmisch-Partenkirchen über Mittenwald direkt nach Scharnitz an. Großzügige, gebührenpflichtige Naturpark-Wanderparkplätze stehen im Ortsteil Länd am Eingang der Karwendeltäler zur Verfügung. Die Anreise mit öffentlichen Verkehrsmitteln ist vorbildlich: Die Karwendelbahn (S-Bahn S6 der ÖBB/DB) verkehrt stündlich von Innsbruck Hauptbahnhof bzw. München direkt zum Grenzbahnhof Scharnitz. Vom Bahnhof sind es nur rund zehn Minuten zu Fuß zum Treffpunkt am Naturpark-Infozentrum.\n\n### Tipps\nDie besten Beobachtungschancen für Steinwild und Gämsen bieten geführte Touren in den kühlen Morgenstunden ab 07:30 Uhr oder am späten Nachmittag, wenn die Tiere aus den schattigen Felsspalten auf die saftigen Bergwiesen zur Äsung herabsteigen. Bringen Sie einen Fotoapparat mit Teleobjektiv oder einen Smartphone-Adapter für Spektive mit, um gestochen scharfe Tierporträts aufzunehmen. Nach der Exkursion lohnt sich ein Besuch des modernen Holzmuseums und Naturpark-Museums direkt in Scharnitz sowie eine Einkehr im Traditionsgasthof Wiesenhof.",
   "preis": 79,
   "dauer": "4 Stunden",
+  "link": "https://www.karwendel.org/",
   "tags": [
-    "natur",
-    "wildtiere",
+    "wildtierbeobachtung",
     "karwendel",
-    "pirsch",
-    "nationalpark"
+    "scharnitz",
+    "steinbock",
+    "gams",
+    "naturpark",
+    "ranger",
+    "naturewatch"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.4367",
     "lng": "11.4098"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.karwendel.org/naturpark",
+    "https://www.karwendel.org/kategorie/naturfuehrungen/",
+    "https://www.karwendel.org/nordkette-entdeckertour/",
+    "https://de.wikipedia.org/wiki/Naturpark_Karwendel",
+    "https://de.wikipedia.org/wiki/Karwendel"
+  ]
 }

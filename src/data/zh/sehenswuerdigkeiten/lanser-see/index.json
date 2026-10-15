@@ -5,13 +5,13 @@
   "region": "innsbruck",
   "ort": "Lans",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
-  "beschreibung": "Der <strong>Lanser See</strong> liegt auf 992 m Höhe in der Gemeinde Lans, nur wenige Kilometer südöstlich von Innsbruck. Der natürliche Moorsee besticht durch sein kristallklares, türkisgrünes Wasser und die idyllische Lage am Fuße des Patscherkofels. Im Sommer lädt die große Liegewiese zum Sonnenbaden und Picknicken ein, während das warme Wasser zum Schwimmen und Plantschen einlädt. Ein Rundwanderweg führt um den gesamten See – ideal für einen entspannten Spaziergang. Das <strong>Seehof-Restaurant</strong> direkt am Ufer serviert Tiroler Spezialitäten und erfrischende Getränke mit Seeblick.",
+  "kurzbeschreibung": "位于Patscherkofel山脚海拔840米处的Lanser See：因斯布鲁克附近宁静的泥炭湖天然浴场，拥有康体泉水、阳光草坪和Waldstraßenbahn森林有轨电车。",
+  "beschreibung": "<h2>概览</h2><p>底蕴深厚的<strong>Lanser See</strong>是一座风景如画的天然泥炭湖，坐落在蒂罗尔州首府因斯布鲁克以南约6公里的阳光明媚的中低山高原上。它地处Lans市镇，海拔840米，背靠雄伟的<strong>Patscherkofel</strong>（2246米），这片受保护的水域面积约为12,000平方米（1.2公顷），最大水深约12米。作为因斯布鲁克地区历史最悠久、最受青睐的天然天然湖泊浴场，它以一流的水质、田园诗般的森林景致以及眺望Nordkette险峻石灰岩峭壁的壮美视野吸引着无数游人。</p><h2>泥炭泉水、沐浴文化与自然生态</h2><p>Lanser See形成于约15,000年前末次冰期的终结阶段，是由因河谷冰川融化消退后地下残留的死冰融水形成的死冰湖。湖水由地下泉水补给，其深邃且闪烁着绿宝石般光泽的湖水归功于富含泥炭的湖底地质。富含氧气且微带泥炭成分的泉水在夏季能迅速升温至宜人的22至25°C，在自然疗法中被认为对皮肤具有极佳的舒缓和修复功效。早在19世纪下半叶，该湖便成为因斯布鲁克市民夏季避暑的首选胜地。历史悠久的湖畔浴场<strong>Strandbad Lanser See</strong>设有绿树成荫的宽阔整洁日光浴草坪、向阳的木质栈桥、儿童戏水池、跳水台、脚踏船与桨板（SUP）租赁服务，并在南侧设有隐蔽独立的FKK天体浴区。拥有临湖露台的水上餐厅更为浴客提供地道的当地特色美食与饮品。</p><h2>参观与交通</h2><p>Strandbad Lanser See浴场在5月中旬至9月初的沐浴季期间每天09:00至19:00开放（盛夏晴朗天气延长至20:00）；非沐浴季节湖区作为休闲游憩区免费对外开放。浴场门票参考（2025/2026年赛季）：成人全天票6.50欧元（14:00后5.00欧元，17:00后3.50欧元），青少年及学生5.00欧元，儿童（6至15岁）3.50欧元，6岁以下儿童免费。搭乘公共交通前往别具怀旧风情：历史悠久的<strong>Straßenbahnlinie 6</strong>有轨电车（即浪漫的“Waldstraßenbahn”森林电车/Igler电车）从Innsbruck Bergisel穿行于茂密的云杉林中，直达<em>Lanser See</em>站；亦可从Innsbruck Hauptbahnhof火车站乘坐VVT 540路区域客运巴士。自驾路线：从因斯布鲁克经Aldrans或Igls驶抵Lans；湖畔设有收费停车场。</p><h2>贴士</h2><p>湖滨步道、湖畔餐厅及草坪主通道地势平坦，无台阶障碍，婴儿车和轮椅可顺畅通行。建议漫步游览相邻的Lanser Moor沼泽地（国家法定受保护自然纪念物），或将湖畔沐浴日程与攀登Patscherkofel的缆车之旅完美结合。</p>",
   "emoji": "🏞️",
   "farbe": "#00BCD4",
   "hoehe": "992 m",
   "dauer": "Halbtag",
-  "preis": "Kostenlos (Naturbadestelle)",
+  "preis": "Tageskarte Strandbad Erwachsene 6,50 €, Kinder 3,50 €",
   "tags": [
     "自然",
     "湖泊",
@@ -20,12 +20,18 @@
     "家庭友好",
     "郊游"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich (Badesaison: Mai–Sep)",
-  "webseite": "https://www.lans.at",
+  "oeffnungszeiten": "Mitte Mai bis Anfang Sep täglich 09:00–19:00/20:00 Uhr; außerhalb frei zugänglich",
+  "webseite": "https://www.lansersee.at",
   "koordinaten": {
     "lat": "47.2375",
     "lng": "11.4331"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lansersee.at",
+    "https://www.innsbruck.info/sehenswuerdigkeiten/sightseeing/seen-und-wasserwelten/detail/infrastruktur/lanser-see-lans.html",
+    "https://de.wikipedia.org/wiki/Lanser_See",
+    "https://www.tirol.at/aktivitaeten/sport/baden/bademoeglichkeiten/lanser-see"
+  ]
 }

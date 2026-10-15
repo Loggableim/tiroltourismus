@@ -5,8 +5,8 @@
   "region": "achensee",
   "ort": "Pertisau",
   "kategorie": "natur",
-  "kurzbeschreibung": "El lago más grande de Tirol, con aguas cristalinas, rodeado por las escarpadas paredes rocosas del Karwendel – un paraíso para los deportes acuáticos y el senderismo.",
-  "beschreibung": "Der Achensee ist mit einer Fläche von 6,8 km² und einer Tiefe von 133 m der größte und einer der saubersten Seen Tirols. Sein smaragdgrünes, klares Wasser erreicht im Sommer angenehme Badetemperaturen. Der See ist umgeben von der imposanten Karwendel-Bergkulisse und bietet ideale Bedingungen für Segeln, Surfen, Tauchen und Stand-up-Paddling. Die <strong>Achensee-Schifffahrt</strong> verbindet die Orte Pertisau, Maurach und Seespitz. Ein Uferweg lädt zu ausgedehnten Spaziergängen mit herrlichen Panoramablicken ein.",
+  "kurzbeschreibung": "El lago más grande del Tirol con aguas cristalinas, rodeado por las escarpadas paredes rocosas del Karwendel: un paraíso para los deportes acuáticos y el senderismo.",
+  "beschreibung": "<h2>Descripción general</h2><p>Con una superficie de 6,8 km², una longitud de 9,4 km y una profundidad máxima de 133 metros, el <strong>Achensee</strong> es el lago natural más grande del Tirol y uno de los lagos alpinos más limpios de Austria. Situado a 929 metros de altitud entre las montañas del Karwendel al oeste y el macizo del Rofan al este, se le conoce popularmente como el «mar del Tirol».</p><h2>Historia</h2><p>El Achensee se formó hace unos 20.000 años al final de la glaciación de Würm: el glaciar de Achental excavó una fosa tectónica entre Karwendel y Rofan. Durante el retroceso de los glaciares, los glaciares del Inn y del Zillertal levantaron a la entrada sur del valle una barrera de grava morrénica de unos 150 metros de altura, la denominada Achenseedamm. Esta represa contiene las aguas del lago y separa el Achental del valle Inntal, situado unos 380 metros más abajo. De forma natural, el lago desaguaba a través del Seeache y el Isar hacia el Danubio; desde la construcción de la central hidroeléctrica TIWAG-Achenseekraftwerk en 1927, la mayor parte del agua se desvía al Inntal para generar electricidad.</p><h2>Visita y cómo llegar</h2><p>En pleno verano, la superficie del agua alcanza entre 18 y 20 °C, y en zonas ribereñas poco profundas como el Strandbad Maurach hasta 22 °C. Los vientos térmicos constantes (viento suave del sur por la mañana y viento del norte de 3 a 5 nudos Beaufort por la tarde) garantizan condiciones ideales para la vela, el windsurf y el kitesurf. También se puede practicar paddle surf, buceo con visibilidad de hasta 15 metros, o alquilar barcas de remos y eléctricas. Desde 1887, la compañía Achensee-Schifffahrt conecta los embarcaderos de Pertisau, Seespitz, Buchau, Gaisalm, Seehofkapelle y Scholastika. En coche: autopista Inntalautobahn A12, salida Wiesing/Achensee/Zillertal, luego B181 unos 10 km hasta Maurach, Pertisau o Achenkirch. En transporte público: tren ÖBB hasta la estación de Jenbach, luego autobús regional VVT línea 4080 hasta el Achensee; en temporada de verano también con el histórico ferrocarril de cremallera Achenseebahn.</p><h2>Consejos</h2><p>Los paseos ribereños asfaltados de Pertisau y Maurach son llanos y accesibles sin barreras. Para quienes viajan desde Alemania: a través de Holzkirchen – Tegernsee – Achenpass (B307/B181), se puede llegar al Achensee sin viñeta ni peaje. Para una excursión de un día, se recomienda un billete combinado con el tren de vapor Achenseebahn desde Jenbach y un paseo panorámico en barco por el lago.</p>",
   "emoji": "🏞️",
   "farbe": "#2196F3",
   "hoehe": "929 m",
@@ -21,11 +21,15 @@
     "natur"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich; Schifffahrt: Mai–Okt",
-  "webseite": "https://www.achensee.info",
+  "webseite": "https://www.achensee.com",
   "koordinaten": {
     "lat": "47.4500",
     "lng": "11.7167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.achensee.com",
+    "https://de.wikipedia.org/wiki/Achensee"
+  ]
 }

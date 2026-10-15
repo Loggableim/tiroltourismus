@@ -91,20 +91,16 @@ const resolvedAriaLabel = ariaLabel || `${keyName} ${FILTER_LABEL[locale] || FIL
     color: var(--text, #1a1a1a);
     border-color: color-mix(in srgb, currentColor 55%, transparent);
   }
-  .filter-pill:focus-visible {
-    outline: 2px solid var(--tirol-pink-dark, #c0006e);
+  .filter-bar .filter-pill:focus-visible {
+    outline: 2px solid #b4232f;
     outline-offset: 2px;
   }
-  .filter-pill.active {
-    background: var(--tirol-pink-dark, #c0006e);
-    border-color: var(--tirol-pink-dark, #c0006e);
+  .filter-bar .filter-pill.active,
+  .filter-bar .filter-pill.active:hover {
+    background-color: #b4232f;
+    border-color: #b4232f;
     color: #fff;
     font-weight: 700;
-  }
-  .filter-pill.active:hover {
-    background: var(--tirol-pink-dark, #c0006e);
-    border-color: var(--tirol-pink-dark, #c0006e);
-    color: #fff;
   }
   @media (max-width: 600px) {
     .filter-bar { gap: 8px; }

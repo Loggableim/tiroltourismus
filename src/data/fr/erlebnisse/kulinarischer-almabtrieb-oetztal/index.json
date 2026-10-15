@@ -1,12 +1,12 @@
 {
-  "name": "Kulinarischer Almabtrieb im Ötztal",
+  "name": "Descente d'alpages culinaire dans l'Ötztal",
   "slug": "kulinarischer-almabtrieb-oetztal",
   "emoji": "🍽️",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "Der Almabtrieb im Ötztal wird zum grossen kulinarischen Fest. Neben dem traditionellen Umzug der geschmückten Kühe erwarten die Besucher Stände mit regionalen Köstlichkeiten: Almkäse, Geräuchertes, frische Bauernbrote und natürlich der berühmte Ötztaler Grauvogel-Braten. Ein Fest für die Sinne!",
+  "beschreibung": "### Aperçu\nLa désalpe dans la vallée de l'Ötztal marque la fin festive de l'été alpin, associant traditions pastorales séculaires et gastronomie tyrolienne de fête. À la mi-septembre, les troupeaux bovins parés de couronnes descendent des alpages vers Längenfeld, Umhausen et Sölden. Le point d'orgue culturel reste la transhumance ovine de Vent: plus de cinq mille moutons franchissent des cols glaciaires à plus de 3 000 mètres d'altitude depuis le Val Senales italien pour regagner l'Ötztal, une pratique millénaire inscrite au patrimoine culturel immatériel de l'UNESCO. Dès que les cloches annoncent l'arrivée des bêtes, les places de village se muent en marchés festifs animés.\n\n### Itinéraire et exigences\nLes festivités se déroulent sur plusieurs week-ends de septembre. À Längenfeld, le défilé traverse le centre du village. À Vent, les moutons rejoignent les enclos pour le tri traditionnel. Aucune condition physique particulière n'est requise, mais il convient de prévoir plusieurs heures debout en extérieur. Les spectateurs doivent impérativement respecter les distances de sécurité et laisser les voies de passage dégagées pour les animaux.\n\n### Accès\nRejoignez la gare ferroviaire d'Ötztal sur la ligne de l'Arlberg, puis empruntez la ligne de bus 320 (Ötztalbus), cadencée toutes les 30 minutes vers Längenfeld et Sölden. Pour Vent, la ligne 330 assure la correspondance depuis Zwieselstein. En voiture, suivez l'autoroute A12 puis la B186. Les transports publics sont vivement conseillés en raison des fermetures temporaires de chaussée.\n\n### Conseils\nNe manquez pas les fameux Ötztaler Kirchtagskrapfen, beignets traditionnels farcis de poires séchées, pavot et rhum, dorés au beurre clarifié. Goûtez également au rôti de bœuf Tyrolean Grey et aux fromages d'alpage. L'événement convient parfaitement aux familles. Les chiens sont formellement déconseillés pour éviter tout stress ou réflexe défensif des troupeaux.",
   "preis": 0,
   "dauer": "1 Tag",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at",
+    "https://www.unesco.at/kultur/immaterielles-kulturerbe/oesterreichisches-verzeichnis/detail/article/transhumanz-schafwandertriebe-in-den-oetztaler-alpen",
+    "https://www.oetztaler.at",
+    "https://www.naturpark-oetztal.at"
+  ]
 }

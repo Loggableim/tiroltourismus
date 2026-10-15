@@ -35,10 +35,10 @@ export interface Props {
 const { locale, brandHref, items, langLinks, labels } = Astro.props;
 ---
 
-<nav class="df-nav" aria-label={labels.aria}>
+<nav class:list={['df-nav', `df-${locale}`]} aria-label={labels.aria}>
   <div class="df-nav-inner">
     <a class="df-nav-brand" href={brandHref} aria-label="Tirol Tourismus">
-      <TirolLogo width={112} idSuffix={`dfnav-${locale}`} locale={locale} />
+      <TirolLogo width={112} idSuffix={`dfnav-${locale}`} locale={locale} inverted={locale === 'en' || locale === 'zh'} />
     </a>
 
     <ul class="df-nav-links" aria-label={labels.sectionsAria}>
@@ -114,107 +114,173 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
 <script is:inline>
   (function () {
     'use strict';
-    var nav = document.querySelector('.df-nav');
-    var burger = document.getElementById('dfBurger');
-    var mobile = document.getElementById('dfMobileMenu');
-    var langBtn = document.getElementById('dfLangBtn');
-    var langPanel = document.getElementById('dfLangPanel');
 
     function closeMobile() {
+      var mobile = document.getElementById('dfMobileMenu');
+      var burger = document.getElementById('dfBurger');
       if (!mobile || !burger) return;
       mobile.classList.remove('open');
       mobile.hidden = true;
       burger.setAttribute('aria-expanded', 'false');
     }
     function closeLang() {
+      var langBtn = document.getElementById('dfLangBtn');
+      var langPanel = document.getElementById('dfLangPanel');
       if (!langBtn || !langPanel) return;
       langPanel.classList.remove('open');
       langBtn.setAttribute('aria-expanded', 'false');
     }
 
-    if (burger && mobile) {
-      burger.addEventListener('click', function () {
-        var open = burger.getAttribute('aria-expanded') === 'true';
-        if (open) { closeMobile(); }
-        else {
-          mobile.hidden = false;
-          mobile.classList.add('open');
-          burger.setAttribute('aria-expanded', 'true');
+    // Document-level listeners are bound once; view transitions keep the document.
+    if (!window.__dfNavDocBound) {
+      window.__dfNavDocBound = true;
+      document.addEventListener('click', function (e) {
+        var langPanel = document.getElementById('dfLangPanel');
+        var langBtn = document.getElementById('dfLangBtn');
+        var mobile = document.getElementById('dfMobileMenu');
+        var nav = document.querySelector('.df-nav');
+        if (langPanel && langPanel.classList.contains('open') && !langPanel.contains(e.target) && e.target !== langBtn) {
           closeLang();
         }
+        if (mobile && mobile.classList.contains('open') && nav && !nav.contains(e.target)) {
+          closeMobile();
+        }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') { closeLang(); closeMobile(); }
       });
     }
 
-    if (langBtn && langPanel) {
-      langBtn.addEventListener('click', function (e) {
-        e.stopPropagation();
-        var open = langBtn.getAttribute('aria-expanded') === 'true';
-        langPanel.classList.toggle('open', !open);
-        langBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
-      });
-    }
+    function bindMenuControls() {
+      var burger = document.getElementById('dfBurger');
+      var mobile = document.getElementById('dfMobileMenu');
+      var langBtn = document.getElementById('dfLangBtn');
+      var langPanel = document.getElementById('dfLangPanel');
 
-    document.addEventListener('click', function (e) {
-      if (langPanel && langPanel.classList.contains('open') && !langPanel.contains(e.target) && e.target !== langBtn) {
-        closeLang();
+      if (burger && mobile && !burger.__dfBound) {
+        burger.__dfBound = true;
+        burger.addEventListener('click', function () {
+          var open = burger.getAttribute('aria-expanded') === 'true';
+          if (open) { closeMobile(); }
+          else {
+            mobile.hidden = false;
+            mobile.classList.add('open');
+            burger.setAttribute('aria-expanded', 'true');
+            closeLang();
+          }
+        });
       }
-      if (mobile && mobile.classList.contains('open') && nav && !nav.contains(e.target)) {
-        closeMobile();
+
+      if (langBtn && langPanel && !langBtn.__dfBound) {
+        langBtn.__dfBound = true;
+        langBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var open = langBtn.getAttribute('aria-expanded') === 'true';
+          langPanel.classList.toggle('open', !open);
+          langBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+        });
       }
-    });
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') { closeLang(); closeMobile(); }
-    });
-    if (mobile) {
-      mobile.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') closeMobile();
-      });
+
+      if (mobile && !mobile.__dfBound) {
+        mobile.__dfBound = true;
+        mobile.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') closeMobile();
+        });
+      }
     }
 
-    // ── Scroll-Spy (IntersectionObserver) ──
-    var links = Array.prototype.slice.call(document.querySelectorAll('.df-nav-links a[data-spy]'));
-    var byId = {};
-    links.forEach(function (a) { byId[a.getAttribute('data-spy')] = a; });
-    var sections = Object.keys(byId)
-      .map(function (id) { return document.getElementById(id); })
-      .filter(Boolean);
+    // ── Scroll-Spy: last section whose top passed nav height + 40% viewport ──
+    function initScrollSpy() {
+      var links = Array.prototype.slice.call(document.querySelectorAll('.df-nav-links a[data-spy], .df-mobile ul a[data-spy]'));
+      if (!links.length) return;
 
-    function setActive(id) {
+      var byId = {};
       links.forEach(function (a) {
-        var on = a.getAttribute('data-spy') === id;
-        a.classList.toggle('active', on);
-        if (on) a.setAttribute('aria-current', 'true');
-        else a.removeAttribute('aria-current');
+        var id = a.getAttribute('data-spy');
+        (byId[id] = byId[id] || []).push(a);
       });
-    }
 
-    if (sections.length && 'IntersectionObserver' in window) {
-      var visible = {};
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          visible[en.target.id] = en.isIntersecting ? en.intersectionRatio : 0;
+      var sections = Object.keys(byId)
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean)
+        .sort(function (a, b) {
+          return (a.getBoundingClientRect().top + window.pageYOffset) -
+                 (b.getBoundingClientRect().top + window.pageYOffset);
         });
-        var best = null, bestRatio = 0;
-        Object.keys(visible).forEach(function (id) {
-          if (visible[id] > bestRatio) { bestRatio = visible[id]; best = id; }
-        });
-        if (best) setActive(best);
-      }, {
-        rootMargin: '-30% 0px -55% 0px',
-        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
-      });
-      sections.forEach(function (s) { io.observe(s); });
+      if (!sections.length) return;
 
-      // Reflect hash on load
+      function setActive(id) {
+        links.forEach(function (a) {
+          var on = a.getAttribute('data-spy') === id;
+          a.classList.toggle('active', on);
+          if (on) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      }
+
+      function onScroll() {
+        var nav = document.querySelector('.df-nav');
+        var navH = nav ? nav.getBoundingClientRect().height : 64;
+        var line = navH + window.innerHeight * 0.4;
+        var current = sections[0].id;
+        for (var i = 0; i < sections.length; i++) {
+          if (sections[i].getBoundingClientRect().top <= line) current = sections[i].id;
+          else break;
+        }
+        var root = document.documentElement;
+        if (window.innerHeight + window.pageYOffset >= root.scrollHeight - 4) {
+          current = sections[sections.length - 1].id;
+        }
+        setActive(current);
+      }
+
+      var ticking = false;
+      function requestTick() {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () { ticking = false; onScroll(); });
+      }
+
+      if (window.__dfSpyTick) {
+        window.removeEventListener('scroll', window.__dfSpyTick);
+        window.removeEventListener('resize', window.__dfSpyTick);
+      }
+      window.__dfSpyTick = requestTick;
+      window.addEventListener('scroll', requestTick, { passive: true });
+      window.addEventListener('resize', requestTick);
+
+      onScroll();
       if (location.hash) {
-        var id = location.hash.slice(1);
-        if (byId[id]) setActive(id);
+        var hashId = location.hash.slice(1);
+        if (byId[hashId]) setActive(hashId);
       }
     }
+
+    function boot() {
+      bindMenuControls();
+      initScrollSpy();
+    }
+
+    // The inline script is parsed before the sections exist, so wait for the DOM
+    // (and re-run on view-transition page loads).
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', boot, { once: true });
+    } else {
+      boot();
+    }
+    document.addEventListener('astro:page-load', boot);
   })();
 </script>
 
 <style is:global>
+  /* Sticky one-page nav height (shared with content scroll-margins). */
+  :root { --demo-nav-h: 64px; }
+  @media (max-width: 640px) { :root { --demo-nav-h: 56px; } }
+
+  /* ── Solid, theme-aware nav surface ──────────────────────────────
+     The nav sits OUTSIDE .art-root, so it cannot inherit the per-language
+     theme tokens. Each language class supplies solid background + AA
+     text colours so the sticky bar stays readable over dark/image content. */
   .df-nav {
     position: fixed;
     top: 0;
@@ -222,11 +288,28 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     right: 0;
     z-index: 1200;
     height: var(--demo-nav-h, 64px);
-    background: rgba(245, 243, 240, .88);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--glass-border);
+    /* DE defaults (overridden per language below). */
+    --df-bg: #faf9f6;
+    --df-bg2: #f2f0ea;
+    --df-text: #1c1c1a;
+    --df-text2: rgba(28, 28, 26, .72);
+    --df-border: rgba(28, 28, 26, .16);
+    --df-accent: #c44536;
+    --df-accent-ink: #ffffff;
+    --df-surface: rgba(28, 28, 26, .04);
+    --df-surface-hover: rgba(28, 28, 26, .08);
+    background: var(--df-bg);
+    border-bottom: 1px solid var(--df-border);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .02), 0 8px 24px rgba(0, 0, 0, .07);
   }
+  .df-nav.df-de { --df-bg: #faf9f6; --df-bg2: #f2f0ea; --df-text: #1c1c1a; --df-text2: rgba(28, 28, 26, .72); --df-border: rgba(28, 28, 26, .16); --df-accent: #c44536; --df-accent-ink: #fff; --df-surface: rgba(28, 28, 26, .04); --df-surface-hover: rgba(28, 28, 26, .08); }
+  .df-nav.df-en { --df-bg: #241b15; --df-bg2: #2f2620; --df-text: #f5f0e8; --df-text2: rgba(245, 240, 232, .74); --df-border: rgba(245, 240, 232, .18); --df-accent: #c9a227; --df-accent-ink: #241b15; --df-surface: rgba(245, 240, 232, .07); --df-surface-hover: rgba(245, 240, 232, .13); }
+  .df-nav.df-fr { --df-bg: #f4f1ea; --df-bg2: #ece8de; --df-text: #3a3a35; --df-text2: rgba(58, 58, 53, .74); --df-border: rgba(58, 58, 53, .16); --df-accent: #5f6e56; --df-accent-ink: #fff; --df-surface: rgba(58, 58, 53, .035); --df-surface-hover: rgba(58, 58, 53, .08); }
+  .df-nav.df-cs { --df-bg: #ede4d3; --df-bg2: #e3d8c2; --df-text: #2e1f14; --df-text2: rgba(46, 31, 20, .76); --df-border: rgba(46, 31, 20, .24); --df-accent: #7a2e2e; --df-accent-ink: #fff; --df-surface: rgba(46, 31, 20, .05); --df-surface-hover: rgba(46, 31, 20, .1); }
+  .df-nav.df-it { --df-bg: #faf8f5; --df-bg2: #f1ede6; --df-text: #1a2a4a; --df-text2: rgba(26, 42, 74, .74); --df-border: rgba(184, 145, 46, .42); --df-accent: #6e5510; --df-accent-ink: #fff; --df-surface: rgba(26, 42, 74, .035); --df-surface-hover: rgba(26, 42, 74, .075); }
+  .df-nav.df-nl { --df-bg: #f7f7f5; --df-bg2: #efefec; --df-text: #111; --df-text2: rgba(17, 17, 17, .72); --df-border: rgba(17, 17, 17, .22); --df-accent: #3232d6; --df-accent-ink: #fff; --df-surface: rgba(17, 17, 17, .03); --df-surface-hover: rgba(17, 17, 17, .075); }
+  .df-nav.df-es { --df-bg: #f2efe9; --df-bg2: #e9e5dc; --df-text: #2a2a2a; --df-text2: rgba(42, 42, 42, .74); --df-border: rgba(42, 42, 42, .18); --df-accent: #b23535; --df-accent-ink: #fff; --df-surface: rgba(42, 42, 42, .035); --df-surface-hover: rgba(42, 42, 42, .075); }
+  .df-nav.df-zh { --df-bg: #1a1520; --df-bg2: #251d2f; --df-text: #e8dcc8; --df-text2: rgba(232, 220, 200, .74); --df-border: rgba(201, 162, 39, .32); --df-accent: #c9a227; --df-accent-ink: #1a1520; --df-surface: rgba(232, 220, 200, .06); --df-surface-hover: rgba(232, 220, 200, .12); }
   .df-nav-inner {
     height: 100%;
     max-width: 1240px;
@@ -250,22 +333,31 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
   }
   .df-nav-links a {
     display: inline-block;
-    padding: 7px 10px;
+    padding: 7px 11px;
     border-radius: 100px;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: .2px;
-    color: var(--text2);
+    color: var(--df-text2);
     text-decoration: none;
     white-space: nowrap;
-    transition: color .2s, background .2s;
+    transition: color .2s, background .2s, box-shadow .2s;
   }
-  .df-nav-links a:hover { color: var(--text); background: var(--surface-hover); }
+  .df-nav-links a:hover { color: var(--df-text); background: var(--df-surface-hover); }
+  /* Active: accent-coloured text + 2px accent underline + soft accent pill.
+     Accent-on-nav contrast is >= 4.69 in every language theme (AA). */
   .df-nav-links a.active {
-    color: #fff;
-    background: var(--tirol-pink);
+    color: var(--df-accent);
+    background: var(--df-surface-hover);
+    box-shadow: inset 0 -2px 0 0 var(--df-accent);
+    font-weight: 700;
   }
-  .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+  @supports (background: color-mix(in srgb, red 10%, transparent)) {
+    .df-nav-links a.active {
+      background: color-mix(in srgb, var(--df-accent) 16%, transparent);
+    }
+  }
+  .df-nav-r { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; margin-left: auto; }
 
   .df-lang { position: relative; }
   .df-lang-btn {
@@ -274,16 +366,16 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     gap: 6px;
     padding: 8px 12px;
     border-radius: 100px;
-    border: 1px solid var(--glass-border);
-    background: var(--surface);
-    color: var(--text);
+    border: 1px solid var(--df-border);
+    background: var(--df-surface);
+    color: var(--df-text);
     font: inherit;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .5px;
     cursor: pointer;
   }
-  .df-lang-btn:hover { border-color: var(--tirol-pink); }
+  .df-lang-btn:hover { border-color: var(--df-accent); color: var(--df-text); }
   .df-lang-code { font-size: 11px; }
   .df-lang-panel {
     position: absolute;
@@ -292,9 +384,9 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     min-width: 190px;
     padding: 6px;
     border-radius: var(--radius);
-    background: #fff;
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 16px 44px rgba(0, 0, 0, .16);
+    background: var(--df-bg2);
+    border: 1px solid var(--df-border);
+    box-shadow: 0 16px 44px rgba(0, 0, 0, .28);
     display: none;
     flex-direction: column;
     gap: 2px;
@@ -307,13 +399,13 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     padding: 9px 12px;
     border-radius: var(--radius-sm);
     font-size: 13px;
-    color: var(--text2);
+    color: var(--df-text2);
     text-decoration: none;
   }
-  .df-lang-link:hover { background: var(--surface-hover); color: var(--text); }
-  .df-lang-link.active { color: var(--tirol-pink); font-weight: 700; background: rgba(255, 20, 147, .08); }
+  .df-lang-link:hover { background: var(--df-surface-hover); color: var(--df-text); }
+  .df-lang-link.active { color: var(--df-text); font-weight: 700; background: var(--df-surface-hover); box-shadow: inset 0 0 0 1px var(--df-accent); }
   .df-lang-flag { font-size: 16px; }
-  .df-lang-check { margin-left: auto; color: var(--tirol-pink); }
+  .df-lang-check { margin-left: auto; color: var(--df-accent); }
 
   .df-burger {
     display: none;
@@ -323,16 +415,18 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     width: 42px;
     height: 42px;
     border-radius: 10px;
-    border: 1px solid var(--glass-border);
-    background: var(--surface);
+    color: var(--df-text);
+    border: 1px solid var(--df-border);
+    background: var(--df-surface);
     cursor: pointer;
     padding: 0 10px;
   }
+  .df-burger:hover { background: var(--df-surface-hover); }
   .df-burger span {
     display: block;
     width: 100%;
     height: 2px;
-    background: var(--text);
+    background: currentColor;
     border-radius: 2px;
   }
 
@@ -343,9 +437,9 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     right: 0;
     max-height: calc(100dvh - var(--demo-nav-h, 64px));
     overflow-y: auto;
-    background: #fff;
-    border-bottom: 1px solid var(--glass-border);
-    box-shadow: 0 24px 48px rgba(0, 0, 0, .18);
+    background: var(--df-bg);
+    border-bottom: 1px solid var(--df-border);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, .28);
     padding: 10px 16px 20px;
   }
   .df-mobile[hidden] { display: none; }
@@ -356,26 +450,32 @@ const { locale, brandHref, items, langLinks, labels } = Astro.props;
     border-radius: var(--radius-sm);
     font-size: 15px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--df-text);
     text-decoration: none;
   }
-  .df-mobile ul a:hover { background: var(--surface-hover); }
+  .df-mobile ul a:hover { background: var(--df-surface-hover); }
+  .df-mobile ul a.active {
+    color: var(--df-accent);
+    background: var(--df-surface-hover);
+    box-shadow: inset 3px 0 0 0 var(--df-accent);
+    font-weight: 700;
+  }
   .df-mobile-lang {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
     padding-top: 12px;
-    border-top: 1px solid var(--glass-border);
+    border-top: 1px solid var(--df-border);
   }
   .df-mobile-lang-link {
     padding: 6px 12px;
     border-radius: 100px;
-    border: 1px solid var(--glass-border);
+    border: 1px solid var(--df-border);
     font-size: 12px;
-    color: var(--text2);
+    color: var(--df-text2);
     text-decoration: none;
   }
-  .df-mobile-lang-link.active { color: var(--tirol-pink); border-color: var(--tirol-pink); background: rgba(255, 20, 147, .08); font-weight: 700; }
+  .df-mobile-lang-link.active { color: var(--df-accent-ink); background: var(--df-accent); border-color: var(--df-accent); font-weight: 700; }
 
   @media (max-width: 1100px) {
     .df-nav-links { display: none; }

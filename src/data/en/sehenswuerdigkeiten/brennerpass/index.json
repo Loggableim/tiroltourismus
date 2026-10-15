@@ -5,13 +5,13 @@
   "region": "innsbruck-land",
   "ort": "Brenner",
   "kategorie": "natur",
-  "kurzbeschreibung": "The lowest Alpine pass at 1,374 m – historic border between Austria and Italy with the Brennerbahn, the Brennerautobahn and a cycle path to Bozen.",
-  "beschreibung": "<p>The <strong>Brenner Pass</strong> connects Austrian Tyrol with South Tyrol at an altitude of 1,374 metres and is the most important Alpine crossing between Austria and Italy. For centuries, travellers and traders have used this lowest pass of the Central Alps as a north-south connection. After the end of the First World War, it forms the national border between the two countries. Today, the Brennerautobahn and the historic Brennerbahn cross the pass, linking Innsbruck with Sterzing, Brixen and Bozen. The Brenner–Bozen cycle path follows the old railway line through the Eisacktal for around 96 kilometres. The view extends far into the Wipptal and to the surrounding mountain worlds. The pass is passable all year round, but in winter weather and road conditions must be taken into account.</p>",
+  "kurzbeschreibung": "At 1,370 m, the Brennerpass connects Austria and Italy: an ancient Roman alpine crossing, Carl von Etzel's Brennerbahn, and a major European transport axis.",
+  "beschreibung": "<h2>Overview</h2><p>The <strong>Brennerpass</strong> (Italian: <em>Passo del Brennero</em>) marks the national border between the Austrian province of Tyrol and the autonomous province of Bozen-S?dtirol in Italy at an elevation of 1,370 metres above sea level. Nestled between the Stubai and Zillertal Alps, the Brenner is the topographically lowest notch across the entire main ridge of the Central Alps. For millennia, this mountain pass served as the most crucial transport artery between Central Europe and the Mediterranean basin and remains the busiest transit corridor across the Alps to this day.</p><h2>History & Transport</h2><p>Hunters and traders navigated this gentle mountain saddle as early as the Stone and Bronze Ages. Around 200 AD, Roman Emperor <strong>Septimius Severus</strong> expanded the existing path into the paved military road <em>Via Raetia</em>, connecting Verona with Augsburg. During the Middle Ages, as part of the <em>Via Imperii</em>, the vast majority of German kings and emperors crossed the Brenner on their way to Rome for their imperial coronations. Between 1772 and 1777, Empress <strong>Maria Theresia</strong> had the packhorse trail upgraded into the first engineered road in the Eastern Alps. An engineering triumph of global renown was achieved in 1867 by engineer <strong>Carl von Etzel</strong>: He completed the <em>Brennerbahn</em> ? the first transalpine railway without a crest tunnel. Following World War I, the 1919 Treaty of Saint-Germain established the pass as the international border. Between 1959 and 1974, the A13 Brennerautobahn was constructed alongside the monumental Europabr?cke bridge. Currently, the 55-kilometre <em>Brenner Basistunnel (BBT)</em> railway project is under construction to shift freight traffic from road to rail.</p><h2>Visit & Getting There</h2><p>The pass summit and road connections are open 24 hours a day, 7 days a week year-round. The federal highway B182 (Brennerstra?e) on the Austrian side is completely <strong>toll-free</strong>. On the A13 Brennerautobahn, a distance-based special toll by ASFINAG applies (single car trip approx. ? 11.50 to ? 12.00). On the South Tyrolean side, the route transitions into the A22 toll motorway. Directly adjacent to the border railway station lies the <em>Designer Outlet Brenner (DOB)</em> featuring over 70 retail shops, open daily from 09:00 to 19:00. Arrival by rail: The S-Bahn Tirol (line S3) runs every 30 minutes from Innsbruck Hauptbahnhof directly to Brenner border station (journey time approx. 35 minutes); international Eurocity trains (?BB/DB) stop here as well. By car, visitors reach the pass either via the A13 motorway (exit Brennersee) or along the scenic B182 road.</p><h2>Tips</h2><p>The modernized Brenner railway station and Designer Outlet Brenner are fully barrier-free, offering step-free access, wide passageways, and accessible elevators. Right at the pass summit begins the popular <em>Eisacktal-Radweg</em> cycle path, allowing cyclists to glide downhill for over 96 kilometres along a disused rail line via Sterzing and Brixen all the way to Bozen. At the pass summit, be sure to visit the church of <em>Maria am Wege</em>, built in 1962 and featuring symbolic border architecture.</p>",
   "emoji": "🏔️",
   "farbe": "#78909C",
   "hoehe": "1.374 m",
   "dauer": "2–3 Stunden",
-  "preis": "Kostenlos (Passstraße mautfrei)",
+  "preis": "Passhöhe und B182 kostenlos (A13 Sondermaut ca. 12,00 €)",
   "tags": [
     "nature",
     "history",
@@ -20,10 +20,17 @@
     "cycling",
     "Wipptal Valley"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.brennerpass.at",
+  "oeffnungszeiten": "Ganzjährig rund um die Uhr frei befahrbar",
+  "webseite": "https://www.wipptal.at",
   "koordinaten": {
     "lat": "47.0044",
     "lng": "11.5075"
-  }
+  },
+  "sources": [
+    "https://www.bbt-se.com",
+    "https://www.outletcenterbrenner.com",
+    "https://www.asfinag.at",
+    "https://www.wipptal.at",
+    "https://de.wikipedia.org/wiki/Brennerpass"
+  ]
 }

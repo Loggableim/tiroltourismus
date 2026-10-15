@@ -1,17 +1,17 @@
 {
-  "name": "Zirbenweg",
+  "name": "Zirbenweg Patscherkofel & Glungezer",
   "slug": "zirbenweg",
   "status": "published",
   "region": "innsbruck",
-  "ort": "Tulfes",
+  "ort": "Igls",
   "kategorie": "wanderung",
   "kurzbeschreibung": "De hoogstgelegen Zirbenlehrpfad van de Alpen op de Patscherkofel – een droomwandeling door geurige Zirbenwouden met een spectaculair panorama.",
-  "beschreibung": "Der <strong>Zirbenweg</strong> ist ein rund 7 km langer Höhenwanderweg auf dem Patscherkofel-Plateau zwischen Tulfes und der Bergstation Patscherkofelbahn. Auf einer Höhe von 1.700 bis 1.900 m führt der Weg durch einen der größten zusammenhängenden <strong>Zirbenwälder</strong> der Ostalpen. Entlang des Weges informieren Schautafeln über die Besonderheiten der Zirbe (Zirbelkiefer) – ihre Heilwirkungen, ihr Holz und ihre ökologische Bedeutung. Mehrere Aussichtskanzeln bieten atemberaubende Blicke auf das Inntal, die Nordkette, den Patscherkofel und das Stubaital. Der Weg ist auch für Kinder gut geeignet und ganzjährig begehbar.",
+  "beschreibung": "<h2>Overzicht</h2><p>De <strong>Zirbenweg</strong> op 2.000 meter hoogte boven Innsbruck behoort tot de beroemdste hoogtewandelpaden van de Alpen. De route verbindt de Patscherkofelbahn in Igls met de Glungezerbahn in Tulfes en voert door het oudste aaneengesloten alpendennenbos (arve) van Midden-Europa met eeuwenoude bomen tot 700 jaar oud.</p><h2>Route &amp; Vereisten</h2><p>Zeer toegankelijke panoramawandeling van 7 km met slechts 200 m hoogteverschil (2,5 uur wandelen, T1/T2). Berghut Boscheben halverwege voor een pauze. Dankzij het handige Zirbenweg-combirondreisticket zijn beide liften en de pendelbus tussen de dalstations inbegrepen. Stevige wandelschoenen aanbevolen. Honden aangelijnd toegestaan in de lift.</p><h2>Bereikbaarheid</h2><p>Vanaf Innsbruck Hauptbahnhof met stadsbus J naar Igls of streekbus 4134 naar Tulfes. Speciale pendelbus tussen beide dalstations. Met de auto via de A13 (Igls) of A12 (Tulfes) naar de parkeerplaatsen.</p><h2>Tips</h2><p>Bekijk de oudste alpenden van Tirol langs het pad (ruim 700 jaar oud en beschermd natuurmonument) en geniet op het terras van berghut Boscheben van kaasknödel en huisgemaakte zirbenschnaps.</p>",
   "emoji": "🥾",
   "farbe": "#4CAF50",
   "hoehe": "1.900 m",
-  "dauer": "2–3 Stunden",
-  "preis": "Bergbahn: 28 € (Erwachsene); Wanderung kostenlos",
+  "dauer": "3–4 Stunden",
+  "preis": "Zirbenweg-Rundfahrtticket (2 Bergbahnen + Shuttlebus) ca. 36 €",
   "tags": [
     "wandelen",
     "natuur",
@@ -21,11 +21,20 @@
     "zirbe"
   ],
   "oeffnungszeiten": "Ganzjährig begehbar; Patscherkofelbahn: täglich 9:00–17:00",
-  "webseite": "https://www.patscherkofelbahn.at",
+  "webseite": "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
   "koordinaten": {
     "lat": "47.2150",
     "lng": "11.4580"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Anfang Juni bis Ende Oktober",
+  "familie": true,
+  "sources": [
+    "https://www.tyrol.com/",
+    "https://www.patscherkofelbahn.at/",
+    "https://www.glungezerbahn.at/",
+    "https://de.wikipedia.org/wiki/Patscherkofel",
+    "https://www.vvt.at/"
+  ]
 }

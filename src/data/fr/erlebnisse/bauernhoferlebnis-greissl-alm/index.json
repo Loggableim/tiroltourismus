@@ -1,35 +1,32 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
   "region": "alpbach",
-  "beschreibung": "<p>Dans l'<strong>Alpbachtal</strong> – souvent cité comme « le plus beau village d'Autriche » –, le lien entre l'homme, l'animal et la nature perdure de manière authentique. Les visiteurs trouveront ici de véritables expériences alpines et paysannes.</p><h3>Expériences à la Ferme et en Alpage</h3><p>La <strong>Steinbergalm</strong> à Inneralpbach (1 712 m) est un incontournable pour observer la fabrication traditionnelle du fromage. Le berger Hannes Klingler produit de l'Almkäse et du Tiroler Graukäse depuis 1558. Saison : début juin – début octobre.</p><p>La <strong>Bischofer Käsalm</strong> propose fromagerie, dégustation et plateau de spécialités alpines. Saison : mai–octobre environ.</p><p>Le <strong>Bergbauernmuseum Vorder-Unterberg</strong> est un musée vivant de 1636 avec vaches, cochons et poules. Entrée : 3 € (adultes), 1,50 € (enfants). Ouvert de la Pentecôte à fin septembre, lun. et jeu. 13h–16h.</p><h3>Accès</h3><p>En <strong>voiture</strong> : A12, sortie Kramsach/Alpbachtal, puis L5 vers Alpbach. En <strong>transports en commun</strong> : train ÖBB jusqu'à Brixlegg, puis bus VVT 620 jusqu'à Inneralpbach (~35 min).</p>",
-  "preis": 35,
+  "koordinaten": {
+    "lat": "47.3983",
+    "lng": "11.9452"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Expérience ferme et alpage à la Greissl Alm d'Alpbach",
+  "beschreibung": "### Aperçu\nÀ Alpbach, souvent désigné comme le plus beau village en bois d'Autriche, les traditions agro-pastorales se perpétuent intactes depuis des siècles. Précision essentielle pour l'itinéraire : aucun alpage officiel nommé « Greißl-Alm » n'existe dans le cadastre tyrolien ni dans la vallée ; cette appellation provient d'une fiche fictive. En revanche, les sites ruraux authentiques de la région offrent exactement l'expérience recherchée par les familles. Le joyau patrimonial est l'écomusée de la ferme de montagne Vorder-Unterberg à Inneralpbach. Bâti entre 1636 et 1638 et habité jusqu'en 1952, ce domaine fonctionne comme un musée vivant : tandis que la cuisine à foyer ouvert (« Rauchkuchl ») sert encore au fumage traditionnel du lard, l'étable attenante abrite toujours bétail et volailles. D'autres haltes remarquables incluent la fromagerie d'alpage Bischofer Käsalm et les fermes séculaires du vallon de Greiter Graben.\n\n### Itinéraire & Exigences\nLes principales excursions agricoles d'Alpbach comprennent :\n1. Écomusée Vorder-Unterberg (Inneralpbach) : depuis le parking d'Inneralpbach, une voie carrossable facile mène à la ferme en 15 minutes (40 m de dénivelé), praticable en poussette.\n2. Bischofer Käsalm (1 334 m) : une auberge d'alpage réputée sur le versant sud sous le Gratlspitze, dotée d'une cave d'affinage visitable. La boucle depuis le centre d'Alpbach compte 6,8 km et 367 m de dénivelé (environ 2h30 de marche ; accessible en poussette par la piste forestière).\n3. Farmkehralm (1 521 m) dans le Greiter Graben : un alpage vieux de plus de 400 ans au pied du Großer Galtenberg. Depuis Inneralpbach, une piste gravillonnée monte en 1h30 (450 m de dénivelé).\nCes randonnées demandent des chaussures de marche profilées. Les chiens tenus en laisse sont bienvenus sur les sentiers, mais interdits à l'intérieur du musée.\n\n### Accès\nEn voiture, quitter l'autoroute A12 Inntal à la sortie Kramsach/Brixlegg et suivre la route L5 jusqu'à Alpbach puis Inneralpbach. Des parkings payants et gratuits sont aménagés au centre d'Alpbach et aux départs de randonnée d'Inneralpbach et du Hochberg. En transports publics, descendre en train en gare de Brixlegg puis emprunter le bus régional VVT ligne 4074 (cadence horaire) jusqu'au terminus Inneralpbach. Les bus régionaux sont gratuits avec l'Alpbachtal Card remise dès la première nuitée.\n\n### Conseils\nL'entrée au musée Vorder-Unterberg s'élève à environ 3,00 € pour les adultes (2,00 € avec carte d'hôte) et 1,50 € pour les enfants. En été, des visites guidées sont proposées certains après-midis. Les chalets d'alpage régalent les randonneurs d'assiettes paysannes composées de fromage Graukäse local, de beurre fermier et de pain de seigle. En été, des troupeaux de vaches allaitantes paissent dans le Greiter Graben ; tenez-vous à au moins 20 mètres des bêtes et détachez immédiatement votre chien si une vache s'approche avec insistance.",
+  "sources": [
+    "https://www.alpbachtal.at",
+    "https://www.alpbachtal.at/de/aktivitaeten/top-ausflugsziele",
+    "https://www.schuleambauernhof.at"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 35,
   "tags": [
     "familie",
     "bauernhof",
     "alm",
     "alpbach",
     "tiere"
-  ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.alpbachtal.at/",
-    "https://www.alpbachtal.at/de",
-    "https://www.alpbachtal.at/de/sommer",
-    "https://www.bergbauernmuseum.at/",
-    "https://de.wikipedia.org/wiki/Alpbach",
-    "https://www.vvt.at"
   ]
 }

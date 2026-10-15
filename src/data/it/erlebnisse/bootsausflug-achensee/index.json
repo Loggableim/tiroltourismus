@@ -1,34 +1,33 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "<p>L'<strong>Achensee</strong> è il lago più grande e profondo del Tirolo. La <strong>Achenseeschifffahrt GmbH</strong> gestisce corse regolari dal 1887, collegando villaggi pittoreschi.</p><h3>Panoramica &amp; Rotte</h3><p>Tre navi moderne – <strong>MS Stadt Innsbruck</strong> (2007), <strong>MS Tirol</strong> (1995) e <strong>MS Achensee</strong> (2016) – servono <strong>6 pontili</strong>: Pertisau, Buchau, Seespitz, Gaisalm, Seehofkapelle/Lido e Scholastika.</p><p>Biglietto giornaliero Hop-on/Hop-off: adulti 32–34 € | bambini 7–15 anni: 16–17 € (tariffa 2025). Sotto i 6 anni gratis. Biglietto famiglia: ca. 64–68 €. Gita circolare Nord: ca. 75 min, adulti 30 €. Gita circolare Sud: ca. 45 min, adulti 21 €. Stagione: inizio maggio – inizio novembre.</p><h3>Come Arrivare</h3><p>Con i <strong>mezzi pubblici</strong>: treno ÖBB/DB fino a Jenbach, poi autobus VVT (linea 4080, ca. 20–25 min). Combinabile con il treno a cremagliera storico (dal 1889) da Jenbach a Seespitz.</p>",
-  "preis": 22,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Giro in battello sul lago di Achensee – grande crociera panoramica",
+  "beschreibung": "### Panoramica\nFondata nel 1887 dall'abate Albert Wildauer del convento di Fiecht, la navigazione sul lago Achensee (Achenseeschifffahrt) unisce il fascino storico della marineria lacustre a una moderna esperienza di svago. Sul lago più grande del Tirolo, incastonato tra le pareti del Karwendel e le cime del Rofan, navigano tre moderne imbarcazioni: l'ammiraglia MS Tirol con una capienza di 600 passeggeri e ampi ponti prendisole, la confortevole MS Stadt Innsbruck (470 passeggeri) priva di barriere architettoniche e con ristorante a bordo, e l'elegante battello per eventi MS Achensee (500 passeggeri). Su acque profonde fino a 133 metri dall'aspetto fiordico, la crociera regala visuali mozzafiato. Il punto forte è lo scalo alla malga Gaisalm sulla ripida sponda occidentale: l'unica malga attiva di tutto il Tirolo raggiungibile esclusivamente a piedi lungo ripidi sentieri o via lago a bordo del battello, poiché non esistono strade.\n\n### Percorso & Requisiti\nI battelli effettuano servizio presso sei pontili: Pertisau (porto principale), Seespitz sulla riva meridionale, Buchau, la pittoresca Gaisalm, Seehofkapelle e Scholastika ad Achenkirch a nord. Il giro grande del lago (biglietto giornaliero Hop-on Hop-off) dura circa 2 ore e 10 minuti senza soste. Sono disponibili anche il tour Nord (circa 75 minuti) e il tour Sud (circa 45 minuti). Le motonavi sono accessibili alle persone con disabilità, provviste di rampe a filo, servizi igienici per disabili e saloni panoramici riscaldati. L'escursione non richiede alcuno sforzo fisico ed è ideale per famiglie con bambini e passeggini. I cani sono ammessi a bordo (biglietto dedicato di circa 4,00 euro); per legge vige l'obbligo assoluto di guinzaglio e museruola.\n\n### Come arrivare\nIl punto di partenza principale è Pertisau sulla passeggiata lungolago. In auto si giunge a Pertisau dall'autostrada A12 Inntal (uscita Wiesing/Achensee) lungo la strada statale B181. Parcheggi a pagamento sono situati a Pertisau (dietro l'Hotel Christina e lungo il lago), presso la spiaggia di Buchau e a Scholastika. Suggestivo è l'arrivo in treno fino a Jenbach e il trasbordo sulla storica ferrovia a cremagliera a vapore Achenseebahn (inaugurata nel 1889): il treno ferma direttamente al pontile di Seespitz consentendo un comodo trasbordo immediato. In alternativa è attivo l'autobus regionale VVT linea 4080.\n\n### Consigli\nIl biglietto giornaliero Hop-on Hop-off costa 34,00 euro per gli adulti (17,00 euro per ragazzi 7–15 anni; biglietto famiglia 68,00 euro; gratis sotto i 6 anni). I titolari della tessera ospiti AchenseeCard usufruiscono del 10% di sconto. Molto conveniente è il biglietto combinato battello e ferrovia a vapore Achenseebahn (72,00 euro adulti). L'itinerario più amato: navigare da Pertisau alla Gaisalm, pranzare in riva al lago e rientrare a piedi a Pertisau lungo il panoramico sentiero Gaisalmsteig in circa 1,5 ore (necessario passo sicuro). La stagione ordinaria va da maggio a fine ottobre; a dicembre sono attive suggestive corse natalizie.",
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ],
+  "bilder": [],
   "dauer": "2 Stunden",
+  "link": "#",
+  "preis": 22,
   "tags": [
     "barca",
     "Achensee",
     "navigazione",
     "natura",
     "panorama"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://achenseeschifffahrt.at",
-    "https://shop.achenseeschifffahrt.at",
-    "https://www.achenseebahn.at",
-    "https://de.wikipedia.org/wiki/Achensee",
-    "https://www.achensee.com/achensee/"
   ]
 }

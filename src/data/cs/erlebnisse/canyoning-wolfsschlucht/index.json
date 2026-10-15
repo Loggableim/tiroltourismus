@@ -1,35 +1,34 @@
 {
-  "name": "Canyoning in der Wolfsschlucht",
   "slug": "canyoning-wolfsschlucht",
   "emoji": "🧗",
   "farbe": "var(--tirol-red)",
   "kategorie": "abenteuer",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>Slanění, skoky, klouzání a brodění se v křišťálově čisté alpské vodě – <strong>canyoning</strong> je jedním z nejadrenalinovějších outdoorových zážitků v tyrolských horách. <strong>Sport Stubai</strong> v Neustiftu organizuje řízené výjezdy do nejlepších kaňonů v regionu.</p><p>Začátečnický canyoning (např. Alpenrosenklamm): obtížnost Level 1–2, minimální věk 10–12 let, délka cca 3,5–5 hod., cena cca <strong>75–95 €</strong>/os. Pokročilé výjezdy (např. Auerklamm): Level 3, min. věk 16–18 let, cca <strong>110–145 €</strong>/os. Sezóna: cca 1. května – 15. října.</p>",
-  "preis": 119,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Canyoning ve Wolfsschlucht",
+  "beschreibung": "### Přehled\nCanyoning v Tyrolsku představuje vrchol divokého vodního dobrodružství v hlubokých horských soutěskách. Klíčové upřesnění pro orientaci: vyhledávaný název „Wolfsschlucht“ vznikl záměnou se soutěskou Wolfsklamm u Stansu, kde je canyoning přísně zakázán a trasa slouží výhradně pěším turistům po dřevěných lávkách. Legendární kaňon, který v průvodcích nese toto označení, je Auerklamm s nástupem u mostu Wolfsbrücke v přední části údolí Ötztal (potok Nederbach u Oetzu). Auerklamm platí mezi outdoorovými nadšenci za absolutní královskou trasu a nejvelkolepější vodní kaňon Východních Alp (mezinárodní klasifikace v4 a5 IV). Hluboko zaříznutá žulová soutěska nabízí divoké vodopády, smaragdové tůně, přírodní skluzavky a slanění přímo v proudu horské řeky.\n\n### Průběh a náročnost\nKlasický sestup začíná u historického mostu Wolfsbrücke a prochází nejnáročnější vodní pasáží kaňonu. Zahrnuje skoky z výšky 10 až 14 metrů do hlubokých tůní, přírodní kamenné skluzavky dlouhé až 18 metrů (včetně pověstné „Čertovy díry“) a několik vodních slanění pod vodopády s výškou až 40 metrů. Při profesionálně vedených túrách platí pravidlo „Jump or Rope“: vysoké skoky nejsou povinné a lze je vždy slanit. Vzhledem k síle proudu a chladné vodě vyžaduje Auerklamm sportovní kondici, odolnost vůči závratím, spolehlivé plavecké dovednosti a minimální věk 14 až 16 let. Trasa je zcela nevhodná pro malé děti a psy (rodinné začátečnické túry od 8 let probíhají v soutěskách Alpenrosenklamm či Rosengartenschlucht).\n\n### Příjezd a doprava\nZákladny akreditovaných canyoningových agentur se nacházejí v údolí Innu a při vstupu do Ötztalu v obcích Haiming, Sautens a Ötztal-Bahnhof (mimo jiné areál AREA 47). Autem přijedete po dálnici A12 Inntalautobahn (sjezd 123 Ötztal) a silnici B186 Ötztalstraße. U základen je k dispozici bezplatné parkování; transfer k mostu Wolfsbrücke zajišťují pořadatelé mikrobusy. Vlakem dorazíte do rychlíkové stanice Ötztal-Bahnhof, odkud je většina center dostupná pěšky nebo transferem.\n\n### Praktické tipy\nCena túry se pohybuje mezi 90 a 130 eury na osobu. Kompletní certifikované vybavení (zesílený neopren 5–7 mm, neoprenové ponožky, helma na divokou vodu, speciální protiskluzová obuv a sedací úvazek s plastovým chráničem) poskytuje agentura. Účastníci potřebují pouze plavky a ručník. Sezóna trvá od konce května do začátku října, přičemž stav vody zpočátku výrazně ovlivňuje jarní tání sněhu. Zásadní bezpečnostní pravidlo: komerční canyoning smějí v Tyrolsku vést pouze státem certifikovaní tyrolští průvodci; při vysokém stavu vody nebo hrozbě bouřek platí přísný zákaz vstupu.",
+  "sources": [
+    "https://area47.at/outdoor/canyoning/",
+    "https://www.wolfsklamm.tirol",
+    "https://www.tirol.at",
+    "https://www.bergsportfuehrer-tirol.at",
+    "https://alpinesicherheit.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 119,
   "tags": [
     "canyoning",
     "wasser",
     "abenteuer",
     "stubaital",
     "action"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://sport-stubai.com",
-    "https://www.stubai.at",
-    "https://www.stubaierbergfuehrer.at",
-    "https://www.tirol.at/aktivitaeten/sport/canyoning",
-    "https://www.oetztal.com/canyoning",
-    "https://www.wolfsklamm.tirol"
   ]
 }

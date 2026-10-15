@@ -1,36 +1,34 @@
 {
-  "name": "E-Mountainbike Sunset Tour",
   "slug": "emtb-sunset-tour",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "bike",
   "ort": "Ötztal",
   "region": "oetztal",
-  "beschreibung": "<p>L'<strong>Ötztal</strong> è una delle principali destinazioni MTB delle Alpi. I <strong>Sunset Ride</strong> guidati sono particolarmente apprezzati.</p><p>La <strong>Bike Republic Sölden</strong> prolunга la Gaislachkoglbahn I ogni <strong>venerdì di luglio e agosto</strong> fino alle 19:15. Guida privata da 99 €/persona. Noleggio e-MTB: ca. 49–59 €/giorno.</p><p>Tour regolari: <strong>AREA 47</strong> (Haiming): ca. 83 €/pers. (incl. e-MTB in noleggio) | Bikeschule Ötztal: ca. 109 €/pers. (incl. noleggio e-bike, mar. e gio.).</p>",
-  "preis": 89,
+  "status": "published",
+  "hero_bild": null,
+  "koordinaten": {
+    "lat": "47.1003",
+    "lng": "10.9511"
+  },
+  "name": "Tour in eMTB al tramonto in Valle Ötztal",
+  "beschreibung": "### Panoramica\nUn tour guidato in e-mountain bike al tramonto nell'Ötztal unisce il piacere della pedalata assistita alla magia dell'ora d'oro sulle cime di tremila metri. Grazie all'esposizione verso ovest e sud-ovest dei pendii attorno a Sölden, la luce calda del crepuscolo dura particolarmente a lungo prima di accendere i ghiacciai circostanti nel fenomeno dell'enrosadira (Alpenglühen). Tra le mete più spettacolari c'è la storica malga Gampe Thaya a 2.000 metri di quota lungo il versante del Giggijoch (itinerario 643): un rifugio d'eccellenza con caseificio artigianale e cucina a chilometro zero. Un'alternativa più tranquilla è il percorso 652 verso la Brunnenbergalm (1.971 m) sul versante silenzioso di Sölden, che offre un colpo d'occhio frontale indimenticabile sulla sagoma piramidale del Gaislachkogl al calar della sera.\n\n### Percorso & Requisiti\nIl tour parte dal fondovalle di Sölden e si sviluppa su comode strade forestali sterrate per circa 12-15 chilometri e 600-700 metri di dislivello positivo. Con una moderna e-bike la salita è agevole per chiunque abbia una forma fisica di base; il tempo di pedalata è di circa 2-2,5 ore, per una durata complessiva di 3,5-4 ore compresa la cena in malga. La discesa serale su fondo sterrato richiede sicurezza nella frenata e buona conduzione del mezzo. I ragazzi dai 12 ai 14 anni possono partecipare se accompagnati. Il tour è precluso a bambini piccoli e cani per via della velocità e della guida notturna.\n\n### Come arrivare\nIl ritrovo è situato solitamente nel centro di Sölden (Freizeit Arena o cabinovia Gaislachkoglbahn). In auto si percorre l'autostrada A12 Inntal (uscita Ötztal) e la strada statale B186 fino a Sölden. Parcheggi disponibili presso l'autorimessa della Freizeit Arena e agli impianti di risalita. Con i mezzi pubblici l'autobus VVT linea 4194 collega frequentemente la stazione di Ötztal a Sölden. Gli autobus sono dotati di carrello portabici per il trasporto gratuito delle biciclette.\n\n### Consigli\nI tour guidati con le scuole di mountain bike costano circa 65-85 euro a partecipante (noleggio e-bike a parte da 55 euro presso i negozi del paese). È fondamentale partire con la batteria carica al 100% (almeno 625 Wh). Dotazione obbligatoria per il rientro notturno: faro anteriore da almeno 1.000 lumen al manubrio e torcia frontale sul casco per illuminare l'interno dei tornanti. Poiché dopo il tramonto a 2.000 metri la temperatura cala rapidamente di 10-15 gradi, è tassativo avere nello zaino giacca antivento, guanti lunghi invernali e fascia termica.",
+  "sources": [
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren",
+    "https://www.oetztal.com/de/aktivitaeten/sommer/biken-radfahren/bikelifte-radbus",
+    "https://bikerepublic.soelden.com/",
+    "https://www.soelden.com/",
+    "https://www.gampethaya.at/"
+  ],
+  "bilder": [],
   "dauer": "3–4 Stunden",
   "link": "#",
+  "preis": 89,
   "tags": [
     "mountain bike",
     "e-bike",
     "tramonto",
     "Ötztal",
     "escursione guidata"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": null,
-  "koordinaten": {
-    "lat": "47.1003",
-    "lng": "10.9511"
-  },
-  "sources": [
-    "https://www.oetztal.com",
-    "https://www.soelden.com",
-    "https://www.area47.at",
-    "https://www.bike-oetztal.at",
-    "https://www.rideon-soelden.com",
-    "https://www.feelfree-bike.at",
-    "https://www.oetztaler.at"
   ]
 }

@@ -1,35 +1,33 @@
 {
-  "name": "Fuchsbau-Rodeln in Serfaus",
   "slug": "fuchsbau-rodelbahn-serfaus",
   "emoji": "🛷",
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
   "region": "serfaus-fiss-ladis",
-  "beschreibung": "<p>En la meseta alpina de Serfaus, la <strong>pista natural de trineo de Serfaus</strong> (Komperdell–Serfaus) ofrece más de cuatro kilómetros de recorrido preparado con iluminación nocturna los miércoles.</p><h3>Recorrido &amp; Tarifas</h3><p>Salida a 1.980 m en la estación Komperdell, llegada a 1.440 m: <strong>550 m de desnivel</strong> a lo largo de <strong>4,0 km</strong>. Duración: 20–35 minutos. Telecabina abierta de 08:15 a 16:20; noche de trineo los miércoles hasta las 23:30. Subida adulto: 18,50 € (niños 11,50 €). Pase nocturno: 20,00 €. Alquiler de trineos en tiendas de deporte locales.</p><h3>Cómo Llegar</h3><p>Serfaus es peatonal. Aparcamiento a la entrada y metro subterráneo gratuito <strong>Dorfbahn Serfaus</strong> hasta los remontes. En transporte público: tren a Landeck-Zams y autobús VVT 220.</p><h3>Consejos</h3><ul><li><strong>Familias:</strong> Muy adecuado; niños solos a partir de 8 años.</li><li><strong>Perros:</strong> Estrictamente prohibidos en la pista de trineo.</li><li><strong>Seguridad:</strong> Botas de nieve con agarre y casco indispensables.</li></ul>",
-  "preis": 19,
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Pistas de trineo familiares en Serfaus-Fiss-Ladis",
+  "beschreibung": "### Resumen\nLa meseta soleada de Serfaus-Fiss-Ladis es una de las mecas familiares de deportes de invierno más prestigiosas de los Alpes, destacando por sus cuidadas pistas de trineo. Aclaración clave para el viajero: no existe ninguna pista oficial de trineo llamada «Fuchsbau» en la comarca; el nombre alude a «Bertas Fuchsbau», un túnel de nieve lúdico para niños esquiadores en Bertas Kinderland de Fiss. En cambio, las auténticas pistas de trineo de la estación ofrecen una experiencia insuperable: la pista natural de Serfaus desciende 4,0 kilómetros desde la estación superior de Komperdell (1.980 m) salvando 550 metros de desnivel hasta el pueblo. En Fiss, la famosa Hexen-Rodelbahn (pendiente suave del 12,5 %) recorre 4,0 km desde Steinegg (1.920 m). El abanico se completa con el Alpine Coaster sobre raíles Schneisenfeger en el parque Hög, que alcanza 40 km/h entre curvas peraltadas y espirales.\n\n### Ruta y Requisitos\nLas pistas están perfectamente acondicionadas y cuentan con remontes mecánicos:\n1. Pista de trineo de Serfaus: subida en el telecabina Komperdellbahn a 1.980 metros. Pista natural de 4,0 kilómetros y nivel intermedio con parada gastronómica en Seealm Hög.\n2. Hexen-Rodelbahn de Fiss: remonte con Schönjochbahn I hasta Steinegg. Con 4,0 kilómetros de longitud y 3 metros de anchura, resulta perfecta para familias con niños a partir de 5 años.\nNo es necesario subir a pie. Se exige ropa de abrigo invernal, botas de montaña con suela de goma antideslizante (¡prohibidas las botas de esquí rígidas!) y casco de esquí homologado. Queda terminantemente prohibido acceder con perros a las pistas de trineo.\n\n### Cómo llegar\nEn coche se viaja por la autopista A12 Inntal (salida Oberinntal/Reschenpass) y la carretera B180 hasta Ried im Oberinntal, ascendiendo por la L19 a la meseta. En invierno rige en Serfaus la prohibición de circular en coche particular; los visitantes aparcan en el gran estacionamiento a la entrada del pueblo. Desde allí, el metro subterráneo sobre colchón de aire Dorfbahn Serfaus traslada gratis a los viajeros hasta los telecabinas a través de cuatro paradas. En Fiss y Ladis hay aparcamiento en las estaciones inferiores. En tren se llega a Landeck-Zams y se enlaza con el autobús de línea.\n\n### Consejos\nDe día el descenso está incluido en el forfait o billete de peatón; el alquiler de trineo cuesta entre 10 y 15 € al día en las tiendas de las estaciones. Gran cita invernal: ¡el trineo nocturno! Cada miércoles por la noche la pista de Serfaus se ilumina hasta las 23:00 con motivo del espectáculo Adventure Night, mientras que Fiss celebra jornadas de trineo nocturno y fondue los jueves. Seguridad: regule la velocidad según el estado de la nieve, no se detenga nunca en curvas ciegas y sujete la correa del trineo a su muñeca.",
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/rodeln",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/attraktionen",
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/U-Bahn-Serfaus"
+  ],
+  "bilder": [],
   "dauer": "1–2 Stunden",
+  "link": "#",
+  "preis": 19,
   "tags": [
     "rodeln",
     "serfaus",
     "winter",
     "familie",
     "rodelbahn"
-  ],
-  "koordinaten": {
-    "lat": "47.0386",
-    "lng": "10.5739"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.serfaus-fiss-ladis.at/",
-    "https://www.serfaus-fiss-ladis.at/de",
-    "https://www.serfaus-fiss-ladis.at/de/Winterurlaub",
-    "https://www.serfaus-fiss-ladis.at/winter",
-    "https://de.wikipedia.org/wiki/Serfaus-Fiss-Ladis",
-    "https://www.bergfex.at/serfaus-fiss-ladis/"
   ]
 }

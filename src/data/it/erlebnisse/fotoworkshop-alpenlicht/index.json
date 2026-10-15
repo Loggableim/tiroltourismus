@@ -1,35 +1,34 @@
 {
-  "name": "Fotoworkshop 'Alpenlicht'",
   "slug": "fotoworkshop-alpenlicht",
   "emoji": "📸",
   "farbe": "var(--gold)",
   "kategorie": "kultur",
   "ort": "Pitztal",
   "region": "pitztal",
-  "beschreibung": "<p>Il <strong>Pitztal</strong> offre scenari alpini spettacolari per gli amanti della fotografia naturalistica. Un <strong>workshop fotografico alpino</strong> guida i partecipanti a dominare luci d'alta quota, laghi montani e ghiacciai.</p><h3>Contenuti &amp; Prezzi</h3><p>I corsi trattano golden hour, contrasti estremi su neve e roccia, lunghe esposizioni con filtri polarizzatori e ND su torrenti e cascate, nonché post-produzione RAW. Workshop diurno di gruppo (7–8 ore): ca. <strong>220–250 €</strong>/persona. Weekend intensivo di 2 giorni: ca. <strong>349–390 €</strong>. Coaching privato: da 280 € mezza giornata.</p><p><strong>Stagione:</strong> Fine giugno – metà settembre (estate), metà settembre – fine ottobre (autunno dorato) e inverno su ghiacciaio.</p><h3>Come Arrivare</h3><p>In <strong>auto</strong> via A12 uscita Imst/Pitztal e strada L16. Con i <strong>mezzi pubblici</strong>: stazione ferroviaria Imst-Pitztal, poi bus VVT 210 fino a Mandarfen/Mittelberg.</p>",
-  "preis": 79,
+  "koordinaten": {
+    "lat": "46.9792",
+    "lng": "10.8725"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Workshop di fotografia Alpenlicht",
+  "beschreibung": "### Panoramica\nUn workshop fotografico dedicato alle luci alpine nelle valli del Pitztal e del Kaunertal guida i fotografi verso i contrasti più spettacolari delle Alpi tirolesi. Tra creste aguzze, ghiacciai millenari e laghi smeraldini d'alta quota, i partecipanti imparano a padroneggiare la fotografia di paesaggio durante l'Ora d'Oro e l'Ora Blu, cogliendo l'enrosadira (Alpenglühen) sui tremila circostanti. Tra le location d'eccezione spicca il lago Rifflsee a 2.232 metri: il lago alpino più alto d'Austria riflette nelle sue acque immobili i picchi del Kaunergrat. Ancora più spettacolare è il Café 3440 sul ghiacciaio del Pitztal: sulla terrazza panoramica sospesa all'Hinterer Brunnenkogel, punto panoramico più alto d'Austria, si apre una vista circolare su oltre 50 vette e sulla piramide della Wildspitze (3.768 m). Il programma comprende anche sessioni di astrofotografia nel Kaunertal, rinomato per l'assenza di inquinamento luminoso.\n\n### Percorso & Requisiti\nI corsi combinano tecnica e sessioni pratiche di scatto. Le tappe caratteristiche includono il periplo del lago Rifflsee (circa 1 ora, 50 metri di dislivello), la stazione di monte della Wildspitzbahn a 3.440 metri e il belvedere «Gacher Blick» presso la Casa del Parco del Kaunergrat (1.560 m). È richiesto passo sicuro e scarponi da trekking, senza passaggi alpinistici impegnativi. È indispensabile presentarsi con fotocamera reflex o mirrorless con modalità manuale, treppiede solido, ottiche grandangolari e teleobiettivi, filtri ND e polarizzatori. L'attività è inadatta a bambini e cani a causa delle prolungate soste statiche al freddo.\n\n### Come arrivare\nLa base di partenza è Mandarfen presso la funivia Rifflseebahn o Mittelberg al ghiacciaio. In auto si esce dall'autostrada A12 a Imst/Pitztal seguendo la strada provinciale L16 fino a fine valle. Ampi parcheggi gratuiti presso le stazioni a valle. Con i mezzi pubblici si raggiunge in treno la stazione di Imst-Pitztal e si prosegue con l'autobus VVT linea 4204 (gratuito con la tessera Pitztal Sommer Card).\n\n### Consigli\nLa quota del workshop varia da 85 a 190 euro a seconda della formula (impianti esclusi; la cabinovia del Rifflsee è inclusa nella Pitztal Sommer Card). Suggestive le risalite all'alba al Café 3440 con colazione d'alta quota. Abbigliamento: tra i 2.200 e i 3.440 metri la temperatura serale scende spesso attorno allo zero anche in estate. Vestitevi a strati con piumino pesante, berretto e guanti fotografici con dita apribili. Portate batterie di scorta cariche, poiché il freddo riduce rapidamente l'autonomia.",
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.pitztal.com/de/rifflsee-bergbahn-sommer.html",
+    "https://www.pitztaler-gletscher.at",
+    "https://www.pitztaler-gletscher.at/cafe3440",
+    "https://www.kaunertal.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 79,
   "tags": [
     "fotografia",
     "laboratorio",
     "Alpi",
     "Pitztal",
     "paesaggio"
-  ],
-  "koordinaten": {
-    "lat": "46.9792",
-    "lng": "10.8725"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.pitztal.com/",
-    "https://www.pitztal.com/de",
-    "https://www.pitztaler-gletscher.at/",
-    "https://www.alpenverein-akademie.at/",
-    "https://de.wikipedia.org/wiki/Pitztal",
-    "https://www.vvt.at"
   ]
 }

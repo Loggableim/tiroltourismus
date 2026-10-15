@@ -1,35 +1,34 @@
 {
-  "name": "Canyoning in der Wolfsschlucht",
   "slug": "canyoning-wolfsschlucht",
   "emoji": "🧗",
   "farbe": "var(--tirol-red)",
   "kategorie": "abenteuer",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>Rappelling, salti, scivoli e guado in acque alpine cristalline – il <strong>canyoning</strong> è una delle avventure outdoor più entusiasmanti nelle montagne tirolesi. <strong>Sport Stubai</strong> a Neustift organizza tour guidati nelle gole più note della regione.</p><p>Canyoning per principianti (es. Alpenrosenklamm): difficoltà Level 1–2, età minima 10–12 anni, durata ca. 3,5–5 ore, prezzo ca. <strong>75–95 €</strong>/persona. Tour avanzati (es. Auerklamm): Level 3, età min. 16–18 anni, ca. <strong>110–145 €</strong>/persona. Stagione: ca. 1° maggio – 15 ottobre.</p>",
-  "preis": 119,
+  "koordinaten": {
+    "lat": "47.1549",
+    "lng": "11.3509"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Canyoning nella gola Wolfsschlucht",
+  "beschreibung": "### Panoramica\nIl canyoning in Tirolo è sinonimo di pura adrenalina tra gole d'alta quota scavate da acque tumultuose. Chiarimento fondamentale per l'itinerario: la denominazione «Wolfsschlucht» nasce da una frequente confusione con la gola Wolfsklamm di Stans, dove il torrentismo è categoricamente vietato e riservato agli escursionisti su passerelle di legno. La celebre forra a cui fa riferimento questo nome nelle guide alpine è l'Auerklamm con ingresso al ponte Wolfsbrücke, nella bassa valle dell'Ötztal (torrente Nederbach presso Oetz). L'Auerklamm è considerata il percorso di canyoning più spettacolare e ambito delle Alpi orientali (classificazione tecnica v4 a5 IV). Incisa nel granito, la forra regala una sequenza ininterrotta di cascate spumeggianti, pozze verde smeraldo, scivoli naturali di roccia e spettacolari calate su corda nel getto d'acqua.\n\n### Percorso & Requisiti\nLa discesa classica comincia dallo storico ponte Wolfsbrücke e attraversa la sezione più acquatica della gola. Il tracciato include tuffi fino a 10-14 metri di altezza in pozze profonde, scivoli di roccia levigata fino a 18 metri di lunghezza (tra cui il celebre «Buco del Diavolo») e calate in corda doppia sotto cascate con salti massimi di 40 metri. Nelle uscite con guide alpine vige la regola «Jump or Rope»: i tuffi alti non sono mai obbligatori e possono sempre essere affrontati in corda doppia. A causa della forza delle correnti e delle basse temperature dell'acqua, l'Auerklamm richiede ottima forma fisica, assenza di vertigini, buone capacità natatorie e un'età minima di 14-16 anni. L'escursione è vietata a bambini piccoli e cani (per le famiglie con bambini da 8 anni sono disponibili percorsi didattici nell'Alpenrosenklamm o nella Rosengartenschlucht).\n\n### Come arrivare\nLe basi operative delle guide alpine e fluviali si trovano nella valle dell'Inn e all'ingresso dell'Ötztal tra Haiming, Sautens e Ötztal-Bahnhof (inclusa l'AREA 47). In auto si percorre l'autostrada A12 Inntal (uscita 123 Ötztal) e la statale B186. Presso tutte le basi sono disponibili ampi parcheggi gratuiti; il trasferimento fino al ponte Wolfsbrücke viene effettuato con i pulmini delle guide. In treno si scende alla stazione ferroviaria di Ötztal-Bahnhof, situata a breve distanza da molti centri outdoor.\n\n### Consigli\nL'escursione costa tra 90 e 130 euro a persona. Tutta l'attrezzatura tecnica necessaria (muta in neoprene da 5–7 mm, calzari, casco omologato per acque vive, calzature ad alta aderenza e imbragatura da forra con protezione posteriore) viene interamente fornita dalle guide. È sufficiente portare costume da bagno e telo mare. La stagione si protrae da fine maggio a inizio ottobre; il disgelo primaverile influenza notevolmente le portate idriche. Regola di sicurezza: in Tirolo le escursioni guidate devono essere condotte per legge esclusivamente da guide di torrentismo autorizzate; con idrometro in zona rossa o rischio temporali l'accesso alla forra è vietato.",
+  "sources": [
+    "https://area47.at/outdoor/canyoning/",
+    "https://www.wolfsklamm.tirol",
+    "https://www.tirol.at",
+    "https://www.bergsportfuehrer-tirol.at",
+    "https://alpinesicherheit.com"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 119,
   "tags": [
     "canyoning",
     "acqua",
     "avventura",
     "valle dello stubai",
     "azione"
-  ],
-  "koordinaten": {
-    "lat": "47.1549",
-    "lng": "11.3509"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://sport-stubai.com",
-    "https://www.stubai.at",
-    "https://www.stubaierbergfuehrer.at",
-    "https://www.tirol.at/aktivitaeten/sport/canyoning",
-    "https://www.oetztal.com/canyoning",
-    "https://www.wolfsklamm.tirol"
   ]
 }

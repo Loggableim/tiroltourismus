@@ -1,35 +1,32 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
   "region": "alpbach",
-  "beschreibung": "<p>In het <strong>Alpbachtal</strong> – vaak aangeduid als „het mooiste dorp van Oostenrijk“ – leeft de band tussen mens, dier en natuur nog authentiek voort.</p><h3>Boerderij- &amp; Alpenervaringen</h3><p>De <strong>Steinbergalm</strong> in Inneralpbach (1.712 m) laat bezoekers traditionele kaasmakerij meemaken sinds 1558. Seizoen: begin juni – begin oktober.</p><p>De <strong>Bischofer Käsalm</strong> biedt kaasmakerij en een alpenbord. Seizoen: ca. mei–oktober.</p><p>Het <strong>Bergbauernmuseum Vorder-Unterberg</strong> is een levend museum uit 1636. Toegang: €3 (volwassenen), €1,50 (kinderen). Open: Pinksteren–eind september, ma. en do. 13:00–16:00.</p>",
-  "preis": 35,
+  "koordinaten": {
+    "lat": "47.3983",
+    "lng": "11.9452"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Boerderij- en almeleven bij de Greissl Alm in Alpbach",
+  "beschreibung": "### Overzicht\nIn Alpbach, veelvuldig uitgeroepen tot mooiste houtbouwdorp van Oostenrijk, wordt het authentieke boeren- en alpenleven al eeuwenlang in stand gehouden. Belangrijk voor de planning: een alm met de naam 'Greißl-Alm' bestaat niet in het officiële Tiroolse alpenkadaster; het betreft een fictieve benaming uit een eerdere database. De werkelijke agrarische bestemmingen in het Alpbachtal bieden echter precies de authentieke ervaringen die gezinnen zoeken. Het absolute hoogtepunt is het Alpbacher boerderijmuseum 'Vorder-Unterberg' in Inneralpbach. Deze monumentale boerderij stamt uit 1636–1638 en werd tot 1952 bewoond. Als levend museum combineert het historische kamers met actieve veeteelt: terwijl in de authentieke rookkeuken nog steeds spek wordt gerookt, graast in de stal en op de weiden rundvee. Daarnaast bieden almen zoals de Bischofer Käsalm met kaaskelders en historische weiden in de Greiter Graben prachtige doelen.\n\n### Route & Vereisten\nDe mooiste boerderijwandelingen in Alpbach:\n1. Boerderijmuseum Vorder-Unterberg (Inneralpbach): vanaf de parkeerplaats in Inneralpbach voert een verharde weg in circa 15 minuten (40 hoogtemeters) naar de boerderij; geschikt voor kinderwagens.\n2. Bischofer Käsalm (1.334 m): een geliefde horeca-alm op de zonnige helling onder de Gratlspitze met kaasmakerij en rotskelder. De rondwandeling vanaf de dorpskern van Alpbach beslaat 6,8 kilometer en 367 hoogtemeters (circa 2,5 uur wandelen; via de bosweg kinderwagenvriendelijk).\n3. Farmkehralm (1.521 m) in de Greiter Graben: een ruim 400 jaar oude alm aan het dalhoofd van de Großer Galtenberg. Vanaf Inneralpbach loopt een breed grindpad omhoog in circa 1,5 uur (450 hoogtemeters).\nDe tochten vergen een normale wandelconditie en stevige schoenen. Honden aan de lijn zijn welkom op de wandelpaden; in het museumgebouw zijn huisdieren niet toegestaan.\n\n### Bereikbaarheid\nMet de auto vanaf de A12 Inntal-snelweg (afrit Kramsach/Brixlegg) over de provinciale weg L5 naar Alpbach en Inneralpbach. Parkeergelegenheid is aanwezig in het dorpscentrum en bij de wandelparkeerplaatsen in Inneralpbach en op de Hochberg. Met het openbaar vervoer reist men per trein naar station Brixlegg en stapt men over op de VVT-streekbus lijn 4074 (uursdienst) naar Inneralpbach. Het busvervoer is gratis met de Alpbachtal Card (inbegrepen vanaf één overnachting).\n\n### Tips\nToegang tot het museum Vorder-Unterberg bedraagt circa € 3,00 voor volwassenen (€ 2,00 met gastenkaart) en € 1,50 voor kinderen. 's Zomers zijn er op vaste middagen rondleidingen. Op de almen geniet men van een traditionele 'Hüttenjause' met echte Graukäse, alpenboter en boerenbrood. Op de alpenweiden in de Greiter Graben grazen zomers moederkoeien met kalfjes; bewaar minimaal 20 meter afstand en laat honden direct los mocht vee op hen afkomen.",
+  "sources": [
+    "https://www.alpbachtal.at",
+    "https://www.alpbachtal.at/de/aktivitaeten/top-ausflugsziele",
+    "https://www.schuleambauernhof.at"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 35,
   "tags": [
     "familie",
     "boerderij",
     "alm",
     "Alpbach",
     "dieren"
-  ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "sources": [
-    "https://www.alpbachtal.at/",
-    "https://www.alpbachtal.at/de",
-    "https://www.alpbachtal.at/de/sommer",
-    "https://www.bergbauernmuseum.at/",
-    "https://de.wikipedia.org/wiki/Alpbach",
-    "https://www.vvt.at"
   ]
 }

@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "Zams",
   "kategorie": "burg",
-  "kurzbeschreibung": "Malebná hradiště nad Zams s středověkým věžovým hradem a úchvatným panoramatickým výhledem na Oberinntal a Lechtaler Alpen.",
-  "beschreibung": "<p>Die <strong>Burg Kronburg</strong> thront auf einem steilen Felskopf oberhalb der Gemeinde Zams bei Landeck.. Die im 13.. Jahrhundert erbaute Höhenburg diente einst als Sitz der Herren von Kronburg.. Heute ist sie eine malerische Ruine, deren mächtiger <strong>Bergfried</strong> noch fast vollständig erhalten ist und bestiegen werden kann.. Der Aufstieg durch den Wald ist ein kurzer, lohnender Spaziergang.</p>",
+  "kurzbeschreibung": "Z??cenina Burg Kronburg se ty?? na strm?m skaln?m ku?elu nad Zams: st?edov?k? skaln? hrad z doby kolem 1380, poutn? kostel Maria Hilf a kl??ter.",
+  "beschreibung": "<h2>P?ehled</h2><p>Historicky proslul? hrad <strong>Burg Kronburg</strong> (zn?m? t?? jako <em>Ruine Kronburg</em>) se ty?? na v?razn?m, strm? vystupuj?c?m skaln?m ku?elu v nadmo?sk? v??ce 1 066 metr? vysoko nad ?dol?m ?eky Inn mezi obcemi Zams a Sch?nwies v pr?zdninov?m regionu TirolWest. Obklopen hust?mi horsk?mi lesy a strm?mi skaln?mi sr?zy tvo?? voln? se ty??c? z??cenina spolu s n??e polo?en?m poutn?m kostelem Maria Hilf, historick?m hostincem a kl??tern?m statkem Klostergut Kronburg jedine?n? duchovn? a kulturn?-historick? soubor v tyrolsk? oblasti Tiroler Oberland.</p><h2>Historie a poutn? m?sto</h2><p>Archeologick? n?lezy dokl?daj?, ?e v?razn? hradn? vrch slou?il jako ?to?i?t? ji? v prav?ku. Samotnou pevnost nechal kolem roku 1380 postavit ?lechtic <strong>Johann von Starkenberg</strong> pro vojenskou kontrolu ?dol? ?eky Inn. Po ne?sp??n?m povst?n? p?n? ze Starkenbergu proti tyrolsk?mu panovn?kovi jm?nem <strong>Friedrich IV. mit der leeren Tasche</strong> byl hrad v roce 1423 oble?en a p?ipadl zemsk?m kn??at?m. V roce 1504 p?edal c?sa? <strong>Maximilian I.</strong> hrad Kronburg vlivn?mu ?lechtick?mu rodu Fieger?, kte?? jej obytn? roz???ili. Pot?, co byl are?l od druh? poloviny 18. stolet? neob?v?n a rod v roce 1802 vym?el, stavba zch?trala ve z??ceninu. V roce 1985 spolek ?Rettet die Kronburg? zdivo zachr?nil rozs?hlou sanac?. V sedle pod hradn? sk?lou vzniklo od roku 1673 po z?zra?n?ch uzdraven?ch poutn? m?sto <em>Maria Hilf</em>; barokn? poutn? kostel byl roz???en v letech 1714 a? 1717. V sou?asnosti se o kl??tern? statek s l?skou staraj? sestry Barmherzige Schwestern von Zams.</p><h2>N?v?t?va a p??jezd</h2><p>Z??cenina hradu Kronburg je po cel? rok b?hem dne voln? a <strong>zcela bezplatn? p??stupn?</strong> (vstup na vlastn? nebezpe??). Poutn? kostel Maria Hilf je b?hem dne rovn?? otev?en k modlitb? a prohl?dce; p?ilehl? hostinec Gasthof Kronburg v?t? hosty v r?mci sez?nn? otev?rac? doby. Doprava ve?ejn?mi prost?edky: vlakem na n?dra?? Landeck-Zams, odtud region?ln?mi autobusy do obc? Zams nebo Sch?nwies. Od zast?vek v ?dol? vedou dob?e zna?en? turistick? trasy (nap?. po Starkenberger Panoramaweg), kter? zaberou cca 45 a? 60 minut ch?ze ke kl??tern?mu statku. Autem: z d?lnice Inntalautobahn A12 nebo silnice B171 u Zams sledovat zna?en? sm?r Kronburg; asfaltov? horsk? silnice vede p??mo k n?v?t?vnick?mu parkovi?ti u kl??tern?ho statku Klostergut Kronburg. Z parkovi?t? vede strm? lesn? a skaln? p??ina k hradu za cca 15 minut.</p><h2>Tipy</h2><p>V?stup z kl??tern?ho statku ke z??cenin? po kamenit? stezce vy?aduje jist? krok a pevnou horskou obuv; pro ko??rky a invalidn? voz?ky je cesta ke z??cenin? nesj?zdn?. Are?l kl??tern?ho statku s poutn?m kostelem a hostincem je naopak bezbari?rov? a pohodln? p??stupn?. Kronburg je obl?benou zast?vkou na tyrolsk? svatojakubsk? cest? (Tiroler Jakobsweg) ? vychutnejte si hlubok? klid poutn?ho m?sta a ?chvatn? v?hled na ?doln? kotlinu m?sta Landeck.</p>",
   "emoji": "🏰",
   "farbe": "#8D6E63",
   "hoehe": "1.050 m",
   "dauer": "1–2 Stunden",
-  "preis": "Kostenlos",
+  "preis": "Eintritt frei",
   "tags": [
     "burg",
     "geschichte",
@@ -19,10 +19,16 @@
     "wandern",
     "familie"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.zams.at",
+  "oeffnungszeiten": "Burgruine ganzjährig tagsüber frei zugänglich",
+  "webseite": "https://www.klostergut-kronburg.at",
   "koordinaten": {
     "lat": "47.1600",
     "lng": "10.6000"
-  }
+  },
+  "sources": [
+    "https://www.klostergut-kronburg.at",
+    "https://www.tirolwest.at",
+    "https://www.starkenberger-panoramaweg.at",
+    "https://de.wikipedia.org/wiki/Burg_Kronburg"
+  ]
 }

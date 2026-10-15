@@ -66,7 +66,7 @@ const allCamping = readCollection('camping', locale).filter(c => isPublished(c.e
 const STAT_LABELS = {
   de: { regionen: 'Regionen', orte: 'Orte', sights: 'Sehenswürdigkeiten', stays: 'Unterkünfte & Camping' },
   en: { regionen: 'Regions', orte: 'Places', sights: 'Sights', stays: 'Stays & Camping' },
-  fr: { regionen: 'Régions', orte: 'Villages', sights: 'Sites', stays: 'Hébergements & Camping' },
+  fr: { regionen: 'Régions', orte: 'Villages', sights: 'Sites touristiques', stays: 'Hébergements & Camping' },
   it: { regionen: 'Regioni', orte: 'Paesi', sights: 'Attrazioni', stays: 'Alloggi & Campeggio' },
   es: { regionen: 'Regiones', orte: 'Pueblos', sights: 'Atracciones', stays: 'Alojamientos & Camping' },
   zh: { regionen: '地区', orte: '村镇', sights: '景点', stays: '住宿与露营' },
@@ -205,7 +205,7 @@ const useArt = ['de', 'en', 'fr', 'cs', 'nl', 'it', 'es', 'zh'].includes(locale)
 
     <section class="section" id="sehenswuerdigkeiten">
       <div class="container">
-        <SectionHeader label={sl.sehenswuerdigkeiten} title={locale === 'de' ? 'Sehenswürdigkeiten' : locale === 'fr' ? 'Sites' : locale === 'it' ? 'Attrazioni' : locale === 'es' ? 'Atracciones' : locale === 'zh' ? '景点' : locale === 'nl' ? 'Bezienswaardigheden' : locale === 'cs' ? 'Pamětihodnosti' : 'Sights'} sub={locale === 'de' ? 'Die schönsten Ausflugsziele in Tirol.' : locale === 'en' ? 'Discover the most beautiful excursion destinations in Tyrol.' : locale === 'fr' ? 'Découvrez les plus beaux sites touristiques du Tyrol.' : locale === 'it' ? 'Scopri le più belle attrazioni del Tirolo.' : locale === 'es' ? 'Descubre los lugares de interés más bellos del Tirol.' : locale === 'zh' ? '发现蒂罗尔最美丽的景点。' : locale === 'nl' ? 'Ontdek de mooiste uitstapbestemmingen in Tirol.' : locale === 'cs' ? 'Objevte nejkrásnější výletní cíle v Tyrolsku.' : page.whyTirol?.desc || page.regionen.desc} />
+        <SectionHeader label={sl.sehenswuerdigkeiten} title={locale === 'de' ? 'Sehenswürdigkeiten' : locale === 'fr' ? 'Sites touristiques' : locale === 'it' ? 'Attrazioni' : locale === 'es' ? 'Atracciones' : locale === 'zh' ? '景点' : locale === 'nl' ? 'Bezienswaardigheden' : locale === 'cs' ? 'Pamětihodnosti' : 'Sights'} sub={locale === 'de' ? 'Die schönsten Ausflugsziele in Tirol.' : locale === 'en' ? 'Discover the most beautiful excursion destinations in Tyrol.' : locale === 'fr' ? 'Découvrez les plus beaux sites touristiques du Tyrol.' : locale === 'it' ? 'Scopri le più belle attrazioni del Tirolo.' : locale === 'es' ? 'Descubre los lugares de interés más bellos del Tirol.' : locale === 'zh' ? '发现蒂罗尔最美丽的景点。' : locale === 'nl' ? 'Ontdek de mooiste uitstapbestemmingen in Tirol.' : locale === 'cs' ? 'Objevte nejkrásnější výletní cíle v Tyrolsku.' : page.whyTirol?.desc || page.regionen.desc} />
         <div class="sight-grid">
           {sights.map((s) => (
             <SightCard

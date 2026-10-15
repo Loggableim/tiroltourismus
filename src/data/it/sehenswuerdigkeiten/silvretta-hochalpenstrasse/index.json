@@ -6,12 +6,12 @@
   "ort": "Ischgl",
   "kategorie": "aussicht",
   "kurzbeschreibung": "Strada alpina spettacolare con 58 curve a chiocciola che porta dal Tirol al Montafon – con viste mozzafiato sulla Silvretta-Gletscherwelt.",
-  "beschreibung": "Die Silvretta Hochalpenstraße verbindet Tirol mit Vorarlberg und zählt zu den schönsten Alpenstraßen der Ostalpen. Auf 58 Kehren überwindet sie den knapp 2.032 m hohen Bielerhöhe-Pass und führt entlang der <strong>Silvretta-Stauseen</strong> mit ihrer beeindruckenden Berg- und Gletscherkulisse. Zahlreiche Aussichtspunkte ermöglichen spektakuläre Fotos der Silvretta-Gletscher. Die Straße ist auch bei Motorradfahrern und Rennradfahrern äußerst beliebt. Am Bielerhöhe laden die Staumauer und mehrere Wandertouren zum Verweilen ein.",
+  "beschreibung": "<h2>Panoramica</h2><p>La <strong>Strada Alpina del Silvretta</strong> (Silvretta-Hochalpenstraße) è una delle strade panoramiche più spettacolari delle Alpi. Con 22,3 km e 34 tornanti collega il Tirolo al Vorarlberg fino al valico Bielerhöhe (2.037 m), dominato dallo splendido bacino turchese del Silvretta-Stausee e dal massiccio del Piz Buin (3.312 m).</p><h2>Percorso &amp; Requisiti</h2><p>Il giro del lago Silvretta è un'escursione pianeggiante per tutta la famiglia di 6,3 km con vista costante sui ghiacciai (1h30-2 ore, facile T1). Gli escursionisti esperti salgono al rifugio Wiesbadener Hütte (2.443 m) nella valle Ochsental (2h30, dislivello 400 m, T2). Sul lago naviga il battello MS Silvretta, la linea di navigazione più alta d'Europa. Abbigliamento caldo antivento indispensabile. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>In treno ÖBB fino a Landeck-Zams e autobus VVT 260 attraverso la valle Paznaun fino alla Bielerhöhe. In auto dalla B188 oltre Galtür lungo la strada a pedaggio (aperta da inizio giugno a fine ottobre). Grandi parcheggi al passo.</p><h2>Consigli</h2><p>Fate una traversata a bordo del battello panoramico MS Silvretta e gustate le specialità tipiche tirolesi sulla terrazza del Silvretta-Haus ammirando i ghiacciai del Piz Buin.</p>",
   "emoji": "🗻",
   "farbe": "#4CAF50",
   "hoehe": "2.032 m (Bielerhöhe)",
-  "dauer": "Halbtag",
-  "preis": "21 € pro Fahrzeug",
+  "dauer": "3–5 Stunden",
+  "preis": "Mautgebühr Silvretta-Hochalpenstraße ca. 18–21 € pro PKW (Schifffahrt ca. 7 €)",
   "tags": [
     "strada panoramica",
     "vista panoramica",
@@ -20,11 +20,17 @@
     "ghiacciaio"
   ],
   "oeffnungszeiten": "Mitte Juni bis Mitte Oktober, täglich 6:00–20:00",
-  "webseite": "https://www.silvretta-hochalpenstrasse.at",
+  "webseite": "https://www.silvretta-bielerhoehe.at",
   "koordinaten": {
     "lat": "46.9333",
     "lng": "10.0833"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.silvretta-bielerhoehe.at/",
+    "https://de.wikipedia.org/wiki/Silvretta-Hochalpenstra%C3%9Fe",
+    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-silvretta-stausee/1381426/",
+    "https://www.vvt.at/"
+  ]
 }

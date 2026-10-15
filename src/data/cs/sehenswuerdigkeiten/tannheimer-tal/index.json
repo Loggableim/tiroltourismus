@@ -6,12 +6,12 @@
   "ort": "Tannheim",
   "kategorie": "natur",
   "kurzbeschreibung": "Hochtal v Allgäuer Alpen – známý pro svou Vilsalpsee-Bergkulisse, kilometrové turistické stezky a tradiční alpskou hospodu.",
-  "beschreibung": "<p>Das Tannheimer Tal liegt im österreichischen Bundesland Tirol, an der Grenze zu Bayern. Die Landschaft ist von Almflächen, Bergseen und bewaldeten Hängen geprägt. Der Vilsalpsee im südlichen Teil des Tals ist Teil eines Naturschutzgebiets. Das Tal bietet ein Wegenetz für <strong>Wanderungen</strong> und <strong>Radtouren</strong> im Sommer sowie präparierte Pisten und Loipen für den Wintersport. Die umliegenden Gipfel der Allgäuer Alpen, darunter der Einstein und das Gaishorn, rahmen die Region ein. Die touristische Infrastruktur ist auf Aktivitäten in der Natur ausgerichtet. Die Ortschaft Tannheim dient als zentraler Ort für Unterkünfte und Versorgung.</p>",
+  "beschreibung": "<h2>Přehled</h2><p>Údolí <strong>Tannheimer Tal</strong> (1 100 m) je opakovaně označováno za „nejkrásnější vysokohorské údolí Evropy“. Rozkládá se na severozápadě Tyrolska u bavorských hranic a okouzluje křišťálovými jezery (Vilsalpsee a Haldensee), rozkvetlými loukami a vápencovými štíty Rote Flüh a Gimpel.</p><h2>Trasa a náročnost</h2><p>Rovinatý okruh kolem jezera Haldensee je bezbariérový a vhodný pro kočárky (4,5 km, 1,5 hodiny chůze, T1). Kabinková lanovka na Neunerköpfle vyveze turisty k „největší vrcholové knize Alp“ do výšky 1 860 m (T1). Zkušení lezci vyhledávají ferratu na Lachenspitze (C/D). Pevná obuv na hřebenech nutná. Psi na vodítku vítáni.</p><h2>Příjezd a doprava</h2><p>Vlakem do Reutte nebo Sonthofenu (Bavorsko) a autobusy 120/121. Autem z Německa po dálnici A7 přes průsmyk Oberjoch bez nutnosti rakouské dálniční známky. Parkoviště u lanovek.</p><h2>Tipy</h2><p>Využijte pobytovou kartu s bezplatnými lanovkami a ochutnejte vyzrálý horský sýr Tannheimer Almkäse na slunečné terase salaše Vilsalpe.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Ganztag",
-  "preis": "Kostenlos (Naturgebiet)",
+  "dauer": "Halbtags bis Ganztags",
+  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
   "tags": [
     "tal",
     "wandern",
@@ -21,11 +21,19 @@
     "family"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich",
-  "webseite": "https://www.tannheimer-tal.at",
+  "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
     "lng": "10.5167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Ganzjährig zugänglich (Sommersaison Mai bis Oktober ideal)",
+  "familie": true,
+  "sources": [
+    "https://www.tannheimertal.com/",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal",
+    "https://www.naturpark-tiroler-lech.at/",
+    "https://www.vvt.at/"
+  ]
 }

@@ -1,27 +1,37 @@
 {
-  "name": "Mountainbike Trailpark Bikepark Innsbruck",
+  "name": "Bikepark Innsbruck (Muttereralm & Götzens)",
   "slug": "mountainbike-trailpark-innsbruck",
   "emoji": "🚵",
   "farbe": "var(--orange)",
   "kategorie": "abenteuer",
-  "ort": "Innsbruck",
+  "ort": "Mutters / Götzens (Innsbruck)",
   "region": "innsbruck",
-  "beschreibung": "Der Bikepark Innsbruck auf der Muttereralm bietet Downhill-Strecken für jedes Können. Von flowigen Single Trails bis zu anspruchsvollen Freeride-Strecken mit Sprüngen und Northshore-Elementen ist alles dabei. Bike-Verleih und Schutzkleidung sind vor Ort erhältlich.",
-  "preis": 49,
-  "dauer": "3–4 Stunden",
+  "beschreibung": "Überblick\nDirekt vor den Toren der Tiroler Landeshauptstadt liegt mit dem Bikepark Innsbruck auf der Muttereralm und in Götzens eine der renommiertesten Mountainbike-Adressen des Alpenraums. Als offizieller Austragungsort der internationalen Crankworx World Tour zieht das Areal Profisportler aus aller Welt an, begeistert jedoch ebenso Freizeitbiker, Familien und Enduro-Liebhaber. Mit knapp zwanzig Kilometern erstklassig angelegter Strecken, die von sanft geschwungenen Flowtrails über verspielte Jumplines bis hin zu kompromisslosen, weltcuptauglichen Downhill-Pisten reichen, bietet der Trailpark ein abwechslungsreiches Terrain vor der imposanten Kulisse der Nordkette und der Kalkkögel.\n\nRoute & Anforderungen\nDas Herzstück für Einsteiger und Genussfahrer bildet die Strecke „The Chainless One“ (Schwierigkeitsgrad Blau / S1). Mit 8,5 Kilometern Länge und rund 636 Höhenmetern Abfahrt von der Bergstation auf 1.597 Metern hinab zur Talstation Mutters ist sie einer der längsten Flowtrails Europas, geprägt von breiten Anliegerkurven, sanften Wellen und spielerischen Holzkonstruktionen, die fast ohne Pedalumdrehungen gerollt werden können. Fortgeschrittene Fahrer wählen „The First One“ (Rot / S2, 1,9 km, 270 hm) mit naturnahen Waldpassagen und Wallrides oder biegen in die sprunglastige Jumpline mit 16 Tables ein. Könner und Downhill-Spezialisten messen sich auf „The Straight One“ (Schwarz / S3, 2,9 km, 341 hm) mit Steinfeldern und Wurzelteppichen oder stürzen sich in die Crankworx-Rennstrecke „The Rough One / Götzens Trail“ (Schwarz / S3, 2,2 km, 500 hm). An der Bergstation steht für den Nachwuchs ein Rookie-Park mit sicherem BagJump-Airbag bereit, während an der Talstation Mutters Pumptracks und Dual-Slalom-Kurse locken. Das Befahren der roten und schwarzen Trails erfordert fundierte Fahrtechnik. Auf allen Strecken gilt strikte Helmpflicht (Fullface-Helm für schwarze Strecken dringend empfohlen) sowie Pflicht für Knieprotektoren. Hunde dürfen auf den Trails nicht mitlaufen.\n\nAnreise\nDie Talstation der Muttereralmbahn befindet sich am Nockhofweg 40 in 6162 Mutters. Von Innsbruck ist der Park umweltfreundlich im Halbstundentakt mit der traditionsreichen Stubaitalbahn (STB) bis zur Haltestelle Mutters Nockhofweg erreichbar (von dort ca. 600 Meter talwärts rollen). Im Hochsommer verkehrt an Wochenenden zudem ein kostenloser Bike-Shuttle ab dem Tiroler Landestheater. Mit dem Pkw erfolgt die Anfahrt über die A13/A12 (Ausfahrt Innsbruck-Süd). Die Parkplatzgebühr an der Talstation (10 Euro pro Tag) wird Bergbahngästen beim Kauf eines Lifttickets an der Kassa rückerstattet.\n\nTipps\nDie Muttereralmbahn ist von Ende Mai bis Ende Oktober täglich von 09:00 bis 17:00 Uhr in Betrieb; im Juli und August bietet der „Lange Mittwoch“ Liftbetrieb bis 20:00 Uhr für sommerliches Feierabend-Biken. Ein Tagesticket kostet regulär ca. 57 Euro an der Kassa (über den Onlineshop ab ca. 44 Euro ermäßigt). Der Bikepark ist vollwertiges Mitglied der europäischen Gravity Card. An der Talstation stehen ein professioneller Bike-Verleih (Die Börse), eine Bikeschule sowie eine kostenlose Bike-Wash-Station mit Waschlanzen zur Verfügung.",
+  "preis": 44,
+  "dauer": "Halbtags bis Ganztags (3 bis 6 Stunden)",
   "tags": [
     "mountainbike",
     "bikepark",
-    "downhill",
+    "crankworx",
     "innsbruck",
-    "trail"
+    "downhill",
+    "flowtrail",
+    "abenteuer",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.2563",
     "lng": "11.4020"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.muttereralm.at/bikepark",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Muttereralm",
+    "https://www.patscherkofelbahn.at",
+    "https://www.gravity-card.com",
+    "https://www.innsbruck.info",
+    "https://www.crankworx.com"
+  ]
 }

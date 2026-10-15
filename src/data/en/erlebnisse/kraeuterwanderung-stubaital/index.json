@@ -6,16 +6,20 @@
   "kategorie": "wandern",
   "ort": "Stubaital",
   "region": "stubaital",
-  "beschreibung": "<p>The Stubaital is a side valley of the Inntal in Tyrol, about 35 kilometers long, south of Innsbruck, with the five main towns Neustift, Fulpmes, Telfes, Mieders and Schönberg. The coordinates of the entry are located in the front Stubaital near Telfes. In summer, about 850 kilometers of hiking trails lead through the region; among them is the pleasure trail \"Stubaier Almkräuter\" from Milders to the Auffangalm and Brandstattalm.</p><p>The entry describes a guided herb hike with an herb educator and tasting of regional products, duration about four hours, price 55 euros. An assignment to a named, bookable provider was not possible based on publicly accessible official sources.</p>",
-  "preis": 55,
-  "dauer": "4 Stunden",
-  "link": "#",
+  "beschreibung": "Overview\nStretching thirty-five kilometers south of Innsbruck, the Stubaital valley ranks among the botanically richest valleys of the Tyrolean Alps thanks to its vast vertical gradients—from sun-kissed larch meadows at 1,000 meters to glacial summits exceeding 3,000 meters. The union of ancient crystalline bedrock, pristine alpine bogs, and traditional hay farming fosters over three hundred species of alpine herbs and wild botanicals. Along designated routes such as the official 'Stubaier Almkräuter' (Alpine Herbs) trail in Neustift-Milders or guided wetland herb excursions from the Serlesbahnen lifts in Mieders, visitors explore ancient folk healing lore. Accompanied by certified local herbalists, hikers uncover how mountain arnica, wild thyme, eyebright, and lady's mantle have underpinned alpine home remedies, herbal salves, and regional cuisine for centuries.\n\nRoute & Requirements\nThe valley offers several distinguished botanical walking routes:\n1. 'Stubaier Almkräuter' Gourmet Trail (Neustift-Milders): Designed by the Stubaital Tourist Board, this 9.5-kilometer route climbs roughly 650 vertical meters from Milders (1,026 m) through the Oberbergtal valley to the rustic Auffangalm (1,620 m) and Brandstattalm huts. The trail passes thriving patches of genuine mountain arnica, wild thyme, ribwort plantain, and alpine cat's-foot. Walking time is 4 to 4.5 hours, graded as moderate on wide logging roads and mountain paths. The upper forest section from Josef parking area is accessible for rugged all-terrain strollers.\n2. Guided High Bog & Herb Hike Serles (Mieders): Departing every Monday from the Koppeneck mountain station (1,605 m), this 9-kilometer circular hike (300 vertical meters, 4 hours duration) leads past Maria Waldrast Abbey to protected high-moor biotas, showcasing rare insectivorous sundew and cotton grass. Easy to moderate.\n3. Telfer Wiesen (Telfes): A gentle 6-to-8-kilometer circular walk (150 vertical meters, 2 hours) across light larch woods adorned with wild orchids and aromatic herbs.\n4. Herbal Workshops: In Neustift, certified herbalists host workshops crafting natural cosmetics, herbal tinctures, and traditional aromatic bundles.\nAll routes suit active families with children. Dogs on leashes are welcome (watch out for grazing cattle; muzzles are mandatory on public buses and cable cars).\n\nGetting There\nFrom Innsbruck, take the Brenner motorway A13 (exit Schönberg) onto the B183 Stubaital federal road. By public transport, the frequent VVT bus 590 runs directly from Innsbruck Central Station to Mieders, Telfes, and Neustift. Additionally, the historic Stubaitalbahn (STB tram) connects Innsbruck to Telfes and Fulpmes. Spacious parking is provided at Serlesbahnen Mieders and the Josef hiking lot in Oberbergtal.\n\nTips\nGuests staying at participating hotels receive the complimentary 'Stubai Super Card', granting free travel on bus 590, the STB tram, and regional cable cars. Weekly guided hikes hosted by the tourist board are included free of charge. Sturdy hiking boots with non-slip tread and rain gear are essential. Note: Strict harvesting bans apply in protected peatlands and nature preserves; picking unprotected wild herbs is strictly limited to modest hand bouquets outside protected zones.",
+  "preis": 0,
+  "dauer": "3 bis 4,5 Stunden",
+  "link": "https://www.stubai.at/aktivitaeten/wandern/",
   "tags": [
-    "hiking",
-    "herbs",
-    "nature",
-    "Stubai Valley",
-    "event"
+    "wandern",
+    "kraeuter",
+    "stubaital",
+    "neustift",
+    "mieders",
+    "serles",
+    "hochmoor",
+    "alpenflora",
+    "tirol"
   ],
   "status": "published",
   "bilder": [],
@@ -23,5 +27,11 @@
   "koordinaten": {
     "lat": "47.1549",
     "lng": "11.3509"
-  }
+  },
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.stubai.at/aktivitaeten/wandern",
+    "https://www.stubai.at/unterkuenfte/stubai-super-card",
+    "https://www.stubai.at/skigebiete/serlesbahnen"
+  ]
 }

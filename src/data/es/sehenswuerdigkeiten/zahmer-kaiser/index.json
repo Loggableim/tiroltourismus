@@ -1,10 +1,10 @@
 {
-  "name": "Zahmer Kaiser",
+  "name": "Zahmer Kaiser & Kaisertal",
   "slug": "zahmer-kaiser",
   "region": "kufstein",
   "ort": "Ebbs",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Der wald- und almenreiche Bergzug über dem Inntal – Naturschutzgebiet Kaisergebirge, Tischofer Höhle, Anton-Karg-Haus und Pyramidenspitze.",
   "emoji": "⛰️",
   "farbe": "#A9A9A9",
   "tags": [
@@ -13,10 +13,10 @@
     "familie",
     "natur"
   ],
-  "dauer": "Variabel",
-  "preis": "Kostenlos",
+  "dauer": "2–5 Stunden",
+  "preis": "Kostenlos (Parkplatz Kaisertal Sparchen ca. 5–6 € pro Tag)",
   "oeffnungszeiten": "Immer zugänglich",
-  "webseite": "https://www.kaisergebirge.de/",
+  "webseite": "https://www.kufstein.com/de/ebbs/kultur-ausflugsziele/kaisertal.html",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,14 @@
     "lng": "12.2952"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Zahmer Kaiser</strong> – Die Zahmer Kaiser begeistert Besucher mit ihrer ursprünglichen Schönheit und lädt zum Entdecken und Verweilen ein. Der Zahme Kaiser mit seinen sanften Gipfeln und weiten Almwiesen ist ein ideales Wandergebiet für Familien und Genusswanderer Die einzigartige Landschaft mit ihren schroffen Felsformationen, glasklaren Bergbächen und duftenden Almwiesen zieht Naturliebhaber aus aller Welt an. Ein Besuch am frühen Morgen oder zur Abenddämmerung belohnt mit besonders stimmungsvollen Lichtverhältnissen. Eingebettet in die malerische Kulisse der Tiroler Alpen, präsentiert sich die Zahmer Kaiser als Ort der Ruhe und Erholung. Die gute Erreichbarkeit von Ebbs aus macht sie zu einem lohnenden Tagesausflugsziel.  Auch für Familien mit Kindern gibt es hier viel zu entdecken und zu erleben. Ob Sommer oder Winter: Die Zahmer Kaiser ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>Zahmer Kaiser</strong> (2.002 m en Kesselschneid) es la vertiente norte más verde y amable del macizo del Kaisergebirge sobre Kufstein y Ebbs. Frente a las paredes desnudas del Wilder Kaiser, destaca por sus bosques alpinos, el idílico valle Kaisertal y la prehistórica <strong>cueva Tischofer Höhle</strong>, donde se hallaron restos de osos cavernarios.</p><h2>Ruta y Requisitos</h2><p>Subida por la escalinata de Kaiseraufstieg desde Kufstein-Sparchen y sendero forestal señalizado hasta la cueva de Tischofer (1,5 horas, fácil T1/T2). Ascenso exigente de montaña a la Pyramidenspitze (1.997 m, 4 horas, 1.300 m de desnivel, T3). Calzado de trekking y linterna recomendados. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren hasta la estación de Kufstein y autobús urbano 1 o 2 hasta Sparchen/Kaisertal. En coche por la autopista A12 (salida Kufstein-Nord) hasta el aparcamiento de Kaisertal.</p><h2>Consejos</h2><p>Lleve una linterna frontal para inspeccionar con seguridad el sobrecogedor interior de la cueva de Tischofer y deguste especialidades tirolesas en el caserío tradicional Veitenhof.</p>",
+  "saison": "Mai bis Oktober (Kaisertal-Hauptweg auch im Winter geräumt)",
+  "familie": true,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zahmer_Kaiser",
+    "https://www.kufstein.com/",
+    "https://www.kaisertal.com/",
+    "https://www.alpenvereinaktiv.com/de/tour/ins-kaisertal-zur-tischofer-hoehle/1381495/",
+    "https://www.vvt.at/"
+  ]
 }

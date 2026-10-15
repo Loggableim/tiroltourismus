@@ -1,0 +1,45 @@
+name: Content Gate (berichtend)
+
+on:
+  pull_request:
+    paths:
+      - 'src/data/**'
+
+permissions:
+  contents: read
+
+jobs:
+  content-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - name: Checkout (volle Historie für Basis-Vergleich)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node einrichten
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Content-Gate ausführen
+        id: gate
+        env:
+          BASE_REF: origin/${{ github.base_ref }}
+        run: |
+          set +e
+          node scripts/check-content-gate.mjs --base "$BASE_REF" > content-gate.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: Ergebnis als Job-Summary
+        if: always()
+        run: |
+          if [ -s content-gate.md ]; then
+            cat content-gate.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Content-Gate hat keine Ausgabe erzeugt." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "Exit-Code des Skripts: ${{ steps.gate.outputs.exit_code }} (berichtend, nicht blockierend)" >> "$GITHUB_STEP_SUMMARY"

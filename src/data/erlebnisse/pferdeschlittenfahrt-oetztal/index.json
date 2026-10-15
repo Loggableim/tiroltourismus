@@ -4,15 +4,17 @@
   "emoji": "🐴",
   "farbe": "var(--brown)",
   "kategorie": "winter",
-  "ort": "Ötztal",
+  "ort": "Längenfeld",
   "region": "oetztal",
-  "beschreibung": "Märchenhaft durch die verschneite Winterlandschaft: Eine Kutschfahrt mit dem Pferdeschlitten durch das Ötztal ist ein romantisches Erlebnis für die ganze Familie. Eingekuschelt unter dicken Wolldecken gleiten Sie sanft durch die Stille der weissen Pracht. Ein Halt an einer Almhütte mit heissem Punsch und gebrannten Mandeln rundet das Erlebnis ab.",
-  "preis": 55,
-  "dauer": "1,5 Stunden",
+  "beschreibung": "### Überblick\nEine winterliche Pferdeschlittenfahrt im Ötztal gehört zu den stimmungsvollsten Naturerlebnissen der Tiroler Alpen. Eingehüllt in dicke Wolldecken und Schaffelle gleitet man auf traditionellen Kufenschlitten durch die tief verschneite Winterlandschaft, während der gleichmäßige Hufschlag der kräftigen Tiroler Haflinger und das leise Klingen der Glöckchen die Stille des Tals untermalen. Das Herzstück des Schlittenbetriebs im Ötztal liegt im breiten, sonnigen Becken von Längenfeld. Hier bietet der flache Talboden auf rund 1.200 Metern Seehöhe perfekte Schneeverhältnisse abseits des hektischen Pistentrubels. Weitere beliebte Standorte für private Ausfahrten finden sich auf dem sonnigen Hochplateau von Niederthai sowie im hochalpinen Bergsteigerdorf Vent auf 1.900 Metern. Bei unzureichender Schneelage rüsten die erfahrenen Kutscher flexibel auf gummibereifte Panoramakutschen um.\n\n### Route & Anforderungen\nDie rund einstündigen Rundfahrten starten meist im Ortszentrum von Längenfeld oder im Ortsteil Unterried. Die Route führt sanft über weitläufige, glitzernde Schneefelder entlang des Fischbachs, vorbei an alten Holzhöfen und kleinen Kapellen mit freiem Panoramablick auf die Dreitausender der Ötztaler und Stubaier Alpen. Das Erlebnis erfordert keinerlei sportliche Fitness und eignet sich ideal für Mehrgenerationenfamilien, Paare und Senioren. Da man während der Fahrt rund sechzig Minuten regungslos im Fahrtwind sitzt, ist warme Winterkleidung mit Mütze, gefütterten Handschuhen und winterfestem Schuhwerk unerlässlich. Die Schlitten bieten je nach Gespann Platz für vier bis acht Personen.\n\n### Anreise\nDie Anreise nach Längenfeld erfolgt mit dem Auto mautfrei über die A12 Inntalautobahn (Ausfahrt Ötztal) und die gut geräumte Bundesstraße B186 (Fahrzeit ca. 25 Minuten ab Autobahnausfahrt). Parkmöglichkeiten stehen direkt an den Kutscherhöfen (z. B. Schlittenfahrten Kuprian oder Haflingerhof) sowie auf den öffentlichen Parkplätzen im Zentrum von Längenfeld zur Verfügung. Mit den öffentlichen Verkehrsmitteln erreicht man das Tal ab dem Bahnhof Ötztal bequem mit dem Ötztalbus (Linie 320), der im Halbstundentakt verkehrt und direkt an den Haltestellen Längenfeld Gemeindeamt oder Unterried stoppt.\n\n### Tipps\nBuchen Sie Ihre Schlittenfahrt unbedingt mehrere Tage im Voraus telefonisch, besonders während der Hauptsaison zu Weihnachten und in den Februarferien. Besonders romantisch sind Dämmerungs- und Abendfahrten ab 17:00 Uhr, wenn Laternen den Weg durch den Schnee erleuchten. Auf Vorbestellung halten viele Kutscher dampfenden Glühwein, Jagatee oder heißen Apfelpunsch bereit. Hunde sind bei vorheriger Absprache auf vielen Schlitten willkommen, sofern sie ruhig und pferdegewöhnt sind; eine eigene warme Decke für den Hund ist ratsam. Nach der winterlichen Schlittenpartie empfiehlt sich ein Aufwärmen in den Thermenbecken des nahegelegenen Aqua Dome in Längenfeld.",
+  "preis": "Ab 70,00 € bis 110,00 € pro Schlitten (bis 5 Personen)",
+  "dauer": "ca. 50–60 Minuten",
   "tags": [
-    "schlittenfahrt",
     "winter",
+    "pferdeschlitten",
     "oetztal",
+    "laengenfeld",
+    "haflinger",
     "romantik",
     "familie"
   ],
@@ -21,7 +23,15 @@
     "lng": "10.9511"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.oetztal.com/en/winter/active-winter/winter-highlights/carriage-rides/",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.oetztal.com/winter/",
+    "https://www.der-veitenhof.at",
+    "https://www.reitstall-pegasus.com",
+    "https://www.reitstall-pegasus.com/DE/Kutschenfahrten",
+    "https://www.tirol.at"
+  ]
 }

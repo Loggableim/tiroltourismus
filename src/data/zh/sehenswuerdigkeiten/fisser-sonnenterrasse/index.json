@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Fiss",
   "kategorie": "aussicht",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Die Fisser Sonnenterrasse liegt auf rund 1.450 Metern oberhalb von Fiss und bietet einen <strong>Panoramablick</strong> auf die Samnaun- und Verwallgruppe sowie das Inntal. Die <strong>Aussichtsplattform</strong> ist mit Ruhebänken und einer Liegewiese ausgestattet. Besucher erreichen sie über Wanderwege oder mit der Gondelbahn. Die Terrasse dient als <strong>Startpunkt</strong> für Spaziergänge und Touren im Naturpark. Die <strong>Südhanglage</strong> sorgt für überdurchschnittlich viele Sonnenstunden. Vor Ort befindet sich eine <strong>Einkehrmöglichkeit</strong>. Gäste erwartet eine unverbaute Aussicht und ein ruhiger Aufenthalt.</p>",
+  "kurzbeschreibung": "海拔1436米的Fisser Sonnenterrasse阳光露台以罗曼什风貌村落、每年逾2000小时日照及s’Paules und s’Seppls Haus博物馆引人入胜。",
+  "beschreibung": "<h2>概览</h2><p><strong>Fisser Sonnenterrasse</strong>阳光露台是蒂罗尔上地区（Tiroler Oberland）著名的塞劳斯-菲斯-拉迪斯（Serfaus-Fiss-Ladis）高原上如画的核心区域。菲斯（Fiss）市镇高居于因河上游幽深谷地之上，坐落于海拔约1436米、朝向绝佳的山坡台地上。凭借每年超过2000小时的充足日照，该高原堪称整个阿尔卑斯山脉阳光最充沛的地区之一。村落依偎在西侧的Samnaungruppe山脉与东侧的Ötztaler Alpen群峰之间，将原汁原味的阿尔卑斯文化遗产与现代化的旅游基础设施融于一体。</p><h2>村落历史与建筑</h2><p>这片向阳高地的定居历史远在公元前便已开启：考古发掘证实了青铜时代和雷蒂亚时期的定居痕迹，随后罗马人将其划入雷蒂亚省（Raetia）。菲斯于1288年首次见于文献记载，当时名为<em>Fizes</em>。与大多数蒂罗尔农耕村庄不同，菲斯完好保留了其作为<strong>罗曼什风格紧凑型聚集村落</strong>（Haufendorf）的独特风貌。由于向阳耕地对于谷物种植极为珍贵，村民们的房屋建得极其紧凑密集。典型的菲斯农舍以厚重的石墙、小巧的窗洞、雕花华丽的拱形大门以及横跨巷道的木质过道为特色。<strong>Museum s’Paules und s’Seppls Haus</strong>博物馆是这一建筑文化的杰出典范：这座建于16和17世纪、受文物保护的罗曼什双联农庄经过精细修复，完好重现了原汁原味的传统起居室、熏烟厨房和古老谷仓，生动展现了昔日几个世纪艰辛的农家日常。当地的文化盛事当属富有传统的<em>Fisser Blochziehen</em>（菲斯木桩狂欢巡游）——这一古老的谢肉节民俗已被联合国教科文组织列入人类非物质文化遗产名录。</p><h2>参观与交通</h2><p>菲斯限速静音的村庄中心以及阳光露台上的观景步道全年免费开放供游客漫步游览。Museum s’Paules und s’Seppls Haus博物馆在夏季和冬季旅游季每周固定几天开放（通常为周二和周四16:00至18:30；成人门票约5.00欧元）。自驾指南：沿因河谷A12高速公路或S16快速路行驶至Ried im Oberinntal，随后沿修缮良好的Serfauser Landesstraße L19公路盘山行驶至Fiss（村口及缆车站附近设有醒目标识的大型停车场）。公共交通：乘坐奥地利联邦铁路（ÖBB）至Landeck-Zams长途火车站，换乘班次密集的VVT公交220路直达<em>Fiss Postamt</em>邮局站（车程约45分钟）。</p><h2>贴士</h2><p>村中心的主要林荫步道和村内街道均铺设了沥青，非常适合轮椅和婴儿推车平稳通行。从菲斯乘坐Schönjochbahn缆车可直达海拔超过2430米的高山，尽享视野绝佳的高山步道与Fisser Flitzer夏季旱地雪橇项目。务必安排时间前往哥特式的St. Johannes der Täufer（施洗约翰）教区教堂散步，并在村落边缘阳光充足的观景长椅上俯瞰Obere Gericht山谷的壮丽全景。</p>",
   "emoji": "☀️",
   "farbe": "#FFC107",
   "hoehe": "2.000 m",
   "dauer": "Halbtag",
-  "preis": "36 € (Bergbahn Sommer)",
+  "preis": "Dorfbesuch kostenlos; Museum ca. 5,00 €",
   "tags": [
     "aussicht",
     "panorama",
@@ -19,12 +19,18 @@
     "wandern",
     "bergbahn"
   ],
-  "oeffnungszeiten": "Sommer: täglich 8:30–17:00; Winter: täglich 8:30–16:00",
+  "oeffnungszeiten": "Dorfkern ganzjährig frei zugänglich; Museum saisonal Di/Do 16:00–18:30 Uhr",
   "webseite": "https://www.serfaus-fiss-ladis.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "10.6167"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/Fiss",
+    "https://www.museum-fiss.at",
+    "https://de.wikipedia.org/wiki/Fiss",
+    "https://www.fiss.at"
+  ]
 }

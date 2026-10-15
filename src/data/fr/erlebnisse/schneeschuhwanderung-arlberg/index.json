@@ -1,12 +1,12 @@
 {
-  "name": "Schneeschuhwanderung Arlberg",
+  "name": "Randonnée guidée en raquettes à l'Arlberg",
   "slug": "schneeschuhwanderung-arlberg",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "winter",
   "ort": "St. Anton am Arlberg",
   "region": "st-anton",
-  "beschreibung": "Abseits der Pisten die winterliche Stille geniessen: Mit Schneeschuhen und einem erfahrenen Bergführer wandern Sie durch den tiefen Pulverschnee des Arlbergs. Vorbei an verschneiten Hütten und märchenhaften Wäldern erreichen Sie einen Aussichtspunkt mit grandiosem Panorama. Der krönende Abschluss ist eine Jause in einer urigen Hütte mit Glühwein.",
+  "beschreibung": "### Aperçu\nLes randonnées guidées en raquettes au berceau du ski alpin dévoilent des paysages d'hiver féeriques à l'écart des pistes bondées de Ski Arlberg. St. Anton am Arlberg et les villages voisins de Pettneu et Flirsch offrent plus de quatre-vingts kilomètres de chemins d'hiver damés et de pentes de neige vierge. Le joyau incontesté demeure la vallée sauvage du Verwalltal: longeant les gorges de la Rosanna entre cascades de glace, passerelle suspendue spectaculaire et forêts de pins jusqu'au lac gelé du Verwallsee. Accompagnés par des guides de haute montagne diplômés d'Arlberg Free Moving ou de l'école de ski d'Arlberg, les marcheurs savourent le silence immaculé de la montagne.\n\n### Itinéraire et exigences\nLe circuit classique part de Mooserkreuz à St. Anton et monte doucement dans le Verwalltal jusqu'au refuge Wagner Hütte et autour du Verwallsee (10 km, 150 m de dénivelé, 2h30 à 3h30 de marche). Les randonnées plus sportives montent depuis Pettneu vers l'alpage de Nessleralm (400 m de dénivelé) ou parcourent les crêtes panoramiques du Galzig à plus de 2 000 mètres. La marche en neige profonde demande une bonne endurance. Hors des pistes damées, le triptyque DVA, pelle et sonde est obligatoire, de même que la consultation du bulletin d'avalanche du Tyrol.\n\n### Accès\nSt. Anton abrite la plus haute gare TGV/Railjet des Alpes en plein cœur du village, permettant une arrivée facile en train sans voiture. Des navettes gratuites et le Verwallbus (ligne 6) desservent les départs de sentiers. En voiture, l'accès se fait par la voie rapide S16, avec parkings payants aux gares de télécabine du Rendl et de Nasserein (environ 8 € par jour).\n\n### Conseils\nLa location de raquettes et bâtons d'hiver coûte environ 15 à 19 € par jour dans les magasins de sport locaux (Sport Matt ou Intersport). Les sorties nocturnes guidées à la lampe frontale constituent une expérience magique. L'activité convient aux enfants dès 8-10 ans. Les chiens tenus en laisse sont autorisés; un baume protecteur pour les coussinets est recommandé contre la neige glacée.",
   "preis": 69,
   "dauer": "4 Stunden",
   "tags": [
@@ -23,5 +23,14 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/de/winter/winter-und-schneeschuhwandern",
+    "https://www.stantonamarlberg.com/de/die-region-st-anton-am-arlberg/anreise",
+    "https://www.arlbergerbergbahnen.com",
+    "https://www.skiarlberg.at",
+    "https://arlberg-free-moving.com",
+    "https://www.skischule-arlberg.com",
+    "https://lawinen.report"
+  ]
 }

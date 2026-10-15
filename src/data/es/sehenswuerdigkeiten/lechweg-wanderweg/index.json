@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Lechaschau",
   "kategorie": "natur",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Der <strong>Lechweg Wanderweg</strong> in Lechaschau ist ein Abschnitt des 125 Kilometer langen Fernwanderwegs entlang des Lechs. Die Route führt durch die flache Flusslandschaft des <strong>Lechtals</strong> mit Auwäldern und Schotterbänken. Der Weg ist durchgängig markiert und Teil des europäischen Fernwanderwegs <strong>E5</strong>. Auf dem Abschnitt zwischen Weißenbach und Reutte durchquert der Weg Lechaschau und bietet Ausblicke auf die <strong>Allgäuer Alpen</strong>. Mehrere Rastplätze und Schautafeln informieren über Flora und Fauna der Region. Der Wanderweg ist für Tagesausflüge sowie als Teil einer längeren Etappe nutzbar. Die Wege sind überwiegend flach und auf Schotter- sowie Waldwegen geführt.</p>",
+  "kurzbeschreibung": "El Lechweg en el Außerfern tirolés: senderismo por el Naturpark Tiroler Lech con el puente colgante de 200 m de Holzgau y paisajes fluviales vírgenes.",
+  "beschreibung": "<h2>Visión general</h2><p>El <strong>tramo del Lechweg en el Außerfern tirolés</strong> conforma el auténtico corazón de esta ruta europea de gran recorrido de 125 kilómetros. Desde Steeg, en la divisoria con Vorarlberg, pasando por Holzgau, Elbigenalp, Weißenbach y Lechaschau/Reutte, este sendero certificado <em>Leading Quality Trail</em> recorre uno de los últimos ecosistemas fluviales salvajes intactos de Europa Central. Diseñado como una travesía de exigencia moderada, el itinerario sigue el curso aguas abajo del río Lech mientras se ensancha, regalando a los amantes de la naturaleza espectaculares puentes colgantes, frondosos bosques de ribera y el inconfundible rumor de sus aguas verde esmeralda.</p><h2>Naturpark Tiroler Lech y espectaculares puentes colgantes</h2><p>Durante muchos kilómetros, la caminata transcurre directamente por el <strong>Naturpark Tiroler Lech</strong>: el río aún goza aquí del espacio necesario para reconfigurar libremente sus bancos de grava tras cada crecida. Las extensas playas de cantos rodados y las islas fluviales dinámicas constituyen un refugio vital para especies de fauna y flora sumamente escasas, como el chorlitejo chico, el andarríos chico y la amenazada <em>Deutsche Tamariske</em> (tamarisco alemán). Las travesías de las gargantas son momentos estelares: en Holzgau, los senderistas salvan la profunda sima del Höhenbachtal por la <strong>Hängebrücke Holzgau</strong> a una vertiginosa altura de 110 metros; con 200,5 metros de longitud, se sitúa entre las pasarelas colgantes peatonales más largas de Austria. Más abajo, cerca de Forchach, un puente colgante de 75 metros se balancea sobre las turbulentas corrientes del Lech. Cerca de Weißenbach y Lechaschau/Reutte, el fondo del valle se abre en amplias llanuras aluviales, antes de que el camino avance junto a la torre de avistamiento de aves de Pflach y el mágico Alpsee hacia su punto final en el Lechfall junto a Füssen.</p><h2>Visita & Cómo llegar</h2><p>La temporada idónea de senderismo en el Außerfern se extiende desde mediados de mayo hasta finales de octubre. Todo el recorrido del Lechweg es de <strong>acceso libre y gratuito</strong> (el cruce de los puentes colgantes tampoco requiere pago). La distancia total de 125 km suele completarse en seis u ocho jornadas de entre 12 y 18 kilómetros. Una gran ventaja: a lo largo de todo el valle circula el autobús regional <em>Lechbus</em> (línea VVT 110), que traslada con flexibilidad a los caminantes entre sus alojamientos y los puntos de inicio de cada etapa (gratuito con la tarjeta de huésped Lechtal). En coche: por la B198 (Lechtalstraße) desde Reutte o por el puerto de montaña Fernpass (B179). En transporte público: en tren hasta la estación Bahnhof Reutte in Tirol, conectando cómodamente con el autobús del valle Lechtalbus.</p><h2>Consejos</h2><p>El Lechweg discurre en su mayor parte por pistas de media montaña accesibles y senderos de ribera llanos sin pasos de escalada alpina expuestos, por lo que resulta idóneo tanto para senderistas de travesía principiantes como para familias. Quienes prefieran evitar el puente colgante de Holzgau pueden bordear la garganta por un sendero tradicional muy agradable a través del valle de Höhenbachtal. Aproveche el cómodo servicio comarcal de traslado de maletas para caminar sin peso, llevando solo una mochila de día.</p>",
   "emoji": "🥾",
   "farbe": "#2196F3",
   "hoehe": "850–1.800 m",
   "dauer": "5–7 Tage (Gesamtstrecke)",
-  "preis": "Kostenlos",
+  "preis": "Wanderweg und Hängebrücken kostenlos; Gepäcktransfer buchbar",
   "tags": [
     "wandern",
     "flusslandschaft",
@@ -19,12 +19,18 @@
     "natur",
     "lech"
   ],
-  "oeffnungszeiten": "Ganzjährig begehbar (beste Zeit: Mai–Okt)",
-  "webseite": "https://www.lechweg.at",
+  "oeffnungszeiten": "Mitte Mai bis Ende Okt frei begehbar (Etappen flexibel wählbar)",
+  "webseite": "https://www.lechweg.com",
   "koordinaten": {
     "lat": "47.4667",
     "lng": "10.7000"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechweg.com",
+    "https://www.naturpark-tiroler-lech.at",
+    "https://www.lechtal.at",
+    "https://www.reutte.com"
+  ]
 }

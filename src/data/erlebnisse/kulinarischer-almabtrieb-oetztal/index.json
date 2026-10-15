@@ -4,24 +4,33 @@
   "emoji": "🍽️",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
-  "ort": "Ötztal",
+  "ort": "Längenfeld / Vent",
   "region": "oetztal",
-  "beschreibung": "Der Almabtrieb im Ötztal wird zum grossen kulinarischen Fest. Neben dem traditionellen Umzug der geschmückten Kühe erwarten die Besucher Stände mit regionalen Köstlichkeiten: Almkäse, Geräuchertes, frische Bauernbrote und natürlich der berühmte Ötztaler Grauvogel-Braten. Ein Fest für die Sinne!",
-  "preis": 0,
-  "dauer": "1 Tag",
+  "beschreibung": "### Überblick\nDer Almabtrieb im Ötztal markiert den feierlichen Abschluss des alpinen Sommers und verbindet jahrhundertealtes Brauchtum mit authentischer Tiroler Festtagskulinarik. Mitte September kehren die festlich geschmückten Rinderherden von den hochgelegenen Almen wie der Sulztalalm oder Innerbergalm in die Talorte Längenfeld, Umhausen und Sölden zurück. Ein einzigartiges weltweites Kulturgut bildet zudem der Schafübertrieb von Vent: Über fünftausend Schafe überqueren dabei auf uralten Saumpfaden das über 3.000 Meter hohe Niederjoch und Hochjoch aus dem Südtiroler Schnalstal zurück ins Ötztal – eine grenzüberschreitende Transhumanz, die von der UNESCO offiziell als immaterielles Kulturerbe der Menschheit anerkannt wurde. Wenn das Geläut der schweren Schellen das Eintreffen der Herden ankündigt, verwandeln sich die Dorfplätze in lebendige Festareale mit Bauernmärkten und regionalen Genussstationen.\n\n### Route & Anforderungen\nDie Almabtriebe finden im gesamten Tal an ausgewählten Septemberwochenenden statt. Zu den bekanntesten Schauplätzen zählt Längenfeld, wo die Tiere über den Sulztaler Talweg den Kreisverkehr und das Dorfzentrum erreichen. In Vent ziehen die Schafherden nach ihrem zweitägigen Hochgebirgsmarsch direkt in die Auffangpferche ein, wo bei der traditionellen Schafschied die Tiere ihren jeweiligen Besitzern zugeordnet werden. Besucher benötigen keine sportliche Ausrüstung, sollten sich jedoch auf mehrstündiges Stehen im Freien einstellen. Entlang der Zugstrecken säumen Einheimische und Gäste die Straßenränder. Wichtig ist, den Tieren stets ausreichend Raum zu lassen und Fluchtwege nicht zu blockieren.\n\n### Anreise\nDie Anreise ins Ötztal erfolgt umweltfreundlich mit der Bahn bis zum Bahnhof Ötztal an der Arlbergbahn. Von dort verkehrt der Ötztalbus (Linie 320, ehemals Linie 4194) im dichten 30-Minuten-Takt über Oetz, Umhausen und Längenfeld bis nach Sölden. Für die Weiterfahrt nach Vent steht ab Zwieselstein die Anschlusslinie 330 zur Verfügung. Mit dem Pkw führt die Route über die Inntalautobahn A12 (Ausfahrt Ötztal) und die B186 talauswärts. An den Talstationen der Bergbahnen und Ortszentren stehen gebührenpflichtige Parkplätze bereit. Aufgrund lokaler Straßensperren während des Almabtriebs wird die Anreise mit öffentlichen Bussen dringend empfohlen.\n\n### Tipps\nKulinarischer Höhepunkt des Festes sind die echten Ötztaler Kirchtagskrapfen, die traditionell mit einer süßen Masse aus Dörrbirnen, Mohn, Rosinen und Rum gefüllt und in heißem Butterschmalz herausgebacken werden. Daneben locken herzhaftes Schafbratl, saftiger Tiroler Grauviehdraten und frischer Almkäse. Für Familien ist das Spektakel ein unvergessliches Erlebnis, Kinder sollten jedoch an die Hand genommen werden. Hunde sollten wegen der verständlichen Schutzreflexe der Weidetiere und der Geräuschkulisse unbedingt zu Hause bleiben; falls unvermeidbar, gilt strikte Kurzleinenpflicht.",
+  "preis": "Kostenlos (Verzehr & Bauernmarkt kostenpflichtig)",
+  "dauer": "Ganztägig (ca. 4–6 Stunden)",
   "tags": [
     "kulinarik",
     "almabtrieb",
     "oetztal",
-    "fest",
-    "regional"
+    "brauchtum",
+    "herbst",
+    "krapfen",
+    "transhumanz"
   ],
   "koordinaten": {
     "lat": "47.1003",
     "lng": "10.9511"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.oetztal.com",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at",
+    "https://www.unesco.at/kultur/immaterielles-kulturerbe/oesterreichisches-verzeichnis/detail/article/transhumanz-schafwandertriebe-in-den-oetztaler-alpen",
+    "https://www.oetztaler.at",
+    "https://www.naturpark-oetztal.at"
+  ]
 }

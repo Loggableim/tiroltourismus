@@ -1,27 +1,35 @@
 {
-  "name": "Kräuterwanderung im Lechtal",
+  "name": "Kräuterwanderungen & Wildkräuterpfade im Lechtal",
   "slug": "kraeuterwanderung-lechtal",
   "emoji": "🌿",
   "farbe": "var(--green)",
   "kategorie": "natur",
-  "ort": "Lechtal",
+  "ort": "Elbigenalp / Bach / Steeg (Lechtal)",
   "region": "lechtal",
-  "beschreibung": "Das Lechtal ist bekannt für seine artenreiche Pflanzenwelt. Eine Kräuterpädagogin zeigt Ihnen auf einer gemütlichen Wanderung die heimischen Wildkräuter und erklärt deren Verwendung in der Küche und Heilkunde. Frischer Bärlauch, duftender Thymian und goldene Ringelblumen – die Natur schenkt ihre Schätze.",
-  "preis": 45,
-  "dauer": "3 Stunden",
+  "beschreibung": "Überblick\nDer Naturpark Tiroler Lech schützt die letzte unverbaute Wildflusslandschaft der Nordalpen und gilt mit über 1.100 nachgewiesenen Blütenpflanzenarten als botanischer Hotspot Tirols. Von artenreichen Auwäldern an den Schotterbänken des Lechs bis hinauf zu den blumenreichen Almmatten der Lechtaler Alpen entfaltet sich ein Paradies für Kräuterliebhaber. Engagierte Kräuterpädagoginnen – im Tal als „Lechtaler Kräuterhexen“ bekannt – sowie die Naturparkführer vermitteln auf geführten Kräuterwanderungen und thematischen Lehrpfaden jahrhundertealtes volksheilkundliches Wissen. Ob auf dem idyllischen Ölberg-Kräuterweg in Elbigenalp, auf dem hochalpinen Botanischen Lehrpfad an der Jöchelspitze oder auf dem Vitalweg in Holzgau: Das Zusammenspiel aus Gebirgssonne, kalkreichen Böden und reiner Bergluft verleiht den hiesigen Heil- und Würzpflanzen eine außergewöhnliche Wirkstoffdichte.\n\nRoute & Anforderungen\nIm Lechtal stehen verschiedene Kräuter- und Naturlehrpfade zur Auswahl:\n1. Kräuterrundweg Ölberg (Elbigenalp): Ein 900 Meter langer, sonniger Lehrpfad unterhalb der historischen Ölbergkapelle (1.096 m) mit rund 45 Höhenmetern. Schautafeln erklären heimische Wild- und Küchenkräuter wie Quendel, Frauenmantel, Schafgarbe und Blutwurz. Am Aussichtspavillon „Lusthäuschen“ genießen Wanderer den Blick über das Schnitzerdorf Elbigenalp. Gehzeit ca. 30 bis 45 Minuten, ideal für Spaziergänger und Familien mit Kindern.\n2. Botanischer Lehrpfad Jöchelspitze & Bergheumuseum (Bach): Start an der Bergstation der Jöchelspitzbahn auf 1.800 Metern. Der alpine Höhenweg führt über ca. 2,5 Kilometer und 175 Höhenmeter zum traditionellen Lechtaler Bergheumuseum (1.900 m). Unterwegs begegnen Wanderern geschützte Kostbarkeiten wie Türkenbundlilie, Knabenkräuter, Arnika und Gelber Enzian. Am Heumuseum werden bei geführten Touren eigene Kräutertinkturen gerührt. Mittelschwere Bergwanderung auf geschotterten Bergpfaden (feste Wanderschuhe erforderlich, nicht kinderwagentauglich).\n3. Vitalweg Holzgau: Ein 3,8 Kilometer langer Rundkurs (ca. 200 hm) rund um die fünf Säulen der Kneipp-Lehre mit natürlicher Wassertretstelle im Bergbach, Barfußpfad und Kräuterausstellung im historischen Heustadel „Bill“.\n4. Geführte Wildkräuterwanderung Steeg: Wöchentliche 1,5-stündige Exkursion durch die Bergwiesen mit Bestimmung von Wildkräutern und Rezepttipps.\nHunde sind im gesamten Naturpark Tiroler Lech herzlich willkommen, müssen jedoch zum Schutz bodenbrütender Vögel und der Wildtiere ausnahmslos an der Leine geführt werden.\n\nAnreise\nDie Talorte sind von Reutte über die Lechtalstraße B198 oder aus dem Bregenzerwald über den Hochtannbergpass erreichbar. Vor Ort verkehrt der VVT-Regiobus Linie 110 im dichten Takt zwischen Reutte und Steeg/Warth. Mit der Sommer-Gästekarte „Lechtal Aktiv Card“ ist die Busnutzung im gesamten Tal vollkommen kostenlos. Haltestellen befinden sich direkt an den Ausgangspunkten (z. B. Elbigenalp Gemeindeamt, Bach Stockach an der Bergbahn, Holzgau Dorfplatz). Kostenfreie oder kostengünstige Parkplätze stehen an der Geierwally-Bühne Elbigenalp und an der Talstation der Jöchelspitzbahn bereit.\n\nTipps\nMit der Lechtal Aktiv Card (bereits ab einer Übernachtung bei Partnerbetrieben inklusive) sind geführte Kräuterwanderungen im Wochenprogramm sowie die Berg- und Talfahrt mit der Jöchelspitzbahn kostenlos. Anmeldungen zu Führungen erfolgen bis 16:00 Uhr am Vortag im TVB-Büro oder online. Wichtiger Sicherheitshinweis: Im Tal wächst auch der hochgiftige Blaue Eisenhut – niemals unbekannte Pflanzen verzehren! Geschützte Pflanzen dürfen im Naturpark keinesfalls gepflückt werden; für ungeschützte Kräuter gilt außerhalb von Kernzonen die maßvolle Handstraußregel.",
+  "preis": 0,
+  "dauer": "1,5 bis 3 Stunden",
   "tags": [
     "natur",
-    "kraeuter",
-    "wandern",
+    "kraeuterwanderung",
+    "wildkraeuter",
     "lechtal",
-    "wildkraeuter"
+    "naturpark-tiroler-lech",
+    "elbigenalp",
+    "familie",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.3442",
     "lng": "10.5044"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.lechtal.at/de/aktivitaeten/sommer/wandern/alle-wanderungen/tour/kraeuterrundweg-oelberg.html",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.naturpark-tiroler-lech.at",
+    "https://www.lechtaler-bergbahnen.at"
+  ]
 }

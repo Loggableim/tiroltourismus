@@ -1,19 +1,21 @@
 {
-  "name": "Schnapsbrennerei Kitzbühel",
+  "name": "Tiroler Edelbrandverkostung & Schaubrennerei Erber",
   "slug": "schnapsbrennerei-kitzbuehel",
   "emoji": "🍐",
   "farbe": "var(--yellow)",
   "kategorie": "kulinarik",
-  "ort": "Kitzbühel",
+  "ort": "Brixen im Thale",
   "region": "kitzbuehel",
-  "beschreibung": "Die Edelbrennerei Kitzbühel öffnet ihre Pforten für eine exklusive Führung mit Verkostung. Erfahren Sie alles über die Kunst des Brennens – von der Auswahl der Früchte über die Maischebereitung bis zur Reifung im Eichenfass. Kostproben der preisgekrönten Obstbrände, Liköre und Edelbrände inklusive.",
-  "preis": 39,
-  "dauer": "1,5 Stunden",
+  "beschreibung": "### Überblick\nDie Tiroler Schnapsbrennkunst blickt auf eine jahrhundertealte Tradition zurück, die tief im bäuerlichen Erbe verwurzelt ist. Als älteste Kupferkesselbrennerei Tirols gilt die Traditionsbrennerei Erber in Brixen im Thale im Herzen der Kitzbüheler Alpen. Die Wurzeln des geschichtsträchtigen Betriebs reichen bis in das 16. Jahrhundert unter Kaiser Maximilian I. zurück; das historische Brennrecht der Familie Erber ist urkundlich seit 1651 verbrieft. Im 18. Jahrhundert verlieh Kaiserin Maria Theresia ausgewählten Tiroler Bergbauernhöfen das sogenannte Abfindungsbrennrecht, das bis heute fest an die Hofstelle gebunden ist. Bei einer Führung durch die moderne Erlebnisbrennerei und das gemütliche Brennhäusl tauchen Besucher in die Geheimnisse des Doppelbrandverfahrens ein: In glänzenden Kupferbrennblasen werden handverlesene Früchte, Waldbeeren und Gebirgszapfen schonend destilliert, wobei das Kupfer unerwünschte Schwefelstoffe bindet und die feinen Aromen herausarbeitet.\n\n### Route & Anforderungen\nDas rund 75-minütige Programm beginnt mit einer fachkundigen Führung durch die gläserne Manufaktur und die Schaubrennerei, wo Maischetanks, Kupferkessel und die Brennanlage im Detail erklärt werden. Im hauseigenen Brennerei-Kino vermittelt ein stimmungsvoller Film den Weg „Vom Obst in die Flasche“. Den krönenden Abschluss bildet die geführte Degustation im Erber Brennhäusl, bei der vier erlesene Edelbrände und Liköre unter Anleitung eines Edelbrandsommeliers verkostet werden. Zu den typischen Spezialitäten zählen der charaktervolle Tiroler Zirbenschnaps, die seltene wilde Vogelbeere, der würzige Meisterwurz-Digestif sowie klassische Williamsbirnen- und Apfel-Birnen-Cuvées. An der Verkostung dürfen gemäß § 13 des Tiroler Jugendgesetzes ausnahmslos Personen ab 18 Jahren teilnehmen; für jüngere Gäste, Fahrer und Abstinente werden frisches Tiroler Quellwasser und regionale Fruchtsäfte serviert.\n\n### Anreise\nDie Brennerei Erber liegt verkehrsgünstig an der Dorfstraße 57 mitten im Ortszentrum von Brixen im Thale. Mit der Bahn reist man stressfrei über die Salzburg-Tiroler-Bahn bis zum Bahnhof Brixen im Thale; von dort sind es lediglich 5 bis 8 Gehminuten (ca. 500 Meter) durch den Ort. Diese Öffi-Anbindung ist für Verkostungsbesucher ideal. Mit dem Auto erreicht man Brixen über die Inntalautobahn A12 (Ausfahrt Wörgl Ost) und die Brixentaler Bundesstraße B170 in rund 15 Fahrminuten. Direkt am Brennereigelände stehen kostenlose Kundenparkplätze für Pkw bereit.\n\n### Tipps\nReguläre Führungen finden wöchentlich statt (z. B. donnerstags um 10:00 Uhr); für Gruppen ab fünf Personen empfiehlt sich eine rechtzeitige Voranmeldung per Telefon oder E-Mail. Inhaber der Kitzbüheler Alpen Gästekarte erhalten Preisnachlässe auf die Führung sowie Ermäßigungen im Brennhäusl-Hofladen. Neben den klassischen Bränden lohnt sich das Probieren des traditionellen Meisterwurz-Mazerats, einer alpinen Spezialität aus wilden Hochgebirgswurzeln. Hunde sind im Produktions- und Verkostungsbereich aus hygienischen Gründen nicht gestattet.",
+  "preis": "12,50 € pro Person (Führung inkl. Verkostung von 4 Destillaten)",
+  "dauer": "ca. 75 Minuten",
   "tags": [
     "kulinarik",
     "schnaps",
-    "brennerei",
-    "kitzbuehel",
+    "edelbrand",
+    "kitzbueheler-alpen",
+    "brixental",
+    "tradition",
     "verkostung"
   ],
   "koordinaten": {
@@ -21,7 +23,15 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://erber-edelbrand.com",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://erber-edelbrand.com",
+    "https://shop.erber-edelbrand.com",
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at",
+    "https://www.aggstein.co.at",
+    "https://www.tirol.gv.at"
+  ]
 }

@@ -1,27 +1,38 @@
 {
-  "name": "Schneeschuhwanderung Arlberg",
+  "name": "Geführte Schneeschuhwanderung am Arlberg",
   "slug": "schneeschuhwanderung-arlberg",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "winter",
-  "ort": "St. Anton am Arlberg",
+  "ort": "St. Anton am Arlberg / Verwalltal",
   "region": "st-anton",
-  "beschreibung": "Abseits der Pisten die winterliche Stille geniessen: Mit Schneeschuhen und einem erfahrenen Bergführer wandern Sie durch den tiefen Pulverschnee des Arlbergs. Vorbei an verschneiten Hütten und märchenhaften Wäldern erreichen Sie einen Aussichtspunkt mit grandiosem Panorama. Der krönende Abschluss ist eine Jause in einer urigen Hütte mit Glühwein.",
-  "preis": 69,
-  "dauer": "4 Stunden",
+  "beschreibung": "### Überblick\nGeführte Schneeschuhwanderungen in der Wiege des alpinen Skilaufs eröffnen faszinierende Wintereindrücke abseits der rasanten Skipisten von Ski Arlberg. St. Anton am Arlberg bietet zusammen mit den Nachbarorten Pettneu und Flirsch ein Netzwerk von über achtzig Kilometern geräumten Winterwanderwegen und unberührten Tiefschnee-Hängen. Die landschaftliche Krönung für Schneeschuhgeher ist das wildromantische Verwalltal: Entlang der tief verschneiten Rosannaschlucht führt der Weg vorbei an bizarren Eisfällen, über eine kühne Hängebrücke und durch stille Zirben- und Fichtenwälder bis zum zugefrorenen Verwallsee. Begleitet von staatlich geprüften Berg- und Skiführern oder spezialisierten Schneesportschulen wie Arlberg Free Moving und der Skischule Arlberg erleben Gäste die unberührte Natur des Stanzertals, spüren Tierspuren im frischen Pulverschnee auf und genießen absolute Stille in grandioser Gebirgskulisse.\n\n### Route & Anforderungen\nDie beliebteste Einsteiger- und Genussroute führt vom Mooserkreuz in St. Anton sanft ansteigend ins Verwalltal bis zur gemütlichen Wagner Hütte und rund um den Verwallsee (Gesamtdistanz rund 10 km, ca. 150 Höhenmeter, Gehzeit ca. 2,5 bis 3,5 Stunden). Anspruchsvollere Schneeschuhtouren starten in Pettneu hinauf zur tiefverschneiten Nessleralm (ca. 400 Höhenmeter im Aufstieg) oder führen als hochalpine Panoramawanderung auf den Galzig auf über 2.000 Metern Höhe. Schneeschuhwandern im Tiefschnee erfordert eine solide Grundkondition, da der Kraftaufwand spürbar höher ist als beim normalen Wandern. Für alpine Routen im ungesicherten Gelände sind Lawinenverschüttetensuchgerät (LVS), Sonde und Schaufel unverzichtbar. Vor jedem Aufbruch ist der tagesaktuelle Lawinenlagebericht Tirol einzuholen.\n\n### Anreise\nSt. Anton am Arlberg verfügt über den höchstgelegenen Eurocity- und Railjet-Bahnhof der Alpen direkt im Ortszentrum und ist aus ganz Österreich, Deutschland und der Schweiz exzellent ohne Pkw erreichbar. Vom Bahnhof und den Ortsteilen verkehren kostenlose Skibusse und der Verwallbus (Linie 6), der Wanderer direkt bis zur Wagner Hütte im Talinneren bringt. Autofahrer erreichen St. Anton über die Inntalautobahn A12 / Arlberg Schnellstraße S16; gebührenpflichtige Parkplätze stehen an den Talstationen Rendlbahn und Nassereinbahn zur Verfügung (Tagesgebühr ca. 8,00 €).\n\n### Tipps\nLeihschneeschuhe mit Harschkrallen und Teleskopstöcke mit großen Wintertellern sind in den lokalen Sportgeschäften (z. B. Sport Matt Pettneu oder Intersport Arlberg) für ca. 15 bis 19 Euro pro Tag erhältlich. Ein besonderes Highlight sind geführte Nacht-Schneeschuhwanderungen mit Stirnlampen durch die glitzernde Schneelandschaft. Für Kinder ist Schneeschuhgehen ab etwa 8 bis 10 Jahren empfehlenswert; jüngere Kinder können auf den präparierten Talwegen im Verwalltal auf Schlitten gezogen werden. Hunde dürfen an der Leine mitgeführt werden; zum Schutz vor scharfem Harschschnee und Schneeklumpen zwischen den Pfoten empfiehlt sich Pfotenschutzbalsam.",
+  "preis": "Gruppentour ab 35,00 € bis 45,00 € p.P. / Leihausrüstung ca. 15,00 € bis 19,00 € pro Tag",
+  "dauer": "2 bis 3,5 Stunden",
   "tags": [
-    "schneeschuh",
     "winter",
-    "wandern",
+    "schneeschuhe",
+    "arlberg",
     "st-anton",
-    "verschneit"
+    "verwalltal",
+    "natur",
+    "bergfuehrer"
   ],
   "koordinaten": {
     "lat": "47.1285",
     "lng": "10.2665"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.stantonamarlberg.com/de/winter/winter-und-schneeschuhwandern",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/de/winter/winter-und-schneeschuhwandern",
+    "https://www.stantonamarlberg.com/de/die-region-st-anton-am-arlberg/anreise",
+    "https://www.arlbergerbergbahnen.com",
+    "https://www.skiarlberg.at",
+    "https://arlberg-free-moving.com",
+    "https://www.skischule-arlberg.com",
+    "https://lawinen.report"
+  ]
 }

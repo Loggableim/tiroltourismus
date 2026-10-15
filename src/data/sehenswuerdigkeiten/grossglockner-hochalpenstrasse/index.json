@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Heiligenblut",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Eine der schönsten Alpenstraßen Europas mit 36 Kehren und atemberaubenden Panoramablicken auf den höchsten Berg Österreichs.",
-  "beschreibung": "<p>Die <strong>Großglockner Hochalpenstraße</strong> liegt in der Gemeinde <strong>Heiligenblut</strong> in <strong>Tirol</strong>. Sie verbindet das Bundesland Salzburg mit Osttirol und quert den <strong>Nationalpark Hohe Tauern</strong>. Der höchste Punkt der Strecke ist das <strong>Hochtor</strong> auf 2.504 Metern. Entlang der Straße bieten Aussichtsplattformen den Blick auf den <strong>Großglockner</strong> und die <strong>Pasterze</strong>. Ein zentraler Aussichtspunkt ist die <strong>Kaiser-Franz-Josefs-Höhe</strong> mit Ausstellungen zur Nationalparkregion. Die Mautstraße ist in der Regel von Mai bis Oktober geöffnet. Besucher erwartet eine hochalpine Gebirgslandschaft.</p>",
+  "kurzbeschreibung": "Die Großglockner Hochalpenstraße führt auf 2.504 m Seehöhe: Österreichs höchster Berg (3.798 m), Franz-Josefs-Höhe, Pasterze und Meisterwerk alpiner Ingenieurskunst.",
+  "beschreibung": "<h2>Überblick</h2><p>Die <strong>Großglockner Hochalpenstraße</strong> ist das berühmteste alpine Straßenmonument Österreichs und zählt zu den spektakulärsten Panoramastraßen der Welt. Sie überquert den Alpenhauptkamm der Hohen Tauern und verbindet das Bundesland Salzburg mit Osttirol und Kärnten über das Hochtor auf 2.504 Metern Seehöhe. Eingebettet in den <em>Nationalpark Hohe Tauern</em>, führt die 48 Kilometer lange Trasse direkt in das Herz der Glocknergruppe am Fuße des <strong>Großglockners</strong> (3.798 m), dem höchsten Gipfel der Republik Österreich. Jährlich zieht das denkmalgeschützte Meisterwerk hunderttausende Besucher in seinen Bann.</p><h2>Geschichte & Ingenieurbaukunst</h2><p>Die Trasse folgt uralten Pfaden: Bereits in der Bronze- und Römerzeit nutzten Händler den Saumweg über das Hochtor, wie archäologische Funde einer römischen Herkulesstatuette belegen. In den Krisenjahren der 1930er-Jahre beschloss die österreichische Bundesregierung den Bau einer modernen Aussichtsstraße zur Arbeitsbeschaffung und Tourismusförderung. Unter der Leitung des begnadeten Bauingenieurs <strong>Franz Wallack</strong> meißelten zwischen 1930 und 1935 über 3.000 Arbeiter die Straße in das steile Felsgelände. Am 3. August 1935 wurde die Hochalpenstraße feierlich eröffnet. Wallack konzipierte die Trasse mit 36 Kehren harmonisch in die Hochgebirgslandschaft. Absoluter Höhepunkt an der Stichstraße ist die <strong>Kaiser-Franz-Josefs-Höhe</strong> auf 2.369 Metern Seehöhe: Benannt nach dem Kaiserbesuch von Franz Joseph I. im Jahr 1856, bietet das dortige viergeschossige Besucherzentrum Ausstellungen zur Glaziologie, das Glocknerkino, die Wilhelm-Swarovski-Beobachtungswarte sowie einen überwältigenden Tiefblick auf die <em>Pasterze</em>, den mit rund acht Kilometern längsten Gletscher Österreichs.</p><h2>Besuch & Anreise</h2><p>Die Großglockner Hochalpenstraße ist saisonal von Anfang Mai bis Anfang November täglich befahrbar (in der Nacht gilt ein behördliches Fahrverbot). Öffnungszeiten Kassenstellen: Juni bis August täglich 05:30 bis 21:00 Uhr (letzte Einfahrt 20:15 Uhr); Mai und ab September täglich ab 06:00 bis 19:30/20:00 Uhr. Mauttarife Tageskarte (Stand Saison 2025/2026): PKW 46,50 € (Elektro-PKW ermäßigt 40,00 €), Motorrad 36,50 € (Elektro-Motorrad 32,50 €). Anreise mit dem Auto: Von Norden über Zell am See/Bruck auf der B107 über Ferleiten; von Süden über Lienz in Osttirol und Heiligenblut. Mit öffentlichen Verkehrsmitteln: In den Sommermonaten verkehren Ausflugsbusse (Glocknerbus) ab Lienz und Zell am See direkt zur Kaiser-Franz-Josefs-Höhe.</p><h2>Tipps</h2><p>Das moderne Besucherzentrum auf der Kaiser-Franz-Josefs-Höhe sowie das Parkhaus sind barrierefrei mit Aufzügen ausgestattet; die Aussichtsterrassen sind rollstuhl- und kinderwagengerecht zugänglich. Beobachten Sie von den Aussichtsplattformen die zutraulichen Alpenmurmeltiere und Steinböcke. Nehmen Sie auch im Hochsommer wind- und wetterfeste Kleidung mit, da in Höhen über 2.300 Metern rasche Wetterumschwünge auftreten können.</p>",
   "emoji": "🏔️",
   "farbe": "#4CAF50",
   "hoehe": "2.576 m (Hochtor)",
   "dauer": "Halbtag",
-  "preis": "43 € pro Fahrzeug",
+  "preis": "PKW Tageskarte 46,50 € (E-PKW 40,00 €), Motorrad 36,50 €",
   "tags": [
     "panoramastrasse",
     "aussicht",
@@ -19,12 +19,18 @@
     "grossglockner",
     "natur"
   ],
-  "oeffnungszeiten": "Anfang Mai bis Ende Oktober, täglich 6:00–20:00",
+  "oeffnungszeiten": "Mai–Nov täglich ab 05:30/06:00 Uhr (letzte Einfahrt ca. 45 Min vor Nachtsperre)",
   "webseite": "https://www.grossglockner.at",
   "koordinaten": {
     "lat": "47.0833",
     "lng": "12.8333"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.grossglockner.at",
+    "https://www.nationalpark.at",
+    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner-Hochalpenstra%C3%9Fe",
+    "https://de.wikipedia.org/wiki/Pasterze"
+  ]
 }

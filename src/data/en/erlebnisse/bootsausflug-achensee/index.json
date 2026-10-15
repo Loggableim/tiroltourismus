@@ -1,28 +1,34 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "=== description ===\nThe MS Stadt Innsbruck, the Achensee boat, takes you on a relaxed round trip across Tirol’s largest lake. Along the way, you’ll pass picturesque coves and towering cliffs, enjoying the crisp mountain air and breathtaking views of the Karwendel and Rofangebirge mountains. An optional onboard lunch in the restaurant is available for booking.",
-  "preis": 22,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "kurzbeschreibung": null,
+  "name": "Boat Trip on Lake Achensee – Grand Sightseeing Cruise",
+  "beschreibung": "### Overview\nFounded in 1887 by Abbot Albert Wildauer of St. Georgenberg-Fiecht Abbey, Achenseeschifffahrt lake cruises pair rich maritime history with modern leisure. Cruising across Tyrol's largest lake, nestled between the rugged Karwendel range in the west and the towering Rofan mountains in the east, the fleet features three contemporary passenger vessels: the flagship MS Tirol accommodating up to 600 passengers with expansive sun decks, the barrier-free MS Stadt Innsbruck (capacity 470 passengers) offering onboard restaurants, and the sleek gala cruiser MS Achensee (500 passengers). Across the 133-metre-deep, fjord-like body of water, a scenic cruise opens dramatic views of high-alpine peaks. A unique highlight is the secluded Gaisalm on the steep western shore—the only managed alpine pasture in all of Tyrol accessible exclusively on foot via rocky paths or by water aboard a cruise ship, with no connecting roads whatsoever.\n\n### Route & Requirements\nThe cruise connects six piers encircling the lake: Pertisau (home harbour and shipyard), Seespitz on the southern shore, Buchau, the tranquil Gaisalm, Seehofkapelle, and Scholastika at the northern end in Achenkirch. The Grand Lake Cruise (hop-on hop-off day pass) takes approximately 2 hours and 10 minutes without disembarking. Shorter options include North Tour (approx. 75 minutes) and South Tour (approx. 45 minutes). Ships feature step-free boarding ramps, wheelchair-accessible restrooms, and spacious indoor salons. The journey requires no physical exertion, making it ideal for families with infants and pushchairs. Dogs are welcome aboard (ticket approx. €4.00); under Austrian public transport regulations, a leash and fitted muzzle are strictly mandatory.\n\n### Arrival\nThe primary departure hub is Pertisau along the lakeside promenade. Drivers reach Pertisau toll-free from the A12 Inntal Autobahn (Wiesing/Achensee exit) via federal highway B181. Paid parking is available in Pertisau (behind Hotel Christina and promenade lots), at Buchau beach, and at Scholastika pier in Achenkirch. A beloved nostalgic alternative is taking the train to Jenbach and boarding Europe's oldest steam cog railway, the Achenseebahn (built 1889): trains terminate right at Seespitz station, where passengers transfer seamlessly from platform to ship deck. Regional VVT bus line 4080 also operates frequent service from Jenbach.\n\n### Tips\nA Hop-On Hop-Off day pass costs €34.00 for adults (€17.00 for children aged 7–15; family pass €68.00; children under 6 free). Holders of the regional AchenseeCard receive a 10% discount. A combined pass for cruise and Achenseebahn cog railway (€72.00 adult) offers great value. A classic day trip: take the cruise from Pertisau to Gaisalm for a rustic lunch, then hike back to Pertisau along the panoramic Gaisalmsteig shoreline path in roughly 1.5 hours (surefootedness required). The main cruise season runs from May through late October, with magical Christmas holiday cruises operating in December.",
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ],
+  "bilder": [],
   "dauer": "2 Stunden",
+  "link": "#",
+  "preis": 22,
   "tags": [
     "boot",
     "achensee",
     "schifffahrt",
     "natur",
     "panorama"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null,
-  "kurzbeschreibung": null
+  ]
 }

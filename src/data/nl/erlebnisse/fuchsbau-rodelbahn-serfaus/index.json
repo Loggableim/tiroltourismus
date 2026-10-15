@@ -1,27 +1,33 @@
 {
-  "name": "Fuchsbau-Rodeln in Serfaus",
   "slug": "fuchsbau-rodelbahn-serfaus",
   "emoji": "🛷",
   "farbe": "var(--purple)",
   "kategorie": "winter",
   "ort": "Serfaus",
   "region": "serfaus-fiss-ladis",
-  "beschreibung": "Die Fuchsbau-Rodelbahn in Serfaus ist eine der längsten Familienrodelbahnen Tirols. Auf 6,5 Kilometern kurviger Piste geht es von der Mittelstation bis hinab nach Serfaus. Abends erleuchtet stimmungsvolles Licht die Bahn – Rodeln unter dem Sternenhimmel ist ein unvergessliches Wintererlebnis.",
-  "preis": 19,
+  "koordinaten": {
+    "lat": "47.0386",
+    "lng": "10.5739"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Familie-rodelbanen in Serfaus-Fiss-Ladis",
+  "beschreibung": "### Overzicht\nHet zonnige hoogplateau Serfaus-Fiss-Ladis is een van de meest bekroonde familie-wintersportgebieden van de Alpen en beschikt over perfect geprepareerde rodelbanen. Belangrijke verduidelijking: een officiële rodelbaan genaamd 'Fuchsbau' bestaat niet in het gebied; de naam verwijst naar 'Bertas Fuchsbau', een speelse sneeuwtunnel voor skilessers in Bertas Kinderland in Fiss. De werkelijke rodelbanen van de regio bieden echter wintersportvermaak van topniveau: de 4,0 kilometer lange natuurrodelbaan van Serfaus voert vanaf het bergstation Komperdell (1.980 m) over alpenweiden en door bospercelen omlaag naar het dal (550 hoogtemeters). In Fiss wacht de eveneens 4,0 kilometer lange, kindvriendelijke Hexen-Rodelbahn (gemiddeld 12,5% helling) vanaf Steinegg (1.920 m). Daarnaast biedt de alpiene achtbaan Schneisenfeger bij het Hög-park rodelplezier op rails tot 40 km/u.\n\n### Route & Vereisten\nBeide rodelbanen zijn uitstekend geprepareerd en per kabelbaan bereikbaar:\n1. Rodelbaan Serfaus: omhoog met de Komperdellbahn naar 1.980 meter. Een gevarieerde natuurrodelbaan van 4,0 kilometer, met rustpauzes bij restaurant Seealm Hög.\n2. Hexen-Rodelbahn Fiss: bereikbaar via de Schönjochbahn I naar Steinegg. Drie meter breed en 4,0 kilometer lang; ideaal voor beginners en gezinnen met kinderen vanaf 5 jaar.\nLopend omhoog wandelen is niet nodig. Warme winterkleding, hoge winterschoenen met diep profiel (skischoenen zijn strikt verboden!) en een skihelm worden dringend aangeraden. Honden zijn om veiligheidsredenen niet toegestaan op de rodelbanen.\n\n### Bereikbaarheid\nMet de auto via de A12 Inntal-snelweg (afrit Oberinntal/Reschenpass) en de B180 naar Ried im Oberinntal, vanwaar de L19 omhoog naar het plateau slingert. In Serfaus geldt 's winters een autoluw beleid; dagbezoekers parkeren op de grote parkeerplaats bij de dorpsingang. Vanaf daar brengt de unieke ondergrondse luchtkussenmetro Dorfbahn Serfaus passagiers gratis via vier stations naar de kabelbanen. In Fiss en Ladis parkeert men direct bij de liften. Per trein reist men naar Landeck-Zams en stapt over op de streekbus.\n\n### Tips\nOverdag is het gebruik van de rodelbanen inbegrepen bij een geldige skipas of voetgangersticket; huurrodelen kosten circa € 10 tot € 15 per dag bij de sportzaken. Een hoogtepunt is het avondrodelen: elke woensdagavond is de baan in Serfaus tot 23:00 uur verlicht tijdens de Adventure Night, terwijl Fiss elke donderdagavond nachtrodelen met fondue-avonden organiseert. Veiligheidsinstructie: pas de snelheid aan, stop nooit in onoverzichtelijke bochten en houd het rodelkoord om de pols.",
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/rodeln",
+    "https://www.serfaus-fiss-ladis.at/de/winterurlaub/skigebiet-und-winteraktivitaeten/attraktionen",
+    "https://www.serfaus-fiss-ladis.at/de/Orte-Region/U-Bahn-Serfaus"
+  ],
+  "bilder": [],
   "dauer": "1–2 Stunden",
+  "link": "#",
+  "preis": 19,
   "tags": [
     "sneeuwschoen",
     "Serfaus",
     "winter",
     "familie",
     "sneeuwschoenbaan"
-  ],
-  "koordinaten": {
-    "lat": "47.0386",
-    "lng": "10.5739"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

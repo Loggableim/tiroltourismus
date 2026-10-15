@@ -1,17 +1,17 @@
 {
-  "name": "Zirbenweg",
+  "name": "Zirbenweg Patscherkofel & Glungezer",
   "slug": "zirbenweg",
   "status": "published",
   "region": "innsbruck",
-  "ort": "Tulfes",
+  "ort": "Igls",
   "kategorie": "wanderung",
   "kurzbeschreibung": "Le sentier pédagogique de cèdres le plus élevé des Alpes sur le Patscherkofel – une randonnée onirique à travers des forêts parfumées de cèdres, avec un panorama spectaculaire.",
-  "beschreibung": "Der <strong>Zirbenweg</strong> ist ein rund 7 km langer Höhenwanderweg auf dem Patscherkofel-Plateau zwischen Tulfes und der Bergstation Patscherkofelbahn. Auf einer Höhe von 1.700 bis 1.900 m führt der Weg durch einen der größten zusammenhängenden <strong>Zirbenwälder</strong> der Ostalpen. Entlang des Weges informieren Schautafeln über die Besonderheiten der Zirbe (Zirbelkiefer) – ihre Heilwirkungen, ihr Holz und ihre ökologische Bedeutung. Mehrere Aussichtskanzeln bieten atemberaubende Blicke auf das Inntal, die Nordkette, den Patscherkofel und das Stubaital. Der Weg ist auch für Kinder gut geeignet und ganzjährig begehbar.",
+  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Zirbenweg</strong> est le sentier panoramique le plus célèbre du Tyrol, situé à 2 000 m d'altitude au-dessus d'Innsbruck entre le Patscherkofel et le Glungezer. Il traverse la plus vaste forêt de pins cembros (arolles) d'Europe centrale, dont certains arbres multicentenaires ont plus de 700 ans, avec une vue plongeante spectaculaire sur Innsbruck et le Karwendel.</p><h2>Parcours &amp; Exigences</h2><p>Balade panoramique facile de 7 km reliant la gare haute du Patscherkofelbahn (1 964 m) à la Tulfeinalm du Glungezer (2,5 h de marche, faible dénivelé de 200 m, T1/T2). Refuge chaleureux de Boscheben à mi-chemin. Un ticket combiné permet d'emprunter les deux téléphériques et la navette de liaison entre les gares de départ. Bonnes chaussures recommandées. Chiens admis en laisse.</p><h2>Accès</h2><p>Depuis Innsbruck, bus urbain J direct vers Igls (Patscherkofel) ou bus 4134 vers Tulfes (Glungezer). Navette Zirbenweg-Bus entre les deux téléphériques. En voiture par l'A13 (Igls) ou l'A12 (Tulfes).</p><h2>Conseils</h2><p>Admirez le pin cembro le plus ancien du Tyrol, classé monument naturel avec ses 700 ans d'histoire, et dégustez les Kaspressknödel traditionnels au refuge de Boscheben.</p>",
   "emoji": "🥾",
   "farbe": "#4CAF50",
   "hoehe": "1.900 m",
-  "dauer": "2–3 Stunden",
-  "preis": "Bergbahn: 28 € (Erwachsene); Wanderung kostenlos",
+  "dauer": "3–4 Stunden",
+  "preis": "Zirbenweg-Rundfahrtticket (2 Bergbahnen + Shuttlebus) ca. 36 €",
   "tags": [
     "randonnée",
     "nature",
@@ -21,11 +21,20 @@
     "cèdre"
   ],
   "oeffnungszeiten": "Ganzjährig begehbar; Patscherkofelbahn: täglich 9:00–17:00",
-  "webseite": "https://www.patscherkofelbahn.at",
+  "webseite": "https://www.innsbruck.info/wandern/wandern/zirbenweg.html",
   "koordinaten": {
     "lat": "47.2150",
     "lng": "11.4580"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "saison": "Anfang Juni bis Ende Oktober",
+  "familie": true,
+  "sources": [
+    "https://www.tyrol.com/",
+    "https://www.patscherkofelbahn.at/",
+    "https://www.glungezerbahn.at/",
+    "https://de.wikipedia.org/wiki/Patscherkofel",
+    "https://www.vvt.at/"
+  ]
 }

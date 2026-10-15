@@ -1,27 +1,32 @@
 {
-  "name": "Bauernhoferlebnis auf der Greissl Alm",
   "slug": "bauernhoferlebnis-greissl-alm",
   "emoji": "🐄",
   "farbe": "var(--green)",
   "kategorie": "familie",
   "ort": "Alpbach",
   "region": "alpbach",
-  "beschreibung": "Un giorno alla Greissl Alm – qui le famiglie vivono la vera vita contadina del Tirol. I bambini possono accarezzare le mucche, dare da mangiare alle capre e assistere alla produzione del formaggio. Il gestore della malga racconta storie avvincenti della vita quotidiana alpina, mentre gli adulti si trattengono con una sostanziosa Brettljause e Most fatto in casa.",
-  "preis": 35,
+  "koordinaten": {
+    "lat": "47.3983",
+    "lng": "11.9452"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Esperienza fattoria e malga alla Greissl Alm di Alpbach",
+  "beschreibung": "### Panoramica\nAd Alpbach, spesso premiato come il villaggio in legno più bello d'Austria, le tradizioni contadine e la vita d'alpeggio si tramandano intatte da secoli. Nota importante per l'itinerario: una malga ufficiale denominata «Greißl-Alm» non esiste nel catasto tirolese; il toponimo deriva da una denominazione fittizia. Tuttavia, i veri masi e le malghe storiche dell'Alpbachtal offrono esattamente l'autentica esperienza alpestre cercata dalle famiglie. Il fulcro è il Museo dei masi di montagna «Vorder-Unterberg» a Inneralpbach. Edificato tra il 1636 e il 1638 e abitato fino al 1952, è un museo vivente: mentre nell'antica cucina rustica («Rauchkuchl») si affumica ancora lo speck tirolese, la stalla e i pascoli adiacenti ospitano tuttora bestiame e animali da cortile. L'offerta è completata da caseifici dimostrativi come la Bischofer Käsalm e dalle malghe storiche del Greiter Graben.\n\n### Percorso & Requisiti\nLe principali mete contadine di Alpbach includono:\n1. Museo del maso Vorder-Unterberg (Inneralpbach): dal parcheggio di Inneralpbach una comoda strada vicinale asfaltata porta al maso in 15 minuti (40 metri di dislivello), percorribile anche con passeggino.\n2. Bischofer Käsalm (1.334 m): accogliente ristoro d'alpeggio sul versante soleggiato sotto la Gratlspitze con cantina di stagionatura a vista. Il circuito escursionistico dal centro di Alpbach misura 6,8 chilometri per 367 metri di dislivello (circa 2,5 ore; accessibile con passeggino via strada forestale).\n3. Farmkehralm (1.521 m) nel Greiter Graben: malga con oltre 400 anni di storia al cospetto del Großer Galtenberg. Da Inneralpbach si risale la forestale in circa 1,5 ore (450 metri di dislivello).\nI percorsi richiedono calzature da trekking con suola scolpita. I cani al guinzaglio sono ammessi sui sentieri, ma non all'interno degli spazi espositivi del museo.\n\n### Come arrivare\nIn auto dall'autostrada A12 Inntal (uscita Kramsach/Brixlegg) si segue la strada provinciale L5 fino ad Alpbach e Inneralpbach. I parcheggi sono situati nel centro di Alpbach e all'inizio dei sentieri a Inneralpbach e Hochberg. Con i mezzi pubblici si scende in treno alla stazione di Brixlegg e si prosegue con l'autobus regionale VVT linea 4074 (cadenza oraria) fino al capolinea di Inneralpbach. I bus regionali sono gratuiti con la tessera ospiti Alpbachtal Card (inclusa dal primo pernottamento).\n\n### Consigli\nL'ingresso al museo Vorder-Unterberg costa circa 3,00 euro per gli adulti (2,00 euro con tessera ospiti) e 1,50 euro per i bambini. In estate vengono organizzate visite guidate pomeridiane. Nelle malghe della valle è d'obbligo una merenda tipica a base di Graukäse tirolese, burro di malga e pane casereccio. Nei pascoli estivi del Greiter Graben pascolano mucche nutrici con vitelli; mantenete una distanza di sicurezza di almeno 20 metri e sguinzagliate tempestivamente i cani in caso di reazione difensiva delle mucche.",
+  "sources": [
+    "https://www.alpbachtal.at",
+    "https://www.alpbachtal.at/de/aktivitaeten/top-ausflugsziele",
+    "https://www.schuleambauernhof.at"
+  ],
+  "bilder": [],
   "dauer": "4 Stunden",
+  "link": "#",
+  "preis": 35,
   "tags": [
     "familie",
     "bauernhof",
     "alm",
     "alpbach",
     "tiere"
-  ],
-  "koordinaten": {
-    "lat": "47.3983",
-    "lng": "11.9452"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

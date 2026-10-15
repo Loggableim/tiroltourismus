@@ -1,27 +1,33 @@
 {
-  "name": "Bootsausflug auf dem Achensee",
   "slug": "bootsausflug-achensee",
   "emoji": "⛵",
   "farbe": "var(--blue)",
   "kategorie": "natur",
   "ort": "Achensee",
   "region": "achensee",
-  "beschreibung": "Die MS Stadt Innsbruck, das Achenseeschiff, nimmt Sie mit auf eine entspannte Rundfahrt über den grössten See Tirols. Vorbei an idyllischen Buchten und steilen Felswänden geniessen Sie die frische Bergluft und den einzigartigen Blick auf das Karwendel- und Rofangebirge. Ein Mittagessen im Bordrestaurant ist optional buchbar.",
-  "preis": 22,
+  "koordinaten": {
+    "lat": "47.4419",
+    "lng": "11.7352"
+  },
+  "status": "published",
+  "hero_bild": null,
+  "name": "Croisière en bateau sur le lac d'Achensee – grand tour panoramique",
+  "beschreibung": "### Aperçu\nFondée en 1887 par l'abbé Albert Wildauer de l'abbaye de Fiecht, la compagnie maritime de l'Achensee (Achenseeschifffahrt) perpétue plus d'un siècle de tradition lacustre au Tyrol. Niché entre les parois rocheuses du Karwendel à l'ouest et le massif du Rofan à l'est, le plus grand lac du Tyrol est sillonné par trois navires modernes : le navire amiral MS Tirol pouvant accueillir 600 passagers avec de vastes ponts panoramiques, le MS Stadt Innsbruck accessible aux personnes à mobilité réduite (470 passagers) doté d'espaces restauration, et le navire d'apparat MS Achensee (500 passagers). Sur ce plan d'eau fjordique profond de 133 mètres, la croisière dévoile des perspectives grandioses. Particularité unique : les bateaux desservent l'alpage isolé de Gaisalm sur la rive ouest, seul alpage de tout le Tyrol accessible uniquement à pied par un sentier escarpé ou en bateau, aucune route n'y menant.\n\n### Itinéraire & Exigences\nLes bateaux desservent six embarcadères autour du lac : Pertisau (port d'attache), Seespitz sur la rive sud, Buchau, le havre préservé de Gaisalm, Seehofkapelle et Scholastika à Achenkirch au nord. Le grand tour du lac (forfait à la journée Hop-on Hop-off) dure environ 2 heures et 10 minutes sans escale. Des boucles plus courtes sont proposées : Tour Nord (environ 75 minutes) et Tour Sud (environ 45 minutes). Les navires sont totalement accessibles aux personnes à mobilité réduite avec passerelles sans marches, sanitaires adaptés et vastes salons intérieurs. La promenade ne requiert aucun effort physique et convient parfaitement aux familles avec poussettes. Les chiens sont admis à bord (billet dédié à environ 4,00 €) ; conformément à la législation autrichienne sur les transports, le port de la muselière et de la laisse est strictement obligatoire.\n\n### Accès\nL'embarcadère central se trouve à Pertisau sur la promenade du lac. En voiture, rejoindre Pertisau depuis l'autoroute A12 Inntal (sortie Wiesing/Achensee) par la route B181. Des parkings payants sont aménagés à Pertisau, au bord du lac à Buchau ainsi qu'au débarcadère de Scholastika à Achenkirch. Pour une arrivée pittoresque, prendre le train jusqu'à Jenbach puis le chemin de fer à crémaillère à vapeur historique Achenseebahn (ouvert en 1889) : le terminus Seespitz est attenant au quai d'embarquement. La ligne de bus régional VVT 4080 dessert également les rives depuis Jenbach.\n\n### Conseils\nLe pass journée Hop-on Hop-off coûte 34,00 € par adulte (17,00 € pour les enfants de 7 à 15 ans, forfait famille 68,00 € ; gratuit pour les moins de 6 ans). Les détenteurs de la carte AchenseeCard bénéficient de 10 % de réduction. Le billet combiné bateau et train à vapeur Achenseebahn (72,00 € adulte) est particulièrement prisé. Une formule classique : prendre le bateau de Pertisau à Gaisalm, y déjeuner puis revenir à pied à Pertisau par le sentier littoral du Gaisalmsteig en 1h30 (pied montagnard requis). La saison s'étend de mai à fin octobre, complétée par des croisières de l'Avent en décembre.",
+  "sources": [
+    "https://achenseeschifffahrt.at",
+    "https://achenseeschifffahrt.at/flotte/",
+    "https://www.achensee.com",
+    "https://www.achenseebahn.at"
+  ],
+  "bilder": [],
   "dauer": "2 Stunden",
+  "link": "#",
+  "preis": 22,
   "tags": [
     "bateau",
     "lac d'achen",
     "croisière",
     "nature",
     "panorama"
-  ],
-  "koordinaten": {
-    "lat": "47.4419",
-    "lng": "11.7352"
-  },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  ]
 }

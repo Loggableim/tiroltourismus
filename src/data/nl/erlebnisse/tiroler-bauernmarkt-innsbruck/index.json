@@ -6,9 +6,10 @@
   "kategorie": "kulinarik",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Jeden Samstag verwandelt sich der Innsbrucker Marktplatz in ein Paradies für Feinschmecker. Regionale Bauern und Produzenten bieten ihre Schätze an: würzigen Bergkäse, geräucherten Speck, frisches Brot, Honig und hausgemachte Marmeladen. Bei einer geführten Verkostungstour lernen Sie die Geschichten hinter den Produkten kennen.",
+  "beschreibung": "### Overzicht\nDe Markthalle van Innsbruck aan de Herzog-Siegmund-Ufer aan de oever van de Inn is het culinaire visitekaartje van Tirol. Van maandag tot zaterdag brengen boeren, zuivelbedrijven en kleine familiebedrijven uit de dalen van Noord- en Oost-Tirol hun ambachtelijke specialiteiten rechtstreeks naar de hoofdstad. Op de boerenmarkt ruikt het naar vers gebakken boerenbrood, gerookt spek, pittige bergkaas en kruidenproducten, tegen de achtergrond van de Nordkette.\n\n### Route & vereisten\nEen begeleide markttour met proeverij leidt door de hallen en de buitenkramen. Onder leiding van een culinair gids leren de deelnemers de verhalen en bereidingswijzen achter de regionale producten kennen. Bij geselecteerde kramen zijn er proeverijen, bijvoorbeeld van Tiroolse Graukäse, gerijpte bergkaas, hartige worsten, troebel appelsap of cederhoutlikeur. De route is volledig gelijkvloers en grotendeels weersonafhankelijk; ze is goed toegankelijk voor kinderwagens en rolstoelen. Er zijn geen bijzondere conditie-eisen. Goed opgevoede honden mogen aangelijnd bij de buitenkramen mee, maar niet binnen in de hal vanwege hygiëne.\n\n### Bereikbaarheid\nDe markthal ligt centraal in het centrum van Innsbruck, direct aan de Innpromenade. Vanaf Innsbruck Hauptbahnhof is het ongeveer tien minuten lopen via de Maria-Theresien-Straße of gemakkelijk met de tram- en buslijnen van IVB. Automobilisten vinden betaalde parkeerplaatsen in de garages rond het centrum; kom bij voorkeur met het openbaar vervoer.\n\n### Tips\nKom met een lichte trek, de proefporties zijn royaal. Een herbruikbare koeltas of rugzak helpt om lekkernijen zoals alpenboter, boerenhoning en spek vers mee naar huis te nemen. Na de tour is een korte omweg over de brug over de Inn naar de wijk Mariahilf met zijn kleurrijke gevels zeker de moeite waard.",
   "preis": 35,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "culinair",
     "markt",
@@ -16,12 +17,17 @@
     "innsbruck",
     "proeverij"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.markthalle-innsbruck.at/",
+    "https://www.tirol.at/aktivitaeten/kulinarik/bauernmaerkte",
+    "https://www.innsbruck.gv.at/",
+    "https://www.ivb.at/"
+  ]
 }

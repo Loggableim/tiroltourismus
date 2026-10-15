@@ -6,9 +6,10 @@
   "kategorie": "kulinarik",
   "ort": "Innsbruck",
   "region": "innsbruck",
-  "beschreibung": "Jeden Samstag verwandelt sich der Innsbrucker Marktplatz in ein Paradies für Feinschmecker. Regionale Bauern und Produzenten bieten ihre Schätze an: würzigen Bergkäse, geräucherten Speck, frisches Brot, Honig und hausgemachte Marmeladen. Bei einer geführten Verkostungstour lernen Sie die Geschichten hinter den Produkten kennen.",
+  "beschreibung": "### Přehled\nTržnice Markthalle v Innsbrucku na Herzog-Siegmund-Ufer na břehu řeky Inn je kulinářskou výkladní skříní Tyrolska. Od pondělí do soboty sem rolníci, mlékárny a malé rodinné podniky z údolí severního a východního Tyrolska přivážejí své řemeslné speciality přímo do hlavního města země. Na selském trhu to voní čerstvě upečeným chlebem, uzeným špekem, kořeněným horským sýrem a bylinnými produkty – s kulisou pohoří Nordkette.\n\n### Trasa a náročnost\nKomentovaná prohlídka trhu s ochutnávkou vede halami i venkovními stánky tržnice. Pod vedením kulinářského průvodce se účastníci seznámí s příběhy a způsoby výroby regionálních produktů. U vybraných stánků probíhají ochutnávky, například tyrolského sýra Graukäse, zralého horského sýra, pikantních klobás, zakaleného jablečného moštu nebo pálenky z limby. Trasa je zcela bez schodů a z větší části nezávislá na počasí; je dobře přístupná pro kočárky i vozíky. Nejsou kladeny žádné zvláštní nároky na kondici. Dobře vychovaní psi jsou povoleni na vodítku u venkovních stánků, uvnitř haly nikoli z hygienických důvodů.\n\n### Doprava\nTržnice leží centrálně v centru Innsbrucku přímo na nábřežní promenádě řeky Inn. Z hlavního nádraží v Innsbrucku se k ní dostanete asi za deset minut chůze přes Maria-Theresien-Straße nebo pohodlně tramvajovými a autobusovými linkami IVB. Motoristé najdou placené parkování v garážích v okolí centra; doporučujeme cestovat veřejnou dopravou.\n\n### Tipy\nPřijďte s lehkým hladem, ochutnávkové porce jsou štědré. Opakovaně použitelná chladicí taška nebo batoh vám pomůže odnést si domů pochoutky, jako je alpské máslo, farmářský med a špek, v čerstvém stavu. Po prohlídce stojí za krátkou zajížďku přes most přes Inn čtvrť Mariahilf s barevnými fasádami.",
   "preis": 35,
   "dauer": "2 Stunden",
+  "link": "#",
   "tags": [
     "kulinarik",
     "markt",
@@ -16,12 +17,17 @@
     "innsbruck",
     "verkostung"
   ],
+  "status": "published",
+  "bilder": [],
+  "hero_bild": null,
   "koordinaten": {
     "lat": "47.2654",
     "lng": "11.3928"
   },
-  "status": "published",
-  "link": "#",
-  "bilder": [],
-  "hero_bild": null
+  "sources": [
+    "https://www.markthalle-innsbruck.at/",
+    "https://www.tirol.at/aktivitaeten/kulinarik/bauernmaerkte",
+    "https://www.innsbruck.gv.at/",
+    "https://www.ivb.at/"
+  ]
 }

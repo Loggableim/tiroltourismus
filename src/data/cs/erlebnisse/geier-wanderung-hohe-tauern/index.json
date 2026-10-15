@@ -6,7 +6,7 @@
   "kategorie": "wandern",
   "ort": "Osttirol",
   "region": "osttirol",
-  "beschreibung": "Gemeinsam mit einem Nationalpark-Ranger begeben Sie sich auf die Spur der Könige der Lüfte. Die Wanderung durch den Nationalpark Hohe Tauern führt zu den Brutplätzen der Bartgeier und Steinadler. Mit Fernglas und fachkundigen Erläuterungen beobachten Sie die majestätischen Vögel in ihrer natürlichen Umgebung.",
+  "beschreibung": "<p><strong>Národní park Vysoké Tatry / Hohe Tauern</strong> je nejvýznamnějším útočištěm velkých dravců v Alpách. Kolem Großglockneru krouží vzácný <strong>orlosup bradatý</strong> s rozpětím křídel až 2,9 metru a <strong>sup bělohlavý</strong>. Vedené výpravy s rangery umožňují pozorování profesionálními pozorovacími dalekohledy.</p><p>V údolí Ködnitztal u Kalsu (start u chaty Lucknerhaus, 1 920 m n. m.) nabízí túra <em>Big Five</em> trasu dlouhou <strong>4 km s převýšením 350 m</strong> (celkem 3–4 hodiny). Cena: <strong>22 € dospělí</strong>, 15 € děti do 14 let. Sezóna: začátek července až konec září. Příjezd po mýtné silnici Kalser Glocknerstraße nebo autobusem VVT linky 952 z Lienzu.</p><p>Psi jsou na prohlídkách s rangery přísně zakázáni. Pevná turistická obuv a vlastní dalekohled doporučeny.</p>",
   "preis": 59,
   "dauer": "5 Stunden",
   "tags": [
@@ -23,5 +23,12 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hohetauern.at/de/wildtiere/bartgeier/",
+    "https://www.hohetauern.at/de/wildtiere/gaensegeier/",
+    "https://www.glocknerstrasse.at",
+    "https://www.osttirol.com/",
+    "https://de.wikipedia.org/wiki/Nationalpark_Hohe_Tauern"
+  ]
 }

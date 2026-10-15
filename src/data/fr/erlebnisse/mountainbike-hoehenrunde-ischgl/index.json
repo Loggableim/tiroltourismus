@@ -6,22 +6,33 @@
   "kategorie": "bike",
   "ort": "Ischgl",
   "region": "ischgl",
-  "beschreibung": "Die Mountainbike-Höhenrunde Ischgl ist eine der schönsten E-Bike-Touren der Alpen. Die Route führt über 40 Kilometer durch die Silvretta-Region, vorbei an türkisen Bergseen und über 2.500 Meter hohe Pässe. E-Bike-Verleih inklusive. Ein Muss für jeden ambitionierten Biker.",
-  "preis": 99,
-  "dauer": "5–6 Stunden",
+  "beschreibung": "Aperçu\nLa Silvretta Bike Arena, reliant Ischgl dans le Paznaun tyrolien à l'enclave détaxée de Samnaun en Suisse, compte parmi les plus prestigieux domaines VTT de haute montagne au monde. Ce circuit transfrontalier d'anthologie longe des crêtes vertigineuses culminant à 2 852 mètres au Greitspitze, évoluant entre 2 300 et près de 2 900 mètres d'altitude. Face aux sommets glaciaires du massif de la Silvretta, le parcours marie sentiers techniques, crêtes panoramiques et descentes légendaires—à l'image du Velill Trail et ses 1 500 mètres de dénivelé négatif sur près de 9 kilomètres—le tout desservi par un réseau de remontées ultra-moderne.\n\nRoute & Exigences\nLe circuit s'organise en boucle enduro grâce aux remontées mécaniques:\n1. Montée et crête frontière: depuis Ischgl, la télécabine Silvrettabahn monte à l'Idalp (2 320 m), relayée par le télésiège Flimjochbahn jusqu'à 2 748 mètres. De là s'élance le fameux «7187 Schmuggler Trail» (sentier des contrebandiers): 8,6 km sur la ligne de crête frontière passant par le Greitspitze (2 852 m) jusqu'au col d'Alp Trider Sattel en Suisse (Niveau Rouge / S2; courtes sections de poussage en côte).\n2. Liaison suisse: après la descente sur Alp Trida (2 263 m), le télésiège Flimsattelbahn remonte au Viderjoch (2 730 m). De là, le flow trail du Flimjoch (2,9 km, 426 m de dénivelé) offre de magnifiques virages relevés vers l'Idalp.\n3. La grande descente finale: le mythique «7134 Velill Trail» dévale la vallée suspendue du Velilltal sur 8,7 km et près de 1 500 m de dénivelé négatif jusqu'au village d'Ischgl (Rouge / S2; variante noire Expert pour spécialistes).\nNiveau technique confirmé (S2) et maîtrise du terrain cassant exigés. Casque obligatoire, protections conseillées. Chiens interdits sur les pistes VTT.\n\nAccès\nAutoroute A12 (sortie Pians) puis route B188 jusqu'à Ischgl (25 km). Parkings couverts aux gares aval des télécabines. En train jusqu'à Landeck-Zams puis bus VVT 260 direct toutes les demi-heures.\n\nConseils\nDomaine ouvert de fin juin à début octobre de 08h30 à 17h00. La carte Silvretta Card Premium inclut un transport VTT gratuit par jour sur toutes les remontées. Obligation légale: le passage en Suisse (zone franche de Samnaun) impose d'emporter un passeport ou une carte d'identité en cours de validité. Ne partez que par météo stable au-dessus de 2 700 mètres.",
+  "preis": 42,
+  "dauer": "3 bis 5 Stunden",
   "tags": [
     "mountainbike",
-    "e-bike",
+    "singletrail",
     "ischgl",
-    "hoehentour",
-    "silvretta"
+    "samnaun",
+    "silvretta",
+    "paznaun",
+    "velill-trail",
+    "abenteuer",
+    "tirol"
   ],
   "koordinaten": {
     "lat": "47.0139",
     "lng": "10.2897"
   },
   "status": "published",
-  "link": "#",
+  "link": "https://www.ischgl.com/de/sommer/biken/biketouren",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.ischgl.com/de/sommer/biken/biketouren",
+    "https://www.ischgl.com/de/aktivitaeten/touren/7187-schmuggler-trail_tour_101903057",
+    "https://www.ischgl.com/de/aktivitaeten/touren/7134-velill-trail_tour_101903109",
+    "https://www.ischgl.com/de/aktivitaeten/touren/7106-flimjoch-trail_tour_101903059",
+    "https://www.ischgl.com/de/sommer/sommerbergbahn"
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Stuibenfälle",
+  "name": "Stuibenfälle im Außerfern",
   "slug": "stuibenfaelle-ausserfern",
   "region": "ausserfern",
   "ort": "Ehrwald",
@@ -13,14 +13,23 @@
     "nature",
     "Zugspitze"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "2–3 Stunden",
+  "preis": "Kostenlos (Parkplatz ca. 4–6 € pro Tag)",
   "oeffnungszeiten": "Ganzjährig frei zugänglich",
-  "webseite": "https://www.tirol.at/reisefuehrer/sport/natur/stuibenfaelle",
+  "webseite": "https://de.wikipedia.org/wiki/Stuibenf%C3%A4lle",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
     "lat": "47.3987",
     "lng": "10.9205"
-  }
+  },
+  "beschreibung": "<h2>Aperçu</h2><p>Les cascades de <strong>Stuibenfälle</strong> dans l'Außerfern près de Reutte forment un splendide ensemble de chutes d'eau sur le torrent Archbach s'écoulant du lac Plansee. Franchissant 150 m de dénivelé dans un défilé boisé, elles se découvrent par le sentier historique du Ministersteig taillé dans la falaise au XIXe siècle.</p><h2>Parcours &amp; Exigences</h2><p>Sentier de 4 km et 160 m de dénivelé depuis Breitenwang jusqu'au lac Plansee (1h30 à 2h de marche, T2). Passerelles en bois sécurisées, escaliers taillés dans la roche et ponts suspendus au-dessus de vasques émeraude réputées pour le canyoning. Chaussures de marche antidérapantes indispensables. Inaccessible aux poussettes. Chiens admis en laisse.</p><h2>Accès</h2><p>Train Außerfernbahn jusqu'à Reutte puis bus 154 vers Breitenwang. En voiture par la B179 jusqu'à Reutte puis route L255 vers le Plansee. Parkings au départ de la gorge.</p><h2>Conseils</h2><p>Poursuivez la balade jusqu'aux rives du Plansee pour déguster un poisson frais et munissez-vous d'un coupe-vent pour vous protéger des embruns rafraîchissants.</p>",
+  "saison": "Mai bis Oktober (im Winter vereist und gesperrt)",
+  "familie": true,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Stuibenf%C3%A4lle",
+    "https://www.reutte.com/de",
+    "https://www.naturpark-tiroler-lech.at/",
+    "https://www.vvt.at/"
+  ]
 }

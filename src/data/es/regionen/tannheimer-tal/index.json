@@ -1,16 +1,91 @@
 {
-  "name": "Tannheimer Tal",
-  "slug": "tannheimer-tal",
-  "kurzbeschreibung": "Región de Tannheimer Tal en el Tirol",
+  "titel": "Valle de Tannheim",
+  "status": "published",
+  "featured": true,
+  "kurzbeschreibung": "El valle de Tannheim es elogiado como 'el valle alto más bello de Europa' – un idilio para excursionistas y esquiadores de fondo en torno al lago Vilsalpsee.",
+  "bewertung": 5,
+  "farbe": "#27AE60",
+  "tags": [
+    "senderismo",
+    "alta-montana",
+    "lagos",
+    "esqui-de-fondo",
+    "naturaleza"
+  ],
+  "hoehe": "2.238 m",
+  "flaeche": "127 km²",
+  "einwohner": "3.300",
+  "beschreibung": "<p>El <strong>valle de Tannheim (Tannheimer Tal)</strong>, en el distrito de Reutte, se asienta sobre una meseta soleada a 1.100 m de altitud y es considerado por muchos 'el valle alto más hermoso de Europa'. Flanqueado por las majestuosas paredes calizas de los montes de Tannheim con el pico <strong>Kellenspitze (2.238 m)</strong>, la Rote Flüh y el Gimpel al norte, y las suaves laderas de los Alpes de Allgäu al sur, acoge seis encantadores pueblos: <strong>Tannheim</strong>, <strong>Grän</strong>, <strong>Nesselwängle</strong>, <strong>Schattwald</strong>, <strong>Zöblen</strong> y el enclave de <strong>Jungholz</strong>. Entre sus atractivos descuellan la reserva natural del <strong>lago Vilsalpsee</strong>, el apacible <strong>lago Haldensee</strong> y el <em>libro de cumbre más grande de los Alpes</em> en el monte Neunerköpfle. En invierno dispone de más de 140 km de pistas de esquí nórdico.</p>",
+  "tipps": [
+    "Llegue al idílico lago Vilsalpsee en el tren turístico Alpenexpress y camine hasta la cascada de Bergaicht.",
+    "Firme en el libro de cumbre más grande de los Alpes (de 3 metros de ancho) en la cima del Neunerköpfle (1.862 m).",
+    "Disfrute en enero del Festival Internacional de Globos Aerostáticos y su mágico espectáculo nocturno de luces en la nieve."
+  ],
+  "empfehlungen": "<p>Tome el teleférico hasta el <strong>Neunerköpfle</strong> para realizar la ruta panorámica '9er Erlebnisweg' con vistas fabulosas del Tirol y Baviera. Saboree después la gastronomía montañesa en el <strong>Gasthof Vilsalpsee</strong> o en el restaurante del <strong>Lumberger Hof</strong> en Grän.</p>",
+  "umgebung": "<p>El valle de Tannheim se comunica al este con el valle del Lech y Reutte mediante el paso de Gaichtpass. Al norte y al oeste linda con Baviera (Alemania) a través del paso de Oberjoch hacia Bad Hindelang y Pfronten.</p>",
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tannheimer-bergbahnen.at",
+    "https://www.tirol.gv.at/reutte/",
+    "https://www.tirol.at/regionen/a-tannheimer-tal",
+    "https://de.wikipedia.org/wiki/Tannheimer_Tal"
+  ],
+  "bilder": [],
+  "hero_bild": "",
+  "grenzen": [
+    [
+      47.53,
+      10.45
+    ],
+    [
+      47.54,
+      10.5
+    ],
+    [
+      47.53,
+      10.56
+    ],
+    [
+      47.52,
+      10.62
+    ],
+    [
+      47.5,
+      10.66
+    ],
+    [
+      47.48,
+      10.64
+    ],
+    [
+      47.46,
+      10.58
+    ],
+    [
+      47.45,
+      10.52
+    ],
+    [
+      47.46,
+      10.46
+    ],
+    [
+      47.48,
+      10.43
+    ],
+    [
+      47.51,
+      10.42
+    ],
+    [
+      47.53,
+      10.45
+    ]
+  ],
   "koordinaten": {
     "lat": 47.5167,
     "lng": 10.6167
   },
-  "tags": [
-    "tannheimer-tal",
-    "region"
-  ],
-  "status": "published",
-  "bilder": [],
-  "hero_bild": ""
+  "slug": "tannheimer-tal",
+  "name": "Valle de Tannheim"
 }

@@ -4,7 +4,7 @@
   "region": "kitzbuehel",
   "ort": "Jochberg",
   "kategorie": "aussicht",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Der geschichtsträchtige Alpenpass (1.274 m) zwischen Tirol und Salzburg – Panoramablick auf die Hohen Tauern und Europaschutzgebiet Wasenmoos.",
   "emoji": "🛣️",
   "farbe": "#6B8E23",
   "tags": [
@@ -13,10 +13,10 @@
     "panorama",
     "senderismo"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Kostenlos",
+  "dauer": "1–3 Stunden",
+  "preis": "Kostenlos frei zugänglich (Panoramabahn Berg- und Talfahrt ca. 24 €)",
   "oeffnungszeiten": "Ganzjährig befahrbar",
-  "webseite": "https://www.kitzbuehel.com/pass-thurn",
+  "webseite": "https://www.kitzbuehel.com/",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +24,12 @@
     "lng": "12.4180"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Pass Thurn</strong> – Die Pass Thurn bietet einen der schönsten Ausblicke in den gesamten Alpenraum. Der Pass Thurn auf 1.274 m Höhe verbindet die Kitzbüheler Alpen mit dem Oberpinzgau und bietet einen spektakulären Ausblick auf den Wildkogel Vom Gipfel aus eröffnet sich ein 360-Grad-Panorama, das bei klarer Sicht bis zu den Gletschern der Hohen Tauern reicht. Die bequeme Bergbahn bringt Besucher mühelos auf die Höhe, wo mehrere Panoramaterrassen und ein Bergrestaurant zum Genießen einladen. Eingebettet in die malerische Kulisse der Tiroler Alpen, präsentiert sich die Pass Thurn als Ort der Ruhe und Erholung. Die gute Erreichbarkeit von Jochberg aus macht sie zu einem lohnenden Tagesausflugsziel. Die Pass Thurn ist ein Muss für jeden Tirol-Besucher und verspricht unvergessliche Eindrücke.</p>"
+  "beschreibung": "<h2>Visión general</h2><p>El puerto de <strong>Pass Thurn</strong> (1.274 m) une el Tirol (Kitzbühel) con la región de Salzburgo. Además de sus panorámicas sobre los Alpes de Kitzbühel, alberga la reserva natural de <strong>Wasenmoos</strong>, una turbera protegida de gran valor ecológico con pasarelas de madera y vistas directas a los glaciares del Parque Nacional Hohe Tauern.</p><h2>Ruta y Requisitos</h2><p>Sendero interpretativo llano sobre pasarelas de madera por la turbera (1 hora, 2,5 km, fácil T1, apto para carritos y sillas de ruedas). Rutas senderistas de altura hacia Resterhöhe con la telecabina Panoramabahn (2 a 3 horas, T1/T2). Calzado cómodo recomendado. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a Kitzbühel y autobús regional 4010 hasta el alto del puerto de Pass Thurn. En coche por la carretera B161, con aparcamientos gratuitos en el puerto. Acceso libre y gratuito todo el año.</p><h2>Consejos</h2><p>Suba a la torre mirador en mitad de la turbera para contemplar el monte Grossvenediger reflejado en las lagunas y saboree los tradicionales Kasnocken en la posada Toni-Alm.</p>",
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://de.wikipedia.org/wiki/Pass_Thurn",
+    "https://www.alpenvereinaktiv.com/de/tour/moorlehrpfad-wasenmoos-am-pass-thurn/1381545/",
+    "https://www.nationalpark.at/",
+    "https://www.vvt.at/"
+  ]
 }

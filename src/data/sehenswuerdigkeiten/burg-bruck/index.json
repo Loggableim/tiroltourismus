@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Lienz",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Mittelalterliche Höhenburg oberhalb von Lienz mit Museum, Rittersaal und herrlichem Blick auf die Lienzer Dolomiten.",
-  "beschreibung": "<p>Die **Burg Bruck** liegt auf einem Hügel oberhalb von Lienz, am Zusammenfluss von Isel und Drau. Die ehemalige Residenz der Grafen von Görz beherbergt heute das Museum der Stadt mit einer Sammlung zur Osttiroler Kultur. Ein Schwerpunkt der Ausstellung ist das Werk des Malers **Albin Egger-Lienz**, dem eine eigene Dauerausstellung gewidmet ist. Die Innenräume umfassen die gotische Burgkapelle sowie den Rittersaal mit historischen Wandmalereien. Vom Bergfried aus eröffnet sich ein weiter Blick über das Lienzer Becken und die Lienzer Dolomiten. Ein Burgcafé mit Terrasse ergänzt das Angebot für Besucher. Die Burg wird zudem regelmäßig für kulturelle Veranstaltungen und Konzerte genutzt.</p>",
+  "kurzbeschreibung": "Schloss Bruck in Lienz – ehemalige Residenz der Görzer Grafen mit mächtigem Bergfried, romanischer Doppelkapelle und Albin-Egger-Lienz-Galerie.",
+  "beschreibung": "<h2>Überblick</h2><p>Das imposante <strong>Schloss Bruck</strong> (historisch auch <em>Burg Bruck</em>) thront auf einem bewaldeten Hügel über der Dolomitenstadt Lienz in Osttirol auf rund 725 Metern Seehöhe. Als einstige Hauptresidenz der mächtigen Grafen von Görz beherbergt die wehrhafte Burganlage heute das <em>Museum der Stadt Lienz</em>. Mit ihrem 37 Meter hohen romanischen Bergfried, den weitläufigen Schlosssälen und einer zweigeschossigen Doppelkapelle gilt die Anlage als bedeutendstes weltliches Baudenkmal Osttirols und verzaubert Besucher mit einem weiten Panoramablick über das Lienzer Talbecken und die Lienzer Dolomiten.</p><h2>Geschichte & Architektur</h2><p>Zwischen 1252 und 1277 ließen Graf Meinhard III. von Görz und seine Söhne die Residenzburg errichten, um das Herrschaftszentrum des görzischen Fürstengeschlechts abzusichern. Als am 12. April 1500 mit dem Tod von Graf Leonhard die Dynastie im Mannesstamm erlosch, fiel die gesamte Grafschaft Görz gemäß einem Erbvertrag an König <strong>Maximilian I. von Habsburg</strong>. Nach wechselnden adligen Besitzern und zeitweiliger Nutzung als Brauerei und Feldlazarett erwarb die Stadt Lienz 1942 das Bauwerk. Das kunsthistorische Prunkstück der Anlage ist die um 1277 geweihte <em>romanische Doppelkapelle zur Hl. Dreifaltigkeit</em>: Sie beherbergt frühromanische Freskenfragmente, den „Gnadenstuhl“ von Nikolaus Kenntner aus dem Jahr 1452 sowie den weltberühmten spätgotischen Passions- und Marienzyklus des Malers <strong>Simon von Taisten</strong> (geschaffen um 1490 bis 1495). Darüber hinaus präsentiert das Museum die größte öffentliche Sammlung von Meisterwerken des gebürtigen Osttiroler Malers <strong>Albin Egger-Lienz</strong> (1868–1926).</p><h2>Besuch & Anreise</h2><p>Schloss Bruck ist saisonal von Ende Mai bis Mitte Oktober geöffnet: Im Mai, Juni, September und Oktober von Dienstag bis Sonntag jeweils von 10:00 bis 16:00 Uhr (Montag Ruhetag); im Juli und August täglich von 10:00 bis 18:00 Uhr (kein Ruhetag). Eintrittspreise (Stand 2025/2026): Erwachsene 12,00 €, Senioren und Ermäßigte 10,00 €, Schüler und Jugendliche bis 18 Jahre 2,50 €, Familienkarte 24,00 €. Mit der <em>Osttirol Card</em> ist der Eintritt frei. Anreise mit der Bahn: ÖBB bis zum Bahnhof Lienz, von dort führt ein beschilderter Spazierweg in ca. 25 Minuten hinauf zum Schloss oder per Stadtbus bis zur Haltestelle Schlossberg. Mit dem Auto: Über die Drautalstraße B100 oder Felbertauernstraße B108 nach Lienz, Abzweigung Schlossberg zum gebührenfreien Besucherparkplatz direkt am Schlossberg 1.</p><h2>Tipps</h2><p>Der Schlossinnenhof und das Schlosscafé im Erdgeschoss sind schwellenlos zugänglich; die historischen Säle, die Kapelle und der Bergfried sind aufgrund des Denkmalschutzes nur über Treppen erreichbar. Spazieren Sie nach dem Museumsbesuch um den idyllischen Schlossteich im Schlosspark, der im Schatten alter Bäume zum Verweilen einlädt. Die Sonnenterrasse des Schlosscafés bietet herrliche Ausblicke und hausgemachte Mehlspeisen.</p>",
   "emoji": "🏰",
   "farbe": "#795548",
   "hoehe": "725 m",
   "dauer": "1–2 Stunden",
-  "preis": "9 € (Erwachsene)",
+  "preis": "Erwachsene 12,00 €, Kinder/Schüler 2,50 €, Familie 24,00 €",
   "tags": [
     "burg",
     "museum",
@@ -19,12 +19,17 @@
     "kultur",
     "aussicht"
   ],
-  "oeffnungszeiten": "Mai–Okt: Di–So 10:00–18:00; Nov–Apr: Di–So 10:00–16:00",
-  "webseite": "https://www.museum-lienz.at",
+  "oeffnungszeiten": "Ende Mai bis Mitte Okt Di–So 10:00–16:00 Uhr (Juli/Aug tgl. 10:00–18:00 Uhr)",
+  "webseite": "https://museum.tirol/museen/museum-schloss-bruck",
   "koordinaten": {
     "lat": "46.8333",
     "lng": "12.7667"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://museum.tirol/museen/museum-schloss-bruck",
+    "https://www.osttirol.com",
+    "https://de.wikipedia.org/wiki/Schloss_Bruck_(Lienz)"
+  ]
 }

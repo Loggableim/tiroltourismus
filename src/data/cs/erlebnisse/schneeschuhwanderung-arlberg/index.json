@@ -1,12 +1,12 @@
 {
-  "name": "Schneeschuhwanderung Arlberg",
+  "name": "Vedený výstup na sněžnicích v Arlbergu",
   "slug": "schneeschuhwanderung-arlberg",
   "emoji": "🥾",
   "farbe": "var(--blue)",
   "kategorie": "winter",
   "ort": "St. Anton am Arlberg",
   "region": "st-anton",
-  "beschreibung": "Abseits der Pisten die winterliche Stille geniessen: Mit Schneeschuhen und einem erfahrenen Bergführer wandern Sie durch den tiefen Pulverschnee des Arlbergs. Vorbei an verschneiten Hütten und märchenhaften Wäldern erreichen Sie einen Aussichtspunkt mit grandiosem Panorama. Der krönende Abschluss ist eine Jause in einer urigen Hütte mit Glühwein.",
+  "beschreibung": "### Přehled\nVýpravy na sněžnicích v kolébce alpského lyžování otevírají kouzelný svět zasněžených hor stranou od rušných sjezdovek Ski Arlberg. St. Anton am Arlberg spolu se sousedními obcemi Pettneu a Flirsch nabízí přes osmdesát kilometrů upravených zimních cest a panenských svahů s hlubokým prašanem. Největším klenotem pro milovníky sněžnic je romantické údolí Verwalltal: cesta vede podél soutěsky Rosannaschlucht kolem zamrzlých vodopádů, přes visutý most a tichými lesy až k zamrzlému jezeru Verwallsee. V doprovodu certifikovaných horských vůdců ze škol Arlberg Free Moving a Skischule Arlberg zažijete nefalšovaný klid velehor.\n\n### Trasa a náročnost\nKlasická pohodová trasa začíná u Mooserkreuz v St. Antonu a mírně stoupá údolím Verwalltal k chatě Wagner Hütte a kolem jezera Verwallsee (cca 10 km, 150 výškových metrů, 2,5 až 3,5 hodiny chůze). Náročnější výstupy vedou z Pettneu k zasněžené chatě Nessleralm (cca 400 m převýšení) nebo po hřebenech Galzigu ve výšce přes 2 000 metrů. Chůze v hlubokém sněhu vyžaduje dobrou fyzičku. Mimo upravené cesty je povinností lavinová výbava (vyhledávač, sonda, lopata) a sledování lavinové předpovědi.\n\n### Doprava\nSt. Anton am Arlberg má nejvýše položené nádraží dálkových vlaků Eurocity a Railjet přímo v centru obce a je skvěle dostupný vlakem bez nutnosti auta. Bezplatné skibusy a linka 6 (Verwallbus) vozí turisty přímo k nástupním místům. Autem přijedete po rychlostní silnici S16, placená parkoviště jsou u lanovek Rendl a Nasserein (cca 8 € na den).\n\n### Tipy\nPůjčení sněžnic a holí se širokými talířky stojí v místních sportovních obchodech (Sport Matt v Pettneu) přibližně 15 až 19 eur na den. Velkým zážitkem jsou noční túry s čelovkami. Pro děti je chůze na sněžnicích vhodná od 8 do 10 let. Psi na vodítku jsou povoleni; před zmrzlým sněhem ochrání jejich tlapky speciální ochranný krém.",
   "preis": 69,
   "dauer": "4 Stunden",
   "tags": [
@@ -23,5 +23,14 @@
   "status": "published",
   "link": "#",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com/de/winter/winter-und-schneeschuhwandern",
+    "https://www.stantonamarlberg.com/de/die-region-st-anton-am-arlberg/anreise",
+    "https://www.arlbergerbergbahnen.com",
+    "https://www.skiarlberg.at",
+    "https://arlberg-free-moving.com",
+    "https://www.skischule-arlberg.com",
+    "https://lawinen.report"
+  ]
 }

@@ -1,6 +1,4 @@
 ---
-import { randomUUID } from 'node:crypto';
-
 /**
  * CategoryPlaceholder.astro
  * Schlanker SVG-Platzhalter für Einträge ohne Foto.
@@ -13,10 +11,6 @@ export interface Props {
 }
 
 const { collection, locale = 'de', className = '' } = Astro.props;
-// Each inline SVG needs its own gradient ID, even when the same category is
-// rendered more than once on a page.
-const gradientId = `cat-placeholder-bg-${randomUUID()}`;
-
 // Künstler- und Designstile pro Subdomain/Sprache:
 // DE: Linienzeichnung & Reduktion (Paul Flora / Otto Grünmandl)
 // EN: Monumentale & alpine Schichtung (Albin Egger-Lienz & Alfons Walde)
@@ -43,7 +37,10 @@ const palette = PALETTES[locale] || PALETTES.de;
 // Ikonische Vektor-Silhouetten je Kategorie (100x100 ViewBox)
 ---
 
-<div class={`cat-placeholder-wrap cat-placeholder-${locale} ${className}`}>
+<div
+  class={`cat-placeholder-wrap cat-placeholder-${locale} ${className}`}
+  style={`background:linear-gradient(135deg, ${palette.bg1}, ${palette.bg2})`}
+>
   <svg
     viewBox="0 0 100 100"
     preserveAspectRatio="xMidYMid meet"
@@ -52,16 +49,6 @@ const palette = PALETTES[locale] || PALETTES.de;
     aria-hidden="true"
     focusable="false"
   >
-    <defs>
-      <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color={palette.bg1} />
-        <stop offset="100%" stop-color={palette.bg2} />
-      </linearGradient>
-    </defs>
-
-    {/* Hintergrundfläche */}
-    <rect width="100" height="100" fill={`url(#${gradientId})`} />
-
     {/* Design-spezifische Hintergrund-Akzente je Subdomain */}
     {locale === 'de' && (
       /* Flora Linienraster */
@@ -236,7 +223,6 @@ const palette = PALETTES[locale] || PALETTES.de;
   .cat-placeholder-svg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     display: block;
   }
 </style>

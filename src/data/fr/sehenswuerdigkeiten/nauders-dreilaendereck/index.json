@@ -1,5 +1,5 @@
 {
-  "name": "Nauders Dreiländereck & Festung",
+  "name": "Nauders Dreiländereck",
   "slug": "nauders-dreilaendereck",
   "status": "published",
   "region": "landeck",
@@ -21,21 +21,17 @@
     "panorama"
   ],
   "oeffnungszeiten": "Mai–Okt: täglich 9:00–17:00",
-  "webseite": "https://www.nauders.com",
+  "webseite": "https://www.nauders.com/",
   "koordinaten": {
-    "lat": "46.8833",
-    "lng": "10.5000"
+    "lat": "46.8667",
+    "lng": "10.5333"
   },
   "bilder": [],
   "hero_bild": null,
-  "saison": "Juni bis Oktober (Festungsführungen von Mai bis Oktober)",
-  "familie": true,
-  "hunde": true,
   "sources": [
     "https://www.nauders.com/",
-    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-festung-nauders",
+    "https://de.wikipedia.org/wiki/Festung_Nauders",
     "https://www.alpenvereinaktiv.com/de/tour/zum-dreilaendergrenzstein-in-nauders/1381535/",
-    "https://www.festung-nauders.at/",
     "https://www.vvt.at/"
   ]
 }

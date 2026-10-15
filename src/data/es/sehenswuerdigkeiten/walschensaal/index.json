@@ -1,5 +1,5 @@
 {
-  "name": "Walschensaal & Kaunertaler Klamm",
+  "name": "Walschensaal",
   "slug": "walschensaal",
   "region": "kaunertal",
   "ort": "Feichten",
@@ -18,22 +18,18 @@
     "kostenlos"
   ],
   "oeffnungszeiten": "Ganzjährig zugänglich (Schnee im Winter möglich)",
-  "webseite": "https://www.kaunertal.com",
+  "webseite": "https://www.kaunertal.com/",
   "status": "published",
   "koordinaten": {
-    "lat": "47.0500",
-    "lng": "10.7500"
+    "lat": "47.0330556",
+    "lng": "10.6416667"
   },
   "bilder": [],
   "hero_bild": null,
-  "saison": "Mai bis Ende Oktober (im Winter vereist und gesperrt)",
-  "familie": true,
-  "hunde": true,
   "sources": [
     "https://www.kaunertal.com/",
-    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-walschensaal",
+    "https://de.wikipedia.org/wiki/Kaunertal",
     "https://www.alpenvereinaktiv.com/de/tour/durch-die-kaunertaler-klamm-zum-walschensaal/1381575/",
-    "https://www.naturpark-kaunergrat.at/",
     "https://www.vvt.at/"
   ]
 }

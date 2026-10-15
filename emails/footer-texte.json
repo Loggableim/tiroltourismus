@@ -1,0 +1,101 @@
+{
+  "_meta": {
+    "brand": "tiroltourismus",
+    "address": "Hallerstraße 3, 6020 Innsbruck",
+    "url_placeholders": {
+      "imprint_url": "{{imprint_url}}",
+      "privacy_url": "{{privacy_url}}",
+      "unsubscribe_url": "{{unsubscribe_url}}"
+    }
+  },
+  "languages": {
+    "de": {
+      "lang": "de",
+      "footer_country": "Österreich",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Österreich",
+      "footer_imprint_label": "Impressum",
+      "footer_privacy_label": "Datenschutz",
+      "footer_unsubscribe_label": "Abmelden",
+      "footer_reason_transactional": "Sie erhalten diese E-Mail im Zusammenhang mit Ihrer Anfrage oder Buchung auf tiroltourismus.com.",
+      "footer_reason_partner": "Sie erhalten diese Nachricht als touristischer Partnerbetrieb oder Tourismusverband in Tirol.",
+      "footer_reason_newsletter": "Sie erhalten diesen Newsletter, weil Sie sich auf tiroltourismus.com für redaktionelle Beiträge aus Tirol angemeldet haben."
+    },
+    "en": {
+      "lang": "en",
+      "footer_country": "Austria",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Austria",
+      "footer_imprint_label": "Legal Notice",
+      "footer_privacy_label": "Privacy Policy",
+      "footer_unsubscribe_label": "Unsubscribe",
+      "footer_reason_transactional": "You are receiving this email regarding your inquiry or registration on tiroltourismus.com.",
+      "footer_reason_partner": "You are receiving this message as a tourism office or partner accommodation in Tyrol.",
+      "footer_reason_newsletter": "You are receiving this newsletter because you subscribed to editorial updates from Tyrol on tiroltourismus.com."
+    },
+    "fr": {
+      "lang": "fr",
+      "footer_country": "Autriche",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Autriche",
+      "footer_imprint_label": "Mentions légales",
+      "footer_privacy_label": "Politique de confidentialité",
+      "footer_unsubscribe_label": "Se désabonner",
+      "footer_reason_transactional": "Vous recevez cet e-mail suite à votre demande ou réservation sur tiroltourismus.com.",
+      "footer_reason_partner": "Vous recevez ce message en tant qu'office de tourisme ou établissement partenaire au Tyrol.",
+      "footer_reason_newsletter": "Vous recevez cette newsletter car vous êtes inscrit aux actualités éditoriales du Tyrol sur tiroltourismus.com."
+    },
+    "cs": {
+      "lang": "cs",
+      "footer_country": "Rakousko",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Rakousko",
+      "footer_imprint_label": "Tiráž",
+      "footer_privacy_label": "Ochrana osobních údajů",
+      "footer_unsubscribe_label": "Odhlásit odběr",
+      "footer_reason_transactional": "Tento e-mail jste obdrželi v souvislosti s vaší poptávkou nebo registrací na tiroltourismus.com.",
+      "footer_reason_partner": "Tuto zprávu dostáváte jako turistická kancelář nebo partnerské ubytování v Tyrolsku.",
+      "footer_reason_newsletter": "Tento zpravodaj dostáváte, protože jste se na tiroltourismus.com přihlásili k odběru novinek z Tyrolska."
+    },
+    "nl": {
+      "lang": "nl",
+      "footer_country": "Oostenrijk",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Oostenrijk",
+      "footer_imprint_label": "Colofon",
+      "footer_privacy_label": "Privacybeleid",
+      "footer_unsubscribe_label": "Uitschrijven",
+      "footer_reason_transactional": "U ontvangt deze e-mail naar aanleiding van uw aanvraag of registratie op tiroltourismus.com.",
+      "footer_reason_partner": "U ontvangt dit bericht als verkeersbureau of partneraccommodatie in Tirol.",
+      "footer_reason_newsletter": "U ontvangt deze nieuwsbrief omdat u zich op tiroltourismus.com heeft aangemeld voor redactionele bijdragen uit Tirol."
+    },
+    "it": {
+      "lang": "it",
+      "footer_country": "Austria",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Austria",
+      "footer_imprint_label": "Note legali",
+      "footer_privacy_label": "Informativa sulla privacy",
+      "footer_unsubscribe_label": "Annulla iscrizione",
+      "footer_reason_transactional": "Ricevi questa e-mail in relazione alla tua richiesta o registrazione su tiroltourismus.com.",
+      "footer_reason_partner": "Ricevi questo messaggio in qualità di ufficio turistico o struttura partner in Tirolo.",
+      "footer_reason_newsletter": "Ricevi questa newsletter perché ti sei iscritto agli aggiornamenti editoriali sul Tirolo su tiroltourismus.com."
+    },
+    "es": {
+      "lang": "es",
+      "footer_country": "Austria",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · Austria",
+      "footer_imprint_label": "Aviso legal",
+      "footer_privacy_label": "Política de privacidad",
+      "footer_unsubscribe_label": "Darse de baja",
+      "footer_reason_transactional": "Recibe este correo electrónico en relación con su consulta o registro en tiroltourismus.com.",
+      "footer_reason_partner": "Recibe este mensaje como oficina de turismo o alojamiento colaborador en el Tirol.",
+      "footer_reason_newsletter": "Recibe este boletín porque se suscribió a las novedades editoriales del Tirol en tiroltourismus.com."
+    },
+    "cn": {
+      "lang": "zh-CN",
+      "footer_country": "奥地利",
+      "footer_address_line": "tiroltourismus · Hallerstraße 3, 6020 Innsbruck · 奥地利",
+      "footer_imprint_label": "网站声明",
+      "footer_privacy_label": "隐私政策",
+      "footer_unsubscribe_label": "退订通讯",
+      "footer_reason_transactional": "您收到此邮件是因为您在 tiroltourismus.com 上提交了咨询或预订申请。",
+      "footer_reason_partner": "您作为蒂罗尔州的旅游局或合作酒店收到此合作信息。",
+      "footer_reason_newsletter": "您收到此通讯是因为您在 tiroltourismus.com 上订阅了蒂罗尔精选资讯。"
+    }
+  }
+}

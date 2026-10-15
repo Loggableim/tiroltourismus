@@ -1,0 +1,36 @@
+<!--
+  GMAIL-SIGNATUR FÜR info@tiroltourismus.com
+  - Max. 4 Zeilen, 0 Bilder (wird von Gmail nicht gekürzt)
+  - Mindestschriftgröße: 14px
+  - Optionale Felder: {{sender_name}} und {{sender_role}}.
+    Sind beide leer, fällt Zeile 1 automatisch weg (via :empty bzw. Template-Conditional).
+-->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 21px; color: #1E2225; border-left: 2px solid #2C4A3E; padding-left: 12px;">
+  <!-- Zeile 1 (Optional: fällt weg, wenn {{sender_name}} und {{sender_role}} leer sind) -->
+  <tr>
+    <td style="padding: 0; font-size: 14px; line-height: 21px; color: #1A1D1F;">
+      <!-- {{#if sender_name}} -->
+      <span style="font-weight: 600; color: #1A1D1F;">{{sender_name}}</span><span style="color: #5C646B;"> {{sender_role}}</span>
+      <!-- {{/if}} -->
+    </td>
+  </tr>
+  <!-- Zeile 2: Marke tiroltourismus + dezente Text-Split-Flap-Referenz -->
+  <tr>
+    <td style="padding: 0; font-size: 14px; line-height: 21px; color: #1A1D1F;">
+      <strong style="font-weight: 700; color: #1A1D1F; letter-spacing: -0.3px;">tiroltourismus</strong><span style="color: #2C4A3E; font-weight: 700;">.</span>
+       <span style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 14px; font-weight: 700; background-color: #1A1D1F; color: #F4F3EF; padding: 1px 5px; border-radius: 2px;">TIROL</span>
+    </td>
+  </tr>
+  <!-- Zeile 3: Postanschrift & E-Mail -->
+  <tr>
+    <td style="padding: 0; font-size: 14px; line-height: 21px; color: #5C646B;">
+      Hallerstraße 3, 6020 Innsbruck · <a href="mailto:info@tiroltourismus.com" style="color: #2C4A3E; text-decoration: underline;">info@tiroltourismus.com</a>
+    </td>
+  </tr>
+  <!-- Zeile 4: Website & Sprachen -->
+  <tr>
+    <td style="padding: 0; font-size: 14px; line-height: 21px; color: #5C646B;">
+      <a href="https://tiroltourismus.com" target="_blank" style="color: #2C4A3E; text-decoration: underline; font-weight: 600;">tiroltourismus.com</a> · <span style="font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 14px;">DE/EN/FR/CS/NL/IT/ES/CN</span>
+    </td>
+  </tr>
+</table>

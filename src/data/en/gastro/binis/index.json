@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "pub",
   "kurzbeschreibung": "Binis in Tirol Discover the unique charm of Tirol with its traditional Binis – the iconic wooden clogs that have been handcrafted for generations.",
-  "beschreibung": "",
+  "beschreibung": "<p><strong>Binis</strong> in Innsbruck is a cozy pub with an authentic atmosphere and genuine local character. A popular neighborhood spot, it welcomes guests with freshly tapped beers, regional wines, and tasty bar snacks. The laid-back interior and friendly staff make it easy to strike up a conversation and unwind after a busy day. An excellent address for a casual drink and friendly banter in Innsbruck.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2372089,
     "lng": 11.310791
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Bio Gasthof Post in Mittenwald",
-  "beschreibung": "<p>Das <strong>Bio Gasthof Post</strong> in Mittenwald ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bio Gasthof Post</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Bio Gasthof Post in Mittenwald - biologisch restaurant met alpiene traditie",
+  "beschreibung": "<p><strong>Bio Gasthof Post</strong> in Mittenwald is een gecertificeerde biologische herberg die traditionele gastvrijheid combineert met een verantwoorde keuken. De menukaart viert authentieke alpiene recepten bereid met verse biologische ingrediënten uit de regio. De sfeervolle historische eetkamers stralen warmte uit en zorgen voor een ontspannen culinaire ervaring vlak bij de Tiroolse grens.</p>",
   "ort": "Mittenwald",
   "region": "innsbruck",
   "plz": "82481",
@@ -21,5 +21,9 @@
     "lat": 47.4412482,
     "lng": 11.2604559
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Mittenwald"
+  ]
 }

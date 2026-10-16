@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Biorestaurant Garmischer Hof in Garmisch-Partenkirchen",
-  "beschreibung": "<p>Das <strong>Biorestaurant Garmischer Hof</strong> in Garmisch-Partenkirchen ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Biorestaurant Garmischer Hof</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Biorestaurant Garmischer Hof in Garmisch-Partenkirchen - biologisch dineren",
+  "beschreibung": "<p><strong>Biorestaurant Garmischer Hof</strong> in Garmisch-Partenkirchen serveert creatieve biologische gerechten in een warme sfeer. Met toewijding aan 100% gecertificeerde biologische kwaliteit worden streekproducten omgetoverd tot smakelijke klassiekers en lichte gerechten. De sfeervolle houten Stuben nodigen uit tot ontspannen en genieten na een wandeling in de bergen.</p>",
   "ort": "Garmisch-Partenkirchen",
   "region": "innsbruck",
   "plz": "82467",
@@ -21,5 +21,8 @@
     "lat": 47.4944475,
     "lng": 11.0938769
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.garmischhotel.de/de/bio-restaurant/"
+  ]
 }

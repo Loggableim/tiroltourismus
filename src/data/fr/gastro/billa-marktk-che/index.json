@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "La Billa Marktküche en Tirol Découvrez l’authenticité culinaire de la Billa Marktküche en plein cœur de la Tirol !",
-  "beschreibung": "<p>Das <strong>Billa Marktküche</strong> in KitzbÃ¼hel ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Billa Marktküche</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "beschreibung": "<p>La <strong>Billa Marktküche</strong> à Kitzbühel propose une solution de restauration pratique et conviviale, avec un grand choix de plats fraîchement préparés. Les convives peuvent y savourer des spécialités tyroliennes du terroir, des salades fraîches et des menus du jour équilibrés. Cet espace contemporain et lumineux est parfait pour un déjeuner rapide ou une pause gourmande au cœur de Kitzbühel.</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.284616,
     "lng": 12.4873447
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.billa.at/unsere-maerkte/billa-plus/marktkueche"
+  ]
 }

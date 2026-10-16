@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Binderholz – Café Restaurant SichtBAR in Tirol Discover Tirol’s coziest hideaway at Binderholz, where Café Restaurant SichtBAR invites you to savor authentic flavors in a warm…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Binderholz - Cafe Restaurant SichtBAR</strong> in Fügen in the Zillertal valley is an impressive culinary venue set in contemporary timber architecture. Guests are treated to panoramic views alongside a refined menu featuring regional classics and creative modern dishes. High-quality seasonal ingredients from local producers define the kitchen's philosophy. Whether for a relaxed coffee, a sunny lunch on the deck, or a stylish dinner, SichtBAR delivers exceptional hospitality in Zillertal.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3397062,
     "lng": 11.859073
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at"
+  ]
 }

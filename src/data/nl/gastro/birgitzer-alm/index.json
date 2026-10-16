@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Birgitzer Alm in Tirol",
-  "beschreibung": "<p>Das <strong>Birgitzer Alm</strong> in Innsbruck ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Birgitzer Alm</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Birgitzer Alm in Tirol - traditionele berghut met panoramaterras",
+  "beschreibung": "<p>De <strong>Birgitzer Alm</strong> nabij Innsbruck is een geliefde berghut die bekendstaat om haar prachtige vergezichten en traditionele Tiroolse almlekkernijen. Wandelaars en bergsporters genieten hier op het zonnige terras van huisgemaakte Kaspressknödelsuppe, Kaiserschmarrn en verse streekproducten met uitzicht op het Inntal en de omliggende bergtoppen.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2040753,
     "lng": 11.3079304
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.birgitzeralm.at/"
+  ]
 }

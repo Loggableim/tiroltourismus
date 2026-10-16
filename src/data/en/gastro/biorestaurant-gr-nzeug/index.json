@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Organic Restaurant Grünzeug in Tirol Welcome to a culinary journey in the heart of the Alps!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Biorestaurant Grünzeug</strong> in Imst is a trailblazer for fresh, wholesome, and plant-forward organic gastronomy. Specializing in vibrant vegetarian and vegan creations alongside balanced organic dishes, the kitchen sources its ingredients from local growers. The bright and modern interior creates a pleasant, mindful atmosphere where healthy eating becomes a genuine delight for all food enthusiasts in the Imst region.</p>",
   "ort": "",
   "region": "imst",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.0461962,
     "lng": 10.8631208
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.imst.at"
+  ]
 }

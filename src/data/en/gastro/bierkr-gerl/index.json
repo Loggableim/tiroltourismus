@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "pub",
   "kurzbeschreibung": "Enjoy a *Bierkrügerl* in Tirol Discover the heart of Alpine culture with a refreshing *Bierkrügerl*—a traditional half-liter mug of beer—served in the charming towns and cozy…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Bierkrügerl</strong> in the Innsbruck region is what you would call a true insider tip. This small, family-run pub not only serves an impressive selection of Austrian and Bavarian beers, but also classic tavern dishes prepared to high standards. Particularly popular are the homemade dumpling variations and tender roast pork with dark beer sauce. The dining room is cozy and authentic - with dark wood, traditional decor, and an atmosphere that invites guests to linger. Those seeking genuine Tyrolean hospitality without unnecessary fuss will feel right at home here.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2708754,
     "lng": 11.3915329
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

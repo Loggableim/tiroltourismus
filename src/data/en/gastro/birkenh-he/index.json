@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Birkenhöhe in Mittelberg Discover the Birkenhöhe in Mittelberg, a charming mountain retreat nestled in the heart of the Allgäu Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Birkenhöhe</strong> in Mittelberg provides refined alpine cuisine in an inviting setting with sweeping mountain vistas. The restaurant emphasizes seasonal regional products, preparing both traditional Austrian specialties and contemporary culinary highlights. Attentive service and a comfortable dining room make it a premier choice for relaxing family meals and special occasions in the Kleinwalsertal area.</p>",
   "ort": "Mittelberg",
   "region": "?",
   "plz": "6992",
@@ -20,5 +20,8 @@
     "lat": 47.3508743,
     "lng": 10.1710468
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.birkenhoehe.com/kulinarik/"
+  ]
 }

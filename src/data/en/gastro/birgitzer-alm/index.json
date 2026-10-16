@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Discover the Birgitzer Alm in Tirol Nestled in the heart of the Zillertal Alps, the Birgitzer Alm is a true gem of Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Birgitzer Alm</strong> above Innsbruck is a classic alpine pasture hut known for its panoramic mountain vistas and hearty Tyrolean fare. Hikers, mountain bikers, and ski tourers love stopping here for fresh Kaspressknödel soup, home-baked Kaiserschmarrn, and hearty Brettljausn. The sun terrace offers sweeping views over the Inn Valley and Kalkkögel range, while the rustic parlor warms chilly mountain days with authentic alpine charm.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2040753,
     "lng": 11.3079304
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.birgitzeralm.at/"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍺",
   "farbe": "#FF6B35",
   "kategorie": "pub",
-  "kurzbeschreibung": "Bierkrügerl in Tirol",
-  "beschreibung": "<p>Das <strong>Bierkrügerl</strong> in der Region Innsbruck ist das, was man einen echten Geheimtipp nennt. Das kleine, familiengeführte Lokal serviert nicht nur eine beeindruckende Auswahl an österreichischen und bayerischen Bieren, sondern auch klassische Wirtshausküche auf hohem Niveau. Besonders beliebt sind die hausgemachten Knödelvariationen und der zarte Schweinsbraten mit Dunkelbiersauce. Der Gastraum ist gemütlich und authentisch — mit dunklem Holz, traditioneller Dekoration und einer Atmosphäre, die zum Verweilen einlädt. Wer Tiroler Gastlichkeit ohne Schnickschnack sucht, wird hier fündig.</p>",
+  "kurzbeschreibung": "Bierkrügerl in Innsbruck - authentieke herberg en biercultuur",
+  "beschreibung": "<p><strong>Bierkrügerl</strong> in de regio Innsbruck is een echte geheime tip. Deze kleine, door een familie gerunde herberg serveert niet alleen een indrukwekkende selectie van Oostenrijkse en Beierse bieren, maar ook klassieke herberggerechten op hoog niveau. Zeer geliefd zijn de huisgemaakte knoedelvariaties en het malse varkensgebraad met donkere biersaus. Het interieur is knus en authentiek - met donker hout, traditionele decoraties en een ontspannen sfeer. Wie op zoek is naar ongecompliceerde Tiroolse gastvrijheid, is hier aan het juiste adres.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2708754,
     "lng": 11.3915329
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

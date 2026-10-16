@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Hôtel bio Leutascher Hof à Leutasch Bienvenue au Leutascher Hof, un hôtel bio niché au cœur de la vallée de Leutasch, dans le Tirol.",
-  "beschreibung": "<p>Das <strong>Biohotel Leutascher Hof</strong> in Leutasch ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Biohotel Leutascher Hof</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "beschreibung": "<p>Le <strong>Biohotel Leutascher Hof</strong> à Leutasch propose une gastronomie biologique remarquable, axée sur la durabilité et le goût du terroir. La cuisine élabore des spécialités tyroliennes raffinées exclusivement à partir d'ingrédients certifiés 100% bio provenant de fermes régionales. Ses salles à manger lambrissées créent une ambiance élégante et reposante, parfaite pour un dîner d'exception dans la vallée de Leutasch.</p>",
   "ort": "Leutasch",
   "region": "innsbruck",
   "plz": "6105",
@@ -21,5 +21,8 @@
     "lat": 47.3694123,
     "lng": 11.1625483
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.leutascherhof.at/"
+  ]
 }

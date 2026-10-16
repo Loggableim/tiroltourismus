@@ -11,7 +11,7 @@
   "telefon": "+43 5372 66686",
   "email": null,
   "webseite": "https://www.hoerfinghof.at/",
-  "beschreibung": "<p>Der <strong>Hörfinghof</strong> in <strong>Kufstein</strong> ist ein landwirtschaftlicher Betrieb mit Ferienwohnungen. Die Unterkünfte verfügen über ein Bad und eine Küche. Der Hof liegt im Gemeindegebiet von Kufstein, von wo aus das Stadtzentrum und die Festung schnell erreichbar sind. Auf dem Hof werden landwirtschaftliche Produkte erzeugt. Die Umgebung von Kufstein ist reich an Wander- und Radwegen. Das nahe Kaisergebirge lädt zu Ausflügen ein. Kufstein ist ein Verkehrsknotenpunkt mit guter Bahnanbindung.</p>",
+  "beschreibung": "<p><strong>Hörfinghof</strong> v <strong>Kufsteinu</strong> je zemědělská usedlost nabízející prázdninové apartmány. Ubytování disponuje vlastní koupelnou a plně vybavenou kuchyní. Statek se nachází v katastru města Kufstein, odkud se rychle dostanete do historického centra i na známou pevnost. Na statku se vyrábějí čerstvé zemědělské produkty. Okolí Kufsteinu nabízí bohatou síť turistických a cyklistických tras. Nedaleké pohoří Kaisergebirge láká k nezapomenutelným horským výletům. Kufstein je významným dopravním uzlem s vynikajícím vlakovým spojením.</p>",
   "ausstattung": [],
   "tags": [
     "ferienwohnung",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Kufstein"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Café Restaurant Waidmannsheil in Bad Hindelang",
-  "beschreibung": "<p>Im <strong>Café Restaurant Waidmannsheil</strong> in Bad Hindelang in der Region Kufstein genießen Gäste eine köstliche Kombination aus traditioneller Tiroler Küche und modernen Einflüssen. Das gemütliche Restaurant überzeugt mit einer einladenden Atmosphäre und einem freundlichen Service, der jeden Besuch zu einem besonderen Erlebnis macht. Die saisonal wechselnde Karte setzt auf frische Produkte aus der Region – von Bergkäse aus den umliegenden Almen bis hin zu frischem Wild aus den Tiroler Wäldern. Auch Liebhaber der internationalen Küche kommen hier auf ihre Kosten. Die hausgemachten Nachspeisen, darunter Klassiker wie Kaiserschmarrn und Apfelstrudel, runden das kulinarische Angebot perfekt ab.</p>",
+  "kurzbeschreibung": "Café Restaurant Waidmannsheil in Bad Hindelang - gastvrij restaurant en regionale gerechten",
+  "beschreibung": "<p>In <strong>Café Restaurant Waidmannsheil</strong> in Bad Hindelang genieten gasten van een smakelijke combinatie van traditionele Tiroolse gerechten en eigentijdse invloeden. Het gezellige restaurant verwelkomt bezoekers met een ontspannen sfeer en attente bediening. Op de menukaart staan verse streekproducten centraal, van lokale bergkaas tot seizoensgebonden wildspecialiteiten en ambachtelijke Oostenrijkse desserts.</p>",
   "ort": "Bad Hindelang",
   "region": "kufstein",
   "plz": "87541",
@@ -20,5 +20,8 @@
     "lat": 47.4813925,
     "lng": 10.40326
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.waidmannsheil-hinterstein.de"
+  ]
 }

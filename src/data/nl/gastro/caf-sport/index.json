@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Sport in Tirol",
-  "beschreibung": "<p>Das <strong>Café Sport</strong> in Außerfern ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "kurzbeschreibung": "Café Sport in Ausserfern - sfeervol café en Oostenrijks gebak",
+  "beschreibung": "<p><strong>Café Sport</strong> in Ausserfern is een charmant café dat zijn gasten verrast met huisgemaakt gebak, verfijnde koffiespecialiteiten en een warme ambiance. Hier kunt u heerlijk ontspannen, een goed boek lezen of gezellig bijpraten met vrienden. De menukaart biedt traditionele Oostenrijkse meelspijzen – van klassieke Sachertorte tot geurige apfelstrudel, geserveerd met aromatische koffie.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "87459",
@@ -21,5 +21,8 @@
     "lat": 47.5683411,
     "lng": 10.5641677
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

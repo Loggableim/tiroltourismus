@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Liebevoll in Oberndorf in Tirol",
-  "beschreibung": "<p>Het <strong>Café Liebevoll</strong> in Oberndorf in Tirol in de regio Kitzbühel nodigt uit voor een smakelijke pauze. De stijlvolle café-konditorie verwent zijn gasten met een grote selectie zelfgemaakte taarten, cakes en zoete specialiteiten. Elk stuk wordt met veel liefde voor detail bereid en kunstig gepresenteerd. Daarbij worden zorgvuldig geselecteerde koffiespecialiteiten geserveerd, die door ervaren baristi perfect worden bereid. De gezellige sfeer met charmant interieur nodigt uit tot blijven en genieten. Of het nu voor het ontbijt, een namiddagkoffie of een kleine snack tussendoor is – hier voel je je welkom. Het rijke ontbijtassortiment laat geen wensen onbeantwoord en is de perfecte start van de dag.</p>",
+  "kurzbeschreibung": "Café Liebevoll in Oberndorf in Tirol - ambachtelijke patisserie en koffie",
+  "beschreibung": "<p><strong>Café Liebevoll</strong> in Oberndorf in Tirol nodigt uit tot een heerlijke pauze. Deze stijlvolle café-patisserie verwent gasten met een ruime selectie aan huisgemaakt gebak, taarten en zoete lekkernijen. Elk stuk wordt met liefde en vakmanschap bereid. Daarbij worden voortreffelijke koffiespecialiteiten geserveerd. De gezellige sfeer met charmant interieur maakt het tot een ideale plek voor een ontspannen ontbijt of middagkoffie.</p>",
   "ort": "Oberndorf in Tirol",
   "region": "kitzbuehel",
   "plz": "6372",
@@ -21,5 +21,8 @@
     "lat": 47.4986856,
     "lng": 12.38447
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://liebe-voll.at/"
+  ]
 }

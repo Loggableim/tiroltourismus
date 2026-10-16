@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café SCHMANKER lekker in Kufstein",
-  "beschreibung": "<p>Das <strong>Café SCHMANKERLeck</strong> in Kufstein in der Region Kufstein ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "kurzbeschreibung": "Café SCHMANKERLeck in Kufstein - ambachtelijke patisserie en koffie",
+  "beschreibung": "<p><strong>Café SCHMANKERLeck</strong> in Kufstein nodigt uit tot een heerlijke pauze. Deze stijlvolle café-patisserie verwent gasten met een ruime selectie aan huisgemaakt gebak, taarten en zoete lekkernijen. Elk stuk wordt met liefde en vakmanschap bereid. Daarbij worden voortreffelijke koffiespecialiteiten geserveerd. De gezellige sfeer met charmant interieur maakt het tot een ideale plek voor een ontspannen ontbijt of middagkoffie.</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -20,5 +20,8 @@
     "lat": 47.5813458,
     "lng": 12.1703593
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

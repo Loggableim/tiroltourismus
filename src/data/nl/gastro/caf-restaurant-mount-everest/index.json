@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Café-Restaurant Mount Everest in Mayrhofen",
-  "beschreibung": "<p>Im <strong>Café-Restaurant Mount Everest</strong> in Mayrhofen in der Region Zillertal wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt.</p>",
+  "kurzbeschreibung": "Café-Restaurant Mount Everest in Mayrhofen - uitzicht en Oostenrijkse keuken",
+  "beschreibung": "<p>In <strong>Café-Restaurant Mount Everest</strong> in Mayrhofen in het Zillertal staat oprechte gastvrijheid centraal. Het restaurant biedt een uitnodigende ambiance en een menukaart die traditionele Tiroolse en Oostenrijkse gerechten combineert met moderne accenten. De ingrediënten zijn grotendeels afkomstig van lokale producenten. De veranda met panoramisch uitzicht op de omliggende bergwereld nodigt op zonnige dagen uit tot langdurig genieten.</p>",
   "ort": "Mayrhofen",
   "region": "zillertal",
   "plz": "6290",
@@ -20,5 +20,8 @@
     "lat": 47.1608588,
     "lng": 11.86137
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

@@ -4,17 +4,19 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "Le Museum Kitzbühel présente sur trois étages l’histoire mouvementée de la ville, du Moyen Âge à nos jours, avec un accent particulier sur l’exploitation minière et le Tourismus. *(HTML tags et termes spécifiques conservés comme demandé.)*",
+  "kurzbeschreibung": "Le Musée de Kitzbühel retrace l'histoire de la cité et du ski alpin et abrite la plus importante collection du peintre Alfons Walde.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museum",
-    "geschichte",
-    "kultur",
-    "bergbau"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 10,00 €, Kinder und Jugendliche bis 18 Jahre frei",
   "oeffnungszeiten": "Di-So 10:00-17:00",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
@@ -22,5 +24,15 @@
   "koordinaten": {
     "lat": "47.4464",
     "lng": "12.3911"
-  }
+  },
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le <strong>Museum Kitzbühel</strong> est établi dans un ancien grenier à blé du XVIe siècle flanqué d'une tour médiévale en plein cœur de la vieille ville. Il retrace l'épopée locale depuis l'âge du bronze et l'exploitation minière jusqu'au développement du ski de compétition sur la célèbre Streif. Le musée abrite la plus grande collection permanente consacrée à l'artiste Alfons Walde dont les toiles enneigées ont fait la renommée internationale du Tyrol.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>Le parcours s'étend sur plusieurs étages desservis par ascenseur. On découvre les trophées des pionniers du ski et du champion Toni Sailer, avant d'admirer les paysages lumineux peints par Walde. Le sommet du bâtiment offre une terrasse panoramique accessible à tous avec une vue à 360 degrés sur la ville et le mont Hahnenkamm. Accessible en fauteuil roulant. Durée : 1h30 à 2h.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Ouvert toute l'année du mardi au dimanche de 10h00 à 17h00 (fermé le lundi). Tarif adulte environ 10,00 €, gratuit pour les moins de 18 ans. Situé dans la zone piétonne de la Hinterstadt, à 8 minutes de marche de la gare de Kitzbühel.</p>\n\n<h2>Tipps</h2>\n<p>La terrasse sur le toit offre un point de vue spectaculaire sur les toits multicolores de la vieille ville et sur le tracé de la piste de descente de la Streif.</p>",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-museum-kitzbuehel",
+    "https://www.kitzbuehel.com/",
+    "https://de.wikipedia.org/wiki/Alfons_Walde",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

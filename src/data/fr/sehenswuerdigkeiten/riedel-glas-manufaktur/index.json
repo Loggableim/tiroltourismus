@@ -4,17 +4,19 @@
   "region": "kufstein",
   "ort": "Rattenberg",
   "kategorie": "museum",
-  "kurzbeschreibung": "La célèbre Glashütte de Rattenberg présente, lors de visites guidées, l’art du soufflage de verre et propose des produits en verre uniques.",
+  "kurzbeschreibung": "La verrerie Riedel à Kufstein dévoile l'art millénaire du verre soufflé à la bouche et l'exposition sensorielle Sinnfonie dédiée à l'œnologie.",
   "emoji": "🥂",
   "farbe": "#87CEEB",
   "tags": [
-    "verre",
-    "artisanat",
-    "musée",
-    "culture"
+    "Kultur",
+    "Handwerk",
+    "Museum",
+    "Glasbläserei",
+    "Kufstein",
+    "Design"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Führung Erwachsene € 10,00",
+  "dauer": "1-1.5 Stunden",
+  "preis": "Erwachsene ca. 12,00 €, Kinder unter 18 Jahren in Begleitung frei",
   "oeffnungszeiten": "Mo-Fr 9:00-18:00, Sa 9:00-17:00",
   "webseite": "https://www.riedel.com/de/",
   "bilder": [],
@@ -22,5 +24,15 @@
   "koordinaten": {
     "lat": "47.4399",
     "lng": "11.8941"
-  }
+  },
+  "beschreibung": "<h2>Überblick</h2>\n<p>Mondialement réputée, la cristallerie <strong>Riedel Glas</strong> à Kufstein incarne depuis plus de 265 ans et onze générations l'excellence du verre soufflé. Claus J. Riedel révolutionna l'art de la dégustation dans les années 1950 en concevant des verres dont la forme magnifie les arômes des différents cépages. L'espace immersif « Sinnfonie » fait découvrir la magie du sable en fusion transformé en cristal délicat.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>La visite guidée sensorielle parcourt l'exposition interactive avant de mener à la galerie surplombant l'atelier de fabrication. Là, les maîtres verriers cueillent la pâte de verre chauffée à plus de 1 000 °C et façonnent à la bouche carafes et verres selon des techniques ancestrales. Le circuit est accessible aux personnes à mobilité réduite grâce à des rampes et ascenseurs. Durée : environ 1 heure.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Ouvert du lundi au vendredi de 09h00 à 18h00 et le samedi de 09h00 à 16h00 (fermé le dimanche ; pas de production le samedi). Entrée adulte environ 12,00 €, gratuit pour les moins de 18 ans. En voiture par l'A12 sortie Kufstein-Süd avec parking gratuit. À 15 minutes à pied de la gare de Kufstein.</p>\n\n<h2>Tipps</h2>\n<p>Participez à un atelier de dégustation comparative pour constater l'impact de la forme du calice sur le vin. La boutique d'usine propose des collections exclusives.</p>",
+  "sources": [
+    "https://www.riedel.com/",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-riedel-glas",
+    "https://de.wikipedia.org/wiki/Riedel_Glas",
+    "https://www.kufstein.com/",
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ],
+  "saison": "Ganzjährig geöffnet (Mo-Fr sowie Sa vormittags)",
+  "familie": true
 }

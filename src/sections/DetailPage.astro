@@ -67,6 +67,12 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
 />
     ))}
 
+    {sections.filter(s => s.type === 'image-credit' && s.sourceUrl).map(s => (
+      <div class="container image-credit">
+        <p>Foto: {s.artist ? `${s.artist}, ` : ''}<a href={s.licenseUrl} rel="license">{s.license}</a> · <a href={s.sourceUrl} rel="noopener" target="_blank">Wikimedia Commons</a></p>
+      </div>
+    ))}
+
     {sections.filter(s => s.type === 'facts-bar').map(s => (
       <SectionFactsBar items={s.items} accentColor={s.accentColor} />
     ))}
@@ -262,4 +268,6 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
     .sec-custom-hero h1{font-size:clamp(28px,8vw,42px)}
     .sec-custom-hero-sub{font-size:13px}
   }
+  .image-credit{margin-top:6px;font-size:11px;color:var(--text3);text-align:right}
+  .image-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 </style>

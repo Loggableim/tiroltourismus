@@ -4,14 +4,14 @@
   "status": "published",
   "region": "imst",
   "ort": "Imst",
-  "kategorie": "natur",
-  "kurzbeschreibung": "Le Hausberg d’Imst – un sommet de 2.774 m avec des voies d’escalade, des sentiers de randonnée et un panorama à 360° grandiose sur les Alpes du Lech.",
-  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Muttekopf</strong> (2 774 m) est le sommet emblématique surplombant la ville d'Imst dans les Alpes de Lechtal. Réputé pour ses falaises calcaires, ses cirques glaciaires sauvages et son panorama à 360 degrés sur la Zugspitze et les Alpes de l'Ötztal, il abrite le refuge chaleureux Muttekopfhütte à 1 934 m d'altitude.</p><h2>Parcours &amp; Exigences</h2><p>Départ depuis la station supérieure d'Alpjoch (2 050 m) via le sentier sécurisé Drischlsteig jusqu'au refuge (40 min). La montée finale franchit des pierriers raides et l'arête sommitale (750 m de dénivelé, 2h30 à 3h de marche, difficulté T3+/T4). Les ferratistes expérimentés peuvent emprunter l'exigeante via ferrata d'Imst (C/D). Chaussures de haute montagne indispensables. Arête sommitale interdite aux chiens.</p><h2>Accès</h2><p>Gare d'Imst-Pitztal puis bus local jusqu'aux remontées mécaniques de Hoch-Imst. En voiture via l'A12 sortie Imst jusqu'au grand parking gratuit de Hoch-Imst. Télésièges ouverts de mai à octobre.</p><h2>Conseils</h2><p>Redescendez depuis la gare intermédiaire avec l'Alpine Coaster d'Imst, la plus longue luge sur rail des Alpes. Goûtez les Kaspressknödel sur la terrasse de la Muttekopfhütte.</p>",
+  "kategorie": "aussicht",
+  "kurzbeschreibung": "Culminant à 2 774 mètres au-dessus d'Imst, le Muttekopf est un belvédère exceptionnel des Alpes de Lechtal, réputé pour ses courses d'arête, ses refuges et ses via ferratas.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le <strong>Muttekopf</strong> (2 774 m) est la fière montagne tutélaire de la ville d'Imst, formant l'avant-poste sud-est des Alpes de Lechtal dans le Tyrol supérieur. Grâce à sa position isolée en promontoire au-dessus de la vallée de l'Inn et du Gurgltal, ce sommet rocheux offre l'un des panoramas les plus impressionnants du Tyrol. Depuis la vaste croix sommitale, le regard embrasse les glaciers des Alpes de l'Ötztal et de Stubai, le massif du Wetterstein dominé par la Zugspitze ainsi que les crêtes du Karwendel. Façonné par des falaises de conglomérat et de calcaire entourant le cirque sauvage du Malchitt, ce massif séduit randonneurs, grimpeurs et amateurs de via ferrata par sa richesse géologique et florale.</p>\n<h2>Route & Anforderungen</h2>\n<p>L'ascension du Muttekopf représente une course en haute montagne sportive, cumulant de 800 à 1 800 mètres de dénivelé selon la variante choisie. Une approche très prisée consiste à emprunter les télésièges d'Imst jusqu'à la station supérieure de l'Alpjoch (2 050 m). De là, le spectaculaire sentier du Drischlsteig, taillé dans la falaise et parfaitement sécurisé, rejoint le chaleureux refuge Muttekopfhütte à 1 934 mètres. L'itinéraire grimpe ensuite à travers un grand cirque rocheux vers la brèche de la Muttekopfscharte avant de suivre une arête escarpée jusqu'au sommet. Cette sortie réclame un pied très sûr, l'absence de vertige et un équipement adapté. Les via ferratas de la cascade et de l'Imster Klettersteig offrent de superbes défis verticaux.</p>\n<h2>Besuch & Anreise</h2>\n<p>Le point de ralliement est la ville d'Imst. Le départ des remontées mécaniques à Hoch-Imst dispose de vastes parkings et est accessible en voiture ou par le bus urbain depuis la gare d'Imst-Pitztal. Pour une ascension intégrale à pied, on peut partir d'Imst en traversant les spectaculaires gorges de la Rosengartenschlucht jusqu'au refuge en quatre heures environ. La Muttekopfhütte est gardée de début juin à début octobre.</p>\n<h2>Tipps</h2>\n<p>Une halte sur la terrasse ensoleillée de la Muttekopfhütte comblera les gourmands avec ses spécialités tyroliennes faites maison. Pour les familles, combiner la randonnée avec une descente sur l'Alpine Coaster de Hoch-Imst, l'une des plus longues luges sur rail alpines au monde, promet des sensations fortes inoubliables.</p>",
   "emoji": "🏔️",
   "farbe": "#6D4C41",
   "hoehe": "2.774 m",
-  "dauer": "5–6 Stunden",
-  "preis": "Kostenlos (Bergbahn Hoch-Imst Berg- und Talfahrt ca. 24 €)",
+  "dauer": "5-8 heures (randonnée d'une journée)",
+  "preis": "Accès libre et gratuit (remontées d'Imst payantes en option)",
   "tags": [
     "vue panoramique",
     "randonnée",
@@ -20,7 +20,7 @@
     "alpinisme",
     "Alpes de Lechtal"
   ],
-  "oeffnungszeiten": "Ganzjährig; Muttekopfhütte: Juni–Sep",
+  "oeffnungszeiten": "Accessible toute l'année; randonnées recommandées de juin à octobre",
   "webseite": "https://www.muttekopfhuette.at",
   "koordinaten": {
     "lat": "47.2833",
@@ -28,9 +28,9 @@
   },
   "sources": [
     "https://de.wikipedia.org/wiki/Muttekopf",
+    "https://www.imst.at/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Muttekopfh%C3%BCtte",
-    "https://www.alpenvereinaktiv.com/de/tour/muttekopf-vom-alpjoch/1381387/",
-    "https://www.bergsteigen.com/touren/klettersteig/imster-klettersteig-muttekopf/",
-    "https://www.vvt.at/"
+    "https://www.alpenverein.at/"
   ]
 }

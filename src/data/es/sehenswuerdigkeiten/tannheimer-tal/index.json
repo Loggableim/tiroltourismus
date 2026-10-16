@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Tannheim",
   "kategorie": "natur",
-  "kurzbeschreibung": "Das 'schönste Hochtal Europas' (1.100 m) im Außerfern – verträumte Badeseen, schroffe Kletterberge, Familienwanderwege und Almidylle.",
-  "beschreibung": "<h2>Visión general</h2><p>El valle de <strong>Tannheimer Tal</strong> (1.100 m) está reconocido como uno de los valles de montaña más bellos de Europa. Situado al noroeste del Tirol junto a Baviera, combina lagos cristalinos protegidos (Vilsalpsee y Haldensee), verdes praderas alpinas y las impresionantes paredes rocosas de la Rote Flüh y el Neunerköpfle.</p><h2>Ruta y Requisitos</h2><p>El paseo circular alrededor del lago Haldensee es llano y adaptado para carritos (4,5 km, 1,5 horas, T1). El telecabina del Neunerköpfle da acceso al sendero familiar y al \"Libro de cumbre más grande de los Alpes\" a 1.860 m (T1). Para montañeros expertos destaca la ferrata de Lachenspitze (C/D). Calzado de montaña imprescindible en altura. Perros permitidos con correa.</p><h2>Cómo llegar</h2><p>En tren a Reutte o Sonthofen (Alemania) y autobuses 120/121. En coche sin peaje desde Alemania por la autopista A7 y el puerto de Oberjoch. Aparcamientos en las estaciones de remontes.</p><h2>Consejos</h2><p>Aproveche la tarjeta de remontes incluidos que ofrecen los alojamientos locales y saboree el queso artesano de montaña en la terraza de la cabaña Vilsalpe.</p>",
+  "kurzbeschreibung": "El valle Tannheimer Tal a 1.100 m en los Alpes de Allgäu está considerado el valle alto más hermoso de Europa, con lagos, teleféricos y crestas alpinas.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>El bucólico <strong>valle de Tannheimer Tal</strong> reposa a unos 1.100 metros de altitud en los Alpes de Allgäu, en el distrito tirolés de Reutte. Con 16 kilómetros de longitud, está aclamado como uno de los valles de alta montaña más bellos del continente. Custodiado por agujas calcáreas legendarias como la Rote Flüh (2.108 m) y el Gimpel y por laderas amables como el Neunerköpfle, combina extensas praderas floridas con cumbres alpinas. Destacan joyas lacustres como el lago Vilsalpsee en su reserva natural y el lago Haldensee. En verano cuenta con más de 300 km de rutas señalizadas y el famoso libro de cima gigante, mientras que en invierno es una meca del esquí nórdico con 140 km de pistas.</p>\n<h2>Route & Anforderungen</h2>\n<p>El fondo del valle dispone de una senda llana que acompaña el curso del río Vils entre aldeas (de 1 a 3 horas, accesible para carritos de bebé). Los montañeros experimentados pueden ascender hacia el refugio Gimpelhaus y la cima de Rote Flüh (unas 3,5 horas, exige buena forma y calzado técnico). Zapatillas ligeras bastan en el valle; botas de montaña para las alturas.</p>\n<h2>Besuch & Anreise</h2>\n<p>Se llega en coche por la B199 desde Reutte por el paso de Gaichtpass o sin peaje desde Baviera por el puerto de Oberjoch. Hay aparcamientos junto a los remontes. En tren se viaja a Reutte o Sonthofen con enlace en autobuses regulares.</p>\n<h2>Tipps</h2>\n<p>Suba en telecabina al monte Neunerköpfle para firmar en el libro de cumbres más grande de los Alpes (de más de 3 metros) y deguste fideos tiroleses al horno con queso en la terraza de la cabaña Gundhütte.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Halbtags bis Ganztags",
-  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
+  "dauer": "Medio día a día completo",
+  "preis": "Senderos del valle y lagos gratuitos; teleféricos aprox. 24-28 € ida y vuelta (incluidos en hoteles socios)",
   "tags": [
     "senderismo",
     "senderismo",
@@ -20,7 +20,7 @@
     "naturaleza",
     "familia"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Senderos del valle todo el año; remontes de mayo a octubre y de diciembre a abril",
   "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
@@ -32,8 +32,9 @@
   "familie": true,
   "sources": [
     "https://www.tannheimertal.com/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Tannheimer_Tal",
-    "https://www.naturpark-tiroler-lech.at/",
+    "https://de.wikipedia.org/wiki/Tannheim_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

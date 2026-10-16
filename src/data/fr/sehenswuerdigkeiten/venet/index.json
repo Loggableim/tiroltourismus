@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Le Hausberg de Landeck – accessible en Panoramabahn, avec la plus longue zipline du Tirol et une vue imprenable à 360° sur la vallée de l’Oberinntal. Une expérience inoubliable !",
-  "beschreibung": "<h2>Aperçu</h2><p>Le <strong>Venet</strong> (2 208 m au Krahberg) est la montagne panoramique emblématique dominant Landeck et Zams. Accessible en 8 minutes par le téléphérique Venetbahn, il offre un balcon panoramique exceptionnel à 360 degrés sur 82 sommets de plus de 3 000 m (Zugspitze, Wildspitze, Ortles) et abrite le plus haut observatoire astronomique du Tyrol.</p><h2>Parcours &amp; Exigences</h2><p>Sentier panoramique plat et accessible autour du Krahberg (45 min, T1, poussettes). Traversée facile des crêtes vers l'alpage traditionnel de Goglesalm (1h30, T1/T2). Randonnée alpine vers la Glanderspitze (2 512 m, T2/T3). Très réputé pour le parapente. Bonnes chaussures de marche recommandées. Chiens admis en laisse dans les bennes.</p><h2>Accès</h2><p>Gare ÖBB de Landeck-Zams à 10 minutes à pied du téléphérique à Zams. En voiture par l'A12 sortie Zams/Landeck. Grand parking gratuit au départ.</p><h2>Conseils</h2><p>Participez à une soirée d'observation aux télescopes de l'observatoire astronomique du Venet et profitez de la terrasse panoramique du refuge sommital.</p>",
+  "kurzbeschreibung": "Le mont Venet (2 208 m au Krahberg) sur Landeck/Zams offre un panorama à 360° sur plus de 80 sommets alpins, l’observatoire le plus haut du Tyrol et le sentier ludique de Tobi.",
+  "beschreibung": "<h2>Aperçu</h2>\n<p>Le <strong>Venet</strong> (2 208 m au Krahberg) est le sommet emblématique du bassin de Landeck-Zams-Fließ, considéré comme l'un des plus remarquables belvédères des Alpes centrales. Depuis la vaste cime du Krahberg se déploie une vue circulaire à 360 degrés sur plus de 80 sommets majeurs, comprenant la Wildspitze étincelante, le mont Ortles, la Silvretta et la Zugspitze en Bavière. Par temps clair, la vue porte au-delà des frontières autrichiennes, suisses et italiennes. Grâce à son exposition particulièrement ensoleillée, le sommet héberge l'observatoire astronomique le plus élevé du Tyrol avec un télescope solaire de pointe. En été, le massif comble les randonneurs, les parapentistes et les adeptes de VTT, tandis qu'en hiver, ses pentes douces accueillent un domaine skiable familial chaleureux.</p>\n<h2>Parcours &amp; Exigences</h2>\n<p>Le téléphérique moderne du Venet hisse les passagers depuis Zams jusqu'à la gare amont à 2 208 mètres en quelques minutes. Autour de la station sommitale, un chemin panoramique accessible mène en 20 minutes à la plateforme d’observation et à l’observatoire, accessible sans peine aux poussettes et aux seniors. Les enfants adorent « Tobi’s Erlebnisweg » avec ses jeux interactifs et ses modules d'adresse. De confortables bancs et chaises longues jalonnent le sentier pour savourer le panorama. Les randonneurs chevronnés peuvent s'élancer sur l'arête du Venet vers le Glanderspitz (2 512 m), qui réclame un pied sûr et une tenue de haute montagne. De bonnes baskets suffisent pour les promenades faciles au sommet, tandis que des chaussures montantes de montagne s'imposent pour la crête.</p>\n<h2>Accès</h2>\n<p>Les remontées fonctionnent en été de fin mai à mi-octobre tous les jours de 08h30 à 17h00 (exploitation hivernale de décembre à mars). Le forfait aller-retour adulte coûte environ 25,00 euros, avec des réductions pour les titulaires de la carte d'hôte TirolWest. La station de départ se trouve au cœur de Zams avec un vaste parking gratuit. En train, la gare grandes lignes de Landeck-Zams permet de rejoindre le téléphérique en 10 minutes à pied ou en bus local.</p>\n<h2>Conseils</h2>\n<p>Réservez une soirée d'observation astronomique à l'observatoire du Venet par nuit claire pour admirer planètes et galaxies à travers un télescope de recherche. Sur la terrasse ensoleillée du restaurant panoramique, dégustez de savoureux Kaspressknödel tyroliens face aux sommets.</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "2–4 Stunden",
-  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
+  "dauer": "2–4 heures",
+  "preis": "Téléphérique aller-retour adultes env. 25,00 € ; réductions avec la carte TirolWest Card",
   "tags": [
     "vue panoramique",
     "randonnée",
@@ -20,7 +20,7 @@
     "sport",
     "famille"
   ],
-  "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt); Winter: Di–So 9:00–16:00",
+  "oeffnungszeiten": "Saison estivale de fin mai à mi-octobre tous les jours 08h30–17h00 ; exploitation hivernale de décembre à mars",
   "webseite": "https://www.venet.at",
   "koordinaten": {
     "lat": "47.1528",
@@ -30,8 +30,10 @@
   "familie": true,
   "sources": [
     "https://www.venet.at/",
-    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
-    "https://de.wikipedia.org/wiki/Venet",
+    "https://www.tirolwest.at/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Venet_(Berg)",
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

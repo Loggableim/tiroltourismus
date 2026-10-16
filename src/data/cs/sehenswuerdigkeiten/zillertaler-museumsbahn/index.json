@@ -4,12 +4,12 @@
   "region": "zillertal",
   "ort": "Strass im Zillertal",
   "kategorie": "kultur",
-  "kurzbeschreibung": "Historická parní kolej se od roku 1902 pohybuje přes Zillertal – nostalgická časová cesta mezi Strass a Mayrhofen.",
-  "beschreibung": "Die Zillertaler Museumsbahn ist eine der ältesten erhaltenen Schmalspurbahnen Österreichs. Auf der 32 km langen Strecke zwischen Strass im Zillertal und Mayrhofen verkehren historische Dampf- und Dieselloks mit Originalwagen aus der Kaiserzeit. Im Sommer finden regelmäßig Dampfzugfahrten statt, bei denen Passagiere in die Nostalgie vergangener Tage eintauchen können. Der Verein 'Zillertaler Museumsbahn' hat die historischen Fahrzeuge liebevoll restauriert. Ein Besuch im Bahnhof Jenbach mit dem angeschlossenen Heizhausmuseum rundet das Erlebnis ab.",
+  "kurzbeschreibung": "Historická parní železnice Zillertalbahn spojuje Jenbach a Mayrhofen od roku 1902 s dobovými vagony, vyhlídkovým vozem a vagonem se krystaly Swarovski.",
+  "beschreibung": "<h2>Přehled</h2>\n<p>Nostalgická železnice <strong>Zillertaler Museumsbahn</strong> – slavný historický parní vlak dráhy Zillertalbahn – patří k nejoblíbenějším železničním atrakcím Rakouska. Od slavnostního otevření v roce 1902 spojuje úzkokolejka o rozchodu 760 mm (tzv. bosenský rozchod) údolí Innu v Jenbachu s malebnými obcemi Zillertalu až do Mayrhofenu. Když se mohutná parní lokomotiva, stará více než 120 let, rozjede za hlasitého pískání, syčení páry a klapání kol, cestující se přenesou do romantiky epochy Belle Époque. Na trase dlouhé 32 kilometrů supí vlak pohodovým tempem širokým údolím podél rozkvetlých statků pod štíty Tuxských a Zillertalských Alp.</p>\n<h2>Trasa a náročnost</h2>\n<p>Historická jízda vede přes Jenbach, Fügen, Kaltenbach, Zell am Ziller až do Mayrhofenu a trvá zhruba 90 minut. Cestující mohou nastupovat a vystupovat v hlavních stanicích nebo jet jen část trasy. Samotné vagony jsou pojízdným muzeem: vedle dřevěných lavic dvounápravových vozů souprava nabízí otevřený vyhlídkový vagon („Cabrio“), bufetový vůz s občerstvením i světoznámý křišťálový vagon zdobený 62 000 krystaly Swarovski. Jízda je zcela bezbariérová a příjemná pro rodiny, seniory i železniční nadšence. Ve služebním voze lze zdarma přepravovat jízdní kola, což je ideální pro kombinaci s rovinatou cyklostezkou podél řeky Ziller.</p>\n<h2>Příjezd a doprava</h2>\n<p>Parní vlaky jezdí v letních měsících od začátku června do začátku října podle sezónního jízdního řádu (obvykle od středy do neděle s jedním až dvěma páry vlaků denně). Jízdenky zakoupíte na nádražích (dospělí cca 26,00 € zpáteční). Výchozí stanice Jenbach je důležitým dopravním uzlem ÖBB s přímými vlaky Railjet z Innsbrucku, Salcburku a Mnichova. Autem sjedete z dálnice A12 na výjezdu Wiesing/Zillertal a zaparkujete u nádraží.</p>\n<h2>Tipy</h2>\n<p>Za slunečného počasí si včas zajistěte místo v otevřeném vyhlídkovém voze, abyste si užili svěží horský vzduch a vůni uhlí a páry. Zpáteční cestu můžete pojmout jako nenáročný cyklovýlet po proudu podél řeky Ziller.</p>",
   "emoji": "🚂",
   "farbe": "#8B4513",
-  "dauer": "2-3 Stunden",
-  "preis": "26 € (Hin- und Rückfahrt, Erwachsene)",
+  "dauer": "2–3 hodiny",
+  "preis": "Celá trasa zpáteční dospělí cca 26,00 €, dílčí úseky a dětské jízdné k dispozici; sleva se Zillertal Activcard",
   "tags": [
     "kultur",
     "geschichte",
@@ -17,7 +17,7 @@
     "familie",
     "museum"
   ],
-  "oeffnungszeiten": "Fahrplan saisonal: Jun–Sep (Dampfzüge Sa, So & Feiertag)",
+  "oeffnungszeiten": "Letní sezóna od června do začátku října podle parního jízdního řádu (zpravidla středa až neděle)",
   "webseite": "https://www.zillertaler-museumsbahn.at",
   "status": "published",
   "koordinaten": {
@@ -25,5 +25,13 @@
     "lng": "11.8222222"
   },
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertalbahn.at/",
+    "https://www.zillertal.at/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Zillertalbahn",
+    "https://de.wikipedia.org/wiki/Jenbach",
+    "https://www.vvt.at/"
+  ]
 }

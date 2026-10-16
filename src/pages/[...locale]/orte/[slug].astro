@@ -2,7 +2,7 @@
 import DetailPage from '../../../sections/DetailPage.astro';
 import { readEntry, readCollection, isPublished, findNearby, findByTag, shouldIndex, autoLinkContent } from '../../../lib/content.js';
 import { generateMetaDescription, buildPageTitle } from '../../../lib/seo.js';
-import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix, localeParams } from '../../../lib/languages.js';
+import { LANGUAGES_READY, DEFAULT_LOCALE, isDefaultLocale, localePrefix, localeParams, LANG_DOMAINS, LANDING_DOMAIN } from '../../../lib/languages.js';
 
 // Localized labels for all 8 languages (DE/EN/FR/IT/ES/ZH/NL/CS)
 const LABELS = {
@@ -216,6 +216,20 @@ const LABELS = {
   },
 };
 
+const ANREISE_LABELS = {
+  de: { title: 'Anreise', auto: 'Auto', bahn: 'Bahn', bus: 'Bus', flughafen: 'Flughafen' },
+  en: { title: 'Getting there', auto: 'Car', bahn: 'Train', bus: 'Bus', flughafen: 'Airport' },
+  fr: { title: 'Accès', auto: 'Voiture', bahn: 'Train', bus: 'Bus', flughafen: 'Aéroport' },
+  it: { title: 'Come arrivare', auto: 'Auto', bahn: 'Treno', bus: 'Autobus', flughafen: 'Aeroporto' },
+  es: { title: 'Cómo llegar', auto: 'Coche', bahn: 'Tren', bus: 'Autobús', flughafen: 'Aeropuerto' },
+  zh: { title: '交通方式', auto: '自驾', bahn: '火车', bus: '巴士', flughafen: '机场' },
+  nl: { title: 'Bereikbaarheid', auto: 'Auto', bahn: 'Trein', bus: 'Bus', flughafen: 'Luchthaven' },
+  cs: { title: 'Dojezd', auto: 'Auto', bahn: 'Vlak', bus: 'Autobus', flughafen: 'Letiště' },
+};
+
+const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const stripEmoji = (s) => String(s || '').replace(/\p{Extended_Pictographic}\uFE0F?\s*/gu, '').trim();
+
 export async function getStaticPaths() {
   const locales = localeParams();
   const paths = [];
@@ -241,6 +255,8 @@ const l = LABELS[locale] || LABELS.de;
 const pref = localePrefix(locale);
 
 const { name, kurzbeschreibung, beschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const heroWebp = entry.hero_bild ? entry.hero_bild.replace(/\.png$/, '-800.webp') : undefined;
+const heroQuelle = entry.hero_bild ? entry.hero_quelle : undefined;
 
 // Verknüpfte Unterkünfte, Gastro und Sehenswürdigkeiten in diesem Ort
 const unterkuenfteImOrt = readCollection('unterkuenfte', locale)
@@ -253,7 +269,9 @@ const sehenswuerdigkeitenImOrt = readCollection('sehenswuerdigkeiten', locale)
   .filter(s => isPublished(s.entry) && s.entry.ort && s.entry.ort.toLowerCase() === name.toLowerCase())
   .slice(0, 6);
 
-const nearbyEntries = entry.koordinaten ? findNearby(entry, 'orte', locale, 8) : [];
+const nearbyEntries = entry.koordinaten
+  ? findNearby(entry, 'orte', locale, 8).filter(n => n.collection !== 'events')
+  : [];
 const CATEGORY_EMOJI = { sehenswuerdigkeiten: '🏛️', gastro: '🍽️', unterkuenfte: '🏨', camping: '🏕️', erlebnisse: '🎯', orte: '🏘️', events: '🎪', regionen: '🏔️' };
 const mapMarkers = [];
 if (entry.koordinaten) {
@@ -276,10 +294,21 @@ const mapSection = mapMarkers.length > 0 ? {
   filterable: true,
 } : null;
 
+const anreiseLabels = ANREISE_LABELS[locale] || ANREISE_LABELS.de;
+const anreiseItems = ['auto', 'bahn', 'bus', 'flughafen']
+  .filter(k => entry.anreise && typeof entry.anreise[k] === 'string' && entry.anreise[k].trim())
+  .map(k => `<li><strong>${escapeHtml(anreiseLabels[k])}:</strong> ${escapeHtml(entry.anreise[k].trim())}</li>`);
+const anreiseSection = anreiseItems.length > 0 ? {
+  type: 'description',
+  label: name,
+  title: anreiseLabels.title,
+  content: `<ul>${anreiseItems.join('')}</ul>`,
+} : null;
+
 // Verwandte Orte via ersten Tag
-const relatedByTag = tags && tags.length > 0
+const relatedByTag = tags && tags.length > 0 && entry.region
   ? findByTag(tags[0], locale)
-      .filter(r => r.collection === 'orte' && r.slug !== slug)
+      .filter(r => r.collection === 'orte' && r.slug !== slug && r.entry.region === entry.region)
       .slice(0, 3)
       .map(r => ({
         ...r,
@@ -288,7 +317,7 @@ const relatedByTag = tags && tags.length > 0
   : [];
 
 // JSON-LD: TouristDestination
-const siteURL = 'https://www.tirol-tourismus.at';
+const siteURL = LANG_DOMAINS[locale] || LANDING_DOMAIN;
 const destinationLD = {
   '@context': 'https://schema.org',
   '@type': 'TouristDestination',
@@ -313,7 +342,7 @@ const destinationLD = {
 
 <DetailPage
   title={buildPageTitle(entry, 'orte', locale)}
-  description={generateMetaDescription(entry, 'orte', locale)}
+  description={stripEmoji(generateMetaDescription(entry, 'orte', locale))}
   breadcrumbs={[{ label: l.orte, href: `${pref}/orte/` }, { label: name }]}
   locale={locale}
   jsonld={destinationLD}
@@ -326,8 +355,15 @@ const destinationLD = {
       emoji: emoji || '🏘️',
       gradient: farbe,
       size: 'sm',
-      bgImage: undefined,
+      bgImage: heroWebp,
     },
+    heroQuelle ? {
+      type: 'image-credit',
+      artist: heroQuelle.autor,
+      license: heroQuelle.lizenz,
+      licenseUrl: heroQuelle.lizenz_url,
+      sourceUrl: heroQuelle.quelle,
+    } : null,
     {
       type: 'facts-bar',
       accentColor: farbe,
@@ -336,7 +372,10 @@ const destinationLD = {
         einwohner ? { value: einwohner, label: l.einwohner } : null,
       ].filter(Boolean),
     },
-    tags && tags.length > 0 ? { type: 'tags', tags } : null,
+    tags && tags.length > 0 ? {
+      type: 'tags',
+      tags: tags.map(t => ({ label: t, href: `${pref}/suche/?q=${encodeURIComponent(t)}` })),
+    } : null,
     // Langbeschreibung (wird bisher nicht angezeigt — Bug)
     beschreibung ? {
       type: 'description',
@@ -346,6 +385,7 @@ const destinationLD = {
     } : null,
     { type: 'related-links', collection: 'orte', slug },
     mapSection,
+    anreiseSection,
     unterkuenfteImOrt.length > 0 ? {
       type: 'related-grid',
       label: l.uebernachten,

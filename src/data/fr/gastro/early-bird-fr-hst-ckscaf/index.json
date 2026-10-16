@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Petit-déjeuner *Early Bird Frühstückscafé* en Tirol Découvrez le charme authentique de l’Early Bird Frühstückscafé au cœur de la Tirol, où chaque matin s’accompagne d’une ambiance…",
-  "beschreibung": null,
+  "beschreibung": "<p>À l'<strong>Early Bird Frühstückscafé</strong> à Innsbruck, la journée commence sous le signe de la gourmandise et de la convivialité. Ce café chaleureux propose une carte associant petits-déjeuners tyroliens copieux et créations saines et modernes. Les produits frais proviennent directement de producteurs alpins locaux : pains croustillants, œufs fermiers et fromages de montagne. Son décor lumineux et sa terrasse ensoleillée avec vue sur les cimes en font l'adresse rêvée pour un brunch relaxant au cœur des Alpes.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3062731,
     "lng": 11.0712407
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

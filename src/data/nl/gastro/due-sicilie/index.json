@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Due Sicilie in Innsbruck",
-  "beschreibung": "<p>Im <strong>Due Sicilie</strong> in Innsbruck in der Region Innsbruck wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt. Italienische Küche mit authentischen Rezepten und mediterranen Zutaten – ein Hauch von Dolce Vita in Tirol.</p>",
+  "kurzbeschreibung": "Authentiek Italiaans restaurant in Innsbruck met mediterrane klassiekers, knapperige pizza's en een vleugje Dolce Vita.",
+  "beschreibung": "<p>Bij <strong>Due Sicilie</strong> in Innsbruck in de regio Innsbruck staat gastvrijheid hoog in het vaandel. Het restaurant biedt een uitnodigende ambiance en een menukaart die authentieke Italiaanse recepten en mediterrane smaken combineert met Tiroolse gezelligheid. De ingrediënten zijn zorgvuldig geselecteerd, wat tot uiting komt in de voortreffelijke smaak van de gerechten. Het sfeervolle interieur met warme houtaccenten zorgt voor een aangename ambiance. Een bijzonder hoogtepunt is de veranda met uitzicht op de omringende bergen – een heerlijk vleugje Dolce Vita in Tirol.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2690779,
     "lng": 11.3892956
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

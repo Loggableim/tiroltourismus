@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cielo v Innsbrucku",
-  "beschreibung": "<p>Das <strong>Cielo</strong> in Innsbruck in der Region Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cielo</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "beschreibung": "<p><strong>Cielo</strong> v Innsbrucku v regionu Innsbruck přináší svým hostům přívětivou rodinnou atmosféru a prvotřídní výběr kávy i lahodných domácích dobrot. Kavárna je známá svou slunnou terasou, která za teplého počasí láká k příjemnému lenošení. Nabídka zahrnuje tradiční rakouské moučníky, voňavé koláče a lákavé čerstvé dorty. Pozorný servis dbá na to, aby návštěvníkům nic nechybělo. <strong>Cielo</strong> je perfektním místem pro klidnou kávovou přestávku uprostřed všedního tyrolského dění.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2630882,
     "lng": 11.3979791
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Welcome to Duxer Stadl in Tirol! Nestled in the heart of the Alps, Duxer Stadl invites you to experience authentic Tirol hospitality in a cozy, rustic setting.",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Duxer Stadl</strong> in the Zillertal, genuine alpine hospitality takes center stage. The restaurant offers a warm, welcoming atmosphere and a menu that brings together traditional Tyrolean mountain recipes with contemporary interpretations. Ingredients are sourced mainly from local alpine farms and forestries, ensuring superb taste and quality. Hearty timber decor and regional touches create an authentic alpine chalet ambiance. An outstanding highlight is the outdoor terrace with panoramic views of the Zillertal Alps, perfect for relaxing after outdoor adventures.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2284101,
     "lng": 12.1405497
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Tirol! Discover the breathtaking beauty of the Alps in Tirol, where majestic mountains meet charming villages and crystal-clear lakes.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Duarf</strong> in the Außerfern region is the ideal destination for anyone seeking a cozy pause from daily life. In this charmingly designed café, guests enjoy a wide range of coffee specialties, homemade pastries, and delicious savory snacks. Traditional Austrian coffeehouse culture is celebrated here with genuine warmth. The velvety Verlängerter and smooth Melange are customer favorites, alongside daily fresh baked goods from the house bakery. A relaxed atmosphere and hospitable service make it a beloved gathering spot for locals and travelers alike.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2911065,
     "lng": 10.4373349
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Reutte"
+  ]
 }

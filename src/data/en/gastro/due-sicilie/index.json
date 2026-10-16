@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Discover the Two Sicilies in Innsbruck Innsbruck, the vibrant capital of Tirol, invites you to experience the charm of Due Sicilie—a culinary and cultural journey that blends the…",
-  "beschreibung": "",
+  "beschreibung": "<p>At <strong>Due Sicilie</strong> in Innsbruck in the Innsbruck region, hospitality is paramount. The restaurant offers a welcoming atmosphere and a menu pairing authentic Italian traditions with Mediterranean freshness and Tyrolean alpine warmth. Ingredients are sourced thoughtfully to ensure top culinary quality across every course. The charming wooden interior and Mediterranean decor create a warm, inviting mood. A special highlight is the veranda offering panoramic views of the alpine peaks, inviting guests to sit back and savor authentic pasta, seafood, and stone-baked pizza – bringing a genuine touch of Dolce Vita to Tyrol.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2690779,
     "lng": 11.3892956
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

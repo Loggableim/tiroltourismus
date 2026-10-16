@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "在蒂罗尔享受阳光烹饪 蒂罗尔的美食之旅 蒂罗尔不仅以壮丽的山脉和清新的空气著称，更是一个美食爱好者的天堂。在这里，您可以在温暖的阳光下，体验当地的传统烹饪艺术，品尝到地道的蒂罗尔美食。",
-  "beschreibung": null,
+  "beschreibung": "<p>在因斯布鲁克的<strong>cooking sun</strong>，宾客可以品味到传统蒂罗尔佳肴与现代风味灵感的曼妙融合。温馨舒适的餐厅以宜人的氛围和热情周到的服务著称，让每次造访都成为令人难忘的美食体验。随季节更迭的菜单选用来自高山牧场和周边森林的优质新鲜食材，无论是高山奶酪还是优质野味都令人称道。亚洲风味与蒂罗尔款待之道的创意碰撞别具魅力，自制皇帝松饼与传统苹果卷等经典甜点更让这一餐画上完美句号。</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2519792,
     "lng": 11.2704933
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

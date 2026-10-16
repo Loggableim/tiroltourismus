@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Dreiseenhütte in Tirol",
-  "beschreibung": "<p>Das <strong>Dreiseenhütte</strong> in Imst verwöhnt seine Gäste mit einer erlesenen Auswahl an regionalen und saisonalen Gerichten. Die Küche verbindet traditionelle Tiroler Rezepte mit kreativen Akzenten und schafft so ein einzigartiges Geschmackserlebnis. Die gemütliche Einrichtung lädt zum Verweilen ein, während der aufmerksame Service für das Wohlbefinden der Gäste sorgt. Besonders empfehlenswert ist die hausgemachte Tiroler Knödelsuppe, die nach einem langen Wandertag wunderbar wärmt. Zudem bietet das Restaurant eine sorgfältig kuratierte Weinkarte mit erlesenen Tropfen aus Südtirol und Österreich.</p>",
+  "kurzbeschreibung": "Traditionele berghut in Imst met hartige Tiroolse gerechten, huisgemaakte knoedelsoep en een heerlijke alpiene sfeer.",
+  "beschreibung": "<p>De <strong>Dreiseenhütte</strong> in Imst verwent zijn gasten met een uitgelezen selectie van regionale en seizoensgebonden gerechten. De keuken combineert traditionele Tiroolse recepten met creatieve accenten en creëert zo een unieke alpiene smaakbeleving. De gezellige inrichting nodigt uit om te ontspannen, terwijl de vriendelijke bediening zorgt voor het welzijn van de gasten. Zeer aan te bevelen is de huisgemaakte Tiroolse knoedelsoep, die na een bergwandeling heerlijk verwarmt. Daarnaast biedt de berghut een zorgvuldig samengestelde wijnkaart met geselecteerde wijnen uit Oostenrijk en Zuid-Tirol.</p>",
   "ort": "",
   "region": "imst",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2052554,
     "lng": 11.0337102
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

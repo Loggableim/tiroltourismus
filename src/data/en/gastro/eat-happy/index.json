@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "Eat Happy in Tirol Discover the joy of eating in Tirol – where every bite tells a story of tradition, quality, and pure Alpine happiness.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Eat Happy</strong> in Tyrol is a premier address for quick yet high-quality culinary delights. Whether you are craving fresh sushi rolls, healthy rice bowls, or savory Asian street snacks, every appetite is satisfied. Ingredients are thoughtfully selected and freshly prepared on site every day, ensuring top taste on the move. The friendly team serves guests with speed and a welcoming smile. <strong>Eat Happy</strong> is the ideal spot for a wholesome, energizing meal during a busy day of city strolls or alpine excursions.</p>",
   "ort": "",
   "region": "?",
   "plz": "82467",
@@ -20,5 +20,8 @@
     "lat": 47.5028629,
     "lng": 11.098224
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Tirol_(Bundesland)"
+  ]
 }

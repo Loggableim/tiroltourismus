@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Duxer Alm v Kufstein",
-  "beschreibung": "<p>Das <strong>Duxer Alm</strong> in Kufstein in der Region Kufstein verwöhnt seine Gäste mit einer erlesenen Auswahl an regionalen und saisonalen Gerichten. Die Küche verbindet traditionelle Tiroler Rezepte mit kreativen Akzenten und schafft so ein einzigartiges Geschmackserlebnis. Die gemütliche Einrichtung lädt zum Verweilen ein, während der aufmerksame Service für das Wohlbefinden der Gäste sorgt. Besonders empfehlenswert ist die hausgemachte Tiroler Knödelsuppe, die nach einem langen Wandertag wunderbar wärmt. Zudem bietet das Restaurant eine sorgfältig kuratierte Weinkarte mit erlesenen Tropfen aus Südtirol und Österreich.</p>",
+  "beschreibung": "<p><strong>Duxer Alm</strong> v Kufsteinu v regionu Kufstein hýčká své hosty prvotřídním výběrem regionálních a sezónních pokrmů. Kuchyně dovedně kombinuje osvědčené tyrolské receptury s moderními kulinářskými trendy a vytváří tak jedinečný alpský zážitek. Útulné rustikální prostředí láká k příjemnému odpočinku po procházce či horské túře. Obzvláště doporučujeme poctivou domácí knedlíčkovou polévku a lahodné sýrové speciality z místních salaší. Bohatý vinný lístek navíc nabízí vybraná vína z Rakouska a Jižního Tyrolska.</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -20,5 +20,8 @@
     "lat": 47.5829242,
     "lng": 12.2003365
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

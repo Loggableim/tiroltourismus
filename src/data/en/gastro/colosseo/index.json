@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Welcome to the Colosseo in Garmisch-Partenkirchen! Discover the breathtaking beauty of the Zugspitz Arena, where the majestic Zugspitze, Germany’s highest mountain, meets the…",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Colosseo</strong> in the alpine region, generous hospitality is an enduring tradition. The restaurant provides an inviting atmosphere and a menu that effortlessly blends classic Tyrolean and Austrian cooking with contemporary culinary ideas. Ingredients are sourced predominantly from regional farmers and producers, resulting in exceptional flavor across every dish. Warm woodwork and rustic decorative details create an authentic alpine feel. A particular highlight is the outdoor dining area with mountain vistas, while crispy stone-baked pizzas are a favorite among all visitors.</p>",
   "ort": "Garmisch-Partenkirchen",
   "region": "innsbruck",
   "plz": "82467",
@@ -21,5 +21,8 @@
     "lat": 47.4926287,
     "lng": 11.0901907
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Garmisch-Partenkirchen"
+  ]
 }

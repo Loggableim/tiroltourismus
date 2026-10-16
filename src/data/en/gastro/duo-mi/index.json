@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Discover Innsbruck with Duo Mi – Your Perfect Alpine Adventure Welcome to Tirol, where breathtaking mountains meet vibrant culture!",
-  "beschreibung": "",
+  "beschreibung": "<p>At <strong>Duo Mi</strong> in Innsbruck in the Innsbruck region, hospitality is paramount. The restaurant offers a welcoming atmosphere and a menu that seamlessly pairs regional Tyrolean farm ingredients with creative Asian culinary traditions. Ingredients are largely sourced from local producers, ensuring outstanding freshness and quality. Warm wooden furnishings and tasteful decor foster a comfortable ambiance. A special highlight is the sun veranda with panoramic views of the alpine peaks, inviting diners to savor an exciting culinary fusion.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2667327,
     "lng": 11.3924862
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

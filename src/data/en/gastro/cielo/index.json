@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Discover the Sky in Innsbruck Innsbruck, the vibrant capital of Tirol, invites you to experience the sky in all its facets.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cielo</strong> in Innsbruck in the Innsbruck region offers a warm, friendly atmosphere and a fine selection of coffee specialties and homemade delights. The café is particularly appreciated for its sunny outdoor terrace, which invites guests to relax on warm days. The menu covers classic Austrian pastries, fragrant cakes, and tempting tarts prepared fresh every day. Attentive staff members ensure that visitors enjoy a completely carefree stay. <strong>Cielo</strong> is the ideal address for a peaceful coffee break in the heart of Innsbruck.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2630882,
     "lng": 11.3979791
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Wake-Up Call Café – Your Tirol Breakfast Haven Start your day with a hearty Frühstück at Wake-Up Call Café, nestled in the heart of Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Early Bird Frühstückscafé</strong> in Innsbruck, hospitable mornings are celebrated in style. The café offers an inviting atmosphere and a menu pairing hearty Tyrolean breakfast favorites with healthy modern interpretations. Fresh breads, artisan cheeses, farm eggs, and specialty coffees are sourced largely from local alpine producers. Cozy wooden interior accents and bright sunlit tables create an uplifting start to the day. The sun terrace with mountain views is a favored gathering spot for early risers and brunch lovers alike.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3062731,
     "lng": 11.0712407
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "HongKong China Restaurant in Reutte – where authentic flavors from the Far East meet the charm of Tirol. Enjoy delicious dishes like Peking duck, crispy Spring rolls, and fragrant Dim Sum in a cozy atmosphere. A culinary journey right in the heart of the Lechtal!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>China Restaurant HongKong</strong> in Reutte in the Außerfern region pampers its patrons with a wonderful array of regional and seasonal dishes. The kitchen combines beloved Tyrolean recipes with fresh creative ideas, resulting in a distinct dining experience. The inviting interior makes it easy to unwind, while the friendly team ensures attentive care. Highly recommended is the house-made Tyrolean dumpling soup, perfect for warming up after exploring the mountains. A curated wine list showcasing Austrian and regional vintages completes the experience.</p>",
   "ort": "Reutte",
   "region": "ausserfern",
   "plz": "6600",
@@ -20,5 +20,8 @@
     "lat": 47.4909433,
     "lng": 10.7177934
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Reutte"
+  ]
 }

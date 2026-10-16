@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "Welcome to the Dunlin Bar in Innsbruck – your cozy spot in the heart of the city, where the charm of Tirol meets modern vibes.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Dunlin Bar</strong> in Innsbruck in the Innsbruck region is a popular rendezvous for anyone looking to enjoy the evening over an exceptional drink. The contemporary interior and relaxed ambiance invite guests to unwind in comfort. The bar presents a refined collection of signature cocktails, long drinks, craft beers, and quality wines. Talented mixologists prepare each drink with passion and precision. Whether meeting colleagues after work or enjoying a celebratory night out, the Dunlin Bar guarantees a memorable night in the alpine capital.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.264879,
     "lng": 11.3963004
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

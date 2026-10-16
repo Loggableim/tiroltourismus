@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": null,
-  "beschreibung": "<p>Das <strong>Chinarestaurant Kaiser</strong> in Innsbruck in der Region Innsbruck ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt. Das Ambiente vereint traditionelle Tiroler Elemente mit modernem Komfort und schafft eine einladende Atmosphäre für jeden Anlass. Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten – von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemütliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschäftliches Treffen – das <strong>Chinarestaurant Kaiser</strong> heißt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service für einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Oblíbená restaurace v Innsbrucku s bohatým jídelním lístkem, tyrolskými specialitami a srdečnou obsluhou.",
+  "beschreibung": "<p><strong>Chinarestaurant Kaiser</strong> v Innsbrucku v regionu Innsbruck je vyhledávanou restaurací, která své hosty hýčká rozmanitým jídelním lístkem a vřelou pohostinností. Příjemné prostředí spojuje tradiční tyrolské prvky s moderním komfortem a vytváří útulnou atmosféru pro každou příležitost. Nabídka představuje pestrý výběr jídel – od klasických tyrolských specialit, jako jsou Tiroler Gröstl a Kaiserschmarrn, až po mezinárodní oblíbené pokrmy. Kuchařský tým klade důraz na čerstvé suroviny z okolních farem. Ať už plánujete romantickou večeři ve dvou, rodinnou oslavu nebo pracovní schůzku, v restauraci Kaiser se postarají o váš ničím nerušený gurmánský zážitek.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2650318,
     "lng": 11.4095724
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

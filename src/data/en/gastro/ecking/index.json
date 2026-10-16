@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Tirol Discover the breathtaking beauty of Tirol, where majestic mountains meet charming alpine villages.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>ecKing</strong> in Kitzbühel provides its guests with a cordial atmosphere and a delicate choice of coffee specialties and homemade treats. The café is well regarded for its sunny terrace, inviting guests to sit back and relax on pleasant days. The menu covers traditional Austrian pastries, aromatic cakes, and fresh tarts baked daily. Attentive service ensures that guests want for nothing. <strong>ecKing</strong> is the perfect venue for an enjoyable coffee break in the heart of the world-famous town of Kitzbühel.</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4491681,
     "lng": 12.3825314
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

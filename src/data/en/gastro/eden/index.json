@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Eden in Innsbruck Discover Tirol’s vibrant heart: Innsbruck, where alpine charm meets urban energy.",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Eden</strong> in Innsbruck in the Innsbruck region, hospitality is paramount. The restaurant boasts an inviting atmosphere and a menu that seamlessly weaves traditional Tyrolean cooking with creative modern touches. Ingredients are predominantly sourced from local producers, which translates into superb culinary quality. Warm wood paneling and regional decorative touches create an authentic, comfortable alpine feeling. A special highlight is the veranda offering panoramic views of the alpine peaks, inviting guests to sit back and savor delicious regional specialties.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2646586,
     "lng": 11.4385153
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

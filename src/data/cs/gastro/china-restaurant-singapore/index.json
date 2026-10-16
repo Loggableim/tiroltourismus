@@ -3,7 +3,7 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Oblíbená restaurace v Zillertalu spojující tyrolské kulinářské tradice s mezinárodními vlivy a domácími dezerty.",
   "beschreibung": "<p>V <strong>China Restaurant Singapore</strong> v Zillertalu si hosté pochutnají na lahodné kombinaci tradiční tirolské kuchyně a moderních vlivů. Pohodlná restaurace přesvědčuje přívětivou atmosférou a přátelským servisem, který každý návštěvu dělá zvláštním zážitkem. Sezónně se měnící menu se opírá o čerstvé produkty z regionu – od horského sýra z okolních almen až po čerstvé divočiny z tirolských lesů. Také milovníci mezinárodní kuchyně zde najdou své uspokojení. Domácí dezerty, včetně klasik jako <em>Kaiserschmarrn</em> a <em>Apfelstrudel</em>, dokonale doplňují kulinářskou nabídku.</p>",
   "ort": "",
   "region": "zillertal",
@@ -21,5 +21,8 @@
     "lat": 47.1661852,
     "lng": 11.8651832
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

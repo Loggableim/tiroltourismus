@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "pub",
   "kurzbeschreibung": "Discover the Magic of Tirol – Where Tradition Meets Adventure Welcome to Tirol, a land of breathtaking alpine landscapes, charming villages, and unforgettable experiences.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Dun Aengus</strong> in Kufstein is a quaint pub with an authentic atmosphere and genuine welcoming warmth. Here, locals and travelers come together to savor the evening over a freshly poured cold beer or a fine spirit. The menu offers traditional pub comfort food and regional Tyrolean delicacies prepared fresh on site. The rustic interior with comfortable wooden seating creates a relaxed mood that invites guests to linger. Whether stopping by for an after-work pint or a lively gathering with friends, Dun Aengus is a premier spot for sociable hours.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4403303,
     "lng": 11.8939338
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

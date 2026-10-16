@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Edelweiss Lounge in Tirol",
-  "beschreibung": "<p>Im <strong>Edelweiss Lounge</strong> in Zillertal wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt.</p>",
+  "kurzbeschreibung": "Stijlvolle lounge en restaurant in het Zillertal met alpiene gerechten, een ontspannen sfeer en een panoramisch uitzicht.",
+  "beschreibung": "<p>In de <strong>Edelweiss Lounge</strong> in het Zillertal wordt gastvrijheid met veel passie beleefd. De stijlvolle lounge en het restaurant bieden een gemoedelijke sfeer en een kaart vol traditionele Tiroolse en Oostenrijkse gerechten met een moderne twist. De verse streekproducten zorgen voor pure smaak en kwaliteit. Het warme houten interieur en de prachtige veranda met uitzicht op de Zillertaler bergwereld maken dit tot een heerlijke plek om te ontspannen.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.166543,
     "lng": 11.8650811
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

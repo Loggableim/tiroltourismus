@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "欢迎来到蒂罗尔的童话世界！ 在蒂罗尔（Tirol），每一座山峰都像是从童话书中走出来的，每一条小径都充满了神奇的故事。这里的山脉高耸入云，湖泊清澈如镜，村庄整洁如画，让人仿佛置身于梦幻般的童话王国。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于奥塞尔芬恩地区的<strong>Duarf</strong>是所有渴望在日常生活中享受温馨小憩客人的理想去处。在这家布置精致的咖啡馆里，宾客可以品味香浓的特色咖啡、手工制作的自制蛋糕与精美小点。这里全心传承奥地利传统咖啡馆文化，口感醇厚的Verlängerter和温和丝滑的Melange尤其受到赞誉。店内每天供应自制烘焙工坊新鲜制作的传统甜点。轻松惬意的氛围与亲切周到的款待，使其成为深受当地居民与旅人喜爱的温馨驿站。</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2911065,
     "lng": 10.4373349
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Reutte"
+  ]
 }

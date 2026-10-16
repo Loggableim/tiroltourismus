@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "City Pub in Innsbruck Discover the heart of Innsbruck’s nightlife at City Pub, where traditional Austrian charm meets modern vibes.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>City Pub</strong> in Innsbruck in the Innsbruck region is a popular gathering place for anyone looking to enjoy the evening over a stylish drink. Its modern interior and relaxed ambiance make it easy to stay and unwind. The bar offers a fine curation of cocktails, long drinks, craft beers, and selected wines – spanning time-honored classics to creative house concoctions. Talented bartenders mix each beverage with passion and flair. Whether catching up after work or celebrating with friends, the City Pub is an ideal choice.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2669157,
     "lng": 11.39027
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Duxer Stadl in Tirol",
-  "beschreibung": "<p>Im <strong>Duxer Stadl</strong> in Zillertal wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt.</p>",
+  "kurzbeschreibung": "Gezellige bergstadl in het Zillertal met traditionele streekgerechten, rustieke houten stube en een panoramaterras.",
+  "beschreibung": "<p>In de <strong>Duxer Stadl</strong> in het Zillertal staat warme alpiene gastvrijheid centraal. Het restaurant biedt een gemoedelijke sfeer en een menukaart die klassieke Tiroolse berggerechten combineert met moderne interpretaties. De ingrediënten zijn grotendeels afkomstig van lokale bergboerderijen, wat borg staat voor een uitstekende kwaliteit. Het rustieke interieur met veel hout zorgt voor een authentieke bergsfeer, terwijl het panoramaterras een schitterend uitzicht biedt over het dal.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2284101,
     "lng": 12.1405497
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

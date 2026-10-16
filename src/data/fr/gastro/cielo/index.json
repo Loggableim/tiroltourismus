@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cielo en Innsbruck Bienvenue dans le Tirol, où les sommets enneigés se reflètent dans les eaux cristallines des lacs, et où chaque saison offre une expérience unique.",
-  "beschreibung": null,
+  "beschreibung": "<p>Le <strong>Cielo</strong> à Innsbruck, au cœur de la région d'Innsbruck, offre un cadre des plus accueillants avec sa belle sélection de cafés et de douceurs artisanales. Le café est réputé pour sa terrasse ensoleillée, parfaite pour se détendre aux beaux jours. La carte décline les classiques de la pâtisserie autrichienne, des gâteaux parfumés et des tartes fraîches préparées chaque matin. Le personnel attentif veille à combler toutes les envies. Le <strong>Cielo</strong> est une escale idéale pour savourer une pause café bienfaisante au cœur de la vie tyrolienne.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2630882,
     "lng": 11.3979791
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

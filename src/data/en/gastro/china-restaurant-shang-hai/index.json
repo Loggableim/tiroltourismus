@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Shang-Hai China Restaurant in Tirol Discover authentic Chinese flavors in the heart of Tirol!",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>China Restaurant Shang-Hai</strong> in the Außerfern region, warm alpine hospitality takes center stage. The restaurant features a welcoming setting and a menu pairing authentic Tyrolean recipes with contemporary culinary flair. Ingredients are chosen carefully from regional suppliers, ensuring top-tier freshness and flavor. Comfortable alpine wooden furnishings create a relaxing environment. A standout highlight is the sun veranda boasting panoramic views of the alpine peaks, inviting guests to sit back and savor the scenery.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.4844781,
     "lng": 10.7207903
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Reutte"
+  ]
 }

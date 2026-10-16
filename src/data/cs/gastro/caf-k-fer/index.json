@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Käfer v Tarrenz",
-  "beschreibung": "<p>Das <strong>Café Käfer</strong> in Tarrenz in der Region Imst lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "beschreibung": "<p><strong>Café Käfer</strong> v Tarrenzu v regionu Imst zve k příjemnému odpočinku. Tato stylová kavárna a cukrárna hýčká své hosty pestrým výběrem domácích dortů, koláčů a sladkých specialit. Každý kousek je připravován s velkou péčí a umělecky prezentován. K tomu se podávají vybrané kávové speciality připravené zkušenými baristy. Příjemná atmosféra s kouzelným interiérem vybízí k posezení a vychutnání chvil klidu – ať už na snídani, odpolední kávu nebo menší občerstvení během dne.</p>",
   "ort": "Tarrenz",
   "region": "imst",
   "plz": "6464",
@@ -21,5 +21,8 @@
     "lat": 47.2650884,
     "lng": 10.7639654
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

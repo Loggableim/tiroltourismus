@@ -4,18 +4,20 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "Muzeum Kitzbühel na třech patrech představuje živou historii města od středověku po současnost se zaměřením na těžbu a turismus.",
+  "kurzbeschreibung": "Muzeum Kitzbühel vystavuje největší sbírku malíře Alfonse Waldeho, historii lyžování a nabízí střešní vyhlídkovou terasu s výhledem na sjezdovku Streif.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "muzeum",
-    "historie",
-    "kultura",
-    "hornictví"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
-  "oeffnungszeiten": "Di-So 10:00-17:00",
+  "dauer": "1-1,5 hodiny",
+  "preis": "Dospělí cca 10,00 €, studenti a senioři 8,00 €, děti do 18 let zdarma",
+  "oeffnungszeiten": "Úterý až pátek 10:00–17:00, sobota 10:00–18:00 (v neděli a pondělí zavřeno)",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
   "hero_bild": null,
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum Kitzbühel</strong> – Die Museum Kitzbühel in Kitzbühel verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Museum Kitzbühel zeigt auf drei Etagen die bewegte Geschichte der Stadt vom Mittelalter bis zur Gegenwart mit Schwerpunkt Bergbau und Tourismus Das vielfältige Veranstaltungsprogramm mit Konzerten, Lesungen und Workshops macht jeden Besuch einzigartig. Besonders die stimmungsvollen Abendführungen und thematischen Sonderausstellungen bleiben nachhaltig in Erinnerung. Mitten in der reizvollen Altstadt von Kitzbühel gelegen, fügt sich die Museum Kitzbühel harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Ob Sommer oder Winter: Die Museum Kitzbühel ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Přehled</h2>\n<p><strong>Museum Kitzbühel – Sbírka Alfonse Waldeho</strong>, sídlící v historické sýpce (Kastenturm) a přilehlé nárožní věži středověkých městských hradeb, patří k předním kulturním institucím Tyrolska. Nabízí fascinující pohled na tisíciletou historii osídlení údolí, počátky moderního lyžování a tyrolské výtvarné umění. Hlavním lákadlem je největší stálá veřejná sbírka děl slavného místního rodáka, malíře a architekta Alfonse Waldeho, jehož prosluněné zimní obrazy zasněžených chalup a lyžařů proslavily Kitzbühel po celém světě.</p>\n<h2>Trasa a náročnost</h2>\n<p>Prohlídková trasa je rozmístěna v několika citlivě zrekonstruovaných patrech. V horních sálech září <strong>sbírka Alfonse Waldeho</strong> (1891–1958) s ikonickými plátny jako «Výstup lyžařů», osamělými alpskými statky pod sněhovou peřinou a expresivními portréty horalů. Neméně poutavá část je věnována dějinám zimních sportů: od průkopnických sjezdů Franze Reische v roce 1893 přes založení slavných závodů Hahnenkammrennen na sjezdovce Streif v roce 1931 až po triumfy olympijského «týmu snů» vedeného Tonim Sailerem. V suterénu dokládají pravěké nástroje a nálezy bohatou historii těžby mědi a stříbra.</p>\n<h2>Příjezd a doprava</h2>\n<p>Muzeum se nachází v ulici Hinterstadt 32, v samém srdci pěší zóny Kitzbühelu. Vlakem: pouhých 5 minut chůze ze zastávky Kitzbühel Hahnenkamm nebo 10 minut z hlavního nádraží Kitzbühel Hauptbahnhof. Autobusem: linky VVT na zastávku Kitzbühel Im Gries. Autem: po silnici B161, parkování na centrálních parkovištích P1 Pfarrau nebo v krytých garážích v centru.</p>\n<h2>Tipy</h2>\n<p>Budova muzea je vybavena moderními výtahy a je z velké části plně bezbariérová. Rozhodně vystoupejte na <strong>vyhlídkovou střešní terasu</strong> na věži, odkud se otevírá jedinečný panoramatický pohled na středověké střechy městečka, vrchol Kitzbüheler Horn a legendární strmý svah sjezdovky Streif. V muzejním obchodě si můžete zakoupit kvalitní umělecké reprodukce obrazů Alfonse Waldeho.</p>",
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://www.tirol.at/",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Museum_Kitzb%C3%BChel",
+    "https://de.wikipedia.org/wiki/Alfons_Walde"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

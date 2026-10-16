@@ -3,7 +3,7 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Domcafe in Innsbruck",
+  "kurzbeschreibung": "Domcafe in Innsbruck - traditioneel café met zonnig terras en heerlijk gebak",
   "beschreibung": "<p>Het <strong>Domcafe</strong> in Innsbruck in de regio Innsbruck biedt gasten een vriendelijke sfeer en een fijne keuze aan koffiespecialiteiten en zelfgemaakte lekkernijen. Het café is bekend om zijn zonnetrappelende terras, dat op warme dagen uitnodigt tot ontspanning. De menu bevat klassieke Oostenrijkse meelsnacks, geurige cakes en verleidelijke tarten, die dagelijks vers bereid worden. De aandachtige dienst zorgt ervoor dat niets aan gasten ontbreekt. Het <strong>Domcafe</strong> is de ideale plek voor een ontspannen koffiepauze midden in het Tirolse dagelijks leven.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
@@ -20,5 +20,8 @@
     "lat": 47.2690808,
     "lng": 11.393466
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

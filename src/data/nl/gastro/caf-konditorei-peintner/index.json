@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Konditorei Peintner in Innsbruck",
-  "beschreibung": "<p>Het <strong>Café Konditorei Peintner</strong> in Innsbruck in de regio Innsbruck nodigt uit tot een heerlijke pauze. De stijlvolle Café-Konditorei verwent haar gasten met een ruime keuze aan zelfgemaakte taarten, cakes en zoete specialiteiten. Elk stuk wordt met veel liefde voor detail bereid en kunstig gepresenteerd. Daarbij worden uitgelezen koffiespecialiteiten geserveerd, die door ervaren barista's perfect worden bereid. De gezellige sfeer met charmant interieur nodigt uit om te blijven en te genieten. Of het nu voor het ontbijt is, voor een middagkoffie of een kleine snack tussendoor – hier voelt men zich welkom.</p>",
+  "kurzbeschreibung": "Café Konditorei Peintner in Innsbruck - ambachtelijke patisserie en koffie",
+  "beschreibung": "<p><strong>Café Konditorei Peintner</strong> in Innsbruck nodigt uit tot een heerlijke pauze. Deze stijlvolle café-patisserie verwent gasten met een ruime selectie aan huisgemaakt gebak, taarten en zoete lekkernijen. Elk stuk wordt met liefde en vakmanschap bereid. Daarbij worden voortreffelijke koffiespecialiteiten geserveerd. De gezellige sfeer met charmant interieur maakt het tot een ideale plek voor een ontspannen ontbijt of middagkoffie.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2627017,
     "lng": 11.4134014
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.konditorei-peintner.at/"
+  ]
 }

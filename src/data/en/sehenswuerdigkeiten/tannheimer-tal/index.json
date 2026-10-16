@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Tannheim",
   "kategorie": "natur",
-  "kurzbeschreibung": "High-altitude valley in the Allgäuer Alpen – famous for its Vilsalpsee mountain backdrop, kilometers of hiking trails, and traditional alpine farming.",
-  "beschreibung": "<h2>Overview</h2><p>The <strong>Tannheimer Tal</strong> unfolds as an enchanting, sun-drenched high-alpine valley at an elevation of roughly 1,100 meters in northwestern Tyrol, directly adjoining the Bavarian Allgäu. Repeatedly voted \"Europe's most beautiful high valley\" by travel publications, this 16-kilometer-long alpine plateau harmonizes wide, pastoral meadows, deep-rooted rural traditions, and jagged limestone sentinels. Cradled by legendary hiking and climbing massifs—such as the formidable Rote Flüh (2,108 m), the Gimpel spire, and the panoramic Neunerköpfle—the valley provides an awe-inspiring alpine amphitheater. Anchored by the turquoise Vilsalpsee nature reserve and the inviting bathing waters of Lake Haldensee, the valley forms a paradise for casual walkers, water sports fans, and mountaineers alike.</p><h2>Route &amp; Requirements</h2><p>Trail diversity in the Tannheimer Tal spans gentle valley strolls to severe vertical rock climbing. Families adore the level circular promenade around Lake Haldensee (4.5 km, 1.5 hours, easy grade T1, completely barrier-free and stroller accessible) or the pastoral walk into the Vilsalpsee nature reserve. Modern cable cars provide effortless access to high elevations: the 8-seater Neunerköpfle gondola leads to the interactive \"9erlebnisweg\" sensory trail and the famous \"World's Largest Summit Book\" at over 1,860 meters (easy family ridge walk T1). Seasoned mountaineers tackle the challenging Lachenspitze Via Ferrata (grade C/D) or rock scrambles up the Rote Flüh (alpine grade T3/T4). Furthermore, the valley is celebrated as an international road cycling and gravel hub featuring over 2,500 km of interconnected routes. Comfortable footwear suffices on valley paths, while rigid hiking boots are essential on ridges. Leashed dogs are warmly welcomed on all valley and alpine trails.</p><h2>Visit &amp; Arrival</h2><p>By rail, travelers arrive via Reutte in Tirol station or Sonthofen station in Bavaria. Connecting regional VVT bus lines 120 and 121 run frequently throughout the valley, serving all villages from Nesselwängle through Tannheim to Schattwald. Motorists arriving from Germany enjoy toll- and vignette-free access via autobahn A7 (exit Oy-Mittelberg) across the scenic Oberjoch Pass. From Austria, access leads via Reutte over the Weißenbach Pass. Ample parking is situated at all lift bases and trailheads.</p><h2>Tips</h2><p>Book a stay with partner hosts offering \"Summer Cable Cars Included,\" granting complimentary daily rides on mountain lifts in Tannheim, Grän, Nesselwängle, and Schattwald, as well as free admission to Haldensee outdoor swimming lido. Savor handcrafted alpine mountain cheese and fresh sourdough bread on the sun deck of Vilsalpe or Krinnenalpe.</p>",
+  "kurzbeschreibung": "The Tannheimer Tal at 1,100 m in the Allgäu Alps is hailed as Europe's most enchanting high valley, featuring Lake Vilsalpsee, Haldensee, cable cars, and limestone peaks.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>The breathtaking <strong>Tannheimer Tal</strong> rests at an elevation of 1,100 metres within the Allgäu Alps of the Tyrolean Außerfern district, widely celebrated by alpine authors as Europe's most picturesque high valley. Extending roughly 16 kilometres from Nesselwängle in the east through Grän, Tannheim, and Zöblen to Schattwald on the Bavarian border, this wide glacial trough pairs rolling pastoral pastures with formidable limestone battlements. It is flanked by the jagged peaks of Rote Flüh (2,108 m), Gimpel, and Kellenspitze on the north side, counterbalanced by gentle grassy summits like Mount Neunerköpfle to the south. Glittering alpine tarns including the protected emerald Vilsalpsee and the swimming waters of Lake Haldensee enhance the scenery. Cableways in Tannheim, Grän, and Schattwald provide swift access to high ridges. In summer, over 300 kilometres of trails feature highlights such as the 'largest summit logbook in the Alps'. In winter, it transforms into an internationally lauded cross-country skiing hub.</p>\n<h2>Route & Anforderungen</h2>\n<p>The valley provides walking options for every ambition. Casual strollers enjoy the level valley floor path shadowing the Vils stream connecting villages (1 to 3 hours, level paved or packed gravel tracks). Mountaineers can undertake the classic ascent to the Gimpelhaus and the summit of Rote Flüh (approx. 3.5 hours, 850 m ascent, alpine sure-footedness required). Standard sneakers suffice for the floor; supportive lugged mountain boots are mandatory for ridgelines. The valley floor tracks and Haldensee promenade are completely stroller-friendly.</p>\n<h2>Besuch & Anreise</h2>\n<p>Motorists arrive via the Fern Pass route (B179) and B199 over the Gaicht Pass from Reutte, or toll-free from Bavaria via the A7 motorway and Oberjoch pass. Ample pay parking exists at all lift terminals. Rail travelers alight at Sonthofen (Bavaria) or Reutte in Tirol, connecting via regular regional buses straight into the valley.</p>\n<h2>Tipps</h2>\n<p>Ascend the Neunerköpfle gondola to sign the 'World's Largest Summit Book' perched near the top station, then walk the sensory 9erlebnisweg trail before stopping at the rustic Gundhütte for cheese spätzle.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Halbtags bis Ganztags",
-  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
+  "dauer": "Half-day to full-day",
+  "preis": "Valley walking routes and lakes free; cable cars approx. €24-28 round trip (complimentary with partner hotels in summer)",
   "tags": [
     "tal",
     "wandern",
@@ -20,7 +20,7 @@
     "natur",
     "family"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Valley trails open year-round; summer lift operations run May to October; winter ski season December to April",
   "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
@@ -32,8 +32,9 @@
   "familie": true,
   "sources": [
     "https://www.tannheimertal.com/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Tannheimer_Tal",
-    "https://www.naturpark-tiroler-lech.at/",
+    "https://de.wikipedia.org/wiki/Tannheim_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

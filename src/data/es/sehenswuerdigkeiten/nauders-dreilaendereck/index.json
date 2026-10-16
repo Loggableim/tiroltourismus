@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Nauders",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "La Dreiländerstein, cerca de Nauders, marca el punto fronterizo donde se encuentran Austria, Suiza e Italia.",
-  "beschreibung": "<h2>Visión general</h2><p>El <strong>Dreiländereck de Nauders</strong> (2.179 m) en el paso de Reschenpass es el histórico hito fronterizo donde confluyen Austria, Suiza e Italia. Enmarcado por las cumbres del macizo de Ortler, alberga además la colosal <strong>Fortaleza de Nauders</strong>, el único fuerte de bloqueo vial austrohúngaro del siglo XIX conservado íntegramente.</p><h2>Ruta y Requisitos</h2><p>Ruta senderista desde la estación superior del teleférico Bergkastel (2.200 m) hasta el hito de las tres fronteras (1,5 horas, T2, terreno rocoso). Visita guiada al interior de la fortaleza militar de piedra (1 hora, T1, llevar chaqueta). Calzado de montaña y documento de identidad indispensables. Perros permitidos con correa en el monte.</p><h2>Cómo llegar</h2><p>En tren a Landeck-Zams y autobús 210 a Nauders. En coche por la carretera B180 hacia el Reschenpass con aparcamientos gratuitos en el fuerte y la telecabina. Abierto de junio a octubre.</p><h2>Consejos</h2><p>Póngase con un pie en Suiza, otro en Italia y una mano en Austria para una foto inolvidable junto al monolito y disfrute de la panorámica del monte Ortler desde la terraza de Bergkastel.</p>",
+  "kurzbeschreibung": "El Hito de las Tres Fronteras cerca de Nauders en el paso de Reschen une Austria, Italia y Suiza en un enclave alpino histórico con horizontes panorámicos excepcionales.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>El <strong>Hito de las Tres Fronteras de Nauders</strong> (Dreiländereck), situado sobre el histórico paso de Reschen, constituye una encrucijada geográfica e histórica de primer orden: en este punto confluyen las fronteras estatales de Austria (Tirol), Italia (Tirol del Sur) y Suiza (Grisones). A 2.179 metros de altitud, un emblemático monolito fronterizo conmemora la hermandad y la paz entre tres grandes culturas alpinas. Resguardada por los colosos montañosos de los Alpes de Ötztal, el macizo de Sesvenna y la cordillera de Samnaun, esta altiplanicie regala vistas panorámicas privilegiadas hacia la Engadina, el valle de Venosta y el curso alto del río Eno. Además de su legado histórico, la zona fascina por sus laderas tapizadas de rododendros y sus búnkeres militares integrados en el paisaje.</p>\n<h2>Route & Anforderungen</h2>\n<p>La caminata hacia el monolito fronterizo representa una excursión de montaña sumamente gratificante para familias y senderistas habituales. El acceso más cómodo y panorámico comienza en la estación superior del telecabina Bergkastelbahn (2.200 m) en Nauders. Desde allí, una senda perfectamente balizada discurre entre ondulantes praderías alpinas y bosques abiertos de alerces, alcanzando el hito internacional en unas dos horas de marcha distendida. Los montañeros más entusiastas pueden acometer el ascenso a pie desde Nauders por el collado Norbertshöhe y los lagos Schwarzsee, o culminar en la cima del Piz Lad (2.808 m). Resulta imprescindible calzar botas de montaña y llevar consigo documentos de identidad al cruzar los límites fronterizos.</p>\n<h2>Besuch & Anreise</h2>\n<p>Nauders se halla a 1.394 metros de altitud junto a la carretera del paso de Reschen (B180), a las puertas de Italia. Se llega con comodidad en coche desde Landeck por Pfunds o mediante los autobuses regulares procedentes de la estación de Landeck-Zams. La estación inferior de los remontes dispone de amplias explanadas de aparcamiento. En época estival funcionan autobuses de montaña que conectan Nauders con el lago de Reschen.</p>\n<h2>Tipps</h2>\n<p>Combine la excursión con una visita a la fortaleza militar de Nauders, la única obra defensiva de carretera del Imperio austriaco que se conserva completamente intacta. Una parada en el lago de Reschen para fotografiar el célebre campanario sumergido de Curon pondrá el broche de oro a la jornada.</p>",
   "emoji": "📍",
   "farbe": "#F44336",
   "hoehe": "2.175 m",
-  "dauer": "2–4 Stunden",
-  "preis": "Kostenlos frei zugänglich (Führung Festung Nauders ca. 9 €; Bergkastelbahn ca. 26 €)",
+  "dauer": "3-6 horas",
+  "preis": "Acceso libre a los senderos (telecabina de Nauders de pago opcional)",
   "tags": [
     "aussicht",
     "geschichte",
@@ -20,8 +20,8 @@
     "wandern",
     "panorama"
   ],
-  "oeffnungszeiten": "Mai–Okt: täglich 9:00–17:00",
-  "webseite": "https://www.nauders.com/",
+  "oeffnungszeiten": "Accesible todo el año; excursiones de montaña recomendadas de junio a octubre",
+  "webseite": "https://www.nauders.com/dreilaendereck",
   "koordinaten": {
     "lat": "46.8667",
     "lng": "10.5333"
@@ -29,9 +29,10 @@
   "bilder": [],
   "hero_bild": null,
   "sources": [
+    "https://de.wikipedia.org/wiki/Nauders",
     "https://www.nauders.com/",
-    "https://de.wikipedia.org/wiki/Festung_Nauders",
-    "https://www.alpenvereinaktiv.com/de/tour/zum-dreilaendergrenzstein-in-nauders/1381535/",
-    "https://www.vvt.at/"
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Reschenpass",
+    "https://www.tiroler-oberland.com/"
   ]
 }

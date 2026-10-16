@@ -4,19 +4,21 @@
   "region": "arlberg",
   "ort": "St. Anton am Arlberg",
   "kategorie": "museum",
-  "kurzbeschreibung": "El museo en el histórico espacio de asentamiento documenta la rica historia del turismo alpino, la cultura campesina y la construcción del Arlbergbahn.",
+  "kurzbeschreibung": "El Museo de St. Anton am Arlberg en la histórica Villa Trier muestra la cuna del esquí alpino, pioneros de la nieve y la construcción del ferrocarril.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museum",
-    "kultur",
-    "geschichte",
-    "arlberg"
+    "Kultur",
+    "Museum",
+    "Skisport",
+    "Arlberg",
+    "St. Anton am Arlberg",
+    "Geschichte"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 8,00",
-  "oeffnungszeiten": "Mi-So 10:00-17:00",
-  "webseite": "https://www.museum-st-anton.at",
+  "dauer": "1-1,5 horas",
+  "preis": "Adultos aprox. 5,00 €, niños y jóvenes hasta 16 años gratis (incluido en la St. Anton Sommer-Karte)",
+  "oeffnungszeiten": "Abierto de diciembre a abril y de junio a octubre: lunes a sábado 14:00–18:00 (cerrado domingos)",
+  "webseite": "https://www.stantonamarlberg.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +26,14 @@
     "lng": "10.2664"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum St. Anton am Arlberg</strong> – Die Museum St. Anton am Arlberg ist ein kultureller Höhepunkt in St. Anton am Arlberg und zieht Besucher aus aller Welt an. Das Museum im historischen Siedlungsraum dokumentiert die reiche Geschichte des alpinen Tourismus, der bäuerlichen Kultur und des Arlbergbahnbaus Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Die Museum St. Anton am Arlberg befindet sich im Herzen von St. Anton am Arlberg und ist bequem zu Fuß oder mit öffentlichen Verkehrsmitteln zu erreichen. Die zentrale Lage macht sie zum idealen Ausgangspunkt für einen Kulturspaziergang durch die Stadt. Ob Sommer oder Winter: Die Museum St. Anton am Arlberg ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Visión general</h2>\n<p>El <strong>Museo de St. Anton am Arlberg</strong> (Museum St. Anton am Arlberg), emplazado en la magnífica Villa Trier en medio de un parque alpino ajardinado, rinde homenaje al lugar considerado con justicia la cuna indiscutible del esquí alpino mundial. La mansión señorial de estilo historicista fue erigida en 1912 por encargo del industrial alemán Bernhard Trier y acoge desde 1982 la rica colección municipal. El museo documenta de forma viva la asombrosa metamorfosis de una remota aldea campesina de alta montaña, a menudo incomunicada por la nieve, en una estación de deportes de invierno y meca del esquí de renombre planetario a los pies del mítico paso de Arlberg.</p>\n<h2>Ruta y Requisitos</h2>\n<p>A lo largo de las elegantes salas revestidas de madera noble de la villa, el visitante realiza un apasionante viaje en el tiempo. La exposición rinde tributo a figuras pioneras legendarias como Hannes Schneider, quien revolucionó las técnicas de descenso a principios del siglo XX con la creación de la universalmente adoptada «escuela de esquí del Arlberg» («Arlberg-Technik») con su característico estilo de cuña y viraje cristinia. Modelos de esquís históricos de madera, fijaciones primitivas, ropa deportiva de época y trofeos internacionales ilustran la evolución del deporte blanco. Otras salas abordan la monumental obra de ingeniería de la construcción del túnel ferroviario de Arlberg entre 1880 y 1884, la historia de los puertos de montaña y la dura cotidianidad de las familias campesinas alpinas del valle del Stanzertal.</p>\n<h2>Cómo llegar</h2>\n<p>El museo se encuentra en Kandaharweg 9, al suroeste del centro urbano de St. Anton, en una colina suave junto al parque Kurpark. En ferrocarril: St. Anton am Arlberg es estación internacional de trenes de alta velocidad (Railjet / Eurocity); desde la estación de tren se llega a pie en un agradable paseo de unos 8 minutos. En autobús comarcal de VVT: parada Terminal West o Bahnhof. En automóvil: por la autovía S16 Arlberg Schnellstraße (salida St. Anton), disponiendo de estacionamiento público señalizado en los aparcamientos del centro.</p>\n<h2>Consejos</h2>\n<p>El acceso a la planta baja de la villa es accesible en silla de ruedas, mientras que las plantas superiores se alcanzan mediante escaleras históricas. Tras la visita cultural, disfrute de un almuerzo o un café en el excelente restaurante situado en la propia villa del museo, dotado de una terraza con vistas cautivadoras al monte Galzig. Durante los meses estivales, el parque circundante con sus senderos floridos y estanque alpino invita a un relajante descanso.</p>",
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg",
+    "https://de.wikipedia.org/wiki/Arlberg",
+    "https://www.vvt.at/"
+  ],
+  "saison": "Saisonal im Sommer und Winter nachmittags geöffnet",
+  "familie": true
 }

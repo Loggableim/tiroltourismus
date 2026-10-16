@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "北南咖啡馆（Café NordSüd）位于蒂罗尔（Tirol），是一个充满活力的聚集地，在这里，你可以品尝到精心烹制的咖啡、美味的蛋糕和传统的蒂罗尔（Tirol）美食，比如Kaiserschmarrn 和Apfelstrudel。咖啡馆的装饰融合了现代和传统元素，让人感到温馨舒适。无论是享用一杯咖啡还是与朋友共进午餐，这里都是一个完美的选择。 地址： [保持原HTML地址格式，如有则填入] 开放时间： [保持原HTML时间格式，如有则填入]",
-  "beschreibung": "<p>Das <strong>Café NordSüd</strong> im Außerfern ist ein stilvoller Treffpunkt, der nordische Kaffeekultur mit südlichem Flair kombiniert. Helle, skandinavisch inspirierte Räume treffen auf eine Terrasse mit sonnigem Ambiente. Die Kaffeekarte umfasst sorgfältig zubereitete Spezialitäten vom klassischen Espresso bis zum samtigen Flat White, begleitet von täglich frisch gebackenen Kuchen und Croissants. Mittags gibt es leichte Gerichte wie Salate, Quiches und Suppen. Die entspannte Atmosphäre und das durchdachte Design machen das Café zu einem beliebten Arbeits- und Leseort ebenso wie zum geselligen Beisammensein. Ein modernes Stück Kaffeekultur inmitten der Tiroler Berglandschaft.</p>",
+  "kurzbeschreibung": "提洛尔奥塞尔芬的Café NordSüd北欧风尚咖啡馆",
+  "beschreibung": "<p>位于奥塞尔芬的<strong>Café NordSüd</strong>是一家融合北欧咖啡文化与南部明媚风情的时尚咖啡馆。北欧极简风格的明亮室内空间与阳光露台相映成趣。精选咖啡单涵盖经典意式浓缩至丝滑白咖啡，配有每日新鲜出炉的糕点，午间亦提供沙拉、法式咸派与热汤等轻食。优雅舒适的环境与现代设计理念，使其成为提洛尔山区备受欢迎的惬意休憩之所。</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.499883,
     "lng": 10.3655544
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Inners v Kufstein",
-  "beschreibung": "<p>Das <strong>Cafe Inners</strong> in Kufstein in der Region Kufstein bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cafe Inners</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "Cafe Inners v Kufsteinu - příjemná kavárna a zákusky",
+  "beschreibung": "<p><strong>Cafe Inners</strong> v Kufsteinu nabízí svým hostům srdečnou atmosféru a jemný výběr kávových specialit i čerstvých sladkostí. Oblíbené místo setkávání místních i turistů zaujme pohodlným posezením a nabídkou tradičních tyrolských moučníků pečených podle osvědčených receptur.</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -20,5 +20,8 @@
     "lat": 47.582845,
     "lng": 12.166529
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

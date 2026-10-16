@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Sailer in Innsbruck",
-  "beschreibung": "<p>Das <strong>Café Sailer</strong> in Innsbruck in der Region Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Café Sailer</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "Café Sailer in Innsbruck - sfeervol café en Oostenrijks gebak",
+  "beschreibung": "<p><strong>Café Sailer</strong> in Innsbruck is een charmant café dat zijn gasten verrast met huisgemaakt gebak, verfijnde koffiespecialiteiten en een warme ambiance. Hier kunt u heerlijk ontspannen, een goed boek lezen of gezellig bijpraten met vrienden. De menukaart biedt traditionele Oostenrijkse meelspijzen – van klassieke Sachertorte tot geurige apfelstrudel, geserveerd met aromatische koffie.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2615617,
     "lng": 11.3654428
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.cafesailer.com/"
+  ]
 }

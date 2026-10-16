@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "café saggen in Tirol",
-  "beschreibung": "<p>Das <strong>café saggen</strong> in Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>café saggen</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "café saggen in Innsbruck - sfeervol café en Oostenrijks gebak",
+  "beschreibung": "<p><strong>café saggen</strong> in Innsbruck is een charmant café dat zijn gasten verrast met huisgemaakt gebak, verfijnde koffiespecialiteiten en een warme ambiance. Hier kunt u heerlijk ontspannen, een goed boek lezen of gezellig bijpraten met vrienden. De menukaart biedt traditionele Oostenrijkse meelspijzen – van klassieke Sachertorte tot geurige apfelstrudel, geserveerd met aromatische koffie.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2757891,
     "lng": 11.4099389
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

@@ -5,13 +5,13 @@
   "region": "ausserfern",
   "ort": "Tannheim",
   "kategorie": "natur",
-  "kurzbeschreibung": "Hochtal v Allgäuer Alpen – známý pro svou Vilsalpsee-Bergkulisse, kilometrové turistické stezky a tradiční alpskou hospodu.",
-  "beschreibung": "<h2>Přehled</h2><p>Údolí <strong>Tannheimer Tal</strong> (1 100 m) je opakovaně označováno za „nejkrásnější vysokohorské údolí Evropy“. Rozkládá se na severozápadě Tyrolska u bavorských hranic a okouzluje křišťálovými jezery (Vilsalpsee a Haldensee), rozkvetlými loukami a vápencovými štíty Rote Flüh a Gimpel.</p><h2>Trasa a náročnost</h2><p>Rovinatý okruh kolem jezera Haldensee je bezbariérový a vhodný pro kočárky (4,5 km, 1,5 hodiny chůze, T1). Kabinková lanovka na Neunerköpfle vyveze turisty k „největší vrcholové knize Alp“ do výšky 1 860 m (T1). Zkušení lezci vyhledávají ferratu na Lachenspitze (C/D). Pevná obuv na hřebenech nutná. Psi na vodítku vítáni.</p><h2>Příjezd a doprava</h2><p>Vlakem do Reutte nebo Sonthofenu (Bavorsko) a autobusy 120/121. Autem z Německa po dálnici A7 přes průsmyk Oberjoch bez nutnosti rakouské dálniční známky. Parkoviště u lanovek.</p><h2>Tipy</h2><p>Využijte pobytovou kartu s bezplatnými lanovkami a ochutnejte vyzrálý horský sýr Tannheimer Almkäse na slunečné terase salaše Vilsalpe.</p>",
+  "kurzbeschreibung": "Údolí Tannheimer Tal ve výšce 1 100 m v Allgäuských Alpách je považováno za nejkrásnější vysokohorské údolí Evropy s jezery, lanovkami a vápencovými štíty.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Malebné vysokohorské údolí <strong>Tannheimer Tal</strong> leží v nadmořské výšce 1 100 metrů v Allgäuských Alpách v tyrolském regionu Außerfern. Šestnáct kilometrů dlouhé prosluněné údolí je často označováno za nejkrásnější vysokohorské údolí Evropy. Lemované skalními štíty jako Rote Flüh (2 108 m) a Gimpel na jedné straně a travnatými hřebeny hory Neunerköpfle na straně druhé snoubí rozkvetlé louky s alpskými útesy. Klenoty oblasti jsou smaragdové jezero Vilsalpsee a koupací jezero Haldensee. V létě láká přes 300 km značených turistických tras včetně největší vrcholové knihy světa, v zimě je údolí rájem běžeckého lyžování se 140 km stop.</p>\n<h2>Route & Anforderungen</h2>\n<p>Údolní stezka podél řeky Vils nabízí nenáročnou procházku po rovině spojující malebné vesnice (1 až 3 hodiny chůze, sjízdné pro kočárky). Zkušení turisté mohou vystoupat k chatě Gimpelhaus a na vrchol Rote Flüh (cca 3,5 hodiny náročného výstupu). V údolí stačí tenisky, na horské štíty jsou nezbytné pevné kotníkové pohorky.</p>\n<h2>Besuch & Anreise</h2>\n<p>Příjezd autem vede po silnici B199 přes průsmyk Gaichtpass z Reutte nebo bez mýta z Bavorska přes sedlo Oberjoch. U dolních stanic lanovek jsou velká parkoviště. Vlakem se dostanete do Reutte nebo bavorského Sonthofenu, odkud do údolí jezdí přímé autobusy.</p>\n<h2>Tipps</h2>\n<p>Vyjeďte lanovkou na Neunerköpfle a zapište se do největší vrcholové knihy v Alpách (vysoké přes tři metry). Na horské chatě si pak dopřejte vyhlášené sýrové špecle Kasspatzln.</p>",
   "emoji": "🌄",
   "farbe": "#4CAF50",
   "hoehe": "1.097 m",
-  "dauer": "Halbtags bis Ganztags",
-  "preis": "Kostenlos (Bergbahnen Berg- und Talfahrt ca. 24–27 €; Sommerbergbahnen inklusive bei Partnerbetrieben)",
+  "dauer": "Půl dne až celý den",
+  "preis": "Údolní trasy a jezera zdarma; lanovky zpáteční cca 24-28 € (v létě zdarma u partnerských hotelů)",
   "tags": [
     "tal",
     "wandern",
@@ -20,7 +20,7 @@
     "natur",
     "family"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Údolní cesty otevřeny celoročně; lanovky v provozu květen až říjen a prosinec až duben",
   "webseite": "https://www.tannheimertal.com",
   "koordinaten": {
     "lat": "47.5000",
@@ -32,8 +32,9 @@
   "familie": true,
   "sources": [
     "https://www.tannheimertal.com/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Tannheimer_Tal",
-    "https://www.naturpark-tiroler-lech.at/",
+    "https://de.wikipedia.org/wiki/Tannheim_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

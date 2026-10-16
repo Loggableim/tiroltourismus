@@ -1,0 +1,70 @@
+---
+import DetailPage from '../../../../sections/DetailPage.astro';
+import { readEntry, readCollection } from '../../../../lib/content.js';
+import { localeParams, DEFAULT_LOCALE, localePrefix } from '../../../../lib/languages.js';
+
+const TVB_FIELDS = [
+  ['tvb_name', 'TVB-Name'],
+  ['adresse', 'Adresse'],
+  ['telefon', 'Telefon'],
+  ['email', 'E-Mail'],
+  ['website', 'Website'],
+  ['ansprechpartner', 'Ansprechpartner'],
+];
+
+export async function getStaticPaths() {
+  // DE carries tvb; generate demo routes for every locale that has the ort entry.
+  const deWithTvb = new Set(
+    readCollection('orte', 'de')
+      .filter(({ entry }) => entry && entry.tvb)
+      .map(({ slug }) => slug)
+  );
+  const paths = [];
+  for (const loc of localeParams()) {
+    const locale = loc || DEFAULT_LOCALE;
+    for (const slug of deWithTvb) {
+      if (readEntry('orte', slug, locale)) paths.push({ params: { locale: loc, slug } });
+    }
+  }
+  return paths;
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale || DEFAULT_LOCALE;
+const entry = readEntry('orte', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/orte/`);
+
+const deEntry = readEntry('orte', slug, 'de');
+const tvb = (deEntry && deEntry.tvb) || {};
+const rows = TVB_FIELDS.map(([key, label]) => {
+  const value = typeof tvb[key] === 'string' ? tvb[key].trim() : '';
+  const cell = value
+    ? value.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
+    : '<mark>Angabe fehlt, nicht erfasst</mark>';
+  return `<tr><th scope="row">${label}</th><td>${cell}</td></tr>`;
+}).join('');
+---
+
+<DetailPage
+  title={`Demo: Offizieller Ansprechpartner, ${entry.name}`}
+  description="Interne Demo-Route, nicht veröffentlicht."
+  breadcrumbs={[{ label: 'Orte', href: `${localePrefix(locale)}/orte/` }, { label: entry.name, href: `${localePrefix(locale)}/orte/${slug}/` }, { label: 'Demo TVB' }]}
+  locale={locale}
+  noindex={true}
+  sections={[
+    {
+      type: 'hero',
+      title: `Offizieller Ansprechpartner: ${entry.name}`,
+      subtitle: 'Demo-Route, nicht im Menü, nicht indexiert',
+      emoji: entry.emoji || '🏘️',
+      gradient: entry.farbe,
+      size: 'sm',
+    },
+    {
+      type: 'description',
+      label: entry.name,
+      title: 'Offizieller Ansprechpartner',
+      content: `<p>Quelle: offizielle TVB-Seite. Fehlt eine Angabe, bleibt das Feld leer und ist markiert.</p><table><tbody>${rows}</tbody></table>`,
+    },
+  ]}
+/>

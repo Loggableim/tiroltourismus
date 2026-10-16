@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "脆皮烤肉串 & FFC 在蒂罗尔 蒂罗尔的美食之旅 在蒂罗尔，你不仅能品尝到传统的Kaiserschmarrn和香醇的Tiroler Gröstl，还能享受到现代街头美食的魅力。",
-  "beschreibung": null,
+  "beschreibung": "<p>因斯布鲁克的<strong>Crispy Kebab & FFC</strong>是享用快捷而高品质美食的理想之选。无论是多汁可口的烤肉串、新鲜制作的汉堡还是浓郁风味特色小吃，都能在这里得到满足。店家精心甄选食材并现点现做，让您在旅途中也能品尝到新鲜美味。热情友好的团队以真诚的微笑迎接每位客人。<strong>Crispy Kebab & FFC</strong>是漫步因斯布鲁克街头或登临蒂罗尔群山归来后快速补充能量的理想去处。</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.4932386,
     "lng": 11.087487
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

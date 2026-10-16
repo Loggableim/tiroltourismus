@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Chinarestaurant Phönix v Füssen",
-  "beschreibung": "<p>Das <strong>Chinarestaurant Phönix</strong> in Füssen in der Region Außerfern verwöhnt seine Gäste mit einer erlesenen Auswahl an regionalen und saisonalen Gerichten. Die Küche verbindet traditionelle Tiroler Rezepte mit kreativen Akzenten und schafft so ein einzigartiges Geschmackserlebnis. Die gemütliche Einrichtung lädt zum Verweilen ein, während der aufmerksame Service für das Wohlbefinden der Gäste sorgt. Besonders empfehlenswert ist die hausgemachte Tiroler Knödelsuppe, die nach einem langen Wandertag wunderbar wärmt. Zudem bietet das Restaurant eine sorgfältig kuratierte Weinkarte mit erlesenen Tropfen aus Südtirol und Österreich.</p>",
+  "beschreibung": "<p><strong>Chinarestaurant Phönix</strong> v regionu Außerfern hýčká své návštěvníky vybranými regionálními a sezónními pokrmy. Místní kuchyně spojuje tradiční tyrolské a alpské recepty s nápaditými moderními vlivy, čímž vzniká jedinečný chuťový zážitek. Příjemný a vkusný interiér vybízí k odpočinku, zatímco ochotný servis pečuje o maximální spokojenost hostů. Zvláště doporučujeme poctivou domácí knedlíčkovou polévku, která báječně zahřeje po túře v přírodě. Nabídku výtečně doplňuje pestrý lístek s kvalitními víny z Rakouska i Jižního Tyrolska.</p>",
   "ort": "Füssen",
   "region": "ausserfern",
   "plz": "87629",
@@ -21,5 +21,8 @@
     "lat": 47.568325,
     "lng": 10.7011583
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/F%C3%BCssen"
+  ]
 }

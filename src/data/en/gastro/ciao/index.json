@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Ciao in Tirol Welcome to Tirol, where the Alps meet adventure and tradition.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Ciao</strong> in Innsbruck is the perfect retreat for anyone looking for a cozy escape from the daily grind. In this charmingly designed café, guests enjoy a wide range of coffee specialties, homemade pastries, and delicious light snacks. Traditional Austrian coffee culture is nurtured here with true passion. The velvety Verlängerter and smooth Melange are customer favorites, alongside daily fresh baked goods from the house bakery. A relaxed atmosphere and hospitable service make it a beloved destination for both locals and travelers.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2648937,
     "lng": 11.3985394
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

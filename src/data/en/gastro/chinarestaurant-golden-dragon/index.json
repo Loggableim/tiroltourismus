@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Chinese Restaurant Golden Dragon in Tirol Discover the vibrant flavors of Asia at the Golden Dragon in Tirol!",
-  "beschreibung": "",
+  "beschreibung": "<p>Experience memorable dining at the <strong>Chinarestaurant Golden Dragon</strong> in the Zillertal. This restaurant stands for elevated Tyrolean hospitality infused with elegance. The menu harmonizes timeless alpine recipes with international nuances, surprising diners with inventive dishes. Great value is placed on uncompromised freshness and regional sourcing, from fine mountain cheeses to regional meats. Friendly, attentive service and a comfortable atmosphere make every meal a pleasure, whether celebrating a special occasion or enjoying a relaxed dinner.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.3364534,
     "lng": 11.705408
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

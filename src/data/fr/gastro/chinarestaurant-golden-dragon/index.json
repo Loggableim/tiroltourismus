@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Découvrez une expérience culinaire unique au cœur des paysages alpins, où les saveurs exotiques de l’Asie se rencontrent avec l’hospitalité chaleureuse des montagnes.",
-  "beschreibung": "<p>Genießen Sie unvergessliche Momente im <strong>Chinarestaurant Golden Dragon</strong> in Zillertal. Dieses Restaurant steht für gehobene Tiroler Gastlichkeit mit einem Hauch von Eleganz. Die Speisekarte vereint Klassiker der Alpenküche mit internationalen Einflüssen und überrascht mit kreativen Kreationen. Das Team legt großen Wert auf Qualität und verwendet ausschließlich frische, regionale Produkte – vom Almkäse bis zum Tiroler Rindfleisch. Der freundliche Service und das stilvolle Ambiente machen jeden Besuch zu einem kulinarischen Highlight. Ob geschäftliches Dinner oder romantischer Abend zu zweit – hier sind Sie richtig.</p>",
+  "beschreibung": "<p>Vivez des instants gourmands d'exception au <strong>Chinarestaurant Golden Dragon</strong> dans le Zillertal. Cette adresse élégante cultive une hospitalité tyrolienne chaleureuse et attentionnée. La carte réunit les grands classiques montagnards et des touches culinaires internationales pleines d'originalité. L'accent est résolument mis sur la fraîcheur et les produits du terroir alpin. L'accueil bienveillant et l'ambiance soignée transforment chaque passage en une belle fête des saveurs, parfaite pour un dîner romantique ou une réunion conviviale.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.3364534,
     "lng": 11.705408
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

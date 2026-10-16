@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Charly’s Silvretta Meetup in Tirol Welcome to Charly’s Silvretta Meetup in Tirol Discover the magic of the Silvretta region in Tirol —where breathtaking alpine landscapes meet…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Charlys Silvrettatreff</strong> in Landeck offers its visitors a cordial atmosphere and a delicious range of coffee specialties and homemade delicacies. The café is well-loved for its sunny terrace, which invites guests to relax and unwind on mild days. The menu features classic Austrian pastries, aromatic cakes, and tempting tarts prepared fresh every day. Attentive service ensures that guests have everything they need. <strong>Charlys Silvrettatreff</strong> is the ideal spot for a relaxing coffee break amidst Tyrolean everyday life.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.1310077,
     "lng": 10.5058618
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)"
+  ]
 }

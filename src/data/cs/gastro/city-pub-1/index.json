@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "Městský pub v Innsbrucku",
-  "beschreibung": null,
+  "beschreibung": "<p><strong>City Pub</strong> v Innsbrucku v regionu Innsbruck je oblíbeným místem setkávání všech, kteří si chtějí užít příjemný večer u dobrého drinku. Moderní prostředí a uvolněná atmosféra lákají k pohodlnému posezení. Bar nabízí vytříbený výběr koktejlů, long drinků, čepovaných piv i kvalitních vín – od prověřených klasik až po originální autorské receptury. Zkušení barmani míchají každý nápoj s nadšením a zručností. Pravidelné akce se starají o skvělou zábavu. Ať už jde o drink po práci nebo posezení s přáteli, v City Pubu jste na správné adrese.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2669157,
     "lng": 11.39027
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Voici les couleurs du Tirol : Un spectacle naturel à couper le souffle Le Tirol, niché entre les Alpes majestueuses et les lacs cristallins, est une palette vivante où chaque…",
-  "beschreibung": "<p>Das <strong>colours</strong> in Innsbruck ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "beschreibung": "<p>Le <strong>colours</strong> à Innsbruck est un charmant café qui enchante sa clientèle avec ses pâtisseries maison, ses cafés fins et son ambiance particulièrement douillette. C'est le refuge rêvé pour faire une pause paisible, lire un bon roman ou discuter entre proches. La carte présente un bel assortiment de douceurs autrichiennes traditionnelles – de la célèbre Sachertorte au strudel aux pommes croustillant et aux délices au fromage blanc. Les cafés d'exception confectionnés avec art subliment chaque dégustation dans un cadre chaleureux et soigné.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2690631,
     "lng": 11.3900918
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

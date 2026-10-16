@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Colours in Tirol Tirol is a land of breathtaking contrasts and vibrant colours.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>colours</strong> in Innsbruck is an enchanting café that delights guests with homemade cakes, artisanal coffee specialties, and a serene, cozy environment. It provides a marvelous retreat to unwind, read a good book, or chat with friends. The menu highlights a refined assortment of traditional Austrian baked goods – from decadent Sachertorte and flaky apple strudel to delicious curd pastries. These sweet delights are accompanied by aromatic coffee specialties prepared with great devotion. The comfortable seating and charming touches ensure a thoroughly pleasant stay.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2690631,
     "lng": 11.3900918
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

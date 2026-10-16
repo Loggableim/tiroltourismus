@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Jardin chinois en Tirol Découvrez le China-Garden à Tirol, un havre de paix où l’art asiatique rencontre la nature alpine.",
-  "beschreibung": "<p>Das <strong>China-Garden</strong> in Innsbruck verwöhnt seine Gäste mit einer erlesenen Auswahl an regionalen und saisonalen Gerichten. Die Küche verbindet traditionelle Tiroler Rezepte mit kreativen Akzenten und schafft so ein einzigartiges Geschmackserlebnis. Die gemütliche Einrichtung lädt zum Verweilen ein, während der aufmerksame Service für das Wohlbefinden der Gäste sorgt. Besonders empfehlenswert ist die hausgemachte Tiroler Knödelsuppe, die nach einem langen Wandertag wunderbar wärmt. Zudem bietet das Restaurant eine sorgfältig kuratierte Weinkarte mit erlesenen Tropfen aus Südtirol und Österreich.</p>",
+  "beschreibung": "<p>Le <strong>China-Garden</strong> à Innsbruck régale ses convives avec une sélection soignée de plats régionaux et de saison. La cuisine marie habilement les recettes tyroliennes traditionnelles à des touches créatives, offrant une expérience gustative singulière. Le cadre chaleureux invite à la détente tandis que le service prévenant veille au confort de chacun. La soupe maison aux quenelles tyroliennes est particulièrement recommandée pour se réchauffer après une belle randonnée. De plus, le restaurant propose une carte des vins raffinée mettant à l'honneur des crus d'Autriche et du Tyrol du Sud.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4856128,
     "lng": 11.0675393
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Hoppala v Tirolu",
-  "beschreibung": "<p>Das <strong>Cafe Hoppala</strong> in Innsbruck lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "kurzbeschreibung": "Cafe Hoppala v Innsbrucku - stylová městská kavárna",
+  "beschreibung": "<p><strong>Cafe Hoppala</strong> v Innsbrucku zve k příjemnému odpočinku v srdci města. Stylová kavárna hýčká své hosty pestrým výběrem kávových specialit, lehkého občerstvení a domácích zákusků. Příjemné prostředí a pozorný servis vytvářejí ideální zázemí pro snídani i odpolední kávové posezení.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2724353,
     "lng": 11.2421394
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

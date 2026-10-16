@@ -1,6 +1,6 @@
 ---
 import DetailPage from '../../../../sections/DetailPage.astro';
-import { readEntry } from '../../../../lib/content.js';
+import { readEntry, readCollection } from '../../../../lib/content.js';
 import { localeParams, DEFAULT_LOCALE, localePrefix } from '../../../../lib/languages.js';
 
 const TVB_FIELDS = [
@@ -13,11 +13,16 @@ const TVB_FIELDS = [
 ];
 
 export async function getStaticPaths() {
-  const PILOT_SLUGS = ['innsbruck', 'kappl'];
+  // DE carries tvb; generate demo routes for every locale that has the ort entry.
+  const deWithTvb = new Set(
+    readCollection('orte', 'de')
+      .filter(({ entry }) => entry && entry.tvb)
+      .map(({ slug }) => slug)
+  );
   const paths = [];
   for (const loc of localeParams()) {
     const locale = loc || DEFAULT_LOCALE;
-    for (const slug of PILOT_SLUGS) {
+    for (const slug of deWithTvb) {
       if (readEntry('orte', slug, locale)) paths.push({ params: { locale: loc, slug } });
     }
   }
@@ -29,7 +34,8 @@ const locale = Astro.params.locale || DEFAULT_LOCALE;
 const entry = readEntry('orte', slug, locale);
 if (!entry) return Astro.redirect(`${localePrefix(locale)}/orte/`);
 
-const tvb = entry.tvb || {};
+const deEntry = readEntry('orte', slug, 'de');
+const tvb = (deEntry && deEntry.tvb) || {};
 const rows = TVB_FIELDS.map(([key, label]) => {
   const value = typeof tvb[key] === 'string' ? tvb[key].trim() : '';
   const cell = value

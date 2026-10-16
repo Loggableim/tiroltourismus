@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Kavárna Konditorei Wiedmann v Tirol.",
-  "beschreibung": "<p>Das <strong>Cafe Konditorei Wiedmann</strong> in Landeck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cafe Konditorei Wiedmann</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "Cafe Konditorei Wiedmann v Landecku - cukrárna a kavárna",
+  "beschreibung": "<p><strong>Cafe Konditorei Wiedmann</strong> v Landecku vítá své hosty rodinnou atmosférou a prvotřídními cukrářskými výrobky. Každý zákusek je tvořen s důrazem na kvalitu surovin a poctivou tyrolskou tradici, doplněnou výtečnou kávou v klidném prostředí.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.1382019,
     "lng": 10.5665423
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

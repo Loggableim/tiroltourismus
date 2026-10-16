@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café GZI in Imst",
-  "beschreibung": "<p>Das <strong>Cafe GZI</strong> in Imst in der Region Imst ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "kurzbeschreibung": "Cafe GZI in Imst - gezellig café en koffie",
+  "beschreibung": "<p><strong>Cafe GZI</strong> in Imst is een charmant café dat zijn gasten verrast met huisgemaakt gebak, aromatische koffiespecialiteiten en een gastvrije sfeer in het hart van de regio Imst.</p>",
   "ort": "Imst",
   "region": "imst",
   "plz": "6460",
@@ -20,5 +20,8 @@
     "lat": 47.2369701,
     "lng": 10.7387517
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

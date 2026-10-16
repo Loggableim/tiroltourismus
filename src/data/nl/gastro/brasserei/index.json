@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Brouwerij in Tirol",
-  "beschreibung": "<p>Das <strong>Brasserei</strong> in Innsbruck ist ein einladendes CafÃ©, das mit seinem gemÃ¼tlichen Ambiente und einer feinen Auswahl an KaffeespezialitÃ¤ten, hausgemachten Kuchen und sÃ¼ÃŸen Versuchungen begeistert. Hier kÃ¶nnen GÃ¤ste den Alltag hinter sich lassen und bei einer Tasse aromatischem Kaffee oder einem cremigen Cappuccino entspannen. Das Angebot umfasst FrÃ¼hstÃ¼cksvariationen, leichte Snacks und tÃ¤glich frische Mehlspeisen - von der klassischen Sachertorte bis zum saftigen Apfelstrudel. Die freundliche Bedienung und das wohnliche Interieur laden zum Verweilen und GenieÃŸen ein. Ob fÃ¼r einen entspannten Start in den Tag, eine gemÃ¼tliche Kaffeepause am Nachmittag oder einen Plausch mit Freunden - das <strong>Brasserei</strong> ist der ideale Ort fÃ¼r Genuss und Geselligkeit in Innsbruck.</p>",
+  "kurzbeschreibung": "Brasserei in Innsbruck - sfeervol café met koffie en gebak",
+  "beschreibung": "<p><strong>Brasserei</strong> in Innsbruck is een uitnodigend café dat inspireert met zijn gezellige sfeer en een fijne selectie koffiespecialiteiten, huisgemaakt gebak en zoete verleidingen. Hier kunnen gasten de dagelijkse drukte achter zich laten en ontspannen met een kopje aromatische koffie of een romige cappuccino. Het aanbod omvat ontbijtvariaties, lichte snacks en dagelijks vers gebak - van klassieke Sachertorte tot sappige apfelstrudel. De vriendelijke bediening en het huiselijke interieur nodigen uit tot genieten. Of het nu voor een ontspannen begin van de dag is, een gezellige koffiepauze in de middag of een praatje met vrienden - <strong>Brasserei</strong> is de ideale plek voor ontmoeting en gezelligheid in Innsbruck.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2676304,
     "lng": 11.3946413
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

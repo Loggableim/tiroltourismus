@@ -3,7 +3,7 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Dopolavoro Vecchia Locomotiva in Tirol",
+  "kurzbeschreibung": "Dopolavoro Vecchia Locomotiva in Tirol - authentiek restaurant met streekgerechten",
   "beschreibung": "<p>In het <strong>Dopolavoro Vecchia Locomotiva</strong> in Innsbruck-Land genieten gasten een heerlijke mix van traditionele Tirolse keuken en moderne invloeden. Het gezellige restaurant overtreft met een ontvankelijke sfeer en een vriendelijke service, die elke bezoeker tot een bijzondere ervaring maakt. De wisselende menu's baseren zich op verse regionale producten – van bergkaas van de nabijgelegen alpen tot verse jacht uit de Tirolse bossen. Ook internationale keukenliefhebbers komen hier aan hun trekken. De zelfgemaakte desserts, waaronder klassiekers als Kaiserschmarrn en Apfelstrudel, sluiten het culinaire aanbod perfect af. De focus ligt op regionale producten uit Tirol, die afkomstig zijn van geselecteerde boerderijen en producenten.</p>",
   "ort": "",
   "region": "innsbruck-land",
@@ -21,5 +21,8 @@
     "lat": 47.0039259,
     "lng": 11.504503
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

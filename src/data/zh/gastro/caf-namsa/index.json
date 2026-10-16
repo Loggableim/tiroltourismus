@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "咖啡馆 Namsa（因斯布鲁克） 在因斯布鲁克市中心，有一家充满魅力的小咖啡馆——Café Namsa，这里是当地人和游客共同的心头好。这家咖啡馆坐落在古老的建筑中，保留着典型的蒂罗尔风情，让人一走进去就能感受到温馨的氛围。 这里的咖啡和茶叶都是精心挑选的，无论是传统的Melange还是香醇的Einspänner，都能让你品味到纯正的咖啡滋味。如果你想尝试当地的特色，可以点一份香甜的Kaiserschmarrn，配上一杯热巧克力，绝对是冬日里的最佳享受。 Café Namsa 不仅是一个饮品的地方，还是一个可以悠闲聊天、阅读或工作的好去处。无论是独自一人还是与朋友相聚，这里都能为你提供一个舒适、宁静的空间。",
-  "beschreibung": "<p>Das <strong>Café Namsa</strong> in Innsbruck ist ein kosmopolitisches Café mit internationalem Flair. Hier treffen sich Studierende, Kreative und Reisende, um bei exzellentem Kaffee den Tag zu beginnen oder ausklingen zu lassen. Die Kaffeeauswahl reicht vom klassischen Espresso bis zu aufwändigen Filterkaffee-Zubereitungen, begleitet von einer verlockenden Auswahl an hausgemachten Kuchen, Croissants und kleinen internationalen Gerichten. Das hell und modern eingerichtete Café besticht durch sein entspanntes Ambiente und die herzliche Bedienung. Ein Treffpunkt mit Charakter inmitten der Innsbrucker Altstadt, der zum Wohlfühlen und Wiederkommen einlädt.</p>",
+  "kurzbeschreibung": "因斯布鲁克的Café Namsa国际风尚咖啡馆",
+  "beschreibung": "<p>位于因斯布鲁克的<strong>Café Namsa</strong>是一家兼具国际风情的大都市风格咖啡馆。学生、创意人士和旅行者常常在此相聚，在醇香的咖啡中开启或结束美好的一天。店内咖啡种类丰富，从经典意式浓缩到精致手冲滤泡咖啡应有尽有，同时供应诱人的自制蛋糕、羊角面包及风味轻食。明亮现代的装潢与热情周到的服务，使其成为因斯布鲁克极具个性的舒适聚会场所。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2617433,
     "lng": 11.3674519
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

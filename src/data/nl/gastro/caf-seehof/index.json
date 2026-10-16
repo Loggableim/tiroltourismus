@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Seehof in Walchensee",
-  "beschreibung": "<p>Das <strong>Café Seehof</strong> in Walchensee in der Region Kufstein lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "kurzbeschreibung": "Café Seehof in Walchensee - ambachtelijke patisserie en koffie",
+  "beschreibung": "<p><strong>Café Seehof</strong> in Walchensee nodigt uit tot een heerlijke pauze. Deze stijlvolle café-patisserie verwent gasten met een ruime selectie aan huisgemaakt gebak, taarten en zoete lekkernijen. Elk stuk wordt met liefde en vakmanschap bereid. Daarbij worden voortreffelijke koffiespecialiteiten geserveerd. De gezellige sfeer met charmant interieur maakt het tot een ideale plek voor een ontspannen ontbijt of middagkoffie.</p>",
   "ort": "Walchensee",
   "region": "kufstein",
   "plz": "82432",
@@ -20,5 +20,8 @@
     "lat": 47.5895024,
     "lng": 11.316821
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

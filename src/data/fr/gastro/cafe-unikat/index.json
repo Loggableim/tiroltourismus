@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Unikat en Tirol Découvrez l’ambiance chaleureuse et unique du Café Unikat au cœur de la Tirol.",
-  "beschreibung": "<p>Das <strong>Cafe Unikat</strong> in Schwaz ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "kurzbeschreibung": "Cafe Unikat à Schwaz - café chaleureux et douceurs maison",
+  "beschreibung": "<p>Le <strong>Cafe Unikat</strong> à Schwaz est l'adresse parfaite pour une pause gourmande et chaleureuse. Dans ce café joliment aménagé, les convives profitent de spécialités de café et de pâtisseries maison raffinées.</p>",
   "ort": "",
   "region": "schwaz",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3216851,
     "lng": 11.5859494
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

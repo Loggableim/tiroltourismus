@@ -3,7 +3,7 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Lounge Dorfschmiede in Tirol",
+  "kurzbeschreibung": "Cafe Lounge Dorfschmiede in Landeck - stijlvolle lounge",
   "beschreibung": null,
   "ort": "",
   "region": "landeck",
@@ -20,5 +20,8 @@
     "lat": 47.0123726,
     "lng": 10.291015
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Heiligenblut",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "The Grossglockner High Alpine Road is Austria's most iconic scenic highway, winding 48 km up to 2,571 m through the core of the Hohe Tauern National Park.",
-  "beschreibung": "<h2>Überblick</h2>\n<p>The internationally renowned <strong>Grossglockner High Alpine Road</strong> (Großglockner Hochalpenstraße) ranks among Europe's most celebrated engineering and scenic landmarks, seamlessly linking Salzburg and Carinthia with direct connections into East Tirol. Spanning 48 kilometres across 36 hairpin bends, this heritage-protected mountain pass road built during the 1930s crests the main alpine divide at elevations up to 2,571 metres. Bisecting Central Europe's largest national reserve—the Hohe Tauern National Park—the route journeys through every alpine ecological zone, from verdant dairy pastures and fragrant larch woods to arctic tundra and perennial glaciers. The undisputed centerpiece is the Kaiser-Franz-Josefs-Höhe at 2,369 metres: from its vast tiered terraces, visitors gaze directly upon the 3,798-metre glaciated peak of the Grossglockner—Austria's highest mountain—and the creeping Pasterze glacier. Engaging museums, wildlife trails, and panoramic restaurants render the journey an indelible highlight.</p>\n<h2>Route & Anforderungen</h2>\n<p>Driving the highway is comfortable and rewarding in any roadworthy passenger car, motorbike, or campervan. The road is broad, flawlessly paved, lined with safety barriers, and features manageable maximum gradients around twelve percent. With dozens of curated theme viewpoints, alpine exhibits, and inns flanking the road, drivers should budget four to six hours for a leisurely crossing. Barrier-free pathways encircle the Kaiser-Franz-Josefs-Höhe visitor hub; those wishing to hike along the trail towards the Pasterze glacier tongue require ankle-high hiking boots with rubber traction. High altitude winds frequently chill the summit ridges (Hochtor tunnel at 2,504 m and Edelweißspitze at 2,571 m), making warm layers indispensable.</p>\n<h2>Besuch & Anreise</h2>\n<p>Access is gained from the south via Heiligenblut (conveniently reached from East Tirol via Lienz across the Iselsberg Pass) or from the north via Fusch an der Glocknerstraße near Zell am See. Toll plazas are located at Ferleiten and Heiligenblut. Spacious multi-storey parking garages at Kaiser-Franz-Josefs-Höhe are complimentary for toll-ticket holders.</p>\n<h2>Tipps</h2>\n<p>Keep a keen eye open around the sunlit slopes of the Kaiser-Franz-Josefs-Höhe for charming wild alpine marmots basking on the rocks. Motorists comfortable with tight turns should navigate the historic spur road up to the cobbled Edelweißspitze, rewarding them with views over thirty distinct 3,000-metre peaks.</p>",
+  "kurzbeschreibung": "The Grossglockner High Alpine Road is Austria's most iconic scenic highway: 48 km of alpine wonder, Kaiser-Franz-Josefs-Höhe, and the Pasterze Glacier.",
+  "beschreibung": "<h2>Overview</h2>\n<p>The world-famous and heritage-protected <strong>Grossglockner High Alpine Road</strong> ranks among the boldest, most renowned, and most thrilling scenic highways in the entire alpine world. Spanning 48 kilometers with 36 masterfully engineered hairpin curves, this 1930s engineering marvel ascends to 2,504 meters at the Hochtor pass, seamlessly connecting Salzburg with East Tyrol and Carinthia. Embedded in the majestic high-alpine landscape of the Hohe Tauern National Park, the route reveals breathtaking vistas of sheer rock walls, blooming alpine meadows, and pristine glacier fields. The undisputed crown jewel along the road is the panoramic branch up to Kaiser-Franz-Josefs-Höhe at 2,369 meters, commanding an awe-inspiring view of Austria's highest peak, the 3,798-meter Grossglockner, and the vast Pasterze Glacier.</p>\n<h2>Route &amp; Requirements</h2>\n<p>Driving the Grossglockner High Alpine Road requires no mountaineering fitness, though drivers, motorcyclists, and cyclists must maintain focus and sound brakes on sustained gradients of up to twelve percent. The route is peppered with turnouts, panoramic terraces, and thematic nature displays. At Kaiser-Franz-Josefs-Höhe, fully accessible footpaths connect to a contemporary visitor centre with multiple floors of exhibitions, a craft workshop, and a widescreen cinema. From here, the Gamsgrubenweg path leads through secure rock tunnels to vantage points overlooking the receding glacier and cascading waterfalls (approx. 1 hour walking, easy). Sturdy footwear and warm clothing are strongly advised even in midsummer, as sudden snowfall and icy gusts can occur at elevations exceeding two thousand meters.</p>\n<h2>Visit &amp; Arrival</h2>\n<p>The road is open daily from early May to early November, depending on snow conditions (closed throughout winter). Northern access begins at Bruck and Fusch in Salzburg, while southern access approaches via Heiligenblut or from Lienz via the B107. The toll highway costs approx. €43.00 per car. In summer, the Glocknerbus connects Lienz and Zell am See directly with Kaiser-Franz-Josefs-Höhe on a regular schedule.</p>\n<h2>Tips</h2>\n<p>Watch friendly alpine marmots scampering across the rocks at Kaiser-Franz-Josefs-Höhe and scan the cliffs through spotting scopes for alpine ibex. A stop at the Wilhelm Swarovski Observatory with its high-power optical telescopes will delight wildlife enthusiasts.</p>",
   "emoji": "🏔️",
   "farbe": "#4CAF50",
   "hoehe": "2.576 m (Hochtor)",
-  "dauer": "4-7 hours",
-  "preis": "Toll road applies vehicle charges (day passes for passenger cars, motorbikes, and EVs)",
+  "dauer": "4 to 6 hours (half-day to full-day experience)",
+  "preis": "Toll road (day pass for passenger cars approx. €43.00)",
   "tags": [
     "panoramic road",
     "view",
@@ -19,7 +19,7 @@
     "Grossglockner",
     "nature"
   ],
-  "oeffnungszeiten": "Open seasonally early May through early November (weather dependent)",
+  "oeffnungszeiten": "Open daily from early May to early November (closed in winter due to snow)",
   "webseite": "https://www.grossglockner.at",
   "koordinaten": {
     "lat": "47.0833",
@@ -28,10 +28,11 @@
   "bilder": [],
   "hero_bild": null,
   "sources": [
-    "https://www.grossglockner.at/",
-    "https://www.osttirol.com/",
-    "https://www.tirol.at/",
+    "https://www.grossglockner.at",
+    "https://www.nationalpark.at",
     "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner-Hochalpenstra%C3%9Fe",
-    "https://de.wikipedia.org/wiki/Gro%C3%9Fglockner"
+    "https://de.wikipedia.org/wiki/Pasterze",
+    "https://www.osttirol.com/",
+    "https://www.vvt.at/"
   ]
 }

@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Konditorei Riehle v Kufstein",
-  "beschreibung": "<p>Das <strong>Cafe Konditorei Riehle</strong> in Kufstein in der Region Kufstein bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cafe Konditorei Riehle</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "Cafe Konditorei Riehle v Kufsteinu - tradiční cukrárna",
+  "beschreibung": "<p><strong>Cafe Konditorei Riehle</strong> v Kufsteinu nabízí svým hostům poctivé cukrářské řemeslo a útulné prostředí. Cukrárna je vyhlášená čerstvě pečenými dorty, křehkými řezy a bohatou nabídkou kávových specialit. Ideální místo pro sladkou zastávku při procházce historickým Kufsteinem.</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -21,5 +21,8 @@
     "lat": 47.586032,
     "lng": 12.1724607
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

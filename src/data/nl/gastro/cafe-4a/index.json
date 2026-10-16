@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café 4A in Innsbruck",
-  "beschreibung": "<p>Das <strong>Cafe 4A</strong> in Innsbruck in der Region Innsbruck lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen. Der Fokus liegt auf regionalen Produkten aus Tirol, die von ausgewählten Bauernhöfen und Produzenten bezogen werden.</p>",
+  "kurzbeschreibung": "Cafe 4A in Innsbruck",
+  "beschreibung": "<p>Het <strong>Cafe 4A</strong> in Innsbruck in de regio Innsbruck nodigt uit tot een smaakvolle pauze. Deze stijlvolle café-banketbakkerij verwent haar gasten met een ruime keuze aan zelfgemaakte taarten, gebak en zoete specialiteiten. Elk stuk wordt met veel liefde voor detail bereid en kunstig gepresenteerd. Daarbij worden verfijnde koffiespecialiteiten geserveerd, die door ervaren barista's perfect worden bereid. De gezellige sfeer met charmant interieur nodigt uit om te blijven hangen en te genieten. Of het nu voor het ontbijt is, voor een kop koffie in de namiddag of een kleine snack tussendoor – hier voelt iedereen zich welkom. De nadruk ligt op regionale producten uit Tirol, die worden afgenomen van geselecteerde boerderijen en producenten.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.259096,
     "lng": 11.3958433
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

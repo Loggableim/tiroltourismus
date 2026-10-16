@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Veldidena à Innsbruck Découvrez l’ambiance chaleureuse et raffinée du Café Veldidena, un joyau historique niché au cœur d’Innsbruck.",
-  "beschreibung": "<p>Das <strong>Cafe Veldidena</strong> in Innsbruck in der Region Innsbruck ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste. Der Fokus liegt auf regionalen Produkten aus Tirol, die von ausgewählten Bauernhöfen und Produzenten bezogen werden.</p>",
+  "kurzbeschreibung": "Cafe Veldidena à Innsbruck - café de quartier chaleureux",
+  "beschreibung": "<p>Le <strong>Cafe Veldidena</strong> à Innsbruck est un café de quartier apprécié pour son ambiance détendue, son café savoureux et ses délicieuses pâtisseries autrichiennes servies avec le sourire.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2574725,
     "lng": 11.3950553
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

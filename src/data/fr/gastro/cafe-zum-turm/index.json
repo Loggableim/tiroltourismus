@@ -3,7 +3,7 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe zum Turm in Graun im Vinschgau - Curon Venosta",
+  "kurzbeschreibung": "Cafe zum Turm à Graun im Vinschgau - café avec vue sur le clocher",
   "beschreibung": null,
   "ort": "Graun im Vinschgau - Curon Venosta",
   "region": "landeck",
@@ -20,5 +20,8 @@
     "lat": 46.8115477,
     "lng": 10.5376094
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

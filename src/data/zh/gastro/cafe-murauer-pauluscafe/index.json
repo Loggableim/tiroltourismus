@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "咖啡馆 Murauer PaulusCafe 在因斯布鲁克（Innsbruck）位于美丽的老城区，是一家充满魅力的传统咖啡馆。这里的氛围温馨舒适，无论是享用一杯精心调制的咖啡，还是品尝经典的Kaiserschmarrn 或Apfelstrudel，都能让您感受到蒂罗尔（Tirol）的传统风味。咖啡馆的装饰保留了历史风貌，让人仿佛置身于昔日的因斯布鲁克。无论是当地居民还是游客，都会在这里找到放松身心的完美去处。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克的 <strong>Cafe Murauer PaulusCafe</strong> 是一家集精致甜点与优雅咖啡于一体的高雅咖啡点心坊。这里的糕点师傅满怀匠心，为客人奉上各式纯手工制作的蛋糕、时令果挞与精致甜品。搭配由咖啡师精心调调配的香醇咖啡，典雅舒适的室内环境为享受下午茶时光提供了无与伦比的美妙体验。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,9 @@
     "lat": 47.2726995,
     "lng": 11.4163085
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

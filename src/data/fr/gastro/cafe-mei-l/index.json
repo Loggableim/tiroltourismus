@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Meißl en Tirol\n\nDécouvrez l’art de vivre à la tyrolienne dans le Café Meißl, une institution emblématique située au cœur de Tirol. Depuis plus de 150 ans, ce café allie élégance et tradition, offrant une ambiance chaleureuse où chaque visiteur se sent comme à la maison.\n\nInstallez-vous dans un salon raffiné, savourez un Kaiserschmarrn doré à point ou un café viennois crémeux, tout en admirant les paysages alpins qui s’étendent à perte de vue depuis les fenêtres. Le Café Meißl est bien plus qu’un lieu de pause : c’est une expérience sensorielle où se mêlent saveurs, histoire et la douceur de vivre à la montagne.\n\nQue vous soyez en quête d’inspiration, d’un moment de détente ou d’une escapade gourmande, ce café mythique à Innsbruck vous promet une immersion totale dans l’âme de la région. À ne pas manquer : leur célèbre Apfelstrudel et leurs spécialités locales, servies avec une touche d’authenticité.\n\nVisitez le site pour réserver votre table ou explorer leur carte détaillée.",
-  "beschreibung": "<p>Das <strong>Cafe Meißl</strong> in Innsbruck ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "beschreibung": "<p>Le <strong>Cafe Meißl</strong> à Innsbruck est un charmant café qui séduit par la fraîcheur de ses gâteaux faits maison, ses cafés aromatiques et son atmosphère intimiste. Les convives s'y installent volontiers pour déguster des spécialités sucrées autrichiennes, telles que les strudels et tartes traditionnelles, préparées avec grand soin. Un havre de tranquillité et de convivialité au cœur de la capitale tyrolienne.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2829857,
     "lng": 11.5080993
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

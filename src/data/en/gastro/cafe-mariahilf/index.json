@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Mariahilf in Tirol – a cozy retreat nestled in the heart of the Alps!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Mariahilf</strong> in Innsbruck is a charming café that delights its visitors with homemade cakes, exquisite coffee specialties, and a welcoming atmosphere. It is a wonderful place to unwind, read a good book, or chat with friends. The menu offers a refined selection of traditional Austrian pastries - from rich Sachertorte and flaky apple strudel to delicate curd strudel. Prepared with great care, the aromatic coffees and cozy interior ensure a delightful experience in Innsbruck.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2680563,
     "lng": 11.3875558
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

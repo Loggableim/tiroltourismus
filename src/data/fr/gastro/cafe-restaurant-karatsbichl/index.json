@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Café Restaurant Karatsbichl à Oberstdorf Découvrez une ambiance chaleureuse et conviviale dans ce Café Restaurant Karatsbichl, niché au cœur d’Oberstdorf, dans le magnifique…",
-  "beschreibung": "<p>Im <strong>Cafe Restaurant Karatsbichl</strong> in Oberstdorf in der Region Tirol wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt. Der Fokus liegt auf regionalen Produkten aus Tirol, die von ausgewählten Bauernhöfen und Produzenten bezogen werden.</p>",
+  "beschreibung": "<p>Au <strong>Cafe Restaurant Karatsbichl</strong> à Oberstdorf, l'art de recevoir est une seconde nature. L'établissement séduit par son ambiance conviviale et une cuisine qui revisite avec talent les grands classiques alpins. Les ingrédients proviennent principalement de producteurs locaux sélectionnés. Sa superbe véranda panoramique avec vue sur les crêtes alpines offre un cadre magique pour savourer des plats du terroir préparés avec passion.</p>",
   "ort": "Oberstdorf",
   "region": "?",
   "plz": "87561",
@@ -21,5 +21,8 @@
     "lat": 47.3999095,
     "lng": 10.260619
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.karatsbichl.de/"
+  ]
 }

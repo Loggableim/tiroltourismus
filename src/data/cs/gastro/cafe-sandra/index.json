@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Sandra v Tirolu",
-  "beschreibung": "<p>Das <strong>Cafe Sandra</strong> in Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cafe Sandra</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "beschreibung": "<p><strong>Cafe Sandra</strong> v Innsbrucku nabízí svým hostům srdečnou atmosféru a lákavý výběr kávových specialit i domácích pochoutek. Kavárna je známá svou slunnou terasou, která za hezkého počasí vybízí k odpočinku. Nabídka zahrnuje tradiční rakouské moučníky a čerstvě pečené dorty, zatímco pozorná obsluha dbá na maximální pohodlí každého návštěvníka.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2671823,
     "lng": 11.4403604
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

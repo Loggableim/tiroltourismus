@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Naiv in Innsbruck – a cozy, charming café nestled in the heart of the historic Altstadt, where traditional Tyrolean warmth meets modern flair.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Naiv</strong> in Innsbruck offers guests a warm, hospitable atmosphere along with a fine selection of coffee specialties and homemade treats. The café is especially known for its sunny terrace, which invites visitors to linger on pleasant days. The menu features traditional Austrian pastries, freshly baked cakes, and delicate tortes prepared each day. Attentive service ensures an enjoyable coffee break in the heart of Innsbruck.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2734969,
     "lng": 11.4059065
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.cafe-naiv.at/"
+  ]
 }

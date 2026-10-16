@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Marlo en Tirol Découvrez le charme authentique du Tirol dans ce café emblématique niché au cœur des paysages alpins.",
-  "beschreibung": "<p>Das <strong>Cafe Marlo</strong> in Stubaital ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p>Le <strong>Cafe Marlo</strong> dans la vallée du Stubaital offre un cadre chaleureux et reposant pour une pause gourmande. Les visiteurs y profitent d'une savoureuse sélection de cafés de spécialité, de tartes maison et de légers en-cas autrichiens. La culture traditionnelle des cafés alpins y est mise à l'honneur avec gentillesse et savoir-faire. Une halte très agréable pour se ressourcer après une journée d'excursion dans les montagnes du Stubai.</p>",
   "ort": "",
   "region": "stubaital",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.1166608,
     "lng": 11.3310041
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
+  ]
 }

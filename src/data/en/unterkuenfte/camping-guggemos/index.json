@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Camping Guggemos</strong> is located in <strong>Füssen</strong> (according to information in Tirol) on the shore of the Forggensee. The site offers parceled pitches for motorhomes and caravans with electricity supply. The sanitary building is equipped with showers, washbasins, and a chemical toilet disposal facility. A kiosk supplies guests with fresh baked goods and drinks. From the campsite, hiking trails lead to the surrounding Alps and cycle paths run along the lake.</p>",
+  "beschreibung": "<p><strong>Camping Guggemos</strong> is situated in <strong>Füssen</strong> (recorded under Tyrol) on the scenic shores of Lake Forggensee. The campsite offers parcelled pitches for motorhomes and caravans with electric hookups. The sanitary building is equipped with showers, washbasins, and chemical toilet disposal facilities. A kiosk provides guests with fresh baked goods and refreshing beverages. Hiking trails into the surrounding Alps and cycling paths along the lake start directly from the campsite.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

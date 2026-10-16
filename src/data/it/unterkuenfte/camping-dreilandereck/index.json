@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Dreiländereck</strong> befindet sich in <strong>Ried im Oberinntal</strong> nahe der Grenze zu Italien und der Schweiz. Die Anlage liegt auf einer sonnigen Terrasse mit <strong>Bergblick</strong> im Oberinntal. Sie bietet <strong>Stellplätze</strong> für Wohnmobile, Wohnwagen und Zelte sowie gemietete <strong>Chalets</strong> und <strong>Mobilheime</strong>. Das <strong>Dreiländereck</strong> ist ein beliebtes Ausflugsziel und zentraler Ausgangspunkt für Touren. Die Umgebung lädt zu Wanderungen im <strong>Nationalpark Stilfserjoch</strong> ein. Die Infrastruktur umfasst ein Restaurant, einen Brötchenservice und moderne Sanitäranlagen. Im Winter sind die Skigebiete <strong>Serfaus-Fiss-Ladis</strong> schnell erreichbar.</p>",
+  "beschreibung": "<p>Il <strong>Camping Dreiländereck</strong> si trova a <strong>Ried im Oberinntal</strong>, vicino al confine con Italia e Svizzera. Il complesso sorge su una terrazza soleggiata con <strong>vista panoramica sui monti</strong> nell'Alta Valle dell'Inn. Offre <strong>piazzole</strong> per camper, roulotte e tende, oltre ad accoglienti <strong>chalet</strong> e <strong>case mobili</strong> in affitto. L'area dei tre confini è una meta rinomata e un perfetto punto di partenza per gite alpine. I dintorni invitano a escursioni nel <strong>Parco Nazionale dello Stelvio</strong>. I servizi includono un ristorante, servizio pane fresco e moderni impianti sanitari. In inverno, i comprensori sciistici di <strong>Serfaus-Fiss-Ladis</strong> si raggiungono in breve tempo.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

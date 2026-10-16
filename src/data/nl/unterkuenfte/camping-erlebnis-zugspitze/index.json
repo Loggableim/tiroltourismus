@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Erlebnis Zugspitze</strong> liegt in <strong>Garmisch-Partenkirchen</strong> im Bundesland <strong>Tirol</strong> und gehört zur Kategorie <strong>Camping</strong>. Die Anlage bietet Stellplätze für Wohnmobile und Caravans sowie Zeltwiesen in ruhiger Umgebung. Die <strong>Nähe zum Zugspitzmassiv</strong> ermöglicht einfache Ausflüge zu Fuß oder mit der Bahn. Der Platz verfügt über <strong>moderne Sanitäreinrichtungen</strong> und einen kleinen Laden für den Grundbedarf. Freizeitangebote umfassen <strong>Wandern und Radfahren</strong> direkt ab dem Gelände. Die Anbindung an das <strong>öffentliche Verkehrsnetz</strong> ist durch eine Bushaltestelle in der Nähe gegeben.</p>",
+  "beschreibung": "<p><strong>Camping Erlebnis Zugspitze</strong> ligt in <strong>Garmisch-Partenkirchen</strong> in de deelstaat <strong>Tirol</strong> en behoort tot de categorie <strong>campings</strong>. Het terrein biedt staanplaatsen voor campers en caravans en grasvelden voor tenten in een rustige omgeving. De <strong>nabijheid van het Zugspitze-massief</strong> maakt eenvoudige uitstapjes te voet of met de trein mogelijk. De camping beschikt over <strong>moderne sanitaire voorzieningen</strong> en een kleine winkel voor de basisbehoeften. Tot de recreatieve mogelijkheden behoren <strong>wandelen en fietsen</strong> direct vanaf het terrein. Een bushalte in de buurt zorgt voor een uitstekende aansluiting op het <strong>openbaar vervoer</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

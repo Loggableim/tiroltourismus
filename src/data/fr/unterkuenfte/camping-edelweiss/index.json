@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Edelweiss</strong> liegt in <strong>Neustift im Stubaital</strong> inmitten der <strong>Stubaier Alpen</strong>. Die Anlage bietet <strong>Stellplätze</strong> für Wohnwagen, Wohnmobile und Zelte sowie <strong>Apartments</strong> und <strong>Hütten</strong> zur Miete. Ein beheiztes <strong>Freibad</strong> und eine <strong>Sauna</strong> stehen zur Freizeitgestaltung bereit. Im Sommer ist der Platz Ausgangspunkt für Wanderungen und Mountainbiketouren im <strong>Stubaital</strong>. Im Winter führen Wege zu den Skigebieten <strong>Stubaier Glets",
+  "beschreibung": "<p>Le <strong>Camping Edelweiss</strong> est situé à <strong>Neustift im Stubaital</strong>, au cœur des <strong>Alpes de Stubai</strong>. L'établissement propose des <strong>emplacements</strong> pour caravanes, camping-cars et tentes, ainsi que des <strong>appartements</strong> et des <strong>chalets</strong> à louer. Une <strong>piscine extérieure</strong> chauffée et un <strong>sauna</strong> sont à la disposition des hôtes pour leurs moments de détente. En été, le site constitue un point de départ privilégié pour la randonnée et le VTT dans la <strong>vallée de Stubai</strong>. En hiver, des liaisons rapides permettent de rejoindre les domaines skiables environnants, notamment le <strong>Glacier de Stubai</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

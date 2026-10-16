@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Campingplatz Camping Austria</strong> liegt an einem Standort in Tirol. Die Anlage bietet Stellplätze für Wohnwagen, Wohnmobile und Zelte. Die Sanitäranlagen sind sauber und funktional. Ein Gastronomiebetrieb ist vorhanden. Kindern steht ein Spielplatz zur Verfügung. Die Lage ermöglicht Ausflüge in das umliegende Gebirge. Radfahrer und Wanderer nutzen die nahen Wege.</p>",
+  "beschreibung": "<p>De camping <strong>Camping Austria</strong> ligt op een locatie in Tirol. Het terrein biedt staanplaatsen voor caravans, campers en tenten. De sanitaire voorzieningen zijn schoon en functioneel. Er is een horecagelegenheid aanwezig. Voor kinderen is er een speeltuin beschikbaar. De ligging maakt uitstapjes naar de omliggende bergen mogelijk, en fietsers en wandelaars maken gebruik van de nabijgelegen paden.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

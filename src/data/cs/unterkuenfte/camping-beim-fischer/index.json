@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping beim Fischer</strong> liegt im Ort <strong>Münsing</strong> in Tirol und ist als Ganzjahres-Campingplatz ausgewiesen. Die Anlage bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte, die teils parzelliert sind. Die sanitären Einrichtungen werden regelmäßig gereinigt und umfassen Duschen sowie WCs in getrennten Kabinen. Ein kleiner Verkaufsstand auf dem Platz versorgt Gäste mit frischen Brötchen und Grundnahrungsmitteln. Der angrenzende Wald ermöglicht kurze Spaziergänge, und Radwege sind direkt erreichbar. Wassersportmöglichkeiten finden sich im nahen See, dessen Ufer vom Platz aus zu Fuß erreichbar ist. Ein Grillplatz steht zur gemeinschaftlichen Nutzung bereit.</p>",
+  "beschreibung": "<p><strong>Camping beim Fischer</strong> leží v obci <strong>Münsing</strong> a je celoročním kempem. Areál nabízí částečně parcelovaná stání pro obytné vozy, karavany a stany. Sanitární zařízení jsou pravidelně čištěna a zahrnují sprchy a toalety v oddělených kabinách. Malý prodejní stánek v areálu zásobuje hosty čerstvým pečivem a základními potravinami. Přilehlý les láká ke krátkým procházkám a cyklostezky jsou přímo dostupné. Možnosti vodních sportů nabízí blízké jezero, jehož břeh je z kempu v docházkové vzdálenosti. K dispozici je také společné griloviště.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

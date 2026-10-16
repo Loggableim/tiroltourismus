@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Brugger am Riegsee</strong> liegt in der Gemeinde <strong>Murnau am Staffelsee</strong> im Tiroler Alpenvorland. Die Anlage grenzt unmittelbar an den <strong>Riegsee</strong> und bietet Zugang zu Badegelegenheiten sowie zu Bootsaktivitäten. Zur Ausstattung zählen <strong>Stellplätze</strong> für Wohnmobile und Wohnwagen sowie <strong>Mietunterkünfte</strong> wie Mobilheime und Ferienwohnungen. Die umliegende Landschaft des <strong>Staffelsees</strong> eignet sich für Wanderungen und Radtouren. In Murnau selbst sind kulturelle Einrichtungen wie das <strong>Münter-Haus</strong> zugänglich. Ein <strong>Sanitärgebäude</strong> und ein Kiosk sind auf dem Gelände vorhanden. Die verkehrsgünstige Lage ermöglicht Ausflüge in die bayerischen und tiroler Alpen.</p>",
+  "beschreibung": "<p><strong>里格湖畔布鲁格露营地（Camping Brugger am Riegsee）</strong>坐落于阿尔卑斯山前麓的<strong>施塔费尔湖畔穆尔瑙（Murnau am Staffelsee）</strong>。园区紧邻<strong>里格湖（Riegsee）</strong>，为住客提供便捷的游泳与乘船游乐条件。设施涵盖适合房车与大篷车的<strong>露营车位</strong>，以及移动房屋和度假公寓等<strong>出租房型</strong>。<strong>施塔费尔湖（Staffelsee）</strong>周边的秀美自然风光非常适合徒步与骑行远足。在穆尔瑙镇内，亦可参观<strong>明特故居（Münter-Haus）</strong>等文化景观。营区内建有<strong>卫浴楼</strong>和小卖部。便捷的地理位置方便游客前往巴伐利亚与蒂罗尔阿尔卑斯山区游览。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

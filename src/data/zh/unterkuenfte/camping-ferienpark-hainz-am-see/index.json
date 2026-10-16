@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Campingplatz Ferienpark Hainz am See</strong> befindet sich in <strong>Petting</strong> im Bundesland <strong>Tirol</strong> und ist als <strong>Campingplatz</strong> klassifiziert. Er liegt <strong>direkt am Ufer eines Badesees</strong>, was zu den Hauptattraktionen des Platzes zählt. Die <strong>Stellplätze sind parzelliert</strong> und teilweise mit Strom- und Wasseranschluss ausgestattet. Ein <strong>separater Strandbereich mit Spielwiese</strong> ist für Gäste reserviert. In der Umgebung bieten sich <strong>Radtouren und Spaziergänge</strong> im angrenzenden Waldgebiet an. Die <strong>sanitären Anlagen</strong> werden regelmäßig gereinigt und sind barrierefrei zugänglich.</p>",
+  "beschreibung": "<p><strong>Campingplatz Ferienpark Hainz am See</strong>（湖畔海因茨假日公园露营地）位于<strong>蒂罗尔州</strong>的<strong>佩廷</strong>（Petting），被评定为<strong>露营地</strong>类别。该营地<strong>坐落于天然浴湖湖畔</strong>，这是营地最引人注目的亮点之一。<strong>营位规划整齐</strong>，部分营位配备水电接口。营地为宾客专属保留了<strong>带游乐草坪的独立湖滩区域</strong>。周边郁郁葱葱的林区非常适合展开<strong>骑行之旅与漫步散心</strong>。营地的<strong>卫生设施</strong>定期清洁打扫，并具备无障碍通行条件。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

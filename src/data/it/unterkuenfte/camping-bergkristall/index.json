@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Bergkristall</strong> befindet sich in der Ortschaft <strong>Prägraten</strong> im Virgental in Osttirol. Die Anlage ist von der Bergwelt der Venedigergruppe umgeben und liegt auf einer Höhe von rund 1.300 Metern. Der Platz bietet ebene Stellflächen für Wohnmobile und Wohnwagen, die an eine saubere Stromversorgung angeschlossen werden können. Ein separates Zeltwiese ist für Gäste mit eigener Ausrüstung vorgesehen. Das Sanitärgebäude ist mit Fußbodenheizung ausgestattet und bietet behindertengerechte Zugänge. Von hier aus starten zahlreiche Wanderrouten in den Nationalpark Hohe Tauern. Im Winter dienen die nahen Lifte der Umgebung dem Skifahren.</p>",
+  "beschreibung": "<p>Il <strong>Camping Bergkristall</strong> si trova nella località di <strong>Prägraten</strong>, nella valle Virgental nel Tirolo Orientale. Immersa nello scenario alpino del Gruppo del Venediger, la struttura è situata a un'altitudine di circa 1.300 metri. Il campeggio offre piazzole pianeggianti per camper e roulotte con allacciamento elettrico. Agli ospiti con tende è riservato un prato dedicato. La palazzina dei servizi igienici è dotata di riscaldamento a pavimento e accessi per persone con disabilità. Da qui partono numerosi percorsi escursionistici nel Parco Nazionale Alti Tauri. Durante la stagione invernale, i vicini impianti di risalita permettono di sciare comodamente.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

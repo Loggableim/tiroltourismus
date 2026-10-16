@@ -3,7 +3,7 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Bäckerei Sieß in Garmisch-Partenkirchen",
+  "kurzbeschreibung": "Boulangerie Sieß à Garmisch-Partenkirchen",
   "beschreibung": null,
   "ort": "Garmisch-Partenkirchen",
   "region": "innsbruck",
@@ -20,5 +20,8 @@
     "lat": 47.4919922,
     "lng": 11.1133222
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://tiroltourismus.com/gastro/b-ckerei-sie/"
+  ]
 }

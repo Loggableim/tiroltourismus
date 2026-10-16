@@ -3,7 +3,7 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Azadi Oriental Tandoor Restaurant (halal) in Innsbruck",
+  "kurzbeschreibung": "Restaurant Azadi Oriental Tandoor (halal) à Innsbruck",
   "beschreibung": "<p>Le <strong>Azadi Oriental Tandoor Restaurant (halal)</strong> à Innsbruck est un restaurant populaire qui séduit ses clients avec une carte riche en saveurs et une gastronomie locale authentique. L’ambiance allie éléments traditionnels de la région du Tyrol avec le confort moderne, créant une atmosphère chaleureuse pour chaque occasion. La carte propose une sélection soignée de plats – des spécialités classiques du Tyrol comme le Tiroler Gröstl et le Kaiserschmarrn jusqu’aux classiques internationaux. L’équipe met un soin particulier à utiliser des ingrédients frais et locaux de la région. Que ce soit un dîner intimiste à deux, une fête en famille ou un rendez-vous professionnel, le <strong>Azadi Oriental Tandoor Restaurant (halal)</strong> vous accueille chaleureusement et assure un séjour parfait grâce à son service attentif.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
@@ -21,5 +21,9 @@
     "lat": 47.2666289,
     "lng": 11.4018956
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.azadiorientaltandoor.com/",
+    "https://tiroltourismus.com/gastro/azadi-oriental-tandoor-restaurant-h/"
+  ]
 }

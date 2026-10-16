@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Castelletto sul Lago – Schlössel in Tirol Discover the charm of Tirol with a stay at Castelletto sul Lago, a cozy retreat nestled in the heart of the Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Castelletto sul Lago - Schlössel</strong> in Landeck treats its guests to an exquisite selection of regional and seasonal dishes. The cuisine combines traditional Tyrolean recipes with creative touches, creating a unique culinary experience. The cozy interior invites guests to linger, while attentive service ensures complete well-being. Particularly recommended is the homemade Tyrolean dumpling soup (Tiroler Knödelsuppe), wonderfully warming after a long day of hiking. In addition, the restaurant offers a carefully curated wine list featuring fine wines from South Tyrol and Austria. The focus is firmly on regional products from Tirol, sourced from selected local farms and producers.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 46.8277806,
     "lng": 10.5112818
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

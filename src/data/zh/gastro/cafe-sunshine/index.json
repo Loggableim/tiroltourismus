@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "阳光咖啡馆（Cafe Sunshine）位于基茨比厄尔（Kitzbühel），是一家温馨舒适的小咖啡屋，坐落在蒂罗尔（Tirol）山区的美丽风景中。这里提供精心烘焙的咖啡、新鲜的面包和传统的蒂罗尔（Tirol）美食，如香喷喷的Kaiserschmarrn和手工制作的Apfelstrudel。无论是享受一杯咖啡还是品尝当地特色，都能在这里感受到蒂罗尔（Tirol）的纯朴与热情。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于基茨比厄尔（Kitzbühel）地区的<strong>Cafe Sunshine</strong>是所有寻求舒适惬意、远离日常生活喧嚣者的理想去处。在这家布置温馨的咖啡馆里，宾客们可以享用种类丰富的特色咖啡、自制蛋糕和精美小吃。这里热情秉承着传统的奥地利咖啡文化，其中浓郁的Verlängerter和温和的Melange格外受欢迎。此外，店内每天还供应自家糕点坊新鲜出炉的传统糕点。轻松惬意的氛围与热情周到的服务，使这家咖啡馆成为了当地居民和游客喜爱的聚会场所。</p>",
   "ort": "Kitzbühel",
   "region": "kitzbuehel",
   "plz": "6370",
@@ -20,5 +20,8 @@
     "lat": 47.4558747,
     "lng": 12.3660634
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com"
+  ]
 }

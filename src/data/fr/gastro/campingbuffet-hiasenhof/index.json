@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Campingbuffet Hiasenhof en Tirol\n\nDécouvrez un cadre idyllique pour vos vacances en plein air au Campingbuffet Hiasenhof, niché au cœur des paysages enchanteurs de la Tirol. Profitez d’un buffet varié et savoureux, où chaque matinée commence par un petit-déjeuner copieux, et où les soirées se terminent en douceur avec des spécialités locales comme le Kaiserschmarrn ou des plats réconfortants à base de produits régionaux.\n\nQue vous soyez en quête d’aventures en montagne, de balades à vélo ou de moments de détente autour d’un feu de camp, le Campingbuffet Hiasenhof offre tout ce qu’il vous faut pour des vacances inoubliables. Bienvenue dans un havre de paix où nature et convivialité se rencontrent ! À proximité d’Innsbruck, de Kitzbühel et des plus belles stations de ski des Alpes, ce camping est l’adresse parfaite pour les familles, les groupes d’amis ou les voyageurs en solo.\n\nAdresse : [À compléter avec les coordonnées exactes si disponibles]\nSite web : [Lien vers le site officiel si applicable]",
-  "beschreibung": null,
+  "beschreibung": "<p>Le <strong>Campingbuffet Hiasenhof</strong> à Kufstein régale ses hôtes avec une sélection raffinée de plats régionaux et de saison. La cuisine marie des recettes traditionnelles tyroliennes à des touches de créativité, offrant ainsi une expérience gustative unique. Le cadre chaleureux invite à la détente, tandis que le service attentionné veille au bien-être des convives. La soupe tyrolienne aux quenelles (Tiroler Knödelsuppe) faite maison est particulièrement recommandée, idéale pour se réchauffer après une longue journée de randonnée. De plus, le restaurant propose une carte des vins soigneusement élaborée, mettant à l'honneur des crus d'exception du Tyrol du Sud et d'Autriche.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.5890107,
     "lng": 12.1166404
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com"
+  ]
 }

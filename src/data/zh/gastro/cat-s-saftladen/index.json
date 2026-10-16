@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "猫咪的汽水店（Cat's Saftladen）位于因斯布鲁克（Innsbruck），是一家充满创意的咖啡馆和甜点店。这里的特色是以新鲜水果、蔬菜和植物为主料，制作出独特的饮品和美食。无论是卡伊泽施马伦（Kaiserschmarrn）的果酱版本，还是用当季水果调制的沙拉（Salat），都让人回味无穷。店内装饰温馨，氛围轻松，是蒂罗尔（Tirol）的年轻人和游客们放松身心的好去处。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克地区因斯布鲁克（Innsbruck）的<strong>Cat's Saftladen</strong>是一家迷人的咖啡馆，以自制蛋糕、精选特色咖啡和温馨舒适的氛围深受宾客喜爱。这里是放松身心、品读好书或与好友畅谈的绝佳之所。菜单提供精选的奥地利传统甜点——从香浓细腻的萨赫蛋糕（Sachertorte）、松脆清香的苹果卷（Apfelstrudel）到诱人的凝乳卷（Topfenstrudel）。此外，店内还供应精心调制的芳香特色咖啡。舒适的座椅与充满温馨细节的布置，营造出令人倍感惬意的舒心氛围。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,9 @@
     "lat": 47.2667246,
     "lng": 11.398525
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

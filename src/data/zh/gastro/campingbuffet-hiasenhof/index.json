@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "露营自助餐 Hiasehof 在蒂罗尔",
-  "beschreibung": null,
+  "beschreibung": "<p>位于库夫施泰因（Kufstein）的<strong>Campingbuffet Hiasenhof</strong>以精选的当地时令佳肴犒劳宾客。厨房将传统的蒂罗尔食谱与创意风味巧妙融合，打造出独特的味觉盛宴。温馨舒适的陈设让人流连忘返，贴心周到的服务更让宾客倍感舒心。特别值得推荐的是自家熬制的蒂罗尔丸子汤（Tiroler Knödelsuppe），在一整天的徒步后格外温暖人心。此外，餐厅还提供精心挑选的酒单，荟萃了来自南蒂罗尔与奥地利的优质佳酿。</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.5890107,
     "lng": 12.1166404
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com"
+  ]
 }

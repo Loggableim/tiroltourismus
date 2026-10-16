@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "咖啡馆 Veldidena（因斯布鲁克） 位于因斯布鲁克市中心的 Cafe Veldidena，是一家充满魅力的传统咖啡馆，以其温馨的氛围和精致的奥地利美食而闻名。在这里，您可以品尝到香醇的咖啡、新鲜的面包和经典的 Kaiserschmarrn，同时欣赏到蒂罗尔地区的迷人风景。 无论是享用一杯咖啡还是一顿丰盛的早餐，Veldidena 都为您提供了一个放松身心的理想场所。咖啡馆的装饰保留了传统的欧洲风格，让人仿佛置身于一个宁静的时光隧道中。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克（Innsbruck）地区的<strong>Cafe Veldidena</strong>，是渴望从繁忙日常中偷得浮生半日闲的绝佳去处。在这家布置温馨的咖啡馆中，宾客们可以享受到品类丰富的咖啡饮品、手工烘焙蛋糕以及精巧小食。这里充满热情地传承着地道的奥地利咖啡文化，尤其是香醇浓郁的Verlängerter与温润柔滑的Melange极具人气。此外，店内每天供应由自家糕点工坊新鲜制作的传统甜点。轻松惬意的氛围与亲切热情的服务，让这家咖啡馆成为当地居民和海内外游客钟爱的聚会场所。店里的食材均优先选用源自蒂罗尔（Tirol）精选农场和生产商的地道风味。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,9 @@
     "lat": 47.2574725,
     "lng": 11.3950553
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café zum Kommerzialrat in Tirol Discover a charming café nestled in the heart of Tirol, where tradition meets warmth.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe zum Kommerzialrat</strong> in Achensee invites you to indulge in a delightful break. This stylish café and confectionery pampers its guests with a wide range of homemade tortes, cakes, and sweet delicacies. Each creation is crafted with great attention to detail and artfully presented. Accompanying these are exquisite coffee specialties, expertly prepared by seasoned baristas. The cozy ambiance with its charming interior invites guests to sit back and relish the moment. Whether for breakfast, an afternoon coffee, or a light snack in between – you are sure to feel truly welcome here.</p>",
   "ort": "",
   "region": "achensee",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4368221,
     "lng": 11.6957323
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.achensee.com"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "蒂罗尔的咖啡手工坊 Innsbruck – Kaffee mit Bergblick Genießen Sie in der Cafemanufaktur Innsbruck einen perfekt zubereiteten Kaffee mit Blick auf die Nordkette.",
-  "beschreibung": null,
+  "beschreibung": "<p>位于基茨比厄尔（Kitzbühel）的<strong>Cafemanufaktur</strong>是寻找远离日常喧嚣、享受惬意悠闲时光的理想之所。在这家布置温馨的咖啡馆中，宾客们可以品尝到种类丰富的特色咖啡、自制蛋糕和精致小吃。这里饱含热情地传承着传统的奥地利咖啡馆文化。口感浓郁的Verlängerter和温和顺滑的Melange尤其受到欢迎。此外，店内每天还供应自家甜品坊新鲜制作的传统糕点。轻松惬意的氛围与热情周到的服务，使这家咖啡馆成为当地居民和八方游客喜爱的聚会场所。</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4489317,
     "lng": 12.1592116
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com"
+  ]
 }

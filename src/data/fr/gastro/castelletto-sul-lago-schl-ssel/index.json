@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Castelletto sul Lago – Le Schlössel en Tirol Découvrez le charme romantique des Schlössel à Innsbruck, nichés au bord du lac Castelletto sul Lago, un joyau caché au cœur des Alpes…",
-  "beschreibung": null,
+  "beschreibung": "<p>Le <strong>Castelletto sul Lago - Schlössel</strong> à Landeck régale ses hôtes avec une sélection exquise de plats régionaux et de saison. La cuisine marie des recettes traditionnelles tyroliennes à des touches créatives, créant ainsi une expérience gustative unique. Le cadre chaleureux invite à la détente, tandis que le service attentionné veille au bien-être des convives. La soupe tyrolienne aux quenelles (Tiroler Knödelsuppe) maison est particulièrement recommandée, merveilleusement réconfortante après une longue journée de randonnée. De plus, le restaurant propose une carte des vins soigneusement élaborée avec des crus choisis du Tyrol du Sud et d'Autriche. L'accent est mis sur les produits régionaux du Tyrol, issus de fermes et de producteurs locaux sélectionnés.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 46.8277806,
     "lng": 10.5112818
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

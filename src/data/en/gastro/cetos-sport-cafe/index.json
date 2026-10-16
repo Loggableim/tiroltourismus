@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Cetos Sport Café in Matrei/Brenner Discover the perfect blend of sporty energy and cozy atmosphere at Cetos Sport Café in Matrei/Brenner.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cetos Sport Cafe</strong> in Matrei/Brenner in the Osttirol region is a popular restaurant that delights its guests with a varied menu and authentic regional hospitality. The ambiance blends traditional Tyrolean elements with modern comfort, creating an inviting setting for every occasion. The menu features a carefully curated selection of dishes – from classic Tyrolean specialties like Tiroler Gröstl and Kaiserschmarrn to international favorites. The team places particular emphasis on using fresh, regional ingredients sourced from the surrounding area. Whether for a cozy dinner for two, a family celebration, or a business meeting – <strong>Cetos Sport Cafe</strong> welcomes you warmly and ensures a thoroughly enjoyable visit with its attentive service.</p>",
   "ort": "Matrei/Brenner",
   "region": "osttirol",
   "plz": "6143",
@@ -20,5 +20,8 @@
     "lat": 47.1306419,
     "lng": 11.4519779
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.osttirol.com"
+  ]
 }

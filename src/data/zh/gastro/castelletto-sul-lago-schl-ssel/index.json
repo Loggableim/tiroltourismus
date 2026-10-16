@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "卡斯特莱托苏尔拉戈 - 提洛尔的小城堡 提洛尔的迷人小城堡：卡斯特莱托苏尔拉戈 位于提洛尔南部的卡斯特莱托苏尔拉戈（Castelletto sul Lago），是一个充满中世纪魅力的小村庄，坐落在美丽的伊塞奥湖（Lago d’Isarco）畔。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于兰德克（Landeck）的<strong>Castelletto sul Lago - Schlössel</strong>以精选的当地时令菜肴犒劳宾客。烹饪团队将传统的蒂罗尔特色食谱与现代创意巧妙结合，打造出别具一格的美味体验。温馨舒适的室内装潢让人流连忘返，周到贴心的服务更让宾客感受如家般的温暖。特别推荐自家熬制的蒂罗尔丸子汤（Tiroler Knödelsuppe），在经过一整天的徒步旅程后格外温暖惬意。此外，餐厅还提供一份精心搭配的酒单，网罗了来自南蒂罗尔与奥地利的优质葡萄酒。餐厅重点选用来自蒂罗尔当地精选农场及生产商的高品质食材。</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 46.8277806,
     "lng": 10.5112818
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

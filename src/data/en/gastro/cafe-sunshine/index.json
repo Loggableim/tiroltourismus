@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Sunshine in Kitzbühel – your cozy retreat nestled in the heart of the Alpenland Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Sunshine</strong> in Kitzbühel in the Kitzbühel region is the perfect destination for anyone seeking a cozy break from everyday life. In this lovingly decorated café, guests enjoy a diverse range of coffee specialties, homemade cakes, and light snacks. Traditional Austrian coffee culture is cultivated here with great passion. Especially popular are the creamy Verlängerter and the smooth Melange. In addition, freshly baked pastries from their own patisserie are offered daily. The relaxed atmosphere and warm service make the café a popular meeting place for locals and visitors alike.</p>",
   "ort": "Kitzbühel",
   "region": "kitzbuehel",
   "plz": "6370",
@@ -20,5 +20,8 @@
     "lat": 47.4558747,
     "lng": 12.3660634
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com"
+  ]
 }

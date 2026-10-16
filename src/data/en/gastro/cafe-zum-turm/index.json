@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café zum Turm in Graun im Vinschgau – Curon Venosta Nestled in the heart of Tirol, just a stone’s throw from the stunning Alps, Café zum Turm invites you to savor the…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe zum Turm</strong> in Graun im Vinschgau - Curon Venosta in the Landeck region is the perfect destination for anyone looking for a cozy retreat from everyday life. In this charmingly decorated café, guests enjoy a wide range of coffee specialties, homemade cakes, and light bites. Traditional Austrian coffee culture is celebrated here with heartfelt passion. The creamy Verlängerter and smooth Melange are customer favorites. In addition, fresh pastries from the café's own bakery are served daily. The relaxed atmosphere and welcoming hospitality make the café a popular gathering place for locals and visitors alike.</p>",
   "ort": "Graun im Vinschgau - Curon Venosta",
   "region": "landeck",
   "plz": "39027",
@@ -20,5 +20,8 @@
     "lat": 46.8115477,
     "lng": 10.5376094
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

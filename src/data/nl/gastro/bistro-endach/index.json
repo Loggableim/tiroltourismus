@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Bistro Endach in Kufstein",
-  "beschreibung": "<p>Das <strong>Bistro Endach</strong> in Kufstein ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bistro Endach</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "beschreibung": "<p>Het <strong>Bistro Endach</strong> in Kufstein is een geliefd lokaal restaurant dat bekendstaat om zijn eerlijke keuken en gastvrije service. Gasten kunnen hier terecht voor dagelijks wisselende lunchmenu's, traditionele Oostenrijkse gerechten en verfrissende drankjes in een ontspannen, informele setting. Ideaal voor zowel een snelle lunch als een rustig diner.</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -21,5 +21,8 @@
     "lat": 47.5731866,
     "lng": 12.1532057
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

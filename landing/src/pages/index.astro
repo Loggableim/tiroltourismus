@@ -1,5 +1,6 @@
 ---
 import HeroPhoto from '../components/HeroPhoto.astro';
+import stationFlapBoard from '../lib/station-flap-board.js?raw';
 // tiroltourismus.com — Apex Sprach-Hub
 // Self-contained one-screen (#sprache) language picker. 8 tiles (4x2 desktop /
 // 2x4 mobile): all tiles are equal; each reveals a per-language hover/focus
@@ -158,16 +159,46 @@ const TILES = [
       font-size: clamp(11px, 1.7vh, 15px);
       line-height: 1.5;
       color: var(--text2);
-      max-width: 56ch;
-      min-height: calc(1.5em * 3);
-      text-wrap: balance;
-      perspective: 500px;
+      max-width: min(920px, 100%);
+      min-height: calc(1.5em * 2.2);
+      perspective: 650px;
+    }
+    .df-sub.df-flap-board {
+      display: grid;
+      grid-template-columns: repeat(var(--flap-cols, 48), minmax(0, 1fr));
+      grid-template-rows: repeat(var(--flap-rows, 2), auto);
+      gap: 3px 1px;
+      justify-content: center;
+      text-wrap: unset;
     }
     .df-sub .df-ch {
+      position: relative;
       display: inline-block;
-      transform-origin: 50% 100%;
+      transform-origin: 50% 52%;
       backface-visibility: hidden;
       will-change: transform, opacity;
+      min-height: 1.35em;
+      padding: 2px 0;
+      border-radius: 2px;
+      background: rgba(8, 12, 18, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+      font-size: clamp(9.5px, 1.35vh, 13px);
+      line-height: 1.2;
+    }
+    .df-sub .df-ch::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.55);
+      pointer-events: none;
+    }
+    .df-sub .df-ch-empty {
+      opacity: 0.42;
+      color: transparent;
     }
 
     /* ─── Language tiles: slim, compact ─── */
@@ -355,6 +386,7 @@ const TILES = [
     </footer>
   </section>
 
+  <script is:inline set:html={stationFlapBoard} />
   <script is:inline>
     (function () {
       'use strict';
@@ -407,109 +439,48 @@ const TILES = [
         });
       });
 
-      // ─── Split-flap (airport board) hero tagline ───
+      // ─── Split-flap station board (fixed cells, empty slots when text is shorter) ───
       var subEl = document.querySelector('.df-sub');
       if (!subEl) return;
       subEl.setAttribute('aria-live', 'off');
-      var BASE = SUBS['de'] || subEl.textContent;
+      var BASE_CODE = match || 'de';
+      var BASE = SUBS[BASE_CODE] || SUBS['de'] || subEl.textContent;
 
       var REDUCED = false;
       try { REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
 
-      var GLYPHS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#@$%&*/<>';
-      var FLAP_MS = 700;
-      var raf = 0;
-      var fadeTimer = 0;
+      var board = new TTStationFlap({
+        el: subEl,
+        cellClass: 'df-ch',
+        emptyClass: 'df-ch-empty',
+        boardClass: 'df-flap-board',
+        cols: 48,
+        rows: 2,
+        flapMs: 700
+      });
+      var flapState = { raf: 0, fadeTimer: 0 };
+      var activeCode = BASE_CODE;
 
-      function cancelAll() {
-        if (raf) { cancelAnimationFrame(raf); raf = 0; }
-        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = 0; }
+      board.renderStatic(BASE, BASE_CODE);
+
+      function flapTo(code) {
+        var text = SUBS[code] || BASE;
+        var lang = code === 'zh' ? 'zh-Hans' : code;
+        activeCode = code;
+        board.animateTo(text, lang, REDUCED, flapState);
       }
 
-      function crossfade(text) {
-        cancelAll();
-        subEl.style.transition = 'opacity .18s ease';
-        subEl.style.opacity = '0';
-        fadeTimer = setTimeout(function () {
-          fadeTimer = 0;
-          subEl.textContent = text;
-          subEl.style.opacity = '1';
-        }, 180);
-      }
-
-      function flapTo(text) {
-        if (!text) text = BASE;
-        if (REDUCED) { crossfade(text); return; }
-        cancelAll();
-        subEl.style.transition = '';
-        subEl.style.opacity = '';
-
-        var chars = Array.from(text);
-        var frag = document.createDocumentFragment();
-        var nodes = [];
-        for (var i = 0; i < chars.length; i++) {
-          var ch = chars[i];
-          if (ch === ' ') { frag.appendChild(document.createTextNode(' ')); continue; }
-          var span = document.createElement('span');
-          span.className = 'df-ch';
-          span.textContent = ch;
-          frag.appendChild(span);
-          nodes.push({ el: span, target: ch, glyph: GLYPHS[(Math.random() * GLYPHS.length) | 0] });
-        }
-        subEl.textContent = '';
-        subEl.appendChild(frag);
-
-        var count = nodes.length;
-        if (!count) { subEl.textContent = text; return; }
-
-        var start = 0;
-        var lastGlyph = 0;
-        var lead = FLAP_MS * 0.12;
-        var span0 = FLAP_MS * 0.78;
-        var settle = nodes.map(function (n, idx) {
-          return count > 1 ? lead + (idx / (count - 1)) * span0 : FLAP_MS * 0.5;
-        });
-
-        function frame(now) {
-          if (!start) start = now;
-          var elapsed = now - start;
-          var step = elapsed - lastGlyph >= 55;
-          if (step) lastGlyph = elapsed;
-          var done = true;
-          for (var j = 0; j < count; j++) {
-            var n = nodes[j];
-            if (elapsed >= settle[j]) {
-              n.el.textContent = n.target;
-              n.el.style.transform = 'rotateX(0deg)';
-              n.el.style.opacity = '1';
-            } else {
-              done = false;
-              if (step) n.glyph = GLYPHS[(Math.random() * GLYPHS.length) | 0];
-              n.el.textContent = n.glyph;
-              var phase = elapsed / 48 + j * 0.7;
-              n.el.style.transform = 'rotateX(' + (Math.sin(phase) * 42).toFixed(1) + 'deg)';
-              n.el.style.opacity = String(0.5 + 0.5 * Math.abs(Math.cos(phase)));
-            }
-          }
-          if (done) {
-            raf = 0;
-            subEl.textContent = text;
-          } else {
-            raf = requestAnimationFrame(frame);
-          }
-        }
-        raf = requestAnimationFrame(frame);
-      }
-
-      // Hover / focus a tile → flap into its language; leave → back to German.
       var revertTimer = 0;
       function enter(code) {
         if (revertTimer) { clearTimeout(revertTimer); revertTimer = 0; }
-        flapTo(SUBS[code] || BASE);
+        flapTo(code);
       }
       function leave() {
         if (revertTimer) clearTimeout(revertTimer);
-        revertTimer = setTimeout(function () { revertTimer = 0; flapTo(BASE); }, 60);
+        revertTimer = setTimeout(function () {
+          revertTimer = 0;
+          flapTo(BASE_CODE);
+        }, 60);
       }
       Object.keys(tiles).forEach(function (code) {
         var t = tiles[code];

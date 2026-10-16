@@ -281,9 +281,16 @@
       line-height: 1.55;
       color: var(--text-secondary);
       text-align: center;
-      text-wrap: balance;
       perspective: 650px;
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+    }
+    .tt-flap.tt-flap-board {
+      display: grid;
+      grid-template-columns: repeat(var(--flap-cols, 52), minmax(0, 1fr));
+      grid-template-rows: repeat(var(--flap-rows, 2), auto);
+      gap: 3px 1px;
+      width: 100%;
+      max-width: min(920px, 100%);
     }
     .tt-flap .tt-ch {
       position: relative;
@@ -291,11 +298,17 @@
       transform-origin: 50% 52%;
       backface-visibility: hidden;
       will-change: transform, opacity;
-      padding: 0 1px;
-      margin: 0 0.2px;
+      padding: 2px 0;
+      min-height: 1.35em;
       border-radius: 2px;
       background: rgba(15, 21, 30, 0.72);
       border: 1px solid rgba(245, 243, 240, 0.14);
+      font-size: clamp(9.5px, 1.35vh, 13px);
+      line-height: 1.2;
+    }
+    .tt-flap .tt-ch-empty {
+      opacity: 0.42;
+      color: transparent;
     }
     .tt-flap .tt-ch::after {
       content: '';
@@ -629,6 +642,7 @@
     </div>
   </div>
 
+  <script src="station-flap-board.js"></script>
   <script>
     (function () {
       'use strict';
@@ -706,124 +720,33 @@
         privacyEl.setAttribute('lang', info.htmlLang);
       }
 
-      var GLYPHS_LATIN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜČŘŠŽ0123456789·—';
-      var GLYPHS_CJK = '山川云雪峰谷林泉风光探索蒂罗尔天地八方旅途境';
-      var FLAP_MS = 700;
-      var rafId = 0;
-      var fadeTimer = 0;
+      var board = new TTStationFlap({
+        el: flapEl,
+        cellClass: 'tt-ch',
+        emptyClass: 'tt-ch-empty',
+        boardClass: 'tt-flap-board',
+        cols: 52,
+        rows: 2,
+        flapMs: 700
+      });
+      var flapState = { raf: 0, fadeTimer: 0 };
       var revertTimer = 0;
       var currentShownCode = '';
-
-      function cancelAnimations() {
-        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
-        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = 0; }
-      }
-
-      function crossfadeTo(code) {
-        var info = langData[code] || langData[activeBaseCode];
-        cancelAnimations();
-        flapEl.style.transition = 'opacity 180ms ease';
-        flapEl.style.opacity = '0';
-        fadeTimer = setTimeout(function () {
-          fadeTimer = 0;
-          flapEl.textContent = info.sub;
-          flapEl.setAttribute('lang', info.htmlLang);
-          flapEl.style.opacity = '1';
-          liveEl.textContent = info.sub;
-        }, 180);
-      }
 
       function flapTo(code, instant) {
         var info = langData[code] || langData[activeBaseCode];
         if (!info) return;
         setAtmosphereAndFooter(code);
-
-        if (instant) {
-          cancelAnimations();
-          currentShownCode = code;
-          flapEl.textContent = info.sub;
-          flapEl.setAttribute('lang', info.htmlLang);
-          liveEl.textContent = info.sub;
-          return;
-        }
-        if (code === currentShownCode && !rafId) return;
-        currentShownCode = code;
-
-        if (reducedMotion) {
-          crossfadeTo(code);
-          return;
-        }
-
-        cancelAnimations();
-        flapEl.style.transition = '';
-        flapEl.style.opacity = '1';
-        flapEl.setAttribute('lang', info.htmlLang);
         liveEl.textContent = info.sub;
-
-        var text = info.sub;
-        var pool = code === 'cn' ? GLYPHS_CJK : GLYPHS_LATIN;
-        var chars = Array.from(text);
-        var frag = document.createDocumentFragment();
-        var nodes = [];
-
-        for (var c = 0; c < chars.length; c++) {
-          var ch = chars[c];
-          if (ch === ' ') {
-            frag.appendChild(document.createTextNode(' '));
-            continue;
-          }
-          var span = document.createElement('span');
-          span.className = 'tt-ch';
-          var g = pool[(Math.random() * pool.length) | 0];
-          span.textContent = g;
-          frag.appendChild(span);
-          nodes.push({ el: span, target: ch, glyph: g });
+        if (instant) {
+          board.cancel(flapState);
+          currentShownCode = code;
+          board.renderStatic(info.sub, info.htmlLang);
+          return;
         }
-
-        flapEl.textContent = '';
-        flapEl.appendChild(frag);
-
-        var total = nodes.length;
-        var startTime = 0;
-        var lastTick = 0;
-        var lead = FLAP_MS * 0.12;
-        var spread = FLAP_MS * 0.78;
-        var settleTimes = nodes.map(function (_, idx) {
-          return total > 1 ? lead + (idx / (total - 1)) * spread : FLAP_MS * 0.5;
-        });
-
-        function stepFrame(now) {
-          if (!startTime) startTime = now;
-          var elapsed = now - startTime;
-          var swap = elapsed - lastTick >= 52;
-          if (swap) lastTick = elapsed;
-          var done = true;
-          for (var j = 0; j < total; j++) {
-            var n = nodes[j];
-            if (elapsed >= settleTimes[j]) {
-              n.el.textContent = n.target;
-              n.el.style.transform = 'rotateX(0deg)';
-              n.el.style.opacity = '1';
-            } else {
-              done = false;
-              if (swap) {
-                n.glyph = pool[(Math.random() * pool.length) | 0];
-                n.el.textContent = n.glyph;
-              }
-              var phase = elapsed / 45 + j * 0.68;
-              var angle = Math.sin(phase) * 54;
-              n.el.style.transform = 'rotateX(' + angle.toFixed(1) + 'deg)';
-              n.el.style.opacity = String((0.56 + 0.44 * Math.abs(Math.cos(phase))).toFixed(2));
-            }
-          }
-          if (done) {
-            rafId = 0;
-            flapEl.textContent = text;
-          } else {
-            rafId = requestAnimationFrame(stepFrame);
-          }
-        }
-        rafId = requestAnimationFrame(stepFrame);
+        if (code === currentShownCode && !flapState.raf) return;
+        currentShownCode = code;
+        board.animateTo(info.sub, info.htmlLang, reducedMotion, flapState);
       }
 
       updateDetectedHighlight(detectedCode);

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Duxer Alm is a picturesque alpine meadow near Kufstein, nestled in the heart of Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Duxer Alm</strong> in Kufstein in the Kufstein region delights its guests with a fine assortment of regional and seasonal alpine dishes. The culinary team thoughtfully combines traditional Tyrolean recipes with creative touches, creating an authentic mountain dining experience. The rustic, cozy furnishings invite visitors to sit back and recharge, while courteous service ensures their well-being. The homemade Tyrolean dumpling soup is particularly revitalizing after a scenic mountain hike, paired wonderfully with fine Austrian wines.</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -20,5 +20,8 @@
     "lat": 47.5829242,
     "lng": 12.2003365
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

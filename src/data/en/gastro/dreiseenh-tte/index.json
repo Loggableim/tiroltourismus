@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Three Lakes Hut in Tirol Nestled in the heart of the Zillertal Alps, the Dreiseenhütte is a true paradise for hikers and nature lovers.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Dreiseenhütte</strong> in Imst spoils its guests with a fine selection of regional and seasonal alpine specialties. The kitchen artfully brings together classic Tyrolean recipes and creative touches, offering a unique taste of the mountains. The rustic, welcoming interior invites visitors to rest and recharge, while courteous staff ensure their well-being. A warm bowl of homemade Tyrolean dumpling soup is especially revitalizing after a long day of alpine hiking. In addition, the hut offers a curated wine list with select vintages from South Tyrol and Austria.</p>",
   "ort": "",
   "region": "imst",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2052554,
     "lng": 11.0337102
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

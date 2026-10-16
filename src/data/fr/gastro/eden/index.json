@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Un Éden à Innsbruck Bienvenue dans la capitale alpine du Tirol, où les montagnes majestueuses, les lacs cristallins et une ambiance chaleureuse se rencontrent pour créer une…",
-  "beschreibung": null,
+  "beschreibung": "<p>À l'<strong>Eden</strong> à Innsbruck, au cœur de la région d'Innsbruck, l'hospitalité est une seconde nature. Le restaurant séduit par son cadre chaleureux et sa carte combinant subtilement recettes traditionnelles tyroliennes et créations culinaires modernes. Les ingrédients proviennent en grande majorité de producteurs régionaux, ce qui se reflète dans la fraîcheur des assiettes. Les boiseries et le décor alpin créent une ambiance feutrée très appréciable. Le point d'orgue reste la véranda panoramique avec vue sur les montagnes, propice à de délicieux moments de détente.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2646586,
     "lng": 11.4385153
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

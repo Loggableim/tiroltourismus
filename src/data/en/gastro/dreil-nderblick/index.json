@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Three-Country View in Nauders Nauders – Where Three Worlds Meet Nestled at the heart of the Alps, the small village of Nauders in Tirol offers a breathtaking panorama: the…",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Dreiländerblick</strong> in Nauders in the Landeck region, guests enjoy a mouth-watering combination of traditional Tyrolean cuisine and contemporary culinary influences. The cozy restaurant charms visitors with its inviting atmosphere and friendly service, turning every meal into a memorable experience. The seasonally changing menu relies on fresh local ingredients – from alpine cheeses produced on surrounding pastures to fresh game from Tyrolean forests. Fans of international dishes will also find excellent choices. Homemade desserts, including classics like Kaiserschmarrn and apple strudel, round off the culinary journey perfectly.</p>",
   "ort": "Nauders",
   "region": "landeck",
   "plz": "6543",
@@ -20,5 +20,8 @@
     "lat": 46.8491123,
     "lng": 10.5060719
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Nauders"
+  ]
 }

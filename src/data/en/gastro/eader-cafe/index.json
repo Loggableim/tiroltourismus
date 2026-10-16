@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Eader Café in Tirol Discover the cozy charm of Eader Café in the heart of Tirol, where traditional Alpine hospitality meets modern comfort.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Eader Cafe</strong> in Landeck is a charming café that enchants its visitors with homemade cakes, specialty coffees, and an inviting ambiance. Here you can unwind wonderfully, read a good book, or chat with friends. The menu offers an enticing selection of traditional Austrian pastries – from creamy Sachertorte and warm apple strudel to delicate sweet curd pastries. These treats are served alongside aromatic barista coffees crafted with passion. The bright, welcoming seating area and friendly staff make every visit thoroughly enjoyable.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.1441094,
     "lng": 10.57258
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Discover the Magic of Edelweiß in Pettneu am Arlberg Nestled in the heart of Tirol, Pettneu am Arlberg is a picturesque alpine village where the iconic Edelweiß—the symbol of the…",
-  "beschreibung": "",
+  "beschreibung": "<p>Enjoy unforgettable culinary moments at the <strong>Edelweiß</strong> in Pettneu am Arlberg in the Arlberg region. This restaurant represents refined Tyrolean hospitality infused with timeless elegance. The menu harmonizes classics of alpine cooking with international influences, surprising guests with creative presentations. Great value is placed on uncompromised freshness and regional sourcing, from fine mountain cheeses to regional meats. Friendly, attentive service and a stylish dining room make every visit a culinary highlight, whether for business or a romantic dinner.</p>",
   "ort": "Pettneu am Arlberg",
   "region": "arlberg",
   "plz": "6574",
@@ -21,5 +21,8 @@
     "lat": 47.1493307,
     "lng": 10.3415129
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pettneu_am_Arlberg"
+  ]
 }

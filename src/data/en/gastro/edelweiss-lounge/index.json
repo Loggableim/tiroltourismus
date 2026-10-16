@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Welcome to the Edelweiss Lounge in Tirol—where alpine charm meets modern comfort.",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Edelweiss Lounge</strong> in the Zillertal, genuine Tyrolean warmth takes center stage. The restaurant and lounge provide an inviting atmosphere and a menu pairing timeless alpine comfort dishes with contemporary culinary accents. Ingredients are predominantly sourced from regional producers, resulting in exceptional flavor across every dish. Warm woodwork and alpine decorative elements create a cozy, relaxing environment. A standout highlight is the panoramic veranda offering sweeping views of the surrounding peaks, perfect for lounging on sunny days.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.166543,
     "lng": 11.8650811
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

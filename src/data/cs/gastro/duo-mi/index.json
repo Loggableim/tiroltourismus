@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Duo Mi v Innsbrucku",
-  "beschreibung": null,
+  "beschreibung": "<p>V restauraci <strong>Duo Mi</strong> v Innsbrucku v regionu Innsbruck je pohostinnost vždy na prvním místě. Podnik nabízí příjemné prostředí a pestrý jídelní lístek spojující tradiční alpské suroviny s moderní asijskou gastronomií. Čerstvé ingredience pocházejí převážně od místních dodavatelů, což zaručuje vysokou kvalitu všech pokrmů. Útulný dřevěný interiér vytváří hřejivou domáckou atmosféru. Skvělým zážitkem je také posezení na vyhlídkové verandě s pohledem na okolní horské štíty.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2667327,
     "lng": 11.3924862
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

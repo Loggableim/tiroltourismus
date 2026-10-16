@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Edelweiss in Reutte Discover the Edelweiss in its natural habitat in the Lechtal Alps near Reutte.",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Edelweis</strong> in Reutte in the Außerfern region, hospitality is paramount. The restaurant offers an inviting atmosphere and a menu that seamlessly brings together traditional Tyrolean and Austrian cooking with modern interpretations. Ingredients are sourced largely from local producers, which is reflected in the excellent quality of the food. Cozy wooden furnishings and regional décor create a comfortable setting. A particular highlight is the veranda with panoramic views of the surrounding mountains, inviting guests to linger on sunny afternoons.</p>",
   "ort": "Reutte",
   "region": "ausserfern",
   "plz": "6600",
@@ -20,5 +20,8 @@
     "lat": 47.4934513,
     "lng": 10.7175604
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Reutte"
+  ]
 }

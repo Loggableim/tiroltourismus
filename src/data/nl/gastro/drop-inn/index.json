@@ -3,8 +3,8 @@
   "emoji": "🍸",
   "farbe": "#FF6B35",
   "kategorie": "bar",
-  "kurzbeschreibung": "Drop Inn in Innsbruck",
-  "beschreibung": "<p>Die <strong>Drop Inn</strong> in Innsbruck in der Region Innsbruck ist ein beliebter Treffpunkt für alle, die den Abend bei einem stilvollen Drink genießen möchten. Das moderne Ambiente und die entspannte Atmosphäre laden zum Verweilen ein. Die Bar bietet eine erlesene Auswahl an Cocktails, Longdrinks, Bieren und erlesenen Weinen – von klassischen Drinks bis hin zu kreativen Eigenkreationen. Die erfahrenen Barkeeper mixen mit Leidenschaft und Know-how jeden Drink individuell. Regelmäßige Live-Events und Themenabende sorgen für Abwechslung. Ob für einen gemütlichen Feierabend-Drink, einen Abend mit Freunden oder einen besonderen Anlass – hier ist man richtig.</p>",
+  "kurzbeschreibung": "Moderne bar in Innsbruck met een ontspannen avondsfeer, creatieve cocktails en een uitgelezen bier- en wijnkaart.",
+  "beschreibung": "<p>De <strong>Drop Inn</strong> in Innsbruck in de regio Innsbruck is een geliefde ontmoetingsplek voor iedereen die de avond wil vieren met een stijlvol drankje. De moderne ambiance en relaxte sfeer nodigen uit om gezellig te blijven zitten. De bar biedt een gevarieerde selectie van cocktails, longdrinks, speciaalbieren en verfijnde wijnen – van klassiekers tot creatieve eigen creaties. Ervaren barmannen shaken elk drankje met passie en vakmanschap. Of het nu gaat om een gezellige borrel na het werk of een avond met vrienden – hier bent u aan het juiste adres.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.265903,
     "lng": 11.3824988
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

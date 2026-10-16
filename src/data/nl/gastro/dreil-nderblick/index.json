@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Drie-landse uitzicht in Nauders",
-  "beschreibung": "<p>Im <strong>Dreiländerblick</strong> in Nauders in der Region Landeck genießen Gäste eine köstliche Kombination aus traditioneller Tiroler Küche und modernen Einflüssen. Das gemütliche Restaurant überzeugt mit einer einladenden Atmosphäre und einem freundlichen Service, der jeden Besuch zu einem besonderen Erlebnis macht. Die saisonal wechselnde Karte setzt auf frische Produkte aus der Region – von Bergkäse aus den umliegenden Almen bis hin zu frischem Wild aus den Tiroler Wäldern. Auch Liebhaber der internationalen Küche kommen hier auf ihre Kosten. Die hausgemachten Nachspeisen, darunter Klassiker wie Kaiserschmarrn und Apfelstrudel, runden das kulinarische Angebot perfekt ab.</p>",
+  "beschreibung": "<p>In het <strong>Dreiländerblick</strong> in Nauders in de regio Landeck genieten gasten van een heerlijke combinatie van traditionele Tiroolse gerechten en moderne culinaire invloeden. Het gezellige restaurant overtuigt met een gastvrije ambiance en een vriendelijke bediening die van elk bezoek een bijzondere belevenis maakt. De seizoensgebonden kaart legt de nadruk op verse streekproducten – van bergkaas uit de omliggende almen tot vers wild uit de Tiroolse bossen. Ook liefhebbers van de internationale keuken komen hier volop aan hun trekken. Huisgemaakt gebak, waaronder klassiekers als Kaiserschmarrn en Apfelstrudel, completeert het aanbod op perfecte wijze.</p>",
   "ort": "Nauders",
   "region": "landeck",
   "plz": "6543",
@@ -20,5 +20,8 @@
     "lat": 46.8491123,
     "lng": 10.5060719
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Nauders"
+  ]
 }

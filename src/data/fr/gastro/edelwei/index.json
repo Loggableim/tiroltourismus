@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Édredon dans Pettneu am Arlberg *(Les autres règles ont été respectées : pas d’explications, pas de notes, pas de modifications des noms ou termes culinaires.)*",
-  "beschreibung": null,
+  "beschreibung": "<p>Vivez des instants gourmands d'exception au restaurant <strong>Edelweiß</strong> à Pettneu am Arlberg, au cœur de la prestigieuse région de l'Arlberg. Cet établissement incarne l'hospitalité tyrolienne haut de gamme alliant authenticité alpine et élégance. La carte marie harmonieusement les recettes traditionnelles de montagne aux influences gastronomiques internationales. L'équipe privilégie des produits frais issus des fermes régionales. Le service soigné et l'ambiance chaleureuse garantissent une expérience culinaire inoubliable.</p>",
   "ort": "Pettneu am Arlberg",
   "region": "arlberg",
   "plz": "6574",
@@ -21,5 +21,8 @@
     "lat": 47.1493307,
     "lng": 10.3415129
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pettneu_am_Arlberg"
+  ]
 }

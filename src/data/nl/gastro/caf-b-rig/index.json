@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Bärig in Tirol",
-  "beschreibung": "<p>Das <strong>Café Bärig</strong> in Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Café Bärig</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "Café Bärig in Innsbruck - zonnig café met Tiroolse lekkernijen",
+  "beschreibung": "<p><strong>Café Bärig</strong> in Innsbruck biedt zijn gasten een hartelijke sfeer en een fijne selectie aan koffiespecialiteiten en huisgemaakte lekkernijen. Het café staat bekend om zijn zonnige terras, dat op warme dagen uitnodigt tot ontspannen. De menukaart omvat klassiek Oostenrijks gebak, geurige taarten en verleidelijke lekkernijen die dagelijks vers worden bereid. De attente service zorgt ervoor dat het gasten aan niets ontbreekt. <strong>Café Bärig</strong> is de ideale plek voor een ontspannen koffiepauze te midden van het Tiroolse dagelijkse leven.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2815979,
     "lng": 11.1936423
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

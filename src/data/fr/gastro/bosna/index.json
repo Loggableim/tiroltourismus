@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Bosna in Grainau Découvrez Bosna, un joyau niché dans le Tirol, à seulement quelques minutes d’Innsbruck et en plein cœur des Alpes.",
-  "beschreibung": "<p>Das <strong>Bosna</strong> in Grainau ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bosna</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "beschreibung": "<p>Le snack <strong>Bosna</strong> à Innsbruck est une adresse incontournable pour savourer la célèbre saucisse épicée Bosna dans la capitale tyrolienne. Servie dans un pain chaud et croustillant avec des oignons frais et un mélange d'épices au curry exclusif, chaque bouchée offre une explosion de saveurs. Parfait pour une pause gourmande et rapide lors de votre découverte d'Innsbruck.</p>",
   "ort": "Grainau",
   "region": "ausserfern",
   "plz": "82491",
@@ -21,5 +21,9 @@
     "lat": 47.4699215,
     "lng": 11.0299601
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck",
+    "https://www.innsbruck.gv.at"
+  ]
 }

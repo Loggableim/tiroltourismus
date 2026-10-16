@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Bockbacher Almwirtschaft in Tirol",
-  "beschreibung": "<p>Das <strong>Bockbacher Almwirtschaft</strong> in AuÃŸerfern ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bockbacher Almwirtschaft</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Authentieke alpenherberg in Steeg met traditionele Tiroolse gerechten en bergzicht.",
+  "beschreibung": "<p>De <strong>Bockbacher Almwirtschaft</strong> in Steeg is een authentieke alpenherberg te midden van het indrukwekkende berglandschap van de Lechtaler Alpen. Wandelaars en natuurliefhebbers worden hier verwelkomd met traditionele Tiroolse almlekkernijen, stevige streekgerechten en zelfgemaakte specialiteiten. Het zonnige terras biedt een weids panorama over de omliggende bergtoppen, terwijl de rustieke stube binnen behaaglijke warmte uitstraalt. De <strong>Bockbacher Almwirtschaft</strong> is een niet te missen stop tijdens elke tocht in het Bockbachtal.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -21,5 +21,9 @@
     "lat": 47.2396596,
     "lng": 10.2249153
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Steeg_(Tirol)",
+    "https://www.lechtal.at"
+  ]
 }

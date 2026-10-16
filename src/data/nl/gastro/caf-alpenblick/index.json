@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Alpenblick in Wallgau",
-  "beschreibung": "<p>Das <strong>Café Alpenblick</strong> in Wallgau ist ein einladendes CafÃ©, das mit seinem gemÃ¼tlichen Ambiente und einer feinen Auswahl an KaffeespezialitÃ¤ten, hausgemachten Kuchen und sÃ¼ÃŸen Versuchungen begeistert. Hier kÃ¶nnen GÃ¤ste den Alltag hinter sich lassen und bei einer Tasse aromatischem Kaffee oder einem cremigen Cappuccino entspannen. Das Angebot umfasst FrÃ¼hstÃ¼cksvariationen, leichte Snacks und tÃ¤glich frische Mehlspeisen - von der klassischen Sachertorte bis zum saftigen Apfelstrudel. Die freundliche Bedienung und das wohnliche Interieur laden zum Verweilen und GenieÃŸen ein. Ob fÃ¼r einen entspannten Start in den Tag, eine gemÃ¼tliche Kaffeepause am Nachmittag oder einen Plausch mit Freunden - das <strong>Café Alpenblick</strong> ist der ideale Ort fÃ¼r Genuss und Geselligkeit in Wallgau.</p>",
+  "kurzbeschreibung": "Café Alpenblick in Riezlern - sfeervol café",
+  "beschreibung": "<p><strong>Café Alpenblick</strong> in Riezlern is een uitnodigend café dat charmeert met zijn gezellige sfeer en een fijne selectie aan koffiespecialiteiten, huisgemaakt gebak en zoete lekkernijen. Hier kunnen gasten de dagelijkse routine even achter zich laten en ontspannen met een kop aromatische koffie of een romige cappuccino. Het aanbod omvat ontbijtvariaties, lichte snacks en dagelijks vers gebak - van klassieke Sachertorte tot knapperige apfelstrudel. De vriendelijke bediening en het sfeervolle interieur nodigen uit tot ontspannen en genieten. Voor een relaxte start van de dag, een koffiepauze in de middag of een gezellig samenzijn met vrienden is <strong>Café Alpenblick</strong> de ideale plek in Riezlern.</p>",
   "ort": "Wallgau",
   "region": "?",
   "plz": "82499",
@@ -21,5 +21,8 @@
     "lat": 47.5208648,
     "lng": 11.2819392
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.holzers-alpenblick.de/"
+  ]
 }

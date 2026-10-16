@@ -3,7 +3,7 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Deck 47 in Innsbruck",
+  "kurzbeschreibung": "Deck 47 in Innsbruck - stijlvol restaurant met uitzicht en regionale keuken",
   "beschreibung": "<p><strong>Deck 47</strong> in Innsbruck in de regio Innsbruck verwent zijn gasten met een uitgelezen selectie van regionale en seizoensgebonden gerechten. De keuken combineert traditionele Tiroler recepten met creatieve accenten en creëert zo een unieke smaakbeleving. De gezellige inrichting nodigt uit om te vertoeven, terwijl de attente service voor het welzijn van de gasten zorgt. Vooral aan te bevelen is de huisgemaakte Tiroler Knödelsuppe, die na een lange wandeldag heerlijk opwarmt. Bovendien biedt het restaurant een zorgvuldig samengestelde wijnkaart met uitgelezen druppels uit Südtirol en Österreich.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
@@ -20,5 +20,8 @@
     "lat": 47.2668348,
     "lng": 11.4486356
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

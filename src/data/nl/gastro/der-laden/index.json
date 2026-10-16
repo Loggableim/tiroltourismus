@@ -3,7 +3,7 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "De winkel in Garmisch-Partenkirchen",
+  "kurzbeschreibung": "Der Laden in Garmisch-Partenkirchen - charmant café met taarten en koffiespecialiteiten",
   "beschreibung": "<p>De <strong>Der Laden</strong> in Garmisch-Partenkirchen, in de buurt van Innsbruck, biedt een heerlijke pauze aan. De stijlvolle café-konditorei verleidt zijn gasten met een grote keuze aan zelfgemaakte taarten, cake en zoete specialiteiten. Elke stuk wordt met veel liefde voor detail bereid en kunstzinnig gepresenteerd. Hierbij worden geëigende koffiespecialiteiten geserveerd, die door ervaren baristas perfect worden bereid. De warme sfeer met charmant interieur lädt tot vertoeven en genieten in. Of voor het ontbijt, een middagkaffee of een kleine snack – hier voelt men zich welkom.</p>",
   "ort": "Garmisch-Partenkirchen",
   "region": "innsbruck",
@@ -20,5 +20,8 @@
     "lat": 47.494459,
     "lng": 11.0941708
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

@@ -255,6 +255,8 @@ const l = LABELS[locale] || LABELS.de;
 const pref = localePrefix(locale);
 
 const { name, kurzbeschreibung, beschreibung, emoji, farbe, hoehe, einwohner, tags } = entry;
+const heroWebp = entry.hero_bild ? entry.hero_bild.replace(/\.png$/, '-800.webp') : undefined;
+const heroQuelle = entry.hero_bild ? entry.hero_quelle : undefined;
 
 // Verknüpfte Unterkünfte, Gastro und Sehenswürdigkeiten in diesem Ort
 const unterkuenfteImOrt = readCollection('unterkuenfte', locale)
@@ -353,8 +355,15 @@ const destinationLD = {
       emoji: emoji || '🏘️',
       gradient: farbe,
       size: 'sm',
-      bgImage: undefined,
+      bgImage: heroWebp,
     },
+    heroQuelle ? {
+      type: 'image-credit',
+      artist: heroQuelle.autor,
+      license: heroQuelle.lizenz,
+      licenseUrl: heroQuelle.lizenz_url,
+      sourceUrl: heroQuelle.quelle,
+    } : null,
     {
       type: 'facts-bar',
       accentColor: farbe,

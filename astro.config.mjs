@@ -30,7 +30,9 @@ export default defineConfig({
   compressHTML: true,
   build: {
     assets: 'assets',
-    inlineStylesheets: 'auto',
+    // Pro-Seiten-CSS (Detailseiten ~4 KB) inline ausliefern, damit
+    // /assets/_slug_.*.css nicht mehr render-blocking ist.
+    inlineStylesheets: 'always',
   },
   image: {
     service: {

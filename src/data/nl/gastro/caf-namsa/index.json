@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Namsa in Innsbruck",
-  "beschreibung": "<p>Das <strong>Café Namsa</strong> in Innsbruck ist ein kosmopolitisches Café mit internationalem Flair. Hier treffen sich Studierende, Kreative und Reisende, um bei exzellentem Kaffee den Tag zu beginnen oder ausklingen zu lassen. Die Kaffeeauswahl reicht vom klassischen Espresso bis zu aufwändigen Filterkaffee-Zubereitungen, begleitet von einer verlockenden Auswahl an hausgemachten Kuchen, Croissants und kleinen internationalen Gerichten. Das hell und modern eingerichtete Café besticht durch sein entspanntes Ambiente und die herzliche Bedienung. Ein Treffpunkt mit Charakter inmitten der Innsbrucker Altstadt, der zum Wohlfühlen und Wiederkommen einlädt.</p>",
+  "kurzbeschreibung": "Café Namsa in Innsbruck - kosmopolitisch café en koffiebar",
+  "beschreibung": "<p><strong>Café Namsa</strong> in Innsbruck is een kosmopolitisch café met een internationale flair. Hier ontmoeten studenten, creatievelingen en reizigers elkaar om met uitstekende koffie de dag te beginnen of sfeervol af te sluiten. Het koffieaanbod varieert van klassieke espresso tot verfijnde filterkoffiebereidingen, vergezeld van vers gebak, croissants en lichte internationale gerechten. Het lichte, eigentijdse interieur en de gastvrije bediening maken dit café tot een geliefde ontmoetingsplek in het hart van Innsbruck.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2617433,
     "lng": 11.3674519
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

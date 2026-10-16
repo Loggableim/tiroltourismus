@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Mali v Tirol",
-  "beschreibung": "<p>Das <strong>Café Mali</strong> in Außerfern ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p><strong>Café Mali</strong> v Außerfernu je ideální adresou pro všechny, kteří hledají útulný odpočinek od každodenního shonu. V této s láskou zařízené kavárně si hosté vychutnají pestrou nabídku kávových specialit, domácích moučníků a lehkého občerstvení. Tradiční rakouská kávová kultura je zde pěstována s velkou vášní. Velké oblibě se těší krémový Verlängerter i jemná Melange, doplněné denně čerstvými zákusky z vlastní cukrárny. Pohodová atmosféra a srdečný servis dělají z kavárny oblíbené místo setkávání místních i návštěvníků.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.5048993,
     "lng": 10.3500411
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://cafe-mali.de/"
+  ]
 }

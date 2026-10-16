@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "=== description ===\n<p>The <strong>Alpenhotel Kramerwirt</strong> in Söll is a four-star hotel located in the Hochsöll neighborhood, offering direct access to the SkiWelt ski resort. The rooms are stylishly designed in an alpine-modern aesthetic. The culinary offerings include a buffet breakfast and a dinner menu. The <strong>wellness area</strong> features an indoor pool, saunas, and relaxation zones. A children’s club and playroom are available for families with kids. In the summer, the house serves as a starting point for hiking and mountain biking adventures.</p>",
+  "beschreibung": "<p>The <strong>Alpenhotel Kramerwirt</strong> in Söll is a four-star hotel. Located in the Hochsöll district, it boasts direct ski-in/ski-out access to the SkiWelt ski area. The rooms are furnished in a modern alpine style. The culinary offerings include a breakfast buffet and an evening dinner menu. The <strong>wellness area</strong> features an indoor pool, saunas, and relaxation zones. A kids' club and playroom are available for families with children. In summer, the hotel serves as an ideal base for hiking and mountain biking tours.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

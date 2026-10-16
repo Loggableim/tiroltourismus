@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "=== description ===\n<p>The **Gasthof Alpenflora** in Ischgl, Tyrol, is located in a quiet side location just five minutes' walk from the town center. The rooms are furnished with local wood and feature a balcony. The restaurant serves regional cuisine alongside international dishes. The wellness area includes a **sauna** and a steam bath. The Silvretta Railway is reachable within a few minutes on foot. In summer, the establishment serves as a starting point for **hikes**, while in winter, it offers ski trips. The stay is offered with **half-board**.</p>",
+  "beschreibung": "<p>The <strong>Alpenflora</strong> inn in Ischgl, Tyrol, is situated in a quiet side street about a five-minute walk from the village centre. The rooms are furnished with local wood and feature a balcony. The restaurant offers regional cuisine alongside international dishes. The wellness area includes a <strong>sauna</strong> and a steam bath. The Silvretta cable car can be reached on foot in just a few minutes. In summer, the inn serves as an ideal base for <strong>hikes</strong>, and in winter for skiing excursions. Stays are offered with <strong>half board</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Bezirk_Landeck"
+  ]
 }

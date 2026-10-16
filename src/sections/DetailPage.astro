@@ -1,5 +1,6 @@
 ---
 import { plainText, richText } from '../lib/richtext.js';
+import { resolveHeroImage } from '../lib/images.js';
 // DetailPage.astro — Lego-Orchestrator für alle Detailseiten
 // Nimmt ein sections-Array mit Konfiguration und rendert die passenden Blöcke
 import SectionHero from './SectionHero.astro';
@@ -44,9 +45,12 @@ const { title, description, breadcrumbs, sections, isArticle, locale, jsonld, og
 
 // Extract hero image for preloading (LCP optimization)
 const heroSection = sections?.find(s => s.type === 'hero' || s.type === 'article-hero');
-const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSection?.imageSrc || ogImage;
+const heroImg = heroSection?.bgImage ? resolveHeroImage(heroSection.bgImage) : null;
+const heroPreloadImage = heroImg?.src || heroSection?.bgImage || heroSection?.image || heroSection?.imageSrc || ogImage;
+const heroPreloadSrcset = heroImg?.srcset;
+const heroPreloadSizes = heroImg?.sizes;
 ---
-<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage} noindex={noindex} availableLanguages={availableLanguages}>
+<BaseLayout title={title} description={description} locale={locale} jsonld={jsonld} ogImage={ogImage} type={type} publishedTime={publishedTime} preloadImage={heroPreloadImage} preloadImageSrcset={heroPreloadSrcset} preloadImageSizes={heroPreloadSizes} noindex={noindex} availableLanguages={availableLanguages}>
   <main>
     {breadcrumbs && breadcrumbs.length > 0 && (
       <div class="container">
@@ -63,6 +67,7 @@ const heroPreloadImage = heroSection?.bgImage || heroSection?.image || heroSecti
         gradient={s.gradient}
         size={s.size || 'sm'}
         bgImage={s.bgImage}
+        bgImageAlt={s.bgImageAlt}
         meta={s.meta}
 />
     ))}

@@ -177,9 +177,10 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" crossorigin fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"></noscript>
-  <!-- Art-Theme Fonts (pro Sprache) -->
+  <!-- Art-Theme Fonts (pro Sprache) — nicht render-blocking laden -->
   {ART_FONTS[locale] && (
-    <link rel="stylesheet" href={ART_FONTS[locale]} />
+    <link rel="stylesheet" href={ART_FONTS[locale]} media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');" />
+    <noscript><link rel="stylesheet" href={ART_FONTS[locale]} /></noscript>
   )}
 
   <!-- Canonical URL -->

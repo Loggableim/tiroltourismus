@@ -336,6 +336,17 @@
 
   /* CHRONOCHROM_CORE_END */
 
+  /* ─── 3b. IDLE-Helfer für nicht-paintkritische Init ─── */
+  // Startet schwere Initialisierungen erst, wenn der Browser Leerlauf hat
+  // (Fallback: setTimeout, damit auch ältere Browser nicht ausgebremst werden).
+  function whenIdle(fn) {
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      window.requestIdleCallback(fn, { timeout: 2000 });
+    } else {
+      window.setTimeout(fn, 1);
+    }
+  }
+
   /* ─── 4. CSS-VARS SETZEN ─── */
   function applyChronochrom(colors) {
     var root = document.documentElement;
@@ -410,10 +421,13 @@
   }
 
   /* ─── 6. INIT + TICK-START ─── */
-  // Beim Laden sofort ausführen
-  chronoTick();
-  // Alle 10 Minuten wiederholen
-  setInterval(chronoTick, CHRONO_INTERVAL);
+  // Nicht für den ersten Paint nötig → erst im Leerlauf starten.
+  whenIdle(function() {
+    // Beim Laden ausführen
+    chronoTick();
+    // Alle 10 Minuten wiederholen
+    setInterval(chronoTick, CHRONO_INTERVAL);
+  });
 
   /* ─── 7. 3-STATE TOGGLE ─── */
   (function initThemeToggle() {
@@ -466,7 +480,7 @@
      ════════════════════════════════════════════════════════ */
 
   /* ─── 8. COUNTER ANIMATION ─── */
-  (function initCounters() {
+  whenIdle(function initCounters() {
     var counterObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -487,7 +501,7 @@
     document.querySelectorAll('[data-count]').forEach(function(el) {
       counterObserver.observe(el);
     });
-  })();
+  });
 
   /* ─── 9. FAVORITE TOGGLE ─── */
   (function initFavorites() {
@@ -534,7 +548,7 @@
   })();
 
   /* ─── 12. SCROLL PROGRESS ─── */
-  (function initScrollProgress() {
+  whenIdle(function initScrollProgress() {
     var scrollProg = document.getElementById('scrollProgress');
     if (scrollProg) {
       var ticking = false;
@@ -552,7 +566,7 @@
         });
       }, { passive: true });
     }
-  })();
+  });
 
   /* ─── 13. WEATHER WIDGET ─── */
   (function initWeather() {
@@ -622,7 +636,7 @@
   })();
 
   /* ─── 15. SCROLL REVEAL ─── */
-  (function initScrollReveal() {
+  whenIdle(function initScrollReveal() {
     var revealObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -634,7 +648,7 @@
     document.querySelectorAll('.reveal').forEach(function(el) {
       revealObserver.observe(el);
     });
-  })();
+  });
 
   /* ─── 16. ACCOMMODATION TABS ─── */
   (function initAccommTabs() {

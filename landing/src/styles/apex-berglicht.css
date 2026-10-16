@@ -1,0 +1,688 @@
+/* tiroltourismus — Synthese Richtung B ("Berglicht & Firn") + Einflüsse aus A ("Alpin-Monolith") */
+
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/instrument-serif-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/space-grotesk-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-500.woff2') format('woff2');
+}
+
+:root {
+  /* Core Palette — Dark Alpine Slate, Firn White, Warm Larch Gold, Tirol Carmine */
+  --bg: #0B0F14;
+  --surface: rgba(11, 15, 21, 0.78);
+  --surface-hover: rgba(16, 22, 31, 0.92);
+  --border-hairline: rgba(245, 243, 240, 0.15);
+  --border-active: rgba(245, 243, 240, 0.36);
+
+  --text: #F5F3F0;
+  --text-secondary: rgba(245, 243, 240, 0.84);
+  --text-muted: rgba(245, 243, 240, 0.62);
+
+  --gold: #E0B72C;
+  --tirol-red: #C8102E;
+
+  /* Direction B+A Natural & Mineral Language Accents (No neon/magenta) */
+  --accent-de: #C8102E; /* Tiroler Karmin */
+  --accent-en: #6996B3; /* Firn- & Gletscherblau */
+  --accent-fr: #9488B4; /* Enzian-Schiefer */
+  --accent-cs: #529982; /* Bergtannen-Grün */
+  --accent-nl: #D18450; /* Lärchen-Kupfer */
+  --accent-it: #C2646B; /* Dolomit-Porphyr */
+  --accent-es: #E0B72C; /* Alpingold */
+  --accent-cn: #CC523F; /* Bergfeuer-Zinnober */
+
+  /* Direction B Time-of-Day Grading Variables (Always WCAG AA safe) */
+  --scrim-top: rgba(10, 15, 24, 0.72);
+  --scrim-mid: rgba(10, 14, 20, 0.50);
+  --scrim-bot: rgba(8, 11, 16, 0.90);
+  --horizon-tint: rgba(224, 183, 44, 0.11);
+
+  /* Typography Stack (B + A) */
+  --font-editorial: 'Instrument Serif', 'Playfair Display', 'Times New Roman', Georgia, serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius: 8px;
+}
+
+/* ─── Direction B: Subtle Time-of-Day Alpine Light Moods ─── */
+.tt-stage[data-light="dawn"] {
+  --scrim-top: rgba(20, 17, 30, 0.72);
+  --scrim-mid: rgba(15, 14, 23, 0.50);
+  --horizon-tint: rgba(235, 168, 132, 0.15);
+}
+
+.tt-stage[data-light="day"] {
+  --scrim-top: rgba(9, 15, 24, 0.68);
+  --scrim-mid: rgba(9, 14, 21, 0.48);
+  --horizon-tint: rgba(150, 196, 230, 0.12);
+}
+
+.tt-stage[data-light="dusk"] {
+  --scrim-top: rgba(22, 15, 21, 0.73);
+  --scrim-mid: rgba(15, 13, 19, 0.52);
+  --horizon-tint: rgba(224, 156, 76, 0.16);
+}
+
+.tt-stage[data-light="night"] {
+  --scrim-top: rgba(6, 9, 15, 0.80);
+  --scrim-mid: rgba(7, 11, 18, 0.60);
+  --horizon-tint: rgba(105, 150, 179, 0.10);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.tt-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── Full-Viewport Stage (Desktop No-Scroll from 1280×720) ─── */
+.tt-stage {
+  position: relative;
+  width: 100%;
+  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg);
+  isolation: isolate;
+}
+
+.tt-hero {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tt-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+/* Multi-layer Scrim for guaranteed contrast over bright snow & sky */
+.tt-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(90% 55% at 50% 20%, var(--horizon-tint) 0%, transparent 72%),
+    linear-gradient(
+      180deg,
+      var(--scrim-top) 0%,
+      var(--scrim-mid) 38%,
+      rgba(9, 13, 19, 0.78) 70%,
+      var(--scrim-bot) 100%
+    );
+}
+
+/* Direction B: Subtle Moving Alpine Light Cone on Tile Hover */
+.tt-light-cone {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(
+    42% 46% at var(--spot-x, 50%) 34%,
+    color-mix(in srgb, var(--active-accent, var(--gold)) 14%, transparent) 0%,
+    transparent 75%
+  );
+  transition: background 0.45s var(--ease-out);
+}
+
+/* Direction A: Architectural Topographic Height-Line Texture */
+.tt-contours {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='440' height='220' viewBox='0 0 440 220' fill='none'%3E%3Cpath d='M-20 45 C 90 12, 175 75, 285 38 C 345 18, 395 55, 460 32 M-20 105 C 100 68, 195 140, 315 92 C 365 72, 410 108, 460 88 M-20 168 C 80 132, 215 192, 335 152 C 380 135, 415 162, 460 146' stroke='%23F5F3F0' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 540px 270px;
+}
+
+/* ─── Main Content Shell ─── */
+.tt-shell {
+  position: relative;
+  z-index: 2;
+  width: min(1140px, 100%);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(12px, 2.2vh, 24px);
+  padding: clamp(16px, 3vh, 34px) clamp(18px, 4.5vw, 56px) clamp(8px, 1.4vh, 16px);
+}
+
+/* ─── Header (Direction B Editorial Magazine Claim + Direction A Split-Flap) ─── */
+.tt-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(4px, 0.8vh, 10px);
+}
+
+.tt-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 243, 240, 0.16);
+  background: rgba(11, 15, 20, 0.52);
+  transition: border-color 0.25s var(--ease-out), background-color 0.25s var(--ease-out);
+}
+
+.tt-brand:hover {
+  border-color: rgba(224, 183, 44, 0.48);
+  background: rgba(11, 15, 20, 0.76);
+}
+
+.tt-brand-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--tirol-red);
+  box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.28);
+}
+
+.tt-brand-word {
+  font-family: var(--font-display);
+  font-size: clamp(11.5px, 1.4vh, 13.5px);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: lowercase;
+  color: var(--text);
+}
+
+.tt-claim {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  font-size: clamp(58px, 11.4vh, 124px);
+  line-height: 0.88;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.68);
+}
+
+.tt-claim-dot {
+  color: var(--gold);
+}
+
+/* ─── Direction A: Mechanical Split-Flap Tagline with Hinge Line ─── */
+.tt-flap-wrap {
+  width: 100%;
+  max-width: 62ch;
+  min-height: calc(1.55em * 2.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+}
+
+.tt-flap {
+  font-family: var(--font-body);
+  font-size: clamp(13px, 1.75vh, 15.5px);
+  line-height: 1.55;
+  font-weight: 400;
+  color: var(--text-secondary);
+  text-align: center;
+  text-wrap: balance;
+  perspective: 650px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+}
+
+.tt-flap .tt-ch {
+  position: relative;
+  display: inline-block;
+  transform-origin: 50% 52%;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+  padding: 0 1px;
+  margin: 0 0.2px;
+  border-radius: 2px;
+  background: rgba(15, 21, 30, 0.72);
+  border: 1px solid rgba(245, 243, 240, 0.14);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+/* Authentic horizontal split-flap center axle line during rotation */
+.tt-flap .tt-ch::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* ─── Direction B: Alpine Summit Silhouette Divider above Grid ─── */
+.tt-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1.3vh, 14px);
+}
+
+.tt-ridge-bar {
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+}
+
+.tt-ridge-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+.tt-ridge-line {
+  stroke: rgba(245, 243, 240, 0.24);
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tt-ridge-peak {
+  fill: rgba(245, 243, 240, 0.35);
+  transition: fill 0.25s var(--ease-out), transform 0.25s var(--ease-out), filter 0.25s var(--ease-out);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.tt-ridge-peak[data-active="true"] {
+  fill: var(--gold);
+  transform: scale(1.45);
+  filter: drop-shadow(0 0 6px rgba(224, 183, 44, 0.8));
+}
+
+/* ─── Direction A+B: Language Selection Grid (4×2 Desktop / 2×4 Mobile) ─── */
+.tt-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 1.1vw, 15px);
+}
+
+.tt-grid-item {
+  min-width: 0;
+}
+
+@media (hover: hover) {
+  .tt-grid:has(.tt-tile:hover) .tt-tile:not(:hover) {
+    opacity: 0.80;
+  }
+}
+
+.tt-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(6px, 0.9vh, 10px);
+  min-height: clamp(68px, 9.6vh, 86px);
+  padding: clamp(12px, 1.7vh, 16px) clamp(14px, 1.5vw, 20px);
+  background: var(--surface);
+  border: 1px solid var(--border-hairline);
+  border-left: 3px solid var(--tile-accent, var(--gold));
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.30);
+  transition:
+    transform 0.24s var(--ease-out),
+    background-color 0.24s var(--ease-out),
+    border-color 0.24s var(--ease-out),
+    box-shadow 0.24s var(--ease-out),
+    opacity 0.24s var(--ease-out);
+  overflow: hidden;
+}
+
+/* Subtle top warm firn-light sheen inside hovered tile (Direction B) */
+.tt-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 90% at 0% 0%, color-mix(in srgb, var(--tile-accent, var(--gold)) 15%, transparent), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.25s var(--ease-out);
+  pointer-events: none;
+}
+
+.tt-tile[data-detected="true"] {
+  border-color: rgba(224, 183, 44, 0.46);
+  border-left-color: var(--tile-accent, var(--gold));
+  background: rgba(15, 21, 30, 0.86);
+}
+
+.tt-tile:hover,
+.tt-tile:focus-visible {
+  transform: translateY(-2px);
+  background: var(--surface-hover);
+  border-color: var(--tile-accent, var(--gold));
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.50);
+}
+
+.tt-tile:hover::before,
+.tt-tile:focus-visible::before {
+  opacity: 1;
+}
+
+.tt-tile-top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tt-tile-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(17.5px, 2.25vh, 22px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.tt-tile[lang^="zh"] .tt-tile-name {
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.10em;
+}
+
+.tt-tile-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.tt-tile-match-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+.tt-tile[data-detected="true"] .tt-tile-match-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tt-tile-code {
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.tt-tile-bottom {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 1.35em;
+}
+
+.tt-tile-tagline,
+.tt-tile-hint {
+  font-size: clamp(11.5px, 1.45vh, 13px);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+.tt-tile-tagline {
+  color: var(--text-secondary);
+}
+
+.tt-tile-hint {
+  position: absolute;
+  left: 0;
+  right: 22px;
+  top: 0;
+  color: var(--text);
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+}
+
+.tt-tile-arrow {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: transform 0.22s var(--ease-out), color 0.22s var(--ease-out);
+}
+
+@media (hover: hover) {
+  .tt-tile:hover .tt-tile-tagline,
+  .tt-tile:focus-visible .tt-tile-tagline {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  .tt-tile:hover .tt-tile-hint,
+  .tt-tile:focus-visible .tt-tile-hint {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tt-tile:hover .tt-tile-arrow,
+.tt-tile:focus-visible .tt-tile-arrow {
+  transform: translateX(3px);
+  color: var(--text);
+}
+
+@media (hover: none) {
+  .tt-tile-hint {
+    display: none;
+  }
+}
+
+/* ─── Legal Footer ─── */
+.tt-footer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: clamp(8px, 1.3vh, 14px) 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.tt-footer a {
+  color: var(--text-secondary);
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: color 0.2s var(--ease-out);
+}
+
+.tt-footer a:hover {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.tt-sep {
+  color: rgba(245, 243, 240, 0.30);
+}
+
+/* ─── Responsive Breakpoints ─── */
+@media (max-width: 820px) {
+  .tt-stage {
+    height: auto;
+    min-height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .tt-shell {
+    padding: 24px 16px 16px;
+    gap: 18px;
+  }
+
+  .tt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tt-tile {
+    min-height: 64px; /* >= 48px touch target */
+    padding: 12px 14px;
+  }
+
+  .tt-claim {
+    font-size: clamp(50px, 12vw, 82px);
+  }
+}
+
+/* Guarantee Desktop No-Scroll at 1280×720 */
+@media (min-width: 821px) and (max-height: 740px) {
+  .tt-shell {
+    gap: 10px;
+    padding-top: 12px;
+    padding-bottom: 4px;
+  }
+
+  .tt-claim {
+    font-size: clamp(50px, 9.2vh, 76px);
+  }
+
+  .tt-flap-wrap {
+    min-height: calc(1.45em * 2);
+  }
+
+  .tt-tile {
+    min-height: 60px;
+    padding: 10px 15px;
+  }
+}
+
+/* ─── Accessibility: Reduced Motion & High Contrast ─── */
+@media (prefers-reduced-motion: reduce) {
+  .tt-tile,
+  .tt-tile::before,
+  .tt-tile-tagline,
+  .tt-tile-hint,
+  .tt-tile-arrow,
+  .tt-tile-match-dot,
+  .tt-ridge-peak,
+  .tt-light-cone,
+  .tt-brand,
+  .tt-footer a {
+    transition: none !important;
+  }
+
+  .tt-tile:hover,
+  .tt-tile:focus-visible {
+    transform: none !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --surface: rgba(4, 6, 10, 0.95);
+    --surface-hover: #000000;
+    --border-hairline: rgba(255, 255, 255, 0.58);
+    --text-secondary: #FFFFFF;
+    --text-muted: #E4E4E4;
+  }
+
+  .tt-tile {
+    border-width: 2px;
+    border-left-width: 5px;
+  }
+}

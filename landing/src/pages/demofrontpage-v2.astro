@@ -1,31 +1,675 @@
 ---
-// Platzhalter für Frontpage-Demo Version 2 (noindex, separater Pfad).
-import '../styles/apex.css';
+// tiroltourismus — Demo Startseite v2 (Berglicht & Firn), nur unter /demofrontpage-v2.
+// Noindex, nicht in der Sitemap. Live-Startseite (index.astro) bleibt unverändert.
+// Design-Synthese: Richtung B ("Berglicht & Firn") + Einflüsse aus A ("Alpin-Monolith")
+import '../styles/apex-berglicht.css';
+
+interface LanguageItem {
+  code: string;
+  htmlLang: string;
+  hreflang: string;
+  isoLabel: string;
+  name: string;
+  tagline: string;
+  hint: string;
+  sub: string;
+  imprintLabel: string;
+  privacyLabel: string;
+  accent: string;
+  spotX: string;
+  peakX: number;
+  peakY: number;
+  href: string;
+  imprintHref: string;
+  privacyHref: string;
+}
+
+const LANGUAGES: LanguageItem[] = [
+  {
+    code: 'de',
+    htmlLang: 'de',
+    hreflang: 'de-AT',
+    isoLabel: 'DE',
+    name: 'Deutsch',
+    tagline: 'Tirol entdecken',
+    hint: 'Weiter auf Deutsch',
+    sub: 'Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite.',
+    imprintLabel: 'Impressum',
+    privacyLabel: 'Datenschutz',
+    accent: 'var(--accent-de)',
+    spotX: '20%',
+    peakX: 90,
+    peakY: 14,
+    href: 'https://de.tiroltourismus.com/',
+    imprintHref: 'https://de.tiroltourismus.com/impressum/',
+    privacyHref: 'https://de.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'en',
+    htmlLang: 'en',
+    hreflang: 'en-US',
+    isoLabel: 'EN',
+    name: 'English',
+    tagline: 'Discover Tirol',
+    hint: 'Continue in English',
+    sub: 'One land. Eight languages. Everything inside — pick your language and discover Tirol on one page.',
+    imprintLabel: 'Legal notice',
+    privacyLabel: 'Privacy',
+    accent: 'var(--accent-en)',
+    spotX: '38%',
+    peakX: 230,
+    peakY: 9,
+    href: 'https://en.tiroltourismus.com/',
+    imprintHref: 'https://en.tiroltourismus.com/impressum/',
+    privacyHref: 'https://en.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'fr',
+    htmlLang: 'fr',
+    hreflang: 'fr-FR',
+    isoLabel: 'FR',
+    name: 'Français',
+    tagline: 'Découvrir le Tyrol',
+    hint: 'Continuer en français',
+    sub: 'Un pays. Huit langues. Tout y est — choisis ta langue et découvre le Tyrol sur une seule page.',
+    imprintLabel: 'Mentions légales',
+    privacyLabel: 'Confidentialité',
+    accent: 'var(--accent-fr)',
+    spotX: '62%',
+    peakX: 375,
+    peakY: 11,
+    href: 'https://fr.tiroltourismus.com/',
+    imprintHref: 'https://fr.tiroltourismus.com/impressum/',
+    privacyHref: 'https://fr.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'cs',
+    htmlLang: 'cs',
+    hreflang: 'cs-CZ',
+    isoLabel: 'CS',
+    name: 'Čeština',
+    tagline: 'Objevte Tyrolsko',
+    hint: 'Pokračovat v češtině',
+    sub: 'Jedna země. Osm jazyků. Všechno v jednom — vyber si jazyk a objev Tyrolsko na jedné stránce.',
+    imprintLabel: 'Tiráž',
+    privacyLabel: 'Ochrana soukromí',
+    accent: 'var(--accent-cs)',
+    spotX: '80%',
+    peakX: 505,
+    peakY: 6,
+    href: 'https://cs.tiroltourismus.com/',
+    imprintHref: 'https://cs.tiroltourismus.com/impressum/',
+    privacyHref: 'https://cs.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'nl',
+    htmlLang: 'nl',
+    hreflang: 'nl-NL',
+    isoLabel: 'NL',
+    name: 'Nederlands',
+    tagline: 'Ontdek Tirol',
+    hint: 'Verder in het Nederlands',
+    sub: 'Eén land. Acht talen. Alles erin — kies je taal en ontdek Tirol op één pagina.',
+    imprintLabel: 'Colofon',
+    privacyLabel: 'Privacy',
+    accent: 'var(--accent-nl)',
+    spotX: '24%',
+    peakX: 635,
+    peakY: 4,
+    href: 'https://nl.tiroltourismus.com/',
+    imprintHref: 'https://nl.tiroltourismus.com/impressum/',
+    privacyHref: 'https://nl.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'it',
+    htmlLang: 'it',
+    hreflang: 'it-IT',
+    isoLabel: 'IT',
+    name: 'Italiano',
+    tagline: 'Scopri il Tirolo',
+    hint: 'Continua in italiano',
+    sub: 'Una terra. Otto lingue. Tutto dentro — scegli la tua lingua e scopri il Tirolo in una pagina.',
+    imprintLabel: 'Note legali',
+    privacyLabel: 'Privacy',
+    accent: 'var(--accent-it)',
+    spotX: '44%',
+    peakX: 765,
+    peakY: 10,
+    href: 'https://it.tiroltourismus.com/',
+    imprintHref: 'https://it.tiroltourismus.com/impressum/',
+    privacyHref: 'https://it.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'es',
+    htmlLang: 'es',
+    hreflang: 'es-ES',
+    isoLabel: 'ES',
+    name: 'Español',
+    tagline: 'Descubre el Tirol',
+    hint: 'Continuar en español',
+    sub: 'Una tierra. Ocho idiomas. Todo dentro — elige tu idioma y descubre el Tirol en una sola página.',
+    imprintLabel: 'Aviso legal',
+    privacyLabel: 'Privacidad',
+    accent: 'var(--accent-es)',
+    spotX: '58%',
+    peakX: 905,
+    peakY: 8,
+    href: 'https://es.tiroltourismus.com/',
+    imprintHref: 'https://es.tiroltourismus.com/impressum/',
+    privacyHref: 'https://es.tiroltourismus.com/datenschutz/',
+  },
+  {
+    code: 'cn',
+    htmlLang: 'zh-Hans',
+    hreflang: 'zh-CN',
+    isoLabel: 'ZH',
+    name: '中文',
+    tagline: '探索蒂罗尔',
+    hint: '继续使用中文',
+    sub: '一片土地。八种语言。应有尽有 — 选择你的语言，在一页上探索蒂罗尔。',
+    imprintLabel: '法律声明',
+    privacyLabel: '隐私政策',
+    accent: 'var(--accent-cn)',
+    spotX: '78%',
+    peakX: 1045,
+    peakY: 13,
+    href: 'https://cn.tiroltourismus.com/',
+    imprintHref: 'https://cn.tiroltourismus.com/impressum/',
+    privacyHref: 'https://cn.tiroltourismus.com/datenschutz/',
+  },
+];
+
+// Default fallback before client language detection: English ('en')
+const DEFAULT_ITEM = LANGUAGES.find((l) => l.code === 'en') || LANGUAGES[0];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'tiroltourismus',
+  url: 'https://tiroltourismus.com/demofrontpage-v2',
+  description:
+    'Demo: tiroltourismus Sprachauswahl v2 (Berglicht & Firn) — 8 Sprachen, noindex.',
+  inLanguage: 'de',
+  hasPart: LANGUAGES.map((l) => ({
+    '@type': 'WebSite',
+    name: `tiroltourismus ${l.name}`,
+    url: l.href,
+    inLanguage: l.htmlLang,
+  })),
+};
 ---
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tiroltourismus — Demo Startseite v2 (Platzhalter)</title>
+  <title>tiroltourismus — Demo Startseite v2 (Berglicht & Firn)</title>
+  <meta name="description" content="Demo der Berglicht-&-Firn-Startseite von tiroltourismus. Wähle deine Sprache." />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href="https://tiroltourismus.com/demofrontpage-v2" />
-  <meta name="theme-color" content="#0A0D12" />
+  <meta name="theme-color" content="#0B0F14" />
   <link rel="icon" href="/favicon.ico" />
+  <link
+    rel="preload"
+    href="/fonts/instrument-serif-400.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="/fonts/space-grotesk-600.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="/fonts/inter-400.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 </head>
 <body>
-  <main
-    style="min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem;background:#0A0D12;color:#F5F3F0;font-family:system-ui,sans-serif;text-align:center"
+  <div
+    class="tt-stage"
+    id="ttStage"
+    data-light="dusk"
+    data-active-lang="en"
+    style="--spot-x: 50%; --active-accent: var(--gold);"
   >
-    <p style="letter-spacing:0.12em;text-transform:lowercase;font-weight:600">tiroltourismus</p>
-    <h1 style="font-size:clamp(2rem,5vw,3rem);font-weight:700">Demo Startseite · Version 2</h1>
-    <p style="max-width:42ch;color:rgba(245,243,240,0.84);line-height:1.55">
-      Dieser Pfad ist für die nächste Design-Iteration reserviert (<code>noindex</code>). Die aktuelle
-      Worker-Demo liegt unter <a href="/demofrontpage" style="color:#E0B72C">/demofrontpage</a>.
-    </p>
-    <p style="font-size:0.875rem;color:rgba(245,243,240,0.64)">
-      Offline-Prototyp: <code>landing/frontpage-demo.html</code>
-    </p>
-  </main>
+    <!-- Responsive Hero Media with fallback to /hero-tirol.jpg -->
+    <picture class="tt-hero" aria-hidden="true">
+      <source
+        type="image/avif"
+        srcset="/images/hero-tirol-640.avif 640w, /images/hero-tirol-1280.avif 1280w, /images/hero-tirol-1920.avif 1920w, /hero-tirol.avif 1920w"
+        sizes="100vw"
+      />
+      <source
+        type="image/webp"
+        srcset="/images/hero-tirol-640.webp 640w, /images/hero-tirol-1280.webp 1280w, /images/hero-tirol-1920.webp 1920w, /hero-tirol.webp 1920w"
+        sizes="100vw"
+      />
+      <img
+        class="tt-hero-img"
+        src="/hero-tirol.jpg"
+        alt=""
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
+
+    <!-- Direction B: Time-of-Day Scrim + Interactive Alpine Light Cone -->
+    <div class="tt-scrim" aria-hidden="true"></div>
+    <div class="tt-light-cone" aria-hidden="true"></div>
+
+    <!-- Direction A: Subtle Topographic Contour Texture -->
+    <div class="tt-contours" aria-hidden="true"></div>
+
+    <div class="tt-shell">
+      <header class="tt-header">
+        <a class="tt-brand" href="/demofrontpage-v2" aria-label="tiroltourismus">
+          <span class="tt-brand-dot" aria-hidden="true"></span>
+          <span class="tt-brand-word">tiroltourismus</span>
+        </a>
+
+        <h1 class="tt-claim">TIROL<span class="tt-claim-dot">.</span></h1>
+
+        <!-- Split-Flap Tagline Container (Fixed height -> CLS = 0) -->
+        <div class="tt-flap-wrap">
+          <p class="tt-sr-only" id="ttSubLive" aria-live="polite">
+            {DEFAULT_ITEM.sub}
+          </p>
+          <p
+            class="tt-flap"
+            id="ttFlap"
+            aria-hidden="true"
+            lang={DEFAULT_ITEM.htmlLang}
+          >
+            {DEFAULT_ITEM.sub}
+          </p>
+        </div>
+      </header>
+
+      <main id="sprache" class="tt-main">
+        <!-- Direction B: Full-Width Alpine Ridge Silhouette Separator with 8 Summit Markers -->
+        <div class="tt-ridge-bar" aria-hidden="true">
+          <svg
+            class="tt-ridge-svg"
+            viewBox="0 0 1140 24"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="tt-ridge-line"
+              d="M0 22 L42 19 L90 14 L148 18 L188 15 L230 9 L285 16 L330 14 L375 11 L435 17 L470 12 L505 6 L565 15 L600 10 L635 4 L695 14 L730 13 L765 10 L825 16 L865 13 L905 8 L965 17 L1005 16 L1045 13 L1095 19 L1140 22"
+            />
+            {LANGUAGES.map((l) => (
+              <circle
+                class="tt-ridge-peak"
+                data-peak={l.code}
+                cx={l.peakX}
+                cy={l.peakY}
+                r="2.6"
+              />
+            ))}
+          </svg>
+        </div>
+
+        <nav aria-label="Sprachauswahl">
+          <ul class="tt-grid">
+            {LANGUAGES.map((t) => (
+              <li class="tt-grid-item">
+                <a
+                  class="tt-tile"
+                  href={t.href}
+                  lang={t.htmlLang}
+                  hreflang={t.hreflang}
+                  data-lang={t.code}
+                  data-html-lang={t.htmlLang}
+                  data-spot-x={t.spotX}
+                  data-sub={t.sub}
+                  data-imprint-label={t.imprintLabel}
+                  data-privacy-label={t.privacyLabel}
+                  data-imprint-href={t.imprintHref}
+                  data-privacy-href={t.privacyHref}
+                  style={`--tile-accent:${t.accent}`}
+                >
+                  <span class="tt-tile-top">
+                    <span class="tt-tile-name">{t.name}</span>
+                    <span class="tt-tile-meta" aria-hidden="true">
+                      <span class="tt-tile-match-dot"></span>
+                      <span class="tt-tile-code">{t.isoLabel}</span>
+                    </span>
+                  </span>
+                  <span class="tt-tile-bottom">
+                    <span class="tt-tile-tagline">{t.tagline}</span>
+                    <span class="tt-tile-hint" aria-hidden="true">
+                      {t.hint}
+                    </span>
+                    <span class="tt-tile-arrow" aria-hidden="true">→</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </main>
+    </div>
+
+    <footer class="tt-footer" aria-label="Rechtliches">
+      <a
+        id="ttImprint"
+        href={DEFAULT_ITEM.imprintHref}
+        hreflang={DEFAULT_ITEM.htmlLang}
+        lang={DEFAULT_ITEM.htmlLang}
+      >
+        {DEFAULT_ITEM.imprintLabel}
+      </a>
+      <span class="tt-sep" aria-hidden="true">·</span>
+      <a
+        id="ttPrivacy"
+        href={DEFAULT_ITEM.privacyHref}
+        hreflang={DEFAULT_ITEM.htmlLang}
+        lang={DEFAULT_ITEM.htmlLang}
+      >
+        {DEFAULT_ITEM.privacyLabel}
+      </a>
+      <span class="tt-sep" aria-hidden="true">·</span>
+      <span class="tt-copy">© tiroltourismus</span>
+    </footer>
+  </div>
+
+  <script is:inline>
+    (function () {
+      'use strict';
+
+      var STORE_KEY = 'tiroltourismus-lang';
+      var stageEl = document.getElementById('ttStage');
+      var flapEl = document.getElementById('ttFlap');
+      var liveEl = document.getElementById('ttSubLive');
+      var imprintEl = document.getElementById('ttImprint');
+      var privacyEl = document.getElementById('ttPrivacy');
+
+      // 1) Direction B: Time-of-Day Ambient Alpine Light (subtle, WCAG AA safe)
+      try {
+        var hr = new Date().getHours();
+        var mode = 'day';
+        if (hr >= 5 && hr < 9) mode = 'dawn';
+        else if (hr >= 9 && hr < 17) mode = 'day';
+        else if (hr >= 17 && hr < 21) mode = 'dusk';
+        else mode = 'night';
+        if (stageEl) stageEl.setAttribute('data-light', mode);
+      } catch (e) {}
+
+      // 2) Index language tiles and summit markers
+      var tiles = {};
+      var peaks = {};
+      var langData = {};
+
+      var peakList = document.querySelectorAll('.tt-ridge-peak[data-peak]');
+      for (var p = 0; p < peakList.length; p++) {
+        var pk = peakList[p];
+        peaks[pk.getAttribute('data-peak')] = pk;
+      }
+
+      var nodeList = document.querySelectorAll('.tt-tile[data-lang]');
+      for (var i = 0; i < nodeList.length; i++) {
+        var a = nodeList[i];
+        var code = a.getAttribute('data-lang');
+        if (!code) continue;
+        tiles[code] = a;
+        langData[code] = {
+          code: code,
+          htmlLang: a.getAttribute('data-html-lang') || code,
+          spotX: a.getAttribute('data-spot-x') || '50%',
+          sub: a.getAttribute('data-sub') || '',
+          imprintLabel: a.getAttribute('data-imprint-label') || 'Impressum',
+          privacyLabel: a.getAttribute('data-privacy-label') || 'Datenschutz',
+          imprintHref: a.getAttribute('data-imprint-href') || 'https://de.tiroltourismus.com/impressum/',
+          privacyHref: a.getAttribute('data-privacy-href') || 'https://de.tiroltourismus.com/datenschutz/'
+        };
+      }
+
+      function normalizeLang(tag) {
+        if (!tag) return null;
+        var base = String(tag).toLowerCase().trim().split(/[-_]/)[0];
+        if (base === 'zh' || base === 'cn') return tiles['cn'] ? 'cn' : null;
+        return tiles[base] ? base : null;
+      }
+
+      // 3) Browser language detection (starts in matched language, else 'en'; no auto-redirect)
+      var detectedCode = null;
+      try {
+        var navLangs = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language];
+        for (var k = 0; k < navLangs.length && !detectedCode; k++) {
+          detectedCode = normalizeLang(navLangs[k]);
+        }
+      } catch (e) {}
+
+      var activeBaseCode = detectedCode || 'en';
+      if (!langData[activeBaseCode]) activeBaseCode = 'de';
+
+      if (detectedCode && tiles[detectedCode]) {
+        tiles[detectedCode].setAttribute('data-detected', 'true');
+      }
+
+      function setAtmosphereAndFooter(code) {
+        var info = langData[code] || langData[activeBaseCode];
+        if (!info) return;
+
+        if (stageEl) {
+          stageEl.setAttribute('data-active-lang', code);
+          stageEl.style.setProperty('--spot-x', info.spotX);
+          stageEl.style.setProperty('--active-accent', 'var(--accent-' + code + ')');
+        }
+
+        Object.keys(peaks).forEach(function (k) {
+          if (k === code) peaks[k].setAttribute('data-active', 'true');
+          else peaks[k].removeAttribute('data-active');
+        });
+
+        if (imprintEl) {
+          imprintEl.textContent = info.imprintLabel;
+          imprintEl.setAttribute('href', info.imprintHref);
+          imprintEl.setAttribute('hreflang', info.htmlLang);
+          imprintEl.setAttribute('lang', info.htmlLang);
+        }
+        if (privacyEl) {
+          privacyEl.textContent = info.privacyLabel;
+          privacyEl.setAttribute('href', info.privacyHref);
+          privacyEl.setAttribute('hreflang', info.htmlLang);
+          privacyEl.setAttribute('lang', info.htmlLang);
+        }
+      }
+
+      function setInitialText(code) {
+        var info = langData[code] || langData[activeBaseCode];
+        if (!info || !flapEl) return;
+        flapEl.textContent = info.sub;
+        flapEl.setAttribute('lang', info.htmlLang);
+        if (liveEl) liveEl.textContent = info.sub;
+      }
+
+      setInitialText(activeBaseCode);
+      setAtmosphereAndFooter(activeBaseCode);
+
+      // 4) Direction A+B: Mechanical Split-Flap Engine (60fps, half-card hinge optics)
+      var reducedMotion = false;
+      try {
+        var mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+        reducedMotion = mq.matches;
+        if (mq.addEventListener) {
+          mq.addEventListener('change', function (ev) { reducedMotion = ev.matches; });
+        }
+      } catch (e) {}
+
+      var GLYPHS_LATIN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜČŘŠŽ0123456789·—';
+      var GLYPHS_CJK = '山川云雪峰谷林泉风光探索蒂罗尔天地八方旅途境';
+      var FLAP_MS = 700;
+      var rafId = 0;
+      var fadeTimer = 0;
+      var revertTimer = 0;
+      var currentShownCode = activeBaseCode;
+
+      function cancelAnimations() {
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = 0; }
+      }
+
+      function crossfadeTo(code) {
+        var info = langData[code] || langData[activeBaseCode];
+        if (!info || !flapEl) return;
+        cancelAnimations();
+        flapEl.style.transition = 'opacity 180ms ease';
+        flapEl.style.opacity = '0';
+        fadeTimer = setTimeout(function () {
+          fadeTimer = 0;
+          flapEl.textContent = info.sub;
+          flapEl.setAttribute('lang', info.htmlLang);
+          flapEl.style.opacity = '1';
+          if (liveEl) liveEl.textContent = info.sub;
+        }, 180);
+      }
+
+      function flapTo(code) {
+        var info = langData[code] || langData[activeBaseCode];
+        if (!info || !flapEl) return;
+        setAtmosphereAndFooter(code);
+
+        if (code === currentShownCode && !rafId) return;
+        currentShownCode = code;
+
+        if (reducedMotion) {
+          crossfadeTo(code);
+          return;
+        }
+
+        cancelAnimations();
+        flapEl.style.transition = '';
+        flapEl.style.opacity = '1';
+        flapEl.setAttribute('lang', info.htmlLang);
+        if (liveEl) liveEl.textContent = info.sub;
+
+        var text = info.sub;
+        var pool = code === 'cn' ? GLYPHS_CJK : GLYPHS_LATIN;
+        var chars = Array.from(text);
+        var frag = document.createDocumentFragment();
+        var nodes = [];
+
+        for (var c = 0; c < chars.length; c++) {
+          var ch = chars[c];
+          if (ch === ' ') {
+            frag.appendChild(document.createTextNode(' '));
+            continue;
+          }
+          var span = document.createElement('span');
+          span.className = 'tt-ch';
+          var initialGlyph = pool[(Math.random() * pool.length) | 0];
+          span.textContent = initialGlyph;
+          frag.appendChild(span);
+          nodes.push({
+            el: span,
+            target: ch,
+            glyph: initialGlyph
+          });
+        }
+
+        flapEl.textContent = '';
+        flapEl.appendChild(frag);
+
+        var total = nodes.length;
+        if (!total) {
+          flapEl.textContent = text;
+          return;
+        }
+
+        var startTime = 0;
+        var lastTick = 0;
+        var lead = FLAP_MS * 0.12;
+        var spread = FLAP_MS * 0.78;
+        var settleTimes = new Array(total);
+        for (var s = 0; s < total; s++) {
+          settleTimes[s] = total > 1 ? lead + (s / (total - 1)) * spread : FLAP_MS * 0.5;
+        }
+
+        function stepFrame(now) {
+          if (!startTime) startTime = now;
+          var elapsed = now - startTime;
+          var swap = elapsed - lastTick >= 52;
+          if (swap) lastTick = elapsed;
+
+          var done = true;
+          for (var j = 0; j < total; j++) {
+            var item = nodes[j];
+            if (elapsed >= settleTimes[j]) {
+              if (item.el.textContent !== item.target) {
+                item.el.textContent = item.target;
+                item.el.style.transform = 'rotateX(0deg)';
+                item.el.style.opacity = '1';
+                item.el.removeAttribute('data-flapping');
+              }
+            } else {
+              done = false;
+              if (swap) {
+                item.glyph = pool[(Math.random() * pool.length) | 0];
+                item.el.textContent = item.glyph;
+              }
+              item.el.setAttribute('data-flapping', 'true');
+              var phase = elapsed / 45 + j * 0.68;
+              var angle = Math.sin(phase) * 54;
+              item.el.style.transform = 'rotateX(' + angle.toFixed(1) + 'deg)';
+              item.el.style.opacity = String((0.56 + 0.44 * Math.abs(Math.cos(phase))).toFixed(2));
+            }
+          }
+
+          if (done) {
+            rafId = 0;
+            flapEl.textContent = text;
+          } else {
+            rafId = requestAnimationFrame(stepFrame);
+          }
+        }
+
+        rafId = requestAnimationFrame(stepFrame);
+      }
+
+      // 5) Tile Interactions
+      function handleEnter(code) {
+        if (revertTimer) { clearTimeout(revertTimer); revertTimer = 0; }
+        flapTo(code);
+      }
+
+      function handleLeave() {
+        if (revertTimer) clearTimeout(revertTimer);
+        revertTimer = setTimeout(function () {
+          revertTimer = 0;
+          flapTo(activeBaseCode);
+        }, 70);
+      }
+
+      Object.keys(tiles).forEach(function (code) {
+        var tile = tiles[code];
+        tile.addEventListener('mouseenter', function () { handleEnter(code); });
+        tile.addEventListener('mouseleave', handleLeave);
+        tile.addEventListener('focus', function () { handleEnter(code); });
+        tile.addEventListener('blur', handleLeave);
+        tile.addEventListener('click', function () {
+          activeBaseCode = code;
+          setAtmosphereAndFooter(code);
+          try { localStorage.setItem(STORE_KEY, code); } catch (e) {}
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
+Datei 2: landing/src/styles/apex.cssCSS/* 

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Biwakplatz</strong> in Tirol ist ein einfacher Campingplatz für Naturliebhaber. Er bietet meist eine <strong>minimale Infrastruktur</strong> mit Sanitäranlagen und Feuerstellen. Der Platz liegt oft in einer Höhenlage und ist nur zu Fuß erreichbar. Gäste sollten eine gewisse Selbstversorgung mitbringen. Von hier aus sind Gipfeltouren oder Klettersteige möglich. Der Aufenthalt erfordert <strong>Verantwortung im Umgang mit der Natur</strong>.</p>",
+  "beschreibung": "<p>L'area bivacco e campeggio <strong>Biwakplatz</strong> in Tirolo è una sistemazione rustica ed essenziale per gli amanti della natura incontaminata. Offre solitamente una <strong>infrastruttura minimale</strong> con servizi igienici di base e punti fuoco attrezzati. Spesso situato in quota e raggiungibile solo a piedi, il sito richiede autosufficienza da parte degli escursionisti. Da qui si possono intraprendere ascese alle vette e vie ferrate, all'insegna del <strong>rispetto e della tutela ambientale</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -25,5 +25,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

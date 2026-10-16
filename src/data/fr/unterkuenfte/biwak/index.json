@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Biwak</strong> liegt in Tirol und ist ein traditionelles Berggasthaus. Der Name weist auf die frühere Funktion als einfache Unterkunft hin. Heute bietet der Gasthof <strong>regionale Gerichte</strong> und Getränke an. Die Zimmer sind zweckmäßig eingerichtet. Die Terrasse ermöglicht einen Blick auf die umliegende <strong>Bergwelt</strong>. Der Gasthof dient als Ausgangspunkt für Wanderungen und Touren.</p>",
+  "beschreibung": "<p>L'auberge <strong>Gasthof Biwak</strong> est située au Tyrol et perpétue la tradition des auberges de montagne alpines. Son nom évoque sa fonction passée d'abri simple pour les randonneurs. Aujourd'hui, l'établissement propose de savoureuses <strong>spécialités régionales</strong> et des boissons locales. Les chambres sont aménagées avec simplicité et fonctionnalité. La terrasse dégage une vue splendide sur les <strong>sommets environnants</strong>, servant d'excellent point de départ pour de nombreuses excursions pédestres.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://www.tirol.at"
+  ]
 }

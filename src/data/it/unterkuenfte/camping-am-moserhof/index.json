@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz Camping am Moserhof befindet sich in <strong>Samerberg</strong> in Tirol. Er bietet Stellplätze in einer ländlichen und ruhigen Lage. Der Platz ist mit Sanitäranlagen und Strom ausgestattet. Gäste können die Natur und die Landschaft genießen. Die Region bietet Möglichkeiten zum Wandern und Radfahren. Der Campingplatz ist ein Ort für einen entspannten Aufenthalt.</p>",
+  "beschreibung": "<p>Il campeggio <strong>Camping am Moserhof</strong> si trova immerso in una tranquilla cornice rurale e panoramica. Offre piazzole immerse nel verde per un soggiorno all'insegna del relax. L'area è dotata di confortevoli servizi igienici e allacciamenti per la corrente elettrica. Gli ospiti possono contemplare paesaggi incontaminati e approfittare di numerosi itinerari cicloturistici ed escursionistici per una vacanza rigenerante.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

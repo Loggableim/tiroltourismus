@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Camping Abtsee in Laufen, Tirol, bietet einen idyllisch gelegenen Campingplatz direkt am Abtsee. Die Natur umgibt den Platz mit einer ruhigen, grünen Landschaft, ideal für einen entspannten Urlaub. <strong>Naturfreundliche Wanderwege</strong> und der nahegelegene Wald laden zu ausgedehnten Spaziergängen ein. Der Campingplatz verfügt über moderne Sanitäreinrichtungen und bietet auch Ferienhäuser an, um den Urlaub zu erweitern. <strong>Wasserstoffeinspeisung</strong> und umweltfreundliche Angebote unterstreichen das Engagement für Nachhaltigkeit.</p>",
+  "beschreibung": "<p>El camping <strong>Camping Abtsee</strong> en Laufen ofrece un emplazamiento idílico a orillas del lago Abtsee. La naturaleza circundante crea un paisaje apacible y verde, idóneo para disfrutar de unas vacaciones de descanso. <strong>Senderos naturales</strong> y bosques cercanos invitan a relajantes caminatas. El camping cuenta con modernas instalaciones sanitarias y cabañas vacacionales, destacando por su compromiso con la sostenibilidad ambiental.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

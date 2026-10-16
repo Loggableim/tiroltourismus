@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Burghotel Alpenglühn</strong> befindet sich in <strong>Obergurgl</strong>, einem hochgelegenen Ort im Ötztal. Die Architektur erinnert an eine Burg und fügt sich in die Berglandschaft ein. Die Gästezimmer sind im alpin-modernen Stil gestaltet. Ein Schwerpunkt liegt auf kulinarischen Genüssen mit regionaler Küche. Der Wellnessbereich bietet Bade- und Saunalandschaften. Obergurgl ist bekannt für seine schneesicheren Pisten und langen Wanderwege.</p>",
+  "beschreibung": "<p>高山城堡酒店 <strong>Burghotel Alpenglühn</strong> 坐落于厄茨山谷的高海拔明珠<strong>上谷尔格尔</strong>（Obergurgl）。其宛若古堡般的建筑风貌与阿尔卑斯雪峰融为一体。客房融合了阿尔卑斯与现代雅致风格。酒店主打精致的地方珍馐美食，并配备完善的桑拿与水疗康体区。上谷尔格尔以其天然雪场优势与优美的高山远足径闻名遐迩。</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz Camping am Badsee liegt in <strong>Isny im Allgäu</strong> in Tirol. Er bietet Stellplätze für Zelte, Wohnmobile und Wohnwagen. Der Badsee ist direkt in der Nähe und zum Baden geeignet. Der Platz verfügt über Sanitäranlagen und Stromanschlüsse. Die Region eignet sich für Wanderungen, Radtouren und Wassersport. Der Campingplatz ist ein Basislager für Erkundungen der Umgebung.</p>",
+  "beschreibung": "<p>湖畔露营基地 <strong>Camping am Badsee</strong> 毗邻清澈的巴德湖（Badsee）。营地为帐篷、房车及露营拖车提供宽敞平整的营位。巴德湖近在咫尺，非常适合游泳与水上娱乐。营区配备完善的卫生设施与电源接口。周边地区景致秀丽，适合徒步探险与骑行游览，是深入探索当地优美风光的理想大本营。</p>",
   "ausstattung": [
     "pool",
     "sanitäranlagen",
@@ -31,5 +31,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

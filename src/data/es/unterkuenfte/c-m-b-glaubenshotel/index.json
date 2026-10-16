@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.cmb-hotel.com/",
-  "beschreibung": "<p>Das <strong>C+M+B Glaubenshotel</strong> ist ein spezielles Hotelkonzept in <strong>Tirol</strong>. Es richtet sich an Gäste, die eine besinnliche Auszeit suchen. Die Einrichtung ist einfach und zweckmäßig gehalten. Es werden Programme zu christlichen Themen und Meditation angeboten. Das Hotel legt Wert auf Stille und innere Einkehr. Es eignet sich für Einzelpersonen und Gruppen für gemeinsame Glaubenserfahrungen. Die Umgebung bietet Möglichkeiten für Spaziergänge und Naturerlebnisse.</p>",
+  "beschreibung": "<p>El <strong>C+M+B Glaubenshotel</strong> en el <strong>Tirol</strong> ofrece un concepto singular orientado a huéspedes que buscan una pausa espiritual y contemplativa. Su decoración es sencilla, serena y funcional, propiciando un ambiente de absoluto silencio e introspección. Se organizan programas temáticos y sesiones de meditación tanto para personas a título individual como para grupos. El entorno natural circundante invita a sosegados paseos y al contacto revitalizante con la montaña.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.gv.at",
+    "https://www.tirol.at"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5632 402",
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Bretterhof</strong> is an inn situated in Tirol, Austria. The accommodation offers guests rooms across multiple categories. An on-site restaurant serves traditional regional cuisine. The property is nestled in a peaceful rural setting ideal for leisurely walks and excursions into the Tyrolean mountain scenery. The <strong>Bretterhof</strong> appeals to travellers seeking a quiet retreat. Free on-site parking is available.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Biwakplatz</strong> in Tirol ist ein einfacher Campingplatz für Naturliebhaber. Er bietet meist eine <strong>minimale Infrastruktur</strong> mit Sanitäranlagen und Feuerstellen. Der Platz liegt oft in einer Höhenlage und ist nur zu Fuß erreichbar. Gäste sollten eine gewisse Selbstversorgung mitbringen. Von hier aus sind Gipfeltouren oder Klettersteige möglich. Der Aufenthalt erfordert <strong>Verantwortung im Umgang mit der Natur</strong>.</p>",
+  "beschreibung": "<p>El área de acampada y vivac <strong>Biwakplatz</strong> en el Tirol es un espacio agreste pensado para los amantes de la naturaleza en estado puro. Ofrece una <strong>infraestructura mínima</strong> con instalaciones básicas y zonas habilitadas para el fuego. Frecuentemente emplazado en zonas altas de montaña, su acceso se realiza principalmente a pie, por lo que se recomienda autonomía a los usuarios. Desde este punto se abren ascensiones y vías ferratas, exigiendo una absoluta <strong>responsabilidad con el entorno natural</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "acampada",
@@ -25,5 +25,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

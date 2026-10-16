@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Burghotel Alpenglühn</strong> is located in <strong>Obergurgl</strong>, a high-altitude village in the Ötztal valley. The castle-inspired architecture blends harmoniously into the alpine landscape. The guest rooms are decorated in a modern alpine style, and great emphasis is placed on regional culinary delights. The wellness area features soothing saunas and pool facilities. Obergurgl is renowned for its snow-sure ski slopes and extensive summer hiking trails.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ]
 }

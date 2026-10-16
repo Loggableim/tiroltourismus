@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Campingplatz Camping am See International</strong> liegt in der Tiroler Gemeinde Buxheim im Bezirk Imst. Der Platz bietet Stellplätze für Wohnwagen, Wohnmobile und Zelte. Die sanitären Einrichtungen sind modern und behindertengerecht ausgelegt. Ein Badesee befindet sich auf dem Gelände. Für Kinder steht ein Spielplatz bereit. Die Umgebung eignet sich für Wanderungen und Radtouren. Ein kleiner Shop versorgt die Gäste mit dem Nötigsten.</p>",
+  "beschreibung": "<p>Kemp <strong>Camping am See International</strong> nabízí skvělé zázemí pro karavany, obytné vozy i stany. Sanitární zařízení jsou moderní, čistá a bezbariérová. Přímo v areálu se nachází přírodní jezero ke koupání a pro děti je připraveno bezpečné hřiště. Okolní příroda je ideální pro pěší túry a vyjížďky na kole. Malý obchod přímo na místě spolehlivě zajišťuje všechny základní potřeby pro táboření.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

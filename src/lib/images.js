@@ -4,9 +4,10 @@ import { fileURLToPath } from 'node:url';
 
 const PUBLIC_DIR = fileURLToPath(new URL('../../public/', import.meta.url));
 
-// Konventionen: orte `<base>-420.webp` / `<base>-800.webp`, magazin `<base>.webp` / `<base>_thumb.webp`
+// Konventionen: orte `<base>-420.webp` / `<base>-720.webp` / `<base>-800.webp`, magazin `<base>.webp` / `<base>_thumb.webp`
 const VARIANTS = [
   { suffix: '-420.webp', width: 420 },
+  { suffix: '-720.webp', width: 720 },
   { suffix: '-800.webp', width: 800 },
   { suffix: '_thumb.webp', width: 420 },
   { suffix: '.webp', width: 800 },

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Martin in Tirol Discover the cozy charm of Cafe Martin in the heart of Tirol, where traditional Austrian hospitality meets rustic elegance.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Martin</strong> in Kufstein is an enchanting café that charms its patrons with homemade cakes, premium coffee creations, and a comfortable, warm setting. It provides an ideal haven to unwind, enjoy a good book, or catch up with friends. The menu highlights a fine collection of Austrian pastry classics – from rich Sachertorte and delicate apple strudel to delicious sweet curd strudel. Carefully brewed barista coffees complement the sweet treats. The inviting interior with comfortable seating and friendly service ensures a memorable visit.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4110919,
     "lng": 12.034836
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "凤凰咖啡馆（Cafe Phoenix）位于蒂罗尔（Tirol）霍恩普拉茨尔（Hornplatzl），是一家充满魅力的传统咖啡屋。 *（如需完整翻译原文，请提供完整内容。）*",
-  "beschreibung": null,
+  "beschreibung": "<p>位于基茨比厄尔的<strong>Café Phoenix am Hornplatzl</strong>是一家引人入胜的雅致咖啡馆，以自制新鲜蛋糕、香浓特色咖啡和温馨舒适的用餐环境广受好评。这里是您驻足小憩、翻阅报刊书籍或与友人欢聚交谈的理想场所。菜单精心荟萃了传统奥地利精典甜点——从浓郁的萨赫蛋糕、温热香脆的苹果卷到细腻的凝乳糕点一应俱全。每杯咖啡都由技艺娴熟的咖啡师用心烹制。明亮雅致的陈设与贴心周到的服务，让每次造访都成为令人愉悦的美食记忆。</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4500288,
     "lng": 12.3947695
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Mariandl in Tirol Welcome to Café Mariandl, a charming café nestled in the heart of Tirol, where tradition meets warmth.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Mariandl</strong> in Kufstein is the perfect address for anyone looking for a cozy retreat from the hustle and bustle. In this lovingly furnished café, guests enjoy a diverse array of coffee specialties, homemade cakes, and light bites. Traditional Austrian coffee culture is nurtured here with genuine passion. Especially popular are the creamy Verlängerter and smooth Melange. Every day, fresh pastries from the in-house bakery are freshly served. The relaxed atmosphere and warm hospitality make this café a favorite gathering place for locals and travelers alike.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4277304,
     "lng": 12.027824
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

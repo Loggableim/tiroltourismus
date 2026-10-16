@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "蒂罗尔的咖啡馆玛丽安德尔（Cafe Mariandl）： 这里，您可以品尝到传统的蒂罗尔美食，如香喷喷的Kaiserschmarrn和新鲜的Apfelstrudel，配上一杯精心煮制的咖啡或热巧克力。咖啡馆的氛围温馨舒适，让您在因斯布鲁克（Innsbruck）或蒂罗尔的乡间小镇中感受到家的温暖。无论是享用早餐、午后甜点还是晚间小夜宵，Cafe Mariandl都为您提供了最地道的蒂罗尔风味体验。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于库夫施泰因的<strong>Café Mariandl</strong>是寻求舒适小憩时光客人的理想去处。在这家布置精致的咖啡馆里，宾客可以品味丰富的特色咖啡、美味的自制蛋糕和精致可口的小食。这里用心传承奥地利传统咖啡馆文化，醇厚香浓的Verlängerter和柔和平衡的Melange备受欢迎。店内每天供应自制烘焙工坊新鲜制作的传统甜品糕点。轻松惬意的氛围与热情周到的服务，使这里成为深受当地民众与旅人喜爱的温馨聚会点。</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4277304,
     "lng": 12.027824
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

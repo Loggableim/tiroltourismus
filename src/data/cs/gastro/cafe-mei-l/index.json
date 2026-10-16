@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Kavárna Meißl v Tirolu",
-  "beschreibung": "<p>Das <strong>Cafe Meißl</strong> in Innsbruck ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "beschreibung": "<p><strong>Café Meißl</strong> v Innsbrucku je vyhlášená stylová kavárna, která láká hosty na domácí dorty, vybrané druhy káv a příjemnou domáckou atmosféru. Zde se nabízí ideální prostor pro klidné chvíle, relaxaci u knížky nebo neformální setkání s přáteli. Nabídka představuje pestrou paletu tradičních rakouských moučníků – od poctivé Sachertorte přes voňavý jablečný štrúdl až po lahodný tvarohový závin. Káva je zde připravována s láskou a řemeslnou zručností. Vkusné interiérové detaily a pohodlná křesílka zaručují dokonalé pohodlí.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2829857,
     "lng": 11.5080993
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

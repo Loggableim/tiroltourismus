@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Maria en Tirol Découvrez l’ambiance chaleureuse et typique du Café Maria, niché au cœur de la région ensoleillée de Tirol.",
-  "beschreibung": "<p>Das <strong>Cafe Maria</strong> in Innsbruck ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p>Le <strong>Café Maria</strong> à Innsbruck est l'adresse idéale pour tous ceux qui recherchent une pause agréable au quotidien. Dans ce café aménagé avec soin, les clients profitent d'un large choix de spécialités de café, de gâteaux faits maison et d'en-cas savoureux. La culture traditionnelle des cafés autrichiens y est entretenue avec passion. Le Verlängerter onctueux et le doux Melange sont particulièrement appréciés. De plus, de délicieuses pâtisseries fraîches du jour sont préparées sur place. L'ambiance détendue et l'accueil chaleureux en font un lieu de rencontre prisé des habitants comme des visiteurs.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2518849,
     "lng": 11.4462646
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

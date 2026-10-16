@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Café-Restaurant Pizzeria Urgner Stube in Fließ Welcome to Café-Restaurant Pizzeria Urgner Stube, a cozy retreat nestled in the heart of Fließ, where traditional Tyrolean charm…",
-  "beschreibung": "",
+  "beschreibung": "<p>Enjoy unforgettable moments at the <strong>Café-Restaurant Pizzeria Urgner Stube</strong> in Fließ in the Landeck region. This establishment stands for refined Tyrolean hospitality with a stylish touch. The menu brings together alpine classics and international favorites, including crispy pizzas and creative seasonal plates. The culinary team places top priority on quality, sourcing regional alpine cheese and choice Tyrolean beef. Attentive service and a tasteful dining atmosphere make every visit a culinary delight, whether for a relaxed family meal or an enjoyable evening for two.</p>",
   "ort": "Fließ",
   "region": "landeck",
   "plz": "6500",
@@ -20,5 +20,8 @@
     "lat": 47.1189961,
     "lng": 10.6047188
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Flie%C3%9F"
+  ]
 }

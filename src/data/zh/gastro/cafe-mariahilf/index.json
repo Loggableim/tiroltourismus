@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "咖啡馆 Mariahilf 在蒂罗尔 蒂罗尔的美味与文化 位于蒂罗尔的咖啡馆 Mariahilf，坐落在风景如画的阿尔卑斯山脚下，是游客与当地人共同享受美食与宁静的绝佳去处。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克的<strong>Café Mariahilf</strong>是一家迷人的咖啡馆，以自制蛋糕、精选特色咖啡和温馨惬意的氛围令宾客宾至如归。在这里，您可以尽情放松身心，阅读一本好书或与好友畅叙幽情。菜单提供精美的传统奥地利糕点系列——从醇厚的萨赫蛋糕、松软香甜的苹果卷到令人垂涎的凝乳馅卷应有尽有。经验丰富的咖啡师用心制作每一杯芳香四溢的咖啡。温馨舒适的座椅与别具匠心的装饰细节，为您营造出宾至如归的体验。</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2680563,
     "lng": 11.3875558
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Murauer PaulusCafé à Innsbruck Découvrez l’ambiance chaleureuse et raffinée du Café Murauer PaulusCafé au cœur d’Innsbruck, où tradition et modernité se rencontrent dans un…",
-  "beschreibung": "<p>Das <strong>Cafe Murauer PaulusCafe</strong> in Innsbruck in der Region Innsbruck lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "beschreibung": "<p>Le <strong>Café Murauer PaulusCafé</strong> à Innsbruck, au cœur de la région d'Innsbruck, convie à une pause pleine de gourmandise. Cette élégante pâtisserie-café séduit par sa belle palette de gâteaux, tartes maison et douceurs sucrées confectionnées avec passion et présentées avec art. Pour accompagner ces délices, les baristas expérimentés préparent d'excellentes créations de café. L'atmosphère chaleureuse et le cadre soigné incitent à la détente. Que ce soit pour le petit-déjeuner, le goûter ou une pause légère dans la journée, l'accueil y est toujours irréprochable.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2726995,
     "lng": 11.4163085
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

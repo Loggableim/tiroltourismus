@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Schatzi in Kitzbühel – a cozy gem nestled in the heart of the Alpenland Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Schatzi Kitzbühel</strong> in Kitzbühel in the Kitzbühel region is the premier address for anyone seeking a delightful alpine coffeehouse experience. In this tastefully styled café, patrons can enjoy a rich selection of specialty coffees, freshly baked cakes, and light savory bites. Classic Austrian café heritage is embraced with warmth and style. The creamy Verlängerter and smooth Melange are evergreen favorites, paired with fresh desserts straight from the bakery. The welcoming atmosphere and attentive service ensure a lovely visit in this world-famous alpine town.</p>",
   "ort": "Kitzbühel",
   "region": "kitzbuehel",
   "plz": "6370",
@@ -20,5 +20,8 @@
     "lat": 47.4482231,
     "lng": 12.3902034
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

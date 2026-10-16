@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "咖啡客栈 Pfeiffer（位于 Krün） 欢迎来到位于美丽阿尔卑斯山脚下的 Krün 咖啡客栈 Pfeiffer！ 这里是您在蒂罗尔（Tirol）度假的完美起点。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于阿尔卑斯山区克伦的<strong>Café-Pension Pfeiffer</strong>是寻求远离日常喧嚣、亲近大自然宁静休憩的理想驿站。在这家充满温馨家庭氛围的咖啡客栈中，客人可以品尝到丰富的特色咖啡、新鲜自制的蛋糕以及美味可口的高山点心。这里以质朴的热情传承奥地利咖啡馆传统，口感丝滑的Melange咖啡与每日出炉的精美点心深得赞誉。亲切周到的服务与令人身心愉悦的环境，为每一位来访者带来难忘的阿尔卑斯度假体验。</p>",
   "ort": "Krün",
   "region": "?",
   "plz": "82494",
@@ -21,5 +21,8 @@
     "lat": 47.5039803,
     "lng": 11.2690139
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kr%C3%BCn"
+  ]
 }

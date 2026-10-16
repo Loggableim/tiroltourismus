@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Mariandl v Tirolu",
-  "beschreibung": "<p>Das <strong>Cafe Mariandl</strong> in Kufstein ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p><strong>Café Mariandl</strong> v Kufsteinu je dokonalou adresou pro všechny, kteří hledají příjemný odpočinek od všedních starostí. V této útulně zařízené kavárně si hosté vychutnají pestrou nabídku kávových specialit, domácích koláčů a lehkého občerstvení. Tradiční rakouská kavárenská kultura je zde pěstována s velkým nadšením. Velmi oblíbené jsou krémová káva Verlängerter i jemná vídeňská Melange. K tomu jsou denně nabízeny čerstvé moučníky z vlastní cukrárny. Uvolněná atmosféra a srdečný servis dělají z kavárny oblíbené místo setkávání místních obyvatel i turistů.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4277304,
     "lng": 12.027824
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

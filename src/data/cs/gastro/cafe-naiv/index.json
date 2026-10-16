@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Naiv v Innsbrucku",
-  "beschreibung": "<p>Das <strong>Cafe Naiv</strong> in Innsbruck in der Region Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cafe Naiv</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "beschreibung": "<p><strong>Café Naiv</strong> v Innsbrucku v regionu Innsbruck nabízí svým hostům srdečnou rodinnou atmosféru a vytříbenou nabídku kávových specialit i domácích delikates. Kavárna je oblíbená pro svou slunečnou terasu, která v teplých dnech láká k příjemnému lenošení. Nabídka zahrnuje tradiční rakouské moučníky, voňavé koláče a lahodné dorty připravované denně čerstvé. Pozorný a vstřícný servis dbá na to, aby návštěvníkům nic nescházelo. <strong>Café Naiv</strong> představuje ideální útočiště pro pohodovou kávovou přestávku uprostřed všedního tyrolského shonu.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2734969,
     "lng": 11.4059065
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Moos v Thauru",
-  "beschreibung": "<p>Das <strong>Cafe Moos</strong> in Thaur in der Region Innsbruck lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "beschreibung": "<p><strong>Café Moos</strong> v Thauru v regionu Innsbruck zve k příjemnému gurmánskému zastavení. Tato stylová kavárna a cukrárna hýčká své hosty bohatým výběrem domácích dortů, koláčů a sladkých specialit. Každý kousek je připravován s velkým smyslem pro detail a lákavě servírován. K tomu se podávají znamenité kávové speciality z rukou zkušených baristů. Útulná atmosféra s půvabným interiérem vybízí k poklidnému posezení a vychutnávání. Ať už se zastavíte na vydatnou snídani, odpolední kávu nebo lehkou svačinku, vždy se zde budete cítit vítáni.</p>",
   "ort": "Thaur",
   "region": "innsbruck",
   "plz": "6065",
@@ -20,5 +20,8 @@
     "lat": 47.2967096,
     "lng": 11.4748282
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Thaur"
+  ]
 }

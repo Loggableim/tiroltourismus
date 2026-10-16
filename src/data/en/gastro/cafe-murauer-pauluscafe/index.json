@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Murauer PaulusCafe in Innsbruck – a cozy retreat in the heart of the city, where tradition meets modern charm.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Murauer PaulusCafé</strong> in Innsbruck in the Innsbruck region offers a wonderfully pleasurable retreat. This stylish café and confectionery treats its visitors to an exceptional assortment of freshly crafted tarts, cakes, and artisanal pastries. Each piece is made with dedication and artfully presented. Complementing the desserts is a fine selection of coffee specialties brewed by passionate baristas. The charming ambiance and comfortable seating make it easy to linger and unwind. Whether for a leisurely breakfast, an afternoon treat, or a refreshing snack, you are always warmly welcomed.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2726995,
     "lng": 11.4163085
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

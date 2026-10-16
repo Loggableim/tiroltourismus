@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "蒂罗尔的 Cafe Nuovo & Diamond Cocktail Bar 欢迎来到蒂罗尔的时尚咖啡吧 位于因斯布鲁克市中心的Cafe Nuovo，是一家充满魅力的咖啡吧，结合了传统与现代的氛围。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于库夫施泰因的<strong>Café Nuovo & Diamond Cocktail Bar</strong>以一流的酒水单和时尚现代的氛围吸引着众多宾客。这处舒适惬意的酒吧是结束一天忙碌行程后彻底放松的绝佳场所，您可以沉浸在精心调制的鸡尾酒或香醇的佳酿之中。搭配饮品的餐单提供精致的小吃与美味冷盘，风味相得益彰。自制开胃抹酱和精选当地特色的蒂罗尔奶酪拼盘格外受到好评。热情亲切的服务人员与轻松自在的交际氛围，使这里成为美食美酒爱好者流连忘返的聚会胜地。</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4882963,
     "lng": 12.0644538
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

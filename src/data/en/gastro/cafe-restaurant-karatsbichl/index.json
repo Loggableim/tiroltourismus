@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Café Restaurant Karatsbichl in Oberstdorf Welcome to Café Restaurant Karatsbichl, a cozy mountain retreat nestled in the heart of Oberstdorf, where traditional Bavarian…",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>Café Restaurant Karatsbichl</strong> in the alpine region, genuine hospitality is paramount. The restaurant boasts an inviting atmosphere and a menu that seamlessly blends traditional Tyrolean and Austrian cooking with contemporary inspirations. Ingredients are primarily sourced from local producers, which translates into superb culinary quality. Warm wood paneling and alpine decorative touches create an authentic mountain lodge feeling. A standout feature is the veranda offering panoramic views of the surrounding peaks, perfect for lingering on sunny afternoons.</p>",
   "ort": "Oberstdorf",
   "region": "?",
   "plz": "87561",
@@ -21,5 +21,8 @@
     "lat": 47.3999095,
     "lng": 10.260619
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Oberstdorf"
+  ]
 }

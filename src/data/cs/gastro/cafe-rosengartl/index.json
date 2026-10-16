@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Rosengartl v Imst",
-  "beschreibung": "<p>Das <strong>Cafe Rosengartl</strong> in Imst in der Region Imst ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p><strong>Café Rosengartl</strong> v Imstu v regionu Imst představuje báječné místo pro oddech a sladké potěšení. V příjemně zařízené kavárně na hosty čeká pestrý výběr kávových nápojů, domácích koláčů a lehkých slaných svačinek. Tradiční rakouská kavárenská kultura je zde ctěna s opravdovým nadšením. Velké oblibě se těší krémová káva Verlängerter a jemná Melange, doplněné každý den čerstvě pečenými moučníky. Klidná atmosféra a milá obsluha zaručují, že se sem návštěvníci i místní rádi vracejí.</p>",
   "ort": "Imst",
   "region": "imst",
   "plz": "6460",
@@ -20,5 +20,8 @@
     "lat": 47.2429173,
     "lng": 10.7394844
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

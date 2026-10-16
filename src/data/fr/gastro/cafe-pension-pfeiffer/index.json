@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café-Pension Pfeiffer à Krün Découvrez un havre de paix chaleureux et authentique au cœur des Alpes bavaroises, dans le charmant village de Krün.",
-  "beschreibung": "<p>Das <strong>Cafe-Pension Pfeiffer</strong> in Krün in der Region Tirol ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p>Le <strong>Café-Pension Pfeiffer</strong> à Krün dans la région alpine offre un cadre paisible pour se ressourcer en pleine nature. Dans ce café à la gestion familiale, les visiteurs dégustent un large éventail de spécialités de café, de gâteaux savoureux faits maison et de collations réconfortantes. La tradition des cafés autrichiens y est honorée avec authenticité. Le Melange doux et les pâtisseries fraîches du jour remportent tous les suffrages. La gentillesse du personnel et l'ambiance chaleureuse en font une halte incontournable pour les randonneurs et les amateurs de calme.</p>",
   "ort": "Krün",
   "region": "?",
   "plz": "82494",
@@ -21,5 +21,8 @@
     "lat": 47.5039803,
     "lng": 11.2690139
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kr%C3%BCn"
+  ]
 }

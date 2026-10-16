@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Kavárna a restaurace Wanninger v Oberammergau",
-  "beschreibung": "<p>Das <strong>Cafe & Restaurant Wanninger</strong> in Oberammergau in der Region Kufstein ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p><strong>Café & Restaurant Wanninger</strong> v alpském regionu je výtečnou volbou pro všechny, kdo si chtějí dopřát chutné jídlo v příjemném rodinném prostředí. Hosté zde ocení bohatou nabídku kávových specialit, domácích moučníků i poctivých teplých pokrmů z tradiční kuchyně. Místní tým s láskou udržuje rakouskou kulinářskou tradici. Mezi nejoblíbenější patří čerstvé koláče z vlastní kuchyně a klasické vídeňské kávové nápoje. Uvolněná nálada a ochotný personál dělají z podniku oblíbené místo pro setkání rodin, přátel i výletníků.</p>",
   "ort": "Oberammergau",
   "region": "kufstein",
   "plz": "82487",
@@ -20,5 +20,8 @@
     "lat": 47.5978173,
     "lng": 11.0641222
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Oberammergau"
+  ]
 }

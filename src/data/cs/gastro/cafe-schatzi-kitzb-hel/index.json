@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Schatzi Kitzbühel v Kitzbühel",
-  "beschreibung": "<p>Das <strong>Cafe Schatzi Kitzbühel</strong> in Kitzbühel in der Region Kitzbühel ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p><strong>Café Schatzi Kitzbühel</strong> v Kitzbühelu v regionu Kitzbühel je vyhledávanou kavárnou pro všechny, kteří touží po pohodovém posezení v srdci světoznámého střediska. V tomto útulném podniku si návštěvníci užijí širokou škálu kávových nápojů, domácích dortů a drobných specialit. Rakouská kavárenská tradice je zde ctěna v plné parádě. Velké popularitě se těší lahodná Melange i káva Verlängerter. Domácí moučníky jsou pečené každý den z kvalitních surovin. Přátelská atmosféra a milý personál činí z kavárny oblíbené místo pro setkání po lyžování i letní túře.</p>",
   "ort": "Kitzbühel",
   "region": "kitzbuehel",
   "plz": "6370",
@@ -20,5 +20,8 @@
     "lat": 47.4482231,
     "lng": 12.3902034
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

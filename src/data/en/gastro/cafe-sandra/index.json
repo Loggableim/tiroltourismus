@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Sandra in Tirol Discover the cozy charm of Café Sandra in the heart of the Tirol Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Sandra</strong> in Innsbruck treats its visitors to a welcoming ambiance and an appealing range of coffee specialties and homemade delicacies. The café is particularly well known for its sunny outdoor terrace, which invites guests to relax and soak up the sunshine on pleasant days. The menu includes classic Austrian pastries, delicious cakes, and tempting tarts prepared fresh every morning. Dedicated service ensures every guest feels valued. <strong>Café Sandra</strong> is an excellent choice for a restful coffee break in the heart of Tyrol.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2671823,
     "lng": 11.4403604
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

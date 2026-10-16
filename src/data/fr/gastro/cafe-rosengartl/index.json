@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Rosengartl à Imst Découvrez le Café Rosengartl à Imst, un havre de douceur niché au cœur du Tirol.",
-  "beschreibung": null,
+  "beschreibung": "<p>Le <strong>Café Rosengartl</strong> à Imst, dans la belle région d'Imst, est l'endroit parfait pour s'offrir une douce parenthèse gourmande. Dans ce café joliment décoré, les clients apprécient un large choix de spécialités de café, de gâteaux maison et de petits encas savoureux. La culture autrichienne du café y est préservée avec une grande passion. Les habitués raffolent du Verlängerter onctueux et du Melange réconfortant. L'ambiance sereine et l'accueil attentif en font une halte de choix pour les résidents comme pour les voyageurs de passage.</p>",
   "ort": "Imst",
   "region": "imst",
   "plz": "6460",
@@ -20,5 +20,8 @@
     "lat": 47.2429173,
     "lng": 10.7394844
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

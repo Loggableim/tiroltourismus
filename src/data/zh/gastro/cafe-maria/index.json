@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "蒂罗尔的咖啡馆玛利亚 (Cafe Maria in Tirol) 欢迎来到蒂罗尔的心脏地带 在因斯布鲁克 (Innsbruck) 的中心，坐落着一家充满魅力的传统咖啡馆：Cafe Maria。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克的<strong>Café Maria</strong>是所有寻求舒适休憩时光客人的理想去处。在这家布置温馨的咖啡馆中，宾客可以享用丰富的特色咖啡、自制蛋糕和美味小吃。这里热情秉承奥地利传统咖啡馆文化，口感醇厚的Verlängerter和柔和香滑的Melange尤其受到喜爱。店内烘焙房每天供应新鲜烘烤的精美糕点。轻松惬意的氛围与亲切周到的服务，使其成为深受当地居民和游客青睐的热门小聚场所。</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2518849,
     "lng": 11.4462646
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

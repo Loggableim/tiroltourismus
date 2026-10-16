@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Meißl in Tirol Discover the timeless charm of Tirol at Café Meißl, a legendary café nestled in the heart of Innsbruck.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Meißl</strong> in Innsbruck is a delightful café that enchants its guests with homemade pastries, artisanal coffee creations, and a relaxed, welcoming atmosphere. It is the perfect place to pause, dive into a good book, or enjoy lively conversations. The menu features an enticing assortment of traditional Austrian desserts – from decadent Sachertorte and flaky apple strudel to rich curd strudel. Masterfully prepared coffee specialties complement every sweet bite. Charming furnishings and hospitable service make this café a true gem in Tyrol.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2829857,
     "lng": 11.5080993
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

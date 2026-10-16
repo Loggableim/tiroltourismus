@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Marlo in Tirol! Nestled in the heart of the Alpenland, our cozy café invites you to savor the finest Kaffee und Kuchen in a warm, rustic atmosphere.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Marlo</strong> in the Stubaital is the ideal spot for anyone seeking a relaxing pause during their day. In this thoughtfully styled café, visitors can savor a wide range of coffee specialties, homemade pastries, and delicious savory snacks. Austria's renowned coffee culture is upheld with dedication and warmth. Guests particularly relish the creamy Verlängerter and aromatic Melange, complemented by daily fresh treats from the pastry kitchen. The welcoming ambiance and attentive hospitality make it a beloved meeting spot for both locals and alpine adventurers.</p>",
   "ort": "",
   "region": "stubaital",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.1166608,
     "lng": 11.3310041
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ]
 }

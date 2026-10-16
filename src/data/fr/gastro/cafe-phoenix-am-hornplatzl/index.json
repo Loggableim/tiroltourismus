@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Phoenix am Hornplatzl in Tirol",
-  "beschreibung": null,
+  "kurzbeschreibung": "Café convivial à Kitzbühel proposant d'exquises pâtisseries maison et d'aromatiques spécialités de café autrichiennes.",
+  "beschreibung": "<p>Le <strong>Café Phoenix am Hornplatzl</strong> à Kitzbühel est un café charmant qui enchante sa clientèle avec ses douceurs faites maison, ses cafés fins et son cadre très agréable. C'est le lieu idéal pour faire une halte bienfaisante, bouquiner ou partager un moment convivial. La carte met à l'honneur les desserts traditionnels d'Autriche – de la fameuse Sachertorte au strudel aux pommes chaud et aux délices au fromage blanc. Les cafés d'exception servis avec minutie complètent l'expérience. L'accueil bienveillant et le confort des lieux garantissent un instant de pur plaisir.</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4500288,
     "lng": 12.3947695
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

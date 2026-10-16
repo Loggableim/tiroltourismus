@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "The Black Horse Café Pub in Innsbruck Welcome to Café Pub Black Horse in the heart of Innsbruck, where traditional Tyrolean charm meets modern pub vibes.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Pub Black Horse</strong> in Innsbruck in the Innsbruck region is an excellent venue for anyone seeking a sociable break. In this welcoming venue, guests can enjoy a variety of coffee specialties, homemade baked goods, and hearty savory snacks. Austrian hospitality is blended with a friendly pub atmosphere. Visitors appreciate the fresh coffees, cold beers, and casual surroundings. Friendly staff and an upbeat environment make the Black Horse a popular destination for locals and travelers looking to relax after a busy day.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2685928,
     "lng": 11.4203337
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

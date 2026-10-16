@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "Café Nuovo & Diamond Cocktail Bar in Tirol Discover the perfect blend of Viennese charm and Alpine flair at Café Nuovo & Diamond Cocktail Bar in the heart of Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café Nuovo & Diamond Cocktail Bar</strong> in Kufstein delights guests with a premier drinks menu and a stylish, contemporary ambiance. This inviting lounge bar is the perfect venue to unwind in the evening and relax over an expertly mixed cocktail or a fine vintage wine. The food menu features an appetizing array of snacks and light bites tailored to complement the beverages. Homemade spreads and cheese platters featuring local Tyrolean specialties are particularly sought after. Friendly hospitality and a vibrant yet relaxed mood make it a popular meeting place for connoisseurs.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4882963,
     "lng": 12.0644538
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Kufstein"
+  ]
 }

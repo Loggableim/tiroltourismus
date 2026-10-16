@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café & Restaurant Wanninger in Oberammergau Welcome to Café & Restaurant Wanninger in the heart of Oberammergau, where tradition meets modern charm.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Café & Restaurant Wanninger</strong> is the perfect address for anyone looking to enjoy delicious regional food in a cozy setting. In this thoughtfully run establishment, patrons enjoy an appetizing array of coffee specialties, homemade pastries, and hearty alpine dishes. Traditional culinary heritage is cultivated with pride. Especially popular are the fresh house cakes and aromatic coffee drinks like the Viennese Melange. The welcoming atmosphere and courteous hospitality ensure a delightful dining experience for every visitor.</p>",
   "ort": "Oberammergau",
   "region": "kufstein",
   "plz": "82487",
@@ -20,5 +20,8 @@
     "lat": 47.5978173,
     "lng": 11.0641222
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Oberammergau"
+  ]
 }

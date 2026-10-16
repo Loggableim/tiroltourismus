@@ -11,7 +11,7 @@
   "telefon": "+43 5675 20024",
   "email": "pension@cafe-alpenblick.at",
   "webseite": "http://www.cafe-alpenblick.at/",
-  "beschreibung": "<p>Der <strong>Gasthof Alpenblick</strong> befindet sich in der Tiroler Gemeinde <strong>Schattwald</strong> im Bezirk Reutte. Die Unterkunft liegt ruhig am Ortsrand mit Aussicht auf die Allgäuer und Lechtaler Alpen. Die Zimmer sind mit Bad, WC, Satellitenfernsehen und teilweise Balkon ausgestattet. Im Restaurant werden regionale Gerichte und internationale Klassiker serviert. Zum Angebot zählen ein Gastgarten und ein <strong>Wellnessbereich</strong> mit Sauna und Dampfbad. Wander- und Skitouren können direkt ab dem Gasthof gestartet werden. Der Betrieb wird als Familienunternehmen geführt und ist ganzjährig geöffnet.</p>",
+  "beschreibung": "<p>Il <strong>Gasthof Alpenblick</strong> è situato nel comune tirolese di <strong>Schattwald</strong>, nel distretto di Reutte. La locanda gode di una posizione tranquilla alla periferia del paese, con una magnifica vista sulle Alpi dell'Algovia e della Lechtal. Le camere dispongono di bagno privato, servizi igienici, TV satellitare e in parte di balcone. Nel ristorante vengono servite specialità regionali e classici internazionali. La struttura include un giardino con dehors e un'<strong>area benessere</strong> dotata di sauna e bagno turco. Le escursioni e le gite sugli sci partono direttamente dal gasthof. L'albergo è gestito a conduzione familiare ed è aperto tutto l'anno.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.reutte.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Reutte"
+  ]
 }

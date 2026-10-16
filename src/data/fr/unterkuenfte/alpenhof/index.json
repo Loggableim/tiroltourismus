@@ -11,7 +11,7 @@
   "telefon": "+43 5287 8550",
   "email": "info@alpenhof.at",
   "webseite": "www.alpenhof.at",
-  "beschreibung": "<p>Der <strong>Alpenhof</strong> liegt in der Gemeinde Tux auf rund 1.300 Metern Höhe im Tuxertal. Das Hotel dient als Ausgangspunkt für Aktivitäten im Sommer und Winter, unter anderem für Touren zu den <strong>Ski- und Wandergebieten</strong> am Hintertuxer Gletscher. Zur Ausstattung gehören ein Restaurant mit regionaler Küche sowie ein <strong>Wellnessbereich</strong> mit Sauna und Schwimmbad. Die Zimmer sind im alpenländischen Stil eingerichtet und verfügen über einen Balkon mit Ausblick auf die umliegenden Berge. Es handelt sich um einen Familienbetrieb. Gäste können einen ruhigen Aufenthalt abseits des Durchgangsverkehrs erwarten.</p>",
+  "beschreibung": "<p>L'hôtel <strong>Alpenhof</strong> est situé dans la commune de Tux, à environ 1 300 mètres d'altitude au cœur de la vallée de Tux. L'établissement constitue un point de départ privilégié pour des activités en été comme en hiver, notamment des excursions vers les <strong>domaines skiables et sentiers de randonnée</strong> du glacier d'Hintertux. Ses équipements comprennent un restaurant de cuisine régionale ainsi qu'un <strong>espace bien-être</strong> avec sauna et piscine. Les chambres, aménagées dans un style alpin soigné, disposent d'un balcon donnant sur les montagnes environnantes. Géré en famille, cet hôtel garantit un séjour paisible à l'écart du trafic de transit.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

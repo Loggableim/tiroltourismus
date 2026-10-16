@@ -171,12 +171,12 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
     <link rel="alternate" href={link.href} hreflang={link.hreflang} />
   ))}
   {xDefaultURL && <link rel="alternate" href={xDefaultURL} hreflang="x-default" />}
-  <!-- Fonts: display=swap + preconnect for optimal loading -->
+  <!-- Fonts: display=optional (kein Font-Swap-CLS) + preconnect for optimal loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" crossorigin fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=optional" crossorigin fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=optional" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=optional"></noscript>
   <!-- Art-Theme Fonts (pro Sprache) — nicht render-blocking laden -->
   {ART_FONTS[locale] && (
     <link rel="stylesheet" href={ART_FONTS[locale]} media="print" onload="this.media='all';this.onload=null;this.removeAttribute('media');" />
@@ -217,6 +217,8 @@ const ldBlocks = [websiteLD, organizationLD, ...extraLD];
   <noscript><link rel="stylesheet" href="/assets/css/tirol.css"></noscript>
   <style is:inline>
     /* ─── Critical: Design Tokens, Reset, Nav, Hero ─── */
+    /* Back-to-top vor tirol.css aus dem Fluss nehmen (sonst ~26px CLS auf Mobil) */
+    .btt{position:fixed;bottom:24px;right:24px;opacity:0;pointer-events:none}
     /* Metrik-gleiche Fallbacks (Font-Swap-CLS) – Werte aus Capsize-Metriken. */
     @font-face{font-family:'Montserrat Fallback';src:local('Arial'),local('Liberation Sans'),local('Helvetica Neue'),local('Roboto'),local('Noto Sans');size-adjust:112.8307%;ascent-override:85.7923%;descent-override:22.2457%;line-gap-override:0%}
     @font-face{font-family:'Bebas Neue Fallback';src:local('Arial Narrow'),local('Impact'),local('Arial'),local('Liberation Sans');ascent-override:90%;descent-override:30%;line-gap-override:0%}

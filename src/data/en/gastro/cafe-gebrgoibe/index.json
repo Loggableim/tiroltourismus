@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Gebrgoibe in Tirol Discover the cozy charm of Tirol at Café Gebrgoibe, where tradition meets warmth in every cup.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Gebrgoibe</strong> in Außerfern is a charming café that delights its guests with homemade cakes, exquisite coffee specialties, and a cozy atmosphere. It is a wonderful place to relax, read a good book, or chat with friends. The menu offers a fine selection of traditional Austrian pastries – from creamy Sachertorte and light apple strudel to tempting Topfenstrudel (curd cheese strudel). In addition, aromatic coffee specialties prepared with great care are served. The inviting interior with comfortable seating and charming details creates a feel-good atmosphere.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3820145,
     "lng": 10.2933701
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

@@ -13,11 +13,17 @@ const TVB_FIELDS = [
 ];
 
 export async function getStaticPaths() {
+  // DE carries tvb; generate demo routes for every locale that has the ort entry.
+  const deWithTvb = new Set(
+    readCollection('orte', DEFAULT_LOCALE)
+      .filter(({ entry }) => entry && entry.tvb)
+      .map(({ slug }) => slug)
+  );
   const paths = [];
   for (const loc of localeParams()) {
     const locale = loc || DEFAULT_LOCALE;
-    for (const { slug, entry } of readCollection('orte', locale)) {
-      if (entry.tvb) paths.push({ params: { locale: loc, slug } });
+    for (const slug of deWithTvb) {
+      if (readEntry('orte', slug, locale)) paths.push({ params: { locale: loc, slug } });
     }
   }
   return paths;

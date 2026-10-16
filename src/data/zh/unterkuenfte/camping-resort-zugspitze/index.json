@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Resort Zugspitze</strong> befindet sich in Tirol, im Nahbereich des Zugspitzmassivs. Die Anlage ist auf die Unterbringung von Wohnmobilen, Wohnwagen und Zelten ausgerichtet. Sie verfügt über zeitgemäße Sanitäranlagen und einen Verkaufsbereich für Grundnahrungsmittel. Die Lage ermöglicht den Zugang zu einem weitläufigen Netz an Wander- und Radwegen. In den Wintermonaten dient der Platz als Ausgangspunkt für Skitouren und Winterwanderungen.</p>",
+  "beschreibung": "<p><strong>Camping Resort Zugspitze</strong> 位于 Tirol，靠近 Zugspitzmassiv（楚格峰山地）。营地以接待房车、拖挂式房车和帐篷为主。营地设有现代化的卫生设施和售卖基本食品的区域。其地理位置便于进入广阔的徒步和骑行路网。冬季月份，营地可作为滑雪巡游和冬季徒步的出发点。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zugspitze"
+  ]
 }

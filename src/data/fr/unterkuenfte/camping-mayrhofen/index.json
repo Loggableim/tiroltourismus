@@ -11,16 +11,16 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz <strong>Mayrhofen</strong> liegt im Zentrum des bekannten Urlaubsortes <strong>Mayrhofen</strong> im <strong>Zillertal</strong>. Er ist ganzjährig geöffnet und bietet sowohl Stellplätze für Reisemobile als auch Mietunterkünfte in Form von Mobilheimen. Die Anlage verfügt über einen beheizten Swimmingpool und einen Kinderspielplatz. In unmittelbarer Nähe befinden sich die Talstationen der <strong>Penken- und Ahornbahnen</strong>. Der Ort Mayrhofen bietet eine Vielzahl an Einkaufsmöglichkeiten und gastronomischen Betrieben. Der Campingplatz eignet sich als Ausgangspunkt für Wanderungen und Skitouren in der umliegenden Bergwelt.</p>",
+  "beschreibung": "<p>Le camping <strong>Mayrhofen</strong> se trouve au centre de la station de vacances connue de <strong>Mayrhofen</strong> dans le <strong>Zillertal</strong>. Il est ouvert toute l'année et propose des emplacements pour camping-cars ainsi que des hébergements en location sous forme de mobil-homes. L'établissement dispose d'une piscine chauffée et d'une aire de jeux pour enfants. À proximité immédiate se trouvent les stations de vallée des <strong>Penken- et Ahornbahnen</strong>. La localité de Mayrhofen offre une multitude de possibilités d'achats et d'établissements gastronomiques. Le camping convient comme point de départ pour des randonnées et des courses à ski dans le monde montagneux environnant.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
     "camping",
-    "famille",
-    "plein air",
-    "Zillertal"
+    "familie",
+    "outdoor",
+    "zillertal"
   ],
   "tier": "basic",
   "koordinaten": {
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Mayrhofen"
+  ]
 }

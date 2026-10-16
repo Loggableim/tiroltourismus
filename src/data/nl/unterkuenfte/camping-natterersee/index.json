@@ -11,18 +11,18 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Campingplatz Natterersee</strong> liegt in der Gemeinde Natters südwestlich von Innsbruck. Der Platz ist direkt am <strong>Natterersee</strong> gelegen, der im Sommer zum Baden und im Winter zum Eislaufen einlädt. Die Anlage verfügt über Stellplätze für Wohnmobile und Wohnwagen sowie über Mietunterkünfte in Form von <strong>Mobilheimen</strong>. Ein Restaurant mit regionaler Küche und ein Kiosk sind auf dem Gelände vorhanden. Von hier aus sind Ausflüge nach Innsbruck mit seiner Altstadt und den kulturellen Einrichtungen gut möglich. Die umliegenden Berge bieten ganzjährig Möglichkeiten für <strong>Wanderungen und Skitouren</strong>.</p>",
+  "beschreibung": "<p>De camping <strong>Natterersee</strong> ligt in de gemeente Natters, ten zuidwesten van Innsbruck. De camping ligt direct aan de <strong>Natterersee</strong>, die in de zomer uitnodigt tot zwemmen en in de winter tot schaatsen. Het complex beschikt over plaatsen voor campers en caravans evenals over huuraccommodatie in de vorm van <strong>mobilhomes</strong>. Op het terrein zijn een restaurant met regionale keuken en een kiosk aanwezig. Van hieruit zijn uitstapjes naar Innsbruck met zijn oude stadskern en culturele voorzieningen goed mogelijk. De omliggende bergen bieden het hele jaar mogelijkheden voor <strong>wandelingen en skitoeren</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
-    "kamperen",
+    "camping",
     "familie",
-    "Innsbruck",
-    "buiten",
-    "zee",
-    "water"
+    "innsbruck",
+    "outdoor",
+    "see",
+    "wasser"
   ],
   "tier": "basic",
   "koordinaten": {
@@ -31,5 +31,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Natterer_See"
+  ]
 }

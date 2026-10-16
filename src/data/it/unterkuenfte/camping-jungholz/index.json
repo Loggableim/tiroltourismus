@@ -11,15 +11,15 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Camping <strong>Jungholz</strong> liegt in der gleichnamigen Gemeinde in Tirol. Die Anlage bietet Stellplätze für <strong>Camper und Wohnmobile</strong>. Sie ist von Wäldern und Bergen umgeben. Auf dem Platz gibt es <strong>Sanitäreinrichtungen</strong> und einen Brötchenservice. Wanderungen im Sommer oder Skifahren im Winter sind in der Region möglich. Der Campingplatz eignet sich für einen ruhigen Urlaub. Ein nahegelegenes Freibad kann mitgenutzt werden.</p>",
+  "beschreibung": "<p>Il camping <strong>Jungholz</strong> si trova nell'omonimo comune in Tirolo. L'impianto offre piazzole per <strong>camper e motorhome</strong>. È circondato da boschi e montagne. Sul piazzale sono presenti <strong>servizi igienici</strong> e un servizio pane. Nella regione sono possibili escursioni estive o sci invernale. Il camping si presta a una vacanza tranquilla. Una piscina all'aperto nelle vicinanze può essere utilizzata insieme.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
-    "Alpi dell'Allgäu",
+    "ausserfern",
     "camping",
-    "famiglie",
+    "familie",
     "outdoor"
   ],
   "tier": "basic",
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Jungholz"
+  ]
 }

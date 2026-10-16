@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Schatzi in Kitzbühel – a cozy gem nestled in the heart of the Alpenland Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Schatzi Kitzbühel</strong> in Kitzbühel is a popular local spot known for its cozy alpine charm, delicious homemade cakes, and exceptional coffee. Guests can relax in comfortable seating while enjoying friendly service and sweet treats, making it a wonderful hideaway in the heart of the world-famous ski resort town.</p>",
   "ort": "Kitzbühel",
   "region": "kitzbuehel",
   "plz": "6370",
@@ -20,5 +20,9 @@
     "lat": 47.4482231,
     "lng": 12.3902034
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

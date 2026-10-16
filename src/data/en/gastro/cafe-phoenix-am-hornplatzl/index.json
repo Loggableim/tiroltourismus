@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Phoenix at Hornplatzl in Tirol Welcome to Café Phoenix at Hornplatzl, a charming café nestled in the heart of Tirol, where tradition meets modern flair.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Phoenix am Hornplatzl</strong> in Kitzbühel is a charming town café delighting guests with homemade cakes, specialty coffees, and an inviting atmosphere. Visitors can relax with a book or meet friends over classic Austrian pastries, from delicate curd strudel to rich Sachertorte. Lovingly decorated seating and warm hospitality create a welcoming ambiance right in vibrant Kitzbühel.</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.4500288,
     "lng": 12.3947695
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ]
 }

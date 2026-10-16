@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Moos in Thaur – a cozy mountain café nestled in the heart of the Tirol countryside, just a stone’s throw from Innsbruck.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Moos</strong> in Thaur near Innsbruck invites visitors to enjoy a gourmet break. This stylish café and patisserie treats guests to an extensive array of homemade tortes, cakes, and artisanal pastries, each crafted with exceptional attention to detail. Skilled baristas serve expertly brewed coffee specialties to accompany the sweet delicacies. The inviting decor and warm hospitality make it an enchanting stop near Innsbruck.</p>",
   "ort": "Thaur",
   "region": "innsbruck",
   "plz": "6065",
@@ -20,5 +20,9 @@
     "lat": 47.2967096,
     "lng": 11.4748282
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Thaur"
+  ]
 }

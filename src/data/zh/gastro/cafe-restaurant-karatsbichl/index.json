@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "卡拉茨比赫尔咖啡餐厅（Cafe Restaurant Karatsbichl）位于奥伯斯多夫（Oberstdorf），是一家充满阿尔卑斯山风情的传统餐厅。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于奥伯斯多夫的 <strong>Cafe Restaurant Karatsbichl</strong> 秉持热情好客的待客之道。餐厅融合阿尔卑斯传统菜肴与现代创意烹饪，所用食材绝大部分来自当地精选农场，品质卓越。带有全景视野的景观阳台是其一大亮点，客人在饱览雄伟山景的同时品尝特色高山佳肴，尽享惬意无忧的用餐时光。</p>",
   "ort": "Oberstdorf",
   "region": "?",
   "plz": "87561",
@@ -21,5 +21,8 @@
     "lat": 47.3999095,
     "lng": 10.260619
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.karatsbichl.de/"
+  ]
 }

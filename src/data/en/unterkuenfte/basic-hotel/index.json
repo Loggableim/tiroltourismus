@@ -11,7 +11,7 @@
   "telefon": "+43 512 586385",
   "email": null,
   "webseite": "https://www.basic-hotel.at",
-  "beschreibung": "=== beschreibung ===\n<p>The <strong>Basic Hotel</strong> in <strong>Innsbruck</strong> is a hotel accommodation in the category of <strong>Hotel</strong>. It is centrally located in the capital city of the Austrian state of <strong>Tirol</strong>. The rooms are functional and well-equipped. The hotel provides basic services for its guests. Right nearby, visitors can find attractions such as the historic <strong>Altstadt</strong> and the <strong>Nordkette</strong> mountain range. Guests can explore the city and the surrounding alpine scenery. This hotel is ideal for travelers seeking a straightforward overnight stay.</p>",
+  "beschreibung": "<p>The <strong>Basic Hotel</strong> in <strong>Innsbruck</strong> offers modern, practical accommodation situated centrally in the capital of Tyrol. The guest rooms are thoughtfully designed with functional furnishings, ensuring a comfortable and straightforward stay. Renowned attractions, including the historic Old Town and the Nordkette cable railway, are just a short walk away. Guests can effortlessly explore urban culture alongside breathtaking Alpine nature. The hotel is ideally suited for city travellers and adventurers seeking convenient, central lodging.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.info",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

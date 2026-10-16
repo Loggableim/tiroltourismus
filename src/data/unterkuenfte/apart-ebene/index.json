@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://ebene.at",
-  "beschreibung": "<p>Der Gasthof **Apart Ebene** liegt im Ortsteil Ebene von Ischgl. Die Talstation der **Silvretta-Bahn** ist fußläufig erreichbar. Das Haus kombiniert Gästezimmer mit Ferienwohnungen. Im hoteleigenen Restaurant werden tirolerische Gerichte serviert. Ein **Saunabereich** ergänzt das Angebot. Die Unterkunft stellt einen geeigneten Ausgangspunkt für Aktivitäten im Sommer und Winter dar. Parkmöglichkeiten sind gegen Gebühr verfügbar.</p>",
+  "beschreibung": "<p>Der Gasthof <strong>Apart Ebene</strong> liegt im Ortsteil Ebene von Ischgl. Die Talstation der <strong>Silvretta-Bahn</strong> ist fußläufig erreichbar. Das Haus kombiniert Gästezimmer mit Ferienwohnungen. Im hoteleigenen Restaurant werden tirolerische Gerichte serviert. Ein <strong>Saunabereich</strong> ergänzt das Angebot. Die Unterkunft stellt einen geeigneten Ausgangspunkt für Aktivitäten im Sommer und Winter dar. Parkmöglichkeiten sind gegen Gebühr verfügbar.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Bezirk_Landeck"
+  ]
 }

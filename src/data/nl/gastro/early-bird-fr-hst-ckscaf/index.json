@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Early Bird Frühstückscafé in Tirol",
-  "beschreibung": "<p>Im <strong>Early Bird Frühstückscafé</strong> in Innsbruck wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt.</p>",
+  "kurzbeschreibung": "Populair ontbijtcafé in Innsbruck met verse streekproducten, uitgebreide ontbijtopties en een zonnige sfeer.",
+  "beschreibung": "<p>In het <strong>Early Bird Frühstückscafé</strong> in Innsbruck begint elke ochtend met een glimlach en heerlijke streekproducten. Het café biedt een uitnodigende ambiance en een ontbijtkaart die traditionele Tiroolse klassiekers combineert met moderne, gezonde creaties. Verse ambachtelijke broodjes, lokale boerenkaas en geurige koffie worden met zorg geserveerd. De gezellige inrichting en het zonnige terras maken dit tot de ideale plek voor een ontspannen start van de dag.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3062731,
     "lng": 11.0712407
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

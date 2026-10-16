@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Eader Café in Tirol",
-  "beschreibung": "<p>Das <strong>Eader Cafe</strong> in Landeck ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "beschreibung": "<p>Het <strong>Eader Cafe</strong> in Landeck is een charmant café dat zijn gasten verblijdt met huisgemaakt gebak, verfijnde koffiespecialiteiten en een gezellige ambiance. Hier kunt u heerlijk ontspannen, een goed boek lezen of bijkletsen met vrienden. De menukaart biedt een fijne selectie van traditioneel Oostenrijks gebak – van romige Sachertorte en luchtige Apfelstrudel tot verleidelijke Topfenstrudel. De vriendelijke bediening en de comfortabele zitplaatsen zorgen voor een warm thuisgevoel.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.1441094,
     "lng": 10.57258
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)"
+  ]
 }

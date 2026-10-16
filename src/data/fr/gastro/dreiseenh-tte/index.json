@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "La Dreiseenhütte en Tirol Perchée à 1 920 mètres d'altitude, la Dreiseenhütte est un refuge alpin emblématique situé dans le cœur des Alpes tyroliennes.",
-  "beschreibung": null,
+  "beschreibung": "<p>La <strong>Dreiseenhütte</strong> à Imst régale ses convives avec une sélection soignée de plats alpins régionaux et de saison. La cuisine marie savoureusement les recettes tyroliennes traditionnelles à des touches créatives pour une expérience montagnarde authentique. L'aménagement chaleureux invite au repos tandis que le personnel prévenant veille au confort de tous. La soupe maison aux quenelles tyroliennes est particulièrement revigorante après une belle randonnée. Le refuge propose également une carte des vins soignée mettant à l'honneur des crus d'Autriche et du Tyrol du Sud.</p>",
   "ort": "",
   "region": "imst",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2052554,
     "lng": 11.0337102
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

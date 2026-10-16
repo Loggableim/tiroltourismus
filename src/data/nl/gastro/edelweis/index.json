@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Edelweis in Reutte",
-  "beschreibung": "<p>Im <strong>Edelweis</strong> in Reutte in der Region Außerfern wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt.</p>",
+  "kurzbeschreibung": "Gezellig restaurant in Reutte met traditionele Tiroolse gerechten, een sfeervolle veranda en prachtig bergzicht.",
+  "beschreibung": "<p>In het <strong>Edelweis</strong> in Reutte in de regio Außerfern staat hartelijke gastvrijheid centraal. Het restaurant biedt een uitnodigende sfeer en een menukaart die traditionele Tiroolse en Oostenrijkse gerechten combineert met eigentijdse accenten. De ingrediënten zijn grotendeels afkomstig van lokale producenten, wat garant staat voor verse kwaliteit. Het sfeervolle interieur met veel hout en de gezellige veranda met panoramisch bergzicht nodigen uit tot ontspannen genieten.</p>",
   "ort": "Reutte",
   "region": "ausserfern",
   "plz": "6600",
@@ -20,5 +20,8 @@
     "lat": 47.4934513,
     "lng": 10.7175604
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Reutte"
+  ]
 }

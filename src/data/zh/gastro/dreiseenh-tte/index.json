@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "三湖小屋（Dreiseenhütte）位于蒂罗尔（Tirol）的心脏地带，坐落在阿尔卑斯山脉的壮丽景色之中。这里是登山者和徒步爱好者的天堂，提供无与伦比的自然体验。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于伊姆斯特地区的<strong>Dreiseenhütte</strong>高山木屋以其精选的时令与当地特色风味款待登山者与游客。厨房将传统蒂罗尔经典高山食谱与创意理念巧妙结合，带来独一无二的高山美馔体验。温馨纯朴的木屋装潢让人尽情放松，体贴周到的服务令人备感亲切。在徒步高山一整天后，来上一碗热气腾腾的自制蒂罗尔丸子汤尤为暖身舒适。此外，木屋还提供精心挑选的葡萄酒单，囊括来自南蒂罗尔及奥地利的优质佳酿。</p>",
   "ort": "",
   "region": "imst",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2052554,
     "lng": 11.0337102
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Imst"
+  ]
 }

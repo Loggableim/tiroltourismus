@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "Welcome to Innsbruck – Your Gateway to Tirol! Discover the heart of the Tirol with its breathtaking Alpine scenery, charming towns, and unforgettable experiences.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Dunkin'</strong> in Innsbruck in the Innsbruck region stands for freshly prepared treats and quality casual refreshment. Traditional recipes are served with modern ease, ranging from world-famous donuts and sweet baked goods to hearty snack options. The friendly staff ensures quick and hassle-free service without compromising on freshness. <strong>Dunkin'</strong> is the perfect pitstop for a sweet boost during a stroll through Innsbruck or after an outdoor excursion in the Tyrolean mountains.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2645069,
     "lng": 11.3946436
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

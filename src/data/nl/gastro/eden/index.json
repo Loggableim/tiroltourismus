@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Eden in Innsbruck",
-  "beschreibung": "<p>Im <strong>Eden</strong> in Innsbruck in der Region Innsbruck wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt.</p>",
+  "kurzbeschreibung": "Uitnodigend restaurant in Innsbruck met authentieke Tiroolse gerechten, een warme houten ambiance en een panoramische veranda.",
+  "beschreibung": "<p>In het <strong>Eden</strong> in Innsbruck in de regio Innsbruck staat gastvrijheid hoog aangeschreven. Het restaurant biedt een warme, uitnodigende ambiance en een menukaart die traditionele Tiroolse gerechten op harmonieuze wijze combineert met moderne culinaire invloeden. De ingrediënten zijn grotendeels afkomstig van lokale boeren en leveranciers. Het sfeervolle houten interieur en de veranda met panoramisch uitzicht op de Tiroolse bergen maken elk bezoek tot een ontspannen genot.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2646586,
     "lng": 11.4385153
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

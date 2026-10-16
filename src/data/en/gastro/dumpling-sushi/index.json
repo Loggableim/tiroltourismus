@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Dumplings & Sushi in Tirol Discover the perfect blend of Alpine tradition and Asian flair in Tirol!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Dumpling & Sushi</strong> in Tyrol delights guests with an exquisite combination of regional freshness and seasonal Asian culinary art. The kitchen brings together authentic Asian dumpling recipes and fresh sushi with alpine hospitality, creating an inspiring culinary journey. The cozy setting invites visitors to linger, while attentive service ensures a memorable dining experience. Freshly prepared dumplings, delicate sushi platters, and a curated wine list with selections from Austria make this fusion dining destination a true culinary highlight in the Alps.</p>",
   "ort": "",
   "region": "?",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.5987322,
     "lng": 11.0636601
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Tirol_(Bundesland)"
+  ]
 }

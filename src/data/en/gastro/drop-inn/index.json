@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "Welcome to Drop Inn in Innsbruck Discover your home away from home in the heart of Tirol!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Drop Inn</strong> in Innsbruck in the Innsbruck region is a popular gathering place for anyone wishing to savor an evening over an exceptional drink. Its contemporary ambiance and laid-back atmosphere create the perfect environment to linger. The bar offers a refined selection of cocktails, long drinks, draft beers, and fine wines – ranging from beloved classics to creative original concoctions. Experienced bartenders craft each drink individually with skill and enthusiasm. Regular themed evenings provide vibrant entertainment. Whether for a relaxed after-work drink or a festive night with friends, Drop Inn is the place to be.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.265903,
     "lng": 11.3824988
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -3,7 +3,7 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "Vyhlášená restaurace v Pettneu am Arlberg s vytříbenou tyrolskou pohostinností, alpskými specialitami a elegantním prostředím.",
   "beschreibung": "<p>Užijte si nezapomenutelné chvíle v <strong>Edelweiß</strong> v Pettneu am Arlberg v regionu Arlberg. Tato restaurace je synonymem pro vybranou Tiroler pohostinnost s nádechem elegance. Jídelní lístek spojuje klasiky alpské kuchyně s mezinárodními vlivy a překvapí kreativními kreacemi. Tým klade velký důraz na kvalitu a používá výhradně čerstvé, regionální produkty – od Almkäse až po Tiroler Rindfleisch. Přátelský servis a stylové prostředí dělají z každé návštěvy kulinářský zážitek. Ať už jde o obchodní večeři nebo romantický večer ve dvou – jste na správném místě.</p>",
   "ort": "Pettneu am Arlberg",
   "region": "arlberg",
@@ -21,5 +21,8 @@
     "lat": 47.1493307,
     "lng": 10.3415129
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Pettneu_am_Arlberg"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Duo Mi in Innsbruck",
-  "beschreibung": "<p>Im <strong>Duo Mi</strong> in Innsbruck in der Region Innsbruck wird Gastfreundschaft großgeschrieben. Das Restaurant bietet eine einladende Atmosphäre und eine Speisekarte, die traditionelle Tiroler und österreichische Gerichte mit modernen Interpretationen verbindet. Die Zutaten stammen weitgehend von lokalen Produzenten, was sich in der hervorragenden Qualität der Speisen widerspiegelt. Die gemütliche Einrichtung mit viel Holz und regionalen Dekorationselementen schafft ein warmes Ambiente. Ein besonderes Highlight ist die Veranda mit Panoramablick auf die umliegende Bergwelt, die an sonnigen Tagen zum Verweilen einlädt. Asiatische Aromen treffen auf Tiroler Gastlichkeit – eine spannende kulinarische Fusion.</p>",
+  "kurzbeschreibung": "Verfijnd fusion-restaurant in Innsbruck met streekproducten, creatieve Aziatische gerechten en bergzicht.",
+  "beschreibung": "<p>Bij <strong>Duo Mi</strong> in Innsbruck in de regio Innsbruck staat gastvrijheid centraal. Het restaurant biedt een uitnodigende sfeer en een menukaart die lokale Tiroolse ingrediënten op harmonieuze wijze combineert met moderne Aziatische culinaire invloeden. De producten zijn grotendeels afkomstig van regionale boerderijen, wat zorgt voor een uitstekende kwaliteit. Het sfeervolle houten interieur straalt rust en gezelligheid uit, terwijl de veranda een prachtig uitzicht biedt op de bergwereld.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2667327,
     "lng": 11.3924862
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5372 63675",
   "email": null,
   "webseite": "https://www.hinterduxerhof.at/",
-  "beschreibung": "<p>Der <strong>Berggasthof Hinterduxerhof</strong> befindet sich in der Nähe von Kufstein in Tirol. Der Gasthof liegt in einer Höhenlage und bietet einen Blick auf das Inntal. Die Zimmer sind rustikal eingerichtet. Im Restaurant werden <strong>Tiroler und österreichische Gerichte</strong> angeboten. Der Gasthof ist ein beliebter Stützpunkt für Wanderer und Skifahrer. Die Umgebung lädt zu Aktivitäten in der Natur ein. Das Haus wird als <strong>Familienbetrieb</strong> geführt.</p>",
+  "beschreibung": "<p><strong>Berggasthof Hinterduxerhof</strong> se nachází nedaleko města Kufstein v Tyrolsku. Hostinec leží ve vyvýšené poloze a nabízí působivý výhled na malebné údolí řeky Inn (Inntal). Pokoje jsou rustikálně a útulně zařízené. V restauraci se podávají vynikající <strong>tyrolská a rakouská jídla</strong>. Hostinec je oblíbenou základnou pro pěší turisty i milovníky lyžování. Okolní příroda přímo vybízí k pestrým venkovním aktivitám. Celý dům je provozován jako pohostinný <strong>rodinný podnik</strong>.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,9 @@
     "lat": "47.5860197",
     "lng": "12.1914377"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Kufstein"
+  ]
 }

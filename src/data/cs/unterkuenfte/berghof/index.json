@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.berghof-tirol.com/",
-  "beschreibung": "<p>Der <strong>Berghof</strong> liegt in <strong>Neustift im Stubaital</strong>, einem etablierten Urlaubsgebiet in Tirol. Das Hotel bietet verschiedene Zimmer- und Suitenkategorien an. Die Lage ermöglicht Zugang zu Wanderwegen und im Winter zu den Skigebieten des Stubaitales. Das Haus verfügt über einen Wellnessbereich mit Sauna und Dampfbad. Die gastronomischen Einrichtungen umfassen ein Restaurant mit Tiroler Küche. Gäste können Halbpension buchen. Neustift selbst bietet Infrastruktur mit Geschäften und Freizeiteinrichtungen. Der Berghof eignet sich für Gäste, die einen aktiven Urlaub verbringen möchten.</p>",
+  "beschreibung": "<p><strong>Berghof</strong> se nachází v obci <strong>Neustift im Stubaital</strong>, v jedné z nejvyhlášenějších prázdninových oblastí v Tyrolsku. Hotel nabízí rozmanité kategorie pokojů a apartmá. Výborná poloha zajišťuje přímý přístup k turistickým trasám a v zimě k oblíbeným lyžařským střediskům celého údolí Stubaital. Součástí hotelu je wellness zóna se saunou a parní lázní. Gastronomická nabídka zahrnuje restauraci s vybranou tyrolskou kuchyní. Hosté si mohou rezervovat pobyt s polopenzí. Městečko Neustift poskytuje veškerou občanskou vybavenost s obchody a volnočasovým vyžitím. Berghof je ideální volbou pro ty, kteří touží po aktivní dovolené na horách.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -28,5 +28,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ]
 }

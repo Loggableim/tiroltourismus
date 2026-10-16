@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p><strong>Bilgeri Camping</strong> ist ein <strong>Campingplatz</strong> in Tirol. Der genaue Standort ist nicht angegeben, aber die Unterkunft richtet sich an Urlauber mit Wohnmobil oder Zelt. Der Platz bietet Stellflächen mit <strong>Strom- und Wasseranschlüssen</strong>. Sanitäranlagen sind auf dem Gelände vorhanden. Die Umgebung in <strong>Tirol</strong> ermöglicht Aktivitäten wie Wandern und Radfahren. Einrichtungen wie ein Brötchenservice können den Aufenthalt erleichtern. Der Campingplatz ist <strong>saisonal geöffnet</strong>.</p>",
+  "beschreibung": "<p><strong>Bilgeri Camping</strong> es un apacible <strong>camping</strong> en el Tirol, concebido especialmente para aquellos viajeros que disfrutan de estancias en autocaravana, caravana o tienda de campaña. El recinto cuenta con parcelas acondicionadas con <strong>tomas de electricidad y agua</strong>. En el camping se dispone de completas instalaciones sanitarias. La naturaleza del <strong>Tirol</strong> ofrece inmejorables oportunidades para practicar senderismo y rutas ciclistas al aire libre. Servicios prácticos como el reparto diario de pan fresco hacen que la estancia sea aún más placentera. El establecimiento está <strong>abierto por temporadas</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Pizzeria Celentano en Tirol Découvrez l’authentique saveur italienne au cœur des Alpes autrichiennes !",
-  "beschreibung": "<p>Das <strong>Celentano Pizzeria</strong> in Innsbruck ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt. Das Ambiente vereint traditionelle Tiroler Elemente mit modernem Komfort und schafft eine einladende Atmosphäre für jeden Anlass. Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten – von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemütliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschäftliches Treffen – das <strong>Celentano Pizzeria</strong> heißt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service für einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Celentano Pizzeria à Innsbruck - pizzeria traditionnelle italienne",
+  "beschreibung": "<p>La <strong>Celentano Pizzeria</strong> à Innsbruck propose d'authentiques pizzas italiennes à pâte croustillante cuites au four, des antipasti savoureux et des pâtes fraîches dans une ambiance méditerranéenne animée.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4925218,
     "lng": 11.0861212
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

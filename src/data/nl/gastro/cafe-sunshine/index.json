@@ -3,7 +3,7 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Sunshine in Kitzbühel",
+  "kurzbeschreibung": "Cafe Sunshine in Kitzbühel - zonnig alpenontbijt en koffie",
   "beschreibung": "<p>Het <strong>Cafe Sunshine</strong> in Kitzbühel in de regio Kitzbühel is het perfecte adres voor iedereen die een gezellige onderbreking van de dagelijkse routine zoekt. In dit liefdevol ingerichte café genieten gasten van een gevarieerd aanbod aan koffiespecialiteiten, huisgemaakte cakes en kleine snacks. De traditionele Oostenrijkse koffiecultuur wordt hier met veel passie gekoesterd. Bijzonder geliefd zijn de romige Verlängerter en de milde Melange. Daarnaast worden dagelijks verse Mehlspeisen uit de eigen Konditorei aangeboden. De ontspannen sfeer en de hartelijke service maken het café tot een populaire ontmoetingsplek voor inwoners en gasten.</p>",
   "ort": "Kitzbühel",
   "region": "kitzbuehel",
@@ -20,5 +20,8 @@
     "lat": 47.4558747,
     "lng": 12.3660634
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

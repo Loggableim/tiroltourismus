@@ -3,8 +3,8 @@
   "emoji": "🍸",
   "farbe": "#FF6B35",
   "kategorie": "bar",
-  "kurzbeschreibung": "Cantina Vecchia v Innsbrucku",
-  "beschreibung": "<p>Die <strong>Cantina Vecchia</strong> in Innsbruck in der Region Innsbruck ist ein beliebter Treffpunkt für alle, die den Abend bei einem stilvollen Drink genießen möchten. Das moderne Ambiente und die entspannte Atmosphäre laden zum Verweilen ein. Die Bar bietet eine erlesene Auswahl an Cocktails, Longdrinks, Bieren und erlesenen Weinen – von klassischen Drinks bis hin zu kreativen Eigenkreationen. Die erfahrenen Barkeeper mixen mit Leidenschaft und Know-how jeden Drink individuell. Regelmäßige Live-Events und Themenabende sorgen für Abwechslung. Ob für einen gemütlichen Feierabend-Drink, einen Abend mit Freunden oder einen besonderen Anlass – hier ist man richtig.</p>",
+  "kurzbeschreibung": "Cantina Vecchia v Innsbrucku - vinárna a tapas bar",
+  "beschreibung": "<p><strong>Cantina Vecchia</strong> v Innsbrucku je oblíbený podnik spojující tyrolskou pohostinnost s italským šarmem. Hosté zde ocení výběrová vína, lahodné tapas a uvolněnou atmosféru ideální pro večerní posezení.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2577705,
     "lng": 11.3920465
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://cantina-vecchia.at/"
+  ]
 }

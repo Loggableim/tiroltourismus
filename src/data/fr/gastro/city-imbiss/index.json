@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "City Imbiss à Schwaz Découvrez le City Imbiss à Schwaz, votre adresse incontournable pour des spécialités rapides et savoureuses en plein cœur du Tirol.",
-  "beschreibung": "<p>Der <strong>City Imbiss</strong> in Schwaz in der Region Zillertal steht für frisch zubereitete Snacks und regionale Imbisskultur. Hier werden traditionelle Rezepte mit modernem Twist serviert. Die Auswahl reicht von herzhaften Klassikern bis zu kreativen Spezialitäten. Das freundliche Personal sorgt für eine schnelle und unkomplizierte Bedienung, ohne dass die Qualität darunter leidet. Der <strong>City Imbiss</strong> ist der perfekte Ort für eine wohlverdiente Pause während einer Erkundungstour durch Tirol. Besonders beliebt sind die knusprigen Pizzen, die im Holzofen gebacken werden und mit erlesenen Zutaten belegt sind.</p>",
+  "beschreibung": "<p>Le <strong>City Imbiss</strong> à Schwaz, aux portes du Zillertal, propose des collations fraîchement préparées et une cuisine rapide régionale de qualité. Les recettes traditionnelles y sont revisitées avec modernité. L'offre s'étend des grands classiques réconfortants à des spécialités créatives. L'équipe dynamique assure un service rapide et chaleureux avec des produits de premier choix. Le <strong>City Imbiss</strong> constitue une halte idéale lors d'une escapade dans le Tyrol, particulièrement apprécié pour ses pizzas croustillantes cuites au four.</p>",
   "ort": "Schwaz",
   "region": "zillertal",
   "plz": "6130",
@@ -21,5 +21,8 @@
     "lat": 47.3450914,
     "lng": 11.7076206
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Schwaz"
+  ]
 }

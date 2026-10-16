@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Cuisino Restaurant Kleinwalsertal in Riezlern – a cozy alpine retreat where traditional Tyrolean flavors meet modern culinary artistry.",
-  "beschreibung": "",
+  "beschreibung": "<p>Enjoy unforgettable culinary moments at the <strong>Cuisino Restaurant Kleinwalsertal</strong> in Riezlern in the alpine region. This restaurant represents upscale Tyrolean hospitality infused with modern elegance. The menu harmoniously combines alpine culinary traditions with international gourmet influences, delighting diners with creative presentations. The team places the highest value on regional farm products, from choice mountain cheese to fine regional meats. Courteous service and a refined ambiance turn every dinner into a gastronomic highlight, ideal for romantic evenings and special celebrations.</p>",
   "ort": "Riezlern",
   "region": "?",
   "plz": "6991",
@@ -21,5 +21,8 @@
     "lat": 47.3586723,
     "lng": 10.189785
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Mittelberg_(Vorarlberg)"
+  ]
 }

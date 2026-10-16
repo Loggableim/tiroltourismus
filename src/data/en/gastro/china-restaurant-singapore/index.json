@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "China Restaurant Singapore in Tirol Discover authentic Asian flavors in the heart of the Alps!",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>China Restaurant Singapore</strong> in the Zillertal, guests enjoy a delectable synthesis of traditional Tyrolean cuisine and modern inspirations. The cozy establishment charms visitors with its friendly hospitality, turning every meal into a memorable occasion. The seasonal menu focuses on fresh local farm products – ranging from alpine cheeses to fresh game from Tyrolean forests. International culinary favorites are also well represented. Homemade desserts, including legendary Kaiserschmarrn and apple strudel, perfectly round off the culinary journey.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.1661852,
     "lng": 11.8651832
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Zillertal"
+  ]
 }

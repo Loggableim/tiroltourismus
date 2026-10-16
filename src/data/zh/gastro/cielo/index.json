@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "天空在因斯布鲁克 在因斯布鲁克（Innsbruck），天空是最美的画布。无论是从北山（Nordkette）俯瞰整个城市的壮丽景色，还是在霍赫卡尔（Hochkar）山顶上感受高山的宁静，这里的天空总是让人心旷神怡。 白天，阳光洒在阿尔卑斯山脉（Alpen）的雪峰上，让整个景色变得璀璨夺目；夜晚，星空在蒂罗尔（Tirol）的夜空中闪耀，仿佛触手可及。无论你是徒步、骑行还是乘坐缆车，因斯布鲁克的天空总会带给你不一样的体验。 来因斯布鲁克，感受天空的无限可能！",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克地区的<strong>Cielo</strong>为广大宾客提供温馨亲切的就餐环境与精选的特色咖啡及自制美味。这家咖啡馆尤以其阳光明媚的户外露台著称，在晴朗温暖的日子里是放松小憩的绝佳场所。菜单涵盖了经典奥地利甜点、芳香诱人的蛋糕和每日新鲜烘焙的精美糕点。体贴入微的服务让每位到访者宾至如归。<strong>Cielo</strong>是您在蒂罗尔日常旅途中享受宁静咖啡时光的理想驿站。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2630882,
     "lng": 11.3979791
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

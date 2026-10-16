@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "Crispy Kebab & FFC in Tirol Discover the vibrant flavors of Tirol with a delicious mix of Crispy Kebab and FFC—the perfect fusion of international and local cuisine.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Crispy Kebab & FFC</strong> in Innsbruck is the prime address for quick, high-quality street food. Whether you crave savory kebabs, fresh burgers, or hearty specialties, every appetite is satisfied here. Ingredients are thoughtfully selected and freshly prepared on the spot, ensuring top taste on the go. The friendly team serves meals with a warm smile in a pleasant setting. <strong>Crispy Kebab & FFC</strong> is an ideal spot for a quick bite during a city tour of Innsbruck or after a day out in the Tyrolean mountains.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.4932386,
     "lng": 11.087487
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

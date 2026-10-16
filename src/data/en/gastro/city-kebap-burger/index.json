@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "City Kebap & Burger in Innsbruck Discover the vibrant flavors of Innsbruck at City Kebap & Burger, where every bite brings a taste of the city’s lively food scene.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>City Kebap & Burger</strong> in Innsbruck in the Innsbruck region is known for freshly prepared snacks and quality fast casual fare. Classic snack recipes are served with a contemporary culinary twist, ranging from hearty burgers to freshly grilled kebabs. The courteous staff ensures prompt and friendly service while maintaining high standards for all ingredients. The <strong>City Kebap & Burger</strong> is the perfect pitstop for a delicious bite during a stroll through the alpine capital.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2652262,
     "lng": 11.398577
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

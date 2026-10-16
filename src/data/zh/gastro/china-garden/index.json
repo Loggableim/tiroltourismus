@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "中国花园在蒂罗尔 蒂罗尔的中国花园——一个独特的文化交融之地，位于因斯布鲁克附近的蒂罗尔州。在这里，您可以欣赏到精心设计的中国式园林景观，体验到东方与西方的和谐融合。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克的<strong>China-Garden</strong>以其精选的时令与当地美馔款待八方宾客。主厨巧妙地将传统蒂罗尔经典食谱与现代创意融为一体，带来别具一格的味觉盛宴。舒适宜人的就餐环境令人流连忘返，热忱周到的服务让人倍感温馨。在徒步高山一整天后，来上一碗热腾腾的自制蒂罗尔丸子汤尤为惬意暖胃。此外，餐厅还提供精心挑选的葡萄酒单，汇集了来自南蒂罗尔及奥地利各地的上等佳酿。</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4856128,
     "lng": 11.0675393
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

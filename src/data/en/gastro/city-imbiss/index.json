@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "Street Food with a Twist in Schwaz Welcome to City Imbiss in the heart of Schwaz, where traditional Austrian flavors meet modern street food.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>City Imbiss</strong> in Schwaz in the Zillertal gateway region stands for freshly prepared snacks and high-quality regional casual dining. Traditional recipes are served with a contemporary touch. The assortment ranges from hearty alpine classics to creative specialty snacks. The friendly team delivers quick, uncomplicated service without compromising on ingredients. The <strong>City Imbiss</strong> is the ideal spot for a well-earned break during an exploratory tour through Tyrol, with stone-baked pizzas being especially popular among guests.</p>",
   "ort": "Schwaz",
   "region": "zillertal",
   "plz": "6130",
@@ -21,5 +21,8 @@
     "lat": 47.3450914,
     "lng": 11.7076206
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Schwaz"
+  ]
 }

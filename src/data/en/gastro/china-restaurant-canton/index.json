@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "China Restaurant Canton in Innsbruck Discover authentic Chinese flavors in the heart of Tirol!",
-  "beschreibung": "",
+  "beschreibung": "<p>At the <strong>China Restaurant Canton</strong> in Innsbruck in the Innsbruck region, hospitality is paramount. The restaurant offers an inviting atmosphere and a menu that brings together traditional Tyrolean and Austrian cooking with modern interpretations. Ingredients are largely sourced from local producers, which is reflected in the excellent quality of the food. Cozy wooden furnishings and regional décor create a comfortable setting. A particular highlight is the veranda with panoramic views of the surrounding mountains, inviting guests to linger on sunny afternoons.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2650472,
     "lng": 11.394963
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

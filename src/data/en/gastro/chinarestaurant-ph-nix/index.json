@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Chinese Restaurant Phönix in Füssen – A culinary gem in the heart of the Allgäu, where authentic flavors from the Orient meet the charm of Bavaria.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Chinarestaurant Phönix</strong> in the Außerfern region delights its patrons with a wonderful selection of regional and seasonal specialties. The kitchen artfully weaves traditional alpine culinary traditions with modern creative notes, creating a unique feast for the senses. The inviting décor invites guests to settle in comfortably, while the attentive service ensures every wish is met. A warm recommendation is the homemade dumpling soup, a true comfort after outdoor excursions. In addition, an enticing wine list offers handpicked selections from Austria and South Tyrol.</p>",
   "ort": "Füssen",
   "region": "ausserfern",
   "plz": "87629",
@@ -21,5 +21,8 @@
     "lat": 47.568325,
     "lng": 10.7011583
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/F%C3%BCssen"
+  ]
 }

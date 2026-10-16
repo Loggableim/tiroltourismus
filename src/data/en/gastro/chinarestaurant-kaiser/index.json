@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Chinarestaurant Kaiser in Innsbruck Discover authentic Chinese flavors in the heart of Tirol!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Chinarestaurant Kaiser</strong> in Innsbruck in the Innsbruck region is a popular restaurant that spoils its guests with a varied menu and warm regional hospitality. The ambiance merges traditional Tyrolean elements with modern comfort, creating an inviting space for any occasion. The menu features an enticing selection – from Tyrolean classics like Gröstl and Kaiserschmarrn to well-loved international dishes. The kitchen places great emphasis on sourcing fresh, local ingredients from nearby farms. Whether for a relaxed dinner for two, a family celebration, or a business meeting, the team welcomes you warmly.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2650318,
     "lng": 11.4095724
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

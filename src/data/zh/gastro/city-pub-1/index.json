@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "因斯布鲁克的City Pub是一家充满活力的酒吧，位于市中心，距离因斯布鲁克火车站仅几步之遥。在这里，你可以品尝到各种当地啤酒和国际饮品，同时享受轻松的氛围和友好的气氛。无论是独自前来还是与朋友一起，这里都是放松和社交的绝佳去处。酒吧内还提供简单的小吃，如Kaiserschmarrn或Brezn，让你在享受饮品的同时也能满足胃口。无论是白天还是夜晚，City Pub都以其热情的服务和舒适的环境，成为游客和当地人喜爱的聚集地。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克的<strong>City Pub</strong>是所有渴望在时尚饮品中享受美妙夜晚宾客的热门聚会地点。现代风格的室内设计与轻松愉悦的交际氛围令人流连忘返。酒吧提供种类丰富的精选鸡尾酒、长饮、特色啤酒和上乘葡萄酒，从经典配方到独具匠心的创意特调一应俱全。技艺精湛的调酒师充满热情地调制每一杯饮品。不论是下班后小酌一杯、与三五好友聚会畅谈还是庆祝特别时刻，这里都是您的理想之选。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2669157,
     "lng": 11.39027
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

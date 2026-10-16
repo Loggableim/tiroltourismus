@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "China-Garden in Tirol Discover the enchanting China-Garden in the heart of Tirol, where a touch of the Orient meets the Alpine charm.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>China-Garden</strong> in Innsbruck treats its guests to a delightful selection of regional and seasonal creations. The kitchen blends traditional Tyrolean recipes with creative touches, creating a unique culinary journey. The cozy interior invites visitors to linger, while courteous service ensures their well-being. A warm bowl of homemade Tyrolean dumpling soup is especially recommended after a long day of alpine hiking. Furthermore, the restaurant offers a carefully curated wine list featuring fine wines from South Tyrol and Austria.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4856128,
     "lng": 11.0675393
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

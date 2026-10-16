@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Yong-Hao China Restaurant in Innsbruck invites you to a culinary journey through the flavors of Asia.",
-  "beschreibung": "",
+  "beschreibung": "<p>Enjoy unforgettable culinary moments at the <strong>China Restaurant Yong-Hao</strong> in Innsbruck in the Innsbruck region. This dining destination represents sophisticated Tyrolean hospitality with an elegant touch. The menu unites alpine classics with international influences, surprising guests with innovative culinary creations. The culinary team values quality above all, using fresh regional ingredients from local farms. Attentive service and a stylish ambiance make every dinner a special highlight, whether for a business gathering or a romantic evening for two.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.27398,
     "lng": 11.4379657
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

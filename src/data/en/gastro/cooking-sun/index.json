@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Cooking in the sun in Tirol Discover the unique charm of Tirol’s culinary world, where traditional recipes meet the warmth of the alpine sun.",
-  "beschreibung": "",
+  "beschreibung": "<p>At <strong>cooking sun</strong> in Innsbruck, guests enjoy an appetizing combination of traditional Tyrolean cuisine and modern international inspirations. The welcoming restaurant impresses with an open, friendly environment and attentive service that turns each visit into a memorable culinary experience. The seasonal menu relies on fresh local alpine farm produce, from regional mountain cheeses to fresh game. Fans of international and Asian flavors will find exciting culinary fusions here, complemented by homemade desserts such as golden Kaiserschmarrn and warm apple strudel.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2519792,
     "lng": 11.2704933
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

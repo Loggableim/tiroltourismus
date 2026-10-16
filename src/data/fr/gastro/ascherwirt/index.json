@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Ascherwirt en Tirol Bienvenue à l’Ascherwirt, une auberge typique nichée au cœur des paysages enchanteurs de la Tirol.",
-  "beschreibung": "<p>Das <strong>Ascherwirt</strong> in Kufstein ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Ascherwirt</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "beschreibung": "<p>Le <strong>Ascherwirt</strong> à Kufstein est un restaurant populaire, qui chouchoute ses clients avec un menu varié et une hospitalité régionale. L'ambiance combine des éléments traditionnels tiroliens avec un confort moderne et crée une atmosphère accueillante pour toute occasion. Le menu propose une sélection soignée de plats - des spécialités tiroliennes classiques comme Tiroler Gröstl et Kaiserschmarrn jusqu'aux classiques internationaux. L'équipe accorde une importance particulière à l'utilisation d'ingrédients frais et régionaux de la région. Que ce soit un dîner cosy à deux, une fête en famille ou une réunion d'affaires, le <strong>Ascherwirt</strong> vous accueille chaleureusement et assure un séjour réussi grâce à son service attentif.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,10 @@
     "lat": 47.4899831,
     "lng": 11.8938959
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.ascherwirt.at/wp/en/",
+    "https://www.herold.at/gelbe-seiten/brandenberg/SHPmM/gasthaus-ascherwirt/",
+    "https://tiroltourismus.com/gastro/ascherwirt/"
+  ]
 }

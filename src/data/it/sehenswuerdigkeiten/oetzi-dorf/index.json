@@ -4,18 +4,19 @@
   "region": "oetztal",
   "ort": "Umhausen",
   "kategorie": "museum",
-  "kurzbeschreibung": "La ricostruzione dell’insediamento neolitico con la messa in scena della vita di Ötzi offre stazioni esperienziali e dimostrazioni di mestieri artigianali.",
+  "kurzbeschreibung": "Parco archeologico all'aperto a Umhausen nella valle Ötztal, che ricostruisce la vita e le usanze del Neolitico ai tempi di Ötzi.",
   "emoji": "🗿",
   "farbe": "#8B5E3C",
   "tags": [
-    "museo",
-    "storia",
-    "ötzi",
-    "età preistorica",
-    "famiglia"
+    "Kultur",
+    "Museum",
+    "Familie",
+    "Archäologie",
+    "Ötztal",
+    "Freilichtmuseum"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 12,00, Kinder € 8,00",
+  "dauer": "2-3 Stunden",
+  "preis": "Erwachsene ca. 12,00 €, Kinder ca. 6,50 €, Kombiticket mit Greifvogelpark möglich",
   "oeffnungszeiten": "Mai-Okt täglich 10:00-17:00",
   "webseite": "https://www.oetzi-dorf.at",
   "bilder": [],
@@ -25,5 +26,15 @@
     "lng": "10.9299"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Ötzi Dorf</strong> – Mit ihrer beeindruckenden Geschichte und Architektur zählt die Ötzi Dorf zu den bedeutendsten Kulturdenkmälern der Region Ötztal. Die nachgebaute steinzeitliche Siedlung mit Inszenierung zum Leben des Ötzi bietet Erlebnisstationen und Handwerksvorführungen Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Mitten in der reizvollen Altstadt von Umhausen gelegen, fügt sich die Ötzi Dorf harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein.  Auch für Familien mit Kindern gibt es hier viel zu entdecken und zu erleben. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Überblick</h2>\n<p>L'<strong>Ötzi-Dorf</strong> a Umhausen, nella valle tirolese dell'Ötztal, è un affascinante parco archeologico all'aperto che permette di scoprire la vita quotidiana, le abitazioni e le tecniche di sopravvivenza nel Neolitico. Circa 4.000 anni prima di Cristo visse il celebre uomo dei ghiacci, rinvenuto nel 1991 al Tisenjoch. Su una superficie di 9.000 metri quadrati, in collaborazione con l'Università di Innsbruck, sono state ricostruite capanne, granai e laboratori preistorici ai piedi della fragorosa cascata Stuibenfall.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>Il percorso circolare attraversa il villaggio toccando capanne residenziali, focolari, officine per la lavorazione della selce e recinti con razze animali storiche. I sentieri sono pianeggianti, sterrati e perfettamente accessibili con passeggini e sedie a rotelle. La visita richiede circa due o tre ore. I cani al guinzaglio corto sono benvenuti.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Aperto da inizio maggio a fine ottobre, ogni giorno dalle 09:30 alle 17:30 (fino alle 18:30 in estate). Biglietto adulti circa 12,00 €, ridotto bambini 6,50 €, con opzione biglietto combinato con il vicino parco dei rapaci. In auto attraverso la A12 fino all'uscita Ötztal, quindi lungo la B186 fino a Umhausen. Con i mezzi pubblici: treno fino alla stazione Ötztal e autobus 4194 fino a Umhausen Feuerwehr.</p>\n\n<h2>Tipps</h2>\n<p>Da non perdere le giornate con laboratori didattici dedicati all'accensione del fuoco con la selce e alla lavorazione dell'argilla. Ideale da abbinare alla camminata panoramica verso la cascata Stuibenfall.</p>",
+  "sources": [
+    "https://www.oetzi-dorf.at/",
+    "https://www.oetztal.com/de/sommer.html",
+    "https://www.tirol.at/",
+    "https://www.umhausen.com/",
+    "https://de.wikipedia.org/wiki/Umhausen",
+    "https://de.wikipedia.org/wiki/%C3%96tzi"
+  ],
+  "saison": "Mai bis Ende Oktober",
+  "familie": true
 }

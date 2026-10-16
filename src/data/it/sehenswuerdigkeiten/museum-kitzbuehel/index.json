@@ -4,17 +4,19 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "Il Museum Kitzbühel espone su tre piani la movimentata storia della città dal Medioevo ai giorni nostri, con particolare attenzione al Bergbau e al Tourismus.",
+  "kurzbeschreibung": "Il Museo di Kitzbühel presenta la storia cittadina e dello sci alpino accanto alla più vasta galleria di opere del pittore Alfons Walde.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museo",
-    "storia",
-    "cultura",
-    "miniera"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 10,00 €, Kinder und Jugendliche bis 18 Jahre frei",
   "oeffnungszeiten": "Di-So 10:00-17:00",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum Kitzbühel</strong> – Die Museum Kitzbühel in Kitzbühel verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Museum Kitzbühel zeigt auf drei Etagen die bewegte Geschichte der Stadt vom Mittelalter bis zur Gegenwart mit Schwerpunkt Bergbau und Tourismus Das vielfältige Veranstaltungsprogramm mit Konzerten, Lesungen und Workshops macht jeden Besuch einzigartig. Besonders die stimmungsvollen Abendführungen und thematischen Sonderausstellungen bleiben nachhaltig in Erinnerung. Mitten in der reizvollen Altstadt von Kitzbühel gelegen, fügt sich die Museum Kitzbühel harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Ob Sommer oder Winter: Die Museum Kitzbühel ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Überblick</h2>\n<p>Il <strong>Museum Kitzbühel</strong> occupa un suggestivo granaio cinquecentesco e una torre difensiva nel centro storico. È il cuore culturale della celebre località tirolese e racconta le radici dell'attività mineraria, la vita rurale e l'epopea dello sci alpino. Il fiore all'occhiello è l'esposizione monografica di Alfons Walde (1891-1958), pittore e architetto che immortalò con tratti luminosi i paesaggi innevati del Tirolo.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>L'esposizione si snoda su più piani accessibili con ascensore, dalle testimonianze dei pionieri dello sci come Franz Reisch e Toni Sailer fino ai capolavori pittorici di Walde. Dalla terrazza panoramica sul tetto si gode una vista a 360 gradi sulla città e sull'Hahnenkamm. Perfettamente accessibile ai disabili. Durata consigliata: circa 2 ore.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Aperto tutto l'anno da martedì a domenica (10:00-17:00; lunedì chiuso). Biglietto adulti circa 10,00 €, gratis fino a 18 anni. Nel centro pedonale di Kitzbühel, a circa 8 minuti a piedi dalla stazione ferroviaria.</p>\n\n<h2>Tipps</h2>\n<p>Salite sulla terrazza sul tetto per ammirare da vicino il panorama sulla celebre pista di discesa libera della Streif.</p>",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-museum-kitzbuehel",
+    "https://www.kitzbuehel.com/",
+    "https://de.wikipedia.org/wiki/Alfons_Walde",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

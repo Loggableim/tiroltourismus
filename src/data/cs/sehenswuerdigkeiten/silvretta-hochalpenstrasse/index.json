@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Ischgl",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Spektakulární alpská silnice s 58 křivkami, která vede z Tirol do Montafonu – s grandiózními výhledy na Silvretta-Gletscherwelt.",
-  "beschreibung": "<h2>Přehled</h2><p><strong>Vysokohorská silnice Silvretta</strong> (Silvretta-Hochalpenstraße) je legendární vyhlídková horská silnice dlouhá 22,3 km se 34 serpentinami, spojující tyrolské údolí Paznaun s Vorarlberskem přes sedlo Bielerhöhe (2 037 m). Korunou trasy je tyrkysová přehrada Silvretta-Stausee s výhledem na nejvyšší horu Vorarlberska Piz Buin (3 312 m).</p><h2>Trasa a náročnost</h2><p>Pohodlný okruh kolem přehrady měří 6,3 km po rovinatých cestách s výhledem na ledovec (1,5 až 2 hodiny chůze, snadná T1). Horský výstup vede k chatě Wiesbadener Hütte (2 443 m) údolím Ochsental (2,5 hodiny, 400 m převýšení, T2). Po jezeře jezdí motorová loď MS Silvretta – nejvýše položená lodní linka v Evropě. Teplé oblečení nutné. Psi na vodítku povoleni.</p><h2>Příjezd a doprava</h2><p>Vlakem ÖBB do Landeck-Zams a autobusem 260 údolím Paznaun přes Ischgl a Galtür přímo do sedla Bielerhöhe. Autem po B188 přes Galtür po mýtné silnici (v provozu od června do konce října). Velká parkoviště v sedle.</p><h2>Tipy</h2><p>Vyzkoušejte plavbu lodí MS Silvretta po ledovcové přehradě a vychutnejte si tradiční trhanec Kaiserschmarrn na panoramatické terase horského hotelu Silvretta-Haus.</p>",
+  "kurzbeschreibung": "Vysokohorská silnice Silvretta-Hochalpenstraße spojuje 34 serpentinami Tyrolsko a Vorarlbersko, vede do sedla Bielerhöhe ve výšce 2 037 m u přehrady s výhledem na Piz Buin.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Legendární vysokohorská silnice <strong>Silvretta-Hochalpenstraße</strong> patří k nejkrásnějším panoramatickým silnicím Rakouska. Na délce 22,3 kilometru spojuje tyrolské údolí Paznaun s vorarlberským Montafonem a přes 34 ostrých serpentin stoupá do sedla Bielerhöhe ve výšce 2 037 metrů. V sedle se otevírá úchvatný pohled na ledovce štítu Piz Buin (3 312 m), nejvyšší hory Vorarlberska. Srdcem sedla je přehradní jezero Silvretta-Stausee, zadržované monumentálními hrázemi pro výrobu čisté elektřiny. V létě na jezeře funguje nejvýše položená lodní linka v Evropě. Trasa nabízí nezapomenutelný zážitek motoristům i cyklistům.</p>\n<h2>Route & Anforderungen</h2>\n<p>Nejoblíbenější túrou v sedle je okruh kolem přehrady Silvretta. Šestikilometrová trasa zabere zhruba dvě hodiny pohodlné chůze s minimálním převýšením 70 metrů. Široká štěrková stezka vede přes obě přehradní hráze a po jižním břehu přímo pod splazy ledovců. Doporučuje se pevná turistická obuv. Na výstup k chatě Wiesbadener Hütte (cca 2,5 hodiny) je nutná plná vysokohorská výbava. Cesta po hrázi je sjízdná pro kočárky.</p>\n<h2>Besuch & Anreise</h2>\n<p>Mýtná silnice B188 bývá otevřena od konce května do konce října. Mýtné brány leží v tyrolském Galtüru a vorarlberském Partenenu. V sedle Bielerhöhe jsou k dispozici bezplatná parkoviště. V létě sem jezdí pravidelné linkové autobusy z Landecku a Galtüru.</p>\n<h2>Tipps</h2>\n<p>Projeďte se vyhlídkovou lodí Silvretta po hladině přehradního jezera a pokochejte se ledovci přímo z vody. Poté si vychutnejte tradiční trhanec Kaiserschmarrn v horském hostinci Berggasthof Piz Buin.</p>",
   "emoji": "🗻",
   "farbe": "#4CAF50",
   "hoehe": "2.032 m (Bielerhöhe)",
-  "dauer": "3–5 Stunden",
-  "preis": "Mautgebühr Silvretta-Hochalpenstraße ca. 18–21 € pro PKW (Schifffahrt ca. 7 €)",
+  "dauer": "3-5 hodin",
+  "preis": "Mýtné pro osobní auto cca 18-21 €, motocykl cca 14-16 €; okruh kolem přehrady zdarma",
   "tags": [
     "panoramastrasse",
     "aussicht",
@@ -19,7 +19,7 @@
     "alpenstrasse",
     "gletscher"
   ],
-  "oeffnungszeiten": "Mitte Juni bis Mitte Oktober, täglich 6:00–20:00",
+  "oeffnungszeiten": "V provozu podle sněhu od konce května do konce října; v zimě pro auta uzavřena",
   "webseite": "https://www.silvretta-bielerhoehe.at",
   "koordinaten": {
     "lat": "46.9333",
@@ -29,8 +29,9 @@
   "hero_bild": null,
   "sources": [
     "https://www.silvretta-bielerhoehe.at/",
+    "https://www.paznaun-ischgl.com/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Silvretta-Hochalpenstra%C3%9Fe",
-    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-silvretta-stausee/1381426/",
     "https://www.vvt.at/"
   ]
 }

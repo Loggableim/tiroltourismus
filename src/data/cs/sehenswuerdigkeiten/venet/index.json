@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Domácí hora Landeck – s panoramatickou kolejí, nejdelší Zipline Tirol a nezapomenutelným výhledem na Oberinntal.",
-  "beschreibung": "<h2>Přehled</h2><p>Hora <strong>Venet</strong> (2 208 m na Krahbergu) je výjimečnou vyhlídkovou horou tyčící se nad městy Landeck a Zams. Lanovka Venetbahn vás za 8 minut vyveze na vrcholový hřeben s 360stupňovým panoramatem zahrnujícím 82 alpských třítisícovek (včetně Wildspitze a Zugspitze) a s nejvýše položenou hvězdárnou v celém Tyrolsku.</p><h2>Trasa a náročnost</h2><p>Rovinatý vyhlídkový okruh Krahberg-Panoramaweg (45 minut, T1, pro kočárky). Pohodová hřebenová túra k salaši Goglesalm (1,5 hodiny, T1/T2). Výstup pro horské turisty na štít Glanderspitze (2 512 m, T2/T3). Významné centrum paraglidingu. Turistická obuv nutná. Psi v lanovce povoleni s náhubkem.</p><h2>Příjezd a doprava</h2><p>Vlakem do stanice Landeck-Zams a 10 minut pěšky k dolní stanici lanovky v Zamsu. Autem po dálnici A12 (sjezd Zams) na bezplatné parkoviště u lanovky.</p><h2>Tipy</h2><p>Navštivte večerní pozorování hvězd v observatoři na vrcholu Venetu a ochutnejte tyrolské sýrové speciality na panoramatické terase vrcholové chaty.</p>",
+  "kurzbeschreibung": "Hora Venet (2 208 m Krahberg) nad Landeckem/Zamsem nabízí 360° výhled na více než 80 alpských štítů, nejvýše položenou hvězdárnu v Tyrolsku a Tobiho stezku.",
+  "beschreibung": "<h2>Přehled</h2>\n<p>Vyhlídkový vrchol <strong>Venet</strong> (2 208 m na Krahbergu) je dominantou údolí Landeck-Zams-Fließ, považovanou znalci za jeden z nejkrásnějších rozhledových bodů v Centrálních Alpách. Z širokého travnatého temene se otevírá kruhové 360stupňové panorama zahrnující přes 80 alpských velikánů, včetně zaledněné Wildspitze, masivu Ortler, švýcarské Silvretty a bavorské Zugspitze. Za jasného počasí dohlédnete daleko za hranice Rakouska. Díky slunečné poloze se na vrcholu nachází nejvýše položená hvězdárna v Tyrolsku se slunečním dalekohledem. V létě je masiv vyhledávaným rájem pro pěší turistiku, paragliding a horská kola, v zimě se mění v přehledné rodinné lyžařské středisko s horskými chatami.</p>\n<h2>Trasa a náročnost</h2>\n<p>Moderní kabinová lanovka vyveze návštěvníky ze Zamsu k horní stanici ve výšce 2 208 metrů za několik minut. Kolem stanice vede pohodlný bezbariérový panoramatický chodník k vyhlídkové plošině a hvězdárně (cca 20 minut chůze), který bez potíží zvládnou i senioři a kočárky. Děti nadchne stezka „Tobi’s Erlebnisweg“ s herními stanovišti a překážkami, zatímco lehátka lákají k odpočinku s výhledem. Zkušení turisté mohou podniknout hřebenovku přes Glanderspitz (2 512 m), která vyžaduje jistý krok a pevnou trekovou obuv. Na horní plošině postačí sportovní obuv, na hřeben jsou nezbytné kotníkové boty.</p>\n<h2>Příjezd a doprava</h2>\n<p>Lanovka jezdí v létě od konce května do poloviny října denně 08:30–17:00 (zimní provoz prosinec až březen). Zpáteční jízdenka pro dospělé stojí cca 25,00 eur se slevami pro držitele karty TirolWest Card. Dolní stanice leží přímo v Zamsu a disponuje bezplatným parkovištěm. Vlakem dorazíte na nádraží Landeck-Zams a ke stanici lanovky dojdete za 10 minut pěšky nebo místním autobusem.</p>\n<h2>Tipy</h2>\n<p>Za jasné noci si rezervujte večerní pozorování hvězd v observatoři na Venetu a obdivujte vzdálené galaxie výkonnými teleskopy. Na terase panoramatické restaurace ochutnejte tradiční tyrolské sýrové knedlíky Kaspressknödel.</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "2–4 Stunden",
-  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
+  "dauer": "2–4 hodiny",
+  "preis": "Lanovka zpáteční dospělí cca 25,00 €; slevy s kartou TirolWest Card",
   "tags": [
     "aussicht",
     "wandern",
@@ -20,7 +20,7 @@
     "sport",
     "familie"
   ],
-  "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt); Winter: Di–So 9:00–16:00",
+  "oeffnungszeiten": "Letní sezóna konec května až polovina října denně 08:30–17:00; zimní provoz prosinec až březen",
   "webseite": "https://www.venet.at",
   "koordinaten": {
     "lat": "47.1528",
@@ -30,8 +30,10 @@
   "familie": true,
   "sources": [
     "https://www.venet.at/",
-    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
-    "https://de.wikipedia.org/wiki/Venet",
+    "https://www.tirolwest.at/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Venet_(Berg)",
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

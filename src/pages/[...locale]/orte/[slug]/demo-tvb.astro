@@ -43,6 +43,19 @@ const rows = TVB_FIELDS.map(([key, label]) => {
     : '<mark>Angabe fehlt, nicht erfasst</mark>';
   return `<tr><th scope="row">${label}</th><td>${cell}</td></tr>`;
 }).join('');
+
+const count = (name) => readCollection(name, 'de').length;
+const fmt = (n) => n.toLocaleString('de-AT');
+const stats = [
+  ['Regionen', count('regionen')],
+  ['Orte', count('orte')],
+  ['Sehenswürdigkeiten', count('sehenswuerdigkeiten')],
+  ['Unterkünfte', count('unterkuenfte')],
+  ['Gastronomiebetriebe', count('gastro')],
+  ['Sprachen', 8],
+];
+const statsHtml = `<ul style="display:flex;flex-wrap:wrap;gap:.75rem;list-style:none;padding:0;margin:1rem 0">${stats.map(([l, n]) => `<li style="flex:1 1 140px;border:1px solid #d6dde3;border-radius:10px;padding:.75rem 1rem;background:#f7f9fb"><strong style="display:block;font-size:1.5rem">${fmt(n)}</strong>${l}</li>`).join('')}</ul>`;
+const ortUrl = `${localePrefix(locale)}/orte/${slug}/`;
 ---
 
 <DetailPage
@@ -62,9 +75,21 @@ const rows = TVB_FIELDS.map(([key, label]) => {
     },
     {
       type: 'description',
+      label: 'Vorschau',
+      title: 'Über tiroltourismus',
+      content: `<p style="padding:.75rem 1rem;border-left:4px solid #e0a100;background:#fff8e1"><strong>Hinweis:</strong> Diese Seite ist eine nicht öffentliche Vorschau für den Tourismusverband. Sie ist nicht im Menü verlinkt und wird von Suchmaschinen nicht indexiert.</p><p>tiroltourismus ist ein unabhängiges Reiseportal für Tirol. Es stellt Regionen, Orte, Sehenswürdigkeiten, Unterkünfte und Gastronomie übersichtlich in 8 Sprachen vor. Für den Tourismusverband ist die Eintragung kostenlos.</p><p>Aktueller Umfang des Portals:</p>${statsHtml}`,
+    },
+    {
+      type: 'description',
       label: entry.name,
-      title: 'Offizieller Ansprechpartner',
-      content: `<p>Quelle: offizielle TVB-Seite. Fehlt eine Angabe, bleibt das Feld leer und ist markiert.</p><table><tbody>${rows}</tbody></table>`,
+      title: 'So würde Ihr Kontakt auf der Ortsseite erscheinen',
+      content: `<p>Auf der <a href="${ortUrl}">Ortsseite ${entry.name}</a> würde der folgende Kontaktblock angezeigt. Der markierte Rahmen zeigt die Stelle.</p><div style="position:relative;border:3px dashed #d32f2f;border-radius:12px;padding:2.25rem 1rem 1rem;margin:1.5rem 0;background:#fffafa"><span style="position:absolute;top:-.9rem;left:1rem;background:#d32f2f;color:#fff;font-weight:700;padding:.2rem .7rem;border-radius:6px">Hier erscheint Ihr Kontakt</span><h3 style="margin-top:0">Offizieller Ansprechpartner</h3><table><tbody>${rows}</tbody></table><p style="font-size:.9em;color:#555">Quelle: offizielle TVB-Seite. Fehlt eine Angabe, bleibt das Feld leer und ist markiert.</p></div><p><strong>Wie das funktioniert:</strong> Die Kontaktdaten werden in der Datei <code>src/data/orte/${slug}/index.json</code> im Feld <code>tvb</code> gespeichert. Von dort erscheinen sie auf der Ortsseite in allen 8 Sprachen. Sie können die Angaben jederzeit ändern oder auf Wunsch ganz entfernen lassen.</p>`,
+    },
+    {
+      type: 'description',
+      label: 'Zusammenarbeit',
+      title: 'Was wir uns von Ihnen wünschen',
+      content: `<ul><li><strong>Fotos</strong> von ${entry.name}, die wir mit Nutzungsrecht und Bildnachweis auf der Website verwenden dürfen.</li><li><strong>Freigabe des Kontakts:</strong> ob der Tourismusverband wie oben als Ansprechpartner auf der Ortsseite genannt werden darf.</li><li><strong>Liste der Privatzimmervermieter</strong>, nur soweit das datenschutzrechtlich erlaubt ist oder die Daten ohnehin öffentlich einsehbar sind.</li></ul><p><strong>Kontakt:</strong> Dominik Rainer, <a href="mailto:info@tiroltourismus.com">info@tiroltourismus.com</a></p>`,
     },
   ]}
 />

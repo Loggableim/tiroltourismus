@@ -11,7 +11,7 @@
   "telefon": "+43 4852 69279",
   "email": "info@apartmenthaus-nr1.at",
   "webseite": "https://www.apartmenthaus-nr1.at/",
-  "beschreibung": "=== description ===\n<p>The <strong>Apartmenthaus Nr. 1</strong> is located in the heart of <strong>Lienz</strong>, just a few minutes’ walk from the pedestrian zone. The apartments feature a practical layout with a separate living area and small kitchen, ideal for self-caterers. The stunning <strong>Osttiroler Bergwelt</strong> of the <strong>Dolomites</strong> is easily accessible from the house, perfect for hiking in the summer or skiing in the <strong>Skigebiet Zettersfeld</strong> in winter. Parking is available nearby.</p>",
+  "beschreibung": "<p><strong>Apartmenthaus Nr. 1</strong> is situated in the center of <strong>Lienz</strong>, just a few minutes' walk from the pedestrian zone. The apartments feature functional amenities with a separate living area and a small kitchen, ideal for self-catering guests. The <strong>East Tyrolean Dolomites</strong> are easily accessible from the property, whether for summer hiking trips or ski days at the <strong>Zettersfeld ski resort</strong> in winter. Parking facilities are located nearby.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.osttirol.com",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "=== beschreibung ===\n<p>The <strong>Appartement Seeberger</strong> in Strengen is a holiday apartment in the Stanzer Valley. The accommodation is located at the edge of the village and offers views of the surrounding mountainous landscape. The apartment features a <strong>kitchenette</strong>, a living area, a bedroom, and a separate bathroom. Depending on the unit, there is either a balcony or a terrace available. Guests have access to a <strong>ski storage</strong> and a parking space. The location is ideal for hiking in the summer and serves as a starting point for trips to the ski resort <strong>St. Anton am Arlberg</strong>. The nearest ski shuttle is within walking distance. The accommodation is offered without any included meals.</p>",
+  "beschreibung": "<p><strong>Appartement Seeberger</strong> in Strengen is a holiday apartment located in the Stanzer Tal valley. Set on the edge of the village, the property enjoys lovely views of the surrounding mountain scenery. The apartment features a <strong>kitchenette</strong>, a living area, a bedroom, and a separate bathroom. Depending on the unit, a private balcony or terrace is provided. Guests have access to a <strong>ski storage room</strong> and parking facilities. The location is ideal for summer hiking and serves as a convenient base for trips to the premier ski area of <strong>St. Anton am Arlberg</strong>. The nearest ski bus stop is within walking distance. The apartment is offered on a self-catering basis.</p>",
   "ausstattung": [],
   "tags": [
     "arlberg",
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://de.wikipedia.org/wiki/Arlberg"
+  ]
 }

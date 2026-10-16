@@ -33,8 +33,11 @@ export function detectLeak(value) {
 
 /** CJK in locales other than zh (e.g. DE file with 厨房). Used by scan-leaks only — not content-gate. */
 const CJK_IN_TEXT = /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/;
-export function detectCjkInNonZh(value, lang) {
+/** Felder mit CJK-Sprachsuffix (z. B. beschreibung_cn) sind legitim chinesisch. */
+const CJK_FIELD = /(^|[._])(cn|zh|ja|ko)(\b|\[|\.|$)/i;
+export function detectCjkInNonZh(value, lang, field = '') {
   if (lang === 'zh') return null;
+  if (field && CJK_FIELD.test(field)) return null;
   if (typeof value !== 'string' || value.length < 2) return null;
   const m = value.match(CJK_IN_TEXT);
   if (!m) return null;

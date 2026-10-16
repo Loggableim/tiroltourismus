@@ -11,7 +11,7 @@
   "telefon": "+43 5372 6980",
   "email": null,
   "webseite": "http://www.andreas-hofer.com/",
-  "beschreibung": "<p>Das <strong>Hotel Andreas Hofer</strong> liegt zentral in Kufstein, wenige Gehminuten vom Bahnhof und der Festung entfernt. Die Zimmer sind mit einheimischen Hölzern möbliert und gewähren Ausblicke auf die Altstadt oder das Inntal. Im Restaurant werden regionale Speisen und internationale Gerichte angeboten. Ein <strong>Wellnessbereich</strong> mit Sauna, Dampfbad und Ruhezone steht den Gästen zur Verfügung. Für Tagungen und Feiern stehen mehrere Räume mit moderner Ausstattung bereit. Das Hotel verfügt über eine eigene Tiefgarage mit limitierten Parkplätzen. Die Lage ermöglicht es, das Stadtzentrum und die nahen Wanderwege bequem zu Fuß zu erreichen.</p>",
+  "beschreibung": "<p><strong>Hotel Andreas Hofer</strong> má výhodnou centrální polohu v Kufsteinu, jen pár minut chůze od nádraží i historické pevnosti. Pokoje jsou zařízeny nábytkem z lokálního dřeva a nabízejí výhledy na staré město nebo do údolí řeky Inn. V hotelové restauraci se podávají jak tyrolské speciality, tak pokrmy mezinárodní kuchyně. Hosté mohou relaxovat ve <strong>wellness zóně</strong> se saunou, parní lázní a odpočinkovou místností. Pro konference i oslavy je připraveno několik moderně vybavených sálů. Hotel disponuje také vlastní podzemní garáží s omezenou kapacitou. Poloha hotelu umožňuje snadno pěšky dosáhnout centra města i okolních turistických stezek.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Kufstein"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "=== description ===\n<p>The <strong>Gasthof Alplig</strong> is located in the village of **Ischgl**, Tyrol. The rooms feature en-suite bathrooms, cable TV, and free Wi-Fi. The house includes a restaurant serving traditional Tyrolean cuisine. A wellness area is available for guests' use. A ski storage room with ski-drying facilities and parking spaces are also provided. The **Silvretta Arena** ski resort is just a short walk away. This accommodation serves as an all-year-round base for exploring the region’s activities.</p>",
+  "beschreibung": "<p>The <strong>Gasthof Alplig</strong> is located in the alpine resort of Ischgl in Tyrol. The rooms feature private bathrooms, cable TV, and Wi-Fi access. The on-site restaurant serves authentic Tyrolean delicacies. Guests can relax in the sauna area after an active day outdoors. Facilities also include a ski room equipped with ski boot dryers and private parking. The world-renowned Silvretta Arena ski area is within easy walking distance. The guesthouse serves year-round as a convenient base for exploring the region.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Bezirk_Landeck"
+  ]
 }

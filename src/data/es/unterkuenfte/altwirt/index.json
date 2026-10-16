@@ -11,7 +11,7 @@
   "telefon": "+43 5232 2250",
   "email": null,
   "webseite": "https://www.gasthof-altwirt.at",
-  "beschreibung": "<p>Der Gasthof Altwirt liegt im Ortszentrum von Kematen in Tirol, rund zehn Kilometer westlich von Innsbruck. Das Haus wird als <strong>Gasthof mit Zimmern</strong> geführt und entspricht dem traditionellen Typus eines Tiroler Landgasthofs. Die Gasträume umfassen eine Gaststube und einen Gastgarten, die sowohl Hotelgästen als auch Laufkundschaft offenstehen. Die <strong>Küche</strong> konzentriert sich auf traditionelle Tiroler Gerichte und verwendet überwiegend regionale Produkte. Die Zimmer sind funktional eingerichtet und bieten die für Gasthöfe dieser Kategorie übliche Ausstattung. Der Standort in Kematen eignet sich als Ausgangspunkt für <strong>Aktivitäten im Inntal</strong>, wie Wandern oder Radfahren. Gäste können eine unkomplizierte Atmosphäre und einfache Gastfreundschaft erwarten.</p>",
+  "beschreibung": "<p>El Gasthof Altwirt está situado en el centro de Kematen in Tirol, a unos diez kilómetros al oeste de Innsbruck. Funciona como una <strong>posada tradicional con habitaciones</strong> y responde al modelo clásico de hostería rural tirolesa. Sus espacios gastronómicos incluyen un comedor rústico y una terraza exterior, abiertos tanto a los huéspedes del hotel como al público en general. La <strong>cocina</strong> se centra en recetas tradicionales del Tirol elaboradas con ingredientes locales. Las habitaciones presentan un mobiliario funcional y disponen del equipamiento habitual para alojamientos de esta categoría. Su ubicación en Kematen resulta ideal para disfrutar de <strong>actividades en el valle del Eno</strong>, como el senderismo o las rutas en bicicleta. Los visitantes encontrarán un ambiente distendido y una hospitalidad honesta.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.info",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

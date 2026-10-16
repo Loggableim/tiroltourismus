@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die <strong>Alte Mühle</strong> in <strong>Tirol</strong> ist ein <strong>Hotel</strong>, das in einem ehemaligen Mühlengebäude eingerichtet ist. Die ruhige Lage am Ortsrand bietet einen Ausgangspunkt für Aktivitäten in der Natur. Das Haus verfügt über Zimmer mit zeitgemäßer Ausstattung und Blick ins Tal. Ein Schwerpunkt liegt auf der <strong>regionalen Küche</strong>, die im Restaurant des Hauses angeboten wird. Die <strong>historische Bausubstanz</strong> der Mühle ist in Teilen sichtbar, etwa durch das erhaltene Mahlwerk. Gäste haben Zugang zu einem kleinen Wellnessbereich mit Sauna. Das Hotel spricht überwiegend Gäste an, die eine ruhige Unterkunft für Outdoor-Aktivitäten suchen.</p>",
+  "beschreibung": "<p>El <strong>Alte Mühle</strong> en el <strong>Tirol</strong> es un <strong>hotel</strong> con encanto acondicionado en un antiguo molino. Su tranquila ubicación en las afueras de la localidad ofrece un perfecto punto de partida para disfrutar de la naturaleza. La casa dispone de habitaciones equipadas con comodidades modernas y agradables vistas al valle. Destaca de manera especial su <strong>gastronomía regional</strong>, servida en el restaurante propio. La <strong>estructura histórica</strong> del molino se mantiene visible en diversos rincones, entre ellos parte de la maquinaria original. Los huéspedes pueden relajarse en una pequeña zona de bienestar con sauna. El hotel atrae principalmente a quienes buscan una estancia apacible combinada con actividades al aire libre.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Bezirk_Landeck"
+  ]
 }

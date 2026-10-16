@@ -30,6 +30,16 @@ export function detectLeak(value) {
   if (r) return `Wiederholungsschleife "${r.slice(0, 40)}"`;
   return null;
 }
+
+/** CJK in locales other than zh (e.g. DE file with 厨房). Used by scan-leaks only — not content-gate. */
+const CJK_IN_TEXT = /[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff]/;
+export function detectCjkInNonZh(value, lang) {
+  if (lang === 'zh') return null;
+  if (typeof value !== 'string' || value.length < 2) return null;
+  const m = value.match(CJK_IN_TEXT);
+  if (!m) return null;
+  return `CJK in Nicht-ZH-Locale (z. B. „${m[0]}“)`;
+}
 export function* walkStrings(obj, p = '') {
   if (typeof obj === 'string') yield [p, obj];
   else if (Array.isArray(obj)) for (let i = 0; i < obj.length; i++) yield* walkStrings(obj[i], `${p}[${i}]`);

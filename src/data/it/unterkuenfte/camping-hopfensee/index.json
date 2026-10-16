@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Hopfensee</strong> liegt in <strong>Füssen</strong> und wird in der Kategorie Campingplatz geführt. Der Platz erstreckt sich entlang eines Abschnitts des natürlichen Badesees mit direktem Zugang zum Wasser. Es gibt separate Bereiche für Dauer- und Kurzzeitcamper sowie eine Wiese für Zelte. Eine zentrale Versorgungsstation bietet Anschlüsse für Strom und Trinkwasser. Das Gelände verfügt über ein Sanitärhaus sowie einen Kiosk. In der näheren Umgebung befindet sich das Fahrrad- und Wanderwegenetz des Füssener Landes.</p>",
+  "beschreibung": "<p>Il <strong>Camping Hopfensee</strong> è situato a <strong>Füssen</strong> ed è inserito nella categoria dei campeggi. La struttura si sviluppa lungo la riva del suggestivo lago balneabile, garantendo un accesso diretto alle acque. Sono presenti aree distinte per soggiorni stagionali e di breve durata, oltre a un rigoglioso prato per tende. Una stazione centrale di servizio offre prese di corrente e allacciamenti per acqua potabile. Il complesso è dotato di un edificio sanitario e di un chiosco. Nei dintorni si articola la ricca rete di percorsi ciclabili e sentieri della regione di Füssen.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

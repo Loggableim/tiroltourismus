@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Grubhof</strong> liegt in <strong>St. Martin bei Lofer</strong> im Tiroler Saalachtal. Die Anlage bietet Standplätze für Wohnmobile, Wohnwagen und Zelte sowie mehrere Mietunterkünfte. Auf dem Gelände befinden sich sanitäre Einrichtungen, eine Brötchenservice-Station und ein kleiner Lebensmittelladen. Gäste können Tennisplätze, einen Kinderspielplatz und einen Fußballplatz nutzen. Die Umgebung eignet sich zum Wandern, Radfahren und für Ausflüge zu den Loferer Steinbergen.</p>",
+  "beschreibung": "<p><strong>Camping Grubhof</strong> leží v obci <strong>St. Martin bei Lofer</strong> v tyrolském údolí Saalachtal. Areál nabízí stání pro obytné vozy, karavany a stany a také několik ubytovacích jednotek k pronájmu. V areálu se nachází sociální zařízení, výdejna čerstvého pečiva a malý obchod s potravinami. Hosté mohou využívat tenisové kurty, dětské hřiště a fotbalové hřiště. Okolí je ideální pro pěší turistiku, cyklistiku a výlety do pohoří Loferer Steinberge.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

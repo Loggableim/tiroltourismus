@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Camping Dr. Lauth in Ehrwald, Tirol, bietet eine idyllische Naturumgebung mit dem Blick auf die Ötztaler Alpen. Der Campingplatz liegt direkt am Ehrwalder Ache und ist daher ideal für Wasserspiele und Flusswanderungen. <strong>Die Atmosphäre</strong> ist entspannt und ruhig, mit ausreichend Platz für Zelte und Wohnwagen. Gäste können von dem leichten Zugang zu Wanderwegen und dem nahegelegenen Ehrwalder See profitieren, der zum Schwimmen und Entspannen einlädt.</p>",
+  "beschreibung": "<p>Le <strong>Camping Dr. Lauth</strong> à Ehrwald, au Tyrol, offre un cadre naturel idyllique avec vue sur les massifs alpins. Situé au bord du ruisseau Ehrwalder Ache, le camping est propice aux activités aquatiques et aux promenades le long de l'eau. <strong>L'atmosphère</strong> y est calme et décontractée, avec de grands espaces pour les tentes et les caravanes. Les vacanciers bénéficient d'un accès direct aux sentiers de randonnée et au lac voisin, propice à la baignade et à la détente.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

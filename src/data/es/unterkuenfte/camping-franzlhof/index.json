@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Franzlhof</strong> liegt in <strong>Söll</strong> im Bundesland <strong>Tirol</strong> und ist als <strong>Campingplatz</strong> ausgewiesen. Er befindet sich am <strong>Ortsrand von Söll</strong> und ist von Wiesen und Wäldern umgeben. Das Angebot umfasst <strong>großzügige Stellplätze für Wohnmobile und Zelte</strong>. Vom Platz aus sind <strong>Wanderwege und Loipen</strong> direkt erreichbar. Der <strong>Betriebshof besitzt einen Gastgarten</strong>, in dem Tiroler Gerichte serviert werden. Die <strong>Sanitärbereiche wurden erst kürzlich renoviert</strong> und entsprechen modernen Standards.</p>",
+  "beschreibung": "<p>El <strong>Camping Franzlhof</strong> se encuentra en <strong>Söll</strong>, en el estado federado de <strong>Tirol</strong>, y está catalogado como <strong>camping</strong>. Está ubicado a las <strong>afueras de Söll</strong>, rodeado de verdes prados y bosques. Ofrece <strong>amplias parcelas para autocaravanas y tiendas de campaña</strong>. Desde el propio recinto se accede directamente a <strong>rutas de senderismo y pistas de esquí de fondo</strong>. Las instalaciones cuentan con una <strong>agradable terraza jardín</strong> donde se degustan exquisitas especialidades tirolesas. Las <strong>instalaciones sanitarias han sido renovadas recientemente</strong> y cumplen con los estándares más modernos.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

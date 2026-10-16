@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Hochzillertal</strong> befindet sich in <strong>Kaltenbach</strong> im Zillertal und ist als Unterkunftskategorie Campingplatz klassifiziert. Die Anlage liegt direkt am Fuße der gleichnamigen Bergbahn und ist daher sowohl im Winter als auch im Sommer ein Ausgangspunkt für Aktivitäten. Der Platz bietet getrennte Stellflächen für Wohnmobile, Wohnwagen und Zelte mit entsprechender Strom- und Wasserversorgung. Sanitäranlagen sowie eine kleine Einkaufsmöglichkeit sind auf dem Gelände vorhanden. In der Umgebung können Sie das Skigebiet Hochzillertal oder im Sommer zahlreiche Wanderrouten nutzen.</p>",
+  "beschreibung": "<p>Il <strong>Camping Hochzillertal</strong> si trova a <strong>Kaltenbach</strong>, nella splendida Zillertal, ed è classificato nella categoria campeggi. La struttura è posizionata direttamente ai piedi della funivia omonima, rivelandosi un perfetto punto di partenza per emozionanti avventure sia in inverno che in estate. Il campeggio dispone di zone distinte per camper, roulotte e tende, dotate dei relativi allacciamenti per acqua ed elettricità. Sul posto sono presenti servizi igienici e un pratico punto vendita. Nei dintorni è possibile accedere al comprensorio sciistico Hochzillertal o intraprendere spettacolari itinerari escursionistici estivi.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

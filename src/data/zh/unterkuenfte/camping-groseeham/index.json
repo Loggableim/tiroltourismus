@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Camping Großseeham in Weyarn, Tirol, bietet eine idyllische Naturumgebung mit dem direkt angrenzenden Großen Seehamsee. Die Campingplatz-Lage ermöglicht einen direkten Zugang zum Wasser und bietet einen ruhigen Rückzugsort inmitten von Wäldern und Bergen. Die Atmosphäre ist entspannt und familiär, mit ausreichend Raum für Aktivitäten und Erholung. Gäste können zwischen verschiedenen Stellplätzen wählen, von den ruhigen Ecken für Wanderfreudige bis zu den sonnigen Flächen für Liebhaber des Camp Lebensstils. Die Infrastruktur umfasst moderne Sanitäreinrichtungen, einen Spielplatz für Kinder und eine Gemeinschaftshalle.</p>",
+  "beschreibung": "<p>位于蒂罗尔州韦亚恩（Weyarn）的 <strong>Camping Großseeham</strong>（大泽哈姆露营地）依傍着大泽哈姆湖（Großer Seehamer See），坐拥田园牧歌般的迷人自然环境。露营地的绝佳地理位置让游客可直接下水畅游，并在群山与森林环抱中享受静谧的避世时光。营地氛围惬意而温馨，拥有充裕的休闲与运动空间。宾客可在不同营位间随心选择，既有适合徒步爱好者的幽静角落，也有适合崇尚露营生活方式的向阳开阔地。配套设施包括现代化的卫浴空间、儿童游乐场及多功能公共活动厅。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

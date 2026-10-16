@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Inntal</strong> in <strong>Wiesing</strong> ist als Campingplatz mit Fokus auf Standplätze für Reisemobile und Caravans ausgelegt. Er liegt an der Inntalautobahn in der Nähe der Ausfahrt Wiesing und ist daher für Durchreisende sowie als Basis für Ausflüge geeignet. Der Platz bietet befestigte Stellplätze mit Strom- und Frischwasseranschluss sowie eine Entsorgungsstation. Eine Rezeption und ein einfaches Sanitärgebäude sind vorhanden. Die Umgebung ermöglicht kurze Fahrten zum Achensee oder in die umliegenden Bergregionen.</p>",
+  "beschreibung": "<p>Il <strong>Camping Inntal</strong> a <strong>Wiesing</strong> è un campeggio strutturato appositamente per ospitare camper e caravan. Situato lungo l'autostrada dell'Inntal, in prossimità dell'uscita di Wiesing, rappresenta una sosta ottimale per chi è di passaggio e una comoda base per escursioni nel territorio. Il campeggio vanta piazzole pavimentate con allacciamento idrico ed elettrico e un'apposita stazione di scarico. Sono presenti una reception e un funzionale edificio per i servizi igienici. La posizione consente di raggiungere comodamente il lago Achensee o le circostanti vette alpine.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

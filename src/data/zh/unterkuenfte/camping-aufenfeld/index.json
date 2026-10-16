@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Camping Aufenfeld in Aschau im Zillertal, Tirol, bietet eine idyllische Naturumgebung mit Aussicht auf die Zillertaler Alpen. Der Campingplatz liegt direkt am Fluss Zillertalbäche, umgeben von weitläufigen Wäldern und bietet eine ruhige, abgeschiedene Lage. Die Atmosphäre ist entspannt und naturbelassen, ideal für Natur- und Familienurlauber. <strong>Gäste</strong> können zwischen verschiedenen Stellplätzen wählen und profitieren von modernen Sanitäreinrichtungen, einem Geschirrspüler und einem Gemeinschaftsgrill. <strong>Wandern</strong> und Outdoor-Aktivitäten sind direkt vom Camping aus möglich, und die nahegelegene Ortschaft bietet Einkaufsmöglichkeiten und gastronomische Einrichtungen.</p>",
+  "beschreibung": "<p>位于蒂罗尔州齐勒河谷阿绍（Aschau im Zillertal）的<strong>奥芬费尔德露营地（Camping Aufenfeld）</strong>坐拥田园诗般的自然风光，享有齐勒河谷阿尔卑斯山的壮丽景致。露营地紧邻齐勒河畔，四周环绕着广袤的森林，地理位置宁静而幽雅。这里的氛围轻松质朴，是自然爱好者与家庭度假的理想胜地。<strong>宾客</strong>可选择多种不同营位，并享有现代化的卫浴设施、洗碗机及公共烧烤区。从营地出发可直接进行<strong>徒步</strong>与户外活动，附近的城镇亦提供便利的购物与餐饮服务。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

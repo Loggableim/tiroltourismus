@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p><strong>Camping beim Fischer</strong> is located in the village of <strong>Münsing</strong> in Tirol and is designated as a year-round campsite. The site offers pitches for motorhomes, caravans, and tents, some of which are divided into pitches. The sanitary facilities are cleaned regularly and include showers and WCs in separate cubicles. A small kiosk on the site supplies guests with fresh rolls and basic groceries. The adjacent forest is ideal for short walks, and cycle paths are directly accessible. Water sports opportunities can be found at the nearby lake, whose shore can be reached on foot from the site. A barbecue area is available for communal use.</p>",
+  "beschreibung": "<p><strong>Camping beim Fischer</strong> is located in <strong>Münsing</strong> and operates as a year-round campsite. The grounds offer partly parcelled pitches for motorhomes, caravans, and tents. The sanitary facilities are regularly cleaned and include showers and toilets in separate cubicles. A small kiosk on site provides guests with fresh bread rolls and basic groceries. The adjacent forest is ideal for short strolls, and cycle paths are directly accessible. Water sports facilities are available at the nearby lake, whose shore is within easy walking distance of the site. A communal barbecue area is also available.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

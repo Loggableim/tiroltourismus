@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Camping Biberhof</strong> liegt im Ort <strong>Biberwier</strong> am Fernpass in Tirol auf rund 1.000 Metern Höhe. Die Anlage umfasst Stellplätze für Camper mit Wohnmobil, Wohnwagen oder Zelt, die alle mit Stromanschluss verfügbar sind. Das Sanitärhaus bietet getrennte Duschen und Toiletten sowie einen Wickelraum. Ein Kinderspielplatz und ein Tischtennisplatz bieten Möglichkeiten zur Freizeitgestaltung. Der Campingplatz verfügt über eine eigene Rezeption mit Informationen zu Ausflugszielen der Region. Im Winter sind die Skigebiete von Ehrwald und Lermoos in wenigen Fahrminuten erreichbar. Die Lage direkt an der Fernpassstraße ermöglicht eine gute Anbindung für Durchreisende.</p>",
+  "beschreibung": "<p><strong>Camping Biberhof</strong> leží v obci <strong>Biberwier</strong> u průsmyku Fernpass v Tyrolsku v nadmořské výšce zhruba 1 000 metrů. Areál zahrnuje stání pro obytné vozy, karavany i stany, přičemž všechna mají k dispozici přípojku elektřiny. Sanitární budova nabízí oddělené sprchy a toalety i přebalovací koutek. Dětské hřiště a stůl na stolní tenis poskytují možnosti pro volný čas. Kemp má vlastní recepci s turistickými informacemi o výletních cílech v regionu. V zimě jsou lyžařské areály Ehrwald a Lermoos dostupné během několika minut jízdy. Poloha přímo u silnice Fernpassstraße zaručuje skvělé napojení pro tranzitní cestovatele.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

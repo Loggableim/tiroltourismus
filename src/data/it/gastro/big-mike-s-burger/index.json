@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "Big Mike’s Burger a Neustift im Stubaital – dove la tradizione tirolese incontra il sapore americano in un’esperienza unica.",
-  "beschreibung": "<p><strong>Big Mike's Burger</strong> in Neustift im Stubaital ist der Hotspot für Burger-Fans in der Region. Hier dreht sich alles um saftige Patties, knusprige Buns und kreative Toppings. Ob klassischer Cheeseburger, würziger BBQ-Burger oder vegetarische Option mit gegrilltem Halloumi — jeder Burger wird frisch und auf Bestellung zubereitet. Dazu gibt es hausgemachte Pommes Frites und eine Auswahl an Craft-Bieren aus der Region. Das rustikale Ambiente mit Holztischen und industriellen Lampen schafft eine ungezwungene Atmosphäre. Ein Muss für alle, die nach einem Tag in den Stubaier Bergen eine herzhafte Mahlzeit suchen.</p>",
+  "beschreibung": "<p><strong>Big Mike's Burger</strong> a Neustift im Stubaital è il punto di riferimento per gli amanti degli hamburger nella regione. Protagonisti indiscussi sono i burger succulenti, i panini fragranti e le farciture creative. Dal classico cheeseburger alle varianti BBQ speziate o alle opzioni vegetariane con halloumi grigliato, ogni piatto è preparato al momento. Con patatine fritte fatte in casa e birre artigianali locali, l'ambiente rustico assicura una pausa perfetta dopo un'escursione tra le vette dello Stubai.</p>",
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
@@ -21,5 +21,8 @@
     "lat": 47.1264238,
     "lng": 11.33372
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.bigmikesburger.com"
+  ]
 }

@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "台球在因斯布鲁克的Gärkeller",
-  "beschreibung": null,
+  "beschreibung": "<p>位于因斯布鲁克的 <strong>Billard im Gärkeller</strong> 是一家集桌球娱乐与休闲酒吧于一体的时尚场所。客人可以在打台球的同时享用丰富的饮品，包括扎啤、鸡尾酒和精选葡萄酒。历史悠久的酒窖拱顶与现代舒适的灯光相得益彰，是与朋友相聚、共度欢乐夜生活的绝佳去处。</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2607858,
     "lng": 11.3985206
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.billard-innsbruck.at/"
+  ]
 }

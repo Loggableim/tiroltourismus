@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Bio Café Baumgarten in Füssen",
-  "beschreibung": "<p>Das <strong>Bio Café Baumgarten</strong> in Füssen ist ein einladendes CafÃ©, das mit seinem gemÃ¼tlichen Ambiente und einer feinen Auswahl an KaffeespezialitÃ¤ten, hausgemachten Kuchen und sÃ¼ÃŸen Versuchungen begeistert. Hier kÃ¶nnen GÃ¤ste den Alltag hinter sich lassen und bei einer Tasse aromatischem Kaffee oder einem cremigen Cappuccino entspannen. Das Angebot umfasst FrÃ¼hstÃ¼cksvariationen, leichte Snacks und tÃ¤glich frische Mehlspeisen - von der klassischen Sachertorte bis zum saftigen Apfelstrudel. Die freundliche Bedienung und das wohnliche Interieur laden zum Verweilen und GenieÃŸen ein. Ob fÃ¼r einen entspannten Start in den Tag, eine gemÃ¼tliche Kaffeepause am Nachmittag oder einen Plausch mit Freunden - das <strong>Bio Café Baumgarten</strong> ist der ideale Ort fÃ¼r Genuss und Geselligkeit in Füssen.</p>",
+  "kurzbeschreibung": "Bio Café Baumgarten in Füssen - biologisch café met gebak en ontbijt",
+  "beschreibung": "<p><strong>Bio Café Baumgarten</strong> in Füssen is een uitnodigend biologisch café met een fijne selectie aan biologische koffie, huisgemaakt gebak en gezonde snacks. Gasten kunnen hier ontspannen genieten van dagelijks vers bereide lekkernijen, van traditionele apfelstrudel tot veganistische creaties. Met een heerlijk biologisch ontbijt en een warme ambiance is dit het ideale adres voor een bewuste pauze in Füssen.</p>",
   "ort": "Füssen",
   "region": "ausserfern",
   "plz": "87629",
@@ -20,5 +20,8 @@
     "lat": 47.5670981,
     "lng": 10.699315
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.cafe-baumgarten.de/"
+  ]
 }

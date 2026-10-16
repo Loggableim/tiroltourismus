@@ -3,8 +3,8 @@
   "emoji": "🍺",
   "farbe": "#FF6B35",
   "kategorie": "pub",
-  "kurzbeschreibung": "Binis in Tirol",
-  "beschreibung": "<p>Das <strong>Binis</strong> in Innsbruck ist ein uriger Pub mit authentischem Ambiente und einer herzlichen Willkommenskultur. Hier treffen sich Einheimische und GÃ¤ste gleichermaÃŸen, um bei einem kÃ¼hlen Bier oder einem edlen Tropfen den Abend zu genieÃŸen. Die Speisekarte bietet klassische Pub-SpezialitÃ¤ten und regionale Schmankerln, die frisch zubereitet serviert werden. Das rustikal-einladende Interieur mit gemÃ¼tlichen SitzplÃ¤tzen schafft eine relaxte AtmosphÃ¤re, die zum Verweilen einlÃ¤dt. Ob fÃ¼r einen Feierabend-Drink, ein gemÃ¼tliches Beisammensein mit Freunden oder um einfach nur das bunte Treiben zu genieÃŸen - das <strong>Binis</strong> ist die erste Adresse fÃ¼r gesellige Stunden in Innsbruck.</p>",
+  "kurzbeschreibung": "Binis in Innsbruck - gezellige pub en ontmoetingsplek",
+  "beschreibung": "<p><strong>Binis</strong> in Innsbruck is een gezellige pub met een authentieke sfeer en echte Tiroolse gemoedelijkheid. Deze geliefde buurtbar verwelkomt gasten met vers getapte bieren, wijnen en smaakvolle hapjes. Het ontspannen interieur en de vriendelijke bediening maken het de perfecte plek voor een ongedwongen drankje na het werk in Innsbruck.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2372089,
     "lng": 11.310791
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

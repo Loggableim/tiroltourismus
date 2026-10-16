@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
   "kurzbeschreibung": "Bill Bo Kiosk in Tirol Discover the Bill Bo Kiosk in the heart of Tirol—your quick stop for fresh snacks, drinks, and local treats on the go!",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Bill Bo Kiosk</strong> in Außerfern is the ideal stop for a fast and satisfying refreshment on the go. Featuring a diverse range of warm and cold snacks, hearty bites, and sweet pastries, it caters to all tastes. Dishes are prepared with care and fresh ingredients, ensuring great taste even during a quick break. The friendly team provides speedy service with a genuine smile. Perfect during an excursion through Außerfern, <strong>Bill Bo Kiosk</strong> delivers solid quality at honest prices.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.5620245,
     "lng": 10.6955733
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

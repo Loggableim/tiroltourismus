@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Welcome to Biohotel Leutascher Hof in Leutasch Nestled in the heart of the Tirol Alps, Biohotel Leutascher Hof invites you to experience pure relaxation and natural beauty in the…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Biohotel Leutascher Hof</strong> in Leutasch offers an exceptional organic dining experience dedicated to sustainability and premium regional cuisine. The kitchen creates refined alpine dishes prepared exclusively with 100% certified organic ingredients from local organic farms. The warm wooden dining rooms provide an elegant yet cozy setting, perfect for indulging after exploring the scenic Leutasch valley. A premier organic restaurant in Tirol.</p>",
   "ort": "Leutasch",
   "region": "innsbruck",
   "plz": "6105",
@@ -21,5 +21,8 @@
     "lat": 47.3694123,
     "lng": 11.1625483
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.leutascherhof.at/"
+  ]
 }

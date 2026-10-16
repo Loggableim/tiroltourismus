@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Organic Restaurant Garmischer Hof in Garmisch-Partenkirchen Tradition meets sustainability Welcome to the Garmischer Hof, a family-run restaurant nestled in the heart of…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Biorestaurant Garmischer Hof</strong> in Garmisch-Partenkirchen serves creative organic cuisine in a welcoming Bavarian-Tyrolean ambiance. With a commitment to 100% certified organic quality, the kitchen transforms local seasonal products into hearty classics and contemporary dishes. The charming wood-paneled dining parlors invite guests to linger and enjoy a meal in style, whether arriving after a mountain hike or celebrating with family.</p>",
   "ort": "Garmisch-Partenkirchen",
   "region": "innsbruck",
   "plz": "82467",
@@ -21,5 +21,8 @@
     "lat": 47.4944475,
     "lng": 11.0938769
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.garmischhotel.de/de/bio-restaurant/"
+  ]
 }

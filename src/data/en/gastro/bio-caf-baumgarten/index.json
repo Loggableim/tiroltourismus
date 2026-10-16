@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Bio Café Baumgarten in Füssen Discover a cozy retreat in the heart of the Allgäu, where organic goodness meets Alpine charm.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Bio Café Baumgarten</strong> in Füssen is an inviting organic café that delights visitors with freshly brewed organic coffees, homemade cakes, and wholesome snacks. Guests can unwind in a bright, friendly ambiance while savoring freshly prepared pastries, from traditional apple strudel to vegan cakes. Hearty breakfast options and light dishes crafted from certified organic ingredients round out the offering. A lovely stop for conscious enjoyment in Füssen.</p>",
   "ort": "Füssen",
   "region": "ausserfern",
   "plz": "87629",
@@ -20,5 +20,8 @@
     "lat": 47.5670981,
     "lng": 10.699315
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.cafe-baumgarten.de/"
+  ]
 }

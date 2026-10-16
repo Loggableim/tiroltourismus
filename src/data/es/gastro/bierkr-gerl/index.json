@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "pub",
   "kurzbeschreibung": "¡Bierkrügerl en Tirol! En los pintorescos pueblos y ciudades de Tirol, especialmente en Innsbruck, Hall in Tirol o Kufstein, disfrutar de un Bierkrügerl es una tradición que…",
-  "beschreibung": "<p>Das <strong>Bierkrügerl</strong> in der Region Innsbruck ist das, was man einen echten Geheimtipp nennt. Das kleine, familiengeführte Lokal serviert nicht nur eine beeindruckende Auswahl an österreichischen und bayerischen Bieren, sondern auch klassische Wirtshausküche auf hohem Niveau. Besonders beliebt sind die hausgemachten Knödelvariationen und der zarte Schweinsbraten mit Dunkelbiersauce. Der Gastraum ist gemütlich und authentisch — mit dunklem Holz, traditioneller Dekoration und einer Atmosphäre, die zum Verweilen einlädt. Wer Tiroler Gastlichkeit ohne Schnickschnack sucht, wird hier fündig.</p>",
+  "beschreibung": "<p>El <strong>Bierkrügerl</strong> en la región de Innsbruck es lo que se conoce como una auténtica joya oculta. Este pequeño local de gestión familiar no solo sirve una impresionante selección de cervezas austriacas y bávaras, sino también cocina tradicional de taberna elaborada al más alto nivel. Son especialmente populares las variaciones de albóndigas caseras (Knödel) y el tierno asado de cerdo con salsa de cerveza negra. El comedor es acogedor y auténtico, con madera oscura, decoración tradicional y una atmósfera que invita a quedarse. Quienes busquen hospitalidad tirolesa genuina sin artificios la encontrarán aquí.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2708754,
     "lng": 11.3915329
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

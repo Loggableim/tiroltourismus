@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Bierol Taproom & Restaurant in Schwoich Discover the cozy charm of Bierol Taproom & Restaurant in the picturesque village of Schwoich, nestled in the heart of Tirol.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Bierol Taproom & Restaurant</strong> in Schwoich is a popular culinary destination that pampers its guests with an inventive menu and regional craft beer culture. The ambiance blends traditional Tyrolean elements with modern comfort, creating an inviting setting for every occasion. The menu features a curated selection of dishes - from classic Tyrolean specialties like Tiroler Gröstl and Kaiserschmarrn to international craft dishes. The team places great importance on fresh, regional ingredients and creative beer pairings. <strong>Bierol Taproom & Restaurant</strong> warmly welcomes you for a memorable culinary experience.</p>",
   "ort": "Schwoich",
   "region": "kufstein",
   "plz": "6334",
@@ -21,5 +21,8 @@
     "lat": 47.5357859,
     "lng": 12.141599
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.bierol.at/"
+  ]
 }

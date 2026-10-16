@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "pub",
   "kurzbeschreibung": "Bierkrügerl in Tirol Un’esperienza autentica tra birra e tradizione In Tirol , il Bierkrügerl non è solo un bicchiere di birra, ma un simbolo di ospitalità e convivialità.",
-  "beschreibung": "<p>Das <strong>Bierkrügerl</strong> in der Region Innsbruck ist das, was man einen echten Geheimtipp nennt. Das kleine, familiengeführte Lokal serviert nicht nur eine beeindruckende Auswahl an österreichischen und bayerischen Bieren, sondern auch klassische Wirtshausküche auf hohem Niveau. Besonders beliebt sind die hausgemachten Knödelvariationen und der zarte Schweinsbraten mit Dunkelbiersauce. Der Gastraum ist gemütlich und authentisch — mit dunklem Holz, traditioneller Dekoration und einer Atmosphäre, die zum Verweilen einlädt. Wer Tiroler Gastlichkeit ohne Schnickschnack sucht, wird hier fündig.</p>",
+  "beschreibung": "<p>Il <strong>Bierkrügerl</strong> nella regione di Innsbruck è quello che si definisce un vero e proprio consiglio da intenditori. Questo piccolo locale a conduzione familiare serve non solo un'impressionante selezione di birre austriache e bavaresi, ma anche piatti classici da osteria di alto livello. Particolarmente apprezzate sono le varianti di canederli fatti in casa e il tenero arrosto di maiale con salsa alla birra scura. La sala è accogliente e autentica, con legno scuro e un'atmosfera che invita a rilassarsi. Chi cerca la tipica ospitalità tirolese senza fronzoli troverà qui la meta perfetta.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2708754,
     "lng": 11.3915329
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

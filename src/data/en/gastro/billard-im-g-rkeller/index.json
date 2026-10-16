@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "Billards in the Gärkeller in Innsbruck – enjoy a game in the historic cellar of the Brauhaus Tyrol with a cold Tiroler Bier in hand.",
-  "beschreibung": "",
+  "beschreibung": "<p><strong>Billard im Gärkeller</strong> in Innsbruck is a stylish bar and recreation venue that pairs billiard tables with an inviting lounge atmosphere. Guests can enjoy a wide selection of drinks including draft beers, cocktails, and fine spirits while playing a round of pool. The interior blends historic cellar vaulting with modern lighting and comfortable seating. An ideal spot for an entertaining evening with friends or a lively get-together after work in Innsbruck.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2607858,
     "lng": 11.3985206
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.billard-innsbruck.at/"
+  ]
 }

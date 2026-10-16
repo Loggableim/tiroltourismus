@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "A pint of beer in Neustift im Stubaital Traditional Tyrolean beer culture in the heart of the Alps In the picturesque village of Neustift im Stubaital, just a stone’s throw from…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Bierfassl</strong> in Neustift im Stubaital is a stylish bar with an inviting atmosphere and an exquisite drinks menu. Whether classic cocktails, fine wines, or regional beers - every guest finds the right drink for a perfect evening. The interior blends modern design with cozy elements, creating a feel-good atmosphere to linger in. The experienced bartenders are also happy to craft creative signature drinks unique to this venue. Whether an after-work get-together, a relaxed evening with friends, or the start of a long night out - <strong>Bierfassl</strong> offers the ideal setting for sociable hours in Neustift im Stubaital.</p>",
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
@@ -20,5 +20,9 @@
     "lat": 47.1104594,
     "lng": 11.305714
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.stubai.at",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
+  ]
 }

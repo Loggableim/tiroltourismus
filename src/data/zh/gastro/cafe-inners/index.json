@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "咖啡馆 Inners 在库夫施泰因",
-  "beschreibung": null,
+  "beschreibung": "<p>位于 Kufstein 地区 Kufstein 的 <strong>Cafe Inners</strong> 为宾客提供温馨的氛围，以及精选的咖啡特色饮品和自制美味。这家咖啡馆以其阳光露台而闻名，温暖的日子里邀人放松休憩。菜单包括经典奥地利 Mehlspeisen、香气扑鼻的蛋糕和诱人的奶油蛋糕，每日新鲜制作。周到的服务确保宾客一切所需皆得满足。<strong>Cafe Inners</strong> 是在 Tiroler 日常生活中享受悠闲咖啡时光的理想之地。</p>",
   "ort": "Kufstein",
   "region": "kufstein",
   "plz": "6330",
@@ -20,5 +20,8 @@
     "lat": 47.582845,
     "lng": 12.166529
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com"
+  ]
 }

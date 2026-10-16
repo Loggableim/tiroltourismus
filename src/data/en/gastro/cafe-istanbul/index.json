@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Cafe Istanbul in Tirol – a cozy spot where the flavors of the East meet the charm of the Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Istanbul</strong> in Innsbruck invites you to enjoy an indulgent break. The stylish café and patisserie treats its guests to a wide selection of homemade tortes, cakes, and sweet specialties. Each piece is prepared with great attention to detail and artfully presented. Accompanying them are exquisite coffee specialties, perfectly crafted by experienced baristas. The cozy atmosphere with its charming interior invites guests to linger and enjoy. Whether for breakfast, an afternoon coffee, or a light snack in between – everyone feels welcome here.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.3058674,
     "lng": 11.0753795
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

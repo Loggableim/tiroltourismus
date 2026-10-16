@@ -11,7 +11,7 @@
   "telefon": "+43 5448 8506",
   "email": null,
   "webseite": "http://www.ebster.net/",
-  "beschreibung": "<p>Das <strong>Apartment Ebster</strong> liegt im Zentrum von Pettneu am Arlberg, nur wenige Gehminuten von der Skibushaltestelle entfernt. Die Ferienwohnung bietet eine funktionale Einrichtung mit separatem Wohnbereich und kleiner Küchenzeile. Gäste erreichen das <strong>Skigebiet St. Anton am Arlberg</strong> in etwa zehn Minuten mit dem Bus. Im Ort befinden sich ein Lebensmittelgeschäft und ein Gasthaus.</p>",
+  "beschreibung": "<p><strong>Apartment Ebster</strong> se nachází v centru obce Pettneu am Arlberg, jen několik minut chůze od zastávky skibusu. Tento prázdninový apartmán nabízí funkční vybavení s odděleným obývacím prostorem a malým kuchyňským koutem. Do <strong>lyžařského střediska St. Anton am Arlberg</strong> se hosté dostanou autobusem přibližně za deset minut. V obci je k dispozici obchod s potravinami a tradiční hostinec.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://de.wikipedia.org/wiki/Arlberg"
+  ]
 }

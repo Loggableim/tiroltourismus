@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Apartametul afit</strong> liegt in <strong>Lienz</strong>, dem Hauptort Osttirols. Die Ferienwohnungen sind für Selbstversorger konzipiert. Jedes Apartment bietet eine Küchenzeile und einen Wohnbereich. Lienz ist ein Ausgangspunkt für Bergtouren und Kultur. Die Altstadt ist zu Fuß erreichbar. In der Umgebung gibt es Wander- und Radwege. Die Unterkunft eignet sich für einen unabhängigen Aufenthalt.</p>",
+  "beschreibung": "<p><strong>Apartametul afit</strong> se nachází v <strong>Lienzu</strong>, hlavním městě Východního Tyrolska. Tyto apartmány jsou navrženy pro hosty preferující vlastní stravování. Každý apartmán nabízí plně vybavený kuchyňský kout a příjemný obývací prostor. Lienz představuje ideální výchozí bod pro horské túry i poznávání kultury a do historického centra dojdete pohodlně pěšky. V bezprostředním okolí se nachází pestrá síť turistických a cyklistických tras. Ubytování je ideální volbou pro nezávislou a pohodovou dovolenou.</p>",
   "ausstattung": [],
   "tags": [
     "ferienwohnung",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.osttirol.com",
+    "https://de.wikipedia.org/wiki/Osttirol"
+  ]
 }

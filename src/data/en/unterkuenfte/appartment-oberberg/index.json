@@ -11,7 +11,7 @@
   "telefon": "+43 664 4649415",
   "email": "info@oberberg.at",
   "webseite": "http://www.oberberg.at/",
-  "beschreibung": "=== description ===\n<p>The <strong>Appartment Oberberg</strong> is a holiday apartment located in the Austrian state of Tyrol. The accommodation features a self-contained apartment with a kitchenette and private bathroom. Designed for self-caterers, the apartment is equipped with all necessary household appliances. It is situated in a peaceful setting, ideal for a relaxing holiday. From the holiday apartment, you can easily explore hiking trails and ski outings in the stunning Tyrolean mountain landscape. The accommodation typically includes a balcony or terrace.</p>",
+  "beschreibung": "<p><strong>Appartment Oberberg</strong> is a holiday apartment located in the Austrian province of Tyrol. The accommodation offers a self-contained apartment with cooking facilities and a private bathroom. Designed for self-catering, the apartment is equipped with all essential household appliances. Set in quiet surroundings, it is well suited for a relaxing holiday. From the apartment, guests can easily set out on hikes and ski trips into the Tyrolean mountains. Amenities typically include a balcony or terrace.</p>",
   "ausstattung": [],
   "tags": [
     "mountain",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Kufstein"
+  ]
 }

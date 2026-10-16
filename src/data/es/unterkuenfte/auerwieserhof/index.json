@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Außerwieserhof</strong> liegt am Rand von Neustift im <strong>Stubaital</strong>, umgeben von Wiesen und Bergland.. Das Gebäude ist ein traditioneller Tiroler Bauernhof, der als Gasthof geführt wird.. Gäste erwartet eine schlichte, heimelige Atmosphäre mit typisch regionaler Küche und einfachen, aber gepflegten Zimmern.. Die Stimmung ist ruhig und ländlich.. Der Gasthof eignet sich für Gäste, die Ruhe und Natur suchen, ohne auf Komfort angewiesen zu sein.",
+  "beschreibung": "<p>El <strong>Außerwieserhof</strong> se encuentra a las afueras de Neustift, en el <strong>valle de Stubai</strong> (Stubaital), rodeado de prados y paisajes de montaña. El edificio es una granja tradicional tirolesa gestionada como posada. A los huéspedes les espera un ambiente sencillo y acogedor con cocina típica regional y habitaciones sobrias pero muy bien cuidadas. El ambiente es tranquilo y rural. La posada resulta ideal para quienes buscan calma y naturaleza sin depender de grandes lujos.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -24,5 +24,9 @@
     "lat": "47.1167293",
     "lng": "11.3235853"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.stubai.at",
+    "https://de.wikipedia.org/wiki/Stubaital"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.bergwelttirol.com",
-  "beschreibung": "<p>Das <strong>Hotel Bergwelt</strong> liegt zentral in St. Anton am Arlberg, unweit der Bergbahnen und des Ortszentrums. Das Haus verbindet alpine Tradition mit schlichtem, modernem Interior. Gäste erwarten ein Restaurant mit regionaler Küche, eine Saunaarea sowie komfortable Zimmer mit Blick auf die umliegenden Gipfel. Der Bahnhof ist in wenigen Minuten zu Fuß erreichbar.</p>",
+  "beschreibung": "<p>格调高雅的 <strong>Hotel Bergwelt</strong> 坐落于圣安东阿尔山麓（St. Anton am Arlberg）的中心地带，紧邻登山缆车站与繁华的镇中心。酒店巧妙融合了传统阿尔卑斯风情与简约现代的设计格调。宾客可在特色餐厅品尝风味地道的本地佳肴，在桑拿休闲区尽情舒缓身心，并在推窗即可饱览阿尔山峰美景的舒适客房中惬意休憩。火车站距离酒店也仅需步行数分钟即可抵达。</p>",
   "ausstattung": [],
   "tags": [
     "阿尔卑斯山脉阿尔贝格",
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://de.wikipedia.org/wiki/Arlberg"
+  ]
 }

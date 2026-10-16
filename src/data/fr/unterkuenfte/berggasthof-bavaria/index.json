@@ -11,7 +11,7 @@
   "telefon": "+43 5358 8353",
   "email": "info@bavaria.at",
   "webseite": "http://www.bavaria.at/",
-  "beschreibung": "<p>Der <strong>Berggasthof Bavaria</strong> liegt in der Tiroler Bergwelt und bietet eine Unterkunft mit regionalem Charakter. Die Zimmer sind einfach und zweckmäßig eingerichtet. Der Gasthof verfügt über einen Gastraum, in dem <strong>Tiroler Spezialitäten</strong> serviert werden. Von der Terrasse genießt man einen Ausblick auf die umliegenden Berge. Der Gasthof eignet sich als Ausgangspunkt für Wanderungen und Skitouren. Die Küche legt Wert auf <strong>heimische Produkte</strong>. Die Atmosphäre ist ländlich und traditionell.</p>",
+  "beschreibung": "<p>Le <strong>Berggasthof Bavaria</strong> est niché au cœur des montagnes tyroliennes et propose un hébergement au charme résolument régional. Les chambres sont aménagées avec simplicité et praticité. L'auberge comprend une salle de restaurant conviviale où sont servies de succulentes <strong>spécialités tyroliennes</strong>. Depuis la terrasse, les hôtes bénéficient d'un panorama exceptionnel sur les sommets environnants. L'auberge de montagne constitue un point de départ privilégié pour la randonnée pédestre et le ski de randonnée. La cuisine valorise les <strong>produits du terroir</strong>, dans une atmosphère champêtre et traditionnelle.</p>",
   "ausstattung": [
     "restaurant",
     "wifi"
@@ -29,5 +29,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Kufstein"
+  ]
 }

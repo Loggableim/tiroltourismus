@@ -43,9 +43,21 @@
 html{scroll-behavior:smooth}
 body{font-family:var(--font-body);color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s,color .6s}
 a{color:inherit;text-decoration:none}
-button,input,select,textarea{cursor:pointer;border:none;background:none;font-family:inherit;outline:none;color:inherit}
+button,input,select,textarea{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
 ::selection{background:var(--tirol-pink);color:var(--bg)}
 img{max-width:100%;height:auto;display:block}
+
+/* ─── Visible focus (WCAG 2.4.7 / 2.4.11) ─── */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--tirol-pink);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
 /* ─── Gold Utilities ─── */
 .text-gold{color:var(--gold)!important}

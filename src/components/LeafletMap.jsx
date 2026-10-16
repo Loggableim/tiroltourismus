@@ -102,6 +102,7 @@ export default function LeafletMap({
   scrollWheelZoom = false,
   polygons = [],  // { coords: [[lat,lng],...], label, color, fillOpacity }
   filterable = false,  // show category filter bar
+  label,  // accessible name for the map region
 }) {
   const mapContainer = useRef(null);
   const mapInstance = useRef(null);
@@ -474,6 +475,7 @@ export default function LeafletMap({
             const isActive = activeFilters.size === 0 || activeFilters.has(cat);
             return (
               <button key={cat} onClick={() => toggleFilter(cat)}
+                aria-pressed={isActive}
                 style={{
                   padding: '6px 14px', borderRadius: '100px', border: '1px solid ' + (isActive ? style.color : 'var(--glass-border, #ddd)'),
                   background: isActive ? style.color + '22' : 'transparent',
@@ -490,7 +492,9 @@ export default function LeafletMap({
 
       {/* Loading skeleton overlay */}
       {loading && (
-        <div style={{
+        <div
+          aria-live="polite"
+          style={{
           position: 'absolute', top: 0, left: 0, width: '100%', height: respH, zIndex: 10,
           borderRadius: 'var(--radius, 12px)',
           background: 'var(--bg2, #f0f0f0)',
@@ -502,6 +506,8 @@ export default function LeafletMap({
       )}
       <div
         ref={mapContainer}
+        role={label ? 'region' : undefined}
+        aria-label={label || undefined}
         style={{
           width: '100%', height: respH,
           borderRadius: 'var(--radius, 12px)',

@@ -19,7 +19,7 @@ const { markers, center, zoom, height, scrollWheelZoom, label, title, polygons, 
 const hasMarkers = markers && markers.length > 0;
 ---
 
-<section class="sec-map">
+<section class="sec-map" aria-label={title || label}>
   <div class="container">
     {(label || title) && (
       <div class="sec-map-header">
@@ -37,6 +37,7 @@ const hasMarkers = markers && markers.length > 0;
         scrollWheelZoom={scrollWheelZoom !== false}
         polygons={polygons}
         filterable={filterable}
+        label={title || label}
       />
     )}
     {!hasMarkers && (
@@ -63,7 +64,7 @@ const hasMarkers = markers && markers.length > 0;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--purple, #a855f7);
+    color: var(--text2);
     display: block;
     margin-bottom: 4px;
   }
@@ -77,7 +78,7 @@ const hasMarkers = markers && markers.length > 0;
   .sec-map-empty {
     text-align: center;
     padding: 60px 20px;
-    color: var(--text3);
+    color: var(--text2);
     font-size: 14px;
   }
   @media (max-width: 600px) {

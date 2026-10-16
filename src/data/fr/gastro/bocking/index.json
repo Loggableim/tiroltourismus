@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Envie de découvrir le Tirol ? Le Tirol, avec ses paysages à couper le souffle, ses montagnes majestueuses et ses villages pittoresques, est une destination qui ne laisse personne…",
-  "beschreibung": "<p>Das <strong>Bocking</strong> in Kufstein ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bocking</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "beschreibung": "<p>Le <strong>Bocking</strong> à Söll est un restaurant chaleureux qui séduit par sa cuisine généreuse et son hospitalité tyrolienne. Dans un cadre mariant boiseries traditionnelles et confort contemporain, les convives dégustent une carte variée mettant à l'honneur des recettes régionales authentiques préparées avec des produits du terroir. Que ce soit après une randonnée dans le massif du Wilder Kaiser ou pour un dîner convivial en famille, le <strong>Bocking</strong> vous promet un moment gourmand et mémorable.</p>",
   "ort": "",
   "region": "kufstein",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.5167021,
     "lng": 12.2250716
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/S%C3%B6ll_(Tirol)",
+    "https://www.wilderkaiser.info"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Bodenalpe in Tirol",
-  "beschreibung": "<p>Das <strong>Bodenalpe</strong> in AuÃŸerfern ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bodenalpe</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Gezellige almwirtschaft in Ischgl met streekgerechten en een zonnig terras.",
+  "beschreibung": "<p>De <strong>Bodenalpe</strong> in Ischgl is een traditionele almwirtschaft gelegen in het betoverende berglandschap van het Paznauntal. Wintersporters en zomertoeristen genieten hier van stevige Tiroolse klassiekers, huisgemaakte soepen en verse gebaksspecialiteiten. Het royale zonneterras nodigt uit tot ontspannen met uitzicht op de imposante bergkammen van de Silvretta. De <strong>Bodenalpe</strong> combineert alpiene traditie met attente gastvrijheid voor een heerlijke pauze op grote hoogte.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -21,5 +21,9 @@
     "lat": 47.1843534,
     "lng": 10.2678342
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Ischgl",
+    "https://www.paznaun-ischgl.com"
+  ]
 }

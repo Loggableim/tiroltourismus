@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Bobcafe K14 in Tirol",
-  "beschreibung": "<p>Das <strong>Bobcafe K14</strong> in Innsbruck ist ein einladendes CafÃ©, das mit seinem gemÃ¼tlichen Ambiente und einer feinen Auswahl an KaffeespezialitÃ¤ten, hausgemachten Kuchen und sÃ¼ÃŸen Versuchungen begeistert. Hier kÃ¶nnen GÃ¤ste den Alltag hinter sich lassen und bei einer Tasse aromatischem Kaffee oder einem cremigen Cappuccino entspannen. Das Angebot umfasst FrÃ¼hstÃ¼cksvariationen, leichte Snacks und tÃ¤glich frische Mehlspeisen - von der klassischen Sachertorte bis zum saftigen Apfelstrudel. Die freundliche Bedienung und das wohnliche Interieur laden zum Verweilen und GenieÃŸen ein. Ob fÃ¼r einen entspannten Start in den Tag, eine gemÃ¼tliche Kaffeepause am Nachmittag oder einen Plausch mit Freunden - das <strong>Bobcafe K14</strong> ist der ideale Ort fÃ¼r Genuss und Geselligkeit in Innsbruck.</p>",
+  "kurzbeschreibung": "Uitnodigend café in Innsbruck voor koffie, verfrissende drankjes en lichte snacks.",
+  "beschreibung": "<p>Het <strong>Bobcafe K14</strong> in Innsbruck is een gezellig café waar gasten kunnen ontspannen met aromatische koffiespecialiteiten, verse snacks en een gemoedelijke sfeer. Met haar gastvrije ambiance is het café een perfecte pleisterplaats voor zowel sporters als stadsbezoekers. Naast warme dranken worden er verfrissende drankjes en lichte versnaperingen geserveerd. Het vriendelijke team zorgt ervoor dat u zich bij <strong>Bobcafe K14</strong> direct welkom voelt.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,9 @@
     "lat": 47.2226853,
     "lng": 11.429553
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck",
+    "https://www.innsbruck.gv.at"
+  ]
 }

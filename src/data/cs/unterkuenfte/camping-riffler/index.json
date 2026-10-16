@@ -11,15 +11,15 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Camping Riffler liegt in <strong>St. Ulrich am Pillersee</strong> im Bezirk Kitzbühel, umgeben von den <strong>Kitzbüheler Alpen</strong>. Die Anlage bietet Stellplätze für Wohnmobile und Zelte sowie einfache Sanitäranlagen. Gäste erreichen in wenigen Minuten das <strong>Ortszentrum</strong> und die Skipiste. Die Atmosphäre ist ruhig und familienfreundlich, mit direktem Zugang zu <strong>Wanderwegen</strong> und Skipisten.</p>",
+  "beschreibung": "<p>Kemping Riffler leží ve <strong>St. Ulrich am Pillersee</strong> v okrese Kitzbühel, obklopený <strong>Kitzbühelskými Alpami</strong>. Areál nabízí stání pro karavany a stany a také jednoduchá sanitární zařízení. Hosté se během několika minut dostanou do <strong>centra obce</strong> a na sjezdovku. Atmosféra je klidná a vhodná pro rodiny, s přímým přístupem k <strong>turistickým cestám</strong> a sjezdovkám.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
-    "kempování",
-    "rodina",
-    "venkovní"
+    "camping",
+    "familie",
+    "outdoor"
   ],
   "tier": "basic",
   "koordinaten": {
@@ -28,5 +28,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/St._Ulrich_am_Pillersee"
+  ]
 }

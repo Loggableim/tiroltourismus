@@ -11,16 +11,16 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The campsite <strong>Mayrhofen</strong> is located in the centre of the well-known holiday resort of <strong>Mayrhofen</strong> in the <strong>Zillertal</strong>. It is open all year round and offers pitches for motorhomes as well as rental accommodation in the form of mobile homes. The site has a heated swimming pool and a children's playground. In the immediate vicinity are the valley stations of the <strong>Penken and Ahorn lifts</strong>. The village of Mayrhofen offers a variety of shopping options and restaurants. The campsite is suitable as a starting point for hikes and ski tours in the surrounding mountains.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
     "camping",
-    "family-friendly",
-    "outdoor activities",
-    "Zillertal"
+    "familie",
+    "outdoor",
+    "zillertal"
   ],
   "tier": "basic",
   "koordinaten": {
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Mayrhofen"
+  ]
 }

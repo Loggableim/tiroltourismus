@@ -11,16 +11,16 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Campingplatz Ötztal Längenfeld</strong> liegt in Längenfeld im Ötztal. Er bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte. Die <strong>Sanitäranlagen</strong> sind modern und beheizt. Ein Brötchenservice steht täglich zur Verfügung. In der Nähe befinden sich die <strong>Stuibenfall Wasserfälle</strong> und die Ötztaler Therme. Die Region eignet sich für <strong>Wanderungen</strong> im Sommer und Skifahren im Winter. Ein Restaurant auf dem Platz serviert regionale Gerichte.</p>",
+  "beschreibung": "<p>Camping <strong>Ötztal Längenfeld</strong> 位于 Ötztal 的 Längenfeld。营地提供房车、拖挂式房车和帐篷车位。<strong>卫生设施</strong>现代且带供暖。每天提供面包预订服务。附近有 <strong>Stuibenfall Wasserfälle</strong> 瀑布和 Ötztaler Therme 温泉浴场。该地区适合夏季<strong>徒步</strong>和冬季滑雪。营区内一家餐厅供应地方风味菜肴。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
-    "露营",
-    "家庭友好",
-    "奥茨塔尔",
-    "户外活动"
+    "camping",
+    "familie",
+    "oetztal",
+    "outdoor"
   ],
   "tier": "basic",
   "koordinaten": {
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/L%C3%A4ngenfeld"
+  ]
 }

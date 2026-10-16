@@ -11,15 +11,15 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz <strong>Maurerhäusl</strong> befindet sich in <strong>Hochfilzen</strong>, einer Gemeinde im Pillerseetal in Tirol. Die Umgebung ist durch ausgedehnte Wälder und das nahe gelegene Bergmassiv der <strong>Loferer Steinberge</strong> geprägt. Der Platz bietet Stellplätze für Wohnmobile und Wohnwagen sowie Zeltmöglichkeiten. Die sanitären Anlagen sind mit modernen Duschen und Waschräumen ausgestattet. Ein kleiner Lebensmittelladen versorgt Gäste mit Grundnahrungsmitteln. Von hier aus sind die <strong>Biathlonarena Hochfilzen</strong> und mehrere Wanderwege leicht erreichbar. Auch Langlaufloipen beginnen direkt am Campingplatz.</p>",
+  "beschreibung": "<p>Il camping <strong>Maurerhäusl</strong> si trova a <strong>Hochfilzen</strong>, un comune della valle Pillerseetal in Tirolo. L'ambiente è caratterizzato da foreste estensive e dal vicino massiccio dei <strong>Loferer Steinberge</strong>. Il camping offre piazzole per motorhome e roulotte oltre a possibilità per tende. I servizi igienici sono dotati di docce moderne e lavabi. Un piccolo spaccio alimentare fornisce agli ospiti derrate di base. Da qui, la <strong>Biathlonarena Hochfilzen</strong> e diversi sentieri di escursione sono facilmente raggiungibili. Anche le piste di fondo partono direttamente dal camping.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
     "camping",
-    "famiglie",
-    "Kitzbühel",
+    "familie",
+    "kitzbuehel",
     "outdoor"
   ],
   "tier": "basic",
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Hochfilzen"
+  ]
 }

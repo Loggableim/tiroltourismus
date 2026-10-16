@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p><strong>Camping Lermoos</strong> liegt in der Gemeinde Lermoos im Bezirk Reutte in Tirol. Der Platz am Fuß der Zugspitze bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte. Die <strong>sanitären Anlagen</strong> sind modern und barrierefrei. Ein Supermarkt und ein Restaurant sind auf dem Gelände vorhanden. Wanderungen und Skiausflüge können direkt vom Platz aus unternommen werden. Der Campingplatz ist <strong>ganzjährig geöffnet</strong>. Haustiere sind auf dem Platz erlaubt.</p>",
+  "beschreibung": "<p><strong>Camping Lermoos</strong> se encuentra en el municipio de Lermoos, en el distrito de Reutte (Tirol). El recinto, a los pies de la Zugspitze, ofrece plazas para autocaravanas, caravanas y tiendas. Las <strong>instalaciones sanitarias</strong> son modernas y accesibles. En el recinto hay un supermercado y un restaurante. Las caminatas y las excursiones de esquí se pueden realizar directamente desde el camping. El camping está <strong>abierto durante todo el año</strong>. Se admiten mascotas en el recinto.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Lermoos"
+  ]
 }

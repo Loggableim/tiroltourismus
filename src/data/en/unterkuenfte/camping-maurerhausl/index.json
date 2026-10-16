@@ -11,16 +11,16 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The campsite <strong>Maurerhäusl</strong> is located in <strong>Hochfilzen</strong>, a municipality in the Pillerseetal in Tirol. The surroundings are characterised by extensive forests and the nearby mountain range of the <strong>Loferer Steinberge</strong>. The site offers pitches for motorhomes and caravans as well as tent options. The sanitary facilities are equipped with modern showers and washrooms. A small grocery store supplies guests with basic foodstuffs. From here, the <strong>Biathlonarena Hochfilzen</strong> and several hiking trails are easily accessible. Cross-country skiing trails also start directly at the campsite.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
   ],
   "tags": [
     "camping",
-    "family-friendly",
-    "Kitzbühel",
-    "outdoor activities"
+    "familie",
+    "kitzbuehel",
+    "outdoor"
   ],
   "tier": "basic",
   "koordinaten": {
@@ -29,5 +29,8 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://de.wikipedia.org/wiki/Hochfilzen"
+  ]
 }

@@ -38,6 +38,12 @@ const { tags, centered = true } = Astro.props;
     justify-content: center;
   }
 
+  .sec-tags-row a.tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+  }
+
   @media (max-width: 768px) {
     .sec-tags-row {
       gap: 6px;

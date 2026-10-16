@@ -7,8 +7,8 @@
   "datum_von": "2026-07-05",
   "ort": "Ötztal",
   "region": "Ötztal",
-  "beschreibung": "Kunstinstallationen und goldene Leuchtskulpturen entlang eines beleuchteten Bergpfads – abends geöffnet. Ein einzigartiges Kunsterlebnis in der Natur.",
-  "kurzbeschreibung": "沿着一条照明的山路，艺术装置和金色灯光雕塑——晚上开放。",
+  "beschreibung": "沿照明山间小径分布的艺术装置与金色光影雕塑——夜间开放。一次在大自然中独一无二的艺术沉浸体验。",
+  "kurzbeschreibung": "沿照明山间小径分布的艺术装置与金色光影雕塑——夜间开放。",
   "preis": "€22",
   "link": "#",
   "webseite": "#",
@@ -27,5 +27,9 @@
   "koordinaten": {
     "lat": "47.1003",
     "lng": "10.9511"
-  }
+  },
+  "sources": [
+    "https://www.oetztal.com",
+    "https://de.wikipedia.org/wiki/%C3%96tztal"
+  ]
 }

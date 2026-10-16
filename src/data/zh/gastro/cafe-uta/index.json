@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "蒂罗尔的咖啡屋 Uta",
-  "beschreibung": null,
+  "beschreibung": "<p>位于奥瑟芬（Außerfern）的<strong>Cafe Uta</strong>为宾客奉上精选的当地特色与应季佳肴。厨房将传统的蒂罗尔风味与创意元素巧妙融合，带来独一无二的味觉享受。温馨舒适的室内装潢让人流连忘返，贴心周到的服务更让人倍感舒适。特别推荐自制的传统蒂罗尔丸子汤（Tiroler Knödelsuppe），在充实的一天徒步后喝上一碗，格外暖胃舒心。此外，餐厅还提供精心挑选的酒单，汇聚来自南蒂罗尔与奥地利的优质佳酿。这里的食材严选自当地蒂罗尔（Tirol）精选农场和生产商，致力于呈现最纯正的本土风味。</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2734113,
     "lng": 10.3395314
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

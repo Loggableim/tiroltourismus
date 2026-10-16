@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "查理酒吧（Charly's Pub）位于塔伦茨（Tarrenz），是一家充满活力的酒吧，无论是当地居民还是游客都会在这里找到温暖的氛围。这里提供各种当地啤酒、国际进口酒以及美味的小吃，如卡伊泽施马伦（Kaiserschmarrn）和传统的蒂罗尔（Tirol）风味菜肴。无论你是想放松还是与朋友聚会，这里都是一个绝佳的选择。",
-  "beschreibung": null,
+  "beschreibung": "<p>位于伊姆斯特地区塔伦茨（Tarrenz）的<strong>Charly's Pub</strong>诚邀您在此享受一段愉悦的小憩时光。这家独具风格的咖啡甜品屋以丰富多样的自家精制蛋糕、馅饼与甜点犒劳宾客。每一款点心都倾注了对细节的精心雕琢，并呈现出如艺术品般的美感。此外，经验丰富的咖啡师还会为您奉上调制得当的精选特色咖啡。舒适惬意的氛围与迷人的内饰设计，让人流连忘返、尽享美好时光。无论是享用早餐、午后咖啡还是随心享用轻便小吃——来到这里都能感受到宾至如归的温暖。</p>",
   "ort": "Tarrenz",
   "region": "imst",
   "plz": "6464",
@@ -20,5 +20,9 @@
     "lat": 47.261652,
     "lng": 10.7613484
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ]
 }

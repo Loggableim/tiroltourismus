@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Charly’s Pub in Tarrenz Welcome to Charly’s Pub in the heart of Tarrenz, where traditional Tyrolean charm meets a cozy, relaxed atmosphere.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Charly's Pub</strong> in Tarrenz in the Imst region invites you to take an enjoyable break. This stylish café and confectionery treats its guests to a wide selection of homemade cakes, tortes, and sweet specialties. Each piece is prepared with great attention to detail and artfully presented. Accompanying these are exquisite coffee specialties, perfectly brewed by experienced baristas. The cozy atmosphere with its charming interior invites guests to linger and enjoy. Whether for breakfast, afternoon coffee, or a light snack in between – everyone feels warmly welcome here.</p>",
   "ort": "Tarrenz",
   "region": "imst",
   "plz": "6464",
@@ -20,5 +20,9 @@
     "lat": 47.261652,
     "lng": 10.7613484
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ]
 }

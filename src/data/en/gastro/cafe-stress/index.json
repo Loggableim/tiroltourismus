@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Stress in Innsbruck Welcome to Café Stress in the heart of Innsbruck, where the hustle of city life meets the cozy charm of a classic Viennese café.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Stress</strong> in Innsbruck in the Innsbruck region is a charming café that delights its guests with homemade cakes, fine coffee specialties, and a cozy atmosphere. It is a wonderful place to relax, read a good book, or chat with friends. The menu offers a fine selection of traditional Austrian pastries – from creamy Sachertorte and airy apple strudel to tempting Topfenstrudel. These are accompanied by aromatic coffee specialties prepared with great care. The inviting interior with comfortable seating and charming details creates a true feel-good atmosphere.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,9 @@
     "lat": 47.2644443,
     "lng": 11.4107981
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

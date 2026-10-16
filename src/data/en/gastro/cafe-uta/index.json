@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Welcome to Café Uta in Tirol! Nestled in the heart of the Alps, just a short stroll from the vibrant center of Innsbruck, Café Uta invites you to savor the finest moments of…",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Uta</strong> in Außerfern delights its guests with an exquisite selection of regional and seasonal dishes. The cuisine combines traditional Tyrolean recipes with creative touches, creating a unique culinary experience. The cozy interior invites guests to linger, while attentive service ensures complete comfort. Particularly recommended is the homemade Tyrolean dumpling soup (Tiroler Knödelsuppe), wonderfully warming after a long day of hiking. In addition, the restaurant offers a carefully curated wine list with fine selections from South Tyrol and Austria. The focus is firmly on regional products from Tirol, sourced from select local farms and producers.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2734113,
     "lng": 10.3395314
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

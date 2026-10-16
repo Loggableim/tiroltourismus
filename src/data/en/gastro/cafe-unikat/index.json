@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Unikat in Tirol! Discover the cozy charm of our café nestled in the heart of the Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Unikat</strong> in Schwaz is the perfect destination for anyone looking for a cozy break from the daily grind. In this lovingly decorated café, guests can enjoy a wide selection of coffee specialties, homemade cakes, and light snacks. Traditional Austrian coffee culture is cultivated here with true passion. The creamy Verlängerter and smooth Melange are especially popular. In addition, freshly baked pastries from the café's own patisserie are offered daily. The relaxed ambiance and warm service make the café a cherished meeting point for both locals and visitors.</p>",
   "ort": "",
   "region": "schwaz",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3216851,
     "lng": 11.5859494
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

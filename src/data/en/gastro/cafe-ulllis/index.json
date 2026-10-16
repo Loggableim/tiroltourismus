@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "bar",
   "kurzbeschreibung": "Café Ullis in Tirol Welcome to Café Ullis in the heart of Tirol, where tradition meets modern charm.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Ulllis</strong> in Zillertal delights visitors with a first-class drinks menu and a stylish ambiance. This cozy bar is the ideal place to end the day and unwind with an exquisite cocktail or a fine glass of wine. The menu also offers delectable snacks and light bites that harmonize perfectly with the beverages. Particularly popular are the homemade spreads and cheese platters featuring regional specialties. The friendly staff and laid-back atmosphere make the bar a favored gathering spot for connoisseurs.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3430026,
     "lng": 11.7076321
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at"
+  ]
 }

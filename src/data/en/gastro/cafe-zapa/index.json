@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Welcome to Café Zapa in Tirol! Nestled in the heart of the Alps, our cozy café invites you to indulge in the finest Tiroler hospitality.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Zapa</strong> in Landeck is the ideal spot for anyone looking for a relaxing break from everyday routines. In this lovingly designed café, guests can savor a diverse selection of coffee specialties, homemade cakes, and tasty snacks. Traditional Austrian coffee house culture is cultivated here with genuine passion. Especially popular are the creamy Verlängerter and smooth Melange. Furthermore, freshly made pastries from the in-house bakery are served daily. The laid-back atmosphere and cordial service make the café a favorite meeting place for locals and travelers alike.</p>",
   "ort": "",
   "region": "landeck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.1400393,
     "lng": 10.5665659
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

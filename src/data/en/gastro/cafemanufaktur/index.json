@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Manufaktur in Tirol Discover the authentic charm of a Tirol-style café in the heart of the Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafemanufaktur</strong> in Kitzbühel is the perfect spot for anyone in search of a cozy break from daily routines. In this lovingly decorated café, guests can enjoy a diverse selection of coffee specialties, homemade cakes, and savory snacks. Traditional Austrian coffee culture is cultivated here with immense dedication. Especially popular are the creamy Verlängerter and smooth Melange. In addition, fresh pastries from the in-house confectionery are served daily. The laid-back atmosphere and cordial service make the café a cherished meeting place for locals and travelers alike.</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4489317,
     "lng": 12.1592116
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com"
+  ]
 }

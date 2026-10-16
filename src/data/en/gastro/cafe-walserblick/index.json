@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Walserblick in Mittelberg Discover the cozy charm of Café Walserblick nestled in the heart of Mittelberg, a picturesque village in the Tirol Alps.",
-  "beschreibung": "",
+  "beschreibung": "<p>The <strong>Cafe Walserblick</strong> in Mittelberg in the Tirol region is a charming café that delights guests with homemade cakes, exquisite coffee specialties, and a welcoming atmosphere. It is the perfect place to unwind, read a good book, or chat with friends. The menu offers a fine selection of traditional Austrian pastries – from creamy Sachertorte and light apple strudel to enticing Topfenstrudel. These are accompanied by aromatic coffee specialties prepared with great care. The inviting interior with comfortable seating and lovely details creates a wonderful feel-good ambiance. A strong emphasis is placed on regional products from Tirol, sourced from selected local farms and producers.</p>",
   "ort": "Mittelberg",
   "region": "?",
   "plz": "6992",
@@ -21,5 +21,8 @@
     "lat": 47.3490482,
     "lng": 10.1622759
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

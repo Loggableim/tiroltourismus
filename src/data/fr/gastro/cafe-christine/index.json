@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Christine en Tirol Découvrez l'ambiance chaleureuse et typique du Café Christine au cœur de la Tirol, où chaque visite est une invitation à savourer des spécialités locales…",
-  "beschreibung": "<p>Das <strong>Cafe Christine</strong> in Innsbruck lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "kurzbeschreibung": "Cafe Christine en Tirol",
+  "beschreibung": "<p>Le <strong>Cafe Christine</strong> à Innsbruck invite à une pause gourmande. Cette élégante pâtisserie-café régale ses hôtes avec une vaste sélection de tartes, gâteaux et douceurs faits maison. Chaque création est préparée avec un grand sens du détail et présentée avec art. Pour accompagner ces douceurs, des spécialités de café raffinées sont servies, préparées à la perfection par des baristas expérimentés. L'ambiance chaleureuse au décor charmant invite à s'attarder et à savourer le moment. Que ce soit pour le petit-déjeuner, un café l'après-midi ou un petit en-cas sur le pouce, on s'y sent immédiatement le bienvenu.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3011701,
     "lng": 11.6357782
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

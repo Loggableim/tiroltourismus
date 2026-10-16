@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Cafe Bäckerei Schwaiger in Brixlegg",
-  "beschreibung": "<p>Le <strong>Cafe Bäckerei Schwaiger</strong> à Brixlegg, dans la région de Kufstein, invite à une pause gourmande. Le chic Café-Konditorei chouchoute ses clients avec une large sélection de Torten, Kuchen et Süßen Spezialitäten faits maison. Chaque pièce est préparée avec beaucoup d'amour du détail et présentée de façon artistique. Des Kaffeespezialitäten d'exception sont servies, préparées à la perfection par des Baristi expérimentés. L'ambiance cosy avec un intérieur charmant invite à rester et à savourer. Que ce soit pour le petit-déjeuner, un café de l'après-midi ou une petite collation entre deux repas – on se sent le bienvenu ici.</p>",
+  "kurzbeschreibung": "Cafe Bäckerei Schwaiger à Brixlegg",
+  "beschreibung": "<p>Le <strong>Cafe Bäckerei Schwaiger</strong> à Brixlegg dans la région de Kufstein invite à une pause gourmande. Cette élégante pâtisserie-café régale ses hôtes avec une vaste sélection de tartes, gâteaux et douceurs faits maison. Chaque création est préparée avec un grand sens du détail et présentée avec art. Pour accompagner ces douceurs, des spécialités de café raffinées sont servies, préparées à la perfection par des baristas expérimentés. L'ambiance chaleureuse au décor charmant invite à s'attarder et à savourer le moment. Que ce soit pour le petit-déjeuner, un café l'après-midi ou un petit en-cas sur le pouce, on s'y sent immédiatement le bienvenu.</p>",
   "ort": "Brixlegg",
   "region": "kufstein",
   "plz": "6230",
@@ -20,5 +20,8 @@
     "lat": 47.4296057,
     "lng": 11.8792851
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com"
+  ]
 }

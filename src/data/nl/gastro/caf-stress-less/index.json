@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Café Stress Less in Tirol",
-  "beschreibung": "<p>Das <strong>Café Stress Less</strong> in Zillertal bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Café Stress Less</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "beschreibung": "<p>Het <strong>Café Stress Less</strong> in het Zillertal biedt zijn gasten een hartelijke sfeer en een fijne selectie koffiespecialiteiten en huisgemaakte lekkernijen. Het café staat bekend om zijn zonnige terras, dat op warme dagen uitnodigt tot ontspannen. De menukaart omvat klassiek Oostenrijks gebak, geurige cakes en verleidelijke taarten die dagelijks vers worden bereid. De attente service zorgt ervoor dat het de gasten aan niets ontbreekt. Het <strong>Café Stress Less</strong> is de ideale plek voor een ontspannen koffiepauze te midden van het Tiroolse alledaagse leven.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4044465,
     "lng": 11.7975162
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at"
+  ]
 }

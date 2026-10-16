@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "pub",
   "kurzbeschreibung": "Cafe Bar Memory v Tirolu",
-  "beschreibung": "<p>Das <strong>Cafe Bar Memory</strong> in Zillertal ist ein uriges Pub mit authentischem Ambiente und einer herzlichen Willkommenskultur. Hier treffen sich Einheimische und Gäste gleichermaßen, um bei einem kühlen Bier oder einem edlen Tropfen den Abend zu genießen. Die Speisekarte bietet klassische Pub-Spezialitäten und regionale Schmankerln, die frisch zubereitet serviert werden. Das rustikal-einladende Interieur mit gemütlichen Sitzplätzen schafft eine relaxte Atmosphäre, die zum Verweilen einlädt. Ob für einen Feierabend-Drink, ein gemütliches Beisammensein mit Freunden oder um einfach nur das bunte Treiben zu genießen – das <strong>Cafe Bar Memory</strong> ist die erste Adresse für gesellige Stunden.</p>",
+  "beschreibung": "<p><strong>Cafe Bar Memory</strong> v Zillertalu je rázovitý pub s autentickou atmosférou a vřelou pohostinností. Setkávají se zde místní obyvatelé i hosté, aby si u vychlazeného piva nebo sklenky dobrého vína užili příjemný večer. Jídelní lístek nabízí klasické hospodské speciality a regionální pochoutky, které se podávají čerstvě připravené. Rustikální a příjemný interiér s pohodlným posezením vytváří uvolněnou atmosféru lákající k odpočinku. Ať už na drink po práci, příjemné posezení s přáteli nebo jen pro pozorování okolního ruchu – <strong>Cafe Bar Memory</strong> je prvotřídní adresou pro chvíle v příjemné společnosti.</p>",
   "ort": "",
   "region": "zillertal",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.3917617,
     "lng": 11.7750674
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at"
+  ]
 }

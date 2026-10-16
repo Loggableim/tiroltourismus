@@ -3,8 +3,8 @@
   "emoji": "🍺",
   "farbe": "#FF6B35",
   "kategorie": "pub",
-  "kurzbeschreibung": "Café 33 in Tirol",
-  "beschreibung": "<p>Das <strong>Cafe 33</strong> in Innsbruck lädt zu geselligen Stunden in rustikalem Ambiente ein. Mit seiner gemütlichen Einrichtung, der Theke aus Massivholz und der herzlichen Atmosphäre ist es der ideale Ort, um bei einem frisch gezapften Bier oder einem Glas Wein den Abend zu verbringen. Die Karte bietet herzhafte regionale Gerichte und klassische Pub-Snacks, die perfekt zu den Getränken passen. Regelmäßige Veranstaltungen wie Quizabende oder Live-Musik sorgen zusätzlich für Unterhaltung. Das <strong>Cafe 33</strong> ist mehr als nur ein Pub – es ist ein zweites Wohnzimmer für Genießer.</p>",
+  "kurzbeschreibung": "Cafe 33 in Tirol",
+  "beschreibung": "<p>Het <strong>Cafe 33</strong> in Innsbruck nodigt uit tot gezellige uren in een rustieke ambiance. Met zijn knusse inrichting, de toog van massief hout en de hartelijke sfeer is het de ideale plek om met een vers getapt biertje of een glas wijn de avond door te brengen. De menukaart biedt hartige regionale gerechten en klassieke pubsnacks die perfect bij de drankjes passen. Regelmatige evenementen zoals quizavonden of livemuziek zorgen voor extra vermaak. Het <strong>Cafe 33</strong> is meer dan alleen een pub – het is een tweede huiskamer voor levensgenieters.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2804261,
     "lng": 11.4988615
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

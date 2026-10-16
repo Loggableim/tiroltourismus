@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Werkgeplauder in Füssen",
-  "beschreibung": "<p>Le <strong>Café Werkgeplauder</strong> à Füssen dans la région Außerfern invite à une pause gourmande. Le chic Café-Konditorei chouchoute ses clients avec un large choix de Torten, Kuchen et süßen Spezialitäten faites maison. Chaque pièce est préparée avec beaucoup d'amour du détail et présentée de façon artistique. En accompagnement, des Kaffeespezialitäten raffinées sont servies, préparées à la perfection par des Baristi expérimentés. L'ambiance cosy avec un intérieur charmant invite à rester et à savourer. Que ce soit pour le petit déjeuner, un café de l'après-midi ou un petit snack entre les repas – on se sent le bienvenu.</p>",
+  "kurzbeschreibung": "Café Werkgeplauder à Füssen",
+  "beschreibung": "<p>Le <strong>Café Werkgeplauder</strong> à Füssen dans la région d'Außerfern vous invite à une pause gourmande. Cette élégante pâtisserie-café régale ses hôtes avec une vaste sélection de tartes, gâteaux et douceurs faits maison. Chaque création est préparée avec un grand sens du détail et présentée avec art. Pour accompagner ces douceurs, des spécialités de café raffinées sont servies, préparées à la perfection par des baristas expérimentés. L'ambiance chaleureuse au décor charmant invite à s'attarder et à savourer le moment. Que ce soit pour le petit-déjeuner, un café l'après-midi ou un petit en-cas sur le pouce, on s'y sent immédiatement le bienvenu.</p>",
   "ort": "Füssen",
   "region": "ausserfern",
   "plz": "87629",
@@ -20,5 +20,8 @@
     "lat": 47.5724054,
     "lng": 10.6744275
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at"
+  ]
 }

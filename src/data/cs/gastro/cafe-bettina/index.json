@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "cafe",
   "kurzbeschreibung": "Cafe Bettina v Ellmau",
-  "beschreibung": "<p>Das <strong>Cafe Bettina</strong> in Ellmau in der Region Kufstein ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "beschreibung": "<p><strong>Cafe Bettina</strong> v Ellmau v regionu Kufstein je ideální adresou pro všechny, kteří hledají příjemný odpočinek od každodenního shonu. V této s láskou zařízené kavárně si hosté vychutnají pestrou nabídku kávových specialit, domácích koláčů a malého občerstvení. Tradiční rakouská kávová kultura se zde pěstuje s velkou vášní. Zvláště oblíbené jsou krémový Verlängerter a jemná Melange. K tomu se denně nabízí čerstvé moučníky z vlastní cukrárny. Uvolněná atmosféra a srdečný servis dělají z kavárny oblíbené místo setkávání pro místní obyvatele i návštěvníky.</p>",
   "ort": "Ellmau",
   "region": "kufstein",
   "plz": "6352",
@@ -20,5 +20,8 @@
     "lat": 47.5113699,
     "lng": 12.295682
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com"
+  ]
 }

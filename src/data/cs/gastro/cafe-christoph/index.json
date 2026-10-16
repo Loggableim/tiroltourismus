@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Kavárna Christoph v Längenfeld",
-  "beschreibung": "<p>Das <strong>Cafe Christoph</strong> in Längenfeld in der Region Ötztal lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "kurzbeschreibung": "Cafe Christoph v Längenfeldu",
+  "beschreibung": "<p><strong>Cafe Christoph</strong> v Längenfeldu v regionu Ötztal zve k příjemnému odpočinku. Tato stylová kavárna a cukrárna hýčká své hosty bohatým výběrem domácích dortů, koláčů a sladkých specialit. Každý kousek je připravován s velkou láskou k detailu a umělecky prezentován. K tomu se podávají vybrané kávové speciality, které zkušení baristé připravují k naprosté dokonalosti. Útulná atmosféra s okouzlujícím interiérem láká k posezení a vychutnání příjemných chvil. Ať už na snídani, odpolední kávu nebo malé občerstvení během dne – tady se každý cítí vítán.</p>",
   "ort": "Längenfeld",
   "region": "oetztal",
   "plz": "6444",
@@ -21,5 +21,8 @@
     "lat": 47.0712339,
     "lng": 10.9707545
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.oetztal.com"
+  ]
 }

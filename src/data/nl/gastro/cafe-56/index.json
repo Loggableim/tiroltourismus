@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café 56 in Tirol",
-  "beschreibung": "<p>Das <strong>Cafe 56</strong> in Innsbruck ist die perfekte Adresse für alle, die eine gemütliche Auszeit vom Alltag suchen. In diesem liebevoll eingerichteten Café genießen die Gäste ein vielfältiges Angebot an Kaffeespezialitäten, hausgemachten Kuchen und kleinen Snacks. Die traditionelle österreichische Kaffeekultur wird hier mit viel Leidenschaft gepflegt. Besonders beliebt sind der cremige Verlängerter und der milde Melange. Dazu werden täglich frische Mehlspeisen aus der eigenen Konditorei angeboten. Die entspannte Atmosphäre und der herzliche Service machen das Café zu einem beliebten Treffpunkt für Einheimische und Gäste.</p>",
+  "kurzbeschreibung": "Cafe 56 in Tirol",
+  "beschreibung": "<p>Het <strong>Cafe 56</strong> in Innsbruck is het perfecte adres voor iedereen die op zoek is naar een gezellige onderbreking van het dagelijks leven. In dit liefdevol ingerichte café genieten gasten van een gevarieerd aanbod aan koffiespecialiteiten, huisgemaakt gebak en kleine snacks. De traditionele Oostenrijkse koffiecultuur wordt hier met veel passie gekoesterd. Bijzonder geliefd zijn de romige Verlängerter en de milde Melange. Daarnaast worden dagelijks verse zoetigheden uit de eigen banketbakkerij aangeboden. De ontspannen sfeer en de hartelijke service maken het café tot een geliefde ontmoetingsplek voor zowel de lokale bevolking als gasten.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4818163,
     "lng": 11.1190184
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck"
+  ]
 }

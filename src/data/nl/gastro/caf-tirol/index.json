@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Café Tirol in Mayrhofen",
-  "beschreibung": "<p>Das <strong>Café Tirol</strong> in Mayrhofen in der Region Zillertal verwöhnt seine Gäste mit einer erlesenen Auswahl an regionalen und saisonalen Gerichten. Die Küche verbindet traditionelle Tiroler Rezepte mit kreativen Akzenten und schafft so ein einzigartiges Geschmackserlebnis. Die gemütliche Einrichtung lädt zum Verweilen ein, während der aufmerksame Service für das Wohlbefinden der Gäste sorgt. Besonders empfehlenswert ist die hausgemachte Tiroler Knödelsuppe, die nach einem langen Wandertag wunderbar wärmt. Zudem bietet das Restaurant eine sorgfältig kuratierte Weinkarte mit erlesenen Tropfen aus Südtirol und Österreich.</p>",
+  "beschreibung": "<p>Het <strong>Café Tirol</strong> in Mayrhofen in de regio Zillertal verwent zijn gasten met een uitgelezen selectie van regionale en seizoensgebonden gerechten. De keuken combineert traditionele Tiroolse recepten met creatieve accenten en creëert zo een unieke smaakbeleving. De gezellige inrichting nodigt uit tot verpozen, terwijl de attente service zorgt voor het welzijn van de gasten. Een bijzondere aanrader is de huisgemaakte Tiroler Knödelsuppe, die na een lange wandeldag heerlijk verwarmt. Daarnaast biedt het restaurant een zorgvuldig samengestelde wijnkaart met uitgelezen wijnen uit Zuid-Tirol en Oostenrijk.</p>",
   "ort": "Mayrhofen",
   "region": "zillertal",
   "plz": "6290",
@@ -20,5 +20,8 @@
     "lat": 47.165557,
     "lng": 11.8621755
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at"
+  ]
 }

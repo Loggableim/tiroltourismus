@@ -11,7 +11,7 @@
   "telefon": "+43 5358 2225; +43 5358 3291",
   "email": "info@hotelaltepost.com",
   "webseite": "http://www.hotelaltepost.com/",
-  "beschreibung": "=== description ===\n<p>The <strong>Hotel Alte Post</strong> is centrally located in a charming Tiroler town. The <strong>rooms</strong> are neatly furnished with alpine-style decor. The <strong>building</strong> features a restaurant serving regional cuisine and a wellness area. The <strong>surroundings</strong> are ideal for hikers and winter sports enthusiasts. A standout feature is the historic interiors, which preserve the house’s traditional character. Guests will enjoy a peaceful stay with practical amenities and a warm, local atmosphere.</p>",
+  "beschreibung": "<p>The <strong>Hotel Alte Post</strong> is situated in a central location in a Tyrolean village. The <strong>rooms</strong> are functionally furnished in an alpine style. The <strong>property</strong> features a restaurant serving regional cuisine as well as a wellness area. The <strong>surrounding area</strong> is ideal for hikers and winter sports enthusiasts. A <strong>special feature</strong> is the historic premises, which reflect the property's traditional character. Guests can look forward to quiet accommodation with practical amenities and a regional atmosphere.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://de.wikipedia.org/wiki/Bezirk_Kufstein"
+  ]
 }

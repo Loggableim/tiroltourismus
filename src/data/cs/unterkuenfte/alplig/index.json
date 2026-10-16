@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Alplig</strong> liegt im Ort Ischgl in Tirol. Die Zimmer sind mit Bad, WC, Kabel-TV und WLAN ausgestattet. Im Haus gibt es ein Restaurant, das Tiroler Speisen serviert. Zur Nutzung steht ein Saunabereich zur Verfügung. Ein Skiraum mit Skischuhtrockner und Parkplätze sind vorhanden. Das Skigebiet Silvretta Arena ist fußläufig erreichbar. Die Unterkunft dient ganzjährig als Ausgangspunkt für Aktivitäten in der Region.</p>",
+  "beschreibung": "<p><strong>Gasthof Alplig</strong> se nachází v tyrolském středisku Ischgl. Pokoje jsou vybaveny koupelnou, WC, kabelovou TV a Wi-Fi připojením. V budově se nachází restaurace nabízející tyrolské speciality. Hostům je k dispozici saunová část. Nechybí ani lyžárna se sušákem lyžařských bot a parkoviště. Do lyžařského areálu Silvretta Arena dojdete pohodlně pěšky. Penzion slouží po celý rok jako skvělá základna pro rozmanité aktivity v regionu.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -26,5 +26,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirolwest.at",
+    "https://de.wikipedia.org/wiki/Bezirk_Landeck"
+  ]
 }

@@ -4,14 +4,14 @@
   "status": "published",
   "region": "imst",
   "ort": "Imst",
-  "kategorie": "natur",
-  "kurzbeschreibung": "Domácí hora Imstu – 2 774 m vysoký vrchol s kluzkovými stěnami, turistickými stezkami a grandiózním 360° panoramatem nad Lechtaler Alpen.",
-  "beschreibung": "<h2>Přehled</h2><p><strong>Muttekopf</strong> (2 774 m) je dominantní vápencový vrchol tyčící se nad tyrolským městem Imst v Lechtalských Alpách. Nabízí velkolepé 360stupňové panorama od Zugspitze až po ledovce Ötztalských Alp a pod jeho stěnami leží útulná horská chata Muttekopfhütte (1 934 m).</p><h2>Trasa a náročnost</h2><p>Trasa obvykle začíná u horní stanice lanovky Alpjoch (2 050 m) sestupem po skalní stezce Drischlsteig k chatě. Odtud vede strmý výstup suťoviskem a skalnatým hřebenem až na vrchol (převýšení 750 m, 2,5 až 3 hodiny chůze, obtížnost T3+/T4). Zkušení lezci mohou zvolit náročnou ferratu Imster Klettersteig (C/D). Pevná kotníková obuv nutná. Vrcholový hřeben není vhodný pro psy.</p><h2>Příjezd a doprava</h2><p>Vlakem ÖBB do stanice Imst-Pitztal a městským autobusem k lanovce v Hoch-Imstu. Autem po dálnici A12 (sjezd Imst) na bezplatné parkoviště v Hoch-Imstu.</p><h2>Tipy</h2><p>Při sestupu zažijte jízdu na nejdelší horské bobové dráze na světě Alpine Coaster Imst a vychutnejte si tradiční sýrové knedlíky Kaspressknödel na terase chaty Muttekopfhütte.</p>",
+  "kategorie": "aussicht",
+  "kurzbeschreibung": "S výškou 2 774 metrů nad městem Imst je Muttekopf velkolepým vyhlídkovým vrcholem Lechtalských Alp, který láká na náročné horské túry, chaty a via ferraty.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Hora <strong>Muttekopf</strong> (2 774 m n. m.) je majestátní dominantou tyčící se přímo nad městem Imst a jihovýchodním pilířem Lechtalských Alp v tyrolském Oberlandu. Díky své vysunuté poloze nad údolími Inntal a Gurgltal je tento skalnatý vrchol považován za jednu z nejvelkolepějších přírodních vyhlídek v celém Tyrolsku. Z prostorného vrcholu s křížem se otevírá kruhový rozhled od zaledněných Ötztalských a Stubaiských Alp přes Wetterstein se Zugspitze až hluboko do Karwendelu. Působivý masiv tvořený vápencem a slepencovými skalami obklopující kotlinu Malchitt přitahuje turisty, lezce i příznivce zajištěných cest bohatou alpskou květenou i geologickou pestrostí.</p>\n<h2>Route & Anforderungen</h2>\n<p>Výstup na Muttekopf je fyzicky náročná vysokohorská túra s převýšením 800 až 1 800 metrů podle zvolené trasy. Mnoho turistů volí usnadnění výstupu sedačkovou lanovkou Imster Bergbahnen na horní stanici Alpjoch (2 050 m). Odtud vede panoramatická stezka Drischlsteig – bezpečně vytesaná do skály a jištěná ocelovými lany – k horské chatě Muttekopfhütte ve výšce 1 934 metrů. Odtud stezka stoupá kamenitým karem do sedla Muttekopfscharte a dále po suťovém a skalnatém hřebeni na vrchol. Trasa vyžaduje jistý krok, odolnost vůči závratím a kvalitní pohorky. Milovníci ferrat mohou vyzkoušet náročnou ferratu Wasserfall-Klettersteig nebo proslulou Imster Klettersteig.</p>\n<h2>Besuch & Anreise</h2>\n<p>Výchozím místem je okresní město Imst v údolí řeky Inn. Dolní stanice lanovky v části Hoch-Imst nabízí prostorné parkoviště a je snadno dostupná autem i městským autobusem z nádraží Imst-Pitztal. Pěší turisté mohou vystoupat k chatě pěšky z Imstu přes romantickou soutěsku Rosengartenschlucht za zhruba čtyři hodiny. Chata Muttekopfhütte bývá otevřena od začátku června do začátku října.</p>\n<h2>Tipps</h2>\n<p>Návštěva chaty Muttekopfhütte potěší nejen výbornými tyrolskými specialitami, ale také slunečnou terasou s výhledem na lezecké stěny. Pro rodiny s dětmi je skvělým zážitkem jízda na horské bobové dráze Alpine Coaster v Hoch-Imstu, která patří k nejdelším v celých Alpách.</p>",
   "emoji": "🏔️",
   "farbe": "#6D4C41",
   "hoehe": "2.774 m",
-  "dauer": "5–6 Stunden",
-  "preis": "Kostenlos (Bergbahn Hoch-Imst Berg- und Talfahrt ca. 24 €)",
+  "dauer": "5-8 hodin (celodenní túra)",
+  "preis": "Volný přístup (lanovka v Imstu volitelně za poplatek)",
   "tags": [
     "aussicht",
     "wandern",
@@ -20,7 +20,7 @@
     "bergsteigen",
     "lechtaler-alpen"
   ],
-  "oeffnungszeiten": "Ganzjährig; Muttekopfhütte: Juni–Sep",
+  "oeffnungszeiten": "Přístupné celoročně; horské túry doporučeny od června do října",
   "webseite": "https://www.muttekopfhuette.at",
   "koordinaten": {
     "lat": "47.2833",
@@ -28,9 +28,9 @@
   },
   "sources": [
     "https://de.wikipedia.org/wiki/Muttekopf",
+    "https://www.imst.at/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Muttekopfh%C3%BCtte",
-    "https://www.alpenvereinaktiv.com/de/tour/muttekopf-vom-alpjoch/1381387/",
-    "https://www.bergsteigen.com/touren/klettersteig/imster-klettersteig-muttekopf/",
-    "https://www.vvt.at/"
+    "https://www.alpenverein.at/"
   ]
 }

@@ -4,17 +4,19 @@
   "region": "innsbruck",
   "ort": "Jenbach",
   "kategorie": "burg",
-  "kurzbeschreibung": "This magnificently preserved Renaissance castle above the Inntal takes you through authentically furnished princely apartments and the armory.",
+  "kurzbeschreibung": "Stately Renaissance castle perched above the Inn Valley featuring original state rooms, historic armouries, and award-winning audio drama tours.",
   "emoji": "🏰",
   "farbe": "#A0522D",
   "tags": [
-    "castle",
-    "renaissance",
-    "museum",
-    "history"
+    "Kultur",
+    "Schloss",
+    "Geschichte",
+    "Familie",
+    "Silberregion Karwendel",
+    "Jenbach"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 14,00, Kinder € 7,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 15,00 €, Kinder ca. 9,00 €, inklusive Hörspielführung",
   "oeffnungszeiten": "Mitte April-Okt: Di-So 9:00-17:00",
   "webseite": "https://www.schloss-tratzberg.at/",
   "bilder": [],
@@ -24,5 +26,14 @@
     "lng": "11.7717"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Schloss Tratzberg</strong> – Die Schloss Tratzberg gehört zum kulturellen Erbe Tirols und bietet einen faszinierenden Einblick in vergangene Zeiten. Dieses prachtvoll erhaltene Renaissance-Schloss oberhalb des Inntals führt durch original eingerichtete Fürstenwohnungen und die Rüstkammer Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Die Schloss Tratzberg befindet sich im Herzen von Jenbach und ist bequem zu Fuß oder mit öffentlichen Verkehrsmitteln zu erreichen. Die zentrale Lage macht sie zum idealen Ausgangspunkt für einen Kulturspaziergang durch die Stadt. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Überblick</h2>\n<p>The majestic <strong>Schloss Tratzberg</strong> commands sweeping views across the lower Inn Valley from its forested ridge between Jenbach and Stans. Originally mentioned in the 13th century as a border stronghold against Bavaria, the medieval castle burned down in 1492. Emperor Maximilian I transferred the ruin to wealthy Schwaz mining magnates, the Tänzl brothers, who transformed it into an exquisite late Gothic and early Renaissance jewel. Owned by the Counts of Enzenberg since 1848, the castle remains one of the best-preserved and most authentically furnished Renaissance fortresses in the Alps.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>From the car park in the valley, visitors can either take a scenic 20-minute uphill woodland stroll or ride the cheerful \"Tratzberg-Express\" fun train to the castle gates. Interior tours take approximately one hour and utilize an immersive wireless audio-play guide, where historical figures such as Emperor Maximilian I narrate their lives. Highlights include the arcaded courtyard, the Habsburg Hall with its monumental 46-metre painted genealogical tree, the Queen's Chamber with intricate woodwork, and the Armoury. A dedicated fairy-tale audio guide is provided for children with ghost Tratzi.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Schloss Tratzberg welcomes visitors daily from early April until early November, operating from 10:00 to 16:00. Standard admission including the audio tour is roughly 15.00 Euro for adults and 9.00 Euro for children. By car, take the Inntal motorway A12 to the Jenbach or Schwaz exits and follow signs to the castle parking area at the Schlosswirt tavern. Rail passengers arrive at Jenbach station, from where local buses operate, or walk to the castle base in about 25 minutes.</p>\n\n<h2>Tipps</h2>\n<p>Enjoy lunch or refreshments in the beer garden of the Schlosswirt inn near the lower car park. You can combine your visit with a thrilling hike through the nearby Wolfsklamm gorge in Stans up to the historic pilgrimage monastery of St. Georgenberg.</p>",
+  "sources": [
+    "https://www.schloss-tratzberg.com/",
+    "https://www.silberregion-karwendel.com/de/schloss-tratzberg",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-schloss-tratzberg",
+    "https://de.wikipedia.org/wiki/Schloss_Tratzberg",
+    "https://de.wikipedia.org/wiki/Jenbach"
+  ],
+  "saison": "Anfang April bis Anfang November",
+  "familie": true
 }

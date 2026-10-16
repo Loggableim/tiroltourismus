@@ -4,17 +4,19 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": null,
+  "kurzbeschreibung": "El Museo de Kitzbühel recorre la historia urbana y deportiva de la localidad y expone la mayor colección pictórica de Alfons Walde.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museo",
-    "historia",
-    "cultura",
-    "minería"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 10,00 €, Kinder und Jugendliche bis 18 Jahre frei",
   "oeffnungszeiten": "Di-So 10:00-17:00",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum Kitzbühel</strong> – Die Museum Kitzbühel in Kitzbühel verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Museum Kitzbühel zeigt auf drei Etagen die bewegte Geschichte der Stadt vom Mittelalter bis zur Gegenwart mit Schwerpunkt Bergbau und Tourismus Das vielfältige Veranstaltungsprogramm mit Konzerten, Lesungen und Workshops macht jeden Besuch einzigartig. Besonders die stimmungsvollen Abendführungen und thematischen Sonderausstellungen bleiben nachhaltig in Erinnerung. Mitten in der reizvollen Altstadt von Kitzbühel gelegen, fügt sich die Museum Kitzbühel harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Ob Sommer oder Winter: Die Museum Kitzbühel ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Überblick</h2>\n<p>El <strong>Museum Kitzbühel</strong> se ubica en un antiguo granero del siglo XVI y torre defensiva en el casco antiguo. Este espacio expositivo recorre la historia tirolesa desde la minería de la Edad del Bronce hasta el auge del esquí alpino de competición. Su gran tesoro es la colección dedicada al pintor y arquitecto local Alfons Walde, cuyos carteles y óleos invernales simbolizan el espíritu de los Alpes austríacos.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>La muestra abarca salas dedicadas a las leyendas del esquí como Toni Sailer y los orígenes de las carreras del Hahnenkamm, antes de dar paso a la galería con las célebres estampas alpinas de Walde. El recorrido finaliza en la terraza superior con vistas de 360 grados sobre el casco urbano y las cumbres tirolesas. Dispone de ascensor y acceso para sillas de ruedas. Tiempo de visita: 1,5 a 2 horas.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Abierto de martes a domingo de 10:00 a 17:00 (lunes cerrado). Entrada aprox. 10,00 € adultos, menores de 18 gratis. Ubicado en la calle Hinterstadt en el centro peatonal, a 8 minutos a pie de la estación de Kitzbühel.</p>\n\n<h2>Tipps</h2>\n<p>La terraza de la azotea ofrece la mejor panorámica del trazado de la mítica pista de descenso de la Streif en el monte Hahnenkamm.</p>",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-museum-kitzbuehel",
+    "https://www.kitzbuehel.com/",
+    "https://de.wikipedia.org/wiki/Alfons_Walde",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

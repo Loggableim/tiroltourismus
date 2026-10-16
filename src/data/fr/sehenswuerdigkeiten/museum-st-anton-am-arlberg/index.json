@@ -4,17 +4,19 @@
   "region": "arlberg",
   "ort": "St. Anton am Arlberg",
   "kategorie": "museum",
-  "kurzbeschreibung": "Le musée dans l'espace de peuplement historique dokumentiert l'histoire riche du tourisme alpin, de la culture paysanne et de la construction de la Arlbergbahn.",
+  "kurzbeschreibung": "Le Musée de St. Anton am Arlberg dans la villa Trier retrace la transformation du village alpin en berceau mondial du ski.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "musée",
-    "culture",
-    "histoire",
-    "Arlberg"
+    "Kultur",
+    "Museum",
+    "Skisport",
+    "Arlberg",
+    "St. Anton am Arlberg",
+    "Geschichte"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 8,00",
+  "dauer": "1-1.5 Stunden",
+  "preis": "Erwachsene ca. 6,00 €, Kinder in Begleitung frei",
   "oeffnungszeiten": "Mi-So 10:00-17:00",
   "webseite": "https://www.museum-st-anton.at",
   "bilder": [],
@@ -22,5 +24,15 @@
   "koordinaten": {
     "lat": "47.1289",
     "lng": "10.2664"
-  }
+  },
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le <strong>Museum St. Anton am Arlberg</strong> est abrité dans la villa historique Trier (1912), élégante demeure de style Art nouveau alpin entourée d'un parc boisé dominant la station. Il rend hommage au riche passé de la région de l'Arlberg, universellement reconnue comme le berceau du ski alpin. C'est ici que le pionnier Hannes Schneider développa au début du XXe siècle la technique de l'Arlberg, posant les bases du ski moderne.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>La visite traverse de chaleureuses pièces lambrissées d'époque sur deux niveaux. Les collections rassemblent des skis en bois anciens, des tenues d'époque, des photographies et films historiques des courses de l'Arlberg-Kandahar, ainsi que des témoignages sur la percée du tunnel ferroviaire de l'Arlberg. Le parc environnant dispose de sentiers ombragés. Escalier intérieur en bois. Visite : environ 1 heure.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Ouvert l'après-midi pendant les saisons d'hiver et d'été (généralement du dimanche au vendredi de 15h00 à 19h00 ; fermé le samedi). Entrée adulte environ 6,00 €, gratuit pour les enfants accompagnés. Situé à 5-10 minutes à pied de la gare et du centre de St. Anton.</p>\n\n<h2>Tipps</h2>\n<p>Prenez un verre ou un repas sur la terrasse ensoleillée du restaurant du musée en contemplant les cimes du Galzig et du Valluga.</p>",
+  "sources": [
+    "https://www.stantonamarlberg.com/de/service/infrastruktur/museum-st-anton-am-arlberg",
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-museum-st-anton-am-arlberg",
+    "https://www.arlbergerin.at/museum-st-anton-am-arlberg/",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg",
+    "https://www.stantonamarlberg.com/"
+  ],
+  "saison": "Saisonal im Sommer und Winter nachmittags geöffnet",
+  "familie": true
 }

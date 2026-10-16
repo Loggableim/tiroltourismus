@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Zams",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Il monte che domina Landeck – con la Panoramabahn, la zipline più lunga del Tirol e una vista mozzafiato a 360° sull’Oberinntal. *(HTML tags e termini originali mantenuti esattamente come da richiesta.)*",
-  "beschreibung": "<h2>Panoramica</h2><p>Il <strong>Venet</strong> (2.208 m) è la straordinaria montagna panoramica che sovrasta Landeck e Zams nel Tirolo occidentale. Raggiungibile in 8 minuti con la funivia Venetbahn, regala una vista a 360 gradi su ben 82 vette alpine oltre i tremila metri (tra cui Ortles, Wildspitze e Zugspitze) e ospita l'osservatorio astronomico più alto del Tirolo.</p><h2>Percorso &amp; Requisiti</h2><p>Giro panoramico pianeggiante del Krahberg accessibile a tutti (45 minuti, T1, per passeggini). Camminata panoramica lungo la cresta verso la malga Goglesalm (1h30, T1/T2). Salita per escursionisti alla cima Glanderspitze (2.512 m, T2/T3). Famoso sito di lancio per parapendio. Scarpe comode consigliate. Cani ammessi al guinzaglio.</p><h2>Come arrivare</h2><p>In treno ÖBB fino alla stazione di Landeck-Zams e 10 minuti a piedi fino alla funivia. In auto dall'autostrada A12 (uscita Zams) con parcheggio gratuito alla partenza.</p><h2>Consigli</h2><p>Partecipate a una serata di osservazione delle stelle all'osservatorio astronomico del Venet e gustate i canederli tirolesi sulla terrazza a quota 2.208 metri.</p>",
+  "kurzbeschreibung": "Il monte Venet (2.208 m al Krahberg) sopra Landeck/Zams offre panorami a 360° su oltre 80 cime alpine, l’osservatorio più alto del Tirolo e il percorso didattico di Tobi.",
+  "beschreibung": "<h2>Panoramica</h2>\n<p>Il monte <strong>Venet</strong> (2.208 m sulla vetta del Krahberg) è la montagna simbolo della conca di Landeck-Zams-Fließ, considerata dagli escursionisti una delle vette panoramiche più straordinarie delle Alpi Centrali. Dall'ampio pianoro sommitale si ammira una stupefacente vista a 360 gradi su oltre 80 cime alpine, tra cui la Wildspitze con i suoi ghiacciai, il gruppo dell'Ortles, il massiccio svizzero del Silvretta e la Zugspitze in territorio bavarese. Nelle giornate limpide la vista abbraccia orizzonti oltreconfine. Grazie alla sua posizione soleggiata e aperta, ospita in vetta l'osservatorio astronomico più alto del Tirolo con telescopio solare. In estate il massiccio attrae camminatori, parapendisti e amanti della mountain bike, mentre d'inverno offre un'accogliente e soleggiata stazione sciistica a misura di famiglia.</p>\n<h2>Percorso &amp; Requisiti</h2>\n<p>La moderna funivia del Venet conduce i passeggeri da Zams alla stazione a monte a 2.208 metri in pochi minuti. Attorno alla stazione si sviluppa un comodo sentiero panoramico pianeggiante fino alla terrazza belvedere e all'osservatorio (circa 20 minuti di cammino), accessibile agevolmente anche con passeggini o per persone anziane. I bambini adorano «Tobi’s Erlebnisweg» con le sue divertenti stazioni di gioco e prove di abilità, mentre comode panchine consentono di rilassarsi di fronte al panorama. I camminatori esperti possono affrontare l'impegnativa cresta del Venet verso il Glanderspitz (2.512 m), che richiede passo sicuro, assenza di vertigini e scarponi da montagna. Scarpe sportive bastano per la vetta, scarponi alti per la cresta.</p>\n<h2>Come arrivare</h2>\n<p>La funivia è in funzione in estate da fine maggio a metà ottobre tutti i giorni dalle 08:30 alle 17:00 (in inverno da dicembre a marzo). I biglietti di andata e ritorno per adulti costano circa 25,00 euro, con agevolazioni per i possessori della TirolWest Card. La stazione a valle sorge nel centro di Zams con un grande parcheggio gratuito per auto e pullman. In treno, la stazione internazionale di Landeck-Zams dista solo 10 minuti a piedi o in autobus locale.</p>\n<h2>Consigli</h2>\n<p>Prenotate una serata di osservazione delle stelle all'osservatorio del Venet a cielo sereno per scrutare pianeti e galassie attraverso telescopi professionali. Sulla terrazza baciata dal sole del ristorante in vetta, gustate gli squisiti Kaspressknödel tirolesi ammirando le montagne.</p>",
   "emoji": "🚡",
   "farbe": "#43A047",
   "hoehe": "2.508 m",
-  "dauer": "2–4 Stunden",
-  "preis": "Bergbahn Venet Berg- und Talfahrt ca. 25 €",
+  "dauer": "2–4 ore",
+  "preis": "Funivia andata e ritorno adulti ca. 25,00 €; sconti con tessera TirolWest Card",
   "tags": [
     "panorama",
     "trekking",
@@ -20,7 +20,7 @@
     "sport",
     "famiglia"
   ],
-  "oeffnungszeiten": "Täglich 8:30–17:00 (Mai–Okt); Winter: Di–So 9:00–16:00",
+  "oeffnungszeiten": "Stagione estiva da fine maggio a metà ottobre tutti i giorni 08:30–17:00; inverno da dicembre a marzo",
   "webseite": "https://www.venet.at",
   "koordinaten": {
     "lat": "47.1528",
@@ -30,8 +30,10 @@
   "familie": true,
   "sources": [
     "https://www.venet.at/",
-    "https://www.tirolwest.at/de/entdecken-erleben/sommer/bergbahnen/venet-genussberg/",
-    "https://de.wikipedia.org/wiki/Venet",
+    "https://www.tirolwest.at/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Venet_(Berg)",
+    "https://de.wikipedia.org/wiki/Landeck_(Tirol)",
     "https://www.vvt.at/"
   ]
 }

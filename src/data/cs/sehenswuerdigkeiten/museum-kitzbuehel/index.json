@@ -4,17 +4,19 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "Muzeum Kitzbühel na třech patrech představuje živou historii města od středověku po současnost se zaměřením na těžbu a turismus.",
+  "kurzbeschreibung": "Muzeum v Kitzbühelu představuje historii města a lyžování i největší stálou sbírku obrazů malíře Alfonse Waldeho.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "muzeum",
-    "historie",
-    "kultura",
-    "hornictví"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Erwachsene ca. 10,00 €, Kinder und Jugendliche bis 18 Jahre frei",
   "oeffnungszeiten": "Di-So 10:00-17:00",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum Kitzbühel</strong> – Die Museum Kitzbühel in Kitzbühel verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Museum Kitzbühel zeigt auf drei Etagen die bewegte Geschichte der Stadt vom Mittelalter bis zur Gegenwart mit Schwerpunkt Bergbau und Tourismus Das vielfältige Veranstaltungsprogramm mit Konzerten, Lesungen und Workshops macht jeden Besuch einzigartig. Besonders die stimmungsvollen Abendführungen und thematischen Sonderausstellungen bleiben nachhaltig in Erinnerung. Mitten in der reizvollen Altstadt von Kitzbühel gelegen, fügt sich die Museum Kitzbühel harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Ob Sommer oder Winter: Die Museum Kitzbühel ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Überblick</h2>\n<p>Městské muzeum <strong>Museum Kitzbühel</strong> sídlí v historické sýpce ze 16. století s věží v centru starého města. Dokumentuje cestu Kitzbühelu od pravěkého dolování přes středověk až po kolébku slavného lyžařského závodu na Hahnenkammu. Vrcholem expozice je nejrozsáhlejší světová sbírka obrazů malíře Alfonse Waldeho, jehož zasněžené alpské scenérie proslavily Tyrolsko po celém světě.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>Prohlídka v několika patrech představuje historické trofeje lyžařských legend, jako byli Toni Sailer a Franz Reisch, i mistrovská plátna Alfonse Waldeho. Z vyhlídkové střešní terasy je úchvatný panoramatický výhled na město a sjezdovku Streif. Budova je bezbariérová s výtahy. Doba návštěvy: 1,5 až 2 hodiny.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Otevřeno celoročně od úterý do neděle 10:00–17:00 (v pondělí zavřeno). Vstupné dospělí cca 10,00 €, do 18 let zdarma. Pěšky z nádraží Kitzbühel přibližně 8 minut.</p>\n\n<h2>Tipps</h2>\n<p>Určitě navštivte střešní terasu muzea, odkud uvidíte slavnou sjezdovku Streif i historické centrum města.</p>",
+  "sources": [
+    "https://www.tirol.at/reisefuehrer/ausflugstipps/ausflugsziele/a-museum-kitzbuehel",
+    "https://www.kitzbuehel.com/",
+    "https://de.wikipedia.org/wiki/Alfons_Walde",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Kitzb%C3%BChel"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

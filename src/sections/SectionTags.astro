@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  tags: string[];
+  tags: Array<string | { label: string; href?: string }>;
   centered?: boolean;
 }
 
@@ -11,7 +11,13 @@ const { tags, centered = true } = Astro.props;
   <section class="sec-tags">
     <div class="container">
       <div class="sec-tags-row" class:list={{ 'sec-tags-centered': centered }}>
-        {tags.map(t => <span class="tag">{t}</span>)}
+        {tags.map(t => typeof t === 'string' ? (
+          <span class="tag">{t}</span>
+        ) : t.href ? (
+          <a class="tag" href={t.href}>{t.label}</a>
+        ) : (
+          <span class="tag">{t.label}</span>
+        ))}
       </div>
     </div>
   </section>

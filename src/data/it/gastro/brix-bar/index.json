@@ -3,8 +3,8 @@
   "emoji": "🍸",
   "farbe": "#FF6B35",
   "kategorie": "bar",
-  "kurzbeschreibung": "Brix Bar in Tirol Scopri la Brix Bar nel cuore del Tirol, un luogo dove l’atmosfera accogliente e la vista mozzafiato sulle montagne si fondono con un’offerta di drink creativi e…",
-  "beschreibung": "<p>Die <strong>Brix Bar</strong> im Raum Kitzbühel ist der Treffpunkt für alle, die exzellente Drinks in stilvollem Ambiente suchen. Die Barkeeper verstehen ihr Handwerk: Ob klassische Cocktails, innovative Eigenkreationen oder ein sorgfältig ausgewählter Wein — hier wird Genuss großgeschrieben. Das Interieur ist modern und elegant, mit gedämpftem Licht und bequemen Loungemöbeln, die zum Verweilen einladen. Regelmäßige Events wie DJ-Abende oder Weinverkostungen sorgen für Abwechslung. Die Bar bietet auch eine ausgewählte Karte kleiner Speisen, die perfekt zum Drink passen. Der ideale Ort für einen stilvollen Abend in den Kitzbüheler Alpen.</p>",
+  "kurzbeschreibung": "Brix Bar in Tirol",
+  "beschreibung": "<p>Il <strong>Brix Bar</strong> nella zona di Kitzbühel è il punto d'incontro ideale per chi cerca ottimi drink in un ambiente elegante. I baristi conoscono alla perfezione il loro mestiere: che si tratti di cocktail classici, innovative creazioni della casa o di un vino selezionato con cura, qui il piacere è al primo posto. Gli interni sono moderni e raffinati, con luci soffuse e comodi arredi lounge che invitano a fermarsi e rilassarsi. Eventi regolari come serate con DJ o degustazioni di vino garantiscono sempre un'esperienza varia. Il locale propone inoltre una curata selezione di stuzzichini e piccoli piatti che accompagnano alla perfezione ogni bevanda. Il posto ideale per trascorrere una serata ricca di stile nelle Alpi di Kitzbühel.</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4494578,
     "lng": 12.2560641
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com"
+  ]
 }

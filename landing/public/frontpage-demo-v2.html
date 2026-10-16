@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tiroltourismus — Demo v2 (Berglicht & Firn + Alpin-Monolith)</title>
+  <style>
+    :root {
+      --bg: #0B0F14;
+      --surface: rgba(11, 15, 21, 0.78);
+      --surface-hover: rgba(16, 22, 31, 0.92);
+      --border-hairline: rgba(245, 243, 240, 0.15);
+      --text: #F5F3F0;
+      --text-secondary: rgba(245, 243, 240, 0.84);
+      --text-muted: rgba(245, 243, 240, 0.62);
+      --gold: #E0B72C;
+      --tirol-red: #C8102E;
+
+      --accent-de: #C8102E;
+      --accent-en: #6996B3;
+      --accent-fr: #9488B4;
+      --accent-cs: #529982;
+      --accent-nl: #D18450;
+      --accent-it: #C2646B;
+      --accent-es: #E0B72C;
+      --accent-cn: #CC523F;
+
+      --scrim-top: rgba(22, 15, 21, 0.70);
+      --scrim-mid: rgba(15, 13, 19, 0.48);
+      --scrim-bot: rgba(8, 11, 16, 0.90);
+      --horizon-tint: rgba(224, 156, 76, 0.22);
+      --sky-top: #16111c;
+      --sky-mid: #573629;
+
+      --font-editorial: 'Instrument Serif', 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+      --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --radius: 8px;
+    }
+
+    .tt-stage[data-light="dawn"] {
+      --scrim-top: rgba(20, 17, 30, 0.68);
+      --scrim-mid: rgba(15, 14, 23, 0.46);
+      --horizon-tint: rgba(235, 168, 132, 0.26);
+      --sky-top: #151728;
+      --sky-mid: #5b3b49;
+    }
+
+    .tt-stage[data-light="day"] {
+      --scrim-top: rgba(9, 15, 24, 0.64);
+      --scrim-mid: rgba(9, 14, 21, 0.44);
+      --horizon-tint: rgba(150, 196, 230, 0.22);
+      --sky-top: #0d1c30;
+      --sky-mid: #2f4f72;
+    }
+
+    .tt-stage[data-light="dusk"] {
+      --scrim-top: rgba(22, 15, 21, 0.70);
+      --scrim-mid: rgba(15, 13, 19, 0.48);
+      --horizon-tint: rgba(224, 156, 76, 0.26);
+      --sky-top: #16111c;
+      --sky-mid: #5c3728;
+    }
+
+    .tt-stage[data-light="night"] {
+      --scrim-top: rgba(6, 9, 15, 0.78);
+      --scrim-mid: rgba(7, 11, 18, 0.58);
+      --horizon-tint: rgba(105, 150, 179, 0.14);
+      --sky-top: #05080f;
+      --sky-mid: #142133;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      background: #05070A;
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible, select:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    .tt-sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    /* ─── Demo Toolbar ─── */
+    .demo-bar {
+      position: fixed;
+      top: 10px;
+      right: 12px;
+      z-index: 100;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      background: rgba(8, 11, 16, 0.88);
+      border: 1px solid rgba(245, 243, 240, 0.2);
+      border-radius: 8px;
+      backdrop-filter: blur(8px);
+      font-size: 11px;
+      color: var(--text-secondary);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+    .demo-bar label {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 500;
+    }
+    .demo-bar select, .demo-bar button {
+      background: #141B24;
+      color: var(--text);
+      border: 1px solid rgba(245, 243, 240, 0.22);
+      border-radius: 5px;
+      padding: 3px 6px;
+      font-size: 11px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .demo-bar button[aria-pressed="true"] {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .demo-viewport-wrap {
+      width: 100%;
+      height: 100dvh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: auto;
+    }
+    .demo-viewport-wrap[data-vp="1280"] .tt-stage {
+      width: 1280px;
+      height: 720px;
+      min-height: 720px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.75);
+    }
+    .demo-viewport-wrap[data-vp="390"] .tt-stage {
+      width: 390px;
+      height: 844px;
+      min-height: 844px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 24px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.75);
+      overflow-y: auto;
+    }
+
+    .tt-stage {
+      position: relative;
+      width: 100%;
+      min-height: 100dvh;
+      height: 100dvh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--bg);
+      isolation: isolate;
+      transition: width 0.25s var(--ease-out), height 0.25s var(--ease-out);
+    }
+    .tt-hero-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 56%, #0B0F14 100%);
+      transition: background 0.5s ease;
+    }
+    .tt-hero-svg svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .tt-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(85% 52% at 50% 22%, var(--horizon-tint) 0%, transparent 72%),
+        linear-gradient(180deg, var(--scrim-top) 0%, var(--scrim-mid) 38%, rgba(9, 13, 19, 0.78) 70%, var(--scrim-bot) 100%);
+      transition: background 0.45s ease;
+    }
+    .tt-light-cone {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: radial-gradient(42% 48% at var(--spot-x, 50%) 34%, rgba(224, 183, 44, 0.14) 0%, transparent 75%);
+      transition: background 0.4s var(--ease-out);
+    }
+    .tt-contours {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='440' height='220' viewBox='0 0 440 220' fill='none'%3E%3Cpath d='M-20 45 C 90 12, 175 75, 285 38 C 345 18, 395 55, 460 32 M-20 105 C 100 68, 195 140, 315 92 C 365 72, 410 108, 460 88 M-20 168 C 80 132, 215 192, 335 152 C 380 135, 415 162, 460 146' stroke='%23F5F3F0' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 540px 270px;
+    }
+
+    .tt-shell {
+      position: relative;
+      z-index: 2;
+      width: min(1140px, 100%);
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: clamp(12px, 2.2vh, 24px);
+      padding: clamp(16px, 3vh, 34px) clamp(18px, 4.5vw, 56px) clamp(8px, 1.4vh, 16px);
+    }
+
+    .tt-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: clamp(4px, 0.8vh, 10px);
+    }
+    .tt-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 243, 240, 0.16);
+      background: rgba(11, 15, 20, 0.52);
+    }
+    .tt-brand-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--tirol-red);
+      box-shadow: 0 0 0 2px rgba(200, 16, 46, 0.28);
+    }
+    .tt-brand-word {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: lowercase;
+    }
+    .tt-claim {
+      font-family: var(--font-editorial);
+      font-weight: 400;
+      font-size: clamp(58px, 11.4vh, 120px);
+      line-height: 0.88;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      text-shadow: 0 10px 40px rgba(0, 0, 0, 0.68);
+    }
+    .tt-claim-dot { color: var(--gold); }
+
+    .tt-flap-wrap {
+      width: 100%;
+      max-width: 62ch;
+      min-height: calc(1.55em * 2.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 8px;
+    }
+    .tt-flap {
+      font-size: clamp(13px, 1.75vh, 15.5px);
+      line-height: 1.55;
+      color: var(--text-secondary);
+      text-align: center;
+      text-wrap: balance;
+      perspective: 650px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+    }
+    .tt-flap .tt-ch {
+      position: relative;
+      display: inline-block;
+      transform-origin: 50% 52%;
+      backface-visibility: hidden;
+      will-change: transform, opacity;
+      padding: 0 1px;
+      margin: 0 0.2px;
+      border-radius: 2px;
+      background: rgba(15, 21, 30, 0.72);
+      border: 1px solid rgba(245, 243, 240, 0.14);
+    }
+    .tt-flap .tt-ch::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: rgba(0, 0, 0, 0.55);
+      pointer-events: none;
+    }
+
+    .tt-main {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .tt-ridge-bar { width: 100%; height: 20px; pointer-events: none; }
+    .tt-ridge-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+    .tt-ridge-line {
+      stroke: rgba(245, 243, 240, 0.24);
+      stroke-width: 1.15;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .tt-ridge-peak {
+      fill: rgba(245, 243, 240, 0.35);
+      transition: fill 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+    .tt-ridge-peak[data-active="true"] {
+      fill: var(--gold);
+      transform: scale(1.45);
+    }
+
+    .tt-grid {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: clamp(10px, 1.1vw, 15px);
+    }
+    .demo-viewport-wrap[data-vp="390"] .tt-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .demo-viewport-wrap[data-vp="390"] .tt-shell {
+      padding: 24px 16px 16px;
+      gap: 16px;
+    }
+    .demo-viewport-wrap[data-vp="390"] .tt-claim {
+      font-size: 56px;
+    }
+
+    .tt-tile {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 74px;
+      padding: 13px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border-hairline);
+      border-left: 3px solid var(--tile-accent, var(--gold));
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.30);
+      transition: transform 0.24s var(--ease-out), background-color 0.24s var(--ease-out), border-color 0.24s var(--ease-out), box-shadow 0.24s var(--ease-out);
+      overflow: hidden;
+    }
+    .tt-tile[data-detected="true"] {
+      border-color: rgba(224, 183, 44, 0.48);
+      border-left-color: var(--tile-accent, var(--gold));
+      background: rgba(15, 21, 30, 0.86);
+    }
+    .tt-tile:hover, .tt-tile:focus-visible {
+      transform: translateY(-2px);
+      background: var(--surface-hover);
+      border-color: var(--tile-accent, var(--gold));
+      box-shadow: 0 14px 36px rgba(0, 0, 0, 0.50);
+    }
+    .tt-tile-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .tt-tile-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.12;
+      color: var(--text);
+    }
+    .tt-tile[lang^="zh"] .tt-tile-name {
+      font-family: var(--font-body);
+      letter-spacing: 0.10em;
+    }
+    .tt-tile-meta { display: inline-flex; align-items: center; gap: 5px; }
+    .tt-tile-match-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: var(--gold);
+      opacity: 0;
+    }
+    .tt-tile[data-detected="true"] .tt-tile-match-dot { opacity: 1; }
+    .tt-tile-code {
+      font-family: var(--font-display);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+    .tt-tile-bottom {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      min-height: 1.35em;
+    }
+    .tt-tile-tagline, .tt-tile-hint {
+      font-size: 12.5px;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    }
+    .tt-tile-tagline { color: var(--text-secondary); }
+    .tt-tile-hint {
+      position: absolute;
+      left: 0;
+      right: 22px;
+      top: 0;
+      color: var(--text);
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(4px);
+      pointer-events: none;
+    }
+    .tt-tile-arrow {
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: transform 0.22s var(--ease-out), color 0.22s var(--ease-out);
+    }
+    .tt-tile:hover .tt-tile-tagline, .tt-tile:focus-visible .tt-tile-tagline {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    .tt-tile:hover .tt-tile-hint, .tt-tile:focus-visible .tt-tile-hint {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .tt-tile:hover .tt-tile-arrow, .tt-tile:focus-visible .tt-tile-arrow {
+      transform: translateX(3px);
+      color: var(--text);
+    }
+
+    .tt-footer {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 12px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .tt-footer a { color: var(--text-secondary); }
+    .tt-footer a:hover { color: var(--text); text-decoration: underline; }
+    .tt-sep { color: rgba(245, 243, 240, 0.30); }
+
+    @media (max-width: 820px) {
+      .tt-stage { height: auto; min-height: 100dvh; overflow-y: auto; }
+      .tt-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    .tt-stage[data-reduced-motion="true"] * {
+      transition: none !important;
+    }
+  </style>
+</head>
+<body>
+  <aside class="demo-bar" aria-label="Demo-Steuerung">
+    <label>
+      Browsersprache:
+      <select id="demoLangSelect">
+        <option value="de">de (Deutsch)</option>
+        <option value="en">en (English)</option>
+        <option value="fr">fr (Français)</option>
+        <option value="cs">cs (Čeština)</option>
+        <option value="nl">nl (Nederlands)</option>
+        <option value="it">it (Italiano)</option>
+        <option value="es">es (Español)</option>
+        <option value="cn">zh-CN (中文)</option>
+        <option value="other">Andere (Fallback → EN)</option>
+      </select>
+    </label>
+    <label>
+      Berglicht:
+      <select id="demoLightSelect">
+        <option value="dawn">Morgenfirn (Dawn)</option>
+        <option value="day">Firnlicht (Day)</option>
+        <option value="dusk" selected>Alpenglühen (Dusk)</option>
+        <option value="night">Bergnacht (Night)</option>
+      </select>
+    </label>
+    <label>
+      Viewport:
+      <select id="demoVpSelect">
+        <option value="full">Vollbild</option>
+        <option value="1280">Desktop 1280×720</option>
+        <option value="390">Mobil 390×844</option>
+      </select>
+    </label>
+    <button type="button" id="demoMotionBtn" aria-pressed="false">
+      Reduzierte Bewegung: Aus
+    </button>
+  </aside>
+
+  <div class="demo-viewport-wrap" id="demoVpWrap" data-vp="full">
+    <div class="tt-stage" id="ttStage" data-light="dusk" style="--spot-x: 50%;">
+      <div class="tt-hero-svg" aria-hidden="true">
+        <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 680L210 510L390 610L640 390L870 555L1140 340L1390 520L1640 370L1920 540V1080H0Z" fill="#182435" opacity="0.72"/>
+          <path d="M0 740L160 620L370 700L590 470L790 630L1020 430L1290 640L1540 460L1770 610L1920 530V1080H0Z" fill="#111926" opacity="0.90"/>
+          <path d="M590 470L655 520L615 545L590 470ZM1020 430L1105 495L1045 520L985 485L1020 430ZM1540 460L1610 515L1560 540L1540 460Z" fill="#F5F3F0" opacity="0.24"/>
+          <path d="M0 830L280 690L510 780L830 590L1120 770L1420 620L1700 760L1920 670V1080H0Z" fill="#0B0F14"/>
+        </svg>
+      </div>
+      <div class="tt-scrim" aria-hidden="true"></div>
+      <div class="tt-light-cone" aria-hidden="true"></div>
+      <div class="tt-contours" aria-hidden="true"></div>
+
+      <div class="tt-shell">
+        <header class="tt-header">
+          <a class="tt-brand" href="/demofrontpage-v2" aria-label="tiroltourismus">
+            <span class="tt-brand-dot" aria-hidden="true"></span>
+            <span class="tt-brand-word">tiroltourismus</span>
+          </a>
+          <h1 class="tt-claim">TIROL<span class="tt-claim-dot">.</span></h1>
+          <div class="tt-flap-wrap">
+            <p class="tt-sr-only" id="ttSubLive" aria-live="polite"></p>
+            <p class="tt-flap" id="ttFlap" aria-hidden="true" lang="en"></p>
+          </div>
+        </header>
+
+        <main id="sprache" class="tt-main">
+          <div class="tt-ridge-bar" aria-hidden="true">
+            <svg class="tt-ridge-svg" viewBox="0 0 1140 24" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="tt-ridge-line" d="M0 22 L42 19 L90 14 L148 18 L188 15 L230 9 L285 16 L330 14 L375 11 L435 17 L470 12 L505 6 L565 15 L600 10 L635 4 L695 14 L730 13 L765 10 L825 16 L865 13 L905 8 L965 17 L1005 16 L1045 13 L1095 19 L1140 22"/>
+              <circle class="tt-ridge-peak" data-peak="de" cx="90" cy="14" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="en" cx="230" cy="9" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="fr" cx="375" cy="11" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="cs" cx="505" cy="6" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="nl" cx="635" cy="4" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="it" cx="765" cy="10" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="es" cx="905" cy="8" r="2.6"/>
+              <circle class="tt-ridge-peak" data-peak="cn" cx="1045" cy="13" r="2.6"/>
+            </svg>
+          </div>
+
+          <nav aria-label="Sprachauswahl">
+            <ul class="tt-grid">
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://de.tiroltourismus.com/" lang="de" hreflang="de-AT" data-lang="de" data-html-lang="de" data-spot-x="20%" data-sub="Ein Land. Acht Sprachen. Alles drin — wähle deine Sprache und entdecke Tirol auf einer Seite." data-imprint-label="Impressum" data-privacy-label="Datenschutz" data-imprint-href="https://de.tiroltourismus.com/impressum/" data-privacy-href="https://de.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-de)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">Deutsch</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">DE</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Tirol entdecken</span><span class="tt-tile-hint" aria-hidden="true">Weiter auf Deutsch</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://en.tiroltourismus.com/" lang="en" hreflang="en-US" data-lang="en" data-html-lang="en" data-spot-x="38%" data-sub="One land. Eight languages. Everything inside — pick your language and discover Tirol on one page." data-imprint-label="Legal notice" data-privacy-label="Privacy" data-imprint-href="https://en.tiroltourismus.com/impressum/" data-privacy-href="https://en.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-en)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">English</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">EN</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Discover Tirol</span><span class="tt-tile-hint" aria-hidden="true">Continue in English</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://fr.tiroltourismus.com/" lang="fr" hreflang="fr-FR" data-lang="fr" data-html-lang="fr" data-spot-x="62%" data-sub="Un pays. Huit langues. Tout y est — choisis ta langue et découvre le Tyrol sur une seule page." data-imprint-label="Mentions légales" data-privacy-label="Confidentialité" data-imprint-href="https://fr.tiroltourismus.com/impressum/" data-privacy-href="https://fr.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-fr)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">Français</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">FR</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Découvrir le Tyrol</span><span class="tt-tile-hint" aria-hidden="true">Continuer en français</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://cs.tiroltourismus.com/" lang="cs" hreflang="cs-CZ" data-lang="cs" data-html-lang="cs" data-spot-x="80%" data-sub="Jedna země. Osm jazyků. Všechno v jednom — vyber si jazyk a objev Tyrolsko na jedné stránce." data-imprint-label="Tiráž" data-privacy-label="Ochrana soukromí" data-imprint-href="https://cs.tiroltourismus.com/impressum/" data-privacy-href="https://cs.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-cs)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">Čeština</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">CS</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Objevte Tyrolsko</span><span class="tt-tile-hint" aria-hidden="true">Pokračovat v češtině</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://nl.tiroltourismus.com/" lang="nl" hreflang="nl-NL" data-lang="nl" data-html-lang="nl" data-spot-x="24%" data-sub="Eén land. Acht talen. Alles erin — kies je taal en ontdek Tirol op één pagina." data-imprint-label="Colofon" data-privacy-label="Privacy" data-imprint-href="https://nl.tiroltourismus.com/impressum/" data-privacy-href="https://nl.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-nl)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">Nederlands</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">NL</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Ontdek Tirol</span><span class="tt-tile-hint" aria-hidden="true">Verder in het Nederlands</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://it.tiroltourismus.com/" lang="it" hreflang="it-IT" data-lang="it" data-html-lang="it" data-spot-x="44%" data-sub="Una terra. Otto lingue. Tutto dentro — scegli la tua lingua e scopri il Tirolo in una pagina." data-imprint-label="Note legali" data-privacy-label="Privacy" data-imprint-href="https://it.tiroltourismus.com/impressum/" data-privacy-href="https://it.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-it)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">Italiano</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">IT</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Scopri il Tirolo</span><span class="tt-tile-hint" aria-hidden="true">Continua in italiano</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://es.tiroltourismus.com/" lang="es" hreflang="es-ES" data-lang="es" data-html-lang="es" data-spot-x="58%" data-sub="Una tierra. Ocho idiomas. Todo dentro — elige tu idioma y descubre el Tirol en una sola página." data-imprint-label="Aviso legal" data-privacy-label="Privacidad" data-imprint-href="https://es.tiroltourismus.com/impressum/" data-privacy-href="https://es.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-es)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">Español</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">ES</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">Descubre el Tirol</span><span class="tt-tile-hint" aria-hidden="true">Continuar en español</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+              <li class="tt-grid-item">
+                <a class="tt-tile" href="https://cn.tiroltourismus.com/" lang="zh-Hans" hreflang="zh-CN" data-lang="cn" data-html-lang="zh-Hans" data-spot-x="78%" data-sub="一片土地。八种语言。应有尽有 — 选择你的语言，在一页上探索蒂罗尔。" data-imprint-label="法律声明" data-privacy-label="隐私政策" data-imprint-href="https://cn.tiroltourismus.com/impressum/" data-privacy-href="https://cn.tiroltourismus.com/datenschutz/" style="--tile-accent:var(--accent-cn)">
+                  <span class="tt-tile-top"><span class="tt-tile-name">中文</span><span class="tt-tile-meta" aria-hidden="true"><span class="tt-tile-match-dot"></span><span class="tt-tile-code">ZH</span></span></span>
+                  <span class="tt-tile-bottom"><span class="tt-tile-tagline">探索蒂罗尔</span><span class="tt-tile-hint" aria-hidden="true">继续使用中文</span><span class="tt-tile-arrow" aria-hidden="true">→</span></span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </main>
+      </div>
+
+      <footer class="tt-footer" aria-label="Rechtliches">
+        <a id="ttImprint" href="https://en.tiroltourismus.com/impressum/" hreflang="en" lang="en">Legal notice</a>
+        <span class="tt-sep" aria-hidden="true">·</span>
+        <a id="ttPrivacy" href="https://en.tiroltourismus.com/datenschutz/" hreflang="en" lang="en">Privacy</a>
+        <span class="tt-sep" aria-hidden="true">·</span>
+        <span class="tt-copy">© tiroltourismus</span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      var stageEl = document.getElementById('ttStage');
+      var flapEl = document.getElementById('ttFlap');
+      var liveEl = document.getElementById('ttSubLive');
+      var imprintEl = document.getElementById('ttImprint');
+      var privacyEl = document.getElementById('ttPrivacy');
+
+      var tiles = {};
+      var peaks = {};
+      var langData = {};
+
+      document.querySelectorAll('.tt-ridge-peak[data-peak]').forEach(function (pk) {
+        peaks[pk.getAttribute('data-peak')] = pk;
+      });
+
+      document.querySelectorAll('.tt-tile[data-lang]').forEach(function (a) {
+        var code = a.getAttribute('data-lang');
+        tiles[code] = a;
+        langData[code] = {
+          code: code,
+          htmlLang: a.getAttribute('data-html-lang') || code,
+          spotX: a.getAttribute('data-spot-x') || '50%',
+          sub: a.getAttribute('data-sub') || '',
+          imprintLabel: a.getAttribute('data-imprint-label') || 'Impressum',
+          privacyLabel: a.getAttribute('data-privacy-label') || 'Datenschutz',
+          imprintHref: a.getAttribute('data-imprint-href') || '',
+          privacyHref: a.getAttribute('data-privacy-href') || ''
+        };
+      });
+
+      function normalizeLang(tag) {
+        if (!tag) return null;
+        var base = String(tag).toLowerCase().trim().split(/[-_]/)[0];
+        if (base === 'zh' || base === 'cn') return tiles['cn'] ? 'cn' : null;
+        return tiles[base] ? base : null;
+      }
+
+      var detectedCode = null;
+      try {
+        var navLangs = navigator.languages || [navigator.language];
+        for (var i = 0; i < navLangs.length && !detectedCode; i++) {
+          detectedCode = normalizeLang(navLangs[i]);
+        }
+      } catch (e) {}
+
+      var activeBaseCode = detectedCode || 'en';
+      var reducedMotion = false;
+      try { reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+
+      function updateDetectedHighlight(simCode) {
+        Object.keys(tiles).forEach(function (c) {
+          if (c === simCode) tiles[c].setAttribute('data-detected', 'true');
+          else tiles[c].removeAttribute('data-detected');
+        });
+      }
+
+      function setAtmosphereAndFooter(code) {
+        var info = langData[code] || langData[activeBaseCode];
+        if (!info) return;
+        stageEl.style.setProperty('--spot-x', info.spotX);
+        Object.keys(peaks).forEach(function (k) {
+          if (k === code) peaks[k].setAttribute('data-active', 'true');
+          else peaks[k].removeAttribute('data-active');
+        });
+        imprintEl.textContent = info.imprintLabel;
+        imprintEl.setAttribute('href', info.imprintHref);
+        imprintEl.setAttribute('hreflang', info.htmlLang);
+        imprintEl.setAttribute('lang', info.htmlLang);
+        privacyEl.textContent = info.privacyLabel;
+        privacyEl.setAttribute('href', info.privacyHref);
+        privacyEl.setAttribute('hreflang', info.htmlLang);
+        privacyEl.setAttribute('lang', info.htmlLang);
+      }
+
+      var GLYPHS_LATIN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜČŘŠŽ0123456789·—';
+      var GLYPHS_CJK = '山川云雪峰谷林泉风光探索蒂罗尔天地八方旅途境';
+      var FLAP_MS = 700;
+      var rafId = 0;
+      var fadeTimer = 0;
+      var revertTimer = 0;
+      var currentShownCode = '';
+
+      function cancelAnimations() {
+        if (rafId) { cancelAnimationFrame(rafId); rafId = 0; }
+        if (fadeTimer) { clearTimeout(fadeTimer); fadeTimer = 0; }
+      }
+
+      function crossfadeTo(code) {
+        var info = langData[code] || langData[activeBaseCode];
+        cancelAnimations();
+        flapEl.style.transition = 'opacity 180ms ease';
+        flapEl.style.opacity = '0';
+        fadeTimer = setTimeout(function () {
+          fadeTimer = 0;
+          flapEl.textContent = info.sub;
+          flapEl.setAttribute('lang', info.htmlLang);
+          flapEl.style.opacity = '1';
+          liveEl.textContent = info.sub;
+        }, 180);
+      }
+
+      function flapTo(code, instant) {
+        var info = langData[code] || langData[activeBaseCode];
+        if (!info) return;
+        setAtmosphereAndFooter(code);
+
+        if (instant) {
+          cancelAnimations();
+          currentShownCode = code;
+          flapEl.textContent = info.sub;
+          flapEl.setAttribute('lang', info.htmlLang);
+          liveEl.textContent = info.sub;
+          return;
+        }
+        if (code === currentShownCode && !rafId) return;
+        currentShownCode = code;
+
+        if (reducedMotion) {
+          crossfadeTo(code);
+          return;
+        }
+
+        cancelAnimations();
+        flapEl.style.transition = '';
+        flapEl.style.opacity = '1';
+        flapEl.setAttribute('lang', info.htmlLang);
+        liveEl.textContent = info.sub;
+
+        var text = info.sub;
+        var pool = code === 'cn' ? GLYPHS_CJK : GLYPHS_LATIN;
+        var chars = Array.from(text);
+        var frag = document.createDocumentFragment();
+        var nodes = [];
+
+        for (var c = 0; c < chars.length; c++) {
+          var ch = chars[c];
+          if (ch === ' ') {
+            frag.appendChild(document.createTextNode(' '));
+            continue;
+          }
+          var span = document.createElement('span');
+          span.className = 'tt-ch';
+          var g = pool[(Math.random() * pool.length) | 0];
+          span.textContent = g;
+          frag.appendChild(span);
+          nodes.push({ el: span, target: ch, glyph: g });
+        }
+
+        flapEl.textContent = '';
+        flapEl.appendChild(frag);
+
+        var total = nodes.length;
+        var startTime = 0;
+        var lastTick = 0;
+        var lead = FLAP_MS * 0.12;
+        var spread = FLAP_MS * 0.78;
+        var settleTimes = nodes.map(function (_, idx) {
+          return total > 1 ? lead + (idx / (total - 1)) * spread : FLAP_MS * 0.5;
+        });
+
+        function stepFrame(now) {
+          if (!startTime) startTime = now;
+          var elapsed = now - startTime;
+          var swap = elapsed - lastTick >= 52;
+          if (swap) lastTick = elapsed;
+          var done = true;
+          for (var j = 0; j < total; j++) {
+            var n = nodes[j];
+            if (elapsed >= settleTimes[j]) {
+              n.el.textContent = n.target;
+              n.el.style.transform = 'rotateX(0deg)';
+              n.el.style.opacity = '1';
+            } else {
+              done = false;
+              if (swap) {
+                n.glyph = pool[(Math.random() * pool.length) | 0];
+                n.el.textContent = n.glyph;
+              }
+              var phase = elapsed / 45 + j * 0.68;
+              var angle = Math.sin(phase) * 54;
+              n.el.style.transform = 'rotateX(' + angle.toFixed(1) + 'deg)';
+              n.el.style.opacity = String((0.56 + 0.44 * Math.abs(Math.cos(phase))).toFixed(2));
+            }
+          }
+          if (done) {
+            rafId = 0;
+            flapEl.textContent = text;
+          } else {
+            rafId = requestAnimationFrame(stepFrame);
+          }
+        }
+        rafId = requestAnimationFrame(stepFrame);
+      }
+
+      updateDetectedHighlight(detectedCode);
+      flapTo(activeBaseCode, true);
+
+      Object.keys(tiles).forEach(function (code) {
+        var t = tiles[code];
+        t.addEventListener('mouseenter', function () {
+          if (revertTimer) { clearTimeout(revertTimer); revertTimer = 0; }
+          flapTo(code, false);
+        });
+        t.addEventListener('mouseleave', function () {
+          if (revertTimer) clearTimeout(revertTimer);
+          revertTimer = setTimeout(function () { revertTimer = 0; flapTo(activeBaseCode, false); }, 70);
+        });
+        t.addEventListener('focus', function () {
+          if (revertTimer) { clearTimeout(revertTimer); revertTimer = 0; }
+          flapTo(code, false);
+        });
+        t.addEventListener('blur', function () {
+          if (revertTimer) clearTimeout(revertTimer);
+          revertTimer = setTimeout(function () { revertTimer = 0; flapTo(activeBaseCode, false); }, 70);
+        });
+      });
+
+      var langSelect = document.getElementById('demoLangSelect');
+      var lightSelect = document.getElementById('demoLightSelect');
+      var vpSelect = document.getElementById('demoVpSelect');
+      var vpWrap = document.getElementById('demoVpWrap');
+      var motionBtn = document.getElementById('demoMotionBtn');
+
+      if (detectedCode && langSelect) langSelect.value = detectedCode;
+      else if (langSelect) langSelect.value = 'other';
+
+      langSelect.addEventListener('change', function () {
+        var val = langSelect.value;
+        if (val === 'other') {
+          detectedCode = null;
+          activeBaseCode = 'en';
+        } else {
+          detectedCode = val;
+          activeBaseCode = val;
+        }
+        updateDetectedHighlight(detectedCode);
+        flapTo(activeBaseCode, false);
+      });
+
+      lightSelect.addEventListener('change', function () {
+        stageEl.setAttribute('data-light', lightSelect.value);
+      });
+
+      vpSelect.addEventListener('change', function () {
+        vpWrap.setAttribute('data-vp', vpSelect.value);
+      });
+
+      motionBtn.addEventListener('click', function () {
+        reducedMotion = !reducedMotion;
+        motionBtn.setAttribute('aria-pressed', String(reducedMotion));
+        motionBtn.textContent = 'Reduzierte Bewegung: ' + (reducedMotion ? 'An' : 'Aus');
+        stageEl.setAttribute('data-reduced-motion', String(reducedMotion));
+      });
+    })();
+  </script>
+</body>
+</html>

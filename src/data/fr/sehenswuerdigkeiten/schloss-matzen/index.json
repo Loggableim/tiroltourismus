@@ -4,17 +4,20 @@
   "region": "kufstein",
   "ort": "Reith im Alpbachtal",
   "kategorie": "burg",
-  "kurzbeschreibung": "Le château médiéval Matzen, entouré d’un vaste parc, abrite un musée et propose des visites guidées à travers les anciennes salles historiques.",
+  "kurzbeschreibung": "Château romantique près de Reith dans l'Alpbachtal, entouré du parc historique classé de Matzen avec ses étangs et ses arbres exotiques.",
   "emoji": "🏰",
   "farbe": "#B8860B",
   "tags": [
-    "château",
-    "musée",
-    "histoire",
-    "culture"
+    "Kultur",
+    "Schloss",
+    "Park",
+    "Natur",
+    "Alpbachtal",
+    "Familie",
+    "Spaziergang"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Führung Erwachsene € 9,00",
+  "dauer": "1.5-2 Stunden",
+  "preis": "Schlosspark frei zugänglich, Schloss beherbergt Hotel und Restaurant",
   "oeffnungszeiten": "Mai bis Oktober, Führungen nach Vereinbarung",
   "webseite": "https://www.schlossmatzen.at/",
   "bilder": [],
@@ -22,5 +25,15 @@
   "koordinaten": {
     "lat": "47.4168",
     "lng": "11.8798"
-  }
+  },
+  "beschreibung": "<h2>Überblick</h2>\n<p>Le pittoresque <strong>Schloss Matzen</strong> s'élève à l'entrée de la vallée de l'Alpbachtal près de Reith et Brixlegg. Mentionnée dès le XIIe siècle, cette forteresse médiévale à donjon circulaire surveillait le passage de l'Inn avant d'être réaménagée au XIXe siècle dans un style romantique par le baron irlandais Groote. Le château abrite un hôtel de charme, tandis que son superbe parc paysager de 15 hectares est classé monument historique et ouvert au public.</p>\n\n<h2>Route & Anforderungen</h2>\n<p>Le parc de Matzen déploie des allées ombragées autour des étangs des Lions et des Carpes, au milieu d'arbres remarquables centenaires tels que des séquoias géants et des ginkgos rapportés du monde entier. Les chemins de promenade sont plats, entretenus et accessibles aux fauteuils roulants comme aux poussettes. Comptez 1 à 2 heures de balade reposante. Les chiens tenus en laisse sont autorisés.</p>\n\n<h2>Besuch & Anreise</h2>\n<p>Le parc est accessible gratuitement toute l'année du lever au coucher du soleil. En voiture, autoroute A12 sortie Kramsach/Alpbachtal vers Brixlegg, avec parking gratuit à l'entrée. En train jusqu'à la gare de Brixlegg puis 15 minutes de marche fléchée.</p>\n\n<h2>Tipps</h2>\n<p>Profitez de la terrasse ombragée du restaurant Gut Matzen après votre tour des étangs, en admirant la silhouette du château avec les crêtes du Rofan en arrière-plan.</p>",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Schloss_Matzen_(Reith_im_Alpbachtal)",
+    "https://www.alpbachtal.at/",
+    "https://de.wikipedia.org/wiki/Reith_im_Alpbachtal",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Brixlegg"
+  ],
+  "saison": "Schlosspark ganzjährig frei zugänglich",
+  "familie": true
 }

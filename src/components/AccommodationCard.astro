@@ -17,10 +17,11 @@ export interface Props {
   /** Optional hero image. When provided, shown instead of placeholder icon. */
   heroSrc?: string;
 }
-const { name, slug, typ, ort, sterne = 3, preis_ab, tier = 'basic', 'data-tier': dataTier, heroSrc , locale = undefined } = Astro.props;
+const { name, slug, typ, ort, sterne, preis_ab, tier = 'basic', 'data-tier': dataTier, heroSrc , locale = undefined } = Astro.props;
 const safeName = plainText(name);
 const isCamping = typ === 'camping';
-const typLabel = { hotel: 'Hotel', ferienwohnung: 'Ferienwohnung', bauernhof: 'Bauernhof', jugendherberge: 'Jugendherberge', camping: 'Camping' };
+const typLabel = { hotel: 'Hotel', gasthof: 'Gasthof', ferienwohnung: 'Ferienwohnung', ferienhaus: 'Ferienhaus', privatzimmer: 'Privatzimmer', bauernhof: 'Bauernhof', jugendherberge: 'Jugendherberge', camping: 'Camping' };
+const starCount = Number.isInteger(sterne) && sterne > 0 ? Math.min(sterne, 5) : 0;
 // Badge handled by PremiumBadge component
 // Lokalisierter CTA-Text
 const DETAILS_TEXT = { de: 'Details →', en: 'Details →', fr: 'Détails →', cs: 'Detaily →', nl: 'Details →', it: 'Dettagli →', es: 'Detalles →', zh: '详情 →' };
@@ -49,7 +50,7 @@ const detailsText = DETAILS_TEXT[locale] || DETAILS_TEXT.de;
     <div class="uk-type">{typLabel[typ] || typ || 'Unterkunft'}</div>
     <div class="uk-name">{safeName}</div>
     <div class="uk-ort">{ort || 'Tirol'}</div>
-    {!isCamping && <div class="uk-stars">{'★'.repeat(sterne)}</div>}
+    {!isCamping && starCount > 0 && <div class="uk-stars">{'★'.repeat(starCount)}</div>}
     {isCamping && <div class="uk-camping-info">Zelt • Wohnmobil • Wohnwagen</div>}
     <div class="uk-meta">
       {preis_ab ? <span class="uk-price">ab {preis_ab}€<small>/Nacht</small></span> : <span class="uk-na">{isCamping ? 'Stellplatz' : 'Preis auf Anfrage'}</span>}

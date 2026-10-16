@@ -3,8 +3,8 @@
   "emoji": "🍸",
   "farbe": "#FF6B35",
   "kategorie": "bar",
-  "kurzbeschreibung": "蒂罗尔的 Brix Bar 欢迎来到蒂罗尔的 Brix Bar！ 这里是蒂罗尔最受欢迎的酒吧之一，位于因斯布鲁克市中心，距离老城区仅几步之遥。",
-  "beschreibung": "<p>Die <strong>Brix Bar</strong> im Raum Kitzbühel ist der Treffpunkt für alle, die exzellente Drinks in stilvollem Ambiente suchen. Die Barkeeper verstehen ihr Handwerk: Ob klassische Cocktails, innovative Eigenkreationen oder ein sorgfältig ausgewählter Wein — hier wird Genuss großgeschrieben. Das Interieur ist modern und elegant, mit gedämpftem Licht und bequemen Loungemöbeln, die zum Verweilen einladen. Regelmäßige Events wie DJ-Abende oder Weinverkostungen sorgen für Abwechslung. Die Bar bietet auch eine ausgewählte Karte kleiner Speisen, die perfekt zum Drink passen. Der ideale Ort für einen stilvollen Abend in den Kitzbüheler Alpen.</p>",
+  "kurzbeschreibung": "蒂罗尔的 Brix Bar",
+  "beschreibung": "<p>位于Kitzbühel地区的 <strong>Brix Bar</strong> 是所有追求高雅格调与上乘饮品人士的绝佳聚会之所。这里的调酒师技艺精湛：无论是经典鸡尾酒、创意独创特调，还是精心挑选的葡萄酒，高品质的享受在此都是头等大事。酒吧内部装潢现代典雅，柔和的灯光与舒适的休闲沙发让人流连忘返。定期举办的DJ之夜与品酒会等活动更为这里注入了丰富多元的活力。酒吧还提供精选佐酒小食，与各种饮品堪称绝配。这里是您在Kitzbühel阿尔卑斯山区度过优雅惬意夜晚的理想去处。</p>",
   "ort": "",
   "region": "kitzbuehel",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.4494578,
     "lng": 12.2560641
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com"
+  ]
 }

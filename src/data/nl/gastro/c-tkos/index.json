@@ -3,8 +3,8 @@
   "emoji": "🍔",
   "farbe": "#FF6B35",
   "kategorie": "imbiss",
-  "kurzbeschreibung": "Cütkos in Tirol",
-  "beschreibung": "<p>Der <strong>Cütkos</strong> in Innsbruck ist die erste Adresse für schnelle, aber dennoch qualitativ hochwertige Gaumenfreuden. Ob herzhafte Snacks, frische Burger oder deftige Spezialitäten – hier wird jeder Hunger gestillt. Die Zutaten werden sorgfältig ausgewählt und frisch zubereitet, sodass auch unterwegs nicht auf Genuss verzichtet werden muss. Das freundliche Team serviert die Speisen mit einem Lächeln und sorgt für eine angenehme Atmosphäre. Der <strong>Cütkos</strong> ist der ideale Ort für eine schnelle Stärkung bei einem Stadtbummel oder nach einem Ausflug in die Tiroler Berge. Die saftigen Döner und Kebab-Spezialitäten werden nach traditioneller Art zubereitet und sind ein echter Genuss.</p>",
+  "kurzbeschreibung": "Cütkos in Tirol - snelle en smakelijke hap",
+  "beschreibung": "<p><strong>Cütkos</strong> in Innsbruck is het adres voor snelle, maar hoogwaardige maaltijden. Of het nu gaat om hartige snacks, verse burgers of smaakvolle specialiteiten – hier wordt elke trek gestild. De ingrediënten worden zorgvuldig geselecteerd en vers bereid, zodat er ook onderweg niet op smaak hoeft te worden ingeleverd. Het vriendelijke team serveert het eten met een glimlach en zorgt voor een aangename sfeer. <strong>Cütkos</strong> is de ideale plek voor een snelle pauze tijdens het winkelen of na een tocht in de Tiroolse bergen. De sappige döner- en kebapspecialiteiten worden op traditionele wijze bereid en zijn een waar genot.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -21,5 +21,8 @@
     "lat": 47.2655788,
     "lng": 11.3946579
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

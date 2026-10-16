@@ -4,19 +4,21 @@
   "region": "arlberg",
   "ort": "St. Anton am Arlberg",
   "kategorie": "museum",
-  "kurzbeschreibung": "Muzeum v historickém sídlišti dokumentuje bohatou historii alpského turistiky, venkovské kultury a výstavby Arlbergbahn.",
+  "kurzbeschreibung": "Muzeum v St. Antonu am Arlberg v historické vile Trier představuje kolébku sjezdového lyžování, slavné průkopníky i stavbu arlberské železnice.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museum",
-    "kultur",
-    "geschichte",
-    "arlberg"
+    "Kultur",
+    "Museum",
+    "Skisport",
+    "Arlberg",
+    "St. Anton am Arlberg",
+    "Geschichte"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 8,00",
-  "oeffnungszeiten": "Mi-So 10:00-17:00",
-  "webseite": "https://www.museum-st-anton.at",
+  "dauer": "1-1,5 hodiny",
+  "preis": "Dospělí cca 5,00 €, děti a mládež do 16 let zdarma (zahrnuto v letní kartě St. Anton Sommer-Karte)",
+  "oeffnungszeiten": "Od prosince do dubna a od června do října: pondělí–sobota 14:00–18:00 (v neděli zavřeno)",
+  "webseite": "https://www.stantonamarlberg.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +26,14 @@
     "lng": "10.2664"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum St. Anton am Arlberg</strong> – Die Museum St. Anton am Arlberg ist ein kultureller Höhepunkt in St. Anton am Arlberg und zieht Besucher aus aller Welt an. Das Museum im historischen Siedlungsraum dokumentiert die reiche Geschichte des alpinen Tourismus, der bäuerlichen Kultur und des Arlbergbahnbaus Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Die Museum St. Anton am Arlberg befindet sich im Herzen von St. Anton am Arlberg und ist bequem zu Fuß oder mit öffentlichen Verkehrsmitteln zu erreichen. Die zentrale Lage macht sie zum idealen Ausgangspunkt für einen Kulturspaziergang durch die Stadt. Ob Sommer oder Winter: Die Museum St. Anton am Arlberg ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Přehled</h2>\n<p>Půvabné <strong>Muzeum St. Anton am Arlberg</strong> (Museum St. Anton am Arlberg), umístěné v reprezentativní historické vile Trier uprostřed lázeňského parku, je poctou místu, které je po právu považováno za světovou kolébku sjezdového lyžování. Secesní horská vila byla postavena v roce 1912 pro německého průmyslníka Bernharda Triera a od roku 1982 slouží jako městské muzeum. Poutavě dokumentuje přerod chudé, sněhem často odříznuté horské vesnice v mezinárodně proslulé centrum zimních sportů na úpatí slavného průsmyku Arlberg.</p>\n<h2>Trasa a náročnost</h2>\n<p>V dřevem obložených pokojích vily prožijí návštěvníci fascinující cestu dějinami lyžování. Zvláštní pozornost je věnována lyžařskému pionýrovi Hannesovi Schneiderovi, který na počátku 20. století vyvinul přelomovou arlberskou lyžařskou techniku s přívratem a kristiánií, jež položila základy moderní výuky lyžování. Expozice představuje historické dřevěné lyže, ranná vázání, dobové zimní oblečení i trofeje ze slavných závodů Kandahar. Další sály připomínají monumentální stavbu železničního tunelu pod Arlbergem z let 1880–1884, historii horských průsmyků i náročný život horských zemědělců v údolí Stanzertal.</p>\n<h2>Příjezd a doprava</h2>\n<p>Muzeum se nachází na adrese Kandaharweg 9, mírně nad centrem St. Antonu v upraveném parku. Vlakem: St. Anton am Arlberg je mezinárodní rychlíkovou stanicí vlaků Railjet a Eurocity; od nádraží dojdete k vile příjemnou procházkou za 8 minut. Autobusem: linky VVT na zastávku Terminal West nebo Bahnhof. Autem: po rychlostní silnici S16 Arlberg Schnellstraße (sjezd St. Anton), parkování na vyznačených parkovištích v obci.</p>\n<h2>Tipy</h2>\n<p>Přízemí vily je bezbariérově přístupné pro vozíčkáře, horní patra jsou přístupná po schodech. Po prohlídce si dopřejte kávu nebo oběd v prvotřídní restauraci přímo ve vile s vyhlídkovou terasou a pohledem na horu Galzig. V letních měsících je okolní park s jezírkem a květinovými záhony nádherným místem k odpočinku.</p>",
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg",
+    "https://de.wikipedia.org/wiki/Arlberg",
+    "https://www.vvt.at/"
+  ],
+  "saison": "Saisonal im Sommer und Winter nachmittags geöffnet",
+  "familie": true
 }

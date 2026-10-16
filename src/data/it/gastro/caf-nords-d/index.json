@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Caffè NordSüd in Tirol Benvenuti nel Caffè NordSüd, un angolo accogliente nel cuore di Tirol, dove l’atmosfera calda e l’ospitalità tirolese vi avvolgono sin dal primo sorso.",
-  "beschreibung": "<p>Das <strong>Café NordSüd</strong> im Außerfern ist ein stilvoller Treffpunkt, der nordische Kaffeekultur mit südlichem Flair kombiniert. Helle, skandinavisch inspirierte Räume treffen auf eine Terrasse mit sonnigem Ambiente. Die Kaffeekarte umfasst sorgfältig zubereitete Spezialitäten vom klassischen Espresso bis zum samtigen Flat White, begleitet von täglich frisch gebackenen Kuchen und Croissants. Mittags gibt es leichte Gerichte wie Salate, Quiches und Suppen. Die entspannte Atmosphäre und das durchdachte Design machen das Café zu einem beliebten Arbeits- und Leseort ebenso wie zum geselligen Beisammensein. Ein modernes Stück Kaffeekultur inmitten der Tiroler Berglandschaft.</p>",
+  "kurzbeschreibung": "Café NordSüd in Tirolo - design scandinavo e caffè",
+  "beschreibung": "<p>Il <strong>Café NordSüd</strong> nell'Außerfern è un raffinato punto d'incontro che unisce la cultura nordica del caffè al fascino mediterraneo. Ambienti luminosi d'ispirazione scandinava si aprono su una terrazza soleggiata e accogliente. Il menu offre specialità preparate con cura, dal classico espresso al cremoso flat white, accompagnate da dolci e croissant appena sfornati. A pranzo vengono serviti piatti leggeri come insalate, quiche e zuppe in un'atmosfera moderna e rilassante tra le montagne tirolesi.</p>",
   "ort": "",
   "region": "ausserfern",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.499883,
     "lng": 10.3655544
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

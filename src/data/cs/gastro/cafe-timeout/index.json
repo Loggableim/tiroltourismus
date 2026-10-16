@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Kavárenská pauza v Innsbrucku",
-  "beschreibung": "<p>Das <strong>CAFE timeout</strong> in Innsbruck in der Region Innsbruck lädt zu einer genussvollen Pause ein. Das stilvolle Café-Konditorei verwöhnt seine Gäste mit einer großen Auswahl an selbstgemachten Torten, Kuchen und süßen Spezialitäten. Jedes Stück wird mit viel Liebe zum Detail zubereitet und kunstvoll präsentiert. Dazu werden erlesene Kaffeespezialitäten serviert, die von erfahrenen Baristi perfekt zubereitet werden. Die gemütliche Atmosphäre mit charmantem Interieur lädt zum Verweilen und Genießen ein. Ob zum Frühstück, für einen Nachmittagskaffee oder einen kleinen Snack zwischendurch – hier fühlt man sich willkommen.</p>",
+  "kurzbeschreibung": "CAFE timeout v Innsbrucku - kávová pauza v centru",
+  "beschreibung": "<p><strong>CAFE timeout</strong> v Innsbrucku zve k příjemné pauze u skvělé kávy a domácích specialit. Moderní a přátelské prostředí je jako stvořené pro setkání s přáteli, pracovní schůzku i odpočinek po procházce městem.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -20,5 +20,8 @@
     "lat": 47.2780723,
     "lng": 11.4299511
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://cafe-timeout.at/"
+  ]
 }

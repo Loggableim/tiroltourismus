@@ -5,13 +5,13 @@
   "region": "landeck",
   "ort": "Ischgl",
   "kategorie": "aussicht",
-  "kurzbeschreibung": "Route spectaculaire à travers les Alpes avec 58 virages menant du Tirol au Montafon – offrant des vues grandioses sur la Silvretta, ce monde glaciaire. *(Note : Les termes techniques comme \"Kehren\" et noms géographiques comme \"Silvretta\" restent en allemand, comme demandé.)*",
-  "beschreibung": "<h2>Aperçu</h2><p>La <strong>Silvretta-Hochalpenstraße</strong> est l'une des plus belles routes panoramiques d'altitude d'Europe. Reliant le Tyrol et le Vorarlberg sur 22,3 km et 34 virages en épingle jusqu'au col de la Bielerhöhe (2 037 m), elle longe le magnifique lac de barrage de Silvretta dominé par le majestueux Piz Buin (3 312 m) et ses glaciers étincelants.</p><h2>Parcours &amp; Exigences</h2><p>Le tour complet du lac de Silvretta est une boucle familiale facile de 6,3 km sur piste presque plate (1h30 à 2h, T1). Les randonneurs montent au refuge Wiesbadener Hütte (2 443 m) au pied des glaciers (2h30, dénivelé 400 m, T2). Le bateau à moteur MS Silvretta est le plus haut service de navigation régulier d'Europe à plus de 2 000 m. Vêtements chauds obligatoires en haute altitude. Chiens admis en laisse.</p><h2>Accès</h2><p>Train ÖBB jusqu'à Landeck-Zams puis bus régulier 260 traversant la vallée de Paznaun jusqu'au col de la Bielerhöhe. En voiture via la route B188 depuis Galtür. Route à péage ouverte de juin à fin octobre (fermée l'hiver). Grands parkings au col.</p><h2>Conseils</h2><p>Embarquez sur le bateau MS Silvretta pour une croisière glaciaire unique en altitude et dégustez un Kaiserschmarrn traditionnel face au Piz Buin à la terrasse du Silvretta-Haus.</p>",
+  "kurzbeschreibung": "La route alpine Silvretta-Hochalpenstraße franchit 34 lacets entre Tyrol et Vorarlberg pour atteindre le col de la Bielerhöhe à 2 037 m, face au Piz Buin.",
+  "beschreibung": "<h2>Überblick</h2>\n<p>La célèbre <strong>Silvretta-Hochalpenstraße</strong> compte parmi les routes de montagne les plus spectaculaires des Alpes orientales. Elle relie sur 22,3 kilomètres le Paznaun tyrolien au Montafon en franchissant 34 virages en épingle jusqu'au col de la Bielerhöhe à 2 037 mètres d'altitude. Au col, le regard embrasse les glaciers étincelants du Piz Buin (3 312 m), point culminant du Vorarlberg. Le site est dominé par l'immense lac de barrage de Silvretta, retenu par deux digues géantes pour la production hydroélectrique. En été, le bateau à moteur « Silvretta » y assure la ligne régulière de navigation la plus haute d'Europe. Le parcours offre un panorama d'une beauté grandiose pour les automobilistes et les cyclistes.</p>\n<h2>Route & Anforderungen</h2>\n<p>Le tour complet du lac de Silvretta constitue une randonnée classique de 6 kilomètres réalisable en deux heures de marche avec seulement 70 mètres de dénivelé. Le sentier gravillonné franchit les deux barrages et longe la rive sud au pied des cascades glaciaires. De bonnes chaussures de marche sont recommandées. L'accès à la Wiesbadener Hütte (2h30 d'ascension) exige un équipement de haute montagne. La traversée des digues est accessible en poussette.</p>\n<h2>Besuch & Anreise</h2>\n<p>La route à péage B188 est ouverte de fin mai à fin octobre. Les postes de péage sont situés à Galtür au Tyrol et à Partenen au Vorarlberg. Des parkings gratuits sont aménagés au col. Des bus régionaux relient régulièrement Landeck et Galtür à la Bielerhöhe en été.</p>\n<h2>Tipps</h2>\n<p>Embarquez sur le bateau Silvretta pour contempler les glaciers depuis l'eau, puis faites une halte gourmande au Berggasthof Piz Buin face aux sommets.</p>",
   "emoji": "🗻",
   "farbe": "#4CAF50",
   "hoehe": "2.032 m (Bielerhöhe)",
-  "dauer": "3–5 Stunden",
-  "preis": "Mautgebühr Silvretta-Hochalpenstraße ca. 18–21 € pro PKW (Schifffahrt ca. 7 €)",
+  "dauer": "3-5 heures",
+  "preis": "Péage automobile env. 18-21 €, motos env. 14-16 €; tour du lac de barrage gratuit",
   "tags": [
     "route panoramique",
     "vue panoramique",
@@ -19,7 +19,7 @@
     "route alpine",
     "glacier"
   ],
-  "oeffnungszeiten": "Mitte Juni bis Mitte Oktober, täglich 6:00–20:00",
+  "oeffnungszeiten": "Ouverte de fin mai à fin octobre selon l'enneigement; fermée aux véhicules en hiver",
   "webseite": "https://www.silvretta-bielerhoehe.at",
   "koordinaten": {
     "lat": "46.9333",
@@ -29,8 +29,9 @@
   "hero_bild": null,
   "sources": [
     "https://www.silvretta-bielerhoehe.at/",
+    "https://www.paznaun-ischgl.com/",
+    "https://www.tirol.at/",
     "https://de.wikipedia.org/wiki/Silvretta-Hochalpenstra%C3%9Fe",
-    "https://www.alpenvereinaktiv.com/de/tour/rund-um-den-silvretta-stausee/1381426/",
     "https://www.vvt.at/"
   ]
 }

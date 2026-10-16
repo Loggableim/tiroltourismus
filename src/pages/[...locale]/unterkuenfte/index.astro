@@ -35,6 +35,8 @@ const sorted = [...unterkuenfte].sort((a, b) => {
   return (order[a.entry.tier || 'basic'] || 2) - (order[b.entry.tier || 'basic'] || 2);
 });
 
+const privatZimmer = sorted.filter(u => ['privatzimmer', 'ferienwohnung'].includes(u.entry.typ));
+
 const siteURL = 'https://www.tirol-tourismus.at';
 const accommodationItemList = {
   '@context': 'https://schema.org', '@type': 'ItemList',
@@ -95,7 +97,7 @@ const accommodationItemList = {
           </div>
           <div class="uk-grid">
             {sorted.map((u, i) => (
-              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} locale={locale} />
+              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} heroSrc={u.entry.hero_bild} locale={locale} />
             ))}
           </div>
         </div>
@@ -109,6 +111,19 @@ const accommodationItemList = {
         </div>
       </section>
     )}
+
+    {privatZimmer.length > 0 && (
+      <section class="section">
+        <div class="container">
+          <h2 class="uk-section-title">Privatzimmer &amp; Ferienwohnungen</h2>
+          <div class="uk-grid">
+            {privatZimmer.map(u => (
+              <AccommodationCard name={u.entry.name} slug={u.slug} typ={u.entry.typ} ort={u.entry.ort} sterne={u.entry.sterne} preis_ab={u.entry.preis_ab} tier={u.entry.tier || 'basic'} data-tier={u.entry.tier || 'basic'} heroSrc={u.entry.hero_bild} locale={locale} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
   </main>
 </BaseLayout>
 
@@ -117,6 +132,7 @@ const accommodationItemList = {
   .page-header h1{font-family:var(--font-display);font-size:clamp(42px,6vw,80px);line-height:1;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
   .page-header p{font-size:15px;color:var(--text2);max-width:480px;margin:0 auto}
   .uk-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .uk-section-title{font-family:var(--font-display);font-size:clamp(28px,4vw,40px);letter-spacing:1px;text-transform:uppercase;margin-bottom:24px}
   @media(max-width:968px){.uk-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:550px){.uk-grid{grid-template-columns:1fr}}
 </style>

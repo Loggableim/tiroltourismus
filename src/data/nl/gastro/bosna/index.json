@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Bosna in Grainau",
-  "beschreibung": "<p>Das <strong>Bosna</strong> in Grainau ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bosna</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Bosna in Innsbruck",
+  "beschreibung": "<p>De <strong>Bosna</strong> in Innsbruck is hét adres voor liefhebbers van de befaamde kruidige braadworstspecialiteit. Geserveerd in een knapperig geroosterd broodje met verse uien en een kenmerkende curry-kruidenmix, biedt deze snack een ongeëvenaarde smaakbeleving. Perfect voor een snelle, smaakvolle hap tijdens een wandeling door het centrum van Innsbruck.</p>",
   "ort": "Grainau",
   "region": "ausserfern",
   "plz": "82491",
@@ -21,5 +21,9 @@
     "lat": 47.4699215,
     "lng": 11.0299601
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck",
+    "https://www.innsbruck.gv.at"
+  ]
 }

@@ -4,18 +4,20 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "Het Museum Kitzbühel toont op drie verdiepingen de bewegende geschiedenis van de stad van het Middelengerd tot het heden met de nadruk op mijnbouw en toerisme.",
+  "kurzbeschreibung": "Museum Kitzbühel toont de grootste collectie van schilder Alfons Walde, de opkomst van de wintersport en een dakterras met uitzicht op de Streif.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museum",
-    "geschiedenis",
-    "cultuur",
-    "mijnbouw"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
-  "oeffnungszeiten": "Di-So 10:00-17:00",
+  "dauer": "1-1,5 uur",
+  "preis": "Volwassenen ca. € 10,00, studenten/senioren € 8,00, kinderen tot 18 jaar gratis",
+  "oeffnungszeiten": "Dinsdag tot vrijdag 10:00–17:00, zaterdag 10:00–18:00 (zondag en maandag gesloten)",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
   "hero_bild": null,
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum Kitzbühel</strong> – Die Museum Kitzbühel in Kitzbühel verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Museum Kitzbühel zeigt auf drei Etagen die bewegte Geschichte der Stadt vom Mittelalter bis zur Gegenwart mit Schwerpunkt Bergbau und Tourismus Das vielfältige Veranstaltungsprogramm mit Konzerten, Lesungen und Workshops macht jeden Besuch einzigartig. Besonders die stimmungsvollen Abendführungen und thematischen Sonderausstellungen bleiben nachhaltig in Erinnerung. Mitten in der reizvollen Altstadt von Kitzbühel gelegen, fügt sich die Museum Kitzbühel harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Ob Sommer oder Winter: Die Museum Kitzbühel ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Overzicht</h2>\n<p>Het <strong>Museum Kitzbühel – Sammlung Alfons Walde</strong> is gevestigd in de voormalige graanschuur (Kastenturm) en een zuidwestelijke hoektoren van de middeleeuwse stadsmuur. Het museum biedt een boeiende inkijk in de duizenden jaren oude nederzettingsgeschiedenis van het dal, het ontstaan van het moderne wintertoerisme en de Tiroolse beeldende kunst. Absolute trekpleister is de grootste openbare collectie ter wereld van schilderijen van Alfons Walde, wiens kleurrijke schilderijen van besneeuwde alpenweiden en skiërs het imago van Kitzbühel als mondaine wintersportplaats wereldwijd hebben gevormd.</p>\n<h2>Route &amp; Vereisten</h2>\n<p>De tentoonstelling strekt zich uit over meerdere modern gerestaureerde verdiepingen. Op de bovenverdiepingen schittert de <strong>Alfons Walde-collectie</strong> (1891–1958) met beroemde doeken zoals «Opstijgende skiërs», eenzame boerderijen onder diepe sneeuw en portretten van Tiroolse boeren. Een ander boeiend gedeelte is gewijd aan de geschiedenis van het skiën: van de eerste skipogingen van pionier Franz Reisch in 1893 tot de oprichting van de befaamde Hahnenkamm-rennen op de Streif in 1931 en de successen van het Kitzbüheler Wunderteam rond Toni Sailer. Archeologische vondsten en mijnwerktuigen op de lagere niveaus illustreren de eeuwenoude brons- en koperwinning in de streek.</p>\n<h2>Bereikbaarheid</h2>\n<p>Het museum bevindt zich aan de Hinterstadt 32, midden in het autovrije centrum van Kitzbühel. Met de trein: op slechts 5 minuten lopen van station Kitzbühel Hahnenkamm en 10 minuten van station Kitzbühel Hauptbahnhof. Met de bus: streekbussen van de VVT stoppen bij halte Kitzbühel Im Gries. Met de auto: via de B161, parkeren op de nabijgelegen parkeerplaats P1 Pfarrau of in de parkeergarage Altstadtgarage.</p>\n<h2>Tips</h2>\n<p>Het museum is voorzien van liften en vrijwel geheel rolstoeltoegankelijk. Bezoek beslist het <strong>panoramaterras op het dak</strong> van de toren: vanaf hier heeft u een schitterend uitzicht over de middeleeuwse daken, de Kitzbüheler Horn en de duizelingwekkende Streif op de Hahnenkamm. In de museumwinkel zijn hoogwaardige kunstdrukken van Walde-motieven verkrijgbaar.</p>",
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://www.tirol.at/",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Museum_Kitzb%C3%BChel",
+    "https://de.wikipedia.org/wiki/Alfons_Walde"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

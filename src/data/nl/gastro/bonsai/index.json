@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Bonsai in Innsbruck",
-  "beschreibung": "<p>Das <strong>Bonsai</strong> in Innsbruck ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bonsai</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Aziatisch specialiteitenrestaurant in Innsbruck met verse sushi en wokgerechten.",
+  "beschreibung": "<p>Het <strong>Bonsai</strong> in Innsbruck is een verfijnd Aziatisch restaurant dat bekendstaat om zijn verse sushi, knapperige wokgerechten en evenwichtige smaken. Het moderne, rustgevende interieur weerspiegelt de harmonie van de oosterse eetcultuur. Met oog voor verse ingrediënten en een stijlvolle presentatie verzorgt het keukenteam gezonde en lichte culinaire creaties. Het <strong>Bonsai</strong> is de ideale plek voor een ontspannen lunch of een feestelijk Aziatisch diner in Innsbruck.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,9 @@
     "lat": 47.2675031,
     "lng": 11.3945938
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck",
+    "https://www.innsbruck.gv.at"
+  ]
 }

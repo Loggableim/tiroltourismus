@@ -22,7 +22,7 @@
     "lat": "47.3289",
     "lng": "11.1867"
   },
-  "beschreibung": "<p><strong>Seefeld in Tirol</strong> befindet sich auf 1.180 Metern Höhe in dem Innsbrucker Mittelgebirge und den umliegenden Tälern und ist eine idyllische Streugemeinde. Rund <strong>3.400</strong> Einwohner zählt der Ort, der sich über eine weitläufige Fläche mit typischen Tiroler Bauernhäusern und landwirtschaftlichen Betrieben erstreckt.</p><p>Im winter locken gut präparierte skipisten und unberührte tiefschneeabfahrten und wanderer kommen auf zahlreichen markierten wegen rund um den ort auf ihre kosten. Im Winter (von Dezember bis April) bietet die schneesichere Lage ideale Bedingungen. In den Sommermonaten (von Mai bis Oktober) verwandelt sich die Umgebung in ein Outdoor-Paradies.</p><p>Seefeld in Tirol ist der ideale Ausgangspunkt für Aktivurlauber und Naturfreunde, die die Vielfalt Tirols erleben möchten. Die gute verkehrstechnische Anbindung und die Nähe zu größeren Orten machen den Aufenthalt besonders angenehm.</p>",
+  "beschreibung": "<h2>Überblick</h2>\n<p>Seefeld in Tirol liegt auf 1.180 Metern Seehöhe auf dem sonnigen Seefelder Hochplateau im Bezirk Innsbruck-Land, eingerahmt von den markanten Gebirgszügen des Wettersteingebirges, des Karwendels und der Mieminger Kette. Mit rund 3.640 Einwohnern ist die traditionsreiche Marktgemeinde das pulsierende Herz der Olympiaregion Seefeld. Bekannt als international renommierter Ganzjahres-Kur- und Urlaubsort, verbindet Seefeld mondänes Flair mit alpenländischem Charme: Eine weitläufige Fußgängerzone mit Boutiquen und Cafés, das renommierte Casino Seefeld, erstklassige Wellnesshotellerie und ein gepflegter Kurpark prägen das Ortsbild. Weltweiten Ruhm genießt Seefeld als nordisches Wintersportmekka: Als zweimaliger Austragungsort der Olympischen Winterspiele (1964 und 1976) sowie zweifacher Ausrichter der FIS Nordischen Ski-Weltmeisterschaften (1985 und 2019) verfügt der Ort über ein Loipennetz von Weltklasseformat, ergänzt durch vielseitige Familienskigebiete und endlose Sommerwanderwege.</p>\n\n<h2>Geschichte</h2>\n<p>Die erste urkundliche Erwähnung stammt aus dem 11. Jahrhundert (zwischen 1022 und 1078) in Traditionsbüchern des Hochstifts Freising unter dem Namen Sevelt. Seefeld lag an der uralten Handels- und Pilgerstraße über den Scharnitzpass und besaß ein wichtiges Niederlagsrecht. Weltberühmt wurde der Ort durch das Hostienwunder von 1384: Am Gründonnerstag verlangte Ritter Oswald Milser hochmütig die große Priesterhostie; als er sie empfing, versank er vor Schreck bis zu den Knien im steinernen Kirchenboden, während sich die Hostie blutrot färbte (die Knieabdrücke und der Handabdruck im Altarstein sind bis heute in der Kirche sichtbar). Dies begründete eine florierende europäische Wallfahrt. Herzog Friedrich IV. und Herzog Sigmund der Münzreiche ließen daraufhin ab 1430 die prächtige spätgotische Hallenkirche St. Oswald mit ihrem kunstvollen Tympanon errichten. Das Wahrzeichen Seefelds, das achteckige barocke Seekirchl (Heiligkreuzkirche), wurde 1628 bis 1666 von Hofbaumeister Christoph Gumpp dem Jüngeren mitten in einem künstlichen See erbaut, der später abgelassen wurde. 1912 erschloss die Mittenwaldbahn den Ort für den modernen Tourismus.</p>\n\n<h2>Anreise</h2>\n<p>Seefeld ist verkehrsmäßig hervorragend angebunden. Mit dem Auto führt von München die mautfreie Strecke über die A95, Garmisch-Partenkirchen und Mittenwald auf die Bundesstraße B177 direkt nach Seefeld. Von Innsbruck gelangt man über die Inntalautobahn A12 (Ausfahrt Zirl-Ost) und die steile B177 über den Zirler Berg in nur 20 Fahrminuten herauf. Bahnreisende profitieren von einem Unikat: Der Bahnhof Seefeld in Tirol ist der höchstgelegene ganzjährig regulär bediente ICE-Bahnhof der Welt mit Direktverbindungen aus Berlin, Hamburg, Dortmund und München. Zusätzlich verbindet die S-Bahn-Linie S6 Innsbruck und München über die malerische Karwendelbahn. Ein dichtes Netz aus VVT-Regionsbussen verkehrt kostenlos für Inhaber der Gästekarte PlateauCard.</p>\n\n<h2>Tipps</h2>\n<p>Das barocke Seekirchl auf dem sanften Kirchhügel ist das meistfotografierte Wahrzeichen und Ausgangspunkt für Spaziergänge durch den Kurpark. Sportler finden im Nordischen Kompetenzzentrum über 245 Kilometer bestens präparierte Langlaufloipen sowie moderne Biathlonanlagen. Im Sommer wie im Winter bieten die Bergbahnen Rosshütte (2.064 m) mit Standseilbahn und Seilbahnen Panoramaaussichten auf Karwendel und Wetterstein, ergänzt durch das Skigebiet am Gschwandtkopf. Ein herrlicher Naturspaziergang führt um den idyllischen Wildsee mit seinem geschützten Moorlehrpfad im Reither Moor. Am Abend lockt das elegante Casino Seefeld im alpenländischen Stil im Dorfzentrum.</p>",
   "sehenswuerdigkeiten": [
     {
       "name": "Bergwanderung im Mittelgebirge",
@@ -39,5 +39,19 @@
       "beschreibung": "Ein abwechslungsreicher Wanderweg führt durch die schönsten Landschaften der Umgebung.",
       "typ": "wandern"
     }
-  ]
+  ],
+  "sources": [
+    "https://www.seefeld.com",
+    "https://www.rosshuette.at",
+    "https://www.casinos.at/casinos/seefeld",
+    "https://de.wikipedia.org/wiki/Seefeld_in_Tirol"
+  ],
+  "tvb": {
+    "tvb_name": "Seefeld",
+    "adresse": "Bahnhofplatz 115, 6100 Seefeld in Tirol",
+    "telefon": "+43 50 8800",
+    "email": "region@seefeld.com",
+    "website": "https://www.seefeld.com",
+    "ansprechpartner": "Mag. (FH) Elias Walser (Geschäftsführer)"
+  }
 }

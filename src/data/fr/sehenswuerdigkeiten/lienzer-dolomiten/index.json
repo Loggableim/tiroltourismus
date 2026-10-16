@@ -5,13 +5,13 @@
   "region": "osttirol",
   "ort": "Lienz",
   "kategorie": "natur",
-  "kurzbeschreibung": "Massif caractéristique des Dolomites en Osttirol – un paradis pour randonneurs, grimpeurs et amoureux de la nature.",
-  "beschreibung": "<h2>Aperçu</h2><p>Les <strong>Lienzer Dolomiten</strong> constituent un massif rocheux spectaculaire s'élevant au sud du bassin ensoleillé de Lienz, en Tyrol oriental. Célèbres pour leurs flèches de calcaire et de dolomie culminant à 2 770 m à la Große Sandspitze, elles abritent le cirque glaciaire du Laserz et son lac d'altitude étincelant. Ce sanctuaire alpin offre des panoramas d'exception sur les Hohe Tauern et les Alpes carniques.</p><h2>Parcours &amp; Exigences</h2><p>L'itinéraire classique monte du refuge Dolomitenhütte (1 616 m) au refuge Karlsbader Hütte (2 260 m) au bord du lac Laserz (650 m de dénivelé, 2h à 2h30 de marche). Les randonneurs chevronnés privilégient le Dolomitensteig ou les célèbres vias ferratas du Seekofel (C) et de la Madone (C/D). Chaussures de montagne rigides indispensables ; équipement de via ferrata complet obligatoire pour les parois rocheuses. Chiens admis en laisse sur la piste principale.</p><h2>Accès</h2><p>Train ÖBB jusqu'à la gare de Lienz, puis navette estivale vers la Dolomitenhütte. En voiture via la route à péage des Dolomites au départ de Tristach jusqu'au parking du refuge. Route ouverte de mai à fin octobre.</p><h2>Conseils</h2><p>Dégustez les fameux Schlipfkrapfen d'Osttirol sur la terrasse du refuge Karlsbader Hütte. Le lever de soleil illuminant la paroi du Laserz depuis la Dolomitenhütte est l'un des plus beaux spectacles d'Autriche.</p>",
+  "kurzbeschreibung": "Les spectaculaires Dolomites de Lienz émerveillent avec leurs aiguilles calcaires, le refuge Karlsbader Hütte au lac Laserzsee et leurs via ferratas.",
+  "beschreibung": "<h2>Aperçu</h2>\n<p>Les majestueuses <strong>Dolomites de Lienz</strong> forment la spectaculaire toile de fond méridionale de la ville de Lienz au Tyrol oriental. Bien qu'appartenant géologiquement aux Alpes de Gailtal, elles doivent leur nom évocateur à leur ressemblance frappante avec les Dolomites du Tyrol du Sud : flèches de calcaire clair élancées, cirques d'éboulis escarpés et aiguilles rocheuses hardies caractérisent ce massif de haute montagne. Son point culminant est la Große Sandspitze à 2 770 mètres, entourée de sommets légendaires tels que la Laserzwand, le Roter Turm et le groupe du Spitzkofel. La région est historiquement reconnue comme le berceau de l'escalade dans les Alpes sud-orientales, attirant des alpinistes du monde entier grâce à plus de cent voies rocheuses, des via ferratas modernes et des sentiers d'altitude panoramiques.</p>\n<h2>Parcours &amp; Exigences</h2>\n<p>Le point de départ idéal pour explorer le cœur des Dolomites de Lienz est le refuge Dolomitenhütte, perché à 1 616 mètres sur un éperon rocheux spectaculaire. De là, le sentier très bien entretenu monte jusqu'au refuge historique Karlsbader Hütte au bord du lac d'un bleu profond Laserzsee à 2 260 mètres d'altitude (environ 2h à 2h30 de marche, 645 mètres de dénivelé, niveau moyen, accessible aux familles par la piste carrossable). À l'arrivée, un immense cirque rocheux s'offre au regard. Pour les adeptes de via ferrata, l'itinéraire du Seekofel ou de la Laserzwand offre des panoramas inoubliables. Des chaussures de montagne montantes rigides et une tenue adaptée aux changements climatiques sont indispensables.</p>\n<h2>Accès</h2>\n<p>Le massif est accessible par la route à péage des Dolomites qui serpente depuis Tristach près de Lienz jusqu'au parking du refuge Dolomitenhütte (ouverte de mai à octobre ; péage env. 9 € par voiture). En transports collectifs, un bus de randonnée relie directement la gare de Lienz au refuge. Les refuges sont ouverts tous les jours de début juin à début octobre et proposent une excellente cuisine régionale tyrolienne.</p>\n<h2>Conseils</h2>\n<p>Avancez sur la terrasse panoramique vitrée de la Dolomitenhütte pour une vue plongeante vertigineuse sur les gorges de Klapffall, et goûtez aux traditionnels Kaspressknödel du Tyrol oriental. Un départ matinal permet d'immortaliser les reflets féeriques sur le lac Laserzsee.</p>",
   "emoji": "⛰️",
   "farbe": "#607D8B",
   "hoehe": "2.770 m",
-  "dauer": "4–6 Stunden",
-  "preis": "Kostenlos (Mautstraße ca. 9 € pro PKW)",
+  "dauer": "Randonnée d'une demi-journée à une journée",
+  "preis": "Massif accessible gratuitement ; route à péage de la Dolomitenhütte payante (env. 9 € par voiture)",
   "tags": [
     "randonnée",
     "escalade",
@@ -19,7 +19,7 @@
     "alpinisme",
     "vue panoramique"
   ],
-  "oeffnungszeiten": "Ganzjährig zugänglich",
+  "oeffnungszeiten": "Accès libre ; refuges gardés de début juin à début octobre",
   "webseite": "https://www.osttirol.com/lienzer-dolomiten",
   "koordinaten": {
     "lat": "46.7833",
@@ -29,9 +29,10 @@
   "hero_bild": null,
   "sources": [
     "https://de.wikipedia.org/wiki/Lienzer_Dolomiten",
-    "https://www.alpenvereinaktiv.com/de/tour/auf-die-karlsbader-huette/1393663/",
     "https://www.dolomitenhuette.at/",
     "https://www.bergsteigen.com/touren/klettersteig/seekofel-klettersteig/",
+    "https://www.osttirol.com/",
+    "https://www.alpenverein.at/",
     "https://www.vvt.at/"
   ]
 }

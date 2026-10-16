@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Bollywood Tandoori in Garmisch-Partenkirchen",
-  "beschreibung": "<p>Das <strong>Bollywood Tandoori</strong> in Garmisch-Partenkirchen ist ein beliebtes Restaurant, das seine GÃ¤ste mit einer vielfÃ¤ltigen Speisekarte und regionaler Gastlichkeit verwÃ¶hnt. Das Ambiente vereint traditionelle tirolerische Elemente mit modernem Komfort und schafft eine einladende AtmosphÃ¤re fÃ¼r jeden Anlass. Die Speisekarte bietet eine sorgfÃ¤ltige Auswahl an Gerichten - von klassischen Tiroler SpezialitÃ¤ten wie Tiroler GrÃ¶stl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten aus der Umgebung. Ob ein gemÃ¼tliches Abendessen zu zweit, eine Feier im Familienkreis oder ein geschÃ¤ftliches Treffen - das <strong>Bollywood Tandoori</strong> heiÃŸt Sie herzlich willkommen und sorgt mit seinem aufmerksamen Service fÃ¼r einen rundum gelungenen Aufenthalt.</p>",
+  "kurzbeschreibung": "Bollywood Tandoori in Innsbruck",
+  "beschreibung": "<p>Het <strong>Bollywood Tandoori</strong> in Innsbruck serveert de authentieke en aromatische smaken van de Indiase keuken in het hart van Tirol. Het restaurant bereidt traditionele tandoori-specialiteiten, geurige curry's en versgebakken naan in de tandoor-oven. Met een gastvrije bediening en een sfeervol interieur worden gasten meegenomen op een culinaire reis door India. Een absolute aanrader voor fijnproevers en liefhebbers van kruidige gerechten in Innsbruck.</p>",
   "ort": "Garmisch-Partenkirchen",
   "region": "innsbruck",
   "plz": "82467",
@@ -21,5 +21,9 @@
     "lat": 47.4926123,
     "lng": 11.0845387
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://de.wikipedia.org/wiki/Innsbruck",
+    "https://www.innsbruck.gv.at"
+  ]
 }

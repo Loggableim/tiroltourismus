@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "```html Café Konditorei Großgasteiger in Innsbruck ``` ```html Het café-konditorei Großgasteiger in Innsbruck ```",
-  "beschreibung": "<p>Het <strong>Café Konditorei Großgasteiger</strong> in Innsbruck in de regio Innsbruck nodigt uit tot een genotvolle pauze. Het stijlvolle Café-Konditorei verwent zijn gasten met een grote selectie van zelfgemaakte taarten, cakes en zoete specialiteiten. Elk stuk wordt met veel liefde voor detail bereid en kunstig gepresenteerd. Daarbij worden geselecteerde koffiespecialiteiten geserveerd, die door ervaren Baristi perfect worden bereid. De gezellige sfeer met charmant interieur nodigt uit tot blijven en genieten. Of het nu voor het ontbijt, een namiddagkoffie of een kleine snack tussendoor is – hier voel je je welkom. De focus ligt op regionale producten uit Tirol, die uit geselecteerde boerderijen en producenten worden gehaald.</p>",
+  "kurzbeschreibung": "Café Konditorei Großgasteiger in Innsbruck - ambachtelijke patisserie en koffie",
+  "beschreibung": "<p><strong>Café Konditorei Großgasteiger</strong> in Innsbruck nodigt uit tot een heerlijke pauze. Deze stijlvolle café-patisserie verwent gasten met een ruime selectie aan huisgemaakt gebak, taarten en zoete lekkernijen. Elk stuk wordt met liefde en vakmanschap bereid. Daarbij worden voortreffelijke koffiespecialiteiten geserveerd. De gezellige sfeer met charmant interieur maakt het tot een ideale plek voor een ontspannen ontbijt of middagkoffie.</p>",
   "ort": "Innsbruck",
   "region": "innsbruck",
   "plz": "6020",
@@ -21,5 +21,8 @@
     "lat": 47.2711115,
     "lng": 11.3861861
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

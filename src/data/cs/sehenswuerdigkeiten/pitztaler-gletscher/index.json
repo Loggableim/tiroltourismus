@@ -5,13 +5,13 @@
   "region": "imst",
   "ort": "St. Leonhard im Pitztal",
   "kategorie": "sport",
-  "kurzbeschreibung": "Nejvyšší horské lyžařské středisko v Tirol s celoročním provozem lyžování, úchvatným panoramatem a slavnou Gletscherexpress-Bahn.",
-  "beschreibung": "<h2>Přehled</h2><p><strong>Ledovec Pitztal</strong> (Pitztaler Gletscher) je „Střechou Tyrolska“ a nejvýše položeným ledovcovým střediskem v celém Rakousku (3 440 m). Podzemní lanovka Gletscherexpress a panoramatická lanovka Wildspitzbahn vás vyvezou k futuristické kavárně Café 3.440 s visutou prosklenou terasou přímo naproti nejvyšší hoře Severního Tyrolska Wildspitze (3 774 m).</p><h2>Trasa a náročnost</h2><p>Vyhlídková plošina kavárny je bezbariérová a dostupná pro každého (T1). V létě odtud vede vysokohorská stezka k chatě Braunschweiger Hütte (2 759 m, 2 hodiny chůze sutí a morénou, T3). Ledovcový výstup na Wildspitze vyžaduje horského vůdce, mačky a lano. Teplé zimní oblečení a ledovcové brýle nutné i v červenci. Psi v lanovkách povoleni s náhubkem.</p><h2>Příjezd a doprava</h2><p>Vlakem ÖBB do Imst-Pitztal a autobusem 4204 na konečnou stanici Mittelberg. Autem po dálnici A12 (sjezd Imst) údolím Pitztal po silnici L16 (35 km) na bezplatné parkoviště v Mittelbergu.</p><h2>Tipy</h2><p>Dopřejte si kávu a limetkovo-borovicový koláč v Café 3.440 s výhledem na 50 třítisícovek a navštivte žulovou Kapli bílého světla u dolní stanice lanovky.</p>",
+  "kurzbeschreibung": "Pitztalský ledovec je střechou Tyrolska: lanovka Wildspitzbahn ke Café 3440 ve 3 440 metrech, věčný led a výhled na 50 třítisícovek.",
+  "beschreibung": "<h2>Přehled</h2>\n<p>Monumentální ledovcem pokrytý <strong>Pitztalský ledovec</strong> (Pitztaler Gletscher) tvoří v závěru údolí Pitztal ve výšce až 3 440 metrů velkolepou 'Střechu Tyrolska'. Jako nejvýše položený ledovcový skiareál a nejvyšší bod dosažitelný lanovkou v celém Rakousku se tento svět věčného ledu rozprostírá na masivech ledovců Mittelbergferner a Taschachferner. Celému kraji vévodí majestátní Wildspitze, která je s 3 768 metry nejvyšším vrcholem Severního Tyrolska a druhou nejvyšší horou Rakouska. Architektonickým triumfem je futuristická kavárna Café 3440 u horní stanice Wildspitzbahn: s vysunutou prosklenou vyhlídkovou terasou stavba zdánlivě levituje nad ledovcem a nabízí neomezený 360stupňový výhled na více než padesát zaledněných třítisícovek Ötztalských Alp.</p>\n<h2>Trasa a náročnost</h2>\n<p>Výjezd do věčného ledu je mimořádným zážitkem: nejprve podzemní pozemní lanovka Pitzexpress proráží skálu v délce přes tři kilometry k horní stanici ve výšce 2 840 metrů. Odtud moderní kabinka Wildspitzbahn stoupá k vyhlídkové plošině ve výšce 3 440 metrů. Celý vrcholový komplex i kavárna Café 3440 jsou bezbariérové. Pro zkušené horolezce je ledovec základnou pro klasické výstupy na Wildspitze (cca 3,5 hodiny, mačky, cepín a lano nutností). Rodinnou alternativou je zajištěná ledovcová stezka k chatě Braunschweiger Hütte. Pevné pohorky, teplé zimní oblečení a sluneční brýle s UV filtrem kategorie 4 jsou nezbytné.</p>\n<h2>Příjezd a doprava</h2>\n<p>Údolní stanice v Mittelbergu na konci údolí disponuje velkými bezplatnými parkovišti a je snadno dostupná po dálnici A12 (sjezd Imst-Pitztal) a silnici L16. Vlakem dorazíte do stanice Imst-Pitztal a přestoupíte na přímý Regiobus Pitztal (linka 4204), který staví přímo před stanicí lanovky.</p>\n<h2>Tipy</h2>\n<p>Objednejte si v Café 3440 cappuccino a domácí pohankový koláč na visuté terase a obdivujte obří ledovcové trhliny Taschachferneru. Navštivte také kapličku Bílého světla (Kapelle des Weißen Lichts) na okraji ledovce pro chvíli ztišení v lůně horských velikánů.</p>",
   "emoji": "🏔️",
   "farbe": "#00ACC1",
   "hoehe": "3.440 m",
-  "dauer": "3–5 Stunden",
-  "preis": "Bergbahn Berg- und Talfahrt (Gletscherexpress + Wildspitzbahn) ca. 45–48 €",
+  "dauer": "3 až 5 hodin (půldenní až celodenní výlet)",
+  "preis": "Ledovcová oblast přístupná; lanovky Pitzexpress a Wildspitzbahn zpoplatněny (ledovcová jízdenka)",
   "tags": [
     "ski",
     "gletscher",
@@ -20,17 +20,17 @@
     "natur",
     "wandern"
   ],
-  "oeffnungszeiten": "Täglich 8:00–16:30 (Okt–Mai Skibetrieb, Jun–Sep Gletscherwanderungen)",
+  "oeffnungszeiten": "V provozu denně od poloviny července do poloviny května (krátká technická odstávka začátkem léta)",
   "webseite": "https://www.pitztaler-gletscher.at",
   "koordinaten": {
     "lat": "46.9436",
     "lng": "10.8514"
   },
   "sources": [
+    "https://de.wikipedia.org/wiki/Pitztal",
     "https://www.pitztaler-gletscher.at/",
     "https://www.pitztal.com/",
-    "https://de.wikipedia.org/wiki/Mittelbergferner",
-    "https://www.alpenvereinaktiv.com/de/tour/zur-braunschweiger-huette-vom-pitztaler-gletscher/1381402/",
-    "https://www.vvt.at/"
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Wildspitze"
   ]
 }

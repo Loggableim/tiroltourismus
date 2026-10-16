@@ -1,4 +1,5 @@
 ---
+import HeroPhoto from '../components/HeroPhoto.astro';
 // tiroltourismus.com — Apex Sprach-Hub
 // Self-contained one-screen (#sprache) language picker. 8 tiles (4x2 desktop /
 // 2x4 mobile): all tiles are equal; each reveals a per-language hover/focus
@@ -111,15 +112,6 @@ const TILES = [
       justify-content: center;
       background: var(--bg);
       isolation: isolate;
-    }
-    .df-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 42%;
-      z-index: 0;
     }
     .df-scrim {
       position: absolute;
@@ -290,6 +282,8 @@ const TILES = [
     .df-foot a { color: rgba(255,255,255,.64); transition: color .2s var(--ease); }
     .df-foot a:hover { color: #fff; }
     .df-sep { color: rgba(255,255,255,.34); }
+    .df-photo[hidden] { display: none; }
+    .df-photo::before { content: '· '; color: rgba(255,255,255,.34); }
 
     @media (max-width: 760px) {
       .df-langs {
@@ -305,10 +299,22 @@ const TILES = [
       .df-tile, .df-tile::after, .df-hint, .df-foot a { transition: none; }
     }
   </style>
+  <style is:global>
+    .df-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 42%;
+      z-index: 0;
+    }
+    .df-picker > picture { display: contents; }
+  </style>
 </head>
 <body>
   <section id="sprache" class="df-picker" aria-label="Sprachauswahl">
-    <img class="df-bg" src="/hero-tirol.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async" />
+    <HeroPhoto imgClass="df-bg" creditId="dfPhoto" />
     <div class="df-scrim" aria-hidden="true"></div>
 
     <div class="df-content">
@@ -345,6 +351,7 @@ const TILES = [
       <a id="dfPrivacy" href="https://de.tiroltourismus.com/datenschutz/">Datenschutz</a>
       <span class="df-sep" aria-hidden="true">·</span>
       <span>© tiroltourismus</span>
+      <a id="dfPhoto" class="df-photo" href="https://commons.wikimedia.org/" target="_blank" rel="noopener" hidden></a>
     </footer>
   </section>
 

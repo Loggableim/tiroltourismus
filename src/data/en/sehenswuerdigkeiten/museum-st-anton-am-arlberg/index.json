@@ -4,19 +4,21 @@
   "region": "arlberg",
   "ort": "St. Anton am Arlberg",
   "kategorie": "museum",
-  "kurzbeschreibung": "The museum in the historic settlement area documents the rich history of alpine tourism, rural culture, and the construction of the Arlbergbahn, showcasing how these elements have shaped the region over time.",
+  "kurzbeschreibung": "The Museum St. Anton am Arlberg inside the historic Trier House showcases the birthplace of alpine skiing and early Arlberg railway history.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museum",
-    "culture",
-    "history",
-    "Arlberg"
+    "Kultur",
+    "Museum",
+    "Skisport",
+    "Arlberg",
+    "St. Anton am Arlberg",
+    "Geschichte"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 8,00",
-  "oeffnungszeiten": "Mi-So 10:00-17:00",
-  "webseite": "https://www.museum-st-anton.at",
+  "dauer": "1 hour",
+  "preis": "Adults approx. €5.00, children free (free with St. Anton Summer Card)",
+  "oeffnungszeiten": "Winter daily 14:00–22:00, summer Mon–Fri 10:00–18:00 (restaurant operating)",
+  "webseite": "https://www.stantonamarlberg.com",
   "bilder": [],
   "hero_bild": null,
   "koordinaten": {
@@ -24,5 +26,14 @@
     "lng": "10.2664"
   },
   "status": "published",
-  "beschreibung": null
+  "beschreibung": "<h2>Overview</h2>\n<p>The <strong>Museum St. Anton am Arlberg</strong> is housed inside the stately Trier House (Villa Trier), a magnificent alpine chalet built in 1912 along Kandaharweg above the world-renowned ski resort. Surrounded by a tranquil park with towering pine trees and an idyllic pond, the villa serves as the historical treasure chest of the Arlberg region. Universally revered as the cradle of modern alpine skiing, the museum chronicles the pioneering evolution of winter sports, the construction of the trans-alpine Arlberg railway tunnel, and the traditional lives of mountain farming families in the Stanzertal valley. Nestled in alpine tranquility, the museum offers a delightful retreat from the bustling resort atmosphere.</p>\n<h2>Route &amp; Requirements</h2>\n<p>The heritage timber villa itself is an architectural jewel of alpine rustic style with carved balconies and fragrant Swiss pine parlors. Across two gallery floors, the exhibition guides visitors on a fascinating journey: on display are vintage wooden skis, primitive cable bindings, and alpine touring gear from the dawn of skiing around 1900. Generous space is devoted to ski pioneer <strong>Hannes Schneider</strong>, who revolutionized skiing worldwide with his \"Arlberg technique\" (stem christie) and the establishment of the first commercial ski school. The founding of the legendary Ski-Club Arlberg in 1901 and the prestigious Arlberg-Kandahar races are thoroughly documented. Vintage travel posters, championship medals, and historic film footage illustrate the global triumph of alpine skiing originating on the Arlberg. Further rooms illuminate the bold construction of the Arlberg Railway (1880–1884) connecting Tyrol to Western Europe, alongside folk crafts and sacred art.</p>\n<h2>Visit &amp; Arrival</h2>\n<p>The museum operates seasonally: in winter typically daily from 14:00 to 22:00, in summer Monday to Friday from 10:00 to 18:00. The building also accommodates an acclaimed restaurant serving regional Tyrolean dining. Admission: adults approx. €5.00, children free; free entry with the St. Anton Summer Card. Public transit: from St. Anton am Arlberg international station, walk 10 minutes uphill through the Kurpark to the villa. By car: via Arlberg expressway S16, with parking spaces located in the valley center.</p>\n<h2>Tips</h2>\n<p>Due to historic wooden stairways, the upper floor is not wheelchair accessible; the ground floor and park pathways are step-free. Relax after your tour on the sun-drenched veranda of the museum café with views toward the Galzig and Gampen peaks. Visiting in the early evening pairs rich alpine history with fine Tyrolean dining. In winter, an evening stroll through the snow-laden villa park is wonderfully romantic.</p>",
+  "sources": [
+    "https://www.stantonamarlberg.com/",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/St._Anton_am_Arlberg",
+    "https://de.wikipedia.org/wiki/Arlberg",
+    "https://www.vvt.at/"
+  ],
+  "saison": "Saisonal im Sommer und Winter nachmittags geöffnet",
+  "familie": true
 }

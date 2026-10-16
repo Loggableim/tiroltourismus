@@ -4,18 +4,20 @@
   "region": "kitzbuehel",
   "ort": "Kitzbühel",
   "kategorie": "museum",
-  "kurzbeschreibung": "Il Museum Kitzbühel espone su tre piani la movimentata storia della città dal Medioevo ai giorni nostri, con particolare attenzione al Bergbau e al Tourismus.",
+  "kurzbeschreibung": "Il Museum Kitzbühel ospita la più grande collezione di Alfons Walde, la storia dello sci e della Streif, e una terrazza panoramica sul tetto.",
   "emoji": "🏛️",
   "farbe": "#8B4513",
   "tags": [
-    "museo",
-    "storia",
-    "cultura",
-    "miniera"
+    "Kultur",
+    "Museum",
+    "Kunst",
+    "Skisport",
+    "Kitzbühel",
+    "Alfons Walde"
   ],
-  "dauer": "1,5 Stunden",
-  "preis": "Erwachsene € 9,00",
-  "oeffnungszeiten": "Di-So 10:00-17:00",
+  "dauer": "1-1,5 ore",
+  "preis": "Adulti ca. 10,00 €, ridotto per studenti/senior 8,00 €, giovani sotto i 18 anni gratuito",
+  "oeffnungszeiten": "Martedì–venerdì 10:00–17:00, sabato 10:00–18:00 (chiuso lunedì e domenica)",
   "webseite": "https://www.museum-kitzbuehel.at",
   "bilder": [],
   "hero_bild": null,
@@ -24,5 +26,14 @@
     "lng": "12.3911"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Museum Kitzbühel</strong> – Die Museum Kitzbühel in Kitzbühel verbindet auf einzigartige Weise Geschichte, Kunst und Tiroler Tradition. Das Museum Kitzbühel zeigt auf drei Etagen die bewegte Geschichte der Stadt vom Mittelalter bis zur Gegenwart mit Schwerpunkt Bergbau und Tourismus Das vielfältige Veranstaltungsprogramm mit Konzerten, Lesungen und Workshops macht jeden Besuch einzigartig. Besonders die stimmungsvollen Abendführungen und thematischen Sonderausstellungen bleiben nachhaltig in Erinnerung. Mitten in der reizvollen Altstadt von Kitzbühel gelegen, fügt sich die Museum Kitzbühel harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein. Ob Sommer oder Winter: Die Museum Kitzbühel ist immer eine Reise wert.</p>"
+  "beschreibung": "<h2>Panoramica</h2>\n<p>Il <strong>Museum Kitzbühel – Collezione Alfons Walde</strong>, allestito all'interno dell'antico granaio civico (Kastenturm) e della confinante torre della cinta muraria medievale, rappresenta una delle istituzioni museali più affascinanti del Tirolo. L'esposizione racconta in modo avvincente la storia plurimillenaria della città, dai giacimenti minerari dell'età del bronzo fino alla nascita del turismo invernale alpino e ai trionfi dello sci moderno. Fiore all'occhiello del museo è la più grande collezione permanente al mondo dedicata alle opere del celebre artista e architetto locale Alfons Walde, celebre per aver immortalato i paesaggi innevati e la luce abbacinante delle Alpi tirolesi.</p>\n<h2>Percorso &amp; Requisiti</h2>\n<p>L'itinerario museale si sviluppa su più livelli restaurati con sapiente rigore architettonico. Nei piani nobili troneggia la straordinaria <strong>collezione Alfons Walde</strong> (1891–1958): dipinti celeberrimi quali «Salita degli sciatori», baite d'alta quota sepolte dalla neve candida e vivaci scene rurali testimoniano la nascita del mito invernale alpino. Una sezione imperdibile è dedicata all'epopea dello sci: dai pionieristici tentativi di Franz Reisch nel 1893 alla fondazione della mitica discesa della Streif sull'Hahnenkamm nel 1931, fino alle storiche vittorie olimpiche del leggendario «Wunderteam» guidato da Toni Sailer. Al pianterreno reperti archeologici e arredi storici illustrano la ricchezza derivata dalle storiche miniere di rame e argento.</p>\n<h2>Come arrivare</h2>\n<p>Il museo sorge in Hinterstadt 32, nel cuore dell'isola pedonale di Kitzbühel. In treno: a soli 5 minuti a piedi dalla fermata ferroviaria Kitzbühel Hahnenkamm e a 10 minuti dalla stazione centrale Hauptbahnhof. Con i bus pubblici VVT: scendere alla fermata Kitzbühel Im Gries. In automobile: percorrere la statale B161 e parcheggiare comodamente nel capiente parcheggio P1 Pfarrau o presso l'Altstadtgarage.</p>\n<h2>Consigli</h2>\n<p>L'intero percorso espositivo è servito da moderni ascensori ed è accessibile a visitatori con disabilità motoria. Salite imperativamente fino alla spettacolare <strong>terrazza panoramica sul tetto</strong> dell'antica torre: offre uno scorcio fotografico senza pari sulle facciate del borgo antico e sulle vertiginose pendenze della Streif. Presso il bookshop del museo sono disponibili pregevoli riproduzioni e cataloghi d'arte delle opere di Walde.</p>",
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://www.tirol.at/",
+    "https://www.kitzbuehel.at/",
+    "https://de.wikipedia.org/wiki/Museum_Kitzb%C3%BChel",
+    "https://de.wikipedia.org/wiki/Alfons_Walde"
+  ],
+  "saison": "Ganzjährig geöffnet (Di-So geöffnet, montags Ruhetag)",
+  "familie": true
 }

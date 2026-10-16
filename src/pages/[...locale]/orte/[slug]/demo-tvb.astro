@@ -1,0 +1,95 @@
+---
+import DetailPage from '../../../../sections/DetailPage.astro';
+import { readEntry, readCollection } from '../../../../lib/content.js';
+import { localeParams, DEFAULT_LOCALE, localePrefix } from '../../../../lib/languages.js';
+
+const TVB_FIELDS = [
+  ['tvb_name', 'TVB-Name'],
+  ['adresse', 'Adresse'],
+  ['telefon', 'Telefon'],
+  ['email', 'E-Mail'],
+  ['website', 'Website'],
+  ['ansprechpartner', 'Ansprechpartner'],
+];
+
+export async function getStaticPaths() {
+  // DE carries tvb; generate demo routes for every locale that has the ort entry.
+  const deWithTvb = new Set(
+    readCollection('orte', 'de')
+      .filter(({ entry }) => entry && entry.tvb)
+      .map(({ slug }) => slug)
+  );
+  const paths = [];
+  for (const loc of localeParams()) {
+    const locale = loc || DEFAULT_LOCALE;
+    for (const slug of deWithTvb) {
+      if (readEntry('orte', slug, locale)) paths.push({ params: { locale: loc, slug } });
+    }
+  }
+  return paths;
+}
+
+const { slug } = Astro.params;
+const locale = Astro.params.locale || DEFAULT_LOCALE;
+const entry = readEntry('orte', slug, locale);
+if (!entry) return Astro.redirect(`${localePrefix(locale)}/orte/`);
+
+const deEntry = readEntry('orte', slug, 'de');
+const tvb = (deEntry && deEntry.tvb) || {};
+const rows = TVB_FIELDS.map(([key, label]) => {
+  const value = typeof tvb[key] === 'string' ? tvb[key].trim() : '';
+  const cell = value
+    ? value.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
+    : '<mark>Angabe fehlt, nicht erfasst</mark>';
+  return `<tr><th scope="row">${label}</th><td>${cell}</td></tr>`;
+}).join('');
+
+const count = (name) => readCollection(name, 'de').length;
+const fmt = (n) => n.toLocaleString('de-AT');
+const stats = [
+  ['Regionen', count('regionen')],
+  ['Orte', count('orte')],
+  ['Sehenswürdigkeiten', count('sehenswuerdigkeiten')],
+  ['Unterkünfte', count('unterkuenfte')],
+  ['Gastronomiebetriebe', count('gastro')],
+  ['Sprachen', 8],
+];
+const statsHtml = `<ul style="display:flex;flex-wrap:wrap;gap:.75rem;list-style:none;padding:0;margin:1rem 0">${stats.map(([l, n]) => `<li style="flex:1 1 140px;border:1px solid #d6dde3;border-radius:10px;padding:.75rem 1rem;background:#f7f9fb"><strong style="display:block;font-size:1.5rem">${fmt(n)}</strong>${l}</li>`).join('')}</ul>`;
+const ortUrl = `${localePrefix(locale)}/orte/${slug}/`;
+---
+
+<DetailPage
+  title={`Demo: Offizieller Ansprechpartner, ${entry.name}`}
+  description="Interne Demo-Route, nicht veröffentlicht."
+  breadcrumbs={[{ label: 'Orte', href: `${localePrefix(locale)}/orte/` }, { label: entry.name, href: `${localePrefix(locale)}/orte/${slug}/` }, { label: 'Demo TVB' }]}
+  locale={locale}
+  noindex={true}
+  sections={[
+    {
+      type: 'hero',
+      title: `Offizieller Ansprechpartner: ${entry.name}`,
+      subtitle: 'Demo-Route, nicht im Menü, nicht indexiert',
+      emoji: entry.emoji || '🏘️',
+      gradient: entry.farbe,
+      size: 'sm',
+    },
+    {
+      type: 'trusted-html',
+      label: 'Vorschau',
+      title: 'Über tiroltourismus',
+      html: `<p style="padding:.75rem 1rem;border-left:4px solid #e0a100;background:#fff8e1"><strong>Hinweis:</strong> Diese Seite ist eine nicht öffentliche Vorschau für den Tourismusverband. Sie ist nicht im Menü verlinkt und wird von Suchmaschinen nicht indexiert.</p><p>tiroltourismus ist ein unabhängiges Reiseportal für Tirol. Es stellt Regionen, Orte, Sehenswürdigkeiten, Unterkünfte und Gastronomie übersichtlich in 8 Sprachen vor. Für den Tourismusverband ist die Eintragung kostenlos.</p><p>Aktueller Umfang des Portals:</p>${statsHtml}`,
+    },
+    {
+      type: 'trusted-html',
+      label: entry.name,
+      title: 'So würde Ihr Kontakt auf der Ortsseite erscheinen',
+      html: `<p>Auf der <a href="${ortUrl}">Ortsseite ${entry.name}</a> würde der folgende Kontaktblock angezeigt. Der markierte Rahmen zeigt die Stelle.</p><div style="position:relative;border:3px dashed #d32f2f;border-radius:12px;padding:2.25rem 1rem 1rem;margin:1.5rem 0;background:#fffafa"><span style="position:absolute;top:-.9rem;left:1rem;background:#d32f2f;color:#fff;font-weight:700;padding:.2rem .7rem;border-radius:6px">Hier erscheint Ihr Kontakt</span><h3 style="margin-top:0">Offizieller Ansprechpartner</h3><table><tbody>${rows}</tbody></table><p style="font-size:.9em;color:#555">Quelle: offizielle TVB-Seite. Fehlt eine Angabe, bleibt das Feld leer und ist markiert.</p></div><p><strong>Wie das funktioniert:</strong> Die Kontaktdaten werden in der Datei <code>src/data/orte/${slug}/index.json</code> im Feld <code>tvb</code> gespeichert. Von dort erscheinen sie auf der Ortsseite in allen 8 Sprachen. Sie können die Angaben jederzeit ändern oder auf Wunsch ganz entfernen lassen.</p>`,
+    },
+    {
+      type: 'trusted-html',
+      label: 'Zusammenarbeit',
+      title: 'Was wir uns von Ihnen wünschen',
+      html: `<ul><li><strong>Fotos</strong> von ${entry.name}, die wir mit Nutzungsrecht und Bildnachweis auf der Website verwenden dürfen.</li><li><strong>Freigabe des Kontakts:</strong> ob der Tourismusverband wie oben als Ansprechpartner auf der Ortsseite genannt werden darf.</li><li><strong>Liste der Privatzimmervermieter</strong>, nur soweit das datenschutzrechtlich erlaubt ist oder die Daten ohnehin öffentlich einsehbar sind.</li></ul><p><strong>Kontakt:</strong> Dominik Rainer, <a href="mailto:info@tiroltourismus.com">info@tiroltourismus.com</a></p>`,
+    },
+  ]}
+/>

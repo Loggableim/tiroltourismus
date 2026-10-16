@@ -4,7 +4,7 @@
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
   "kurzbeschreibung": "Les Alpes de Kärntner en Tirol Découvrez les Alpes de Kärntner en Tirol, un paradis pour les amoureux de nature et de tranquillité.",
-  "beschreibung": "We need to output only the translated text. The user wants natural French translation of the German tourism text. The German text is garbled. We need to translate it into French, keep tags unchanged, keep place names and culinary terms in German. There are no place names or culinary terms. So we just translate the garbled text into French. But the garbled text is nonsense. We can translate each word: \"Das ist ein ...\"? But it's nonsense. We can produce a French translation of the nonsense: \"C'est un ...\"? But we need to keep tags unchanged. So final output: <p>C'est un ...</p><p>C'est un ...</p>",
+  "beschreibung": "<p>Das <strong>Kärntner Alm</strong> in Innsbruck ist ein beliebtes Restaurant, das seine Gäste mit einer vielfältigen Speisekarte und regionaler Gastlichkeit verwöhnt. Die Speisekarte bietet eine sorgfältige Auswahl an Gerichten – von klassischen Tiroler Spezialitäten wie Tiroler Gröstl und Kaiserschmarrn bis hin zu internationalen Klassikern. Besonderen Wert legt das Team auf die Verwendung frischer, regionaler Zutaten. Das gemütliche Ambiente und der aufmerksame Service machen jeden Besuch zu einem kulinarischen Genuss. Ob für ein romantisches Dinner, ein Geschäftsessen oder einen geselligen Abend mit Freunden – hier ist man jederzeit willkommen.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",

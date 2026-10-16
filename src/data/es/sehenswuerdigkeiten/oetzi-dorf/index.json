@@ -4,19 +4,20 @@
   "region": "oetztal",
   "ort": "Umhausen",
   "kategorie": "museum",
-  "kurzbeschreibung": "La réplica de la aldea neolítica con puesta en escena de la vida de Ötzi ofrece estaciones de experiencia y demostraciones de oficios artesanales.",
+  "kurzbeschreibung": "La Aldea de Ötzi en Umhausen es un parque arqueológico al aire libre que recrea la vida, viviendas y supervivencia en los Alpes en el Neolítico.",
   "emoji": "🗿",
   "farbe": "#8B5E3C",
   "tags": [
-    "museo",
-    "historia",
-    "Ötzi",
-    "edad de piedra",
-    "familia"
+    "Kultur",
+    "Museum",
+    "Familie",
+    "Archäologie",
+    "Ötztal",
+    "Freilichtmuseum"
   ],
-  "dauer": "1-2 Stunden",
-  "preis": "Erwachsene € 12,00, Kinder € 8,00",
-  "oeffnungszeiten": "Mai-Okt täglich 10:00-17:00",
+  "dauer": "aprox. 2–3 horas",
+  "preis": "Adultos aprox. 12,00 €, niños (6–15 años) 6,50 €, entrada combinada con parque de rapaces disponible",
+  "oeffnungszeiten": "De principios de mayo a finales de octubre a diario de 09:30 a 17:30 (en octubre hasta las 17:00)",
   "webseite": "https://www.oetzi-dorf.at",
   "bilder": [],
   "hero_bild": null,
@@ -25,5 +26,14 @@
     "lng": "10.9299"
   },
   "status": "published",
-  "beschreibung": "<p><strong>Ötzi Dorf</strong> – Mit ihrer beeindruckenden Geschichte und Architektur zählt die Ötzi Dorf zu den bedeutendsten Kulturdenkmälern der Region Ötztal. Die nachgebaute steinzeitliche Siedlung mit Inszenierung zum Leben des Ötzi bietet Erlebnisstationen und Handwerksvorführungen Bei einem Rundgang entdecken Besucher wertvolle Kunstschätze, historische Räumlichkeiten und liebevoll kuratierte Ausstellungen. Fachkundige Führungen vermitteln spannende Hintergründe zur Geschichte des Hauses und seiner Bewohner. Regelmäßige Sonderausstellungen und kulturelle Veranstaltungen bereichern das Programm. Mitten in der reizvollen Altstadt von Umhausen gelegen, fügt sich die Ötzi Dorf harmonisch in das historische Stadtbild ein. In unmittelbarer Nähe laden weitere Sehenswürdigkeiten und gemütliche Cafés zum Verweilen ein.  Auch für Familien mit Kindern gibt es hier viel zu entdecken und zu erleben. Lassen Sie sich von der Magie dieses Ortes verzaubern und genießen Sie Tiroler Gastfreundschaft pur.</p>"
+  "beschreibung": "<h2>Visión general</h2>\n<p>La popular <strong>Aldea de Ötzi</strong> (Ötzi-Dorf) en Umhausen, en el centro del valle de Ötztal, es un parque arqueológico al aire libre que recrea fielmente la vida cotidiana, artesanías y supervivencia alpina durante el Neolítico. Inspirado en el legendario hallazgo en 1991 de «Ötzi el Hombre de Hielo», la momia glaciar de más de 5.000 años descubierta en el Tisenjoch, se levantó aquí un poblado prehistórico a escala real. Este extenso recinto ofrece apasionantes lecciones de historia cultural sobre arquitectura primitiva, tácticas de caza, agricultura y vestimenta de la Edad de Piedra.</p>\n<h2>Ruta y Requisitos</h2>\n<p>Siguiendo un sendero circular bien trazado, los visitantes exploran cabañas de postes y troncos, talleres artesanales, refugios de caza, hornos de arcilla y graneros. Paneles explicativos, vitrinas y talleres en vivo muestran cómo se tallaba el sílex, se cosían pieles o se molían cereales ancestrales. Los niños disfrutan con los recintos de razas ganaderas primitivas, como cerdos lanudos mangalitza, ovejas de Soay y truchas autóctonas en el arroyo. Todo el recinto exterior cuenta con senderos de gravilla compactada transitables con cochecitos de bebé. Se recomienda calzado cómodo y ropa adecuada para el aire libre.</p>\n<h2>Cómo llegar</h2>\n<p>El parque abre todos los días desde principios de mayo hasta finales de octubre, de 09:30 a 17:30 horas (hasta las 17:00 en octubre). Precio de entrada: adultos aprox. 12,00 euros, niños 6,50 euros; las entradas combinadas con el parque de aves rapaces vecino son muy ventajosas. Transporte público: tren hasta Ötztal Bahnhof y luego autobús de línea hasta Umhausen Feuerwehr, seguido de un agradable paseo de quince minutos junto al río. En coche: por la autopista A12 saliendo hacia la carretera federal B186 hasta Umhausen, siguiendo la señalización hacia el aparcamiento de Stuibenfall.</p>\n<h2>Consejos</h2>\n<p>Junto al poblado prehistórico se encuentra el <strong>Parque de Aves Rapaces de Umhausen</strong>, con espectaculares exhibiciones diarias de vuelo con águilas, halcones y búhos. Combine la visita con una caminata a la cercana <strong>cascada de Stuibenfall</strong>, el salto de agua más alto del Tirol con 159 metros de caída, visible desde puentes colgantes y miradores. El bistró del recinto ofrece tentempiés y bebidas.</p>",
+  "sources": [
+    "https://www.oetzi-dorf.at/",
+    "https://www.oetztal.com/de/sommer.html",
+    "https://www.tirol.at/",
+    "https://de.wikipedia.org/wiki/Umhausen",
+    "https://de.wikipedia.org/wiki/%C3%96tzi"
+  ],
+  "saison": "Mai bis Ende Oktober",
+  "familie": true
 }

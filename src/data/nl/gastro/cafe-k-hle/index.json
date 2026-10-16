@@ -3,8 +3,8 @@
   "emoji": "🍽️",
   "farbe": "#FF6B35",
   "kategorie": "restaurant",
-  "kurzbeschreibung": "Café Köhle in Ried im Oberinntal",
-  "beschreibung": "<p>Im <strong>Cafe Köhle</strong> in Ried im Oberinntal in der Region Landeck genießen Gäste eine köstliche Kombination aus traditioneller Tiroler Küche und modernen Einflüssen. Das gemütliche Restaurant überzeugt mit einer einladenden Atmosphäre und einem freundlichen Service, der jeden Besuch zu einem besonderen Erlebnis macht. Die saisonal wechselnde Karte setzt auf frische Produkte aus der Region – von Bergkäse aus den umliegenden Almen bis hin zu frischem Wild aus den Tiroler Wäldern. Auch Liebhaber der internationalen Küche kommen hier auf ihre Kosten. Die hausgemachten Nachspeisen, darunter Klassiker wie Kaiserschmarrn und Apfelstrudel, runden das kulinarische Angebot perfekt ab. Besonders beliebt sind die knusprigen Pizzen, die im Holzofen gebacken werden und mit erlesenen Zutaten belegt sind.</p>",
+  "kurzbeschreibung": "Cafe Köhle in Ried im Oberinntal - Tiroolse gastvrijheid",
+  "beschreibung": "<p>In <strong>Cafe Köhle</strong> in Ried im Oberinntal in de regio Landeck genieten gasten van een smaakvolle combinatie van traditionele Tiroolse lekkernijen en verse meelspijzen in een huiselijke ambiance.</p>",
   "ort": "Ried im Oberinntal",
   "region": "landeck",
   "plz": "6531",
@@ -21,5 +21,8 @@
     "lat": 47.0551116,
     "lng": 10.6531884
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

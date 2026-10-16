@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Florian en Tirol Découvrez l’ambiance chaleureuse et typique du Café Florian, niché au cœur de la région montagneuse du Tirol.",
-  "beschreibung": "<p>Das <strong>Cafe Florian</strong> in Innsbruck bietet seinen Gästen eine herzliche Atmosphäre und eine feine Auswahl an Kaffeespezialitäten und hausgemachten Köstlichkeiten. Das Café ist bekannt für seine sonnige Terrasse, die an warmen Tagen zum Entspannen einlädt. Die Karte umfasst klassische österreichische Mehlspeisen, duftende Kuchen und verlockende Torten, die täglich frisch zubereitet werden. Der aufmerksame Service sorgt dafür, dass es den Gästen an nichts fehlt. Das <strong>Cafe Florian</strong> ist der ideale Ort für eine entspannte Kaffeepause inmitten des Tiroler Alltags.</p>",
+  "kurzbeschreibung": "Cafe Florian à Innsbruck - café convivial et pâtisseries maison",
+  "beschreibung": "<p>Le <strong>Cafe Florian</strong> à Innsbruck offre à ses convives une atmosphère chaleureuse et une sélection soignée de cafés de spécialité et de douceurs faites maison. Un lieu propice à la détente en plein cœur de la ville tyrolienne.</p>",
   "ort": "",
   "region": "innsbruck",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2741318,
     "lng": 11.4482344
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

@@ -3,8 +3,8 @@
   "emoji": "☕",
   "farbe": "#FF6B35",
   "kategorie": "cafe",
-  "kurzbeschreibung": "Café Knappenstube en Tirol Découvrez l’authenticité alpine au cœur du Tyrol Bienvenue au Café Knappenstube, une institution emblématique nichée dans le Tyrol, où l’ambiance…",
-  "beschreibung": "<p>Das <strong>Cafe Knappenstube</strong> in Imst ist ein charmantes Café, das seine Gäste mit hausgemachten Kuchen, erlesenen Kaffeespezialitäten und einer gemütlichen Atmosphäre begeistert. Hier lässt es sich wunderbar entspannen, ein gutes Buch lesen oder mit Freunden plaudern. Die Karte bietet eine feine Auswahl an traditionellen österreichischen Mehlspeisen – von der cremigen Sachertorte über den luftigen Apfelstrudel bis hin zum verführerischen Topfenstrudel. Dazu werden aromatische Kaffeespezialitäten serviert, die mit viel Sorgfalt zubereitet werden. Die einladende Einrichtung mit bequemen Sitzplätzen und liebevollen Details schafft Wohlfühlatmosphäre.</p>",
+  "kurzbeschreibung": "Cafe Knappenstube à Imst - halte gourmande alpine",
+  "beschreibung": "<p>Le <strong>Cafe Knappenstube</strong> à Imst est un charmant café qui séduit ses visiteurs par ses gâteaux faits maison, ses boissons chaudes réconfortantes et son ambiance rustique typique des Alpes tyroliennes.</p>",
   "ort": "",
   "region": "imst",
   "plz": "",
@@ -20,5 +20,8 @@
     "lat": 47.2401877,
     "lng": 10.7398438
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tiroltourismus.com"
+  ]
 }

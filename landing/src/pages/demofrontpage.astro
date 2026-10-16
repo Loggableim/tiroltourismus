@@ -2,7 +2,6 @@
 // tiroltourismus — Demo der neuen Startseite (Sprachauswahl), nur unter /demofrontpage.
 // Noindex, nicht in der Sitemap. Die Live-Startseite (index.astro) bleibt unverändert.
 import '../styles/apex.css';
-import HeroPhoto from '../components/HeroPhoto.astro';
 
 interface LanguageItem {
   code: string;
@@ -154,6 +153,22 @@ const LANGUAGES: LanguageItem[] = [
 
 // Ausgangs-Tagline ohne erkannte Sprache: Englisch (laut Spezifikation)
 const DEFAULT_ITEM = LANGUAGES.find((l) => l.code === 'en') || LANGUAGES[0];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'tiroltourismus',
+  url: 'https://tiroltourismus.com/demofrontpage',
+  description:
+    'Demo: tiroltourismus Sprachauswahl-Startseite (Alpin-Monolith) — 8 Sprachen, noindex.',
+  inLanguage: 'de',
+  hasPart: LANGUAGES.map((l) => ({
+    '@type': 'WebSite',
+    name: `tiroltourismus ${l.name}`,
+    url: l.href,
+    inLanguage: l.htmlLang,
+  })),
+};
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -168,10 +183,31 @@ const DEFAULT_ITEM = LANGUAGES.find((l) => l.code === 'en') || LANGUAGES[0];
   <link rel="icon" href="/favicon.ico" />
   <link rel="preload" href="/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 </head>
 <body>
   <div class="tt-stage" id="ttStage" data-light="day">
-    <HeroPhoto imgClass="tt-hero-img tt-hero" creditId="ttPhoto" />
+    <picture class="tt-hero" aria-hidden="true">
+      <source
+        type="image/avif"
+        srcset="/images/hero-tirol-640.avif 640w, /images/hero-tirol-1280.avif 1280w, /images/hero-tirol-1920.avif 1920w, /hero-tirol.avif 1920w"
+        sizes="100vw"
+      />
+      <source
+        type="image/webp"
+        srcset="/images/hero-tirol-640.webp 640w, /images/hero-tirol-1280.webp 1280w, /images/hero-tirol-1920.webp 1920w, /hero-tirol.webp 1920w"
+        sizes="100vw"
+      />
+      <img
+        class="tt-hero-img"
+        src="/hero-tirol.jpg"
+        alt=""
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
 
     <div class="tt-scrim" aria-hidden="true"></div>
     <div class="tt-contours" aria-hidden="true"></div>
@@ -267,7 +303,6 @@ const DEFAULT_ITEM = LANGUAGES.find((l) => l.code === 'en') || LANGUAGES[0];
       </a>
       <span class="tt-sep" aria-hidden="true">·</span>
       <span class="tt-copy">© tiroltourismus</span>
-      <a id="ttPhoto" class="tt-photo" href="https://commons.wikimedia.org/" target="_blank" rel="noopener" hidden></a>
     </footer>
   </div>
 

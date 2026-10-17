@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>FeWo Biohof Planer</strong> liegt in einer ruhigen Tallage in den <strong>Tiroler Alpen</strong>. Die Umgebung ist von alpinen Wiesen und dichten Wäldern geprägt. Der Gasthof zeichnet sich durch eine rustikale Einrichtung und eine familiengeführte Atmosphäre aus. Den Gästen wird regionale Küche mit Produkten aus eigener biologischer Landwirtschaft geboten. Im Sommer sind Wanderungen und Radtouren auf markierten Wegen möglich. Im Winter sind die nahen Skigebiete und Langlaufloipen gut erreichbar. Der Hof legt Wert auf Nachhaltigkeit und direkte Vermarktung seiner Produkte.</p>",
+  "beschreibung": "<p>A plus de 1 400 metres d altitude dans le Defereggental sauvage, cette ferme biologique offre confort naturel et vue grandiose sur les sommets des Hohe Tauern.</p><p>Air pur d altitude, alpages intacts et ski familial a St. Jakob font le bonheur des vacanciers.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "La FeWo Biohof Planer a St. Veit in Defereggen propose des vacances bio a la ferme dans la vallee preservee du Defereggental."
 }

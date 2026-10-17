@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Sun Valley liegt in ruhiger Lage im <strong>Zillertal</strong> und bietet einen Ausblick auf die umliegende Bergwelt. Die Gestaltung des Hauses verbindet Elemente des <strong>traditionellen Tiroler Stils</strong> mit zeitgenössischem Komfort. Die Zimmer sind mit Balkon, Satellitenfernsehen und einem eigenen Badezimmer ausgestattet. Der Wellnessbereich umfasst eine Sauna, ein Dampfbad und einen Ruheraum. Das <strong>Halbpensionsangebot</strong> beinhaltet ein Frühstücksbuffet und ein Abendessen mit regionalen und internationalen Gerichten. Im Winter dient der nahegelegene Skibus als Verbindung zu den Skigebieten. Im Sommer starten Wanderer und Mountainbiker direkt vom Hotel aus in die umliegende Bergwelt. Das Hotel eignet sich für Paare und Familien, die Wert auf Ruhe und Erholung legen.</p>",
+  "beschreibung": "<p>El <strong>Hotel Sun Valley</strong> goza de una ubicación apacible en el valle de <strong>Wildschönau</strong>, regalando vistas panorámicas a las montañas tirolesas. Su arquitectura aúna elementos del estilo alpino clásico con el confort contemporáneo. Las habitaciones disponen de balcón, televisión por satélite y baño privado. La agradable zona de spa, equipada con sauna, baño de vapor y sala de relajación, invita al descanso tras una jornada de actividad al aire libre. La media pensión incluye un completo desayuno bufé y cenas con platos regionales e internacionales. En invierno, el autobús de esquí cercano conecta con las pistas de Ski Juwel Alpbachtal Wildschönau, mientras que en verano parten rutas de senderismo directamente desde el hotel.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wildschoenau.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel tranquilo en Wildschönau con auténtico encanto tirolés, zona de bienestar y gastronomía regional."
 }

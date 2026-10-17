@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Enjoying a sunny hillside location with panoramic views over the Oetztal Alps, Das Liebener welcomes guests in Soelden. The stylishly furnished apartments offer expansive living space and private balconies for quiet relaxation.</p><p>The base stations of the Giggijoch and Gaislachkogl gondolas are quickly accessible, making it an excellent base for skiers, hikers, and mountain bikers alike.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Das Liebener in Soelden provides contemporary apartments in a quiet panoramic setting close to the Oetztal cable cars."
 }

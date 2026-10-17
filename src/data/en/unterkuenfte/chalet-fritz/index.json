@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Located in the world-renowned resort of St. Anton am Arlberg, Chalet Fritz welcomes guests with stylish elegance and traditional alpine character. Expansive living spaces and premium finishes ensure an exceptional stay.</p><p>Legendary Ski Arlberg lifts and slopes alongside spectacular summer hiking routes are within close reach, guaranteeing year-round mountain enjoyment.</p>",
   "ausstattung": [],
   "tags": [
     "Arlberg",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Chalet Fritz in St. Anton am Arlberg combines premium chalet comfort with immediate access to the cradle of alpine skiing."
 }

@@ -281,9 +281,16 @@
       line-height: 1.55;
       color: var(--text-secondary);
       text-align: center;
-      text-wrap: balance;
       perspective: 650px;
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
+    }
+    .tt-flap.tt-flap-board {
+      display: grid;
+      grid-template-columns: repeat(var(--flap-cols, 52), minmax(0, 1fr));
+      grid-template-rows: repeat(var(--flap-rows, 2), auto);
+      gap: 3px 1px;
+      width: 100%;
+      max-width: min(920px, 100%);
     }
     .tt-flap .tt-ch {
       position: relative;
@@ -291,11 +298,17 @@
       transform-origin: 50% 52%;
       backface-visibility: hidden;
       will-change: transform, opacity;
-      padding: 0 1px;
-      margin: 0 0.2px;
+      padding: 2px 0;
+      min-height: 1.35em;
       border-radius: 2px;
       background: rgba(15, 21, 30, 0.72);
       border: 1px solid rgba(245, 243, 240, 0.14);
+      font-size: clamp(9.5px, 1.35vh, 13px);
+      line-height: 1.2;
+    }
+    .tt-flap .tt-ch-empty {
+      opacity: 0.42;
+      color: transparent;
     }
     .tt-flap .tt-ch::after {
       content: '';

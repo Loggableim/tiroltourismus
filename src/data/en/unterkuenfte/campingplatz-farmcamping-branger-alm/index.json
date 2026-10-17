@@ -11,7 +11,7 @@
   "telefon": "+43 5232 2209",
   "email": "info@brangeralm.at",
   "webseite": "https://brangeralm.at/#camping",
-  "beschreibung": "<p>The Farmcamping Branger Alm campsite is located in the tranquil municipality of Unterperfuss in the Tiroler Inntal and offers nature-oriented accommodation directly on the farm. The surroundings are characterized by expansive meadows and the impressive mountain backdrop of the Nordkette. The site has solid basic amenities with well-maintained sanitary facilities and electricity connections for motorhomes, caravans, and tents. The atmosphere is deliberately simple and quiet, which makes the campsite an ideal retreat for those seeking relaxation. The target audience is primarily nature-loving guests, families, as well as hikers and cyclists who want to explore the Tiroler Alpen. A special plus is the opportunity to obtain fresh products directly from the farm. Despite the secluded location, the state capital Innsbruck with its cultural offerings can be reached quickly.</p>",
+  "beschreibung": "<p>The campsite Farmcamping Branger Alm is located in the tranquil municipality of Unterperfuss in the Tyrolean Inn Valley and offers close-to-nature accommodation directly on the farm. The surroundings are characterised by extensive meadows and the impressive mountain backdrop of the Nordkette. The site has a solid basic infrastructure with well-kept sanitary facilities and electricity connections for motorhomes, caravans and tents. The atmosphere is deliberately simple and quiet, which makes the campsite an ideal retreat for those seeking relaxation. The target audience is mainly nature-loving guests, families as well as hikers and cyclists who want to explore the Tyrolean Alps. A special bonus is the option of buying fresh produce directly from the farm. Despite its secluded location, the provincial capital Innsbruck with its cultural offerings is quickly reachable.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.2601134",
     "lng": "11.2551538"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://brangeralm.at/#camping",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

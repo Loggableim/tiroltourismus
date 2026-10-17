@@ -11,7 +11,7 @@
   "telefon": "+43 5332 72966",
   "email": null,
   "webseite": "http://camping.hager.tirol/",
-  "beschreibung": "<p>Campingplatz Hager is located in Langkampfen in the Tiroler Unterinntal, just a few kilometers from the fortress town of Kufstein. The surrounding mountain landscape of the Kaisergebirge and the Brandenberger Alpen shapes the close-to-nature surroundings. The facility's amenities include modern sanitary facilities, spacious pitches with electricity connections, and a common room. A bread roll service and a tavern with regional cuisine round off the services offered. The site impresses with its quiet, well-kept atmosphere. Active holidaymakers can access a dense network of hiking and cycling trails directly from the site. The Campingplatz also appeals to families with its playground and spacious sunbathing lawn.</p>",
+  "beschreibung": "<p>The campsite Hager is located in Langkampfen in the Tyrolean Lower Inn Valley, only a few kilometres from the fortress town of Kufstein. The surrounding mountain landscape of the Kaisergebirge and the Brandenberger Alpen shapes the close-to-nature surroundings. The facilities include modern sanitary installations, spacious pitches with electricity connection and a common room. A bread roll service and a parlour serving regional cuisine complete the range of services. The site impresses with its quiet, well-kept atmosphere. Active holidaymakers can reach a dense network of hiking and cycling trails directly from the site. The campsite also caters to families with its playground and spacious sunbathing lawn.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.5655031",
     "lng": "12.1255702"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

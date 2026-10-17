@@ -11,7 +11,7 @@
   "telefon": "+43 5232 2209",
   "email": "info@brangeralm.at",
   "webseite": "https://brangeralm.at/#camping",
-  "beschreibung": "<p>Der Campingplatz Farmcamping Branger Alm liegt in der beschaulichen Gemeinde Unterperfuss im Tiroler Inntal und bietet eine naturnahe Unterkunft direkt am Bauernhof. Die Umgebung ist von weitläufigen Wiesen und der beeindruckenden Bergkulisse der Nordkette geprägt. Der Platz verfügt über eine grundsolide Ausstattung mit gepflegten Sanitäranlagen und Stromanschlüssen für Wohnmobile, Wohnwagen und Zelte. Die Atmosphäre ist bewusst einfach und ruhig gehalten, was den Campingplatz zu einem idealen Rückzugsort für Erholungssuchende macht. Das Zielpublikum sind vor allem naturverbundene Gäste, Familien sowie Wanderer und Radfahrer, die die Tiroler Alpen erkunden möchten. Ein besonderes Plus ist die Möglichkeit, frische Produkte direkt vom Hof zu beziehen. Trotz der abgeschiedenen Lage ist die Landeshauptstadt Innsbruck mit ihrem kulturellen Angebot schnell erreichbar.</p>",
+  "beschreibung": "<p>Kemp Farmcamping Branger Alm se nachází v poklidné obci Unterperfuss v tyrolském údolí Innu a nabízí ubytování blízko přírody přímo na statku. Okolní krajinu tvoří rozlehlé louky a působivé horské panorama Nordkette. Areál disponuje solidním základním vybavením s udržovanými sociálními zařízeními a elektrickými přípojkami pro obytné vozy, karavany a stany. Atmosféra je záměrně jednoduchá a klidná, což z kempu činí ideální místo pro odpočinek. Cílovou skupinou jsou především hosté blízcí přírodě, rodiny a také turisté a cyklisté, kteří chtějí poznat tyrolské Alpy. Zvláštní výhodou je možnost odebrat čerstvé produkty přímo ze statku. I přes odlehlou polohu je hlavní město Innsbruck s kulturní nabídkou rychle dostupné.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.2601134",
     "lng": "11.2551538"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://brangeralm.at/#camping",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

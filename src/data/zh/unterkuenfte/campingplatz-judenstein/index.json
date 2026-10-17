@@ -11,7 +11,7 @@
   "telefon": "+43 664 2428500",
   "email": "info@camping-judenstein.at",
   "webseite": "https://www.camping-judenstein.at",
-  "beschreibung": "<p>Der Campingplatz Judenstein liegt in der Gemeinde Rinn in Tirol und präsentiert sich als ruhiger Familiencampingplatz in sonniger Hanglage im Inntal. Eingebettet in die Tiroler Bergwelt bietet die Umgebung ideale Bedingungen für ausgedehnte Wanderungen und Mountainbike-Touren. Die Ausstattung umfasst komfortable Stellplätze, moderne Sanitäranlagen sowie einen Naturbadeteich zur Erfrischung. Die gepflegte und ruhige Atmosphäre lädt vor allem Familien und Naturliebhaber zur Erholung ein. Dank der verkehrsgünstigen Lage unweit von Innsbruck ist der Platz zudem ein optimaler Ausgangspunkt für Ausflüge in die Landeshauptstadt. So verbinden Gäste hier entspannte Nächte in der Natur mit kulturellen Highlights der Region.</p>",
+  "beschreibung": "<p>Judenstein 露营地位于蒂罗尔州 Rinn 市镇，是一处坐落在因河谷向阳山坡上的宁静家庭露营地。营地置身于蒂罗尔山地世界之中，周边为长时间的徒步和山地自行车路线提供了理想条件。设施包括舒适的营位、现代化的卫生设施以及一处可供消暑的自然泳池。整洁宁静的氛围尤其适合家庭和自然爱好者前来休憩。得益于靠近因斯布鲁克的便利位置，营地也是前往省会短途出游的理想出发点。客人由此将自然中的惬意夜晚与当地的文化亮点结合起来。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.259626",
     "lng": "11.5058357"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.camping-judenstein.at",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

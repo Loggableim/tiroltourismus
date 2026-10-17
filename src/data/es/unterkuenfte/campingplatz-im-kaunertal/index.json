@@ -11,7 +11,7 @@
   "telefon": "+43 5475 316",
   "email": null,
   "webseite": "https://www.camping-kaunertal.at",
-  "beschreibung": "<p>Der Campingplatz im Kaunertal liegt auf rund 1.400 Metern Höhe mitten im Naturpark Kaunergrat. Die Lage nahe der Kaunertaler Gletscherstraße macht ihn zu einem gefragten Ausgangspunkt für Aktivurlauber. Die Ausstattung umfasst moderne Sanitäranlagen, Stromanschlüsse sowie separate Stellplätze für Wohnmobile, Wohnwagen und Zelte. Im Sommer bieten sich unzählige Wander- und Mountainbike-Touren direkt ab dem Platz an, während im Winter das Skigebiet am Gletscher bequem erreichbar ist. Die ruhige, naturnahe Atmosphäre und der familiäre Betrieb sprechen ein breites Publikum von Naturliebhabern bis hin zu Familien an. Ein kleiner Shop sowie eine Gaststätte auf dem Gelände runden das Angebot für einen naturnahen Aufenthalt ab.</p>",
+  "beschreibung": "<p>El camping del Kaunertal se encuentra a unos 1.400 metros de altitud, en pleno parque natural Kaunergrat. Su ubicación cerca de la carretera del glaciar del Kaunertal lo convierte en un punto de partida muy solicitado para los amantes de las actividades. El equipamiento incluye modernas instalaciones sanitarias, conexiones eléctricas y parcelas separadas para autocaravanas, caravanas y tiendas de campaña. En verano, desde el propio recinto parten innumerables rutas de senderismo y de mountain bike, mientras que en invierno se puede llegar cómodamente a la zona de esquí del glaciar. El ambiente tranquilo y natural y la gestión familiar atraen a un amplio público, desde amantes de la naturaleza hasta familias. Una pequeña tienda y un restaurante en el recinto completan la oferta para una estancia en plena naturaleza.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.0529375",
     "lng": "10.7497657"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.camping-kaunertal.at",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

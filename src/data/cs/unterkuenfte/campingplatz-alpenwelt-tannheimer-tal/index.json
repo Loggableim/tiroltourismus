@@ -11,7 +11,7 @@
   "telefon": "+43 5675 43070",
   "email": null,
   "webseite": "https://alpenwelt-tannheimertal.at/camping",
-  "beschreibung": "<p>Der <strong>Campingplatz Alpenwelt</strong> liegt am Rand von <strong>Tannheim</strong> im gleichnamigen Tal auf etwa 1.100 Metern Seehöhe. Das Gelände bietet einen direkten Zugang zum <strong>Tannheimer See</strong> und ist von sanften Almwiesen sowie Bergketten umgeben. Gäste finden hier Stellplätze für Wohnmobile und Zelte, sanitäre Anlagen sowie einen kleinen Laden. Die Umgebung eignet sich für <strong>Wanderungen</strong> und <strong>Radtouren</strong> im Sommer sowie für <strong>Winterwanderungen</strong> in der kalten Jahreszeit.</p>",
+  "beschreibung": "<p>Kemp <strong>Campingplatz Alpenwelt</strong> se nachází na okraji obce <strong>Tannheim</strong> ve stejnojmenném údolí v nadmořské výšce přibližně 1 100 metrů. Areál nabízí přímý přístup k <strong>Tannheimer See</strong> a je obklopen mírnými horskými loukami a hřebeny. Hosté zde najdou stání pro obytné vozy a stany, sociální zařízení a malý obchod. Okolí se hodí pro <strong>pěší túry</strong> a <strong>cyklistické výlety</strong> v létě i pro <strong>zimní túry</strong> v chladném období.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.5084253",
     "lng": "10.4952208"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://alpenwelt-tannheimertal.at/camping",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

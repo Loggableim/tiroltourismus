@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { linkDescriptionText, linkifyHtml } from './related.js';
+import { isHiddenSlug } from './hidden.js';
 
 const DATA_DIR = path.resolve(process.cwd(), 'src/data');
 const _collectionCache = new Map();
@@ -43,6 +44,7 @@ export function readCollection(name, locale = 'de') {
   const entries = [];
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
     if (!item.isDirectory()) continue;
+    if (isHiddenSlug(name, item.name)) continue;
     const jsonPath = path.join(dir, item.name, 'index.json');
     if (fs.existsSync(jsonPath)) {
       try {

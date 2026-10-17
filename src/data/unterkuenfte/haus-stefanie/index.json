@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Haus Stefanie ist ein <strong>traditioneller Gasthof</strong> in Tirol, Österreich. Die Unterkunft befindet sich in einer ruhigen Lage mit <strong>Ausblick auf die Alpen</strong>. Die Ausstattung umfasst mehrere Zimmer mit einfacher, zweckmäßiger Einrichtung. Der Gastraum bietet <strong>regionale Tiroler Küche</strong> für die Gäste. Die Umgebung ist geprägt von Wanderwegen im Sommer und Skigebieten im Winter. Gäste können einen unkomplizierten Aufenthalt mit persönlichem Service erwarten. Die Anbindung an das Verkehrsnetz ist vorhanden, aber die Umgebung bleibt naturnah.</p>",
+  "beschreibung": "<p>Das <strong>Haus Stefanie</strong> empfängt Feriengäste in einer ruhigen und sonnigen Lage in <strong>Sölden</strong> im Tiroler Ötztal, umgeben von der eindrucksvollen Kulisse der Ötztaler Alpen. Die behaglich im alpenländischen Holzstil eingerichteten Gästezimmer verfügen über moderne Badezimmer mit Dusche/WC, Sat-TV und sonnige Balkone mit Blick auf die schneebedeckten Berggipfel. Morgens stärkt ein reichhaltiges Frühstücksbuffet mit regionalen Köstlichkeiten die Gäste für aktive Unternehmungen in der Bergwelt. Die Haltestelle des kostenlosen Skibusses liegt nur wenige Schritte entfernt und gewährleistet den bequemen Transfer zu den Talstationen der Giggijoch- und Gaislachkoglbahn, die den Einstieg in das weltberühmte Skigebiet Sölden und seine beiden Gletscher erschließen. Im Sommer begeistern abwechslungsreiche Höhenwanderwege und die Trails der Bike Republic Sölden.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -23,5 +23,10 @@
     "lat": "46.9596576",
     "lng": "11.0049427"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütlicher Berggasthof in ruhiger Lage in Sölden im Ötztal mit komfortablen Zimmern und schneller Anbindung an das Skigebiet Sölden."
 }

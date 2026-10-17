@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Haus Stefanie ist ein <strong>traditioneller Gasthof</strong> in Tirol, Österreich. Die Unterkunft befindet sich in einer ruhigen Lage mit <strong>Ausblick auf die Alpen</strong>. Die Ausstattung umfasst mehrere Zimmer mit einfacher, zweckmäßiger Einrichtung. Der Gastraum bietet <strong>regionale Tiroler Küche</strong> für die Gäste. Die Umgebung ist geprägt von Wanderwegen im Sommer und Skigebieten im Winter. Gäste können einen unkomplizierten Aufenthalt mit persönlichem Service erwarten. Die Anbindung an das Verkehrsnetz ist vorhanden, aber die Umgebung bleibt naturnah.</p>",
+  "beschreibung": "<p>La <strong>Haus Stefanie</strong> accoglie i viaggiatori in una posizione calma e soleggiata a <strong>Sölden</strong>, nella splendida cornice della Ötztal, incorniciata dalle imponenti vette delle Alpi Venoste. Le confortevoli camere, arredate secondo la migliore tradizione alpina con tanto legno naturale, dispongono di moderni servizi privati con doccia/WC, TV satellitare e balconi esposti al sole con vista sui ghiacciai. Al mattino una ricca colazione a buffet a base di prodotti del territorio dà la giusta carica per la giornata. La fermata dello skibus gratuito è a pochi passi e assicura trasferimenti rapidi verso le cabinovie Giggijoch e Gaislachkogl del comprensorio di Sölden. In estate, suggestivi trekking in quota e i percorsi della Bike Republic Sölden soddisfano ogni sportivo.</p>",
   "ausstattung": [],
   "tags": [
     "osteria",
@@ -23,5 +23,10 @@
     "lat": "46.9596576",
     "lng": "11.0049427"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente locanda alpina in posizione tranquilla a Sölden nella Ötztal con camere confortevoli e rapido accesso all'area sciistica."
 }

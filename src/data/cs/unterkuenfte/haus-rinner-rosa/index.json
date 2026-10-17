@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Gasthof <strong>Haus Rinner Rosa</strong> befindet sich in einer ruhigen Seitenlage in Tirol, eingebettet in eine typisch alpine Umgebung. Die <strong>Gästezimmer</strong> sind modern und dennoch traditionell gestaltet, mit Holzmöbeln und komfortablen Betten. Im hauseigenen Restaurant werden <strong>traditionelle Tiroler Gerichte</strong> aus regionalen Zutaten zubereitet. Für Freizeitaktivitäten bieten sich in der Nähe <strong>Wanderwege, Radstrecken und im Winter Skigebiete</strong> an. Die <strong>persönliche und einladende Atmosphäre</strong> des Familienbetriebs sorgt für einen angenehmen Aufenthalt.</p>",
+  "beschreibung": "<p>Penzion <strong>Haus Rinner Rosa</strong> se nachází v klidné boční ulici v idylické obci <strong>Oetz</strong> na začátku tyrolského údolí Ötztal. Příjemné pokoje zařízené tradičním dřevěným nábytkem mají moderní koupelnu se sprchou/WC, satelitní televizi a balkony s nádherným výhledem na vrcholky Ötztalských a Stubaiských Alp. Ráno čeká hosty pestrá snídaně z regionálních produktů v útulné jídelně. Dolní stanice lanovky <strong>Acherkogelbahn</strong> do rodinného areálu Hochoetz i malebné centrum obce jsou v docházkové vzdálenosti několika minut. V létě láká romantické a příjemně teplé jezero <strong>Piburger See</strong> obklopené lesy ke koupání a procházkám.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetz.com",
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný rodinný penzion v Oetzu na začátku údolí Ötztal s tradičními pokoji a blízkostí jezera Piburger See."
 }

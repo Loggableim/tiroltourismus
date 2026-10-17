@@ -1,15 +1,17 @@
 # tiroltourismus.com – Projekt-Conventions
 
-## Hosting
-- Hosting: **GitHub Pages** (Free Account, Custom Domain via CNAME)
-- Pages-Quelle: Hauptbranch (`master`), Root `/`
-- Kein Backend, keine Datenbank – rein statisch
-- Deploy via `git push` → automatisch live (innerhalb ~1-2 Min.)
+Agent-Regeln (Rollen, Hard Rules, Gates, Hand-off) stehen in [`AGENTS.md`](./AGENTS.md).
+Diese Datei beschreibt nur den technischen Rahmen des Projekts.
 
-## Passwortschutz
-- `/index.html` = Passwort-Gate (Code: 2205)
-- `/app/index.html` = eigentliches Portal (mit sessionStorage-Prüfung)
-- Bei Direktaufruf von `/app/` ohne Auth → Redirect zurück zu `/`
+## Hosting & Stack
+- Hosting: **Cloudflare Pages**, Multi-Sprachen-Deploy über die Matrix in
+  `.github/workflows/deploy.yml` (je Sprache ein Pages-Projekt).
+- Build: **Astro 5** (statischer Output), Content JSON-getrieben in `src/data/`.
+- Sprachen: `de`, `en`, `it`, `fr`, `nl`, `es`, `cs`, `zh` — Inhalte immer in
+  allen 8 Sprachen pflegen.
+- Build-Ausgabe: `dist/`, konfiguriert in `wrangler.toml`.
+  `wrangler.toml` und `deploy.yml` werden von der Deployment-Pipeline gepflegt
+  und nicht manuell geändert.
 
 ## Bilder
 - **Keine Bilder ohne Rechte** – jeder Upload muss lizenzgeklärt sein
@@ -27,14 +29,14 @@
   ```
 
 ## Code & Struktur
-- Statisches HTML (kein Build-Tool nötig in Phase 1)
-- CSS/JS inline oder in `/app/assets/`
+- Astro-Komponenten in `src/`, Inhalte in `src/data/` (JSON pro Sprache)
 - SEO: Meta-Tags, Alt-Texte an Bildern, strukturierte Daten (JSON-LD)
 
 ## Git
-- Hauptbranch: `master` (wird deployed)
-- Feature-Branches für größere Änderungen
-- Commit-Nachrichten: `[tirol] kurz beschreibung`
+- Hauptbranch: `master` (Deploy-Quelle; nur Vali mergt dorthin)
+- Feature-Branches für größere Änderungen, PR-only
+- Commit-Nachrichten im Conventional-Commit-Stil, z. B.
+  `feat(content): …`, `fix(…)`, `chore(…)`
 - Keine Binärdateien außer optimierte WebP-Bilder
 
 ## Hermes-Automation (später)

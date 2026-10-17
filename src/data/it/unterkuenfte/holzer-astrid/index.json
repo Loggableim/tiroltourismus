@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Ferienwohnung 'Holzer Astrid' liegt in einer ruhigen Wohngegend in Tirol. Die Unterkunft ist mit einer <strong>voll ausgestatteten Küche</strong> und einem <strong>gemütlichen Wohnbereich</strong> ausgestattet. Das Schlafzimmer bietet <strong>bequeme Betten</strong> und ausreichend Stauraum. In der Umgebung befinden sich zahlreiche <strong>Wander- und Radwege</strong>. Gäste können die nahegelegenen <strong>Ski- und Berggebiete</strong> nutzen. Die Wohnung verfügt über ein <strong>eigenes Bad mit Dusche</strong>. Die Räume sind <strong>hell und praktisch eingerichtet</strong>. In der Nähe gibt es Einkaufsmöglichkeiten und Restaurants.</p>",
+  "beschreibung": "<p>L'appartamento <strong>Holzer Astrid</strong> accoglie i viaggiatori in una tranquilla e soleggiata zona residenziale di <strong>Mayrhofen</strong>, nell'alta Zillertal. L'alloggio, luminoso e arredato con sobria modernità alpina, assicura un soggiorno sereno a coppie e famiglie: cucina completamente accessoriata per la totale autonomia, comode stanze da letto, bagno moderno con doccia, TV satellitare, Wi-Fi e balcone soleggiato con vista sulle vette della Zillertal e di Tux. Il vivace centro di Mayrhofen con negozi e ristoranti caratteristici si raggiunge comodamente a piedi. In inverno, lo skibus conduce in pochi istanti alle stazioni della Penkenbahn e della Ahornbahn nel comprensorio <strong>Mountopolis Mayrhofen</strong>. D'estate vie ferrate e trekking nel parco naturale soddisfano gli sportivi.</p>",
   "ausstattung": [
     "wifi",
     "küche"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente appartamento per vacanze a Mayrhofen nella Zillertal con cucina completa, balcone e rapido accesso alla Penkenbahn."
 }

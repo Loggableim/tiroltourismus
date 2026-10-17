@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hiasler Hof liegt in ruhiger Ortsrandlage einer Tiroler Gemeinde, umgeben von Bergwiesen und Wäldern. Die <strong>Gästezimmer</strong> sind zweckmäßig eingerichtet und verfügen über kostenfreies WLAN. Im <strong>Gaststüberl</strong> werden täglich regionale Gerichte und Getränke serviert. Die Umgebung bietet sowohl im Sommer für <strong>Wanderer</strong> als auch im Winter für <strong>Skifahrer</strong> zahlreiche Routen und Pisten. Gäste können hier eine traditionelle, familiengeführte Unterkunft mit bodenständiger Küche erwarten. Ein <strong>Frühstücksbuffet</strong> ist im Übernachtungspreis enthalten.</p>",
+  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> empfängt seine Gäste in einer sonnigen und ruhigen Einzellage in <strong>Kössen</strong> in der Ferienregion Kaiserwinkl in den Kitzbüheler Alpen. Der traditionell geführte Bauernhof bietet gemütlich mit viel einheimischem Holz eingerichtete Gästezimmer mit eigenem Bad (Dusche/WC), Sat-TV, WLAN und sonnigen Balkonen mit freiem Blick auf das Kaisergebirge und die Kitzbüheler Alpen. Morgens stärkt ein reichhaltiges Frühstücksbuffet mit frischen Produkten aus eigener Landwirtschaft und der Region die Feriengäste. Die Talstation der Bergbahnen Kössen am <strong>Unterberg</strong> sowie das weitläufige Loipennetz des Kaiserwinkls sind in wenigen Minuten erreichbar. Im Sommer lädt der nahegelegene Walchsee zum Schwimmen, Wassersport und Sonnenbaden ein, während reizvolle Höhenwanderungen direkt vor Ort starten.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditioneller Bauernhof in Kössen im Kaiserwinkl mit gemütlichen Zimmern, Frühstücksbuffet und Nähe zum Unterberg."
 }

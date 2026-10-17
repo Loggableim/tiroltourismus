@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Ferienwohnung 'Holzer Astrid' liegt in einer ruhigen Wohngegend in Tirol. Die Unterkunft ist mit einer <strong>voll ausgestatteten Küche</strong> und einem <strong>gemütlichen Wohnbereich</strong> ausgestattet. Das Schlafzimmer bietet <strong>bequeme Betten</strong> und ausreichend Stauraum. In der Umgebung befinden sich zahlreiche <strong>Wander- und Radwege</strong>. Gäste können die nahegelegenen <strong>Ski- und Berggebiete</strong> nutzen. Die Wohnung verfügt über ein <strong>eigenes Bad mit Dusche</strong>. Die Räume sind <strong>hell und praktisch eingerichtet</strong>. In der Nähe gibt es Einkaufsmöglichkeiten und Restaurants.</p>",
+  "beschreibung": "<p>Die Ferienwohnung <strong>Holzer Astrid</strong> empfängt Urlaubsgäste in einer sonnigen und ruhigen Wohngegend von <strong>Mayrhofen</strong> im hinteren Zillertal. Die modern und freundlich eingerichtete Unterkunft bietet idealen Wohnkomfort für Paare und Familien: eine komplett ausgestattete Küche für unabhängige Selbstversorger, behagliche Schlafzimmer mit bequemen Betten, ein modernes Badezimmer mit Dusche/WC, Sat-TV, WLAN sowie einen sonnigen Balkon mit Panoramablick auf die Gipfel der Zillertaler und Tuxer Alpen. Das pulsierende Ortszentrum von Mayrhofen mit Geschäften, Bäckereien und traditionsreichen Tiroler Gaststätten liegt in angenehmer Gehdistanz. Im Winter bringt der Skibus Gäste in wenigen Minuten zu den Talstationen der Penken- und Ahornbahn im Skigebiet <strong>Mountopolis Mayrhofen</strong>. Im Sommer begeistern Klettersteige, Mountainbiketrails und Touren im Naturpark Zillertaler Alpen.</p>",
   "ausstattung": [
     "wifi",
     "küche"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütliche Ferienwohnung in Mayrhofen im Zillertal mit voll ausgestatteter Küche, Balkon und schneller Anbindung an die Penkenbahn."
 }

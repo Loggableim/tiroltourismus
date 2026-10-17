@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hof liegt in einer ländlichen Gegend Tirols. Die Zimmer sind <strong>einfach ausgestattet</strong> und haben ein <strong>eigenes Bad</strong>. Das Restaurant serviert <strong>Tiroler Spezialitäten</strong>. Ein <strong>Gastgarten</strong> ist vorhanden. Die Umgebung besteht aus <strong>Bergen und Wäldern</strong>. Gäste können <strong>Wanderungen und Wintersport</strong> betreiben. Die Unterkunft bietet <strong>Parkplätze</strong> für Autos.</p>",
+  "beschreibung": "<p>De herberg <strong>Hof</strong> verwelkomt gasten op een zonnige en rustige locatie in de marktgemeente <strong>Brixlegg</strong>, aan de ingang van het schilderachtige Alpbachtal in het Tiroolse laagland. De gezellig in alpiene stijl ingerichte gastenkamers beschikken over een eigen badkamer met douche/wc, satelliettelevisie, wifi en een balkon met weids zicht over het Inndal en het Rofangebergte. 's Morgens staat er een gevarieerd ontbijt met verse streek- en boerderijproducten klaar. De zonnige tuin nodigt 's zomers uit tot ontspannen met een Tirools hapje. Het uitgestrekte skigebied <strong>Ski Juwel Alpbachtal Wildschönau</strong> ligt op enkele minuten rijden, terwijl schilderachtige wandelpaden naar de Reintaler meren en het middeleeuwse Rattenberg direct in de buurt starten.</p>",
   "ausstattung": [
     "restaurant",
     "parkplatz"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gezellige landelijke herberg op een zonnige locatie in Brixlegg in het Alpbachtal met traditionele kamers en uitzicht op het Rofangebergte."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt im <strong>Ortszentrum von Söll</strong> in <strong>Tirol</strong>. Das <strong>Skigebiet Skiwelt Wilder Kaiser</strong> sowie zahlreiche <strong>Wanderwege</strong> sind von der Unterkunft aus erreichbar. Das hauseigene <strong>Restaurant</strong> serviert <strong>Tiroler Gerichte</strong> aus regionalen Zutaten. Die <strong>Gästezimmer</strong> sind im traditionellen Stil eingerichtet und verfügen über moderne Ausstattung. Der <strong>Saunabereich</strong> steht zur Erholung nach Aktivitäten zur Verfügung. Von der <strong>Terrasse</strong> blickt man auf die umliegende Berglandschaft. Die Unterkunft eignet sich für Urlauber, die sowohl im Sommer als auch im Winter Aktivitäten suchen.</p>",
+  "beschreibung": "<p>Das <strong>Hausberger</strong> liegt im sonnigen und ruhigen Ortsteil Gänsleit in <strong>Söll</strong> in der Ferienregion Wilder Kaiser in Tirol. Die behaglich im alpenländischen Stil eingerichteten Gästezimmer bieten ein gemütliches Wohngefühl mit eigenem Bad (Dusche/WC), Sat-TV, WLAN und privaten Balkonen mit freiem Blick auf die Hohe Salve und die Felswände des Wilden Kaisers. Nach einem erlebnisreichen Tag in der Natur lädt der gepflegte Saunabereich zum Entspannen und Regenerieren ein. Morgens servieren die Gastgeber ein reichhaltiges Frühstücksbuffet mit regionalen Köstlichkeiten. Das lebendige Dorfzentrum von Söll mit traditionellen Gasthöfen und Geschäften ist bequem zu Fuß erreichbar. Im Winter bringt der kostenlose Skibus Urlauber in wenigen Minuten zur Talstation der Bergbahn Söll in die <strong>SkiWelt Wilder Kaiser–Brixental</strong>. Im Sommer begeistert das Hexenwasser Groß und Klein.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -32,5 +32,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütlicher Gasthof in Gänsleit in Söll am Wilden Kaiser mit komfortablen Zimmern, Saunabereich und Nähe zur SkiWelt."
 }

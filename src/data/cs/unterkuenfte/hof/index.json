@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hof liegt in einer ländlichen Gegend Tirols. Die Zimmer sind <strong>einfach ausgestattet</strong> und haben ein <strong>eigenes Bad</strong>. Das Restaurant serviert <strong>Tiroler Spezialitäten</strong>. Ein <strong>Gastgarten</strong> ist vorhanden. Die Umgebung besteht aus <strong>Bergen und Wäldern</strong>. Gäste können <strong>Wanderungen und Wintersport</strong> betreiben. Die Unterkunft bietet <strong>Parkplätze</strong> für Autos.</p>",
+  "beschreibung": "<p>Penzion <strong>Hof</strong> vítá své návštěvníky na slunném a klidném samotovém místě v městysi <strong>Brixlegg</strong> u vstupu do malebného údolí Alpbachtal v tyrolském Unterlandu. Příjemně zařízené pokoje v tyrolském venkovském stylu disponují moderními koupelnami se sprchou/WC, satelitní televizí, Wi-Fi a soukromými balkony s širokým výhledem na údolí Inntal i vápencové stěny pohoří Rofan. Ráno čeká hosty bohatá snídaně z čerstvých lokálních surovin. Slunná zahradní terasa láká v létě k posezení u tyrolských specialit. Dolní stanice lanovek do velkého areálu <strong>Ski Juwel Alpbachtal Wildschönau</strong> jsou dostupné během několika minut jízdy. V okolí začínají turistické trasy k jezerům Reintaler Seen i do historického městečka Rattenberg.</p>",
   "ausstattung": [
     "restaurant",
     "parkplatz"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný venkovský penzion na slunné samotě v Brixleggu v údolí Alpbachtal s tradičními pokoji a výhledem na Rofanspitze."
 }

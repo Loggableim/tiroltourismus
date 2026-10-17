@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz **Lagertorwiese** liegt in **Going am Wilden Kaiser** in Tirol. Die Anlage befindet sich in ruhiger, naturnaher Umgebung am Fuße des **Wilden Kaiser** Gebirges. Zur Ausstattung gehören **Sanitäranlagen**, **Stromanschlüsse** und eine **Küchenzeile**. Stellplätze sind für **Wohnmobile**, **Wohnwagen** und **Zelte** ausgelegt. Ein **kleiner Laden** auf dem Gelände bietet Lebensmittel des täglichen Bedarfs. Im Sommer dient der Platz als Ausgangspunkt für **Wanderungen** und **Klettertouren** im Kaisergebirge. Im Winter sind die **Skigebiete** der SkiWelt und Kitzbühel erreichbar. Der sachlich geführte Campingplatz bietet eine **zweckmäßige Basis** für Aktivurlauber.</p>",
+  "beschreibung": "<p><strong>Lagertorwiese</strong> 露营地坐落于蒂罗尔<strong>戈英</strong>（Going am Wilden Kaiser）边缘幽静向阳的林缘草地之中。营地就坐落在举世闻名的野皇帝山脉绝壁脚下，为远离尘嚣、崇尚纯正大自然的露营爱好者打造质朴舒适的高山田园避世之地。营地设有平整开阔的房车与大篷车专用车位以及绿意盎然的帐篷草坪。实用整洁的配套设施包含热水淋浴卫浴间、电力接驳桩以及供应日常新鲜食品的便利小铺。夏季这里是深入皇帝山脉开展岩壁攀登与高山徒步的理想大本营，冬季则可迅速前往 SkiWelt 滑雪场。</p>",
   "ausstattung": [],
   "tags": [
     "露营",
@@ -23,5 +23,10 @@
     "lat": "47.2220255",
     "lng": "11.4307049"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "坐落于戈英野皇帝山脚下的宁静高山原生态露营地，直面皇帝山脉雄伟石灰岩峰壁。"
 }

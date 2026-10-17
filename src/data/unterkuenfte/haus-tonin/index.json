@@ -11,7 +11,7 @@
   "telefon": "+43 5225 63731",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der **Gasthof Haus Tonin** befindet sich im Ortskern von **Fulpmes** im Stubaital. Die Unterkunft bietet eine traditionelle **Gaststube** und mehrere Gästezimmer. Die Zimmer sind mit Bad und Satellitenfernsehen ausgestattet. Das Restaurant serviert Speisen der **Tiroler Küche**. Die zentrale Lage erlaubt einen kurzen Fußweg zu Geschäften und zur Talstation **Schlick 2000**. Parkplätze sind am Haus vorhanden. Der **Stubaier Gletscher** ist mit dem Skibus erreichbar. In der Umgebung von Fulpmes gibt es ein Netz an Wander- und Radwegen.</p>",
+  "beschreibung": "<p>Das <strong>Haus Tonin</strong> empfängt seine Gäste im Herzen der Marktgemeinde <strong>Fulpmes</strong> im Stubaital. Das traditionsreiche Haus verbindet Tiroler Gemütlichkeit mit einer einladenden Atmosphäre und bietet komfortable Gästezimmer mit eigenem Bad und Fernsehen. In der rustikalen Gaststube werden Spezialitäten der regionalen Tiroler Küche serviert. Dank der zentralen Lage erreichen Urlauber örtliche Geschäfte sowie die Talstation des Ski- und Wandergebiets Schlick 2000 bequem in wenigen Gehminuten. Der Stubaier Gletscher ist mit dem regelmäßig verkehrenden Skibus unkompliziert erreichbar, während im Sommer ein abwechslungsreiches Netz aus Spazier-, Wander- und Radwegen direkt vor der Haustür beginnt.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditionelles Gästehaus im Ortszentrum von Fulpmes im Stubaital mit gemütlicher Gaststube und Bergblick."
 }

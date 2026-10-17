@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz **Lagertorwiese** liegt in **Going am Wilden Kaiser** in Tirol. Die Anlage befindet sich in ruhiger, naturnaher Umgebung am Fuße des **Wilden Kaiser** Gebirges. Zur Ausstattung gehören **Sanitäranlagen**, **Stromanschlüsse** und eine **Küchenzeile**. Stellplätze sind für **Wohnmobile**, **Wohnwagen** und **Zelte** ausgelegt. Ein **kleiner Laden** auf dem Gelände bietet Lebensmittel des täglichen Bedarfs. Im Sommer dient der Platz als Ausgangspunkt für **Wanderungen** und **Klettertouren** im Kaisergebirge. Im Winter sind die **Skigebiete** der SkiWelt und Kitzbühel erreichbar. Der sachlich geführte Campingplatz bietet eine **zweckmäßige Basis** für Aktivurlauber.</p>",
+  "beschreibung": "<p>Der Naturcampingplatz <strong>Lagertorwiese</strong> liegt in herrlich ruhiger und sonniger Lage am Ortsrand von <strong>Going am Wilden Kaiser</strong>. Die Anlage befindet sich unmittelbar am Fuße des majestätischen Kaisergebirges und bietet Naturliebhabern eine authentische alpine Auszeit abseits des Durchgangsverkehrs. Der gepflegte Platz verfügt über Stellflächen für Wohnmobile, Caravans sowie weitläufige Zeltwiesen im Grünen. Zur zweckmäßigen und sauberen Ausstattung zählen sanitäre Anlagen mit Duschen, Stromanschlüsse sowie ein Kiosk mit Waren des täglichen Bedarfs. Im Sommer dient der Platz als idealer Ausgangspunkt für Klettertouren und Wanderungen im Kaisergebirge, während im Winter die Skigebiete der SkiWelt Wilder Kaiser rasch erreicht sind.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,10 @@
     "lat": "47.2220255",
     "lng": "11.4307049"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ruhiger, naturnaher Naturcampingplatz in Going am Wilden Kaiser mit traumhaftem Blick auf das Kaisergebirge."
 }

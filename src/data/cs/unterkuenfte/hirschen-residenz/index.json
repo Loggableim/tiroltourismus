@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Hirschen Residenz in Imst, Tirol, bietet Gästen eine Unterkunft in <strong>zentraler Lage</strong>. Das Hotel verfügt über Zimmer mit Bad, Fernseher und kostenfreiem WLAN. Im Restaurant werden Gerichte der <strong>regionalen Küche</strong> serviert. Die Umgebung von Imst eignet sich für Wanderungen und Wintersport. Gäste erreichen die Imster Bergbahnen und das Stadtzentrum zu Fuß. Die Unterkunft ist ein Ausgangspunkt für Aktivitäten in den Alpen. Die öffentliche Anbindung ist mit Bus und Bahn gegeben.</p>",
+  "beschreibung": "<p>Hotelová rezidence <strong>Hirschen Residenz</strong> vítá své hosty na slunném a centrálním místě v ulici Thomas-Walch-Straße v <strong>Imstu</strong> v tyrolském Oberlandu. Stylově a moderně zařízené pokoje a apartmány nabízejí elegantní koupelny se sprchou/WC, televizi, bezplatné Wi-Fi a balkony s výhledem na masiv Muttekopf a údolí Gurgltal. V hotelové restauraci se servírují tyrolské speciality i mezinárodní pokrmy z čerstvých lokálních surovin. Historické centrum města Imst s obchody a kavárnami je v pohodlné docházkové vzdálenosti. Dolní stanice lanovek <strong>Imster Bergbahnen</strong> se slavnou bobovou dráhou Alpine Coaster je vzdálena jen pár minut jízdy. V zimě ocení návštěvníci rodinný skiareál Hoch-Imst i skvělou dostupnost dalších tyrolských středisek.</p>",
   "ausstattung": [
     "wlan",
     "parkplatz",
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Moderní rezidence v ulici Thomas-Walch-Straße v Imstu s komfortními pokoji, restaurací a blízkostí lanovek Imster Bergbahnen."
 }

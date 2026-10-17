@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hiasler Hof liegt in ruhiger Ortsrandlage einer Tiroler Gemeinde, umgeben von Bergwiesen und Wäldern. Die <strong>Gästezimmer</strong> sind zweckmäßig eingerichtet und verfügen über kostenfreies WLAN. Im <strong>Gaststüberl</strong> werden täglich regionale Gerichte und Getränke serviert. Die Umgebung bietet sowohl im Sommer für <strong>Wanderer</strong> als auch im Winter für <strong>Skifahrer</strong> zahlreiche Routen und Pisten. Gäste können hier eine traditionelle, familiengeführte Unterkunft mit bodenständiger Küche erwarten. Ein <strong>Frühstücksbuffet</strong> ist im Übernachtungspreis enthalten.</p>",
+  "beschreibung": "<p>La acogedora finca rural <strong>Hiasler Hof</strong> abre sus puertas en un apacible y soleado paraje campestre de <strong>Kössen</strong>, en la comarca de Kaiserwinkl, dentro de los Alpes de Kitzbühel. Sus habitaciones rústicas, revestidas en madera noble tradicional, cuentan con baño privado con ducha, televisión por satélite, conexión wifi y balcones soleados orientados al imponente perfil del Kaisergebirge. Cada mañana se sirve un copioso bufé de desayuno con alimentos procedentes de la propia granja y de productores locales. La estación de telecabina de Kössen en el monte <strong>Unterberg</strong> y los circuitos de esquí nórdico se alcanzan en pocos minutos. En verano, el cercano lago Walchsee brinda refrescantes baños y deportes acuáticos.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Casa rural tradicional en Kössen, Kaiserwinkl, con habitaciones acogedoras, bufé de desayuno y cerca del monte Unterberg."
 }

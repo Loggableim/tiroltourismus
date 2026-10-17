@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Hiasler Hof</strong> welcomes visitors to a sunny, peaceful rural setting in <strong>Kössen</strong> in the Kaiserwinkl holiday region in the Kitzbühel Alps. This traditionally managed farmhouse offers cosy guest rooms styled with native timber, complete with en-suite bathrooms (shower/WC), satellite TV, Wi-Fi, and sunny balconies framing open views of the Kaisergebirge and the Kitzbühel Alps. In the morning, a rich breakfast buffet filled with farm-fresh dairy and regional delicacies awaits guests. The valley station of the Kössen cable cars at the <strong>Unterberg</strong>, as well as the renowned Kaiserwinkl cross-country skiing trail network, are only minutes away. In summer, nearby Lake Walchsee invites swimming and water sports, alongside scenic alpine hikes.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional farm guesthouse in Kössen in the Kaiserwinkl featuring cosy rooms, breakfast buffet, and close to the Unterberg."
 }

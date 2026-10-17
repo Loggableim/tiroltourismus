@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> ist ein traditioneller <strong>Gasthof</strong> in Tirol, Österreich. Er liegt in einer ruhigen <strong>Lage</strong> mit Aussicht auf die umliegenden Berge. Die Zimmer sind einfach und <strong>komfortabel</strong> eingerichtet. Die Gaststube bietet <strong>regionale Speisen</strong> und Getränke. Die Umgebung eignet sich für <strong>Wanderungen</strong> im Sommer und Skifahren im Winter. Gäste können den Hof als <strong>Ausgangspunkt</strong> für Ausflüge in die Natur nutzen. Der Betrieb ist familiengeführt und legt Wert auf <strong>Tiroler Gastfreundschaft</strong>.</p>",
+  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> empfängt Erholungssuchende in einer idyllischen und ruhigen Höhenlage in Tanneben im sonnigen Mittelgebirge der Region <strong>Innsbruck-Land</strong>. Der familiär geführte Hof bietet behaglich im Tiroler Stil eingerichtete Zimmer mit modernem Bad (Dusche/WC), Sat-TV, WLAN und privaten Balkonen mit weitem Blick über das Inntal und die markanten Kalkwände der Nordkette. Morgens stärkt ein ausgewogenes Frühstücksbuffet mit regionalen Köstlichkeiten die Gäste für Ausflüge in die Natur. Die Lage verbindet ländliche Abgeschiedenheit mit schneller Erreichbarkeit der Tiroler Landeshauptstadt Innsbruck und deren Sehenswürdigkeiten wie dem Goldenen Dachl oder der Hofburg. Im Sommer beginnen lohnende Wald- und Almwanderwege direkt am Hof. Im Winter laden die umliegenden Skigebiete wie Glungezer oder Patscherkofel zu Wintersporttagen ein.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditioneller Berggasthof in Tanneben in der Region Innsbruck-Land mit gemütlichen Zimmern und weitem Panoramablick über das Inntal."
 }

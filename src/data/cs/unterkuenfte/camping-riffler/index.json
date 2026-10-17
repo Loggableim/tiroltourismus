@@ -6,11 +6,11 @@
   "preis_ab": null,
   "ort": "Landeck",
   "region": "landeck",
-  "plz": "",
-  "adresse": "",
-  "telefon": null,
+  "plz": "6500",
+  "adresse": "Bruggfeldstraße 2",
+  "telefon": "+43 660 6500880",
   "email": null,
-  "webseite": null,
+  "webseite": "https://www.camping-riffler.at/",
   "beschreibung": "<p>Der Camping Riffler liegt in <strong>St. Ulrich am Pillersee</strong> im Bezirk Kitzbühel, umgeben von den <strong>Kitzbüheler Alpen</strong>. Die Anlage bietet Stellplätze für Wohnmobile und Zelte sowie einfache Sanitäranlagen. Gäste erreichen in wenigen Minuten das <strong>Ortszentrum</strong> und die Skipiste. Die Atmosphäre ist ruhig und familienfreundlich, mit direktem Zugang zu <strong>Wanderwegen</strong> und Skipisten.</p>",
   "ausstattung": [
     "sanitäranlagen",
@@ -28,5 +28,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.campingtirol.at/en/camping-riffler",
+    "https://www.tirol.at"
+  ]
 }

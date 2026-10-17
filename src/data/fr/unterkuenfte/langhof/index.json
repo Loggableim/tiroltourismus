@@ -11,7 +11,7 @@
   "telefon": "+43 5376 5276",
   "email": null,
   "webseite": "http://www.langhof.at/",
-  "beschreibung": "<p>Der <strong>Gasthof Langhof</strong> liegt in der Gemeinde <strong>Thiersee</strong> in <strong>Tirol</strong>. Das Haus steht direkt am Ufer des <strong>Thiersees</strong>. Die Umgebung ist durch das <strong>Kaisergebirge</strong> und ausgedehnte Wälder geprägt. Zur Ausstattung gehört eine traditionelle <strong>Gaststube</strong> mit regionaler Küche. Die Zimmer bieten einen Blick auf den See oder die <strong>Berge</strong>. Die Atmosphäre im Haus ist ländlich und ruhig. Die Unterkunft wird häufig von <strong>Wanderern</strong> und <strong>Familien</strong> genutzt. Der Gasthof dient als Ausgangspunkt für Ausflüge in die Umgebung.</p>",
+  "beschreibung": "<p>Le <strong>Gasthof Langhof</strong> accueille ses hôtes dans un cadre champêtre au sein de la commune de <strong>Thiersee</strong>, près de Kufstein. Située à deux pas du lac et bordée de forêts, cette ferme-auberge traditionnelle propose une hospitalité tyrolienne chaleureuse. Ses chambres confortables au style montagnard s'ouvrent sur des balcons avec vue sur le lac ou le Kaisergebirge. Dans la stube rustique, le restaurant sert une cuisine paysanne généreuse. L'endroit est idéal pour les familles et les randonneurs en quête de calme.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -26,5 +26,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.thiersee.at",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Auberge rurale traditionnelle à Thiersee près des rives du lac avec cadre montagnard et convivialité."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Gästehaus Franz in Tirol ist ein traditioneller Gasthof mit angeschlossenen Gästezimmern. Die Lage ist ruhig und dennoch zentral im Ort, von wo aus <strong>Wanderwege</strong> direkt erreichbar sind. Die Zimmer sind einfach und funktional ausgestattet und bieten einen Balkon mit <strong>Aussicht</strong>. Die Gaststube wird von Gästen und Einheimischen gleichermaßen besucht. Die Küche serviert <strong>regionale Spezialitäten</strong> und Tiroler Klassiker. Die umliegende Landschaft eignet sich für Aktivitäten zu jeder Jahreszeit. Das Haus verfügt über <strong>Abstellmöglichkeiten</strong> für Fahrräder und Skier.</p>",
+  "beschreibung": "<p>Situado en el tranquilo enclave de Gmuend cerca de Gerlos, el tradicional Gaestehaus Franz ofrece habitaciones acogedoras con vistas a las cumbres y un ambiente genuinamente tiroles.</p><p>Rutas de senderismo por valles laterales y la estacion de Zillertal Arena estan a muy corta distancia.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gaestehaus Franz en Gmuend cerca de Gerlos combina tranquilidad rural y facil acceso al valle de Zillertal."
 }

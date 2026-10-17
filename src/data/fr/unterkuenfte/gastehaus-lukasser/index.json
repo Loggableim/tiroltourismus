@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Lukasser</strong> befindet sich in <strong>Tirol</strong>, Österreich. Die Atmosphäre des Hauses ist ruhig und unaufgeregt. Gäste erwartet eine komfortable, aber schlichte Unterkunft. Die Umgebung besteht aus der typischen Tiroler Bergwelt. Wanderwege und Naherholungsgebiete sind in unmittelbarer Nähe. Zur Ausstattung gehören Zimmer mit eigenem Bad und Satellitenfernsehen. Ein Frühstücksbuffet wird angeboten. Die Lage eignet sich für Ausflüge in die Region.</p>",
+  "beschreibung": "<p>Entouree de collines douces et des sommets du Kaiser, la maison Lukasser a Koessen reserve des chambres accueillantes et un service attentif pour un sejour paisible.</p><p>Le lac Walchsee, les remontees de l Unterberg et les pistes de ski de fond sont joignables en quelques minutes.</p>",
   "ausstattung": [],
   "tags": [
     "hôtel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaiserwinkl.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "La pension Gaestehaus Lukasser a Koessen offre confort et serenite dans le cadre du Kaiserwinkl."
 }

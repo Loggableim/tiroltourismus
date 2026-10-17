@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Quietly yet centrally located in Mayrhofen, Gaestehaus Ludwig Kroell serves as an excellent home base for skiers and mountaineers. Comfortably furnished rooms offer restful relaxation.</p><p>The Penkenbahn and Ahornbahn cable cars, local shops, and hiking bus stops are just an easy walk away.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.mayrhofen.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gaestehaus Ludwig Kroell in Mayrhofen features central convenience and alpine comfort in Zillertal."
 }

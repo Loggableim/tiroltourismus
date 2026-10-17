@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Quietly and sunnily situated on the edge of Soell, Gaestehaus Bichler is an inviting family-run haven. Cosy rooms provide peaceful rest after active days exploring the alpine scenery.</p><p>The Soell cable car connecting into SkiWelt Wilder Kaiser - Brixental and mountain trails are quickly reached.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gaestehaus Bichler in Soell offers warm Tyrolean hospitality at the base of the Wilder Kaiser."
 }

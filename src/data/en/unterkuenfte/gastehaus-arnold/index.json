@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Quietly yet centrally located in Soelden, Gaestehaus Arnold is an excellent hub for hikers, climbers, and skiers. Bright, tidy rooms combined with friendly service make guests feel right at home.</p><p>Major cable car stations and alpine hiking routes throughout the Oetztal valley are just a short journey away.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gaestehaus Arnold in Soelden welcomes travellers with cosy accommodations and a great Oetztal location."
 }

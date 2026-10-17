@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Bergland</strong> liegt in einer ruhigen Lage in <strong>Tirol</strong>, umgeben von der typischen <strong>Alpenlandschaft</strong>. Die Umgebung ist durch ausgedehnte <strong>Wälder</strong> und die nahen <strong>Berggipfel</strong> geprägt. Der Gasthof bietet eine schlichte, traditionelle Atmosphäre mit einer <strong>tirolerischen Gaststube</strong>. Gäste erwartet eine regionale Küche sowie eine Terrasse mit <strong>Talblick</strong>. Im Sommer eignet sich die Umgebung für <strong>Wanderungen</strong> und <strong>Mountainbike-Touren</strong>. In den Wintermonaten sind die nahen <strong>Skigebiete</strong> und <strong>Langlaufloipen</strong> leicht erreichbar. Die ruhige Lage des Hauses ermöglicht Erholung in der Natur.</p>",
+  "beschreibung": "<p>Nel borgo piu elevato della Tiroler Zugspitz Arena, la Gaestehaus Bergland a Berwang accoglie gli ospiti con ambienti caldi e una meravigliosa quiete naturale.</p><p>Funivie, piste da fondo e itinerari panoramici partono a brevissima distanza.</p>",
   "ausstattung": [],
   "tags": [
     "montagna",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zugspitzarena.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "La Gaestehaus Bergland a Berwang assicura vacanze rilassanti tra le vette della Zugspitz Arena."
 }

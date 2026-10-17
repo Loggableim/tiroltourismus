@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Ludwig Kröll</strong> ist als traditioneller Gasthof in Tirol geführt. Die Unterkunft liegt in einer ruhigen Umgebung, die dennoch gut angebunden ist. Gäste erwartet eine sachliche und freundliche Atmosphäre mit regionalem Charakter. Die umliegende Berglandschaft lädt zu Aktivitäten wie Wandern und Skifahren ein. Die Zimmer sind zweckmäßig eingerichtet und bieten Grundkomfort. Zur Ausstattung zählen ein Aufenthaltsraum sowie ein Gartenbereich. Die Verpflegung im angeschlossenen Gastbetrieb ist im Aufenthalt inkludiert.</p>",
+  "beschreibung": "<p>Zentral und dennoch ruhig gelegen in Mayrhofen, ist das Gaestehaus Ludwig Kroell eine hervorragende Basis fuer Berg- und Skifreunde. Die gemuetlich eingerichteten Zimmer bieten erholsamen Komfort.</p><p>Penkenbahn, Ahornbahn, die lebendige Einkaufsstrasse und Wanderbusse sind bequem zu Fuss erreichbar.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.mayrhofen.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Das Gaestehaus Ludwig Kroell in Mayrhofen bietet zentrale Gemuetlichkeit im hinteren Zillertal."
 }

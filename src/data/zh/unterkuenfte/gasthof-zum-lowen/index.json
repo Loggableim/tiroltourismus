@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof zum Löwen in Fließ ist ein traditionell geführtes Hotel im Tiroler Oberland. Das Haus liegt im Ortszentrum und bietet einen Blick ins Tal. Die Gästezimmer sind im alpenländischen Stil eingerichtet und mit modernem Komfort ausgestattet. Das Hotelrestaurant serviert Tiroler Spezialitäten sowie internationale Gerichte. Zur Unterkunft gehören ein Gastgarten und ein Aufenthaltsraum. Der Betrieb wird von der Familie geführt und besteht seit mehreren Generationen. Gäste nutzen den Gasthof als Ausgangspunkt für Wanderungen und Skiausflüge. Das Haus verfügt über ausreichend Parkplätze und eine Skiaufbewahrung.</p>",
+  "beschreibung": "<p>客栈坐落于风景优美的高山村落弗利斯，具有浓郁的历史底蕴，配备温馨舒适的客房并供应可口的家常高山风味，是文化与自然爱好者的绝佳驿站。</p><p>考纳格拉特自然公园中心、费内特（Venet）及塞尔福斯-菲斯-拉迪斯滑雪区均可迅速抵达。</p>",
   "ausstattung": [
     "restaurant",
     "wifi"
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tiroler-oberland.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "弗利斯的狮子历史客栈（Gasthof zum Loewen）在考纳格拉特自然公园内展现悠久的传统旅店文化与美味佳肴。"
 }

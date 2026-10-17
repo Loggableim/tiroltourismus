@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Ferienheim Wildmoos</strong> ist ein Ferienhaus in Tirol, das als Unterkunft für Selbstversorger konzipiert ist. Die <strong>Lage</strong> in den Alpen bietet Zugang zu Wanderwegen im Sommer und zu Skigebieten im Winter. Die Ausstattung umfasst eine voll ausgestattete Küche, mehrere Schlafzimmer und einen Wohnbereich. Die ruhige Umgebung fördert eine erholsame Atmosphäre für die Gäste. Die Unterkunft eignet sich für Familien und Gruppen, die einen naturnahen Aufenthalt planen. Ein Garten oder eine Terrasse ergänzt das Angebot für Aktivitäten im Freien.</p>",
+  "beschreibung": "<p>En una ladera soleada de Telfs con amplias panoramicas del valle, el Ferienheim Wildmoos brinda comodidad y tranquilidad. Sus estancias bien equipadas aseguran un descanso placentero.</p><p>Permite emprender rutas hacia la Hohe Munde y enlazar comodamente con Seefeld y la capital tirolesa Innsbruck.</p>",
   "ausstattung": [],
   "tags": [
     "familie",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "El Ferienheim Wildmoos en Telfs ofrece estancias reconfortantes en el valle del Inn al pie de la Hohe Munde."
 }

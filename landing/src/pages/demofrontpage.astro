@@ -2,6 +2,7 @@
 // tiroltourismus — Demo der neuen Startseite (Sprachauswahl), nur unter /demofrontpage.
 // Noindex, nicht in der Sitemap. Die Live-Startseite (index.astro) bleibt unverändert.
 import '../styles/apex.css';
+import HeroPhoto from '../components/HeroPhoto.astro';
 
 interface LanguageItem {
   code: string;
@@ -187,27 +188,7 @@ const jsonLd = {
 </head>
 <body>
   <div class="tt-stage" id="ttStage" data-light="day">
-    <picture class="tt-hero" aria-hidden="true">
-      <source
-        type="image/avif"
-        srcset="/images/hero-tirol-640.avif 640w, /images/hero-tirol-1280.avif 1280w, /images/hero-tirol-1920.avif 1920w, /hero-tirol.avif 1920w"
-        sizes="100vw"
-      />
-      <source
-        type="image/webp"
-        srcset="/images/hero-tirol-640.webp 640w, /images/hero-tirol-1280.webp 1280w, /images/hero-tirol-1920.webp 1920w, /hero-tirol.webp 1920w"
-        sizes="100vw"
-      />
-      <img
-        class="tt-hero-img"
-        src="/hero-tirol.jpg"
-        alt=""
-        width="1920"
-        height="1080"
-        fetchpriority="high"
-        decoding="async"
-      />
-    </picture>
+    <HeroPhoto imgClass="tt-hero-img tt-hero" creditId="ttPhoto" />
 
     <div class="tt-scrim" aria-hidden="true"></div>
     <div class="tt-contours" aria-hidden="true"></div>

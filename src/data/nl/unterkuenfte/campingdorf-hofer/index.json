@@ -11,7 +11,7 @@
   "telefon": "+43 5282 2248",
   "email": "info@campingdorf.at",
   "webseite": "https://www.campingdorf.at/",
-  "beschreibung": "<p>Das Campingdorf Hofer befindet sich in Zell am Ziller, unweit des Zentrums und direkt am Ziller gelegen. Die Umgebung im Zillertal ist ideal für Outdoor-Aktivitäten wie Wandern, Radfahren und Skifahren. Zur Ausstattung des Campingplatzes gehören komfortable Stellplätze, moderne Sanitäranlagen und gemütliche Mietchalets. Das Restaurant Hofer Wirt bietet eine Auswahl an Tiroler Spezialitäten. Die Anlage zeichnet sich durch eine gepflegte und ruhige Atmosphäre aus, die von Familien und Paaren gleichermaßen geschätzt wird. Durch die Nähe zu den Skigebieten Zillertal Arena und Mayrhofen ist der Platz auch in der Wintersaison ein beliebter Standort.</p>",
+  "beschreibung": "<p>Het <strong>Campingdorf Hofer</strong> bevindt zich in Zell am Ziller, niet ver van het centrum en direct aan de oever van de rivier de Ziller. De schitterende omgeving van het Zillertal is ideaal voor outdooractiviteiten zoals wandelen, fietsen en skiën. Tot de voorzieningen van de camping behoren comfortabele staanplaatsen, moderne sanitaire faciliteiten en gezellige houten huurchalets. Restaurant Hofer Wirt serveert een keur aan Tiroolse specialiteiten. Het vakantiepark kenmerkt zich door een verzorgde en rustige sfeer die door gezinnen en stellen bijzonder op prijs wordt gesteld. Dankzij de directe nabijheid van de skigebieden Zillertal Arena en Mayrhofen is het terrein tevens een populaire uitvalsbasis tijdens het winterseizoen.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.228658",
     "lng": "11.8863955"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

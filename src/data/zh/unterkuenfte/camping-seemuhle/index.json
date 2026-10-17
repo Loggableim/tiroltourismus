@@ -11,7 +11,7 @@
   "telefon": "+43 5374 5458",
   "email": "info@camping-seemuehle.at",
   "webseite": "https://camping-seemuehle.at/",
-  "beschreibung": "<p>Der Camping Seemühle liegt in Kössen im Tiroler Unterland. Der Platz befindet sich in unmittelbarer Nähe zum <strong>See</strong> und bietet Stellplätze für Wohnmobile und Zelte. Die Sanitäranlagen sind modern und barrierefrei gestaltet. Gäste können im angrenzenden Restaurant regionale Speisen genießen. In der Umgebung laden <strong>Wander- und Radwege</strong> zu Aktivitäten ein. Der Campingplatz ist ein geeigneter Ausgangspunkt für Ausflüge in die Tiroler Bergwelt.</p>",
+  "beschreibung": "<p>Seemühle 露营地位于蒂罗尔下地区（Unterland）的克斯森（Kössen）。营地紧邻<strong>湖泊</strong>，提供适合房车和帐篷的停靠车位。卫浴设施现代完备且采用无障碍设计。宾客可以在相邻的餐厅品尝正宗的当地佳肴。周边交错的<strong>徒步与骑行步道</strong>为户外活动提供了绝佳环境。该露营地是探索蒂罗尔阿尔卑斯群山的理想出发点。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.6477418",
     "lng": "12.3389406"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

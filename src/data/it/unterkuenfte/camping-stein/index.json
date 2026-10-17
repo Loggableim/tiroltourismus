@@ -11,7 +11,7 @@
   "telefon": "+49 8053 9349",
   "email": "info@camping-stein.de",
   "webseite": "https://www.camping-stein.de/",
-  "beschreibung": "<p>Der Camping Stein befindet sich in Bad Endorf im Chiemgau. Der Platz ist in eine parkähnliche Landschaft eingebettet. Er bietet Stellplätze für Wohnmobile, Caravans und Zelte. Ein eigener <strong>See</strong> mit Bademöglichkeit gehört zur Anlage. Die Infrastruktur umfasst ein Restaurant und einen Kiosk. Von hier aus sind Ausflüge zum Chiemsee und in die Berge möglich. Die Region ist für ihre <strong>Thermalquellen</strong> bekannt.</p>",
+  "beschreibung": "<p>Il Camping Stein si trova a Bad Endorf, nella regione del Chiemgau. Il campeggio è immerso in un paesaggio simile a un parco naturale. Offre piazzole per camper, roulotte e tende. Un <strong>lago</strong> privato balneabile fa parte della proprietà. L'infrastruttura comprende un ristorante e un chiosco. Da qui è possibile organizzare splendide escursioni verso il lago Chiemsee e le montagne circostanti. La regione è rinomata per le sue <strong>sorgenti termali</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.8844692",
     "lng": "12.2684394"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

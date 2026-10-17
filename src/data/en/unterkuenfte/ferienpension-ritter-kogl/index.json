@@ -11,7 +11,7 @@
   "telefon": "+43 5376 5420",
   "email": null,
   "webseite": "http://www.gasthaus-ritter.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>Quietly nestled in the idyllic Thiersee valley, the family-run Pension Ritter & Koegl welcomes visitors with authentic Tyrolean warmth. Pleasantly appointed rooms invite deep relaxation amidst intact natural scenery.</p><p>Nearby Lake Thiersee promises refreshing swims in summer, while hiking paths ascending Mount Pendling start close by. Winter brings quiet snowshoe trails and well-tended cross-country tracks.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ferienpension Ritter & Koegl in Thiersee offers comfortable rooms and a warm family atmosphere in scenic Kufsteinerland."
 }

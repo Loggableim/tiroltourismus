@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Nestled at the base of the Hahnenkamm mountain in Hoefen, Gaestehaus am Graben provides restful holiday days in the Reutte Nature Park region. The family-run guesthouse offers cosy rooms and friendly personal hospitality.</p><p>The Hahnenkamm cable car, the celebrated Lechweg trail, and the high-flying Highline179 suspension bridge are only minutes away.</p>",
   "ausstattung": [],
   "tags": [
     "Allgäu",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gaestehaus am Graben in Hoefen offers peaceful accommodation with mountain vistas in the Reutte Nature Park region."
 }

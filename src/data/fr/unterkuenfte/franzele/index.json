@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Franzele</strong> liegt ruhig in der Tiroler Berglandschaft. Die Umgebung ist geprägt von Wäldern und Almflächen. Die <strong>traditionelle Architektur</strong> des Hauses spiegelt den regionalen Baustil wider. Die Innenräume sind gemütlich und mit heimischen Materialien gestaltet. Gäste erhalten <strong>regionale Küche</strong> mit saisonalen Produkten. Im Sommer können Wanderungen unternommen werden, im Winter Skifahren. Der Gasthof eignet sich als Ausgangspunkt für Ausflüge in die <strong>Alpenregion</strong>.</p>",
+  "beschreibung": "<p>Situe au milieu des hauts sommets de la vallee de l Oetztal, Franzele a Soelden est un point de chute convivial pour les amateurs de montagne. Chambres soignees et hospitalite tyrolienne rendent le sejour tres agreable.</p><p>Les pistes de ski, telecabines et sentiers de randonnee sont rapidement accessibles.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "L etablissement Franzele a Soelden propose des chambres confortables et un accueil chaleureux dans l Oetztal."
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5373 61886",
   "email": null,
   "webseite": "https://www.kaiserreich.info/schwaighofer",
-  "beschreibung": "<p>Das <strong>Gästehaus Schwaighofer</strong> befindet sich in Niederndorf im Tiroler Unterland, nahe der deutschen Grenze. Die Unterkunft ist ein <strong>Gasthof</strong> mit angeschlossenem Restaurant, das hauptsächlich Brotzeitgerichte serviert. Die Zimmer sind mit Bad, WC und Satellitenfernsehen ausgestattet. Die Lage am Dorfrand von Niederndorf ist ruhig und ländlich. Für Sommeraktivitäten stehen Wanderwege im <strong>Kaisergebirge</strong> zur Verfügung. Im Winter können Gäste Skigebiete und Langlaufloipen in der Umgebung nutzen. Das Gästehaus bietet einen Parkplatz und einen Kinderspielplatz.</p>",
+  "beschreibung": "<p>La <strong>Gästehaus Schwaighofer</strong> se encuentra en Niederndorf, en la comarca del Tiroler Unterland, junto a la frontera alemana. El establecimiento es una acogedora <strong>posada</strong> con restaurante anexo, famoso por sus tradicionales platos fríos y tablas de tentempiés (Brotzeit). Las habitaciones cuentan con baño privado, aseo y televisión por satélite. Su emplazamiento en las afueras de Niederndorf ofrece tranquilidad y ambiente rural. Para el verano, destacan los senderos del macizo montañoso de <strong>Kaisergebirge</strong>. En invierno, los huéspedes disponen de pistas de esquí alpino y circuitos de esquí de fondo en las proximidades. La posada incluye aparcamiento y parque infantil.</p>",
   "ausstattung": [],
   "tags": [
     "posada rural",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaiserreich.info/schwaighofer",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Fuchs</strong> liegt in der Region Tirol in Österreich. Die Unterkunft ist als Hotel klassifiziert und vermittelt eine ruhige Atmosphäre. Gäste können mit einer freundlichen Betreuung rechnen. Die Umgebung ist von der Alpenlandschaft geprägt. Wanderungen sind direkt ab dem Haus möglich. Die Zimmer sind funktional ausgestattet. Die Ausstattung bietet grundlegende Annehmlichkeiten. Ein Aufenthalt in dieser Gegend ist erholsam.</p>",
+  "beschreibung": "<p>Il <strong>Gästehaus Fuchs</strong> è situato nella splendida regione del Tirolo, in Austria. Struttura ricettiva classificata come hotel, trasmette un'atmosfera serena e rilassante. Gli ospiti possono contare su un'assistenza cordiale e premurosa durante tutto il soggiorno. L'ambiente circostante è incorniciato da suggestivi paesaggi alpini. Dalla struttura è possibile partire direttamente per rilassanti escursioni a piedi. Le camere sono arredate in modo funzionale e provviste di tutti i servizi fondamentali. Una vacanza in questa splendida area regala vero benessere e rigenerazione a contatto con la natura.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

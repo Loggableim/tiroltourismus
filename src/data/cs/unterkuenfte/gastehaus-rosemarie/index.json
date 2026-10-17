@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Rosemarie</strong> ist ein <strong>Gasthof</strong> in Tirol, Österreich. Das Haus liegt in einer ruhigen, von Bergen umgebenen Lage. Die Region eignet sich für Wanderungen und Wintersport. Die <strong>Zimmer</strong> sind traditionell eingerichtet und mit Komfort ausgestattet. Ein <strong>Restaurant</strong> mit regionaler Küche ist im Haus vorhanden. Zur Ausstattung gehören ein Garten und Parkmöglichkeiten. Gäste erhalten freundlichen Service und eine entspannte Atmosphäre.</p>",
+  "beschreibung": "<p>Penzion <strong>Gästehaus Rosemarie</strong> je <strong>hostinec</strong> v Tyrolsku v Rakousku. Dům se nachází na klidném místě v objetí horských štítů. Tento region je ideálním výchozím bodem pro pěší turistiku i zimní sporty. <strong>Pokoje</strong> jsou zařízeny v tradičním stylu a poskytují příjemné pohodlí. V domě nechybí <strong>restaurace</strong> s chutnou regionální kuchyní. Součástí zázemí je také zahrada a parkovací místa. Hosté oceňují přátelský servis a uvolněnou atmosféru.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

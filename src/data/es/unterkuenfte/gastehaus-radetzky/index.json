@@ -11,7 +11,7 @@
   "telefon": "+43 5375 6263",
   "email": "mail@radetzky.at",
   "webseite": "http://www.radetzky.at/",
-  "beschreibung": "<p>Das <strong>Gästehaus Radetzky</strong> befindet sich in der Gemeinde Kössen im Tiroler Unterland. Es wird als traditioneller <strong>Gasthof</strong> geführt und bietet Übernachtungsmöglichkeiten. Die Zimmer sind einfach und zweckmäßig eingerichtet. Zur Ausstattung gehört ein Gastraum mit regionaler Küche. Die Umgebung von Kössen ist von den <strong>Kitzbüheler Alpen</strong> geprägt. Gäste können von hier aus Wanderungen und Skiausflüge unternehmen. Die Atmosphäre im Haus ist bodenständig und gastfreundlich. Das Haus eignet sich für Gäste, die eine unkomplizierte Unterkunft suchen.</p>",
+  "beschreibung": "<p>La <strong>Gästehaus Radetzky</strong> se ubica en el municipio de Kössen, en la región del Tiroler Unterland. Funciona como una <strong>posada tradicional</strong> que brinda cómodas opciones de alojamiento. Las habitaciones son sencillas y funcionales. El establecimiento dispone de un comedor típico donde se degusta cocina regional. El entorno de Kössen está enmarcado por los <strong>Alpes de Kitzbühel</strong>, ideales para emprender rutas de senderismo y jornadas de esquí. El ambiente es auténtico, cercano y acogedor, perfecto para viajeros que buscan una estancia práctica y sin complicaciones.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -28,5 +28,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

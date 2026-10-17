@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Lukasser</strong> befindet sich in <strong>Tirol</strong>, Österreich. Die Atmosphäre des Hauses ist ruhig und unaufgeregt. Gäste erwartet eine komfortable, aber schlichte Unterkunft. Die Umgebung besteht aus der typischen Tiroler Bergwelt. Wanderwege und Naherholungsgebiete sind in unmittelbarer Nähe. Zur Ausstattung gehören Zimmer mit eigenem Bad und Satellitenfernsehen. Ein Frühstücksbuffet wird angeboten. Die Lage eignet sich für Ausflüge in die Region.</p>",
+  "beschreibung": "<p>Penzion <strong>Gästehaus Lukasser</strong> se nachází v malebném <strong>Tyrolsku</strong> v Rakousku. Atmosféra penzionu je příjemně tichá, klidná a neuspěchaná. Na návštěvníky čeká komfortní, vkusné a jednoduché ubytování. Okolní scenérii tvoří kouzelný tyrolský horský svět. Turistické trasy a rekreační přírodní oblasti leží v bezprostřední blízkosti. Vybavení zahrnuje pokoje s vlastní koupelnou a satelitní televizí. Každé ráno je podávána pestrá snídaně formou bufetu. Poloha domu je vynikající pro objevné výlety po celém regionu.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

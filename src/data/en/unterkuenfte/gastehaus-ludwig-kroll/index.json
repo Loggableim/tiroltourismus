@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Gästehaus Ludwig Kröll</strong> is operated as a traditional Tyrolean guesthouse. The accommodation is situated in serene surroundings while remaining conveniently connected to local transport. Guests can look forward to a warm, friendly ambiance infused with genuine regional character. The encompassing mountain scenery invites visitors to enjoy outdoor pursuits such as alpine hiking and skiing. The guest rooms are functionally furnished, providing solid comfort for a restful stay. Amenities include an inviting lounge area as well as a charming garden. Generous meals served in the adjoining inn are included in your stay.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

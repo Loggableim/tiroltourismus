@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Villa Rosenhain ist ein traditionsreicher <strong>Gasthof</strong> in einem ruhigen <strong>Tiroler Bergdorf</strong>. Das Haus bietet <strong>gutbürgerliche Küche</strong> mit regionalen Spezialitäten und gemütliche Zimmer mit Holzmöbeln. Gäste schätzen die <strong>familiäre Atmosphäre</strong>, die Terrasse mit Bergpanorama sowie die zentrale Lage für <strong>Wanderungen und Ausflüge</strong> im Tiroler Unterland.</p>",
+  "beschreibung": "<p>La Villa Rosenhain est une <strong>auberge traditionnelle</strong> pleine de charme, située dans un paisible <strong>village de montagne tyrolien</strong>. L'établissement propose une <strong>cuisine du terroir généreuse</strong> composée de spécialités locales ainsi que des chambres chaleureuses avec mobilier en bois. Les hôtes apprécient tout particulièrement l'<strong>ambiance familiale</strong>, la terrasse offrant un superbe panorama alpin et la situation centrale idéale pour partir en <strong>randonnées et excursions</strong> à travers le Tyroler Unterland.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -23,5 +23,9 @@
     "lat": "47.5940292",
     "lng": "12.1228074"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

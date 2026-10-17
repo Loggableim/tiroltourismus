@@ -11,7 +11,7 @@
   "telefon": "+43 5376 5544",
   "email": null,
   "webseite": "http://www.vital-hof.at/",
-  "beschreibung": "<p>Der <strong>Vital-Hof Wanishof</strong> liegt im Tiroler Talkessel von Thiersee, umgeben von Wiesen und Bergen. Das ehemalige Bauernhaus wurde liebevoll zu einem Ferienhaus umgebaut und verbindet ländliche Gemütlichkeit mit modernem Komfort. Gäste können die Ruhe der Natur genießen und die Umgebung für Wanderungen und Ausflüge nutzen.</p>",
+  "beschreibung": "<p>Le <strong>Vital-Hof Wanishof</strong> est situé dans le charmant vallon tyrolien de Thiersee, au milieu de prairies verdoyantes et de montagnes majestueuses. Cet ancien corps de ferme a été réaménagé avec passion en maison de vacances, conjuguant authenticité champêtre et confort contemporain. Les hôtes peuvent savourer le calme d'une nature préservée et explorer les multiples sentiers de randonnée et curiosités des environs.</p>",
   "ausstattung": [],
   "tags": [
     "famille",
@@ -25,5 +25,9 @@
     "lat": "47.584915",
     "lng": "12.0722468"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

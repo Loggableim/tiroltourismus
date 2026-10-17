@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Ferienhaus <strong>Waldfrieden</strong> liegt am Rand von Kartitsch im Gailtal. Die Unterkunft befindet sich in ruhiger <strong>Waldrandlage</strong> mit Blick auf die umliegenden <strong>Karnischen Alpen</strong>. Gäste profitieren von der direkten <strong>Nähe zu Wanderwegen</strong> und der Stille des Bergdorfs.</p>",
+  "beschreibung": "<p>La casa vacanze <strong>Waldfrieden</strong> si trova ai margini di Kartitsch, nella valle Gailtal. La struttura vanta una tranquilla <strong>posizione ai margini del bosco</strong> con vista panoramica sulle circostanti <strong>Alpi Carniche</strong>. Gli ospiti beneficiano della <strong>vicinanza immediata ai sentieri escursionistici</strong> e della quiete del caratteristico villaggio montano.</p>",
   "ausstattung": [],
   "tags": [
     "famiglie",
@@ -24,5 +24,9 @@
     "lat": "46.7224475",
     "lng": "12.5009305"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

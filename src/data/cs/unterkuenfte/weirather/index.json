@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Weirather</strong> liegt im Zentrum von <strong>Imst</strong>, unweit der markanten Stadtpfarrkirche. Das Haus verbindet traditionelle Tiroler Gastlichkeit mit einer gemütlichen Atmosphäre. Gäste erwartet regionale Küche mit Zutaten aus der Umgebung sowie einfache, gepflegte Zimmer. Die Lage eignet sich gut für Aufenthalte, die Stadt und Umgebung zu erkunden.</p>",
+  "beschreibung": "<p>Penzion <strong>Gasthof Weirather</strong> se nachází v centru města <strong>Imst</strong>, v blízkosti výrazného městského farního kostela. Dům spojuje tradiční tyrolskou pohostinnost s útulnou a přátelskou atmosférou. Hosté se mohou těšit na regionální kuchyni připravovanou ze surovin z okolí i na jednoduché, pečlivě udržované pokoje. Poloha je výbornou základnou pro poznávání města i okolního regionu.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -24,5 +24,9 @@
     "lat": "47.2458388",
     "lng": "10.7412825"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

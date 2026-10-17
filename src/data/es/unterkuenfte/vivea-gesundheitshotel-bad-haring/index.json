@@ -11,7 +11,7 @@
   "telefon": "+43 5332 90500",
   "email": null,
   "webseite": "http://www.kurzentrum.at/",
-  "beschreibung": "<p>Das <strong>Vivea Gesundheitshotel Bad Häring</strong> liegt im österreichischen Tirol inmitten der Berglandschaft des Unterinntals. Gäste erwartet eine <strong>gesundheitsorientierte Atmosphäre</strong> mit Angeboten wie Entspannung, Bewegung und Ernährung. Das Hotel kombiniert <strong>Erholung und präventive Gesundheitsförderung</strong> in ruhiger Lage mit Blick auf die Tiroler Berge.</p>",
+  "beschreibung": "<p>El <strong>Vivea Gesundheitshotel Bad Häring</strong> está situado en el Tirol austríaco, en pleno corazón del valle del Bajo Inn. Los huéspedes disfrutan de una <strong>atmósfera orientada a la salud</strong> con completas propuestas dedicadas a la relajación, la actividad física y la nutrición saludable. El hotel aúna <strong>descanso reparador y promoción de la salud preventiva</strong> en una ubicación serena con espléndidas vistas a las montañas tirolesas.</p>",
   "ausstattung": [
     "pool"
   ],
@@ -26,5 +26,9 @@
     "lat": "47.5146703",
     "lng": "12.1091403"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

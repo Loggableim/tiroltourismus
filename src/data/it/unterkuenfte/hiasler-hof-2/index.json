@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> ist ein traditioneller <strong>Gasthof</strong> in Tirol, Österreich. Er liegt in einer ruhigen <strong>Lage</strong> mit Aussicht auf die umliegenden Berge. Die Zimmer sind einfach und <strong>komfortabel</strong> eingerichtet. Die Gaststube bietet <strong>regionale Speisen</strong> und Getränke. Die Umgebung eignet sich für <strong>Wanderungen</strong> im Sommer und Skifahren im Winter. Gäste können den Hof als <strong>Ausgangspunkt</strong> für Ausflüge in die Natur nutzen. Der Betrieb ist familiengeführt und legt Wert auf <strong>Tiroler Gastfreundschaft</strong>.</p>",
+  "beschreibung": "<p>La <strong>Hiasler Hof</strong> accoglie i viaggiatori in una splendida e tranquilla posizione rialzata a Tanneben, sul soleggiato altopiano di media montagna nella regione di <strong>Innsbruck-Land</strong>. La struttura a conduzione familiare dispone di camere accoglienti in autentico stile tirolese con moderni servizi privati con doccia/WC, TV satellitare, Wi-Fi e balconi panoramici affacciati sulla valle dell'Inn e sulle cime della Nordkette. Al mattino una ricca colazione a buffet con specialità genuine del territorio dà il benvenuto a una nuova giornata. La posizione combina pace agreste e rapidità di collegamento con il capoluogo Innsbruck e le sue attrazioni storiche. D'estate piacevoli sentieri tra boschi e malghe partono dall'edificio, mentre d'inverno le aree sciistiche di Glungezer e Patscherkofel soddisfano gli sportivi.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradizionale locanda alpina a Tanneben nella regione di Innsbruck-Land con camere accoglienti e splendida vista sulla valle dell'Inn."
 }

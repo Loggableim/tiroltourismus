@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Holzerhof</strong> liegt in einer ländlichen Gegend Tirols, abseits von stark befahrenen Straßen. Die Unterkunft agiert als <strong>Gasthof</strong> und bietet einfache, aber saubere Gästezimmer zur Übernachtung an. Zur Ausstattung gehören ein gastronomischer Betrieb mit regionaler Küche sowie Parkplätze für Gäste. Die Umgebung ist von <strong>Berglandschaft</strong> und landwirtschaftlichen Flächen geprägt, was sich für Spaziergänge eignet. Gäste können eine ruhige Atmosphäre und die Nähe zur Natur erwarten, jedoch keinen luxuriösen Komfort.</p>",
+  "beschreibung": "<p>La ferme d'hôtes <strong>Holzerhof</strong> est juchée sur un coteau panoramique paisible et très ensoleillé à <strong>Telfes dans le Stubaital</strong>, au milieu des alpages verdoyants face aux parois dentelées des Kalkkögel. Les chambres confortables agencées dans un style montagnard soigné comprennent une salle de bains contemporaine, la télévision par satellite, le Wi-Fi et un balcon privé avec vue dégagée sur les Alpes de Stubai. Un savoureux petit-déjeuner buffet composé de lait frais de l'étable et de spécialités locales est servi chaque matin. Le parc aquatique et thermal StuBay tout proche est idéal pour se détendre. Le domaine skiable de <strong>Schlick 2000</strong> à Fulpmes se trouve à quelques minutes et la navette gratuite s'arrête tout près, reliant également le vaste <strong>glacier de Stubai</strong>.</p>",
   "ausstattung": [
     "wifi",
     "restaurant"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ferme d'hôtes traditionnelle sur un coteau ensoleillé à Telfes dans le Stubaital, avec chambres chaleureuses et vue sur les Kalkkögel."
 }

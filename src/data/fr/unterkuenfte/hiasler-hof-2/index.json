@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> ist ein traditioneller <strong>Gasthof</strong> in Tirol, Österreich. Er liegt in einer ruhigen <strong>Lage</strong> mit Aussicht auf die umliegenden Berge. Die Zimmer sind einfach und <strong>komfortabel</strong> eingerichtet. Die Gaststube bietet <strong>regionale Speisen</strong> und Getränke. Die Umgebung eignet sich für <strong>Wanderungen</strong> im Sommer und Skifahren im Winter. Gäste können den Hof als <strong>Ausgangspunkt</strong> für Ausflüge in die Natur nutzen. Der Betrieb ist familiengeführt und legt Wert auf <strong>Tiroler Gastfreundschaft</strong>.</p>",
+  "beschreibung": "<p>L'auberge traditionnelle <strong>Hiasler Hof</strong> reçoit les visiteurs dans un cadre champêtre paisible en altitude à Tanneben, sur le plateau ensoleillé de la région d'<strong>Innsbruck-Land</strong>. Cet établissement familial propose des chambres chaleureuses agencées dans un style tyrolien authentique avec salle de bains moderne, télévision par satellite, Wi-Fi et balcons ouvrant sur la vallée de l'Inn et les parois abruptes de la Nordkette. Un savoureux petit-déjeuner buffet composé de produits régionaux attend les hôtes au réveil. L'adresse associe quiétude montagnarde et accès rapide aux attraits culturels de la capitale Innsbruck, tels que le Petit Toit d'or. L'été, sentiers forestiers et balades en alpage démarrent sur place, tandis que l'hiver invite à skier au Glungezer ou au Patscherkofel.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Auberge alpine traditionnelle à Tanneben dans la région d'Innsbruck-Land, avec chambres confortables et panorama sur la vallée de l'Inn."
 }

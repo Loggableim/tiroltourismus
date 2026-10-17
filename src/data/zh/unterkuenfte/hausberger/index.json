@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt im <strong>Ortszentrum von Söll</strong> in <strong>Tirol</strong>. Das <strong>Skigebiet Skiwelt Wilder Kaiser</strong> sowie zahlreiche <strong>Wanderwege</strong> sind von der Unterkunft aus erreichbar. Das hauseigene <strong>Restaurant</strong> serviert <strong>Tiroler Gerichte</strong> aus regionalen Zutaten. Die <strong>Gästezimmer</strong> sind im traditionellen Stil eingerichtet und verfügen über moderne Ausstattung. Der <strong>Saunabereich</strong> steht zur Erholung nach Aktivitäten zur Verfügung. Von der <strong>Terrasse</strong> blickt man auf die umliegende Berglandschaft. Die Unterkunft eignet sich für Urlauber, die sowohl im Sommer als auch im Winter Aktivitäten suchen.</p>",
+  "beschreibung": "<p><strong>豪斯伯格客栈</strong>（Hausberger）坐落在蒂罗尔州狂野凯撒山度假区<strong>瑟尔</strong>（Söll）向阳静谧的根斯莱特（Gänsleit）街区。客房秉承阿尔卑斯实木乡村风情，配备现代淋浴卫生间、卫星电视、无线网络以及饱览霍厄萨尔韦峰与狂野凯撒峭壁雄姿的景观阳台。户外归来后，舍内整洁的桑拿区是消除疲劳的绝佳去处。早晨供应精选当地食材制作的丰盛自助早餐。步行即可轻松到达餐馆与商铺林立的瑟尔镇中心。冬季，免费滑雪巴士在近旁停靠，极速抵达<strong>狂野凯撒-布里克森谷滑雪世界</strong>（SkiWelt Wilder Kaiser–Brixental）缆车站。夏季时，女巫之水（Hexenwasser）乐园更让亲子度假充满欢歌笑语。</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -32,5 +32,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "位于狂野凯撒山麓瑟尔根斯莱特（Gänsleit）的温馨客栈，客房舒适，设有桑拿浴室并邻近滑雪世界。"
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Hirschen Residenz in Imst, Tirol, bietet Gästen eine Unterkunft in <strong>zentraler Lage</strong>. Das Hotel verfügt über Zimmer mit Bad, Fernseher und kostenfreiem WLAN. Im Restaurant werden Gerichte der <strong>regionalen Küche</strong> serviert. Die Umgebung von Imst eignet sich für Wanderungen und Wintersport. Gäste erreichen die Imster Bergbahnen und das Stadtzentrum zu Fuß. Die Unterkunft ist ein Ausgangspunkt für Aktivitäten in den Alpen. Die öffentliche Anbindung ist mit Bus und Bahn gegeben.</p>",
+  "beschreibung": "<p><strong>鹿园居所</strong>（Hirschen Residenz）坐落在蒂罗尔高地<strong>伊姆斯特</strong>（Imst）向阳便利的托马斯-瓦尔希街（Thomas-Walch-Straße）。现代时尚且格调雅致的客房与套房配备品质卫浴、平板电视、免费无线网络以及饱览穆特科夫山峦（Muttekopf）与古尔格尔山谷全景的景观阳台。舍内餐厅精选当地食材，烹饪地道蒂罗尔风味与国际美食。漫步片刻即可步入喷泉之城伊姆斯特历史悠久的市中心商铺与咖啡馆。前往<strong>伊姆斯特高山缆车</strong>（Imster Bergbahnen）底站及其闻名遐迩的高山过山车（Alpine Coaster）驱车仅需数分钟，冬夏两季皆为户外度假的上选之地。</p>",
   "ausstattung": [
     "wlan",
     "parkplatz",
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "位于伊姆斯特托马斯-瓦尔希街（Thomas-Walch-Straße）的现代居所，客房舒适完备，设有餐厅并邻近高山缆车。"
 }

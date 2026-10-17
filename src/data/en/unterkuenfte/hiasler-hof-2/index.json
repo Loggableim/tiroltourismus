@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Hiasler Hof</strong> is a traditional <strong>inn</strong> in Tirol, Österreich. It is located in a quiet <strong>location</strong> with a view of the surrounding mountains. The rooms are simply and <strong>comfortably</strong> furnished. The dining room offers <strong>regional dishes</strong> and drinks. The surrounding area is ideal for <strong>hiking</strong> in summer and skiing in winter. Guests can use the inn as a <strong>starting point</strong> for excursions into nature. The establishment is family-run and values <strong>Tiroler hospitality</strong>.</p>",
+  "beschreibung": "<p>The <strong>Hiasler Hof</strong> welcomes holidaymakers to an idyllic, peaceful elevated setting in Tanneben on the sunny mid-mountain plateau of <strong>Innsbruck-Land</strong>. This welcoming family-run guesthouse offers charming Tyrolean-style rooms equipped with modern en-suite bathrooms (shower/WC), satellite TV, Wi-Fi, and private balconies framing expansive panoramas of the Inn Valley and the dramatic Nordkette limestone peaks. A wholesome breakfast buffet filled with regional specialities greets guests each morning. The location harmoniously pairs rural tranquillity with convenient access to Innsbruck's historic landmarks, such as the Golden Roof and the Imperial Palace. In summer, wooded walking routes start right from the property. In winter, nearby ski hills like the Glungezer and Patscherkofel provide wonderful snow sports.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional alpine inn in Tanneben in Innsbruck-Land featuring cosy rooms and sweeping panoramic views across the Inn Valley."
 }

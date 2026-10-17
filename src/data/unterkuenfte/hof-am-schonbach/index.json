@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Hof am Schönbach</strong> befindet sich in einer ruhigen Wohngegend von St. Anton am Arlberg. Die Ferienwohnung ist mit einer <strong>voll ausgestatteten Küche</strong> und einem <strong>Wohnraum</strong> ausgestattet. Die <strong>Bergbahnen</strong> sind in wenigen Gehminuten erreichbar. Das Ortszentrum mit Einkaufsmöglichkeiten liegt ebenfalls in der Nähe. In der Umgebung können Gäste <strong>Wandern</strong> und <strong>Skifahren</strong> nutzen. Die Unterkunft eignet sich für <strong>Paare oder kleine Familien</strong>. Gäste können eine <strong>ruhige Lage</strong> und eine <strong>zweckmäßige Einrichtung</strong> erwarten.</p>",
+  "beschreibung": "<p>Der <strong>Hof am Schönbach</strong> empfängt Urlaubsgäste in einer sonnigen und ruhigen Wohnlage in der St. Jakober Dorfstraße 56 in <strong>St. Anton am Arlberg</strong>. Die im behaglichen alpinen Stil eingerichtete Ferienwohnung bietet idealen Wohnkomfort für Paare und Familien, die ihren Urlaub in den Bergen unabhängig gestalten möchten: eine komplett ausgestattete Küche mit modernen Geräten, gemütliche Schlafzimmer, ein gepflegtes Badezimmer mit Dusche/WC, Sat-TV, WLAN sowie private Balkone mit herrlichem Blick auf die Arlberger Bergwelt und die Verwallgruppe. Die Haltestelle des kostenlosen Skibusses liegt nur wenige Schritte entfernt und chauffiert Wintersportler zügig zu den Talstationen der Galzig-, Gampen- und Rendlbahn im Skigebiet <strong>Ski Arlberg</strong>. Im Sommer begeistern Klettersteige, Mountainbiketouren und alpine Höhenwanderungen direkt im Umland.</p>",
   "ausstattung": [
     "küche",
     "wlan",
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütliche Ferienwohnung in der St. Jakober Dorfstraße in St. Anton am Arlberg mit voll ausgestatteter Küche und Blick auf die Bergwelt."
 }

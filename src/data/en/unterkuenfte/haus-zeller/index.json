@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Haus Zeller</strong> welcomes visitors to the charming village centre of <strong>Nesselwängle</strong> in Tyrol's scenic Tannheimer Tal. Styled in authentic alpine woodwork, the cosy guest rooms feature private en-suite bathrooms with shower/WC, satellite TV, Wi-Fi, and sunny balconies boasting open views of the Allgäu Alps. In the morning, a delicious breakfast buffet packed with local regional produce is served in the friendly breakfast parlour. The guesthouse serves as an ideal launchpad for outdoor activities: summer brings high-altitude hikes up to the Krinnen pastures, via ferratas, and refreshing swimming at nearby Lake Haldensee. In winter, valley cross-country ski tracks pass right by and local ski slopes cater superbly to families.</p>",
   "ausstattung": [],
   "tags": [
     "Allgäu",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy alpine guesthouse in the centre of Nesselwängle in the Tannheimer Tal with traditional rooms and near Lake Haldensee."
 }

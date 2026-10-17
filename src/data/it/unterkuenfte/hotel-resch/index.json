@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Resch liegt zentral in <strong>Seefeld in Tirol</strong>, einem bekannten Ferienort auf rund 1.200 Metern Höhe. Das Haus verbindet traditionelle Tiroler Gastlichkeit mit modernem Komfort und richtet sich an Gäste, die sowohl Erholung als auch Aktivität im <strong>Outdoor-Bereich</strong> suchen. Zum Angebot zählen Wellnesseinrichtungen und eine Gastronomie mit regionaler Küche. <strong>Wandern, Skifahren und Radfahren</strong> sind über das Jahr möglich – die Infrastruktur vor Ort unterstützt entsprechende Aktivitäten.</p>",
+  "beschreibung": "<p>L'<strong>Hotel Resch</strong> sorge in posizione strategica nel centro dell'esclusiva <strong>Kitzbühel</strong>. L'albergo a conduzione familiare unisce la genuina tradizione tirolese a un comfort moderno. Gli impianti di risalita del mitico <strong>Hahnenkamm</strong> e il comprensorio KitzSki sono raggiungibili a piedi, così come panoramici <strong>itinerari escursionistici</strong> estivi. Tra i servizi figurano camere in stile alpino, un'intima <strong>area sauna</strong> e un ristorante di cucina locale.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -22,5 +22,10 @@
     "lat": "47.4458219",
     "lng": "12.3885183"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "L'Hotel Resch nel centro di Kitzbühel offre calorosa gestione familiare, area sauna, cucina tipica tirolese e vicinanza a piedi alla funivia del leggendario Hahnenkamm."
 }

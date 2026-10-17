@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Hotel Panorama</strong> is set on a sunny hillside in <strong>Jerzens</strong> within Tyrol's scenic <strong>Pitztal Valley</strong>. The property offers comfortable, traditionally furnished rooms with private balconies showcasing sweeping mountain panoramas. In winter, guests enjoy effortless connectivity to the <strong>Hochzeiger ski resort</strong> and the Pitztal Glacier, while summer brings direct access to alpine <strong>hiking paths</strong>. Amenities include a restorative <strong>sauna wellness area</strong>, an outdoor terrace, and hearty regional dining.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Panorama in Jerzens in the Pitztal valley provides hillside lodging with panoramic alpine views, a sauna area, a sun terrace, and easy access to Hochzeiger."
 }

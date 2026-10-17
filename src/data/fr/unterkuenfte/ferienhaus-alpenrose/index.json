@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Ferienhaus Alpenrose ist ein <strong>Hotel</strong> in den Tiroler Alpen. Die Lage ist ruhig, umgeben von <strong>Wanderwegen</strong> und <strong>Skigebieten</strong>. Die Zimmer sind traditionell eingerichtet und bieten <strong>Bergblick</strong>. Das Hotel verfügt über einen <strong>Wellnessbereich</strong> mit Sauna und Dampfbad. Die Atmosphäre ist ruhig. Das Hotel eignet sich für Wanderer und Skifahrer. Auch Familien sind willkommen.</p>",
+  "beschreibung": "<p>Au calme dans le village pittoresque de Serfaus, le Ferienhaus Alpenrose offre un cadre reposant et convivial. Ses appartements soignes s ouvrent sur des balcons ensoleilles face aux sommets tyroliens.</p><p>Les remontees mecaniques et la ligne souterraine du village sont rapidement accessibles pour profiter du domaine de Serfaus-Fiss-Ladis.</p>",
   "ausstattung": [],
   "tags": [
     "hôtel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Le Ferienhaus Alpenrose a Serfaus propose des appartements confortables sur le haut-plateau ensoleille pour familles et randonneurs."
 }

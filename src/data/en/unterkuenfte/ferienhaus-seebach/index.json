@@ -11,7 +11,7 @@
   "telefon": "+43 660 1216388",
   "email": "sarah.gogl@gmx.at",
   "webseite": "http://www.skiwelt-scheffau.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>Wonderfully set in a quiet spot on the edge of Scheffau, Ferienhaus Seebach enchants visitors with its close proximity to the pristine wilderness of the Wilder Kaiser. The generous, comfortably furnished home provides abundant space for families and outdoor enthusiasts.</p><p>Turquoise-hued Lake Hintersteiner See is just a short trip away, while the Scheffau gondola connects skiers directly to the vast SkiWelt in winter.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ferienhaus Seebach in Scheffau am Wilden Kaiser offers idyllic peace and nature immersion near pristine Lake Hintersteiner See."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Set amidst the scenic mountain landscapes of the Wildschoenau, the traditional Ferienhotel Lenzenhof welcomes travellers with authentic Tyrolean warmth. Comfortable rooms provide a cosy retreat with pleasing views over the Kitzbuehel Alps.</p><p>The Ski Juwel Alpbachtal Wildschoenau winter resort and extensive summer hiking or biking routes promise diverse alpine adventures year-round.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wildschoenau.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ferienhotel Lenzenhof in the Wildschoenau offers rustic alpine charm and peaceful relaxation in one of Tyrol's most pristine high valleys."
 }

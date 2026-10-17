@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Gemse</strong> liegt in der Gemeinde Prutz im Tiroler Oberland. Das Haus befindet sich in ruhiger Lage und ist von der Berglandschaft der Tiroler Alpen umgeben. Der Gasthof wird traditionell geführt und bietet eine einfache, aber gepflegte Unterkunft. Gäste können im hauseigenen Restaurant regionale Gerichte probieren. Die Zimmer sind zweckmäßig eingerichtet und verfügen über Bad und WC. Ein Gastgarten steht für die Nutzung im Sommer zur Verfügung. Die Umgebung eignet sich für Wanderungen im Sommer und Skifahren im Winter. Prutz ist ein zentraler Ort im Tiroler Oberland und gut als Basis für Ausflüge geeignet.</p>",
+  "beschreibung": "<p>Zentral und verkehrsguenstig in Prutz gelegen, ist der Gasthof Gemse ein traditionsreiches Haus fuer Urlauber und Durchreisende. Gepflegte Zimmer und eine schmackhafte Tiroler Kueche sorgen fuer einen angenehmen Aufenthalt.</p><p>Die Skigebiete Serfaus-Fiss-Ladis, der Kaunertaler Gletscher und Wanderrouten sind schnell erreichbar.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tiroler-oberland.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Der traditionsreiche Gasthof Gemse in Prutz bietet gemuetliche Zimmer und regionale Kueche im Tiroler Oberland."
 }

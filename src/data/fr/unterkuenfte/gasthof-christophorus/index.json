@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5264",
   "email": "info@gasthof-christophorus.at",
   "webseite": "http://www.gasthof-christophorus.at/",
-  "beschreibung": "<p>Der <strong>Gasthof Christophorus</strong> liegt in Söll im Tiroler Unterland. Die Unterkunft bietet Gästen <strong>Zimmer in einem traditionellen Gasthaus</strong>. Die Einrichtung der Zimmer ist funktional und zweckmäßig. Das hauseigene Restaurant serviert <strong>Tiroler Spezialitäten</strong>. Die Umgebung ist von Wiesen und Wäldern geprägt. Wanderwege beginnen direkt vor der Haustür. Die Seilbahnen der <strong>SkiWelt Wilder Kaiser-Brixental</strong> sind fußläufig erreichbar. Der Gasthof eignet sich für Gäste, die einen ruhigen Aufenthalt suchen.</p>",
+  "beschreibung": "<p>Situee au calme a Soell, cette auberge familiale accueille ses hotes avec des chambres claires et une delicieuse cuisine du terroir dans une ambiance decontractee.</p><p>La telecabine de Soell, les circuits d hiver et le SkiWelt sont immediatement accessibles.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "L auberge Gasthof Christophorus a Soell propose un sejour agreable et une table conviviale au pied du Wilder Kaiser."
 }

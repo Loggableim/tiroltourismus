@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Goldene Krone liegt in einer Ortschaft im <strong>Tiroler Inntal</strong>. Das Haus verbindet traditionelle Holzbauweise mit modernen Gästezimmern. Gäste erwartet eine ruhige Atmosphäre und regionale Gastfreundschaft. Die Umgebung ist von Bergen, Wäldern und Wanderwegen geprägt. Das Restaurant serviert saisonale Speisen aus der Region. Die Zimmer sind zweckmäßig eingerichtet und verfügen über Balkon oder Terrasse.</p>",
+  "beschreibung": "<p>En el corazon de Reutte, la historica posada Goldene Krone combina estancias de ambiente clasico con alta gastronomia regional tirolesa.</p><p>El puente Highline179, el castillo de Ehrenberg, el lago Plansee y el teleferico de Hahnenkamm estan muy cerca.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "El historico Gasthof Goldene Krone en Reutte ofrece tradicion culinaria y confort en el parque natural."
 }

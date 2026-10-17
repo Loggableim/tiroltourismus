@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Campingplatz Camping Ambach am See</strong> is located directly on the shore of a lake in Tirol. The facility includes pitches for caravans, motorhomes, and tents. The sanitary facilities are in good condition. A private stretch of beach is available. The lake is ideal for swimming and water sports. There are marked hiking trails in the surrounding area. A restaurant on site offers food.</p>",
+  "beschreibung": "<p>The <strong>Campingplatz Camping Ambach am See</strong> is located directly on the shore of a lake in Tirol. The facility includes pitches for caravans, motorhomes, and tents. The sanitary facilities are in very good condition, and a private stretch of beach is available to guests. The lake is ideal for swimming and water sports. Marked hiking trails run through the surrounding area, and an on-site restaurant provides dining.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

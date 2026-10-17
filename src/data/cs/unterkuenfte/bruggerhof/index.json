@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Bruggerhof</strong> in <strong>Kitzbühel</strong> ist ein Campingplatz in Tirol. Er bietet Stellplätze für Wohnwagen, Wohnmobile und Zelte. Die Sanitäranlagen sind modern gehalten. Ein kleiner Shop und eine Gastronomie sind auf dem Gelände vorhanden. Der Platz liegt in der Nähe des Kitzbüheler Zentrums. Von hier aus können die Kitzbüheler Alpen für Touren genutzt werden. Der <strong>Bruggerhof</strong> ist ganzjährig geöffnet und besitzt einen Spielplatz.</p>",
+  "beschreibung": "<p>Kemp <strong>Bruggerhof</strong> v <strong>Kitzbühelu</strong> je oblíbený kempinkový areál v Tyrolsku. Nabízí stání pro obytné vozy, karavany i prostorná místa pro stany. Moderní sanitární zařízení, malý obchod a restaurace jsou přímo v areálu. Místo leží nedaleko centra Kitzbühelu a umožňuje snadný přístup na výlety do Kitzbühelských Alp. <strong>Bruggerhof</strong> je otevřen celoročně a disponuje dětským hřištěm.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -26,5 +26,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.tirol.at"
+  ]
 }

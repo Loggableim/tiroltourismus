@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.hotel-brunnenhof.at/",
-  "beschreibung": "<p>Das <strong>Hotel Brunnenhof</strong> liegt in der Ortschaft <strong>Neustift im Stubaital</strong>. Es handelt sich um ein familiengeführtes Haus mit traditionellem Tiroler Charakter. Die Zimmer sind modern eingerichtet und verfügen über einen Balkon. Der Wellnessbereich umfasst eine Sauna, ein Dampfbad und einen Ruheraum. Die Küche legt Wert auf regionale Produkte und saisonale Gerichte. Neustift bietet ganzjährig Sportmöglichkeiten wie Wandern, Skifahren und Klettern.</p>",
+  "beschreibung": "<p>El <strong>Hotel Brunnenhof</strong> se ubica en la localidad de <strong>Neustift im Stubaital</strong>. Se trata de un hotel de gestión familiar que conserva el encanto auténtico tirolés. Sus habitaciones, modernas y elegantes, están equipadas con balcón panorámico. La zona de spa incluye sauna, baño de vapor y sala de relajación. Su restaurante prima los productos autóctonos y de temporada. Neustift brinda actividades deportivas durante todo el año, como senderismo, esquí y escalada.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ]
 }

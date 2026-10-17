@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Campingplatz Camping Ambach am See</strong> liegt direkt am Ufer eines Tiroler Sees. Die Anlage umfasst Stellplätze für Wohnwagen, Wohnmobile und Zelte. Die Sanitäranlagen sind in einem guten Zustand. Ein eigener Strandabschnitt ist vorhanden. Der See lädt zum Baden und zu Wassersportarten ein. In der Umgebung verlaufen markierte Wanderwege. Ein Restaurant auf dem Platz bietet Verpflegung an.</p>",
+  "beschreibung": "<p>Il campeggio <strong>Camping Ambach am See</strong> sorge direttamente sulla riva di un suggestivo lago tirolese. La struttura offre piazzole per roulotte, camper e tende, con servizi igienici in ottime condizioni. Gli ospiti possono accedere a una spiaggia privata ideale per il nuoto e gli sport acquatici. Nei dintorni si snodano percorsi escursionistici ben segnalati, mentre il ristorante presente sul posto propone piatti caldi e ristorazione.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -30,5 +30,9 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

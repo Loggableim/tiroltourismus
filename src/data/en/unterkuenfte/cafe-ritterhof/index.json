@@ -11,7 +11,7 @@
   "telefon": "+43 5358 2654",
   "email": "info@ritterhof-ellmau.at",
   "webseite": "http://www.ritterhof-ellmau.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Cafe Ritterhof</strong> in <strong>Ellmau</strong> is classified as a comfortable <strong>hotel</strong> and guesthouse featuring an attached <strong>café</strong>. The <strong>rooms</strong> are equipped with a <strong>private bathroom</strong> and <strong>satellite TV</strong>. The café serves authentic <strong>Tyrolean specialities</strong> and freshly baked pastries. A comprehensive <strong>breakfast buffet</strong> is served each morning. In fine weather, the <strong>sun terrace</strong> is open to guests, and the location provides quick access to regional <strong>hiking and skiing</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ]
 }

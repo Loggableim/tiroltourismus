@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Weberhof</strong> liegt am Ortseingang von Brixen im Thale, direkt an der Zufahrt zum <strong>Brixental</strong>. Das Haus wirkt traditionell mit hohem Holzanteil innen, die Einrichtung ist schlicht und funktional. Gäste erwartet eine traditionelle <strong>Tiroler Küche</strong> mit regionalen Produkten und eine gemütliche Stube, in der sich Einheimische und Urlauber treffen. <strong>Parkplätze</strong> befinden sich direkt am Haus.</p>",
+  "beschreibung": "<p>El <strong>Weberhof</strong> se sitúa a la entrada de Brixen im Thale, justo junto al acceso al valle de <strong>Brixental</strong>. La casa destaca por su estilo tradicional con abundante madera en su interior, con un mobiliario sencillo y funcional. Los huéspedes pueden deleitarse con la auténtica <strong>cocina tirolesa</strong> elaborada con productos locales y disfrutar de un salón muy acogedor donde coinciden lugareños y viajeros. Hay <strong>plazas de aparcamiento</strong> directamente en el alojamiento.</p>",
   "ausstattung": [],
   "tags": [
     "posada rural",
@@ -24,5 +24,9 @@
     "lat": "47.4458877",
     "lng": "12.271645"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

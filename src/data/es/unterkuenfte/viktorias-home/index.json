@@ -11,7 +11,7 @@
   "telefon": "+43 5372 62331",
   "email": null,
   "webseite": "http://www.tirolerhof-kufstein.at/",
-  "beschreibung": "<p>Viktorias Home liegt im Zentrum von <strong>Kufstein</strong>, nur wenige Gehminuten von der <strong>Festung Kufstein</strong> und der Fußgängerzone entfernt. Das Haus bietet <strong>gemütlich eingerichtete Zimmer</strong> mit Blick auf die Stadt oder die umliegenden Berge. <strong>Gäste schätzen die ruhige Lage</strong> in einem historischen Gebäude, während Geschäfte, Restaurants und Cafés fußläufig erreichbar sind. Ein <strong>kleines Frühstücksangebot</strong> ist im Preis inbegriffen.</p>",
+  "beschreibung": "<p>Viktorias Home está situado en pleno centro de <strong>Kufstein</strong>, a solo unos minutos a pie de la famosa <strong>fortaleza de Kufstein</strong> y de la zona peatonal. El establecimiento dispone de <strong>habitaciones acogedoras</strong> con vistas a la ciudad o a las montañas circundantes. <strong>Los huéspedes valoran enormemente su tranquila ubicación</strong> en un edificio histórico, con tiendas, restaurantes y cafeterías al alcance de un agradable paseo. Incluye un <strong>desayuno ligero</strong> en la tarifa.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -23,5 +23,9 @@
     "lat": "47.5929751",
     "lng": "12.1816957"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

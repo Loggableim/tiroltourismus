@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Gasthof Waldheim</strong> is located in a quiet valley village in Tirol, surrounded by meadows and forests. The building is a traditional Tiroler wooden structure with a cozy dining room. Guests will find simple, down-to-earth cuisine featuring regional dishes. The rooms are functionally furnished and are suitable for travelers seeking a <strong>quiet accommodation</strong> in a rural setting.</p>",
+  "beschreibung": "<p>The <strong>Gasthof Waldheim</strong> is located in a peaceful valley town in Tyrol, surrounded by lush meadows and forests. The building is a traditional Tyrolean wooden structure featuring a welcoming, rustic dining parlour. Guests will enjoy honest, down-to-earth cooking with hearty regional dishes. The functional and comfortable guest rooms are ideally suited for travellers seeking <strong>quiet accommodation</strong> in an idyllic rural setting.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -23,5 +23,9 @@
     "lat": "47.5896272",
     "lng": "12.0342347"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

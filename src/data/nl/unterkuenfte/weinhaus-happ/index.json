@@ -11,7 +11,7 @@
   "telefon": "+43 512 582980",
   "email": null,
   "webseite": "http://weinhaus-happ.at/de/home/",
-  "beschreibung": "<p>Das <strong>Weinhaus Happ</strong> befindet sich in der Innsbrucker Altstadt in unmittelbarer Nähe zur berühmten <strong>Innsbrucker Hofburg</strong>. Das historische Gebäude verbindet traditionellen Charme mit gehobener Gastlichkeit. Gäste erwarten individuell eingerichtete Zimmer, ein gehobenes Restaurant sowie ein persönlicher Service in familiärer Atmosphäre.</p>",
+  "beschreibung": "<p>Het <strong>Weinhaus Happ</strong> bevindt zich in de historische oude binnenstad van Innsbruck, in de directe nabijheid van de beroemde <strong>Hofburg Innsbruck</strong>. Het historische pand combineert traditionele charme met hoogwaardige gastvrijheid. Gasten worden verwelkomd in individueel ingerichte kamers, een uitstekend restaurant en een persoonlijke service in een gemoedelijke sfeer.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -26,5 +26,9 @@
     "lat": "47.2682515",
     "lng": "11.3930429"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

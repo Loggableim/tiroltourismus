@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Villa Rosenhain is a traditional <strong>inn</strong> in a quiet <strong>Tiroler mountain village</strong>. The house offers <strong>traditional home-style cuisine</strong> with regional specialties and cozy rooms with wooden furniture. Guests appreciate the <strong>family atmosphere</strong>, the terrace with mountain panorama, as well as the central location for <strong>hikes and excursions</strong> in the Tiroler Unterland.</p>",
+  "beschreibung": "<p>Villa Rosenhain is a traditional <strong>country inn</strong> located in a peaceful <strong>Tyrolean mountain village</strong>. The property serves <strong>hearty local cuisine</strong> made with regional specialties and offers comfortable guest rooms featuring wooden furnishings. Guests appreciate the <strong>welcoming family atmosphere</strong>, the sun terrace with panoramic mountain vistas, and the ideal starting point for <strong>hiking tours and excursions</strong> throughout the Tyrolean Unterland.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -23,5 +23,9 @@
     "lat": "47.5940292",
     "lng": "12.1228074"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

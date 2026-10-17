@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Alpenfriede</strong> befindet sich in ruhiger Lage am Ortsrand von Kitzbühel in Tirol. Die Unterkunft bietet <strong>Zimmer mit Balkon</strong> und Bad, die mit modernen Möbeln ausgestattet sind. Zur Ausstattung gehören ein <strong>Wellnessbereich</strong> mit Sauna und Dampfbad, ein Speisesaal und eine hauseigene Tiefgarage. Die Umgebung ist von <strong>Wanderwegen</strong> und Loipen geprägt, die direkt ab dem Hotel zugänglich sind. Im Winter erreichen Gäste die Skigebiete Hahnenkamm und Kitzbühel in wenigen Minuten mit dem Skibus. Gäste können mit <strong>regionaler Küche</strong> im Halbpensionsangebot rechnen, das Frühstück und Abendessen umfasst. Das Haus eignet sich für Paare und Familien, die einen ruhigen Aufenthalt in der Natur suchen. Die Rezeption ist täglich von 7 bis 22 Uhr besetzt.</p>",
+  "beschreibung": "<p>Horský hotel <strong>Hotel Alpenfriede</strong> se nachází na slunném a klidném panoramatickém místě v obci <strong>Jerzens</strong> v údolí Pitztal, obklopený modřínovými lesy a s ničím nerušeným výhledem na štíty Pitztalských Alp. Pokoje zařízené v útulném tyrolském venkovském stylu disponují moderními koupelnami se sprchou/WC, satelitní televizí, Wi-Fi a soukromými balkony s krásným výhledem do údolí. Po sportovních výkonech zve k uvolnění domácí wellness zóna s finskou saunou a odpočívárnou. Ráno čeká hosty pestrá snídaně z regionálních surovin a večer tradiční tyrolská kuchyně. Dolní stanice rodinného areálu <strong>Hochzeiger</strong> je s bezplatným skibusem dosažitelná během několika minut. V létě láká zážitkový park ZirbenPark Hochzeiger a síť stezek.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný horský hotel v Jerzensu v údolí Pitztal se slunnými pokoji s balkonem, saunou a blízkostí skiareálu Hochzeiger."
 }

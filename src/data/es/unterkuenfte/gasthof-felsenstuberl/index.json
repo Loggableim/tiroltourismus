@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Felsenstuberl</strong> liegt in Tirol, Österreich. Die Unterkunft bietet eine traditionelle <strong>tiroler Atmosphäre</strong>. Gäste erwartet ein gemütliches Haus mit regionaler Gastronomie. Die Umgebung ist durch eine alpine <strong>Berglandschaft</strong> geprägt. Wanderwege und Naturerlebnisse sind in der Nähe verfügbar. Zur Ausstattung gehören <strong>komfortable Zimmer</strong> und ein rustikaler Gastraum. Der Gasthof ist ein geeigneter Ausgangspunkt für Ausflüge in die Berge.</p>",
+  "beschreibung": "<p>El <strong>Gasthof Felsenstuberl</strong> se encuentra en el Tirol, Austria. El establecimiento brinda una tradicional y cálida <strong>atmósfera tirolesa</strong>. Los huéspedes disfrutarán de una casa muy acogedora con gastronomía regional de calidad. El entorno destaca por su impresionante <strong>paisaje de montaña</strong> alpino. En las inmediaciones hay numerosas rutas de senderismo y atractivos naturales. Las instalaciones incluyen <strong>habitaciones confortables</strong> y un rústico salón comedor. La posada es un magnífico punto de partida para realizar excursiones por las montañas.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

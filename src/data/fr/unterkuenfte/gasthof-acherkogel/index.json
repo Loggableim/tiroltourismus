@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Acherkogel liegt in der Region Tirol in Österreich. Die Unterkunft ist als <strong>Hotel</strong> eingerichtet und bietet eine traditionelle Atmosphäre. Die Umgebung ist von der <strong>Berglandschaft</strong> geprägt. Gäste erwartet eine komfortable Ausstattung mit Restaurant und Zimmern. Die Lage eignet sich für Wanderungen und Wintersport. Das Hotel ist sauber und zweckmäßig. Es dient als Basis für Erkundungen der Region.</p>",
+  "beschreibung": "<p>Le Gasthof Acherkogel est situé dans la région du Tyrol en Autriche. Cet hébergement aménagé en <strong>hôtel</strong> offre une atmosphère traditionnelle et conviviale. L'environnement est sublimé par un majestueux <strong>paysage de montagne</strong>. Les hôtes y bénéficient d'un confort soigné avec un restaurant sur place et des chambres agréables. L'emplacement est particulièrement propice à la randonnée et aux sports d'hiver. L'hôtel se distingue par sa propreté et sa fonctionnalité, constituant un point de départ parfait pour découvrir la région.</p>",
   "ausstattung": [],
   "tags": [
     "hôtel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

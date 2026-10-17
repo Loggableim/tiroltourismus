@@ -11,7 +11,7 @@
   "telefon": "+43 5376 5252",
   "email": "info@hiasenhof-thiersee.at",
   "webseite": "https://hiasenhof-thiersee.at/",
-  "beschreibung": "<p>Der <strong>Campingplatz Hiasenhof</strong> liegt am ruhigen Ortsrand von <strong>Thiersee</strong> im Tiroler Kaisergebirge. Die Anlage bietet Stellplätze in alpiner Wiesenlandschaft mit Blick auf umliegende Berge. Gäste erreichen den <strong>Thiersee</strong> zu Fuß in wenigen Minuten. Zur Ausstattung gehören Sanitärgebäude, ein kleines Brötchen-Service und eine Grillstelle. Der Campingplatz eignet sich für ruhesuchende Naturliebhaber und Wanderer.</p>",
+  "beschreibung": "<p>Le <strong>Campingplatz Hiasenhof</strong> est établi dans un secteur calme en périphérie de <strong>Thiersee</strong>, face au Kaisergebirge. Le terrain propose des emplacements verdoyants au cœur de prairies alpines avec vue sur les reliefs. Le lac de <strong>Thiersee</strong> se rejoint à pied en quelques minutes. Un bâtiment sanitaire moderne, un service de pain frais et un espace barbecue accueillent randonneurs et amateurs de calme.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.5891985",
     "lng": "12.1161394"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ]
 }

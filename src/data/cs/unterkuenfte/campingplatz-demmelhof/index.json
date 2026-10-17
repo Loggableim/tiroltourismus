@@ -11,7 +11,7 @@
   "telefon": "+49 8041 8121",
   "email": "info@campingplatz-demmelhof.de",
   "webseite": "https://www.campingplatz-demmelhof.de",
-  "beschreibung": "<p>Der Campingplatz Demmelhof liegt in St. Johann in Tirol, direkt am Fuße des Wilder Kaiser Massivs. Die Umgebung ist geprägt durch Almen, Wälder und ein weitläufiges Wander- und Radwegenetz. Die Ausstattung umfasst großzügige Stellplätze, moderne Sanitäranlagen und einen Wellnessbereich mit Pool und Sauna. Ein Restaurant mit Tiroler Küche sowie ein Brötchenservice sind auf dem Platz vorhanden. Die Atmosphäre auf dem gepflegten Gelände ist ruhig und familiär. Das ganzjährige Angebot richtet sich an Familien, Wanderer, Biker und Wintersportler. Im Winter profitieren Gäste von der direkten Lage an den Langlaufloipen und der Nähe zu den Skigebieten. Somit dient der Platz als idealer Ausgangspunkt für Aktivurlauber, die eine komfortable Unterkunft in der Natur suchen.</p>",
+  "beschreibung": "<p>Kemp <strong>Campingplatz Demmelhof</strong> leží v obci St. Johann in Tirol, přímo na úpatí masivu Wilder Kaiser. Okolí nabízí horské louky, lesy a síť pěších i cyklistických tras. K vybavení patří prostorná stání, moderní sanitární zázemí a wellness zóna s bazénem a saunou. Nechybí restaurace s tyrolskou kuchyní. Celoroční provoz vyhovuje rodinám i sportovcům, přičemž v zimě jsou přímo u kempu běžkařské stopy i blízká lyžařská střediska.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.750708",
     "lng": "11.4999226"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.tirol.at"
+  ]
 }

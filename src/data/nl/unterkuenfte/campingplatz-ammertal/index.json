@@ -11,7 +11,7 @@
   "telefon": "+49 8803 2797",
   "email": "info@camping-ammertal.de",
   "webseite": "https://www.camping-ammertal.de/",
-  "beschreibung": "<p>Der <strong>Campingplatz Ammertal</strong> liegt am Rand von Peißenberg im Pfaffenwinkel.. Die Anlage befindet sich in ruhiger Tallage nahe dem Fluss Ammer.. Gäste finden <strong>Stellplätze für Wohnmobile und Zelte</strong> vor, ergänzt durch sanitäre Einrichtungen und einen kleinen Spielplatz.. Die Umgebung bietet <strong>Wander- und Radwege</strong> durch die bayerische Voralpenlandschaft.. Der historische Marktort Peißenberg mit seinen Einkaufsmöglichkeiten ist fußläufig erreichbar.",
+  "beschreibung": "<p>Camping <strong>Campingplatz Ammertal</strong> ligt aan de rand van Peißenberg in het alpenvoorland. Gelegen in een rustig dal nabij de rivier de Ammer, beschikt het terrein over <strong>staanplaatsen voor campers en tenten</strong>, keurig sanitair en een speeltuin. De omgeving herbergt mooie <strong>wandel- en fietspaden</strong>, terwijl het historische marktstadje Peißenberg met winkels op loopafstand ligt.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.7862195",
     "lng": "11.0846948"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

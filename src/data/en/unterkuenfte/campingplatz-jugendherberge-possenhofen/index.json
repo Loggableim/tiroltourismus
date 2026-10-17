@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The Possenhofen Youth Hostel campsite is situated in a quiet, natural location in the Tiroler Alpine region and offers an affordable base for active holidaymakers. The surroundings with mountains, forests and swimming lakes are ideal for hiking, cycling and relaxing. The facilities combine a campsite with pitches for motorhomes and tents with a youth hostel with simple shared rooms. A common room and a self-catering kitchen are available for guests to use communally. The atmosphere is informal and family-friendly, and the standard is functional and inexpensive.</p>",
+  "beschreibung": "<p>The campsite and youth hostel <strong>Campingplatz Jugendherberge Possenhofen</strong> is situated in a tranquil alpine setting, providing an affordable and welcoming hub for active travellers. The surrounding mountains, forests, and bathing lakes are ideal for hiking and cycling. Combining outdoor pitches for motorhomes and tents with functional shared hostel rooms, the facility features a communal lounge and a self-catering guest kitchen in an easygoing, budget-friendly atmosphere.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.960722",
     "lng": "11.3137908"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

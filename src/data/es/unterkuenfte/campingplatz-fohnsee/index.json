@@ -11,7 +11,7 @@
   "telefon": "+49 8856 7874",
   "email": "info@campingplatz-fohnsee.de",
   "webseite": "https://www.campingplatz-fohnsee.de/",
-  "beschreibung": "<p>Der Campingplatz Fohnsee liegt in Eben am Achensee, direkt am Ufer des Fohnsees. Die Umgebung ist von dichten Wäldern und der imposanten Bergkulisse des Karwendelgebirges geprägt. Die Ausstattung umfasst einfache, aber gepflegte Stellplätze für Wohnmobile, Wohnwagen und Zelte sowie moderne Sanitäranlagen. Die ruhige, naturnahe Atmosphäre macht den Platz zu einem idealen Rückzugsort für Erholungssuchende. Zielgruppe sind vor allem Naturliebhaber, Wanderer und Mountainbiker, die die unberührte Landschaft schätzen. Der nahe gelegene Achensee sowie das Naturschutzgebiet bieten vielfältige Freizeitmöglichkeiten wie Schwimmen, Angeln und Wandern. Der Campingplatz Fohnsee spricht damit Gäste an, die einen authentischen Campingurlaub in der Tiroler Bergwelt suchen.</p>",
+  "beschreibung": "<p>El <strong>Campingplatz Fohnsee</strong> se halla en Eben am Achensee, a orillas del lago y flanqueado por espesos bosques y los riscos del Karwendel. Dispone de parcelas bien cuidadas para autocaravanas, caravanas y tiendas con sanitarios modernos. Su atmósfera tranquila y agreste atrae a senderistas, ciclistas y aficionados a la pesca y al baño en el cercano lago Achensee y su reserva natural protegida.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.7815761",
     "lng": "11.316071"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

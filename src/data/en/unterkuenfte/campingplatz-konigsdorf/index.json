@@ -11,7 +11,7 @@
   "telefon": "+49 8171 81580",
   "email": "mail@camping-koenigsdorf.de",
   "webseite": "https://www.camping-koenigsdorf.de/",
-  "beschreibung": "<p>The Königsdorf campsite is located in the idyllic municipality of Königsdorf in Tiroler Leukental, nestled between Wilder Kaiser and Kitzbüheler Horn. The surrounding natural and cultural landscape offers ideal conditions for hiking, cycling, and in winter for cross-country skiing as well as excursions to the ski areas. The site has modern sanitary facilities, a bread roll service, and spacious pitches for motorhomes, caravans, and tents. The well-maintained and quiet facility exudes a relaxed atmosphere that invites you to linger. The target audience is nature-loving vacationers, families with children, and active travelers looking for a close-to-nature base for their activities. Thanks to its convenient location on the B178, St. Johann in Tirol and Kitzbühel are quickly reachable, making the campsite an ideal starting point for excursions throughout the entire Kitzbüheler Region.</p>",
+  "beschreibung": "<p>The campsite <strong>Campingplatz Königsdorf</strong> is situated in the idyllic Leukental valley, nestled between the Wilder Kaiser range and the Kitzbüheler Horn. The surrounding landscape provides premier conditions for hiking, cycling, winter cross-country skiing, and downhill skiing. Facilities include modern sanitary amenities, a fresh bread service, and generous pitches for motorhomes, caravans, and tents. Convenient access via the B178 brings St. Johann in Tirol and Kitzbühel within swift reach.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.8386168",
     "lng": "11.4685417"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.tirol.at"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": "+49 8051 4136",
   "email": "ferienhaus-campingpl.hofbauer@t-online.de",
   "webseite": "https://www.camping-prien-chiemsee.de/",
-  "beschreibung": "<p>Der Campingplatz Hofbauer liegt direkt am Ufer des Chiemsees in Prien, Tirol, Österreich. Die Umgebung verbindet die Weite des Sees mit der beeindruckenden Kulisse der nahen Alpen. Die Ausstattung umfasst moderne Sanitäreinrichtungen, großzügige Stellplätze und ein Restaurant mit regionaler Küche. Die ruhige und gepflegte Atmosphäre macht den Platz besonders für Familien, Paare und Senioren attraktiv. Wassersportler nutzen den direkten Seezugang, während Wanderer und Radfahrer die umliegende Region erkunden. Somit ist der Campingplatz Hofbauer ein idealer Ausgangspunkt für einen vielseitigen Urlaub in Tirol.</p>",
+  "beschreibung": "<p>Camping <strong>Campingplatz Hofbauer</strong> bevindt zich direct aan het meer in Prien, met een indrukwekkend alpendecor op de achtergrond. De camping combineert waterplezier met prachtige vergezichten. Tot de uitrusting behoren modern sanitair, royale staanplaatsen en een restaurant met streekgerechten. Dankzij de directe toegang tot het meer genieten watersporters, fietsers en wandelaars hier volop.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.8383556",
     "lng": "12.350335"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

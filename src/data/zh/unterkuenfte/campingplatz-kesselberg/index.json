@@ -11,7 +11,7 @@
   "telefon": "+49 8851 464",
   "email": "mailto@campingplatz-kesselberg.de",
   "webseite": "https://www.campingplatz-kesselberg.de/",
-  "beschreibung": "<p>Der Campingplatz Kesselberg liegt direkt am Kochelsee im österreichischen Tirol und ist von der beeindruckenden Bergwelt der Alpen umgeben. Die Umgebung lädt zu vielfältigen Outdoor-Aktivitäten wie Wandern, Radfahren und Wassersport ein. Die Ausstattung des Platzes umfasst moderne Sanitäranlagen und großzügige Stellplätze für Wohnmobile, Wohnwagen und Zelte. Die ruhige und naturnahe Atmosphäre sorgt für einen erholsamen Aufenthalt. Das Zielpublikum sind vor allem Naturliebhaber und Familien, die einen aktiven Urlaub in den Bergen schätzen. Auch Wassersportler schätzen die direkte Lage am See für Segel- und Surfausflüge.</p>",
+  "beschreibung": "<p>湖畔度假胜地 <strong>Campingplatz Kesselberg</strong> 坐落于科赫尔湖（Kochelsee）水岸边，群峰环抱，景致万千。周边大自然适宜开展远足登山、自行车骑行与丰富水上运动。营地配备现代化卫浴系统，规划有宽敞的房车与帐篷营位。幽静的水滨环境为帆船、冲浪爱好者及家庭亲子度假提供了绝佳的休闲港湾。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.6375576",
     "lng": "11.3479772"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

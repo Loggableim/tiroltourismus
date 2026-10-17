@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz Jugendherberge Possenhofen liegt in einer ruhigen, naturnahen Lage im Tiroler Alpenraum und bietet eine günstige Basis für Aktivurlauber. Die Umgebung mit Bergen, Wäldern und Badeseen ist ideal zum Wandern, Radfahren und Erholen. Die Ausstattung kombiniert einen Campingplatz mit Stellplätzen für Wohnmobile und Zelte mit einer Jugendherberge mit einfachen Mehrbettzimmern. Ein Aufenthaltsraum und eine Selbstversorgerküche stehen den Gästen zur gemeinschaftlichen Nutzung zur Verfügung. Die Atmosphäre ist ungezwungen und familienfreundlich, der Standard ist zweckmäßig und preisgünstig.</p>",
+  "beschreibung": "<p>Kemp a mládežnická ubytovna <strong>Campingplatz Jugendherberge Possenhofen</strong> leží v tichém přírodním zákoutí a nabízí výhodnou základnu pro aktivní dovolenou. Hory, lesy a jezera v okolí lákají k turistice, cyklistice i vodním radovánkám. Zařízení kombinuje kempinková stání pro karavany a stany s účelnými vícelůžkovými pokoji ubytovny. Hosté mají k dispozici společenskou místnost a vybavenou kuchyň pro vlastní vaření v přátelské atmosféře.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.960722",
     "lng": "11.3137908"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

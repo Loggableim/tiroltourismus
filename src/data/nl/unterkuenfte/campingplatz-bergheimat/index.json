@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.camping-bergheimat.de/",
-  "beschreibung": "<p>Der Campingplatz <strong>Bergheimat</strong> liegt am Ortsrand von <strong>Bad Hindelang</strong> im Oberallgäu.. Die Anlage bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte sowie Mietunterkünfte.. Gäste erreichen in wenigen Minuten das Ortszentrum mit Einkaufsmöglichkeiten und Gastronomie.. Der Stellplatz ist terrassenförmig angelegt mit Blick auf die umliegenden Berge.. Sanitäranlagen, ein Spielplatz und ein kleiner Lebensmittelladen sind vorhanden.",
+  "beschreibung": "<p>Camping <strong>Campingplatz Bergheimat</strong> ligt aan de dorpsrand van <strong>Bad Hindelang</strong> in het Oberallgäu. Het terrein biedt staanplaatsen voor campers, caravans en tenten evenals huuraccommodaties. Het centrum met winkels en restaurants is binnen enkele minuten bereikbaar. De terrasvormige opzet biedt een fraai uitzicht op de bergen, met compleet sanitair, een speeltuin en een levensmiddelenwinkel.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.5176178",
     "lng": "10.4217761"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ]
 }

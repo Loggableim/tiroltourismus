@@ -11,7 +11,7 @@
   "telefon": "+43 6542 68548",
   "email": "info@camping-neunbrunnen.at",
   "webseite": "https://www.camping-neunbrunnen.at/",
-  "beschreibung": "<p>Der Campingplatz Bad Neunbrunnen liegt in der beschaulichen Gemeinde Maishofen, eingebettet in die beeindruckende Berglandschaft des Pinzgaus. Die Umgebung bietet einen idealen Ausgangspunkt für Wanderungen, Radtouren und Ausflüge zum nahegelegenen Zeller See. Die Ausstattung umfasst einen eigenen Naturbadesee, moderne Sanitäranlagen, einen Lebensmittelmarkt sowie ein Restaurant. Die großzügig geschnittenen Stellplätze sind teils terrassiert und garantieren viel Privatsphäre und einen herrlichen Bergblick. Die ruhige und naturnahe Atmosphäre trägt maßgeblich zur Erholung der Gäste bei. Der Campingplatz richtet sich hauptsächlich an Familien, Paare und Aktivurlauber, die Wert auf einen komfortablen Stellplatz in einer idyllischen Alpenlandschaft legen.</p>",
+  "beschreibung": "<p>Le <strong>Campingplatz Bad Neunbrunnen</strong> est implanté dans le village paisible de Maishofen, au cœur du splendide paysage du Pinzgau. C'est un point de départ idéal pour randonner, pédaler ou visiter le lac tout proche de Zell am See. Le site comprend son propre lac de baignade naturel, des sanitaires récents, une épicerie et un restaurant. Les emplacements spacieux en terrasses garantissent intimité et vue dégagée sur les sommets pour les familles et couples actifs.</p>",
   "ausstattung": [
     "pool",
     "sanitäranlagen",
@@ -27,5 +27,9 @@
     "lat": "47.3775901",
     "lng": "12.7954262"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.tirol.at"
+  ]
 }

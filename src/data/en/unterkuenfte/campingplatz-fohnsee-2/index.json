@@ -11,7 +11,7 @@
   "telefon": "+49 8856 7874",
   "email": "info@campingplatz-fohnsee.de",
   "webseite": "https://www.campingplatz-fohnsee.de/",
-  "beschreibung": "<p>The <strong>Campingplatz Cohnsee 2</strong> is located near <strong>Tirol</strong> and offers direct access to the lake. The site is designed in a natural style and is suitable for families and nature lovers. Guests will find <strong>pitches for tents, caravans and motorhomes</strong> here. Sanitary facilities and a small kiosk are available. The campsite offers a quiet atmosphere away from larger tourist centers.</p>",
+  "beschreibung": "<p>The campsite <strong>Campingplatz Cohnsee 2</strong> is located in an idyllic alpine lakeside setting with direct water access. Designed in harmony with nature, the park is ideally suited for families and outdoor lovers. Guests find spacious <strong>pitches for tents, caravans, and motorhomes</strong>, supported by clean sanitary amenities and a kiosk, providing a peaceful atmosphere away from bustling tourist hubs.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.7783648",
     "lng": "11.3161895"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

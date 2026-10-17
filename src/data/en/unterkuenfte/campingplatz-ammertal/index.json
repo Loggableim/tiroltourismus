@@ -11,7 +11,7 @@
   "telefon": "+49 8803 2797",
   "email": "info@camping-ammertal.de",
   "webseite": "https://www.camping-ammertal.de/",
-  "beschreibung": null,
+  "beschreibung": "<p>The campsite <strong>Campingplatz Ammertal</strong> is situated on the outskirts of Peißenberg in the alpine foothills. Nestled in a quiet valley close to the River Ammer, the park features <strong>pitches for motorhomes and tents</strong>, complemented by clean sanitary amenities and a children's playground. The picturesque surroundings offer attractive <strong>hiking and cycle trails</strong>, while the historic market town of Peißenberg with its local shops is within easy walking distance.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.7862195",
     "lng": "11.0846948"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

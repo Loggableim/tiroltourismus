@@ -11,7 +11,7 @@
   "telefon": "+49 8343 248",
   "email": "info@elbsee.de",
   "webseite": "https://www.elbsee.eu/",
-  "beschreibung": "<p>Der Campingplatz Elbsee in Ruderatshofen liegt direkt am Ufer des Elbsees und am Fuße der Alpen, in der Grenzregion zu Tirol, Österreich. Die ruhige, naturbelassene Umgebung ist ideal für ausgedehnte Wanderungen und Radtouren in die Umgebung. Die Ausstattung des Platzes umfasst moderne Sanitäranlagen, einen Kiosk und einen eigenen Strandzugang zum See mit Badestelle. Die großzügigen Stellplätze für Wohnmobile, Wohnwagen und Zelte bieten ausreichend Komfort und Privatsphäre. Die Atmosphäre auf dem Campingplatz ist naturnah und entspannt, was ihn besonders bei Familien mit Kindern und Erholungssuchenden beliebt macht. Zielpublikum sind vor allem Naturliebhaber und Aktivurlauber, welche die Nähe zu den Sehenswürdigkeiten der Region sowie dem angrenzenden Tiroler Außerfern schätzen.</p>",
+  "beschreibung": "<p>Il campeggio <strong>Campingplatz Elbsee</strong> a Ruderatshofen sorge direttamente sulla riva del lago Elbsee, ai piedi delle Alpi vicino al confine tirolese. L'ambiente naturale incontaminato è perfetto per escursioni e itinerari in bicicletta. Dispone di bagni moderni, un chiosco e accesso diretto alla spiaggia balneabile. Le spaziose piazzole assicurano comodità e privacy, ideale per famiglie e amanti della natura desiderosi di esplorare l'Außerfern.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.8041346",
     "lng": "10.5543186"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": "+49 8856 598",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz Huber See liegt in Tirol, Österreich, direkt am Seeufer und ist von einer beeindruckenden Bergkulisse umgeben. Die Umgebung zeichnet sich durch unberührte Natur mit dichten Wäldern und klaren Gewässern aus. Die Ausstattung des Platzes umfasst komfortable Sanitäranlagen, einen Spielplatz sowie einen Kiosk mit Grundnahrungsmitteln. Die Atmosphäre ist ruhig und familienfreundlich, was den Platz ideal für einen entspannten Urlaub macht. Hauptsächlich richtet sich der Campingplatz an Familien, Paare und Naturliebhaber, die die alpine Landschaft genießen möchten. Gäste können hier wandern, schwimmen oder einfach die Natur in vollen Zügen genießen.</p>",
+  "beschreibung": "<p>湖滨静谧营地 <strong>Campingplatz Huber See</strong> 坐落于奥地利蒂罗尔州的湖畔，环抱于雄奇阿尔卑斯山峦之中。繁茂的森林与澄澈的湖水构筑了未经雕琢的原生态之美。园区配备舒适整洁的卫生设施、儿童乐园及生活便利小卖部，温馨祥和的度假氛围非常适合家庭与情侣前来进行山地远足、湖泊畅泳与身心放松。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.7646621",
     "lng": "11.3479611"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

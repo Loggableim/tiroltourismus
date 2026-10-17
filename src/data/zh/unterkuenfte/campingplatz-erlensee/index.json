@@ -11,7 +11,7 @@
   "telefon": "+49 8039 1695",
   "email": "campingplatz-erlensee@t-online.de",
   "webseite": "https://www.camping-erlensee.de/",
-  "beschreibung": "<p>Der Campingplatz Erlensee befindet sich in der ruhigen Ortschaft Schechen im österreichischen Bundesland Tirol. Umgeben von dichten Wäldern und sanften Hügeln liegt er unweit des namensgebenden Erlensees, der zu Spaziergängen einlädt. Die Anlage bietet gut ausgebaute Stellplätze für Wohnmobile, Wohnwagen und Zelte sowie einfache Sanitäranlagen. Zur Infrastruktur zählen ein kleiner Kiosk und ein Gemeinschaftsraum, die den Aufenthalt erleichtern. Die naturnahe und überschaubare Atmosphäre spricht vor allem Ruhesuchende sowie Familien mit Kindern an. Ideal ist der Platz für Gäste, die eine einfache und preiswerte Übernachtungsmöglichkeit in der Tiroler Landschaft suchen.</p>",
+  "beschreibung": "<p>幽静林间营地 <strong>Campingplatz Erlensee</strong> 坐落于谢欣（Schechen）小镇的优美自然风光中。营地被茂密的树林与缓坡丘陵环绕，毗邻适宜悠然漫步的埃尔伦湖（Erlensee）。园区规划有平整的房车与帐篷营位，配备洁净的卫生设施、便民小卖部及公共活动室。安宁祥和的田园氛围特别适合家庭出游及追求实惠自然度假的旅行者。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.9246175",
     "lng": "12.1367657"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

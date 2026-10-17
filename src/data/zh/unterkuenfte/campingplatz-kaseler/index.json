@@ -11,7 +11,7 @@
   "telefon": "+43 5286 52181",
   "email": "ortsvorstehung@ginzling.at",
   "webseite": "https://www.naturpark-zillertal.at/naturpark-erleben/campingplatz-kaseler.html",
-  "beschreibung": "<p>Der <strong>Campingplatz Kaseler</strong> liegt im Talkessel von Ginzling, einem kleinen Ort im Zillertal. Die Anlage bietet <strong>Stellplätze für Wohnmobile und Zelte</strong> in unmittelbarer Nähe zum Fluss. Gäste erreichen von hier aus <strong>Wanderwege und Mountainbike-Strecken</strong> ins hintere Zillertal. Die Sanitärbereiche sind zweckmäßig ausgestattet. Im Ort gibt es ein Gasthaus und einen kleinen Laden.</p>",
+  "beschreibung": "<p>高山溪谷营地 <strong>Campingplatz Kaseler</strong> 坐落于齐勒山谷（Zillertal）深处的金茨灵（Ginzling）小镇盆地。营位紧邻清澈的阿尔卑斯山溪，提供<strong>房车与帐篷专业营位</strong>。宾客可由此直入通往齐勒阿尔卑斯高山区纵深的<strong>远足徒步步道与山地车探险路线</strong>。卫生设施完备实用，镇内还设有特色客栈与乡村小店。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.0757069",
     "lng": "11.7593087"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ]
 }

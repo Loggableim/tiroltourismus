@@ -11,7 +11,7 @@
   "telefon": "+43 5412 64119",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gasthaus Alpenrose</strong> befindet sich im österreichischen Bundesland Tirol. Die Einrichtung ist traditionell und verleiht dem Haus eine ruhige Atmosphäre. Gäste erwartet eine unkomplizierte Unterkunft in ländlicher Umgebung. Die Umgebung ist von Wäldern und Bergen geprägt. Zur Ausstattung zählen ein Restaurant und eine Sauna. Das Hotel ist ein Ausgangspunkt für Wanderungen. Parkplätze sind auf dem Gelände verfügbar.</p>",
+  "beschreibung": "<p><strong>阿尔卑斯玫瑰客栈（Gasthaus Alpenrose）</strong>位于奥地利蒂罗尔州。馆内传统的阿尔卑斯装潢营造出宁静祥和的居住氛围。宾客可在此享受到田园乡村里轻松惬意的住宿体验。旅馆四周环绕着茂密的森林与巍峨的群山。主要设施包括一家风味餐厅和舒缓身心的桑拿浴室。客栈是徒步探索自然的理想出发基地，院内亦备有便利的专属停车位。</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

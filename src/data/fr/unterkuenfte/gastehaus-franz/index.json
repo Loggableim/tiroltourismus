@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Gästehaus Franz in Tirol ist ein traditioneller Gasthof mit angeschlossenen Gästezimmern. Die Lage ist ruhig und dennoch zentral im Ort, von wo aus <strong>Wanderwege</strong> direkt erreichbar sind. Die Zimmer sind einfach und funktional ausgestattet und bieten einen Balkon mit <strong>Aussicht</strong>. Die Gaststube wird von Gästen und Einheimischen gleichermaßen besucht. Die Küche serviert <strong>regionale Spezialitäten</strong> und Tiroler Klassiker. Die umliegende Landschaft eignet sich für Aktivitäten zu jeder Jahreszeit. Das Haus verfügt über <strong>Abstellmöglichkeiten</strong> für Fahrräder und Skier.</p>",
+  "beschreibung": "<p>L'auberge <strong>Gästehaus Franz</strong> dans le Tyrol est un établissement traditionnel proposant des chambres confortables. Son emplacement est à la fois paisible et central au cœur du village, avec un accès direct à de superbes <strong>sentiers de randonnée</strong>. Les chambres, meublées avec simplicité et fonctionnalité, disposent d'un balcon offrant une splendide <strong>vue panoramique</strong>. La salle de restaurant traditionnelle est un lieu convivial apprécié des vacanciers comme des habitants de la région. Le restaurant sert de savoureuses <strong>spécialités régionales</strong> et des classiques de la cuisine tyrolienne. Le paysage environnant se prête à une multitude d'activités en toute saison. La maison met également à disposition des <strong>espaces de rangement</strong> sécurisés pour les vélos et les skis.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

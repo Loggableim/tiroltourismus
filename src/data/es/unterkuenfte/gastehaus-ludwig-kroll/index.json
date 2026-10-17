@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Gästehaus Ludwig Kröll</strong> ist als traditioneller Gasthof in Tirol geführt. Die Unterkunft liegt in einer ruhigen Umgebung, die dennoch gut angebunden ist. Gäste erwartet eine sachliche und freundliche Atmosphäre mit regionalem Charakter. Die umliegende Berglandschaft lädt zu Aktivitäten wie Wandern und Skifahren ein. Die Zimmer sind zweckmäßig eingerichtet und bieten Grundkomfort. Zur Ausstattung zählen ein Aufenthaltsraum sowie ein Gartenbereich. Die Verpflegung im angeschlossenen Gastbetrieb ist im Aufenthalt inkludiert.</p>",
+  "beschreibung": "<p>El <strong>Gästehaus Ludwig Kröll</strong> se gestiona como una posada tradicional en el Tirol. El alojamiento está ubicado en un entorno tranquilo y apacible, aunque excelentemente comunicado. Los visitantes encontrarán un trato cercano, cordial y una atmósfera con marcado carácter regional. Las montañas circundantes son el escenario idóneo para actividades como el senderismo y el esquí. Las habitaciones están amuebladas de forma práctica, ofreciendo el confort esencial para una estancia agradable. Entre sus instalaciones figuran una sala de estar común y una cuidada zona ajardinada. El servicio de comidas en la posada contigua está incluido en la estancia.</p>",
   "ausstattung": [],
   "tags": [
     "posada rural",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

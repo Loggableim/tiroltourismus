@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p><strong>Gasthof Kessler</strong> liegt im Ortskern von Trins in Tirol, Österreich. Die Umgebung wird von der <strong>alpinen Natur</strong> geprägt, was eine ruhige Atmosphäre bietet. Die Ausstattung umfasst <strong>gemütliche Zimmer</strong> sowie einen Gastraum mit regionaler Küche. Die Atmosphäre ist <strong>familiär und traditionell</strong>. Zielgruppe sind vor allem <strong>Wanderer</strong> und <strong>Skifahrer</strong>, die die nahen Berge nutzen.</p>",
+  "beschreibung": "<p>Der <strong>Gasthof Kessler</strong> empfängt seine Gäste im malerischen Ortskern von <strong>Trins im Gschnitztal</strong>, einem idyllischen Seitental des Tiroler Wipptals. Umgeben von steil aufragenden Kalkgipfeln und unberührter Natur, strahlt das Haus traditionelle Tiroler Gastlichkeit und familiäre Gemütlichkeit aus. Die rustikalen Gästezimmer bieten komfortable Erholung für Bergsteiger, Wanderer und Ruhesuchende. In der gemütlichen Gaststube werden traditionelle Tiroler Hausmannskost, feine Knödelspezialitäten und saisonale Gerichte aus heimischer Landwirtschaft serviert. Im Winter locken bestens gespurte Langlaufloipen durch das verschneite Tal und der Familienlift in Trins, während im Sommer traumhafte Bergtouren zu Almen und Hütten direkt vor der Haustür starten.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wipptal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditionsreicher Almgasthof in Trins im ursprünglichen Gschnitztal im Wipptal mit Tiroler Wirtshauskultur."
 }

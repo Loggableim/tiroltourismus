@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Kasamandl ist ein traditionsreicher Gasthof mit Hotelbetrieb im Zentrum von Söll. Die Atmosphäre des Hauses ist von alpenländischer Gastlichkeit und einer ruhigen Lage im Ortsteil geprägt. Die <strong>Gästezimmer</strong> sind im tirolerischen Landhausstil eingerichtet. Zu den typischen Angeboten des Hauses zählen die Verpflegung mit Halbpension sowie ein <strong>Wellnessbereich</strong>. Das Gasthausrestaurant serviert überwiegend regionale Speisen. Die Lage ermöglicht einen direkten Zugang zum Wanderwegenetz im Sommer sowie zur SkiWelt Wilder Kaiser im Winter. Gäste nutzen das Kasamandl daher sowohl für Aktivurlaube als auch für erholsame Aufenthalte in der <strong>Region Wilder Kaiser</strong>.</p>",
+  "beschreibung": "<p>Der <strong>Gasthof Kasamandl</strong> begrüßt seine Gäste in der Gemeinde <strong>Kirchbichl</strong> im Bezirk Kufstein. Der traditionsreiche Familienbetrieb zeichnet sich durch seine herzliche Tiroler Gastlichkeit und gemütlich gestaltete Gaststuben aus. Urlauber und Geschäftsreisende schätzen die gepflegten Zimmer, die mit zeitgemäßem Komfort und Holzelementen eingerichtet sind. Im Restaurant serviert die Küche echte Tiroler Hausmannskost, feine Schmankerl und saisonale Spezialitäten aus regionaler Erzeugung. Die Lage im Inntal bietet eine optimale Verkehrsanbindung und dient als hervorragender Ausgangspunkt für Ausflüge zur Festung Kufstein, zum Moorstrandbad Kirchbichl sowie in die Wander- und Skigebiete der Region Hohe Salve.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditioneller Gasthof in Kirchbichl im Tiroler Unterland mit herzhafter Tiroler Küche und gemütlicher Gaststube."
 }

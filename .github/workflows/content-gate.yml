@@ -1,45 +1,92 @@
-name: Content Gate (berichtend)
+name: Content Gate
 
 on:
   pull_request:
     paths:
       - 'src/data/**'
+      - 'scripts/check-content-gate.mjs'
+      - 'scripts/lib/**'
+      - '.github/workflows/content-gate.yml'
 
 permissions:
   contents: read
 
 jobs:
-  content-gate:
+  content-gate-offline:
+    name: Content Gate (offline, blocking)
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    continue-on-error: true
     steps:
-      - name: Checkout (volle Historie für Basis-Vergleich)
+      - name: Checkout (full history for base comparison)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Node einrichten
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: '22'
 
-      - name: Content-Gate ausführen
+      - name: Run content gate (offline)
         id: gate
-        env:
-          BASE_REF: origin/${{ github.base_ref }}
         run: |
           set +e
-          node scripts/check-content-gate.mjs --base "$BASE_REF" > content-gate.md
-          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          node scripts/check-content-gate.mjs --base "origin/${{ github.base_ref }}" --no-network > content-gate-offline.md 2>&1
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
 
-      - name: Ergebnis als Job-Summary
+      - name: Write job summary
         if: always()
         run: |
-          if [ -s content-gate.md ]; then
-            cat content-gate.md >> "$GITHUB_STEP_SUMMARY"
+          if [ -s content-gate-offline.md ]; then
+            cat content-gate-offline.md >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "Content-Gate hat keine Ausgabe erzeugt." >> "$GITHUB_STEP_SUMMARY"
+            echo "Content Gate produced no output." >> "$GITHUB_STEP_SUMMARY"
           fi
           echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Exit-Code des Skripts: ${{ steps.gate.outputs.exit_code }} (berichtend, nicht blockierend)" >> "$GITHUB_STEP_SUMMARY"
+          echo "Exit code: ${{ steps.gate.outputs.exit_code }} (blocking)" >> "$GITHUB_STEP_SUMMARY"
+
+  content-gate-network:
+    name: Content Gate (network, advisory)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    continue-on-error: true
+    steps:
+      - name: Checkout (full history for base comparison)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Run content gate (network)
+        id: gate
+        run: |
+          set +e
+          node scripts/check-content-gate.mjs --base "origin/${{ github.base_ref }}" > content-gate-network.md 2>&1
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: Write job summary
+        if: always()
+        run: |
+          {
+            echo "## Content Gate (network) — advisory, non-blocking"
+            echo ""
+            echo "This job is advisory and does not block merges. External dead links"
+            echo "on third-party sites can make the network check flaky, so it stays"
+            echo "non-blocking until the backlog of dead sources has been cleaned up."
+            echo ""
+            echo "Exit code: ${{ steps.gate.outputs.exit_code }}"
+            echo ""
+            if [ -s content-gate-network.md ]; then
+              cat content-gate-network.md
+            else
+              echo "Content Gate produced no output."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

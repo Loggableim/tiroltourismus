@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das **Hotel Seppl** liegt in einem ruhigen Ortsteil von **Tirol, Österreich** und bietet einen Ausgangspunkt für Erkundungen der Alpenregion. Die Unterkunft ist im **traditionellen Stil** gehalten, wobei Wert auf die Verwendung von heimischen Hölzern und regionalen Materialien gelegt wird. Gäste können zwischen verschiedenen Zimmerkategorien wählen, die mit modernem Komfort ausgestattet sind. Das hoteleigene Restaurant serviert täglich ein Frühstücksbuffet sowie abends ein Mehr-Gänge-Menü mit regionalen Produkten. Der **Wellnessbereich** umfasst eine Sauna, ein Dampfbad und einen Ruheraum. In der Umgebung stehen im Sommer ein weitläufiges Wanderwegenetz und im Winter präparierte Skipisten zur Verfügung. Das Hotel eignet sich durch seine Ausstattung und Lage besonders für Paare und Familien.</p>",
+  "beschreibung": "<p><strong>Hotel Seppl</strong> leží v klidné obci <strong>Mutters</strong> na slunné náhorní plošině jen několik minut od tyrolské metropole Innsbrucku. Dům je postaven v tradičním alpském stylu s využitím místního dřeva a přírodních materiálů. V zimě nabízí bezprostřední blízkost rodinného lyžařského areálu <strong>Muttereralm</strong>, v létě rozsáhlé turistické a cyklistické trasy. K vybavení patří <strong>wellness zóna se saunou, parní lázní a relaxační místností</strong> a restaurace s vyhlášenou regionální polopenzí.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Seppl v Muttersu u Innsbrucku nabízí rodinné tyrolské ubytování, wellness se saunou a parní lázní, regionální kuchyni a blízkost areálu Muttereralm."
 }

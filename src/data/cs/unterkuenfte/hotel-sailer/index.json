@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://sailer-hotels.at",
-  "beschreibung": "<p>Das Hotel Sailer liegt in der Gemeinde Wenns im Pitztal, einem Seitental des Inntals. Das traditionell geführte Haus zeichnet sich durch seine alpine Holzarchitektur und eine familiäre Atmosphäre aus. Der **Wellnessbereich** umfasst unter anderem eine Sauna, ein Dampfbad und ein Hallenbad. Die **Halbpension** besteht aus einem Frühstücksbuffet und einem mehrgängigen Abendmenü mit regionalen Spezialitäten. Im Sommer dient das Hotel als Basis für Wanderungen und Touren in die umliegende Bergwelt. Im Winter profitieren Gäste von der guten Anbindung an die Skigebiete am **Rifflsee** und am **Pitztaler Gletscher**. Insgesamt erwartet Besucher ein auf Tiroler Gastlichkeit ausgerichteter Aufenthalt in ruhiger Lage.</p>",
+  "beschreibung": "<p><strong>Hotel Sailer</strong> leží v obci <strong>Wenns v údolí Pitztal</strong> v tyrolském okrese Imst. Tradičně vedený dům vyniká typickou alpskou dřevěnou architekturou a vřelou rodinnou atmosférou. <strong>Wellness zóna</strong> zahrnuje krytý bazén, saunu a parní lázeň pro dokonalou relaxaci. Polopenze se skládá z bohatého snídaňového bufetu a vícedílného večerního menu s regionálními specialitami. V létě je hotel výchozím bodem pro pěší túry, v zimě těží ze spojení k lyžařským areálům <strong>Hochzeiger, Rifflsee a Pitztaler Gletscher</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Sailer ve Wennsu v údolí Pitztal nabízí dřevěnou alpskou architekturu, krytý bazén, saunu a parní lázeň a snadné spojení k Rifflsee a ledovci."
 }

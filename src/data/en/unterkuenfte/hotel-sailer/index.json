@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://sailer-hotels.at",
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Hotel Sailer</strong> is situated in <strong>Wenns</strong> within Tyrol's scenic <strong>Pitztal Valley</strong>. The traditionally operated hotel stands out for its alpine timber architecture and genuine family hospitality. The <strong>wellness area</strong> features an indoor swimming pool, a sauna, and a steam bath. Half-board includes a generous breakfast buffet and multi-course regional dinners. It serves as an ideal base for summer hiking and winter skiing across <strong>Hochzeiger, Rifflsee, and the Pitztal Glacier</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Sailer in Wenns in the Pitztal valley features alpine timber architecture, an indoor pool, a sauna and steam bath, and easy access to Pitztal ski resorts."
 }

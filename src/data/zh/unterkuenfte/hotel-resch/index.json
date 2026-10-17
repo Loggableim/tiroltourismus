@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Resch liegt zentral in <strong>Seefeld in Tirol</strong>, einem bekannten Ferienort auf rund 1.200 Metern Höhe. Das Haus verbindet traditionelle Tiroler Gastlichkeit mit modernem Komfort und richtet sich an Gäste, die sowohl Erholung als auch Aktivität im <strong>Outdoor-Bereich</strong> suchen. Zum Angebot zählen Wellnesseinrichtungen und eine Gastronomie mit regionaler Küche. <strong>Wandern, Skifahren und Radfahren</strong> sind über das Jahr möglich – die Infrastruktur vor Ort unterstützt entsprechende Aktivitäten.</p>",
+  "beschreibung": "<p><strong>雷施酒店（Hotel Resch）</strong>坐落于享誉世界的滑雪之都<strong>基茨比厄尔（Kitzbühel）</strong>市中心。酒店将纯正的蒂罗尔热情与现代居住体验融为一体。步行片刻即可抵达传奇的<strong>哈嫩卡姆（Hahnenkamm）缆车站</strong>与KitzSki各大雪道，夏季亦可漫步于优美的<strong>高山徒步路线</strong>。设施包括舒适的阿尔卑斯客房、带<strong>桑拿房的水疗区</strong>以及供应经典本土风味的特色餐厅。</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -22,5 +22,10 @@
     "lat": "47.4458219",
     "lng": "12.3885183"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "雷施酒店（Hotel Resch）位于基茨比厄尔中心，提供温馨家庭式住宿、桑拿水疗、地道美食及步行即达著名的哈嫩卡姆缆车站的优势。"
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Restaurant Pizzeria Haid</strong> befindet sich in <strong>St.. Leonhard im Pitztal</strong>, eingebettet ins Ötztal und nahe der Pitztaler Gletscherwelt.. Die Unterkunft bietet eine Kombination aus Hotelzimmern und einem Restaurant mit Pizzeria.. <strong>St.. Leonhard</strong> liegt auf etwa 1.400 Metern Seehöhe und bildet das Zentrum des Pitztals.",
+  "beschreibung": "<p>Das <strong>Hotel Restaurant Pizzeria Haid</strong> befindet sich in <strong>St. Leonhard im Pitztal</strong>, eingebettet in die Bergwelt des Pitztals nahe der Pitztaler Gletscherwelt. Die Unterkunft bietet eine gelungene Kombination aus gemütlichen Hotelzimmern und einem beliebten Restaurant mit Pizzeria. St. Leonhard liegt auf etwa 1.400 Metern Seehöhe und bildet das Herzstück des Pitztals. Im Winter ist das Haus idealer Ausgangspunkt für die Skigebiete <strong>Pitztaler Gletscher und Rifflsee</strong>, im Sommer für Wanderungen im Naturpark Kaunergrat.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ]
 }

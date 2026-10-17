@@ -11,7 +11,7 @@
   "telefon": "+43 5232 2209",
   "email": "info@brangeralm.at",
   "webseite": "https://brangeralm.at/#camping",
-  "beschreibung": "<p>Der Campingplatz Farmcamping Branger Alm liegt in der beschaulichen Gemeinde Unterperfuss im Tiroler Inntal und bietet eine naturnahe Unterkunft direkt am Bauernhof. Die Umgebung ist von weitläufigen Wiesen und der beeindruckenden Bergkulisse der Nordkette geprägt. Der Platz verfügt über eine grundsolide Ausstattung mit gepflegten Sanitäranlagen und Stromanschlüssen für Wohnmobile, Wohnwagen und Zelte. Die Atmosphäre ist bewusst einfach und ruhig gehalten, was den Campingplatz zu einem idealen Rückzugsort für Erholungssuchende macht. Das Zielpublikum sind vor allem naturverbundene Gäste, Familien sowie Wanderer und Radfahrer, die die Tiroler Alpen erkunden möchten. Ein besonderes Plus ist die Möglichkeit, frische Produkte direkt vom Hof zu beziehen. Trotz der abgeschiedenen Lage ist die Landeshauptstadt Innsbruck mit ihrem kulturellen Angebot schnell erreichbar.</p>",
+  "beschreibung": "<p>El camping Farmcamping Branger Alm se encuentra en el apacible municipio de Unterperfuss, en el valle del Inn tiroles, y ofrece un alojamiento cercano a la naturaleza directamente en la granja. El entorno está marcado por amplias praderas y la impresionante silueta montañosa del Nordkette. El recinto cuenta con un equipamiento básico sólido, con instalaciones sanitarias cuidadas y conexiones eléctricas para autocaravanas, caravanas y tiendas de campaña. El ambiente es deliberadamente sencillo y tranquilo, lo que convierte al camping en un lugar de retiro ideal para quienes buscan descanso. El público objetivo son sobre todo huéspedes amantes de la naturaleza, familias, así como senderistas y ciclistas que desean explorar los Alpes tiroleses. Un plus especial es la posibilidad de adquirir productos frescos directamente de la granja. A pesar de su ubicación apartada, la capital provincial, Innsbruck, con su oferta cultural, es fácilmente accesible.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.2601134",
     "lng": "11.2551538"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://brangeralm.at/#camping",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

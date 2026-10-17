@@ -11,7 +11,7 @@
   "telefon": "+43 5232 2209",
   "email": "info@brangeralm.at",
   "webseite": "https://brangeralm.at/#camping",
-  "beschreibung": "<p>Der Campingplatz Farmcamping Branger Alm liegt in der beschaulichen Gemeinde Unterperfuss im Tiroler Inntal und bietet eine naturnahe Unterkunft direkt am Bauernhof. Die Umgebung ist von weitläufigen Wiesen und der beeindruckenden Bergkulisse der Nordkette geprägt. Der Platz verfügt über eine grundsolide Ausstattung mit gepflegten Sanitäranlagen und Stromanschlüssen für Wohnmobile, Wohnwagen und Zelte. Die Atmosphäre ist bewusst einfach und ruhig gehalten, was den Campingplatz zu einem idealen Rückzugsort für Erholungssuchende macht. Das Zielpublikum sind vor allem naturverbundene Gäste, Familien sowie Wanderer und Radfahrer, die die Tiroler Alpen erkunden möchten. Ein besonderes Plus ist die Möglichkeit, frische Produkte direkt vom Hof zu beziehen. Trotz der abgeschiedenen Lage ist die Landeshauptstadt Innsbruck mit ihrem kulturellen Angebot schnell erreichbar.</p>",
+  "beschreibung": "<p>Farmcamping Branger Alm 露营地位于蒂罗尔因河谷中宁静的 Unterperfuss 市镇，直接在农场提供贴近自然的住宿。周边环境以广阔的草地和壮观的 Nordkette 山景为特色。营地设有扎实的基础设施，包括整洁的卫生设施以及供房车、旅行拖车和帐篷使用的电力接口。这里的氛围刻意保持简朴与安静，使营地成为寻求休憩之人的理想去处。目标客群主要是热爱自然的客人、家庭，以及希望探索蒂罗尔阿尔卑斯山的徒步者和骑行者。一大特色是可以直接从农场购买新鲜产品。尽管位置幽静，但拥有丰富文化资源的省会因斯布鲁克仍可快速到达。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.2601134",
     "lng": "11.2551538"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://brangeralm.at/#camping",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

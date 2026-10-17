@@ -11,7 +11,7 @@
   "telefon": "+43 664 2428500",
   "email": "info@camping-judenstein.at",
   "webseite": "https://www.camping-judenstein.at",
-  "beschreibung": "<p>The Judenstein campsite is located in the municipality of Rinn in Tirol and presents itself as a quiet family campsite on a sunny hillside in the Inntal. Nestled in the Tiroler mountains, the surroundings offer ideal conditions for extended hikes and mountain bike tours. The facilities include comfortable pitches, modern sanitary facilities, and a natural swimming pond for refreshment. The well-kept and quiet atmosphere invites especially families and nature lovers to relax. Thanks to its convenient location not far from Innsbruck, the site is also an ideal starting point for excursions to the provincial capital. Here, guests combine relaxed nights in nature with cultural highlights of the region.</p>",
+  "beschreibung": "<p>The campsite Judenstein is located in the municipality of Rinn in Tyrol and presents itself as a quiet family campsite on a sunny hillside in the Inn Valley. Embedded in the Tyrolean mountains, the surroundings offer ideal conditions for extensive hikes and mountain bike tours. The facilities include comfortable pitches, modern sanitary installations and a natural bathing pond for refreshment. The well-kept and quiet atmosphere invites above all families and nature lovers to relax. Thanks to its convenient location not far from Innsbruck, the site is also an optimal starting point for excursions to the provincial capital. Guests thus combine relaxed nights in nature with the cultural highlights of the region.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,10 @@
     "lat": "47.259626",
     "lng": "11.5058357"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.camping-judenstein.at",
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

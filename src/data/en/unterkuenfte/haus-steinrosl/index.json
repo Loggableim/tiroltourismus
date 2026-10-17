@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Gasthof Haus Steinrösl</strong> is located in a rural area of <strong>Tirol</strong>. The <strong>guest rooms</strong> are simply and functionally furnished. In the <strong>dining room</strong>, regional dishes are served. A <strong>guest garden</strong> is available during the summer months. The surroundings are characterized by <strong>mountains</strong> and <strong>forests</strong>. Guests use the house as a <strong>starting point for hikes</strong> or <strong>ski trips</strong>. The establishment places value on unobtrusive, traditional hospitality.</p>",
+  "beschreibung": "<p>The <strong>Haus Steinrösl</strong> welcomes travellers to a sunny and quiet setting in <strong>Sölden</strong> within the Tyrolean Ötztal. Decorated in an authentic alpine country style utilizing local timber, the comfortable guest rooms offer en-suite bathrooms with shower/WC, satellite TV, and sunny balconies showcasing sweeping views of the soaring Ötztal summits. After a day exploring the mountains, the property's scenic sun terrace invites guests to relax and soak up the alpine sunshine. A rich morning breakfast buffet featuring regional produce prepares everyone for active days. The complimentary ski bus stops right nearby, whisking winter guests straight to the Giggijoch and Gaislachkogl gondolas into Sölden's glacier realm. In summer, diverse hiking and cycling routes begin right outside.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -23,5 +23,10 @@
     "lat": "46.9600686",
     "lng": "11.0044525"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional alpine guesthouse in Sölden in the Ötztal with cosy rooms, sun terrace, and close proximity to the glacier lifts."
 }

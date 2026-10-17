@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Haus Steinrösl</strong> liegt in einer ländlichen Gegend <strong>Tirols</strong>. Die <strong>Gästezimmer</strong> sind schlicht und zweckmäßig eingerichtet. In der <strong>Gaststube</strong> werden regionale Speisen angeboten. Ein <strong>Gastgarten</strong> steht in den Sommermonaten zur Verfügung. Die Umgebung ist durch <strong>Berge</strong> und <strong>Wälder</strong> geprägt. Gäste nutzen das Haus als <strong>Ausgangspunkt für Wanderungen</strong> oder <strong>Skiausflüge</strong>. Der Betrieb legt Wert auf eine unaufdringliche, traditionelle Gastlichkeit.</p>",
+  "beschreibung": "<p>L'auberge <strong>Haus Steinrösl</strong> reçoit ses hôtes dans un cadre paisible et très ensoleillé à <strong>Sölden</strong> dans l'Ötztal. Décorées dans un style campagnard soigné avec du bois régional, les chambres disposent d'une salle de bains contemporaine avec douche/WC, de la télévision par satellite et d'un balcon ouvrant sur le cirque spectaculaire des Alpes de l'Ötztal. Après les excursions en plein air, la terrasse ensoleillée est l'endroit parfait pour se détendre. Un petit-déjeuner montagnard copieux est proposé chaque matin. La navette gratuite s'arrête tout près pour rejoindre rapidement les gares de départ du Giggijoch et du Gaislachkogl. L'été venu, de multiples itinéraires de randonnée et circuits cyclistes débutent au seuil de l'établissement.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -23,5 +23,10 @@
     "lat": "46.9600686",
     "lng": "11.0044525"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Auberge alpine traditionnelle à Sölden dans l'Ötztal, avec chambres chaleureuses, terrasse ensoleillée et proche des glaciers."
 }

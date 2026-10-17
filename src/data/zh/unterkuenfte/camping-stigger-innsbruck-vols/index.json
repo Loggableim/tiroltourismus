@@ -11,7 +11,7 @@
   "telefon": "+43 512 30 35 33",
   "email": "campingvoels@aon.at",
   "webseite": "http://www.camping-stigger.at/",
-  "beschreibung": "<p><strong>Camping Stigger Innsbruck - Völs</strong> liegt am Stadtrand von Innsbruck, nahe dem westlichen Stadtteil Völs.. Die Anlage bietet Stellplätze für Wohnmobile, Wohnwagen und Zelte sowie einen direkten Zugang zum Innradweg.. In wenigen Minuten erreicht man das Stadtzentrum von Innsbruck.. Die Umgebung ist geprägt von Wiesen und einem Bachlauf, der das Gelände begrenzt.. Gäste können einen kleinen Shop, sanitäre Anlagen und eine Grillstelle nutzen.",
+  "beschreibung": "<p>城市郊野营地 <strong>Camping Stigger Innsbruck - Völs</strong> 坐落于因斯布鲁克西郊邻近勒尔斯（Völs）市镇。营地为房车、露营拖车及帐篷提供平整泊位，直连著名的因河骑行道（Innradweg）。数分钟车程即可抵达因斯布鲁克市中心。营区被茵茵绿草和清澈溪流环绕，配备便民商店、现代卫浴及专属烧烤活动区。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.2534852",
     "lng": "11.3267845"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.innsbruck.gv.at",
+    "https://www.tirol.at"
+  ]
 }

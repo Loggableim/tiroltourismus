@@ -11,7 +11,7 @@
   "telefon": "+43 5265 51 54",
   "email": "rainer.ruepp@gmx.at",
   "webseite": "https://www.campingrossbach.at/",
-  "beschreibung": "<p>Der <strong>Camping Rossbach</strong> liegt in der Gemeinde Nassereith im Bezirk Imst. Der Stellplatz ist an der Fernpassstraße gelegen und somit verkehrstechnisch günstig erreichbar. Der Platz bietet sowohl Touristen als auch Durchreisenden Stellmöglichkeiten für unterschiedliche Fahrzeugtypen. Neben Wohnmobilstellplätzen sind auch Mietunterkünfte wie Mobilheime vorhanden. Die Umgebung von Nassereith eignet sich für Ausflüge in die Lechtaler Alpen und das Mieminger Gebirge.</p>",
+  "beschreibung": "<p>露营地 <strong>Camping Rossbach</strong> 坐落于伊姆斯特区的纳塞赖斯（Nassereith）市镇。营地紧邻费恩山口（Fernpass）公路，交通极为便捷，为过境旅客与度假宾客提供完备的各类露营车位与移动房屋租赁设施。纳塞赖斯周边自然环境壮美，是前往莱希塔尔阿尔卑斯山脉（Lechtal Alps）和米明山脉探险远足的理想门户。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.3104919",
     "lng": "10.8549189"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ]
 }

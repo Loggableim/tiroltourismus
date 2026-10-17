@@ -11,7 +11,7 @@
   "telefon": "+43 5226 2537",
   "email": "info@campingstubai.at",
   "webseite": "https://www.campingstubai.at/",
-  "beschreibung": "<p>Der Campingplatz <strong>Camping Stubai</strong> befindet sich in Neustift im Stubaital. Die Anlage verfügt über parzellierte Stellplätze für verschiedene Fahrzeugtypen. Die hygienischen Einrichtungen sind auf dem neuesten Stand. Ein kleiner Supermarkt und ein Restaurant sind auf dem Gelände vorhanden. Das Stubaital ist ein beliebtes Ziel für Bergsportler. Im Sommer laden unzählige Wanderwege zu Touren ein. Im Winter lockt das nahegelegene Skigebiet Stubaier Gletscher mit sicheren Schneeverhältnissen.</p>",
+  "beschreibung": "<p>Le <strong>Camping Stubai</strong> est établi à Neustift dans la vallée réputée du Stubaital. Le domaine propose des emplacements délimités pour tous véhicules, assortis d'infrastructures sanitaires très modernes. Une supérette et un restaurant accueillent les campeurs sur place. La vallée est une destination d'élection pour les sports de montagne, entre randonnées d'été et ski d'altitude garanti sur le glacier de Stubai.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.109707",
     "lng": "11.308573"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ]
 }

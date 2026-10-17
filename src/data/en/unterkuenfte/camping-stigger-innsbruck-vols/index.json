@@ -11,7 +11,7 @@
   "telefon": "+43 512 30 35 33",
   "email": "campingvoels@aon.at",
   "webseite": "http://www.camping-stigger.at/",
-  "beschreibung": "<p><strong>Camping Stigger Innsbruck - Völs</strong> is located on the outskirts of Innsbruck, near the western district of Völs. The site offers pitches for motorhomes, caravans and tents as well as direct access to the Innradweg. In just a few minutes you can reach the city center of Innsbruck. The surroundings are characterized by meadows and a stream that borders the site. Guests can use a small shop, sanitary facilities and a barbecue area.</p>",
+  "beschreibung": "<p>The campsite <strong>Camping Stigger Innsbruck - Völs</strong> is located on the western outskirts of Innsbruck, close to Völs. The grounds provide pitches for motorhomes, caravans, and tents, along with direct access to the scenic Inn Cycle Path. Central Innsbruck is reachable within minutes. Bounded by meadows and a clear stream, the site features a convenience shop, modern sanitary facilities, and a dedicated barbecue area.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.2534852",
     "lng": "11.3267845"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.innsbruck.gv.at",
+    "https://www.tirol.at"
+  ]
 }

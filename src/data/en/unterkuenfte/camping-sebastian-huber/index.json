@@ -11,7 +11,7 @@
   "telefon": "+49 8053 3726",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The campsite <strong>Camping Sebastian Huber</strong> is located in the quiet village of Söchtenau in Tirol. The site offers close-to-nature surroundings and is suitable for guests seeking relaxation in the Alpen. On the grounds, parcelled pitches are available for motorhomes and tents. <strong>Sanitary facilities</strong> and <strong>electricity connections</strong> are available. In the surrounding area, hiking trails and cycling routes invite you to get active. The site is a suitable starting point for excursions to the nearby Inntal.</p>",
+  "beschreibung": "<p>The campsite <strong>Camping Sebastian Huber</strong> is located in the peaceful village of Söchtenau. It offers a close-to-nature atmosphere ideal for holidaymakers seeking rest in the alpine foothills. The grounds provide parcelled pitches for motorhomes and tents, accompanied by sanitary facilities and electrical hookups. In the surrounding countryside, hiking paths and cycle trails invite exploration towards the nearby Inntal valley.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.8958893",
     "lng": "12.2430974"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

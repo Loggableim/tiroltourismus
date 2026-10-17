@@ -11,7 +11,7 @@
   "telefon": "+43 5337 63541",
   "email": null,
   "webseite": "https://www.camping-seehof.com/",
-  "beschreibung": "<p>Der Campingplatz <strong>Seehof</strong> befindet sich ebenfalls in Kramsach in unmittelbarer Nähe zum Reintaler See. Die Anlage ist von Grünflächen umgeben und bietet <strong>Stellplätze mit Seeblick</strong>. Die Ausstattung umfasst moderne Sanitäranlagen und eine Ver- und Entsorgungsstation für Wohnmobile. Ein <strong>hauseigenes Restaurant</strong> versorgt die Gäste mit regionalen Speisen. Der See lädt zum Schwimmen und zu Bootsfahrten ein. Der Standort eignet sich für einen ruhigen Urlaub in der Natur Tirols.</p>",
+  "beschreibung": "<p>湖畔度假营地 <strong>Seehof</strong> 同样坐落于克拉姆萨赫，紧邻秀美的赖因塔尔湖。营区被葱郁草木环绕，提供开阔的<strong>临湖全景营位</strong>。现代化卫生设施健全，并配备房车综合补给排污站。<strong>自营风味餐厅</strong>为宾客奉上地道的蒂罗尔特色美食。湖中游泳与泛舟悠然惬意，是体验静谧阿尔卑斯自然假期的上佳之选。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.4614347",
     "lng": "11.9074814"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ]
 }

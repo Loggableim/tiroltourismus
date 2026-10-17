@@ -11,7 +11,7 @@
   "telefon": "+43 5337 63544",
   "email": "info@camping-seeblick.at",
   "webseite": "https://www.camping-seeblick.at/",
-  "beschreibung": "<p>The campsite <strong>Seeblick Toni</strong> is located in Kramsach directly on the shore of the Reintaler See. The location allows direct access to the water and a wide view of the surrounding mountain landscape. The site has <strong>level pitches</strong> for caravans and motorhomes as well as connections for fresh water and waste disposal. The proximity to the lake offers opportunities for swimming and for <strong>water sports</strong>. In the municipality of Kramsach there are shopping facilities and restaurants. The campsite is accommodation for guests who prefer a stay by the water.</p>",
+  "beschreibung": "<p>The campsite <strong>Seeblick Toni</strong> is located in Kramsach directly on the shore of Lake Reintaler See. The location allows direct access to the water and panoramic views of the surrounding mountains. The site has <strong>level pitches</strong> for caravans and motorhomes as well as full utility hookups. Proximity to the lake provides wonderful opportunities for swimming and <strong>watersports</strong>, while the village of Kramsach offers shops and restaurants nearby.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.4606181",
     "lng": "11.9049568"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ]
 }

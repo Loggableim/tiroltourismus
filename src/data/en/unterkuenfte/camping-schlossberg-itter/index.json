@@ -11,7 +11,7 @@
   "telefon": "+43 5335 2181",
   "email": "info@camping-itter.at",
   "webseite": "https://www.camping-wilder-kaiser.at",
-  "beschreibung": "<p>The <strong>Camping Schlossberg Itter</strong> is located in the village of Itter in Brixental. It lies at the foot of the Schlossberg, which gave it its name. The site is equipped with pitches for motorhomes and caravans. In addition, permanently installed mobile homes are available for rent. The facility has a swimming pool and a children's playground. From Itter, the ski areas of SkiWelt Wilder Kaiser-Brixental and those of Hopfgarten are easily accessible.</p>",
+  "beschreibung": "<p>The campsite <strong>Camping Schlossberg Itter</strong> is situated in the village of Itter in the Brixental valley, right at the foot of the historic Schlossberg hill. It features well-equipped pitches for motorhomes and caravans alongside rental mobile homes. Facilities include an outdoor swimming pool and a children's playground. From Itter, the vast ski domains of SkiWelt Wilder Kaiser-Brixental and Hopfgarten are easily accessible.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.4672922",
     "lng": "12.1404276"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.tirol.at"
+  ]
 }

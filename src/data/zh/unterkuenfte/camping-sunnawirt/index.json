@@ -11,7 +11,7 @@
   "telefon": "+43 676 4535061",
   "email": "sunnawirt@aon.at",
   "webseite": "https://www.sunnawirt.at/camping/",
-  "beschreibung": "<p>Das <strong>Camping Sunnawirt</strong> liegt in der Gemeinde Heiterwang im Außerfern. Der Platz ist von Wiesen und Wäldern umgeben. Er bietet Stellplätze für Urlauber, die Ruhe suchen. Die sanitären Anlagen sind sauber und gepflegt. In der Nähe befindet sich der Plansee, der zum Baden und Segeln einlädt. Wanderungen in den umliegenden Bergen sind ebenso möglich wie Radtouren. Im Winter sind die Skigebiete Zugspitze und Berwang schnell erreichbar.</p>",
+  "beschreibung": "<p>森林静谧营地 <strong>Camping Sunnawirt</strong> 坐落于奥伊瑟芬（Außerfern）地区的海特旺（Heiterwang）市镇。营区四面环抱于高山草甸与茂密森林之间，为崇尚安宁惬意假期的旅人提供了避世之所。卫浴设施维护精细整洁。临近的普兰湖（Plansee）是游泳与帆船胜地，冬季更可迅速前往楚格峰（Zugspitze）及贝尔旺（Berwang）滑雪胜地。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.4499783",
     "lng": "10.7480757"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ]
 }

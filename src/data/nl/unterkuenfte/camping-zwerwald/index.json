@@ -11,7 +11,7 @@
   "telefon": "+43 5517 5727",
   "email": "specht@camping-zwerwald.de",
   "webseite": "http://www.camping-zwerwald.de",
-  "beschreibung": "<p>Camping Cwerwald liegt in den Tiroler Alpen auf etwa 1.000 Metern Höhe, umgeben von Wald und Wiesen. Die Anlage bietet Stellplätze für Wohnmobile, Zelte und saisonale Gäste. Zur Ausstattung gehören sanitäre Einrichtungen, ein kleines Restaurant und ein Spielplatz. In der Nähe führen Wanderwege durch die Berglandschaft. Der Campingplatz ist von Mai bis September geöffnet.</p>",
+  "beschreibung": "<p>Camping <strong>Camping Zwerwald</strong> bevindt zich in de Tiroolse Alpen op circa 1.000 meter hoogte, te midden van bossen en alpenweiden. Het terrein biedt staanplaatsen voor campers, tenten en seizoensgasten. De voorzieningen omvatten degelijk sanitair, een gemoedelijk restaurant en een speeltuin. Rondom voeren wandelroutes door de bergwereld. De camping is geopend van mei tot september.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.349507",
     "lng": "10.1790389"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ]
 }

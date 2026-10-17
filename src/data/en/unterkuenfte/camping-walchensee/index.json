@@ -11,7 +11,7 @@
   "telefon": "+49 8858 929168",
   "email": "info@camping-walchensee.de",
   "webseite": "https://www.camping-walchensee.de/",
-  "beschreibung": null,
+  "beschreibung": "<p>The campsite <strong>Camping Walchensee</strong> is situated directly on scenic Lake <strong>Walchensee</strong>. Celebrated for its <strong>crystal-clear alpine water</strong>, the lake provides superb <strong>swimming opportunities</strong>. The grounds offer <strong>pitches</strong> with panoramic lake and mountain vistas, along with an on-site <strong>bathing beach</strong> and <strong>boat rental</strong>. Watersports and fishing are popular summer pastimes, complemented by nearby hiking and cycle paths.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.5833442",
     "lng": "11.310762"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://www.tirol.gv.at"
+  ]
 }

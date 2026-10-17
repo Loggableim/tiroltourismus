@@ -11,7 +11,7 @@
   "telefon": "+43 5353 5345",
   "email": "camping-steinplatte@aon.at",
   "webseite": "https://www.camping-steinplatte.at/",
-  "beschreibung": "<p>The <strong>Camping Steinplatte</strong> is located in the municipality of Waidring in the district of Kitzbühel in Tirol. The campsite offers pitches for motorhomes, caravans, and tents. The sanitary facilities are modern and are cleaned regularly. In the surrounding area there are numerous hiking and cycling trails. In winter, the Steinplatte ski area is in the immediate vicinity. Cross-country skiers also get their money's worth on the groomed trails. The site is ideal for a relaxing holiday in nature.</p>",
+  "beschreibung": "<p>The campsite <strong>Camping Steinplatte</strong> is situated in the municipality of Waidring in Tyrol's Kitzbühel district. It features pitches for motorhomes, caravans, and tents, complete with regularly cleaned modern sanitary facilities. The surrounding area boasts numerous hiking and cycling trails. In winter, the renowned Steinplatte ski area and prepared cross-country tracks are on the doorstep, making it ideal for a relaxing holiday in nature.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.5844756",
     "lng": "12.5842362"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbuehel.com",
+    "https://www.tirol.at"
+  ]
 }

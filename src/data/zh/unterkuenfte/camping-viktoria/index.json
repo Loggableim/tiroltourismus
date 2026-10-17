@@ -11,7 +11,7 @@
   "telefon": "+43 664 32 63 528",
   "email": null,
   "webseite": "https://www.campingviktoria.at/",
-  "beschreibung": "<p><strong>Camping Viktoria</strong> liegt in <strong>Wald im Pinzgau</strong> im Bundesland Tirol. Der Platz befindet sich in den <strong>Kitzbüheler Alpen</strong> und ist ein Ausgangspunkt für Aktivitäten in der Natur. Die Anlage bietet <strong>Stellplätze</strong> für Wohnmobile und Zelte an. Moderne <strong>Sanitäranlagen</strong> und ein <strong>Lebensmittelladen</strong> sind vorhanden. Wanderer und Mountainbiker nutzen die umliegenden <strong>Wege</strong>. Ein <strong>Bauerspielplatz</strong> ist für Kinder vorhanden.</p>",
+  "beschreibung": "<p>高山度假露营地 <strong>Camping Viktoria</strong> 坐落于基茨比厄尔阿尔卑斯山区的<strong>平茨高地区瓦尔德</strong>（Wald im Pinzgau），是开展户外探险的理想出发点。营区配备宽裕的<strong>房车与帐篷营位</strong>、现代化<strong>卫浴系统</strong>以及便民<strong>副食商店</strong>。周边环绕着适宜远足与山地骑行的户外步道，并特别为儿童建有独具风情的农庄主题乐园。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.2421234",
     "lng": "12.2111127"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ]
 }

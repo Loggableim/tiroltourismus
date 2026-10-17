@@ -11,7 +11,7 @@
   "telefon": "+49 8361 770",
   "email": null,
   "webseite": "https://camping-wertacher-hof.de/",
-  "beschreibung": "=== beschreibung ===\n<p><strong>Camping Wertacher Hof</strong> is located in <strong>Oy-Mittelberg</strong> in the Tiroler Allgäu. The site is surrounded by <strong>Wald</strong> and <strong>Bergen</strong>. The facility offers <strong>Stellplätze</strong> and <strong>Mietunterkünfte</strong>. A <strong>Restaurant</strong> with regional dishes is available. The surrounding area features <strong>Wanderwege</strong> and <strong>Langlauf-Loipen</strong>. The campsite is suitable for <strong>Naturliebhaber</strong> and <strong>Familien</strong>.</p>",
+  "beschreibung": "<p>The campsite <strong>Camping Wertacher Hof</strong> is situated in <strong>Oy-Mittelberg</strong> in the alpine foothills. Encircled by tranquil <strong>forests and mountains</strong>, the facility provides <strong>pitches and rental chalets</strong> alongside an authentic <strong>restaurant</strong> serving regional specialties. The area features scenic <strong>hiking trails</strong> in summer and prepared <strong>cross-country ski tracks</strong> in winter, making it ideal for families and nature enthusiasts.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.6283962",
     "lng": "10.45827"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ]
 }

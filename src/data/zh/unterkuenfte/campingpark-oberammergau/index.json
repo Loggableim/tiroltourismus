@@ -11,7 +11,7 @@
   "telefon": "+49 8822 94105",
   "email": "info@camping-oberammergau.de",
   "webseite": "https://www.campingpark-oberammergau.de/",
-  "beschreibung": "<p>Der Campingpark Oberammergau befindet sich in der gleichnamigen Gemeinde Oberammergau, welche im österreichischen Bundesland Tirol liegt. Die Umgebung ist geprägt von einer malerischen Alpenlandschaft, die ideale Bedingungen für ausgedehnte Spaziergänge und anspruchsvolle Bergtouren bietet. Der Platz selbst besticht durch eine moderne Infrastruktur mit gepflegten Sanitäranlagen und klar abgegrenzten Stellplätzen für Reisemobile und Zelte. Zur Ausstattung zählen zudem ein kleiner Supermarkt und eine Gaststätte, die regionale Schmankerln serviert. Die ruhige und familiäre Atmosphäre macht den Campingpark zu einem beliebten Ziel für Naturliebhaber und Erholungssuchende gleichermaßen. Angesprochen werden hier vor allem Camper, die einen gepflegten Stellplatz mit direktem Zugang zur Bergwelt schätzen.</p>",
+  "beschreibung": "<p><strong>上阿默高露营公园（Campingpark Oberammergau）</strong>依偎在毗邻蒂罗尔边境的壮丽阿尔卑斯山峦之中。如画的自然景观为漫步休闲和高难度登山探险提供了极佳的环境。露营地本身设施现代完善，拥有整洁卫生的淋浴卫浴区，以及划分明晰的房车与帐篷营位。此外，营地内还设有小型超市和供应地道乡村风味的特色餐馆。宁静温馨的家庭氛围让这里成为大自然爱好者与养生度假者的心仪目的地，为钟情山野风光的露营者提供了无可挑剔的落脚点。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.590417",
     "lng": "11.0688176"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

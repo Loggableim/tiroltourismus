@@ -11,7 +11,7 @@
   "telefon": "+49 8686 8037",
   "email": "stadlerflo@web.de",
   "webseite": "https://www.camping-stadler.de/",
-  "beschreibung": "<p>Camping-Stadler liegt am <strong>Ufer des Waginger Sees</strong> im oberbayerischen Voralpenland, etwa 20 Kilometer westlich von Traunstein. Der Campingplatz bietet <strong>direkten Seezugang</strong> und ist von Wiesen und Wäldern umgeben. Gäste finden hier Stellplätze für Wohnmobile, Zelte und feste Mietunterkünfte vor. Zum Angebot gehören sanitäre Einrichtungen, ein kleiner Shop und ein <strong>Gastrobetrieb am Seeufer</strong>. Der Ort Petting selbst verfügt über einen Strandbadbereich und ist ein Ausgangspunkt für <strong>Wanderungen im Rupertiwinkel</strong>.</p>",
+  "beschreibung": "<p>Camping-Stadler ligt aan de <strong>oevers van de Waginger See</strong> in het Opper-Beierse vooralpenland, ongeveer 20 kilometer ten westen van Traunstein. De camping biedt <strong>directe toegang tot het meer</strong> en wordt omringd door weiden en bossen. Gasten vinden hier staanplaatsen voor campers, tenten en vaste huuraccommodaties. Tot de voorzieningen behoren sanitair, een kleine winkel en een <strong>horecagelegenheid aan de oever</strong>. Het dorp Petting beschikt zelf over een strandbad en vormt een ideaal startpunt voor <strong>wandelingen in het Rupertiwinkel</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.9281697",
     "lng": "12.8027991"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

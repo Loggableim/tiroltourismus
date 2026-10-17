@@ -11,7 +11,7 @@
   "telefon": "+49 8846 211",
   "email": null,
   "webseite": "https://www.aichalehof.de/",
-  "beschreibung": "<p>Der Campingplatz Aichalehof liegt am westlichen Ufer des Staffelsees und bietet direkten Zugang zum Wasser. Uffing ist ein kleiner Ort im Voralpenland, etwa 20 Kilometer östlich von Garmisch-Partenkirchen. Die Anlage verfügt über Stellplätze, Sanitärgebäude und einen Zugangsbereich zum See. In der Nähe befinden sich Wanderwege und die Bahnanbindung ermöglicht Tagesausflüge ins Umland. Die Umgebung ist ländlich geprägt mit Wiesen und Wäldern.</p>",
+  "beschreibung": "<p>Le <strong>Campingplatz Aichalehof</strong> est situé sur la rive ouest du lac Staffelsee, offrant un accès direct privilégié à l'eau. Uffing est un charmant village des Préalpes bavaroises, situé à une vingtaine de kilomètres au nord-est de Garmisch-Partenkirchen. Le domaine dispose d'emplacements soignés, de pavillons sanitaires confortables et d'un accès direct au lac. Des chemins de randonnée bucoliques passent à proximité, tandis que la gare ferroviaire permet de belles excursions d'une journée. Le cadre champêtre, entre prairies fleuries et forêts, invite à une véritable déconnexion.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.6978047",
     "lng": "11.1602582"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

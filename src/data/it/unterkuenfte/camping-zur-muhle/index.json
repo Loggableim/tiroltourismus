@@ -11,7 +11,7 @@
   "telefon": "+43 6547 8254",
   "email": null,
   "webseite": "http://www.campkaprun.at/",
-  "beschreibung": "<p>Der <strong>Campingplatz zur Mühle</strong> liegt in einer ländlichen Umgebung in Tirol, benannt nach einer historischen Mühle auf dem Gelände. Der Platz bietet Stellplätze für Wohnmobile und Zelte in naturnaher Atmosphäre. Die Ausstattung umfasst sanitäre Einrichtungen und eine Ver- und Entsorgungsstation. Von hier aus können Gäste Wanderungen in die umliegenden Berge unternehmen. Der Platz ist für Naturliebhaber und Erholungssuchende geeignet. Ein kleiner Spielplatz ist für Familien vorhanden.</p>",
+  "beschreibung": "<p>Il <strong>Camping zur Mühle</strong> sorge in un incantevole contesto rurale nel Tirolo, prendendo il nome da uno storico mulino situato all'interno della tenuta. Il campeggio mette a disposizione piazzole per camper e tende in un'atmosfera autentica a stretto contatto con la natura. I servizi includono impianti igienici ben curati e una stazione di carico e scarico. Dalla struttura è possibile intraprendere splendide camminate verso le montagne circostanti. È una meta ideale per gli amanti della natura e per chi cerca relax, con un piccolo parco giochi dedicato alle famiglie.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.2649407",
     "lng": "12.7469447"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

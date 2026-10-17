@@ -11,7 +11,7 @@
   "telefon": "+49 8858 929168",
   "email": "info@camping-walchensee.de",
   "webseite": "https://www.camping-walchensee.de/",
-  "beschreibung": "<p><strong>Camping Walchensee</strong> befindet sich direkt am <strong>Walchensee</strong> in Tirol. Der See ist für sein <strong>klares Wasser</strong> bekannt und bietet <strong>Bademöglichkeiten</strong>. Der Campingplatz verfügt über <strong>Stellplätze</strong> mit See- und Bergblick. Ein <strong>Strandbad</strong> und ein <strong>Bootsverleih</strong> sind auf dem Gelände. Im Sommer sind <strong>Wassersport</strong> und <strong>Angeln</strong> beliebt. Die Region lädt auch zu <strong>Wanderungen</strong> und <strong>Radfahrten</strong> ein.</p>",
+  "beschreibung": "<p>Le <strong>Camping Walchensee</strong> se trouve directement au bord du lac <strong>Walchensee</strong>, dans le Tyrol. Réputé pour ses <strong>eaux cristallines</strong>, le lac offre d'excellentes <strong>possibilités de baignade</strong>. Le camping dispose d'<strong>emplacements</strong> offrant une vue imprenable sur le lac et les montagnes. Une <strong>plage aménagée</strong> et un service de <strong>location de bateaux</strong> sont présents sur place. En été, les <strong>sports nautiques</strong> et la <strong>pêche</strong> sont très prisés, et la région invite à de splendides <strong>randonnées</strong> et <strong>balades à vélo</strong>.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.5833442",
     "lng": "11.310762"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

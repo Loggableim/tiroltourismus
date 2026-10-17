@@ -11,7 +11,7 @@
   "telefon": "+43 5412 66293",
   "email": "info@campingfink.tirol",
   "webseite": "https://campingfink.tirol/",
-  "beschreibung": "<p>Der Campingpark FiNK liegt am Rand von Imst im Oberinntal, unweit des Flusses Lech.. Die Anlage bietet einen direkten Zugang zu Wander- und Radwegen.. Die Umgebung ist von alpine Natur geprägt und bietet Ausgangspunkte für Ausflüge ins Kaunertal und ins Ötztal.. Das Gelände ist terrassiert angelegt, mit Stellplätzen für Zelte, Wohnmobile und Mietunterkünften.. Gäste finden sanitäre Einrichtungen, einen kleinen Shop und einen Gastrobereich.",
+  "beschreibung": "<p><strong>芬克露营公园（Campingpark FiNK）</strong>坐落于上因河谷伊姆斯特（Imst）的城市边缘，紧邻莱希河（Lech）。营区可直通周围多条风景优美的徒步和骑行路线。雄伟的阿尔卑斯自然风光使其成为前往考讷谷（Kaunertal）和厄茨谷（Ötztal）探索游览的理想大本营。园区依山势呈梯田状错落规划，配有帐篷和房车营位以及高品质租赁客房。此外，宾客还可以享用完备的卫浴设施、便捷的小超市以及餐饮美食区。</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.2282829",
     "lng": "10.7424947"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

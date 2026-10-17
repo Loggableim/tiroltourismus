@@ -11,7 +11,7 @@
   "telefon": "+43 5242 641 95",
   "email": null,
   "webseite": "https://www.plankenhof.at/",
-  "beschreibung": "<p>Der <strong>Camping Wohnmobilstellplatz Plankenhof</strong> befindet sich in Pill, einer Gemeinde im Tiroler Unterland. Der Platz wird von einem landwirtschaftlichen Betrieb geführt und bietet einfache Stellplätze für Wohnmobile und Zelte. Die Lage ist ruhig am Hang mit Blick auf das Inntal. Moderne Sanitäranlagen und Stromanschlüsse sind vorhanden. Wanderwege starten direkt ab dem Platz oder in der näheren Umgebung. Der Plankenhof eignet sich als Etappenziel für Reisende oder für ruhige Tage in der Natur.</p>",
+  "beschreibung": "<p>El <strong>Camping Wohnmobilstellplatz Plankenhof</strong> está situado en Pill, un municipio del Tiroler Unterland. Gestionado por una explotación agrícola tradicional, ofrece parcelas sencillas y acogedoras para autocaravanas y tiendas. Su tranquila ubicación en una ladera regala hermosas vistas al valle del Inn. Dispone de modernas instalaciones sanitarias y tomas de corriente eléctrica. Diversas rutas de senderismo parten directamente desde el camping o en las inmediaciones. El Plankenhof resulta idóneo tanto como parada de descanso en ruta como para disfrutar de unos días apacibles en plena naturaleza.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,9 @@
     "lat": "47.3219979",
     "lng": "11.6834891"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

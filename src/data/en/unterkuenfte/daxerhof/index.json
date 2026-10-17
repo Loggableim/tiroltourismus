@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Surrounded by sunny meadows and the picturesque backdrop of the Kitzbuehel Alps, Daxerhof in Erpfendorf welcomes visitors with genuine Tyrolean warmth. Comfortably designed accommodations offer a cosy home for families and nature lovers.</p><p>Children love interacting with farm animals and discovering farm life. Summer invites exploration of trails and swimming lakes, while winter brings quick access to ski areas and cross-country tracks.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Daxerhof in Erpfendorf provides authentic farm holiday charm and warm hospitality in the Kitzbuehel Alps."
 }

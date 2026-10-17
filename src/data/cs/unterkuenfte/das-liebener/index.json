@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel <strong>Das Liebener</strong> befindet sich in <strong>Neustift im Stubaital</strong>, eingebettet in die <strong>Tiroler Berglandschaft</strong>. Die Unterkunft ist von <strong>Wiesen und Wäldern</strong> umgeben und liegt in <strong>ruhiger Ortsrandlage</strong>. Das Haus verfügt über <strong>23 moderne Zimmer</strong> mit <strong>Balkon und Bergblick</strong>. Zum <strong>Angebot</strong> gehören ein <strong>Restaurant mit regionalen Produkten</strong> und ein <strong>Saunabereich</strong>. Die <strong>Einrichtung</strong> ist <strong>schlicht und funktional</strong>, die Atmosphäre <strong>entspannt</strong>. Das Hotel wird von <strong>Paaren und Familien</strong> besucht, die <strong>Ruhe und Natur</strong> suchen. Der <strong>Stubaier Gletscher</strong> ist in <strong>kurzer Fahrt</strong> erreichbar, der <strong>Ortskern</strong> zu Fuß.</p>",
+  "beschreibung": "<p>Das Liebener lezi na slunnem svahu v Soeldenu a nabizi nadherny panoramaticky vyhled na Oetztalske Alpy. Stylove a kvalitne vybavene apartmany poskytuji dostatek prostoru i soukrome balkony k relaxaci.</p><p>Lanovky Giggijoch a Gaislachkogl jsou na dosah, takze si lyzari, bajkeri i turisti mohou naplno uzivat krasy regionu.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Das Liebener v Soeldenu nabizi moderni apartmany na klidnem vyhlidkovem miste s rychlym pristupem k lanovkam Oetztalu."
 }

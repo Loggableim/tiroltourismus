@@ -18,6 +18,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import MiniSearch from 'minisearch';
+import { isHiddenSlug } from '../src/lib/hidden.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
@@ -68,6 +69,7 @@ function readCollection(name, locale) {
   const entries = [];
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
     if (!item.isDirectory()) continue;
+    if (isHiddenSlug(name, item.name)) continue;
     const jsonPath = path.join(dir, item.name, 'index.json');
     if (!fs.existsSync(jsonPath)) continue;
     try {

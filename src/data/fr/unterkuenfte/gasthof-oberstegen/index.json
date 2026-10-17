@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5277",
   "email": "oberstegen@speed.at",
   "webseite": "http://www.gasthof-oberstegen.at/",
-  "beschreibung": "<p>Der <strong>Gasthof Oberstegen</strong> in <strong>Söll</strong>, <strong>Tirol</strong>, ist ein traditionelles Hotel im Ortszentrum. Die Einrichtung ist im alpenländischen Stil gestaltet. Die Umgebung bietet eine Berglandschaft mit Wander- und Skimöglichkeiten. Das Hotel verfügt über ein Restaurant mit regionaler Küche. Die Zimmer sind mit Holzmöbeln ausgestattet. Ein Wellnessbereich mit Sauna steht zur Verfügung. Gäste nutzen die direkte Nähe zur SkiWelt. Parkplätze sind am Haus vorhanden.</p>",
+  "beschreibung": "<p>Installee a la lisiere du village de Soell, l auberge Oberstegen seduit par son ambiance familiale et ses chambres reposantes, ideales avant de gravir les pentes du Wilder Kaiser.</p><p>L acces au vaste domaine du SkiWelt et les sentiers pedestres sont a proximite immediate.</p>",
   "ausstattung": [
     "restaurant",
     "wifi"
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "L auberge Gasthof Oberstegen a Soell propose detente et saveurs tyroliennes au pied du Kaisergebirge."
 }

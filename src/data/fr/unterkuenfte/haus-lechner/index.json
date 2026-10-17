@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Lechner ist ein traditioneller Gasthof in der ruhigen Gemeinde Thiersee, eingebettet in die Bergwelt des Tiroler Unterlandes. Die Zimmer sind zweckmäßig eingerichtet und mit Bad, WC sowie teils mit Balkon ausgestattet. In der Gaststube werden regionale Tiroler Speisen und Getränke serviert. Die Umgebung lädt zu Aktivitäten wie Wandern, Radfahren und Schwimmen im nahegelegenen Thiersee ein. Die Atmosphäre des Hauses ist bodenständig und von familiärer Gastlichkeit geprägt.</p>",
+  "beschreibung": "<p>L'auberge <strong>Haus Lechner</strong> accueille ses visiteurs dans le charmant hameau de Landl, sur la commune de <strong>Thiersee</strong> dans le Kufsteinerland. Cet établissement montagnard familial propose des chambres soignées dotées d'une salle de bains privative et, pour certaines, d'un balcon avec vue sur les forêts des Alpes de Brandenberg. La salle de restaurant traditionnelle sert une cuisine tyrolienne copieuse et des produits du terroir. La haute vallée environnante et le lac de Thiersee invitent à une multitude d'activités, de la baignade et des balades estivales jusqu'aux descentes en luge et sorties en raquettes hivernales. L'hospitalité authentique garantit un dépaysement ressourçant.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Auberge tyrolienne traditionnelle à Landl près de Thiersee dans le Kufsteinerland, avec chambres confortables et cuisine régionale."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Lechner ist ein traditioneller Gasthof in der ruhigen Gemeinde Thiersee, eingebettet in die Bergwelt des Tiroler Unterlandes. Die Zimmer sind zweckmäßig eingerichtet und mit Bad, WC sowie teils mit Balkon ausgestattet. In der Gaststube werden regionale Tiroler Speisen und Getränke serviert. Die Umgebung lädt zu Aktivitäten wie Wandern, Radfahren und Schwimmen im nahegelegenen Thiersee ein. Die Atmosphäre des Hauses ist bodenständig und von familiärer Gastlichkeit geprägt.</p>",
+  "beschreibung": "<p>Hostinec <strong>Haus Lechner</strong> vítá své návštěvníky v malebné části Landl v obci <strong>Thiersee</strong> v regionu Kufsteinerland. Rodinný venkovský penzion nabízí příjemně zařízené pokoje se sprchou/WC a zčásti také s vlastním balkonem s výhledem na lesnaté svahy Brandenberských Alp. V útulné selské jizbě se podávají domácí tyrolské speciality a osvěžující nápoje. Malebné horské údolí kolem jezera Thiersee láká v každém ročním období k aktivnímu odpočinku: v létě na pěší túry a koupání, v zimě na sáňkařské dráhy, sněžnice i sjezdovky. Přátelská rodinná atmosféra zaručuje pohodovou dovolenou.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradiční hostinec v Landlu u Thiersee v Kufsteinerlandu s útulnými pokoji a regionální tyrolskou kuchyní."
 }

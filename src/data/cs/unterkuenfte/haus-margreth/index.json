@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Margreth in St. Leonhard im Pitztal liegt in einer <strong>ruhigen und naturnahen</strong> Umgebung. Die Gästezimmer sind <strong>komfortabel eingerichtet</strong> und verfügen über eigenes Bad und teilweise Balkon. Das <strong>Gasthausrestaurant</strong> bietet Tiroler Küche mit regionalen Produkten. Wander- und Radwege starten direkt am Haus, und das <strong>Skigebiet Pitztal</strong> ist leicht erreichbar. Der Pitztaler Gletscher ermöglicht ganzjährigen Skisport. Die <strong>familiäre Gastfreundschaft</strong> prägt die besondere Atmosphäre des Gasthofs.</p>",
+  "beschreibung": "<p>Penzion <strong>Haus Margreth</strong> vítá své hosty v malebné osadě Plangeroß v obci <strong>St. Leonhard im Pitztal</strong>, obklopené mohutnými vrcholy Ötztalských Alp. Komfortní pokoje mají vlastní koupelnu se sprchou/WC, satelitní televizi a zčásti balkon s přímým výhledem na zasněžené štíty. Vydatná snídaně složená z regionálních potravin zajistí skvělý start do nového dne. Přímo u domu začínají turistické a horolezecké stezky k tradičním horským chatám. V zimě staví skibus jen pár kroků od ubytování a zajišťuje rychlou dopravu k ledovci <strong>Pitztaler Gletscher</strong> i do skiareálu Rifflsee s jistotou sněhu až do pozdního jara.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný penzion v Plangeroß v St. Leonhardu v údolí Pitztal s výhledem na ledovec Pitztaler Gletscher a rychlým spojením k lanovkám."
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5100; +43 5333 5377",
   "email": "info@koglkaser.at",
   "webseite": "http://www.koglkaser.at/",
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Jausenstation Kogl-Kaser</strong> offers a secluded alpine retreat situated at an altitude of approximately 1,500 meters above the village of <strong>Söll</strong>. Built in traditional Tyrolean alpine lodge style, this cozy accommodation provides peaceful respite far away from road traffic and everyday haste. Featuring a fully equipped farmhouse kitchen, comfortable bedroom, and modern bathroom, it is a haven for mountain enthusiasts. The sunny terrace and balcony command spectacular panoramic views of the Wilder Kaiser peaks and Kitzbühel Alps. In summer, scenic hiking and mountain biking trails depart right from the doorstep, while the vast SkiWelt Wilder Kaiser-Brixental ski domain is within easy reach in winter.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Idyllic alpine chalet holiday accommodation at 1,500 meters altitude above Söll on the Wilder Kaiser."
 }

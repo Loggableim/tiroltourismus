@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5100; +43 5333 5377",
   "email": "info@koglkaser.at",
   "webseite": "http://www.koglkaser.at/",
-  "beschreibung": "<p>Die **Jausenstation Kogl-Kaser** in Tirol, Österreich, ist eine als **Ferienwohnung** genutzte ehemalige Jausenstation. Die Unterkunft liegt auf rund 1.500 Metern Seehöhe, abseits des Durchgangsverkehrs in einer Almregion. Die Bausubstanz und die Einrichtung sind im **traditionellen Tiroler Stil** gehalten. Die Ferienwohnung verfügt über eine **Wohnküche**, ein Schlafzimmer und ein separates Bad. Vom Balkon oder der Terrasse bietet sich ein Blick auf die umliegenden Gipfel. Gäste können zahlreiche **Wander- und Mountainbikewege** direkt ab der Unterkunft nutzen. Das nächste Skigebiet ist mit dem Pkw oder Skibus in wenigen Minuten erreichbar. Ein Lebensmittel-Selbstbedienungsladen ist im nächstgelegenen Ortsteil vorhanden.</p>",
+  "beschreibung": "<p>La <strong>Jausenstation Kogl-Kaser</strong> accoglie gli ospiti in una posizione idilliaca e appartata a circa 1.500 metri di altitudine, tra i pascoli alpini sopra <strong>Söll</strong>. Realizzata nel tipico stile tirolese in legno, regala quiete assoluta lontano dal traffico. Dotata di una confortevole cucina abitabile, camera da letto e bagno, rappresenta un rifugio autentico per gli amanti della natura. Dalla terrazza soleggiata e dal balcone si gode di una vista straordinaria sulle vette del Wilder Kaiser e sulle Alpi di Kitzbühel. In estate numerosi sentieri per trekking e mountain bike partono direttamente dalla baita, mentre in inverno le piste di SkiWelt sono comodamente raggiungibili.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Idilliaca baita alpina a 1.500 metri di quota sopra Söll, affacciata sulle cime del Wilder Kaiser."
 }

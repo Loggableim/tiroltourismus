@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p><strong>Das Landhaus Alpenrose</strong> ist ein traditioneller Gasthof in <strong>Tirol, Österreich</strong>. Er liegt inmitten der beeindruckenden <strong>Alpenlandschaft</strong>, umgeben von dichten Wäldern und grünen Bergwiesen. Die Zimmer sind <strong>komfortabel</strong> ausgestattet und bieten einen atemberaubenden Blick auf die umliegenden Berge. Im hauseigenen Restaurant wird <strong>regionale Küche</strong> mit frischen Zutaten serviert. Die <strong>gemütliche</strong> Atmosphäre des Gasthofs lädt zum Entspannen und Genießen der Natur ein. Der Gasthof ist ideal für <strong>Wanderer, Naturliebhaber und Familien</strong>, die Ruhe und Erholung suchen.</p>",
+  "beschreibung": "<p>Le <strong>Landhaus Alpenrose</strong> accueille ses hôtes sur le haut plateau ensoleillé de <strong>Hinterthiersee</strong> surplombant le lac Thiersee près de Kufstein. Cet établissement à gestion familiale se distingue par son ambiance prévenante et montagnarde. Les chambres et appartements aménagés dans le style chalet tyrolien s'ouvrent sur des balcons offrant un panorama remarquable sur le Kaisergebirge. Un buffet de petit-déjeuner composé de produits régionaux frais démarre agréablement la journée, au départ de sentiers de randonnée et de pistes familiales.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.thiersee.at",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Pension familiale chaleureuse et appartements à Hinterthiersee avec vue panoramique sur le Kaisergebirge."
 }

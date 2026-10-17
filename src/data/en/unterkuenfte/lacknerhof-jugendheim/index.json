@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Lacknerhof Jugendheim</strong> is peacefully located in a sunny, scenic setting in <strong>St. Johann in Tirol</strong> within the Kitzbühel district. Designed specifically for school classes, youth clubs, sports teams, and budget-conscious group travel, the lodge provides an uncomplicated and affordable base in the Tyrolean Alps. Accommodations include functional dormitory rooms, a communal dining hall, and flexible activity rooms. The surrounding outdoor grounds offer ample space for games and leisure. Proximity to the St. Johann cable cars and the Kitzbüheler Horn ensures swift access to winter ski slopes and summer hiking paths.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional youth hostel and group lodge in St. Johann in Tirol surrounded by alpine meadows and nature."
 }

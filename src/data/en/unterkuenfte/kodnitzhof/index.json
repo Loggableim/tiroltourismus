@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Ködnitzhof</strong> welcomes alpine travelers to the mountaineering village of <strong>Kals am Großglockner</strong> in East Tyrol, situated right at the foot of Austria's highest peak (3,798 m). This historic inn radiates authentic East Tyrolean warmth and alpine character. Well-appointed rooms boast sweeping views across the glaciated summits of the Glockner Group. The traditional restaurant serves beloved regional delicacies, including handmade East Tyrolean Schlipfkrapfen ravioli and game dishes. In summer, it serves as the ultimate basecamp for Großglockner ascents and hikes in the High Tauern National Park, while winter brings prime skiing at the Großglockner Resort Kals-Matrei.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional alpine inn in Kals am Großglockner in East Tyrol nestled at the foot of Austria's highest peak."
 }

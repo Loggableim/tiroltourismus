@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.haus-christine-tirol.at/",
-  "beschreibung": "<p>Haus Christine ist ein Gasthof in Tannheim im Tannheimer Tal. Der Betrieb wird als Familienunternehmen geführt. Das Haus bietet Übernachtungsmöglichkeiten und Verpflegung an. Die Küche serviert traditionelle Tiroler Gerichte mit regionalen Zutaten. Die Zimmer sind funktional und mit Dusche und WC ausgestattet. Der Gasthof liegt ruhig und dennoch zentral im Ort. Von hier aus können Wanderungen im Tannheimer Tal unternommen werden. Im Winter haben Gäste Zugang zu Loipen und Skipisten.</p>",
+  "beschreibung": "<p>En una zona tranquila y soleada de Tannheim, Haus Christine dispone de confortables apartamentos con vistas panoramicas a las montanas para una estancia inolvidable.</p><p>El teleferico Vogelhornbahn, el lago Vilsalpsee y las pistas de esqui de fondo estan muy cerca.</p>",
   "ausstattung": [],
   "tags": [
     "Alpes suabios",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Christine en Tannheim ofrece acogedores apartamentos en el idilico valle de Tannheimer Tal."
 }

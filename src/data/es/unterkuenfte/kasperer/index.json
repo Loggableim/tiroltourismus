@@ -11,7 +11,7 @@
   "telefon": "+43 676 843264638",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Kasperer</strong> liegt im Zentrum von <strong>Erl</strong> im Bezirk Kufstein in <strong>Tirol</strong>. Das familiengeführte Haus bietet eine traditionelle Tiroler Gaststube mit regionaler Küche. Die Speisekarte umfasst Gerichte wie <strong>Tiroler Gröstl</strong> und Schnitzel. Für Gäste, die länger verweilen möchten, stehen Übernachtungsmöglichkeiten zur Verfügung. Die Lage ist geprägt durch die unmittelbare Nähe zum <strong>Erler Festspielhaus</strong> sowie zu den umliegenden Bergen des <strong>Kaisergebirges</strong>. Von hier aus lassen sich Wanderungen im Sommer und Skitouren im Winter unternehmen. Der Betrieb stellt einen typischen ländlichen Gasthof der Region dar.</p>",
+  "beschreibung": "<p>La posada <strong>Gasthof Kasperer</strong> se halla en el centro de la localidad festivalera de <strong>Erl</strong>, en el distrito de Kufstein. Este establecimiento familiar destaca por su rústico salón tirolés y su auténtica hospitalidad. Sus confortables habitaciones ofrecen descanso tanto a amantes de la cultura como a senderistas. La cocina deleita con platos clásicos como el Wiener Schnitzel, el <strong>Tiroler Gröstl</strong> y postres caseros. Su proximidad a los famosos <strong>auditorios del Festival de Erl</strong> y al macizo del Kaisergebirge la convierte en una opción idónea en cualquier época.</p>",
   "ausstattung": [],
   "tags": [
     "posada rural",
@@ -26,5 +26,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.erl.at",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Posada tradicional en Erl, distrito de Kufstein, junto a los auditorios de festivales, con gastronomía tirolesa."
 }

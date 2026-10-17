@@ -11,7 +11,7 @@
   "telefon": "+43 5476 6371",
   "email": "info@haus-josephine.com",
   "webseite": "http://members.aon.at/haus-josephine/",
-  "beschreibung": "<p>Das Hotel <strong>Haus Josephine</strong> liegt in ruhiger Lage am Rande eines Dorfes in <strong>Tirol</strong>. Die Umgebung bietet einen weiten Blick auf die umliegenden Berge. Die Zimmer sind traditionell eingerichtet und verfügen über moderne Annehmlichkeiten wie kostenfreies WLAN. Das hoteleigene Restaurant serviert <strong>regionale Gerichte</strong> mit Zutaten aus der Umgebung. In der Nähe finden Gäste verschiedene Freizeitmöglichkeiten wie Wanderwege und Skigebiete. Die besondere Atmosphäre des Hauses wird durch den Einsatz von Holz und eine <strong>gemütliche Einrichtung</strong> geprägt.</p>",
+  "beschreibung": "<p>El establecimiento <strong>Haus Josephine</strong> goza de una ubicación apacible en las afueras de <strong>Serfaus</strong>, en la célebre meseta soleada de los Alpes tiroleses. Sus estancias y apartamentos están decorados con maderas claras tradicionales, equipados con baños modernos, conexión wifi gratuita y balcones con vistas abiertas al grupo montañoso de Samnaun. A pocos minutos a pie se accede a la calle peatonal del pueblo y al tren subterráneo municipal Dorfbahn, que transporta a los esquiadores cómodamente hasta los telecabinas. En verano, el área de Serfaus-Fiss-Ladis despliega infinitas rutas familiares de senderismo y cicloturismo, y en invierno ofrece pistas de clase mundial.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Alojamiento acogedor en Serfaus, en la meseta soleada del Tirol, con excelentes vistas a la montaña y cerca del metro local."
 }

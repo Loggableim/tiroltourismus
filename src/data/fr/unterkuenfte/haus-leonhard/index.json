@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Haus Leonhard</strong> liegt am Ortsrand eines Tiroler Dorfes, umgeben von Wiesen und Wäldern. Die ruhige Umgebung und die traditionelle Bauweise prägen die <strong>Atmosphäre</strong> des Gasthofs.</p><p>Die <strong>Zimmer</strong> sind mit einheimischem Holz möbliert und verfügen jeweils über ein Bad. Zum Frühstück und Abendessen werden <strong>regionale Speisen</strong> im Restaurant des Hauses serviert.</p><p>In der Umgebung bieten sich <strong>Wanderwege</strong> im Sommer sowie Loipen im Winter. Die Lage eignet sich als Ausgangspunkt für Aktivitäten in beiden Jahreszeiten.</p>",
+  "beschreibung": "<p>La maison d'hôtes <strong>Haus Leonhard</strong> est située dans le cadre champêtre de Gmünd, tout près de <strong>Gerlos</strong> dans le Zillertal, au cœur des alpages et des ruisseaux cristallins. Les chambres et appartements lumineux sont décorés avec du bois de la région et dotés d'une literie soignée et d'une salle de bains privative. Les vacanciers apprécient la tranquillité des lieux combinée à la proximité du centre de Gerlos et du lac de retenue de Durlassboden. L'été invite à des randonnées d'altitude et des circuits de VTT dans les vallons préservés du Zillertal. En hiver, les navettes de ski permettent de rejoindre rapidement l'immense domaine skiable de la <strong>Zillertal Arena</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.gerlos.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Maison d'hôtes paisible à Gmünd près de Gerlos dans le Zillertal, en pleine nature et proche de la Zillertal Arena."
 }

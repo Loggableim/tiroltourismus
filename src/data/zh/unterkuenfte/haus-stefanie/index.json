@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Haus Stefanie ist ein <strong>traditioneller Gasthof</strong> in Tirol, Österreich. Die Unterkunft befindet sich in einer ruhigen Lage mit <strong>Ausblick auf die Alpen</strong>. Die Ausstattung umfasst mehrere Zimmer mit einfacher, zweckmäßiger Einrichtung. Der Gastraum bietet <strong>regionale Tiroler Küche</strong> für die Gäste. Die Umgebung ist geprägt von Wanderwegen im Sommer und Skigebieten im Winter. Gäste können einen unkomplizierten Aufenthalt mit persönlichem Service erwarten. Die Anbindung an das Verkehrsnetz ist vorhanden, aber die Umgebung bleibt naturnah.</p>",
+  "beschreibung": "<p><strong>斯特凡妮旅舍</strong>（Haus Stefanie）坐落在蒂罗尔州厄茨谷<strong>索尔登</strong>（Sölden）向阳幽静的地段，厄茨塔尔阿尔卑斯山的雄浑峰峦环抱四周。客房以经典高山实木装潢打造，配备现代淋浴卫生间、卫星电视以及饱览皑皑雪山奇观的向阳阳台。早晨，汇集当地特色的丰盛自助早餐为新一天的户外活动注满生机。免费滑雪专车停靠在数步之遥，便捷通往吉吉约赫与盖斯拉赫科格尔缆车站，直达举世瞩目的索尔登双冰川雪区。夏季时分，纵横交错的全景步道与索尔登自行车共和国（Bike Republic Sölden）的专业赛道近在咫尺。</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -23,5 +23,10 @@
     "lat": "46.9596576",
     "lng": "11.0049427"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "位于厄茨谷索尔登宁静地段的温馨高山客栈，客房舒适宜人，便捷通往索尔登滑雪大区。"
 }

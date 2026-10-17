@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Gemse</strong> liegt in der Gemeinde Prutz im Tiroler Oberland. Das Haus befindet sich in ruhiger Lage und ist von der Berglandschaft der Tiroler Alpen umgeben. Der Gasthof wird traditionell geführt und bietet eine einfache, aber gepflegte Unterkunft. Gäste können im hauseigenen Restaurant regionale Gerichte probieren. Die Zimmer sind zweckmäßig eingerichtet und verfügen über Bad und WC. Ein Gastgarten steht für die Nutzung im Sommer zur Verfügung. Die Umgebung eignet sich für Wanderungen im Sommer und Skifahren im Winter. Prutz ist ein zentraler Ort im Tiroler Oberland und gut als Basis für Ausflüge geeignet.</p>",
+  "beschreibung": "<p>El <strong>Gasthof Gemse</strong> se encuentra en el municipio de Prutz, en la comarca del Tiroler Oberland. El establecimiento goza de una ubicación apacible, rodeado por el paisaje montañoso de los Alpes tiroleses. Gestionada de forma tradicional, esta posada ofrece un alojamiento sencillo pero cuidado al detalle. Los huéspedes pueden degustar platos regionales en el restaurante del establecimiento. Las habitaciones son funcionales y disponen de baño y aseo privados. En verano, los visitantes pueden disfrutar de un agradable jardín al aire libre. El entorno resulta perfecto para el senderismo estival y el esquí en invierno. Prutz es un punto neurálgico del Oberland tirolés y una base excelente para excursiones.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

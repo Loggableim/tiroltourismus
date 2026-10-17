@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Goldene Krone liegt in einer Ortschaft im <strong>Tiroler Inntal</strong>. Das Haus verbindet traditionelle Holzbauweise mit modernen Gästezimmern. Gäste erwartet eine ruhige Atmosphäre und regionale Gastfreundschaft. Die Umgebung ist von Bergen, Wäldern und Wanderwegen geprägt. Das Restaurant serviert saisonale Speisen aus der Region. Die Zimmer sind zweckmäßig eingerichtet und verfügen über Balkon oder Terrasse.</p>",
+  "beschreibung": "<p>La locanda <strong>Gasthof Goldene Krone</strong> si trova in una località della valle <strong>Tiroler Inntal</strong>. L'edificio unisce la tradizionale architettura in legno alpina a moderne camere per gli ospiti. Ad accogliere chi vi soggiorna ci sono un'atmosfera serena e la proverbiale ospitalità tirolese. Il paesaggio circostante è contraddistinto da cime montuose, fitti boschi e sentieri escursionistici. Il ristorante propone deliziose specialità stagionali a base di prodotti del territorio. Le camere, arredate in modo funzionale, dispongono di balcone o terrazza.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

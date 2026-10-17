@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5277",
   "email": "oberstegen@speed.at",
   "webseite": "http://www.gasthof-oberstegen.at/",
-  "beschreibung": "<p>Der <strong>Gasthof Oberstegen</strong> in <strong>Söll</strong>, <strong>Tirol</strong>, ist ein traditionelles Hotel im Ortszentrum. Die Einrichtung ist im alpenländischen Stil gestaltet. Die Umgebung bietet eine Berglandschaft mit Wander- und Skimöglichkeiten. Das Hotel verfügt über ein Restaurant mit regionaler Küche. Die Zimmer sind mit Holzmöbeln ausgestattet. Ein Wellnessbereich mit Sauna steht zur Verfügung. Gäste nutzen die direkte Nähe zur SkiWelt. Parkplätze sind am Haus vorhanden.</p>",
+  "beschreibung": "<p>Le <strong>Gasthof Oberstegen</strong> à <strong>Söll</strong>, au <strong>Tyrol</strong>, est un hôtel traditionnel situé au cœur du village. Son aménagement intérieur met à l'honneur le style alpin authentique. Les environs offrent un cadre montagnard privilégié pour la randonnée et le ski. L'hôtel dispose d'un restaurant proposant une délicieuse cuisine régionale. Les chambres sont équipées de meubles en bois massif. Un espace bien-être doté d'un sauna est à la disposition des résidents. Les hôtes profitent en outre de la proximité immédiate du domaine skiable SkiWelt. Des places de stationnement sont disponibles sur place.</p>",
   "ausstattung": [
     "restaurant",
     "wifi"
@@ -29,5 +29,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

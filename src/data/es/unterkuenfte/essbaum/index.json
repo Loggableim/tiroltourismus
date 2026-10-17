@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Ferienwohnung <strong>Essbaum</strong> liegt in einer ruhigen, ländlichen Umgebung in Tirol. Die Ausstattung umfasst eine Küchenzeile mit Kochmöglichkeit, ein separates Schlafzimmer sowie ein Badezimmer. Die Region bietet sich für <strong>Wanderungen</strong> im Sommer und für <strong>Langlauf</strong> im Winter an. Die Einrichtung ist funktional; Holzmöbel prägen den Innenraum. Die Unterkunft eignet sich für Paare oder kleine Familien, die einen unabhängigen Urlaub verbringen möchten. Ein PKW-Stellplatz ist direkt am Haus vorhanden. Der nächste Ort mit Einkaufsmöglichkeiten ist rund zwei Kilometer entfernt.</p>",
+  "beschreibung": "<p>Con vistas abiertas al macizo de Kaisergebirge, la granja Essbaum en Koessen brinda reposo y cordialidad tirolesa. Sus apartamentos bien equipados son el hogar ideal para unas vacaciones en familia.</p><p>Los ninos disfrutan del contacto con los animales, mientras que el lago Walchsee y los senderos aseguran ocio continuo.</p>",
   "ausstattung": [],
   "tags": [
     "familie",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaiserwinkl.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "La granja Essbaum en Koessen ofrece autenticas vacaciones rurales para familias en la comarca de Kaiserwinkl."
 }

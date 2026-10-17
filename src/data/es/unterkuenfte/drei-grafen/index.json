@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Drei Grafen liegt in der <strong>historischen Altstadt</strong> von Innsbruck. Die Umgebung bietet eine Mischung aus barocker Architektur und belebten Einkaufsstraßen. Die Zimmer sind im traditionellen Landhausstil eingerichtet und verfügen über kostenfreies WLAN. Das hauseigene Restaurant konzentriert sich auf <strong>regionale Küche</strong>. Die Atmosphäre des <strong>Familienbetriebs</strong> ist persönlich und ruhig. Gäste, die eine Kombination aus Stadterkundung und alpinen Aktivitäten suchen, finden hier einen geeigneten Ausgangspunkt. Der nächste Skilift ist mit öffentlichen Verkehrsmitteln erreichbar. Ein kleiner Wellnessbereich steht zur Erholung zur Verfügung.</p>",
+  "beschreibung": "<p>En el tranquilo paraje de Bruckhaeusl, el historico Gasthof Drei Grafen ofrece una acogedora estancia tirolesa. Sus habitaciones garantizan descanso placentero.</p><p>La region de Hohe Salve permite disfrutar de la inmensa SkiWelt Wilder Kaiser - Brixental, rutas en bicicleta y ascensiones panoramicas.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hohe-salve.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "El Gasthof Drei Grafen en Bruckhaeusl brinda atencion familiar y una base idonea en la comarca de Hohe Salve."
 }

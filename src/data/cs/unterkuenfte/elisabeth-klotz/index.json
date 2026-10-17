@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Elisabeth Klotz liegt im Ort Nesselwängle, am östlichen Ende des Tannheimer Tals. Die umliegende Berglandschaft und das nahe gelegene <strong>Naturschutzgebiet</strong> Vilsalpsee prägen die ruhige Umgebung. Das Haus verfügt über einen <strong>Wellnessbereich</strong> mit Hallenbad und Sauna sowie ein Restaurant mit regionaler Küche. Das Hotel ist familiengeführt und richtet sich an Gäste, die die <strong>Wanderweg</strong>e im Sommer und das <strong>Skigebiet</strong> Neunerköpfe im Winter nutzen möchten. Die Einrichtung verbindet traditionelle Elemente mit modernen Annehmlichkeiten. Die ungezwungene Atmosphäre kommt besonders bei Aktivurlaubern und Familien an.</p>",
+  "beschreibung": "<p>V klidne obci Nesselwaengle vita Haus Elisabeth Klotz hosty opravdovou tyrolskou srdecnosti. Svetle a pohodlne pokoje nabizeji nadherny vyhled na skalnaty vrchol Rote Flueh i Gimpel.</p><p>Skvele zazemi pro horolezce a turisty v lete, stejne jako pro bezkare a lyzare na udolnich trasach v zime.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Elisabeth Klotz v Nesselwaengle nabizi vrelou pohostinnost a utulne pokoje u vstupu do Tannheimerskeho udoli."
 }

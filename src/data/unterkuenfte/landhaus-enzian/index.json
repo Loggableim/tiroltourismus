@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Landhaus Enzian</strong> ist ein traditioneller Gasthof in einem kleinen Dorf im Tiroler Unterland.. Das Gebäude ist im regionalen Stil erbaut, mit Holzmöbeln und einer gemütlichen Gaststube.. <strong>Tiroler Spezialitäten</strong> werden hier nach hausüblichen Rezepten zubereitet.. Das Haus liegt ruhig am Rand des Ortes, umgeben von Wiesen und Bergen.. Gäste können einfache, saubere Zimmer erwarten sowie eine gute regionale Küche zu fairen Preisen.",
+  "beschreibung": "<p>Das <strong>Landhaus Enzian</strong> empfängt seine Gäste in ruhiger Lage am Ortsrand von <strong>Walchsee</strong> im Tiroler Kaiserwinkl. Umgeben von grünen Wiesen und den imposanten Felswänden des Zahmen Kaisers, bietet das Haus eine familiäre und herzliche Urlaubsatmosphäre. Die komfortabel eingerichteten Zimmer und Ferienwohnungen verfügen über Balkone mit freiem Blick auf das Bergpanorama. Der gepflegte Garten mit Liegewiese lädt nach erlebnisreichen Tagen zum Entspannen ein. Der wärmende Walchsee mit seinen Badestränden und Wassersportmöglichkeiten ist rasch erreicht. Im Winter führen Langlaufloipen und Winterwanderwege direkt am Haus vorbei, während die Skigebiete der Region beste Bedingungen bieten.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaiserwinkl.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditionsreiches Landhaus in Walchsee im Kaiserwinkl mit Bergblick, Garten und Seenaehe."
 }

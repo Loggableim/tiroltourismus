@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Landhaus Enzian</strong> ist ein traditioneller Gasthof in einem kleinen Dorf im Tiroler Unterland.. Das Gebäude ist im regionalen Stil erbaut, mit Holzmöbeln und einer gemütlichen Gaststube.. <strong>Tiroler Spezialitäten</strong> werden hier nach hausüblichen Rezepten zubereitet.. Das Haus liegt ruhig am Rand des Ortes, umgeben von Wiesen und Bergen.. Gäste können einfache, saubere Zimmer erwarten sowie eine gute regionale Küche zu fairen Preisen.",
+  "beschreibung": "<p>El <strong>Landhaus Enzian</strong> se sitúa en una zona apacible a las afueras de <strong>Walchsee</strong>, en la región tirolesa de Kaiserwinkl. Enmarcado por praderas y los riscos del Zahmer Kaiser, brinda un trato familiar y relajante. Sus habitaciones y apartamentos disponen de balcones con vistas abiertas a las montañas. Su jardín con pradera permite descansar al aire libre. La cercanía al lago Walchsee facilita la natación en verano, mientras que en invierno destacan las pistas de fondo junto a la casa.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaiserwinkl.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Agradable casa de campo en Walchsee, comarca de Kaiserwinkl, con jardín, vistas alpinas y cerca del lago."
 }

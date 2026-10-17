@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Innerwald</strong> liegt im Stubaital, eingebettet in die Tiroler Berglandschaft auf etwa 1.000 Metern Höhe. Der gleichnamige Gasthof erwartet Gäste mit <strong>traditioneller Tiroler Gastfreundschaft</strong> und regionaler Küche. Besonders beliebt ist das Gasthaus bei <strong>Wanderern und Naturliebhabern</strong>, die nach Erkundung der umliegenden Almen einkehren. Die Einrichtung verbindet alpine Gemütlichkeit mit schlichtem, authentischem Charakter.</p>",
+  "beschreibung": "<p>L'hébergement <strong>Innerwald</strong> est situé dans le hameau ensoleillé du même nom qui surplombe <strong>Sölden dans la vallée de l'Ötztal</strong>, à plus de 1 400 mètres d'altitude. Face aux sommets culminant à plus de 3 000 mètres, l'établissement dévoile un panorama grandiose sur la vallée. Les hôtes y apprécient une hospitalité tyrolienne chaleureuse et une cuisine de montagne authentique. L'hiver, l'accès direct aux pistes de ski de Sölden garantit une expérience ski aux pieds absolue, complétée par la navette Zentrum Shuttle. En été, les pistes de la Bike Republic Sölden et les sentiers alpins commencent devant l'auberge.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Auberge alpine traditionnelle à Innerwald au-dessus de Sölden dans l'Ötztal avec accès direct aux pistes."
 }

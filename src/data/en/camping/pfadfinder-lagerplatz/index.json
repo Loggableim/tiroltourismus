@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Telfs",
-  "region": "",
+  "region": "innsbruck",
   "plz": "6410",
   "adresse": "Birkenberg 9",
   "telefon": "+43 664 1612 234",
@@ -27,5 +27,9 @@
     "lng": "11.0817474"
   },
   "status": "published",
-  "kurzbeschreibung": "Campground and scout home of the Pfadfindergruppe Telfs on the Birkenberg, available for rent for camps, seminars and celebrations."
+  "kurzbeschreibung": "Campground and scout home of the Pfadfindergruppe Telfs on the Birkenberg, available for rent for camps, seminars and celebrations.",
+  "sources": [
+    "https://www.pfadfinder-telfs.at/",
+    "https://de.wikipedia.org/wiki/Telfs"
+  ]
 }

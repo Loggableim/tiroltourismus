@@ -19,6 +19,7 @@ const BLOCKED_FIELDS = new Set([
   'status', 'featured', 'emoji', 'farbe', 'bilder', 'hero_bild', 'grenzen',
   'koordinaten', 'slug', 'region', 'bezirk', 'hunde', 'title', 'metaDescription', 'text',
 ]);
+const FILLABLE_BLOCKED_FIELDS = new Set(['region']);
 const SOFT_STATUSES = new Set(['403', '429', 'timeout']);
 const HARD_STATUSES = new Set(['404', '410']);
 const HTTP_TIMEOUT_MS = 15000;
@@ -223,7 +224,11 @@ async function main() {
         const keys = new Set([...Object.keys(baseData), ...Object.keys(data)]);
         for (const key of keys) {
           if (!BLOCKED_FIELDS.has(key) || sameJson(baseData[key], data[key])) continue;
-          if (key in baseData) {
+          const baseEmpty = baseData[key] === '' || baseData[key] === null || baseData[key] === undefined;
+          const valueFilled = data[key] !== '' && data[key] !== null && data[key] !== undefined;
+          if (key in baseData && FILLABLE_BLOCKED_FIELDS.has(key) && baseEmpty && valueFilled) {
+            addFinding(file, entry, '3 Nur Inhaltsfelder', 'warn', `Blockiertes Feld aus leerem Wert ergänzt: ${key}`);
+          } else if (key in baseData) {
             addFinding(file, entry, '3 Nur Inhaltsfelder', 'error', `Blockiertes Feld geändert: ${key}`);
           } else {
             addFinding(file, entry, '3 Nur Inhaltsfelder', 'warn', `Blockiertes Feld neu ergänzt: ${key}`);

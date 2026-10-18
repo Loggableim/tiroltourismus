@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Kaunertal",
-  "region": "",
+  "region": "landeck",
   "plz": "6524",
   "adresse": "",
   "telefon": "+43 5475 316",
@@ -24,5 +24,9 @@
     "lng": "10.7497657"
   },
   "status": "published",
-  "kurzbeschreibung": null
+  "kurzbeschreibung": null,
+  "sources": [
+    "https://www.camping-kaunertal.at",
+    "https://de.wikipedia.org/wiki/Kaunertal"
+  ]
 }

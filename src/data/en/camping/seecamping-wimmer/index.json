@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Maurach",
-  "region": "",
+  "region": "achensee",
   "plz": "6212",
   "adresse": "",
   "telefon": "+43 660 420 6316",
@@ -24,5 +24,9 @@
     "lng": "11.7347722"
   },
   "status": "published",
-  "kurzbeschreibung": null
+  "kurzbeschreibung": null,
+  "sources": [
+    "https://www.achensee-camping.at/",
+    "https://de.wikipedia.org/wiki/Maurach_am_Achensee"
+  ]
 }

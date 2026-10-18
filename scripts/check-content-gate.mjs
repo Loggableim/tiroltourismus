@@ -11,6 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { detectLeak, walkStrings } from './lib/leak-detect.mjs';
+import { SOON_LANGS } from '../src/lib/languages.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = 'src/data';
@@ -64,11 +65,17 @@ function changedFiles() {
  * Interne Dateien/Verzeichnisse unter src/data, die mit "_" beginnen
  * (z. B. _hidden-nicht-tirol.json, _quality_report.json, _sk_excluded),
  * sind keine Inhalts-Einträge und werden vom Entry-Gate ausgenommen.
+ *
+ * Ebenfalls ausgenommen sind die Bald-Sprachen (SOON_LANGS: pl, hu, sk,
+ * siehe src/lib/languages.js). Sie sind noch nicht veröffentlicht und
+ * haben keinen Subdomain-Build; ihre Daten sind vorbereitete Übersetzungen,
+ * aber keine Einträge des 8-Sprachen-Vertrags (de, cs, en, es, fr, it, nl, zh).
+ * Das Leak-Gate (Prüfung 0) läuft weiterhin über ALLE Dateien inkl. hu/pl/sk.
  */
 function isInternalDataFile(file) {
   const rel = path.posix.relative(DATA, file);
   const firstSegment = rel.split('/')[0];
-  return firstSegment.startsWith('_');
+  return firstSegment.startsWith('_') || SOON_LANGS.includes(firstSegment);
 }
 
 function splitLocale(file) {

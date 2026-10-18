@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Strasserwirt</strong> ist ein traditionsreiches Gasthaus in <strong>St. Johann in Tirol</strong>, eingebettet in die Berglandschaft des <strong>Kaiserwaldes</strong>. Die Einrichtung verbindet tyrolische Gemütlichkeit mit modernem Komfort – holzverkleidete Stuben, eine gutbürgerliche Küche mit regionalen Spezialitäten und komfortable Zimmer mit alpinem Flair. Gäste schätzen das Haus als Ausgangspunkt für Wanderungen und Skitouren im <strong>Kaiser-Gebirge</strong> sowie als Ort zum Entspannen nach einem Tag in der Natur. Das Gasthaus bietet eine warme, ungezwungene Atmosphäre für Erholungssuchende.</p>",
+  "beschreibung": "<p>De <strong>Strasserwirt</strong> is een sfeervolle, traditionele herberg in <strong>St. Johann in Tirol</strong>, genesteld in het indrukwekkende berglandschap van het <strong>Kaiserwald</strong>. De accommodatie combineert Tiroolse gezelligheid met hedendaags comfort: met hout betimmerde gelagkamers, een eerlijke keuken met streekgerechten en comfortabele kamers met alpiene flair. Gasten waarderen de herberg als ideaal vertrekpunt voor wandelingen en skitochten in het <strong>Kaisergebergte</strong> en als ontspannen toevluchtsoord na een actieve dag in de natuur, gedragen door een warme en gastvrije sfeer.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -22,5 +22,9 @@
     "lat": "46.7503119",
     "lng": "12.4853383"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

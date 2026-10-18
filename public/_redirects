@@ -324,6 +324,51 @@
 /camping/zeltplatz-oberhart /camping/ 301
 /camping/zeltplatz-oberhart/ /camping/ 301
 
+# ── Gastro-Nicht-Tirol (gastro-nicht-tirol): ausgeblendete Einträge → Gastro-Übersicht (301) ──
+# Je Sprache wird die Übersicht der jeweiligen Subdomain-Root ausgeliefert (/gastro/); die
+# Sprach-Prefixe der Hauptdomain werden durch die Splat-Regeln weiter unten auf die Subdomain
+# umgeleitet. Daher genügt eine sprachunabhängige Regel pro Slug (Muster der fakt-02-Regeln).
+/gastro/4eck /gastro/ 301
+/gastro/4eck/ /gastro/ 301
+/gastro/alpe-dornach /gastro/ 301
+/gastro/alpe-dornach/ /gastro/ 301
+/gastro/alte-druckerei /gastro/ 301
+/gastro/alte-druckerei/ /gastro/ 301
+/gastro/alte-post /gastro/ 301
+/gastro/alte-post/ /gastro/ 301
+/gastro/amrut /gastro/ 301
+/gastro/amrut/ /gastro/ 301
+/gastro/antica-roma /gastro/ 301
+/gastro/antica-roma/ /gastro/ 301
+/gastro/b-ckerei-lipp /gastro/ 301
+/gastro/b-ckerei-lipp/ /gastro/ 301
+/gastro/bellini-il-ristorantino /gastro/ 301
+/gastro/bellini-il-ristorantino/ /gastro/ 301
+/gastro/berggasthaus-bleckenau /gastro/ 301
+/gastro/berggasthaus-bleckenau/ /gastro/ 301
+/gastro/berggasthof-riefenkopf /gastro/ 301
+/gastro/berggasthof-riefenkopf/ /gastro/ 301
+/gastro/bungalow-7 /gastro/ 301
+/gastro/bungalow-7/ /gastro/ 301
+/gastro/caf-restaurant-waidmannsheil /gastro/ 301
+/gastro/caf-restaurant-waidmannsheil/ /gastro/ 301
+/gastro/cafe-restaurant-karatsbichl /gastro/ 301
+/gastro/cafe-restaurant-karatsbichl/ /gastro/ 301
+/gastro/das-lokal /gastro/ 301
+/gastro/das-lokal/ /gastro/ 301
+/gastro/gasthaus-ferchensee /gastro/ 301
+/gastro/gasthaus-ferchensee/ /gastro/ 301
+/gastro/gasthof-adler /gastro/ 301
+/gastro/gasthof-adler/ /gastro/ 301
+/gastro/gasthof-fraundorfer /gastro/ 301
+/gastro/gasthof-fraundorfer/ /gastro/ 301
+/gastro/gasthof-sonnenhof /gastro/ 301
+/gastro/gasthof-sonnenhof/ /gastro/ 301
+/gastro/gasthof-und-hotel-zur-post /gastro/ 301
+/gastro/gasthof-und-hotel-zur-post/ /gastro/ 301
+/gastro/maronis /gastro/ 301
+/gastro/maronis/ /gastro/ 301
+
 /sitemap.xml /sitemap-index.xml 301
 
 # ── Ehemalige Demo-Startseite → Subdomain-Root (301; die echte Frontseite ist jetzt /) ──

@@ -49,9 +49,25 @@ function changedFiles() {
     const parts = line.split('\t');
     const status = parts[0][0];
     if (status === 'D') continue;
-    files.push(parts[parts.length - 1]);
+    const file = parts[parts.length - 1];
+    // Interne Registry-/Report-Dateien (Namenspräfix "_") sind keine
+    // Collection-Einträge: sie haben weder 8 Sprachvarianten noch `sources`.
+    // Beispiel: src/data/_hidden-nicht-tirol.json (fakt-02/Gastro-Deny-List).
+    if (isInternalDataFile(file)) continue;
+    files.push(file);
   }
   return files;
+}
+
+/**
+ * Interne Dateien/Verzeichnisse unter src/data, die mit "_" beginnen
+ * (z. B. _hidden-nicht-tirol.json, _quality_report.json, _sk_excluded),
+ * sind keine Inhalts-Einträge und werden vom Entry-Gate ausgenommen.
+ */
+function isInternalDataFile(file) {
+  const rel = path.posix.relative(DATA, file);
+  const firstSegment = rel.split('/')[0];
+  return firstSegment.startsWith('_');
 }
 
 function splitLocale(file) {

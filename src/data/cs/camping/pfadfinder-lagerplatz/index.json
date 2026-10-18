@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Telfs",
-  "region": "",
+  "region": "innsbruck",
   "plz": "6410",
   "adresse": "Birkenberg 9",
   "telefon": "+43 664 1612 234",
@@ -26,5 +26,9 @@
     "lat": "47.3216224",
     "lng": "11.0817474"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.pfadfinder-telfs.at/",
+    "https://de.wikipedia.org/wiki/Telfs"
+  ]
 }

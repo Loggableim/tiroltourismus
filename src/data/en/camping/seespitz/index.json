@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Walchsee",
-  "region": "",
+  "region": "kufstein",
   "plz": "6344",
   "adresse": "Seespitz 1",
   "telefon": "+43 5374 5359",
@@ -24,5 +24,9 @@
     "lng": "12.3140714"
   },
   "status": "published",
-  "kurzbeschreibung": "Year-round campsite directly on the Walchsee in the Kaiserwinkl, with renovated sanitary facilities, a bathing jetty, a restaurant and views of the Kaisergebirge."
+  "kurzbeschreibung": "Year-round campsite directly on the Walchsee in the Kaiserwinkl, with renovated sanitary facilities, a bathing jetty, a restaurant and views of the Kaisergebirge.",
+  "sources": [
+    "https://www.campingseespitz.at",
+    "https://de.wikipedia.org/wiki/Walchsee"
+  ]
 }

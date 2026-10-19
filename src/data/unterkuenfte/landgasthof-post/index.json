@@ -11,7 +11,7 @@
   "telefon": "+43 5674 5207",
   "email": null,
   "webseite": "http://www.landgasthofpost.com",
-  "beschreibung": "<p>Der <strong>Landgasthof Post</strong> befindet sich in der beschaulichen Gemeinde <strong>Bach</strong> im österreichischen <strong>Lechtal</strong>, das für seine unberührte Natur bekannt ist. Die Umgebung bietet eine vielseitige alpine Landschaft mit Wäldern, Bergen und Tälern. Die Ausstattung des Hotels umfasst <strong>komfortable Zimmer</strong>, einen <strong>Speisesaal</strong> mit regionaler Küche und einen <strong>Biergarten</strong> mit Bergblick. Die Atmosphäre ist von <strong>traditionellem Charme</strong> und <strong>tiroler Gastlichkeit</strong> geprägt. Das Haus eignet sich besonders für <strong>Wanderer</strong> und <strong>Skifahrer</strong>, aber auch für <strong>Paare</strong> und <strong>Familien</strong>, die Erholung suchen. Die ruhige Lage garantiert einen entspannten Aufenthalt abseits des Massentourismus.</p>",
+  "beschreibung": "<p>Der <strong>Landgasthof Post</strong> empfängt Feriengäste in der idyllischen Gemeinde <strong>Bach im Lechtal</strong>, im Herzen des geschützten Naturparks Tiroler Lech. Das traditionsreiche Haus verbindet über Generationen gelebte Gastfreundschaft mit alpinem Wohlfühlkomfort. Die gemütlichen Gästezimmer sind im alpenländischen Holzstil eingerichtet und verfügen über Balkone mit freiem Blick auf die Lechtaler und Allgäuer Alpen. In den getäfelten Gaststuben und im sonnigen Biergarten serviert die Küche herzhafte Tiroler Spezialitäten, Wildgerichte und hausgemachte Mehlspeisen aus regionaler Erzeugung. Der Lechweg für Weitwanderer führt direkt durch die Region, während im Winter die Skigebiete des Lechtals sowie die Verbindung nach Warth-Schröcken und an den Arlberg für unbegrenzten Winterspaß sorgen.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Historischer Landgasthof in Bach im Naturpark Tiroler Lechtal mit traditioneller Wirtshauskultur."
 }

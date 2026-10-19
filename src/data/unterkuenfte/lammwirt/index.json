@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Lammwirt</strong> liegt in einer beschaulichen Ortschaft in <strong>Tirol</strong>, eingebettet in die alpine Kulisse. Die <strong>Umgebung</strong> ist ideal für Naturliebhaber und bietet im Sommer Wandermöglichkeiten und im Winter Skigebiete. Die <strong>Ausstattung</strong> des Hotels umfasst komfortable Zimmer, ein Restaurant mit traditioneller Tiroler Küche und einen Saunabereich. Die <strong>Atmosphäre</strong> ist warmherzig und einladend, mit Fokus auf Gemütlichkeit. Die <strong>Zielgruppe</strong> sind Urlauber, die einen erholsamen Aufenthalt in der Natur suchen, sowie Aktivurlauber. Das Hotel verbindet traditionelle Elemente mit modernem Komfort.</p>",
+  "beschreibung": "<p>Der <strong>Gasthof Lammwirt</strong> liegt in sonniger Panoramalage in <strong>Jerzens im Pitztal</strong>, umgeben von der imposanten Kulisse der Pitztaler Bergwelt. Der traditionsreiche Betrieb verbindet herzliche Tiroler Gastlichkeit mit behaglichem Komfort. Die gemütlichen Gästezimmer im alpenländischen Stil verfügen über Balkone mit weitem Blick ins Tal und auf die umliegenden Gipfel. Im rustikalen Restaurant serviert die Küche traditionelle Tiroler Gerichte, herzhafte Gröstl und feine Schmankerl aus regionalen Zutaten. Ein kleiner <strong>Wellnessbereich mit Sauna</strong> lädt nach aktiven Tagen zur Erholung ein. Dank der Nähe zum familienfreundlichen Skigebiet Hochzeiger und abwechslungsreichen Wanderwegen ist der Gasthof zu jeder Jahreszeit ein idealer Stützpunkt.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditionsreicher Almgasthof in Jerzens im Pitztal mit Tiroler Küche, Sauna und Panoramablick."
 }

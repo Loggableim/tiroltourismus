@@ -11,7 +11,7 @@
   "telefon": "+43 5674 5207",
   "email": null,
   "webseite": "http://www.landgasthofpost.com",
-  "beschreibung": "<p>Der <strong>Landgasthof Post</strong> befindet sich in der beschaulichen Gemeinde <strong>Bach</strong> im österreichischen <strong>Lechtal</strong>, das für seine unberührte Natur bekannt ist. Die Umgebung bietet eine vielseitige alpine Landschaft mit Wäldern, Bergen und Tälern. Die Ausstattung des Hotels umfasst <strong>komfortable Zimmer</strong>, einen <strong>Speisesaal</strong> mit regionaler Küche und einen <strong>Biergarten</strong> mit Bergblick. Die Atmosphäre ist von <strong>traditionellem Charme</strong> und <strong>tiroler Gastlichkeit</strong> geprägt. Das Haus eignet sich besonders für <strong>Wanderer</strong> und <strong>Skifahrer</strong>, aber auch für <strong>Paare</strong> und <strong>Familien</strong>, die Erholung suchen. Die ruhige Lage garantiert einen entspannten Aufenthalt abseits des Massentourismus.</p>",
+  "beschreibung": "<p>Il <strong>Landgasthof Post</strong> sorge nella suggestiva località di <strong>Bach nella Valle Lechtal</strong>, nel cuore del Parco Naturale del Lech tirolese. La storica struttura unisce l'autentica ospitalità contadina a un'atmosfera serena e rilassante. Le camere in stile rustico con arredi in legno presentano balconi panoramici affacciati sulle Alpi della Lechtal e dell'Algovia. Nelle caratteristiche stube e nel giardino estivo vengono serviti piatti genuini, selvaggina e dolci fatti in casa. Il celebre sentiero Lechweg attraversa la valle, mentre in inverno si accede rapidamente alle piste di Warth-Schröcken e dell'Arlberg.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Storica locanda rurale a Bach nel Parco Naturale della Valle Lechtal con autentica cucina tirolese."
 }

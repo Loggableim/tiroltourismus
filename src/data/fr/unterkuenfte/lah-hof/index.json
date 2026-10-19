@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Läh-Hof</strong> in <strong>Nesselwängle</strong> liegt im malerischen <strong>Tannheimer Tal</strong> in Österreich. Die <strong>Umgebung</strong> wird von einer alpinen Berglandschaft geprägt, die ideale Bedingungen für Wanderungen und Skifahrten bietet. Die <strong>Ausstattung</strong> umfasst komfortable Zimmer, einen Wellnessbereich mit Sauna und ein Restaurant mit regionaler Küche. Die <strong>Atmosphäre</strong> ist gemütlich und einladend, mit traditionellem österreichischem Charme. Die <strong>Zielgruppe</strong> sind vor allem Familien, Paare und Naturliebhaber, die Erholung in den Bergen suchen.</p>",
+  "beschreibung": "<p>La ferme <strong>Läh-Hof</strong> accueille ses hôtes dans le village pittoresque de <strong>Nesselwängle</strong>, au cœur de la splendide <strong>vallée de Tannheim</strong>. Dominé par les parois rocheuses de la Rote Flüh et du Gimpel, cet établissement familial est un havre de calme et d'authenticité. Les chambres et appartements meublés en bois massif s'ouvrent sur des balcons avec vue sur les cimes. Le petit-déjeuner met en valeur les produits de la ferme. En été, les via ferratas et le lac Haldensee séduisent les vacanciers, tandis que l'hiver déroule ses pistes de ski et de fond.</p>",
   "ausstattung": [],
   "tags": [
     "hors des sentiers battus",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ferme familiale chaleureuse et appartements à Nesselwängle dans la splendide vallée de Tannheim."
 }

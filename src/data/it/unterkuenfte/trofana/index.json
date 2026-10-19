@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.trofana-soelden.at/willkommen.html",
-  "beschreibung": "<p>Die Ferienwohnung <strong>Trofana</strong> befindet sich in ruhiger Lage von <strong>Sölden</strong>, nur wenige Gehminuten vom Ortszentrum entfernt. Die Unterkunft bietet eine <strong>typisch alpine Einrichtung</strong> mitholzmöbeln und einem gemütlichen Wohnbereich. <strong>Gäste</strong> erhalten eine voll ausgestattete Küche zur Selbstversorgung sowie Zugang zu einem <strong>Skikeller</strong> und einem kleinen <strong>Abstellraum</strong> für Sportausrüstung. Die Umgebung lädt zu <strong>Wanderungen</strong> und <strong>Skiaktivitäten</strong> im Ötztal ein.</p>",
+  "beschreibung": "<p>L'appartamento vacanze <strong>Trofana</strong> si trova in una posizione tranquilla a <strong>Sölden</strong>, a pochi minuti a piedi dal centro del paese. L'alloggio offre un <strong>arredamento tipicamente alpino</strong> con mobili in legno massello e un'accogliente zona giorno. Gli <strong>ospiti</strong> hanno a disposizione una cucina completamente attrezzata, l'accesso a un <strong>deposito sci</strong> e un pratico <strong>ripostiglio</strong> per l'attrezzatura sportiva. L'incantevole Ötztal invita a splendide <strong>escursioni estive</strong> e avvincenti <strong>giornate sugli sci</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "alloggio vacanze",
@@ -23,5 +23,9 @@
     "lat": "46.9742169",
     "lng": "11.012519"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

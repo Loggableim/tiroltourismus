@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Tirolerheim</strong> liegt in einem ruhigen Dorf im Stubaital, umgeben von Bergen und Wiesen. Das Gasthaus erwartet Gäste mit traditionellen Tiroler Speisen und einfachen, sauberen Zimmern. Die Einrichtung ist rustikal, mit Holzmöbeln und Wandbildern. <strong>WLAN</strong> ist vorhanden, Parkplätze sind verfügbar.</p>",
+  "beschreibung": "<p><strong>Tirolerheim</strong> 旅社坐落于斯图拜山谷（Stubaital）宁静优美的山村中，群山巍峨，草场茵茵。这家温馨的客栈为客人提供可口纯正的蒂罗尔传统美馔与整洁舒适的客房。实木家具与精美壁饰烘托出淳朴地道的乡村风情。住宿期间免费提供 <strong>Wi-Fi</strong> 无线上网与专用停车位。</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -23,5 +23,9 @@
     "lat": "47.0630207",
     "lng": "11.5009858"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

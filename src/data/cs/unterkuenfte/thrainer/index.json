@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Thrainer</strong> liegt in einem Tiroler Dorf im Stubaital, eingebettet in die Berglandschaft des Alpenraums. Die Einrichtung ist schlicht gehalten, mit einem gastfreundlichen Ambiente und einer Küche, die regionale Gerichte anbietet. Gäste können eine warme, unkomplizierte Bewirtung erwarten, wobei der Schwerpunkt auf bodenständiger Gastronomie liegt.</p>",
+  "beschreibung": "<p><strong>Gasthof Thrainer</strong> se nachází v malebné tyrolské vesničce v údolí Stubaital, zasazené do působivé horské scenérie Alp. Interiér penzionu je zařízen v útulném, jednoduchém stylu s vřelou atmosférou a kuchyní nabízející poctivé regionální pokrmy. Hosté se mohou těšit na srdečné a neformální přijetí s důrazem na pravou, tradiční alpskou pohostinnost.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -23,5 +23,9 @@
     "lat": "47.6488225",
     "lng": "12.2165336"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

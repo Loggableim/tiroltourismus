@@ -11,7 +11,7 @@
   "telefon": "+43 5376 5359",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Ferienwohnung Stix liegt am Ortsrand von <strong>Thiersee</strong> in ruhiger Lage mit Blick auf die umliegenden Berge. Das Haus bietet eine gemütliche Wohnung mit separatem Eingang, voll ausgestatteter Küche und Balkon. <strong>Gäste</strong> erreichen in wenigen Minuten das Skigebiet und den <strong>Thiersee</strong> für Sommeraktivitäten. Die Wohnung eignet sich für Selbstversorger, die die Tiroler Bergwelt kennenlernen möchten.</p>",
+  "beschreibung": "<p>L'appartamento Ferienwohnung Stix sorge in una posizione tranquilla alla periferia di <strong>Thiersee</strong>, con una splendida vista sulle montagne circostanti. La struttura propone un alloggio confortevole con ingresso indipendente, cucina completamente attrezzata e balcone. Gli <strong>ospiti</strong> possono raggiungere in pochi minuti il comprensorio sciistico e il lago di <strong>Thiersee</strong> per una ricca varietà di attività estive. È la soluzione ideale per chi desidera esplorare le Alpi tirolesi in totale autonomia.</p>",
   "ausstattung": [],
   "tags": [
     "alloggio vacanze",
@@ -23,5 +23,9 @@
     "lat": "47.5938793",
     "lng": "12.1296478"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

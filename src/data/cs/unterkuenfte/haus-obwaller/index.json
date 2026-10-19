@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5457",
   "email": "appartement@obwaller.at",
   "webseite": "http://www.appartement-obwaller-soell.at/",
-  "beschreibung": "<p>Haus Obwaller liegt im Ortsteil Söll, Tirol, in der <strong>ruhigen Umgebung</strong> der Wilder Kaiser Region. <strong>Die Ferienwohnungen</strong> sind mit einer voll ausgestatteten Küche und komfortablen Wohnbereichen ausgestattet. Da es sich um eine Ferienwohnung handelt, besteht die Möglichkeit zur Selbstverpflegung; in der Nähe befinden sich mehrere Gastronomiebetriebe. In der Umgebung bieten sich <strong>Wander- und Radwege</strong> im Sommer sowie das Skigebiet SkiWelt Wilder Kaiser-Brixental im Winter an. Das Haus besticht durch seine <strong>ruhige Lage</strong> und den traditionellen Tiroler Baustil, was eine gemütliche Atmosphäre schafft. Der <strong>Ortskern von Söll</strong> ist fußläufig erreichbar.</p>",
+  "beschreibung": "<p>Apartmánový dům <strong>Haus Obwaller</strong> se nachází na adrese Dorf 55 v obci <strong>Söll</strong> v oblíbeném prázdninovém regionu Wilder Kaiser v Tyrolsku. Útulné a s citem zařízené prázdninové apartmány poskytují dostatek prostoru pro rodiny i páry hledající nezávislou dovolenou. K dispozici jsou plně vybavené kuchyně s moderními spotřebiči, pohodlné obývací pokoje, oddělené ložnice a balkony s přímým výhledem na masiv Wilden Kaiseru i vrchol Hohe Salve. Centrum obce Söll s restauracemi a obchody je snadno dostupné pěšky. V zimě staví skibus kousek od domu a doveze lyžaře za několik minut k lanovkám obřího areálu <strong>SkiWelt Wilder Kaiser–Brixental</strong>. V létě lákají zážitkové stezky jako Hexenwasser a cyklotrasy údolím.</p>",
   "ausstattung": [],
   "tags": [
     "ferienwohnung",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulné prázdninové apartmány v Söllu u masivu Wilder Kaiser v klidné poloze s kompletní kuchyní a blízkostí skiareálu SkiWelt."
 }

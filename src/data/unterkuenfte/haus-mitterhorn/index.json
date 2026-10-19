@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Haus Mitterhorn</strong> liegt in einer ruhigen Lage in Tirol mit Blick auf das umliegende Bergpanorama. Die Ferienwohnung ist mit einer <strong>voll ausgestatteten Küche</strong> und komfortablen Wohnräumen ausgestattet. Ein kulinarisches Angebot vor Ort besteht nicht, die Küche erlaubt aber eine <strong>flexible Selbstverpflegung</strong>. In der Nähe laden im Sommer <strong>Wanderwege</strong> und im Winter <strong>Skipisten zu Aktivitäten</strong> ein. Das Haus besticht durch seine <strong>ruhige Atmosphäre</strong>, die traditionelle alpine Elemente mit modernem Wohnkomfort vereint.</p>",
+  "beschreibung": "<p>Das <strong>Haus Mitterhorn</strong> liegt in einer ruhigen und sonnigen Lage in <strong>St. Ulrich am Pillersee</strong> im malerischen Pillerseetal in den Kitzbüheler Alpen. Die großzügige Ferienwohnung ist behaglich eingerichtet und verfügt über eine voll ausgestattete Küche für die unabhängige Selbstverpflegung, komfortable Schlafzimmer sowie einen sonnigen Balkon mit Panoramablick auf das namensgebende Mitterhorn und die schroffen Felswände der Loferer Steinberge. Nur wenige Gehminuten trennen die Unterkunft vom smaragdgrünen Pillersee, der im Sommer zu Spaziergängen, Bootsfahrten und Erfrischung einlädt. Im Winter begeistern die schneesicheren Pisten der Buchensteinwand mit dem berühmten Jakobskreuz sowie das weitläufige Langlaufnetz des Tales, dessen Loipen bequem erreichbar sind.</p>",
   "ausstattung": [],
   "tags": [
     "ferienwohnung",
@@ -24,5 +24,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pillerseetal.at",
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Ruhig gelegene Ferienwohnung in St. Ulrich am Pillersee mit komplett ausgestatteter Küche und Blick auf die Loferer Steinberge."
 }

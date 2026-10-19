@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.tiscover.at/haus-mangweth",
-  "beschreibung": "<p>Das <strong>Haus Mangweth</strong> liegt in einer ruhigen Lage im Tiroler Alpenraum, mit Blick auf die umliegenden Berggipfel. Die <strong>Zimmer</strong> sind im Tiroler Landhausstil eingerichtet und mit modernen Bädern ausgestattet. Das Restaurant bietet eine Auswahl an regionalen Spezialitäten, die mit lokalen Produkten zubereitet werden. In der Umgebung können Gäste im Sommer wandern oder Mountainbike fahren, im Winter ist Skifahren möglich. Die <strong>Atmosphäre</strong> des Hauses wird als gemütlich und einladend beschrieben. Wanderwege beginnen direkt hinter dem Haus. Nahegelegene Skigebiete sind mit dem Auto erreichbar.</p>",
+  "beschreibung": "<p>La maison d'hôtes <strong>Haus Mangweth</strong> accueille les vacanciers dans un endroit calme et bien exposé à <strong>Nauders</strong>, sur le col de Reschen, au carrefour de l'Autriche, de l'Italie et de la Suisse. Décorées dans un style tyrolien chaleureux, les chambres disposent de salles de bains contemporaines, d'une télévision et d'un balcon avec vue dégagée sur les hauts sommets environnants. Un copieux petit-déjeuner composé de produits du terroir est proposé chaque matin. De nombreux sentiers de randonnée et parcours VTT démarrent au seuil de l'établissement. L'hiver, la navette gratuite dépose rapidement les skieurs au pied des pistes enneigées du domaine de Nauders Bergkastel.</p>",
   "ausstattung": [],
   "tags": [
     "hôtel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.nauders.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Maison d'hôtes alpine à Nauders près du col de Reschen, avec des chambres confortables et une vue sur les trois frontières."
 }

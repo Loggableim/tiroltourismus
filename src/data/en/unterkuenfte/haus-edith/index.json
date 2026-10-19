@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Located at the foot of Germany's and Austria's iconic border peak in Ehrwald, Haus Edith welcomes holidaymakers with cosy rooms and scenic mountain surroundings.</p><p>The Tiroler Zugspitzbahn cable car, the Ehrwalder Alm ski resort, and alpine walking trails are reached in minutes.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zugspitzarena.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Edith in Ehrwald features warm hospitality and dramatic views of the Zugspitze massif."
 }

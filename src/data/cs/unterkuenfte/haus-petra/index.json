@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof <strong>Haus Petra</strong> liegt in ruhiger Ortsrandlage eines Tiroler Bergdorfes, umgeben von Wiesen und Wäldern. Die <strong>Zimmer sind zweckmäßig eingerichtet</strong> und verfügen über Bad, WC sowie teilweise einen Balkon. Das <strong>hauseigene Restaurant bietet traditionelle Tiroler Küche</strong> mit regionalen Produkten. In der Umgebung gibt es ein dichtes <strong>Netz an Wander- und Radwegen</strong>; im Winter sind mehrere Skigebiete schnell erreichbar. Die <strong>Atmosphäre des Hauses ist familiär und unkompliziert</strong>, was den Aufenthalt angenehm macht.</p>",
+  "beschreibung": "<p>Penzion <strong>Haus Petra</strong> se nachází na slunném a klidném svahu v <strong>Söldenu</strong> v tyrolském údolí Ötztal, obklopený horskými loukami a lesy. Pokoje zařízené v tradičním tyrolském stylu nabízejí moderní koupelny se sprchou/WC, satelitní televizi a balkony s nádherným výhledem na okolní horské velikány. Ráno čeká na hosty vyvážená snídaně z čerstvých regionálních surovin, která dodá energii pro celodenní aktivity. K údolním stanicím lanovek Giggijoch a Gaislachkogl doveze lyžaře bezplatný skibus během několika minut a otevře jim cestu na zasněžené ledovce v Söldenu. V létě začínají v okolí značené turistické trasy i oblíbené traily pro horská kola v rámci Bike Republic Sölden.</p>",
   "ausstattung": [],
   "tags": [
     "hostinec",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný horský penzion v klidné poloze ve svahu v Söldenu v údolí Ötztal s komfortními pokoji a výhledem na Stubaiské Alpy."
 }

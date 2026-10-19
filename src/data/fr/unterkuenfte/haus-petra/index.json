@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof <strong>Haus Petra</strong> liegt in ruhiger Ortsrandlage eines Tiroler Bergdorfes, umgeben von Wiesen und Wäldern. Die <strong>Zimmer sind zweckmäßig eingerichtet</strong> und verfügen über Bad, WC sowie teilweise einen Balkon. Das <strong>hauseigene Restaurant bietet traditionelle Tiroler Küche</strong> mit regionalen Produkten. In der Umgebung gibt es ein dichtes <strong>Netz an Wander- und Radwegen</strong>; im Winter sind mehrere Skigebiete schnell erreichbar. Die <strong>Atmosphäre des Hauses ist familiär und unkompliziert</strong>, was den Aufenthalt angenehm macht.</p>",
+  "beschreibung": "<p>L'auberge <strong>Haus Petra</strong> est agréablement située à flanc de colline dans un secteur calme et ensoleillé de <strong>Sölden</strong>, au cœur de l'Ötztal. Les chambres aménagées dans une élégante tradition montagnarde sont pourvues de salles de bains contemporaines, de la télévision par satellite et de balcons privés avec vue dégagée sur les crêtes rocheuses. Un petit-déjeuner équilibré composé de produits locaux frais est servi chaque matin pour faire le plein d'énergie. En hiver, la navette gratuite permet de rejoindre en quelques minutes les gares de départ du Giggijoch et du Gaislachkogl, ouvrant les portes du vaste domaine glaciaire de Sölden. L'été, sentiers panoramiques et pistes de la Bike Republic Sölden réjouissent les vacanciers.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Auberge alpine chaleureuse à flanc de montagne à Sölden dans l'Ötztal, avec chambres confortables et vue sur les sommets."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Park</strong> in Tirol liegt in einer ruhigen Seitenlage, dennoch zentrumsnah und bietet einen guten Ausgangspunkt für Aktivitäten in der Region. Die Architektur verbindet alpenländische Tradition mit modernen Linien. Die Zimmer sind zeitgemäß und verfügen über Balkon sowie kostenfreies WLAN. Das Frühstücksbuffet ist umfangreich, das Abendessen wird häufig als Buffet oder Menü mit regionalen Speisen angeboten. Im Wellnessbereich stehen Sauna, Dampfbad und ein Ruheraum zur Verfügung. In der Umgebung können Gäste im Sommer wandern oder Mountainbike fahren, im Winter werden die nahen Skigebiete genutzt. Ein kostenpflichtiger Parkplatz und eine Garage sind vor Ort vorhanden. Das <strong>Hotel Park</strong> spricht somit sowohl Urlaubsgäste als auch Geschäftsreisende an, die eine funktionale und ruhige Unterkunft suchen.</p>",
+  "beschreibung": "<p><strong>Hotel Park</strong> leží v klidné poloze nedaleko centra města <strong>St. Johann in Tirol</strong> v Kitzbühelských Alpách. Architektura spojuje alpskou tradici s moderními liniemi. Pokoje jsou vybavené balkonem a bezplatným Wi-Fi. Kulinářskou nabídku tvoří bohatý snídaňový bufet a večeře s regionálními pokrmy. Ve <strong>wellness zóně</strong> je k dispozici sauna, parní lázeň a odpočívárna. Okolí nabízí v létě turistiku a cyklistiku, v zimě skvělé <strong>lyžařské areály</strong> v čele se St. Johannem a Kitzbühelem.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbuehel.com/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Park v St. Johann in Tirol nabízí klidnou centrální polohu, wellness se saunou a parní lázní, bohatou gastronomii a rychlý přístup ke Kitzbühelským Alpám."
 }

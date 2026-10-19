@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Jugendherberge Dangl ist ein Gasthof am Ortsrand einer Gemeinde im <strong>Tiroler Oberland</strong>. Die Unterkunft bietet eine praktische, unkomplizierte Atmosphäre, die auf <strong>Wandergruppen</strong> und Schulklassen ausgerichtet ist. Überwiegend stehen funktionale <strong>Mehrbettzimmer</strong> zur Verfügung, Sanitäranlagen werden geteilt. Ein Aufenthaltsraum und ein <strong>Trockenraum</strong> für Skiausrüstung sind vorhanden. Die Halbpension beinhaltet ein Frühstücksbuffet und ein Abendessen mit regionalen Gerichten. Die Lage eignet sich für Wanderungen im Sommer und <strong>Skitouren</strong> im Winter. Gäste, die preisbewusst reisen und eine zweckmäßige Unterkunft suchen, finden hier eine geeignete Basis.</p>",
+  "beschreibung": "<p><strong>Jugendherberge Dangl</strong> vítá hosty na slunném okraji obce <strong>Pfunds v Tyrolském Oberlandu</strong>, v blízkosti trojmezí Rakouska, Švýcarska a Itálie. Ubytování je ideální pro skupiny, školní výlety i sportovní nadšence hledající účelné a cenově dostupné zázemí. K dispozici jsou čisté vícelůžkové i rodinné pokoje, společenská místnost a lyžárna se sušárnou. Ráno začíná vydatnou snídaní formou bufetu, večer je k dispozici domácí polopenze. V zimě poloha nabízí rychlou dostupnost velkých areálů Samnaun-Ischgl, Nauders i Serfaus-Fiss-Ladis, v létě lákají túry v údolí Oberinntal.</p>",
   "ausstattung": [],
   "tags": [
     "berg",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tiroler-oberland.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Příjemná mládežnická a skupinová ubytovna v Pfundsu v Tyrolském Oberlandu v trojmezí."
 }

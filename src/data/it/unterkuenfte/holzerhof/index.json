@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Holzerhof</strong> liegt in einer ländlichen Gegend Tirols, abseits von stark befahrenen Straßen. Die Unterkunft agiert als <strong>Gasthof</strong> und bietet einfache, aber saubere Gästezimmer zur Übernachtung an. Zur Ausstattung gehören ein gastronomischer Betrieb mit regionaler Küche sowie Parkplätze für Gäste. Die Umgebung ist von <strong>Berglandschaft</strong> und landwirtschaftlichen Flächen geprägt, was sich für Spaziergänge eignet. Gäste können eine ruhige Atmosphäre und die Nähe zur Natur erwarten, jedoch keinen luxuriösen Komfort.</p>",
+  "beschreibung": "<p>L'agriturismo <strong>Holzerhof</strong> sorge in una splendida posizione collinare rialzata e soleggiata a <strong>Telfes nella Stubaital</strong>, incorniciato da pascoli alpini con vista libera sui maestosi torrioni rocciosi dei Kalkkögel. La struttura a conduzione familiare offre accoglienti camere da letto in legno tradizionale con moderni bagni privati con doccia/WC, TV satellitare, Wi-Fi e balconi panoramici affacciati sui monti dello Stubai. Al risveglio viene servita una genuina colazione a buffet con latte fresco del maso e sapori della valle. Il vicino centro benessere e acquatico StuBay garantisce piacevoli ore di svago. La stazione di partenza di <strong>Schlick 2000</strong> a Fulpmes dista solo pochi minuti d'auto, con lo skibus nelle vicinanze che garantisce anche trasferimenti diretti verso il <strong>ghiacciaio dello Stubai</strong>.</p>",
   "ausstattung": [
     "wifi",
     "restaurant"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradizionale agriturismo in splendida posizione soleggiata a Telfes nella Stubaital con camere accoglienti e vista sui Kalkkögel."
 }

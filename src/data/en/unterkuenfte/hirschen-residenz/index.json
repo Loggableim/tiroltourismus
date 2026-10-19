@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Hirschen Residenz</strong> welcomes guests to a sunny, central setting on Thomas-Walch-Straße in <strong>Imst</strong> in the Tyrolean Oberland. The stylish, modern rooms and suites provide sleek en-suite bathrooms with shower/WC, flat-screen TVs, free Wi-Fi, and private balconies overlooking the rugged Muttekopf mountain chain and the Gurgl Valley. In the welcoming on-site restaurant, delicious Tyrolean specialities and international cuisine crafted from local ingredients are served. Imst's historic centre with its traditional water fountains, boutiques, and bakeries is just an easy stroll away. The base terminal of the <strong>Imster Bergbahnen</strong>, home to the famous Alpine Coaster and superb walking paths, is reached in minutes by car. In winter, family-friendly skiing at Hoch-Imst delights visitors.</p>",
   "ausstattung": [
     "wlan",
     "parkplatz",
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Modern residence on Thomas-Walch-Straße in Imst featuring comfortable rooms, restaurant, and easy access to Imster Bergbahnen."
 }

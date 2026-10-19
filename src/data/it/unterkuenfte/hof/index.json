@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hof liegt in einer ländlichen Gegend Tirols. Die Zimmer sind <strong>einfach ausgestattet</strong> und haben ein <strong>eigenes Bad</strong>. Das Restaurant serviert <strong>Tiroler Spezialitäten</strong>. Ein <strong>Gastgarten</strong> ist vorhanden. Die Umgebung besteht aus <strong>Bergen und Wäldern</strong>. Gäste können <strong>Wanderungen und Wintersport</strong> betreiben. Die Unterkunft bietet <strong>Parkplätze</strong> für Autos.</p>",
+  "beschreibung": "<p>La locanda rurale <strong>Hof</strong> accoglie i propri ospiti in una splendida e tranquilla cornice soleggiata nel comune di <strong>Brixlegg</strong>, all'imbocco della magnifica Alpbachtal nel Tirolo settentrionale. Le camere, arredate secondo lo stile rustico tradizionale con largo uso di legno chiaro, offrono moderni bagni privati con doccia/WC, TV satellitare, Wi-Fi e balconi soleggiati affacciati sulla valle dell'Inn e sulle cime del Rofan. Al mattino viene allestito un ricco buffet di colazione con prodotti freschi del maso e del territorio. Durante la bella stagione, il giardino alberato è la cornice ideale per gustare le specialità locali. Gli impianti di risalita del carosello <strong>Ski Juwel Alpbachtal Wildschönau</strong> distano pochi minuti d'auto, mentre splendidi laghetti balneabili e il borgo di Rattenberg si trovano a breve distanza.</p>",
   "ausstattung": [
     "restaurant",
     "parkplatz"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente locanda rurale in posizione soleggiata e tranquilla a Brixlegg nella Alpbachtal con camere tradizionali e vista sul Rofan."
 }

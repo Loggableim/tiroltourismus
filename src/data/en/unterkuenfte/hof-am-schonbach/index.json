@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Hof am Schönbach</strong> welcomes guests to a sunny, quiet residential location at St. Jakober Dorfstraße 56 in <strong>St. Anton am Arlberg</strong>. Decorated in an inviting alpine style, this self-catering holiday flat provides wonderful comfort for couples and families, featuring a fully equipped kitchen with modern appliances, peaceful bedrooms, an en-suite bathroom with shower/WC, satellite TV, Wi-Fi, and private balconies framing views of the Arlberg and Verwall peaks. The complimentary ski bus stops just moments away, quickly transporting winter sports enthusiasts to the main cable car terminals of Galzig, Gampen, and Rendl within <strong>Ski Arlberg</strong>. In summer, via ferratas, high-alpine hiking routes, and cycling circuits begin right in the area.</p>",
   "ausstattung": [
     "küche",
     "wlan",
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy holiday flat on St. Jakober Dorfstraße in St. Anton am Arlberg with a fully equipped kitchen and scenic mountain views."
 }

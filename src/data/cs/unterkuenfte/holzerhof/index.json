@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Holzerhof</strong> liegt in einer ländlichen Gegend Tirols, abseits von stark befahrenen Straßen. Die Unterkunft agiert als <strong>Gasthof</strong> und bietet einfache, aber saubere Gästezimmer zur Übernachtung an. Zur Ausstattung gehören ein gastronomischer Betrieb mit regionaler Küche sowie Parkplätze für Gäste. Die Umgebung ist von <strong>Berglandschaft</strong> und landwirtschaftlichen Flächen geprägt, was sich für Spaziergänge eignet. Gäste können eine ruhige Atmosphäre und die Nähe zur Natur erwarten, jedoch keinen luxuriösen Komfort.</p>",
+  "beschreibung": "<p>Selský penzion <strong>Holzerhof</strong> se nachází na vyvýšeném, slunném svahu v obci <strong>Telfes im Stubaital</strong>, obklopený rozkvetlými loukami s volným výhledem na vápencové věže Kalkkögel. Rodinný statek nabízí pokoje v útulném tyrolském dřevěném stylu s moderní koupelnou (sprcha/WC), satelitní televizí, Wi-Fi a soukromými balkony s ničím nerušeným výhledem na Stubaiské Alpy. Ráno čeká hosty pestrá snídaně formou bufetu z čerstvého mléka a regionálních surovin. Blízké zážitkové centrum StuBay s bazény a saunami láká k celoroční relaxaci. Dolní stanice areálu <strong>Schlick 2000</strong> ve Fulpmesu je vzdálena jen pár minut jízdy a skibus staví nedaleko. V zimě zajišťuje skibus rychlé spojení na ledovec <strong>Stubaier Gletscher</strong>.</p>",
   "ausstattung": [
     "wifi",
     "restaurant"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradiční selský statek na slunném svahu v Telfesu v údolí Stubaital s útulnými pokoji a výhledem na Kalkkögel."
 }

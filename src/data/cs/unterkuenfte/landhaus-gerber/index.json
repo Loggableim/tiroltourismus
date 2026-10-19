@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Landhaus Gerber befindet sich in einer ruhigen Lage in Tirol, umgeben von der <strong>alpinen Bergwelt</strong> der österreichischen Alpen. Die Umgebung bietet direkten Zugang zu <strong>Wanderwegen und Skigebieten</strong>, was es zu einem idealen Ausgangspunkt für Outdoor-Aktivitäten macht. Die Ausstattung des Hotels umfasst <strong>komfortable Zimmer</strong> mit traditionellem Tiroler Mobiliar und modernen Annehmlichkeiten wie WLAN. Zur Ausstattung gehören zudem ein Wellnessbereich mit Sauna sowie ein <strong>Restaurant mit regionaler Küche</strong>. Die Atmosphäre ist <strong>ruhig und gemütlich</strong>, geprägt von der natürlichen Umgebung und der traditionellen Gastfreundschaft. Zielgruppe sind vor allem <strong>Paare und Familien</strong>, die Erholung in der Natur oder Aktivurlaub suchen.</p>",
+  "beschreibung": "<p>Penzion <strong>Landhaus Gerber</strong> vítá své hosty ve slunném údolí <strong>Wildschönau</strong> v Kitzbühelských Alpách. Klidná poloha uprostřed přírody představuje dokonalé zázemí pro relaxaci. Útulné pokoje a apartmány v tyrolském stylu mají balkony s výhledem na horské vrcholy. K dispozici je <strong>sauna</strong> pro odpočinek po celodenních aktivitách. V létě začínají turistické stezky přímo u domu, v zimě zajišťuje skibus spojení do areálu Ski Juwel Alpbachtal Wildschönau.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wildschoenau.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Příjemný prázdninový dům ve Wildschönau s výhledem na hory, saunou a klidem přírody."
 }

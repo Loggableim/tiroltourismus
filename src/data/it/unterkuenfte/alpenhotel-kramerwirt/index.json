@@ -2,16 +2,16 @@
   "name": "Alpenhotel Kramerwirt",
   "slug": "alpenhotel-kramerwirt",
   "typ": "hotel",
-  "sterne": null,
-  "preis_ab": null,
+  "sterne": 4,
+  "preis_ab": 95,
   "ort": "Mayrhofen",
   "region": "zillertal",
-  "plz": "",
-  "adresse": "",
-  "telefon": null,
-  "email": null,
-  "webseite": null,
-  "beschreibung": "<p>L'<strong>Alpenhotel Kramerwirt</strong> a Söll è un hotel di categoria quattro stelle. Situato nella frazione di Hochsöll, vanta un accesso diretto al comprensorio sciistico SkiWelt. Le camere sono arredate in stile alpino contemporaneo. L'offerta gastronomica comprende una ricca colazione a buffet e un menu serale. L'<strong>area benessere</strong> offre una piscina coperta, saune e zone relax. Per le famiglie con bambini sono a disposizione un miniclub e una sala giochi. In estate la struttura funge da punto di partenza ideale per passeggiate ed escursiones in mountain bike.</p>",
+  "plz": "6290",
+  "adresse": "Am Marienbrunnen 346",
+  "telefon": "+43 5285 6700",
+  "email": "hotel@kramerwirt.at",
+  "webseite": "https://www.kramerwirt.at/",
+  "beschreibung": "<p>Il tradizionale quattro stelle <strong>Alpenhotel Kramerwirt</strong> accoglie i propri ospiti nel centro di Mayrhofen nella Zillertal con una calorosa ospitalità dal 1674. Le accoglienti camere e suite uniscono lo stile tradizionale tirolese al comfort contemporaneo. Al quarto piano, l’area benessere «Himmelreich» invita al relax con idromassaggio panoramico, varie saune, bagno turco e sale relax affacciate sulle vette della Zillertal. Il ristorante dell’hotel propone specialità regionali tirolesi e una ricca colazione a buffet. Sia in estate sia in inverno, l’hotel è una base ideale per escursioni in montagna e giornate sugli sci nella Zillertal.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -26,7 +26,8 @@
   "bilder": [],
   "hero_bild": null,
   "sources": [
-    "https://www.zillertal.at",
-    "https://de.wikipedia.org/wiki/Zillertal"
+    "https://www.kramerwirt.at/",
+    "https://www.zillertal.at/",
+    "https://de.wikipedia.org/wiki/Mayrhofen"
   ]
 }

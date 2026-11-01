@@ -2,16 +2,16 @@
   "name": "Alpenhotel Kramerwirt",
   "slug": "alpenhotel-kramerwirt",
   "typ": "hotel",
-  "sterne": null,
-  "preis_ab": null,
+  "sterne": 4,
+  "preis_ab": 95,
   "ort": "Mayrhofen",
   "region": "zillertal",
-  "plz": "",
-  "adresse": "",
-  "telefon": null,
-  "email": null,
-  "webseite": null,
-  "beschreibung": "<p>Das <strong>Alpenhotel Kramerwirt</strong> in Söll ist ein Hotel der Vier-Sterne-Kategorie. Es liegt im Ortsteil Hochsöll und verfügt über direkten Zugang zum Skigebiet SkiWelt. Die Zimmer sind im alpin-modernen Stil eingerichtet. Das gastronomische Angebot umfasst ein Frühstücksbuffet und ein Abendmenü. Der <strong>Wellnessbereich</strong> bietet ein Hallenbad, Saunen und Ruhezonen. Ein Kinderclub und Spielzimmer sind für Familien mit Kindern vorhanden. Im Sommer dient das Haus als Ausgangspunkt für Wanderungen und Mountainbike-Touren.</p>",
+  "plz": "6290",
+  "adresse": "Am Marienbrunnen 346",
+  "telefon": "+43 5285 6700",
+  "email": "hotel@kramerwirt.at",
+  "webseite": "https://www.kramerwirt.at/",
+  "beschreibung": "<p>Das traditionsreiche Vier-Sterne-<strong>Alpenhotel Kramerwirt</strong> empfängt seine Gäste im Zentrum von Mayrhofen im Zillertal mit Gastfreundschaft seit 1674. Die gemütlichen Zimmer und Suiten verbinden Tiroler Tradition mit zeitgemäßem Komfort. Im vierten Stock lädt der Wellnessbereich „Himmelreich“ mit Panorama-Whirlpool, Saunalandschaft, Dampfbad und Ruheräumen mit Bergblick zum Entspannen ein. Kulinarisch verwöhnt das Haus mit regionaler Zillertaler Küche und einem reichhaltigen Frühstücksbuffet. Im Sommer wie im Winter ist das Hotel ein idealer Ausgangspunkt für Wanderungen und Skitage im Zillertal.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -26,7 +26,8 @@
   "bilder": [],
   "hero_bild": null,
   "sources": [
-    "https://www.zillertal.at",
-    "https://de.wikipedia.org/wiki/Zillertal"
+    "https://www.kramerwirt.at/",
+    "https://www.zillertal.at/",
+    "https://de.wikipedia.org/wiki/Mayrhofen"
   ]
 }

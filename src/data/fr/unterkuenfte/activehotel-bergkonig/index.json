@@ -3,16 +3,21 @@
   "slug": "activehotel-bergkonig",
   "typ": "hotel",
   "sterne": 4,
-  "preis_ab": null,
+  "preis_ab": 140,
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
   "adresse": "Schulweg 9",
   "telefon": "+43 5226 2558",
-  "email": null,
+  "email": "info@activehotel.at",
   "webseite": "https://www.activehotel.at/",
-  "beschreibung": "<p>L'Activehotel Bergkönig est situé à Neustift im Stubaital, à proximité de la station de départ du téléphérique du glacier de Stubai. Cet établissement fonctionne comme un <strong>hôtel actif</strong>, offrant un accès direct aux sentiers de randonnée, pistes cyclables et domaines skiables de la vallée. Les équipements comprennent un <strong>espace bien-être</strong> avec sauna et piscine. La restauration est assurée par le <strong>restaurant</strong> de l'hôtel, qui propose une cuisine régionale. Les chambres bénéficient de divers aménagements, certaines disposant d'un balcon. Un service de location de matériel de sports d'hiver et de montagne est disponible sur place. L'hôtel s'adresse particulièrement aux vacanciers sportifs.</p>",
-  "ausstattung": [],
+  "beschreibung": "<p>L'hôtel quatre étoiles <strong>Activehotel Bergkönig</strong> accueille ses hôtes au centre de Neustift im Stubaital. Cet établissement familial dédié aux séjours actifs propose 36 chambres et suites spacieuses pour des vacances alliant montagne et bien-être. Les installations comprennent un bel espace bien-être doté d'une piscine intérieure et extérieure ainsi que de trois saunas intérieurs et d'un sauna extérieur. Côté restauration, l'établissement met à l'honneur une cuisine tyrolienne régionale et des mets équilibrés. En été comme en hiver, il constitue un point de départ idéal pour la randonnée, le vélo et le ski dans toute la vallée de Stubai.</p>",
+  "ausstattung": [
+    "pool",
+    "restaurant",
+    "sauna",
+    "wifi"
+  ],
   "tags": [
     "montagne",
     "hôtel",
@@ -29,7 +34,7 @@
   "hero_bild": null,
   "sources": [
     "https://www.activehotel.at/",
-    "https://www.stubai.at",
-    "https://de.wikipedia.org/wiki/Stubaital"
+    "https://www.activehotel.at/wellnesshotel-4-sterne-tirol",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
   ]
 }

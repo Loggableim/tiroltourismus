@@ -3,16 +3,21 @@
   "slug": "activehotel-bergkonig",
   "typ": "hotel",
   "sterne": 4,
-  "preis_ab": null,
+  "preis_ab": 140,
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
   "adresse": "Schulweg 9",
   "telefon": "+43 5226 2558",
-  "email": null,
+  "email": "info@activehotel.at",
   "webseite": "https://www.activehotel.at/",
-  "beschreibung": "<p>Das Activehotel Bergkönig liegt in Neustift im Stubaital, in der Nähe der Talstation der Stubaier Gletscherbahn. Die Unterkunft wird als <strong>Aktivhotel</strong> geführt. Gäste haben direkten Zugang zu den Wander-, Rad- und Skigebieten des Tales. Zum Angebot des Hauses gehört ein <strong>Wellnessbereich</strong> mit Sauna und Schwimmbad. Die gastronomische Versorgung erfolgt im hoteleigenen <strong>Restaurant</strong> mit regionaler Küche. Die Zimmer sind unterschiedlich ausgestattet, einige mit Balkon. Ein Verleih für Wintersport- und Bergsportausrüstung ist im Haus verfügbar. Das Hotel richtet sich an sportlich orientierte Gäste.</p>",
-  "ausstattung": [],
+  "beschreibung": "<p>Das Vier-Sterne-<strong>Activehotel Bergkönig</strong> empfängt seine Gäste im Zentrum von Neustift im Stubaital. Das familiengeführte Aktivhotel bietet 36 großzügige Zimmer und Suiten für einen erholsamen Berg- und Wellnessurlaub. Zur Ausstattung gehört ein vielseitiger Wellnessbereich mit In- und Outdoor-Pool sowie drei Indoor- und einer Outdoor-Sauna. Kulinarisch verwöhnt das Haus mit regionaler Tiroler Küche und Vital-Angeboten. Im Sommer wie im Winter ist das Hotel ein idealer Ausgangspunkt zum Wandern, Biken und Skifahren im gesamten Stubaital.</p>",
+  "ausstattung": [
+    "pool",
+    "restaurant",
+    "sauna",
+    "wifi"
+  ],
   "tags": [
     "berg",
     "hotel",
@@ -29,7 +34,7 @@
   "hero_bild": null,
   "sources": [
     "https://www.activehotel.at/",
-    "https://www.stubai.at",
-    "https://de.wikipedia.org/wiki/Stubaital"
+    "https://www.activehotel.at/wellnesshotel-4-sterne-tirol",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
   ]
 }

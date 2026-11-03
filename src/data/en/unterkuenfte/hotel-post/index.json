@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Hotel Post</strong> in <strong>Kaltenbach in the Zillertal Valley</strong> is a historic inn with a long-standing tradition of warm Tyrolean hospitality. The interiors feature classic alpine woodwork creating a welcoming, cozy environment. Guests benefit from exceptional proximity to the premier <strong>Hochzillertal-Hochfügen ski resort</strong> and extensive summer <strong>hiking trails</strong>. Facilities include a relaxing <strong>wellness area with sauna</strong> and a restaurant serving regional half-board meals.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Post in Kaltenbach in the Zillertal Valley provides authentic Tyrolean hospitality, a sauna wellness area, traditional half-board dining, and quick access to Hochzillertal."
 }

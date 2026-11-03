@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5081",
   "email": "servus@derpostwirt.at",
   "webseite": "http://www.hotel-postwirt-soell.at/",
-  "beschreibung": "<p>Das Hotel Postwirt liegt im Ortszentrum von Söll, einem Urlaubsort im Tiroler Unterland. Die Umgebung bietet einen direkten Zugang zu den Wander- und Skigebieten der umliegenden Bergwelt. Die <strong>Atmosphäre</strong> des Hauses ist von traditionellem Tiroler Stil und einer ruhigen, einladenden Stimmung geprägt. Zu den typischen Angeboten zählen ein Restaurant mit saisonaler und regionaler Küche sowie ein <strong>Wellnessbereich</strong> zur Entspannung. Gäste können einen komfortablen Aufenthalt mit guter Anbindung an Outdoor-Aktivitäten erwarten. Das Hotel eignet sich sowohl für Sommer- als auch für Winteraufenthalte und bietet eine solide Basis für die Erkundung der Region.</p>",
+  "beschreibung": "<p><strong>Hotel Postwirt</strong> leží v historickém centru obce <strong>Söll</strong> v prázdninové oblasti <strong>Wilder Kaiser</strong>. Tento tradiční 4hvězdičkový hotel spojuje tyrolskou kulturu pohostinství s moderním komfortem. Hosté mají snadný přístup k lyžařskému areálu <strong>SkiWelt Wilder Kaiser-Brixental</strong> i rozsáhlému systému letních <strong>turistických tras</strong>. K vybavení patří <strong>wellness zóna s celoročně vyhřívaným venkovním bazénem a saunami</strong> a vyhlášená restaurace s regionální a mezinárodní kuchyní.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Postwirt v centru Söllu v regionu Wilder Kaiser nabízí 4hvězdičkovou pohostinnost, celoroční vyhřívaný venkovní bazén, sauny a blízkost SkiWeltu."
 }

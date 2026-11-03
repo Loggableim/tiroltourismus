@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof <strong>Haus Pettneu</strong> liegt im Zentrum von Pettneu am Arlberg in ruhiger Umgebung. Die <strong>Zimmer sind mit Balkon</strong>, Sat-TV und WLAN ausgestattet. Das <strong>haus-eigene Restaurant serviert regionale Spezialitäten</strong> aus Tirol. In der Umgebung locken <strong>Wanderwege und die Skigebiete am Arlberg</strong>. Der <strong>nahegelegene Skibus</strong> bringt Gäste zu den Liften. Die Atmosphäre im Haus ist <strong>familiär und bodenständig</strong>. Eine <strong>Sauna</strong> und ein Lobbybereich mit Kachelofen ergänzen das Angebot.</p>",
+  "beschreibung": "<p>El establecimiento <strong>Haus Pettneu</strong> abre sus puertas en el pintoresco núcleo de <strong>Pettneu am Arlberg</strong>, al pie del imponente monte Hoher Riffler. Sus habitaciones, primorosamente decoradas en estilo alpino tirolés, cuentan con televisión por satélite, wifi, baños modernos y balcones soleados orientados al valle de Stanzer y a las cumbres del Arlberg. Tras una jornada en la nieve o en los senderos, la sauna propia y el acogedor salón con estufa de leña brindan el descanso perfecto. El autobús gratuito para junto a la casa y traslada a los esquiadores en pocos minutos a St. Anton am Arlberg, núcleo del inmenso dominio <strong>Ski Arlberg</strong>. En verano, las cordilleras de Verwall y de Lechtal ofrecen excelentes rutas de senderismo y escalada.</p>",
   "ausstattung": [],
   "tags": [
     "arlberg",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradicional posada alpina en el centro de Pettneu am Arlberg con habitaciones acogedoras, sauna y rápido enlace con Ski Arlberg."
 }

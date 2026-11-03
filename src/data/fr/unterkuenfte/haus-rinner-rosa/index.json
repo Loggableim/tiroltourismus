@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Gasthof <strong>Haus Rinner Rosa</strong> befindet sich in einer ruhigen Seitenlage in Tirol, eingebettet in eine typisch alpine Umgebung. Die <strong>Gästezimmer</strong> sind modern und dennoch traditionell gestaltet, mit Holzmöbeln und komfortablen Betten. Im hauseigenen Restaurant werden <strong>traditionelle Tiroler Gerichte</strong> aus regionalen Zutaten zubereitet. Für Freizeitaktivitäten bieten sich in der Nähe <strong>Wanderwege, Radstrecken und im Winter Skigebiete</strong> an. Die <strong>persönliche und einladende Atmosphäre</strong> des Familienbetriebs sorgt für einen angenehmen Aufenthalt.</p>",
+  "beschreibung": "<p>La maison d'hôtes <strong>Haus Rinner Rosa</strong> bénéficie d'une situation paisible dans une ruelle de la charmante station d'<strong>Oetz</strong>, à l'entrée de l'Ötztal. Les chambres confortables et lumineuses, décorées de mobilier en bois tyrolien, comprennent des salles de bains contemporaines, la télévision et un balcon ouvrant sur les Alpes de l'Ötztal et de Stubai. Un petit-déjeuner buffet varié composé de délices du terroir est servi chaque matin. La télécabine de l'<strong>Acherkogelbahn</strong> menant au domaine familial d'Hochoetz et le centre du village se trouvent à quelques minutes de marche. Durant la belle saison, le lac idyllique et tempéré de <strong>Piburg</strong> offre un cadre enchanteur pour la baignade et la promenade.</p>",
   "ausstattung": [],
   "tags": [
     "auberge",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetz.com",
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Charmante maison d'hôtes à Oetz à l'entrée de l'Ötztal, avec chambres traditionnelles et proche du lac de Piburg."
 }

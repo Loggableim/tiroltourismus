@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Gasthof <strong>Haus Rinner Rosa</strong> befindet sich in einer ruhigen Seitenlage in Tirol, eingebettet in eine typisch alpine Umgebung. Die <strong>Gästezimmer</strong> sind modern und dennoch traditionell gestaltet, mit Holzmöbeln und komfortablen Betten. Im hauseigenen Restaurant werden <strong>traditionelle Tiroler Gerichte</strong> aus regionalen Zutaten zubereitet. Für Freizeitaktivitäten bieten sich in der Nähe <strong>Wanderwege, Radstrecken und im Winter Skigebiete</strong> an. Die <strong>persönliche und einladende Atmosphäre</strong> des Familienbetriebs sorgt für einen angenehmen Aufenthalt.</p>",
+  "beschreibung": "<p>La <strong>Haus Rinner Rosa</strong> si trova in una stradina tranquilla nel cuore dell'incantevole borgo di <strong>Oetz</strong>, all'imbocco della vallata della Ötztal. Le accoglienti camere da letto, arredate secondo la migliore tradizione artigianale tirolese in legno massiccio, dispongono di bagno privato con doccia, TV satellitare e balconi con vista panoramica sulle vette dell'Ötztal e dello Stubai. Al mattino una ricca colazione a buffet con prodotti locali attende gli ospiti nella luminosa sala comune. La cabinovia <strong>Acherkogelbahn</strong> verso l'area per famiglie di Hochoetz e il centro storico distano solo pochi minuti a piedi. In estate, le acque temperate e cristalline del vicino lago <strong>Piburger See</strong> rappresentano una meta imperdibile per nuotate e passeggiate.</p>",
   "ausstattung": [],
   "tags": [
     "osteria",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetz.com",
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente garnì a Oetz all'inizio della Ötztal con camere tradizionali e vicinanza allo scenografico lago Piburger See."
 }

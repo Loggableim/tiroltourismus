@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Haus Petra</strong> occupies a sunny, peaceful hillside position in <strong>Sölden</strong> within Tyrol's Ötztal, surrounded by alpine pastures and evergreen pine forests. Furnished in an authentic alpine style, the guest rooms feature contemporary en-suite bathrooms, satellite television, and private balconies overlooking the surrounding mountain summits. A wholesome breakfast packed with fresh local delicacies prepares outdoor enthusiasts for their alpine pursuits each morning. The valley terminals of the Giggijoch and Gaislachkogl cable cars are just a short complimentary ski bus ride away, giving quick access to Sölden's twin glacier ski slopes. In summer, picturesque hiking trails and the thrilling routes of Bike Republic Sölden await right nearby.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy alpine guesthouse in a peaceful hillside setting in Sölden in the Ötztal with comfortable rooms and alpine views."
 }

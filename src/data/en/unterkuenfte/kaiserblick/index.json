@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The holiday accommodation <strong>Kaiserblick</strong> is centrally yet quietly located in <strong>St. Johann in Tirol</strong>, only a short stroll from the town square and local cable car stations. The property harmoniously pairs genuine Tyrolean charm with modern amenities. Bright and spacious guest rooms feature scenic balconies with uninterrupted <strong>views of the Kaisergebirge</strong> range and Kitzbüheler Horn. A wholesome breakfast buffet highlighting regional farm produce provides an energetic start to the day. Its prime location allows easy walking access to ski lifts in winter as well as hiking and cycling paths during summer.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Centrally located accommodation in St. Johann in Tirol offering panoramic views of the Kaisergebirge."
 }

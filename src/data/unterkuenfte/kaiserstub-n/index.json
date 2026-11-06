@@ -11,7 +11,7 @@
   "telefon": "+43 676 7302789",
   "email": "info@kaiserstuben.at",
   "webseite": "http://www.kaierstube.at/",
-  "beschreibung": "<p>Der <strong>Kaiserstub'n</strong> liegt im Zentrum von <strong>Söll</strong>, nur wenige Gehminuten von der Bergbahn entfernt.. Der Gasthof vereint traditionelle Tiroler Gastlichkeit mit einer gemütlichen Atmosphäre.. Im Inneren erwarten Gäste holzgetäfelte Räume und eine klassische Küche mit regionalen Spezialitäten.. <strong>Söll</strong> gehört zur <strong>Ski Welt Wilder Kaiser-Brixental</strong>, einem der größten Skigebiete Tirols.. Im Sommer starten Wanderwege direkt vom Ort in die umliegende Bergwelt.",
+  "beschreibung": "<p>Die <strong>Kaiserstub'n</strong> begrüßt ihre Gäste mitten im Ortskern von <strong>Söll am Wilden Kaiser</strong>, nur wenige Gehminuten von der Talstation der Bergbahnen entfernt. Das Haus verbindet gelebte Tiroler Gastfreundschaft mit einer behaglichen Atmosphäre. Die gemütlichen Gästezimmer sind im alpenländischen Stil eingerichtet und bieten jeglichen Komfort für einen erholsamen Aufenthalt. In den holzgetäfelten Stuben serviert die Küche traditionelle Tiroler Klassiker, feine Schmankerl und saisongerechte Spezialitäten aus heimischer Erzeugung. Durch die zentrale Lage im Dorf sind die Pisten der SkiWelt Wilder Kaiser-Brixental sowie zahlreiche Wander- und Radwege rasch erreichbar.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditionsreicher Gasthof im Herzen von Söll am Wilden Kaiser mit gemütlicher Zirbenstube und regionaler Küche."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.appartements-juwel.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>The holiday residence <strong>Juwel</strong> welcomes travelers to the world-renowned alpine resort of <strong>Sölden in the Ötztal Valley</strong>. Framed by majestic glaciers and three-thousand-meter peaks, the property provides comfortable rooms and apartments featuring alpine wooden furnishings and modern amenities. Sunny private balconies afford expansive vistas across the Ötztal alpine landscape. In winter, guests appreciate quick access to the Giggijoch and Gaislachkogl gondolas connecting to snow-sure glacier ski runs. During summer, Sölden transforms into a vibrant hub for high-altitude hikers, climbers, and cyclists tackling the Bike Republic Sölden trails.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cozy alpine holiday retreat in Sölden in the Ötztal Valley with warm hospitality near the ski lifts."
 }

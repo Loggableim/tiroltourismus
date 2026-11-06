@@ -21,12 +21,21 @@ AI assistant) working in this repository. Read this file before starting any tas
 - **Polecat** — implements a task in its own git worktree / branch. Never
   merges; hands off a branch and a report.
 - **Refinery** — reviews work, opens pull requests, and verifies the gates.
-  The Refinery **never merges to `master`** — only Vali approves and merges.
+  The Refinery may merge **content-only** pull requests itself (see the merge
+  rule below); everything else is approved and merged by Vali.
 
 ## Hard rules
 
 - **PR-only.** Never push directly to `master`. All work goes through a pull
-  request. Only Vali merges.
+  request. Vali merges, with ONE exception: the **Refinery may merge
+  content-only PRs** when ALL of the following hold:
+  - The PR touches **only** data files under `src/content/**` — no scripts, no
+    `.github/`, no package/lock files, no gate scripts, no `public/_redirects`,
+    no `wrangler` config, and no paywall/LemonSqueezy files.
+  - `test:content`, `check:content --no-network`, `build` and CI are all green.
+  Anything outside that scope still needs Vali.
+- **Polecat cap:** at most **3** active polecats in tiroltourismus, and only
+  while the host has **>= 10G free disk** and a sane load — throttle below that.
 - **No force-push, no history rewrite** (no `git push --force`, no rebase of
   shared branches, no `filter-branch`).
 - **No deploys.** Never run a deploy or a deploy workflow.

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Hotel Wiesenhof</strong> enjoys a sunny and peaceful setting in Mieders at the gateway to the picturesque <strong>Stubai Valley</strong>. Surrounded by meadows and pine forests, the hotel provides a welcoming retreat with uninterrupted views of the surrounding peaks. Cozy guest rooms and self-catering apartments feature scenic balconies and modern conveniences. After active days hiking or skiing, guests can unwind in the <strong>wellness area</strong> complete with sauna, steam bath, and relaxation rooms. The traditional restaurant serves homemade Tyrolean specialties and international dishes. The Serlesbahnen cable cars, hiking trails, and toboggan runs are all nearby.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.mieders.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Family-run hotel in Mieders in the Stubai Valley offering mountain views, a wellness area, and Tyrolean hospitality."
 }

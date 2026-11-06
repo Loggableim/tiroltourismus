@@ -11,7 +11,7 @@
   "telefon": "+43 5358 8202",
   "email": "info@oberhofer.co.at",
   "webseite": "http://goingstaetthof-scheffau-am-wilden-kaiser-tirol.hotelwebseite.at/",
-  "beschreibung": "<p>Die Jausenstation Goingstätt ist ein traditioneller Gasthof in der Gemeinde Scheffau am Wilden Kaiser. Das Gebäude liegt auf einer Sonnenterrasse oberhalb des Söllerbodens und bietet Aussicht auf das Kaisergebirge. Die Einrichtung der Gaststube ist rustikal und alpin gehalten. Die Karte konzentriert sich auf die klassische Tiroler Jause. Typische Gerichte sind die <strong>Brettljause</strong> mit verschiedenen Käse- und Wurstsorten sowie der <strong>Kaiserschmarrn</strong>. Die Zutaten stammen überwiegend aus der Region. Der Betrieb ist ein beliebter Rastplatz für Tourengeher und Mountainbiker. Gäste können hier eine einfache und bodenständige Gastlichkeit erwarten.</p>",
+  "beschreibung": "<p><strong>Jausenstation Goingstätt</strong> je tradiční horský hostinec v obci <strong>Scheffau am Wilden Kaiser</strong>. Nachází se na slunné terase nad údolím a nabízí nádherný výhled na majestátní masiv Wilder Kaiser. Útulná horská jizba i venkovní slunečná terasa lákají turisty a cyklisty k příjemnému odpočinku. Nabídka jídel se zaměřuje na poctivé tyrolské občerstvení, jako je prkénko <strong>Brettljause</strong> s místním sýrem a špekem nebo čerstvě upečený <strong>císařský trhanec</strong> z lokálních surovin.</p>",
   "ausstattung": [
     "restaurant",
     "wifi"
@@ -29,5 +29,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradiční horský hostinec v Scheffau am Wilden Kaiser se sluneční terasou a tyrolskými dobrotami."
 }

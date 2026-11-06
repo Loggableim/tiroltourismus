@@ -11,7 +11,7 @@
   "telefon": "+43 512 5703000",
   "email": null,
   "webseite": "http://www.ibis.com/de/hotel-5174-ibis-innsbruck/index.shtml",
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Ibis Innsbruck</strong> is located directly adjacent to Innsbruck Main Station, offering unparalleled connectivity to international trains and local transit. The soundproofed and air-conditioned guest rooms feature the brand's contemporary design alongside comfortable Sweet Bed bedding, flat-screen TVs, and complimentary high-speed Wi-Fi. Amenities include a 24-hour reception and a welcoming lounge bar serving drinks and light refreshments at any hour. A varied breakfast buffet ensures an energetic start to the day. Innsbruck's historic <strong>Old Town</strong>, featuring the Golden Roof and imperial palaces, is less than a ten-minute walk away.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,12 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.ibis.com",
+    "https://all.accor.com",
+    "https://www.innsbruck-tourismus.at/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Modern hotel directly at Innsbruck Central Station offering prime transit links and proximity to the Old Town."
 }

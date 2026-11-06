@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Ilgerhof</strong> welcomes visitors to the picturesque village of <strong>Walchsee</strong> in Tyrol’s scenic Kaiserwinkl region. Surrounded by rolling alpine pastures and the Kaisergebirge mountains, this family-run inn radiates authentic Tyrolean warmth and comfort. Well-maintained rooms decorated in classic alpine style feature private balconies overlooking the landscape. The welcoming restaurant serves hearty regional favorites made with locally sourced ingredients. Its proximity to Lake Walchsee, scenic hiking paths, and winter cross-country ski trails makes it an attractive year-round base for nature lovers.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kaiserwinkl.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional Tyrolean inn in Walchsee in the Kaiserwinkl region offering family hospitality near the lake."
 }

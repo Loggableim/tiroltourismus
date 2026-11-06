@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Germania liegt in einer Gemeinde in Tirol. Die Unterkunft bietet mehrere Zimmer mit Blick auf die umliegende Berglandschaft. Die Einrichtung ist zweckmäßig und auf die Bedürfnisse der Gäste ausgerichtet. Im Haus befinden sich ein Frühstücksraum und ein Aufenthaltsbereich. Wanderwege und Skigebiete sind von hier aus erreichbar. Das Hotel ist ganzjährig geöffnet und richtet sich an Erholungssuchende. Parkplätze sind in ausreichender Zahl vorhanden. Die Umgebung lädt zu Aktivitäten in der Natur ein.</p>",
+  "beschreibung": "<p>Con una ubicacion privilegiada en Ischgl, el Hotel Germania cuenta con elegantes habitaciones, zona de bienestar y magnifica gastronomia para estancias inolvidables.</p><p>Los telefericos Silvrettabahn y Fimbabahn, junto al centro urbano, se alcanzan comodamente a pie.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.ischgl.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "El Hotel Germania en Ischgl ofrece estancias modernas a pocos pasos de las pistas de la Silvretta Arena."
 }

@@ -11,7 +11,7 @@
   "telefon": "+43 5358 8398",
   "email": "info@bikerranch.at",
   "webseite": "http://www.bikerranch.at/",
-  "beschreibung": "<p>Der Gasthof Wiesenhof befindet sich in der Ortschaft Scheffau am Wilden Kaiser in Tirol. Das Haus bietet Übernachtungen in mehreren Zimmerkategorien an. Die Gaststube serviert traditionelle Tiroler Küche mit regionalen Produkten. Ein Gastgarten steht in den Sommermonaten zur Verfügung. Wanderwege und Radwege sind direkt vom Haus aus zugänglich. Im Winter sind die Skipisten des Skigebiets Wilder Kaiser-Brixental erreichbar. Der Gasthof wird familiengeführt und ist ganzjährig geöffnet.</p>",
+  "beschreibung": "<p>In posizione tranquilla e soleggiata alla periferia di Scheffau, il Wiesenhof accoglie i viaggiatori con cura familiare e camere accoglienti per una vacanza rigenerante.</p><p>La cabinovia di Scheffau, il lago Hintersteiner See e le passeggiate panoramiche si trovano a breve distanza.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "La locanda Gasthof Wiesenhof a Scheffau garantisce tranquillita e panorami montani ai piedi del Wilder Kaiser."
 }

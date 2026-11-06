@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt im <strong>Ortszentrum von Söll</strong> in <strong>Tirol</strong>. Das <strong>Skigebiet Skiwelt Wilder Kaiser</strong> sowie zahlreiche <strong>Wanderwege</strong> sind von der Unterkunft aus erreichbar. Das hauseigene <strong>Restaurant</strong> serviert <strong>Tiroler Gerichte</strong> aus regionalen Zutaten. Die <strong>Gästezimmer</strong> sind im traditionellen Stil eingerichtet und verfügen über moderne Ausstattung. Der <strong>Saunabereich</strong> steht zur Erholung nach Aktivitäten zur Verfügung. Von der <strong>Terrasse</strong> blickt man auf die umliegende Berglandschaft. Die Unterkunft eignet sich für Urlauber, die sowohl im Sommer als auch im Winter Aktivitäten suchen.</p>",
+  "beschreibung": "<p>La <strong>Hausberger</strong> sorge nella tranquilla e soleggiata frazione di Gänsleit a <strong>Söll</strong>, nell'ambita cornice alpina del Wilder Kaiser in Tirolo. Le camere, arredate secondo lo stile alpino con largo uso di legno naturale, offrono moderni bagni privati con doccia/WC, TV satellitare, Wi-Fi e balconi soleggiati affacciati sulla mole della Hohe Salve e sul Wilder Kaiser. Al rientro dalle escursioni, l'area sauna interna consente un perfetto recupero delle energie. Al mattino viene allestito un ricco buffet di colazione con sapori tipici del territorio. Il centro del paese si raggiunge con una piacevole camminata. In inverno, lo skibus gratuito ferma a due passi collegando con il carosello <strong>SkiWelt Wilder Kaiser–Brixental</strong>. D'estate il parco avventura Hexenwasser soddisfa grandi e piccini.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -32,5 +32,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente locanda a Gänsleit a Söll ai piedi del Wilder Kaiser con camere confortevoli, sauna e vicinanza allo SkiWelt."
 }

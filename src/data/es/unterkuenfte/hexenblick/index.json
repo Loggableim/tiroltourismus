@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel <strong>Hexenblick</strong> befindet sich in der Gemeinde <strong>Söll</strong> im <strong>Tiroler Unterland</strong>. Es bietet eine ruhige Lage mit Panoramablick auf die umliegende Berglandschaft. Die Zimmer sind modern eingerichtet und verfügen über Balkon sowie kostenfreies WLAN. Ein Wellnessbereich mit Sauna und Dampfbad steht den Gästen zur Verfügung. Das hoteleigene Restaurant serviert regionale Spezialitäten aus Tirol. Die Umgebung eignet sich für Wanderungen im Sommer und Skifahren im Winter. Gäste können die nahegelegenen Sehenswürdigkeiten wie die <strong>Wilder Kaiser</strong> Bergwelt erkunden. Der öffentliche Nahverkehr und Skibusse sind in unmittelbarer Nähe erreichbar.</p>",
+  "beschreibung": "<p>El Hotel <strong>Hexenblick</strong> se ubica en el soleado paraje de Stampfanger en <strong>Söll</strong>, dentro de la apreciada comarca del Wilder Kaiser en el Tirol. Sus habitaciones, decoradas con un diseño moderno y acogedor, disponen de cuartos de baño actuales, televisión de pantalla plana, wifi gratuita y balcones privados con amplias panorámicas al pico Hohe Salve y al macizo de Kaisergebirge. La zona de relax con sauna y baño de vapor proporciona el entorno perfecto tras las actividades de montaña. Cada mañana se sirve un completo bufé de desayuno con productos de proximidad. El telecabina hacia la inmensa estación <strong>SkiWelt Wilder Kaiser–Brixental</strong> y el parque Hexenwasser quedan a pocos minutos a pie y el autobús para frente a la casa. En verano, destacan rutas ciclistas y senderos por el valle.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -31,5 +31,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Acogedor hotel en Stampfanger, Söll, junto al Wilder Kaiser, con habitaciones modernas, zona de bienestar y vistas panorámicas."
 }

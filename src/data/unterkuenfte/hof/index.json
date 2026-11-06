@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hof liegt in einer ländlichen Gegend Tirols. Die Zimmer sind <strong>einfach ausgestattet</strong> und haben ein <strong>eigenes Bad</strong>. Das Restaurant serviert <strong>Tiroler Spezialitäten</strong>. Ein <strong>Gastgarten</strong> ist vorhanden. Die Umgebung besteht aus <strong>Bergen und Wäldern</strong>. Gäste können <strong>Wanderungen und Wintersport</strong> betreiben. Die Unterkunft bietet <strong>Parkplätze</strong> für Autos.</p>",
+  "beschreibung": "<p>Der Gasthof <strong>Hof</strong> empfängt Feriengäste in einer sonnigen und ruhigen Einzellage in der Marktgemeinde <strong>Brixlegg</strong>, am Eingang zum malerischen Alpbachtal im Tiroler Unterland. Die im behaglichen Tiroler Landhausstil eingerichteten Zimmer bieten moderne Badezimmer mit Dusche/WC, Sat-TV, WLAN und private Balkone mit weitem Blick über das Inntal und auf die schroffen Kalkberge des Rofangebirges. Morgens stärkt ein reichhaltiges Frühstück mit frischen Produkten aus eigener Landwirtschaft und der Region die Urlauber für aktive Stunden in der Natur. Der sonnige Gastgarten lädt im Sommer zum Verweilen bei Tiroler Schmankerln ein. Die Einstiege in das weitläufige Ski- und Wandergebiet <strong>Ski Juwel Alpbachtal Wildschönau</strong> sind in wenigen Fahrminuten erreichbar. Gleichzeitig beginnen wunderschöne Wanderwege zu den Reintaler Seen und zur Burg Rattenberg direkt in der Umgebung.</p>",
   "ausstattung": [
     "restaurant",
     "parkplatz"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütlicher Bauernhof-Gasthof in sonniger Einzellage in Brixlegg im Alpbachtal mit traditionellen Zimmern und Blick auf die Rofanspitze."
 }

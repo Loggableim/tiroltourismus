@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Zeller ist ein Hotel in der Gemeinde <strong>Nesselwängle</strong> im Tannheimer Tal. Die Unterkunft liegt in ruhiger <strong>Lage</strong> umgeben von der Bergwelt Tirols. Die <strong>Zimmer</strong> sind mit traditionellen Tiroler Möbeln ausgestattet und bieten zeitgemäßen Komfort. Zur <strong>Ausstattung</strong> des Hotels zählen ein Restaurant mit regionaler Küche sowie ein Wellnessbereich. Die <strong>Umgebung</strong> im Tannheimer Tal umfasst zahlreiche Wanderwege und Langlaufloipen. Im Winter ist das Skigebiet der Region gut erreichbar. Gäste erwartet ein solider und erholsamer Aufenthalt in einem familiengeführten Haus.</p>",
+  "beschreibung": "<p><strong>策勒旅舍</strong>（Haus Zeller）坐落在蒂罗尔州坦海姆谷风景如画的<strong>内塞尔旺勒</strong>（Nesselwängle）村落中心。客房遵循纯正的阿尔卑斯乡村风情，巧妙运用实木装潢，配有独立淋浴卫生间、卫星电视、无线网络以及饱览阿尔高阿尔卑斯山群峰景色的向阳阳台。清晨以新鲜当地特产烹制的美味早餐开启活力一天。这里的地理位置非常适合户外探索：夏季可尽享徒步前往克林嫩牧场、挑战攀岩小径以及临近哈尔登湖（Haldensee）的亲水乐趣；冬季时分，风景宜人的越野滑雪道横穿村落，内塞尔旺勒滑雪场则为家庭滑雪带来惬意体验。</p>",
   "ausstattung": [],
   "tags": [
     "阿尔卑斯山脉外地区",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "位于坦海姆谷内塞尔旺勒中心的温馨高山客栈，客房传统质朴，临近秀丽的哈尔登湖。"
 }

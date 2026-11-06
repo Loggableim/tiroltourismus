@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel <strong>Hexenblick</strong> befindet sich in der Gemeinde <strong>Söll</strong> im <strong>Tiroler Unterland</strong>. Es bietet eine ruhige Lage mit Panoramablick auf die umliegende Berglandschaft. Die Zimmer sind modern eingerichtet und verfügen über Balkon sowie kostenfreies WLAN. Ein Wellnessbereich mit Sauna und Dampfbad steht den Gästen zur Verfügung. Das hoteleigene Restaurant serviert regionale Spezialitäten aus Tirol. Die Umgebung eignet sich für Wanderungen im Sommer und Skifahren im Winter. Gäste können die nahegelegenen Sehenswürdigkeiten wie die <strong>Wilder Kaiser</strong> Bergwelt erkunden. Der öffentliche Nahverkehr und Skibusse sind in unmittelbarer Nähe erreichbar.</p>",
+  "beschreibung": "<p>Hotel <strong>Hexenblick</strong> se nachází na slunné ulici Stampfanger v <strong>Söllu</strong> v oblíbeném regionu Wilder Kaiser v Tyrolsku. Moderní a vkusně zařízené pokoje nabízejí světlé prostředí, současné koupelny se sprchou/WC, televizi, bezplatné Wi-Fi a vlastní balkony s výhledem na vrchol Hohe Salve a pohoří Kaisergebirge. Po sportovním dni v horách zve k odpočinku hotelová wellness zóna se saunou a parní lázní. Ráno potěší hosty pestrá snídaně z lokálních produktů. Dolní stanice lanovky v Söllu s přímým vstupem do obřího skiareálu <strong>SkiWelt Wilder Kaiser–Brixental</strong> i zážitkový svět Hexenwasser jsou vzdáleny jen několik minut chůze a skibus staví u domu. V létě je hotel skvělým startem pro pěší túry a cyklovýlety.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -31,5 +31,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný hotel v ulici Stampfanger v Söllu u masivu Wilder Kaiser s moderními pokoji, wellness a panoramatickým výhledem."
 }

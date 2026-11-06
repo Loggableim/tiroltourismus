@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel <strong>Hexenblick</strong> befindet sich in der Gemeinde <strong>Söll</strong> im <strong>Tiroler Unterland</strong>. Es bietet eine ruhige Lage mit Panoramablick auf die umliegende Berglandschaft. Die Zimmer sind modern eingerichtet und verfügen über Balkon sowie kostenfreies WLAN. Ein Wellnessbereich mit Sauna und Dampfbad steht den Gästen zur Verfügung. Das hoteleigene Restaurant serviert regionale Spezialitäten aus Tirol. Die Umgebung eignet sich für Wanderungen im Sommer und Skifahren im Winter. Gäste können die nahegelegenen Sehenswürdigkeiten wie die <strong>Wilder Kaiser</strong> Bergwelt erkunden. Der öffentliche Nahverkehr und Skibusse sind in unmittelbarer Nähe erreichbar.</p>",
+  "beschreibung": "<p>L'hôtel <strong>Hexenblick</strong> est situé dans le secteur ensoleillé du Stampfanger à <strong>Söll</strong>, au cœur de la magnifique région du Wilder Kaiser dans le Tyrol. Ses chambres contemporaines et soignées offrent un cadre de séjour lumineux avec des salles de bains modernes, une télévision à écran plat, le Wi-Fi gratuit et des balcons privés donnant sur la Hohe Salve et le massif du Kaisergebirge. Pour se ressourcer après les sorties montagnardes, un agréable espace bien-être comprenant sauna et bain de vapeur est à disposition. Un savoureux petit-déjeuner buffet composé de produits régionaux attend les hôtes au réveil. La télécabine donnant accès au gigantesque domaine <strong>SkiWelt Wilder Kaiser–Brixental</strong> et au parc Hexenwasser se trouve à quelques pas. L'été invite aux randonnées et aux balades à vélo.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -31,5 +31,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hôtel chaleureux sur le Stampfanger à Söll au pied du Wilder Kaiser, avec chambres modernes, espace bien-être et vue panoramique."
 }

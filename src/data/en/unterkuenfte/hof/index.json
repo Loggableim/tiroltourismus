@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The Gasthof Hof is located in a rural area of Tirol. The rooms are <strong>simply furnished</strong> and have a <strong>private bathroom</strong>. The restaurant serves <strong>Tiroler Spezialitäten</strong>. A <strong>guest garden</strong> is available. The surroundings consist of <strong>mountains and forests</strong>. Guests can enjoy <strong>hiking and winter sports</strong>. The accommodation offers <strong>parking spaces</strong> for cars.</p>",
+  "beschreibung": "<p>The guesthouse <strong>Hof</strong> welcomes holidaymakers to a sunny, peaceful secluded setting in <strong>Brixlegg</strong>, situated at the entrance to the picturesque Alpbachtal in the Tyrolean lowlands. Styled in a cosy alpine country aesthetic, the guest rooms feature contemporary en-suite bathrooms with shower/WC, satellite TV, Wi-Fi, and private balconies presenting wide views across the Inn Valley and the rugged Rofan mountain range. A wholesome morning breakfast featuring fresh farm produce and regional ingredients sets visitors up for active adventures. In summer, the sunny garden terrace invites guests to relax over Tyrolean refreshments. The cable car terminals of the expansive <strong>Ski Juwel Alpbachtal Wildschönau</strong> are reached within a short drive, while scenic trails to the Reintaler lakes and historic Rattenberg begin nearby.</p>",
   "ausstattung": [
     "restaurant",
     "parkplatz"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy rural guesthouse in a sunny secluded setting in Brixlegg in the Alpbachtal with traditional rooms and Rofanspitze views."
 }

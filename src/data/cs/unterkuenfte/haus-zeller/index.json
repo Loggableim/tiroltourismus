@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Zeller ist ein Hotel in der Gemeinde <strong>Nesselwängle</strong> im Tannheimer Tal. Die Unterkunft liegt in ruhiger <strong>Lage</strong> umgeben von der Bergwelt Tirols. Die <strong>Zimmer</strong> sind mit traditionellen Tiroler Möbeln ausgestattet und bieten zeitgemäßen Komfort. Zur <strong>Ausstattung</strong> des Hotels zählen ein Restaurant mit regionaler Küche sowie ein Wellnessbereich. Die <strong>Umgebung</strong> im Tannheimer Tal umfasst zahlreiche Wanderwege und Langlaufloipen. Im Winter ist das Skigebiet der Region gut erreichbar. Gäste erwartet ein solider und erholsamer Aufenthalt in einem familiengeführten Haus.</p>",
+  "beschreibung": "<p>Penzion <strong>Haus Zeller</strong> vítá návštěvníky v malebném centru obce <strong>Nesselwängle</strong> v tyrolském údolí Tannheimer Tal. Pokoje zařízené v tradičním alpském venkovském stylu nabízejí útulné prostředí, vlastní koupelnu se sprchou/WC, satelitní televizi, Wi-Fi a slunné balkony s výhledem na hřebeny Allgäuských Alp. Ráno se v příjemné společenské místnosti podává bohatá snídaně z regionálních tyrolských produktů. Penzion je skvělou základnou pro aktivity v přírodě: v létě lákají hřebenové túry k pastvině Krinnenalpe, ferraty i koupání v malebném jezeře Haldensee. V zimě prochází kolem obce oblíbená běžkařská stopa a místní rodinný skiareál nabízí pohodové lyžování.</p>",
   "ausstattung": [],
   "tags": [
     "ausserfern",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný rodinný penzion v centru Nesselwängle v údolí Tannheimer Tal s tradičními pokoji a blízkostí jezera Haldensee."
 }

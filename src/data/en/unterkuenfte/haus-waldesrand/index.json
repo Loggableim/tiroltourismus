@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Haus Waldesrand</strong> enjoys a sunny, peaceful forest-edge setting on Granbichlstraße in <strong>Sölden</strong> within Tyrol's scenic Ötztal. Thoughtfully decorated in an authentic Tyrolean alpine cottage style, the guest rooms feature en-suite bathrooms with shower/WC, satellite TV, Wi-Fi, and private balconies framing panoramic views across the valley floor and glaciated mountain summits. A hearty breakfast buffet loaded with local regional specialities prepares visitors for active days outdoors. Sölden's vibrant village centre with its bakeries and restaurants is just a short, pleasant walk away. In winter, the ski bus quickly whisks guests to the base stations of the Giggijoch and Gaislachkogl gondolas. In summer, wooded walking trails and biking paths begin right by the house.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy guesthouse on Granbichlstraße on the forest edge in Sölden in the Ötztal with traditional rooms and near the cable cars."
 }

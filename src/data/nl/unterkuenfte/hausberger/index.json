@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt im <strong>Ortszentrum von Söll</strong> in <strong>Tirol</strong>. Das <strong>Skigebiet Skiwelt Wilder Kaiser</strong> sowie zahlreiche <strong>Wanderwege</strong> sind von der Unterkunft aus erreichbar. Das hauseigene <strong>Restaurant</strong> serviert <strong>Tiroler Gerichte</strong> aus regionalen Zutaten. Die <strong>Gästezimmer</strong> sind im traditionellen Stil eingerichtet und verfügen über moderne Ausstattung. Der <strong>Saunabereich</strong> steht zur Erholung nach Aktivitäten zur Verfügung. Von der <strong>Terrasse</strong> blickt man auf die umliegende Berglandschaft. Die Unterkunft eignet sich für Urlauber, die sowohl im Sommer als auch im Winter Aktivitäten suchen.</p>",
+  "beschreibung": "<p>Het <strong>Hausberger</strong> bevindt zich in de zonnige wijk Gänsleit in <strong>Söll</strong> in de vakantieregio Wilder Kaiser in Tirol. De sfeervolle, in alpenstijl ingerichte gastenkamers beschikken over een eigen badkamer met douche/wc, satelliettelevisie, wifi en een privébalkon met uitzicht op de Hohe Salve en de rotswanden van de Wilder Kaiser. Na een actieve dag in de bergen biedt de eigen sauna heerlijke ontspanning. 's Morgens staat er een gevarieerd ontbijtbuffet met streekproducten klaar. De dorpskern van Söll ligt op korte loopafstand. 's Winters stopt de gratis skibus nabij en brengt wintersporters snel naar de gondelbaan van de <strong>SkiWelt Wilder Kaiser–Brixental</strong>. In de zomer is het themapark Hexenwasser een grote trekpleister voor gezinnen.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -32,5 +32,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gezellige herberg in Gänsleit in Söll aan de Wilder Kaiser met comfortabele kamers, sauna en dicht bij de SkiWelt."
 }

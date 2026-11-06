@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt im <strong>Ortszentrum von Söll</strong> in <strong>Tirol</strong>. Das <strong>Skigebiet Skiwelt Wilder Kaiser</strong> sowie zahlreiche <strong>Wanderwege</strong> sind von der Unterkunft aus erreichbar. Das hauseigene <strong>Restaurant</strong> serviert <strong>Tiroler Gerichte</strong> aus regionalen Zutaten. Die <strong>Gästezimmer</strong> sind im traditionellen Stil eingerichtet und verfügen über moderne Ausstattung. Der <strong>Saunabereich</strong> steht zur Erholung nach Aktivitäten zur Verfügung. Von der <strong>Terrasse</strong> blickt man auf die umliegende Berglandschaft. Die Unterkunft eignet sich für Urlauber, die sowohl im Sommer als auch im Winter Aktivitäten suchen.</p>",
+  "beschreibung": "<p>Penzion <strong>Hausberger</strong> se nachází ve slunné a klidné části Gänsleit v obci <strong>Söll</strong> v prázdninovém regionu Wilder Kaiser. Pokoje zařízené v útulném alpském stylu nabízejí vlastní koupelnu se sprchou/WC, satelitní televizi, Wi-Fi a soukromé balkony s výhledem na vrchol Hohe Salve i vápencové stěny Wilden Kaiseru. Po dni stráveném v horské přírodě zve k relaxaci příjemná sauna. Ráno se podává bohatá snídaně formou bufetu z lokálních tyrolských surovin. Centrum obce Söll s restauracemi a obchody je snadno dostupné pěšky. V zimě doveze bezplatný skibus lyžaře za několik minut k lanovkám obřího areálu <strong>SkiWelt Wilder Kaiser–Brixental</strong>. V létě láká oblíbený zážitkový park Hexenwasser i síť cyklostezek.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -32,5 +32,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Útulný venkovský penzion v Gänsleitu v Söllu u masivu Wilder Kaiser s komfortními pokoji, saunou a blízkostí SkiWelt."
 }

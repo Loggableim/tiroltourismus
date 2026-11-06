@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hof liegt in einer ländlichen Gegend Tirols. Die Zimmer sind <strong>einfach ausgestattet</strong> und haben ein <strong>eigenes Bad</strong>. Das Restaurant serviert <strong>Tiroler Spezialitäten</strong>. Ein <strong>Gastgarten</strong> ist vorhanden. Die Umgebung besteht aus <strong>Bergen und Wäldern</strong>. Gäste können <strong>Wanderungen und Wintersport</strong> betreiben. Die Unterkunft bietet <strong>Parkplätze</strong> für Autos.</p>",
+  "beschreibung": "<p>La casa rural <strong>Hof</strong> acoge a los viajeros en un tranquilo y soleado paraje del municipio de <strong>Brixlegg</strong>, a la entrada del hermoso valle tirolés de Alpbachtal. Sus habitaciones, ambientadas con la calidez de la madera tradicional de montaña, disponen de baño privado moderno con ducha, televisión satelital, wifi y balcones con amplias panorámicas al valle del Eno y a las crestas calcáreas de Rofan. Por las mañanas se ofrece un generoso desayuno con alimentos de proximidad y de la propia granja. Durante el verano, su terraza ajardinada es un remanso de paz para degustar especialidades tirolesas. Las estaciones del dominio <strong>Ski Juwel Alpbachtal Wildschönau</strong> quedan a corta distancia en coche, y en las inmediaciones aguardan los lagos de Reintal y la villa medieval de Rattenberg.</p>",
   "ausstattung": [
     "restaurant",
     "parkplatz"
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Acogedora posada rural en una soleada ubicación de Brixlegg, valle de Alpbachtal, con habitaciones tradicionales y vistas al Rofan."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Hiasler Hof</strong> ist ein traditioneller <strong>Gasthof</strong> in Tirol, Österreich. Er liegt in einer ruhigen <strong>Lage</strong> mit Aussicht auf die umliegenden Berge. Die Zimmer sind einfach und <strong>komfortabel</strong> eingerichtet. Die Gaststube bietet <strong>regionale Speisen</strong> und Getränke. Die Umgebung eignet sich für <strong>Wanderungen</strong> im Sommer und Skifahren im Winter. Gäste können den Hof als <strong>Ausgangspunkt</strong> für Ausflüge in die Natur nutzen. Der Betrieb ist familiengeführt und legt Wert auf <strong>Tiroler Gastfreundschaft</strong>.</p>",
+  "beschreibung": "<p><strong>希亚斯勒高山旅舍</strong>（Hiasler Hof）坐落在<strong>因斯布鲁克乡村区</strong>（Innsbruck-Land）向阳中低山台地坦内本（Tanneben）幽静的高地。这家家庭经营的高山客栈客房充满传统蒂罗尔风情，配备现代淋浴卫生间、卫星电视、无线网络以及俯瞰因河谷与北链山险峻岩峰全景的私家阳台。清晨，营养地道的当地风味自助早餐开启崭新的一天。这里既拥有田园般悠然宁静，又能迅速抵达蒂罗尔州府因斯布鲁克探访黄金屋顶等名胜古迹。夏季，林间步道直接自门前铺展；冬季，格隆格策（Glungezer）与帕彻科菲尔（Patscherkofel）雪场更是畅滑冰雪的极佳去处。</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "位于因斯布鲁克乡村区坦内本的传统高山客栈，客房舒适温馨，居高临下俯瞰因河谷壮阔全景。"
 }

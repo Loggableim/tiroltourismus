@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Hiasler Hof liegt in ruhiger Ortsrandlage einer Tiroler Gemeinde, umgeben von Bergwiesen und Wäldern. Die <strong>Gästezimmer</strong> sind zweckmäßig eingerichtet und verfügen über kostenfreies WLAN. Im <strong>Gaststüberl</strong> werden täglich regionale Gerichte und Getränke serviert. Die Umgebung bietet sowohl im Sommer für <strong>Wanderer</strong> als auch im Winter für <strong>Skifahrer</strong> zahlreiche Routen und Pisten. Gäste können hier eine traditionelle, familiengeführte Unterkunft mit bodenständiger Küche erwarten. Ein <strong>Frühstücksbuffet</strong> ist im Übernachtungspreis enthalten.</p>",
+  "beschreibung": "<p><strong>希亚斯勒农庄</strong>（Hiasler Hof）坐落在基茨比厄尔阿尔卑斯山脉<strong>凯森</strong>（Kössen）向阳幽雅的凯撒温克尔（Kaiserwinkl）田园旷野。这家传统农家客栈客房采用当地原木精雕细琢，配备独立淋浴卫生间、卫星电视、无线网络以及饱览凯撒山脉雄伟全景的向阳阳台。清晨，农场自产的新鲜乳品与高山特色农家自助早餐为宾客注满生机。通往下山（<strong>Unterberg</strong>）的高山缆车站以及享誉奥地利的凯撒温克尔越野滑雪道驱车数分钟即达。盛夏时节，邻近的瓦尔希湖（Walchsee）更是游泳嬉水与水上运动的避暑胜地。</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -30,5 +30,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "位于凯撒温克尔凯森的传统农场客栈，客房温馨质朴，供应自助早餐，邻近下山（Unterberg）。"
 }

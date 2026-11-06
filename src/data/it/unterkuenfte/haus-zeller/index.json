@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Zeller ist ein Hotel in der Gemeinde <strong>Nesselwängle</strong> im Tannheimer Tal. Die Unterkunft liegt in ruhiger <strong>Lage</strong> umgeben von der Bergwelt Tirols. Die <strong>Zimmer</strong> sind mit traditionellen Tiroler Möbeln ausgestattet und bieten zeitgemäßen Komfort. Zur <strong>Ausstattung</strong> des Hotels zählen ein Restaurant mit regionaler Küche sowie ein Wellnessbereich. Die <strong>Umgebung</strong> im Tannheimer Tal umfasst zahlreiche Wanderwege und Langlaufloipen. Im Winter ist das Skigebiet der Region gut erreichbar. Gäste erwartet ein solider und erholsamer Aufenthalt in einem familiengeführten Haus.</p>",
+  "beschreibung": "<p>La <strong>Haus Zeller</strong> accoglie i viaggiatori nel suggestivo centro di <strong>Nesselwängle</strong>, nella spettacolare cornice alpina della Tannheimer Tal tirolese. Le camere, arredate secondo la migliore tradizione rustica con tanto legno chiaro, offrono bagno privato con doccia/WC, TV satellitare, connessione Wi-Fi e balconi soleggiati affacciati sulle creste delle Alpi dell'Allgäu. Al mattino viene allestito un ricco buffet di colazione con sapori tipici del territorio. La residenza rappresenta un punto di riferimento strategico per le attività all'aria aperta: d'estate percorsi verso la malga Krinnenalpe, ferrate e nuotate nel vicino lago Haldensee, mentre d'inverno le piste da fondo della valle e gli impianti di risalita regalano emozioni sulla neve.</p>",
   "ausstattung": [],
   "tags": [
     "Alpi dell'Alta Valica",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com/de",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente pensione nel centro di Nesselwängle nella Tannheimer Tal con camere tradizionali e vicinanza al lago Haldensee."
 }

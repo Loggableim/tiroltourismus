@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The Hotel <strong>Hexenblick</strong> is situated on sunny Stampfanger in <strong>Söll</strong> in the renowned Wilder Kaiser holiday region in Tyrol. These modern, tastefully furnished guest rooms feature light-filled living spaces, sleek en-suite bathrooms, flat-screen TVs, free Wi-Fi, and private balconies presenting open panoramas of the Hohe Salve and the Kaisergebirge. After active hours exploring the alpine terrain, the hotel's relaxing wellness area with sauna and steam bath offers soothing regeneration. A varied breakfast buffet showcasing regional delicacies is served each morning. The lower cable car station of Söll, granting direct access to the expansive <strong>SkiWelt Wilder Kaiser–Brixental</strong> and the Hexenwasser theme park, is just a short walk away. In summer, wonderful walking paths and bike circuits start nearby.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -31,5 +31,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy alpine hotel on Stampfanger in Söll at the Wilder Kaiser featuring modern rooms, wellness, and panoramic mountain views."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Hausberger</strong> liegt im <strong>Ortszentrum von Söll</strong> in <strong>Tirol</strong>. Das <strong>Skigebiet Skiwelt Wilder Kaiser</strong> sowie zahlreiche <strong>Wanderwege</strong> sind von der Unterkunft aus erreichbar. Das hauseigene <strong>Restaurant</strong> serviert <strong>Tiroler Gerichte</strong> aus regionalen Zutaten. Die <strong>Gästezimmer</strong> sind im traditionellen Stil eingerichtet und verfügen über moderne Ausstattung. Der <strong>Saunabereich</strong> steht zur Erholung nach Aktivitäten zur Verfügung. Von der <strong>Terrasse</strong> blickt man auf die umliegende Berglandschaft. Die Unterkunft eignet sich für Urlauber, die sowohl im Sommer als auch im Winter Aktivitäten suchen.</p>",
+  "beschreibung": "<p>El establecimiento <strong>Hausberger</strong> goza de una ubicación soleada y apacible en el barrio de Gänsleit, en <strong>Söll</strong>, dentro de la hermosa comarca del Wilder Kaiser. Sus habitaciones, ambientadas con la calidez de la madera alpina tradicional, disponen de baño privado moderno con ducha, televisión por satélite, wifi y balcones con hermosas vistas al monte Hohe Salve y al Wilder Kaiser. Para desconectar tras una jornada alpina, la casa dispone de una agradable zona de sauna. Cada mañana se sirve un completo bufé de desayuno con alimentos locales. El centro urbano de Söll queda a un cómodo paseo a pie. En invierno, el autobús de esquí gratuito acerca con rapidez a las pistas de la inmensa <strong>SkiWelt Wilder Kaiser–Brixental</strong>. En verano, el parque temático Hexenwasser aguarda a las familias.</p>",
   "ausstattung": [
     "Restaurant",
     "Parkplatz",
@@ -32,5 +32,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Acogedora posada en Gänsleit, Söll, junto al Wilder Kaiser, con habitaciones confortables, sauna y cerca de la SkiWelt."
 }

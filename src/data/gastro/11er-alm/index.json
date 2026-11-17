@@ -2,12 +2,12 @@
   "name": "11er Alm",
   "emoji": "🍺",
   "farbe": "#FF6B35",
-  "kategorie": "pub",
-  "kurzbeschreibung": "11er Alm in Tirol",
-  "beschreibung": "<p>Das <strong>11er Alm</strong> in Kitzbühel ist ein uriges Pub mit authentischem Ambiente und einer herzlichen Willkommenskultur. Hier treffen sich Einheimische und Gäste gleichermaßen, um bei einem kühlen Bier oder einem edlen Tropfen den Abend zu genießen. Die Speisekarte bietet klassische Pub-Spezialitäten und regionale Schmankerln, die frisch zubereitet serviert werden. Das rustikal-einladende Interieur mit gemütlichen Sitzplätzen schafft eine relaxte Atmosphäre, die zum Verweilen einlädt. Ob für einen Feierabend-Drink, ein gemütliches Beisammensein mit Freunden oder um einfach nur das bunte Treiben zu genießen – das <strong>11er Alm</strong> ist die erste Adresse für gesellige Stunden in Kitzbühel.</p>",
-  "ort": "",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Bergrestaurant in Westendorf an der Familienabfahrt 111.",
+  "beschreibung": "<p>Die 11er Alm liegt in Westendorf an der Familienabfahrt 111. Der Tourismusverband nennt regionale und internationale Küche und eine Terrasse. Bitte erkundige dich telefonisch nach den aktuellen Öffnungszeiten.</p>",
+  "ort": "Westendorf",
   "region": "kitzbuehel",
-  "plz": "",
+  "plz": "6363",
   "adresse": "",
   "telefon": "+436649122534",
   "email": "",
@@ -20,5 +20,9 @@
     "lat": 47.4075202,
     "lng": 12.2272709
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbueheler-alpen.com/de/bri/infra/a-z/11er-alm.html",
+    "https://www.skiwelt.at/en/info/11er-alm/"
+  ]
 }

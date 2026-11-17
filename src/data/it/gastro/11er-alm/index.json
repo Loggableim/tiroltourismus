@@ -2,12 +2,12 @@
   "name": "11er Alm",
   "emoji": "🍺",
   "farbe": "#FF6B35",
-  "kategorie": "pub",
-  "kurzbeschreibung": "L’11er Alm nel Tirol Sulle montagne del Tirol , dove l’aria è fresca e i panorami mozzafiato si perdono all’orizzonte, si trova l’ 11er Alm – un rifugio alpino che incanta con la…",
-  "beschreibung": "<p>Il <strong>11er Alm</strong> a Kitzbühel è un pub rustico e caratteristico con un'atmosfera autentica e una calorosa cultura dell'accoglienza. Qui si incontrano abitanti del luogo e ospiti, per godersi la serata con una birra fresca o un buon bicchiere. Il menù offre classiche specialità da pub e Schmankerln regionali, il tutto servito appena preparato. L'interno rustico e accogliente, con comodi posti a sedere, crea un'atmosfera rilassata che invita a fermarsi. Che sia per un drink dopo il lavoro, per un piacevole ritrovo con amici o semplicemente per godersi il vivace viavai – il <strong>11er Alm</strong> è l'indirizzo numero uno per momenti conviviali a Kitzbühel.</p>",
-  "ort": "",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Ristorante di montagna a Westendorf, sulla pista per famiglie 111.",
+  "beschreibung": "<p>La 11er Alm si trova a Westendorf, sulla pista per famiglie 111. L’ente turistico segnala cucina regionale e internazionale e una terrazza. Per gli orari aggiornati telefonare al locale.</p>",
+  "ort": "Westendorf",
   "region": "kitzbuehel",
-  "plz": "",
+  "plz": "6363",
   "adresse": "",
   "telefon": "+436649122534",
   "email": "",
@@ -20,5 +20,9 @@
     "lat": 47.4075202,
     "lng": 12.2272709
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbueheler-alpen.com/de/bri/infra/a-z/11er-alm.html",
+    "https://www.skiwelt.at/en/info/11er-alm/"
+  ]
 }

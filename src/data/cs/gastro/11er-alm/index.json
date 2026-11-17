@@ -2,12 +2,12 @@
   "name": "11er Alm",
   "emoji": "🍺",
   "farbe": "#FF6B35",
-  "kategorie": "pub",
-  "kurzbeschreibung": "11er Alm v Tirol",
-  "beschreibung": "<p>Das <strong>11er Alm</strong> v Kitzbühel je úžasné pub s autentickou atmosférou a srdečnou pohostinností. Zde se setkávají místní i hosté stejně, aby si užili večer při chladném pivu nebo šlachetném šálku. Jídelní lístek nabízí klasické pubové speciality a regionální pochoutky, které jsou podávány čerstvě připravené. Rustikální a přívětivé interiér s útulnými sedadly vytváří relaxační atmosféru, která láká k odpočinku. Ať už jde o drink po práci, pohodovou společnost s přáteli nebo jen o užívání se barevného dění – Das <strong>11er Alm</strong> je první adresou pro společné chvíle v Kitzbühel.</p>",
-  "ort": "",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "Horská restaurace ve Westendorfu u rodinné sjezdovky 111.",
+  "beschreibung": "<p>11er Alm se nachází ve Westendorfu u rodinné sjezdovky 111. Turistická kancelář uvádí regionální a mezinárodní kuchyni a terasu. Aktuální otevírací dobu si ověřte telefonicky.</p>",
+  "ort": "Westendorf",
   "region": "kitzbuehel",
-  "plz": "",
+  "plz": "6363",
   "adresse": "",
   "telefon": "+436649122534",
   "email": "",
@@ -20,5 +20,9 @@
     "lat": 47.4075202,
     "lng": 12.2272709
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbueheler-alpen.com/de/bri/infra/a-z/11er-alm.html",
+    "https://www.skiwelt.at/en/info/11er-alm/"
+  ]
 }

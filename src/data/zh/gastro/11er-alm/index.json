@@ -2,12 +2,12 @@
   "name": "11er Alm",
   "emoji": "🍺",
   "farbe": "#FF6B35",
-  "kategorie": "pub",
-  "kurzbeschreibung": "11er Alm 在蒂罗尔 高山牧场的乐园 在蒂罗尔的心脏地带，坐落着一片充满魔力的高山牧场——11er Alm。这里海拔1,100米，是蒂罗尔最著名的夏季度假胜地之一，也是登山者、徒步爱好者和寻求宁静的游客的天堂。",
-  "beschreibung": "<p>位于 Kitzbühel 的 <strong>11er Alm</strong> 是一家质朴的酒吧，拥有地道的氛围和热情的迎客文化。当地人和游客都会在这里相聚，在冰镇啤酒或一杯美酒中享受夜晚。菜单提供经典的酒吧特色菜和地方 Schmankerln，均新鲜烹制后供应。乡村风格又温馨宜人的内饰搭配舒适的座位，营造出放松的氛围，让人流连忘返。无论是下班后小酌、与朋友惬意相聚，还是单纯享受热闹景象——<strong>11er Alm</strong> 都是 Kitzbühel 社交时光的首选之地。</p>",
-  "ort": "",
+  "kategorie": "restaurant",
+  "kurzbeschreibung": "位于韦斯滕多夫家庭滑雪道111旁的山间餐厅。",
+  "beschreibung": "<p>11er Alm 位于韦斯滕多夫，靠近家庭滑雪道111。当地旅游局介绍这里供应地区及国际菜肴，并设有露台。请致电查询最新营业时间。</p>",
+  "ort": "Westendorf",
   "region": "kitzbuehel",
-  "plz": "",
+  "plz": "6363",
   "adresse": "",
   "telefon": "+436649122534",
   "email": "",
@@ -20,5 +20,9 @@
     "lat": 47.4075202,
     "lng": 12.2272709
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kitzbueheler-alpen.com/de/bri/infra/a-z/11er-alm.html",
+    "https://www.skiwelt.at/en/info/11er-alm/"
+  ]
 }

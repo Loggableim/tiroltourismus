@@ -8,7 +8,7 @@ export async function getStaticPaths() {
 }
 
 const locale = Astro.params.locale || DEFAULT_LOCALE;
-const t = { de:{ title:'Über uns', desc:'Über tiroltourismus.com – Mission & Vision, Team-Philosophie, Geschichte des Portals und unsere Werte: Innovation, Nachhaltigkeit, Leidenschaft.' }, en:{ title:'About Us', desc:'About tiroltourismus.com – our mission, vision, and values.' }, fr:{ title:'À Propos', desc:'À propos de tiroltourismus.com – notre mission et nos valeurs.' }, it:{ title:'Chi Siamo', desc:'Chi siamo – missione e valori di tiroltourismus.com.' }, es:{ title:'Sobre Nosotros', desc:'Sobre tiroltourismus.com – nuestra misión y valores.' }, zh:{ title:'关于我们', desc:'关于蒂罗尔旅游门户 – 我们的使命和价值观。' } };
+const t = { de:{ title:'Über uns', desc:'Tirol entdecken: Informationen zu Orten, Unterkünften, Gastronomie und Erlebnissen.' }, en:{ title:'About Us', desc:'Explore Tyrol with information on places, accommodation, food and experiences.' }, fr:{ title:'À Propos', desc:'À propos de tiroltourismus.com – notre mission et nos valeurs.' }, it:{ title:'Chi Siamo', desc:'Chi siamo – missione e valori di tiroltourismus.com.' }, es:{ title:'Sobre Nosotros', desc:'Sobre tiroltourismus.com – nuestra misión y valores.' }, zh:{ title:'关于我们', desc:'关于蒂罗尔旅游门户 – 我们的使命和价值观。' } };
 const info = t[locale] || t.de;
 ---
 
@@ -17,7 +17,7 @@ const info = t[locale] || t.de;
     <div class="container"><Breadcrumbs items={[{ label: info.title }]} locale={locale} /></div>
     <section class="ueber-uns">
       <h1>{info.title}</h1>
-      <p>tiroltourismus.com ist das moderne Tourismusportal für Tirol – kuratiert, KI-gestützt und community-basiert. Unser Ziel: Besuchern die schönsten Seiten Tirols zu zeigen und Betrieben eine smarte Präsentationsplattform zu bieten.</p>
+      {locale === 'en' ? <p>tiroltourismus.com is an information portal for planning a trip to Tyrol. Explore places, accommodation, food and experiences. The media owner and operator is Dominik Rainer, based in Innsbruck. Send questions or corrections to a listing via our <a href="/kontakt/">contact page</a>. See the <a href="/impressum/">imprint</a> for operator details.</p> : locale === 'de' ? <p>tiroltourismus.com ist ein Informationsportal für die Reiseplanung in Tirol. Hier findest du Orte, Unterkünfte, Gastronomie und Erlebnisse. Medieninhaber und Betreiber ist Dominik Rainer aus Innsbruck. Fragen oder Hinweise zu einem Eintrag kannst du uns über die <a href="/kontakt/">Kontaktseite</a> senden. Die Betreiberangaben stehen im <a href="/impressum/">Impressum</a>.</p> : <p>tiroltourismus.com ist das moderne Tourismusportal für Tirol – kuratiert, KI-gestützt und community-basiert. Unser Ziel: Besuchern die schönsten Seiten Tirols zu zeigen und Betrieben eine smarte Präsentationsplattform zu bieten.</p>}
     </section>
   </main>
 </BaseLayout>

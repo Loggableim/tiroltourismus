@@ -29,7 +29,8 @@ interface FormErrors {
   message?: string;
 }
 
-export default function ContactForm() {
+export default function ContactForm({ locale = 'de' }: { locale?: string }) {
+  const en = locale === 'en';
   const [form, setForm] = useState<FormData>({
     name: '',
     email: '',
@@ -45,21 +46,21 @@ export default function ContactForm() {
     const e: FormErrors = {};
 
     if (!form.name.trim()) {
-      e.name = 'Bitte gib deinen Namen ein.';
+      e.name = en ? 'Please enter your name.' : 'Bitte gib deinen Namen ein.';
     } else if (form.name.trim().length < 2) {
-      e.name = 'Name muss mindestens 2 Zeichen lang sein.';
+      e.name = en ? 'Name must be at least 2 characters.' : 'Name muss mindestens 2 Zeichen lang sein.';
     }
 
     if (!form.email.trim()) {
-      e.email = 'Bitte gib deine E-Mail-Adresse ein.';
+      e.email = en ? 'Please enter your email address.' : 'Bitte gib deine E-Mail-Adresse ein.';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email.trim())) {
-      e.email = 'Bitte gib eine gültige E-Mail-Adresse ein.';
+      e.email = en ? 'Please enter a valid email address.' : 'Bitte gib eine gültige E-Mail-Adresse ein.';
     }
 
     if (!form.message.trim()) {
-      e.message = 'Bitte schreib uns eine Nachricht.';
+      e.message = en ? 'Please enter a message.' : 'Bitte schreib uns eine Nachricht.';
     } else if (form.message.trim().length < 10) {
-      e.message = 'Nachricht muss mindestens 10 Zeichen lang sein.';
+      e.message = en ? 'Message must be at least 10 characters.' : 'Nachricht muss mindestens 10 Zeichen lang sein.';
     }
 
     setErrors(e);
@@ -99,7 +100,7 @@ export default function ContactForm() {
       }
     } catch {
       setErrorMsg(
-        'Netzwerkfehler. Bitte prüfe deine Internetverbindung und versuche es erneut.'
+        en ? 'Network error. Check your connection and try again.' : 'Netzwerkfehler. Bitte prüfe deine Internetverbindung und versuche es erneut.'
       );
       setState('error');
     }
@@ -134,8 +135,8 @@ export default function ContactForm() {
         <div className="cf-state cf-success" role="status">
           <span className="cf-state-icon">✓</span>
           <div>
-            <strong>Nachricht gesendet!</strong>
-            <p>Vielen Dank für deine Nachricht. Wir melden uns innerhalb von 24 h bei dir.</p>
+            <strong>{en ? 'Message sent!' : 'Nachricht gesendet!'}</strong>
+            <p>{en ? 'Thank you for your message.' : 'Vielen Dank für deine Nachricht.'}</p>
           </div>
         </div>
       )}
@@ -145,7 +146,7 @@ export default function ContactForm() {
         <div className="cf-state cf-error" role="alert">
           <span className="cf-state-icon">✕</span>
           <div>
-            <strong>Fehler beim Senden</strong>
+            <strong>{en ? 'Sending failed' : 'Fehler beim Senden'}</strong>
             <p>{errorMsg}</p>
           </div>
         </div>
@@ -159,7 +160,7 @@ export default function ContactForm() {
           <input
             type="text"
             className={`cf-input${errors.name ? ' cf-input-error' : ''}`}
-            placeholder="Dein Name"
+            placeholder={en ? 'Your name' : 'Dein Name'}
             value={form.name}
             onChange={(e) => set('name', e.target.value)}
             disabled={state === 'loading'}
@@ -174,7 +175,7 @@ export default function ContactForm() {
           <input
             type="email"
             className={`cf-input${errors.email ? ' cf-input-error' : ''}`}
-            placeholder="deine@email.at"
+            placeholder={en ? 'your@email.com' : 'deine@email.at'}
             value={form.email}
             onChange={(e) => set('email', e.target.value)}
             disabled={state === 'loading'}
@@ -185,11 +186,11 @@ export default function ContactForm() {
 
         {/* Betreff */}
         <label className="cf-field">
-          <span className="cf-label">Betreff</span>
+          <span className="cf-label">{en ? 'Subject' : 'Betreff'}</span>
           <input
             type="text"
             className="cf-input"
-            placeholder="Worum geht es?"
+            placeholder={en ? 'What is this about?' : 'Worum geht es?'}
             value={form.subject}
             onChange={(e) => set('subject', e.target.value)}
             disabled={state === 'loading'}
@@ -199,11 +200,11 @@ export default function ContactForm() {
 
         {/* Nachricht */}
         <label className="cf-field">
-          <span className="cf-label">Nachricht *</span>
+          <span className="cf-label">{en ? 'Message *' : 'Nachricht *'}</span>
           <textarea
             rows={5}
             className={`cf-input cf-textarea${errors.message ? ' cf-input-error' : ''}`}
-            placeholder="Deine Nachricht an uns …"
+            placeholder={en ? 'Your message …' : 'Deine Nachricht an uns …'}
             value={form.message}
             onChange={(e) => set('message', e.target.value)}
             disabled={state === 'loading'}
@@ -220,10 +221,10 @@ export default function ContactForm() {
           {state === 'loading' ? (
             <>
               <span className="cf-spinner" aria-hidden="true" />
-              Wird gesendet …
+              {en ? 'Sending …' : 'Wird gesendet …'}
             </>
           ) : (
-            'Senden ✈️'
+            en ? 'Send ✈️' : 'Senden ✈️'
           )}
         </button>
       </div>

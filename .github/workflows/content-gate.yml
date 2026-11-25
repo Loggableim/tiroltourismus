@@ -2,11 +2,6 @@ name: Content Gate
 
 on:
   pull_request:
-    paths:
-      - 'src/data/**'
-      - 'scripts/check-content-gate.mjs'
-      - 'scripts/lib/**'
-      - '.github/workflows/content-gate.yml'
 
 permissions:
   contents: read
@@ -76,7 +71,7 @@ jobs:
         if: always()
         run: |
           {
-            echo "## Content Gate (network) — advisory, non-blocking"
+            echo "## Content Gate (network) - advisory, non-blocking"
             echo ""
             echo "This job is advisory and does not block merges. External dead links"
             echo "on third-party sites can make the network check flaky, so it stays"

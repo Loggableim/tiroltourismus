@@ -2,16 +2,16 @@
   "name": "Alpenhotel Kramerwirt",
   "slug": "alpenhotel-kramerwirt",
   "typ": "hotel",
-  "sterne": null,
-  "preis_ab": null,
+  "sterne": 4,
+  "preis_ab": 95,
   "ort": "Mayrhofen",
   "region": "zillertal",
-  "plz": "",
-  "adresse": "",
-  "telefon": null,
-  "email": null,
-  "webseite": null,
-  "beschreibung": "<p>L'<strong>Alpenhotel Kramerwirt</strong> à Söll est un établissement quatre étoiles. Situé dans le quartier de Hochsöll, il offre un accès direct au domaine skiable de la SkiWelt. Les chambres sont aménagées dans un style alpin moderne. L'offre gastronomique comprend un buffet de petit-déjeuner et un menu pour le dîner. L'<strong>espace bien-être</strong> dispose d'une piscine couverte, de saunas et de zones de repos. Un club pour enfants et une salle de jeux sont proposés aux familles. En été, l'hôtel constitue un point de départ idéal pour les randonnées à pied et les circuits en VTT.</p>",
+  "plz": "6290",
+  "adresse": "Am Marienbrunnen 346",
+  "telefon": "+43 5285 6700",
+  "email": "hotel@kramerwirt.at",
+  "webseite": "https://www.kramerwirt.at/",
+  "beschreibung": "<p>Le traditionnel <strong>Alpenhotel Kramerwirt</strong>, établissement quatre étoiles, accueille ses hôtes au cœur de Mayrhofen dans le Zillertal avec une tradition d’hospitalité depuis 1674. Les chambres et suites chaleureuses marient le charme tyrolien au confort moderne. Au quatrième étage, l’espace bien-être « Himmelreich » propose un bain à remous panoramique, un espace sauna, un bain de vapeur et des salles de repos offrant une vue imprenable sur les Alpes du Zillertal. Le restaurant de l’hôtel sert une savoureuse cuisine régionale tyrolienne et un copieux buffet de petit-déjeuner. En été comme en hiver, l’hôtel est un point de départ privilégié pour la randonnée et le ski dans le Zillertal.</p>",
   "ausstattung": [],
   "tags": [
     "hôtel",
@@ -26,7 +26,8 @@
   "bilder": [],
   "hero_bild": null,
   "sources": [
-    "https://www.zillertal.at",
-    "https://de.wikipedia.org/wiki/Zillertal"
+    "https://www.kramerwirt.at/",
+    "https://www.zillertal.at/",
+    "https://de.wikipedia.org/wiki/Mayrhofen"
   ]
 }

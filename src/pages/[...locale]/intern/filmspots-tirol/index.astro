@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../../components/Breadcrumbs.astro';
+import SectionHeader from '../../../../components/SectionHeader.astro';
+import { localeParams, DEFAULT_LOCALE } from '../../../../lib/languages.js';
+
+export async function getStaticPaths() {
+  return localeParams().map(locale => ({ params: { locale } }));
+}
+
+const locale = Astro.params.locale || DEFAULT_LOCALE;
+
+const copy = {
+  de: {
+    title: 'Intern: Film-Spots Tirol (Entwurf)',
+    desc: 'Interne Arbeitsliste für Filmspots in Tirol – Entwurf, nicht indexiert.',
+    sub: 'Arbeitsentwurf für Roman · 2–3 Wochen · flexibel planbar',
+    note: 'Hinweis: Interne Entwurfsseite. Nicht in Navigation verlinkt, per noindex von Suchmaschinen ausgeschlossen. Zeiten, Öffnungen, Genehmigungen und Drohnenregeln bitte vor Dreh prüfen.',
+    howTitle: 'So nutzt ihr die Liste',
+    how: [
+      'Nach Clustern planen: Spots im selben Gebiet am gleichen Tag/Block drehen – spart Anfahrt.',
+      'Wetter-Puffer: 2–3 flexible Tage für Wetterwechsel, Licht und Nachdrehs einplanen.',
+      'Prio A = Must-have, B = stark, C = nice-to-have/Puffer.',
+      'Vor jedem Dreh: Öffnungszeiten, Zufahrt, Drohnen-/Drehgenehmigungen und Saison prüfen.',
+    ],
+    cols: ['Erledigt', 'Prio', 'Spot', 'Cluster', 'Warum filmen', 'Shot-Ideen', 'Beste Zeit', 'Aufwand'],
+  },
+  en: {
+    title: 'Internal: Tirol film spots (draft)',
+    desc: 'Internal working list of film spots in Tyrol – draft, not indexed.',
+    sub: 'Working draft for Roman · 2–3 weeks · flexible planning',
+    note: 'Note: Internal draft page. Not linked in navigation, excluded from search engines via noindex. Check opening times, access, drone/filming permits and season before shooting.',
+    howTitle: 'How to use this list',
+    how: [
+      'Plan by clusters: shoot spots in the same area on the same day/block to save travel time.',
+      'Weather buffer: keep 2–3 flexible days for weather changes, light and reshoots.',
+      'Priority A = must-have, B = strong, C = nice-to-have/buffer.',
+      'Before every shoot: check opening times, access, drone/filming permits and season.',
+    ],
+    cols: ['Done', 'Prio', 'Spot', 'Cluster', 'Why film', 'Shot ideas', 'Best time', 'Effort'],
+  },
+};
+
+const t = copy[locale] || copy.en;
+
+const rows = [
+  ['☐','A','Innsbruck Altstadt & Goldenes Dachl','Innsbruck','Iconic Tyrol opener, city + history','Establishing, alley details, people/B-roll, Golden Roof angles','Early morning / golden hour','Low'],
+  ['☐','A','Nordkette / Seegrube','Innsbruck','Dramatic city-to-alpine contrast','Cable car ride, panorama, city below, silhouettes','Clear morning or sunset','Medium'],
+  ['☐','A','Hall in Tirol Altstadt','Innsbruck region','Medieval town, less crowded than Innsbruck','Narrow streets, Mint Tower, roofs, café B-roll','Morning','Low'],
+  ['☐','A','Swarovski Kristallwelten','Wattens','Visual/artsy indoor option, weather-proof','Giant/head, chambers, garden, reflections','Weekday morning','Medium'],
+  ['☐','A','Achensee & Pertisau','Achensee','Turquoise lake, mountains, water activities','Lake shore, boat, reflections, drone-alt only where permitted','Morning / evening','Medium'],
+  ['☐','A','Zillertal Alpenstraße / Speichersee','Zillertal','High alpine road visuals','Road curves, reservoir, mountain layers, timelapse','Morning','Medium'],
+  ['☐','A','Kufstein Festung & Altstadt','Kufstein','Fortress over Inn river, east Tyrol character','Fortress from below/above, old town, river bank','Late afternoon','Low'],
+  ['☐','B','Alpbach Dorfkern','Alpbachtal','Classic wooden-village look','Village streets, flowers, church, wide valley shots','Morning / golden hour','Low'],
+  ['☐','B','Rattenberg Glasstadt','Alpbachtal','Smallest-town charm, craft detail','Glass workshops, colorful facades, close-up crafts','Daytime','Low'],
+  ['☐','B','Stubaital / Gletscherblick','Stubai','Glacier/high-alpine footage','Suspension bridge/platform if open, snow contrast, wide shots','Early, weather-clear','High'],
+  ['☐','B','Wattens / Innsbruck Market or local food spot','Innsbruck region','Culinary/local life B-roll','Food prep, market stalls, people, details','Lunch / market hours','Low'],
+  ['☐','B','Zell am Ziller / Grünberg','Zillertal','Family-friendly mountain backdrop','Cable car, leisure shots, panorama, activity B-roll','Daytime','Medium'],
+  ['☐','B','Kitzbühel Altstadt & Hahnenkamm-Blick','Kitzbühel','Famous alpine town, premium look','Colorful facades, Streif viewpoint, lifestyle B-roll','Morning / evening','Medium'],
+  ['☐','C','Schloss Tratzberg','Jenbach area','Historic castle alternative','Exterior, courtyard details, approach road','Check tour times','Medium'],
+  ['☐','C','Kaiserlift Kufstein / Brentenjoch','Kufstein','Easy nature panorama near town','Chairlift, panoramic bench, city-lake-mountain view','Clear weather','Medium'],
+  ['☐','C','Wildschönau / leichte Almrunde','Wildschönau','Soft nature, meadows, calmer pacing','Hiking path, alpine huts, cows/meadows, detail shots','Morning / golden hour','Medium'],
+];
+---
+
+<BaseLayout
+  title={`${t.title} – Tirol`}
+  description={t.desc}
+  locale={locale}
+  noindex={true}
+  noindexFollow={true}
+>
+  <main>
+    <div class="container"><Breadcrumbs items={[{ label: 'Intern' }, { label: t.title }]} locale={locale} /></div>
+    <SectionHeader title={t.title} sub={t.sub} />
+
+    <section class="container" style="padding-bottom: 2rem;">
+      <div style="background: var(--surface, #f7f7f7); border: 1px solid var(--glass-border, #ddd); border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+        <strong>{t.howTitle}</strong>
+        <ul style="margin: .75rem 0 0 1.2rem;">
+          {t.how.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+
+      <p style="margin-bottom: 1rem; color: var(--text2, #555);"><em>{t.note}</em></p>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse: collapse; font-size: 0.95rem;">
+          <thead>
+            <tr>
+              {t.cols.map((col) => <th style="text-align:left; border-bottom:2px solid #ccc; padding:.6rem .5rem; white-space:nowrap;">{col}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row) => (
+              <tr>
+                {row.map((cell, i) => <td style={`border-bottom:1px solid #e3e3e3; padding:.55rem .5rem; vertical-align:top; ${i===0||i===1||i===7 ? 'white-space:nowrap;' : ''}`}>{cell}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

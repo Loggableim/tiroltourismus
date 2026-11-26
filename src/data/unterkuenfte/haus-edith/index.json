@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p><strong>Haus Edith</strong> ist ein Gasthof in ruhiger Lage in Tirol, umgeben von Bergen und Natur. Die Zimmer sind gemütlich eingerichtet und bieten einen Balkon mit Bergblick. Im hauseigenen Restaurant werden <strong>traditionelle Tiroler Gerichte</strong> angeboten. Wander- und Radwege beginnen direkt am Haus, und im Winter sind mehrere Skigebiete gut erreichbar. Die <strong>persönliche Gastfreundschaft</strong> schafft eine einladende Atmosphäre. Der Aufenthalt ist von Regionalität und Gemütlichkeit geprägt.</p>",
+  "beschreibung": "<p>Am Fusse der imposanten Zugspitze in Ehrwald gelegen, empfaengt das Haus Edith seine Gaeste mit gemuetlich eingerichteten Zimmern. Die ruhige Naturidylle schafft beste Voraussetzungen fuer entspannte Urlaubstage.</p><p>Die Tiroler Zugspitzbahn, das Skigebiet Ehrwalder Alm und weitlaeufige Wanderpfade sind schnell erreicht.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zugspitzarena.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Das Haus Edith in Ehrwald bietet familiaere Gastfreundschaft und Panoramablicke auf das Zugspitzmassiv."
 }

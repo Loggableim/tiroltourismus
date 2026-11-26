@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Haus Bergheim ist ein Hotel im österreichischen Bundesland Tirol. Die Unterkunft befindet sich in einer ruhigen Lage mit Blick auf die umliegenden Berge. Die Zimmer sind mit traditionellen Materialien und Möbeln eingerichtet. Das Hotel verfügt über ein Restaurant mit regionaler Küche sowie über einen Wellnessbereich. Gäste können im Sommer Wanderungen unternehmen und im Winter nahegelegene Skigebiete nutzen. Der Service des Hauses ist auf persönliche Betreuung ausgerichtet. Die Umgebung bietet vielfältige Möglichkeiten für Naturerlebnisse.</p>",
+  "beschreibung": "<p>En una zona tranquila del pueblo peatonal de Serfaus, Haus Bergheim dispone de habitaciones acogedoras y atencion cercana para unas vacaciones relajantes con toda la familia.</p><p>El metro subterraneo, los telefericos de Serfaus-Fiss-Ladis y los senderos quedan a corta distancia.</p>",
   "ausstattung": [],
   "tags": [
     "berg",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.serfaus-fiss-ladis.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Bergheim en Serfaus brinda un ambiente calido y familiar en la soleada meseta alpina."
 }

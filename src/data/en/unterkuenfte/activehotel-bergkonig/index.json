@@ -3,16 +3,21 @@
   "slug": "activehotel-bergkonig",
   "typ": "hotel",
   "sterne": 4,
-  "preis_ab": null,
+  "preis_ab": 140,
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
   "adresse": "Schulweg 9",
   "telefon": "+43 5226 2558",
-  "email": null,
+  "email": "info@activehotel.at",
   "webseite": "https://www.activehotel.at/",
-  "beschreibung": "<p>Activehotel Bergkönig is located in Neustift im Stubaital, near the valley station of the Stubai Glacier cable car. The property is run as an <strong>active hotel</strong>, giving guests direct access to the valley's hiking, cycling, and skiing areas. Amenities include a <strong>wellness area</strong> with a sauna and swimming pool. Dining is available at the on-site <strong>restaurant</strong> serving regional cuisine. Guest rooms are individually appointed, some featuring a private balcony. Rental equipment for winter and alpine sports is conveniently available in-house. The hotel caters especially to active and sports-minded travelers.</p>",
-  "ausstattung": [],
+  "beschreibung": "<p>The four-star <strong>Activehotel Bergkönig</strong> welcomes guests in the center of Neustift im Stubaital. This family-run active hotel features 36 spacious rooms and suites tailored for mountain and wellness getaways. Facilities include a generous spa area with indoor and outdoor pools as well as three indoor saunas and an outdoor sauna. Guests can enjoy regional Tyrolean cuisine and vital culinary offerings. In both summer and winter, the hotel serves as an ideal base for hiking, biking, and skiing throughout the Stubai Valley.</p>",
+  "ausstattung": [
+    "pool",
+    "restaurant",
+    "sauna",
+    "wifi"
+  ],
   "tags": [
     "mountain",
     "hotel",
@@ -29,7 +34,7 @@
   "hero_bild": null,
   "sources": [
     "https://www.activehotel.at/",
-    "https://www.stubai.at",
-    "https://de.wikipedia.org/wiki/Stubaital"
+    "https://www.activehotel.at/wellnesshotel-4-sterne-tirol",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
   ]
 }

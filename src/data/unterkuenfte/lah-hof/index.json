@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Läh-Hof</strong> in <strong>Nesselwängle</strong> liegt im malerischen <strong>Tannheimer Tal</strong> in Österreich. Die <strong>Umgebung</strong> wird von einer alpinen Berglandschaft geprägt, die ideale Bedingungen für Wanderungen und Skifahrten bietet. Die <strong>Ausstattung</strong> umfasst komfortable Zimmer, einen Wellnessbereich mit Sauna und ein Restaurant mit regionaler Küche. Die <strong>Atmosphäre</strong> ist gemütlich und einladend, mit traditionellem österreichischem Charme. Die <strong>Zielgruppe</strong> sind vor allem Familien, Paare und Naturliebhaber, die Erholung in den Bergen suchen.</p>",
+  "beschreibung": "<p>Der <strong>Läh-Hof</strong> empfängt seine Gäste im malerischen Bergdorf <strong>Nesselwängle</strong> im Tiroler <strong>Tannheimer Tal</strong>, einem der schönsten Hochtäler Europas. Umgeben von den steil aufragenden Kletterwänden der Roten Flüh und des Gimpels, bietet der traditionsreiche Betrieb familiäre Gastfreundschaft und Erholung pur. Die behaglich mit Vollholzmöbeln eingerichteten Zimmer und Ferienwohnungen verfügen über Balkone mit freiem Bergblick. Morgens erwartet Gäste ein liebevoll zubereitetes Frühstück mit hofeigenen und regionalen Produkten. Im Sommer starten Wanderwege, Klettersteige und Radtouren direkt am Haus, während der nahe Haldensee zur Erfrischung einlädt. Im Winter bieten die schneesicheren Lifte von Nesselwängle und das Loipennetz des Tannheimer Tals beste Bedingungen.</p>",
   "ausstattung": [],
   "tags": [
     "ausserfern",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Familiärer Bauernhof und Ferienunterkunft in Nesselwängle im malerischen Tannheimer Tal."
 }

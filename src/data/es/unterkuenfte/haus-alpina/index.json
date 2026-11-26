@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Haus Alpina liegt in einer ruhigen Seitenstraße eines Tiroler Ortes, umgeben von Bergpanorama. Die traditionelle Fassade und die Gaststube bewahren Elemente des regionalen Baustils. Die Gästezimmer sind zweckmäßig eingerichtet, einige verfügen über Balkon mit Blick ins Tal. Die Küche legt Wert auf österreichische Gerichte und verwendet regionale Zutaten der Saison. Öffentliche Verkehrsmittel und Wanderwege sind vom Haus aus in wenigen Minuten erreichbar. Das Haus bietet einen kleinen Wellnessbereich mit Sauna und Ruheraum. Parkplätze stehen begrenzt am Haus zur Verfügung.</p>",
+  "beschreibung": "<p>En una zona tranquila del pintoresco valle de Thiersee, Haus Alpina ofrece habitaciones agradables y un trato muy cercano para disfrutar plenamente de la naturaleza.</p><p>El lago Thiersee, las rutas hacia el monte Pendling y la fortaleza de Kufstein quedan muy cerca.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Alpina en Thiersee brinda vacaciones relajantes entre bellas montanas y el cristalino lago."
 }

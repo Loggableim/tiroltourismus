@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Grünwalderhof ist ein Hotel im Tiroler Unterland. Es liegt in einer ländlichen Umgebung mit Blick auf das Alpenvorland. Die Zimmer sind mit traditionellen Möbeln eingerichtet. Das Restaurant serviert regionale Gerichte. Zur Entspannung gibt es eine Sauna und einen Ruheraum. Wanderwege beginnen direkt am Haus. Im Winter bietet sich die Region für Skifahren an. Der Betrieb wird von der Familie geführt.</p>",
+  "beschreibung": "<p>Op een zonnig plateau nabij Innsbruck ontvangt het historische Gruenwalderhof zijn gasten met stijlvolle kamers en een hoogstaande Tiroolse keuken met uitzicht op de Serles.</p><p>De Patscherkofelbahn, wandelpaden en de stad Innsbruck liggen binnen handbereik.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Het historische Gruenwalderhof in Patsch combineert voorname traditie met panorama's op de Stubaier Alpen."
 }

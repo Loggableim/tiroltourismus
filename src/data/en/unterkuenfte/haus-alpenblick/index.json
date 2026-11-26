@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Gently elevated above the valley floor in Soelden, Haus Alpenblick welcomes visitors with warm family hospitality and tidy guestrooms. Panoramic views of glacier-capped peaks inspire guests every morning.</p><p>Mountain cable cars, cross-country tracks, and Soelden village center are within easy reach.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Alpenblick in Soelden offers cosy accommodation and panoramic views of the Oetztal peaks."
 }

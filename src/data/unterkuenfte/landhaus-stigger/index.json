@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Landhaus Stigger</strong> liegt in den <strong>Tiroler Alpen</strong> und ist von <strong>Berglandschaft</strong> umgeben. Die <strong>Umgebung</strong> eignet sich ideal für <strong>Wanderungen</strong> und <strong>Skifahrten</strong>. Zur <strong>Ausstattung</strong> gehören ein <strong>traditionelles Restaurant</strong> und komfortable Zimmer. Die <strong>Atmosphäre</strong> ist gemütlich und <strong>alpin</strong> gestaltet. Der Gasthof richtet sich an <strong>Urlauber</strong>, die <strong>Erholung</strong> und <strong>Natur</strong> suchen. Die <strong>regionale Küche</strong> mit <strong>Tiroler Spezialitäten</strong> rundet das Angebot ab.</p>",
+  "beschreibung": "<p>Das <strong>Landhaus Stigger</strong> empfängt Feriengäste in sonniger und verkehrsgünstiger Lage in <strong>Ötztal-Bahnhof</strong> am Eingang des weltbekannten <strong>Ötztals</strong>. Das familiär geführte Haus bietet behaglich eingerichtete Zimmer und Ferienwohnungen mit modernem Wohnkomfort und Balkonen mit Bergblick. Durch die ideale Lage am Taleingang erreichen Gäste den weltbekannten Outdoor- und Abenteuerpark <strong>AREA 47</strong>, malerische Rad- und Wanderwege entlang der Ötztaler Ache sowie das Inntal in wenigen Minuten. Im Winter bieten die nahegelegenen Skigebiete Hochoetz, Kühtai sowie Sölden und Gurgl abwechslungsreiches Pistenvergnügen für Familien und Alpinsportler.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütliche Ferienunterkunft in Ötztal-Bahnhof am Eingang des Ötztals nahe der Area 47."
 }

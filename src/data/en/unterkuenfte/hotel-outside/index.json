@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Hotel Outside</strong> is situated in <strong>Matrei in Osttirol</strong>, surrounded by the dramatic 3,000-metre peaks of the <strong>Hohe Tauern National Park</strong>. The boutique hotel seamlessly combines alpine heritage with contemporary eco-conscious architecture. In winter, guests enjoy direct access to the Großglockner Resort Kals-Matrei ski area, while summer invites alpine <strong>hiking expeditions</strong>. Amenities include an organic <strong>nature spa with saunas and natural bathing pond</strong>, regional gourmet cuisine, and panoramic rooms.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.osttirol.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Outside in Matrei in East Tyrol features eco-luxury design, a natural spa wellness area, organic regional dining, and views of the Hohe Tauern peaks."
 }

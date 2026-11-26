@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Haus Moritz</strong> liegt in Nesselwängle, einem Ort im <strong>Tannheimer Tal</strong> in Tirol, und ist von einer ruhigen Berglandschaft umgeben. Die Zimmer des Hotels bieten eine Ausstattung mit Balkon, Bad, Sat-TV und teilweise regionalen Holzmöbeln. Zur hauseigenen Gastronomie gehören ein Frühstücksbuffet und Abendessen mit <strong>regionalen Produkten</strong>.</p><p>In der direkten Umgebung befinden sich Möglichkeiten für Wanderungen, Radtouren und Wintersport. Das Hotel verfügt über <strong>Sauna und Ruhebereiche</strong> zur Erholung. Die <strong>persönliche Atmosphäre</strong> des Hauses trägt zu einem erholsamen Aufenthalt bei.</p>",
+  "beschreibung": "<p>La maison d'hôtes <strong>Haus Moritz</strong> est idéalement située dans un cadre calme et ensoleillé à <strong>Nesselwängle</strong>, au cœur de la vallée de Tannheim dans le Tyrol. Les chambres et appartements lumineux disposent de salles de bains contemporaines, d'une télévision et d'un balcon ouvrant sur le paysage des Alpes d'Allgäu. Pour parfaire la détente après les activités de plein air, un espace bien-être avec sauna est à disposition. Un petit-déjeuner buffet équilibré et composé d'ingrédients régionaux est servi chaque matin. En été, l'établissement est le point de départ rêvé pour gravir les alpages de Krinnen ou flâner au bord du lac Haldensee. L'hiver, les pistes de ski de fond et les téléskis familiaux garantissent de merveilleux moments sur la neige.</p>",
   "ausstattung": [],
   "tags": [
     "hors des sentiers battus",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Maison d'hôtes chaleureuse à Nesselwängle dans la vallée de Tannheim, avec chambres confortables, sauna et vue sur les Alpes d'Allgäu."
 }

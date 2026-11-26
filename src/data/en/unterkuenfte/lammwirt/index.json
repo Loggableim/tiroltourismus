@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Lammwirt</strong> is located in a tranquil village in <strong>Tirol</strong>, nestled in an alpine setting. The <strong>surroundings</strong> are ideal for nature lovers and offer hiking opportunities in summer and ski areas in winter. The <strong>amenities</strong> of the hotel include comfortable rooms, a restaurant serving traditional Tiroler cuisine, and a sauna area. The <strong>atmosphere</strong> is warm and inviting, with a focus on coziness. The <strong>target group</strong> consists of vacationers seeking a relaxing stay in nature, as well as active vacationers. The hotel combines traditional elements with modern comfort.</p>",
+  "beschreibung": "<p>The <strong>Gasthof Lammwirt</strong> is delightfully perched in a sunny panoramic setting in <strong>Jerzens in the Pitztal Valley</strong>, surrounded by the majestic peaks of the Pitztal Alps. This heritage inn combines genuine Tyrolean warmth with cozy alpine comfort. Traditional guest rooms feature private balconies offering wide vistas across the valley. The welcoming dining room serves authentic Tyrolean cuisine, savory Gröstl pans, and regional specialties prepared with locally sourced farm produce. A compact <strong>wellness sauna area</strong> provides post-hike relaxation. Proximity to the Hochzeiger ski area and scenic alpine hiking trails makes it an attractive year-round base.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional alpine inn in Jerzens in the Pitztal Valley featuring regional dining, a sauna, and panoramic views."
 }

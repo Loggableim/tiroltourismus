@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Haus Leonhard</strong> liegt am Ortsrand eines Tiroler Dorfes, umgeben von Wiesen und Wäldern. Die ruhige Umgebung und die traditionelle Bauweise prägen die <strong>Atmosphäre</strong> des Gasthofs.</p><p>Die <strong>Zimmer</strong> sind mit einheimischem Holz möbliert und verfügen jeweils über ein Bad. Zum Frühstück und Abendessen werden <strong>regionale Speisen</strong> im Restaurant des Hauses serviert.</p><p>In der Umgebung bieten sich <strong>Wanderwege</strong> im Sommer sowie Loipen im Winter. Die Lage eignet sich als Ausgangspunkt für Aktivitäten in beiden Jahreszeiten.</p>",
+  "beschreibung": "<p>Penzion <strong>Haus Leonhard</strong> se nachází v idylické části Gmünd nedaleko obce <strong>Gerlos</strong> v údolí Zillertal, obklopený svěžími loukami a horskými potoky. Světlé pokoje a apartmány jsou vybaveny nábytkem z místního dřeva, pohodlnými lůžky a vlastní koupelnou se sprchou/WC. Hosté ocení klidnou polohu mimo hlavní ruch, která však umožňuje rychlé spojení do centra Gerlosu i k přehradě Durlassboden. V létě je dům skvělým výchozím bodem pro horské túry a cyklovýlety do bočních údolí Zillertalu. V zimě doveze bezplatný skibus lyžaře během několika minut do rozsáhlého skiareálu <strong>Zillertal Arena</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.gerlos.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Klidný dům v Gmündu u Gerlosu v Zillertalu v přírodním prostředí a v blízkosti arény Zillertal Arena."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Landhaus Kuen</strong> liegt im Zentrum von <strong>Pettneu am Arlberg</strong>, einem Ort im Tiroler Stanzertal. Das Haus kombiniert traditionelle Architektur mit einer gemütlichen Gaststube. Gäste finden hier einfache Zimmer und ein Restaurant mit regionaler Küche. Die Anlage eignet sich als Ausgangspunkt für Wanderungen und Skitouren im <strong>Arlberggebiet</strong>. Parkplätze und eine gute Erreichbarkeit mit öffentlichen Verkehrsmitteln sind vorhanden.</p>",
+  "beschreibung": "<p>Das <strong>Landhaus Kuen</strong> liegt in sonniger und ruhiger Lage in <strong>Pettneu am Arlberg</strong> im Tiroler Stanzertal, am Fuße des mächtigen Hoher Riffler. Das Haus bietet behaglich im Tiroler Stil eingerichtete Zimmer und Ferienwohnungen mit modernem Komfort und herrlichem Bergblick vom Balkon. Gäste schätzen die entspannte, familiäre Atmosphäre und die Nähe zur weltberühmten Skimetropole <strong>St. Anton am Arlberg</strong>. Der kostenlose Skibus bringt Wintersportler in wenigen Minuten direkt zu den Bergbahnen von Ski Arlberg. Im Sommer dient Pettneu als idealer, beschaulicher Ausgangspunkt für Wanderungen, Mountainbiketouren und alpine Klettereien in der Arlbergregion.</p>",
   "ausstattung": [],
   "tags": [
     "arlberg",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stantonamarlberg.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütliche Ferienunterkunft in Pettneu am Arlberg nahe St. Anton am Arlberg mit Bergblick."
 }

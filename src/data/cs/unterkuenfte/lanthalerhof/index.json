@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Lanthalerhof</strong> ist ein <strong>Hotel</strong> in <strong>Matrei am Brenner</strong>. Das Gebäude liegt im <strong>Wipptal</strong> in der Nähe des <strong>Brennerpasses</strong>. Die Umgebung besteht aus alpinen Berglandschaften und Wäldern. Zur Ausstattung gehören Übernachtungszimmer, ein Restaurant und ein Wellnessbereich. Die Einrichtung orientiert sich am alpenländischen Stil. Die Gäste sind häufig Wanderer und Skifahrer. Das Hotel ist ganzjährig geöffnet.</p>",
+  "beschreibung": "<p>Penzion a statek <strong>Lanthalerhof</strong> vítá návštěvníky v historické obci <strong>Matrei am Brenner</strong> v tyrolském údolí Wipptal. Rodinný podnik nabízí útulné pokoje a apartmány s dřevěnými prvky a balkony s výhledem na hory. Klidné prostředí obklopené loukami zaručuje pohodovou dovolenou. Díky výborné dopravní dostupnosti je dům skvělou základnou pro výlety po Wipptalu. V zimě jsou na dosah lyžařské areály Bergeralm a Serlesbahnen, v létě lákají turistické stezky k horským chatám.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wipptal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Příjemný statek a ubytování v Matrei am Brenner v údolí Wipptal s tyrolskou pohostinností."
 }

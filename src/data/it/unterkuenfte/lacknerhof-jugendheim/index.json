@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Lacknerhof Jugendheim</strong> ist ein traditioneller Gasthof in Tirol, Österreich, der sich durch seine ruhige Lage in den Alpen auszeichnet. Die Umgebung ist von dichten Wäldern und beeindruckenden Bergpanoramen geprägt, die zu Outdoor-Aktivitäten einladen. Die Ausstattung des Hauses umfasst einfache Mehrbettzimmer, einen Speisesaal und Gemeinschaftsräume für Gruppen. Die Atmosphäre ist ungezwungen und gastfreundlich, mit einem Fokus auf Gemeinschaftserlebnisse. Die Zielgruppe sind vor allem Jugendgruppen, Schulklassen und junge Reisende, die einen erschwinglichen Aufenthalt in der Natur suchen.</p>",
+  "beschreibung": "<p>Il <strong>Lacknerhof Jugendheim</strong> sorge in posizione tranquilla e soleggiata a <strong>St. Johann in Tirol</strong>, nel distretto di Kitzbühel. La struttura per gruppi è perfetta per scolaresche, associazioni sportive e comitive giovanili in cerca di una sistemazione pratica ed economica nelle Alpi tirolesi. Offre camerate funzionali, una sala da pranzo e ambienti ricreativi, oltre a un vasto spazio all'aperto per attività sportive. Gli impianti sciistici di St. Johann e i sentieri verso il Kitzbüheler Horn sono facilmente raggiungibili.</p>",
   "ausstattung": [],
   "tags": [
     "osteria",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kitzbueheler-alpen.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tradizionale ostello per giovani e gruppi a St. Johann in Tirol con ampi spazi verdi e vista sui monti."
 }

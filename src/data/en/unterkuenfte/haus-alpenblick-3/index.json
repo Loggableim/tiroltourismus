@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Situated in the historic mountaineering village of Vent above 1,900 metres, Haus Alpenblick welcomes hikers and climbers with cosy rooms and genuine mountain warmth.</p><p>The Wildspitze, the Vent chairlift, and high-alpine climbing trails are right on the doorstep.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.oetztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Alpenblick in Vent offers high-altitude serenity at the base of the Oetztal glacier summits."
 }

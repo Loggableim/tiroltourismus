@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.tiscover.at/haus-mangweth",
-  "beschreibung": "<p>Das <strong>Haus Mangweth</strong> liegt in einer ruhigen Lage im Tiroler Alpenraum, mit Blick auf die umliegenden Berggipfel. Die <strong>Zimmer</strong> sind im Tiroler Landhausstil eingerichtet und mit modernen Bädern ausgestattet. Das Restaurant bietet eine Auswahl an regionalen Spezialitäten, die mit lokalen Produkten zubereitet werden. In der Umgebung können Gäste im Sommer wandern oder Mountainbike fahren, im Winter ist Skifahren möglich. Die <strong>Atmosphäre</strong> des Hauses wird als gemütlich und einladend beschrieben. Wanderwege beginnen direkt hinter dem Haus. Nahegelegene Skigebiete sind mit dem Auto erreichbar.</p>",
+  "beschreibung": "<p>Penzion <strong>Haus Mangweth</strong> vítá hosty na slunném a tichém místě v obci <strong>Nauders</strong> u průsmyku Reschenpass, v trojmezí Rakouska, Itálie a Švýcarska. Pokoje v tradičním tyrolském venkovském stylu nabízejí moderní koupelny, televizi a balkony s přímým výhledem na historickou pevnost i třítisícové štíty. Ráno se podává vydatná snídaně z lokálních produktů. Přímo od domu vedou značené turistické a cyklistické trasy po horských hřebenech kolem Reschenského jezera. V zimě zajišťuje bezplatný skibus bleskové spojení k výborně zasněžovaným sjezdovkám moderního areálu Nauders Bergkastel.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.nauders.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Alpský penzion v Naudersu u průsmyku Reschenpass s komfortními pokoji a výhledem na trojmezí Rakouska, Švýcarska a Itálie."
 }

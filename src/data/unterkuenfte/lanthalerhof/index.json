@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Lanthalerhof</strong> ist ein <strong>Hotel</strong> in <strong>Matrei am Brenner</strong>. Das Gebäude liegt im <strong>Wipptal</strong> in der Nähe des <strong>Brennerpasses</strong>. Die Umgebung besteht aus alpinen Berglandschaften und Wäldern. Zur Ausstattung gehören Übernachtungszimmer, ein Restaurant und ein Wellnessbereich. Die Einrichtung orientiert sich am alpenländischen Stil. Die Gäste sind häufig Wanderer und Skifahrer. Das Hotel ist ganzjährig geöffnet.</p>",
+  "beschreibung": "<p>Der <strong>Lanthalerhof</strong> begrüßt Feriengäste im traditionsreichen Marktort <strong>Matrei am Brenner</strong> im Tiroler Wipptal. Der familiengeführte Bauernhofbetrieb bietet behaglich im Tiroler Stil eingerichtete Zimmer und Ferienwohnungen mit viel Holz und sonnigen Balkonen mit Bergblick. Umgeben von Wiesen und Wäldern genießen Gäste eine ruhige und entspannte Urlaubsatmosphäre. Durch die verkehrsgünstige Lage an der Brennerachse ist das Haus sowohl ein beliebtes Etappenziel als auch ein idealer Stützpunkt für längere Aufenthalte. Im Winter sind die Skigebiete Bergeralm in Steinach und die Serlesbahnen Mieders schnell erreichbar, während im Sommer idyllische Wanderwege zu urigen Almen und Schutzhütten des Wipptals führen.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wipptal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütlicher Bauernhof und Ferienunterkunft in Matrei am Brenner im Wipptal mit Tiroler Gastlichkeit."
 }

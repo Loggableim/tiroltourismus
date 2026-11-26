@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Sunnily situated in Neustift, Haus Elisabeth provides comfortable rooms and holiday apartments showcasing views of the Stubai Alps. It is a welcoming base for hikers and skiers.</p><p>The Elfer ski lifts, the Stubai Glacier, and cross-country trails are within easy reach.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Haus Elisabeth in Neustift im Stubaital offers cosy comfort and alpine panoramas."
 }

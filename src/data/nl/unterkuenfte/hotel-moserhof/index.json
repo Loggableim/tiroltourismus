@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Moserhof</strong> liegt in einer Gemeinde in Tirol, Österreich. Die <strong>Atmosphäre</strong> ist traditionell und ruhig gestaltet. Die umliegende <strong>Bergwelt</strong> erlaubt im Sommer direkten Zugang zu <strong>Wanderwegen</strong>. Im Winter stehen nahegelegene Skigebiete zur Verfügung. Zur <strong>Ausstattung</strong> zählen ein Wellnessbereich sowie ein Restaurant mit regionaler <strong>Küche</strong>. Gäste erwartet eine Unterkunft mit der Möglichkeit, die Bergnatur zu erkunden.</p>",
+  "beschreibung": "<p><strong>Hotel Moserhof</strong> bevindt zich in een schilderachtig dorp in het Tiroolse district <strong>Reutte in het Außerfern</strong>. De traditionele en rustige ambiance vormt een heerlijk decor voor een bergvakantie. 's Zomers starten prachtige <strong>wandelroutes</strong> in de omgeving, terwijl 's winters diverse skigebieden vlot bereikbaar zijn. Tot de voorzieningen behoren een ontspannende <strong>wellnessruimte met sauna</strong> en een restaurant met Tiroolse gerechten.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.reutte.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Moserhof in de regio Reutte in het Außerfern biedt traditionele Tiroolse gezelligheid, een saunaruimte, streekgerechten en uitstekende wandel- en skimogelijkheden."
 }

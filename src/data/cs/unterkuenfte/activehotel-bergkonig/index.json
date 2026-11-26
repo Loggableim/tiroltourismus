@@ -3,16 +3,21 @@
   "slug": "activehotel-bergkonig",
   "typ": "hotel",
   "sterne": 4,
-  "preis_ab": null,
+  "preis_ab": 140,
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
   "adresse": "Schulweg 9",
   "telefon": "+43 5226 2558",
-  "email": null,
+  "email": "info@activehotel.at",
   "webseite": "https://www.activehotel.at/",
-  "beschreibung": "<p>Activehotel Bergkönig se nachází v obci Neustift im Stubaital, nedaleko údolní stanice lanovky na Stubaiský ledovec. Ubytovací zařízení je koncipováno jako <strong>aktivní hotel</strong>. Hosté mají přímý přístup k turistickým trasám, cyklostezkám a lyžařským areálům v údolí. K vybavení hotelu patří <strong>wellness zóna</strong> se saunou a bazénem. Gastronomické služby zajišťuje hotelová <strong>restaurace</strong> s nabídkou regionální kuchyně. Pokoje mají různé vybavení, některé disponují balkonem. Přímo v hotelu je k dispozici půjčovna vybavení pro zimní i horské sporty. Hotel je ideální volbou pro sportovně založené hosty.</p>",
-  "ausstattung": [],
+  "beschreibung": "<p>Čtyřhvězdičkový <strong>Activehotel Bergkönig</strong> vítá své hosty v centru obce Neustift im Stubaital. Tento rodinný aktivní hotel nabízí 36 prostorných pokojů a apartmá pro odpočinkovou horskou i wellness dovolenou. K vybavení patří rozsáhlá wellness zóna s vnitřním i venkovním bazénem a třemi vnitřními i jednou venkovní saunou. Po kulinářské stránce hotel nabízí regionální tyrolskou kuchyni a vitální pokrmy. V létě i v zimě je ideálním výchozím bodem pro pěší turistiku, cyklistiku a lyžování v celém údolí Stubai.</p>",
+  "ausstattung": [
+    "pool",
+    "restaurant",
+    "sauna",
+    "wifi"
+  ],
   "tags": [
     "berg",
     "hotel",
@@ -29,7 +34,7 @@
   "hero_bild": null,
   "sources": [
     "https://www.activehotel.at/",
-    "https://www.stubai.at",
-    "https://de.wikipedia.org/wiki/Stubaital"
+    "https://www.activehotel.at/wellnesshotel-4-sterne-tirol",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
   ]
 }

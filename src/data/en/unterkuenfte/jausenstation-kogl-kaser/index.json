@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5100; +43 5333 5377",
   "email": "info@koglkaser.at",
   "webseite": "http://www.koglkaser.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Jausenstation Kogl-Kaser</strong> commands a magnificent secluded alpine setting at roughly 1,500 metres above sea level on the scenic slopes above <strong>Söll</strong>. This carefully restored historic alpine hut is now rented as a private mountain holiday chalet, delightfully uniting authentic rustic charm with modern home amenities. It features a fully equipped country kitchen with a cosy dining corner, an inviting bedroom, and a modern bathroom. The sun-drenched wooden balcony and terrace afford breathtaking vistas of the rugged limestone crags of the Wilder Kaiser and the valley below. Hiking trails begin right at the doorstep, with the renowned SkiWelt ski area close by in winter.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Rustic alpine holiday chalet situated at 1,500 metres altitude in Söll overlooking the Wilder Kaiser peaks."
 }

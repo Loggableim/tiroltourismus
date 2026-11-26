@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Vitalhotel Sonnschein</strong> liegt im Herzen von Tirol, eingebettet in die Tiroler Berglandschaft. Das Hotel bietet eine <strong>ruhige Atmosphäre</strong> mit Blick auf die umliegenden Berge und eignet sich für Gäste, die Erholung und Entspannung suchen. Zum Angebot gehören <strong>Wellnesseinrichtungen</strong>, regionale Küche und ein Zugang zu Wander- und Radwegen in der Umgebung.</p>",
+  "beschreibung": "<p>The <strong>Vitalhotel Sonnschein</strong> is nestled in the heart of Tyrol, embraced by magnificent alpine scenery. The hotel provides a <strong>peaceful setting</strong> with sweeping views of the surrounding peaks, making it an excellent haven for guests seeking rest and relaxation. Amenities include <strong>wellness facilities</strong>, tasty regional dining, and convenient access to the area's scenic hiking and biking trails.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -23,5 +23,9 @@
     "lat": "47.4505604",
     "lng": "12.0954793"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

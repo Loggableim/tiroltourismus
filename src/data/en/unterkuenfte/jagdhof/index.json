@@ -11,7 +11,7 @@
   "telefon": "+43 5226 26660",
   "email": null,
   "webseite": "https://www.hotel-jagdhof.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>The renowned 5-star Relais & Châteaux <strong>Jagdhof</strong> SPA Hotel is situated on the scenic outskirts of <strong>Neustift im Stubaital</strong>, offering sweeping views of the glacier-crowned Stubai Alps. Celebrating refined Tyrolean country elegance, the property features hand-carved timber ceilings, heritage antiques, and impeccable personal hospitality. Over 3,000 square meters of tranquil spa facilities provide heated indoor and outdoor swimming pools, 20 distinct bathing and sauna experiences, and private spa suites. Connoisseurs relish award-winning gourmet cuisine in historic dining salons accompanied by one of Austria’s most acclaimed wine cellars, complemented by private winter shuttles to the Stubai Glacier.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hotel-jagdhof.at",
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Prestigious 5-star Relais & Châteaux SPA hotel in Neustift in the Stubaital with a 3,000 m² spa oasis."
 }

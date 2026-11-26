@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The traditional <strong>Gasthof Lanserhof</strong> welcomes guests to the picturesque village of <strong>Lans near Innsbruck</strong>, perched on the sunny southeastern plateau above Tyrol’s capital. The property seamlessly blends tranquil village charm with effortless access to Innsbruck’s cultural treasures. Comfortable guest rooms afford panoramic vistas of the Nordkette range and the Patscherkofel mountain. The welcoming dining parlor and sunny guest garden serve classic Tyrolean specialties and Austrian tavern favorites crafted from local farm ingredients. Nearby Lake Lanser See offers summer swimming, while the Patscherkofel cable car delivers premier year-round alpine sports.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck-tourismus.at/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditional alpine inn in Lans near Innsbruck situated on the sunny high plateau overlooking the valley."
 }

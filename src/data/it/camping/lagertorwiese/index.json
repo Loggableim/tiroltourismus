@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz **Lagertorwiese** liegt in **Going am Wilden Kaiser** in Tirol. Die Anlage befindet sich in ruhiger, naturnaher Umgebung am Fuße des **Wilden Kaiser** Gebirges. Zur Ausstattung gehören **Sanitäranlagen**, **Stromanschlüsse** und eine **Küchenzeile**. Stellplätze sind für **Wohnmobile**, **Wohnwagen** und **Zelte** ausgelegt. Ein **kleiner Laden** auf dem Gelände bietet Lebensmittel des täglichen Bedarfs. Im Sommer dient der Platz als Ausgangspunkt für **Wanderungen** und **Klettertouren** im Kaisergebirge. Im Winter sind die **Skigebiete** der SkiWelt und Kitzbühel erreichbar. Der sachlich geführte Campingplatz bietet eine **zweckmäßige Basis** für Aktivurlauber.</p>",
+  "beschreibung": "<p>Il suggestivo campeggio <strong>Lagertorwiese</strong> è situato in una posizione serena e soleggiata alla periferia di <strong>Going am Wilden Kaiser</strong>. La struttura sorge proprio ai piedi delle imponenti pareti rocciose del Wilder Kaiser, offrendo un soggiorno a contatto con la natura alpina. Sono presenti piazzole per camper e roulotte e ampi prati verdi per il montaggio delle tende. I servizi includono blocchi igienici con docce, prese di corrente e un piccolo chiosco per la spesa quotidiana. In estate è la base di partenza perfetta per vie ferrate e sentieri nel massiccio del Kaiser, mentre in inverno gli impianti di SkiWelt sono vicinissimi.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,10 @@
     "lat": "47.2220255",
     "lng": "11.4307049"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Tranquillo campeggio nella natura a Going am Wilden Kaiser con vista meravigliosa sul Wilder Kaiser."
 }

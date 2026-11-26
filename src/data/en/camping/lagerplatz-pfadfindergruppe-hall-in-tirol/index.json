@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Hall in Tirol",
-  "region": "",
+  "region": "innsbruck",
   "plz": "6060",
   "adresse": "Loretto-Umgebung 4, 6060 Hall in Tirol",
   "telefon": null,
@@ -24,5 +24,9 @@
     "lng": "11.481309"
   },
   "status": "published",
-  "kurzbeschreibung": "Loretto Scout Camp of the Hall in Tirol Scout Group, a close-to-nature group and camp site in the Tyrolean Inn Valley"
+  "kurzbeschreibung": "Loretto Scout Camp of the Hall in Tirol Scout Group, a close-to-nature group and camp site in the Tyrolean Inn Valley",
+  "sources": [
+    "https://pfadi-hall.at/",
+    "https://de.wikipedia.org/wiki/Hall_in_Tirol"
+  ]
 }

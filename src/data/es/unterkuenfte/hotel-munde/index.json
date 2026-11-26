@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Munde</strong> liegt in der österreichischen Region Tirol, eingebettet in die alpine Landschaft. Die Atmosphäre ist von traditioneller Tiroler Gastlichkeit und gemütlichem Ambiente geprägt. Die Zimmer sind komfortabel ausgestattet und bieten häufig Ausblick auf die umliegende Bergkulisse. Typische Angebote umfassen ein Restaurant mit <strong>regionaler Küche</strong> sowie einen <strong>Wellnessbereich</strong> zur Entspannung. Gäste können in der Umgebung Aktivitäten wie Wandern, Radfahren oder Skifahren nachgehen. Das Hotel ist ganzjährig geöffnet und eignet sich für einen erholsamen Aufenthalt in den Alpen.</p>",
+  "beschreibung": "<p>El <strong>Hotel Munde</strong> se encuentra en la localidad de <strong>Telfs</strong>, en el valle del Eno, bajo la imponente cumbre de la <strong>Hohe Munde</strong>. Su ambiente se caracteriza por la cordialidad y el confort de estilo alpino. Las habitaciones están bien equipadas y ofrecen magníficas vistas. Dispone de un restaurante de <strong>cocina regional tradicional</strong> y una cuidada <strong>zona de bienestar con sauna</strong>. Su ubicación permite practicar senderismo, ciclismo y esquiar en la vecina meseta de Seefeld.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.innsbruck.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "El Hotel Munde en Telfs, al pie de la Hohe Munde, ofrece hospitalidad tradicional tirolesa, spa con sauna, cocina regional y actividades durante todo el año."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Campingplatz **Lechtal Camping Vorderhornbach** liegt im **Naturpark Lechtal** im gleichnamigen Ort Vorderhornbach. Die Umgebung wird durch die Nähe zum wilden Flusslauf des **Lech** und den Bergketten der **Lechtaler Alpen** geprägt. Die Ausstattung umfasst sowohl **parzellierte Stellplätze** für Wohnmobile und Wohnwagen als auch Wiesenbereiche für **Zelte**. Ein **modernes Sanitärgebäude** sowie ein **Brötchenservice** und ein **Spielplatz** stehen zur Verfügung. Aufgrund seiner **ruhigen und familiären** Atmosphäre wird der Platz besonders von **Natururlaubern**, Wanderern und **Radfahrern** geschätzt. Die direkt angrenzende **Hornbergbahn** bietet einen schnellen Zugang zum Wander- und Skigebiet Hahnenkamm. Der Campingplatz dient als Ausgangspunkt für Touren auf dem **Lechweg** oder den regionalen Mountainbike-Strecken. Insgesamt stellt er eine Basis für Aktivitäten im gesamten **Außerfern** dar.</p>",
+  "beschreibung": "<p>Il curato campeggio <strong>Lechtal Camping Vorderhornbach</strong> sorge in posizione tranquilla a <strong>Vorderhornbach</strong>, nel cuore dello spettacolare Parco Naturale Tiroler Lech. Circondato dal corso incontaminato del fiume Lech e dalle pareti rocciose delle Alpi della Lechtal, rappresenta un vero paradiso per gli amanti della natura. La struttura offre piazzole ampie e ben delimitate per camper e roulotte, oltre a verdi prati per le tende. I moderni blocchi sanitari riscaldati, il servizio di pane fresco al mattino e l’area giochi per bambini assicurano grande comodità. Dal campeggio si accede direttamente alle celebri tappe del cammino Lechweg e a percorsi per bike.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -28,5 +28,11 @@
   },
   "status": "draft",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.lechtal.at",
+    "https://www.naturpark-tiroler-lech.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Campeggio immerso nella natura a Vorderhornbach nel Parco Naturale Tiroler Lech con servizi moderni."
 }

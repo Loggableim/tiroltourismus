@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Hotel Waldhof is located <strong>in a quiet location in the Stubaital</strong>, surrounded by meadows and forests, about a twelve-minute walk from the village center. The furnishings combine <strong>traditional Tiroler hospitality</strong> with a simple, modern design. Guests can expect simple, well-kept rooms as well as a restaurant serving regional cuisine. The hotel is ideal as a <strong>starting point for hikes</strong> and excursions into the surrounding mountains.</p>",
+  "beschreibung": "<p>Hotel Waldhof enjoys a <strong>peaceful setting in the Stubai Valley</strong>, surrounded by meadows and forests, about twelve minutes' walk from the village centre. The ambiance effortlessly blends <strong>traditional Tyrolean hospitality</strong> with a clean, contemporary design. Guests can expect comfortable, well-kept rooms and a restaurant serving regional culinary delights. The hotel is an ideal <strong>starting point for hikes</strong> and explorations into the surrounding mountain peaks.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -22,5 +22,9 @@
     "lat": "47.3188093",
     "lng": "11.6323611"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

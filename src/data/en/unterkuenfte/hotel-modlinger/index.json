@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5339",
   "email": "hotel@moedlinger.at",
   "webseite": "http://www.moedlinger.at/",
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Hotel Mödlinger</strong> is nestled in <strong>Söll</strong> within the stunning <strong>Wilder Kaiser</strong> region. Set in a peaceful yet central location beneath the Hohe Salve, this traditionally run hotel offers warm family hospitality. In winter, the vast <strong>SkiWelt Wilder Kaiser-Brixental</strong> slopes are within walking distance, while summer brings scenic <strong>hiking and biking trails</strong>. Facilities include a <strong>wellness suite with an indoor pool and saunas</strong> and a restaurant serving local specialties.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hotel Mödlinger in Söll in the Wilder Kaiser area provides a family ambiance, an indoor pool, a sauna wellness area, regional dining, and walkable access to SkiWelt."
 }

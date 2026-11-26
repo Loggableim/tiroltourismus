@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die <strong>Stöcklenalm</strong> liegt auf etwa 1.500 Metern Höhe in den Tiroler Alpen nahe dem Ötztal. Die Jugendherberge bietet einfache Unterkünfte in alpiner Atmosphäre mit Blick auf die umliegende Berglandschaft. Gäste übernachten in Mehrbettzimmern oder Lagern, ein Restaurant versorgt mit regionaler Küche. Die Hütte eignet sich als Ausgangspunkt für Wanderungen und Bergtouren in der Umgebung.</p>",
+  "beschreibung": "<p>De <strong>Stöcklenalm</strong> bevindt zich op circa 1.500 meter hoogte in de Tiroolse Alpen, vlak bij het Ötztal. Deze jeugdherberg biedt eenvoudige accommodatie in een authentieke alpiene ambiance met weids uitzicht op het omliggende bergdecor. Gasten overnachten in meerpersoonskamers of slaapzalen, terwijl het eigen restaurant smaakvolle regionale gerechten serveert. De berghut is de ideale uitvalsbasis voor ontspannen wandelingen en uitdagende bergtochten in de omgeving.</p>",
   "ausstattung": [],
   "tags": [
     "berg",
@@ -24,5 +24,9 @@
     "lat": "47.1001261",
     "lng": "11.2068235"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

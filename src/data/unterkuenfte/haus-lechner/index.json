@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Haus Lechner ist ein traditioneller Gasthof in der ruhigen Gemeinde Thiersee, eingebettet in die Bergwelt des Tiroler Unterlandes. Die Zimmer sind zweckmäßig eingerichtet und mit Bad, WC sowie teils mit Balkon ausgestattet. In der Gaststube werden regionale Tiroler Speisen und Getränke serviert. Die Umgebung lädt zu Aktivitäten wie Wandern, Radfahren und Schwimmen im nahegelegenen Thiersee ein. Die Atmosphäre des Hauses ist bodenständig und von familiärer Gastlichkeit geprägt.</p>",
+  "beschreibung": "<p>Das <strong>Haus Lechner</strong> empfängt Gäste im idyllischen Ortsteil Landl in der Gemeinde <strong>Thiersee</strong> im Kufsteinerland. Der familiär geführte Berggasthof bietet freundlich gestaltete Zimmer mit Dusche/WC und teilweise eigenem Balkon, von dem aus sich die bewaldeten Hänge der Brandenberger Alpen überblicken lassen. In der gemütlichen Gaststube kommen Spezialitäten der Tiroler Hausmannskost und erfrischende Getränke auf den Tisch. Das malerische Hochtal rund um den Thiersee lädt zu jeder Jahreszeit zu Erholung in der Natur ein: Wanderungen, Nordic Walking und Badeausflüge im Sommer sowie Rodeln, Schneeschuhwandern und Skifahren im Winter. Die bodenständige Gastfreundschaft macht den Aufenthalt rundum erholsam.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Traditioneller Gasthof in Landl bei Thiersee im Kufsteinerland mit gemütlichen Zimmern und regionaler Tiroler Küche."
 }

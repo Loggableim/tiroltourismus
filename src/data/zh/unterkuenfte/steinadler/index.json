@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die Ferienwohnung <strong>Steinadler</strong> liegt in einem traditionellen Tiroler Dorf im <strong>Ötztal</strong>.. Das Gebäude verbindet regionale Bauweise mit modernem Komfort.. Gäste wohnen in geräumigen Apartments mit Vollholzmöbeln und einem Balkon mit Blick auf die umliegende Berglandschaft... <p>Im Erdgeschoss befindet sich ein kleiner <strong> Wellnessbereich</strong> mit Sauna und Ruhezone.. Ein überdachter Freisitz lädt zum Verweilen ein.",
+  "beschreibung": "<p><strong>Steinadler</strong> 度假公寓坐落于<strong>厄茨山谷（Ötztal）</strong>一处宁静的传统蒂罗尔村庄。建筑将当地纯正的阿尔卑斯风格与现代便利设施完美结合。客人可入住配备实木家具的宽敞公寓，并在私人阳台上尽情饱览周围壮美的高山全景。</p><p>底层设有带桑拿浴室和静息区的精致<strong>水疗放松区</strong>，还配备了带顶棚的户外休憩露台，是放松身心的理想去处。</p>",
   "ausstattung": [],
   "tags": [
     "ferienwohnung",
@@ -22,5 +22,9 @@
     "lat": "47.0982765",
     "lng": "11.2827959"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

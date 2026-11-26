@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Planseecamp</strong> liegt im <strong>Taucherdorf</strong>, einem kleinen Ort im Tiroler Zillertal auf etwa 900 Meter Höhe. Die Ferienhäuser befinden sich in ruhiger Lage am Waldrand, unweit des Plansee. Gäste erwarten einfache, zweckmäßige Unterkünfte mit Zugang zum See und einer Grillstelle. Die Umgebung eignet sich für Wanderungen und Spaziergänge in der Natur.</p>",
+  "beschreibung": "<p>Le <strong>Planseecamp</strong> est implanté dans le <strong>Taucherdorf</strong>, au cœur du Zillertal tyrolien, à environ 900 mètres d'altitude. Les maisons de vacances se trouvent au calme, en lisière de forêt et à proximité immédiate du lac Plansee. Les hôtes y bénéficient d'hébergements simples et fonctionnels, d'un accès direct au lac ainsi que d'un espace barbecue convivial. La nature environnante offre un cadre idéal pour les randonnées et les balades ressourçantes.</p>",
   "ausstattung": [],
   "tags": [
     "famille",
@@ -23,5 +23,9 @@
     "lat": "47.4869925",
     "lng": "10.8430129"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Tirolerhof</strong> liegt in einem der Täler Nordtirols, umgeben von Wiesen und Wäldern. Das Haus verbindet <strong>traditionelle Tiroler Architektur</strong> mit einer schlichten, gepflegten Einrichtung. Gäste können eine <strong>ruhige Atmosphäre</strong> erwarten, die von der alpinen Landschaft geprägt wird. Zum Angebot gehören typische regionale Gerichte und einfache, saubere Zimmer – ein Ort, der sich für Gäste eignet, die die <strong>Berge und Natur</strong> in den Vordergrund stellen möchten.</p>",
+  "beschreibung": "<p>Hotel <strong>Tirolerhof</strong> leží v jednom z malebných údolí severního Tyrolska, uprostřed rozlehlých luk a lesů. Dům působivě propojuje <strong>tradiční tyrolskou architekturu</strong> s vkusným, pečlivě udržovaným vybavením. Hosté mohou zažít <strong>poklidnou atmosféru</strong>, kterou utváří okolní alpská příroda. V nabídce nechybí vyhlášené regionální speciality a komfortní, čisté pokoje – ideální místo pro cestovatele, kteří chtějí naplno vnímat <strong>krásu hor a přírody</strong>.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,9 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

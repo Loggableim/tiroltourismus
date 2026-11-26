@@ -11,7 +11,7 @@
   "telefon": "+43 512 281912",
   "email": "gartenhotel@aon.at",
   "webseite": "http://www.gartenhotel-baumann.at",
-  "beschreibung": null,
+  "beschreibung": "<p>Set in a peaceful green neighbourhood, Gartenhotel Garni is a wonderful retreat for travellers in Innsbruck. Bright guestrooms, a relaxing garden, and a bountiful breakfast buffet ensure a delightful stay.</p><p>The historic Old Town, the Golden Roof, and the Nordkette cable car are conveniently close.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tirol.gv.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gartenhotel Garni in Innsbruck pairs leafy garden tranquillity with easy access to city highlights."
 }

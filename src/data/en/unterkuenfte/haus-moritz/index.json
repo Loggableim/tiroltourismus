@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Haus Moritz</strong> enjoys a quiet, sunny setting in <strong>Nesselwängle</strong> in the Tannheimer Tal, framed by the impressive scenery of the Allgäu Alps. The guest rooms and apartments are comfortably appointed, featuring modern private bathrooms, flat-screen TVs, and balconies showcasing open mountain views. After a rewarding day outdoors, guests can unwind in the property's sauna and relaxation area. A generous breakfast buffet loaded with local Tyrolean produce is served each morning. In summer, the location provides an ideal launchpad for hikes up to the Krinnen pastures and excursions to Lake Haldensee. In winter, cross-country ski tracks pass close by and local ski slopes cater superbly to families.</p>",
   "ausstattung": [],
   "tags": [
     "Allgäu",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Cosy guesthouse in Nesselwängle in the Tannheimer Tal offering comfortable rooms, sauna, and views of the Allgäu Alps."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Tyrolerhof</strong> liegt in einem ruhigen Dorf im Tiroler Oberland, umgeben von Bergwiesen und markanten Gipfeln. Das Haus verbindet traditionelle Architektur mit einer gemütlichen, ungezwungenen Atmosphäre. Gäste erwartet eine regionale Küche mit Speisen aus der Umgebung sowie einfache, gepflegte Zimmer, die einen erholsamen Aufenthalt in den Bergen ermöglichen.</p>",
+  "beschreibung": "<p>De <strong>Tyrolerhof</strong> ligt in een rustig dorp in het Tiroler Oberland, omgeven door bergweiden en markante toppen. De accommodatie combineert traditionele architectuur met een gemoedelijke, ontspannen sfeer. Gasten genieten van een regionale keuken met gerechten uit de omgeving en verzorgde kamers die garant staan voor een ontspannen verblijf in de bergen.</p>",
   "ausstattung": [],
   "tags": [
     "gasthuis",
@@ -23,5 +23,9 @@
     "lat": "47.2748641",
     "lng": "11.1978472"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

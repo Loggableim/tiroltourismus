@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Haus Moritz</strong> liegt in Nesselwängle, einem Ort im <strong>Tannheimer Tal</strong> in Tirol, und ist von einer ruhigen Berglandschaft umgeben. Die Zimmer des Hotels bieten eine Ausstattung mit Balkon, Bad, Sat-TV und teilweise regionalen Holzmöbeln. Zur hauseigenen Gastronomie gehören ein Frühstücksbuffet und Abendessen mit <strong>regionalen Produkten</strong>.</p><p>In der direkten Umgebung befinden sich Möglichkeiten für Wanderungen, Radtouren und Wintersport. Das Hotel verfügt über <strong>Sauna und Ruhebereiche</strong> zur Erholung. Die <strong>persönliche Atmosphäre</strong> des Hauses trägt zu einem erholsamen Aufenthalt bei.</p>",
+  "beschreibung": "<p>Het <strong>Haus Moritz</strong> ligt op een rustige en zonnige locatie in <strong>Nesselwängle</strong> in het Tannheimer Tal, omgeven door de indrukwekkende toppen van de Allgäuer Alpen. De kamers en appartementen zijn comfortabel ingericht en beschikken over een moderne badkamer, flatscreen-tv en een balkon met vrij uitzicht op de bergen. Na een actieve dag in de natuur kunnen gasten heerlijk ontspannen in de eigen saunaruimte. 's Morgens staat er een uitgebreid ontbijtbuffet met hoogwaardige streekproducten klaar. In de zomer is het pension een ideaal vertrekpunt voor wandelingen naar de Krinnenalpen en de Haldensee. In de winter ligt de langlaufloipe vlakbij en bieden de liften van Nesselwängle veel skiplezier voor gezinnen.</p>",
   "ausstattung": [],
   "tags": [
     "ausserfern",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gezellig pension in Nesselwängle in het Tannheimer Tal met comfortabele kamers, sauna en uitzicht op de Allgäuer Alpen."
 }

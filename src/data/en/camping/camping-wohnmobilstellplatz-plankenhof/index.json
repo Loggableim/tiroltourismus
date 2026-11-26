@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Pill",
-  "region": "",
+  "region": "schwaz",
   "plz": "6130",
   "adresse": "",
   "telefon": "+43 5242 641 95",
@@ -27,5 +27,9 @@
     "lng": "11.6834891"
   },
   "status": "published",
-  "kurzbeschreibung": null
+  "kurzbeschreibung": null,
+  "sources": [
+    "https://www.plankenhof.at/",
+    "https://de.wikipedia.org/wiki/Pill"
+  ]
 }

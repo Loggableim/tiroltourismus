@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Tannenhof</strong> liegt ruhig am Rand von <strong>Tirol</strong>, umgeben von Wald und Wiesen.. Das Hotel kombiniert traditionelle alpine Architektur mit modernem Komfort.. Gäste erwarten geräumige Zimmer, eine gutbürgerliche Küche mit regionalen Produkten und ein einfaches Wellnessangebot mit Sauna.. Die Umgebung eignet sich für <strong>Wanderungen</strong> und Spaziergänge.. Ein <strong>familiärer Service</strong> und die gepflegte Einrichtung machen den Aufenthalt angenehm.",
+  "beschreibung": "<p>El <strong>Tannenhof</strong> goza de una ubicación tranquila a las afueras de <strong>Tirol</strong>, rodeado de frondosos bosques y prados alpinos. El hotel combina la arquitectura tradicional tirolesa con el confort moderno. Los huéspedes encontrarán amplias habitaciones, una cuidada cocina tradicional elaborada con productos regionales y una acogedora zona de bienestar con sauna. El entorno resulta perfecto para <strong>rutas de senderismo</strong> y agradables paseos. Una <strong>atención familiar</strong> y un equipamiento impecable garantizan una estancia inolvidable.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -22,5 +22,9 @@
     "lat": "47.0330659",
     "lng": "10.3229007"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

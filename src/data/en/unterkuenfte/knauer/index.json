@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Gasthof Knauer</strong> welcomes travelers to the famous alpine destination of <strong>Mayrhofen in the Zillertal Valley</strong>. Combining warm Zillertal hospitality with alpine comfort, the inn provides comfortable rooms with private balconies framing the high alpine peaks. In the cozy dining parlor with an open fireplace, guests savor hearty Tyrolean specialties prepared with fresh local produce. Winter visitors enjoy quick access to the Penken and Ahorn cable cars and the year-round Hintertux Glacier, while summer invites exploration across the High Alps Nature Park Zillertal Alps.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Charming alpine inn in Mayrhofen in the Zillertal Valley featuring Tyrolean cuisine, a fireplace, and mountain views."
 }

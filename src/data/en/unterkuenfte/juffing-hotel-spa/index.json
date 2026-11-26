@@ -11,7 +11,7 @@
   "telefon": "+43 5376 5585",
   "email": null,
   "webseite": "http://www.juffing.at/",
-  "beschreibung": null,
+  "beschreibung": "<p>The distinguished 4-star superior <strong>Juffing Hotel & Spa</strong> is set in an idyllic, peaceful elevated valley setting in <strong>Hinterthiersee</strong> within the Kufstein region. Renowned as an exclusive sanctuary dedicated to tranquility and couples, the design hotel harmoniously incorporates natural local timber and stone. Sophisticated rooms and suites offer panoramic balconies overlooking the dramatic Kaisergebirge mountain peaks. The expansive spa facility boasts heated indoor and outdoor swimming pools, panoramic Finnish and stone pine saunas, and serene relaxation lounges with waterbeds. Guests savour award-winning organic and regional fine dining in peaceful, light-flooded dining rooms.</p>",
   "ausstattung": [
     "sauna"
   ],
@@ -28,5 +28,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.juffing.at",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Luxury 4-star superior wellness retreat in Hinterthiersee offering adults-only tranquility and Kaisergebirge views."
 }

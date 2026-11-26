@@ -11,7 +11,7 @@
   "telefon": "+43 4824 2048",
   "email": "nationalpark-camping@heiligenblut.at",
   "webseite": "https://www.nationalpark-camping.at/de/",
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Nationalpark Camping Großglockner</strong> welcomes outdoor enthusiasts to <strong>Kals am Großglockner</strong> in East Tyrol, located at the core of the Hohe Tauern National Park. Surrounded by the towering three-thousand-metre peaks of the Glockner Range, it delivers an unforgettable wilderness experience in a peaceful valley landscape. Terraced pitches for motorhomes, caravans, and tents afford uninterrupted panoramas of glaciated summits and alpine pastures. Amenities include modern heated sanitary facilities, boot drying facilities, and a kiosk stocking regional delicacies. Epic alpine climbs and leisurely valley hikes begin right from the campsite, with the Großglockner Resort ski area nearby in winter.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -27,5 +27,10 @@
     "lng": "12.8390265"
   },
   "status": "published",
-  "kurzbeschreibung": null
+  "kurzbeschreibung": "High-alpine campsite in Kals am Großglockner in the Hohe Tauern National Park facing the Glockner range.",
+  "sources": [
+    "https://www.kals.at",
+    "https://www.osttirol.com",
+    "https://www.tirol.at"
+  ]
 }

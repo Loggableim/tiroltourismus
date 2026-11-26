@@ -11,7 +11,7 @@
   "telefon": "+43 5333 5100; +43 5333 5377",
   "email": "info@koglkaser.at",
   "webseite": "http://www.koglkaser.at/",
-  "beschreibung": "<p>Die **Jausenstation Kogl-Kaser** in Tirol, Österreich, ist eine als **Ferienwohnung** genutzte ehemalige Jausenstation. Die Unterkunft liegt auf rund 1.500 Metern Seehöhe, abseits des Durchgangsverkehrs in einer Almregion. Die Bausubstanz und die Einrichtung sind im **traditionellen Tiroler Stil** gehalten. Die Ferienwohnung verfügt über eine **Wohnküche**, ein Schlafzimmer und ein separates Bad. Vom Balkon oder der Terrasse bietet sich ein Blick auf die umliegenden Gipfel. Gäste können zahlreiche **Wander- und Mountainbikewege** direkt ab der Unterkunft nutzen. Das nächste Skigebiet ist mit dem Pkw oder Skibus in wenigen Minuten erreichbar. Ein Lebensmittel-Selbstbedienungsladen ist im nächstgelegenen Ortsteil vorhanden.</p>",
+  "beschreibung": "<p>Die <strong>Jausenstation Kogl-Kaser</strong> befindet sich in traumhafter Alleinlage auf rund 1.500 Metern Seehöhe am sonnigen Hang oberhalb von <strong>Söll</strong>. Die liebevoll restaurierte, historische Almhütte wird heute als uriges Ferienhaus vermietet und verbindet alpinen Hüttencharme mit zeitgemäßem Wohnkomfort. Die Unterkunft verfügt über eine voll ausgestattete gemütliche Wohnküche, ein separates Schlafzimmer und ein modernes Badezimmer. Von der sonnigen Holzterrasse und dem Balkon aus bietet sich ein atemberaubender Panoramablick auf die schroffen Felswände des Wilden Kaisers und das Inntal. Im Sommer starten Wander- und Mountainbiketouren direkt vor der Haustür, und im Winter liegt das weltbekannte Skigebiet SkiWelt Wilder Kaiser - Brixental in greifbarer Nähe.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -27,5 +27,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Uriges Ferienchalet auf 1.500 Metern Seehöhe in Söll mit spektakulärem Blick auf den Wilden Kaiser."
 }

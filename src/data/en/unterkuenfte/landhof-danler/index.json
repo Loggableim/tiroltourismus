@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Landhof Danler</strong> welcomes holidaymakers to a sunny and quiet setting in <strong>Neustift in the Stubai Valley</strong>, framed by the impressive summits of the Stubai glacier world. This family-operated guesthouse offers authentic Tyrolean warmth and cozy accommodations. Comfortably appointed rooms and apartments feature private balconies with unobstructed views of surrounding three-thousand-meter peaks. A garden lawn with sun loungers and a children's play area provides outdoor relaxation. Free ski buses connect swiftly to the Elfer lifts, Schlick 2000, and the year-round <strong>Stubai Glacier</strong>, while summer hiking trails depart from the doorstep.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.stubai.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Family-run country farm guesthouse in Neustift in the Stubai Valley featuring glacier views and gardens."
 }

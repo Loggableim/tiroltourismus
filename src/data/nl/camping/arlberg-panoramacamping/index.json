@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.arlberglifecamping.com/",
-  "beschreibung": "<p>Der Campingplatz **Arlberg-Panoramacamping** liegt in der Gemeinde **Pettneu am Arlberg** im österreichischen Bundesland **Tirol**. Die Anlage befindet sich erhöht im Tal und bietet einen **Panoramablick** auf die umliegenden Berge des Arlberggebiets. Die Anlage ist ruhig und naturnah gelegen. Die Umgebung wird von markierten **Wanderwegen** im Sommer und einem Netz an **Langlaufloipen** im Winter geprägt. Der Standort liegt in der Nähe der Talstationen der **Ski Arlberg** Bergbahnen, die über einen **Skibus** erreichbar sind. Die Ausstattung des Platzes umfasst Sanitärgebäude, Stellplätze mit **Strom",
+  "beschreibung": "<p>De camping <strong>Arlberg-Panoramacamping</strong> ligt op een zonnige heuvel in het dorp <strong>Pettneu am Arlberg</strong> in het Tiroolse Stanzertal. De rustige ligging trakteert kampeerders op een weids uitzicht over de bergwereld van het Arlbergmassief. Deze jaarrond geopende camping beschikt over royale staanplaatsen voor campers en caravans met stroom- en wateraansluitingen, evenals grasvelden voor tenten. Moderne verwarmde sanitairgebouwen, droogruimtes voor wintersportuitrusting en een gezellige recreatieruimte zijn aanwezig. 's Winters brengt de gratis skibus wintersporters rechtstreeks naar het wereldberoemde skigebied Ski Arlberg in St. Anton.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,11 @@
     "lat": "47.1478245",
     "lng": "10.3459918"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.panoramacamping.at",
+    "https://www.stantonamarlberg.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Het hele jaar geopende panoramische camping in Pettneu am Arlberg met bergzicht en skibusverbinding."
 }

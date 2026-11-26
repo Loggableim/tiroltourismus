@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Alpenfriede</strong> befindet sich in ruhiger Lage am Ortsrand von Kitzbühel in Tirol. Die Unterkunft bietet <strong>Zimmer mit Balkon</strong> und Bad, die mit modernen Möbeln ausgestattet sind. Zur Ausstattung gehören ein <strong>Wellnessbereich</strong> mit Sauna und Dampfbad, ein Speisesaal und eine hauseigene Tiefgarage. Die Umgebung ist von <strong>Wanderwegen</strong> und Loipen geprägt, die direkt ab dem Hotel zugänglich sind. Im Winter erreichen Gäste die Skigebiete Hahnenkamm und Kitzbühel in wenigen Minuten mit dem Skibus. Gäste können mit <strong>regionaler Küche</strong> im Halbpensionsangebot rechnen, das Frühstück und Abendessen umfasst. Das Haus eignet sich für Paare und Familien, die einen ruhigen Aufenthalt in der Natur suchen. Die Rezeption ist täglich von 7 bis 22 Uhr besetzt.</p>",
+  "beschreibung": "<p>El establecimiento <strong>Hotel Alpenfriede</strong> goza de una ubicación soleada y apacible en una ladera panorámica de <strong>Jerzens</strong>, en el valle de Pitztal, flanqueado por bosques de alerces y con amplias vistas a las montañas. Sus habitaciones, ambientadas con la calidez de la madera rústica tirolesa, disponen de baño moderno con ducha, televisión por satélite, wifi y balcones privados orientados al valle. Para descansar tras las rutas de montaña, la casa dispone de una agradable zona de bienestar con sauna finlandesa. Cada mañana se sirve un copioso bufé de desayuno con alimentos locales y por la noche platos típicos del Tirol. El telecabina de la estación familiar de <strong>Hochzeiger</strong> se alcanza en breves minutos mediante el autobús gratuito. En verano, el parque temático ZirbenPark ofrece gran diversión.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Acogedor hotel alpino en Jerzens, valle de Pitztal, con habitaciones con balcón soleado, sauna y cerca de la estación de Hochzeiger."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Knauer liegt in der Region <strong>Tirol</strong>, eingebettet in die <strong>Alpen</strong>. Die Umgebung ist von dichten Wäldern und weiten Bergwiesen geprägt, die zu <strong>Wanderungen</strong> einladen. Die Ausstattung umfasst gemütliche Zimmer, einen traditionellen Gastraum mit <strong>Kamin</strong> und eine Terrasse mit Panoramablick. Die Atmosphäre ist von <strong>tiroler Gastlichkeit</strong> und rustikalem Charme bestimmt. Die Zielgruppe sind vor allem <strong>Naturfreunde</strong>, Wanderer und Familien, die Erholung in den Bergen suchen. Die regionale Küche serviert <strong>Tiroler Spezialitäten</strong> aus lokalen Zutaten. Der Gasthof ist ein idealer Ausgangspunkt für Aktivitäten in der <strong>Bergwelt</strong>.</p>",
+  "beschreibung": "<p>Il <strong>Gasthof Knauer</strong> sorge nella celebre località di <strong>Mayrhofen nella Valle Zillertal</strong>. La struttura fonde l'autentica accoglienza della valle con il comfort montano. Le camere dispongono di balcone affacciato sulle vette alpine circostanti. Nella tipica stube con caminetto vengono serviti piatti genuini della tradizione tirolese con prodotti a km zero. In inverno la posizione è strategica per gli impianti di Penken e Ahorn e il ghiacciaio di Hintertux, mentre in estate si aprono gli itinerari del Parco Naturale delle Alpi della Zillertal.</p>",
   "ausstattung": [],
   "tags": [
     "osteria",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Accogliente locanda a Mayrhofen nella Valle Zillertal con cucina tipica, camino e vista sulle montagne."
 }

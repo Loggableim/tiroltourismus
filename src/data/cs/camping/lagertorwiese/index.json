@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "https://www.pfadfinder-tirol.at/tpz/",
-  "beschreibung": "<p>Der Campingplatz **Lagertorwiese** liegt in **Going am Wilden Kaiser** in Tirol. Die Anlage befindet sich in ruhiger, naturnaher Umgebung am Fuße des **Wilden Kaiser** Gebirges. Zur Ausstattung gehören **Sanitäranlagen**, **Stromanschlüsse** und eine **Küchenzeile**. Stellplätze sind für **Wohnmobile**, **Wohnwagen** und **Zelte** ausgelegt. Ein **kleiner Laden** auf dem Gelände bietet Lebensmittel des täglichen Bedarfs. Im Sommer dient der Platz als Ausgangspunkt für **Wanderungen** und **Klettertouren** im Kaisergebirge. Im Winter sind die **Skigebiete** der SkiWelt und Kitzbühel erreichbar. Der sachlich geführte Campingplatz bietet eine **zweckmäßige Basis** für Aktivurlauber.</p>",
+  "beschreibung": "<p>Přírodní kemp <strong>Lagertorwiese</strong> se rozkládá na tichém a slunném místě na okraji obce <strong>Going am Wilden Kaiser</strong>. Areál leží přímo na úpatí majestátního masivu Wilder Kaiser a nabízí milovníkům přírody ničím nerušený pobyt v horách. Kemp disponuje stáními pro obytné vozy a karavany i prostornými loukami pro stany. Zázemí tvoří čisté sanitární zařízení se sprchami, elektrické přípojky a obchůdek se základními potřebami. V létě je kemp skvělým výchozím bodem pro pěší túry a horolezecké výstupy v Kaisergebirge, v zimě jsou nedaleko sjezdovky areálu SkiWelt Wilder Kaiser.</p>",
   "ausstattung": [],
   "tags": [
     "camping",
@@ -23,5 +23,10 @@
     "lat": "47.2220255",
     "lng": "11.4307049"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Klidný přírodní kemp v obci Going am Wilden Kaiser s úchvatným výhledem na pohoří Wilder Kaiser."
 }

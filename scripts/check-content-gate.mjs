@@ -11,6 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { detectLeak, walkStrings } from './lib/leak-detect.mjs';
+import { SOON_LANGS } from '../src/lib/languages.js';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = 'src/data';
@@ -19,6 +20,7 @@ const BLOCKED_FIELDS = new Set([
   'status', 'featured', 'emoji', 'farbe', 'bilder', 'hero_bild', 'grenzen',
   'koordinaten', 'slug', 'region', 'bezirk', 'hunde', 'title', 'metaDescription', 'text',
 ]);
+const FILLABLE_BLOCKED_FIELDS = new Set(['region']);
 const SOFT_STATUSES = new Set(['403', '429', 'timeout']);
 const HARD_STATUSES = new Set(['404', '410']);
 const HTTP_TIMEOUT_MS = 15000;
@@ -49,9 +51,31 @@ function changedFiles() {
     const parts = line.split('\t');
     const status = parts[0][0];
     if (status === 'D') continue;
-    files.push(parts[parts.length - 1]);
+    const file = parts[parts.length - 1];
+    // Interne Registry-/Report-Dateien (Namenspräfix "_") sind keine
+    // Collection-Einträge: sie haben weder 8 Sprachvarianten noch `sources`.
+    // Beispiel: src/data/_hidden-nicht-tirol.json (fakt-02/Gastro-Deny-List).
+    if (isInternalDataFile(file)) continue;
+    files.push(file);
   }
   return files;
+}
+
+/**
+ * Interne Dateien/Verzeichnisse unter src/data, die mit "_" beginnen
+ * (z. B. _hidden-nicht-tirol.json, _quality_report.json, _sk_excluded),
+ * sind keine Inhalts-Einträge und werden vom Entry-Gate ausgenommen.
+ *
+ * Ebenfalls ausgenommen sind die Bald-Sprachen (SOON_LANGS: pl, hu, sk,
+ * siehe src/lib/languages.js). Sie sind noch nicht veröffentlicht und
+ * haben keinen Subdomain-Build; ihre Daten sind vorbereitete Übersetzungen,
+ * aber keine Einträge des 8-Sprachen-Vertrags (de, cs, en, es, fr, it, nl, zh).
+ * Das Leak-Gate (Prüfung 0) läuft weiterhin über ALLE Dateien inkl. hu/pl/sk.
+ */
+function isInternalDataFile(file) {
+  const rel = path.posix.relative(DATA, file);
+  const firstSegment = rel.split('/')[0];
+  return firstSegment.startsWith('_') || SOON_LANGS.includes(firstSegment);
 }
 
 function splitLocale(file) {
@@ -207,7 +231,11 @@ async function main() {
         const keys = new Set([...Object.keys(baseData), ...Object.keys(data)]);
         for (const key of keys) {
           if (!BLOCKED_FIELDS.has(key) || sameJson(baseData[key], data[key])) continue;
-          if (key in baseData) {
+          const baseEmpty = baseData[key] === '' || baseData[key] === null || baseData[key] === undefined;
+          const valueFilled = data[key] !== '' && data[key] !== null && data[key] !== undefined;
+          if (key in baseData && FILLABLE_BLOCKED_FIELDS.has(key) && baseEmpty && valueFilled) {
+            addFinding(file, entry, '3 Nur Inhaltsfelder', 'warn', `Blockiertes Feld aus leerem Wert ergänzt: ${key}`);
+          } else if (key in baseData) {
             addFinding(file, entry, '3 Nur Inhaltsfelder', 'error', `Blockiertes Feld geändert: ${key}`);
           } else {
             addFinding(file, entry, '3 Nur Inhaltsfelder', 'warn', `Blockiertes Feld neu ergänzt: ${key}`);

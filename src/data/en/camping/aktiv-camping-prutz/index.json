@@ -5,7 +5,7 @@
   "sterne": null,
   "preis_ab": null,
   "ort": "Prutz",
-  "region": "",
+  "region": "landeck",
   "plz": "6522",
   "adresse": "",
   "telefon": "+43 5472 2648",
@@ -27,5 +27,9 @@
     "lng": "10.6596843"
   },
   "status": "published",
-  "kurzbeschreibung": null
+  "kurzbeschreibung": null,
+  "sources": [
+    "https://www.prutz.gv.at/Aktiv_Camping_Prutz",
+    "https://de.wikipedia.org/wiki/Prutz"
+  ]
 }

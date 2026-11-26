@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Die <strong>Untere Issalm</strong> liegt im Bezirk Kufstein in Tirol, eingebettet in eine Almlandschaft auf etwa 1.000 Metern Seehöhe.. Das Gebäude ist eine ehemalige Almhütte, die als <strong>Jugendherberge</strong> genutzt wird und bietet einfache, zweckmäßige Übernachtungsmöglichkeiten.. Die Atmosphäre ist ruhig und ländlich geprägt – geeignet für Wanderer und Gruppen, die die Bergnatur nutzen möchten.. Gäste erwarten Mehrbettzimmer, eine Gemeinschaftsküche und ein kleiner Aufenthaltsbereich.. Der nächste Ort mit Einkaufsmöglichkeiten befindet sich im Tal.",
+  "beschreibung": "<p>El <strong>Untere Issalm</strong> se encuentra en el distrito de Kufstein, en el Tirol, enclavado en un paisaje alpino de pastizales a unos 1.000 metros de altitud. Se trata de una antigua cabaña de montaña que hoy en día funciona como <strong>albergue juvenil</strong>, ofreciendo un alojamiento sencillo y funcional. Su atmósfera es tranquila y rural, ideal para senderistas y grupos que deseen disfrutar de la naturaleza de montaña. Cuenta con habitaciones compartidas, una cocina común y una pequeña sala de estar. La localidad más cercana con tiendas se encuentra en el valle.</p>",
   "ausstattung": [],
   "tags": [
     "montaña",
@@ -24,5 +24,9 @@
     "lat": "47.2198428",
     "lng": "10.9854061"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.gluckserhuette.at/",
-  "beschreibung": "<p>Die Gluckserhütte in Tulfes ist eine Ferienwohnung in ruhiger Lage am Rand des Dorfes. Die Unterkunft bietet Platz für bis zu vier Personen und ist mit einer voll ausgestatteten Küche ausgestattet. Vom Balkon eröffnet sich ein Blick auf die umliegenden Berge des Tiroler Unterlandes. In der Umgebung gibt es zahlreiche Wanderwege für den Sommer und Skigebiete für den Winter. Der nahe gelegene Hof des Vermieters liefert frische regionale Produkte. Die Stadt Innsbruck ist mit dem Auto in etwa 20 Minuten erreichbar.</p>",
+  "beschreibung": "<p>Accroche aux pentes ensoleillees du Glungezer au-dessus de Tulfes, la Gluckserhuette offre une halte montagnarde chaleureuse avec ses mets maison et ses couchages douillets.</p><p>La telecabine du Glungezer, le fameux sentier du Zirbenweg et les pistes de ski sont sur le pas de la porte.</p>",
   "ausstattung": [
     "restaurant"
   ],
@@ -28,5 +28,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hall-wattens.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Le refuge Gluckserhuette a Tulfes propose le charme authentique d un alpage sur les pentes du Glungezer."
 }

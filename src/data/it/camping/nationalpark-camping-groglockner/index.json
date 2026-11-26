@@ -11,7 +11,7 @@
   "telefon": "+43 4824 2048",
   "email": "nationalpark-camping@heiligenblut.at",
   "webseite": "https://www.nationalpark-camping.at/de/",
-  "beschreibung": "<p>Der **Nationalpark Camping Großglockner** liegt in der Gemeinde **Kals am Großglockner** im österreichischen Bundesland Tirol. Die Anlage befindet sich im **Nationalpark Hohe Tauern**, umgeben von der Bergwelt der **Glocknergruppe**. Die Umgebung ist durch eine ruhige, **alpine Tallandschaft** geprägt. Im Sommer sind **Wanderwege** und hochalpine Routen direkt vom Platz aus erreichbar. Im Winter steht das",
+  "beschreibung": "<p>Il panoramico <strong>Nationalpark Camping Großglockner</strong> sorge nel comune di <strong>Kals am Großglockner</strong> nel Tirolo Orientale, nel cuore del Parco Nazionale degli Alti Tauri. Circondata dalle maestose vette oltre i tremila metri del gruppo del Glockner, la struttura regala un’esperienza indimenticabile nella quiete della natura alpina. Le piazzole terrazzate per camper, roulotte e tende godono di una vista magnifica su ghiacciai e prati fioriti. Tra i servizi spiccano moderni blocchi igienici riscaldati, asciuga-scarponi e un negozio con specialità tipiche. Dal campeggio partono celebri escursioni e vie alpinistiche, con gli impianti del Großglockner Resort a breve distanza.</p>",
   "ausstattung": [
     "sanitäranlagen",
     "stromanschluss"
@@ -26,5 +26,11 @@
     "lat": "47.0369065",
     "lng": "12.8390265"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.kals.at",
+    "https://www.osttirol.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Campeggio d’alta quota a Kals am Großglockner nel Parco Nazionale Alti Tauri con vista sul Glockner."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Landhaus Bergfried liegt in einer ruhigen Hanglage im Tiroler Ötztal, abseits der Durchgangsstraßen. Die Umgebung ist von weitläufigen <strong>Alm- und Bergwiesen</strong> sowie einem imposanten <strong>Gipfelpanorama</strong> geprägt. Die Ausstattung des Gasthofs umfasst Zimmer im alpenländischen Stil, eine traditionelle Gaststube sowie einen <strong>Spa-Bereich</strong> für die Gäste. Die Atmosphäre gilt als familiär und ruhig, was auf die persönliche Führung und die naturnahe Lage zurückzuführen ist. Das Haus richtet sich vorrangig an <strong>Wanderer</strong> im Sommer und <strong>Skifahrer</strong> im Winter sowie an Erholungssuchende. Die hauseigene Küche legt Wert auf <strong>regionale Produkte</strong> und traditionelle Zubereitung.</p>",
+  "beschreibung": "<p>Le <strong>Landhaus Bergfried</strong> bénéficie d'une situation calme et très ensoleillée à <strong>Thiersee</strong>, dans le district de Kufstein. Baignées par la nature alpine, les chambres et appartements au style montagnard disposent de balcons avec vue sur les parois du Kaisergebirge. L'été invite aux randonnées champêtres et à la baignade au lac Thiersee, tandis que l'hiver déploie ses pistes de ski de fond et sentiers de promenade.</p>",
   "ausstattung": [],
   "tags": [
     "montagne",
@@ -26,5 +26,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.thiersee.at",
+    "https://www.kufstein.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Maison de vacances paisible sur les hauteurs ensoleillées de Thiersee avec vue sur le Kaisergebirge."
 }

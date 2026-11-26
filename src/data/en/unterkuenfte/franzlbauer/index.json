@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>Nestled in a sunny spot beneath the Wilder Kaiser, Franzlbauer in Soell provides a restful farm holiday experience. Featuring cosy wooden furnishings, it is a wonderful retreat for families and outdoor lovers.</p><p>Hiking routes, cycling paths, and the renowned SkiWelt Wilder Kaiser - Brixental are conveniently close.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wilderkaiser.info",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "The Franzlbauer farmstead in Soell offers authentic countryside experiences at the foot of the Wilder Kaiser."
 }

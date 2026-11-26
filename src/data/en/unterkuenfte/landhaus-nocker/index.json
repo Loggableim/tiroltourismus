@@ -11,7 +11,7 @@
   "telefon": "+43 5272 6244",
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p><strong>Landhaus Nocker</strong> welcomes guests to a peaceful, sunny location in <strong>Steinach am Brenner</strong> in Tyrol's scenic Wipptal Valley. Framed by the peaks of the Tux and Stubai Alps, this family-managed home provides authentic alpine comfort and warm hospitality. Thoughtfully styled in alpine aesthetics, the rooms and holiday apartments feature private balconies offering uninterrupted mountain vistas. The Bergeralm cable car valley station, local shops, and restaurants are only a short stroll away. In winter, the Bergeralm ski arena provides snow-sure slopes and tobogganing, while summer invites exploration across the pristine side valleys of the Wipptal.</p>",
   "ausstattung": [],
   "tags": [
     "inn",
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.wipptal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Comfortable alpine holiday retreat in Steinach am Brenner in the Wipptal Valley close to the Bergeralm lifts."
 }

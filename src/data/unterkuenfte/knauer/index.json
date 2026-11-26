@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der Gasthof Knauer liegt in der Region <strong>Tirol</strong>, eingebettet in die <strong>Alpen</strong>. Die Umgebung ist von dichten Wäldern und weiten Bergwiesen geprägt, die zu <strong>Wanderungen</strong> einladen. Die Ausstattung umfasst gemütliche Zimmer, einen traditionellen Gastraum mit <strong>Kamin</strong> und eine Terrasse mit Panoramablick. Die Atmosphäre ist von <strong>tiroler Gastlichkeit</strong> und rustikalem Charme bestimmt. Die Zielgruppe sind vor allem <strong>Naturfreunde</strong>, Wanderer und Familien, die Erholung in den Bergen suchen. Die regionale Küche serviert <strong>Tiroler Spezialitäten</strong> aus lokalen Zutaten. Der Gasthof ist ein idealer Ausgangspunkt für Aktivitäten in der <strong>Bergwelt</strong>.</p>",
+  "beschreibung": "<p>Der <strong>Gasthof Knauer</strong> begrüßt seine Feriengäste im weltbekannten Urlaubsort <strong>Mayrhofen im Zillertal</strong>. Das Haus verbindet traditionelle Zillertaler Gastlichkeit mit behaglichem Wohnkomfort. Die freundlich eingerichteten Zimmer verfügen über Balkone mit freiem Blick auf die Zillertaler Alpen. Im gemütlichen Gastraum mit offenem Kamin serviert die Küche herzhafte Tiroler Schmankerl und Zillertaler Spezialitäten aus frischen regionalen Zutaten. Im Winter profitieren Gäste von der Nähe zu den Talstationen der Penken- und Ahornbahn sowie zum Hintertuxer Gletscher, während im Sommer traumhafte Wander- und Biketouren in den Hochgebirgs-Naturpark Zillertaler Alpen führen.</p>",
   "ausstattung": [],
   "tags": [
     "gasthof",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.zillertal.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Gemütlicher Gasthof in Mayrhofen im Zillertal mit Tiroler Küche, Kamin und Bergblick."
 }

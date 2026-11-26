@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": "http://www.trofana-soelden.at/willkommen.html",
-  "beschreibung": "<p>Die Ferienwohnung <strong>Trofana</strong> befindet sich in ruhiger Lage von <strong>Sölden</strong>, nur wenige Gehminuten vom Ortszentrum entfernt. Die Unterkunft bietet eine <strong>typisch alpine Einrichtung</strong> mitholzmöbeln und einem gemütlichen Wohnbereich. <strong>Gäste</strong> erhalten eine voll ausgestattete Küche zur Selbstversorgung sowie Zugang zu einem <strong>Skikeller</strong> und einem kleinen <strong>Abstellraum</strong> für Sportausrüstung. Die Umgebung lädt zu <strong>Wanderungen</strong> und <strong>Skiaktivitäten</strong> im Ötztal ein.</p>",
+  "beschreibung": "<p><strong>Trofana</strong> 度假公寓坐落于<strong>索尔登</strong>（Sölden）幽静雅致的地段，距热闹的镇中心仅数分钟步行路程。公寓呈现<strong>经典的阿尔卑斯装潢风格</strong>，配有质感温润的原木家具与舒适惬意的起居空间。<strong>宾客</strong>可使用设施齐全的自助式厨房，并享有<strong>雪具存放室</strong>以及专用的运动装备<strong>储物间</strong>。风景如画的厄茨河谷（Ötztal）是开展<strong>徒步远足</strong>与畅享<strong>高山滑雪</strong>的胜地。</p>",
   "ausstattung": [],
   "tags": [
     "ferienwohnung",
@@ -23,5 +23,9 @@
     "lat": "46.9742169",
     "lng": "11.012519"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

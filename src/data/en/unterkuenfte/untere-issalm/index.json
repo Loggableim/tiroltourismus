@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>The <strong>Untere Issalm</strong> is located in the district of Kufstein in Tirol, nestled in an alpine pasture landscape at about 1,000 meters above sea level. The building is a former alpine hut that is used as a <strong>youth hostel</strong> and offers simple, functional overnight accommodation. The atmosphere is quiet and rural – suitable for hikers and groups who want to enjoy the mountain nature. Guests can expect multi-bed rooms, a shared kitchen, and a small lounge area. The nearest town with shopping facilities is in the valley.",
+  "beschreibung": "<p>The <strong>Untere Issalm</strong> is located in the Kufstein district of Tyrol, nestled in an alpine pasture landscape at around 1,000 meters above sea level. The building is a former alpine hut that is now operated as a <strong>youth hostel</strong>, offering simple and functional accommodation. The setting is peaceful and rural—perfect for hikers and groups eager to explore the alpine nature. Guests have access to multi-bed dorms, a communal kitchen, and a small lounge area. The nearest village with grocery shopping facilities is situated down in the valley.</p>",
   "ausstattung": [],
   "tags": [
     "mountain",
@@ -24,5 +24,9 @@
     "lat": "47.2198428",
     "lng": "10.9854061"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

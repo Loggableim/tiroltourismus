@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Gasthof Waldheim</strong> liegt in einem ruhigen Talort in Tirol, umgebenend von Wiesen und Wäldern. Das Gebäude ist ein traditioneller Tiroler Holzbau mit einer gemütlichen Gaststube. Gäste finden eine einfache, bodenständige Küche mit regionalen Gerichten vor. Die Zimmer sind zweckmäßig eingerichtet und eignen sich für Reisende, die eine <strong>ruhige Unterkunft</strong> in ländlicher Umgebung suchen.</p>",
+  "beschreibung": "<p><strong>Gasthof Waldheim</strong> 旅馆坐落于蒂罗尔幽静的谷地中，四周草甸与树林环绕。整座建筑采用传统蒂罗尔木质结构，配有温馨质朴的餐厅客堂。宾客可品尝到朴实地道的当地风味菜肴。客房布置实用整洁，非常适合希望在乡村自然环境中寻找<strong>幽静住宿</strong>的旅客。</p>",
   "ausstattung": [],
   "tags": [
     "客栈",
@@ -23,5 +23,9 @@
     "lat": "47.5896272",
     "lng": "12.0342347"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das <strong>Hotel Alpenfriede</strong> befindet sich in ruhiger Lage am Ortsrand von Kitzbühel in Tirol. Die Unterkunft bietet <strong>Zimmer mit Balkon</strong> und Bad, die mit modernen Möbeln ausgestattet sind. Zur Ausstattung gehören ein <strong>Wellnessbereich</strong> mit Sauna und Dampfbad, ein Speisesaal und eine hauseigene Tiefgarage. Die Umgebung ist von <strong>Wanderwegen</strong> und Loipen geprägt, die direkt ab dem Hotel zugänglich sind. Im Winter erreichen Gäste die Skigebiete Hahnenkamm und Kitzbühel in wenigen Minuten mit dem Skibus. Gäste können mit <strong>regionaler Küche</strong> im Halbpensionsangebot rechnen, das Frühstück und Abendessen umfasst. Das Haus eignet sich für Paare und Familien, die einen ruhigen Aufenthalt in der Natur suchen. Die Rezeption ist täglich von 7 bis 22 Uhr besetzt.</p>",
+  "beschreibung": "<p>L'<strong>Hôtel Alpenfriede</strong> bénéficie d'une situation panoramique calme et très ensoleillée à <strong>Jerzens</strong> dans la vallée du Pitztal, au cœur des forêts de mélèzes face aux sommets tyroliens. Ses chambres chaleureuses agencées dans un style campagnard traditionnel comprennent une salle de bains contemporaine, la télévision par satellite, le Wi-Fi et un balcon privé ouvrant sur la vallée. Pour parfaire la détente après les randonnées ou le ski, un espace bien-être avec sauna finlandais est à disposition. Un généreux petit-déjeuner buffet composé de produits régionaux attend les hôtes au réveil, complété le soir par de savoureux mets locaux. Le domaine skiable et familial du <strong>Hochzeiger</strong> est accessible en quelques minutes grâce à la navette gratuite. L'été venu, le parc à thèmes ZirbenPark comble toute la famille.</p>",
   "ausstattung": [
     "wifi"
   ],
@@ -26,5 +26,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.pitztal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Hôtel montagnard chaleureux à Jerzens dans le Pitztal, avec chambres à balcon ensoleillé, sauna et proche du domaine du Hochzeiger."
 }

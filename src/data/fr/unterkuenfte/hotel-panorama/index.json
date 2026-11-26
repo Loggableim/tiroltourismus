@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das Hotel Panorama liegt am Ortsrand von <strong>Hall in Tirol</strong> mit Blick auf die umliegende Berglandschaft. Das Haus bietet <strong>klassisch eingerichtete Zimmer</strong> und eine Gastronomie mit regionaler Küche. Gäste erreichen Wanderwege direkt vom Hotel aus. Zur Ausstattung gehören ein <strong>kleiner Wellnessbereich</strong>, eine Terrasse und kostenfreie Parkplätze. Das Hotel eignet sich für Reisende, die die Tiroler Bergwelt in ruhiger Lage erkunden möchten.</p>",
+  "beschreibung": "<p>L'<strong>Hôtel Panorama</strong> se trouve sur un versant ensoleillé de <strong>Jerzens</strong>, dans la belle <strong>vallée du Pitztal</strong> au Tyrol. Les chambres aménagées avec soin sont dotées d'un balcon ouvrant sur les cimes environnantes. L'hiver permet de rejoindre aisément la station de ski de <strong>Hochzeiger</strong> et le glacier du Pitztal, tandis que l'été révèle de splendides <strong>chemins de randonnée</strong>. L'établissement abrite un <strong>espace sauna</strong> relaxant, une terrasse panoramique et un restaurant tyrolien.</p>",
   "ausstattung": [],
   "tags": [
     "hôtel",
@@ -24,5 +24,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.imst.at",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "L'Hôtel Panorama à Jerzens dans le Pitztal propose un séjour ensoleillé avec vue panoramique, un espace sauna, une terrasse et un accès direct au domaine du Hochzeiger."
 }

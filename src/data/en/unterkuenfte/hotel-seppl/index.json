@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": null,
+  "beschreibung": "<p>The <strong>Hotel Seppl</strong> enjoys a tranquil and sunny location in the charming village of <strong>Mutters</strong> on the plateau above Innsbruck. This 4-star mountain retreat masterfully blends traditional Tyrolean woodwork, fragrant stone pine, and contemporary lifestyle amenities. A generous spa haven invites guests to unwind with an indoor pool, Finnish and herbal saunas, steam rooms, and panoramic quiet areas. The restaurant serves innovative alpine creations crafted with premium local ingredients. The scenic Stubaital railway offers easy direct transit into historic Innsbruck, while the hiking and skiing slopes of Muttereralm are right on the doorstep.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hotel-seppl.at",
+    "https://www.innsbruck-tourismus.at/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Charming 4-star alpine retreat in Mutters on a sunny plateau near Innsbruck featuring a spa and indoor pool."
 }

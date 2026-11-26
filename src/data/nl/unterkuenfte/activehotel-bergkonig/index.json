@@ -3,16 +3,21 @@
   "slug": "activehotel-bergkonig",
   "typ": "hotel",
   "sterne": 4,
-  "preis_ab": null,
+  "preis_ab": 140,
   "ort": "Neustift im Stubaital",
   "region": "stubaital",
   "plz": "6167",
   "adresse": "Schulweg 9",
   "telefon": "+43 5226 2558",
-  "email": null,
+  "email": "info@activehotel.at",
   "webseite": "https://www.activehotel.at/",
-  "beschreibung": "<p>Activehotel Bergkönig ligt in Neustift im Stubaital, vlak bij het dalstation van de Stubaier gletsjerbaan. Het verblijf wordt gerund als een <strong>actief hotel</strong>. Gasten genieten van directe toegang tot de wandel-, fiets- en skigebieden van het dal. Tot de faciliteiten behoort een <strong>wellnessruimte</strong> met sauna en zwembad. Gastronomische verzorging wordt geboden in het eigen <strong>restaurant</strong> met regionale gerechten. De kamers zijn comfortabel ingericht en sommige beschikken over een balkon. Tevens is er een verhuurservice voor wintersport- en berguitrusting in huis. Het hotel richt zich voornamelijk op sportieve gasten.</p>",
-  "ausstattung": [],
+  "beschreibung": "<p>Het viersterrenhotel <strong>Activehotel Bergkönig</strong> verwelkomt gasten in het centrum van Neustift im Stubaital. Dit door een familie gerunde actieve hotel beschikt over 36 ruime kamers en suites voor een ontspannen berg- en wellnessvakantie. Tot de faciliteiten behoort een veelzijdige wellnessruimte met binnen- en buitenzwembad en drie binnen- en één buitensauna. Culinair worden gasten verwend met regionale Tiroolse gerechten en vitale creaties. In zowel de zomer als de winter is het hotel een ideale uitvalsbasis voor wandelen, fietsen en skiën in het hele Stubaital.</p>",
+  "ausstattung": [
+    "pool",
+    "restaurant",
+    "sauna",
+    "wifi"
+  ],
   "tags": [
     "berg",
     "hotel",
@@ -29,7 +34,7 @@
   "hero_bild": null,
   "sources": [
     "https://www.activehotel.at/",
-    "https://www.stubai.at",
-    "https://de.wikipedia.org/wiki/Stubaital"
+    "https://www.activehotel.at/wellnesshotel-4-sterne-tirol",
+    "https://de.wikipedia.org/wiki/Neustift_im_Stubaital"
   ]
 }

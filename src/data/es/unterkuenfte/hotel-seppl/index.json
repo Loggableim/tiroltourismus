@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Das **Hotel Seppl** liegt in einem ruhigen Ortsteil von **Tirol, Österreich** und bietet einen Ausgangspunkt für Erkundungen der Alpenregion. Die Unterkunft ist im **traditionellen Stil** gehalten, wobei Wert auf die Verwendung von heimischen Hölzern und regionalen Materialien gelegt wird. Gäste können zwischen verschiedenen Zimmerkategorien wählen, die mit modernem Komfort ausgestattet sind. Das hoteleigene Restaurant serviert täglich ein Frühstücksbuffet sowie abends ein Mehr-Gänge-Menü mit regionalen Produkten. Der **Wellnessbereich** umfasst eine Sauna, ein Dampfbad und einen Ruheraum. In der Umgebung stehen im Sommer ein weitläufiges Wanderwegenetz und im Winter präparierte Skipisten zur Verfügung. Das Hotel eignet sich durch seine Ausstattung und Lage besonders für Paare und Familien.</p>",
+  "beschreibung": "<p>El <strong>Hotel Seppl</strong> se emplaza en un entorno tranquilo y soleado en el municipio vacacional de <strong>Mutters</strong>, sobre la meseta al sur de Innsbruck. Este hotel de cuatro estrellas destaca por su cuidada integración de maderas autóctonas de pino cembro y moderno bienestar. Su espacioso spa incluye piscina climatizada cubierta, circuito de saunas, baño de vapor y salas de descanso con vistas a las cumbres tirolesas. Su restaurante deleita con platos alpinos creativos basados en ingredientes locales. El pintoresco tren de Stubaitalbahn conecta directamente con el centro de Innsbruck, y la estación de Muttereralm está a solo unos pasos.</p>",
   "ausstattung": [],
   "tags": [
     "hotel",
@@ -24,5 +24,11 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.hotel-seppl.at",
+    "https://www.innsbruck-tourismus.at/",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Distinguido hotel de 4 estrellas en Mutters, meseta de Innsbruck, con piscina interior, spa y vistas alpinas."
 }

@@ -11,7 +11,7 @@
   "telefon": null,
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Läh-Hof</strong> in <strong>Nesselwängle</strong> liegt im malerischen <strong>Tannheimer Tal</strong> in Österreich. Die <strong>Umgebung</strong> wird von einer alpinen Berglandschaft geprägt, die ideale Bedingungen für Wanderungen und Skifahrten bietet. Die <strong>Ausstattung</strong> umfasst komfortable Zimmer, einen Wellnessbereich mit Sauna und ein Restaurant mit regionaler Küche. Die <strong>Atmosphäre</strong> ist gemütlich und einladend, mit traditionellem österreichischem Charme. Die <strong>Zielgruppe</strong> sind vor allem Familien, Paare und Naturliebhaber, die Erholung in den Bergen suchen.</p>",
+  "beschreibung": "<p>Tradiční <strong>Läh-Hof</strong> vítá hosty v malebné horské obci <strong>Nesselwängle</strong> v tyrolském údolí <strong>Tannheimer Tal</strong>. Dům obklopený skalními štíty Rote Flüh a Gimpel nabízí srdečnou rodinnou atmosféru. Útulné pokoje a apartmány z masivního dřeva disponují balkony s výhledem na hory. Ranní snídaně nabízí domácí a lokální produkty. V létě začínají turistické a lezecké trasy přímo u statku a jezero Haldensee láká ke koupání. V zimě lákají sjezdovky v Nesselwängle a rozsáhlá síť běžeckých stop.</p>",
   "ausstattung": [],
   "tags": [
     "odlehlý",
@@ -25,5 +25,10 @@
   },
   "status": "published",
   "bilder": [],
-  "hero_bild": null
+  "hero_bild": null,
+  "sources": [
+    "https://www.tannheimertal.com",
+    "https://www.tirol.at"
+  ],
+  "kurzbeschreibung": "Příjemný rodinný statek a ubytování v Nesselwängle v malebném údolí Tannheimer Tal."
 }

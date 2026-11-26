@@ -11,7 +11,7 @@
   "telefon": "+43 5226 3863",
   "email": null,
   "webseite": null,
-  "beschreibung": "<p>Der <strong>Steinbichlhof</strong> liegt im Zentrum von <strong>Neustift im Stubaital</strong>, unweit der Pfarrkirche. Der Gasthof vereint traditionelle Tiroler Gastlichkeit mit einer gemütlichen Atmosphäre. Gäste können regionale Küche im urigen Restaurant genießen und die Stube für gesellige Abende nutzen. <strong>Wanderer und Naturliebhaber</strong> erreichen von hier aus bequem die umliegenden Bergwege und lohnende Ausflugsziele im Stubaital.</p>",
+  "beschreibung": "<p>L'auberge <strong>Steinbichlhof</strong> est idéalement située au cœur de <strong>Neustift im Stubaital</strong>, tout près de l'église paroissiale. Cet établissement de tradition conjugue la chaleureuse hospitalité tyrolienne avec une ambiance des plus conviviales. Les hôtes peuvent savourer une cuisine régionale généreuse dans le restaurant rustique et se détendre dans la stube typique en soirée. Pour les <strong>randonneurs et amoureux de la nature</strong>, elle permet de rejoindre rapidement les sentiers alpins et les merveilles de la vallée du Stubai.</p>",
   "ausstattung": [],
   "tags": [
     "auberge_rurale",
@@ -24,5 +24,9 @@
     "lat": "47.0807088",
     "lng": "11.2684652"
   },
-  "status": "published"
+  "status": "published",
+  "sources": [
+    "https://www.tirol.at",
+    "https://de.wikipedia.org/wiki/Tirol"
+  ]
 }
